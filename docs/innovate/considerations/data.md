@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Democratize data
+# Democratize data with digital invention
 
 Coal, oil, and human potential were the three most consequential assets during the industrial revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets: data, devices, and human potential. Each of these assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
 
@@ -27,7 +27,7 @@ The following phases will guide the decisions and approaches required to adopt a
 
 When you [build with customer empathy](./build.md), all processes elevate customer need over a technical solution. Because democratizing data is no exception, we start by sharing data. To democratize data, it must include a solution that shares data with a data consumer. The data consumer could be a direct customer or a proxy who makes decisions for customers. Approved data consumers can analyze, interrogate, and report on centralized data, with no support from IT staff.
 
-Many successful innovations have been launched as an minimum viable product (MVP) that deliver manual, data-driven processes on behalf of the customer. In this concierge model, an employee is the data consumer. That employee uses data to aid the customer. Each time the customer engages manual support, a hypothesis can be tested and validated. This approach is often a cost effective means of testing a customer-focused hypothesis before you invest heavily in integrated solutions.
+Many successful innovations have been launched as a minimum viable product (MVP) that deliver manual, data-driven processes on behalf of the customer. In this concierge model, an employee is the data consumer. That employee uses data to aid the customer. Each time the customer engages manual support, a hypothesis can be tested and validated. This approach is often a cost effective means of testing a customer-focused hypothesis before you invest heavily in integrated solutions.
 
 The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like [Power BI](https://docs.microsoft.com/power-bi).
 

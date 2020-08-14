@@ -1,6 +1,6 @@
 ---
 title: "Cloud migration"
-description: Migrate to Azure. Learn about the phases of migration. Prepare for a successfully migration to Azure using an iterative processes to assess, migrate, optimize, secure, and manage workloads.
+description: Prepare for a successful migration to Azure using an iterative process to assess, migrate, optimize, secure, and manage workloads.
 keywords: azure cloud migration, cloud adoption, migrate to azure, lift and shift, migration waves, migration planning, migrate methodology, cloud migration framework
 author: BrianBlanchard
 ms.author: brblanch
@@ -17,12 +17,10 @@ Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workl
 
 To prepare you for this phase of the cloud adoption lifecycle, we recommend the following:
 
-| | |
-|---|---|
-| <br> ![1](../_images/icons/1.png) | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.                                |
-| <br> ![2](../_images/icons/2.png) | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios.                                |
-| <br> ![3](../_images/icons/3.png) | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.                                |
-| <br> ![4](../_images/icons/4.png) | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.                        |
+- [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.
+- [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios.
+- [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.
+- [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.
 
 The Migrate methodology and the steps above build on the following assumptions:
 
@@ -53,7 +51,7 @@ The following bullets provide an overview of the phases of this process (picture
 
 ## Migration waves and iterative change management
 
-Migration iterations will deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads, which deliver tangible and measurable business value. Each iteration should end in a report outlining the technical efforts completed. However, business change and strategic planning generally happens at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. In that regard, migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
+Migration iterations will deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads, which deliver tangible and measurable business value. Each iteration should end in a report outlining the technical efforts completed. However, business change and strategic planning generally happen at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. In that regard, migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
 
 As outlined in the graphic in the prior section, processes within the [Plan methodology](../plan/index.md), the [Ready methodology](../ready/index.md), and to some extent the [Strategy methodology](../strategy/index.md) of the Cloud Adoption Framework provide guidance on planning and managing the migration waves. The management of those waves will prioritize and define the migration effort to be delivered by the technical teams.
 

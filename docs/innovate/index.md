@@ -19,12 +19,10 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 
 <!-- markdownlint-disable MD033 -->
 
-| | |
-|---|---|
-| <br> ![1](../_images/icons/1.png)     | <br> [Business value consensus](./business-value.md): Before you decide on technical solutions, identify how new innovation can drive business value. Map that value to your cloud strategy. In this incremental methodology, business value is represented by a hypothesis about customer needs.                                |
-| <br> ![2](../_images/icons/2.png)     | <br> [Azure innovation guide](./innovation-guide/index.md): Azure includes cloud tools to accelerate the deployment of innovative solutions. Depending on your hypothesis, you might consider various combinations of tools. The creation of a minimum viable product (MVP) with basic tools is suggested.                                |
-| <br> ![3](../_images/icons/3.png)     | <br> [Best practices](./best-practices/index.md): Your architectural decisions should follow best practices for each tool in the toolchain. By adhering to such guidance, you can better accelerate solution development and provide a reference for solid architectural designs.                                |
-| <br> ![4](../_images/icons/4.png)     | <br> [Feedback loops](./considerations/adoption.md): During each iteration, the solutions under development offer a way for your teams to learn alongside customers. Fast and accurate feedback loops with your customers can help you better test, measure, learn, and ultimately reduce the time to market impact. Learn how Azure and GitHub accelerate feedback loops.                        |
+- [Business value consensus](./business-value.md): Before you decide on technical solutions, identify how new innovation can drive business value. Map that value to your cloud strategy. In this incremental methodology, business value is represented by a hypothesis about customer needs.
+- [Azure innovation guide](./innovation-guide/index.md): Azure includes cloud tools to accelerate the deployment of innovative solutions. Depending on your hypothesis, you might consider various combinations of tools. The creation of a minimum viable product (MVP) with basic tools is suggested.
+- [Best practices](./best-practices/index.md): Your architectural decisions should follow best practices for each tool in the toolchain. By adhering to such guidance, you can better accelerate solution development and provide a reference for solid architectural designs.
+- [Feedback loops](./considerations/adoption.md): During each iteration, the solutions under development offer a way for your teams to learn alongside customers. Fast and accurate feedback loops with your customers can help you better test, measure, learn, and ultimately reduce the time to market impact. Learn how Azure and GitHub accelerate feedback loops.
 
 ## Innovation summary
 
