@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 # Azure Synapse Analytics solutions and migration for Teradata
 
-Many organizations are ready to take the step of shifting expensive data warehouse tasks like infrastructure maintenance and platform development to a cloud provider. Organizations are now looking to take advantage of innovative cloud, infrastructure as a service), and platform as a service offerings in newer environments like Azure.  
+Many organizations are ready to take the step of shifting expensive data warehouse tasks like infrastructure maintenance and platform development to a cloud provider. Organizations are now looking to take advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure.  
 
 Azure Synapse Analytics is a limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms at scale by using either serverless on-demand or provisioned resources. Learn what to plan for as you migrate a legacy Teradata system to Azure Synapse.
 
