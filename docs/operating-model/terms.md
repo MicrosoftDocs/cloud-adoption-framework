@@ -3,7 +3,7 @@ title: Operating model terminology
 description: Learn the terminology associated with operating models. The terminology helps you understand how an operating model fits into the bigger theme of corporate planning.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2019
+ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -28,9 +28,13 @@ The term operating model has many definitions. This intro article establishes te
 
 Cloud adoption is _what we do_ to realize the business value. The operating model represents _who we are_ and how we function on a daily basis while cloud adoption is being delivered.
 
-## Next steps
+## Take action
 
 [Use the operating model](./index.md) provided by the Cloud Adoption Framework to develop operational maturity.
 
+## Next steps
+
+Continue to the next section of the Cloud Adoption Framework. Learn how a landing zone provides the basic building block of any cloud adoption environment.
+
 > [!div class="nextstepaction"]
-> [Use the operating model](./index.md)
+> [Use the operating model](../ready/landing-zone/index.md)

@@ -3,7 +3,7 @@ title: "Understand cloud operating models"
 description: Understand cloud operating models and how they impact your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/20/2020
+ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -24,13 +24,13 @@ Before deploying your cloud architecture, it's important to understand how you w
 
 Prior to the existence of cloud technologies, technology teams established operating models to define how technology would support the business. Any company's IT operating model has a number of factors, but a few remain consistent: *Alignment to business strategy, organization of people, change management (or adoption processes), operations management, governance/compliance, and security*. Each factor is essential to long-term technology operations.
 
-When technology operations moves to the cloud, these vital processes are still relevant, but they're likely to change in some ways. Current operating models focus heavily on physical assets in physical locations funded largely through capital expenditure cycles. These assets are used to support the workloads that the business needs to maintain business operations. The mission of most operating models is to prioritize stability of the workloads by investing in the stability of the underlying physical assets.
+When technology operations shift to the cloud, these vital processes are still relevant, but they're likely to change in some ways. Current operating models focus heavily on physical assets in physical locations funded largely through capital expenditure cycles. These assets are used to support the workloads that the business needs to maintain business operations. The mission of most operating models is to prioritize stability of the workloads by investing in the stability of the underlying physical assets.
 
 ## How is a cloud operating model different?
 
-Redundancy in the hardware stack is a never-ending cycle. Physical hardware breaks down. Performance degrades. Seldom does the degradation of hardware align with the predictable budgetary cycles of an organization's capital expenditure planning cycles. Operating in the cloud breaks the treadmill of hardware refreshes and midnight patches by shifting the focus upstream to the digital assets: operating systems, applications, and data. This shift from physical to digital also shifts the technology operating model.
+Redundancy in the hardware stack is a never-ending cycle. Physical hardware breaks down. Performance degrades. The degradation of hardware rarely aligns with the predictable budgetary cycles of an organization's capital expenditure planning cycles. Operating in the cloud breaks the treadmill of hardware refreshes and midnight patches by shifting the focus upstream to the digital assets: operating systems, applications, and data. This shift from physical to digital also shifts the technology operating model.
 
-As your operating model shifts to the cloud, you still need the same people and processes, but they also shift to focus on a higher level of operations. If your people no longer focus on server uptime, their success metrics will change. If security is no longer protected by the four walls of a datacenter, your threat profile changes. When procurement is no longer a blocker to innovation, the pace at which you manage change also changes.
+As your operating model shifts to the cloud, you still need the same people and processes, but they also shift to focus on a higher level of operations. If your people no longer focus on server uptime, then their success metrics will change. If security is no longer protected by the four walls of a datacenter, then your threat profile changes. When procurement is no longer a blocker to innovation, then the pace at which you manage change also changes.
 
 A *cloud operating model* is the collection of processes and procedures that define how you want to operate technology in the cloud.
 
@@ -46,12 +46,15 @@ When moving to a higher level of operations, these common architectural principl
 
 If you updated your operating model to remove every reference to the procurement, change, operations, or protection of physical assets, what's left? For some organizations, their operating model is now a clean slate. For most organizations, the constraints that have developed over the years are now reduced. In either case, there is an opportunity to think about how you would like to operate in the cloud.
 
-To help you imagine your future state operating model, these articles discuss the following topics:
+To help you imagine your future state operating model, these articles discuss the following subjects:
 
+- [Define your cloud operating model](./methodologies.md)
 - [Compare common cloud operating models](./compare.md)
-- [Define each aspect of your operating model](./methodologies.md)
 - [Implement your operating model with Azure landing zones](../ready/landing-zone/implementation-options.md)
 
-## Next steps X
+## Next steps
 
-Before defining your operating model, review the common approaches other customers take to operating the cloud, with [common operating model examples](./compare.md).
+Learn how the Cloud Adoption Framework helps you define your operating model.
+
+> [!div class="nextstepaction"]
+> [Compare common cloud operating models](./compare.md)
