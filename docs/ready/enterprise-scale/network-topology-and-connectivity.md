@@ -373,8 +373,8 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If third-party NVAs are required for east-west and/or south-north traffic protection/filtering:
 
-   - For Virtual WAN network topologies, deploy the NVAs to a separate VNet (for example, NVA VNet), and connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs, as described in this [article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-route-table-portal).
-   - For non-Virtual WAN network topologies, deploy the third-party NVAs in the central hub VNet.
+  - For Virtual WAN network topologies, deploy the NVAs to a separate VNet (for example, NVA VNet), and connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs, as described in this [article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-route-table-portal).
+  - For non-Virtual WAN network topologies, deploy the third-party NVAs in the central hub VNet.
 
 - If third-party NVAs are required for inbound HTTP/S connections, they should be deployed within a landing zone VNet and together with the apps that they're protecting and exposing to the internet.
 

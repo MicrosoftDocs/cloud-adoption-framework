@@ -51,7 +51,7 @@ Research, open source projects, and Azure Machine Learning all designed to help 
 - **Protect**:  AI systems rely on data. These software tools can help you protect that data by preserving privacy and ensuring confidentiality. For example, Confidential computing for ML, WhiteNoise differential privacy, SEAL homomorphic encryption, Presidio.
 - **Control**:  Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control, to meet regulatory requirements. For example, Audit trail and traceability.
 
-## Next Steps
+## Next steps
 
 For further resources to support your responsible solution development, visit:
 

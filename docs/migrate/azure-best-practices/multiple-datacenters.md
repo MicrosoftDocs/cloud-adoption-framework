@@ -38,7 +38,6 @@ The biggest change to the assess process, when expanding scope to address multip
 > - A subject matter expert with an understanding of asset placement and IP address schemas is required to identify assets that reside in a secondary datacenter.
 > - Evaluate both downstream dependencies and clients in the visual to understand bidirectional dependencies.
 
-
 ## Migration process changes
 
 Migrating multiple datacenters is similar to consolidating datacenters. After migration, the cloud becomes the singular datacenter solution for multiple assets. The most likely scope expansion during the migration process is the validation and alignment of IP addresses.

@@ -191,8 +191,8 @@ items:
         href: operating-model/index.md
       - name: Help defining your operating model
         href: operating-model/methodologies.md
-      - name: Compare common operating models
-        href: operating-model/compare-common-operating-models.md
+      - name: Compare common cloud operating models
+        href: operating-model/compare.md
       - name: Common operating model terms
         href: operating-model/terms.md
     - name: Azure landing zones

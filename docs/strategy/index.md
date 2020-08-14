@@ -16,7 +16,6 @@ The cloud delivers fundamental technology benefits that can help your enterprise
 The following steps can help you document your business strategy efficiently. This approach helps you drive adoption efforts that capture targeted business value in a cross-functional model. Then, you can map your cloud adoption strategy to specific cloud capabilities and business strategies to reach your desired state of transformation.
 
 <!-- docsTest:ignore _images images -->
-<!-- markdownlint-disable MD033 -->
 
 | | |
 |---|---|

@@ -100,7 +100,7 @@ Netezza implements some database objects that are not directly supported in Azur
 
   In Azure Synapse, a similar effect can be achieved by use of partitioning or use of other indexes.
 
-- **Materialized views:** Netezza supports materialized views and recommends that one or more of these is created over large tables that have many columns where only a few of those columns are regularly used in queries. Materialized views are automatically maintained by the system when data in the base table is updates. As of May 2019, Microsoft has announced that Azure Synapse will support materialized views with the same functionality as Netezza. This feature is now available in preview.
+- **Materialized views:** Netezza supports materialized views and recommends that one or more of these is created over large tables that have many columns where only a few of those columns are regularly used in queries. Materialized views are automatically maintained by the system when data in the base table is updates. Azure Synapse will support materialized views with the same functionality as Netezza (now available in preview).
 
 - **Netezza data type mapping:** Most Netezza data types have a direct equivalent in the Azure Synapse. Below is a table that shows these data types together with the recommended approach for mapping these.
 
