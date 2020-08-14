@@ -3,7 +3,7 @@ title: What's new
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 05/15/2020
+ms.date: 07/21/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -16,6 +16,41 @@ ms.subservice: overview
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built in collaboration with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
+
+## July 17, 2020
+
+This release adds a number of new scenarios to make cloud adoption more actionable.
+
+### Migration Scenarios
+
+The new [migration scenarios overview page](../scenarios/index.md) builds on the CAF Migrate methodology to demonstrate how Azure delivers on the "#OneMigrate" promise. It provides approaches to migrating multiple first and third party scenarios to Azure. This includes three new migration scenarios:
+
+| Article | Description |
+|---|---|
+| [Windows Virtual Desktop](../scenarios/wvd/index.md) | This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience. |
+| [Azure Stack](../scenarios/azure-stack/index.md) | Learn about deploying Azure in your datacenter using Azure Stack Hub. |
+
+### Analytics in CAF
+
+Analytics solutions are now included in the Microsoft Cloud Adoption Framework. These new topics highlight the best practices for enabling analytics solutions during your cloud adoption journey.
+
+| Article | Description |
+|---|---|
+| [Analytics solution for Teradata, Netezza, Exadata](../migrate/azure-best-practices/analytics/analytics-solutions-overview.md) | Learn about migrating legacy on-premises environments including Teradata, Netezza, and Exadata to modern Analytics solutions. |
+| [High availability for Azure Synapse](../migrate/azure-best-practices/analytics/azure-synapse.md) | Learn about one of the key benefits of a modern cloud-based infrastructure, built-in high availability and disaster recovery. |
+| [Schema Migration Data Definition Languages (DDL)](../migrate/azure-best-practices/analytics/schema-migration-ddl.md) | Learn about the database objects and associated processes when preparing to migrate existing data. |
+
+### AI in CAF
+
+Artificial Intelligence (AI) solutions and best practices are now integrated into the Microsoft Cloud Adoption Framework. These AI solutions can help accelerate innovation with predictions about customer's needs, automate business processes, discover information, find new ways to engage with customers, and deliver better experiences during your cloud adoption journey.
+
+| Article | Description |
+|---|---|
+| [Responsible AI](../strategy/responsible-ai.md) | Learn about the AI principles you should consider when implementing AI solutions and learn how to establish a responsible AI strategy. |
+| [Azure Innovation Guide: Innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
+| [AI in the Cloud Adoption Framework](../innovate/ai/index.md) | Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale. |
+| [MLOps with Azure Machine Learning](../manage/mlops-machine-learning.md) | Learn about Machine Learning Operations (MLOps) best practices. |
+| [Innovate with AI](../innovate/best-practices/predict.md) | Learn about AI solutions (Machine Learning, AI apps and agents, Knowledge Mining) and best practices that can accelerate digital invention. |
 
 ## June 15, 2020
 
@@ -47,7 +82,7 @@ Based on feedback, we've created new content to get you started using the Cloud 
 | Article | Description |
 |---|---|
 | [Cloud Adoption Framework for Azure](../index.yml) | The Cloud Adoption Framework landing page has been redesigned to make it easier to find the guidance, tools, learn modules and programs that support a successful cloud adoption journey. |
-| [Get started with the Cloud Adoption Framework](./index.md) | Start here to choose a getting started guide aligned with your cloud adoption goals. These common scenarios provide a roadmap through the Microsoft Cloud Adoption Framework for Azure.|
+| [Get started with the Cloud Adoption Framework](./index.md) | Start here to choose a getting started guide that's aligned with your cloud adoption goals. These common scenarios provide a roadmap through the Microsoft Cloud Adoption Framework for Azure. |
 | [Understand and document foundational alignment decisions](./cloud-concepts.md) | Learn about the initial decisions that every team involved in cloud adoption should understand. |
 | [Understand and align the portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md) | Learn how a portfolio hierarchy shows how your workloads and supporting services all fit together. |
 | [How do Azure products support the portfolio hierarchy?](../reference/fundamental-concepts/hierarchy-azure-tools.md) | Learn about the Azure tools and solutions that support your portfolio hierarchy. |

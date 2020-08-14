@@ -258,7 +258,7 @@ Follow these steps:
     - The person who will be the subscription owner for each subscription associated with each environment. Note that this is necessary only if the subscription **service administrator** will not be tasked with managing resource access for each subscription/environment.
     - The person who will be the **network operations user**.
     - The people who are **workload owners**.
-4. The Azure account administrator creates the following three subscriptions using the [Azure account portal](https://account.azure.com/subscriptions):
+4. The Azure account administrator [creates three Azure subscriptions](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription):
     - A subscription for the **shared infrastructure** environment.
     - A subscription for the **production** environment.
     - A subscription for the **development** environment.
@@ -274,8 +274,3 @@ Now that you've implemented your governance model, you can deploy your shared in
 ## Related resources
 
 [Built-in roles for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles)
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Learn about deploying a basic infrastructure](../../infrastructure/virtual-machines/basic-workload.md)

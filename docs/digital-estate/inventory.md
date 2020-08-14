@@ -17,7 +17,7 @@ Developing an inventory is the first step for [digital estate planning](./index.
 
 The inventory that supports a digital estate changes depending on the desired digital transformation and corresponding transformation journey.
 
-- **Cloud migration:**  We often recommend that during a cloud migration, you collect the inventory from scanning tools that create a centralized list of all virtual machines and servers. Some tools can also create network mappings and dependencies, which help define workload alignment.
+- **Cloud migration:** We often recommend that during a cloud migration, you collect the inventory from scanning tools that create a centralized list of all virtual machines and servers. Some tools can also create network mappings and dependencies, which help define workload alignment.
 
 - **Application innovation:** Inventory during a cloud-enabled application innovation effort begins with the customer. Mapping the customer experience from start to finish is a good place to begin. Aligning that map to applications, APIs, data, and other assets creates a detailed inventory for analysis.
 

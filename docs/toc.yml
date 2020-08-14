@@ -958,7 +958,7 @@ items:
               - name: Design, build, and operate microservices in Azure
                 href: https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
               - name: Reference architecture for microservices with Azure Kubernetes Service (AKS)
-                href: https://docs.microsoft.com/azure/architecture/reference-architectures/microservices/aks?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
               - name: Reference architecture - serverless microservices sample
                 href: https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Containers

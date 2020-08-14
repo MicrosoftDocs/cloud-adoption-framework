@@ -15,10 +15,10 @@ A migration landing zone is an environment that has been provisioned and prepare
 
 ## Deploy the blueprint
 
-Before you use the CAF Migration landing zone blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Migration landing zone blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
+Before you use the CAF Migration landing zone blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Migration landing zone blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the deployment steps.
 
 > [!div class="nextstepaction"]
-> [Deploy the blueprint sample][deploy-sample]
+> [Deploy the blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy)
 
 ## Design principles
 
@@ -106,20 +106,16 @@ The following decisions are represented in the landing zone blueprint.
 
 ## Customize or deploy a landing zone
 
-Learn more and download a reference sample of the CAF Migration landing zone blueprint for deployment or customization from [Azure blueprint samples][deploy-sample].
+Learn more and download a reference sample of the CAF Migration landing zone blueprint for deployment or customization from the Azure blueprint samples.
 
 > [!div class="nextstepaction"]
-> [Deploy the blueprint sample][deploy-sample]
+> [Deploy the blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy)
 
 For guidance on customizations that should be made to this blueprint or the resulting landing zone, see the [landing zone considerations](../considerations/index.md).
 
 ## Next steps
 
-After deploying your first landing zone, you're ready to [expand your landing zone](../considerations/index.md)
+After deploying your first landing zone, you're ready to expand your landing zone.
 
 > [!div class="nextstepaction"]
 > [Expand your landing zone](../considerations/index.md)
-
-<!-- links -->
-
-[Deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy
