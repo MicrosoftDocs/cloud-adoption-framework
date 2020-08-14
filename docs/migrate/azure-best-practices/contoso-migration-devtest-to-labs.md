@@ -152,13 +152,13 @@ With the DevTest Labs instance created, Contoso performs the following configura
    1. In the portal, Contoso opens the DevTest Labs instance and selects **Configuration and policies**.
 
       ![Screenshot of "Configuration and policies" in the settings for ContosoDevTestLabs.](./media/contoso-migration-devtest-to-labs/configure-lab.png)
-      
+
       _Figure 5: DevTest Labs instance: configuration and policies._
 
    2. Contoso selects **Virtual Networks** > **+ Add**, chooses **vnet-dev-eus2**, and then selects **Save**. This allows the development virtual network to be used for VM deployments. A virtual network was also created during the deployment of the DevTest Labs instance.
 
       ![Screenshot of selections for adding the virtual network.](./media/contoso-migration-devtest-to-labs/vnets.png)
-      
+
       _Figure 6: Virtual networks._
 
 2. Assign a resource group:
@@ -166,7 +166,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
     - To ensure that resources are deployed to the `ContosoDevRG` resource group, Contoso configures this in the lab settings. It also assigns its developers the **Contributor** role.
 
       ![Screenshot of selections to assign a resource group.](./media/contoso-migration-devtest-to-labs/assign-resource-group.png)
-      
+
       _Figure 7: Assigning a resource group._
 
     > [!NOTE]
@@ -179,25 +179,25 @@ With the DevTest Labs instance created, Contoso performs the following configura
     1. Contoso enables auto-shutdown with a local time of 7:00:00 PM and the correct time zone.
 
        ![Screenshot of selections for setting up auto-shutdown.](./media/contoso-migration-devtest-to-labs/autoshutdown.png)
-       
+
        _Figure 8: Auto-shutdown._
 
     1. Contoso enables auto-start to have the VMs running when the developers come online to work. They're configured to the local time zone and for the days of the week when the developers work.
 
        ![Screenshot of selections for setting up auto-start.](./media/contoso-migration-devtest-to-labs/autostart.png)
-       
+
        _Figure 9: Auto-start._
 
     1. Contoso configures the allowed VM sizes, ensuring that large and expensive VMs can't be started.
 
        ![Screenshot of selections for configuring allowed VM sizes.](./media/contoso-migration-devtest-to-labs/vm-sizes.png)
-       
+
        _Figure 10: Allowed VM sizes._
 
     1. Contoso configures the support message.
 
        ![Screenshot of selections for configuring a support message.](./media/contoso-migration-devtest-to-labs/support.png)
-       
+
        _Figure 11: A support message._
 
 ## Step 3: Create Windows 10 Enterprise multi-session virtual desktops for developers to use from remote locations
@@ -207,25 +207,25 @@ Contoso needs to create a Windows virtual desktop for remote developers.
 1. Contoso selects **All virtual machines** > **+ Add** and chooses a Windows 10 Enterprise multi-session base for a VM.
 
    ![Screenshot that shows selecting a Windows 10 base](./media/contoso-migration-devtest-to-labs/windows-10-vm-base.png)
-   
+
    _Figure 12: A Windows 10 Enterprise multi-session base._
 
 1. Contoso configures the size of the VM along with the artifacts to be installed. In this case, the developers have access to common development tools such as Visual Studio Code, Git, and Chocolatey.
 
    ![Screenshot that shows selected artifacts.](./media/contoso-migration-devtest-to-labs/artifacts.png)
-   
+
    _Figure 13: Artifacts._
 
 1. Contoso reviews the VM configuration for accuracy.
 
    ![Screenshot that shows the selections for virtual machine creation from a base.](./media/contoso-migration-devtest-to-labs/vm-from-base.png)
-   
+
    _Figure 14: Create a virtual machine from a base._
 
 1. After the VM is created, Contoso's remote developers can connect to and use this development workstation for their work. The selected artifacts are installed, saving developers time in configuring their workstation.
 
    ![Screenshot that shows information about the RemoteDevs virtual machine.](./media/contoso-migration-devtest-to-labs/remote-vm.png)
-   
+
    _Figure 15: A remote developer VM._
 
 ## Step 4: Create formulas and VMs within DevTest Labs for development and migrate databases
@@ -237,13 +237,13 @@ With DevTest Labs configured and the remote developers' workstation up and runni
    Contoso selects **Formulas** > **+ Add**, and then a **Windows Server 2012 R2 Datacenter** base.
 
    ![Screenshot that shows the selection of a Windows 2012 R2 base.](./media/contoso-migration-devtest-to-labs/windows-2012-base.png)
-   
+
    _Figure 16: A Windows 2012 R2 base._
 
 1. Contoso configures the size of the VM along with the artifacts to be installed. In this case, the developers have access to common development tools such as Visual Studio Code, Git, and Chocolatey.
 
    ![Screenshot that shows the selected VM size and artifacts for the Windows 2012 R2 base configuration.](./media/contoso-migration-devtest-to-labs/windows-2012-base-configuration.png)
-   
+
    _Figure 17: A Windows 2012 R2 base configuration._
 
 1. To create the database VM formula, Contoso follows the same basic steps. This time, it selects a SQL Server 2012 image for the base.
@@ -255,7 +255,7 @@ With DevTest Labs configured and the remote developers' workstation up and runni
 1. Contoso configures the formula with the size and artifacts. The artifacts include SQL Server Management Studio, which is required for this database development VM formula.
 
    ![Screenshot that shows the SQL 2012 R2 base configuration.](./media/contoso-migration-devtest-to-labs/sql-2012-base-configuration.png)
-   
+
    _Figure 19: An SQL 2020 R2 base configuration._
 
    Learn more about using [formulas](https://docs.microsoft.com/azure/lab-services/devtest-lab-manage-formulas) with DevTest Labs.
@@ -263,7 +263,7 @@ With DevTest Labs configured and the remote developers' workstation up and runni
 1. Contoso has now created the Windows base formulas for its developers to use for applications and databases.
 
    ![Screenshot that shows the configured database VM.](./media/contoso-migration-devtest-to-labs/contoso-formulas.png)
-   
+
    _Figure 20: Windows base formulas._
 
 The next steps provision application and database VMs through the formulas:
@@ -271,31 +271,31 @@ The next steps provision application and database VMs through the formulas:
 1. With the formulas created, Contoso next selects **All virtual machines** and then the **Windows2012AppDevVmBase** formula to match the configuration of its current application development VMs.
 
    ![Screenshot that shows the selection of an app VM as a base.](./media/contoso-migration-devtest-to-labs/app-vm.png)
-   
+
    _Figure 21: An application development VM._
 
 1. Contoso configures the VM with the size and artifacts that are required for this application VM.
 
    ![Screenshot that shows size and artifact selections for an app VM.](./media/contoso-migration-devtest-to-labs/app-vm-configuration.png)
-   
+
    _Figure 22: Size and artifact configurations for a VM._
 
 1. Contoso provisions the database VM by using the **SQLDbDevVmBase** formula to match the configuration of its current database development VMs.
 
    ![Screenshot that shows provisioning of the database VM.](./media/contoso-migration-devtest-to-labs/database-vm.png)
-   
+
    _Figure 23: A database VM._
 
 1. Contoso configures the VM with the size and artifacts that are required.
 
    ![Screenshot that shows the size and artifact selections for a database VM.](./media/contoso-migration-devtest-to-labs/database-vm-config.png)
-   
+
    _Figure 24: Database configurations for a VM._
 
 1. With the first VMs created along with the remote developers' workstation, Contoso's developers are ready to start writing code in Azure.
 
    ![Screenshot that shows Contoso virtual machines.](./media/contoso-migration-devtest-to-labs/contoso-vms.png)
-   
+
    _Figure 25: Contoso VMs._
 
 1. Contoso can now restore its development databases either from backups or by using some type of code generation process to build the schema on the VMs. With SQL Server Management Studio already installed through the artifacts, these are simple tasks that don't require installing any tools.

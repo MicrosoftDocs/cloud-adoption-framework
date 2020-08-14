@@ -41,7 +41,7 @@ To perform a migration using Azure Migrate, follow these steps:
 1. Search for Azure Migrate under **All services**. Select **Azure Migrate** to continue.
 1. Select **Add a tool** to start your migration project.
 1. Select the subscription, resource group, and geography to host the migration.
-1. Select **Select assessment tool** > **Azure Migrate: Server assessment** >  **Next**.
+1. Select **Select assessment tool** > **Azure Migrate: Server assessment** > **Next**.
 1. Select **Review + add tools**, and verify the configuration. Select **Add tools** to initiate the job to create the migration project and register the selected solutions.
 
 #### Learn more

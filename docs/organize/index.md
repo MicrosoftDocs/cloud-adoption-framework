@@ -55,4 +55,4 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 The article on [determining organizational structure maturity](./organization-structures.md) provides additional detail regarding each level of maturity.
 
-To track organization structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+To track organization structure decisions over time, download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

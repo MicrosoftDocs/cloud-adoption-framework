@@ -19,7 +19,7 @@ As your discussions progress, use this template's structure as a model for captu
 > [!IMPORTANT]
 > This template is a limited sample. Before updating this template to reflect your requirements, you should review the subsequent steps for defining an effective Security Baseline discipline within your cloud governance strategy.
 
-[Download the Security Baseline discipline template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Security%20Baseline%20Discipline%20Template.docx)
+[Download the Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx)
 
 ## Next steps
 

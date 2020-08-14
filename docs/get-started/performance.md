@@ -75,7 +75,7 @@ Strategic decisions directly affect performance, rippling through the adoption l
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 - Ensure that the management baseline provides operational support that aligns with the strategic direction of cloud adoption.
 
 **Guidance to support deliverable completion:**
@@ -99,7 +99,7 @@ Understanding the plan also invites the cloud operations team into the developme
 
 **Deliverables:**
 
-- Update the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to reflect changes triggered by the digital estate analysis.
+- Update the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to reflect changes triggered by the digital estate analysis.
 - Work with the cloud operations team to clearly define the criticality and business impact of each workload in the near-term and long-term adoption plan.
 - Work with the cloud operations team to establish a timeline for operations readiness.
 

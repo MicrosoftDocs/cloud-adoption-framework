@@ -11,7 +11,7 @@ ms.subservice: operate
 
 # Machine Learning Operations (MLOps) with Azure Machine Learning
 
-Machine Learning Operations (MLOps) is based on DevOps principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goals of:
+Machine Learning Operations (MLOps) is based on DevOps principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
 
 - Faster experimentation and development of models.
 - Faster deployment of models into production.
@@ -43,10 +43,11 @@ MLOps improves the quality and consistency of your machine learning solutions. T
 
 Learn more by reading and exploring the following resources:
 
-- How and where to [deploy models with Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where)
+- [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-model-management-and-deployment)
+- How and where to [deploy models with Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where)
 - Tutorial: [Deploy an image classification model in ACI](https://docs.microsoft.com/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
 - [CI/CD of machine learning models with Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-machine-learning?view=azure-devops&tabs=yaml)
-- Create clients that [consume a deployed model](https://docs.microsoft.com/azure/machine-learning/how-to-consume-web-service)
+- Create clients that [consume a deployed model](https://docs.microsoft.com/azure/machine-learning/how-to-consume-web-service)
 - [Machine learning at scale](https://docs.microsoft.com/azure/architecture/data-guide/big-data/machine-learning-at-scale)
 - [Azure AI reference architectures and best practices repo](https://github.com/microsoft/AI)
