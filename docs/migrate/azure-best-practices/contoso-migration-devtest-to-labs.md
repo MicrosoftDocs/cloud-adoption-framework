@@ -22,8 +22,8 @@ Contoso has several options available when moving its dev/test environment to Az
 
 | Migration options | Outcome |
 | --- | --- |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | [Assess](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) and [migrate](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <br><br> Run dev/test servers by using Azure infrastructure as a service (IaaS). <br><br> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/). |
-| [DevTest Labs](https://docs.microsoft.com/azure/devtest-labs/devtest-lab-overview) | Quickly provision development and test environments. <br><br> Minimize waste with quotas and policies. <br><br> Set automated shutdowns to minimize costs. <br><br> Build Windows and Linux environments. |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | [Assess](/azure/migrate/tutorial-assess-vmware) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <br><br> Run dev/test servers by using Azure infrastructure as a service (IaaS). <br><br> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/). |
+| [DevTest Labs](/azure/devtest-labs/devtest-lab-overview) | Quickly provision development and test environments. <br><br> Minimize waste with quotas and policies. <br><br> Set automated shutdowns to minimize costs. <br><br> Build Windows and Linux environments. |
 
 > [!NOTE]
 > This article focuses on using DevTest Labs to move an on-premises dev/test environment to Azure. Read how [Contoso moved dev/test to Azure IaaS](./contoso-migration-devtest-to-iaas.md) via Azure Migrate.
@@ -78,7 +78,7 @@ _Figure 1: Scenario architecture._
 
 ### Database considerations
 
-To support ongoing development, Contoso has decided to continue using databases running on VMs. But the current VMs will be replaced with new ones running in DevTest Labs. In the future, Contoso will pursue the use of platform as a service (PaaS) services such as [Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview) and [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview).
+To support ongoing development, Contoso has decided to continue using databases running on VMs. But the current VMs will be replaced with new ones running in DevTest Labs. In the future, Contoso will pursue the use of platform as a service (PaaS) services such as [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) and [Azure Database for MySQL](/azure/mysql/overview).
 
 Current VMware database VMs will be decommissioned and replaced with Azure VMs in DevTest Labs. The existing databases will be migrated with simple backups and restores. Using the Azure Dev/Test subscription offer won't incur licensing fees for the Windows Server and SQL Server instances, minimizing compute costs.
 
@@ -111,7 +111,7 @@ Here's what Contoso needs to run this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to reduce costs up to 80 percent. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the admin of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the admin, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to reduce costs up to 80 percent. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the admin of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the admin, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. |
 
 ## Scenario steps
@@ -131,7 +131,7 @@ Contoso admins first need to provision a new subscription by using the Azure Dev
 
 They set these up as follows:
 
-The admins follow the link to the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p) and provision a new subscription, which saves them up to 80 percent on their systems. This offer allows them to run Windows 10 images on Azure for dev/test. They will gain access to [Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/overview) to simplify the management experience of the remote developers.
+The admins follow the link to the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p) and provision a new subscription, which saves them up to 80 percent on their systems. This offer allows them to run Windows 10 images on Azure for dev/test. They will gain access to [Windows Virtual Desktop](/azure/virtual-desktop/overview) to simplify the management experience of the remote developers.
 
 ![Screenshot of a Pay-As-You-Go Dev/Test offer, with an Activate button.](./media/contoso-migration-devtest-to-labs/devtest-subscription.png)
 
@@ -170,7 +170,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
       _Figure 7: Assigning a resource group._
 
     > [!NOTE]
-    > The contributor role is an administrator-level role with all rights except the ability to provide access to other users. Read more about [Azure role-based access control](https://docs.microsoft.com/azure/role-based-access-control/overview).
+    > The contributor role is an administrator-level role with all rights except the ability to provide access to other users. Read more about [Azure role-based access control](/azure/role-based-access-control/overview).
 
 3. Set lab policies:
 
@@ -258,7 +258,7 @@ With DevTest Labs configured and the remote developers' workstation up and runni
 
    _Figure 19: An SQL 2020 R2 base configuration._
 
-   Learn more about using [formulas](https://docs.microsoft.com/azure/lab-services/devtest-lab-manage-formulas) with DevTest Labs.
+   Learn more about using [formulas](/azure/lab-services/devtest-lab-manage-formulas) with DevTest Labs.
 
 1. Contoso has now created the Windows base formulas for its developers to use for applications and databases.
 
@@ -313,13 +313,13 @@ Now, Contoso needs to complete these cleanup steps:
 
 ### Security
 
-The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
+The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 ### Licensing and cost optimization
 
 - Contoso will ensure that all development Azure resources are created through this dev/test subscription to take advantage of the 80 percent savings.
 - Budgets will be reviewed for all DevTest Labs instances and policies for the VMs to ensure that costs are contained and overprovisioning doesn't happen mistakenly.
-- Contoso will enable [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+- Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 
 ## Conclusion
 
@@ -327,4 +327,4 @@ In this article, Contoso moved its development environments to DevTest Labs. It 
 
 **Need more help?**
 
-[Create a DevTest Labs instance](https://docs.microsoft.com/azure/lab-services/devtest-lab-create-lab) in your subscription now, and learn how to use [DevTest Labs for developers](https://docs.microsoft.com/azure/lab-services/devtest-lab-developer-lab).
+[Create a DevTest Labs instance](/azure/lab-services/devtest-lab-create-lab) in your subscription now, and learn how to use [DevTest Labs for developers](/azure/lab-services/devtest-lab-developer-lab).

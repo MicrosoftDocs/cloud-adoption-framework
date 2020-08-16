@@ -31,7 +31,7 @@ When you're expanding the scope to address multiple datacenters, the biggest cha
 
 ### Suggested action during the assess process
 
-**Evaluate cross-datacenter dependencies:** The [dependency visualization tools in Azure Migrate](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization) can help pinpoint dependencies. Using this toolset before migration is generally a best practice. But when dealing with global complexity, it becomes a necessary step in the assessment process. Through [dependency grouping](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies), the visualization can help identify the IP addresses and ports of any assets required to support the workload.
+**Evaluate cross-datacenter dependencies:** The [dependency visualization tools in Azure Migrate](/azure/migrate/concepts-dependency-visualization) can help pinpoint dependencies. Using this toolset before migration is generally a best practice. But when dealing with global complexity, it becomes a necessary step in the assessment process. Through [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies), the visualization can help identify the IP addresses and ports of any assets required to support the workload.
 
 > [!IMPORTANT]
 >

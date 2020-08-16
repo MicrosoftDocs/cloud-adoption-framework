@@ -19,11 +19,11 @@ By default, the Azure Automation inventory service doesn't monitor files or regi
 
 ![Screenshot of the Azure Automation Inventory view in the Azure portal](./media/change-tracking1.png)
 
-For more information about each registry key, see [Registry key change tracking](https://docs.microsoft.com/azure/automation/automation-change-tracking#registry-key-change-tracking). Select any key to evaluate and then enable it. The setting is applied to all VMs that are enabled in the current workspace.
+For more information about each registry key, see [Registry key change tracking](/azure/automation/automation-change-tracking#registry-key-change-tracking). Select any key to evaluate and then enable it. The setting is applied to all VMs that are enabled in the current workspace.
 
 You can also use the service to track critical file changes. For example, you might want to track the C:\windows\system32\drivers\etc\hosts file because the OS uses it to map host names to IP addresses. Changes to this file could cause connectivity problems or redirect traffic to dangerous websites.
 
-To enable file-content tracking for the hosts file, follow the steps in [Enable file content tracking](https://docs.microsoft.com/azure/automation/change-tracking-file-contents#enable-file-content-tracking).
+To enable file-content tracking for the hosts file, follow the steps in [Enable file content tracking](/azure/automation/change-tracking-file-contents#enable-file-content-tracking).
 
 You can also add an alert for changes to files that you're tracking. For example, say you want to set an alert for changes to the hosts file. Select **Log Analytics** on the command bar or Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
 

@@ -67,9 +67,9 @@ Several technical and nontechnical prerequisites are required to successfully mi
   - If federated, enable tenant restrictions for administrative accounts.
 - Integrate your on-premises and cloud directories.
 - Consider using the following access models:
-  - [Least-privilege administrative](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) access model.
-  - [Privileged identity management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) access model.
-- Finalize all preintegration details and review [identity management and access control security best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices).
+  - [Least-privilege administrative](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) access model.
+  - [Privileged identity management](/azure/active-directory/privileged-identity-management/pim-configure) access model.
+- Finalize all preintegration details and review [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices).
   - Enable single-identity, single-sign-on (SSO), also called seamless SSO.
   - Configure multi-factor authentication for administrators.
   - Consolidate or integrate identity providers, where necessary.
@@ -98,7 +98,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Validate that single sign-on (SSO) and seamless SSO is working as expected for your applications.
 - Reduce or eliminate the number of alternative identity stores.
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
-- Enable conditional access for [on-premises federated applications](https://docs.microsoft.com/azure/active-directory/devices/overview).
+- Enable conditional access for [on-premises federated applications](/azure/active-directory/devices/overview).
 - Distribute identity across global regions in multiple hubs with synchronization between regions.
 - Establish central role-based access control (RBAC) federation.
 
@@ -129,7 +129,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Consider implementing a development security operations (DevSecOps) approach.
 - Conduct an impact analysis to gauge results on costs, security, and user adoption.
 - Periodically produce an impact report that shows the changes in metrics created by the system and estimate the business impacts of the [hybrid identity strategy](../../decision-guides/identity/index.md).
-- Establish integrated monitoring recommended by the [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro).
+- Establish integrated monitoring recommended by the [Azure Security Center](/azure/security-center/security-center-intro).
 
 ## Next steps
 

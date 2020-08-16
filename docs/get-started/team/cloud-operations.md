@@ -180,7 +180,7 @@ As new adoption efforts are completed, the cloud adoption team hands off operati
 
 **Guidance to support deliverable completion:**
 
-- Establish a process for [onboarding new workloads and resources](https://docs.microsoft.com/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
+- Establish a process for [onboarding new workloads and resources](/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
 <!-- markdownlint-disable MD033 -->
 

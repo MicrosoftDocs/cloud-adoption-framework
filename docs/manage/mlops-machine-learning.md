@@ -38,17 +38,17 @@ MLOps with Azure helps you:
 - Simplify model packaging, validation, and deployment for quality control and A/B testing.
 - Explain and observe model behavior, and automate the retraining process.
 
-MLOps improves the quality and consistency of your machine learning solutions. To learn more about how to use Azure Machine Learning to manage the lifecycle of your models, see [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-model-management-and-deployment).
+MLOps improves the quality and consistency of your machine learning solutions. To learn more about how to use Azure Machine Learning to manage the lifecycle of your models, see [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment).
 
 ## Next steps
 
 Learn more by reading and exploring the following resources:
 
-- [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-model-management-and-deployment)
-- How and where to [deploy models with Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where)
-- Tutorial: [Deploy an image classification model in ACI](https://docs.microsoft.com/azure/machine-learning/tutorial-deploy-models-with-aml)
+- [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment)
+- How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where)
+- Tutorial: [Deploy an image classification model in ACI](/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
-- [CI/CD of machine learning models with Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-machine-learning?view=azure-devops&tabs=yaml)
-- Create clients that [consume a deployed model](https://docs.microsoft.com/azure/machine-learning/how-to-consume-web-service)
-- [Machine learning at scale](https://docs.microsoft.com/azure/architecture/data-guide/big-data/machine-learning-at-scale)
+- [CI/CD of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops)
+- Create clients that [consume a deployed model](/azure/machine-learning/how-to-consume-web-service)
+- [Machine learning at scale](/azure/architecture/data-guide/big-data/machine-learning-at-scale)
 - [Azure AI reference architectures and best practices repo](https://github.com/microsoft/AI)

@@ -31,8 +31,8 @@ This helps guide critical prioritization and discovery efforts during cloud adop
 
 ## Preparation
 
-- [Learn the business value of Microsoft Azure](https://docs.microsoft.com/learn/paths/learn-business-value-of-azure).
-- [Learn how the Cloud Adoption Framework](https://docs.microsoft.com/learn/modules/microsoft-cloud-adoption-framework-for-azure) can help you align the strategy for business, people, and technology.
+- [Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure).
+- [Learn how the Cloud Adoption Framework](/learn/modules/microsoft-cloud-adoption-framework-for-azure) can help you align the strategy for business, people, and technology.
 - Review the [cloud adoption strategy](../strategy/index.md) process.
 - Download the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 

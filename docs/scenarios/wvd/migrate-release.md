@@ -15,15 +15,15 @@ The release process for the migration or deployment of Windows Virtual Desktop i
 
 - Test the performance and latency of application groups and deployed desktops for a sampling of users.
 - Onboard end users to teach them how to connect via:
-  - [Windows desktop client](https://docs.microsoft.com/azure/virtual-desktop/connect-windows-7-and-10)
-  - [Web client](https://docs.microsoft.com/azure/virtual-desktop/connect-web)
-  - [Android client](https://docs.microsoft.com/azure/virtual-desktop/connect-android)
-  - [macOS client](https://docs.microsoft.com/azure/virtual-desktop/connect-macos)
-  - [iOS client](https://docs.microsoft.com/azure/virtual-desktop/connect-ios)
+  - [Windows desktop client](/azure/virtual-desktop/connect-windows-7-and-10)
+  - [Web client](/azure/virtual-desktop/connect-web)
+  - [Android client](/azure/virtual-desktop/connect-android)
+  - [macOS client](/azure/virtual-desktop/connect-macos)
+  - [iOS client](/azure/virtual-desktop/connect-ios)
 
 ## Post-deployment
 
-After the release has been completed, it's common to add [logging and diagnostics to better operate Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/diagnostics-log-analytics#push-diagnostics-data-to-your-workspace). It's also common for operations teams to onboard the pooled hosts and desktop virtual machines into the [Azure server management best practices](../../manage/azure-server-management/index.md) to manage reporting, patching, and business continuity and disaster recovery configurations.
+After the release has been completed, it's common to add [logging and diagnostics to better operate Windows Virtual Desktop](/azure/virtual-desktop/diagnostics-log-analytics#push-diagnostics-data-to-your-workspace). It's also common for operations teams to onboard the pooled hosts and desktop virtual machines into the [Azure server management best practices](../../manage/azure-server-management/index.md) to manage reporting, patching, and business continuity and disaster recovery configurations.
 
 Although the release process is out of scope for this migration scenario, the process might expose the need to migrate additional workloads to Azure during subsequent iterations of migration. If you haven't configured Office 365 or Azure Active Directory, your cloud adoption team might choose to onboard into those services upon the release of the desktop scenarios. For a hybrid operating model, operations teams might also choose to integrate Intune, System Center, or other configuration management tools to improve operations, compliance, and security.
 
