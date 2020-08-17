@@ -90,9 +90,9 @@ To publish a blueprint artifacts to your subscription:
 
 To learn more, see:
 
-- [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints)
+- [Azure Blueprints](/azure/governance/blueprints)
 - [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Standards-based blueprints samples](/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
 
 ::: zone-end
 
@@ -130,7 +130,7 @@ To apply a policy to a resource group:
 
 To learn more, see:
 
-- [Azure Policy](https://docs.microsoft.com/azure/governance/policy)
+- [Azure Policy](/azure/governance/policy)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ::: zone-end
@@ -157,8 +157,8 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 To learn more, see:
 
-- [Azure Security Center](https://docs.microsoft.com/azure/security-center)
-- [Just-in-time VM access](https://docs.microsoft.com/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
+- [Azure Security Center](/azure/security-center)
+- [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
 - [Security Center pricing tiers](https://azure.microsoft.com/pricing/details/security-center)
 - [Cloud Adoption Framework: Security Baseline discipline](../../govern/security-baseline/index.md)
 

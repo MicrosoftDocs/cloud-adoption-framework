@@ -30,20 +30,16 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Develop governance policy statements
 
-The following six steps offer examples and potential options to consider when developing your Security Baseline discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to manage security-related risks.
+The following steps offer examples and potential options to consider when developing your Security Baseline discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to manage security-related risks.
 
-<!-- markdownlint-disable MD033 -->
-
-| | |
-|---|---|
+|  |  |
+|--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Security Baseline discipline template](./template.md): Download the template for documenting a Security Baseline discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Security Baseline discipline. |
 | <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand if it is the right time to invest in the Security Baseline discipline. |
 | <br> ![Adherence icon](../../_images/govern/process-enforce.png) | <br> [Policy adherence processes](./compliance-processes.md): Suggested processes for supporting policy compliance in the Security Baseline discipline. |
 | <br> ![Maturity icon](../../_images/govern/process-maturity.png) | <br> [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption. |
 | <br> ![Toolchain icon](../../_images/govern/process-toolchain.png) | <br> [Toolchain](./toolchain.md): Azure services that can be implemented to support the Security Baseline discipline. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Next steps
 

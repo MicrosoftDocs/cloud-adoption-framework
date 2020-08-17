@@ -26,7 +26,7 @@ Cloud platforms like Azure change faster than many organizations are accustomed 
 
 The following resources can help you stay current with Azure:
 
-- **Azure Service Health:** [Service Health](https://docs.microsoft.com/azure/service-health/service-health-overview) alerts provide timely notifications about ongoing service issues, planned maintenance, and health advisories. These alerts also includes information about Azure features scheduled for retirement.
+- **Azure Service Health:** [Service Health](/azure/service-health/service-health-overview) alerts provide timely notifications about ongoing service issues, planned maintenance, and health advisories. These alerts also includes information about Azure features scheduled for retirement.
 - **Azure updates:** Review [Azure updates](https://azure.microsoft.com/updates) for announcements about product updates. Brief summaries link to additional details, making the updates easy to follow. Subscribe via the [Azure updates RSS feed](https://azurecomcdn.azureedge.net/updates/feed).
 - **Azure blog:** The [Azure blog](https://azure.microsoft.com/blog)communicates the most important announcements for the Azure platform. Follow this blog to stay up to date on critical information. Subscribe via the [Azure blog RSS feed](https://azurecomcdn.azureedge.net/blog/feed).
 - **Service-specific blogs:** Many individual Azure services publish blogs that you can follow if you rely on those services. Find the ones you're interested in via a web search.

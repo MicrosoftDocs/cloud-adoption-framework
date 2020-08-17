@@ -20,7 +20,7 @@ Building an innovative new solution isn't about giving users what they want or t
 - **Quantitative (testing feedback):** This feedback measures the actions we hope to see.
 - **Qualitative (customer feedback):** This feedback tells us what those metrics mean in the customer's voice.
 
-Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help you get started with your repo.
+Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops) can help you get started with your repo.
 
 Each of the following tools in Azure integrates with (or is compatible with) projects hosted in GitHub:
 
@@ -55,9 +55,9 @@ To view the data about your applications, go to the [Azure portal](https://porta
 
 ### Learn more
 
-- [Set up Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/learn/quick-monitor-portal)
-- [Get started with Azure Monitor Application Insights](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-users)
-- [Build a telemetry dashboard](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)
+- [Set up Azure Monitor](/azure/azure-monitor/learn/quick-monitor-portal)
+- [Get started with Azure Monitor Application Insights](/azure/azure-monitor/learn/tutorial-users)
+- [Build a telemetry dashboard](/azure/azure-monitor/learn/tutorial-app-dashboards)
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
@@ -99,7 +99,7 @@ To open API Management services, go to the [Azure portal](https://portal.azure.c
 
 ### Learn more
 
-- [Use Azure Monitor to get feedback on APIs](https://docs.microsoft.com/azure/api-management/api-management-howto-use-azure-monitor)
+- [Use Azure Monitor to get feedback on APIs](/azure/api-management/api-management-howto-use-azure-monitor)
 
 ## [Qualitative feedback](#tab/Qualitative)
 
@@ -109,7 +109,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops).
+Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 ::: zone-end
 
@@ -135,8 +135,8 @@ To create a DevOps project:
 
 These articles will help you centralize and manage feedback by using Azure Boards together with GitHub:
 
-- [Get started with Azure Boards](https://docs.microsoft.com/azure/devops/boards/get-started/?view=azure-devops)
-- [Azure Boards and GitHub](https://docs.microsoft.com/azure/devops/boards/github?view=azure-devops)
+- [Get started with Azure Boards](/azure/devops/boards/get-started/?view=azure-devops)
+- [Azure Boards and GitHub](/azure/devops/boards/github?view=azure-devops)
 
 ## [Close the loop with pipelines](#tab/pipelines)
 
@@ -170,5 +170,5 @@ To view your applications in App Service, go to the [Azure portal](https://porta
 
 Start building out your deployment pipelines:
 
-- [Create your first pipeline](https://docs.microsoft.com/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2)
-- [`GitHub Release` tasks](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
+- [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline?tabs=tfs-2018-2&view=azure-devops)
+- [`GitHub Release` tasks](/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)

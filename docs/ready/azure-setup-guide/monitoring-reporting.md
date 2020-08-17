@@ -31,10 +31,10 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
  Start monitoring your:
 
-- [Applications](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
-- [Containers](https://docs.microsoft.com/azure/monitoring/monitoring-container-overview)
-- [Virtual machines](https://docs.microsoft.com/azure/monitoring/monitoring-service-map)
-- [Networks](https://docs.microsoft.com/azure/networking/network-monitoring-overview)
+- [Applications](/azure/application-insights/app-insights-overview)
+- [Containers](/azure/monitoring/monitoring-container-overview)
+- [Virtual machines](/azure/monitoring/monitoring-service-map)
+- [Networks](/azure/networking/network-monitoring-overview)
 
 To monitor other resources, find additional solutions in the Azure Marketplace.
 
@@ -42,7 +42,7 @@ To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#bla
 
 ### Learn more
 
-To learn more, see [Azure Monitor documentation](https://docs.microsoft.com/azure/monitoring-and-diagnostics).
+To learn more, see [Azure Monitor documentation](/azure/monitoring-and-diagnostics).
 
 ::: zone-end
 
@@ -90,7 +90,7 @@ To set up an Azure Service Health alert, go to the [Azure portal](https://portal
 
 ### Learn more
 
-For more information, see [Azure Service Health](https://docs.microsoft.com/azure/service-health).
+For more information, see [Azure Service Health](/azure/service-health).
 
 ::: zone-end
 
@@ -120,7 +120,7 @@ To explore Azure Advisor, go to the [Azure portal](https://portal.azure.com/#bla
 
 ### Learn more
 
-To learn more, see [Azure Advisor documentation](https://docs.microsoft.com/azure/advisor).
+To learn more, see [Azure Advisor documentation](/azure/advisor).
 
 ::: zone-end
 
@@ -150,6 +150,6 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 ### Learn more
 
-To learn more, see [Azure Security Center documentation](https://docs.microsoft.com/azure/security-center).
+To learn more, see [Azure Security Center documentation](/azure/security-center).
 
 ::: zone-end
