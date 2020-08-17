@@ -89,11 +89,11 @@ In the cases of technical debt resolution and automated remediation, system flaw
 - **Management:** Operations processes that keep a system running in production.
 - **Security:** Protecting applications and data from threats.
 
-To help improve overall operations, the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars. Apply the pillars to both platform operations and workload operations.
+To help improve overall operations, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars. Apply the pillars to both platform operations and workload operations.
 
 ## Next steps
 
-With a full understanding of the manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. For guidance on making this methodology actionable within your operations environment, see [Cloud management in the Cloud Adoption Framework](../index.md) of the adoption lifecycle.
+With a full understanding of the manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
 
 > [!div class="nextstepaction"]
 > [Apply this methodology](../index.md)

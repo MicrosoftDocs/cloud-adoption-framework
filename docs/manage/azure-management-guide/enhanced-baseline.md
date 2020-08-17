@@ -44,12 +44,12 @@ This table outlines a few processes, tools, and potential effects common in cust
 
 | Discipline  | Process  | Tool | Potential impact | Learn more |
 |---|---|---|---|---|
-| Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview) |
-| Inventory and visibility | IT service management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](https://docs.microsoft.com/azure/azure-monitor/platform/itsmc-overview) |
+| Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](/azure/governance/resource-graph/overview) |
+| Inventory and visibility | IT service management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/platform/itsmc-overview) |
 | Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
-| Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker) |
-| Operational compliance | Guest automation |  Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC Overview](https://docs.microsoft.com/powershell/scripting/dsc/overview/overview) |
+| Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
+| Operational compliance | Guest automation |  Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC Overview](/powershell/scripting/dsc/overview/overview) |
 | Protect and recover | Breach notification | Azure Security Center | Extend protection to include security-breach recovery triggers. | See the following sections |
 
 ::: zone target="docs"
@@ -124,6 +124,6 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 ### Learn more
 
-To learn more, see [Azure Security Center documentation](https://docs.microsoft.com/azure/security-center).
+To learn more, see [Azure Security Center documentation](/azure/security-center).
 
 ::: zone-end

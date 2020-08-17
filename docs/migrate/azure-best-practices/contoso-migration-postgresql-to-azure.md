@@ -63,7 +63,7 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Processing performance can be enhanced by using read replicas.
 - Support for bring your own key (BYOK) for data encryption.
 - Ability to expose the service to internal network traffic only (no-public access) by using Azure Private Link.
-- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
 
 ### Solution review
 
@@ -92,7 +92,7 @@ Only migrations to the same or a higher version are supported. Migrating Postgre
 
 Microsoft aims to support _n-2_ versions of the PostgreSQL engine in Azure Database for PostgreSQL - Single Server. The versions would be the current major version on Azure (_n_) and the two prior major versions (_-2_).
 
-For the latest updates on supported versions, see [Supported PostgreSQL major versions](https://docs.microsoft.com/azure/postgresql/concepts-supported-versions).
+For the latest updates on supported versions, see [Supported PostgreSQL major versions](/azure/postgresql/concepts-supported-versions).
 
 > [!NOTE]
 > Automatic major version upgrade isn't supported. For example, there isn't an automatic upgrade from PostgreSQL 9.5 to PostgreSQL 9.6. To upgrade to the next major version, dump the database and restore it to a server created with the target engine version.
@@ -117,13 +117,13 @@ Contoso will need to assess the current database for replication issues. These i
 
 Contoso can perform the migration in several ways:
 
-- [Dump and restore](https://docs.microsoft.com/azure/postgresql/howto-migrate-using-dump-and-restore)
-- [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)
-- [Import/export](https://docs.microsoft.com/azure/postgresql/howto-migrate-using-export-and-import)
+- [Dump and restore](/azure/postgresql/howto-migrate-using-dump-and-restore)
+- [Azure Database Migration Service](/azure/dms/tutorial-postgresql-azure-postgresql-online)
+- [Import/export](/azure/postgresql/howto-migrate-using-export-and-import)
 
 Contoso has selected Azure Database Migration Service to allow the company to reuse the migration project whenever it needs to perform major-to-major upgrades. Because a single Database Migration Service activity only accommodates up to four databases, Contoso sets up several jobs by using the following steps.
 
-To prepare, set up a virtual network to access the database. Create a virtual network connection by using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
+To prepare, set up a virtual network to access the database. Create a virtual network connection by using [VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
 <!-- docsTest:ignore "Azure Database Migration Services" -->
 
@@ -243,8 +243,8 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
     _Figure 13: Completing the cutover._
 
       > [!NOTE]
-      > The previous Database Migration Service steps can also be performed via the [Azure CLI](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online).
-    
+      > The previous Database Migration Service steps can also be performed via the [Azure CLI](/azure/dms/tutorial-postgresql-azure-postgresql-online).
+
 1. Import the database schema (step 2):
 
       ```cmd
@@ -267,12 +267,12 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 Contoso needs to:
 
-- Ensure that its new Azure Databases for PostgreSQL instance and databases are secure. For more information, see [Security in Azure Database for PostgreSQL - Single Server](https://docs.microsoft.com/azure/postgresql/concepts-security).
-- Review the [firewall rules](https://docs.microsoft.com/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
-- Implement [BYOK](https://docs.microsoft.com/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
-- Update all applications to [require SSL](https://docs.microsoft.com/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
-- Set up [Private Link](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
-- Enable [Azure Advanced Threat Protection (ATP)](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection).
+- Ensure that its new Azure Databases for PostgreSQL instance and databases are secure. For more information, see [Security in Azure Database for PostgreSQL - Single Server](/azure/postgresql/concepts-security).
+- Review the [firewall rules](/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
+- Implement [BYOK](/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
+- Update all applications to [require SSL](/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
+- Set up [Private Link](/azure/postgresql/concepts-data-access-and-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
+- Enable [Azure Advanced Threat Protection (ATP)](/azure/postgresql/concepts-data-access-and-security-threat-protection).
 - Configure Log Analytics to monitor and alert on security and logs entries of interest.
 
 ### Backups

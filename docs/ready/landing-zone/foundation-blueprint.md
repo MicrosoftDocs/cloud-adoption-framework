@@ -17,10 +17,10 @@ The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys
 
 ## Deploy the blueprint
 
-Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Foundation blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-foundation) can be deployed using the [deployment steps][deploy-sample].
+Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Foundation blueprint](/azure/governance/blueprints/samples/caf-foundation) can be deployed using the deployment steps.
 
 > [!div class="nextstepaction"]
-> [Deploy the blueprint sample][deploy-sample]
+> [Deploy the blueprint sample](/azure/governance/blueprints/samples/caf-foundation/deploy)
 
 ## Design principles
 
@@ -36,11 +36,11 @@ This implementation option does not take an inherent position on enterprise enro
 
 ### Identity
 
-This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
 
 ### Network topology and connectivity
 
-This implementation option assumes the landing zone already has a defined network topology in accordance with [network security best practices](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+This implementation option assumes the landing zone already has a defined network topology in accordance with [network security best practices](/azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
 
 ### Resource organization
 
@@ -64,7 +64,7 @@ This implementation demonstrates one approach to maturity in the Cost Management
 To accelerate parallel development of the other governance disciplines, review the [Govern methodology](../../govern/index.md). To continue maturing the Cost Management discipline of governance, see the [Cost Management discipline guidance](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices).
 
 > [!WARNING]
-> As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+> As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
 
 ### Operations baseline
 
@@ -73,7 +73,7 @@ This implementation option does not implement any aspects of the operations base
 To accelerate parallel development of an operations baseline, review the [Manage methodology](../../manage/index.md) and consider deploying the [Azure server management guide](../../manage/azure-server-management/index.md).
 
 > [!WARNING]
-> As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+> As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
 
 ### Business continuity and disaster recovery (BCDR)
 
@@ -90,18 +90,14 @@ If these assumptions align with your current adoption needs, then this blueprint
 
 ## Customize or deploy this blueprint
 
-Learn more and download a reference sample of the CAF Foundation blueprint for deployment or customization from [Azure blueprint samples][deploy-sample].
+Learn more and download a reference sample of the CAF Foundation blueprint for deployment or customization from the Azure blueprint samples.
 
 > [!div class="nextstepaction"]
-> [Deploy the blueprint sample][deploy-sample]
+> [Deploy the blueprint sample](/azure/governance/blueprints/samples/caf-foundation/deploy)
 
 ## Next steps
 
-After deploying your first landing zone, you're ready to [expand your landing zone](../considerations/index.md).
+After deploying your first landing zone, you're ready to expand your landing zone.
 
 > [!div class="nextstepaction"]
 > [Expand your landing zone](../considerations/index.md)
-
-<!-- links -->
-
-[Deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-foundation/deploy

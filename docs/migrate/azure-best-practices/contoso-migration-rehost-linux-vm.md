@@ -63,8 +63,8 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Both the application VMs will be moved to Azure without changes, which makes the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, no special configuration or migration tools are needed for the application database. <br><br> Contoso will retain full control of the application VMs in Azure. <br><br> The application VMs are running Ubuntu 16.04-TLS, an endorsed Linux distribution. Learn more about [endorsed Linux distributions on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros). |
-| **Cons** | The web and data tier of the application remain single points of failover. <br><br> Contoso will need to continue supporting the application as Azure VMs rather than moving to a managed service, such as Azure App Service and Azure Database for MySQL. <br><br> Contoso realizes that by keeping things simple with a lift-and-shift VM migration, the company isn't taking full advantage of the features provided by [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview). These features include built-in high availability, predictable performance, simple scaling, automatic backups, and built-in security. |
+| **Pros** | Both the application VMs will be moved to Azure without changes, which makes the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, no special configuration or migration tools are needed for the application database. <br><br> Contoso will retain full control of the application VMs in Azure. <br><br> The application VMs are running Ubuntu 16.04-TLS, an endorsed Linux distribution. Learn more about [endorsed Linux distributions on Azure](/azure/virtual-machines/linux/endorsed-distros). |
+| **Cons** | The web and data tier of the application remain single points of failover. <br><br> Contoso will need to continue supporting the application as Azure VMs rather than moving to a managed service, such as Azure App Service and Azure Database for MySQL. <br><br> Contoso realizes that by keeping things simple with a lift-and-shift VM migration, the company isn't taking full advantage of the features provided by [Azure Database for MySQL](/azure/mysql/overview). These features include built-in high availability, predictable performance, simple scaling, automatic backups, and built-in security. |
 
 ### Migration process
 
@@ -81,7 +81,7 @@ Contoso will complete the migration process as follows:
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm) | The service orchestrates and manages migration of your on-premises applications and workloads and Amazon Web Services (AWS)/Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when migration occurs. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
+| [Azure Migrate: Server Migration](/azure/migrate/contoso-migration-rehost-linux-vm) | The service orchestrates and manages migration of your on-premises applications and workloads and Amazon Web Services (AWS)/Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when migration occurs. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
 
 ## Prerequisites
 
@@ -89,10 +89,10 @@ Here's what Contoso needs for this scenario.
 
 Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Azure Site Recovery access with role-based access control (RBAC)](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Azure Site Recovery access with role-based access control (RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | Learn how [Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) for Azure Migrate: Server Migration. |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, or 6.5. <br><br> An ESXi host running version 5.5, 6.0, or 6.5. <br><br> One or more VMware VMs running on the ESXi host. |
-| **On-premises VMs** | [Review Linux Distros](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
+| **On-premises VMs** | [Review Linux Distros](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
 ## Scenario steps
 
@@ -127,20 +127,20 @@ They set up these components as follows:
 
 **Need more help?**
 
-Learn about how to [set up the Azure Migrate: Server Migration tool](https://docs.microsoft.com/azure/migrate).
+Learn about how to [set up the Azure Migrate: Server Migration tool](/azure/migrate).
 
 ## Step 2: Prepare on-premises VMware for Azure Migrate: Server Migration
 
 After migration to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. There are a couple of things that the Contoso admins need to do:
 
 - To access Azure VMs over the internet, they enable SSH on the on-premises Linux VM before migration. For Ubuntu, this step can be completed by using the following command: `sudo apt-get ssh install -y`.
-- Install the [Azure Linux agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux)
+- Install the [Azure Linux agent](/azure/virtual-machines/extensions/agent-linux)
 - After they run the migration, they can check **Boot diagnostics** to view a screenshot of the VM.
 - If it doesn't work, they'll need to check that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
-Learn about how to [prepare VMs for migration](https://docs.microsoft.com/azure/migrate/prepare-for-migration).
+Learn about how to [prepare VMs for migration](/azure/migrate/prepare-for-migration).
 
 ## Step 3: Replicate the on-premises VMs
 
@@ -174,7 +174,7 @@ With discovery finished, begin replication of VMware VMs to Azure.
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
-8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
     - **VM size:** If you're using assessment recommendations, the VM size drop-down list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
@@ -257,8 +257,8 @@ As the final step in the migration process, Contoso admins update the connection
 
 **Need more help?**
 
-- Learn about how to [run a test migration](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration).
-- Learn about how to [migrate VMs to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms).
+- Learn about how to [run a test migration](/azure/migrate/tutorial-migrate-vmware#run-a-test-migration).
+- Learn about how to [migrate VMs to Azure](/azure/migrate/tutorial-migrate-vmware#migrate-vms).
 
 ## Clean up after migration
 
@@ -283,7 +283,7 @@ The Contoso security team reviews the OSTICKETWEB and OSTICKETMYSQL VMs to deter
 - The team reviews the network security groups (NSGs) for the VMs to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - The team also considers securing the data on the VM disks by using Azure Disk Encryption and Azure Key Vault.
 
-For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
+For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 <!-- docsTest:ignore "Quickstart: Set" -->
 
@@ -291,11 +291,11 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery, Contoso takes the following actions:
 
-- **Keep data safe.** Contoso backs up the data on the VMs by using [Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
-- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep data safe.** Contoso backs up the data on the VMs by using [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 
 - After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure deployment](./contoso-migration-infrastructure.md#set-up-tagging).
 - Contoso has no licensing issues with the Ubuntu servers.
-- Contoso will use [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
+- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.

@@ -72,6 +72,10 @@ During a typical FastTrack for Azure engagement, Microsoft helps to define the b
 The [Azure Migration Program (AMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
 The program leverages FastTrack for Azure and Azure solution providers to improve customer success during migration.
 
+Watch this short video to get an overview of how the Azure Migration Program can help you. 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4D1vH]
+
 ### Azure support
 
 If you have questions or need help, [create a support request](https://portal.azure.com/#blade/microsoft_azure_support/helpandsupportblade/newsupportrequest). If your support request requires deep technical guidance, visit [Azure support plans](https://azure.microsoft.com/support/plans) to align the best plan for your needs.

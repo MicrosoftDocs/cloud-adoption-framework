@@ -55,7 +55,7 @@ Azure defines three types of roles for administering subscriptions, identities, 
 - Azure role-based access control (RBAC) roles
 - Azure Active Directory (Azure AD) administrator roles
 
-The account administrator role for an Azure subscription is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can [manage subscription administrators](https://docs.microsoft.com/azure/cost-management-billing/manage/add-change-subscription-administrator) via the Azure portal.
+The account administrator role for an Azure subscription is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can [manage subscription administrators](/azure/cost-management-billing/manage/add-change-subscription-administrator) via the Azure portal.
 
 By default, the service administrator role for a subscription also is assigned to the email account that's used to create the Azure subscription. The service administrator has permissions to the subscription equivalent to the RBAC-based Owner role. The service administrator also has full access to the Azure portal. The account administrator can change the service administrator to a different email account.
 
@@ -63,7 +63,7 @@ When you create an Azure subscription, you can associate it with an existing Azu
 
 An email account can be associated with multiple Azure subscriptions. The account administrator can transfer a subscription to another account.
 
-For a detailed description of the roles defined in Azure, see [Classic subscription administrator roles, Azure RBAC roles, and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+For a detailed description of the roles defined in Azure, see [Classic subscription administrator roles, Azure RBAC roles, and Azure AD administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 ## Subscriptions and regions
 
@@ -80,16 +80,16 @@ The following resources provide detailed information about the concepts discusse
 
 - [How does Azure work?](../../get-started/what-is-azure.md)
 - [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
-- [Azure Resource Manager overview](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)
-- [Role-based access control (RBAC) for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/overview)
-- [What is Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-- [Associate or add an Azure subscription to your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
-- [Topologies for Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies)
-- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](https://docs.microsoft.com/office365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
+- [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview)
+- [Role-based access control (RBAC) for Azure resources](/azure/role-based-access-control/overview)
+- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+- [Topologies for Azure AD Connect](/azure/active-directory/hybrid/plan-connect-topologies)
+- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/office365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
 
 ## Next steps
 
-Now that you understand fundamental Azure concepts, learn how to [scale with multiple Azure subscriptions](../azure-best-practices/scale-subscriptions.md).
+Now that you understand fundamental Azure concepts, learn how to scale with multiple Azure subscriptions.
 
 > [!div class="nextstepaction"]
 > [Scale with multiple Azure subscriptions](../azure-best-practices/scale-subscriptions.md)
