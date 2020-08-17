@@ -28,7 +28,7 @@ During the migration, use educated guesses and experiment with sizing. However, 
 
 ## Benchmark and optimize with Azure Cost Management and Billing
 
-[Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) manages cloud spend with transparency and accuracy. This service monitors, benchmarks, allocates, and optimizes cloud costs.
+[Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) manages cloud spend with transparency and accuracy. This service monitors, benchmarks, allocates, and optimizes cloud costs.
 
 Historical data can help manage costs by analyzing usage and costs over time to identify trends, which are then used to forecast future spending. Cost management also includes useful projected cost reports. Cost allocation manages costs by analyzing costs based on tagging policies. Use cost allocation for showback/chargeback to show resource utilization and associated costs to influence consumption behaviors or charge tenant customers. Access control helps manage costs by ensuring that users and teams access only the cost management data that they need. Alerting helps manage costs through automatic notification when unusual spending or overspending occurs. Alerts can also notify other stakeholders automatically for spending anomalies and overspending risks. Various reports support alerts based on budget and cost thresholds.
 

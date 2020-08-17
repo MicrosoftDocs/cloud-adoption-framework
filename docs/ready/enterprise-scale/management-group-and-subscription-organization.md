@@ -22,7 +22,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 **Design considerations:**
 
 - Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
-- A management group tree can support up to [six levels of depth](https://docs.microsoft.com/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
+- A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
 **Design recommendations:**
 
@@ -45,7 +45,7 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 **Design considerations:**
 
 - Subscriptions serve as boundaries for assigning Azure policies. For example, secure workloads such as payment card industry (PCI) workloads typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a small number of subscriptions.
-- Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
+- Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 - Subscriptions provide a management boundary for governance and isolation, which creates a clear separation of concerns.
 - There's a manual process, planned future automation, that can be conducted to limit an Azure AD tenant to use only Enterprise Agreement enrollment subscriptions. This process prevents creation of Microsoft Developer Network subscriptions at the root management group scope.
 

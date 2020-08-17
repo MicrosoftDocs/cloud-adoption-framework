@@ -39,13 +39,13 @@ Start your cloud policy enforcement planning by examining how the application of
 
 A first step beyond simply relying on the policy enforcement mechanisms provided by the Azure platform is ensuring ability to verify cloud-based applications and services comply with organizational policy. This includes implementing notification capabilities for alerting responsible parties if a resource becomes noncompliant. Effective [logging and reporting](../logging-and-reporting/index.md) of the compliance status of your cloud workloads is a critical part of a corporate policy enforcement strategy.
 
-As your cloud estate grows, additional tools such as [Azure Security Center](https://docs.microsoft.com/azure/security-center) can provide integrated security and threat detection, and help apply centralized policy management and alerting for both your on-premises and cloud assets.
+As your cloud estate grows, additional tools such as [Azure Security Center](/azure/security-center) can provide integrated security and threat detection, and help apply centralized policy management and alerting for both your on-premises and cloud assets.
 
 ## Policy enforcement
 
 In Azure, you can apply configuration settings and resource creation rules at the management group, subscription, or resource group level to help ensure policy alignment.
 
-[Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) is an Azure service for creating, assigning, and managing policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service-level agreements. Azure Policy evaluates your resources for noncompliance with assigned policies. For example, you might want to limit the SKU size of virtual machines in your environment. After implementing a corresponding policy, new and existing resources are evaluated for compliance. With the right policy, existing resources can be brought into compliance.
+[Azure Policy](/azure/governance/policy/overview) is an Azure service for creating, assigning, and managing policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service-level agreements. Azure Policy evaluates your resources for noncompliance with assigned policies. For example, you might want to limit the SKU size of virtual machines in your environment. After implementing a corresponding policy, new and existing resources are evaluated for compliance. With the right policy, existing resources can be brought into compliance.
 
 ## Cross-organization policy
 
@@ -55,7 +55,7 @@ Your [subscription design](../subscriptions/index.md) must account for policy in
 
 ## Automated enforcement
 
-While standardized deployment templates are effective at a smaller scale, [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) allows large-scale standardized provisioning and deployment orchestration of Azure solutions. Workloads across multiple subscriptions can be deployed with consistent policy settings for any resources created.
+While standardized deployment templates are effective at a smaller scale, [Azure Blueprints](/azure/governance/blueprints/overview) allows large-scale standardized provisioning and deployment orchestration of Azure solutions. Workloads across multiple subscriptions can be deployed with consistent policy settings for any resources created.
 
 For IT environments integrating cloud and on-premises resources, you may need use logging and reporting systems to provide hybrid monitoring capabilities. Your third-party or custom operational monitoring systems may offer additional policy enforcement capabilities. For larger or more mature cloud estates, consider how best to integrate these systems with your cloud assets.
 

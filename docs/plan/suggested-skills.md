@@ -40,10 +40,10 @@ Here are a couple examples of tailored learning paths on Microsoft Learn which a
 
 <!-- docsTest:ignore "on premises" -->
 
-[Evolve your DevOps practices](https://docs.microsoft.com/learn/paths/evolve-your-devops-practices): DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either in the cloud or on premises.
+[Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices): DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either in the cloud or on premises.
 
-[Azure for the data engineer](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Explore how the world of data has evolved and how the advent of cloud technologies is providing new opportunities for business to explore. You will learn the various data platform technologies that are available, and how a data engineer can take advantage of this technology to an organization's benefit.
+[Azure for the data engineer](/learn/paths/azure-for-the-data-engineer): Explore how the world of data has evolved and how the advent of cloud technologies is providing new opportunities for business to explore. You will learn the various data platform technologies that are available, and how a data engineer can take advantage of this technology to an organization's benefit.
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the roles filter to align learning paths with your role.
+To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.

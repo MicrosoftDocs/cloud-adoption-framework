@@ -33,7 +33,7 @@ _Figure 1: Identity and access management._
 
 **Design considerations:**
 
-- There are limits around the number of custom roles and role assignments that must be considered when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#role-based-access-control-limits).
+- There are limits around the number of custom roles and role assignments that must be considered when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#role-based-access-control-limits).
 - There's a limit of 2,000 custom RBAC role assignments per subscription.
 - There's a limit of 500 custom RBAC role assignments per management group.
 - Centralized versus federated resource ownership:
@@ -44,14 +44,14 @@ _Figure 1: Identity and access management._
 
 **Design recommendations:**
 
-- Use Azure AD [RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
+- Use Azure AD [RBAC](/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 - Enforce multifactor authentication (MFA) for any user with rights to the Azure environments. MFA enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
-- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined, or use both as needed.
+- Use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined, or use both as needed.
 - Use Azure-AD-only groups for Azure control-plane resources in Azure AD PIM when you grant access to resources.
   - Add on-premises groups to the Azure-AD-only group if a group management system is already in place.
 - Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks. As a result, many organizations will already have a process in place to address this requirement.
-- Integrate Azure AD logs with the platform-central [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor). Azure Monitor allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
+- Integrate Azure AD logs with the platform-central [Azure Monitor](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor). Azure Monitor allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
 - If any data sovereignty requirements exist, custom user policies can be deployed to enforce them.
 - Use custom RBAC role definitions within the Azure AD tenant while you consider the following key roles:
 
@@ -75,13 +75,13 @@ A critical design decision that an enterprise organization must make when adopti
 **Design considerations:**
 
 - Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
-- Applications that rely on domain services and use older protocols can use [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services).
+- Applications that rely on domain services and use older protocols can use [Azure AD DS](/azure/active-directory-domain-services).
 
 **Design recommendations:**
 
 - Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements.
 - Privileged operations such as creating service principal objects, registering applications in Azure AD, and procuring and handling certificates or wildcard certificates require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the degree of diligence required.
-- If an organization has a scenario where an application that uses integrated Windows authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- If an organization has a scenario where an application that uses integrated Windows authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](/azure/active-directory/manage-apps/application-proxy).
 - There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 - Evaluate the compatibility of workloads for AD DS on Windows server and for Azure AD DS.
 - Ensure your network design allows resources that require AD DS on Windows server for local authentication and management to access the appropriate domain controllers.

@@ -58,8 +58,8 @@ Begin a server migration assessment using Azure Migrate via these steps:
 
 #### Learn more
 
-- [Azure Migrate overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview)
-- [Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
+- [Azure Migrate overview](/azure/migrate/migrate-services-overview)
+- [Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)
 
 ::: zone-end
@@ -68,22 +68,22 @@ Begin a server migration assessment using Azure Migrate via these steps:
 
 Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services. With Service Map, you can view your servers in the way that you think of them: as interconnected systems that deliver critical services. Service Map shows connections between servers, processes, inbound and outbound connection latency, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.
 
-Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization). If you use the Azure Migrate service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
+Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](/azure/migrate/concepts-dependency-visualization). If you use the Azure Migrate service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
 
 #### Enable dependency visualization using Service Map
 
 To use dependency visualization, download and install agents on each on-premises machine that you want to analyze.
 
-- [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) must be installed on each machine.
-- The [Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) must be installed on each machine.
+- [Microsoft Monitoring Agent](/azure/log-analytics/log-analytics-agent-windows) must be installed on each machine.
+- The [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) must be installed on each machine.
 - Also, if you have machines with no internet connectivity, download and install Log Analytics gateway on those machines.
 
 <!-- markdownlint-disable MD024 -->
 
 #### Learn more
 
-- [Using Service Map solution in Azure](https://docs.microsoft.com/azure/azure-monitor/insights/service-map)
-- [Azure Migrate and Service Map: Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization)
+- [Using Service Map solution in Azure](/azure/azure-monitor/insights/service-map)
+- [Azure Migrate and Service Map: Dependency visualization](/azure/migrate/concepts-dependency-visualization)
 
 ## [Challenge assumptions](#tab/Challenge-Assumptions)
 
