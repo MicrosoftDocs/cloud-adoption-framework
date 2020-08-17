@@ -36,9 +36,9 @@ The existing CAF Blueprint definitions and CAF Terraform modules provide a start
 | [Enterprise-scale architecture](../ready/enterprise-scale/architecture.md) | Understand the architecture behind enterprise-scale |
 | [Enterprise-scale design principles](../ready/enterprise-scale/design-principles.md) | Understand the architectural design principles that guide decisions during implementation to evaluate if this approach fits your cloud operating model |
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
-| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activites required for an enterprise-scale implementation before deployment |
+| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
-Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play & how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
+Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 
 ## May 15, 2020
 
