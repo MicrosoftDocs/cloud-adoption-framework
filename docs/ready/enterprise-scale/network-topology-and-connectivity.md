@@ -238,7 +238,7 @@ _Figure 4: A traditional Azure network topology._
   _Figure 5: Hub-and-spoke network topology._
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
- 
+
   - You need a high level of isolation.
   - You need dedicated ExpressRoute bandwidth for specific business units.
   - You've reached the maximum number of connections per ExpressRoute gateway (up to four).
