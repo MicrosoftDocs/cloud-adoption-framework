@@ -79,7 +79,7 @@ The following are best practices for your design:
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
 
-- Refer to [Azure region pairs](azure/best-practices-availability-paired-regions) when you're selecting locations for your organization's disaster recovery layouts.
+- Refer to [Azure region pairs](/azure/best-practices-availability-paired-regions) when you're selecting locations for your organization's disaster recovery layouts.
 
 - Use Azure paired regions when you're planning for business continuity and DR.
 
