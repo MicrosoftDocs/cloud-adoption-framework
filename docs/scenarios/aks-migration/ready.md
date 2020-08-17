@@ -3,10 +3,10 @@ title: "Azure Landing Zone review for <Insert Scenario Name>"
 description: Describe the scenario's impact on Azure Landing Zone design
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 09/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: ready
 ---
 
 # Azure Landing Zone review for <Insert Scenario Name>
