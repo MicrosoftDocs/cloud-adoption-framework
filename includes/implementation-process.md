@@ -10,7 +10,7 @@ The following decisions come from teams outside of the cloud governance team. Th
 Identity Baseline is the fundamental starting point for all governance. Before attempting to apply governance, identity must be established. The established identity strategy will then be enforced by the governance solutions.
 In this governance guide, the Identity Management team implements the [Directory Synchronization](~/decision-guides/identity/index.md#directory-synchronization) pattern:
 
-- RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "Same Sign-On" that was implemented during company's migration to Office 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/azure-ad).
+- RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "Same Sign-On" that was implemented during company's migration to Office 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](/azure/architecture/reference-architectures/identity/azure-ad).
 - The Azure AD tenant will also govern authentication and access for assets deployed to Azure.
 
 In the governance MVP, the governance team will enforce application of the replicated tenant through subscription governance tooling, discussed later in this article. In future iterations, the governance team could also enforce rich tooling in Azure AD to extend this capability.
@@ -21,7 +21,7 @@ Software Defined Network is an important initial aspect of the Security Baseline
 
 Given the lack of requirements, IT security is playing it safe and requires a [Cloud DMZ](~/decision-guides/software-defined-network/cloud-dmz.md) pattern. That means governance of the Azure deployments themselves will be very light.
 
-- Azure subscriptions may connect to an existing datacenter via VPN, but must follow all existing on-premises IT governance policies regarding connection of a perimeter network to protected resources. For implementation guidance regarding VPN connectivity, see [On-premises network connected to Azure using a VPN gateway](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn).
+- Azure subscriptions may connect to an existing datacenter via VPN, but must follow all existing on-premises IT governance policies regarding connection of a perimeter network to protected resources. For implementation guidance regarding VPN connectivity, see [On-premises network connected to Azure using a VPN gateway](/azure/architecture/reference-architectures/hybrid-networking/vpn).
 - Decisions regarding subnet, firewall, and routing are currently being deferred to each application/workload lead.
 - Additional analysis is required before releasing of any protected data or mission-critical workloads.
 

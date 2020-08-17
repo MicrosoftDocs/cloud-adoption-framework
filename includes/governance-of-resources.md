@@ -1,7 +1,7 @@
 <!-- TEMPLATE FILE - DO NOT ADD METADATA -->
 <!-- markdownlint-disable MD002 MD041 -->
 > [!NOTE]
-> In the event of changes to your business requirements, Azure management groups allow you to easily reorganize your management hierarchy and subscription group assignments. However, keep in mind that policy and role assignments applied to a management group are inherited by all subscriptions underneath that group in the hierarchy. If you plan to reassign subscriptions between management groups, make sure that you are aware of any policy and role assignment changes that may result. See the [Azure management groups documentation](https://docs.microsoft.com/azure/governance/management-groups) for more information.
+> In the event of changes to your business requirements, Azure management groups allow you to easily reorganize your management hierarchy and subscription group assignments. However, keep in mind that policy and role assignments applied to a management group are inherited by all subscriptions underneath that group in the hierarchy. If you plan to reassign subscriptions between management groups, make sure that you are aware of any policy and role assignment changes that may result. See the [Azure management groups documentation](/azure/governance/management-groups) for more information.
 
 ### Governance of resources
 
@@ -23,11 +23,11 @@ Since the policies required to support the governance MVP are meant to apply to 
 2. Require the following tags on all resources: *Department/Billing Unit*, _Geography_, _Data Classification_, _Criticality_, _SLA_, _Environment_, _Application Archetype_, _Application_, and _Application Owner_. This can be handled using the `Require specified tag` built-in definition.
 3. Require that the `Application` tag for resources should match the name of the relevant resource group. This can be handled using the "Require tag and its value" built-in definition.
 
-For information on defining custom policies see the [Azure Policy documentation](https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition). For guidance and examples of custom policies, consult the [Azure Policy samples site](https://docs.microsoft.com/azure/governance/policy/samples) and the associated [GitHub repository](https://github.com/azure/azure-policy).
+For information on defining custom policies see the [Azure Policy documentation](/azure/governance/policy/tutorials/create-custom-policy-definition). For guidance and examples of custom policies, consult the [Azure Policy samples site](/azure/governance/policy/samples) and the associated [GitHub repository](https://github.com/azure/azure-policy).
 
 #### Assign Azure Policy and RBAC roles using Azure Blueprints
 
-Azure policies can be assigned at the resource group, subscription, and management group level, and can be included in [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) definitions. Although the policy requirements defined in this governance MVP apply to all current subscriptions, it's very likely that future deployments will require exceptions or alternative policies. As a result, assigning policy using management groups, with all child subscriptions inheriting these assignments, may not be flexible enough to support these scenarios.
+Azure policies can be assigned at the resource group, subscription, and management group level, and can be included in [Azure Blueprints](/azure/governance/blueprints/overview) definitions. Although the policy requirements defined in this governance MVP apply to all current subscriptions, it's very likely that future deployments will require exceptions or alternative policies. As a result, assigning policy using management groups, with all child subscriptions inheriting these assignments, may not be flexible enough to support these scenarios.
 
 Azure Blueprints allows consistent assignment of policy and roles, application of Resource Manager templates, and deployment of resource groups across multiple subscriptions. Like policy definitions, blueprint definitions are saved to management groups or subscriptions. The policy definitions are available through inheritance to any children in the management group hierarchy.
 
@@ -41,7 +41,7 @@ The cloud governance team has decided that enforcement of required Azure Policy 
 3. Publish the blueprint definition.
 4. Assign the `governance-baseline` blueprint definition to all subscriptions.
 
-See the [Azure Blueprints documentation](https://docs.microsoft.com/azure/governance/blueprints/overview) for more information on creating and using blueprint definitions.
+See the [Azure Blueprints documentation](/azure/governance/blueprints/overview) for more information on creating and using blueprint definitions.
 
 ### Secure hybrid VNet
 
@@ -50,9 +50,9 @@ Specific subscriptions often require some level of access to on-premises resourc
 Until trust in the cloud environment is fully established it's important to tightly control and monitor any allowed communication between the on-premises environment and cloud workloads, and that the on-premises network is secured against potential unauthorized access from cloud-based resources. To support these scenarios, the governance MVP adds the following best practices:
 
 1. Establish a cloud secure hybrid VNet.
-    1. The [VPN reference architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn) establishes a pattern and deployment model for creating a VPN Gateway in Azure.
+    1. The [VPN reference architecture](/azure/architecture/reference-architectures/hybrid-networking/vpn) establishes a pattern and deployment model for creating a VPN Gateway in Azure.
     2. Validate that on-premises security and traffic management mechanisms treat connected cloud networks as untrusted. Resources and services hosted in the cloud should only have access to authorized on-premises services.
-    3. Validate that the local edge device in the on-premises datacenter is compatible with [Azure VPN Gateway requirements](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices) and is configured to access the public internet.
+    3. Validate that the local edge device in the on-premises datacenter is compatible with [Azure VPN Gateway requirements](/azure/vpn-gateway/vpn-gateway-about-vpn-devices) and is configured to access the public internet.
     4. Note that VPN tunnels should not be considered production ready circuits for anything but the most simple workloads. Anything beyond a few simple workloads requiring on-premises connectivity should use Azure ExpressRoute.
 1. In the root management group, create a second blueprint definition named `secure-hybrid-vnet`.
     1. Add the Resource Manager template for the VPN Gateway as an artifact to the blueprint definition.
