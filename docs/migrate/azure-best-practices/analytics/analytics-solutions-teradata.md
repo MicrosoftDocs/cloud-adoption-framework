@@ -220,7 +220,7 @@ The platforms have some differences when it comes to optimization. In the follow
 
   Azure Synapse provides an additional way to achieve local joins for small table/large table joins (often called a *dimension table/fact table join* in a star schema model). You replicate the smaller table across all nodes, thereby ensuring that any value of the join key for the larger table has a matching dimension row that's locally available. The overhead of replicating the dimension table is relatively low if the tables aren't large. In this case, using the hash distribution approach described earlier is preferable.
 
-- **Data indexing**: Azure Synapse provides various indexing options, but the options are different in operation and usage from indexing options in Teradata. To learn about the indexing options in Azure Synapse, see [Design tables in an Azure Synapse pool](/azure/synapse-analytics/sql-data-warehouse/ql-data-warehouse-tables-overview).
+- **Data indexing**: Azure Synapse provides various indexing options, but the options are different in operation and usage from indexing options in Teradata. To learn about the indexing options in Azure Synapse, see [Design tables in an Azure Synapse pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
 
   Existing indexes in the source Teradata environment can provide a useful indication of how data is used and provide an indication of candidate columns for indexing in the Azure Synapse environment.
 
