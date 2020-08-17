@@ -25,7 +25,7 @@ _Figure 1: A resource._
 
 ## What is an Azure resource group?
 
-Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity **based on lifecycle and security**. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. In other words, everything that is born together, gets managed together, and deprecates together, goes together in a resource group.
+Each resource in Azure must belong to a [resource group](/azure/azure-resource-manager/management/overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity **based on lifecycle and security**. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. In other words, everything that is born together, gets managed together, and deprecates together, goes together in a resource group.
 
 ![Diagram of a resource group containing a resource](../../_images/govern/design/governance-1-10.png)
 _Figure 2: A resource group contains a resource._
@@ -41,17 +41,17 @@ _Figure 3: An Azure subscription._
 
 ## What is Azure Resource Manager?
 
-In [How does Azure work?](../../get-started/what-is-azure.md) you learned that Azure includes a front end with many services that orchestrate all the functions of Azure. One of these services is [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), and this service hosts the RESTful API used by clients to manage resources.
+In [How does Azure work?](../../get-started/what-is-azure.md) you learned that Azure includes a front end with many services that orchestrate all the functions of Azure. One of these services is [Azure Resource Manager](/azure/azure-resource-manager), and this service hosts the RESTful API used by clients to manage resources.
 
 ![Diagram of Azure Resource Manager](../../_images/govern/design/governance-1-12.png)
 _Figure 4: Azure Resource Manager._
 
-The following figure shows three clients: [PowerShell](https://docs.microsoft.com/powershell/azure/overview), the [Azure portal](https://portal.azure.com), and the [Azure CLI](https://docs.microsoft.com/cli/azure):
+The following figure shows three clients: [PowerShell](/powershell/azure/overview), the [Azure portal](https://portal.azure.com), and the [Azure CLI](/cli/azure):
 
-![Diagram of Azure clients connecting to the Azure Resource Manager API](../../_images/govern/design/governance-1-13.png)
-_Figure 5: Azure clients connect to the Azure Resource Manager RESTful API._
+![Diagram of Azure clients connecting to the Resource Manager REST API](../../_images/govern/design/governance-1-13.png)
+_Figure 5: Azure clients connect to the Resource Manager REST API._
 
-While these clients connect to Azure Resource Manager using the RESTful API, Azure Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#terminology).
+While these clients connect to Resource Manager using the REST API, Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](/azure/azure-resource-manager/management/overview#terminology).
 
 ![Azure resource providers](../../_images/govern/design/governance-1-14.png)
 _Figure 6: Azure resource providers._
@@ -65,7 +65,7 @@ Azure Resource Manager requires the client to specify an identifier for both the
 
 Now that you have an understanding of how Azure Resource Manager works, return to the discussion of how an Azure subscription is associated with the controls used by Azure Resource Manager. Before any resource management request can be executed by Azure Resource Manager, a set of controls are checked.
 
-The first control is that a request must be made by a validated user, and Azure Resource Manager has a trusted relationship with [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory) to provide user identity functionality.
+The first control is that a request must be made by a validated user, and Azure Resource Manager has a trusted relationship with [Azure Active Directory (Azure AD)](/azure/active-directory) to provide user identity functionality.
 
 ![Azure Active Directory](../../_images/govern/design/governance-1-16.png)
 _Figure 8: Azure Active Directory._
@@ -77,19 +77,19 @@ _Figure 9: An Azure AD tenant associated with a subscription._
 
 Each client request to manage a resource in a particular subscription requires that the user has an account in the associated Azure AD tenant.
 
-The next control is a check that the user has sufficient permission to make the request. Permissions are assigned to users using [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control).
+The next control is a check that the user has sufficient permission to make the request. Permissions are assigned to users using [role-based access control (RBAC)](/azure/role-based-access-control).
 
 ![Users assigned to RBAC roles](../../_images/govern/design/governance-1-18.png)
 _Figure 10: Each user in the tenant is assigned one or more RBAC roles._
 
-An RBAC role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in `owner` role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) allows a user to perform any action on a resource.
+An RBAC role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in `owner` role](/azure/role-based-access-control/built-in-roles#owner) allows a user to perform any action on a resource.
 
-The next control is a check that the request is allowed under the settings specified for [Azure resource policy](https://docs.microsoft.com/azure/governance/policy). Azure resource policies specify the operations allowed for a specific resource. For example, an Azure resource policy can specify that users are only allowed to deploy a specific type of virtual machine.
+The next control is a check that the request is allowed under the settings specified for [Azure resource policy](/azure/governance/policy). Azure resource policies specify the operations allowed for a specific resource. For example, an Azure resource policy can specify that users are only allowed to deploy a specific type of virtual machine.
 
 ![Azure resource policy](../../_images/govern/design/governance-1-19.png)
 _Figure 11: Azure resource policy._
 
-The next control is a check that the request does not exceed an [Azure subscription limit](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits). For example, each subscription has a limit of 980 resource groups per subscription. If a request is received to deploy an additional resource group when the limit has been reached, it is denied.
+The next control is a check that the request does not exceed an [Azure subscription limit](/azure/azure-resource-manager/management/azure-subscription-service-limits). For example, each subscription has a limit of 980 resource groups per subscription. If a request is received to deploy an additional resource group when the limit has been reached, it is denied.
 
 ![Azure resource limits](../../_images/govern/design/governance-1-20.png)
 _Figure 12: Azure resource limits._

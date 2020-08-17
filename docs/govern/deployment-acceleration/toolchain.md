@@ -18,26 +18,26 @@ Cloud custodians, cloud guardians, and cloud architects with an interest in gove
 
 The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 
-|  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups) | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) | [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) | [Azure resource graph](https://docs.microsoft.com/azure/governance/resource-graph/overview) | [Azure Cost Management](https://docs.microsoft.com/azure/cost-management) |
+|  | [Azure Policy](/azure/governance/policy/overview) | [Azure management groups](/azure/governance/management-groups) | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Blueprints](/azure/governance/blueprints/overview) | [Azure resource graph](/azure/governance/resource-graph/overview) | [Azure Cost Management](/azure/cost-management) |
 |---------|---------|---------|---------|---------|---------|---------|
-| Implement corporate policies     | Yes | No  | No  | No | No | No |
-| Apply policies across subscriptions     | Required | Yes  | No  | No | No | No |
-| Deploy defined resources     | No | No  | Yes  | No | No | No |
-| Create fully compliant environments      | Required | Required  | Required  | Yes | No | No |
-| Audit policies      | Yes | No  | No  | No | No | No |
-| Query Azure resources      | No | No  | No  | No | Yes | No |
-| Report on cost of resources      | No | No  | No  | No | No | Yes |
+| **Implement corporate policies**     | Yes | No  | No  | No | No | No |
+| **Apply policies across subscriptions**     | Required | Yes  | No  | No | No | No |
+| **Deploy defined resources**     | No | No  | Yes  | No | No | No |
+| **Create fully compliant environments**      | Required | Required  | Required  | Yes | No | No |
+| **Audit policies**      | Yes | No  | No  | No | No | No |
+| **Query Azure resources**      | No | No  | No  | No | Yes | No |
+| **Report on cost of resources**      | No | No  | No  | No | No | Yes |
 
 The following are additional tools that may be required to accomplish specific deployment acceleration objectives. Often these tools are used outside of the governance team, but are still considered an aspect of the Deployment Acceleration discipline.
 
-|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure DevOps](https://docs.microsoft.com/azure/devops) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
+|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](/azure/azure-resource-manager/management/overview)  | [Azure Policy](/azure/governance/policy/overview) | [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) | [Azure Backup](/azure/backup/backup-overview) | [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) |
 |---------|---------|---------|---------|---------|---------|---------|
-| Manual deployment (single asset)     | Yes | Yes  | No  | Not efficiently | No | Yes |
-| Manual deployment (full environment)     | Not efficiently | Yes | No  | Not efficiently | No | Yes |
-| Automated deployment (full environment)     | No  | Yes  | No  | Yes  | No | Yes |
-| Update configuration of a single asset     | Yes | Yes | Not efficiently | Not efficiently | No | Yes - during replication |
-| Update configuration of a full environment     | Not efficiently | Yes | Yes | Yes  | No | Yes - during replication |
-| Manage configuration drift     | Not efficiently | Not efficiently | Yes  | Yes  | No | Yes - during replication |
-| Create an automated pipeline to deploy code and configure assets (DevOps)     | No | No | No | Yes | No | No |
+| **Manual deployment (single asset)**     | Yes | Yes  | No  | Not efficiently | No | Yes |
+| **Manual deployment (full environment)**     | Not efficiently | Yes | No  | Not efficiently | No | Yes |
+| **Automated deployment (full environment)**     | No  | Yes  | No  | Yes  | No | Yes |
+| **Update configuration of a single asset**     | Yes | Yes | Not efficiently | Not efficiently | No | Yes, during replication |
+| **Update configuration of a full environment**     | Not efficiently | Yes | Yes | Yes  | No | Yes, during replication |
+| **Manage configuration drift**     | Not efficiently | Not efficiently | Yes  | Yes  | No | Yes, during replication |
+| **Create an automated pipeline to deploy code and configure assets (DevOps)**     | No | No | No | Yes | No | No |
 
 Aside from the Azure native tools mentioned above, it is common for customers to use third-party tools to facilitate deployment acceleration and DevOps deployments.

@@ -35,7 +35,7 @@ These questions are essential to the accuracy of the cloud adoption plan. At a m
 
 ## Next steps
 
-[Deploy the cloud adoption plan template](./template.md) to Azure DevOps.
+Define your cloud adoption plan by deploying the template to Azure DevOps Services.
 
 > [!div class="nextstepaction"]
-> [Deploy the template to Azure DevOps](./template.md)
+> [Define your cloud adoption plan using the template](./template.md)

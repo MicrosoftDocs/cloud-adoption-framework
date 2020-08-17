@@ -26,7 +26,7 @@ The requirements are:
   - Two individuals in your organization responsible for managing a **workload**.
 - Support for multiple **environments**. An environment is a logical grouping of resources, such as virtual machines, virtual networking, and network traffic routing services. These groups of resources have similar management and security requirements and are typically used for a specific purpose such as testing or production. In this example, the requirement is for four environments:
   - A **shared infrastructure environment** that includes resources shared by workloads in other environments. For example, a virtual network with a gateway subnet that provides connectivity to on-premises.
-  - A **production environment** with the most restrictive security policies. May include internal or external facing workloads.
+  - A **production environment** with the most restrictive security policies. Could include internal or external facing workloads.
   - A **nonproduction environment** for development and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment. In Azure, this takes the form of an Enterprise Dev/Test subscription.
   - A **sandbox environment** for proof of concept and education purposes. This environment is typically assigned per employee participating in development activities and has strict procedural and operational security controls in place to prevent corporate data from landing here. In Azure, these take the form of Visual Studio subscriptions. These subscriptions should also _not_ be tied to the enterprise Azure Active Directory.
 - A **permissions model of least privilege** in which users have no permissions by default. The model must support the following:
@@ -34,7 +34,7 @@ The requirements are:
   - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the resource group scope.
   - Management access for the shared infrastructure resources, limited to the shared infrastructure owners.
   - Management access for each workload restricted to the workload owner in production, and increasing levels of control as development proceeds through the various deployment environments (development, test, staging, and production).
-  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) available in Azure's role-based access control (RBAC). If the enterprise absolutely requires custom RBAC roles, additional processes would be needed to synchronize custom roles across the three environments.
+  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](/azure/role-based-access-control/built-in-roles) available in Azure's role-based access control (RBAC). If the enterprise absolutely requires custom RBAC roles, additional processes would be needed to synchronize custom roles across the three environments.
 - Cost tracking by workload owner name, environment, or both.
 
 ## Identity management
@@ -73,7 +73,7 @@ Now that your identity management system and user accounts have been created, yo
 
 There's another requirement stating the resources associated with each workload be isolated from one another such that no one workload owner has management access to any other workload they do not own. There's also a requirement to implement this model using only built-in roles for Azure role-based access control.
 
-Each RBAC role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in owner role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
+Each RBAC role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
 
 Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in owner role at the subscription scope, each workload owner would have management access to all workloads.
 
@@ -86,15 +86,15 @@ _Figure 3: A subscription with a service administrator assigned the built-in own
 
 <!-- docsTest:ignore "resource group A" "resource groups A and B" "workload owner A" -->
 
-1. In the first example, there is **workload owner A** with no permissions at the subscription scope&mdash;they have no resource access management rights by default. This user wants to deploy and manage the resources for their workload. They must contact the **service administrator** to request creation of a resource group.
+1. In the first example, **workload owner A** has no permissions at the subscription scope and no resource access management rights by default. This user wants to deploy and manage the resources for their workload. They must contact the **service administrator** to request creation of a resource group.
     ![Workload owner requests creation of resource group A](../../_images/govern/design/governance-2-2.png)
 2. The **service administrator** reviews their request and creates **resource group A**. At this point, **workload owner A** still doesn't have permission to do anything.
     ![Service administrator creates resource group A](../../_images/govern/design/governance-2-3.png)
-3. The **service administrator** adds **workload owner A** to **resource group A** and assigns the [built-in contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor). The contributor role grants all permissions on **resource group A** except managing access permission.
+3. The **service administrator** adds **workload owner A** to **resource group A** and assigns the [built-in contributor role](/azure/role-based-access-control/built-in-roles#contributor). The contributor role grants all permissions on **resource group A** except managing access permission.
     ![Service administrator adds workload owner A to resource group A](../../_images/govern/design/governance-2-4.png)
 4. Let's assume that **workload owner A** has a requirement for a pair of team members to view the CPU and network traffic monitoring data as part of capacity planning for the workload. Because **workload owner A** is assigned the contributor role, they do not have permission to add a user to **resource group A**. They must send this request to the **service administrator**.
     ![Workload owner requests workload contributors be added to resource group](../../_images/govern/design/governance-2-5.png)
-5. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in reader role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor).
+5. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in reader role](/azure/role-based-access-control/built-in-roles#contributor).
     ![Service administrator adds workload contributors to resource group A](../../_images/govern/design/governance-2-6.png)
 6. Next, **workload owner B** also requires a resource group to contain the resources for their workload. As with **workload owner A**, **workload owner B** initially does not have permission to take any action at the subscription scope so they must send a request to the **service administrator**.
     ![Workload owner B requests creation of resource group B](../../_images/govern/design/governance-2-7.png)
@@ -108,7 +108,7 @@ At this point, each of the workload owners is isolated in their own resource gro
 ![Subscription with resource groups A and B](../../_images/govern/design/governance-2-10.png)
 _Figure 4: A subscription with two workload owners isolated with their own resource group._
 
-This model is a least-privilege model&mdash;each user is assigned the correct permission at the correct resource management scope.
+This model is a least-privilege model. Each user is assigned the correct permission at the correct resource management scope.
 
 Consider that every task in this example was performed by the **service administrator**. While this is a simple example and may not appear to be an issue because there were only two workload owners, it's easy to imagine the types of issues that would result for a large organization. For example, the **service administrator** can become a bottleneck with a large backlog of requests that result in delays.
 
@@ -171,7 +171,7 @@ Let's begin by evaluating the first option. You'll be using the permissions mode
     ![Creating a resource group](../../_images/govern/design/governance-3-0d.png)
 2. The **subscription owner** account adds the **network operations user** account to the resource group and assigns the **contributor** role.
     ![Adding a network operations user](../../_images/govern/design/governance-3-0e.png)
-3. The **network operations user** creates a [VPN gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) and configures it to connect to the on-premises VPN appliance. The **network operations user** also applies a pair of [tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) to each of the resources: `environment:shared` and `managedBy:netOps`. When the **subscription service administrator** exports a cost report, costs will be aligned with each of these tags. This allows the **subscription service administrator** to pivot costs using the `environment` tag and the `managedBy` tag. Notice the **resource limits** counter at the top right-hand side of the figure. Each Azure subscription has [service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits), and to help you understand the effect of these limits you'll follow the virtual network limit for each subscription. There is a limit of 1000 virtual networks per subscription, and after the first virtual network is deployed there are now 999 available.
+3. The **network operations user** creates a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) and configures it to connect to the on-premises VPN appliance. The **network operations user** also applies a pair of [tags](/azure/azure-resource-manager/management/tag-resources) to each of the resources: `environment:shared` and `managedBy:netOps`. When the **subscription service administrator** exports a cost report, costs will be aligned with each of these tags. This allows the **subscription service administrator** to pivot costs using the `environment` tag and the `managedBy` tag. Notice the **resource limits** counter at the top right-hand side of the figure. Each Azure subscription has [service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), and to help you understand the effect of these limits you'll follow the virtual network limit for each subscription. There is a limit of 1000 virtual networks per subscription, and after the first virtual network is deployed there are now 999 available.
     ![Creating a VPN gateway](../../_images/govern/design/governance-3-1.png)
 4. Two more resource groups are deployed. The first is named `prod-rg`. This resource group is aligned with the production environment. The second is named `dev-rg` and is aligned with the development environment. All resources associated with production workloads are deployed to the production environment and all resources associated with development workloads are deployed to the development environment. In this example, you'll only deploy two workloads to each of these two environments, so you won't encounter any Azure subscription service limits. Consider that each resource group has a limit of 800 resources per resource group. If you continue to add workloads to each resource group, you'll eventually reach this limit.
     ![Creating resource groups](../../_images/govern/design/governance-3-2.png)
@@ -198,7 +198,7 @@ This means **app2 workload owner** had permission to deploy their own subnet wit
 
 Next, let's look at a single subscription with multiple resources groups for different environments and workloads. Note that in the previous example, the resources for each environment were easily identifiable because they were in the same resource group. Now that you no longer have that grouping, you will have to rely on a resource group naming convention to provide that functionality.
 
-1. The **shared infrastructure** resources will still have a separate resource group in this model, so that remains the same. Each workload requires two resource groups - one for each of the **development** and **production** environments. For the first workload, the **subscription owner** account creates two resource groups. The first is named `app1-prod-rg` and the second is named `app1-dev-rg`. As discussed earlier, this naming convention identifies the resources as being associated with the first workload, **app1**, and either the **dev** or **prod** environment. Again, the **subscription owner** account adds **app1 workload owner** to the resource group with the **contributor** role.
+1. The **shared infrastructure** resources will still have a separate resource group in this model, so that remains the same. Each workload requires two resource groups, one for each of the **development** and **production** environments. For the first workload, the **subscription owner** account creates two resource groups. The first is named `app1-prod-rg` and the second is named `app1-dev-rg`. As discussed earlier, this naming convention identifies the resources as being associated with the first workload, `app1`, and either the **development** or **production** environment. Again, the **subscription owner** account adds **app1 workload owner** to the resource group with the **contributor** role.
     ![Adding contributors](../../_images/govern/design/governance-3-12.png)
 2. Similar to the first example, **app1 workload owner** deploys a virtual network named `app1-prod-vnet` to the **production** environment, and another named `app1-dev-vnet` to the **development** environment. Again, **app1 workload owner** sends a request to the **network operations** user to create a peering connection. Note that **app1 workload owner** adds the same tags as in the first example, and the limit counter has been decremented to 997 virtual networks remaining in the subscription.
     ![Creating a peering connection](../../_images/govern/design/governance-3-13.png)
@@ -237,15 +237,15 @@ Therefore, you can select any of these two examples resource management models d
 You've learned about several different models for governing access to Azure resources. Now you'll walk through the steps necessary to implement the resource management model with one subscription for each of the **shared infrastructure**, **production**, and **development** environments from the design guide. You'll have one **subscription owner** account for all three environments. Each workload will be isolated in a **resource group** with a **workload owner** added with the **contributor** role.
 
 > [!NOTE]
-> See [Understanding resource access in Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles) to learn more about the relationship between Azure accounts and subscriptions.
+> See [Understanding resource access in Azure](/azure/role-based-access-control/rbac-and-directory-admin-roles) to learn more about the relationship between Azure accounts and subscriptions.
 
 Follow these steps:
 
-1. Create an [Azure account](https://docs.microsoft.com/azure/active-directory/sign-up-organization) if your organization doesn't already have one. The person who signs up for the Azure account becomes the Azure account administrator, and your organization's leadership must select an individual to assume this role. This individual will be responsible for:
+1. Create an [Azure account](/azure/active-directory/sign-up-organization) if your organization doesn't already have one. The person who signs up for the Azure account becomes the Azure account administrator, and your organization's leadership must select an individual to assume this role. This individual will be responsible for:
     - Creating subscriptions.
-    - Creating and administering [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) tenants that store user identity for those subscriptions.
+    - Creating and administering [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) tenants that store user identity for those subscriptions.
 2. Your organization's leadership team decides who is responsible for:
-    - Management of user identity; an [Azure AD tenant](https://docs.microsoft.com/azure/active-directory/develop/active-directory-howto-tenant) is created by default when your organization's Azure account is created, and the account administrator is added as the [Azure AD global administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) by default. Your organization can choose another user to manage user identity by [assigning the Azure AD global administrator role to that user](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
+    - Management of user identity; an [Azure AD tenant](/azure/active-directory/develop/active-directory-howto-tenant) is created by default when your organization's Azure account is created, and the account administrator is added as the [Azure AD global administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) by default. Your organization can choose another user to manage user identity by [assigning the Azure AD global administrator role to that user](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
     - Subscriptions, which means these users:
         - Manage costs associated with resource usage in that subscription.
         - Implement and maintain least permission model for resource access.
@@ -254,28 +254,23 @@ Follow these steps:
         - On-premises to Azure network connectivity.
         - Ownership of network connectivity within Azure through virtual network peering.
     - Workload owners.
-3. The Azure AD global administrator [creates the new user accounts](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory) for:
+3. The Azure AD global administrator [creates the new user accounts](/azure/active-directory/add-users-azure-active-directory) for:
     - The person who will be the subscription owner for each subscription associated with each environment. Note that this is necessary only if the subscription **service administrator** will not be tasked with managing resource access for each subscription/environment.
     - The person who will be the **network operations user**.
     - The people who are **workload owners**.
-4. The Azure account administrator creates the following three subscriptions using the [Azure account portal](https://account.azure.com/subscriptions):
+4. The Azure account administrator [creates three Azure subscriptions](/azure/cost-management-billing/manage/create-subscription):
     - A subscription for the **shared infrastructure** environment.
     - A subscription for the **production** environment.
     - A subscription for the **development** environment.
-5. The Azure account administrator [adds the subscription service owner to each subscription](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
+5. The Azure account administrator [adds the subscription service owner to each subscription](/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
 6. Create an approval process for **workload owners** to request the creation of resource groups. The approval process can be implemented in many ways, such as over email, or you can using a process management tool such as [SharePoint workflows](https://support.office.com/article/introduction-to-sharepoint-workflow-07982276-54e8-4e17-8699-5056eff4d9e3). The approval process can follow these steps:
     - The **workload owner** prepares a bill of materials for required Azure resources in either the **development** environment, **production** environment, or both, and submits it to the **subscription owner**.
-    - The **subscription owner** reviews the bill of materials and validates the requested resources to ensure that the requested resources are appropriate for their planned use - for example, checking that the requested [virtual machine sizes](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) are correct.
-    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](https://docs.microsoft.com/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](../../ready/azure-best-practices/naming-and-tagging.md), [adds the **workload owner**](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
+    - The **subscription owner** reviews the bill of materials and validates the requested resources to ensure that the requested resources are appropriate for their planned use, such as checking that the requested [virtual machine sizes](/azure/virtual-machines/windows/sizes) are correct.
+    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](../../ready/azure-best-practices/naming-and-tagging.md), [adds the **workload owner**](/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
 7. Create an approval process for workload owners to request a virtual network peering connection from the shared infrastructure owner. As with the previous step, this approval process can be implemented using email or a process management tool.
 
 Now that you've implemented your governance model, you can deploy your shared infrastructure services.
 
 ## Related resources
 
-[Built-in roles for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles)
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Learn about deploying a basic infrastructure](../../infrastructure/virtual-machines/basic-workload.md)
+[Built-in roles for Azure resources](/azure/role-based-access-control/built-in-roles)

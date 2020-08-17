@@ -33,7 +33,7 @@ _Figure 1: An Azure account with an Azure account owner and Azure AD global admi
 
 ## Identity management
 
-Azure only trusts [Azure AD](https://docs.microsoft.com/azure/active-directory) to authenticate users and authorize user access to resources, so Azure AD is our identity management system. The Azure AD global administrator has the highest level of permissions and can perform all actions related to identity, including creating users and assigning permissions.
+Azure only trusts [Azure AD](/azure/active-directory) to authenticate users and authorize user access to resources, so Azure AD is our identity management system. The Azure AD global administrator has the highest level of permissions and can perform all actions related to identity, including creating users and assigning permissions.
 
 Our requirement is identity management for a single **workload owner** who is responsible for deploying and maintaining the simple workload. The workload owner requires permission to create, read, update, and delete resources as well as permission to delegate these rights to other users in the identity management system.
 
@@ -58,16 +58,16 @@ When the subscription is created, the Azure **account owner** associates an Azur
 ![The Azure account owner associates the Azure AD tenant with the subscription](../../_images/govern/design/governance-1-4.png)
 _Figure 4: The Azure account owner associates the Azure AD tenant with the subscription._
 
-You may have noticed that there is currently no user associated with the subscription, which means that no one has permission to manage resources. In reality, the **account owner** is the owner of the subscription and has permission to take any action on a resource in the subscription. In practical terms, the **account owner** is more than likely a finance person in your organization and is not responsible for creating, reading, updating, and deleting resources - those tasks will be performed by the **workload owner**. Therefore, you need to add the **workload owner** to the subscription and assign permissions.
+You may have noticed that there is currently no user associated with the subscription, which means that no one has permission to manage resources. In reality, the **account owner** is the owner of the subscription and has permission to take any action on a resource in the subscription. In practical terms, the **account owner** is more than likely a finance person in your organization and is not responsible for creating, reading, updating, and deleting resources. Those tasks will be performed by the **workload owner**, so you need to add the **workload owner** to the subscription and assign permissions.
 
 Since the **account owner** is currently the only user with permission to add the **workload owner** to the subscription, they add the **workload owner** to the subscription:
 
 ![The Azure account owner adds the **workload owner** to the subscription](../../_images/govern/design/governance-1-5.png)
 _Figure 5: The Azure account owner adds the workload owner to the subscription._
 
-The Azure **account owner** grants permissions to the **workload owner** by assigning a [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control) role. The RBAC role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
+The Azure **account owner** grants permissions to the **workload owner** by assigning a [role-based access control (RBAC)](/azure/role-based-access-control) role. The RBAC role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
 
-Notice that in this example, the **account owner** has assigned the [built-in **owner** role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner):
+Notice that in this example, the **account owner** has assigned the [built-in **owner** role](/azure/role-based-access-control/built-in-roles#owner):
 
 ![The **workload owner** was assigned the built-in owner role](../../_images/govern/design/governance-1-6.png)
 _Figure 6: The workload owner was assigned the built-in owner role._
@@ -86,7 +86,7 @@ _Figure 7: The workload owner creates a resource group and inherits the built-in
 
 Again, the built-in **owner** role grants all permissions to the **workload owner** at the resource group scope. As discussed earlier, this role is inherited from the subscription level. If a different role is assigned to this user at this scope, it applies to this scope only.
 
-The lowest level of management scope is at the **resource** level. Operations applied at the resource level apply only to the resource itself. Again, permissions at the resource level are inherited from resource group scope. For example, let's look at what happens if the **workload owner** deploys a [virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) into the resource group:
+The lowest level of management scope is at the **resource** level. Operations applied at the resource level apply only to the resource itself. Again, permissions at the resource level are inherited from resource group scope. For example, let's look at what happens if the **workload owner** deploys a [virtual network](/azure/virtual-network/virtual-networks-overview) into the resource group:
 
 ![The **workload owner** creates a resource](../../_images/govern/design/governance-1-8.png)
 _Figure 8: The workload owner creates a resource and inherits the built-in owner role at the resource scope._
@@ -99,18 +99,13 @@ Let's move on to learn how to implement the governance model designed earlier.
 
 To begin, your organization requires an Azure account. If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
 
-When your Azure account is created, you specify a person in your organization to be the Azure **account owner**. An Azure Active Directory (Azure AD) tenant is then created by default. Your Azure **account owner** must [create the user account](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory) for the person in your organization who is the **workload owner**.
+When your Azure account is created, you specify a person in your organization to be the Azure **account owner**. An Azure Active Directory (Azure AD) tenant is then created by default. Your Azure **account owner** must [create the user account](/azure/active-directory/add-users-azure-active-directory) for the person in your organization who is the **workload owner**.
 
-Next, your Azure **account owner** must [create a subscription](https://docs.microsoft.com/partner-center/create-a-new-subscription) and [associate the Azure AD tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) with it.
+Next, your Azure **account owner** must [create a subscription](/partner-center/create-a-new-subscription) and [associate the Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) with it.
 
-Finally, now that the subscription is created and your Azure AD tenant is associated with it, you can [add the **workload owner** to the subscription with the built-in **owner** role](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
+Finally, now that the subscription is created and your Azure AD tenant is associated with it, you can [add the **workload owner** to the subscription with the built-in **owner** role](/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
 
 ## Next steps
-
-> [!div class="nextstepaction"]
-> [Deploy a basic workload to Azure](../../infrastructure/virtual-machines/basic-workload.md)
-
-<!-- --->
 
 > [!div class="nextstepaction"]
 > [Learn about resource access for multiple teams](./governance-multiple-teams.md)

@@ -1,5 +1,5 @@
 ---
-title: Azure governance, security, and compliance
+title: Governance, security, and compliance in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: kfollis
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 
 As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).
 
-# [Azure Blueprints](#tab/AzureBlueprints)
+## [Azure Blueprints](#tab/AzureBlueprints)
 
 Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and stand up new environments and trust that they're building within organizational compliance using a set of built-in components like networking to speed up development and delivery.
 
@@ -30,7 +30,7 @@ Blueprints are a declarative way to orchestrate the deployment of various resour
 - Azure Resource Manager templates.
 - Resource groups.
 
-## Create a blueprint
+### Create a blueprint
 
 To create a blueprint:
 
@@ -60,7 +60,7 @@ To create a blueprint:
 
 ::: zone-end
 
-## Publish a blueprint
+### Publish a blueprint
 
 To publish a blueprint artifacts to your subscription:
 
@@ -86,17 +86,17 @@ To publish a blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-## Learn more
+### Learn more
 
 To learn more, see:
 
-- [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints)
+- [Azure Blueprints](/azure/governance/blueprints)
 - [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Standards-based blueprints samples](/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
 
 ::: zone-end
 
-# [Azure Policy](#tab/AzurePolicy)
+## [Azure Policy](#tab/AzurePolicy)
 
 Azure Policy is a service that you use to create, assign, and manage policies. These policies enforce rules on your resources so those resources stay compliant with your corporate standards and service-level agreements. Azure Policy scans your resources to identify resources that aren't compliant with the policies you implement. For example, you can have a policy to allow only a specific virtual machine (VM) size to run in your environment. When you implement this policy, it evaluates existing VMs in your environment and any new VMs that are deployed. The policy evaluation generates compliance events for you to use for monitoring and reporting.
 
@@ -109,7 +109,7 @@ Consider common policies to:
 
 ::: zone target="chromeless"
 
-## Action
+### Action
 
 Assign a built-in policy to a management group, subscription, or resource group.
 
@@ -119,23 +119,23 @@ Assign a built-in policy to a management group, subscription, or resource group.
 
 ::: zone target="docs"
 
-## Apply a policy
+### Apply a policy
 
 To apply a policy to a resource group:
 
 1. Go to [Azure Policy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyMenuBlade/GettingStarted).
 1. Select **Assign a policy**.
 
-## Learn more
+### Learn more
 
 To learn more, see:
 
-- [Azure Policy](https://docs.microsoft.com/azure/governance/policy)
+- [Azure Policy](/azure/governance/policy)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ::: zone-end
 
-# [Azure Security Center](#tab/AzureSecurityCenter)
+## [Azure Security Center](#tab/AzureSecurityCenter)
 
 Azure Security Center plays an important part in your governance strategy. It helps you stay on top of security because it:
 
@@ -153,12 +153,12 @@ Many security features, like security policy and recommendations, are available 
 
 To explore Azure Security Center, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
 
-## Learn more
+### Learn more
 
 To learn more, see:
 
-- [Azure Security Center](https://docs.microsoft.com/azure/security-center)
-- [Just-in-time VM access](https://docs.microsoft.com/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
+- [Azure Security Center](/azure/security-center)
+- [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
 - [Security Center pricing tiers](https://azure.microsoft.com/pricing/details/security-center)
 - [Cloud Adoption Framework: Security Baseline discipline](../../govern/security-baseline/index.md)
 
@@ -166,7 +166,7 @@ To learn more, see:
 
 ::: zone target="chromeless"
 
-## Action
+### Action
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
 

@@ -23,10 +23,13 @@ The skills needed to provide cloud operations functions can be provided by:
 - Business application operations teams
 - DevOps teams
 
+> [!IMPORTANT]
+> The individuals or teams accountable for cloud operations are generally responsible for making reactive changes to configuration during remediation. They're also likely to be responsible for proactive configuration changes to minimize operational disruptions. Depending on the organizations cloud operating model, those changes could be delivered via infrastructure-as-code, Azure Pipelines, or direct configuration in the portal. Since operations team will likely have elevated permissions, it is extremely important that those who fill this role are following [identity and access control best practices](https://docs.microsoft.com/azure/security/benchmarks/security-control-identity-access-control) to minimize unintended access or production changes.
+
 ## Preparation
 
-- [Manage resources in Azure](https://docs.microsoft.com/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
-- [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
+- [Manage resources in Azure](/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
+- [Azure network services](/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
 Review the following:
 
@@ -72,4 +75,4 @@ Learn more about:
 - [Cloud center of excellence](../organize/cloud-center-of-excellence.md) functions.
 - [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md).
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

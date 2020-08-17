@@ -9,7 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Modular design areas considered by all Azure landing zones
+<!-- TODO: Refactor terms: "design area", "well-architected" -->
+
+# Design areas of a well-architected landing zone
 
 Each Azure landing zone implementation option provide a deployment approach and defined design principles that helps you implement the following design areas. Before choosing an implementation option, use this article to gain an understanding of those design areas.
 
@@ -18,7 +20,7 @@ Each Azure landing zone implementation option provide a deployment approach and 
 
 Regardless of the deployment option, each of the following should be considered and decisions should be made for each design area. Those decisions will impact the platform foundation that each landing zone will depend on.
 
-| Design areas  | Objective  | Relevant methodologies |
+| Design areas | Objective  | Relevant methodologies |
 |---|---|---|
 | Enterprise enrollment | For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step. | Ready |
 | Identity | Identity and access management (IAM) is a primary security boundary in the public cloud. It is the foundation for any secure and fully compliant architecture. | Ready |

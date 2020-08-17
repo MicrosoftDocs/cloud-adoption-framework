@@ -17,11 +17,11 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 **Design considerations:**
 
-- Subscription and scale limits as they apply to Azure Key Vault: Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see ([Azure limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)).
+- Subscription and scale limits as they apply to Azure Key Vault: Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see ([Azure limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)).
 
-- Key Vault serves a security boundary since access permissions for keys, secrets, and certificates are at the vault level. Key Vault access policy assignments grant permissions separately to keys, secrets, or certificates, but they don't support granular, object-level permissions like a specific key, secret, or certificate ([key management](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices)).
+- Key Vault serves a security boundary since access permissions for keys, secrets, and certificates are at the vault level. Key Vault access policy assignments grant permissions separately to keys, secrets, or certificates, but they don't support granular, object-level permissions like a specific key, secret, or certificate ([key management](/azure/security/fundamentals/data-encryption-best-practices)).
 
-- You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate ([control access](https://docs.microsoft.com/azure/key-vault/general/best-practices)).
+- You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate ([control access](/azure/key-vault/general/best-practices)).
 
 <!-- cSpell:ignore FIPS -->
 
@@ -29,21 +29,21 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Key rotation and secret expiration.
 
-  - Certificate procurement and signing using Key Vault ([about certificates](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
+  - Certificate procurement and signing using Key Vault ([about certificates](/azure/key-vault/certificates/about-certificates))
   - Alerting/notifications and automated certificate renewals
 
 - Disaster recovery requirements for keys, certificates, and secrets.
 
-  Key Vault service replication and failover capabilities: ([availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance)).
+  Key Vault service replication and failover capabilities: ([availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance)).
 
 - Monitoring key, certificate, and secret usage.
 
-  Detecting unauthorized access using a key vault or Azure Monitor Log Analytics workspace: ([monitoring and alerting](https://docs.microsoft.com/azure/key-vault/general/alert))
+  Detecting unauthorized access using a key vault or Azure Monitor Log Analytics workspace: ([monitoring and alerting](/azure/key-vault/general/alert))
 
-- Delegated Key Vault instantiation and privileged access: ([secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
+- Delegated Key Vault instantiation and privileged access: ([secure access](/azure/key-vault/general/secure-your-key-vault))
 
 - Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption (SSE):
-  - [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal).
+  - [Customer-managed keys](/azure/storage/common/storage-encryption-keys-portal).
   - Whole-disk encryption for virtual machines (VMs).
   - Data-in-transit encryption.
   - Data-at-rest encryption.
@@ -86,7 +86,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Compliance reporting and auditing to ensure continuous compliance
 
-- Azure Policy has limits, such as the restriction of definitions at any given scope: ([policy limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits))
+- Azure Policy has limits, such as the restriction of definitions at any given scope: ([policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits))
 
 - Regulatory compliance policies such as the health insurance portability and accountability act, payment card industry (PCI), data security standards, service organization controls (SOC) trust service principals, and criteria.
 
@@ -175,6 +175,8 @@ It is essential to maintain a healthy security posture as you adopt Azure. Besid
 - Align your security requirements with Azure platform roadmaps to stay up to date with newly released security controls.
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
+
+<!-- docsTest:ignore "and conditional access" -->
 
 ## Service enablement framework
 

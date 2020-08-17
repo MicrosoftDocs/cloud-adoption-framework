@@ -43,13 +43,13 @@ Capture disaster recovery (DR) requirements to design suitable platform-level ca
 
   - Geo-replication and DR capabilities for PaaS services.
 
-- Network connectivity in case of a failover.
+- Network connectivity if a failover occurs.
 
   - Bandwidth capacity planning for Azure ExpressRoute.
 
   - Paired failover regions.
 
-  - Traffic routing in case of a regional, zonal, or network outage.
+  - Traffic routing if a regional, zonal, or network outage occurs.
 
 - Planned and unplanned failovers.
 
@@ -77,7 +77,7 @@ Capture disaster recovery (DR) requirements to design suitable platform-level ca
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
 
-- Refer to [Azure region pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organization's disaster recovery layouts.
+- Refer to [Azure region pairs](/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organization's disaster recovery layouts.
 
 - Use Azure paired regions when planning for business continuity and DR.
 

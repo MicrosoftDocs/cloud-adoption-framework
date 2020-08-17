@@ -59,9 +59,9 @@ To operationalize at scale, these activities must follow infrastructure-as-code 
 
 | Name                  | Description                                                                                   |
 |-----------------------|-----------------------------------------------------------------------------------------------|
-| [`Deny-PublicEndpoints`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policySetDefinitions-Deny-PublicEndpoints.parameters.json) | Denies the creation of services with public endpoints on all landing zones. |
-| [`Deploy-VM-Backup`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/Landing%20Zones/.AzState/Microsoft.Authorization_policyAssignments-Deploy-VM-Backup.parameters.json) | Ensures that backup is configured and deployed to all VMs in the landing zones. |
-| [`Deploy-VNet`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json) | Ensures that all landing zones have a VNet deployed and that it is peered to the regional virtual hub. |
+| [`Deny-PublicEndpoints`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policySetDefinitions-Deny-PublicEndpoints.parameters.json) | Denies the creation of services with public endpoints on all landing zones. |
+| [`Deploy-VM-Backup`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/Landing%20Zones%20(landingzones)/.AzState/Microsoft.Authorization_policyAssignments-Deploy-VM-Backup.parameters.json) | Ensures that backup is configured and deployed to all VMs in the landing zones. |
+| [`Deploy-VNet`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json) | Ensures that all landing zones have a VNet deployed and that it is peered to the regional virtual hub. |
 
 ### Global networking and connectivity
 
@@ -76,25 +76,25 @@ To operationalize at scale, these activities must follow infrastructure-as-code 
 
 3. Deploy and configure an Azure Private DNS zone.
 
-4. Provision ExpressRoute circuits with Azure private peering. Follow the instructions in [Create and modify peering for an ExpressRoute circuit](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private)
+4. Provision ExpressRoute circuits with Azure private peering. Follow the instructions in [Create and modify peering for an ExpressRoute circuit](/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private)
 
 5. Connect on-premises HQs/DCs to Azure Virtual WAN virtual hubs via ExpressRoute circuits.
 
 6. Protect VNet traffic across virtual hubs with NSGs.
 
-7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute).
+7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](/azure/virtual-wan/vpn-over-expressroute).
 
-8. (Optional:) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal).
+8. (Optional:) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](/azure/virtual-wan/virtual-wan-site-to-site-portal).
 
-9. (Optional:) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach).
+9. (Optional:) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](/azure/expressroute/expressroute-howto-set-global-reach).
 
 The following list shows Azure Policy assignments used when implementing networking resources for an enterprise-scale deployment:
 
 | Name                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
-| [`Deploy-FirewallPolicy`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-FirewallPolicy.parameters.json) | Creates a firewall policy. |
-| [`Deploy-VHub`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json) | This policy deploys a virtual hub, Azure Firewall, and VPN/ExpressRoute gateways, and configures the default route on connected VNets to Azure Firewall. |
-| [`Deploy-VWAN`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vWAN.parameters.json)| Deploys a Virtual WAN. |
+| [`Deploy-FirewallPolicy`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-FirewallPolicy.parameters.json) | Creates a firewall policy. |
+| [`Deploy-VHub`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json) | This policy deploys a virtual hub, Azure Firewall, and VPN/ExpressRoute gateways, and configures the default route on connected VNets to Azure Firewall. |
+| [`Deploy-VWAN`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vWAN.parameters.json)| Deploys a Virtual WAN. |
 
 ### Security, governance, and compliance
 
@@ -116,19 +116,19 @@ The following policies should be used to enforce company-wide compliance status.
 
 | Name                       | Description                                                        |
 |----------------------------|--------------------------------------------------------------------|
-| [`Allowed-ResourceLocation`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyAssignments-Allowed-ResourceLocation.parameters.json)   | Specifies the allowed region where resources can be deployed. |
-| [`Allowed-RGLocation`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyAssignments-Allowed-RGLocation.parameters.json)         | Specifies the allowed region where resource groups can be deployed. |
-| [`Denied-Resources`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyAssignments-Denied-Resources.parameters.json)           | Resource that are denied for the company . |
-| [`Deny-AppGW-Without-WAF`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deny-AppGW-Without-WAF.parameters.json)     | Allows application gateways deployed with WAF enabled. |
-| [`Deny-IP-Forwarding`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyAssignments-Deny-IP-Forwarding.parameters.json)         | Deny IP forwarding. |
-| [`Deny-RDP-From-Internet`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyAssignments-Deny-RDP-From-Internet.parameters.json)     | Deny RDP connections from internet. |
-| [`Deny-Subnet-Without-Nsg`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deny-Subnet-Without-Nsg.parameters.json)    | Deny subnet creation without an NSG. |
-| [`Deploy-ASC-CE`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-ASC-CE.parameters.json)              | Set up Security Center continuous export to your Log Analytics workspace. |
-| [`Deploy-ASC-Monitoring`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyAssignments-Deploy-ASC-Monitoring.parameters.json)      | Enable monitoring in Azure Security Center. |
-| [`Deploy-ASC-Standard`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-ASC-Standard.parameters.json)        | Ensures that subscriptions have Security Center Standard enabled. |
-| [`Deploy-Diag-ActivityLog`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Diagnostics-ActivityLog.parameters.json) | Enables diagnostics activity log and forwarding to Log Analytics. |
-| [`Deploy-Diag-LogAnalytics`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Log-Analytics.parameters.json) | |
-| [`Deploy-VM-Monitoring`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Diagnostics-VM.parameters.json) | Ensures that VM monitoring is enabled. |
+| [`Allowed-ResourceLocation`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Allowed-ResourceLocation.parameters.json)   | Specifies the allowed region where resources can be deployed. |
+| [`Allowed-RGLocation`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Allowed-RGLocation.parameters.json)         | Specifies the allowed region where resource groups can be deployed. |
+| [`Denied-Resources`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Denied-Resources.parameters.json)           | Resource that are denied for the company . |
+| [`Deny-AppGW-Without-WAF`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deny-AppGW-Without-WAF.parameters.json)     | Allows application gateways deployed with WAF enabled. |
+| [`Deny-IP-Forwarding`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Deny-IP-Forwarding.parameters.json)         | Deny IP forwarding. |
+| [`Deny-RDP-From-Internet`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Deny-RDP-From-Internet.parameters.json)     | Deny RDP connections from internet. |
+| [`Deny-Subnet-Without-Nsg`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deny-Subnet-Without-Nsg.parameters.json)    | Deny subnet creation without an NSG. |
+| [`Deploy-ASC-CE`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-ASC-CE.parameters.json)              | Set up Security Center continuous export to your Log Analytics workspace. |
+| [`Deploy-ASC-Monitoring`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Deploy-ASC-Monitoring.parameters.json)      | Enable monitoring in Azure Security Center. |
+| [`Deploy-ASC-Standard`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-ASC-Standard.parameters.json)        | Ensures that subscriptions have Security Center Standard enabled. |
+| [`Deploy-Diag-ActivityLog`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Diagnostics-ActivityLog.parameters.json) | Enables diagnostics activity log and forwarding to Log Analytics. |
+| [`Deploy-Diag-LogAnalytics`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Log-Analytics.parameters.json) | |
+| [`Deploy-VM-Monitoring`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Diagnostics-VM.parameters.json) | Ensures that VM monitoring is enabled. |
 
 ### Platform identity
 
@@ -140,8 +140,8 @@ The following list shows policies that can be used when implementing identity re
 
 | Name                         | Description                                                               |
 |------------------------------|---------------------------------------------------------------------------|
-| [`DataProtectionSecurityCenter`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) | Data protection automatically created by Azure Security Center. |
-| [`Deploy-VNet-Identity`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json) | Deploys a VNet into the identity subscription to host (for example, DC.) |
+| [`DataProtectionSecurityCenter`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/) | Data protection automatically created by Azure Security Center. |
+| [`Deploy-VNet-Identity`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json) | Deploys a VNet into the identity subscription to host (for example, DC.) |
 
 ### Platform management and monitoring
 
@@ -157,8 +157,8 @@ The following list shows policies that can be used when implementing identity re
 
 | Name                   | Description                                                                            |
 |------------------------|----------------------------------------------------------------------------------------|
-| [`Deploy-LA-Config`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-LA-Config.parameters.json) | Configuration of the Log Analytics workspace. |
-| [`Deploy-Log-Analytics`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Log-Analytics.parameters.json) | Deploys a Log Analytics workspace. |
+| [`Deploy-LA-Config`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-LA-Config.parameters.json) | Configuration of the Log Analytics workspace. |
+| [`Deploy-Log-Analytics`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Log-Analytics.parameters.json) | Deploys a Log Analytics workspace. |
 
 ## **File-> New-> Region**
 
@@ -176,7 +176,7 @@ The following list shows policies that can be used when implementing identity re
 
 | Name                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
-| [`Deploy-VHub`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json) | This policy deploys a virtual hub, Azure Firewall, gateways (VPN/ExpressRoute) and configures default route on connected VNets to Azure Firewall. |
+| [`Deploy-VHub`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json) | This policy deploys a virtual hub, Azure Firewall, gateways (VPN/ExpressRoute) and configures default route on connected VNets to Azure Firewall. |
 
 <!-- docsTest:disable -->
 

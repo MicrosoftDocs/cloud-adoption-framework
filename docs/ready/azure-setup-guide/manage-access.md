@@ -1,6 +1,6 @@
 ---
-title: Manage access to your Azure environment
-description: Learn how to set up access control for your Azure environment with role-based access control (RBAC).
+title: Manage access to your Azure environment with role-based access control
+description: Learn how to set up access control for your Azure environment with role-based access control.
 author: LijuKodicheraJayadevan
 ms.author: kfollis
 ms.date: 04/09/2019
@@ -22,6 +22,7 @@ RBAC provides detailed access management of resources in Azure. It helps you man
 When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning RBAC.
 
 ![Diagram that shows RBAC roles](./media/manage-access/role-examples.png)
+_Figure 1: RBAC roles._
 
 When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
 
@@ -83,7 +84,7 @@ To grant a user access to a subscription:
 
 To learn more, see:
 
-- [What is role-based access control (RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
+- [What is role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
 - [Cloud Adoption Framework: Use role-based access control](../considerations/roles.md)
 
 ::: zone-end
