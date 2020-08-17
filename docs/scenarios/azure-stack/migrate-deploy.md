@@ -13,9 +13,9 @@ ms.subservice: migrate
 
 By using Azure Stack, your organization can run its own instance of Azure in its datacenter. Organizations include Azure Stack in their cloud strategy because it helps them handle situations when the public cloud won't work for them. The three most common reasons to use Azure Stack are:
 
-* Poor network connectivity to the public cloud.
-* Regulatory or contractual requirements.
-* Back-end systems that can't be exposed to the internet.
+- Poor network connectivity to the public cloud.
+- Regulatory or contractual requirements.
+- Back-end systems that can't be exposed to the internet.
 
 ## Infrastructure as a service deployment
 
@@ -32,6 +32,8 @@ When the cloud runs in your datacenter, your stack hub administrators will need 
 ## Deploy workloads
 
 After the Azure Stack Hub administrator has properly configured your stack instance, migrations can continue as they would with most other Azure migration efforts. By using Azure Stack, your team can run any of the following types of migration:
+
+<!-- cSpell:ignore howto -->
 
 - [Ethereum blockchain network](/azure-stack/user/azure-stack-ethereum?view=azs-2002)
 - [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002)

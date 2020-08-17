@@ -13,17 +13,7 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore ONNX -->
 
-::: zone target="docs"
-
-# Azure innovation guide: Innovate with AI
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Innovate with AI
-
-::: zone-end
 
 As an innovator, your company has rich information about its business and its customers. Using AI, your company can:
 
