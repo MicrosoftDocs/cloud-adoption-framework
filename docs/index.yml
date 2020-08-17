@@ -53,7 +53,7 @@ productDirectory:
     # Card
     - title: "Get started"
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /_images/caf-get-started.png
+      imageSrc: ./_images/caf-get-started.png
       links:
         - url: ./get-started/cloud-concepts.md
           text: Document foundational decisions
