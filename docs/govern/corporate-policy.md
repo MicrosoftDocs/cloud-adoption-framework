@@ -12,8 +12,8 @@ ms.custom: governance
 
 # Evaluate corporate policy
 
-| | |
-|---|---|
+|  |  |
+|--|--|
 | Any change to business processes or technology platforms introduces risk to the business. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks with minimal interruption to adoption or innovation efforts. <br><br> But cloud governance requires more than technical implementation. Subtle changes in the corporate narrative or corporate policies can affect adoption efforts significantly. Before implementation, it's important to look beyond IT while defining corporate policy. | [![Diagram of the Cloud Adoption Framework governance model: corporate policy and governance disciplines](../_images/operational-transformation-govern-thumbnail.png)](../_images/operational-transformation-govern-large.png#lightbox) <br> _Figure 1: Visual of corporate policy and the Five Disciplines of Cloud Governance._ |
 
 ## Define corporate policy
