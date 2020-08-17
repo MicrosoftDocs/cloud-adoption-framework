@@ -14,7 +14,7 @@ ms.subservice: overview
 
 The Cloud Adoption Framework can help you get started in multiple ways, so several getting started guides are provided. This article groups those guides to help you find the one that best aligns with your current challenges.
 
-## How can we help you get started?
+## What can we help you get started with?
 
 Each link will take you to a group subset of the questions customers typically ask when trying to accomplish these common objectives.
 

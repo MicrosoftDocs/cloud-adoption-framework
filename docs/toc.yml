@@ -27,8 +27,6 @@ items:
         href: reference/fundamental-concepts/hosting-hierarchy.md
       - name: Azure hierarchy support
         href: reference/fundamental-concepts/hierarchy-azure-tools.md
-      - name: Operating model terminology
-        href: operating-model/terms.md
 
     - name: Accelerate migration
       href: get-started/migrate.md
@@ -187,6 +185,16 @@ items:
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
+    - name: Operating model
+      items:
+      - name: Overview
+        href: operating-model/index.md
+      - name: Define your operating model
+        href: operating-model/define.md
+      - name: Compare common cloud operating models
+        href: operating-model/compare.md
+      - name: Common operating model terms
+        href: operating-model/terms.md
     - name: Azure landing zones
       items:
       - name: What is a landing zone?
