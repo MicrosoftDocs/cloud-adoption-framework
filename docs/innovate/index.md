@@ -34,7 +34,7 @@ The [considerations overview](./considerations/index.md) establishes a common la
 
 Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here are a couple of examples of role-specific learning paths on Microsoft Learn that align with the Innovate methodology in the Cloud Adoption Framework.
+Here are a couple of examples of role-specific learning paths on Microsoft Learn that align with the Innovate methodology of the Cloud Adoption Framework.
 
 [Administer containers in Azure](/learn/paths/administer-containers-in-azure): Azure Container Instances are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how you can use Azure Container Instances to provide elastic scale for Kubernetes.
 

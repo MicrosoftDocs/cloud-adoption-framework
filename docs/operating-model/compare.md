@@ -57,7 +57,7 @@ While many teams and individuals will be responsible for supporting different fu
 
 ### Accelerate operating model implementation in Azure
 
-As discussed in [Define your operating model](./define.md), each methodology in the Cloud Adoption Framework provides a structured path to iteratively developing each aspect of your operating model. Following the most relevant methodology will help you overcome blockers to adoption that stem from gaps in the cloud operating model.
+As discussed in [Define your operating model](./define.md), each methodology of the Cloud Adoption Framework provides a structured path to iteratively developing each aspect of your operating model. Following the most relevant methodology will help you overcome blockers to adoption that stem from gaps in the cloud operating model.
 
 But there are ways to accelerate your operating model implementation, as outlined in the table below.
 
