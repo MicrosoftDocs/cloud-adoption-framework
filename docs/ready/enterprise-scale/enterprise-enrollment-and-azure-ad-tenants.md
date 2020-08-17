@@ -67,10 +67,10 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 **Design recommendations:**
 
-- Use Azure AD seamless single sign-on based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
-- If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
-- Multifactor authentication provides another layer of security and a second barrier of authentication. Enforce [multifactor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security.
-- Plan and implement for [emergency access](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
-- Use [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
+- Use Azure AD seamless single sign-on based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
+- If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Such deployment with [Azure AD Domain Services](/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
+- Multifactor authentication provides another layer of security and a second barrier of authentication. Enforce [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security.
+- Plan and implement for [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
+- Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
 - If dev/test and production are going to be isolated environments from an identity perspective, separate them at a tenant level via multiple tenants.
 - Avoid creating a new Azure AD tenant unless there's a strong identity and access management justification and processes are already in place.

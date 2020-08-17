@@ -34,7 +34,7 @@ The objective of the preceding data points is to capture relative technical effo
 
 Azure Migrate provides a set of grouping functions that can speed up the aggregation of applications, VMs, data sources, and dependencies. After workloads have been defined conceptually, they can be used as the basis for grouping assets based on dependency mapping.
 
-The Azure Migrate documentation provides guidance on [how to group machines based on dependencies](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies).
+The Azure Migrate documentation provides guidance on [how to group machines based on dependencies](/azure/migrate/how-to-create-group-machine-dependencies).
 
 ## Configuration-management database
 

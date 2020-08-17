@@ -44,7 +44,7 @@ As an innovator, your company has rich information about its business and its cu
 
 Azure provides advanced machine learning capabilities. Build, train, and deploy your machine learning models across the cloud and edge by using Azure Machine Learning. Develop models faster by using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For more information, see [Azure Machine Learning overview](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first machine learning experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
+For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
 
 <!-- markdownlint-disable MD024 -->
 
@@ -82,7 +82,7 @@ Azure provides a set of pre-built AI services called Cognitive Services to build
 
 Cognitive Services enables you to incorporate the AI capabilities of vision, speech, language, and decision into your applications. Most predictive models don't require additional training. These services are useful when you don't have data scientists on staff to train the predictive model. Other services require minimal training.
 
-For more information about the training that might be required and a list of available services across vision, speech, language, and decision-making, see the [Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-and-machine-learning#service-requirements-for-the-data-model) documentation.
+For more information about the training that might be required and a list of available services across vision, speech, language, and decision-making, see the [Cognitive Services](/azure/cognitive-services/cognitive-services-and-machine-learning#service-requirements-for-the-data-model) documentation.
 
 #### Action
 
@@ -120,7 +120,7 @@ Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com
 
 Interact more naturally with your customers and improve customer engagement through conversational experiences powered by Bot Framework and Azure Bot Service. In addition, use Cognitive Services APIs like Language Understanding (LUIS), QnA Maker, and Speech service. These help your customers with common tasks, leaving your call center agents time to focus on more nuanced, higher value cases.
 
-For more information on how to build bots, see [Azure Bot Service](https://docs.microsoft.com/learn/paths/create-bots-with-the-azure-bot-service/).
+For more information on how to build bots, see [Azure Bot Service](/learn/paths/create-bots-with-the-azure-bot-service/).
 
 #### Action
 
@@ -156,7 +156,7 @@ Use Azure Cognitive Search to uncover latent insights from your content, includi
 
 Azure Cognitive Search uses the same natural language stack that Bing and Microsoft Office use. Spend more time innovating and less time maintaining a complex cloud search solution.
 
-For more information, see [What is Azure Cognitive Search?](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
+For more information, see [What is Azure Cognitive Search?](/azure/search/search-what-is-azure-search)
 
 ### Action
 

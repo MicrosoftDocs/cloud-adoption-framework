@@ -19,16 +19,16 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Cloud journey tracker](https://docs.microsoft.com/assessments/?mode=pre-assessment&id=cloud-journey-tracker) | Identify your cloud adoption path based on the needs of your business. |
+| [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy&nbsp;and&nbsp;plan&nbsp;template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions as you execute your cloud adoption strategy and plan. |
 
 ## Plan
 
 | Resource | Description |
 |----------|-------------|
-| [Cloud journey tracker](https://docs.microsoft.com/assessments/?mode=pre-assessment&id=cloud-journey-tracker) | Identify your cloud adoption path based on the needs of your business. |
+| [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy&nbsp;and&nbsp;plan&nbsp;template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions, as you execute your cloud adoption strategy and plan. |
-| [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](https://docs.microsoft.com/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
+| [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
 
 ## Ready
 
@@ -58,7 +58,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) | This online assessment will aid in defining workload specific architectures and operations options. |
+| [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) | This online assessment will aid in defining workload specific architectures and operations options. |
 | [Best&nbsp;practices&nbsp;source&nbsp;code](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/manage/Automation-Best-Practices) | This deployable source code complements and accelerates adoption of best practices for Azure server management services. Use this source code to quickly enable operations management and establish an operations baseline. |
 | [Operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) | Document decisions about operations management in the cloud, and facilitate conversations with the business to ensure alignment regarding SLAs, investment in resiliency, and budget allocation related to operations. |
 

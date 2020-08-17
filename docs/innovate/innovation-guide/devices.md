@@ -22,12 +22,12 @@ Azure customers employ a continually expanding set of connected systems and devi
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - [Microsoft HoloLens 2](https://docs.microsoft.com/hololens)
-> - [Azure Sphere](https://docs.microsoft.com/azure-sphere/product-overview/what-is-azure-sphere)
-> - [Azure Kinect DK](https://docs.microsoft.com/azure/kinect-dk/about-azure-kinect-dk)
+> - [Microsoft HoloLens 2](/hololens)
+> - [Azure Sphere](/azure-sphere/product-overview/what-is-azure-sphere)
+> - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
-> - [Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview)
-> - [IoT plug and play](https://docs.microsoft.com/azure/iot-pnp/overview-iot-plug-and-play)
+> - [Azure SQL Edge](/azure/azure-sql-edge/overview)
+> - [IoT plug and play](/azure/iot-pnp/overview-iot-plug-and-play)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -48,8 +48,8 @@ Here are a few features you'll find:
 
 ### Learn more
 
-- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-- [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
+- [Azure IoT Hub](/azure/iot-hub)
+- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
 
 ::: zone-end
 
@@ -101,7 +101,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ### Learn more
 
-- [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)
+- [Azure Digital Twins](/azure/digital-twins/about-digital-twins)
 
 ::: zone-end
 
@@ -140,7 +140,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ### Learn more
 
-- [Azure Maps](https://docs.microsoft.com/azure/azure-maps)
+- [Azure Maps](/azure/azure-maps)
 
 ::: zone-end
 
@@ -177,7 +177,7 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ### Learn more
 
-- [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
+- [Azure Spatial Anchors](/azure/spatial-anchors/overview)
 
 ::: zone-end
 
@@ -208,8 +208,8 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ### Learn more
 
-- [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
-- [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
+- [Azure Remote Rendering](/azure/remote-rendering/overview/about)
+- [Rendering using Azure](/azure/batch/batch-rendering-service)
 
 ::: zone-end
 

@@ -76,17 +76,17 @@ To operationalize at scale, these activities must follow infrastructure-as-code 
 
 3. Deploy and configure an Azure Private DNS zone.
 
-4. Provision ExpressRoute circuits with Azure private peering. Follow the instructions in [Create and modify peering for an ExpressRoute circuit](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private)
+4. Provision ExpressRoute circuits with Azure private peering. Follow the instructions in [Create and modify peering for an ExpressRoute circuit](/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private)
 
 5. Connect on-premises HQs/DCs to Azure Virtual WAN virtual hubs via ExpressRoute circuits.
 
 6. Protect VNet traffic across virtual hubs with NSGs.
 
-7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute).
+7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](/azure/virtual-wan/vpn-over-expressroute).
 
-8. (Optional:) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal).
+8. (Optional:) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](/azure/virtual-wan/virtual-wan-site-to-site-portal).
 
-9. (Optional:) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach).
+9. (Optional:) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](/azure/expressroute/expressroute-howto-set-global-reach).
 
 The following list shows Azure Policy assignments used when implementing networking resources for an enterprise-scale deployment:
 

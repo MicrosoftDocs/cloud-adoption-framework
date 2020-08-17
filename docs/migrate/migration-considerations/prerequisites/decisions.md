@@ -41,7 +41,7 @@ If data, experimentation, research and development (R&D), or new products are yo
 
 ## Effort
 
-Migration effort can vary widely depending on the size and complexities of the workloads involved. A smaller workload migration involving a few hundred virtual machines (VMs) is a tactical process, potentially being implemented using automated tools such as [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview). Conversely, a large enterprise migration of tens of thousands of workloads requires a highly strategic process and can involve extensive refactoring, rebuilding, and replacing of existing applications integrating platform as a service (PaaS) and software as a service (SaaS) capabilities. [Identifying and balancing the scope](../../../strategy/balance-the-portfolio.md) of your planned migrations is critical.
+Migration effort can vary widely depending on the size and complexities of the workloads involved. A smaller workload migration involving a few hundred virtual machines (VMs) is a tactical process, potentially being implemented using automated tools such as [Azure Migrate](/azure/migrate/migrate-services-overview). Conversely, a large enterprise migration of tens of thousands of workloads requires a highly strategic process and can involve extensive refactoring, rebuilding, and replacing of existing applications integrating platform as a service (PaaS) and software as a service (SaaS) capabilities. [Identifying and balancing the scope](../../../strategy/balance-the-portfolio.md) of your planned migrations is critical.
 
 Before making any decisions that could have a long-term impact on the current migration program, it is vital that you create consensus on the following decisions.
 
