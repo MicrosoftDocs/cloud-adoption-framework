@@ -24,8 +24,8 @@ The following image maps common operating models based on the range of complexit
 
 A cloud operating model is primarily driven by two factors:
 
-    - Strategic priorities and motivations.
-    - The scope of the portfolio to be managed.
+- Strategic priorities and motivations.
+- The scope of the portfolio to be managed.
 
 |  | Decentralized operations (ops) | Centralized operations (ops) | Enterprise operations (ops) | Distributed operations (ops) |
 |--|--|--|--|--|
