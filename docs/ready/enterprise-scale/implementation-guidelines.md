@@ -78,13 +78,13 @@ The following sections list the steps to complete this category of activity in t
 
 3. Deploy and configure an Azure Private DNS zone.
 
-4. Provision ExpressRoute circuits with Azure private peering. Follow the instructions in [Create and modify peering for an ExpressRoute circuit](azure/expressroute/expressroute-howto-routing-portal-resource-manager#private).
+4. Provision ExpressRoute circuits with Azure private peering. Follow the instructions in [Create and modify peering for an ExpressRoute circuit](/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private).
 
 5. Connect on-premises HQs/DCs to Azure Virtual WAN virtual hubs via ExpressRoute circuits.
 
 6. Protect virtual network traffic across virtual hubs with network security groups (NSGs).
 
-7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](azure/virtual-wan/vpn-over-expressroute).
+7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](/azure/virtual-wan/vpn-over-expressroute).
 
 8. (Optional:) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](/azure/virtual-wan/virtual-wan-site-to-site-portal).
 
