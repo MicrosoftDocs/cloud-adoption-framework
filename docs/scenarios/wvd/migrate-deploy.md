@@ -41,7 +41,7 @@ If the assigned Azure landing zone doesn't meet your requirements, scope should 
 
 ### Application and desktop considerations
 
-Some personas might have a dependency on legacy solutions, which are not compatible with Windows&nbsp;10 multi-session. In these cases, some personas might require dedicated desktops. This dependency might not be discovered until deployment and testing. 
+Some personas might have a dependency on legacy solutions, which are not compatible with Windows&nbsp;10 multi-session. In these cases, some personas might require dedicated desktops. This dependency might not be discovered until deployment and testing.
 
 If they're discovered late in the process, future iterations should be allocated to modernization or migration of the legacy application. This will reduce the long-term cost of the desktop experience. Those future iterations should be prioritized and completed based on the overall pricing impact of modernization versus the extra cost associated with dedicated desktops. To avoid pipeline disruptions and the realization of business outcomes, this prioritization should not affect current iterations.
 

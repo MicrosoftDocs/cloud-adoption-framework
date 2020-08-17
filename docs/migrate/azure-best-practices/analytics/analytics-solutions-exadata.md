@@ -21,9 +21,8 @@ Several Oracle database objects aren't supported in Azure Synapse. Database obje
 
 When you migrate an Oracle data warehouse schema, you also must take into account data type differences on columns. To find the columns in your Oracle data warehouse and data mart schemas that have data types that don't map to data types in Azure Synapse, query the Oracle catalog. You can use workarounds for several of these instances.
 
-To maintain or improve performance of your schema after migration, consider performance mechanisms, like Oracle indexing, that you currently have in place. For example, bit-mapped indexes that Oracle queries frequently use might indicate that creating a nonclustered index in the migrated schema on Azure Synapse would be advantageous. 
+To maintain or improve performance of your schema after migration, consider performance mechanisms, like Oracle indexing, that you currently have in place. For example, bit-mapped indexes that Oracle queries frequently use might indicate that creating a nonclustered index in the migrated schema on Azure Synapse would be advantageous.
 
 A good practice in Azure Synapse includes using data distribution to colocate data to be joined onto the same processing node. Another good practice in Azure Synapse is ensuring that data types of columns to be joined are identical. Using identical joined columns optimizes join processing by reducing the need to transform data for matching. In Azure Synapse, often it isn't necessary to migrate every Oracle index because other features provide high performance. You can instead use parallel query processing, in-memory data, and result set caching and data distribution options that reduce I/O.
 
 SSMA for Oracle can help you migrate an Oracle data warehouse or data mart to Azure Synapse. SSMA is designed to automate the process of migrating tables, views, and data from an existing Oracle environment. Among other features, SSMA recommends index types and data distributions for target Azure Synapse tables, and it applies data type mappings during migration. Although SSMA isn't the most efficient approach for very high volumes of data, it's useful for smaller tables.
-

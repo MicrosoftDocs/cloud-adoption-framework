@@ -12,6 +12,7 @@ ms.subservice: migrate
 # Deploy workloads to Azure Stack Hub
 
 By using Azure Stack, your organization can run its own instance of Azure in its datacenter. Organizations include Azure Stack in their cloud strategy because it helps them handle situations when the public cloud won't work for them. The three most common reasons to use Azure Stack are:
+
 * Poor network connectivity to the public cloud.
 * Regulatory or contractual requirements.
 * Back-end systems that can't be exposed to the internet.

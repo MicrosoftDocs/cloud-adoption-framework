@@ -238,7 +238,7 @@ _Figure 4: A traditional Azure network topology._
   _Figure 5: Hub-and-spoke network topology._
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
- 
+
   - You need a high level of isolation.
   - You need dedicated ExpressRoute bandwidth for specific business units.
   - You've reached the maximum number of connections per ExpressRoute gateway (up to four).
@@ -398,7 +398,6 @@ This section describes recommended connectivity models for inbound and outbound 
 
   - For Virtual WAN network topologies, deploy the NVAs to a separate virtual network (for example, NVA virtual network). Then connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs. [This article](/azure/virtual-wan/virtual-wan-route-table-portal) describes the process.
   - For non-Virtual WAN network topologies, deploy the partner NVAs in the central-hub virtual network.
-
 
 - If partner NVAs are required for inbound HTTP/S connections, deploy them within a landing-zone virtual network and together with the apps that they're protecting and exposing to the internet.
 

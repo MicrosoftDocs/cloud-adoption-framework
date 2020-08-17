@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Windows Virtual Desktop proof of concept
 
-Before the Contoso cloud adoption team deploys its end-user desktops, it validates the configuration of the Azure landing zone and end-user network capacity by completing and testing a proof of concept. 
+Before the Contoso cloud adoption team deploys its end-user desktops, it validates the configuration of the Azure landing zone and end-user network capacity by completing and testing a proof of concept.
 
 The following approach to the migration process is simplified to outline a proof-of-concept implementation.
 
@@ -36,7 +36,7 @@ It's unlikely that all the following assumptions will prove to be true for any e
 * All workloads are compatible with Windows&nbsp;10 multi-session.
 * Latency between the virtual desktops and application groups is acceptable for production usage.
 
-To calculate the cost of the Windows Virtual Desktop scenario based on the proof-of-concept configuration reference, the team uses the pricing calculator for [East US](https://azure.com/e/448606254c9a44f88798892bb8e0ef3c), [West Europe](https://azure.com/e/61a376d5f5a641e8ac31d1884ade9e55), or [Southeast Asia](https://azure.com/e/7cf555068922461587d0aa99a476f926). 
+To calculate the cost of the Windows Virtual Desktop scenario based on the proof-of-concept configuration reference, the team uses the pricing calculator for [East US](https://azure.com/e/448606254c9a44f88798892bb8e0ef3c), [West Europe](https://azure.com/e/61a376d5f5a641e8ac31d1884ade9e55), or [Southeast Asia](https://azure.com/e/7cf555068922461587d0aa99a476f926).
 > [!NOTE]
 > These examples all use Azure Files as the storage service for user profiles.
 
