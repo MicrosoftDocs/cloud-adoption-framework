@@ -74,7 +74,11 @@ The program leverages FastTrack for Azure and Azure solution providers to improv
 
 Watch this short video to get an overview of how the Azure Migration Program can help you.
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4D1vH>]
+<!-- markdownlint-disable MD034 -->
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4D1vH]
+
+<!-- markdownlint-enable MD034 -->
 
 ### Azure support
 
