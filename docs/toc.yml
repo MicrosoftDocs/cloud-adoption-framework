@@ -541,6 +541,39 @@ items:
           - name: Release
             href: scenarios/wvd/migrate-release.md
 
+        - name: AKS Migration
+          items:
+          - name: Overview
+            href: scenarios/aks-migration/index.md
+          - name: strategy
+            href: scenarios/aks-migration/strategy.md
+          - name: Planning
+            href: scenarios/aks-migration/plan.md
+          - name: Azure landing zone review
+            href: scenarios/aks-migration/ready.md
+          - name: Assess
+            href: scenarios/aks-migration/migrate-assess.md
+          - name: Migrate (or Deploy)
+            href: scenarios/aks-migration/migrate-deploy.md
+          - name: Release
+            href: scenarios/aks-migration/migrate-release.md
+          - name: Enterprise-Scale landing zone
+            items:
+            - name: Overview
+              href: scenarios/aks-migration/enterprise-scale-landing-zone.md
+            - name: Enterprise enrollment and Azure AD Tenant
+              href: scenarios/aks-migration/eslz-enterprise-enrollment-and-azure-ad-tenants.md
+            - name: Identity and Access Management
+              href: scenarios/aks-migration/eslz-identity-and-access-management.md
+            - name: Management and Monitoring
+              href: scenarios/aks-migration/eslz-management-and-monitoring.md
+            - name: Management group and subscription organization
+              href: scenarios/aks-migration/eslz-management-group-and-subscription-organization.md
+            - name: Network topology and connectivity
+              href: scenarios/aks-migration/eslz-network-topology-and-connectivity.md
+            - name: Security governance and compliance
+              href: scenarios/aks-migration/eslz-security-governance-and-compliance.md
+            
         - name: Data platforms
           items:
           - name: Overview
