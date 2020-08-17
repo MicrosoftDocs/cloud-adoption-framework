@@ -35,7 +35,7 @@ When a response to critical business events is the highest priority, it's import
 
 When migration is the highest priority, strategy and planning will play a vital role early in the process. We recommend that you implement the first workload in parallel with planning efforts, to help the team understand and anticipate any learning curves that are associated with cloud adoption.
 
-When innovation is the highest priority, strategy and planning require additional investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For further information and guidance, see [understand the innovation journey](../get-started/innovate.md).
+When innovation is the highest priority, strategy and planning require additional investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For further information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
 
 To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and effect wiser decisions through consistent, strategic methodologies.
 
