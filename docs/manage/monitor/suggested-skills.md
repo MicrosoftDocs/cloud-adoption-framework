@@ -19,18 +19,18 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Fundamentals
 
-- Introduction to [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
+- Introduction to [Azure Resource Manager](/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
 
-- Introduction to [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy Diagnostic Settings, audit guest configuration settings, and more.
+- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy Diagnostic Settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure command-line interface (CLI)](https://docs.microsoft.com/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](https://docs.microsoft.com/powershell/azure/?view=azps-3.6.1). LinkedIn offers, as part of their beginner-level course [Learning Azure Management Tools](https://www.linkedin.com/learning/learning-azure-management-tools), sessions covering Azure CLI and PowerShell programming languages:
+- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](/powershell/azure/?view=azps-3.6.1). LinkedIn offers, as part of their beginner-level course [Learning Azure Management Tools](https://www.linkedin.com/learning/learning-azure-management-tools), sessions covering Azure CLI and PowerShell programming languages:
 
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
 
-- Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](https://docs.microsoft.com/learn/paths/implement-resource-mgmt-security).
+- Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](/learn/paths/implement-resource-mgmt-security).
 
-- Introduction to [Monitoring Microsoft Azure Resources and Workloads](https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring-update/table-of-contents) helps you learn how to use Microsoft Azure monitoring tools to monitor Azure network resources as well as resources on-premises.
+- [Monitoring Microsoft Azure Resources and Workloads](https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring-update/table-of-contents) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
 
 ## Infrastructure monitoring
 
@@ -44,11 +44,11 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [Monitoring Microsoft Azure Hybrid Cloud Networks](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course that helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize Azure virtual networks and virtual private network connections for your hybrid cloud implementation.
 
-- With [Azure Arc for servers](https://docs.microsoft.com/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage native Azure virtual machines.
+- With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage native Azure virtual machines.
 
 ## Application monitoring
 
-- Understand how [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) helps you view availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
+- Understand how [Azure Monitor](/azure/azure-monitor/overview) helps you view availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
 
   - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
 
@@ -62,7 +62,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Data analysis
 
-- Learn how to write [log queries in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-queries). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
+- Learn how to write [log queries in Azure Monitor](/azure/azure-monitor/log-query/get-started-queries). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
 
 - [Kusto Query Language (KQL) from Scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch) is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor logs.
 
@@ -76,7 +76,7 @@ Microsoft and partners offer a variety of options for all audiences to develop t
 
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
 
-Turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams]( https://www.microsoft.com/learning/certification-overview.aspx).
+Turn your knowledge of Azure into official recognition with [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ## Azure DevOps and Project Management
 
@@ -86,13 +86,13 @@ As part of migrating to a cloud monitoring platform, the IT team responsible for
 
 To learn more, review the following:
 
-- [Get started with Azure DevOps](https://docs.microsoft.com/learn/modules/get-started-with-devops).
+- [Get started with Azure DevOps](/learn/modules/get-started-with-devops).
 
-- [Learn about DevOps dojo white belt foundation](https://docs.microsoft.com/learn/paths/devops-dojo-white-belt-foundation)
+- [Learn about DevOps dojo white belt foundation](/learn/paths/devops-dojo-white-belt-foundation)
 
-- [Evolve your DevOps practices](https://docs.microsoft.com/learn/paths/evolve-your-devops-practices)
+- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices)
 
-- [Automate your deployments with Azure DevOps](https://docs.microsoft.com/learn/paths/automate-deployments-azure-devops)
+- [Automate your deployments with Azure DevOps](/learn/paths/automate-deployments-azure-devops)
 
 ## Other Considerations
 
@@ -102,4 +102,4 @@ Review the following to understand the updates made to the most popular ITSM fra
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.
+To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.

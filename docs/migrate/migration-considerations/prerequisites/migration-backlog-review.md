@@ -1,5 +1,5 @@
 ---
-title: "Migration Backlog Review"
+title: "Migration backlog review"
 description: Use the Cloud Adoption Framework for Azure to understand the importance of creating and reviewing a migration backlog.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,7 +29,7 @@ The article on [digital estate rationalization](../../../digital-estate/rational
 
 ## Next steps
 
-With a general understanding of the digital estate and migration backlog, the team is ready to move beyond prerequisites and to begin [assessing workloads](../assess/index.md).
+With a general understanding of the digital estate and migration backlog, the team is ready to move beyond prerequisites and begin assessing workloads.
 
 > [!div class="nextstepaction"]
 > [Assess workloads](../assess/index.md)

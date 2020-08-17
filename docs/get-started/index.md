@@ -17,8 +17,8 @@ These common scenarios provide a roadmap through the Microsoft Cloud Adoption Fr
 <!-- markdownlint-disable MD033 -->
 <br>
 
-|                                                                                     |                                                                                                                                |
-|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| Scenario | Description |
+|----------|-------------|
 | [We need to understand the fundamental concepts around cloud adoption](./cloud-concepts.md) | If your journey involves the cloud, there are a few initial concepts to understand and decisions to make. |
 | [We want to migrate existing workloads to the cloud](./migrate.md)                   | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
 | [We want to build new products and services in the cloud](./innovate.md)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |

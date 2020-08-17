@@ -48,7 +48,7 @@ Computers that are managed by Update Management use the following configurations
 - Azure Automation Hybrid Runbook Worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
-For more information, see [Update Management solution](https://docs.microsoft.com/azure/automation/automation-update-management).
+For more information, see [Update Management solution](/azure/automation/automation-update-management).
 
 > [!WARNING]
 > Before using Update Management, you must onboard virtual machines or an entire subscription into Log Analytics and Azure Automation.
@@ -121,8 +121,8 @@ To apply a policy to a resource group:
 
 To learn more, see:
 
-- [Azure Policy](https://docs.microsoft.com/azure/azure-policy)
-- [Azure Policy: Guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy](/azure/azure-policy)
+- [Azure Policy: Guest configuration](/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
@@ -159,7 +159,7 @@ To create a blueprint:
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
 1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
-1. Select **Save Draft**.
+1. Select **Save draft**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
 
@@ -173,7 +173,7 @@ To create a blueprint:
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
 1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
-1. Select **Save Draft**.
+1. Select **Save draft**.
 
 ::: zone-end
 
@@ -209,8 +209,8 @@ To publish blueprint artifacts to your subscription:
 
 To learn more, see:
 
-- [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints)
+- [Azure Blueprints](/azure/governance/blueprints)
 - [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Standards-based blueprints samples](/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
 
 ::: zone-end

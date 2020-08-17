@@ -22,8 +22,8 @@ Organizing cloud-based resources is a crucial task for IT, unless you only have 
   - [Cloud accounting models](../../strategy/cloud-accounting.md)
   - [ROI calculations](../../strategy/financial-models.md#return-on-investment)
   - [Cost tracking](../../ready/azure-best-practices/track-costs.md)
-  - [Budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-  - [Alerts](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
+  - [Alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
   - [Recurring spend tracking and reporting](../../govern/cost-management/compliance-processes.md)
   - [Post-implementation optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
   - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
@@ -50,7 +50,7 @@ Tagging schemes that include a business-aligned focus, such as accounting, busin
 A standardized naming convention is the starting point for organizing your cloud-hosted resources. A properly structured naming system allows you to quickly identify resources for both management and accounting purposes. If you have existing IT naming conventions in other parts of your organization, consider whether your cloud naming conventions should align with them or if you should establish separate cloud-based standards.
 
 > [!NOTE]
-> [Naming rules and restrictions](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) vary per Azure resource. Your naming conventions must comply with these rules.
+> [Naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules) vary per Azure resource. Your naming conventions must comply with these rules.
 
 ## Resource tagging patterns
 
@@ -72,11 +72,11 @@ The common tagging patterns listed below provide examples of how tagging can be 
 
 | Tag type | Examples | Description |
 |-----|-----|-----|
-| Functional | app&nbsp;=&nbsp;catalogsearch1 <br> tier&nbsp;=&nbsp;web <br> webserver&nbsp;=&nbsp;apache <br> env&nbsp;=&nbsp;prod <br> env&nbsp;=&nbsp;staging <br> env&nbsp;=&nbsp;dev | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
-| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24hours | Classifies a resource by how it is used and what policies apply to it. |
-| Accounting | department&nbsp;=&nbsp;finance <br> program&nbsp;=&nbsp;business-initiative <br> region&nbsp;=&nbsp;northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes. |
-| Partnership | owner&nbsp;=&nbsp;jsmith <br> contactalias&nbsp;=&nbsp;catsearchowners <br> stakeholders&nbsp;=&nbsp;user1;user2;user3 | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
-| Purpose | businessprocess&nbsp;=&nbsp;support <br> businessimpact&nbsp;=&nbsp;moderate <br> revenueimpact&nbsp;=&nbsp;high | Aligns resources to business functions to better support investment decisions. |
+| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
+| Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it is used and what policies apply to it. |
+| Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Allows a resource to be associated with specific groups within an organization for billing purposes. |
+| Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
+| Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
 
 <!-- docsTest:enable -->
 <!-- markdownlint-enable MD033 -->
@@ -86,11 +86,11 @@ The common tagging patterns listed below provide examples of how tagging can be 
 For more information about naming and tagging in Azure, see:
 
 - [Naming conventions for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md). Refer to this guidance for recommended naming conventions for Azure resources.
-- [Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
+- [Use tags to organize your Azure resources and management hierarchy](/azure/azure-resource-manager/management/tag-resources). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
 
 ## Next steps
 
-Resource tagging is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+Resource tagging is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the architectural decision guides overview to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)

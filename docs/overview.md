@@ -26,18 +26,22 @@ The Cloud Adoption Framework brings together cloud adoption best practices from 
 
 <!-- markdownlint-disable MD033 -->
 
-| | | | | |
-|--|--|--|--|--|
-| <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;Define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;Align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
-| <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
-| <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern the environment and workloads. |
-| <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Operations management for cloud and hybrid solutions. | <br> ![Organize icon](./_images/icons/organize.png) | <br> [Organize](./organize/index.md): Govern the environment and workloads. |
+| Phase | Description |
+|----------|-------------|
+| [Strategy](./strategy/index.md) | Define business justification and expected outcomes of adoption. |
+| [Ready](./ready/index.md) | Prepare the cloud environment for the planned changes. |
+| [Innovate](./innovate/index.md) | Develop new cloud-native or hybrid solutions. |
+| [Manage](./manage/index.md) | Operations management for cloud and hybrid solutions. |
+| [Plan](./plan/index.md) | Align actionable adoption plans to business outcomes. |
+| [Migrate](./migrate/index.md) | Migrate and modernize existing workloads. |
+| [Govern](./govern/index.md) | Govern the environment and workloads. |
+| [Organize](./organize/index.md) | Establish and maintain the organizational structure. |
 
 ## Understand the lifecycle
 
 Each methodology above is part of a broad cloud adoption lifecycle. The Cloud Adoption Framework is a full lifecycle framework, supporting customers throughout each phase of adoption by providing methodologies as specific approaches to overcoming common blockers, as shown here.
 
-::: image type="content" source="./_images/caf-overview-new.svg" alt-text="Overview of the Cloud Adoption Framework" :::
+![Overview of the Cloud Adoption Framework](./_images/caf-overview-new.png)
 
 ## Intent
 

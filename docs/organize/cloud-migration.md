@@ -13,14 +13,14 @@ ms.date: 05/15/2020
 
 Cloud migration teams are the modern-day equivalent of technical implementation teams or project teams. But the nature of the cloud may require a more fluid team structure. Some migration teams focus exclusively on cloud migration, while others focus on innovations that take advantage of cloud technologies. Some include the broad technical expertise required to complete large adoption efforts, like a full datacenter migration, while others have a tighter technical focus and may move between projects to accomplish specific goals, for example, a team of data platform specialists who help convert SQL VMs to SQL PaaS instances.
 
-Regardless of the type or number of cloud migration teams, these team(s) generally provides subject matter expertise for IT, business analysis, or implementation partners.
+Regardless of the type or number of cloud migration teams, these teams generally provides subject matter expertise for IT, business analysis, or implementation partners.
 
 ## Prerequisites
 
-- [Create an Azure account](https://docs.microsoft.com/learn/modules/create-an-azure-account): The first step to using Azure is to create an account.
-- [Azure portal](https://docs.microsoft.com/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
-- [Introduction to Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure): Get started with Azure. Create and configure your first virtual machine in the cloud.
-- [Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts, understand the benefits, compare and contrast basic strategies, and explore the breadth of services available in Azure.
+- [Create an Azure account](/learn/modules/create-an-azure-account): The first step to using Azure is to create an account.
+- [Azure portal](/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
+- [Introduction to Azure](/learn/modules/welcome-to-azure): Get started with Azure. Create and configure your first virtual machine in the cloud.
+- [Azure fundamentals](/learn/paths/azure-for-the-data-engineer): Learn cloud concepts, understand the benefits, compare and contrast basic strategies, and explore the breadth of services available in Azure.
 - Review the [Migrate methodology](../migrate/index.md).
 
 ## Minimum scope

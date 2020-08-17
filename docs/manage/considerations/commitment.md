@@ -52,7 +52,7 @@ The operations management baseline serves as an initial starting point to be val
 
 In a traditional on-premises environment, the cost of managing the environment is commonly assumed to be a sunk cost that's owned by IT operations. In the cloud, management is a purposeful decision with direct budgetary impact. The costs of each management function can be more directly attributed to each workload that's deployed to the cloud. This approach allows for greater control, but it does create a requirement for cloud operations teams and cloud strategy teams to first commit to an agreement about responsibilities.
 
-Organizations might also choose to [outsource some of their ongoing management functions to a service provider](https://aka.ms/adopt/partneroffers). These service providers can use [Azure Lighthouse](https://azure.microsoft.com/services/azure-lighthouse) to give organizations more precise control in granting access to their resources, along with greater visibility into the actions performed by the service providers.
+Organizations might also choose to [outsource some of their ongoing management functions to a service provider](https://aka.ms/adopt/partneroffers). These service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to give organizations more precise control in granting access to their resources, along with greater visibility into the actions performed by the service providers.
 
 - **Delegated responsibility:** Because there's no need to centralize and assume operational management overhead, IT operations for many organizations are considering new approaches. One common approach is referred to as _delegated responsibility_. In a cloud center of excellence model, platform operations and platform automation provide self-service management tools that can be used by business-led operations teams, independent of a centralized IT operations team. This approach gives business stakeholders complete control over management-related budgets. It also allows the cloud center of excellence (CCoE) team to ensure that a minimum set of guardrails has been properly implemented. In this model, IT acts as a broker and a guide to help the business make wise decisions. Business operations oversee day to day operations of dependent workloads.
 
@@ -81,7 +81,7 @@ Before you run the numbers, it's important to look at the soft-cost factors. Sof
 A few examples of soft-cost factors would include:
 
 - Daily workload usage by the board or CEO.
-- Workload usage by the top _x%_ of customers that leads to a greater revenue impact elsewhere.
+- Workload usage by the top *x%* of customers that leads to a greater revenue impact elsewhere.
 - Impact on employee satisfaction.
 
 The next data point that's required to make a commitment is a list of soft-cost factors. These factors don't need to be documented at this stage, but business stakeholders should be aware of the importance of these factors and their exclusion from the following calculations.

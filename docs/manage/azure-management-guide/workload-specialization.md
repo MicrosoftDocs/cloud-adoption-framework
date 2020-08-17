@@ -47,7 +47,7 @@ Greater detail on the specific workload is required to provide clear workload op
 | Requirement                          | Tool                 | Purpose                                                                                |
 | ------------------------------------ | -------------------- | -------------------------------------------------------------------------------------- |
 | Application monitoring               | Application Insights | Monitoring and diagnostics for apps                                                    |
-| Performance, availability, and usage | Application Insights | Advanced application monitoring with app dashboard, composite maps, usage, and tracing |
+| Performance, availability, and usage | Application Insights | Advanced application monitoring with the application dashboard, composite maps, usage, and tracing |
 
 ### Deploy Application Insights
 
@@ -55,7 +55,7 @@ Greater detail on the specific workload is required to provide clear workload op
 1. Select **+ Add** to create an Application Insights resource to monitor your live web application.
 1. Follow the on-screen prompts.
 
-See the [Azure Monitor Application Insights hub](https://docs.microsoft.com/azure/azure-monitor/azure-monitor-app-hub) for guidance on configuring your application for monitoring.
+See the [Azure Monitor Application Insights hub](/azure/azure-monitor/azure-monitor-app-hub) for guidance on configuring your application for monitoring.
 
 ::: zone target="chromeless"
 

@@ -44,7 +44,7 @@ The guidance regarding [incremental rationalization of the digital estate](../di
 
 The table in the [documenting business outcomes](#document-business-outcomes) section above misses a key outcome that would support the number one objective of reducing IT costs. When IT costs reductions rank anywhere in the list of business outcomes, it is important to consider the potential to sunset or retire workloads. In some scenarios, cost savings can come from not migrating workloads that don't warrant a short-term investment. Some customers have reported cost savings in excess of 20% total cost reductions by retiring underutilized workloads.
 
-To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload within assess and migrate processes:
+To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload within Assess and Migrate phases:
 
 - Has the workload been used by end users in the past six months?
 - Is end-user traffic consistent or growing?
@@ -75,7 +75,7 @@ To reduce complexity, you should follow a traditional approach to portfolio rati
   - Is this application a third-party application?
   - Has budget been approved to invest in ongoing development of the application in the next 12 months?
   - Would additional development of this application improve the customer experience? Create a competitive differentiator? Drive additional revenue for the business?
-  - Will the data within this workload contribute to a downstream innovation related to BI, Machine Learning, IoT, or related technologies?
+  - Will the data within this workload contribute to a downstream innovation related to BI, machine learning, IoT, or related technologies?
   - Is the workload compatible with modern application platforms like Azure App Service?
 - The answers to the above questions and any other required qualitative analysis would then influence adjustments to the prioritized backlog. These adjustments may include:
   - If a workload could be replaced with a PaaS solution, it may be removed from the migration backlog entirely. At a minimum, additional due diligence to decide between rehost and replace would be added as a task, temporarily reducing that workload's priority from the migration backlog.
@@ -86,7 +86,7 @@ To reduce complexity, you should follow a traditional approach to portfolio rati
 
 These questions shouldn't be the extent of the qualitative analysis completed for each workload, but they help guide a conversation about addressing the complexity of an imbalanced portfolio.
 
-## Migrate process changes
+## Migration process changes
 
 During migration, portfolio balancing activities can have a negative impact on migration velocity (the speed at which assets are migrated). The following guidance will expand on why and how to align work to avoid interruptions to the migration effort.
 

@@ -49,7 +49,7 @@ Learn more about the primary Software Defined Networking architectures:
 
 - **[PaaS-only](./paas-only.md):** Most platform as a service (PaaS) products support a limited set of built-in networking features and may not require an explicitly defined software defined network to support workload requirements.
 - **[Cloud-native](./cloud-native.md):** A cloud-native architecture supports cloud-based workloads using virtual networks built on the cloud platform's default Software Defined Networking capabilities, without reliance on on-premises or other external resources.
-- **[Cloud DMZ](./cloud-dmz.md):** Supports limited connectivity between your on-premises and cloud networks, secured through the implementation of a demilitarized zone tightly controlling traffic between the two environments.
+- **[Cloud DMZ](./cloud-dmz.md):** Supports limited connectivity between your on-premises and cloud networks, secured through the implementation of a perimeter network tightly controlling traffic between the two environments.
 - **[Hybrid](./hybrid.md):** The hybrid cloud network architecture allows virtual networks in trusted cloud environments to access your on-premises resources and vice versa.
 - **[Hub and spoke](./hub-spoke.md):** The hub and spoke architecture allows you to centrally manage external connectivity and shared services, isolate individual workloads, and overcome potential subscription limits.
 
@@ -57,12 +57,12 @@ Learn more about the primary Software Defined Networking architectures:
 
 For more information about Software Defined Networking in Azure, see:
 
-- [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview). On Azure, the core SDN capability is provided by Azure Virtual Network, which acts as a cloud analog to physical on-premises networks. Virtual networks also act as a default isolation boundary between resources on the platform.
-- [Azure best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices). Recommendations from the Azure security team on how to configure your virtual networks to minimize security vulnerabilities.
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview). On Azure, the core SDN capability is provided by Azure Virtual Network, which acts as a cloud analog to physical on-premises networks. Virtual networks also act as a default isolation boundary between resources on the platform.
+- [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Recommendations from the Azure security team on how to configure your virtual networks to minimize security vulnerabilities.
 
 ## Next steps
 
-Software Defined Networking is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+Software Defined Networking is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the architectural decision guides overview to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)

@@ -25,8 +25,8 @@ The skills needed to provide cloud operations functions can be provided by:
 
 ## Preparation
 
-- [Manage resources in Azure](https://docs.microsoft.com/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
-- [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
+- [Manage resources in Azure](/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
+- [Azure network services](/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
 Review the following:
 
@@ -72,4 +72,4 @@ Learn more about:
 - [Cloud center of excellence](../organize/cloud-center-of-excellence.md) functions.
 - [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md).
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

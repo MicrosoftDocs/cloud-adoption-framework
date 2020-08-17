@@ -1,6 +1,6 @@
 ---
-title: Manage access to your Azure environment
-description: Learn how to set up access control for your Azure environment with role-based access control (RBAC).
+title: Manage access to your Azure environment with role-based access control
+description: Learn how to set up access control for your Azure environment with role-based access control.
 author: LijuKodicheraJayadevan
 ms.author: kfollis
 ms.date: 04/09/2019
@@ -22,6 +22,7 @@ RBAC provides detailed access management of resources in Azure. It helps you man
 When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning RBAC.
 
 ![Diagram that shows RBAC roles](./media/manage-access/role-examples.png)
+_Figure 1: RBAC roles._
 
 When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
 
@@ -50,7 +51,7 @@ To grant a user access to a subscription:
 1. Go to **Subscriptions**.
 1. Select a subscription.
 1. Select **Access control (IAM)**.
-1. Select **+Add** > **Add role assignment**.
+1. Select **+ Add** > **Add role assignment**.
 1. Select a role, and then assign access to a user, group, or service principal.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to subscriptions" ::: form-end
@@ -66,7 +67,7 @@ To grant a user access to a resource group:
 1. Go to [resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
 1. Select a resource group.
 1. Select **Access control (IAM)**.
-1. Select **+Add** > **Add role assignment**.
+1. Select **+ Add** > **Add role assignment**.
 1. Select a role, and then assign access to a user, group, or service principal.
 
 ## Grant subscription access
@@ -76,14 +77,14 @@ To grant a user access to a subscription:
 1. Go to [subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
 1. Select a subscription.
 1. Select **Access control (IAM)**.
-1. Select **+Add** > **Add role assignment**.
+1. Select **+ Add** > **Add role assignment**.
 1. Select a role, and then assign access to a user, group, or service principal.
 
 ## Learn more
 
 To learn more, see:
 
-- [What is role-based access control (RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
+- [What is role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
 - [Cloud Adoption Framework: Use role-based access control](../considerations/roles.md)
 
 ::: zone-end

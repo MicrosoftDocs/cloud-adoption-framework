@@ -49,7 +49,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 1. Select **Create (or edit) a new policy**.
 1. Configure the schedule and retention period.
 1. Select **OK**.
-1. Select **Enable Backup**.
+1. Select **Enable backup**.
 
 ::: zone target="chromeless"
 
@@ -59,7 +59,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ::: zone target="docs"
 
-[Overview](https://docs.microsoft.com/azure/backup/backup-overview)
+[Overview](/azure/backup/backup-overview)
 
 ## Azure Site Recovery
 
@@ -111,5 +111,5 @@ After the replication job has finished, you can check the replication status, ve
 
 ### Learn more
 
-- [Azure Site Recovery overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
-- [Replicate an Azure VM to another region](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart)
+- [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview)
+- [Replicate an Azure VM to another region](/azure/site-recovery/azure-to-azure-quickstart)

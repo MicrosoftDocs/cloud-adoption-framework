@@ -44,7 +44,7 @@ To begin a governance journey, choose one of the two options below. The options 
 <!-- docsTest:ignore "Azure Virtual Datacenter" -->
 
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
+> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
 
 <!-- markdownlint-disable MD028 -->
 
@@ -56,8 +56,8 @@ To begin a governance journey, choose one of the two options below. The options 
 | Characteristic | Standard organization | Complex enterprise |
 |---|---|---|
 | Geography (country or geopolitical region) | Customers or staff reside largely in one geography | Customers or staff reside in multiple geographies or require sovereign clouds. |
-| Business units affected | Business units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure |
-| IT budget | Single IT budget | Budget allocated across business units and currencies |
+| Business units affected | Business units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure. |
+| IT budget | Single IT budget | Budget allocated across business units and currencies. |
 | IT investments | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
 
 ### Current state before adopting cloud governance
@@ -72,8 +72,8 @@ To begin a governance journey, choose one of the two options below. The options 
 
 | State | Standard organization | Complex enterprise |
 |---|---|---|
-| Cost management&mdash;cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
-| Security baseline&mdash;protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. May need to consider third-party compliance. |
+| Cost management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
+| Security baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. May need to consider third-party compliance. |
 
 ## CAF enterprise-scale landing zone
 

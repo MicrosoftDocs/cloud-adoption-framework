@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- cSpell:ignore CSPs MSPs -->
+<!-- cSpell:ignore MSPs -->
 
 # Strategy for partner alignment
 
@@ -54,7 +54,7 @@ You are not alone in your cloud journey. There are several options to support yo
 ### Azure solution providers
 
 Microsoft certified solution providers specialize in providing modern customer solutions base on Microsoft technologies across the world. Optimize your business in the cloud with help from an experienced partner.
-**[Find a cloud solutions partner](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
+**[Find a cloud solution provider (CSP)](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
 
 Azure expert managed services providers (MSP) have undergone a third-party audit to validate a higher tier of capability, demonstrated through certified staff headcounts, customer references, annual consumption of Azure at scale, and other criteria.
 **[Find a managed service partner](https://www.microsoft.com/solution-providers/search?cacheid=16a3b49b-fef2-449d-bdf0-628008114cca).** An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
@@ -71,6 +71,10 @@ During a typical FastTrack for Azure engagement, Microsoft helps to define the b
 
 The [Azure Migration Program (AMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
 The program leverages FastTrack for Azure and Azure solution providers to improve customer success during migration.
+
+Watch this short video to get an overview of how the Azure Migration Program can help you. 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4D1vH]
 
 ### Azure support
 

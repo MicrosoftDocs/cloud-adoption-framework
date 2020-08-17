@@ -91,7 +91,7 @@ Many organizations are already on this journey because they have been managing t
 
 The functions of the [NIST cybersecurity framework](https://www.nist.gov/cyberframework) serve as a useful guide on how to balance investments between the complementary activities of identify, protect, detect, respond, and recover in a resilient strategy.
 
-More on cybersecurity resilience and the ultimate goals of cybersecurity controls is discussed in [How do you keep your organization's risk down](https://docs.microsoft.com/azure/architecture/framework/security/resilience).
+More on cybersecurity resilience and the ultimate goals of cybersecurity controls is discussed in [How do you keep your organization's risk down](/azure/architecture/framework/security/resilience).
 
 ### How the cloud is changing security
 
@@ -140,21 +140,21 @@ Building a resilient security posture in the cloud requires several parallel com
 
 - **Trust but verify:** For responsibilities performed by the cloud provider, organizations should take a "trust but verify" approach. Organizations should evaluate the security practices of their cloud providers and the security controls they offer to ensure the cloud provider meets the security needs of the organization.
 
-- **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associate skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
+- **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associated skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
 
   - **Infrastructure security:** Organizations should use the cloud to modernize their approach to protecting and monitoring the common components used by many applications, such as operating systems, networks, and container infrastructure. These cloud capabilities can often including managing infrastructure components across both IaaS and on-premises environments. Optimizing this strategy is important because this infrastructure is a dependency of the applications and data that run on it, which often enable critical business processes and store critical business data.
   - **Application security:** Organizations should also modernize the way they secure the unique applications and technology that is developed by or for their organization. This discipline is changing rapidly with the adoption of agile DevOps processes, the increasing use of open source components, and introduction of cloud APIs and cloud services to replace application components or interconnect applications.
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
 
-  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/en-us/security/ciso-workshop/ciso-workshop-module-3).
+  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](/security/ciso-workshop/ciso-workshop-module-3).
 
 ### Security and trust
 
-Note that the use of the word "trust" in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
+Note that the use of the word *trust* in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
 
 - [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of "zero trust") and designs security accordingly.
-- [Trust but verify](https://en.wikipedia.org/wiki/trust,_but_verify) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
+- [Trust but verify](https://wikipedia.org/wiki/trust,_but_verify) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
 
 A cloud provider and their practices and processes can be accountable to meet contractual and regulatory requirements and could earn or lose trust. A network is a nonliving connection which cannot face consequences if it is used by attackers (much like you cannot hold a road or a car accountable for criminals using them).
 
@@ -235,7 +235,7 @@ This section describes the key relationships that frequently change on the journ
 
   - **Security:** Does the cloud provider follow industry best practices for security? Has this been validated by independent regulatory bodies?
 
-    - [Microsoft cloud app security](https://docs.microsoft.com/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
+    - [Microsoft cloud app security](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
     - The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) makes regulatory compliance certifications, audit reports, pen tests, and more available to customers. These documents include many details of internal security practices (notably the SOC 2 type 2 report and FedRAMP Moderate system security plan).
 
   - **Business competitor:** Is the cloud provider a significant business competitor in your industry? Do you have sufficient protections in the cloud services contract or other means to protect your business against potentially hostile actions?
@@ -245,6 +245,6 @@ This section describes the key relationships that frequently change on the journ
   - **Multicloud:** Many organizations have a de facto or intentional multicloud strategy. This could be an intentional objective to reduce reliance on a single supplier or to access unique best of breed capabilities, but can also happen because developers chose preferred or familiar cloud services, or your organization acquired another business. Regardless of the reason, this strategy can introduce potential risks and costs that have to be managed including:
 
     - **Downtime from multiple dependencies:** Systems architected to rely on multiple clouds are exposed to more sources of downtime risk as disruptions in the cloud providers (or your team's use of them) could cause an outage/disruption of your business. This increased system complexity would also increase the likelihood of disruption events as team members are less likely to fully understand a more complex system.
-    - **Negotiating power:** Larger organizations also should consider whether a single-cloud (mutual commitment/partnership) or multicloud strategy (ability to shift business) will achieve greater influence over their cloud provider(s) to get their organization's feature requests prioritized.
+    - **Negotiating power:** Larger organizations also should consider whether a single-cloud (mutual commitment/partnership) or multicloud strategy (ability to shift business) will achieve greater influence over their cloud providers to get their organization's feature requests prioritized.
     - **Increased maintenance overhead:** IT and security resources already are overburdened from their existing workloads and keeping up with the changes of a single cloud platform. Each additional platform further increases this overhead and takes team members away from higher value activities like streamlining technical process to speed business innovation, consulting with business groups on more effective use of technologies, and so on.
     - **Staffing and training:** Organizations often do not consider the staffing requirements necessary to support multiple platforms and the training required to maintain knowledge and currency of new features which are released in a rapid pace.

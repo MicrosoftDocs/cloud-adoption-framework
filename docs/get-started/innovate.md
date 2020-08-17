@@ -3,7 +3,7 @@ title: "Get started: Build new products and services in the cloud"
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
 author: JanetCThomas
 ms.author: janet
-ms.date: 05/15/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -11,27 +11,27 @@ ms.subservice: overview
 
 # Get started: Accelerate new product and service innovation in the cloud
 
-Creating new products and services in the cloud requires a different approach than migration. The Innovate methodology in the Cloud Adoption Framework for Azure establishes an approach that guides the development of new products and services.
+Creating new products and services in the cloud requires a different approach than migration requires. The Innovate methodology in the Cloud Adoption Framework for Azure establishes an approach that guides the development of new products and services.
 
-This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. While innovation is less predictable than a standard migration, it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide the structure required to create a balanced portfolio throughout cloud adoption.
+This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
-![Get started with accelerating innovation in the cloud](../_images/get-started/innovation-map.png)
+![Diagram of the Cloud Adoption Framework, including the Innovate methodology.](../_images/get-started/innovation-map.png)
 
 ## Step 1: Document the business strategy
 
-To avoid common blockers, create a clear and concise business strategy for innovation. Stakeholder alignment on motivations and expected business outcomes shapes decisions made by the cloud adoption team.
+To avoid common blockers, create a clear and concise business strategy for innovation. Stakeholder alignment on motivations and expected business outcomes shapes decisions that the cloud adoption team makes.
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record motivations and desired business outcomes.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
 
 <!-- docsTest:ignore "Get started: Accelerate migration" -->
 
 **Guidance to support deliverable completion:**
 
-- [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain agreement on the motivations that drive the innovation effort. Start by understanding and categorizing motivations and common themes from various stakeholders across business and IT.
-- [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics you can use to measure the overall transformation.
-- [Balance the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that **require** rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure those investments can produce the desired return on investment (ROI). Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
+- [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain agreement on the motivations that drive the innovation effort. Start by understanding and categorizing motivations and common themes from stakeholders across business and IT.
+- [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics that you can use to measure the overall transformation.
+- [Balancing the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that *require* rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure that those investments can produce the desired return on investment. Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -42,11 +42,11 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 ## Step 2: Evaluate the business justification
 
-In this first pass at building the business case, evaluate the initial high-level return from a potential cloud adoption effort. The goal of this step is to ensure that all stakeholders align around one simple question: based on the available data, is the overall adoption of the cloud a wise business decision? Building on that question, the team can better align on how this innovation project helps meet the end users' projected needs within the goal of adopting the cloud.
+In this first pass at building the business case, evaluate the initial high-level return from a potential cloud adoption effort. The goal of this step is to align all stakeholders around one simple question: based on the available data, is the overall adoption of the cloud a wise business decision? Building on that question, the team can better align on how this innovation project helps meet the users' projected needs within the goal of adopting the cloud.
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record business justification.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record the business justification.
 
 **Guidance to support deliverable completion:**
 
@@ -62,20 +62,22 @@ In this first pass at building the business case, evaluate the initial high-leve
 
 ## Step 3: Gather data and analyze assets and workloads
 
-In most enterprises, innovation can be accelerated through the use of existing assets like applications, VMs, and data. When you plan for innovation, it's important to understand how and when those assets are migrated to the cloud.
+In most enterprises, innovation can be accelerated through the use of existing assets like applications, virtual machines (VMs), and data. When you plan for innovation, it's important to understand how and when those assets are migrated to the cloud.
 
 **Deliverables:**
 
-- Raw data on existing inventory like applications, VMs, and data.
+- Get raw data on existing inventory like applications, VMs, and data.
 - If the proposed innovation has dependencies on existing inventory, complete the following deliverables:
   - Quantitative analysis on any supporting inventory required to support the planned innovation.
   - Qualitative analysis of any supporting workloads required to deliver the innovation.
-- Calculate cost of new inventory required to support the innovation effort.
-- Update business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with refined calculations.
+- Calculate the cost of new inventory required to support the innovation effort.
+- Update the business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with refined calculations.
 
 **Guidance to support deliverable completion:**
 
-Discovery and assessment provide a deeper level of technical alignment, which helps you create an action plan you can use to migrate any dependent workloads required by the planned innovation. This scenario is very common when companies have existing data sources, centralized applications, or required service layers that are needed to deliver the innovation within the context of the rest of the enterprise. When there are dependent systems, the following articles can guide the discovery and assessment.
+Discovery and assessment provide a deeper level of technical alignment. You can then create an action plan for migrating any dependent workloads that the planned innovation requires. This scenario is common when companies have existing data sources, centralized applications, or service layers that are necessary for delivering innovation within the context of the rest of the enterprise.
+
+When there are dependent systems, the following articles can guide the discovery and assessment:
 
 - [Inventory existing systems](../digital-estate/inventory.md): Understanding the current state from a programmatic, data-driven approach is the first step. Discover and gather data to enable all assessment activities.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): Streamline assessment efforts to focus on a qualitative analysis of all assets, possibly even to support the business case. Then add a deep qualitative analysis for the first 10 workloads.
@@ -89,7 +91,7 @@ Discovery and assessment provide a deeper level of technical alignment, which he
 
 ## Step 4: Plan for migration of dependent assets
 
-When new innovation depends on existing workloads or assets, the cloud adoption plan template provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect discovery results, rationalization, needed skills, and partner contracting.
+When new innovation depends on existing workloads or assets, a cloud adoption plan provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect discovery results, rationalization, needed skills, and partner contracting.
 
 **Deliverables:**
 
@@ -102,9 +104,9 @@ When new innovation depends on existing workloads or assets, the cloud adoption 
 
 **Guidance to support deliverable completion:**
 
-- [Cloud adoption plan template](../plan/template.md): Deploy the basic template.
+- [Cloud adoption plan](../plan/template.md): Define your plan using the basic template.
 - [Workload alignment](../plan/workloads.md): Define workloads in the backlog.
-- [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define effort for prioritized workloads.
+- [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define the effort for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity, and releases for the workloads.
 
 <!-- markdownlint-disable MD033 -->
@@ -116,7 +118,7 @@ When new innovation depends on existing workloads or assets, the cloud adoption 
 
 ## Step 5: Align governance requirements to your adoption plan
 
-Discussing planned innovations with the governance team helps you avoid many blockers before they arise. Sometimes, innovative new solutions might require practices that are discouraged in sound governance practices. Some of those required features might even be blocked through automated governance enforcement tooling.
+Discussing planned innovations with the governance team helps you avoid many blockers before they arise. Sometimes, innovative new solutions might require practices that are discouraged in sound governance practices. Some of those required features might even be blocked through automated tooling for governance enforcement.
 
 **Deliverables:**
 
@@ -125,10 +127,10 @@ Discussing planned innovations with the governance team helps you avoid many blo
 
 **Guidance to support deliverable completion:**
 
-These links help the adoption team understand the approach taken by the cloud governance team.
+These links help the adoption team understand the approach of the cloud governance team:
 
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then you can build the disciplines required to deliver on governance across your cloud enterprise efforts.
-- [Define corporate policy](../govern/corporate-policy.md): Identify and mitigate business risks.
+- [Definition of corporate policy](../govern/corporate-policy.md): Identify and mitigate business risks.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -139,11 +141,11 @@ These links help the adoption team understand the approach taken by the cloud go
 
 ## Step 6: Define operational needs and business commitments
 
-Define the plan for long-term operational responsibilities for the planned innovation. Will the established management baseline be sufficient to meet your operational needs? If not, evaluate options for funding operations that are specific to the technology that supports this innovation.
+Define the plan for long-term operational responsibilities for the planned innovation. Will the established management baseline meet your operational needs? If not, evaluate options for funding operations that are specific to the technology that supports this innovation.
 
 **Deliverables:**
 
-- Complete the [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
+- Complete the [Microsoft Azure Architecture Review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
 - Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
 
 **Guidance to support deliverable completion:**
@@ -161,14 +163,16 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 ## Step 7: Deploy an aligned landing zone
 
-All assets hosted in the cloud live within a landing zone. That landing zone might have explicit governance, security, and operational requirements. Or, it might be a brand new subscription, with no support from other teams. In either scenario, it's important to start with a landing zone that aligns to governance and operation requirements from the beginning. Starting with an approved landing zone helps your team discover policy violations early in development, instead of when the solution is released to production. Early discovery helps remove blockers and provides the adoption team and governance team with the time required to implement changes.
+All assets hosted in the cloud live within a landing zone. That landing zone might have explicit governance, security, and operational requirements. Or, it might be a new subscription without support from other teams. In either scenario, it's important to start with a landing zone that aligns to governance and operational requirements from the beginning.
+
+Starting with an approved landing zone helps your team to discover policy violations early during development versus when the solution is released to production. Early discovery helps your team to remove blockers and gives adoption and governance teams enough time to make changes.
 
 **Deliverables:**
 
 - Deploy a first landing zone for initial, low-risk experimentation during early innovation.
-- Develop a plan to refactor with the cloud center of excellence or the Central IT team to ensure governance, security, and operational alignment.
+- Develop a plan to refactor with the cloud center of excellence or the central IT team to ensure governance, security, and operational alignment.
 - Timeline risks:
-  - Governance, operations, and security requirements for the first 10 workloads can slow this process. Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
+  - Governance, operations, and security requirements for the first 10 workloads can slow this process. Refactoring of the first landing zone and later landing zones takes longer, but it should happen in parallel with migration efforts.
 
 **Guidance to support deliverable completion:**
 
@@ -204,6 +208,20 @@ The Innovate methodology provides guidance on the tools and product management a
 - [Innovation best practices](../innovate/best-practices/index.md): Combine Azure services to create a toolchain for digital invention.
 - [Feedback loops](../innovate/considerations/adoption.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
 
+## Step 9: Assess the innovation maturity of your organization
+
+To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
+
+The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI Maturity Model to compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
+
+**Deliverables:**
+
+- Use the [AI Maturity Model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
+
+**Guidance to support deliverable completion:**
+
+- When the assessment is complete, the tool's output will provide a score that estimates the status of AI innovation maturity.
+
 <!-- markdownlint-disable MD033 -->
 <br>
 
@@ -217,7 +235,9 @@ The steps outlined in this guide can help you and your teams create innovative s
 
 ## Next steps
 
-The Cloud Adoption Framework is a lifecycle solution. It can help you begin an innovation journey. It can also help you advance the maturity of the teams that support the innovation efforts. The following teams can use these next steps to continue to advance the maturity of their efforts. These parallel processes aren't linear and shouldn't be viewed as blockers. Instead, each is a parallel value stream to help mature your company's overall cloud readiness.
+The Cloud Adoption Framework is a lifecycle solution. It can help you begin an innovation journey. It can help your organization to start an innovation journey and to advance the maturity of the teams that support innovation efforts.
+
+The following teams can use these next steps to continue to advance the maturity of their efforts. These parallel processes aren't linear and shouldn't be viewed as blockers. Instead, each is a parallel value stream to help mature your company's overall cloud readiness.
 
 | Team | Next iteration |
 |---|---|

@@ -17,7 +17,7 @@ This section of the Cloud Adoption Framework explains the principles behind its 
 
 Cloud migration is a portfolio management effort, cleverly disguised as a technical implementation. During the migration process, you will decide to move some assets, invest in others, and retire obsolete or unused assets. Some assets will be optimized, refactored, or replaced entirely as part of this process. Each of these decisions should align with the motivations behind your cloud migration. The most successful migrations also go a step further and align these decisions with desired business outcomes.
 
-The Cloud Adoption Framework migration model depends on your organization having completed a process of business readiness for cloud adoption. Make sure you have reviewed [Plan](../../strategy/index.md) and [Ready](../../ready/index.md) guidance in the Cloud Adoption Framework to determine the business drivers or other justification for a cloud migration, as well as any required organizational planning or training required before executing a migration process at scale.
+The Cloud Adoption Framework migration model depends on your organization having completed a process of business readiness for cloud adoption. Make sure you have reviewed the [Plan methodology](../../plan/index.md) and the [Ready methodology](../../ready/index.md) guidance in the Cloud Adoption Framework to determine the business drivers or other justification for a cloud migration, as well as any required organizational planning or training required before executing a migration process at scale.
 
 > [!NOTE]
 > While business planning is important, a growth mindset is equally important. In parallel with broader business planning efforts by the cloud strategy team, it's suggested that the cloud adoption team begin migrating a first workload as a precursor to wider scale migration efforts. This initial migration will allow the team to gain practical experience with the business and technical issues involved in a migration.
@@ -28,7 +28,7 @@ It's important to establish a rough vision of your end state before starting you
 
 ![Infographic of the migration options](../../_images/migrate/migration-options.png)
 
-Migration and modernization of workloads range from simple _rehost_ migrations (also called _lift and shift_ migrations) using infrastructure as a service (IaaS) capabilities that don't require code and app changes, through _refactoring_ with minimal changes, to _rearchitecting_ to modify and extend code and app functionality to take advantage of cloud technologies.
+Migration and modernization of workloads range from simple _rehost_ migrations (also called _lift and shift_ migrations) using infrastructure as a service (IaaS) capabilities that don't require code and application changes, through _refactoring_ with minimal changes, to _rearchitecting_ to modify and extend code and application functionality to take advantage of cloud technologies.
 
 Cloud-native strategies and platform as a service (PaaS) strategies _rebuild_ on-premises workloads using Azure platform offerings and managed services. Workloads that have equivalent fully managed software as a service (SaaS) cloud-based offerings can often be fully _replaced_ by these services as part of the migration process.
 
@@ -39,9 +39,9 @@ Cloud-native strategies and platform as a service (PaaS) strategies _rebuild_ on
 
 ## Incremental migration
 
-The Cloud Adoption Framework migration model is based on an incremental cloud transformation process. It assumes that your organization will start with an initial, limited-scope, cloud migration effort, which we refer to commonly as the first workload. This effort will expand iteratively to include more workloads as your Operations teams refine and improve your migration processes.
+The Cloud Adoption Framework migration model is based on an incremental cloud transformation process. It assumes that your organization will start with an initial, limited-scope, cloud migration effort, which we refer to commonly as the first workload. This effort will expand iteratively to include more workloads as your operations teams refine and improve your migration processes.
 
-Cloud migrations tools like [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) can migrate entire datacenters consisting of tens of thousands of VMs. However, the business and existing IT operations can seldom handle such a high pace of change. As such many organizations break up a migration effort into multiple iterations, moving one workload (or a collection of workloads) per iteration.
+Cloud migrations tools like [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) can migrate entire datacenters consisting of tens of thousands of VMs. However, the business and existing IT operations can seldom handle such a high pace of change. As such many organizations break up a migration effort into multiple iterations, moving one workload (or a collection of workloads) per iteration.
 
 The principles behind this incremental model are based on the execution of processes and prerequisites referenced in the following infographic.
 

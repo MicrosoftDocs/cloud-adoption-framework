@@ -10,6 +10,8 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore BYOK -->
+
 # Encryption decision guide
 
 Encrypting data protects it against unauthorized access. Properly implemented encryption policy provides additional layers of security for your cloud-based workloads and guards against attackers and other unauthorized users from both inside and outside your organization and networks.
@@ -45,9 +47,9 @@ With cloud-native key management, all keys and secrets are generated, managed, a
 - You trust the cloud key management solution with creating, managing, and hosting your organization's secrets and keys.
 - You enable all on-premises applications and services that rely on accessing encryption services or secrets to access the cloud key management system.
 
-### Bring your own key
+### Bring your own key (BYOK)
 
-With a bring-your-own-key approach, you generate keys on dedicated HSM hardware within your on-premises environment, then securely transferring these keys to a cloud-based management system such as Azure Key Vault for use with your cloud-hosted resources.
+With a BYOK approach, you generate keys on dedicated HSM hardware within your on-premises environment, then securely transferring these keys to a cloud-based management system such as Azure Key Vault for use with your cloud-hosted resources.
 
 **Bring-your-own-key assumptions:** Generating keys on-premises and using them with a cloud-based key management system includes these assumptions:
 
@@ -116,14 +118,14 @@ Encryption for data in use involves securing data in nonpersistent storage, such
 
 For more information about encryption and key management in Azure, see:
 
-- **[Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview):** A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
-- **[Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
-- **[Azure data security and encryption best practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices).** A discussion of Azure data security and encryption best practices.
+- **[Azure encryption overview](/azure/security/fundamentals/encryption-overview):** A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
+- **[Azure Key Vault](/azure/key-vault/general/overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
+- **[Azure data security and encryption best practices](/azure/security/fundamentals/data-encryption-best-practices).** A discussion of Azure data security and encryption best practices.
 - **[Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute):** Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
 
 ## Next steps
 
-Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [decision guides overview](../index.md).
+Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the architectural decision guides overview.
 
 > [!div class="nextstepaction"]
-> [Architectural decision guides](../index.md)
+> [Architectural decision guides overview](../index.md)

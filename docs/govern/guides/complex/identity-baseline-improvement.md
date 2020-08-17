@@ -10,7 +10,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore CFO's MPLS -->
+<!-- cSpell:ignore MPLS -->
 
 # Governance guide for complex enterprises: Improve the Identity Baseline discipline
 
@@ -33,7 +33,7 @@ The cloud governance team is expanding. Given the need for additional support re
 
 ### Changes in the current state
 
-The IT team has approval to move forward with the CIO and CFO's plans to retire two datacenters. The team is concerned that 750 (15%) of the assets in those datacenters will have to be moved somewhere other than the cloud.
+The IT team has approval to move forward with the plans of the CIO and CFO to retire two datacenters. The team is concerned that 750 (15%) of the assets in those datacenters will have to be moved somewhere other than the cloud.
 
 ### Incrementally improve the future state
 
@@ -72,10 +72,10 @@ The governance MVP design changes to include new Azure policies and an implement
 
 Here are the new best practices:
 
-- **Secure hybrid virtual network blueprint:** The on-premises side of the hybrid network should be configured to allow communication between the following solution and the on-premises Active Directory servers. This best practice requires a DMZ to enable Active Directory Domain Services across network boundaries.
+- **Secure hybrid virtual network blueprint:** The on-premises side of the hybrid network should be configured to allow communication between the following solution and the on-premises Active Directory servers. This best practice requires a perimeter network to enable Active Directory Domain Services across network boundaries.
 - **Azure Resource Manager templates:**
     1. Define an NSG to block external traffic and allow internal traffic.
-    2. Deploy two Active Directory virtual machines in a load-balanced pair based on a golden image. On first boot, that image runs a PowerShell script to join the domain and register with domain services. For more information, see [Extend Active Directory Domain Services (AD DS) to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-extend-domain).
+    2. Deploy two Active Directory virtual machines in a load-balanced pair based on a golden image. On first boot, that image runs a PowerShell script to join the domain and register with domain services. For more information, see [Extend Active Directory Domain Services (AD DS) to Azure](/azure/architecture/reference-architectures/identity/adds-extend-domain).
 - Azure Policy: apply the NSG to all resources.
 - Azure blueprint:
     1. Create a blueprint named `active-directory-virtual-machines`.

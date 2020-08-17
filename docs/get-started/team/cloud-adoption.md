@@ -36,7 +36,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 - Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
-- Update your company's [RACI (responsible, accountable, consulted, and informed) template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
+- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
 **Guidance to support deliverable completion:**
 
@@ -46,7 +46,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 ## Step 2: Align your team with other supporting teams
 
-If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
+If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
 
 **Deliverables:**
 

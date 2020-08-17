@@ -22,7 +22,7 @@ The official guidance in the Cloud Adoption Framework for Azure is to always cre
 **Deliverables:**
 
 - Determine whether you need a cloud governance team.
-- Document the decision and the responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and the responsible individuals using the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
@@ -48,8 +48,8 @@ Before it establishes policies or automated cloud governance, the cloud governan
 
 **Guidance to support deliverable completion:**
 
-- Review your company's [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with members of the cloud strategy team to understand motivations, metrics, and strategy.
-- Review your company's [cloud adoption plan template](../../plan/template.md) with members of the cloud adoption team to understand timelines and prioritization.
+- Review your company's [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with members of the cloud strategy team to understand motivations, metrics, and strategy.
+- Review your company's [cloud adoption plan](../../plan/template.md) with members of the cloud adoption team to understand timelines and prioritization.
 - Review the operation team's [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to understand the operational requirements and commitments that have been established with the business.
 
 <!-- markdownlint-disable MD033 -->
@@ -169,7 +169,7 @@ As new adoption efforts are completed, the cloud adoption team hands off operati
 
 **Guidance to support deliverable completion:**
 
-- Establish a process for [onboarding new workloads and resources](https://docs.microsoft.com/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
+- Establish a process for [onboarding new workloads and resources](/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
 <!-- markdownlint-disable MD033 -->
 <br>

@@ -16,14 +16,10 @@ Cloud adoption can't happen without well-organized people. Successful cloud adop
 
 The following exercises will help guide the process of creating a landing zone to support cloud adoption.
 
-<!-- markdownlint-disable MD033 -->
-
-| | |
-|---|---|
-| <br> ![1](../_Images/icons/1.png) | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model.                                |
-| <br> ![2](../_Images/icons/2.png) | <br> [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud.                                |
-| <br> ![3](../_Images/icons/3.png) | <br> [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions.                                |
-| <br> ![4](../_Images/icons/4.png) | <br> [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model.                        |
+1. [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model.
+2. [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud.
+3. [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions.
+4. [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model.
 
 ## Structure type
 
@@ -57,4 +53,4 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 The article on [determining organizational structure maturity](./organization-structures.md) provides additional detail regarding each level of maturity.
 
-To track organization structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+To track organization structure decisions over time, download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

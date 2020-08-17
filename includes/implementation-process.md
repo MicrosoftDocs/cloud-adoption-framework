@@ -21,11 +21,11 @@ Software Defined Network is an important initial aspect of the Security Baseline
 
 Given the lack of requirements, IT security is playing it safe and requires a [Cloud DMZ](~/decision-guides/software-defined-network/cloud-dmz.md) pattern. That means governance of the Azure deployments themselves will be very light.
 
-- Azure subscriptions may connect to an existing datacenter via VPN, but must follow all existing on-premises IT governance policies regarding connection of a demilitarized zone to protected resources. For implementation guidance regarding VPN connectivity, see [VPN Reference Architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn).
+- Azure subscriptions may connect to an existing datacenter via VPN, but must follow all existing on-premises IT governance policies regarding connection of a perimeter network to protected resources. For implementation guidance regarding VPN connectivity, see [On-premises network connected to Azure using a VPN gateway](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn).
 - Decisions regarding subnet, firewall, and routing are currently being deferred to each application/workload lead.
 - Additional analysis is required before releasing of any protected data or mission-critical workloads.
 
-In this pattern, cloud networks can only connect to on-premises resources over an existing VPN that is compatible with Azure. Traffic over that connection will be treated like any traffic coming from a demilitarized zone. Additional considerations may be required on the on-premises edge device to securely handle traffic from Azure.
+In this pattern, cloud networks can only connect to on-premises resources over an existing VPN that is compatible with Azure. Traffic over that connection will be treated like any traffic coming from a perimeter network. Additional considerations may be required on the on-premises edge device to securely handle traffic from Azure.
 
 The cloud governance team has proactively invited members of the networking and IT security teams to regular meetings, in order to stay ahead of networking demands and risks.
 
