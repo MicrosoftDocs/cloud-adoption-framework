@@ -11,9 +11,7 @@ ms.subservice: strategy
 
 # Motivations: Why are we moving to the cloud?
 
-<!-- docsTest:ignore "is a common question" "Our board" -->
-
-"Why are we moving to the cloud?" Is a common question for business and technical stakeholders alike. If the answer is, "our board (or CIO, or C-level executives) told us to move to the cloud, " it's unlikely that the business will achieve the desired outcomes.
+"Why are we moving to the cloud?" It's a common question for business and technical stakeholders alike. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud" then it's unlikely that the business will achieve the desired outcomes.
 
 This article discusses a few motivations behind cloud migration that can help produce more successful business outcomes. These options help facilitate a conversation about motivations and, ultimately, business outcomes.
 
@@ -35,7 +33,7 @@ When a response to critical business events is the highest priority, it's import
 
 When migration is the highest priority, strategy and planning will play a vital role early in the process. We recommend that you implement the first workload in parallel with planning efforts, to help the team understand and anticipate any learning curves that are associated with cloud adoption.
 
-When innovation is the highest priority, strategy and planning require additional investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For further information and guidance, see [understand the innovation journey](../get-started/innovate.md).
+When innovation is the highest priority, strategy and planning require additional investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For further information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
 
 To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and effect wiser decisions through consistent, strategic methodologies.
 
@@ -59,9 +57,9 @@ Some motivations align well with a migrate strategy. The motives at the top of t
 
 ### Innovation
 
-Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the *innovation* list align to a technology strategy referred to in this framework as [innovate](../get-started/innovate.md).
+Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the *innovation* list align to a technology strategy referred to in this framework as the [Innovate methodology](../get-started/innovate.md).
 
-The following list includes motivations that cause an it organization to focus more on an innovate strategy than a migrate strategy.
+The following list includes motivations that cause an IT organization to focus more on an innovate strategy than a migrate strategy.
 
 - Increasing business agility.
 - Preparing for new technical capabilities.

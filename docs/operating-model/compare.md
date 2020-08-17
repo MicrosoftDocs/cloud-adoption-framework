@@ -24,8 +24,8 @@ The following image maps common operating models based on the range of complexit
 
 A cloud operating model is primarily driven by two factors:
 
-    - Strategic priorities and motivations.
-    - The scope of the portfolio to be managed.
+- Strategic priorities and motivations.
+- The scope of the portfolio to be managed.
 
 |  | Decentralized operations (ops) | Centralized operations (ops) | Enterprise operations (ops) | Distributed operations (ops) |
 |--|--|--|--|--|
@@ -50,20 +50,20 @@ While many teams and individuals will be responsible for supporting different fu
 ||Decentralized ops |Centralized ops  |Enterprise ops          |Distributed ops|
 |---------              |---------      |---------    |---------          |---------|
 |Business alignment|[Workload team](../organize/cloud-adoption.md)|[Central cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
-|[Cloud operations](../organize/cloud-operations.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|[Cloud operations](../organize/cloud-operations.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
 |[Cloud governance](../organize/cloud-governance.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|[Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md)|
-|[Cloud security](../organize/cloud-security.md)|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [define a security strategy](../strategy/define-security-strategy.md)|
-|[Cloud automation and DevOps](../organize/cloud-automation.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|[Cloud security](../organize/cloud-security.md)|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [Define a security strategy](../strategy/define-security-strategy.md)|
+|[Cloud automation and DevOps](../organize/cloud-automation.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
 
 ### Accelerate operating model implementation in Azure
 
-As discussed in [define your operating model](./define.md), each methodology in the Cloud Adoption Framework provides a structured path to iteratively developing each aspect of your operating model. Following the most relevant methodology will help you overcome blockers to adoption that stem from gaps in the cloud operating model.
+As discussed in [Define your operating model](./define.md), each methodology in the Cloud Adoption Framework provides a structured path to iteratively developing each aspect of your operating model. Following the most relevant methodology will help you overcome blockers to adoption that stem from gaps in the cloud operating model.
 
 But there are ways to accelerate your operating model implementation, as outlined in the table below.
 
 |  | Decentralized ops | Centralized ops | Enterprise ops | Distributed ops |
 |--|--|--|--|--|
-| **Starting point** | [Azure Well-Architected Framework (WAF)](https://docs.microsoft.com/azure/architecture/framework/) | Azure landing zones: [start-small options](../ready/landing-zone/implementation-options.md) | Azure landing zones: [CAF enterprise-scale](../ready/enterprise-scale/implementation.md) | [Business alignment](../manage/considerations/business-alignment.md) |
+| **Starting point** | [Azure Well-Architected Framework (WAF)](/azure/architecture/framework/) | Azure landing zones: [start-small options](../ready/landing-zone/implementation-options.md) | Azure landing zones: [CAF enterprise-scale](../ready/enterprise-scale/implementation.md) | [Business alignment](../manage/considerations/business-alignment.md) |
 | **Iterations** | A focus on workloads allows the team to iterate within WAF. | The start-small option requires additional iteration on each methodology, but that can be done as cloud adoption efforts mature. | As illustrated by the reference implementations, future iterations typically focus on minor configuration additions. | Review the [Azure landing zone implementation options](../ready/landing-zone/implementation-options.md) to start with the option that best meets your operations baseline. Follow the iteration path defined in that option's design principles. |
 
 ## Decentralized operations
