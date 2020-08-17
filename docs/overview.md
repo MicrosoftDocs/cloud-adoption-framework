@@ -24,18 +24,12 @@ By using the Microsoft Cloud Adoption Framework for Azure best practices, organi
 
 The Cloud Adoption Framework brings together cloud adoption best practices from Microsoft employees, partners, and customers. It provides a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during your adoption effort. This guidance aligns to the following phases of the cloud adoption lifecycle, giving you easy access to the right guidance at the right time.
 
-<!-- markdownlint-disable MD033 -->
-
-| Phase | Description |
-|----------|-------------|
-| [Strategy](./strategy/index.md) | Define business justification and expected outcomes of adoption. |
-| [Ready](./ready/index.md) | Prepare the cloud environment for the planned changes. |
-| [Innovate](./innovate/index.md) | Develop new cloud-native or hybrid solutions. |
-| [Manage](./manage/index.md) | Operations management for cloud and hybrid solutions. |
-| [Plan](./plan/index.md) | Align actionable adoption plans to business outcomes. |
-| [Migrate](./migrate/index.md) | Migrate and modernize existing workloads. |
-| [Govern](./govern/index.md) | Govern the environment and workloads. |
-| [Organize](./organize/index.md) | Establish and maintain the organizational structure. |
+|  |  |  |  |  |
+|--|--|--|--|--|
+| <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
+| <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
+| <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern the environment and workloads. |
+| <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Operations management for cloud and hybrid solutions. | <br> ![Organize icon](./_images/icons/organize.png) | <br> [Organize](./organize/index.md): Govern the environment and workloads. |
 
 ## Understand the lifecycle
 
