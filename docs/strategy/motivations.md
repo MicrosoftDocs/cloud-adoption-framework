@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 <!-- docsTest:ignore "is a common question" "Our board" -->
 
-"Why are we moving to the cloud?" Is a common question for business and technical stakeholders alike. If the answer is, "our board (or CIO, or C-level executives) told us to move to the cloud, " it's unlikely that the business will achieve the desired outcomes.
+"Why are we moving to the cloud?" Is a common question for business and technical stakeholders alike. If the answer is, "our board (or CIO, or C-level executives) told us to move to the cloud," it's unlikely that the business will achieve the desired outcomes.
 
 This article discusses a few motivations behind cloud migration that can help produce more successful business outcomes. These options help facilitate a conversation about motivations and, ultimately, business outcomes.
 
@@ -59,9 +59,9 @@ Some motivations align well with a migrate strategy. The motives at the top of t
 
 ### Innovation
 
-Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the *innovation* list align to a technology strategy referred to in this framework as [innovate](../get-started/innovate.md).
+Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the *innovation* list align to a technology strategy referred to in this framework as the [Innovate methodology](../get-started/innovate.md).
 
-The following list includes motivations that cause an it organization to focus more on an innovate strategy than a migrate strategy.
+The following list includes motivations that cause an IT organization to focus more on an innovate strategy than a migrate strategy.
 
 - Increasing business agility.
 - Preparing for new technical capabilities.
