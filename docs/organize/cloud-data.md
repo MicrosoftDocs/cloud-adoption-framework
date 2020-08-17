@@ -39,7 +39,7 @@ These teams are responsible for putting together complex solutions with componen
 - Data marts
 - Geo-redundancy and data consistency
 - Dashboarding and reporting
- 
+
  Enterprise architects and data engineers are generally concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
 
 Using Azure Synapse Analytics, data engineers can simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
@@ -59,4 +59,3 @@ Using Azure Synapse Analytics, business analysts can securely access datasets an
 ## Executives
 
 Executives are responsible for charting strategy and ensuring strategic initiatives are implemented effectively across both IT and line-of-business departments. Solutions must be cost-effective, prevent disruption to the business, allow for easy extensibility as requirements change and grow, and deliver results to the business.
-
