@@ -39,7 +39,7 @@ A *cloud operating model* is the collection of processes and procedures that def
 
 When hardware is removed as the most common unit of operations, the focus shifts to the digital assets and the workloads they support. As such, the purpose of the operating model shifts from keeping the lights on to ensuring consistent operations.
 
-The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) does a great job of decomposing workload considerations into a set of common architectural principles: cost optimization, operational excellence, performance efficiency, reliability, and security.
+The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) does a great job of decomposing workload considerations into a set of common architectural principles: cost optimization, operational excellence, performance efficiency, reliability, and security.
 
 When moving to a higher level of operations, these common architectural principles help reframe the purpose of the cloud operating model. How do we ensure that all assets and workloads in the portfolio balance these architecture principles? What processes are needed to scale the application of those principles?
 
