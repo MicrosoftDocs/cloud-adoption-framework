@@ -1,6 +1,6 @@
 ---
 title: Help finding the appropriate getting started guide
-description: Find the most relevant getting started guide for your needs
+description: Find the most relevant getting started guide for your needs.
 services: cloud-adoption-framework
 ms.service: cloud-adoption-framework
 ms.topic: conceptual

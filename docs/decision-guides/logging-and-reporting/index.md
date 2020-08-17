@@ -105,6 +105,7 @@ Mirroring the on-premises centered approach, in this scenario cloud-based worklo
 ### Multicloud
 
 Integrating logging and reporting capabilities across a multiple-cloud platform can be complicated. Services offered between platforms are often not directly comparable, and logging and telemetry capabilities provided by these services differ as well.
+
 Multicloud logging support often requires the use of gateway services to process log data into a common format before submitting data to a hybrid logging solution.
 
 ## Learn more
