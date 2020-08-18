@@ -164,7 +164,7 @@ The following list shows policies that you can use when you're implementing iden
 
 ## File > New > Region
 
-1. If you create the networking resources via Azure Policy, assign the policies listed in the following table to the connectivity subscription. By doing this, Azure Policy ensures that the resource in the following list are created based on parameters provided.
+1. If you create the networking resources via Azure Policy, assign the policies listed in the following table to the connectivity subscription. By doing this, Azure Policy ensures that the resources in the following list are created based on parameters provided.
 
     - In the connectivity subscription, create a new virtual hub within the existing Virtual WAN.
     - Secure virtual hub by deploying Azure Firewall within the virtual hub and link existing or new firewall policies to Azure Firewall.
