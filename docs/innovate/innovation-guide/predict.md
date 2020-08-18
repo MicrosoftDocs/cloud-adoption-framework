@@ -13,25 +13,15 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore ONNX -->
 
-::: zone target="docs"
-
-# Azure innovation guide: Innovate with AI
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Innovate with AI
-
-::: zone-end
 
 As an innovator, your company has rich information about its business and its customers. Using AI, your company can:
 
- - Make predictions about customer needs.
- - Automate business processes.
- - Discover information that's latent in unstructured data.
- - Engage with customers in new ways to deliver better experiences.
- 
+- Make predictions about customer needs.
+- Automate business processes.
+- Discover information that's latent in unstructured data.
+- Engage with customers in new ways to deliver better experiences.
+
  This article introduces a few approaches to innovating with AI. The following table can help you find the best solution for your implementation needs.
 
 | Solution category | Description                                                                                                                              | Required skills              |

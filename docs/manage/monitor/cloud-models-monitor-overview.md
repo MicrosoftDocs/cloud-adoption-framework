@@ -1,5 +1,5 @@
 ---
-title: "Monitoring strategy for cloud deployment models"
+title: Monitoring strategy for cloud deployment models
 description: Use the Cloud Adoption Framework for Azure to learn which monitoring strategy for cloud management to employ.
 author: MGoedtel
 ms.author: magoedte
