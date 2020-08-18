@@ -45,10 +45,10 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 - Delegated Key Vault instantiation and privileged access: [secure access](/azure/key-vault/general/secure-your-key-vault).
 
 - Requirements for using customer-managed keys for native encryption mechanisms such as Azure Storage encryption:
-  - [Customer-managed keys](/azure/storage/common/storage-encryption-keys-portal)
-  - Whole-disk encryption for virtual machines (VMs)
-  - Data-in-transit encryption
-  - Data-at-rest encryption
+  - [Customer-managed keys](/azure/storage/common/storage-encryption-keys-portal).
+  - Whole-disk encryption for virtual machines (VMs).
+  - Data-in-transit encryption.
+  - Data-at-rest encryption.
 
 ### Design recommendations
 
@@ -76,7 +76,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 ## Plan for governance
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement role-based access control that controls what actions authorized users can perform.
+Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement role-based access control (RBAC) that controls what actions authorized users can perform.
 
 ### Design considerations
 
@@ -96,7 +96,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Identify required Azure tags and use the append policy mode to enforce usage.
 
-- Map regulatory and compliance requirements to Azure Policy definitions and Azure AD role-based access control assignments.
+- Map regulatory and compliance requirements to Azure Policy definitions and Azure AD RBAC assignments.
 
 - Establish Azure Policy definitions at the top-level root management group so that they can be assigned at inherited scopes.
 
@@ -191,7 +191,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 |                              |                                                                       | Can Azure services interact directly with the service endpoint?                                                                              |
 |                              |                                                                       | Does it support Azure Private Link endpoints?                                                                                                           |
 |                              |                                                                       | Can it be deployed within a virtual network?                                                                                                            |
-|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate border gateway protocol community in ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
+|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate border gateway protocol community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
 |                              |                                                                       | Does the service support Private Link endpoints?                                                                                                       |
 |                              | Enforce network traffic flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force-tunnelled with user-defined routing?                                    |
 |                              |                                                                       | Do management operations use Azure shared public IP ranges?                                                                                 |
@@ -202,18 +202,18 @@ As business units request to deploy workloads to Azure, you need additional visi
 |                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (secure sockets layer/transport layer security)?                                                                           |
 |                              |                                                                       | Are there any HTTP endpoints, and can they be disabled?                                                                                        |
 |                              |                                                                       | Is underlying service communication also encrypted?                                                                                          |
-|                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is "bring your own encryption" supported?)                                                                               |
+|                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?)                                                                               |
 |                              | Software deployment                                                   | Can application software or third-party products be deployed to the service?                                                                 |
 |                              |                                                                       | How is software deployment performed and managed?                                                                                            |
 |                              |                                                                       | Can policies be enforced to control source or code integrity?                                                                                   |
 |                              |                                                                       | If software is deployable, can antimalware capability, vulnerability management, and security monitoring tools be used?                                  |
-|                              |                                                                       | Does the service provide such capabilities natively? (For example, Azure Kubernetes Service.)                                                                              |
-| Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane such as for Azure Kubernetes Service?)                             |
+|                              |                                                                       | Does the service provide such capabilities natively, such as with Azure Kubernetes Service?                                                                              |
+| Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
 |                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
 |                              |                                                                       | Does Azure-to-Azure (service-to-service) authentication use an MSI/service principal?                                                         |
 |                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
-|                              |                                                                       | How are any applicable keys/SAS managed?                                                                                                     |
+|                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |
 |                              | Segregation of duties                                                 | Does the service separate control plane and data plane operations within Azure AD?                                                                |
 |                              | Multi-factor authentication and conditional access                                            | Is multi-factor authentication enforced for user to service interactions?                                                                                            |
