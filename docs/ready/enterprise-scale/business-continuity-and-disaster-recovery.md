@@ -29,7 +29,7 @@ Consider the following factors:
 
   - Data sharing and dependencies between zones.
 
-  - The impact of Availability Zones on update domains compared to availability sets, and the percentage of workloads that can be under maintenance simultaneously.
+  - The impact of Availability Zones on update domains compared to availability sets and the percentage of workloads that can be under maintenance simultaneously.
 
   - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.
 
@@ -83,7 +83,7 @@ The following are best practices for your design:
 
 - Use Azure paired regions when you're planning for business continuity and DR.
 
-- Azure rolls out planned system updates to paired regions sequentially, not at the same time. This helps minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
+- Azure rolls out planned system updates to paired regions sequentially, not at the same time. This helps to minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
 
 - In the event of a broad outage, recovering one region is prioritized within every pair. Applications deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that aren't paired, the worst case scenario is that recovery might be delayed. It's possible that the preferred region would be the last to be recovered.
 
