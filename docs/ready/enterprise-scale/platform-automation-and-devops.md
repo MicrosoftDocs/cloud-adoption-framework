@@ -77,7 +77,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Network management (app resources).
 
-  - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management, or AppSecOps for more security-sensitive apps.
+  - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management or AppSecOps for more security-sensitive apps.
 
   - Provide a central app DevOps function to support apps that don't have existing DevOps capabilities or a business case to establish one (for example, legacy apps with minimal development capabilities).
 
@@ -85,7 +85,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
-  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and RBAC assignments. This ensures app (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
+  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and RBAC assignments. This ensures that app (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
   - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of app resources. Existing teams that already rely on a DevOps pipeline for app delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guard rails, independent of how resources are deployed in Azure.
 
@@ -103,40 +103,40 @@ The following list presents a recommended distribution of responsibilities betwe
 
 - **App functions**
 
-  - App migration and transformation
+  - App migration and transformation.
 
-  - App management and monitoring (app resources)
+  - App management and monitoring (app resources).
 
-  - Key management (app keys)
+  - Key management (app keys).
 
-  - RBAC (app resources)
+  - RBAC (app resources).
 
-  - Security monitoring and audit (app resources)
+  - Security monitoring and audit (app resources).
 
-  - Cost management (app resources)
+  - Cost management (app resources).
 
-  - Network management (app resources)
+  - Network management (app resources).
 
 - **Central functions**
 
-  - Architecture governance
+  - Architecture governance.
 
-  - Subscription management
+  - Subscription management.
 
-  - Platform as code (management of templates, scripts, and other assets)
+  - Platform as code (management of templates, scripts, and other assets).
 
-  - Policy management and enforcement (holistic)
+  - Policy management and enforcement (holistic).
 
-  - Platform management and monitoring (holistic)
+  - Platform management and monitoring (holistic).
 
-  - RBAC (holistic)
+  - RBAC (holistic).
 
-  - Key management (central services)
+  - Key management (central services).
 
-  - Network management (including networks and network virtual appliances)
+  - Network management (including networks and network virtual appliances).
 
-  - Security monitoring and audit (holistic)
+  - Security monitoring and audit (holistic).
 
-  - Cost management (holistic)
+  - Cost management (holistic).
 
 An Azure DevOps model that's based on these recommendations provides the desired control for central teams and the migration agility required by application teams.
