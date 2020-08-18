@@ -15,7 +15,7 @@ This article covers defining encryption and key management, planning for governa
 
 ## Define encryption and key management
 
-Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Microsoft Azure. It's also one of the most important security concerns of many enterprises. This section covers design considerations and recommendations as they pertain to encryption and key management.
+Encryption is a vital step toward ensuring data privacy, compliance, and data residency in Microsoft Azure. It's also one of the most important security concerns of many enterprises. This section covers design considerations and recommendations as they pertain to encryption and key management.
 
 ### Design considerations
 
