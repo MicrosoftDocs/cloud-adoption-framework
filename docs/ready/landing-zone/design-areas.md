@@ -35,7 +35,7 @@ Regardless of the deployment option, you should carefully consider each design a
 
 ## Next steps
 
-You can implement these design areas over time so that you can grow into your cloud operating model. Alternatively, there are rich, opinionated implementation options that start with a defined position on each design area.
+You can implement these design areas over time so that you can grow into your cloud operating model. Alternately, there are rich, opinionated implementation options that start with a defined position on each design area.
 
 With an understanding of the modular design areas, the next step is to choose the [landing zone implementation option](./implementation-options.md) that best aligns with your cloud adoption plan and requirements.
 
