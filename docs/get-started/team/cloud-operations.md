@@ -1,6 +1,6 @@
 ---
 title: "Get started: Build a cloud operations team"
-description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that they are responsible for.
+description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -24,7 +24,7 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 **Deliverables:**
 
 - Determine whether you need a cloud operations team.
-- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 

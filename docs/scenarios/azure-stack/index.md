@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Azure Stack: A strategic option for running Azure in your datacenter
 
-Microsoft takes a cloud-first approach to application and data storage. The priority is to move applications and data to one or more of the hyperscale clouds, including the global Azure option or a sovereign, locale-specific cloud such as Azure Germany or Azure Government. 
+Microsoft takes a cloud-first approach to application and data storage. The priority is to move applications and data to one or more of the hyperscale clouds, including the global Azure option or a sovereign, locale-specific cloud such as Azure Germany or Azure Government.
 
 Azure Stack Hub acts as another instance of a sovereign cloud, whether it's operated by customers in their datacenters or consumed through a cloud service provider. However, Azure Stack Hub is not a hyperscale cloud, and Microsoft doesn't publish or support any service-level agreements for Azure Stack Hub.
 

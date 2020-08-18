@@ -36,7 +36,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 - Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
-- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
 **Guidance to support deliverable completion:**
 
@@ -63,7 +63,7 @@ If your company's cloud adoption effort is mature enough to have supporting team
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> The cloud strategy team is accountable for maintaining a clear RACI structure across the cloud adoption lifecycle. | Review guidance and requirements from: <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT team <li> Other cloud adoption teams or individuals listed in the RACI |
+| <li> The cloud strategy team is accountable for maintaining a clear RACI structure across the cloud adoption lifecycle. | Review guidance and requirements from: <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team <li> Other cloud adoption teams or individuals listed in the RACI |
 
 ## Step 3: Begin your adoption journey
 
