@@ -84,11 +84,11 @@ The following sections list the steps to complete this category of activity in t
 
 6. Protect virtual network traffic across virtual hubs with network security groups (NSGs).
 
-7. (Optional:) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](/azure/virtual-wan/vpn-over-expressroute).
+7. (Optional) Set up encryption over ExpressRoute private peering. Follow the instructions in [ExpressRoute encryption: IPsec over ExpressRoute for Virtual WAN](/azure/virtual-wan/vpn-over-expressroute).
 
-8. (Optional:) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](/azure/virtual-wan/virtual-wan-site-to-site-portal).
+8. (Optional) Connect branches to the virtual hub via VPN. Follow the instructions in [Create a Site-to-Site connection using Azure Virtual WAN](/azure/virtual-wan/virtual-wan-site-to-site-portal).
 
-9. (Optional:) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](/azure/expressroute/expressroute-howto-set-global-reach).
+9. (Optional) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](/azure/expressroute/expressroute-howto-set-global-reach).
 
 The following list shows Azure Policy assignments that you use when you're implementing networking resources for an enterprise-scale deployment:
 
@@ -174,7 +174,7 @@ The following list shows policies that you can use when you're implementing iden
 
 3. Protect virtual network traffic across virtual hubs via NSGs.
 
-4. (Optional:) Set up encryption over ExpressRoute private peering.
+4. (Optional) Set up encryption over ExpressRoute private peering.
 
 | Name                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
