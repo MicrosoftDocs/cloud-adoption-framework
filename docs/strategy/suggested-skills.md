@@ -83,7 +83,7 @@ We recommend turning knowledge of Azure into official recognition with [Microsof
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here is an example of a tailored learning path that aligns to the Strategy methodology in the Cloud Adoption Framework.
+Here is an example of a tailored learning path that aligns to the Strategy methodology of the Cloud Adoption Framework.
 
 [Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
 

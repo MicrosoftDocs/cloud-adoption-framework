@@ -19,12 +19,12 @@ Driven by ethical principles that put people first, Microsoft is committed to ad
 
 As you implement AI solutions, consider the following principles in your solution:
 
-- Fairness: AI systems should treat all people fairly.
-- Reliability and safety: AI systems should perform reliably and safely.
-- Privacy and security: AI systems should be secure and respect privacy.
-- Inclusiveness: AI systems should empower everyone and engage people.
-- Transparency: AI systems should be understandable.
-- Accountability: People should be accountable for AI systems.
+- **Fairness:** AI systems should treat all people fairly.
+- **Reliability and safety:** AI systems should perform reliably and safely.
+- **Privacy and security:** AI systems should be secure and respect privacy.
+- **Inclusiveness:** AI systems should empower everyone and engage people.
+- **Transparency:** AI systems should be understandable.
+- **Accountability:** People should be accountable for AI systems.
 
 ## Establish a responsible AI strategy
 

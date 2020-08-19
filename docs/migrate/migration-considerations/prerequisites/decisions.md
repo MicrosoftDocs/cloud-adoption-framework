@@ -19,7 +19,7 @@ During migration, several factors affect decisions and execution activities. Thi
 
 The objective or goal of any adoption effort can have a significant impact on the suggested approach to execution.
 
-- **Migration.** Urgent business drivers, speed of adoption, or cost savings are examples of operational outcomes. These outcomes are central to efforts that drive business value from transitive change in IT or operations models. The Migrate methodology in the Cloud Adoption Framework focuses heavily on migration focused business outcomes.
+- **Migration.** Urgent business drivers, speed of adoption, or cost savings are examples of operational outcomes. These outcomes are central to efforts that drive business value from transitive change in IT or operations models. The Migrate methodology of the Cloud Adoption Framework focuses heavily on migration focused business outcomes.
 - **Application innovation.** Improving customer experience and growing market share are examples of incremental outcomes. The outcomes result from a collection of incremental changes focused on the needs and desires of current customers.
 - **Data-driven innovation.** New products or services, especially ones that come from the power of data, are examples of disruptive outcomes. These outcomes are the result of experimentation and predictions that use data to disrupt status quo in the market.
 

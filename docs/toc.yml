@@ -235,7 +235,6 @@ items:
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implementation guidelines
           href: ready/enterprise-scale/implementation-guidelines.md
-
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
@@ -282,8 +281,9 @@ items:
             - name: Azure network security best practices
               href: /azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Azure operational security best practices
-              href: /azure/security/fundamentals/operational-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
+              href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+      - name: Partner landing zones
+        href: ready/landing-zone/partner-landing-zone.md
       - name: Infrastructure-as-code theory
         items:
         - name: Refactor landing zones
