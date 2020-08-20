@@ -1,6 +1,6 @@
 ---
 title: Refactor landing zones
-description: The process for refactoring landing zones.
+description: Learn about the process for refactoring landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020

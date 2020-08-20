@@ -9,6 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
+<!-- cSpell:ignore MSPs -->
 <!-- markdownlint-disable MD024 -->
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
@@ -73,7 +74,7 @@ The existing CAF blueprint definitions and CAF Terraform modules provide a start
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
 | [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
-Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
+Partners are an important aspect of successful cloud adoption. Throughout the Cloud Adoption Framework guidance, we have added references to show the important role that partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure Expert Managed Service Providers (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 
 ## May 15, 2020
 

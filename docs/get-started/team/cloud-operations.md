@@ -82,7 +82,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 ## Step 4: Review the methodology
 
-To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology in the Cloud Adoption Framework.
+To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology of the Cloud Adoption Framework.
 
 **Deliverables:**
 
@@ -90,7 +90,7 @@ To help establish a future vision for operations management and a working approa
 
 **Guidance to support deliverable completion:**
 
-- Review the [Manage methodology in the Cloud Adoption Framework](../../manage/index.md).
+- Review the [Manage methodology of the Cloud Adoption Framework](../../manage/index.md).
 
 **Accountable team:**
 

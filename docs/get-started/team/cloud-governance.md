@@ -81,7 +81,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 ## Step 4: Review the methodology
 
-To help establish a future vision for governance and a working approach to that vision, review the Govern methodology in the Cloud Adoption Framework.
+To help establish a future vision for governance and a working approach to that vision, review the Govern methodology of the Cloud Adoption Framework.
 
 **Deliverables:**
 
