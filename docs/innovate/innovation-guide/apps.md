@@ -194,7 +194,7 @@ To configure or monitor Azure Functions deployments:
 
 ### Serverless solutions: Azure Logic Apps
 
-Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Microsoft 365, and Dropbox.
+Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft 365, and Dropbox.
 
 #### Action
 
