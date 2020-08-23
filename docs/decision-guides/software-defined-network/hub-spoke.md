@@ -22,7 +22,7 @@ This model aims to address the following concerns:
 
 - **Cost savings and management efficiency.** Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort across multiple workloads.
 - **Overcoming subscription limits.** Large cloud-based workloads may require the use of more resources than are allowed within a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure networking limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits).
-- **Separation of concerns.** The ability to deploy individual workloads between Central IT teams and workloads teams.
+- **Separation of concerns.** The ability to deploy individual workloads between Central IT teams and workload teams.
 
 The following diagram shows an example hub and spoke architecture including centrally managed hybrid connectivity.
 
