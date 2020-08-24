@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 # Deploy workloads and assets (infrastructure, apps, and data)
 
-In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. Including native tools, third-party tools, and project management tools.
+In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. You'll explore native tools, third-party tools, and project management tools.
 
 <!-- markdownlint-disable MD025 -->
 
@@ -29,15 +29,15 @@ Azure Migrate delivers a unified and extensible migration experience. Azure Migr
 
 Azure Migrate is a centralized hub to assess and migrate on-premises servers, infrastructure, applications, and data to Azure. It provides the following functionality:
 
-1. Unified platform with assessment, migration, and progress tracking.
-1. Enhanced assessment and migration capabilities:
+- Unified platform with assessment, migration, and progress tracking.
+- Enhanced assessment and migration capabilities:
     - On-premises servers including Hyper-V & VMware.
     - Agentless migration of VMware virtual machines to Azure.
     - Database migrations to Azure SQL Database or SQL Managed Instance
     - Web applications
     - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
     - Large data collections using Azure Data Box products
-1. Extensible approach with ISV integration (such as Cloudamize).
+- Extensible approach with ISV integration (such as Cloudamize).
 
 To perform a migration using Azure Migrate, follow these steps:
 
