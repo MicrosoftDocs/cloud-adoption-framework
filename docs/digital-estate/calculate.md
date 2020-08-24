@@ -1,5 +1,5 @@
 ---
-title: "Align cost models with the digital estate"
+title: Align cost models with the digital estate
 description: Learn about Azure pricing tools that can help you forecast and manage cloud spend with transparency and accuracy, to make the most of Azure and other clouds.
 author: BrianBlanchard
 ms.author: brblanch
