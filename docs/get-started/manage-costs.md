@@ -17,17 +17,15 @@ However, enterprise cost optimization involves many other roles and functions to
 
 Governance is the cornerstone of cost optimization within any large enterprise. The following section outlines cost optimization guidance within the context of governance. The subsequent steps help each team take actions that target its role in cost optimization. Together, these steps will help your organization get started on a journey toward cost optimization.
 
-![Get started with enterprise cost management](../_images/get-started/cost-map.png)
+![Get started with cost optimization](../_images/get-started/cost-map.png)
 
 ## Step 1: Optimize enterprise costs
 
 The cloud governance team is well prepared to evaluate and act on overspending or unplanned spending through a combination of monitoring performance, reducing resource sizing, and safely terminating unused resources. Enterprise cost optimization starts with a shared team understanding of the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
 
-<!-- docsTest:ignore "your cost management policies" -->
-
 **Deliverables:**
 
-- Implement wise cost management changes across the enterprise.
+- Implement wise changes to your Cost Management policies across the enterprise.
 - Document your Cost Management policies, processes, and design guidance in the [Cost Management discipline template](../govern/cost-management/template.md).
 
 These deliverables are the result of a few recurring tasks:
@@ -43,7 +41,7 @@ These deliverables are the result of a few recurring tasks:
 **Guidance to support deliverable completion:**
 
 - Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner."
-- On a regular basis, review and apply [cost management best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Here are a few of the most impactful governance practices:
+- On a regular basis, review and apply [cost management discipline best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Here are a few of the most impactful governance practices:
 
   - Act on [general cost best practices](../govern/cost-management/best-practices.md) to reduce sizing and costs and to stop unused machines.
   - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefit) to reduce licensing costs.
@@ -78,7 +76,7 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 
 **Guidance to support deliverable completion:**
 
-- [Understand motivations](../strategy/motivations.md). Critical business events and some migration motivations tend to be cost sensitive, increasing the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might focus more on top-line revenue. Understanding motivations will help you understand how high a priority cost management should be.
+- [Understand motivations](../strategy/motivations.md). Critical business events and some migration motivations tend to be cost sensitive, increasing the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might focus more on top-line revenue. Understanding motivations will help you understand how high a priority your cost management should be.
 - [Business outcomes](../strategy/business-outcomes/index.md). Some fiscal outcomes tend to be extremely cost-sensitive. When the desired outcomes map to fiscal metrics, you should invest in the Cost Management governance discipline very early.
 - [Business justification](../strategy/cloud-migration-business-case.md). The business justification serves as a high-level view of the financial plan for cloud adoption. This is a good source for initial budgeting efforts.
 

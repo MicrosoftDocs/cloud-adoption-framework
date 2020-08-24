@@ -68,7 +68,7 @@ Enterprise reliability requires consistent application of the management baselin
 
 - Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for criticality.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
-- If you're new to the Cost Management discipline, follow the guidance in the [cost management improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- If you're new to the Cost Management discipline, follow the guidance in the [Cost Management discipline improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
 > [!NOTE]
 > **Steps to start reliability partnerships with other teams:** Various decisions throughout the cloud adoption lifecycle can have a direct impact on reliability. The following steps outline the partnerships and supporting efforts required to deliver consistent reliability across the IT portfolio.

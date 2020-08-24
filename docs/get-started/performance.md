@@ -60,7 +60,7 @@ As the management baseline is improved, it's important to ensure that those impr
 
 - Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "criticality."
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
-- If you're new to the Cost Management governance discipline, consider following the [article about cost management improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- If you're new to the Cost Management governance discipline, consider following the [article about cost management discipline improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -80,7 +80,7 @@ Strategic decisions directly affect performance, rippling through the adoption l
 
 **Guidance to support deliverable completion:**
 
-- [Understand motivations](../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations can help you understand how high of a priority cost management should be.
+- [Understand motivations](../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations can help you understand how high of a priority your cost management should be.
 - [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest in the Cost Management governance discipline early.
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the financial plan for cloud adoption. This can be a good source for initial budgeting efforts.
 
