@@ -28,7 +28,7 @@ The cloud governance team is well prepared to evaluate and act on overspending o
 **Deliverables:**
 
 - Implement wise cost management changes across the enterprise.
-- Document your cost management policies, processes, and design guidance in the [Cost Management discipline template](../govern/cost-management/template.md).
+- Document your Cost Management policies, processes, and design guidance in the [Cost Management discipline template](../govern/cost-management/template.md).
 
 These deliverables are the result of a few recurring tasks:
 
@@ -74,7 +74,7 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 **Deliverables:**
 
 - Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
-- Create your first budget by using Azure Cost Management.
+- Create your first budget by using Azure Cost Management and Billing.
 
 **Guidance to support deliverable completion:**
 
@@ -103,8 +103,8 @@ The adoption plan provides clarity on the timeline of activities during adoption
 - [Gather inventory](../digital-estate/inventory.md). Establish a source of data for analysis of the digital estate before adoption.
 - [Best practice: Azure Migrate](../plan/contoso-migration-assessment.md). Use Azure Migrate to gather inventory.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization). During incremental rationalization and quantitative analysis, identify cloud candidates for budgeting purposes.
-- [Align cost models and forecast models](../digital-estate/calculate.md). Use Azure Cost Management to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
-- [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan). Build a plan with actionable workload, assets, and timeline details. This plan provides the basis for spending over time (or cost forecasting). _Spending over time_ is the initial baseline for all actionable optimization analysis within the Cost Management governance discipline.
+- [Align cost models and forecast models](../digital-estate/calculate.md). Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
+- [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan). Build a plan with actionable workload, assets, and timeline details. This plan provides the basis for spending over time (or cost forecasting). *Spending over time* is the initial baseline for all actionable optimization analysis within the Cost Management governance discipline.
 
 <!-- markdownlint-disable MD033 -->
 <br>
