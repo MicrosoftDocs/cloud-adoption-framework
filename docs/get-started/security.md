@@ -66,7 +66,6 @@ In addition to meeting any explicit regulatory compliance requirements, we recom
   - [Authentication strategy for services](/azure/architecture/framework/security/applications-services#prefer-identity-authentication-over-keys)
   - [Permission assignment strategy](/azure/architecture/framework/security/critical-impact-accounts#avoid-granular-and-custom-permissions)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -112,10 +111,10 @@ Successful programs incorporate these elements into their security strategy proc
 
 - **Modernize security strategy:** The security strategy should include considerations for all aspects of modern technology environment, current threat landscape, and security community resources.
 
-  - **Adapt to the shared responsibility model** of the cloud.
-  - **Include all cloud types and multicloud deployments.**
-  - **Prefer native cloud controls** to avoid unnecessary and harmful friction.
-  - **Integrate the security community** to keep up with the pace of attacker evolution.
+  - Adapt to the shared responsibility model of the cloud.
+  - Include all cloud types and multicloud deployments.
+  - Prefer native cloud controls to avoid unnecessary and harmful friction.
+  - Integrate the security community to keep up with the pace of attacker evolution.
 
 **Related resources for additional context:**
 
@@ -129,7 +128,6 @@ Successful programs incorporate these elements into their security strategy proc
   - [Cybersecurity resilience](../strategy/define-security-strategy.md#cybersecurity-resilience)
   - [How cloud is changing security relationships and responsibilities](../strategy/define-security-strategy.md#how-the-cloud-is-changing-security)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -212,7 +210,6 @@ Your security plan is likely to be more successful if your planning takes the ap
 
   For technical guidance to help build your plan and architecture, see the [Microsoft security documentation](/security).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -250,7 +247,6 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   - [Azure Policy](/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
   - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -275,9 +271,8 @@ After you ensure that new applications and landing zones follow security best pr
 - Balance operational and security risk. Because these environments might host production systems that enable critical business processes, you might need to implement security improvements incrementally to avoid risking operational downtime.
 - Prioritize the discovery and remediation of security risk by business criticality. Start with workloads that have a high business impact if compromised and workloads that have a high exposure to risk.
 
-For more information, see [Identify and classify business-critical applications](/azure/architecture/framework/security/applications-services?bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json#identify-and-classify-business-critical-applications).
+For more information, see [Identify and classify business-critical applications](/azure/architecture/framework/security/applications-services#identify-and-classify-business-critical-applications).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
