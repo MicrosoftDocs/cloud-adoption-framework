@@ -1,6 +1,6 @@
 ---
 title: "Get started: Build a cloud operations team"
-description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that they are responsible for.
+description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -24,7 +24,7 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 **Deliverables:**
 
 - Determine whether you need a cloud operations team.
-- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
@@ -82,7 +82,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 ## Step 4: Review the methodology
 
-To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology in the Cloud Adoption Framework.
+To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology of the Cloud Adoption Framework.
 
 **Deliverables:**
 
@@ -90,7 +90,7 @@ To help establish a future vision for operations management and a working approa
 
 **Guidance to support deliverable completion:**
 
-- Review the [Manage methodology in the Cloud Adoption Framework](../../manage/index.md).
+- Review the [Manage methodology of the Cloud Adoption Framework](../../manage/index.md).
 
 **Accountable team:**
 
@@ -180,7 +180,7 @@ As new adoption efforts are completed, the cloud adoption team hands off operati
 
 **Guidance to support deliverable completion:**
 
-- Establish a process for [onboarding new workloads and resources](https://docs.microsoft.com/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
+- Establish a process for [onboarding new workloads and resources](/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
 <!-- markdownlint-disable MD033 -->
 

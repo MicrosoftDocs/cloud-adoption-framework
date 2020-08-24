@@ -46,7 +46,7 @@ To perform a migration using Azure Migrate, follow these steps:
 
 #### Learn more
 
-- [Azure Migrate tutorial - migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
+- [Azure Migrate tutorial - migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 
 ### Azure Site Recovery
 
@@ -55,7 +55,7 @@ The Azure Site Recovery service can manage the migration of on-premises resource
 The following steps outline the process to use Site Recovery to migrate:
 
 > [!TIP]
-> Depending on your scenario, these steps may differ slightly. For more information, see the [migrate on-premises machines to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
+> Depending on your scenario, these steps may differ slightly. For more information, see the [migrate on-premises machines to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
 
 #### Prepare Azure Site Recovery service
 
@@ -98,7 +98,7 @@ The following steps outline the process to use Site Recovery to migrate:
 
 For more information, see:
 
-- [Migrate on-premises machines to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure)
+- [migrate on-premises machines to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure)
 
 ::: zone-end
 
@@ -137,8 +137,8 @@ The service is now ready to migrate the supported source databases to target pla
 
 For more information, see:
 
-- [Azure Database Migration Service overview](https://docs.microsoft.com/azure/dms/dms-overview)
-- [Create an instance of Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal)
+- [Azure Database Migration Service overview](/azure/dms/dms-overview)
+- [Create an instance of Azure Database Migration Service](/azure/dms/quickstart-create-data-migration-service-portal)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
 - [Azure portal: Create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
 
@@ -162,21 +162,21 @@ Start using Data Migration Assistant with these steps:
 1. Select **Next** to start the assessment.
 1. View results in Data Migration Assistant.
 
-For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
+For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
 
 For more information, including detailed usage steps, see:
 
-- [Data Migration Assistant overview](https://docs.microsoft.com/sql/dma/dma-overview)
-- [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports)
-- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](https://docs.microsoft.com/sql/dma/dma-powerbiassesreport)
+- [Data Migration Assistant overview](/sql/dma/dma-overview)
+- [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports)
+- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/sql/dma/dma-powerbiassesreport)
 
 ### SQL Server migration assistant
 
-Microsoft SQL Server migration assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server migration assistant documentation](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant).
+Microsoft SQL Server migration assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server migration assistant documentation](/sql/ssma/sql-server-migration-assistant).
 
 For more information, see:
 
-- [SQL Server migration assistant overview](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant)
+- [SQL Server migration assistant overview](/sql/ssma/sql-server-migration-assistant)
 
 ### Database experimentation assistant
 
@@ -190,7 +190,7 @@ The database experimentation assistant contains the following workflow activitie
 
 For more information, see:
 
-- [Overview of database experimentation assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
+- [Overview of database experimentation assistant](/sql/dea/database-experimentation-assistant-overview)
 
 ### Azure Cosmos DB data migration tool
 
@@ -198,7 +198,7 @@ Azure Cosmos DB data migration tool can import data from various sources into Az
 
 For more information, see:
 
-- [Azure Cosmos DB data migration tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
+- [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -240,7 +240,7 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
-[Learn more](https://docs.microsoft.com/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
+[Learn more](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
 Visit the [Azure migration center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
@@ -250,14 +250,14 @@ Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) 
 
 Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite.
 
-Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/template). You can then modify the template to reflect the [workloads](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/workloads) and [assets](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/assets) to be migrated.
+Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](/azure/architecture/cloud-adoption/plan/template). You can then modify the template to reflect the [workloads](/azure/architecture/cloud-adoption/plan/workloads) and [assets](/azure/architecture/cloud-adoption/plan/assets) to be migrated.
 
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet and schedule management.
 - [Microsoft teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
-- [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
+- [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These are not the only tools available. Many other third-party tools are widely used in the project management community.
 
@@ -273,7 +273,7 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills resp
 
 Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
+[Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 ## [Cost management](#tab/ManageCost)
 

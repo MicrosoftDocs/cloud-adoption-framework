@@ -35,7 +35,7 @@ When planning your deployment, you need to consider where logging data is stored
 
 ### Cloud-native
 
-If your organization currently lacks established logging and reporting systems, or if your planned deployment does not need to be integrated with existing on-premises or other external monitoring systems, a cloud-native SaaS solution such as [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview), is the simplest choice.
+If your organization currently lacks established logging and reporting systems, or if your planned deployment does not need to be integrated with existing on-premises or other external monitoring systems, a cloud-native SaaS solution such as [Azure Monitor](/azure/azure-monitor/overview), is the simplest choice.
 
 In this scenario, all log data is recorded and stored in the cloud, while the logging and reporting tools that process and surface information to IT staff are provided by the Azure platform and Azure Monitor.
 
@@ -63,7 +63,7 @@ On-premises-only assumptions:
 
 ### Gateway aggregation
 
-For scenarios where the amount of cloud-based telemetry data is large or existing on-premises monitoring systems need log data modified before it can be processed, a log data [gateway aggregation](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation) service might be required.
+For scenarios where the amount of cloud-based telemetry data is large or existing on-premises monitoring systems need log data modified before it can be processed, a log data [gateway aggregation](/azure/architecture/patterns/gateway-aggregation) service might be required.
 
 A gateway service is deployed to your cloud provider. Then, relevant applications and services are configured to submit telemetry data to the gateway instead of a default logging system. The gateway can then process the data: aggregating, combining, or otherwise formatting it before then submitting it to your monitoring service for ingestion and analysis.
 
@@ -105,16 +105,17 @@ Mirroring the on-premises centered approach, in this scenario cloud-based worklo
 ### Multicloud
 
 Integrating logging and reporting capabilities across a multiple-cloud platform can be complicated. Services offered between platforms are often not directly comparable, and logging and telemetry capabilities provided by these services differ as well.
+
 Multicloud logging support often requires the use of gateway services to process log data into a common format before submitting data to a hybrid logging solution.
 
 ## Learn more
 
-[Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is the default reporting and monitoring service for Azure. It provides:
+[Azure Monitor](/azure/azure-monitor/overview) is the default reporting and monitoring service for Azure. It provides:
 
 - A unified platform for collecting app telemetry, host telemetry (such as VMs), container metrics, Azure platform metrics, and event logs.
 - Visualization, queries, alerts, and analytical tools. It can provide insights into virtual machines, guest operating systems, virtual networks, and workload application events.
-- [REST APIs](https://docs.microsoft.com/azure/azure-monitor/platform/rest-api-walkthrough) for integration with external services and automation of monitoring and alerting services.
-- [Integration](https://docs.microsoft.com/azure/azure-monitor/platform/partners) with many popular third-party vendors.
+- [REST APIs](/azure/azure-monitor/platform/rest-api-walkthrough) for integration with external services and automation of monitoring and alerting services.
+- [Integration](/azure/azure-monitor/platform/partners) with many popular third-party vendors.
 
 ## Next steps
 

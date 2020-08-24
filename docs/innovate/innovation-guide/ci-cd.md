@@ -56,7 +56,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="docs"
 
-**Go to [Azure DevOps documentation](https://docs.microsoft.com/azure/devops/user-guide/?view=azure-devops)**
+**Go to [Azure DevOps documentation](/azure/devops/user-guide/?view=azure-devops)**
 
 ::: zone-end
 
@@ -96,7 +96,7 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 ### Learn more
 
 - [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
-- [Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
+- [Microsoft Teams](/MicrosoftTeams/teams-overview)
 
 ## [Innovation characteristics](#tab/Characteristics)
 
@@ -130,8 +130,8 @@ Game development is one example of an industry that's embracing LiveOps today. M
 
 ### Azure PlayFab
 
-[Azure PlayFab](https://docs.microsoft.com/gaming/playfab/what-is-playfab) is a complete back-end platform for live games and an example of a leading LiveOps application platform. With Azure PlayFab, you can continuously monitor your code, get real-time analytics, and release real-time updates to optimize your applications and increase monetization. The PlayFab objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players.
+[Azure PlayFab](/gaming/playfab/what-is-playfab) is a complete back-end platform for live games and an example of a leading LiveOps application platform. With Azure PlayFab, you can continuously monitor your code, get real-time analytics, and release real-time updates to optimize your applications and increase monetization. The PlayFab objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players.
 
 PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device and platform agnostic and can be easily integrated with social identity providers like Facebook or Steam, store platforms to orchestrate commerce, and device platforms like iOS, Android, Xbox, and PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
-**Go to the [Azure PlayFab documentation](https://docs.microsoft.com/gaming/playfab)**
+**Go to the [Azure PlayFab documentation](/gaming/playfab)**

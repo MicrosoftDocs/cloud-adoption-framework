@@ -36,11 +36,11 @@ Key scenarios for knowledge mining include:
 
 - **Explore additional resources:**
 
-  - [Azure Cognitive Search overview](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
-  - [Built-in cognitive skills for text and image processing during indexing](https://docs.microsoft.com/azure/search/cognitive-search-predefined-skills)
-  - [Documentation resources for AI enrichment in Azure Cognitive Search](https://docs.microsoft.com/azure/search/cognitive-search-resources-documentation)
-  - [Design tips and tricks for AI enrichment](https://docs.microsoft.com/azure/search/cognitive-search-concept-troubleshooting)
-  - [Full text search](https://docs.microsoft.com/azure/search/search-lucene-query-architecture)
+  - [Azure Cognitive Search overview](/azure/search/search-what-is-azure-search)
+  - [Built-in cognitive skills for text and image processing during indexing](/azure/search/cognitive-search-predefined-skills)
+  - [Documentation resources for AI enrichment in Azure Cognitive Search](/azure/search/cognitive-search-resources-documentation)
+  - [Design tips and tricks for AI enrichment](/azure/search/cognitive-search-concept-troubleshooting)
+  - [Full text search](/azure/search/search-lucene-query-architecture)
 
 ## Next steps
 

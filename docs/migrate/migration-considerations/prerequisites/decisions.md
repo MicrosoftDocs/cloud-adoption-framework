@@ -19,7 +19,7 @@ During migration, several factors affect decisions and execution activities. Thi
 
 The objective or goal of any adoption effort can have a significant impact on the suggested approach to execution.
 
-- **Migration.** Urgent business drivers, speed of adoption, or cost savings are examples of operational outcomes. These outcomes are central to efforts that drive business value from transitive change in IT or operations models. The Migrate methodology in the Cloud Adoption Framework focuses heavily on migration focused business outcomes.
+- **Migration.** Urgent business drivers, speed of adoption, or cost savings are examples of operational outcomes. These outcomes are central to efforts that drive business value from transitive change in IT or operations models. The Migrate methodology of the Cloud Adoption Framework focuses heavily on migration focused business outcomes.
 - **Application innovation.** Improving customer experience and growing market share are examples of incremental outcomes. The outcomes result from a collection of incremental changes focused on the needs and desires of current customers.
 - **Data-driven innovation.** New products or services, especially ones that come from the power of data, are examples of disruptive outcomes. These outcomes are the result of experimentation and predictions that use data to disrupt status quo in the market.
 
@@ -41,7 +41,7 @@ If data, experimentation, research and development (R&D), or new products are yo
 
 ## Effort
 
-Migration effort can vary widely depending on the size and complexities of the workloads involved. A smaller workload migration involving a few hundred virtual machines (VMs) is a tactical process, potentially being implemented using automated tools such as [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview). Conversely, a large enterprise migration of tens of thousands of workloads requires a highly strategic process and can involve extensive refactoring, rebuilding, and replacing of existing applications integrating platform as a service (PaaS) and software as a service (SaaS) capabilities. [Identifying and balancing the scope](../../../strategy/balance-the-portfolio.md) of your planned migrations is critical.
+Migration effort can vary widely depending on the size and complexities of the workloads involved. A smaller workload migration involving a few hundred virtual machines (VMs) is a tactical process, potentially being implemented using automated tools such as [Azure Migrate](/azure/migrate/migrate-services-overview). Conversely, a large enterprise migration of tens of thousands of workloads requires a highly strategic process and can involve extensive refactoring, rebuilding, and replacing of existing applications integrating platform as a service (PaaS) and software as a service (SaaS) capabilities. [Identifying and balancing the scope](../../../strategy/balance-the-portfolio.md) of your planned migrations is critical.
 
 Before making any decisions that could have a long-term impact on the current migration program, it is vital that you create consensus on the following decisions.
 
@@ -72,7 +72,7 @@ Often, migrations are driven by a compelling business event that is time sensiti
 Before proceeding, document the following assumptions and share them with the cloud strategy team and the cloud adoption teams:
 
 - Business outcomes.
-- Roles, documented and refined for the _Assess_, _Migrate_, _Optimize_, and _Secure and manage_ migration processes.
+- Roles, documented and refined for the *Assess*, *Migrate*, *Optimize*, and *Secure and manage* migration processes.
 - Definition of done, documented and refined separately for these migration processes.
 - Effort type.
 - Effort scale.

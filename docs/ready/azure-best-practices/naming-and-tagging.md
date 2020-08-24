@@ -17,7 +17,7 @@ ms.custom: readiness, fasttrack-edit
 
 Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
 
-Azure defines [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
+Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 
 Changing resource names can be difficult. Establish a comprehensive naming convention before you begin any large cloud deployment.
 
@@ -50,7 +50,7 @@ For example, a virtual network has a resource group scope, which means that ther
 
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, which means that they must be unique across the entire Azure platform.
 
-Resource names have length limits. Balancing the context embedded in a name with its scope and length is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).
+Resource names have length limits. Balancing the context embedded in a name with its scope and length is important when you develop your naming conventions. For more information, see [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
 
 ### Recommended naming components
 

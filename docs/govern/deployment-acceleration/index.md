@@ -30,12 +30,10 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Develop governance policy statements
 
-The following six steps will help you define governance policies to control deployment and configuration of resources in your cloud environment.
+The following steps help you define governance policies to control deployment and configuration of resources in your cloud environment.
 
-<!-- markdownlint-disable MD033 -->
-
-| | |
-|---|---|
+|  |  |
+|--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Deployment Acceleration discipline template](./template.md): Download the template for documenting a Deployment Acceleration discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Deployment Acceleration discipline.|
 | <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand if it is the right time to invest in the Deployment Acceleration discipline. |

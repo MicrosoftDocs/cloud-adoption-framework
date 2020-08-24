@@ -17,8 +17,8 @@ Customer success in cloud adoption efforts often has little to do with technical
 
 As you drive innovation, alignment between business and technical teams is paramount to the success of your solution.
 
-- For business stakeholders, we've created the [Microsoft AI Business School](https://www.microsoft.com/ai/ai-business-school) to support business strategy development and provide example best practices.
-- For technical stakeholders, the [Microsoft AI learning paths](https://docs.microsoft.com/learn/) are available to help you build new AI skills.
+- For business stakeholders, we've created the [Microsoft AI business school](https://www.microsoft.com/ai/ai-business-school) to support business strategy development and provide example best practices.
+- For technical stakeholders, the [Microsoft AI learning paths](/learn/) are available to help you build new AI skills.
 
 ## Blockers
 
@@ -49,7 +49,7 @@ The core principles of a well-managed operating model are based on a set of comm
 
 These principles are shared across Azure Advisor, the Microsoft Azure Well-Architected Framework, and solutions in the Azure Architecture Center:
 
-- [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) evaluates the principles for individual assets across solutions, workloads, and the full portfolio.
-- [Azure Architecture Center](https://docs.microsoft.com/azure/architecture) applies these principles to develop and manage specific technical solutions.
-- [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) helps balance these principles across a workload, to guide architecture decisions.
+- [Azure Advisor](/azure/advisor/advisor-overview) evaluates the principles for individual assets across solutions, workloads, and the full portfolio.
+- [Azure Architecture Center](/azure/architecture/) applies these principles to develop and manage specific technical solutions.
+- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) helps balance these principles across a workload, to guide architecture decisions.
 - [Cloud Adoption Framework](../index.yml) ensures that the principles scale across the portfolio to enable adoption teams through a well-managed environment.

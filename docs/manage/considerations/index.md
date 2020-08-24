@@ -25,7 +25,7 @@ The historical IT operating model was sufficient for over 20 years. But that mod
 
 <!-- cSpell:ignore caf -->
 
-![Manage methodology in the Cloud Adoption Framework](../../_images/manage/caf-manage.png)
+![Manage methodology of the Cloud Adoption Framework](../../_images/manage/caf-manage.png)
 
 ## Next steps
 

@@ -63,7 +63,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Determine your organization's [encryption](../../decision-guides/encryption/index.md) strategy for cloud-hosted data.
 - Evaluate your cloud deployment's [identity](../../decision-guides/identity/index.md) strategy. Determine how your cloud-based identity solution will coexist or integrate with on-premises identity providers.
 - Determine network boundary policies for your [Software Defined Networking (SDN)](../../decision-guides/software-defined-network/index.md) design to ensure secure virtualized networking capabilities.
-- Evaluate your organization's [least-privilege access](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-delegate-by-task) policies, and use task-based roles to provide access to specific resources.
+- Evaluate your organization's [least-privilege access](/azure/active-directory/users-groups-roles/roles-delegate-by-task) policies, and use task-based roles to provide access to specific resources.
 - Apply security and monitoring mechanisms to all cloud services and virtual machines.
 - Automate [security policies](../../decision-guides/policy-enforcement/index.md) where possible.
 - Review your Security Baseline policy and determine if you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).
@@ -112,5 +112,5 @@ Now that you understand the concept of cloud security governance, move on to lea
 
 > [!div class="nextstepaction"]
 > [Learn about security guidance for Azure](./azure-security-guidance.md)
-> [Introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview)
+> [Introduction to Azure security](/azure/security/fundamentals/overview)
 > [Learn about logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)

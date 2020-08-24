@@ -1,5 +1,5 @@
 ---
-title: "Monitoring strategy for cloud deployment models"
+title: Monitoring strategy for cloud deployment models
 description: Use the Cloud Adoption Framework for Azure to learn which monitoring strategy for cloud management to employ.
 author: MGoedtel
 ms.author: magoedte
@@ -88,7 +88,7 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 
 ### Collect and stream monitoring data to third-party or on-premises tools
 
-To collect metrics and logs from Azure infrastructure and platform resources, you need to enable Azure Diagnostics logs for those resources. Additionally, with Azure VMs, you can collect metrics and logs from the guest OS by enabling the Azure Diagnostics extension. To forward the diagnostics data that's emitted from your Azure resources to your on-premises tools or managed service provider, configure [Event Hubs](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-logs-stream-event-hubs) to stream the data to them.
+To collect metrics and logs from Azure infrastructure and platform resources, you need to enable Azure Diagnostics logs for those resources. Additionally, with Azure VMs, you can collect metrics and logs from the guest OS by enabling the Azure Diagnostics extension. To forward the diagnostics data that's emitted from your Azure resources to your on-premises tools or managed service provider, configure [Event Hubs](/azure/azure-monitor/platform/diagnostic-logs-stream-event-hubs) to stream the data to them.
 
 ### Monitor with System Center Operations Manager
 
@@ -114,7 +114,7 @@ Knowledge is defined in the management pack, which describes how to monitor the 
 
 At the application tier, Operations Manager offers basic application performance monitoring capabilities for some legacy versions of .NET and Java. If certain applications within your hybrid cloud environment operate in an offline or network-isolated mode, such that they can't communicate with a public cloud service, Operations Manager Application Performance Monitoring (APM) might be a viable option for certain limited scenarios. For applications that are not running on legacy platforms but are hosted both on-premises and in any public cloud that allows communication through a firewall (either direct or via a proxy) to Azure, use Azure Monitor Application Insights. This service offers deep, code-level monitoring, with first-class support for ASP.NET, ASP.NET Core, Java, JavaScript, and Node.js.
 
-For any web application that can be reached externally, you should enable a type of synthetic transaction known as [availability monitoring](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability). It's important to know whether your application or a critical HTTP/HTTPS endpoint that your app relies on, is available and responsive. With Application Insights availability monitoring, you can run tests from multiple Azure datacenters and provide insight into the health of your application from a global perspective.
+For any web application that can be reached externally, you should enable a type of synthetic transaction known as [availability monitoring](/azure/azure-monitor/app/monitor-web-app-availability). It's important to know whether your application or a critical HTTP/HTTPS endpoint that your app relies on, is available and responsive. With Application Insights availability monitoring, you can run tests from multiple Azure datacenters and provide insight into the health of your application from a global perspective.
 
 Although Operations Manager is capable of monitoring resources that are hosted in Azure, there are several advantages to including Azure Monitor, because its strengths overcome the limitations in Operations Manager and can establish a strong foundation to support eventual migration from it. Here we review each of those strengths and weaknesses, with our recommendation to include Azure Monitor in your hybrid monitoring strategy.  
 
@@ -167,7 +167,7 @@ Although a migration to the cloud presents numerous challenges, it also provides
 
 You can achieve holistic monitoring of Azure Stack with System Center Operations Manager. Specifically, you can monitor the workloads that are running in the tenant, the resource level, on the virtual machines, and the infrastructure hosting Azure Stack (physical servers and network switches).
 
-You can also achieve holistic monitoring with a combination of [infrastructure monitoring capabilities](https://docs.microsoft.com/azure/azure-stack/azure-stack-monitor-health) that are included in Azure Stack. These capabilities help you view health and alerts for an Azure Stack region and the [Azure Monitor service](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-metrics-azure-data) in Azure Stack, which provides base-level infrastructure metrics and logs for most services.
+You can also achieve holistic monitoring with a combination of [infrastructure monitoring capabilities](/azure/azure-stack/azure-stack-monitor-health) that are included in Azure Stack. These capabilities help you view health and alerts for an Azure Stack region and the [Azure Monitor service](/azure/azure-stack/user/azure-stack-metrics-azure-data) in Azure Stack, which provides base-level infrastructure metrics and logs for most services.
 
 If you've already invested in Operations Manager, use the Azure Stack management pack to monitor the availability and health state of Azure Stack deployments, including regions, resource providers, updates, update runs, scale units, unit nodes, infrastructure roles, and their instances (logical entities comprised of the hardware resources). This management pack uses the Health and Update resource provider REST APIs to communicate with Azure Stack. To monitor physical servers and storage devices, use the OEM vendors' management pack (for example, provided by Lenovo, Hewlett Packard, or Dell). Operations Manager can natively monitor the network switches to collect basic statistics by using SNMP. Monitoring the tenant workloads is possible with the Azure management pack by following two basic steps. Configure the subscription that you want to monitor, and then add the monitors for that subscription.
 

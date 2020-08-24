@@ -45,7 +45,7 @@ Whatever cloud provider you choose, all cloud hosting and environmental decision
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md) help you understand key Azure topics before you begin your cloud adoption.
 - The [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) and business alignment approach help you understand the workloads and assets that have been transitioned to a cloud operations team.
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of the workloads and assets that are slated for adoption in the cloud.
-- [Digital estate analysis](../digital-estate/approach.md) is an approach to documenting existing workloads and assets that are slated for adoption in the cloud. In Azure, the digital estate is best represented in a tool called [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-support-matrix).
+- [Digital estate analysis](../digital-estate/approach.md) is an approach to documenting existing workloads and assets that are slated for adoption in the cloud. In Azure, the digital estate is best represented in a tool called [Azure Migrate](/azure/migrate/migrate-support-matrix).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -85,8 +85,8 @@ All existing workloads and assets should be properly named and tagged in accorda
 
 - Create a [naming and tagging standard](../ready/azure-best-practices/naming-and-tagging.md).
 - Populate the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx) to track decisions.
-- [Review and update existing tags in Azure](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
-- [Enforce tagging policies in Azure](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-policies).
+- [Review and update existing tags in Azure](/azure/azure-resource-manager/management/tag-resources).
+- [Enforce tagging policies in Azure](/azure/azure-resource-manager/management/tag-policies).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -113,7 +113,7 @@ Build a subscription strategy:
 - Start with [two subscriptions by design](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs, like shared services or sandbox subscriptions.
 - [Manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as additional subscriptions are required to support the cloud adoption plan.
 - Establish [clear boundaries based on the portfolio hierarchy](../reference/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
-- When required, [move resource groups and assets between subscriptions](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) to adhere to the organization strategy.
+- When required, [move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) to adhere to the organization strategy.
 
 <!-- markdownlint-disable MD033 -->
 <br>

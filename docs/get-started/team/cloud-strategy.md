@@ -1,6 +1,6 @@
 ---
 title: "Get started: Build a cloud strategy team"
-description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you are prepared for a successful cloud adoption journey.
+description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you're prepared for a successful cloud adoption journey.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -20,7 +20,7 @@ Whichever approach you choose, you'll want to create a cloud strategy team that 
 ![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
 
 > [!NOTE]
-> This article discusses a _strategy facilitator_, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
+> This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
 ## Step 1: Determine whether a cloud strategy team is needed
 

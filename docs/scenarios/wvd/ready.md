@@ -25,7 +25,7 @@ Before the Contoso cloud adoption team migrates to Windows Virtual Desktop, it w
 
 Any landing zone that the team develops by using the best practices in the [Ready methodology](../../ready/index.md) and that can meet the previously mentioned specialized requirements would qualify as a landing zone for this migration.
 
-To understand how to architect Windows Virtual Desktop, review the [Windows Virtual Desktop requirements](https://docs.microsoft.com/azure/virtual-desktop/overview#requirements).
+To understand how to architect Windows Virtual Desktop, review the [Windows Virtual Desktop requirements](/azure/virtual-desktop/overview#requirements).
 
 ## Next steps
 

@@ -46,7 +46,7 @@ The **Microsoft Service Trust Portal** provides in-depth information and tools t
 
 ## Unique intelligent insights
 
-As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Azure Security Center overview](https://docs.microsoft.com/azure/security-center/security-center-intro).
+As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Azure Security Center overview](/azure/security-center/security-center-intro).
 
 ## Azure threat intelligence
 

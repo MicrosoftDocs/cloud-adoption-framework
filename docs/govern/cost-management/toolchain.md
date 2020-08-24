@@ -18,7 +18,7 @@ The following is a list of Azure native tools that can help mature the policies 
 
 <!-- TODO: Content packs are deprecated. -->
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview)  | [Power BI desktop connector](https://docs.microsoft.com/power-bi/connect-data/desktop-connect-azure-cost-management) | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview)  | [Power BI desktop connector](/power-bi/connect-data/desktop-connect-azure-cost-management) | [Azure Policy](/azure/governance/policy/overview) |
 |---------|---------|---------|---------|---------|
 | Budget control     | No         | Yes         | No         | Yes         |
 | Monitor spending on single resource    | Yes         | Yes         | Yes         | No         |

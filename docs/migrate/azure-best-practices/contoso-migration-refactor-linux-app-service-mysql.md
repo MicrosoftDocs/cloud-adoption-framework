@@ -83,8 +83,8 @@ Contoso completes the migration process as follows:
 | --- | --- | --- |
 | [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications by using Azure platform as a service (PaaS) for websites. | Pricing is based on the size of the instances and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
 | [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses Domain Name System (DNS) to direct users to Azure or to external websites and services. | Pricing is based on the number of received DNS queries and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
-| [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms, with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
+| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms, with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
+| [Azure Database for MySQL](/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
 
 ## Prerequisites
 
@@ -131,8 +131,8 @@ Contoso admins provision two web apps (one in each region) by using Azure App Se
 
 **Need more help?**
 
-- Learn about [Azure App Service web apps](https://docs.microsoft.com/azure/app-service/overview).
-- Learn about [Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
+- Learn about [Azure App Service web apps](/azure/app-service/overview).
+- Learn about [Azure App Service on Linux](/azure/app-service/containers/app-service-linux-intro).
 
 ## Step 2: Set up Traffic Manager
 
@@ -152,8 +152,8 @@ Contoso admins set up Traffic Manager to direct inbound web requests to the web 
 
 **Need more help?**
 
-- Learn about [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).
-- Learn about [routing traffic to a priority endpoint](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-configure-priority-routing-method).
+- Learn about [Traffic Manager](/azure/traffic-manager/traffic-manager-overview).
+- Learn about [routing traffic to a priority endpoint](/azure/traffic-manager/traffic-manager-configure-priority-routing-method).
 
 ## Step 3: Provision Azure Database for MySQL
 
@@ -187,7 +187,7 @@ There are several ways to move the MySQL database. Each option requires Contoso 
 
 ### Step 4a: Migrate the database via Azure Database Migration Service
 
-Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
+Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the Database Migration Service tool does not yet support this version.
@@ -342,7 +342,7 @@ As the final step in the migration process, Contoso admins configure the web app
     ![Screenshot of the "Deployment options" pane.](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app4.png)
 
 5. They repeat the preceding steps for the secondary web app, osticket-cus.
-6. After the site is configured, it's accessible via the Traffic Manager profile. The DNS name is the new location of the osTicket application. [Learn more](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain#map-a-cname-record).
+6. After the site is configured, it's accessible via the Traffic Manager profile. The DNS name is the new location of the osTicket application. [Learn more](/azure/app-service/app-service-web-tutorial-custom-domain#map-a-cname-record).
 
     ![Screenshot of the Traffic Manager profile pane, displaying the DNS name.](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app5.png)
 
@@ -385,14 +385,14 @@ With the application now running, Contoso needs to fully operationalize and secu
 
 ### Security
 
-The Contoso security team reviews the application to determine any security issues. They identify that the communication between the osTicket application and the MySQL database instance isn't configured for SSL. They do all this to ensure that the database traffic can't be hacked. [Learn more](https://docs.microsoft.com/azure/mysql/howto-configure-ssl).
+The Contoso security team reviews the application to determine any security issues. They identify that the communication between the osTicket application and the MySQL database instance isn't configured for SSL. They do all this to ensure that the database traffic can't be hacked. [Learn more](/azure/mysql/howto-configure-ssl).
 
 ### Backups
 
 - The osTicket web apps don't contain state data and thus don't require backup.
-- The Contoso team doesn't need to configure backup for the database. Azure Database for MySQL automatically creates server backups and stores. The team elected to use geo-redundancy for the database, so it's resilient and production-ready. Backups can be used to restore their server to a point-in-time. [Learn more](https://docs.microsoft.com/azure/mysql/concepts-backup).
+- The Contoso team doesn't need to configure backup for the database. Azure Database for MySQL automatically creates server backups and stores. The team elected to use geo-redundancy for the database, so it's resilient and production-ready. Backups can be used to restore their server to a point-in-time. [Learn more](/azure/mysql/concepts-backup).
 
 ### Licensing and cost optimization
 
 - There are no licensing issues for the PaaS deployment.
-- Contoso will use [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to ensure that they stay within the budgets established by their IT leadership.
+- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure that they stay within the budgets established by their IT leadership.

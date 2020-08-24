@@ -31,7 +31,7 @@ Azure Data Catalog addresses the discovery challenges of data consumers and enab
 
 ::: zone target="docs"
 
-**Go to the [Azure Data Catalog documentation](https://docs.microsoft.com/azure/data-catalog)**
+**Go to the [Azure Data Catalog documentation](/azure/data-catalog)**
 
 ::: zone-end
 
@@ -69,7 +69,7 @@ Achieving a balance between openly sharing data and exercising control over what
 
 ::: zone target="docs"
 
-**Go to the [Azure Data Share documentation](https://docs.microsoft.com/azure/data-share)**
+**Go to the [Azure Data Share documentation](/azure/data-share)**
 
 ::: zone-end
 
@@ -107,7 +107,7 @@ The data innovation capabilities of Azure Time Series Insights are endless. It p
 
 ::: zone target="docs"
 
-**Go to the [Azure Time Series Insights overview](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-update-overview)**
+**Go to the [Azure Time Series Insights overview](/azure/time-series-insights/time-series-insights-update-overview)**
 
 ::: zone-end
 

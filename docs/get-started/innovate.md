@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Get started: Accelerate new product and service innovation in the cloud
 
-Creating new products and services in the cloud requires a different approach than migration requires. The Innovate methodology in the Cloud Adoption Framework for Azure establishes an approach that guides the development of new products and services.
+Creating new products and services in the cloud requires a different approach than migration requires. The Innovate methodology of the Cloud Adoption Framework for Azure establishes an approach that guides the development of new products and services.
 
 This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
@@ -145,7 +145,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 **Deliverables:**
 
-- Complete the [Microsoft Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
+- Complete the [Microsoft Azure Architecture Review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
 - Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
 
 **Guidance to support deliverable completion:**
