@@ -62,7 +62,7 @@ During the Ready phase, technical staff creates a migration landing zone capable
 
 ## Organizational skills
 
-Depending on the motivations and desired business outcomes of a cloud adoption effort, leaders might need to establish new organizational structures or virtual teams (v-teams) to facilitate various functions. These articles will help you develop the skills necessary to structure those teams to meet desired outcomes:
+Depending on the motivations and desired business outcomes of a cloud adoption effort, leaders might need to establish new organizational structures or virtual teams to facilitate various functions. These articles will help you develop the skills necessary to structure those teams to meet desired outcomes:
 
 - [Initial organizational alignment](../organize/index.md). Overview of organizational alignment and various team structures to facilitate specific goals.
 - [Breaking down silos and fiefdoms](../organize/fiefdoms-silos.md). Understanding two common organizational antipatterns and ways to guide a team to productive collaboration.
