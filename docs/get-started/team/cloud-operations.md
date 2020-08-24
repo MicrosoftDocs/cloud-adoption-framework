@@ -3,10 +3,10 @@ title: "Get started: Build a cloud operations team"
 description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud operations team

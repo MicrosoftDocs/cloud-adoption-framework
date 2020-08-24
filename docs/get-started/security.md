@@ -15,7 +15,7 @@ ms.subservice: overview
 
 Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts.
 
-This getting-started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
+This getting started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
 
 The steps in this guide are intended for all roles that support security assurances for cloud environments and landing zones. Tasks include immediate risk mitigation priorities, guidance on building a modern security strategy, operationalizing the approach, and executing on that strategy.
 
@@ -157,7 +157,8 @@ Security planning and cloud adoption planning should not be done in isolation. I
   - **Security skills plan** to support team members as they navigate the significant changes in technology, roles, and responsibilities.
 
   - **Technical security architecture and capabilities roadmap** to guide technical teams.
-  Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
+
+    Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
 
     - [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
@@ -166,8 +167,11 @@ Security planning and cloud adoption planning should not be done in isolation. I
       ![Azure RBAC model](../_images/security/azure-rbac-model.png)
 
     - [Microsoft cybersecurity reference architecture](https://aka.ms/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
+
     - [Security operations center (SOC) reference architecture](/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
+
     - [Zero-trust user access reference architecture](/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
+
     - [Azure Security Center](/azure/security-center) and [Microsoft cloud application security](/cloud-app-security) to help secure cloud assets.
 
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
@@ -199,7 +203,9 @@ Your security plan is likely to be more successful if your planning takes the ap
     - What skills they need to learn.
     - Why they need to learn the skills (and the benefits of doing so).
     - How to get this knowledge (and provide resources to help them learn).
-  You can document the plan by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). And you can use [online Microsoft security training](/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
+
+    You can document the plan by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). And you can use [online Microsoft security training](/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
+
   - **Making security awareness engaging** to help people genuinely connect with their part of keeping the organization safe.
 
 - **Review Microsoft learnings and guidance:** Microsoft has published insights and perspectives to help your organization plan its transformation to the cloud and a modern security strategy. The material includes recorded training, documentation, and security best practices and recommended standards.
@@ -242,7 +248,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   - [Secure score](/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
   - [Azure Blueprints](/azure/governance/blueprints/overview): Cloud architects and centralized IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
   - [Azure Policy](/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
-- [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
+  - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
 <!-- markdownlint-disable MD033 -->
 <br>

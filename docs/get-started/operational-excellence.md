@@ -114,7 +114,7 @@ The previous steps outline a business-led approach to establish operational exce
 
 Operational excellence requires a disciplined approach to reliability, performance, security, and cost optimization. Use the remaining guidance in this series to implement these principles through consistent approaches to automation.
 
-- **Cost optimization:** Continuously optimize operating costs by using the get-started guide on [managing enterprise costs](./manage-costs.md)
-- **Security:** Reduce risk by integrating enterprise security across the portfolio by using the get-started guide on [implementing security across the portfolio](./security.md).
-- **Performance management:** Ensure IT asset performance supports business processes by using the get-started guide on [performance management across the enterprise](./performance.md).
-- **Reliability:** Improve reliability and reduce business disruptions by using the get-started guide on [implementing controls to create reliability](./reliability.md).
+- **Cost optimization:** Continuously optimize operating costs by using the getting started guide on [managing enterprise costs](./manage-costs.md)
+- **Security:** Reduce risk by integrating enterprise security across the portfolio by using the getting started guide on [implementing security across the portfolio](./security.md).
+- **Performance management:** Ensure IT asset performance supports business processes by using the getting started guide on [performance management across the enterprise](./performance.md).
+- **Reliability:** Improve reliability and reduce business disruptions by using the getting started guide on [implementing controls to create reliability](./reliability.md).

@@ -83,7 +83,7 @@ Based on feedback, we've created new content to get you started using the Cloud 
 | Article | Description |
 |---|---|
 | [Cloud Adoption Framework for Azure](../index.yml) | The Cloud Adoption Framework landing page has been redesigned to make it easier to find the guidance, tools, learn modules and programs that support a successful cloud adoption journey. |
-| [Get started with the Cloud Adoption Framework](./index.md) | Start here to choose a getting started guide that's aligned with your cloud adoption goals. These common scenarios provide a roadmap through the Microsoft Cloud Adoption Framework for Azure. |
+| [Get started with the Cloud Adoption Framework](./index.md) | Choose a getting started guide that's aligned with your cloud adoption goals. These common scenarios provide a roadmap through the Microsoft Cloud Adoption Framework for Azure. |
 | [Understand and document foundational alignment decisions](./cloud-concepts.md) | Learn about the initial decisions that every team involved in cloud adoption should understand. |
 | [Understand and align the portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md) | Learn how a portfolio hierarchy shows how your workloads and supporting services all fit together. |
 | [How do Azure products support the portfolio hierarchy?](../reference/fundamental-concepts/hierarchy-azure-tools.md) | Learn about the Azure tools and solutions that support your portfolio hierarchy. |
