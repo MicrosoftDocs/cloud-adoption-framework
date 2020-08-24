@@ -79,7 +79,13 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 Network topology is a critical element of the enterprise-scale architecture because it defines how applications can communicate with each other. This section explores technologies and topology approaches for enterprise Azure deployments. It focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
 
-A network topology based on Azure Virtual WAN is the preferred enterprise-scale approach for large-scale multiregion deployments where your organization needs to connect your global locations to both Azure and on-premises. You should also use a Virtual WAN network topology whenever your organization intends to use software-defined WAN (SD-WAN) deployments fully integrated with Azure. Virtual WAN is used to meet large-scale interconnectivity requirements. Because it's a Microsoft-managed service, it also reduces overall network complexity and helps to modernize your organization's network.
+Use a network topology based on Azure Virtual WAN if any of the following are true:
+
+- Your organization intends to deploy resources across several Azure regions and your organization needs to connect your global locations to both Azure and on-premises.
+- Your organization intends to use software-defined WAN (SD-WAN) deployments fully integrated with Azure.
+- You intend to deploy up to 2,000 virtual machine workload across all VNets connected to a single Azure Virtual WAN hub.
+
+Virtual WAN is used to meet large-scale interconnectivity requirements. Because it's a Microsoft-managed service, it also reduces overall network complexity and helps to modernize your organization's network.
 
 Use a traditional Azure network topology if any of the following are true:
 
@@ -123,6 +129,8 @@ _Figure 1: Virtual WAN network topology._
 
 - Transit connectivity between the virtual networks in Standard Virtual WAN is enabled due to the presence of a router in every virtual hub. Every virtual hub router supports an aggregate throughput up to 50 Gbps.
 
+- The maximum number of VM workload across all VNets connected to a single Virtual WAN hub is 2,000.
+
 - Virtual WAN integrates with a variety of [SD-WAN providers](/azure/virtual-wan/virtual-wan-locations-partners).
 
 - Many managed service providers offer [managed services](/azure/networking/networking-partners-msp) for Virtual WAN.
@@ -137,7 +145,7 @@ _Figure 1: Virtual WAN network topology._
 
 **Design recommendations:**
 
-- We highly recommend Virtual WAN for new large or global network deployments in Azure where you need global transit connectivity across Azure regions and on-premises locations. That way, you don't have to manually set up transitive routing for Azure networking.
+- We recommend Virtual WAN for new large or global network deployments in Azure where you need global transit connectivity across Azure regions and on-premises locations. That way, you don't have to manually set up transitive routing for Azure networking.
 
   The following figure shows a sample global enterprise deployment with datacenters spread across Europe and the United States. The deployment also has a large number of branch offices within both regions. The environment is globally connected via Virtual WAN and ExpressRoute Global Reach.
 
@@ -170,6 +178,8 @@ _Figure 1: Virtual WAN network topology._
 - Create Azure Virtual WAN and Azure Firewall resources within the connectivity subscription.
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
+
+- Plan your deployment carefully, and ensure network architecture is within the Azure Virtual WAN [limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
 ## Traditional Azure networking topology
 
