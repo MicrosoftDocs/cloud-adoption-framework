@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 # Deploy workloads and assets (infrastructure, apps, and data)
 
-In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state, including native tools, third-party tools, and project management tools.
+In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. Including native tools, third-party tools, and project management tools.
 
 <!-- markdownlint-disable MD025 -->
 
@@ -118,7 +118,7 @@ Start using Data Migration Assistant with these steps:
 1. Select **Next** to start the assessment.
 1. View results in Data Migration Assistant.
 
-For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
+For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports, and then use provided Power BI reports to analyze the results.
 
 For more information, including detailed usage steps, see:
 
@@ -164,7 +164,7 @@ Several third-party migration tools and ISV services can assist you with the mig
 
 ### UnifyCloud
 
-UnifyCloud is an ISV service that provides assessment, migration and modernization automation tools.
+UnifyCloud is an ISV service that provides assessment, migration, and modernization automation tools.
 
 [Learn more](https://www.unifycloud.com)
 
@@ -211,15 +211,15 @@ Azure DevOps is the suggested tool for project management during a cloud migrati
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
-- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet and schedule management.
+- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
 - [Microsoft teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
 - [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
-These are not the only tools available. Many other third-party tools are widely used in the project management community.
+These project management tools are not the only tools available. Many other third-party tools are widely used in the project management community.
 
 ### Set up for DevOps
 
-As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
+As, you migrate into cloud technologies it presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
 Azure DevOps provides the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [Quickstart: CI/CD with Azure DevOps](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
@@ -233,4 +233,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 ## [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md) section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place additional usage requirements on your services, periodic cost analysis helps you avoid unexpected usage charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md) section.
