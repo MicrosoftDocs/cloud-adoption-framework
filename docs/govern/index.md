@@ -1,5 +1,5 @@
 ---
-title: "Governance in the Microsoft Cloud Adoption Framework for Azure"
+title: Governance in the Microsoft Cloud Adoption Framework for Azure
 description: Use the Cloud Adoption Framework for Azure to learn to assess existing policies, build an initial governance foundation, and iteratively add governance tools.
 author: BrianBlanchard
 ms.author: brblanch
@@ -38,7 +38,7 @@ The content in the Cloud Adoption Framework affects the business, technology, an
 
 The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect facilitate the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
 
-**Cloud architect specialization in this section:** Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for mitigating or reducing technical risks. Some cloud providers refer to these specialists as _cloud custodians_, but we prefer _cloud guardians_ or, collectively, the _cloud governance team_. The actionable governance guides show how the composition and role of the cloud governance team might change over time.
+**Cloud architect specialization in this section:** Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for mitigating or reducing technical risks. Some cloud providers refer to these specialists as *cloud custodians*, but we prefer *cloud guardians* or, collectively, the *cloud governance team*. The actionable governance guides show how the composition and role of the cloud governance team might change over time.
 
 ## Use this guide
 

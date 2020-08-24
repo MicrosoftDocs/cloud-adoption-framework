@@ -14,7 +14,7 @@ ms.custom: governance
 
 Establishing cloud governance is a broad iterative effort. It is challenging to strike an effective balance between speed and control, especially during execution of early methodologies within the cloud adoption. The governance guidance in the Cloud Adoption Framework helps provide that balance via an agile approach to adoption.
 
-This article provides two options for establishing an initial foundation for governance. Either option ensures that governance constraints can be scaled and expanded as the adoption plan is implemented and requirements become more clearly defined. By default, the initial foundation assumes an isolate-and-control position. It also focuses more on resource organization than on resource governance. This lightweight starting point is called a _minimum viable product (MVP)_ for governance. The objective of the MVP is reducing barriers to establishing an initial governance position, and then enabling rapid maturation of the solution to address a variety of tangible risks.
+This article provides two options for establishing an initial foundation for governance. Either option ensures that governance constraints can be scaled and expanded as the adoption plan is implemented and requirements become more clearly defined. By default, the initial foundation assumes an isolate-and-control position. It also focuses more on resource organization than on resource governance. This lightweight starting point is called a *minimum viable product (MVP)* for governance. The objective of the MVP is reducing barriers to establishing an initial governance position, and then enabling rapid maturation of the solution to address a variety of tangible risks.
 
 ## Already using the Cloud Adoption Framework
 

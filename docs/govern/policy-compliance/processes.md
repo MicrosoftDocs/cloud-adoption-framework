@@ -1,5 +1,5 @@
 ---
-title: "Establish policy adherence processes"
+title: Establish policy adherence processes
 description: Create a strategy and processes for ensuring your cloud deployment stays in compliance with your policy requirements.
 author: BrianBlanchard
 ms.author: brblanch
@@ -73,9 +73,9 @@ Some examples of violation triggers and actions:
 
 | Cloud governance discipline | Sample trigger | Sample action |
 |-----------------------------|----------------|---------------|
-| Cost Management | Monthly cloud spending is more than 20% higher than expected. | Notify the billing unit leader who will begin a review of resource usage. |
-| Security Baseline | Detect suspicious user activity. | Notify the IT security team and disable the suspect user account. |
-| Resource Consistency | CPU utilization for a workload is greater than 90%. | Notify the IT operations team and scale out additional resources to handle the load. |
+| Cost management | Monthly cloud spending is more than 20% higher than expected. | Notify the billing unit leader who will begin a review of resource usage. |
+| Security baseline | Detect suspicious user activity. | Notify the IT security team and disable the suspect user account. |
+| Resource consistency | CPU utilization for a workload is greater than 90%. | Notify the IT operations team and scale out additional resources to handle the load. |
 
 ## Automation of monitoring and compliance
 

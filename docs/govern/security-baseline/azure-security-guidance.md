@@ -1,5 +1,5 @@
 ---
-title: "Azure security guidance"
+title: Azure security guidance
 description: Use the Microsoft Service Trust Portal and Compliance Manager to help meet complex compliance obligations and improve data protection.
 author: BrianBlanchard
 ms.author: brblanch
@@ -36,11 +36,11 @@ The **Microsoft Service Trust Portal** provides in-depth information and tools t
   - Reference architectures with threat models.
   - Control implementation matrices.
   - Automation to deploy reference architectures.
-  - Privacy resources. Documentation for data protection impact assessments, data subject requests, and data breach notification is provided to incorporate into your own accountability program in support of the General Data Protection Regulation (GDPR).
+  - Privacy resources. Documentation for data protection impact assessments, data subject requests, and data breach notification is provided to incorporate into your own accountability program in support of the general data protection regulation (GDPR).
 - **Get started with GDPR:** Microsoft products and services help organizations meet GDPR requirements while collecting or processing personal data. The Microsoft Service Trust Portal is designed to give you information about the capabilities in Microsoft services that you can use to address specific requirements of the GDPR. The documentation can help your GDPR accountability and your understanding of technical and organizational measures. Documentation for data protection impact assessments, data subject requests, and data breach notification is provided to incorporate into your own accountability program in support of the GDPR.
   - **Data subject requests:** The GDPR grants individuals (or data subjects) certain rights in connection with the processing of their personal data. These rights include the right to correct inaccurate data, erase data, or restrict its processing, as well as the right to receive their data and fulfill a request to transmit their data to another controller.
   - **Data breach:** The GDPR mandates notification requirements for data controllers and processors if a breach of personal data occurs. The Microsoft Service Trust Portal provides you with information about how Microsoft works to prevent breaches, how Microsoft detects a breach, and how Microsoft will respond and notify you as a data controller if a breach occurs.
-  - **Data protection impact assessment:** Microsoft helps controllers complete GDPR data protection impact assessments (DPIAs). The GDPR provides an in-exhaustive list of cases in which DPIAs must be performed, such as automated processing for the purposes of profiling and similar activities; processing on a large scale of special categories of personal data, and systematic monitoring of a publicly accessible area on a large scale.
+  - **Data protection impact assessment:** Microsoft helps controllers complete GDPR data protection impact assessments (dpias). The GDPR provides an in-exhaustive list of cases in which dpias must be performed, such as automated processing for the purposes of profiling and similar activities; processing on a large scale of special categories of personal data, and systematic monitoring of a publicly accessible area on a large scale.
   - **Other resources:** In addition to tools guidance discussed in the above sections, the Microsoft Service Trust Portal also provides other resources including regional compliance, additional resources for the security and compliance center, and frequently asked questions about the Microsoft Service Trust Portal, Compliance Manager, privacy, and GDPR.
 - **Regional compliance:** The Microsoft Service Trust Portal provides numerous compliance documents and guidance for Microsoft online services to meet compliance requirements for different regions including Czech Republic, Poland, and Romania.
 

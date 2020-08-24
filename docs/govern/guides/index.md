@@ -1,5 +1,5 @@
 ---
-title: "Cloud governance guides"
+title: Cloud governance guides
 description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
 author: BrianBlanchard
 ms.author: brblanch
@@ -81,15 +81,15 @@ To begin a governance journey, choose one of the two options below. The options 
 
 Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. As your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
 
-The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between Cloud Adoption teams and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
+The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between cloud adoption teams and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
 
 CAF enterprise-scale landing zone deploys your own "isolated cloud" within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, CAF enterprise-scale landing zone offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
 
 ### CAF enterprise-scale landing zone qualifications
 
-Although smaller teams may benefit from the architecture and recommendations the CAF enterprise-scale landing zone provides. Our objective is to continue to streamline the CAF enterprise-scale landing zone implementations to make them more friendly for smaller teams. Currently, this approach is designed to guide Central IT teams managing large cloud environments.
+Although smaller teams may benefit from the architecture and recommendations the CAF enterprise-scale landing zone provides. Our objective is to continue to streamline the CAF enterprise-scale landing zone implementations to make them more friendly for smaller teams. Currently, this approach is designed to guide central IT teams managing large cloud environments.
 
-The [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
+The [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (applications, infrastructure, or data assets) in the cloud**.
 
 For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
 

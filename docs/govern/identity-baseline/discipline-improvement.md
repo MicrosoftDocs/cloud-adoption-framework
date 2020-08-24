@@ -1,5 +1,5 @@
 ---
-title: "Identity Baseline discipline improvement"
+title: Identity Baseline discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Identity Baseline discipline in each phase of cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -20,7 +20,7 @@ This article outlines some potential tasks your company can engage in to better 
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-_Figure 1: Adoption phases of the incremental approach to cloud governance._
+_figure 1: Adoption phases of the incremental approach to cloud governance._
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Identity Baseline discipline.
 
@@ -68,16 +68,16 @@ Several technical and nontechnical prerequisites are required to successfully mi
 - Integrate your on-premises and cloud directories.
 - Consider using the following access models:
   - [Least-privilege administrative](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) access model.
-  - [Privileged identity management](/azure/active-directory/privileged-identity-management/pim-configure) access model.
+  - [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) access model.
 - Finalize all preintegration details and review [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices).
-  - Enable single-identity, single-sign-on (SSO), also called seamless SSO.
+  - Enable single-identity, single-sign-on (SSO), also called Seamless SSO.
   - Configure multi-factor authentication for administrators.
   - Consolidate or integrate identity providers, where necessary.
   - Implement tooling necessary to centralize management of identities.
   - Enable just-in-time (JIT) access and role change alerting.
   - Conduct a risk analysis of key admin activities for assignment to built-in roles.
   - Consider an updated rollout of stronger authentication for all users.
-  - Enable privileged identity management (PIM) for JIT (using time-limited activation) for additional administrative roles.
+  - Enable Privileged Identity Management (PIM) for JIT (using time-limited activation) for additional administrative roles.
   - Separate user accounts from global admin accounts, to ensure that administrators do not inadvertently open emails or run programs associated with their global admin accounts).
 
 ## Adopt and migrate
@@ -95,7 +95,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Validate that the best practices defined during the build predeployment phases are properly executed.
 - Validate and refine your [hybrid identity strategy](../../decision-guides/identity/index.md).
 - Ensure that each application or workload continues to align with the identity strategy before release.
-- Validate that single sign-on (SSO) and seamless SSO is working as expected for your applications.
+- Validate that single sign-on (SSO) and Seamless SSO is working as expected for your applications.
 - Reduce or eliminate the number of alternative identity stores.
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
 - Enable conditional access for [on-premises federated applications](/azure/active-directory/devices/overview).

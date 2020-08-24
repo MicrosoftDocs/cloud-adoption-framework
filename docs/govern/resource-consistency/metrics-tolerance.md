@@ -1,6 +1,6 @@
 ---
 title: Risk tolerance metrics and indicators in the Resource Consistency discipline
-description: Use the the Cloud Adoption Framework for Azure to quantify business risk tolerance related to Resource Consistency discipline.
+description: Use the Cloud Adoption Framework for Azure to quantify business risk tolerance related to Resource Consistency discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -36,8 +36,8 @@ Every organization has different operational scenarios, but the following items 
 - **Service availability.** Percentage of actual uptime cloud-hosted workloads compared to the expected uptime.
 - **Recovery time objective (RTO).** The maximum acceptable time that an application can be unavailable after an incident.
 - **Recovery point objective (RPO).** The maximum duration of data loss that is acceptable during a disaster. For example, if you store data in a single database, with no replication to other databases, and perform hourly backups, you could lose up to an hour of data.
-- **Mean time to recover (MTTR).** The average time required to restore a component after a failure.
-- **Mean time between failures (MTBF).** The duration that a component can reasonably expect to run between outages. This metric can help you calculate how often a service will become unavailable.
+- **Mean time to recover (mttr).** The average time required to restore a component after a failure.
+- **Mean time between failures (mtbf).** The duration that a component can reasonably expect to run between outages. This metric can help you calculate how often a service will become unavailable.
 - **Backup health.** Number of backups actively being synchronized.
 - **Recovery health.** Number of recovery operations successfully performed.
 
@@ -54,7 +54,7 @@ Once you have a baseline, establish minimum benchmarks representing an unaccepta
 - **Tagging and naming trigger.** A company with more than *x* resources lacking required tagging information or not obeying naming standards should consider investing in the Resource Consistency discipline to help refine these standards and ensure consistent application of them to cloud-deployed assets.
 - **Overprovisioned resources trigger.** If a company has more than *x%* of assets regularly using small amounts of their available memory, CPU, or network capabilities, investment in the Resource Consistency discipline is suggested to help optimize resources usage for these items.
 - **Underprovisioned resources trigger.** If a company has more than *x%* of assets regularly exhausting most of their available memory, CPU, or network capabilities, investment in the Resource Consistency discipline is suggested to help ensure these assets have the resources necessary to prevent service interruptions.
-- **Resource age trigger.** A company with more than *x* resources that haven't been updated in over _y_ months could benefit from investment in the Resource Consistency discipline aimed at ensuring active resources are patched and healthy, while retiring obsolete or otherwise unused assets.
+- **Resource age trigger.** A company with more than *x* resources that haven't been updated in over *y* months could benefit from investment in the Resource Consistency discipline aimed at ensuring active resources are patched and healthy, while retiring obsolete or otherwise unused assets.
 - **Service-level agreement trigger.** A company that cannot meet its service-level agreements to its external customers or internal partners should invest in the Deployment Acceleration discipline to reduce system downtime.
 - **Recovery time triggers.** If a company exceeds the required thresholds for recovery time following a system failure, it should invest in improving its Deployment Acceleration discipline and systems design to reduce or eliminate failures or the effect of individual component downtime.
 - **VM health trigger.** A company that has more than *x%* of VMs experiencing a critical health issue should invest in the Resource Consistency discipline to identify issues and improve VM stability.

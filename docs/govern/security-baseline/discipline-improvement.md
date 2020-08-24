@@ -1,5 +1,5 @@
 ---
-title: "Security Baseline discipline improvement"
+title: Security Baseline discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Security Baseline discipline in each phase of cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -18,7 +18,7 @@ This article outlines some potential tasks your company can engage in to better 
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-_Figure 1: Adoption phases of the incremental approach to cloud governance._
+_figure 1: Adoption phases of the incremental approach to cloud governance._
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Security Baseline discipline.
 
@@ -66,7 +66,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Evaluate your organization's [least-privilege access](/azure/active-directory/users-groups-roles/roles-delegate-by-task) policies, and use task-based roles to provide access to specific resources.
 - Apply security and monitoring mechanisms to all cloud services and virtual machines.
 - Automate [security policies](../../decision-guides/policy-enforcement/index.md) where possible.
-- Review your Security Baseline policy and determine if you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).
+- Review your Security Baseline policy and determine whether you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).
 
 ## Adopt and migrate
 
