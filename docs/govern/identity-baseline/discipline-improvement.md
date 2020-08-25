@@ -98,7 +98,8 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Validate that single sign-on (SSO) and seamless SSO is working as expected for your applications.
 - Reduce or eliminate the number of alternative identity stores.
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
-- Enable conditional access for [on-premises federated applications](/azure/active-directory/devices/overview).
+- Enable conditional access for [on-premises federated
+  applications](/azure/active-directory/devices/overview).
 - Distribute identity across global regions in multiple hubs with synchronization between regions.
 - Establish central role-based access control (RBAC) federation.
 

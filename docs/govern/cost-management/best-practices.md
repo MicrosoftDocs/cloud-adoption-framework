@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docutune:casing ARO -->
+<!-- docutune:casing ARO "standard HDD" -->
 
 # Best practices for costing and sizing resources hosted in Azure
 
@@ -101,7 +101,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 - It's important to understand the pricing differences between these VMs, and the long-term budget effects.
 - Each type has several VM series within it.
-- Additionally, when you select a VM within a-series, you can only scale the VM up and down within that series. For example, a `DS2_v2` instance can scale up to `DS4_v2`, but it can't be changed to a instance of a different series such as a `f2S_v2` instance.
+- Additionally, when you select a VM within a-series, you can only scale the VM up and down within that series. For example, a `DS2_v2` instance can scale up to `DS4_v2`, but it can't be changed to a instance of a different series such as a `F2S_v2` instance.
 
 **Learn more:**
 
