@@ -41,14 +41,14 @@ These deliverables are the result of a few recurring tasks:
 **Guidance to support deliverable completion:**
 
 - Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner."
-- On a regular basis, review and apply [cost management discipline best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Here are a few of the most impactful governance practices:
+- On a regular basis, review and apply [Cost Management discipline best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Important governance practices include:
 
-  - Act on [general cost best practices](../govern/cost-management/best-practices.md) to reduce sizing and costs and to stop unused machines.
-  - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefit) to reduce licensing costs.
-  - Align [reserved instances](../govern/cost-management/best-practices.md#best-practice-use-azure-reserved-vm-instances) to reduce resource costs.
-  - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to minimize impacts on resource performance.
-  - [Reduce nonproduction costs](../govern/cost-management/best-practices.md#best-practice-reduce-nonproduction-costs) through policies to govern nonproduction environments.
-  - Act on [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+  - Acting on [general cost best practices](../govern/cost-management/best-practices.md) to reduce sizing and costs and to stop unused machines.
+  - Applying [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefit) to reduce licensing costs.
+  - Aligning [reserved instances](../govern/cost-management/best-practices.md#best-practice-use-azure-reserved-vm-instances) to reduce resource costs.
+  - [Monitoring resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to minimize impacts on resource performance.
+  - [Reducing nonproduction costs](../govern/cost-management/best-practices.md#best-practice-reduce-nonproduction-costs) through policies to govern nonproduction environments.
+  - Acting on [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 - Trade-offs at the workload level might be needed to implement effective cost optimization changes. The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/cost/tradeoffs) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) using the Govern methodology.

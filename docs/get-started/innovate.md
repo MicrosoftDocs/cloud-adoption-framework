@@ -145,7 +145,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 **Deliverables:**
 
-- Complete the [Microsoft Azure Architecture Review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
+- Complete the [Microsoft Azure architecture review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
 - Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
 
 **Guidance to support deliverable completion:**
@@ -210,13 +210,13 @@ The Innovate methodology provides guidance on the tools and product management a
 
 ## Step 9: Assess the innovation maturity of your organization
 
-To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
+To support the development of your innovation strategy, the AI maturity model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
 
-The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI Maturity Model to compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
+The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI maturity model to compute your organization's score and provide an estimate of the AI innovation maturity on a curve.
 
 **Deliverables:**
 
-- Use the [AI Maturity Model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
+- Use the [AI maturity model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
 
 **Guidance to support deliverable completion:**
 
