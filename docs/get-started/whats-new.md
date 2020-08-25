@@ -40,7 +40,7 @@ The concept and implementations options behind Azure Landing Zones was built alo
 | Article | Description |
 |---|---|
 | [Partner landing zones](../ready/landing-zone/partner-landing-zone.md) | Review and compare Azure Landing Zone offers from your partner. |
-| Update: [Implementation options](../ready/landing-zone/implementation.md) | Partner landing zone options added to the existing Azure Landing Zone implementation options |
+| Update: [Implementation options](../ready/landing-zone/implementation-options.md) | Partner landing zone options added to the existing Azure Landing Zone implementation options |
 | Update: [Enterprise-Scale reference implementations](../ready/enterprise-scale/implementation.md) | Hub-Spoke reference implementation added to Enterprise-Scale reference implementations |
 
 > [!NOTE]
