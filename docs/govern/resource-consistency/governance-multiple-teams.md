@@ -84,7 +84,7 @@ In both examples, there is a subscription service administrator that is assigned
 ![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
 *Figure 3: A subscription with a service administrator assigned the built-in owner role.*
 
-<!-- docutune:casing "resource group A" "resource groups A and B" "workload owner A" -->
+<!-- docutune:casing "group A" "groups A and B" "owner A" -->
 
 1. In the first example, **workload owner A** has no permissions at the subscription scope and no resource access management rights by default. This user wants to deploy and manage the resources for their workload. They must contact the **service administrator** to request creation of a resource group. ![Workload owner requests creation of resource group A](../../_images/govern/design/governance-2-2.png)
 2. The **service administrator** reviews their request and creates **resource group A**. At this point, **workload owner A** still doesn't have permission to do anything. ![Service administrator creates resource group A](../../_images/govern/design/governance-2-3.png)
@@ -97,7 +97,7 @@ In both examples, there is a subscription service administrator that is assigned
 
 At this point, each of the workload owners is isolated in their own resource group. None of the workload owners or their team members have management access to the resources in any other resource group.
 
-![Subscription with resource groups A and B](../../_images/govern/design/governance-2-10.png) gfigure 4: A subscription with two workload owners isolated with their own resource group._
+![Subscription with resource groups A and B](../../_images/govern/design/governance-2-10.png) gfigure 4: a subscription with two workload owners isolated with their own resource group._
 
 This model is a least-privilege model. Each user is assigned the correct permission at the correct resource management scope.
 
@@ -208,7 +208,7 @@ Therefore, you can select any of these two examples resource management models d
 You've learned about several different models for governing access to Azure resources. Now you'll walk through the steps necessary to implement the resource management model with one subscription for each of the **shared infrastructure**, **production**, and **development** environments from the design guide. You'll have one **subscription owner** account for all three environments. Each workload will be isolated in a **resource group** with a **workload owner** added with the **contributor** role.
 
 > [!NOTE]
-> See [Understanding resource access in Azure](/azure/role-based-access-control/rbac-and-directory-admin-roles) to learn more about the relationship between Azure accounts and subscriptions.
+> To learn more about the relationship between Azure accounts and subscriptions, see [Understanding resource access in Azure](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Follow these steps:
 
