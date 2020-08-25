@@ -1,5 +1,5 @@
 ---
-title: "<Insert Scenario Name>"
+title: "Strategy for <Insert Scenario Name> adoption"
 description: Describe the scenario's impact on strategy
 author: BrianBlanchard
 ms.author: brblanch

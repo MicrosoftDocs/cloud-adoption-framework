@@ -1,5 +1,5 @@
 ---
-title: "<Insert Scenario Name>"
+title: "Introduction to the <Insert Scenario Name> adoption scenario"
 description: Describe the scenario
 author: BrianBlanchard
 ms.author: brblanch
@@ -34,4 +34,3 @@ The following list of articles will take you to guidance found at specific point
 - [Innovate with <Insert Scenario Name>](./innovate.md)
 - [Govern <Insert Scenario Name>](./govern.md)
 - [Manage <Insert Scenario Name>](./manage.md)
-
