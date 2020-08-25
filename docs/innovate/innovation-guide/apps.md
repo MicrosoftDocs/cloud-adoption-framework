@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 # Engage customers through applications
 
-Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .NET, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
+Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .net, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
 
 With an open-standard container model, building microservices or containerizing your existing applications and deploying them on Azure is simple when you use managed services like Azure Kubernetes Service, Azure Container Instances, and Web App for Containers. Serverless technologies like Azure Functions and Azure Logic Apps use a consumption model (pay for what you use) and help you focus on building your application rather than deploying and managing infrastructure.
 
@@ -179,8 +179,8 @@ Another benefit of functions is that they can be triggered by different actions 
 To configure or monitor Azure Functions deployments:
 
 1. Go to **Function App**.
-2. Configure a new function app: Select **Add** and follow the prompts.
-3. Manage existing function apps: Select the desired function app from the list.
+2. Configure a new function app: select **Add** and follow the prompts.
+3. Manage existing function apps: select the desired function app from the list.
 
 ::: zone target="chromeless"
 
@@ -201,8 +201,8 @@ Integrate data and applications instead of writing complex integration code betw
 To configure or monitor Azure Logic Apps:
 
 1. Go to **Logic Apps**.
-2. Configure a new logic app: Select **Add** and follow the prompts.
-3. Manage existing logic apps: Select the desired logic app from the list.
+2. Configure a new logic app: select **Add** and follow the prompts.
+3. Manage existing Logic Apps: select the desired logic app from the list.
 
 ::: zone target="chromeless"
 
@@ -214,7 +214,7 @@ To configure or monitor Azure Logic Apps:
 
 ::: zone-end
 
-### Serverless solutions: API management
+### Serverless solutions: API Management
 
 Publish, secure, transform, maintain, and monitor APIs by using Azure API Management, a fully managed service that offers a usage model designed and implemented to be natural fit for serverless applications.
 

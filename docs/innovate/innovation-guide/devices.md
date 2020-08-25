@@ -112,7 +112,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, then select **Digital Twins**.
+2. Search for **digital twins**, then select **digital twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing digital twins, select this button:
 
@@ -128,7 +128,7 @@ To create Azure Digital Twins:
 
 ## [Location intelligence](#tab/AzureMaps)
 
-In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
+In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners tomtom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
 **Azure Maps Data Service (preview):** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 

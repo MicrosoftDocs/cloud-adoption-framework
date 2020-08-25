@@ -43,7 +43,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | [Speech](/azure/cognitive-services/speech-service/) | Speech service adds speech-enabled features to applications. |
 | [Speaker Recognition](/azure/cognitive-services/speaker-recognition/home "Speaker Recognition API") (preview) | The Speaker Recognition API provides algorithms for Speaker Identification and verification. |
 | [Bing Speech](/azure/cognitive-services/speech/home) (retiring) | The Bing Speech API provides you with an easy way to create speech-enabled features in your applications. |
-| [Translator Speech](/azure/cognitive-services/translator-speech/) (retiring) | Translator Speech is a machine translation service. |
+| [Translator speech](/azure/cognitive-services/translator-speech/) (retiring) | Translator speech is a machine translation service. |
 
 ### Language APIs
 
