@@ -288,7 +288,7 @@ Consistent application of security requirements comes from sound governance disc
 **Deliverables:**
 
 - Ensure that the organization's security baselines are applied to all relevant systems. Audit anomalies by using a [secure score](/azure/security-center/secure-score-security-controls) or a similar mechanism.
-- Document Security Baseline policies, processes, and design guidance in the [Security Baseline discipline template](../govern/security-baseline/template.md).
+- Document your Security Baseline policies, processes, and design guidance in the [Security Baseline discipline template](../govern/security-baseline/template.md).
 
 **Guidance to support deliverable completion:**
 
