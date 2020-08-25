@@ -76,7 +76,7 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 
 **Guidance to support deliverable completion:**
 
-- [Understand motivations](../strategy/motivations.md). Critical business events and some migration motivations tend to be cost sensitive, increasing the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might focus more on top-line revenue. Understanding motivations will help you understand how high a priority your cost management should be.
+- [Understand motivations](../strategy/motivations.md). Critical business events and some migration motivations tend to be cost sensitive, increasing the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might focus more on top-line revenue. Understanding motivations will help you decide how high to prioritize your cost management.
 - [Business outcomes](../strategy/business-outcomes/index.md). Some fiscal outcomes tend to be extremely cost-sensitive. When the desired outcomes map to fiscal metrics, you should invest in the Cost Management governance discipline very early.
 - [Business justification](../strategy/cloud-migration-business-case.md). The business justification serves as a high-level view of the financial plan for cloud adoption. This is a good source for initial budgeting efforts.
 

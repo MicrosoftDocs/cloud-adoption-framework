@@ -106,7 +106,7 @@ This exercise will surface conversations that can help build alignment among the
 
 **Guidance to support deliverable completion:**
 
-- [Understand motivations](../../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all subsequent efforts. Other forward-looking motivations that are related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps team members understand how high a priority your cost management should be.
+- [Understand motivations](../../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all subsequent efforts. Other forward-looking motivations that are related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps team members decide how high to prioritize your cost management.
 
 <!-- markdownlint-disable MD033 -->
 <br>
