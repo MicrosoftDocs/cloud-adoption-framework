@@ -16,13 +16,13 @@ Describe how your scenario impacts the adoption plan
 ## <Insert Scenario Name> estate
 
 Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient?
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/digital-estate/inventory
+https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/inventory
 
 
 ## <Insert Scenario Name> adoption plan
 
 Do you have a specific devops backlog the customer should use? Or is the standard adoption plan template still sufficient?
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/plan/template
+https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template
 
 ## <Insert Scenario Name> readiness plan
 

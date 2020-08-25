@@ -16,17 +16,17 @@ Describe how your scenario impacts the overall strategy
 ## <Insert Scenario Name> motivations
 
 What would motivate the customer to act on this scenario?
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations
+https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
 
 ## <Insert Scenario Name> outcomes
 
 When customers act on this scenario, what do they expect to see as an outcome?
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/
+https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
 
 ## <Insert Scenario Name> business justification
 
 Is there something special that customers have to do to justify doing this thing?
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
 
 ## Next step: Plan for <Insert Scenario Name>
 

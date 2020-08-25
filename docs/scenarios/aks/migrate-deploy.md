@@ -1,5 +1,5 @@
 ---
-title: "Migrate <Insert Scenario Name>"
+title: "Migrate workloads for <Insert Scenario Name>"
 description: Describe the scenario's impact on migration deployment
 author: BrianBlanchard
 ms.author: brblanch

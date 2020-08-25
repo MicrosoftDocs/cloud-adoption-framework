@@ -1,6 +1,6 @@
 ---
 title: "Release <Insert Scenario Name>"
-description: Describe the scenario's impact on migration deployment
+description: Describe the scenario's impact on post-migration release processes
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2010

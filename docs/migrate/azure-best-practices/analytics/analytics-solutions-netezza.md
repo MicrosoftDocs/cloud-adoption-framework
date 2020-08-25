@@ -169,13 +169,13 @@ For more detailed information on the process of migrating data and ETL from a Ne
 
   Compared to Netezza, Azure Synapse provides an additional way to achieve local joins for small table-large table joins (typically dimension table to fact table in a start schema model) is to replicate the smaller dimension table across all nodes, therefore ensuring any value of the join key of the larger table will have a matching dimension row locally available. The overhead of replicating the dimension tables is relatively low provided the tables are not large. In this case, the hash distribution approach as described above is more appropriate.
 
-- **Data indexing:** Azure Synapse provides a number of user definable indexing options, but these are different in operation and usage to the system-managed zone maps in Netezza. Understand the different indexing options as described in <!-- TODO verify link: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-datawarehouse-tables-index -->
+- **Data indexing:** Azure Synapse provides a number of user definable indexing options, but these are different in operation and usage to the system-managed zone maps in Netezza. Understand the different indexing options as described in <!-- TODO verify link: https://docs.microsoft.com/azure/sql-data-warehouse/sql-datawarehouse-tables-index -->
 
   Existing system-managed zone maps within the source Netezza environment can however provide a useful indication of how the data is currently used and provide an indication of candidate columns for indexing within the Azure Synapse environment.
 
 - **Data partitioning:** In an enterprise data warehouse, fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed. The partitioning specification for a table is defined in the create table statement.
 
-  Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. You can change the partitioning of a table after initial load if necessary, by re-creating the table with the new distribution using the `CREATE TABLE AS SELECT` statement. See <!-- TODO verify link https://docs.microsoft.com/en-us/azure/sql-datawarehouse/sql-data-warehouse-tables-partition --> For a detailed discussion of partitioning in Azure Synapse.
+  Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. You can change the partitioning of a table after initial load if necessary, by re-creating the table with the new distribution using the `CREATE TABLE AS SELECT` statement. See <!-- TODO verify link https://docs.microsoft.com/azure/sql-datawarehouse/sql-data-warehouse-tables-partition --> For a detailed discussion of partitioning in Azure Synapse.
 
 - **PolyBase for data loading:** PolyBase is the most efficient method for loading large amounts of data into the warehouse as it can use parallel loading streams
 
