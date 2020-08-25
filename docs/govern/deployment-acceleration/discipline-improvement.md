@@ -84,7 +84,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Revise the architecture guidelines to guide future adoption processes.
 - Continue to communicate with and train the affected people and teams on a regular basis to ensure ongoing adherence to architecture guidelines.
 
-<!-- docsTest:ignore "desired state configuration" -->
+<!-- docutune:ignore "desired state configuration" -->
 
 **Potential activities:**
 

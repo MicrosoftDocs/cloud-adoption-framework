@@ -34,10 +34,10 @@ When you choose this method, Azure AD handles users' sign-in process. Coupled wi
 
 **Azure AD Pass-through Authentication:** Provides a persistent password validation for Azure AD authentication services by using a software agent that runs on one or more on-premises servers.
 
-<!-- docsTest:casing "the pass-through authentication method" -->
+<!-- docutune:casing "the pass-through authentication method" -->
 
 > [!NOTE]
-> Companies with a security requirement to immediately enforce on-premises user account states, password policies, and sign-in hours should consider the Pass-through Authentication method.
+> Companies with a security requirement to immediately enforce on-premises user account states, password policies, and sign-in hours should consider the pass-through authentication method.
 
 **Federated authentication:**
 
@@ -47,7 +47,7 @@ The article [choosing the right authentication method for Azure Active Directory
 
 The following table lists the native tools that can help mature the policies and processes that support this discipline.
 
-<!-- docsTest:casing UserPrincipalName SamAccountName "conditional access options" -->
+<!-- docutune:casing UserPrincipalName SamAccountName "conditional access options" -->
 
 | Consideration | Password hash synchronization + Seamless SSO | Pass-through Authentication + Seamless SSO | Federation with AD FS |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ The following table lists the native tools that can help mature the policies and
 | Is there an SSL certificate requirement? | No | No | Yes |
 | Is there a health monitoring solution? | Not required | Agent status provided by [Azure Active Directory admin center](/azure/active-directory/hybrid/tshoot-connect-pass-through-authentication#general-issues) | [Azure AD Connect Health](/azure/active-directory/hybrid/how-to-connect-health-adfs) |
 | Do users get single sign-on to cloud resources from domain-joined devices within the company network? | Yes with [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso) | Yes with [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso) | Yes |
-| What sign-in types are supported? | Userprincipalname + password <br><br> Integrated Windows authentication by using [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso) <br><br> [Alternate login ID](/azure/active-directory/hybrid/how-to-connect-install-custom) | Userprincipalname + password <br><br> Integrated Windows authentication by using [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso) <br><br> [Alternate login ID](/azure/active-directory/hybrid/how-to-connect-pta-faq) | Userprincipalname + password <br><br> Samaccountname + password <br><br> Integrated Windows authentication <br><br> [Certificate and smart card authentication](/windows-server/identity/ad-fs/operations/configure-user-certificate-authentication) <br><br> [Alternate login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) |
+| What sign-in types are supported? | UserPrincipalName + password <br><br> Integrated Windows authentication by using [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso) <br><br> [Alternate login ID](/azure/active-directory/hybrid/how-to-connect-install-custom) | UserPrincipalName + password <br><br> Integrated Windows authentication by using [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso) <br><br> [Alternate login ID](/azure/active-directory/hybrid/how-to-connect-pta-faq) | UserPrincipalName + password <br><br> SamAccountName + password <br><br> Integrated Windows authentication <br><br> [Certificate and smart card authentication](/windows-server/identity/ad-fs/operations/configure-user-certificate-authentication) <br><br> [Alternate login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) |
 | Is Windows Hello for Business supported? | [Key trust model](/windows/security/identity-protection/hello-for-business/hello-identity-verification) <br><br> [Certificate trust model with Intune](https://microscott.azurewebsites.net/2017/12/16/setting-up-windows-hello-for-business-with-intune) | [Key trust model](/windows/security/identity-protection/hello-for-business/hello-identity-verification) <br><br> [Certificate trust model with Intune](https://microscott.azurewebsites.net/2017/12/16/setting-up-windows-hello-for-business-with-intune) | [Key trust model](/windows/security/identity-protection/hello-for-business/hello-identity-verification) <br><br> [Certificate trust model](/windows/security/identity-protection/hello-for-business/hello-key-trust-adfs) |
 | What are the multi-factor authentication options? | [Azure Multi-Factor Authentication](/azure/multi-factor-authentication) <br><br> [Custom controls with conditional access*](/azure/active-directory/conditional-access/controls#custom-controls-preview) | [Azure Multi-Factor Authentication](/azure/multi-factor-authentication) <br><br> [Custom controls with conditional access*](/azure/active-directory/conditional-access/controls#custom-controls-preview) | [Azure Multi-Factor Authentication](/azure/multi-factor-authentication) <br><br> [Azure Multi-Factor Authentication server](/azure/active-directory/authentication/howto-mfaserver-deploy) <br><br> [Third-party multi-factor authentication](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs) <br><br> [Custom controls with conditional access](/azure/active-directory/conditional-access/controls#custom-controls-preview) |
 | What user account states are supported? | Disabled accounts <br> (Up to 30-minute delay) | Disabled accounts <br><br> Account locked out <br><br> Account expired <br><br> Password expired <br><br> Sign-in hours | Disabled accounts <br><br> Account locked out <br><br> Account expired <br><br> Password expired <br><br> Sign-in hours |
@@ -73,8 +73,8 @@ The following table lists the native tools that can help mature the policies and
 
 <!-- TODO: The download button for this whitepaper returns 404. -->
 
-<!-- docsTest:casing "Hybrid Identity Digital Transformation Framework" -->
+<!-- docutune:casing "Hybrid Identity Digital Transformation Framework" -->
 
-The [hybrid identity digital transformation framework white paper](https://resources.office.com/ww-landing-M365E-EMS-IDAM-Hybrid-Identity-WhitePaper.html) outlines combinations and solutions for choosing and integrating each of these components.
+The [Hybrid Identity Digital Transformation Framework white paper](https://resources.office.com/ww-landing-M365E-EMS-IDAM-Hybrid-Identity-WhitePaper.html) outlines combinations and solutions for choosing and integrating each of these components.
 
 The [Azure AD Connect tool](https://aka.ms/aadconnectwiz) helps you to integrate your on-premises directories with Azure AD.

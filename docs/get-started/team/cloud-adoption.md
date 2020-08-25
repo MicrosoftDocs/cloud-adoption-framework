@@ -83,8 +83,8 @@ In the end, the cloud adoption team is accountable for delivery across their ass
 
 **Guidance to support deliverable completion:**
 
-- In the getting started guide for migration, the adoption team is accountable for delivery of [Step 10: Migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
-- In the getting started guide for new products, the adoption team is accountable for delivery of [Step 8: Innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
+- In the getting started guide for migration, the adoption team is accountable for delivery of [step 10: Migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
+- In the getting started guide for new products, the adoption team is accountable for delivery of [step 8: Innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
 
 All other steps on those checklists are designed to make the effort more manageable.
 

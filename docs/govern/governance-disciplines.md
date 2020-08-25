@@ -12,13 +12,13 @@ ms.custom: governance
 
 # The Five Disciplines of Cloud Governance
 
-<!-- docsTest:casing "Disciplines of Cloud Governance" "Cost Management" "Deployment Acceleration" "Identity Baseline" "Resource Consistency" "Security Baseline" -->
+<!-- docutune:casing "Disciplines of Cloud Governance" "Cost Management" "Deployment Acceleration" "Identity Baseline" "Resource Consistency" "Security Baseline" -->
 
 |  |  |
 |--|--|
 | Any change to business processes or technology platforms introduces risk. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks and ensuring minimal interruption to adoption or innovation efforts. <br><br> The Cloud Adoption Framework governance model guides these decisions, irrespective of the chosen cloud platform, by focusing on [development of corporate policy](./corporate-policy.md) and the [Five Disciplines of Cloud Governance](#disciplines-of-cloud-governance). [Actionable design guides](./guides/index.md) demonstrate this model using Azure services. Learn about the disciplines of the Cloud Adoption Framework governance model below. | <br><br> [![Diagram of the Cloud Adoption Framework governance model: corporate policy and governance disciplines](../_images/operational-transformation-govern-thumbnail.png)](../_images/operational-transformation-govern-large.png#lightbox) <br> *Figure 1: Visual of corporate policy and the Five Disciplines of Cloud Governance.* |
 
-## Disciplines of cloud governance
+## Disciplines of Cloud Governance
 
 With any cloud platform, there are common governance disciplines that help inform policies and align toolchains. These disciplines guide decisions about the proper level of automation and enforcement of corporate policy across cloud platforms.
 

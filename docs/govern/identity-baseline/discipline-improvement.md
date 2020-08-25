@@ -58,7 +58,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
 - Consider establishing an early adopter program and rolling out to a limited number of users.
 - Continue to educate the people and teams most affected by the architecture guidelines.
 
-<!-- docsTest:casing "seamless SSO" -->
+<!-- docutune:casing "seamless SSO" -->
 
 **Potential activities:**
 

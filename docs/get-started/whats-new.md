@@ -9,9 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:casing "internal Microsoft teams" OneMigrate -->
+<!-- docutune:casing "internal Microsoft teams" OneMigrate -->
 <!-- cSpell:ignore MSPs Teradata Netezza Exadata mlops -->
-<!-- markdownlint-disable MD024 -->
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
@@ -147,9 +146,9 @@ We've added prescriptive guidance that includes the tools, programs, and content
 
 ## March 2, 2020
 
-<!-- docsTest:casing "Strategy, Plan, Ready, and Migrate" -->
+<!-- docutune:casing "Strategy, Plan, Ready, and Migrate" -->
 
-In response to feedback about continuity in the migration approach through multiple sections of the Cloud Adoption Framework, including strategy, plan, ready, and migrate, we've made the following updates. These updates are designed to make it easier for you to understand planning and adoption refinements as you continue a migration journey.
+In response to feedback about continuity in the migration approach through multiple sections of the Cloud Adoption Framework, including Strategy, Plan, Ready, and Migrate, we've made the following updates. These updates are designed to make it easier for you to understand planning and adoption refinements as you continue a migration journey.
 
 **Strategy methodology updates:**
 

@@ -139,8 +139,6 @@ Azure Storage provides different options for accessing block blob data. Selectin
 | **Cool** | Lower storage costs, higher access and transaction costs. <br><br> Store for minimum of 30 days. | Store short-term, data is available but accessed infrequently. |
 | **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Lowest storage costs, highest access and transaction costs. | Use for data that can tolerate several hours of retrieval latency and will reside in the archive tier for at least 180 days. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Storage account types
 
 Azure provides different types of storage accounts and performance tiers.
@@ -151,8 +149,6 @@ Azure provides different types of storage accounts and performance tiers.
 | **General-purpose v2 Premium tier** | Supports Blob storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
 | **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if applications need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table, or disk storage services). Provides the same durability, availability, scalability, and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
-
-<!--markdownlint-enable MD033 -->
 
 ### Storage redundancy options
 

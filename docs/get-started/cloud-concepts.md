@@ -126,8 +126,6 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 - Complete the getting-started guides for organizational alignment based on these concepts.
 
-<!-- docsTest:casing "Get started: Align your organization" -->
-
 **Guidance to support deliverable completion:**
 
 - Use the prior steps as a guide to evaluate the [portfolio hierarchy accountability guidance](../reference/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities might need to be delivered by dedicated organizations or virtual teams.

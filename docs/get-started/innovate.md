@@ -25,8 +25,6 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 - Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
 
-<!-- docsTest:casing "Get started: Accelerate migration" -->
-
 **Guidance to support deliverable completion:**
 
 - [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain agreement on the motivations that drive the innovation effort. Start by understanding and categorizing motivations and common themes from stakeholders across business and IT.
