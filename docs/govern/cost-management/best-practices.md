@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docsTest:ignore ARO -->
+<!-- docutune:casing ARO -->
 
 # Best practices for costing and sizing resources hosted in Azure
 
@@ -101,7 +101,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 - It's important to understand the pricing differences between these VMs, and the long-term budget effects.
 - Each type has several VM series within it.
-- Additionally, when you select a VM within a-series, you can only scale the VM up and down within that series. For example, a `ds2_v2` instance can scale up to `ds4_v2`, but it can't be changed to a instance of a different series such as a `f2s_v2` instance.
+- Additionally, when you select a VM within a-series, you can only scale the VM up and down within that series. For example, a `DS2_v2` instance can scale up to `DS4_v2`, but it can't be changed to a instance of a different series such as a `f2S_v2` instance.
 
 **Learn more:**
 
@@ -253,7 +253,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 - Read overviews of [Azure Monitor](/azure/azure-monitor/overview) and [Azure Advisor](/azure/advisor/advisor-overview).
 - Get [Azure Advisor cost recommendations](/azure/advisor/advisor-cost-recommendations).
 - Learn how to [optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), and [prevent unexpected charges](/azure/billing/billing-getting-started).
-- Learn about the [Azure resource optimization (aro) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+- Learn about the [Azure resource optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Reduce nonproduction costs
 
@@ -369,7 +369,7 @@ You can optimize a VM with Azure Automation, virtual machine scale sets, auto-sh
 - Learn about [vertical autoscaling](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision).
 - Review [Azure DevTest Labs: schedule VM auto-start](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start).
 - Learn how to [start or stop VMs off hours in Azure Automation](/azure/automation/automation-solution-vm-management).
-- Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [Azure resource optimization (aro) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+- Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [Azure resource optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Use Logic Apps and runbooks with Budgets API
 
