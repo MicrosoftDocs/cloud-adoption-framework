@@ -10,8 +10,6 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore catalogsearch northamerica jsmith contactalias catsearchowners businessprocess businessimpact revenueimpact -->
-
 # Resource naming and tagging decision guide
 
 Organizing cloud-based resources is a crucial task for IT, unless you only have simple deployments. Use naming and tagging standards to organize your resources for these reasons:
@@ -67,19 +65,15 @@ As part of your planning process, use the following questions to help determine 
 
 The common tagging patterns listed below provide examples of how tagging can be used to organize cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
 
-<!-- markdownlint-disable MD033 -->
-<!-- docsTest:disable -->
+<!-- cSpell:ignore catalogsearch northamerica jsmith contactalias catsearchowners businessprocess businessimpact revenueimpact -->
 
 | Tag type | Examples | Description |
-|-----|-----|-----|
+|--|--|--|
 | Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
 | Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it is used and what policies apply to it. |
 | Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Allows a resource to be associated with specific groups within an organization for billing purposes. |
 | Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
-
-<!-- docsTest:enable -->
-<!-- markdownlint-enable MD033 -->
 
 ## Learn more
 

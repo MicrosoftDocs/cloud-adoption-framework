@@ -29,11 +29,10 @@ The following are descriptions of compliance regulations in various industries a
 A healthcare application that processes protected health information (phi) is subject to both the privacy rule and the security rule encompassed within the health information portability and accountability act (HIPAA). At a minimum, HIPAA could likely require that a healthcare business must receive written assurances from the cloud provider that it will safeguard any phi received or created.
 
 <!-- cSpell:ignore Visa Mastercard -->
-<!-- docsTest:ignore "American Express" Discover JCB QSA ISA ROC SAQ DPO GRC -->
 
 ## PCI
 
-Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card schemes, including visa, mastercard, American express, discover, and jcb. The PCI standard is mandated by the card brands and administered by the Payment Card Industry Security Standards Council. The standard was created to increase controls around cardholder data to reduce credit-card fraud. Validation of compliance is performed annually, either by an external qualified security assessor (qsa) or by a firm-specific internal security assessor (isa) who creates a report on compliance (roc) for organizations handling large volumes of transactions, or by a self-assessment questionnaire (saq) for companies.
+Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card schemes, including visa, mastercard, American express, Discover, and JCB. The PCI standard is mandated by the card brands and administered by the Payment Card Industry Security Standards Council. The standard was created to increase controls around cardholder data to reduce credit-card fraud. Validation of compliance is performed annually, either by an external qualified security assessor (QSA) or by a firm-specific internal security assessor (ISA) who creates a report on compliance (ROC) for organizations handling large volumes of transactions, or by a self-assessment questionnaire (SAQ) for companies.
 
 ## Personal data
 
@@ -41,7 +40,7 @@ Personal data is information that could be used to identify a consumer, employee
 
 ## GDPR
 
-One of the most important developments in this area is the general data protection regulation (GDPR), designed to strengthen data protection for individuals within the European Union. GDPR requires that data about individuals (such as "a name, a home address, a photo, an email address, bank details, posts on social networking websites, medical information, or a computer's IP address") be maintained on servers within the eu and not transferred out of it. It also requires that companies notify individuals of any data breaches, and mandates that companies have a data protection officer (dpo). Other countries have, or are developing, similar types of regulations.
+One of the most important developments in this area is the general data protection regulation (GDPR), designed to strengthen data protection for individuals within the European Union. GDPR requires that data about individuals (such as "a name, a home address, a photo, an email address, bank details, posts on social networking websites, medical information, or a computer's IP address") be maintained on servers within the eu and not transferred out of it. It also requires that companies notify individuals of any data breaches, and mandates that companies have a data protection officer (DPO). Other countries have, or are developing, similar types of regulations.
 
 ## Compliant foundation in Azure
 
@@ -56,7 +55,7 @@ Azure compliance offerings are based on various types of assurances, including f
 
 The Microsoft Trust Center provides more detailed information about [Azure compliance offerings](https://www.microsoft.com/trust-center/compliance/compliance-overview). Additionally, all downloadable documentation is available to certain Azure customers from the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) in the following sections:
 
-- **Audit reports:** Includes sections for FedRAMP, grc assessment, ISO, PCI DSS, and SOC reports.
+- **Audit reports:** Includes sections for FedRAMP, GRC assessment, ISO, PCI DSS, and SOC reports.
 - **Data protection resources:** Includes compliance guides, FAQ and white papers, and pen test and security assessment sections.
 
 ## Next steps

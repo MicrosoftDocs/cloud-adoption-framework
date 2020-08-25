@@ -36,8 +36,8 @@ Every organization has different operational scenarios, but the following items 
 - **Service availability.** Percentage of actual uptime cloud-hosted workloads compared to the expected uptime.
 - **Recovery time objective (RTO).** The maximum acceptable time that an application can be unavailable after an incident.
 - **Recovery point objective (RPO).** The maximum duration of data loss that is acceptable during a disaster. For example, if you store data in a single database, with no replication to other databases, and perform hourly backups, you could lose up to an hour of data.
-- **Mean time to recover (mttr).** The average time required to restore a component after a failure.
-- **Mean time between failures (mtbf).** The duration that a component can reasonably expect to run between outages. This metric can help you calculate how often a service will become unavailable.
+- **Mean time to recover (MTTR).** The average time required to restore a component after a failure.
+- **Mean time between failures (MTBF).** The duration that a component can reasonably expect to run between outages. This metric can help you calculate how often a service will become unavailable.
 - **Backup health.** Number of backups actively being synchronized.
 - **Recovery health.** Number of recovery operations successfully performed.
 

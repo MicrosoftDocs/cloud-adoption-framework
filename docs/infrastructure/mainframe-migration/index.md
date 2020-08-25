@@ -9,7 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore nanra njray dbspaces dbextents VSAM RACF LPARS ASSGN DLBL EXTENT LIBDEF EXEC IPLs -->
+<!-- docutune:ignore ASSGN DLBL EXTENT LIBDEF EXEC  -->
+<!-- cSpell:ignore nanra njray dbspaces dbextents ASSGN DLBL EXTENT LIBDEF EXEC IPLs -->
 
 # Mainframe migration overview
 
