@@ -17,15 +17,15 @@ A business that's supported by data innovation and a modern data estate can empo
 
 Azure Synapse Analytics is a single service for seamless collaboration and accelerated time-to-insight. To understand this service in more detail, first consider the various roles and skills involved in a typical data estate:
 
-**Data warehousing**: *Database admins* support the management of data lakes and data warehouses, while intelligently optimizing workloads and automatically securing data.
+**Data warehousing**: *database admins* support the management of data lakes and data warehouses, while intelligently optimizing workloads and automatically securing data.
 
-**Data integration**: *Data engineers* use a code-free environment to easily connect multiple sources and types of data.
+**Data integration**: *data engineers* use a code-free environment to easily connect multiple sources and types of data.
 
-**Big data and machine learning**: *Data scientists* build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (for example, T-SQL, Python, Scala, .NET, or SparkSQL).
+**Big data and machine learning**: *data scientists* build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (for example, T-SQL, Python, scala, .net, or sparksql).
 
 **Management and security**: *IT pros* protect and manage data more efficiently, enforce privacy requirements, and secure access to cloud and hybrid configurations.
 
-**Business intelligence**: *Business analysts* securely access datasets, build dashboards, and share data within and outside their organization.
+**Business intelligence**: *business analysts* securely access datasets, build dashboards, and share data within and outside their organization.
 
 The following diagram shows an example of a classic data warehouse architecture. Known structured data is extracted from core transaction processing systems and copied into a staging area. From there, it's cleaned, transformed, and integrated into production tables in a data warehouse. It's often the case that several years of historical transaction data are incrementally built up here. This provides the data needed to understand changes in sales, customer purchasing behavior, and customer segmentation over time. It also provides yearly financial reporting and analysis to help with decision making.
 

@@ -1,5 +1,5 @@
 ---
-title: "Business outcomes from transformation journeys"
+title: Business outcomes from transformation journeys
 description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
 author: BrianBlanchard
 ms.author: brblanch
@@ -44,7 +44,7 @@ Today's fast-changing business environment places a premium on time. The ability
 
 View samples of [agility outcomes](./agility-outcomes.md).
 
-<!-- docsTest:ignore "global reach" -->
+<!-- docutune:ignore "global reach" -->
 
 ### Reach outcomes
 

@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docsTest:ignore "One Migration" -->
+<!-- docutune:ignore "One Migration" -->
 <!-- cSpell:ignore HANA -->
 
 # The One Migration approach to migrating the IT portfolio

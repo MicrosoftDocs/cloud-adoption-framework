@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness path during the Plan phase of a migration journey"
+title: Skills readiness path during the Plan phase of a migration journey
 description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the Plan phase of migration.
 author: BrianBlanchard
 ms.author: brblanch

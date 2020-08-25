@@ -1,13 +1,13 @@
 ---
-title: "Cloud monitoring strategy"
+title: Cloud monitoring strategy
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
+services: azure-monitor
 author: mgoedtel
 ms.author: magoedte
 ms.date: 06/18/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
 ---
 
 <!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->
@@ -32,7 +32,7 @@ The following are important areas that strongly influence a sound monitoring str
 
 - Collect only the metrics and logs that are useful, measurable, and identifiable to the business and IT organization.
 
-- Define an integration plan with existing ITSM solutions such as Remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
+- Define an integration plan with existing ITSM solutions such as remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
 
 - Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
@@ -94,7 +94,7 @@ One principle of monitoring is service visibility. For a service, asset or compo
 2. Monitor end-to-end or breadth from the lowest layer of the stack up to the application.
 3. East to west with a focus on its aspects of health (availability, performance, security, and continuity).
 
-![three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
+![Three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
 
 Some key questions include:
 
@@ -186,9 +186,9 @@ Learning cycles includes getting monitoring data and insights into the hands of 
 
 ![Monitoring and control strategy](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
-<!-- docsTest:ignore "Data to Information, Knowledge, and Wisdom" -->
+<!-- docutune:ignore "Data to Information, Knowledge, and Wisdom" -->
 
-<Sup>1</Sup> The DIKW model is an often used method, with roots in knowledge management, to explain the ways we move from Data to Information, Knowledge, and Wisdom with a component of actions and decisions.
+<Sup>1</Sup> The dikw model is an often used method, with roots in knowledge management, to explain the ways we move from Data to Information, Knowledge, and Wisdom with a component of actions and decisions.
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
@@ -210,7 +210,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 |-----|---------------------|------------------|
 | 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned datacenters with no cloud considerations. |
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the Microsoft 365 and Azure management packs. |
-| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
+| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as zabbix or nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
 | 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. Gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
 | 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune, and others; a range of tools for a mixture of digital assets. |
 | 6 | Cloud native | Azure Monitor, Azure Policy, Azure Security Center, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
@@ -253,7 +253,7 @@ Include in your strategy and operating model how you communicate monitoring plan
 |----------|---------------|--------|
 | Epics | Broad monitoring <br> Initiatives of the monitoring strategy | Consolidate Azure cloud monitoring <br> Hybrid cloud monitoring <br> Private cloud monitoring <br> Establish core monitoring service |
 | Features | Individual monitoring <br> Plans and projects | Monitoring requirements <br> Monitoring consumers and providers <br> Objectives <br> Tools <br> Schedule |
-| User stories and tasks | The end result is a monitoring configuration or solution | Network monitoring (for example, ExpressRoute) <br> Standardized IaaS VM monitoring (for example Azure Monitor for VMs, application insights, Azure Policy, settings, policies, reports, workspaces.) |
+| User stories and tasks | The end result is a monitoring configuration or solution | Network monitoring (for example, ExpressRoute) <br> Standardized IaaS VM monitoring (for example Azure Monitor for VMs, Application Insights, Azure Policy, settings, policies, reports, workspaces.) |
 
 ## Establish minimum governance
 
