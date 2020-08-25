@@ -179,7 +179,7 @@ _Figure 1: Virtual WAN network topology._
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
 
-- Plan your deployment carefully, and ensure network architecture is within the Azure Virtual WAN [limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
+- Plan your deployment carefully, and ensure network architecture is within the Azure Virtual WAN [limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
 ## Traditional Azure networking topology
 
