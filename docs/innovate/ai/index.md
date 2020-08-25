@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- docsTest:ignore InterpretML FairLearn -->
+<!-- docsTest:casing InterpretML FairLearn -->
 
 # AI in the Cloud Adoption Framework
 

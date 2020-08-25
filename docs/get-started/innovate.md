@@ -25,7 +25,7 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 - Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
 
-<!-- docsTest:ignore "Get started: Accelerate migration" -->
+<!-- docsTest:casing "Get started: Accelerate migration" -->
 
 **Guidance to support deliverable completion:**
 
@@ -33,7 +33,6 @@ To avoid common blockers, create a clear and concise business strategy for innov
 - [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics that you can use to measure the overall transformation.
 - [Balancing the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that *require* rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure that those investments can produce the desired return on investment. Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -53,7 +52,6 @@ In this first pass at building the business case, evaluate the initial high-leve
 - [Business justification](../strategy/cloud-migration-business-case.md): Before you evaluate each opportunity to innovate in the cloud, complete a high-level business justification to establish stakeholder alignment for the overall adoption plan.
 - [Business value consensus](../innovate/business-value.md): Quantifying the value of an innovation can be difficult early in the process. The exercise in this article can aid in evaluating alignment on the business value of a specific innovation effort.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -82,7 +80,6 @@ When there are dependent systems, the following articles can guide the discovery
 - [Inventory existing systems](../digital-estate/inventory.md): Understanding the current state from a programmatic, data-driven approach is the first step. Discover and gather data to enable all assessment activities.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): Streamline assessment efforts to focus on a qualitative analysis of all assets, possibly even to support the business case. Then add a deep qualitative analysis for the first 10 workloads.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -109,7 +106,6 @@ When new innovation depends on existing workloads or assets, a cloud adoption pl
 - [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define the effort for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity, and releases for the workloads.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -132,7 +128,6 @@ These links help the adoption team understand the approach of the cloud governan
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then you can build the disciplines required to deliver on governance across your cloud enterprise efforts.
 - [Definition of corporate policy](../govern/corporate-policy.md): Identify and mitigate business risks.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -154,7 +149,6 @@ Define the plan for long-term operational responsibilities for the planned innov
 - [Get specific with advanced operations](../manage/design-principles.md): Discover ways to go beyond your management baseline.
 - If advanced operations are required to support your operations needs, evaluate the [business commitments](../manage/considerations/business-alignment.md) to determine operational responsibilities for both teams.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -179,7 +173,6 @@ Starting with an approved landing zone helps your team to discover policy violat
 - [Choose a landing zone](../ready/landing-zone/index.md): Use this section to find the right approach to deploying a landing zone based on your adoption pattern. Then deploy that standardized code base.
 - [Expand your landing zone](../ready/considerations/index.md): Regardless of the starting point, identify gaps in the deployed landing zone to add required components for resource organization, security, governance, compliance, and operations.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -222,7 +215,6 @@ The assessment takes 5 to 10 minutes and measures your organization's capability
 
 - When the assessment is complete, the tool's output will provide a score that estimates the status of AI innovation maturity.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

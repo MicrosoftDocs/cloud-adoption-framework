@@ -62,8 +62,8 @@ The following are typical mainframe operations:
 
 - **Online:** Workloads include transaction processing, database management, and connections. They are often implemented using IBM DB2, CICS, and z/OS connectors.
 
-<!-- docsTest:ignore "BMC Control-M" -->
-<!-- cSpell:ignore JOB ASSGN DLBL EXTENT LIBDEF EXEC -->
+<!-- docsTest:casing "BMC Control-M" ASSGN DLBL EXTENT LIBDEF EXEC -->
+<!-- docsTest:ignore JOB -->
 
 - **Batch:** Jobs run without user interaction, typically on a regular schedule such as every weekday morning. Batch jobs can be run on systems based on Windows or Linux by using a JCL emulator such as Micro Focus Enterprise Server or BMC Control-M software.
 

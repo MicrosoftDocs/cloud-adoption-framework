@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- docsTest:ignore "natural language understanding" -->
+<!-- docsTest:casing "natural language understanding" -->
 <!-- cSpell:ignore Twilio howto webchat -->
 
 # What are AI agents?

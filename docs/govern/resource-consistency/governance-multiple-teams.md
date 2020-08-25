@@ -84,7 +84,7 @@ In both examples, there is a subscription service administrator that is assigned
 ![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
 *Figure 3: A subscription with a service administrator assigned the built-in owner role.*
 
-<!-- docsTest:ignore "resource group A" "resource groups A and B" "workload owner A" -->
+<!-- docsTest:casing "resource group A" "resource groups A and B" "workload owner A" -->
 
 1. In the first example, **workload owner a** has no permissions at the subscription scope and no resource access management rights by default. This user wants to deploy and manage the resources for their workload. They must contact the **service administrator** to request creation of a resource group. ![Workload owner requests creation of resource group a](../../_images/govern/design/governance-2-2.png)
 2. The **service administrator** reviews their request and creates **resource group a**. At this point, **workload owner a** still doesn't have permission to do anything. ![Service administrator creates resource group a](../../_images/govern/design/governance-2-3.png)

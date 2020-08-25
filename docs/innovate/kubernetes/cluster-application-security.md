@@ -23,9 +23,6 @@ As you get started, the checklist and resources below will help you plan for clu
 >
 > - Have you reviewed the security and threat model of Kubernetes clusters?
 > - Is your cluster enabled for role-based access control?
-
-<!-- markdownlint-disable MD033 -->
-
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources |
@@ -43,9 +40,6 @@ As you prepare the application for production, you should implement a minimum se
 > - Have you configured network security rules for ingress, egress, and intra-pod communication?
 > - Is your cluster configured to automatically apply node security updates?
 > - Are you running a security scanning solution for your cluster and container workloads?
-
-<!-- markdownlint-disable MD033 -->
-
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources |
@@ -66,9 +60,6 @@ Now that the application is in production, how can you optimize your workflow an
 > [!div class="checklist"]
 >
 > - Can you enforce governance and cluster policies at scale?
-
-<!-- markdownlint-disable MD033 -->
-
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources |

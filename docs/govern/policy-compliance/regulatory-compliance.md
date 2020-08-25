@@ -22,7 +22,7 @@ As with security controls, organizations should understand the division of respo
 
 The following are descriptions of compliance regulations in various industries and geographies:
 
-<!-- docsTest:ignore PHI "Health Information Portability and Accountability Act" -->
+<!-- docsTest:casing PHI "Health Information Portability and Accountability Act" -->
 
 ## HIPAA
 

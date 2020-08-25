@@ -13,7 +13,6 @@ ms.subservice: overview
 
 These common scenarios provide a roadmap through the Microsoft Cloud Adoption Framework for Azure. They can help you balance speed, innovation, and control by using an agile approach to start with a minimally viable solution. You can iterate on and improve that solution over time.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Scenario | Description |

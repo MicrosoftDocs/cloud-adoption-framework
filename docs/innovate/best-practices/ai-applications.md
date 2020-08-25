@@ -48,7 +48,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 ### Language APIs
 
 | Service name | Service description |
-| --- | -- |
+|--|--|
 | [Language Understanding (LUIS)](/azure/cognitive-services/luis/) | The Language Understanding service (LUIS) allows your application to understand what a person wants in their own words. |
 | [QnA Maker](/azure/cognitive-services/qnamaker/index "QnA Maker") | QnA Maker allows you to build a question-and-answer service from your semistructured content. |
 | [Text Analytics](/azure/cognitive-services/text-analytics/) | Text Analytics provides natural language processing over raw text for sentiment analysis, key phrase extraction, and language detection. |
@@ -74,7 +74,7 @@ Cognitive Services provides a layered security model, which includes [authentica
 
 Cognitive Services provides containers for deployment in the cloud or on-premises. Learn more about [Cognitive Services containers](/azure/cognitive-services/cognitive-services-container-support).
 
-<!-- docsTest:ignore "HIPAA BAA" "CSA STAR" -->
+<!-- docsTest:casing "HIPAA BAA" "CSA STAR" -->
 
 ### Certifications and compliance
 

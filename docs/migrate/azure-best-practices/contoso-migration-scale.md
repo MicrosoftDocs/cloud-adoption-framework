@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- docsTest:ignore ARO POC Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
+<!-- docsTest:casing Hanu Scalr ARO POC Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
 
 <!-- cSpell:ignore VHDs autosnooze unsnooze Hanu Scalr -->
 

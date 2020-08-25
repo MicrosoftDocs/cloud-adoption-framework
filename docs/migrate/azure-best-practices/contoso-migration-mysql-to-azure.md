@@ -54,7 +54,7 @@ Use Azure Database Migration Service to migrate the database to an Azure Databas
 ### Database considerations
 
 <!-- TODO: Verify GraphDBMS term -->
-<!-- docsTest:ignore ColumnStore GraphDBMS -->
+<!-- docsTest:casing ColumnStore "Graph DBMS" -->
 
 As part of the solution design process, Contoso reviewed the features in Azure for hosting its MySQL data. The following considerations helped the company decide to use Azure:
 
@@ -63,7 +63,7 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Azure Database for MySQL has the required compliance and privacy certifications that Contoso must meet for its auditors.
 - Report and application processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no public access) by using [Azure Private Link](/azure/mysql/concepts-data-access-security-private-link).
-- Contoso chose not to move to Azure Database for MySQL because it's looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
+- Contoso chose not to move to Azure Database for MySQL because it's looking at potentially using the MariaDB ColumnStore and Graph DBMS database model in the future.
 - Aside from MySQL features, Contoso is a proponent of true open-source projects and chose not to use MySQL.
 - The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
 

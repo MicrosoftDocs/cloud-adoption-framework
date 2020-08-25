@@ -54,7 +54,6 @@ These deliverables are the result of a few recurring tasks:
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) using the Govern methodology.
 - If you're new to the Cost Management discipline, consider following the [Cost Management discipline improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -80,7 +79,6 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 - [Business outcomes](../strategy/business-outcomes/index.md). Some fiscal outcomes tend to be extremely cost-sensitive. When the desired outcomes map to fiscal metrics, you should invest in the Cost Management governance discipline very early.
 - [Business justification](../strategy/cloud-migration-business-case.md). The business justification serves as a high-level view of the financial plan for cloud adoption. This is a good source for initial budgeting efforts.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -104,7 +102,6 @@ The adoption plan provides clarity on the timeline of activities during adoption
 - [Align cost models and forecast models](../digital-estate/calculate.md). Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan). Build a plan with actionable workload, assets, and timeline details. This plan provides the basis for spending over time (or cost forecasting). *Spending over time* is the initial baseline for all actionable optimization analysis within the Cost Management governance discipline.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -128,7 +125,6 @@ The Ready methodology of the Microsoft Cloud Adoption Framework for Azure focuse
 - [Optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Understand best practices for using recommendations that will optimize costs.
 - [Monitor usage and spending](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Understand best practices for monitoring usage and spending within a landing zone.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -155,7 +151,6 @@ Long-term operational costs are a common theme in each area of migration process
 - [Migrate](../migrate/migration-considerations/migrate/index.md) contains one process suggestion about remediating assets. This suggestion provides an opportunity to optimize the as-configured state, in favor of an optimized solution.
 - [Promote](../migrate/migration-considerations/optimize/index.md) focuses heavily on testing, resizing, validating, and releasing migrated assets, along with decommissioning retired assets. This is the first clear point at which forecasts and budgets can be tested against actual performance and configuration.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -175,7 +170,6 @@ Innovation and development of new products require a much deeper degree of archi
 - Use the [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) to understand the balance in architecture decisions.
 - Review the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) for deeper guidance on cost optimization during innovation.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -194,7 +188,6 @@ Establishing a solid management baseline will help you collect data and create o
 
 - [Create business alignment](../manage/considerations/business-alignment.md) to gain clarity regarding criticality and appetite for resiliency investments.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

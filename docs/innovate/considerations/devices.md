@@ -25,8 +25,6 @@ A standard web experience is the most common application development technique u
 
 ![Ambient experiences](../../_images/innovate/ambient-experiences.png)
 
-<!-- docsTest:ignore "learning with the customer" -->
-
 Ambient experiences typically require more than a web application these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md), the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
 
 - **[Mobile experience](#mobile-experience):** As with laptops, mobile apps are ubiquitous in customer environments. In some situations, this might provide a sufficient level of interactivity to make a solution ambient.
@@ -61,7 +59,7 @@ Beyond mobile reality or even mixed reality lies integrated reality. Integrated 
 
 This experience is ideal when some form of device is consistently within the same surroundings in which the customer need occurs. Common scenarios include factory floors, elevators, and even your car. These types of large devices already contain compute power. You can also use data from the device itself to detect customer behaviors and send those behaviors to the cloud. This automatic capture of customer behavior data dramatically reduces the need for a customer to input data. Additionally, the web, mobile, or VR experience can function as a feedback loop to share what's been learned from the integrated reality solution.
 
-<!-- docsTest:ignore "advanced computer vision" -->
+<!-- docsTest:casing "advanced computer vision" -->
 
 Examples of integrated reality in Azure could include:
 

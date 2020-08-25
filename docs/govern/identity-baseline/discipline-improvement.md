@@ -58,7 +58,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
 - Consider establishing an early adopter program and rolling out to a limited number of users.
 - Continue to educate the people and teams most affected by the architecture guidelines.
 
-<!-- docsTest:ignore "seamless SSO" -->
+<!-- docsTest:casing "seamless SSO" -->
 
 **Potential activities:**
 
@@ -70,7 +70,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
   - [Least-privilege administrative](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) access model.
   - [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) access model.
 - Finalize all preintegration details and review [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices).
-  - Enable single-identity, single-sign-on (SSO), also called Seamless SSO.
+  - Enable single-identity single-sign-on (SSO), also called seamless SSO.
   - Configure multi-factor authentication for administrators.
   - Consolidate or integrate identity providers, where necessary.
   - Implement tooling necessary to centralize management of identities.
@@ -95,7 +95,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Validate that the best practices defined during the build predeployment phases are properly executed.
 - Validate and refine your [hybrid identity strategy](../../decision-guides/identity/index.md).
 - Ensure that each application or workload continues to align with the identity strategy before release.
-- Validate that single sign-on (SSO) and Seamless SSO is working as expected for your applications.
+- Validate that single sign-on (SSO) and seamless SSO is working as expected for your applications.
 - Reduce or eliminate the number of alternative identity stores.
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
 - Enable conditional access for [on-premises federated applications](/azure/active-directory/devices/overview).

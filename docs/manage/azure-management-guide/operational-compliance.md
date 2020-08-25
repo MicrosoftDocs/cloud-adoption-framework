@@ -196,7 +196,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. In the Azure portal, go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".

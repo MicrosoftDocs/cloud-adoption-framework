@@ -149,8 +149,8 @@ Here's an alphabetical list of supported data types:
 
 The following table lists common data types that are not currently supported, together with the recommended approach for storing them in Azure Synapse Analytics. For specific environments such as Teradata or Netezza, see the associated documents for more detailed information.
 
-| **Unsupported data type** | **Workaround**                                                      |
-|-----------------------|-----------------------------------------------------------------|
+| Unsupported data type | Workaround |
+|--|--|
 | `geometry`              | `varbinary`                                                       |
 | `geography`             | `varbinary`                                                       |
 | `hierarchyid`           | `nvarchar(4000)`                                                  |

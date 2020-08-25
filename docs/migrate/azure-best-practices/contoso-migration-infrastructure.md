@@ -419,7 +419,7 @@ Within the hub-and-spoke model, Contoso needed to think about how traffic from t
 
 With a network and routing topology in place, Contoso is ready to set up Azure networks and subnets:
 
-<!-- docsTest:ignore "class B" -->
+<!-- docsTest:casing "class-A" "class-B" -->
 
 - Contoso will implement a class-A private network in Azure (`10.0.0.0/8`). This works because of on-premises; it currently has a class-B private address space (`172.160.0.0/16`). Contoso can be sure there won't be any overlap between address ranges.
 - Contoso will deploy virtual networks in both the primary and secondary regions.
@@ -587,9 +587,7 @@ When you deploy resources in virtual networks, you have a couple of choices for 
 
 Contoso admins have decided that the Azure DNS service isn't a good choice in the hybrid environment. Instead, they'll use the on-premises DNS servers. Here are the details:
 
-<!-- docsTest:ignore "on premises" -->
-
-- Because this is a hybrid network, all VMs on-premises and in Azure need to be able to resolve names to function properly. This means that custom DNS settings must be applied to all the virtual networks.
+- Because this is a hybrid network, all VMs on premises and in Azure need to be able to resolve names to function properly. This means that custom DNS settings must be applied to all the virtual networks.
 - Contoso currently has domain controllers (DCs) deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are `contosodc1` (`172.16.0.10`) and `contosodc2` (`172.16.0.1`).
 - After the virtual networks are deployed, the on-premises domain controllers are configured as DNS servers in the networks.
 - If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. To do this, Contoso configures DNS server settings on each virtual network. For example, the custom DNS settings for the `VNET-HUB-EUS2` network would be as follows:

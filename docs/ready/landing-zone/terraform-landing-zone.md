@@ -34,8 +34,6 @@ _Figure 1: A foundation landing zone using Terraform._
 
 The components deployed and their purpose include the following:
 
-<!-- markdownlint-disable MD033 -->
-
 | Component | Responsibility |
 |---|---|
 | Resource groups | Core resource groups needed for the foundation |
@@ -43,8 +41,6 @@ The components deployed and their purpose include the following:
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
 | Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> AdAssessment <li> AdReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
 | Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Use this blueprint
 

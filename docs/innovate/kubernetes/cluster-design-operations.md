@@ -19,8 +19,6 @@ Identify for cluster configuration and network design. Future-proof scalability 
 
 As you get started, the checklist and resources below will help you plan the cluster design. You should be able answer these questions:
 
-<!-- markdownlint-disable MD033 -->
-
 > [!div class="checklist"]
 >
 > - Have you identified the networking design requirements for your cluster?

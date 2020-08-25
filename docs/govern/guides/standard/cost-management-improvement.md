@@ -16,8 +16,6 @@ This article advances the narrative by adding cost controls to the governance MV
 
 ## Advancing the narrative
 
-<!-- docsTest:ignore DR -->
-
 Adoption has grown beyond the cost tolerance indicator defined in the governance MVP. This is a good thing, as it corresponds with migrations from the "DR" datacenter. The increase in spending now justifies an investment of time from the cloud governance team.
 
 ### Changes in the current state

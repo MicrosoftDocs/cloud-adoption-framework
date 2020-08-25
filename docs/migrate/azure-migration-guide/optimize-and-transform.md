@@ -11,7 +11,7 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- markdownlint-disable MD025 DOCSMD001 -->
+<!-- markdownlint-disable DOCSMD001 -->
 
 # Release workloads (test, optimize, and handoff)
 

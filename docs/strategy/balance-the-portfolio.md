@@ -24,7 +24,7 @@ Balancing the portfolio is strategic in nature. As such, the approach taken in t
 
 Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud-migration effort. The following table can help document and share desired business outcomes. It's important to note that most businesses are pursuing several outcomes at a time. The importance of this exercise is to clarify the outcomes that are most directly related to the cloud migration effort:
 
-| Outcome  | Measured by  | Goal  | Time frame  | Priority for this effort  |
+| Outcome | Measured by | Goal | Time frame | Priority for this effort |
 |---------|---------|---------|---------|---------|
 | Reduce IT costs     | Datacenter budget         | Reduce by $2M USD     | 12 months         | #1         |
 | Datacenter exit     | Exit from datacenters         | 2 datacenters         | 6 months         | #2         |

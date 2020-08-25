@@ -27,8 +27,6 @@ The following are two different examples of initial governance foundations (also
 - [Standard governance guide](./guides/standard/index.md): A guide for most organizations based on the recommended initial two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.
 - [Governance guide for complex enterprises](./guides/complex/index.md): A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.
 
-<!-- markdownlint-enable MD033 -->
-
 ## Next steps
 
 Once a governance foundation is in place, apply suitable recommendations to improve the solution and protect against tangible risks.

@@ -11,7 +11,8 @@ ms.subservice: innovate
 
 <!-- cSpell:ignore Lucene -->
 
-<!-- docsTest:ignore "Azure Search" "JFK Files" -->
+<!-- docsTest:casing "JFK Files" -->
+<!-- docsTest:ignore "Azure Search" -->
 
 # What is Azure Cognitive Search?
 

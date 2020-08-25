@@ -296,7 +296,6 @@ Consistent application of security requirements comes from sound governance disc
 - Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "data sensitivity."
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

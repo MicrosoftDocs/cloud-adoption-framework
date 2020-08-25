@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!--docsTest:ignore "Oxford English Dictionary" -->
+<!--docsTest:casing "Oxford English Dictionary" -->
 
 # Build with customer empathy
 

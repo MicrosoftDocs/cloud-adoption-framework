@@ -29,11 +29,7 @@ Azure customers employ a continually expanding set of connected systems and devi
 > - [Azure SQL Edge](/azure/azure-sql-edge/overview)
 > - [IoT plug and play](/azure/iot-pnp/overview-iot-plug-and-play)
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Global scale IoT service](#tab/IoTHub)
-
-<!-- markdownlint-enable MD025 -->
 
 Architect solutions that exercise bidirectional communication with IoT devices at billions scale. Use out-of-box, device-to-cloud telemetry data to understand the state of your devices and define message routes to other Azure services just through configuration. By taking advantage of cloud-to-device messages, you can reliably send commands and notifications to your connected devices and track message delivery with acknowledgment receipts. And you'll automatically resend device messages as needed to accommodate intermittent connectivity.
 
@@ -87,8 +83,6 @@ To create an Azure IoT Hub Device Provisioning Service:
 
 ::: zone-end
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Azure Digital Twins](#tab/DigitalTwins)
 
 Build reusable, highly scalable, spatially aware experiences that link streaming data across the physical and digital world. Enhance your customer engagement using comprehensive models of physical environments. Generate spatial intelligence graphs to model the relationships and interactions between people, places, and devices. Query data from a physical space rather than disparate sensors.
@@ -123,8 +117,6 @@ To create Azure Digital Twins:
 <!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
-
-<!-- markdownlint-disable MD025 -->
 
 ## [Location intelligence](#tab/AzureMaps)
 

@@ -59,7 +59,7 @@ If your company's cloud adoption effort is mature enough to have supporting team
 - [Governance disciplines](../../govern/corporate-policy.md) outlines the types of controls or disciplined processes that the governance team has likely implemented to allow for safe, compliant adoption of the cloud.
 - The [Manage methodology](../../manage/index.md) outlines the considerations that go into a cloud operations baseline for providing basic operations management.
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -81,8 +81,6 @@ In the end, the cloud adoption team is accountable for delivery across their ass
 - Become increasingly better at delivering on the methodology associated with your adoption approach.
 - Support other teams in the completion of their accountable steps, even if those steps are blockers to your adoption efforts.
 
-<!-- docsTest:ignore "Step 8" "Step 10" -->
-
 **Guidance to support deliverable completion:**
 
 - In the getting started guide for migration, the adoption team is accountable for delivery of [Step 10: Migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
@@ -90,7 +88,6 @@ In the end, the cloud adoption team is accountable for delivery across their ass
 
 All other steps on those checklists are designed to make the effort more manageable.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

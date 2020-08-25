@@ -121,8 +121,6 @@ Tuning and maintaining on-premises storage (SAN or NAS), and the networks to sup
 
 Azure provides different types of storage data.
 
-<!-- markdownlint-disable MD033 -->
-
 | Data type | Details | Usage |
 | ---|---|---|
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
@@ -131,13 +129,9 @@ Azure provides different types of storage data.
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Access tiers
 
 Azure Storage provides different options for accessing block blob data. Selecting the right access tier helps ensure that you store block blob data in the most cost-effective manner.
-
-<!-- markdownlint-disable MD033 -->
 
 | Access tier | Details | Usage |
 | --- | --- | --- |
@@ -150,8 +144,6 @@ Azure Storage provides different options for accessing block blob data. Selectin
 ### Storage account types
 
 Azure provides different types of storage accounts and performance tiers.
-
-<!-- markdownlint-disable MD033 -->
 
 | Account type | Details | Usage |
 | --- | --- | --- |

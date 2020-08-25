@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- docsTest:ignore "Bulk Migration" "Cold Migration" -->
+<!-- docsTest:casing "HCX Bulk Migration" "HCX Cold Migration" -->
 
 # Move on-premises VMware infrastructure to Azure
 
@@ -189,7 +189,7 @@ To move VMware VMs to Azure using HCX, the Contoso team will need to follow thes
 
 For more information, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/hybrid-cloud-extension-installation).
 
-<!-- docsTest:ignore L2 -->
+<!-- docsTest:casing L2 -->
 
 #### Install and configure VMware HCX for the public cloud
 

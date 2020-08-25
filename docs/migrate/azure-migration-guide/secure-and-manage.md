@@ -11,7 +11,7 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- markdownlint-disable MD024 MD025 DOCSMD001 -->
+<!-- markdownlint-disable MD024 DOCSMD001 -->
 
 # Secure and manage
 

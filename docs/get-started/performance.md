@@ -40,7 +40,6 @@ The operations management baseline, outlined in the Microsoft Cloud Adoption Fra
 > [!NOTE]
 > Various decisions throughout the cloud adoption lifecycle can have a direct impact on performance. The following steps help outline the partnerships and supporting efforts required to deliver performance across the IT portfolio.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -62,7 +61,6 @@ As the management baseline is improved, it's important to ensure that those impr
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 - If you're new to the Cost Management governance discipline, consider following the [article about Cost Management discipline improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -84,7 +82,6 @@ Strategic decisions directly affect performance, rippling through the adoption l
 - [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest in the Cost Management governance discipline early.
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the financial plan for cloud adoption. This can be a good source for initial budgeting efforts.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -111,7 +108,6 @@ Understanding the plan also invites the cloud operations team into the developme
 - [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Build a plan with actionable workload, asset, and timeline details.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -133,7 +129,6 @@ Consult the cloud operations team to help review the landing zone for operations
 
 - [Improve landing zone operations](../ready/considerations/landing-zone-operations.md): Best practices for improving operations within a landing zone.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -156,7 +151,6 @@ Long-term operations might be affected by the decisions that you make during mig
 - [Pre-promotion checklist](../migrate/migration-considerations/optimize/ready.md)
 - [Production release checklist](../migrate/migration-considerations/optimize/promote.md)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

@@ -62,9 +62,6 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="chromeless"
 
-<!-- docsTest:ignore "Azure DevOps Projects" -->
-<!-- markdownlint-disable DOCSMD001 -->
-
 #### Action
 
 To create a DevOps project:
@@ -74,8 +71,6 @@ To create a DevOps project:
 3. Select **Runtime, Framework, and Service**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -112,7 +107,7 @@ With Azure, your developers can build cloud-native applications by using canonic
 
 Sparking innovation for customer experiences and line-of-business applications is a high priority for every business leader. Whether you're building web, mobile, IoT, or mixed reality experiences, innovation is key to the future success of your organization. To scale innovation, organizations need to focus on packaging and shipping their unique business value as composable services so that partners and employees can participate in shared value generation easily and efficiently.
 
-<!-- docsTest:ignore "spark and scale" -->
+<!-- docsTest:casing "spark and scale innovation" -->
 
 Azure has a unique offering to help you spark and scale innovation in your organization. To drive more innovation, professional developers today can create applications and building blocks that empower other experts in your organization to build applications on a reliable foundation. With Azure, they get security from the ground up, backed by a team of experts, and proactive compliance trusted by enterprises, governments, and startups.
 
@@ -127,6 +122,8 @@ LiveOps also helps to humanize data. A LiveOps approach makes data more actionab
 ### LiveOps transition
 
 Game development is one example of an industry that's embracing LiveOps today. Modern games are the iconic LiveOps applications. Games have been going through a quiet revolution, transforming from packaged goods with a lifetime measured in hours to active communities with a lifetime measured in years. With more than 2 billion gamers out there, and tens of thousands of new games shipping every year fighting for attention, game developers are turning toward LiveOps to better engage and retain their player base over time. Innovation happens through continuous player engagement: content updates, special events, promotions, and offers.
+
+<!-- cSpell:ignore playfab -->
 
 ### Azure PlayFab
 

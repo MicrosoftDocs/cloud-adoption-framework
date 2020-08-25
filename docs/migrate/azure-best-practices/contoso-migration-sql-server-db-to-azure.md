@@ -103,7 +103,7 @@ Contoso also added Data Migration Assistant to their Azure Migrate project. By s
 
 #### Step 2: Application assessment
 
-<!-- docsTest:ignore "mainly .NET-based" "non-.NET-based" -->
+<!-- docsTest:casing "mainly .NET-based" "non-.NET-based" -->
 
 The results from the assessment provided Contoso with the visibility that they utilizes mainly .NET-based applications, however, over the years various projects have used other technologies such as PHP and Node.js. Vendor purchased systems also introduced non-.NET-based applications. They have identified the following:
 
@@ -139,7 +139,7 @@ When DMA was not able to be executed on a data source, the following guidelines 
 > [!NOTE]
 > As part of the assessment phase, Contoso discovered various open source databases. Separately, they followed [this guide](./contoso-migration-oss-db-to-azure.md) for their migration planning.
 
-<!-- docsTest:ignore "custom .NET" -->
+<!-- docsTest:casing "custom .NET" -->
 
 #### Step 4: Migration planning
 

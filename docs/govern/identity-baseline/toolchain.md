@@ -34,7 +34,7 @@ When you choose this method, Azure AD handles users' sign-in process. Coupled wi
 
 **Azure AD Pass-through Authentication:** Provides a persistent password validation for Azure AD authentication services by using a software agent that runs on one or more on-premises servers.
 
-<!-- docsTest:ignore "the pass-through authentication method" -->
+<!-- docsTest:casing "the pass-through authentication method" -->
 
 > [!NOTE]
 > Companies with a security requirement to immediately enforce on-premises user account states, password policies, and sign-in hours should consider the Pass-through Authentication method.
@@ -47,8 +47,7 @@ The article [choosing the right authentication method for Azure Active Directory
 
 The following table lists the native tools that can help mature the policies and processes that support this discipline.
 
-<!-- markdownlint-disable MD033 -->
-<!-- docsTest:ignore UserPrincipalName SamAccountName "conditional access options" -->
+<!-- docsTest:casing UserPrincipalName SamAccountName "conditional access options" -->
 
 | Consideration | Password hash synchronization + Seamless SSO | Pass-through Authentication + Seamless SSO | Federation with AD FS |
 | --- | --- | --- | --- |
@@ -67,8 +66,6 @@ The following table lists the native tools that can help mature the policies and
 | Can you customize the logo, image, and description on the sign-in pages? | [Yes, with Azure AD Premium](/azure/active-directory/customize-branding) | [Yes, with Azure AD Premium](/azure/active-directory/customize-branding) | [Yes](/azure/active-directory/connect/active-directory-aadconnect-federation-management#customlogo) |
 | What advanced scenarios are supported? | [Smart password lockout](/azure/active-directory/authentication/concept-sspr-howitworks) <br><br> [Leaked credentials reports](/azure/active-directory/reports-monitoring/concept-risk-events) | [Smart password lockout](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication-smart-lockout) | Multisite low-latency authentication system <br><br> [AD FS extranet lockout](/windows-server/identity/ad-fs/operations/configure-ad-fs-extranet-soft-lockout-protection) <br><br> [Integration with third-party identity systems](/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility) |
 
-<!-- markdownlint-enable MD033 -->
-
 > [!NOTE]
 > Custom controls in Azure AD conditional access does not currently support device registration.
 
@@ -76,7 +73,7 @@ The following table lists the native tools that can help mature the policies and
 
 <!-- TODO: The download button for this whitepaper returns 404. -->
 
-<!-- docsTest:ignore "Hybrid Identity Digital Transformation Framework" -->
+<!-- docsTest:casing "Hybrid Identity Digital Transformation Framework" -->
 
 The [hybrid identity digital transformation framework white paper](https://resources.office.com/ww-landing-M365E-EMS-IDAM-Hybrid-Identity-WhitePaper.html) outlines combinations and solutions for choosing and integrating each of these components.
 

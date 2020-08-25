@@ -12,8 +12,7 @@ ms.custom: governance
 
 # The Five Disciplines of Cloud Governance
 
-<!-- docsTest:ignore "Disciplines of Cloud Governance" "Cost Management" "Deployment Acceleration" "Identity Baseline" "Resource Consistency" "Security Baseline" -->
-<!-- markdownlint-disable MD033 -->
+<!-- docsTest:casing "Disciplines of Cloud Governance" "Cost Management" "Deployment Acceleration" "Identity Baseline" "Resource Consistency" "Security Baseline" -->
 
 |  |  |
 |--|--|

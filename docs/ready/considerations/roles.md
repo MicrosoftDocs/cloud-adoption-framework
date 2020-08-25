@@ -66,16 +66,12 @@ Most cloud environments can also benefit from an access-control strategy that us
 
 The following table illustrates a common pattern for dividing IT responsibilities into separate custom roles:
 
-<!-- markdownlint-disable MD033 -->
-
 | Group | Common role name | Responsibilities |
 | --- | --- | --- |
 | Security operations | SecOps | Provides general security oversight. <br> Establishes and enforces security policy such as encryption at rest. <br><br> Manages encryption keys. <br><br> Manages firewall rules. |
 | Network operations | Netops | Manages network configuration and operations within virtual networks, such as routes and peerings. |
 | Systems operations | Sysops | Specifies compute and storage infrastructure options, and maintains resources that have been deployed. |
 | Development, test, and operations | DevOps | Builds and deploys workload features and applications. <br><br> Operates features and applications to meet service-level agreements and other quality standards. |
-
-<!-- markdownlint-enable MD033 -->
 
 The breakdown of actions and permissions in these standard roles are often the same across your applications, subscriptions, or entire cloud estate, even if these roles are performed by different people at different levels. Accordingly, you can create a common set of RBAC role definitions to apply across different scopes within your environment. Users and groups can then be assigned a common role, but only for the scope of resources, resource groups, subscriptions, or management groups that they're responsible for managing.
 

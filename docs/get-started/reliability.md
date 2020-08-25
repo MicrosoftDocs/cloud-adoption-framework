@@ -48,7 +48,6 @@ Not all workloads are created equal. In any environment, there are workloads tha
 - [Advanced operations](../manage/design-principles.md): Use the management baseline as the foundation for your [business alignment](../manage/considerations/business-alignment.md) conversations. It helps you to clearly discuss [criticality](../manage/considerations/criticality.md), [business impact](../manage/considerations/impact.md), and [operations commitments](../manage/considerations/commitment.md). Business alignment helps quantify and validate requests for an [enhanced baseline](../manage/azure-management-guide/enhanced-baseline.md), management of specific [technology platforms](../manage/azure-management-guide/workload-specialization.md), or [workload-specific operations](../manage/azure-management-guide/platform-specialization.md).
 - **Guide an architecture review:** Architecture changes at the workload level might be required to meet operations requirements. The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/cost/tradeoffs) and [Microsoft Azure Well-Architected Review](/assessments?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -73,7 +72,6 @@ Enterprise reliability requires consistent application of the management baselin
 > [!NOTE]
 > **Steps to start reliability partnerships with other teams:** Various decisions throughout the cloud adoption lifecycle can have a direct impact on reliability. The following steps outline the partnerships and supporting efforts required to deliver consistent reliability across the IT portfolio.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -95,7 +93,6 @@ Strategic decisions directly affect reliability. They ripple through the adoptio
 - [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in the Cost Management governance discipline.
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the overall financial plan for cloud adoption. It can be a good source for initial budgeting efforts.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -126,7 +123,6 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 - [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Build a plan with actionable workload, assets, and timeline details.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -146,7 +142,6 @@ The Ready methodology of the Cloud Adoption Framework for Azure focuses heavily 
 
 - [Improve landing zone operations](../ready/considerations/landing-zone-operations.md): Best practices for improving operations within a given landing zone.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -169,7 +164,6 @@ Long-term operations can be affected by the decisions made during migration and 
 - [Pre-promotion checklist](../migrate/migration-considerations/optimize/ready.md)
 - [Production release checklist](../migrate/migration-considerations/optimize/promote.md)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

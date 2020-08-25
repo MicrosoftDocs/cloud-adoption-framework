@@ -43,7 +43,6 @@ A clear business strategy is the foundation for any digital transformation and o
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the overall financial plan for cloud adoption. It can be a good source for initial budgeting efforts.
 - [Learning metrics](../strategy/learning-metrics.md): To maintain alignment between the overarching business strategy and the more tactical change-management plans, establish learning metrics. These metrics should be designed to show iterative and incremental progress toward the plan.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -71,7 +70,6 @@ Organizational change management is an iterative approach to subtly realign peop
 - [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Build a plan with actionable workload, assets, and timeline details.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -97,7 +95,6 @@ Each wave (or release, in agile terms) delivers a set of workloads to the cloud.
 - [Assess workloads](../migrate/azure-migration-guide/assess.md?tabs=challenge-assumptions): The efforts of the cloud adoption team to evaluate and act on the most recent set of migration priorities.
 - [Business value consensus](../innovate/business-value.md): The cloud adoption team's efforts to ensure business value alignment at each release of new innovation.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

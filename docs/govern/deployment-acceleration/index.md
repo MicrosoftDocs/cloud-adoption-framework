@@ -47,5 +47,3 @@ Get started by evaluating [business risks](./business-risks.md) in a specific en
 
 > [!div class="nextstepaction"]
 > [Understand business risks](./business-risks.md)
-
-<!-- markdownlint-enable MD033 -->
