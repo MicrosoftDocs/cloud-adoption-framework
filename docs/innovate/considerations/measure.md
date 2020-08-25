@@ -47,7 +47,7 @@ In most cases, a customer flow will have an easily defined starting point and no
 3. **Solution steps:** This term refers to the steps that are required to move the customer from the initial trigger to a successful outcome. Each step produces a learning metric based on a customer decision to move on to the next step.
 4. **Individual adoption achieved:** The next time the trigger is encountered, if the customer returns to the solution to get their need met, individual adoption has been achieved.
 5. **Business outcome indicator:** When a customer behaves in a way that contributes to the defined business outcome, a business outcome indicator is observed.
-6. **True innovation:** When _business outcome indicators_ and _individual adoption_ both occur at the desired scale, you've realized true innovation.
+6. **True innovation:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
 
 Each step of the customer flow generates learning metrics. After each iteration (or release), a new version of the hypothesis is tested. At the same time, tweaks to the solution are tested to reflect adjustments in the hypothesis. When customers follow the prescribed path in any given step, a positive metric is recorded. When customers deviate from the prescribed path, a negative metric is recorded.
 
@@ -59,7 +59,7 @@ The first measurement in defining learning metrics is the customer partner defin
 
 - **Experiment or focus group:** Grouping customers based on their participation in a specific experiment designed to test changes over time.
 - **Segment:** Grouping customers by the size of the company.
-- **Vertical:** Grouping customers by the _industry vertical_ they represent.
+- **Vertical:** Grouping customers by the *industry vertical* they represent.
 - **Individual demographics:** Grouping based on personal demographics like age and physical location.
 
 These types of groupings help you validate learning metrics across various cross-sections of those customers who choose to partner with you during your innovation efforts. All subsequent metrics should be derived from definable customer grouping.

@@ -1,5 +1,5 @@
 ---
-title: "Windows Virtual Desktop proof of concept"
+title: Windows Virtual Desktop proof of concept
 description: Use the Cloud Adoption Framework for Azure to learn Windows Virtual Desktop migration best practices to reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
@@ -32,7 +32,7 @@ It's unlikely that all the following assumptions will prove to be true for any e
 
 - End users have a low-latency connection to the assigned landing zone in Azure.
 - All users can work from a shared pool of desktops.
-- All users can use the Windows&nbsp;10 Enterprise multi-session image from Azure Marketplace.
+- All users can use the Windows&nbsp;10 enterprise multi-session image from Azure Marketplace.
 - All user profiles will be migrated to either Azure Files, Azure NetApp Files, or a VM-based storage service for the FSLogix profile containers.
 - All users can be described by a common persona with a density of six users per virtual central processing unit (vCPU) and 4&nbsp;gigabytes (GB) of RAM, [as per the VM sizing recommendations](/windows-server/remote/remote-desktop-services/virtual-machine-recs#multi-session-recommendations).
 - All workloads are compatible with Windows&nbsp;10 multi-session.

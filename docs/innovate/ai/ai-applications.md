@@ -1,5 +1,5 @@
 ---
-title: "AI applications"
+title: AI applications
 description: Infusing AI into an application with Microsoft Azure Cognitive Services.
 author: v-hanki
 ms.author: janet

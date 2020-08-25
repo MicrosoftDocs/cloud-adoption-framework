@@ -1,5 +1,5 @@
 ---
-title: "Cluster and application security"
+title: Cluster and application security
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
 ms.author: asabbour
@@ -30,7 +30,7 @@ As you get started, the checklist and resources below will help you plan for clu
 >
 > | Checklist  | Resources |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
-> | **Familiarize yourself with the security essentials whitepaper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. | [The definitive guide to securing Kubernetes (whitepaper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original)     |
+> | **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. | [The definitive guide to securing Kubernetes (white paper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original)     |
 > | **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. | [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image)     |
 > | **Setup cluster role-based access control (RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads. | [Understand role-based access control (RBAC) in Kubernetes (video)](https://www.youtube.com/watch?v=G3R24JSlGjY&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=12) <br> [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration) <br> [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)   |
 

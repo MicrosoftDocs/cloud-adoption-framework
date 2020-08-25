@@ -1,5 +1,5 @@
 ---
-title: "Innovate with AI"
+title: Innovate with AI
 description: Tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale.
 author: v-hanki
 ms.author: janet

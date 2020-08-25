@@ -109,5 +109,5 @@ Azure Machine Learning works with other services on the Azure platform, and also
 
 ## Next steps
 
-- Review machine learning whitepapers and e-books on [Machine Learning studio](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-studio) and [Machine Learning service](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-service).
+- Review machine learning white papers and e-books on [Machine Learning studio](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-studio) and [Machine Learning service](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-service).
 - Review [AI + Machine Learning architectures](/azure/architecture/browse/).

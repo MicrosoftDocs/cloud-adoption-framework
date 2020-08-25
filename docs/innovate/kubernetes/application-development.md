@@ -1,5 +1,5 @@
 ---
-title: "Application development and deployment"
+title: Application development and deployment
 description: Learn about using Kubernetes in the Cloud Adoption Framework for application development and architecture.
 author: sabbour
 ms.author: asabbour

@@ -1,6 +1,6 @@
 ---
 title: What are AI agents?
-description: Learn about AI agents and conversational interfaces. Plan, build, test, publish, connect, and evaluate a bot.  
+description: Learn about AI agents and conversational interfaces. Plan, build, test, publish, connect, and evaluate a bot.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -47,7 +47,7 @@ While you design your bot in the Plan phase, consider these aspects:
   - How would you measure success?
   - What measurements do you want to use to improve your service?
 
-To learn more about how to design your bot, see [principles of bot design](/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0).
+To learn more about how to design your bot, see [Principles of bot design](/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0).
 
 ### Build
 
@@ -79,7 +79,7 @@ When you're ready to make your bot available on the web, [publish it to Azure](/
 
 ### Connect
 
-Connect your bot to channels such as Facebook, Messenger, Kik, Skype, Slack, Microsoft Teams, Telegram, text/SMS, twilio, Cortana, and Skype. Bot Framework does most of the work necessary to send and receive messages from all of these different platforms. Your bot application receives a unified, normalized stream of messages no matter number and type of channels to which it's connected. For information on how to add channels, see [Channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0).
+Connect your bot to channels such as Facebook, messenger, Kik, Skype, Slack, Microsoft Teams, Telegram, text/SMS, twilio, Cortana, and Skype. Bot Framework does most of the work necessary to send and receive messages from all of these different platforms. Your bot application receives a unified, normalized stream of messages no matter number and type of channels to which it's connected. For information on how to add channels, see [Channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0).
 
 ### Evaluate
 
@@ -91,7 +91,7 @@ Use the data collected in the Azure portal to identify opportunities to improve 
 
 There are common patterns used for implementation of a conversational AI application:
 
-- **Knowledge base:** A knowledge bot can be designed to provide information about virtually any subject. For example, one knowledge bot might answer questions about events such as "What bot events are there at this conference?" or "When is the next reggae show?" Another bot might answer IT-related questions such as "How do I update my operating system?" Yet another bot might answer questions about contacts such as "Who is John Doe?" or "What is Jane Doe's email address?"
+- **Knowledge base:** A knowledge bot can be designed to provide information about virtually any subject. For example, one knowledge bot might answer questions about events such as "what bot events are there at this conference?" Or "when is the next reggae show?" Another bot might answer IT-related questions such as "how do I update my operating system?" Yet another bot might answer questions about contacts such as "who is John Doe?" Or "what is Jane Doe's email address?"
 
    For information on the design elements for knowledge bots, see [Design knowledge bots](/azure/bot-service/bot-service-design-pattern-knowledge-base?view=azure-bot-service-4.0).
 

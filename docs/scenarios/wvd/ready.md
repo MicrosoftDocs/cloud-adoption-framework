@@ -1,5 +1,5 @@
 ---
-title: "Azure landing zones for Windows Virtual Desktop instances"
+title: Azure landing zones for Windows Virtual Desktop instances
 description: Use the Cloud Adoption Framework for Azure to learn virtual desktop migration best practices to reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,13 +15,13 @@ Before the Contoso cloud adoption team migrates to Windows Virtual Desktop, it w
 
 ## Evaluate compatibility
 
-- **Resource organization plan**: The landing zone should include references to the subscription or subscriptions to be used, guidance on resource group usage, and the tagging and naming standards to be used when the team deploys resources.
-- **Azure AD**: An Azure Active Directory (Azure AD) instance or an Azure AD tenant should be provided for end-user authentication.
-- **Network**: Any required network configuration should be established in the landing zone prior to migration.
-- **VPN or ExpressRoute**: Additionally, any landing zone that supports virtual desktops will need a network connection so that end users can connect to the landing zone and hosted assets. If an existing set of endpoints is configured for virtual desktops, end users can still be routed through those on-premises devices via a VPN or Azure ExpressRoute connection. If a connection doesn't already exist, you might want to review the guidance on configuring network connectivity options in the [Ready methodology](../../ready/index.md).
-- **Governance, users, and identity**: For consistent enforcement, any requirements to govern access from virtual desktops and to govern users and their identities should be configured as Azure policies and applied to the landing zone.
-- **Security**: The security team has reviewed the landing zone configurations and approved each landing zone for its intended use, including landing zones for the external connection and landing zones for any mission-critical applications or sensitive data.
-- **Windows Virtual Desktop**: Windows Virtual Desktop platform as a service has been enabled. <!-- TODO: Add link to enable the service. -->
+- **Resource organization plan:** The landing zone should include references to the subscription or subscriptions to be used, guidance on resource group usage, and the tagging and naming standards to be used when the team deploys resources.
+- **Azure AD:** An Azure Active Directory (Azure AD) instance or an Azure AD tenant should be provided for end-user authentication.
+- **Network:** Any required network configuration should be established in the landing zone prior to migration.
+- **VPN or ExpressRoute:** Additionally, any landing zone that supports virtual desktops will need a network connection so that end users can connect to the landing zone and hosted assets. If an existing set of endpoints is configured for virtual desktops, end users can still be routed through those on-premises devices via a VPN or Azure ExpressRoute connection. If a connection doesn't already exist, you might want to review the guidance on configuring network connectivity options in the [Ready methodology](../../ready/index.md).
+- **Governance, users, and identity:** For consistent enforcement, any requirements to govern access from virtual desktops and to govern users and their identities should be configured as Azure policies and applied to the landing zone.
+- **Security:** The security team has reviewed the landing zone configurations and approved each landing zone for its intended use, including landing zones for the external connection and landing zones for any mission-critical applications or sensitive data.
+- **Windows Virtual Desktop:** Windows Virtual Desktop platform as a service has been enabled. <!-- TODO: Add link to enable the service. -->
 
 Any landing zone that the team develops by using the best practices in the [Ready methodology](../../ready/index.md) and that can meet the previously mentioned specialized requirements would qualify as a landing zone for this migration.
 

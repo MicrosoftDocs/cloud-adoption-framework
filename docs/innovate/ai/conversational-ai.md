@@ -1,6 +1,6 @@
 ---
-title: "Conversational AI"
-description: For Conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences.
+title: Conversational AI
+description: For conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -48,7 +48,7 @@ Download and use Bot Framework SDK and tools for bot development
 Learn how to add Cognitive Services to make your bot even more intelligent.
 
 - [A developer's guide to building AI applications](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/) (e-book)
-- [Learn more about Cognitive Services](/azure/cognitive-services/)
+- Learn more about [Cognitive Services](/azure/cognitive-services/)
 
 Learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do.
 
