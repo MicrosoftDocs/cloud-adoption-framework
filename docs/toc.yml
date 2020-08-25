@@ -5,7 +5,7 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-
+ 
     - name: AKS adoption scenario
       items:
       - name: Overview
@@ -30,14 +30,19 @@ items:
           href: scenarios/aks/eslz-enterprise-enrollment-and-azure-ad-tenants.md
         - name: Identity and Access Management
           href: scenarios/aks/eslz-identity-and-access-management.md
-        - name: Management and Monitoring
-          href: scenarios/aks/eslz-management-and-monitoring.md
         - name: Management group and subscription organization
           href: scenarios/aks/eslz-management-group-and-subscription-organization.md
         - name: Network topology and connectivity
           href: scenarios/aks/eslz-network-topology-and-connectivity.md
+        - name: Management and Monitoring
+          href: scenarios/aks/eslz-management-and-monitoring.md
+        - name: Business continuity and disaster recovery
+          href: ready/enterprise-scale/eslz-business-continuity-and-disaster-recovery.md
         - name: Security governance and compliance
           href: scenarios/aks/eslz-security-governance-and-compliance.md
+        - name: Platform automation and DevOps
+          href: ready/enterprise-scale/eslz-platform-automation-and-devops.md
+
   - name: About the Framework
     href: overview.md
   - name: What's new
