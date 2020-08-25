@@ -96,11 +96,11 @@ This section modifies the governance MVP design to include new Azure policies an
 
 The new best practices fall into two categories: corporate IT (hub) and cloud adoption (spoke).
 
-**Establishing a corporate IT hub and spoke subscription to centralize the security baseline:** In this best practice, the existing governance capacity is wrapped by a [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services), with a few key additions from the cloud governance team.
+**Establishing a corporate IT hub and spoke subscription to centralize the security baseline:** In this best practice, the existing governance capacity is wrapped by a [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services), with a few key additions from the cloud governance team.
 
 1. Azure DevOps repository. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
 2. Hub and spoke template:
-    1. The guidance in the [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services) reference architecture can be used to generate Resource Manager templates for the assets required in a corporate IT hub.
+    1. The guidance in the [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services) reference architecture can be used to generate Resource Manager templates for the assets required in a corporate IT hub.
     2. Using those templates, this structure can be made repeatable, as part of a central governance strategy.
     3. In addition to the current reference architecture, a network security group template should be created to capture any port blocking or allow-listing requirements for the virtual network to host the firewall. This network security group differs from prior groups, because it will be the first network security group to allow public traffic into a virtual network.
 3. Create Azure policies. Create a policy named `hub NSG enforcement` to enforce the configuration of the network security group assigned to any virtual network created in this subscription. Apply the built-in policies for guest configuration as follows:
@@ -125,11 +125,11 @@ The new best practices fall into two categories: corporate IT (hub) and cloud ad
 In prior iterative changes to the best practice, we defined network security groups to block public traffic and allow internal traffic. Additionally, the Azure blueprint temporarily created DMZ and Active Directory capabilities. In this iteration, we will tweak those assets a bit, creating a new version of the Azure blueprint.
 
 1. Network peering template. This template will peer the virtual network in each subscription with the hub virtual network in the corporate IT subscription.
-    1. The reference architecture from the prior section, [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services), generated a Resource Manager template for enabling virtual network peering.
+    1. The reference architecture from the prior section, [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services), generated a Resource Manager template for enabling virtual network peering.
     2. That template can be used as a guide to modify the DMZ template from the prior governance iteration.
     3. We are now adding virtual network peering to the DMZ virtual network that was previously connected to the local edge device over VPN.
     4. The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outage.
-    5. Additional [network configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview#network-planning) is required by Azure Automation to apply DSC to hosted VMs.
+    5. Additional [network configuration](/azure/automation/automation-dsc-overview#network-planning) is required by Azure Automation to apply DSC to hosted VMs.
 2. Modify the network security group. Block all public **and** direct on-premises traffic in the network security group. The only inbound traffic should be coming through the virtual network peer in the corporate IT subscription.
     1. In the prior iteration, a network security group was created blocking all public traffic and allowing all internal traffic. Now we want to shift this network security group a bit.
     2. The new network security group configuration should block all public traffic, along with all traffic from the local datacenter.

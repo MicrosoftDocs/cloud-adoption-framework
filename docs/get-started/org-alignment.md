@@ -81,4 +81,4 @@ At each level of maturity, accountability for various cloud functions shifts to 
 
 - [Adapt existing roles, skills, and processes for the cloud](../plan/adapt-roles-skills-processes.md)
 - [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md)
-- [Download the RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx)
+- [Download the RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)

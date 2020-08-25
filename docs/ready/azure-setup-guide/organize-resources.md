@@ -62,7 +62,7 @@ Use subscriptions to manage costs and resources that are created by users, teams
 2. Select **Add**.
 
 > [!NOTE]
-> Subscriptions can also be created programmatically. For more information, see [Programmatically create Azure subscriptions](https://docs.microsoft.com/azure/azure-resource-manager/management/programmatically-create-subscription?tabs=azure-powershell).
+> Subscriptions can also be created programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/azure-resource-manager/management/programmatically-create-subscription?tabs=azure-powershell).
 
 #### Create a resource group
 
@@ -82,9 +82,9 @@ To learn more, see:
 - [Create your initial subscriptions](../azure-best-practices/initial-subscriptions.md)
 - [Create additional Azure subscriptions to scale your Azure environment](../azure-best-practices/scale-subscriptions.md)
 - [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
-- [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview)
+- [Organize your resources with Azure management groups](/azure/azure-resource-manager/management-groups-overview)
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
-- [Subscription service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)
+- [Subscription service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
 ::: zone-end
 
@@ -132,7 +132,7 @@ The business-related side of this strategy should ensure that resource names inc
 
 The operational side should ensure that names include information that IT teams need. Use the details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
-Different resource types have different [naming rules and restrictions](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../azure-best-practices/naming-and-tagging.md).
+Different resource types have different [naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../azure-best-practices/naming-and-tagging.md).
 
 The following table includes naming patterns for a few sample types of Azure resources.
 
@@ -145,8 +145,8 @@ The following table includes naming patterns for a few sample types of Azure res
 
 | Entity | Scope | Length | Casing | Valid characters | Suggested pattern | Example |
 | --- | --- | --- | --- | --- | --- | --- |
-| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters | `<service short name>-<environment>-Rg` | `profx-prod-rg` |
-| Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-As` | `profx-SQL-as` |
+| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters | `<service short name>-<environment>-rg` | `profx-prod-rg` |
+| Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-SQL-as` |
 | Tag | Associated entity | 512 (Name), 256 (value) | Case insensitive | Alphanumeric | `"Key" : "value"` | `"Department" : "Central IT"` |
 
 ## [Resource tags](#tab/ResourceTags)
@@ -178,7 +178,7 @@ To apply a tag to a resource group:
 
 ### Learn more
 
-To learn more, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
+To learn more, see [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources).
 
 ::: zone-end
 

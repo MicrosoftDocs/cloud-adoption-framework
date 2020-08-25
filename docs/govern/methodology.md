@@ -57,7 +57,7 @@ The following diagram shows a simple governance MVP and three governance iterati
 
 ## Next steps
 
-Use the Cloud Adoption Framework [governance benchmark tool](https://cafbaseline.com) to assess your transformation journey and help you identify gaps in your organization across six key domains as defined in the framework.
+Learn to use the Cloud Adoption Framework governance benchmark tool to assess your transformation journey and help you identify gaps in your organization across six key domains as defined in the framework.
 
 > [!div class="nextstepaction"]
 > [Assess your transformation journey](./benchmark.md)

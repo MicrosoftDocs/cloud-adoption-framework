@@ -1,6 +1,6 @@
 ---
 title: "Get started: Build a cloud strategy team"
-description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you are prepared for a successful cloud adoption journey.
+description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you're prepared for a successful cloud adoption journey.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -20,7 +20,7 @@ Whichever approach you choose, you'll want to create a cloud strategy team that 
 ![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
 
 > [!NOTE]
-> This article discusses a _strategy facilitator_, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
+> This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
 ## Step 1: Determine whether a cloud strategy team is needed
 
@@ -50,7 +50,7 @@ If any or all of the preceding reasons represent your existing business consider
 
 ## What if I don't need a cloud strategy team?
 
-Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team (v-team) to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
+Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team (v-team) to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
 
 ## Step 2: Establish the cloud strategy team
 
@@ -66,7 +66,7 @@ The cloud strategy team serves as a recurring alignment point between business l
 - For ideas about who might be a good fit, see [Cloud strategy functions](../../organize/cloud-strategy.md).
 - To validate the alignment and bandwidth from each potential participant, review the [minimum scope](../../organize/cloud-strategy.md#minimum-scope) and [deliverable](../../organize/cloud-strategy.md#deliverable) for this capability.
 - To establish the right RACI chart based on you current team structures, review the various [RACI configuration examples](../../organize/raci-alignment.md#strategic-alignment), or select one of the example tabs at the bottom of the RACI template.
-- Document the results in the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Document the results in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Accountable person or team:**
 
@@ -102,7 +102,7 @@ This exercise will surface conversations that can help build alignment among the
 
 **Deliverables:**
 
-- Record motivations in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Record motivations in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 **Guidance to support deliverable completion:**
 
@@ -131,7 +131,7 @@ Impacts on business outcomes can take time. These types of changes typically mov
 
 **Guidance to support deliverable completion:**
 
-- Record business outcomes in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Record business outcomes in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 - [Business outcomes](../../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, it can be wise to invest very early in the Cost Management governance discipline.
 - [Learning metrics](../../strategy/learning-metrics.md) help bridge the gap between business outcomes and technical adoption efforts.
 
@@ -190,4 +190,4 @@ Strategy and planning are important. Nothing is actionable until you identify th
 
 Align your strategy with the [cloud adoption functions](../../organize/cloud-adoption.md) by working with the adoption team or individuals who are responsible for these functions.
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

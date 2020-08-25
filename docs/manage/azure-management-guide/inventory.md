@@ -79,7 +79,7 @@ To set up Service Health alerts, go to the [Azure portal](https://portal.azure.c
 
 ### Learn more
 
-For more information, see [Azure Service Health](https://docs.microsoft.com/azure/service-health).
+For more information, see [Azure Service Health](/azure/service-health).
 
 ## Log Analytics
 
@@ -90,7 +90,7 @@ For more information, see [Azure Service Health](https://docs.microsoft.com/azur
 
 ::: zone-end
 
-A [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) is a unique environment for storing Azure Monitor log data. Each workspace has its own data repository and configuration. Data sources and solutions are configured to store their data in particular workspaces. Azure monitoring solutions require all servers to be connected to a workspace, so that their log data can be stored and accessed.
+A [Log Analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) is a unique environment for storing Azure Monitor log data. Each workspace has its own data repository and configuration. Data sources and solutions are configured to store their data in particular workspaces. Azure monitoring solutions require all servers to be connected to a workspace, so that their log data can be stored and accessed.
 
 ::: zone target="chromeless"
 
@@ -108,7 +108,7 @@ A [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn
 
 ### Learn more
 
-To learn more, see the [Log Analytics workspace creation documentation](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace).
+To learn more, see the [Log Analytics workspace creation documentation](/azure/azure-monitor/learn/quick-create-workspace).
 
 ## Azure Monitor
 
@@ -143,10 +143,10 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
  Start monitoring your:
 
-- [Applications](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
-- [Containers](https://docs.microsoft.com/azure/monitoring/monitoring-container-overview)
-- [Virtual machines](https://docs.microsoft.com/azure/monitoring/monitoring-service-map)
-- [Networks](https://docs.microsoft.com/azure/networking/network-monitoring-overview)
+- [Applications](/azure/application-insights/app-insights-overview)
+- [Containers](/azure/monitoring/monitoring-container-overview)
+- [Virtual machines](/azure/monitoring/monitoring-service-map)
+- [Networks](/azure/networking/network-monitoring-overview)
 
 To monitor other resources, find additional solutions in Azure Marketplace.
 
@@ -154,7 +154,7 @@ To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#bla
 
 ### Learn more
 
-To learn more, see [Azure Monitor documentation](https://docs.microsoft.com/azure/monitoring-and-diagnostics).
+To learn more, see [Azure Monitor documentation](/azure/monitoring-and-diagnostics).
 
 ## Onboard solutions
 

@@ -30,12 +30,10 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Develop governance policy statements
 
-The following six steps offer examples and potential options to consider when developing your Resource Consistency discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to manage Resource Consistency discipline risks.
+The following steps offer examples and potential options to consider when developing your Resource Consistency discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to manage Resource Consistency discipline risks.
 
-<!-- markdownlint-disable MD033 -->
-
-| | |
-|---|---|
+|  |  |
+|--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Resource Consistency discipline template](./template.md): Download the template for documenting a Resource Consistency discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Resource Consistency discipline. |
 | <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand if it is the right time to invest in the Resource Consistency discipline. |

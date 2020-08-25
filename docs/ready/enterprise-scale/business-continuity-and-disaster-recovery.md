@@ -1,5 +1,5 @@
 ---
-title: CAF enterprise-scale business continuity and disaster recovery
+title: Enterprise-scale business continuity and disaster recovery
 description: Learn about enterprise-scale business continuity and disaster recovery in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,17 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# CAF enterprise-scale business continuity and disaster recovery
+# Enterprise-scale business continuity and disaster recovery
 
-## Planning for business continuity and disaster recovery
+Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
 
-Capture disaster recovery (DR) requirements to design suitable platform-level capabilities that application workloads can consume to meet their specific recovery time objective (RTO) and recovery point objective (RPO) requirements.
+## Design considerations
 
-**Design considerations:**
+Consider the following factors:
 
-- Application and data availability requirements and the use of active-active and active-passive availability patterns (such as workload RTO and RPO requirements).
+- Application and data availability requirements, and the use of active-active and active-passive availability patterns (such as workload RTO and RPO requirements).
 
-- Business continuity and DR for platform as a service (PaaS) services and the availability of native DR and high-availability features.
+- Business continuity and DR for platform as a service (PaaS) services, and the availability of native DR and high-availability features.
 
 - Support for multiregion deployments for failover purposes, with component proximity for performance reasons.
 
@@ -29,7 +29,7 @@ Capture disaster recovery (DR) requirements to design suitable platform-level ca
 
   - Data sharing and dependencies between zones.
 
-  - Impact of Availability Zones on update domains compared to availability sets and percentage of workloads that can be under maintenance simultaneously.
+  - The impact of Availability Zones on update domains compared to availability sets and the percentage of workloads that can be under maintenance simultaneously.
 
   - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.
 
@@ -59,9 +59,11 @@ Capture disaster recovery (DR) requirements to design suitable platform-level ca
 
 - Azure Key Vault DR for application keys, certificates, and secrets.
 
-**Design recommendations:**
+## Design recommendations
 
-- Employ Azure Site Recovery for Azure to Azure Virtual Machines disaster recovery scenarios to replicate workloads across regions.
+The following are best practices for your design:
+
+- Employ Azure Site Recovery for Azure-to-Azure Virtual Machines disaster recovery scenarios. This enables you to replicate workloads across regions.
 
   Site Recovery provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
 
@@ -71,20 +73,21 @@ Capture disaster recovery (DR) requirements to design suitable platform-level ca
 
 - Use Azure-native backup capabilities.
 
-  Azure Backup and PaaS-native backup features remove the need for managing third-party backup software and infrastructure. As with other native features, backup configurations can be set, audited, and enforced with Azure Policy, ensuring that services remain compliant with the organization's requirements.
+  Azure Backup and PaaS-native backup features remove the need for managing third-party backup software and infrastructure. As with other native features, you can set, audit, and enforce backup configurations with Azure Policy. This ensures that services remain compliant with the organization's requirements.
 
 - Use multiple regions and peering locations for ExpressRoute connectivity.
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
 
-- Refer to [Azure region pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organization's disaster recovery layouts.
+- Refer to [Azure region pairs](/azure/best-practices-availability-paired-regions) when you're selecting locations for your organization's disaster recovery layouts.
 
-- Use Azure paired regions when planning for business continuity and DR.
+- Use Azure paired regions when you're planning for business continuity and DR.
 
-- Planned Azure system updates are rolled out to paired regions sequentially but not at the same time to minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
+- Azure rolls out planned system updates to paired regions sequentially, not at the same time. This helps to minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
 
-- In the event of a broad outage, recovering one region is prioritized within of every pair. Applications deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that aren't paired, the worst case scenario is that recovery might delay, and the preferred region may be the last to be recovered.
+- In the event of a broad outage, recovering one region is prioritized within every pair. Applications deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that aren't paired, the worst case scenario is that recovery might be delayed. It's possible that the preferred region would be the last to be recovered.
 
 - Avoid using overlapping IP address ranges for production and DR sites.
 
-  When possible, plan for a business continuity and DR network architect that provides concurrent connectivity to all sites. DR networks using the same classless inter-domain routing blocks such as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.
+  When possible, plan for a business continuity and DR network architecture that provides concurrent connectivity to all sites. DR networks that use the same classless inter-domain routing blocks, such as production networks, require a network failover process that can complicate and delay application failover in the event of an outage.
+

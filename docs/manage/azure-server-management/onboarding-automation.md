@@ -17,7 +17,7 @@ This guidance has a supporting GitHub repository of sample code, [CloudAdoptionF
 
 The sample files illustrate how to use Azure PowerShell cmdlets to automate the following tasks:
 
-- Create a [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
+- Create a [Log Analytics workspace](/azure/azure-monitor/platform/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
 - Create an Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 

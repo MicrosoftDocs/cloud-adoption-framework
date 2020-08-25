@@ -46,7 +46,7 @@ Not all workloads are created equal. In any environment, there are workloads tha
   - [Operational compliance](../manage/considerations/operational-compliance.md): The highest percentages of outages tend to come from changes to resource configuration or poor maintenance practices. Follow the [Azure server management guide](../manage/azure-server-management/index.md) to implement cloud-native tools to manage patching and changes to resource configuration.
   - [Protection and recovery](../manage/considerations/protect.md): Outages are inevitable on any platform. When a disruption occurs, be prepared with [backup and recovery solutions](../manage/azure-management-guide/protect-recover.md) to minimize the duration.
 - [Advanced operations](../manage/design-principles.md): Use the management baseline as the foundation for your [business alignment](../manage/considerations/business-alignment.md) conversations. It helps you to clearly discuss [criticality](../manage/considerations/criticality.md), [business impact](../manage/considerations/impact.md), and [operations commitments](../manage/considerations/commitment.md). Business alignment helps quantify and validate requests for an [enhanced baseline](../manage/azure-management-guide/enhanced-baseline.md), management of specific [technology platforms](../manage/azure-management-guide/workload-specialization.md), or [workload-specific operations](../manage/azure-management-guide/platform-specialization.md).
-- **Guide an architecture review:** Architecture changes at the workload level might be required to meet operations requirements. The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
+- **Guide an architecture review:** Architecture changes at the workload level might be required to meet operations requirements. The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/cost/tradeoffs) and [Microsoft Azure Well-Architected Review](/assessments?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -66,7 +66,7 @@ Enterprise reliability requires consistent application of the management baselin
 
 **Guidance to support deliverable completion:**
 
-- Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for criticality.
+- Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for criticality.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 - If you're new to the Cost Management discipline, follow the guidance in the [cost management improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
@@ -86,7 +86,7 @@ Strategic decisions directly affect reliability. They ripple through the adoptio
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 - Ensure the management baseline provides operational support that aligns to the strategic direction of cloud adoption.
 
 **Guidance to support deliverable completion:**
@@ -110,7 +110,7 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 
 **Deliverables:**
 
-- Update the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to reflect changes that are needed to achieve the desired strategy. The changes recorded can include:
+- Update the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to reflect changes that are needed to achieve the desired strategy. The changes recorded can include:
 
   - An assessment of the existing digital estate.
   - A cloud adoption plan that reflects the required changes and the work involved.
@@ -123,7 +123,7 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 - [Gather inventory](../digital-estate/inventory.md): Establish a source of data for analysis of the digital estate prior to adoption.
 - [Best practice: Azure Migrate](../plan/contoso-migration-assessment.md): Use Azure Migrate to gather inventory.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): During incremental rationalization, a quantitative analysis can identify cloud candidates for budgeting purposes.
-- [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management to align cost and forecast models by [creating budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+- [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Build a plan with actionable workload, assets, and timeline details.
 
 <!-- markdownlint-disable MD033 -->
