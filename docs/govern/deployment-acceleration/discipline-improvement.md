@@ -88,7 +88,7 @@ Once the transformation is complete, governance and operations must live on for 
 
 **Potential activities:**
 
-- Configure a Desired State Configuration monitoring and reporting tool.
+- Configure a desired state configuration monitoring and reporting tool.
 - Regularly review configuration tools and scripts to improve processes and identify common issues.
 - Work with development, operations, and security teams to help mature DevSecOps practices and break down organizational silos that lead to inefficiencies.
 
