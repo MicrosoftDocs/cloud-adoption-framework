@@ -118,7 +118,7 @@ In exchange for using reserved instances for specific VM instances that must be 
 
 Giving and controlling user access to Azure resources with identity and access management is an important step in pulling together an Azure infrastructure.
 
-Contoso decides to extend its on-premises Active Directory into the cloud, rather than build a new separate system in Azure. Because Contoso isn't using Office 365 yet, it needs to provision an Azure AD instance. If Contoso were using Office 365, it would already have an existing Azure AD tenant and directory, which it could use as its primary Azure AD instance.
+Contoso decides to extend its on-premises Active Directory into the cloud, rather than build a new separate system in Azure. Because Contoso isn't using Microsoft 365 yet, it needs to provision an Azure AD instance. If Contoso were using Microsoft 365, it would already have an existing Azure AD tenant and directory, which it could use as its primary Azure AD instance.
 
 Learn more about [Microsoft 365 identity models and Azure Active Directory](/office365/enterprise/about-office-365-identity). You can also learn how to [associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
 
@@ -202,7 +202,7 @@ For management purposes, they create an additional group that will be added to a
 
 ### Synchronize Active Directory
 
-Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory instance with Azure AD. With this model, users and organizations can take advantage of a single identity to access on-premises applications and cloud services, such as Office 365, or thousands of other sites on the internet. Admins can use the groups in Active Directory to implement [role-based access control (RBAC)](/azure/role-based-access-control/role-assignments-portal) in Azure.
+Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory instance with Azure AD. With this model, users and organizations can take advantage of a single identity to access on-premises applications and cloud services, such as Microsoft 365, or thousands of other sites on the internet. Admins can use the groups in Active Directory to implement [role-based access control (RBAC)](/azure/role-based-access-control/role-assignments-portal) in Azure.
 
 To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/active-directory/connect/active-directory-aadconnect). When you install and configure the tool on a domain controller, it synchronizes the on-premises Active Directory identities to Azure AD.
 

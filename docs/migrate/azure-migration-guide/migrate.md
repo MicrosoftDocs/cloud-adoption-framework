@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 # Deploy workloads and assets (infrastructure, apps, and data)
 
-In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state, including native tools, third-party tools, and project management tools.
+In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. You'll explore native tools, third-party tools, and project management tools.
 
 <!-- markdownlint-disable MD025 -->
 
@@ -27,14 +27,17 @@ The following sections describe the native Azure tools available to perform or a
 
 Azure Migrate delivers a unified and extensible migration experience. Azure Migrate provides a one-stop, dedicated experience to track your migration journey across the phases of assessment and migration to Azure. It provides you the option to use the tools of your choice and track the progress of migration across these tools.
 
-Azure Migrate provides the following functionality:
+Azure Migrate is a centralized hub to assess and migrate on-premises servers, infrastructure, applications, and data to Azure. It provides the following functionality:
 
-1. Enhanced assessment and migration capabilities:
-    - Hyper-V assessments.
-    - Improved VMware assessment.
+- Unified platform with assessment, migration, and progress tracking.
+- Enhanced assessment and migration capabilities:
+    - On-premises servers including Hyper-V & VMware.
     - Agentless migration of VMware virtual machines to Azure.
-1. Unified assessment, migration, and progress tracking.
-1. Extensible approach with ISV integration (such as Cloudamize).
+    - Database migrations to Azure SQL Database or SQL Managed Instance
+    - Web applications
+    - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
+    - Large data collections using Azure Data Box products
+- Extensible approach with ISV integration (such as Cloudamize).
 
 To perform a migration using Azure Migrate, follow these steps:
 
@@ -44,63 +47,14 @@ To perform a migration using Azure Migrate, follow these steps:
 1. Select **Select assessment tool** > **Azure Migrate: Server assessment** > **Next**.
 1. Select **Review + add tools**, and verify the configuration. Select **Add tools** to initiate the job to create the migration project and register the selected solutions.
 
+> [!NOTE]
+> For guidance specific to your scenario refer to the tutorials and Azure Migrate [documentation](/azure/migrate/migrate-services-overview).
+>
+
 #### Learn more
 
+- [About Azure Migrate](/azure/migrate/migrate-services-overview)
 - [Azure Migrate tutorial - migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
-
-### Azure Site Recovery
-
-The Azure Site Recovery service can manage the migration of on-premises resources to Azure. It can also manage and orchestrate disaster recovery of on-premises machines and Azure VMs for business continuity and disaster recovery (BCDR) purposes.
-
-The following steps outline the process to use Site Recovery to migrate:
-
-> [!TIP]
-> Depending on your scenario, these steps may differ slightly. For more information, see the [migrate on-premises machines to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
-
-#### Prepare Azure Site Recovery service
-
-1. In the Azure portal, select **+ Create a resource** > **Management tools** > **Backup and Site Recovery**.
-1. If you haven't yet created a recovery vault, complete the wizard to create a **Recovery Services vault** resource.
-1. In the **Resource** menu, select **Site Recovery** > **Prepare infrastructure** > **Protection goal**.
-1. In **Protection goal**, select what you want to migrate.
-    1. **VMware:** Select **to Azure** > **Yes, with VMware vSphere hypervisor**.
-    1. **Physical machine:** Select **to Azure** > **Not virtualized/other**.
-    1. **Hyper-V:** Select **to Azure** > **Yes, with Hyper-V**. If Hyper-V VMs are managed by VMM, select **Yes**.
-
-#### Configure migration settings
-
-1. Set up the source environment as appropriate.
-1. Set up the target environment.
-    1. Select **prepare infrastructure** > **Target**, then select the Azure subscription you want to use.
-    1. Specify the Resource Manager deployment model.
-    1. Site Recovery checks that you have one or more compatible Azure Storage accounts and networks.
-1. Set up a replication policy.
-1. Enable replication.
-1. Run a test migration (test failover).
-
-#### Migrate to Azure using failover
-
-1. In **Settings** > **Replicated items**, select the machine > **Failover**.
-1. In **Failover**, select a **Recovery Point** to fail over to. Select the latest recovery point.
-1. Configure any encryption key settings as required.
-1. Select **Shut down machine before beginning failover**. Site Recovery will attempt to shut down virtual machines before triggering the failover. Failover continues even if shutdown fails. You can follow the failover progress on the jobs page.
-1. Check that the Azure VM appears in Azure as expected.
-1. In **Replicated items**, select and hold (or right-click) the VM and choose **Complete Migration**.
-1. Perform any post-migration steps as required (see relevant information in this guide).
-
-::: zone target="chromeless"
-
-::: form action="Create[#create/Microsoft.RecoveryServices]" submitText="Create a Recovery Services vault" :::
-
-::: zone-end
-
-::: zone target="docs"
-
-For more information, see:
-
-- [migrate on-premises machines to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure)
-
-::: zone-end
 
 ### Azure Database Migration Service
 
@@ -146,7 +100,9 @@ For more information, see:
 
 ### Data Migration Assistant
 
-Data Migration Assistant helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
+Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
+
+Data Migration Assistant is integrated with Azure Migrate, allowing you to track all assessment progress in the Azure Migrate dashboard. Launch DMA from Azure Migrate by adding the Azure Migrate: Database Assessment tool, and add your database assessment to Azure Migrate by selecting the "Upload to Azure Migrate" button in DMA.
 
 > [!NOTE]
 > For large migrations (in terms of number and size of databases), we recommend that you use Azure Database Migration Service, which can migrate databases at scale.
@@ -162,7 +118,7 @@ Start using Data Migration Assistant with these steps:
 1. Select **Next** to start the assessment.
 1. View results in Data Migration Assistant.
 
-For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
+For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports, and then use provided Power BI reports to analyze the results.
 
 For more information, including detailed usage steps, see:
 
@@ -208,7 +164,7 @@ Several third-party migration tools and ISV services can assist you with the mig
 
 ### UnifyCloud
 
-UnifyCloud is an ISV service that provides assessment, migration and modernization automation tools.
+UnifyCloud is an ISV service that provides assessment, migration, and modernization automation tools.
 
 [Learn more](https://www.unifycloud.com)
 
@@ -255,15 +211,15 @@ Azure DevOps is the suggested tool for project management during a cloud migrati
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
-- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet and schedule management.
+- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
 - [Microsoft teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
 - [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
-These are not the only tools available. Many other third-party tools are widely used in the project management community.
+These project management tools are not the only tools available. Many other third-party tools are widely used in the project management community.
 
 ### Set up for DevOps
 
-As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
+As, you migrate into cloud technologies it presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
 Azure DevOps provides the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [Quickstart: CI/CD with Azure DevOps](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
@@ -277,4 +233,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 ## [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md) section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place additional usage requirements on your services, periodic cost analysis helps you avoid unexpected usage charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md) section.
