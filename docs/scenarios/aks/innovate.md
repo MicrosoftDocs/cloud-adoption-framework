@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: innovate
 ---
 
 # Innovate with <Insert Scenario Name>

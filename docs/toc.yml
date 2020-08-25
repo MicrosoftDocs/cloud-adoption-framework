@@ -6,42 +6,44 @@ items:
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
  
-    - name: AKS adoption scenario
+  - name: AKS adoption scenario
+    items:
+    - name: Overview
+      href: scenarios/aks/index.md
+    - name: strategy
+      href: scenarios/aks/strategy.md
+    - name: Planning
+      href: scenarios/aks/plan.md
+    - name: Azure landing zone review
+      href: scenarios/aks/ready.md
+    - name: Innovate
+      href: scenarios/aks/innovate.md
+    - name: Migrate - Assess workloads
+      href: scenarios/aks/migrate-assess.md
+    - name: Migrate - Deploy workloads
+      href: scenarios/aks/migrate-deploy.md
+    - name: Migrate - Release workloads
+      href: scenarios/aks/migrate-release.md
+    - name: Enterprise-Scale landing zone
       items:
       - name: Overview
-        href: scenarios/aks/index.md
-      - name: strategy
-        href: scenarios/aks/strategy.md
-      - name: Planning
-        href: scenarios/aks/plan.md
-      - name: Azure landing zone review
-        href: scenarios/aks/ready.md
-      - name: Assess
-        href: scenarios/aks/migrate-assess.md
-      - name: Migrate (or Deploy)
-        href: scenarios/aks/migrate-deploy.md
-      - name: Release
-        href: scenarios/aks/migrate-release.md
-      - name: Enterprise-Scale landing zone
-        items:
-        - name: Overview
-          href: scenarios/aks/enterprise-scale-landing-zone.md
-        - name: Enterprise enrollment and Azure AD Tenant
-          href: scenarios/aks/eslz-enterprise-enrollment-and-azure-ad-tenants.md
-        - name: Identity and Access Management
-          href: scenarios/aks/eslz-identity-and-access-management.md
-        - name: Management group and subscription organization
-          href: scenarios/aks/eslz-management-group-and-subscription-organization.md
-        - name: Network topology and connectivity
-          href: scenarios/aks/eslz-network-topology-and-connectivity.md
-        - name: Management and Monitoring
-          href: scenarios/aks/eslz-management-and-monitoring.md
-        - name: Business continuity and disaster recovery
-          href: ready/enterprise-scale/eslz-business-continuity-and-disaster-recovery.md
-        - name: Security governance and compliance
-          href: scenarios/aks/eslz-security-governance-and-compliance.md
-        - name: Platform automation and DevOps
-          href: ready/enterprise-scale/eslz-platform-automation-and-devops.md
+        href: scenarios/aks/enterprise-scale-landing-zone.md
+      - name: Enterprise enrollment and Azure AD Tenant
+        href: scenarios/aks/eslz-enterprise-enrollment-and-azure-ad-tenants.md
+      - name: Identity and Access Management
+        href: scenarios/aks/eslz-identity-and-access-management.md
+      - name: Management group and subscription organization
+        href: scenarios/aks/eslz-management-group-and-subscription-organization.md
+      - name: Network topology and connectivity
+        href: scenarios/aks/eslz-network-topology-and-connectivity.md
+      - name: Management and Monitoring
+        href: scenarios/aks/eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: ready/enterprise-scale/eslz-business-continuity-and-disaster-recovery.md
+      - name: Security governance and compliance
+        href: scenarios/aks/eslz-security-governance-and-compliance.md
+      - name: Platform automation and DevOps
+        href: ready/enterprise-scale/eslz-platform-automation-and-devops.md
 
   - name: About the Framework
     href: overview.md
