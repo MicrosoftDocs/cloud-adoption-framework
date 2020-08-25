@@ -180,7 +180,7 @@ Cloud migration tools make it possible to migrate all VMs in a datacenter in one
 
 With each iteration, the cloud adoption team gets better at migrating workloads. These steps start the technical team on this maturity curve:
 
-1. Migrate your first workload in a pure information (IaaS) approach by using the tools outlined in the [Azure migration guide](../migrate/azure-migration-guide/index.md).
+1. Migrate your first workload in a pure information as a service (IaaS) approach by using the tools outlined in the [Azure migration guide](../migrate/azure-migration-guide/index.md).
 2. Expand tooling options to use migration and modernization by using the [migration scenarios](../migrate/azure-best-practices/contoso-migration-overview.md).
 3. Develop your technical strategy by using broader approaches outlined in the [migration best practices](../migrate/azure-best-practices/index.md).
 4. Improve consistency, reliability, and performance through an efficient migration-factory approach as outlined in [Migration process improvements](../migrate/migration-considerations/index.md).
