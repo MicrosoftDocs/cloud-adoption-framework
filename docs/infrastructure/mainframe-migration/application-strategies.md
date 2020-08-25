@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docutune:ignore GDGs -->
+<!-- docutune:casing GDGs -->
 <!-- cSpell:ignore njray nanra Attunity Codit DRDA ISAM ISQL LPARS VSAM ODBC JDBC GDGs REXX dbextents Raincode Tmax -->
 
 # Mainframe application migration
