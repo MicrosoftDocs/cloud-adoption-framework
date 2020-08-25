@@ -5,6 +5,46 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
+ 
+  - name: SAP adoption scenario
+    items:
+    - name: Overview
+      href: scenarios/sap/index.md
+    - name: strategy
+      href: scenarios/sap/strategy.md
+    - name: Planning
+      href: scenarios/sap/plan.md
+    - name: Azure landing zone review
+      href: scenarios/sap/ready.md
+    - name: Innovate
+      href: scenarios/sap/innovate.md
+    - name: Migrate - Assess workloads
+      href: scenarios/sap/migrate-assess.md
+    - name: Migrate - Deploy workloads
+      href: scenarios/sap/migrate-deploy.md
+    - name: Migrate - Release workloads
+      href: scenarios/sap/migrate-release.md
+    - name: Enterprise-Scale landing zone
+      items:
+      - name: Overview
+        href: scenarios/sap/enterprise-scale-landing-zone.md
+      - name: Enterprise enrollment and Azure AD Tenant
+        href: scenarios/sap/eslz-enterprise-enrollment-and-azure-ad-tenants.md
+      - name: Identity and Access Management
+        href: scenarios/sap/eslz-identity-and-access-management.md
+      - name: Management group and subscription organization
+        href: scenarios/sap/eslz-management-group-and-subscription-organization.md
+      - name: Network topology and connectivity
+        href: scenarios/sap/eslz-network-topology-and-connectivity.md
+      - name: Management and Monitoring
+        href: scenarios/sap/eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: scenarios/sap/eslz-business-continuity-and-disaster-recovery.md
+      - name: Security governance and compliance
+        href: scenarios/sap/eslz-security-governance-and-compliance.md
+      - name: Platform automation and DevOps
+        href: scenarios/sap/eslz-platform-automation-and-devops.md
+
 
   - name: About the Framework
     href: overview.md
