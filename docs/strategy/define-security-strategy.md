@@ -91,7 +91,7 @@ Many organizations are already on this journey because they have been managing t
 
 The functions of the [NIST cybersecurity framework](https://www.nist.gov/cyberframework) serve as a useful guide on how to balance investments between the complementary activities of identify, protect, detect, respond, and recover in a resilient strategy.
 
-More on cybersecurity resilience and the ultimate goals of cybersecurity controls is discussed in [How do you keep your organization's risk down](https://docs.microsoft.com/azure/architecture/framework/security/resilience).
+More on cybersecurity resilience and the ultimate goals of cybersecurity controls is discussed in [How do you keep your organization's risk down](/azure/architecture/framework/security/resilience).
 
 ### How the cloud is changing security
 
@@ -147,7 +147,7 @@ Building a resilient security posture in the cloud requires several parallel com
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
 
-  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3).
+  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](/security/ciso-workshop/ciso-workshop-module-3).
 
 ### Security and trust
 
@@ -235,7 +235,7 @@ This section describes the key relationships that frequently change on the journ
 
   - **Security:** Does the cloud provider follow industry best practices for security? Has this been validated by independent regulatory bodies?
 
-    - [Microsoft cloud app security](https://docs.microsoft.com/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
+    - [Microsoft cloud app security](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
     - The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) makes regulatory compliance certifications, audit reports, pen tests, and more available to customers. These documents include many details of internal security practices (notably the SOC 2 type 2 report and FedRAMP Moderate system security plan).
 
   - **Business competitor:** Is the cloud provider a significant business competitor in your industry? Do you have sufficient protections in the cloud services contract or other means to protect your business against potentially hostile actions?

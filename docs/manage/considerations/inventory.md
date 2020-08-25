@@ -1,5 +1,5 @@
 ---
-title: "Inventory and visibility in Azure"
+title: Inventory and visibility in Azure cloud management
 description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility).
 author: BrianBlanchard
 ms.author: brblanch
@@ -105,9 +105,9 @@ Data without action produces little return. Cloud management might expand beyond
 
 Offline processes and communication about commitments to business stakeholders often require reporting. Self-service reporting or periodic reporting might be a necessary component of an enhanced management baseline.
 
-### IT Service Management (ITSM) integration
+### IT service management (ITSM) integration
 
-ITSM integration is often the first example of acting on inventory and visibility. When deviations from expected performance patterns arise, ITSM integration uses alerts from the cloud platform to trigger tickets in a separate service management tool to trigger remediation activities. Some operating models might require ITSM integration as an aspect of the enhanced management baseline.
+ITSM integration is often the first example of acting on inventory and visibility. When deviations from expected performance patterns arise, ITSM integration uses alerts from the cloud platform to trigger tickets in a separate IT service management tool to trigger remediation activities. Some operating models might require ITSM integration as an aspect of the enhanced management baseline.
 
 ### Data centralization
 

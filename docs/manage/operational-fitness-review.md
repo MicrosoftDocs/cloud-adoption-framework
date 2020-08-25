@@ -13,7 +13,7 @@ ms.subservice: operate
 
 As your enterprise begins to operate workloads in Azure, the next step is to establish a process for _operational fitness review_. This process enumerates, implements, and iteratively reviews the _nonfunctional requirements_ for these workloads. Nonfunctional requirements are related to the expected operational behavior of the service.
 
-There are five essential categories of nonfunctional requirements, known as the [pillars of architecture excellence](https://docs.microsoft.com/azure/architecture/framework):
+There are five essential categories of nonfunctional requirements, known as the [pillars of architecture excellence](/azure/architecture/framework):
 
 - Cost optimization
 - Operational excellence
@@ -37,12 +37,12 @@ As discussed in [Get started: Accelerate migration](../get-started/migrate.md), 
 
 During this process, the focus is often on the features of the service: the set of _functional_ requirements that you want the service to perform. For example, a product-delivery service requires features for determining the source and destination locations of the product, tracking the product during delivery, and sending notifications to the customer.
 
-The _nonfunctional_ requirements, in contrast, relate to properties such as the service's [availability](https://docs.microsoft.com/azure/architecture/checklist/availability), [resiliency](https://docs.microsoft.com/azure/architecture/resiliency), and [scalability](/azure/architecture/framework/scalability/performance-efficiency). These properties differ from the functional requirements because they don't directly affect the final function of any particular feature in the service. However, nonfunctional requirements do relate to the performance and continuity of the service.
+The _nonfunctional_ requirements, in contrast, relate to properties such as the service's [availability](/azure/architecture/checklist/availability), [resiliency](/azure/architecture/resiliency), and [scalability](/azure/architecture/framework/scalability/performance-efficiency). These properties differ from the functional requirements because they don't directly affect the final function of any particular feature in the service. However, nonfunctional requirements do relate to the performance and continuity of the service.
 
 You can specify some nonfunctional requirements in terms of a service-level agreement (SLA). For example, you can express service continuity as a percentage of availability: "Available 99.99 percent of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
 
 > [!NOTE]
-> For more information about resiliency requirements, see [Designing reliable Azure applications](https://docs.microsoft.com/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), and SLA.
+> For more information about resiliency requirements, see [Designing reliable Azure applications](/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), and SLA.
 
 ## Process for operational fitness review
 
@@ -64,7 +64,7 @@ The steps in this phase capture the requirements for conducting a regular review
 
 1. **Analyze service dependencies**. Most business operations require orchestration among multiple supporting services. It's important to understand the dependencies between the services, and the flow of mission-critical transactions through these services.
 
-    Also consider the dependencies between on-premises services and Azure services. In the shopping-cart example, the inventory stock-management service might be hosted on-premises and ingest data entered by employees from a physical warehouse. However, it might store data off-premises in an Azure service, such as [Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction), or a database, such as [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction).
+    Also consider the dependencies between on-premises services and Azure services. In the shopping-cart example, the inventory stock-management service might be hosted on-premises and ingest data entered by employees from a physical warehouse. However, it might store data off-premises in an Azure service, such as [Azure Storage](/azure/storage/common/storage-introduction), or a database, such as [Azure Cosmos DB](/azure/cosmos-db/introduction).
 
 An output from these activities is a set of _scorecard metrics_ for service operations. The scorecard measures criteria such as availability, scalability, and disaster recovery. Scorecard metrics express the operational criteria that you expect the service to meet. These metrics can be expressed at any level of granularity that's appropriate for the service operation.
 
@@ -116,17 +116,17 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
 
 ## Recommended resources
 
-- [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework): Learn about guiding tenets for improving the quality of a workload. The framework consists of five pillars of architecture excellence:
+- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework): Learn about guiding tenets for improving the quality of a workload. The framework consists of five pillars of architecture excellence:
   - Cost optimization
   - Operational excellence
   - Performance efficiency
   - Reliability
   - Security
-- [Ten design principles for Azure applications](https://docs.microsoft.com/azure/architecture/guide/design-principles).
+- [Ten design principles for Azure applications](/azure/architecture/guide/design-principles).
     Follow these design principles to make your application more scalable, resilient, and manageable.
-- [Designing resilient applications for Azure](https://docs.microsoft.com/azure/architecture/resiliency).
+- [Designing resilient applications for Azure](/azure/architecture/resiliency).
     Build and maintain reliable systems using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
-- [Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns).
+- [Cloud design patterns](/azure/architecture/patterns).
     Use design patterns to build applications on the pillars of architecture excellence.
-- [Azure Advisor](https://docs.microsoft.com/azure/advisor).
+- [Azure Advisor](/azure/advisor).
     Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources for high availability, security, performance, and cost.

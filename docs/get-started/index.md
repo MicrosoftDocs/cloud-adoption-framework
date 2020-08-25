@@ -17,8 +17,8 @@ These common scenarios provide a roadmap through the Microsoft Cloud Adoption Fr
 <!-- markdownlint-disable MD033 -->
 <br>
 
-|                                                                                     |                                                                                                                                |
-|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| Scenario | Description |
+|----------|-------------|
 | [We need to understand the fundamental concepts around cloud adoption](./cloud-concepts.md) | If your journey involves the cloud, there are a few initial concepts to understand and decisions to make. |
 | [We want to migrate existing workloads to the cloud](./migrate.md)                   | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
 | [We want to build new products and services in the cloud](./innovate.md)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
@@ -29,7 +29,7 @@ These common scenarios provide a roadmap through the Microsoft Cloud Adoption Fr
 | [We want to apply the right controls to improve reliability](./reliability.md)                   | This getting-started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
 | [We need to ensure performance across the enterprise](./performance.md)                               | This getting-started guide can help you establish processes for maintaining performance across the enterprise.                               |
 | [We want to align our organization](./org-alignment.md)                               | This getting-started guide can help you establish an appropriately staffed organizational structure.                               |
-| [We're considering building a cloud strategy team](./team/cloud-strategy.md)     | This guide helps you decide if you need a strategy team, and it outlines what that team does.                                |
+| [We're considering building a cloud strategy team](./team/cloud-strategy.md)     | This guide helps you decide whether you need a strategy team, and it outlines what that team does.                                |
 | [We're considering building a cloud adoption team](./team/cloud-adoption.md)     | This guide outlines steps that help you determine the right type of adoption team for your needs.              |
 | [We're&nbsp;considering&nbsp;building&nbsp;a&nbsp;cloud&nbsp;governance&nbsp;team](./team/cloud-governance.md) | This guide can help you build a governance team to evaluate and manage risks and risk tolerance.                                         |
 | [We're considering building a cloud operations team](./team/cloud-operations.md) | This guide helps you establish teams to focus on monitoring, repairing, and remediating issues related to traditional IT operations and assets. |

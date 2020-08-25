@@ -32,8 +32,8 @@ Perimeter networks make use of the following Azure features and services:
 > [!NOTE]
 > Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
 >
-> - [Implement a perimeter network between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
-> - [Implement a perimeter network between Azure and the internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+> - [Implement a perimeter network between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
+> - [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 
 Usually, your Central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
 
@@ -108,16 +108,16 @@ Real-time telemetry is available through Azure Monitor views both during an atta
 
 <!-- links -->
 
-[Virtual-networks]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview
-[Network-security-groups]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg
-[User-defined-routes]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
-[Network-virtual-appliances]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
-[Azure-firewall]: https://docs.microsoft.com/azure/firewall/overview
-[Perimeter-network]: https://docs.microsoft.com/azure/best-practices-network-security
-[Alb]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
-[DDoS]: https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview
-[PIP]: https://docs.microsoft.com/azure/virtual-network/virtual-network-public-ip-address
-[Afd]: https://docs.microsoft.com/azure/frontdoor/front-door-overview
-[Afdwaf]: https://docs.microsoft.com/azure/frontdoor/waf-overview
-[Appgw]: https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction
-[Appgwwaf]: https://docs.microsoft.com/azure/application-gateway/application-gateway-web-application-firewall-overview
+[Virtual-networks]: /azure/virtual-network/virtual-networks-overview
+[Network-security-groups]: /azure/virtual-network/virtual-networks-nsg
+[User-defined-routes]: /azure/virtual-network/virtual-networks-udr-overview
+[Network-virtual-appliances]: /azure/architecture/reference-architectures/dmz/nva-ha
+[Azure-firewall]: /azure/firewall/overview
+[Perimeter-network]: /azure/best-practices-network-security
+[Alb]: /azure/load-balancer/load-balancer-overview
+[DDoS]: /azure/virtual-network/ddos-protection-overview
+[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[Afd]: /azure/frontdoor/front-door-overview
+[Afdwaf]: /azure/frontdoor/waf-overview
+[Appgw]: /azure/application-gateway/application-gateway-introduction
+[Appgwwaf]: /azure/application-gateway/application-gateway-web-application-firewall-overview

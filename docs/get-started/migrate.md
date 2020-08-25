@@ -24,7 +24,7 @@ Use this guide to reduce the number of materials and the processes required to a
 
 ![Get started with migration in Azure](../_images/get-started/migration-map.png)
 
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](https://docs.microsoft.com/assessments/?id=strategic-migration-assessment). Use it to identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). Use it to identify the guidance that best aligns to your current needs.
 
 ## Get started
 
@@ -41,7 +41,7 @@ To avoid common migration blockers, create a clear and concise business strategy
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record motivations and desired business outcomes.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -59,7 +59,7 @@ Partners, Microsoft Services, or various Microsoft programs are available to sup
 **Deliverables:**
 
 - Establish terms and conditions or other contractual agreements before you engage supporting partners.
-- Identify approved partners in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Identify approved partners in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -80,7 +80,7 @@ Discovery and assessment provide a deeper level of technical alignment, which he
 - Raw data on existing inventory.
 - Quantitative analysis on existing inventory to refine the business justification.
 - Qualitative analysis of the first 10 workloads.
-- Update business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Update business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -97,7 +97,7 @@ Making the business case for migration is likely to be an iterative conversation
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record business justification.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record business justification.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -108,9 +108,9 @@ Making the business case for migration is likely to be an iterative conversation
 
 ## Step 5: Create a migration plan
 
-The cloud adoption plan template provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect discovery results, rationalization, needed skills, and partner contracting.
+A cloud adoption plan provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect discovery results, rationalization, needed skills, and partner contracting.
 
-- [Cloud adoption plan template](../plan/template.md): Deploy the basic template.
+- [Cloud adoption plan](../plan/template.md): Define your cloud adoption plan using the basic template.
 - [Workload alignment](../plan/workloads.md): Define workloads in the backlog.
 - [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define effort for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity (people's time), and releases for the migrated workloads.
@@ -139,7 +139,7 @@ Existing employees can play a hands-on role in the migration effort, but additio
 
 **Deliverables:**
 
-- Add a skills-readiness plan to the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Add a skills-readiness plan to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -257,4 +257,4 @@ The Cloud Adoption Framework is a lifecycle solution. It can help you begin a mi
 | Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
 | Cloud&nbsp;operations&nbsp;team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |
 
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](https://docs.microsoft.com/assessments/?id=strategic-migration-assessment). Based on the answers you provide while taking the assessment, we can help you identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). Based on the answers you provide while taking the assessment, we can help you identify the guidance that best aligns to your current needs.

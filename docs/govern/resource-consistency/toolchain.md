@@ -18,7 +18,7 @@ ms.custom: governance
 
 The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)  | [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) | [Azure Automation](https://docs.microsoft.com/azure/automation/automation-intro) | [Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](/azure/azure-resource-manager/management/overview)  | [Azure Blueprints](/azure/governance/blueprints/overview) | [Azure Automation](/azure/automation/automation-intro) | [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Backup](/azure/backup/backup-overview) | [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) |
 |---------|---------|---------|---------|---------|---------|---------|---------|
 | Deploy resources                             | Yes | Yes | Yes | Yes | No  | No | No |
 | Manage resources                             | Yes | Yes | Yes | Yes | No  | No | No |
@@ -40,9 +40,9 @@ The following is a list of Azure tools that can help mature the policies and pro
 | Recover data during an outage or SLA violation     | No | No  | No  | No  | No  | Yes | Yes |
 | Recover applications and data during an outage or SLA violation     | No | No  | No  | No  | No  | Yes | Yes |
 
-Along with these Resource Consistency tools and features, you will need to monitor your deployed resources for performance and health issues. [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is the default monitoring and reporting solution in Azure. Azure Monitor provides features for monitoring your cloud resources. This list shows which feature addresses common monitoring requirements.
+Along with these Resource Consistency tools and features, you will need to monitor your deployed resources for performance and health issues. [Azure Monitor](/azure/azure-monitor/overview) is the default monitoring and reporting solution in Azure. Azure Monitor provides features for monitoring your cloud resources. This list shows which feature addresses common monitoring requirements.
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal) | [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) | [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) | [Azure Monitor REST API](https://docs.microsoft.com/rest/api/monitor) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal) | [Application Insights](/azure/application-insights/app-insights-overview) | [Log Analytics](/azure/azure-monitor/log-query/log-query-overview) | [Azure Monitor REST API](/rest/api/monitor) |
 |----------------------------------------------------|--------------|----------------------|---------------|------------------------|
 | Log virtual machine telemetry data                 | No           | No                   | Yes           | No                     |
 | Log virtual networking telemetry data              | No           | No                   | Yes           | No                     |
@@ -60,4 +60,4 @@ When planning your deployment, you will need to consider where logging data is s
 
 ## Next steps
 
-Learn to create, assign, and manage [policy definitions](https://docs.microsoft.com/azure/governance/policy) in Azure.
+Learn to create, assign, and manage [policy definitions](/azure/governance/policy) in Azure.

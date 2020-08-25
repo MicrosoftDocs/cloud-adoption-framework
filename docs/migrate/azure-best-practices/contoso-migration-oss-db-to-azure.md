@@ -45,7 +45,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 
 ## Solution design
 
-Contoso has already performed a [migration assessment](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/contoso-migration-assessment) of its digital estate by using [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview).
+Contoso has already performed a [migration assessment](../..//plan/contoso-migration-assessment.md) of its digital estate by using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
 ![Diagram shows the migration process.](./media/contoso-migration-oss-db-to-azure/migration-process.png)
 _Figure 1: The migration process._
@@ -63,9 +63,9 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 Before the migration can occur, the necessary Azure structure is required to be in place to support the administration and billing aspects of the solution.
 
-For the management requirements, several [management groups](https://docs.microsoft.com/azure/governance/management-groups/overview) were created to support the organizational structure.
+For the management requirements, several [management groups](/azure/governance/management-groups/overview) were created to support the organizational structure.
 
-For the billing requirements, each of the Azure resources are then [tagged](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) with the appropriate billing tags.
+For the billing requirements, each of the Azure resources are then [tagged](/azure/azure-resource-manager/management/tag-resources) with the appropriate billing tags.
 
 ### Migration process
 
@@ -87,7 +87,7 @@ Data migrations follow a standard and repeatable pattern. This process involves 
 
 #### Step 1: Discovery
 
-Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and the [Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows).
+Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](/azure/log-analytics/log-analytics-agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows).
 
 Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40 percent can be moved to PaaS-based services. Of the remaining 60 percent, they must be moved to an IaaS-based approach with a VM running the respective database software.
 
@@ -105,15 +105,15 @@ As the databases were inventoried, each type of database was reviewed to determi
 
 | Database type | Details | Target | Migration guide |
 | --- | --- | --- | --- |
-| **MySQL** | All supported versions upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)
-| **PostgreSQL** | All supported versions upgrade to a supported version before migration | Azure Database for PostgreSQL (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online) |
+| **MySQL** | All supported versions upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](/azure/dms/tutorial-mysql-azure-mysql-online)
+| **PostgreSQL** | All supported versions upgrade to a supported version before migration | Azure Database for PostgreSQL (PaaS) | [Guide](/azure/dms/tutorial-postgresql-azure-postgresql-online) |
 | **MariaDB** | All supported versions upgrade to a supported version before migration | Azure Database for MariaDB (PaaS) | [Guide](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1) |
 
 #### Step 4: Migration planning
 
-Because of the large number of databases, Contoso set up a project management office to keep track of every database migration instance. [Accountability and responsibilities](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/) were assigned to each business and application team.
+Because of the large number of databases, Contoso set up a project management office to keep track of every database migration instance. [Accountability and responsibilities](../..//migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
 
-Contoso also performed a [workload readiness review](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/evaluate). This review examined the infrastructure, database, and network components.
+Contoso also performed a [workload readiness review](../..//migrate/migration-considerations/assess/evaluate.md). This review examined the infrastructure, database, and network components.
 
 #### Step 5: Test migrations
 
@@ -123,7 +123,7 @@ Any rollback procedures were identified for each of the database workloads in ca
 
 For the IaaS-based workloads, the company set up all the required third-party software beforehand.
 
-After the test migration, Contoso used the various Azure [cost-estimation tools](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/estimate) to get a more accurate picture of the future operational costs of the migration.
+After the test migration, Contoso used the various Azure [cost-estimation tools](../..//migrate/migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of the migration.
 
 #### Step 6: Migration
 
@@ -141,7 +141,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 Contoso needs to:
 
-- Ensure that its new Azure database workloads are secure. For more information, see [Azure SQL Database and SQL Managed Instance security capabilities](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
+- Ensure that its new Azure database workloads are secure. For more information, see [Azure SQL Database and SQL Managed Instance security capabilities](/azure/sql-database/sql-database-security-overview).
 - Review the firewall and virtual network configurations.
 - Set up Azure Private Link so that all database traffic is kept inside Azure and the on-premises network.
 - Enable Azure Advanced Threat Protection.
@@ -151,7 +151,7 @@ Contoso needs to:
 Ensure that the Azure databases are backed up by using geo-restore. In this way, backups can be used in a paired region if a regional outage occurs.
 
 > [!IMPORTANT]
->Make sure that the Azure resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
+>Make sure that the Azure resource has a [resource lock](/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
 
 #### Licensing and cost optimization
 

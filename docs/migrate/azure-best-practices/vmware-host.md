@@ -16,4 +16,4 @@ Migrating VMware host to Azure can accelerate the standard methodology outlined 
 ![Diagram of Cloud Adoption Framework migration model.](../../_images/migrate/methodology.png)
 *Figure 1*
 
-The table of contents on the left outlines best practices across multiple Microsoft web properties. These best practices  can guide the execution of your VMware host migration to Azure VMware Solution. Bookmark this page to quickly reference the full list of best practices.
+The table of contents on the left outlines best practices across multiple Microsoft web properties. These best practices can guide the execution of your VMware host migration to Azure VMware Solution. Bookmark this page to quickly reference the full list of best practices.
