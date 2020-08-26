@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore Eason -->
 
-<!-- docsTest:ignore "Eason Matrix" -->
+<!-- docsTest:casing "Eason Matrix" -->
 
 # Business change plan
 

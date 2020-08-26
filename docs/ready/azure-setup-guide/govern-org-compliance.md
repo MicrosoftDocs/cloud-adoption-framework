@@ -11,9 +11,7 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore tvuylsteke >
-
-<!-- markdownlint-disable MD024 MD025 -->
+<!-- cSpell:ignore tvuylsteke -->
 
 # Governance, security, and compliance in Azure
 
@@ -49,9 +47,7 @@ To create a blueprint:
 
 ::: zone target="docs"
 
-<!-- docsTest:ignore "Next : Artifacts" "Blueprints: Get started" "Blueprints: Blueprint definitions" -->
-
-1. Go to [Blueprints: Get started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
+1. In the Azure portal, go to [Blueprints: Get started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. Enter the **Blueprint name**, then select the appropriate **Definition location**.
@@ -77,7 +73,7 @@ To publish a blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. In the Azure portal, go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint definition you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.

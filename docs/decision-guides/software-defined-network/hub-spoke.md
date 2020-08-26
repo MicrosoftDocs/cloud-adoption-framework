@@ -14,7 +14,7 @@ ms.custom: governance
 
 The hub and spoke networking model organizes your Azure-based cloud network infrastructure into multiple connected virtual networks. This model allows you to more efficiently manage common communication or security requirements and deal with potential subscription limitations.
 
-In the hub and spoke model, the _hub_ is a virtual network that acts as a central location for managing external connectivity and hosting services used by multiple workloads. The _spokes_ are virtual networks that host workloads and connect to the central hub through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview).
+In the hub and spoke model, the *hub* is a virtual network that acts as a central location for managing external connectivity and hosting services used by multiple workloads. The *spokes* are virtual networks that host workloads and connect to the central hub through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview).
 
 All traffic passing in or out of the workload spoke networks is routed through the hub network where it can be routed, inspected, or otherwise managed by centrally managed IT rules or processes.
 
@@ -22,7 +22,7 @@ This model aims to address the following concerns:
 
 - **Cost savings and management efficiency.** Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort across multiple workloads.
 - **Overcoming subscription limits.** Large cloud-based workloads may require the use of more resources than are allowed within a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure networking limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits).
-- **Separation of concerns.** The ability to deploy individual workloads between Central IT teams and workloads teams.
+- **Separation of concerns.** The ability to deploy individual workloads between central IT teams and workload teams.
 
 The following diagram shows an example hub and spoke architecture including centrally managed hybrid connectivity.
 

@@ -44,8 +44,6 @@ Answer the following questions about your workloads to help you make decisions b
 
 Azure networking is composed of multiple products and services that provide different networking capabilities. As part of your networking design process, you can compare your workload requirements to the networking scenarios in the following table to identify the Azure tools or services you can use to provide these networking capabilities:
 
-<!-- markdownlint-disable MD033 -->
-
 | Scenario | Networking product or service |
 | --- | --- |
 | I need the networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network) |
@@ -61,8 +59,6 @@ Azure networking is composed of multiple products and services that provide diff
 | I need native firewall capabilities, with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](/azure/firewall/overview) |
 | I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](/azure/virtual-wan) |
 | I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](/azure/frontdoor) |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Choose a networking architecture
 
@@ -80,7 +76,7 @@ The following table summarizes the primary scenarios that these patterns support
 | You have many branch offices that need to connect to each other and to Azure.                                                                                                                                                                                                                                                                                         | [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) |
 
 <!-- TODO: Refactor VDC content below. -->
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- docsTest:casing "Azure Virtual Datacenter" -->
 
 ### Azure Virtual Datacenter
 

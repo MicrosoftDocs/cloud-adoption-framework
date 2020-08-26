@@ -220,7 +220,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
 
 Because Windows Virtual Desktop doesn't support user profile disks (UPDs), Contoso needs to convert all the UPDs to FSLogix via the [FSLogixMigration PowerShell module](https://aka.ms/FSLogixMigrationPreviewModule).
 
-<!-- docsTest:ignore FSLogixMigration -->
+<!-- docsTest:casing FSLogixMigration -->
 
 After Contoso imports the FSLogixMigration module, it runs the following PowerShell cmdlets to migrate from UPDs to FSLogix.
 

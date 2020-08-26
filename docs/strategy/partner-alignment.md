@@ -1,5 +1,5 @@
 ---
-title: "Partner alignment strategy"
+title: Partner alignment strategy
 description: Use the Cloud Adoption Framework for Azure to include partner alignment in your strategy
 author: BrianBlanchard
 ms.author: brblanch
@@ -41,6 +41,7 @@ Throughout the cloud adoption lifecycle, the various teams may require support t
 - **Manage:** Support or ongoing managed services to operate the cloud platform and the workloads hosted in the cloud.
 
 Few corporations have the diversity of skills required to support strategy, planning, readiness, adoption, governance, and management. Partners and other support models are often necessary to fill in the gaps in the team's skills and responsibilities.
+
 Various partnership options can help develop needed skills, augment staffing requirement, or completely offload specific processes.
 
 ## Partnership options
@@ -55,7 +56,7 @@ You are not alone in your cloud journey. There are several options to support yo
 
 Microsoft certified solution providers specialize in providing modern customer solutions base on Microsoft technologies across the world. Optimize your business in the cloud with help from an experienced partner.
 
-**[Find a cloud solution provider (CSP)](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
+**[Find a Cloud Solution Provider (CSP)](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
 
 Azure expert managed services providers (MSP) have undergone a third-party audit to validate a higher tier of capability, demonstrated through certified staff headcounts, customer references, annual consumption of Azure at scale, and other criteria.
 
@@ -72,7 +73,8 @@ During a typical FastTrack for Azure engagement, Microsoft helps to define the b
 ### Azure Migration Program (AMP)
 
 The [Azure Migration Program (AMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
-The program leverages FastTrack for Azure and Azure solution providers to improve customer success during migration.
+
+The program uses FastTrack for Azure and Azure solution providers to improve customer success during migration.
 
 Watch this short video to get an overview of how the Azure Migration Program can help you.
 
@@ -89,6 +91,7 @@ If you have questions or need help, [create a support request](https://portal.az
 ## Shortlist of partner options
 
 During strategy development, its hard to define specific partnership needs. During development of the cloud adoption plan and skilling plan, those needs will come into focus.
+
 But, based on the culture and maturity of your team, it may be possible to decide on a partnership option that is more aligned with your expected needs.
 
 Choose one or more of the partnership options above to narrow down the options to investigate first.
@@ -96,7 +99,9 @@ Choose one or more of the partnership options above to narrow down the options t
 ## Begin contract and paperwork reviews
 
 As the shortlist of options is reviewed, there will likely be one or more partners that stand out. If there is a clear leader among the partners, start the process to review contracts and paperwork with the partner.
+
 The contracting process can take time. Reviewing legal terms ahead of time can remove one barrier to engagement when your teams need help the most.
+
 This is especially true if your company requires vendors to be added to an approved vendor list.
 
 ## Next steps

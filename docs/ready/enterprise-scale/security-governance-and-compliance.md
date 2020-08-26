@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-scale security governance and compliance
 
-This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services. 
+This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
 ## Define encryption and key management
 

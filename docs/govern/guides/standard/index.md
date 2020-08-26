@@ -1,5 +1,5 @@
 ---
-title: "Standard enterprise governance guide"
+title: Standard enterprise governance guide
 description: Follow a fictional standard enterprise through various stages of governance maturity, as it defines a minimum viable product (MVP) based on best practices.
 author: BrianBlanchard
 ms.author: brblanch
@@ -19,7 +19,7 @@ This governance guide follows the experiences of a fictional company through var
 As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!WARNING]
-> This MVP is a baseline starting point, based on a set of assumptions. Even this minimal set of best practices is based on corporate policies that are driven by unique business risks and risk tolerances. To see if these assumptions apply to you, read the [longer narrative](./narrative.md) that follows this article.
+> This MVP is a baseline starting point, based on a set of assumptions. Even this minimal set of best practices is based on corporate policies that are driven by unique business risks and risk tolerances. To see whether these assumptions apply to you, read the [longer narrative](./narrative.md) that follows this article.
 
 ### Governance best practices
 

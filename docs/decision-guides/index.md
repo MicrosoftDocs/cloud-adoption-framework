@@ -1,5 +1,5 @@
 ---
-title: "Architectural decision guides"
+title: Architectural decision guides
 description: Use these core cloud deployment infrastructure component patterns and models to support your specific cloud deployment scenarios.
 author: rotycenh
 ms.author: abuck

@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency discipline template"
+title: Resource Consistency discipline template
 description: Use this template as a starting point for documenting and communicating policy statements that govern IT operations and management in the cloud.
 author: BrianBlanchard
 ms.author: brblanch

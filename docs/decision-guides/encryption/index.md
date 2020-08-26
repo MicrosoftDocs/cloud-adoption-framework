@@ -1,5 +1,5 @@
 ---
-title: "Encryption decision guide"
+title: Encryption decision guide
 description: Implement an encryption policy, a core service in Azure migrations that provides additional layers of security for your cloud-based workloads and data.
 author: rotycenh
 ms.author: abuck

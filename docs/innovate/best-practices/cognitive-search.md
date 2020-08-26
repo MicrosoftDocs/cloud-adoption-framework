@@ -11,7 +11,8 @@ ms.subservice: innovate
 
 <!-- cSpell:ignore Lucene -->
 
-<!-- docsTest:ignore "Azure Search" "JFK Files" -->
+<!-- docsTest:casing "JFK Files" -->
+<!-- docsTest:ignore "Azure Search" -->
 
 # What is Azure Cognitive Search?
 
@@ -56,11 +57,11 @@ After you define an index, you're ready to upload content. You can use either a 
 
 The pull model retrieves data from external data sources. It's supported through indexers that streamline and automate aspects of data ingestion, such as connecting to, reading, and serializing data. [Indexers](/rest/api/searchservice/Indexer-operations) are available for Azure Cosmos DB, Azure SQL Database, Azure Blob storage, and SQL Server hosted in an Azure Virtual Machines instance. You can configure an indexer for on-demand or scheduled data refresh.
 
-The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) or [How to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
+The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) or [how to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
 
 ### Step 4: Search
 
-After populating an index, you can [issue search queries](/azure/search/search-query-overview) to your service endpoint by using simple HTTP requests with [REST APIs](/rest/api/searchservice/Search-Documents) or the [.NET SDK](/dotnet/api/microsoft.azure.search.idocumentsoperations?view=azure-dotnet). Step through [creating your first search application](/azure/search/tutorial-csharp-create-first-app) to build and then extend a web page that collects user input and handles results. You can also use [Postman for interactive REST](/azure/search/search-get-started-postman) calls or the built-in [Search explorer](/azure/search/search-explorer) in the Azure portal to query an existing index.
+After populating an index, you can [issue search queries](/azure/search/search-query-overview) to your service endpoint by using simple HTTP requests with [REST APIs](/rest/api/searchservice/search-documents) or the [.NET SDK](/dotnet/api/microsoft.azure.search.idocumentsoperations?view=azure-dotnet). Step through [creating your first search application](/azure/search/tutorial-csharp-create-first-app) to build and then extend a web page that collects user input and handles results. You can also use [Postman for interactive REST](/azure/search/search-get-started-postman) calls or the built-in [Search explorer](/azure/search/search-explorer) in the Azure portal to query an existing index.
 
 ## Next steps
 

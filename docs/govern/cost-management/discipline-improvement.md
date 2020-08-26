@@ -1,5 +1,5 @@
 ---
-title: "Cost Management discipline improvement"
+title: Cost Management discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Cost Management discipline in each phase of cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -18,7 +18,7 @@ This article outlines potential tasks your company perform to develop and mature
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-_Figure 1: Adoption phases of the incremental approach to cloud governance._
+*Figure 1: Adoption phases of the incremental approach to cloud governance.*
 
 No single document can account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Cost Management discipline capabilities.
 
@@ -41,7 +41,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 - Validate learning metrics that you use to report on the successful allocation of funding.
 - Understand the desired cloud accounting model that affects how cloud costs should be accounted for.
 - Become familiar with the digital estate plan and validate accurate costing expectations.
-- Evaluate buying options to determine if it's better to "pay as you go" or to make a precommitment by purchasing an Enterprise Agreement.
+- Evaluate buying options to determine whether it's better to "pay as you go" or to make a precommitment by purchasing an Enterprise Agreement.
 - Align business goals with planned budgets and adjust budgetary plans as necessary.
 - Develop a goals and budget reporting mechanism to notify technical and business stakeholders at the end of each cost cycle.
 
@@ -54,13 +54,13 @@ Several technical and nontechnical prerequisites are required to successfully mi
 - Implement your [Cost Management toolchain](./toolchain.md) by rolling out in a predeployment phase.
 - Update the architecture guidelines document and distribute to key stakeholders.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
-- Determine if your purchase requirements align with your budgets and goals.
+- Determine whether your purchase requirements align with your budgets and goals.
 
 **Potential activities:**
 
 - Align your budgetary plans with the [subscription strategy](../../decision-guides/subscriptions/index.md) that defines your core ownership model.
 - Use the [Resource Consistency discipline strategy](../../decision-guides/resource-consistency/index.md) to enforce architecture and cost guidelines over time.
-- Determine if any cost anomalies affect your adoption and migration plans.
+- Determine whether any cost anomalies affect your adoption and migration plans.
 
 ## Adopt and migrate
 
@@ -96,13 +96,13 @@ After the transformation is complete, governance and operations must live on for
 - Adjust plans quarterly to reflect changes to actual spending.
 - Determine financial alignment to P&Ls for business unit subscriptions.
 - Analyze stakeholder value and cost reporting methods on a monthly basis.
-- Remediate underused assets and determine if they're worth continuing.
+- Remediate underused assets and determine whether they're worth continuing.
 - Detect misalignments and anomalies between the plan and actual spending.
 - Assist the cloud adoption teams and the cloud strategy team with understanding and resolving these anomalies.
 
 ## Next steps
 
-Now that you understand the concept of cloud cost governance, review the [cost management best practices](./best-practices.md) to find ways to reduce your overall spend.
+Now that you understand the concept of cloud cost governance, review the [Cost Management discipline best practices](./best-practices.md) to find ways to reduce your overall spend.
 
 > [!div class="nextstepaction"]
 > [Cost management best practices](./best-practices.md)

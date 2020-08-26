@@ -1,5 +1,5 @@
 ---
-title: "Costing and sizing Azure resources"
+title: Costing and sizing Azure resources
 description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing resources in Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docsTest:ignore ARO -->
+<!-- docutune:casing ARO "standard HDD" -->
 
 # Best practices for costing and sizing resources hosted in Azure
 
@@ -45,7 +45,7 @@ The following best practices are typically completed by a member of the cloud go
 
 Before making architectural changes, consult the technical lead for the workload. Facilitating a review of the workload using [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) to guide decisions regarding the following types of architectural changes.
 
-- **Azure App Service.** Verify production requirements for any Premium tier App Service plans. Without an understanding of the business requirements for a workload and the underlying assets configuration, its difficult to determine if a Premium tier plan is required.
+- **Azure App Service.** Verify production requirements for any Premium tier App Service plans. Without an understanding of the business requirements for a workload and the underlying assets configuration, its difficult to determine whether a Premium tier plan is required.
 - **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization. Before a workload can scale horizontally, the technical team must verify that the application is idempotent. Achieving horizontal scale may first require changes to the code and configuration of various layers of the of the application.
 - **Autoscale.** Enable autoscale on all app services to allow for a burstable number of smaller VMs. Enabling autoscale has the same idempotent requirement, which requires an understanding of the workload architecture. The workload and supporting assets must be approved for horizontal scaling and autoscaling by the adoption team, prior to any operational changes.
 - **Implement serverless technologies:** VM workloads are often migrated "as is" to avoid downtime. Often VMs may host tasks that are intermittent, taking a short period to run, or alternatively many hours. For example, VMs that run scheduled tasks such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs. After migration, consider rearchitecting layers of the workload to serverless technologies such as Azure Functions or Azure Batch jobs.
@@ -67,7 +67,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
 - **Azure pricing calculator:** Select the products you want to estimate, for example VMs and storage, then input costs into the calculator to build an estimate.
 
     ![Azure pricing calculator](../../migrate/azure-best-practices/media/migrate-best-practices-costs/pricing.png)
-    _Azure pricing calculator._
+    *Azure pricing calculator.*
 
 - **Azure Migrate:** To estimate costs, you need to review and account for all the resources required to run your workloads in Azure. To acquire this data, you create inventory of your assets, including servers, VMs, databases, and storage. You can use Azure Migrate to collect this information.
   - Azure Migrate discovers and assesses your on-premises environment to provide an inventory.
@@ -77,7 +77,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
     - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Azure Migrate](../../migrate/azure-best-practices/media/migrate-best-practices-costs/assess.png)
-    _Azure Migrate assessment._
+    *Azure Migrate assessment.*
 
 **Learn more:**
 
@@ -93,7 +93,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 | Type | Details | Usage |
 |---|---|---|
 | **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small to midsize databases, low- to medium-volume traffic web servers. |
-| **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, app servers. |
+| **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, application servers. |
 | **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Suitable for big data, SQL, and NoSQL databases. |
 | **GPU optimized** | Specialized VMs. Single or multiple GPUs. | Heavy graphics and video editing. |
@@ -101,7 +101,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 - It's important to understand the pricing differences between these VMs, and the long-term budget effects.
 - Each type has several VM series within it.
-- Additionally, when you select a VM within a-series, you can only scale the VM up and down within that series. For example, a `DS2_v2` instance can scale up to `DS4_v2`, but it can't be changed to a instance of a different series such as a `F2s_v2` instance.
+- Additionally, when you select a VM within a-series, you can only scale the VM up and down within that series. For example, a `DS2_v2` instance can scale up to `DS4_v2`, but it can't be changed to a instance of a different series such as a `F2S_v2` instance.
 
 **Learn more:**
 
@@ -121,23 +121,17 @@ Tuning and maintaining on-premises storage (SAN or NAS), and the networks to sup
 
 Azure provides different types of storage data.
 
-<!-- markdownlint-disable MD033 -->
-
 | Data type | Details | Usage |
 | ---|---|---|
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access and connections to file data. |
-| **Disks** | Based on page blobs. <br><br> Disk type (speed): standard HDD, standard SSD, premium SSD, or ultra disks. <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
-| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect app components with asynchronous message queueing. |
+| **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard HDD, standard SSD, premium SSD, or ultra disks. <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
+| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
-
-<!--markdownlint-enable MD033 -->
 
 ### Access tiers
 
 Azure Storage provides different options for accessing block blob data. Selecting the right access tier helps ensure that you store block blob data in the most cost-effective manner.
-
-<!-- markdownlint-disable MD033 -->
 
 | Access tier | Details | Usage |
 | --- | --- | --- |
@@ -145,13 +139,9 @@ Azure Storage provides different options for accessing block blob data. Selectin
 | **Cool** | Lower storage costs, higher access and transaction costs. <br><br> Store for minimum of 30 days. | Store short-term, data is available but accessed infrequently. |
 | **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Lowest storage costs, highest access and transaction costs. | Use for data that can tolerate several hours of retrieval latency and will reside in the archive tier for at least 180 days. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Storage account types
 
 Azure provides different types of storage accounts and performance tiers.
-
-<!-- markdownlint-disable MD033 -->
 
 | Account type | Details | Usage |
 | --- | --- | --- |
@@ -160,16 +150,14 @@ Azure provides different types of storage accounts and performance tiers.
 | **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if applications need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table, or disk storage services). Provides the same durability, availability, scalability, and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Storage redundancy options
 
 Storage accounts can use different types of redundancy for resilience and high availability.
 
 | Type | Details | Usage |
 | --- | --- | --- |
-| **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a given year. | Consider if your app stores data that can be easily reconstructed. |
-| **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own availability zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected. |
+| **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a given year. | Consider whether your application stores data that can be easily reconstructed. |
+| **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own Availability Zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider whether you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected. |
 | **Geo-redundant storage (GRS)** | Protects against an entire region outage by replicating data to a secondary region that's hundreds of miles away from the primary. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available. |
 | **Read-access geo-redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Provides and 99.99 percent read availability by allowing read access from the second region used for GRS. |
 
@@ -192,13 +180,13 @@ Once resources are in production, data can be aggregated and trends analyzed at 
 - Analyze data to generate a budget baseline for Azure resource groups and resources.
 - Identify patterns of use that would allow you to reduce size and stop or pause resources to further reduce your costs.
 
-Best practices in this section include using Azure Hybrid Benefit and Azure Reserved Virtual Machine Instances, reduce cloud spending across subscriptions, using Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
+Best practices in this section include using Azure Hybrid Benefit and Azure Reserved Virtual Machine Instances, reduce cloud spending across subscriptions, using Azure Cost Management and Billing for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
 
 ## Best practice: Take advantage of Azure Hybrid Benefit
 
 Due to years of software investment in systems such as Windows Server and SQL Server, Microsoft is in a unique position to offer customers value in the cloud, with substantial discounts that other cloud providers can't necessarily provide.
 
-An integrated Microsoft on-premises/Azure product portfolio generates competitive and cost advantages. If you currently have an operating system or other software licensing through Software Assurance (sa), you can take those licenses with you to the cloud for with Azure Hybrid Benefit.
+An integrated Microsoft on-premises/Azure product portfolio generates competitive and cost advantages. If you currently have an operating system or other software licensing through Software Assurance (SA), you can take those licenses with you to the cloud for with Azure Hybrid Benefit.
 
 **Learn more:**
 
@@ -218,19 +206,19 @@ Using Azure Reserved VM Instances, you prepay for either a one-year or three-yea
 - You can cancel reserved instances.
 
 ![Azure Reserved Virtual Machine Instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
-_Figure 1: Azure reserved VMs._
+*Figure 1: Azure reserved VMs.*
 
 **Learn more:**
 
 - Learn about [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations).
 - Read the [reserved instances FAQ](https://azure.microsoft.com/pricing/reserved-vm-instances/#faq).
-- Review [pricing guidance for for SQL Server Azure VMs](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance).
+- Review [pricing guidance for SQL Server Azure VMs](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance).
 
 ## Best practice: Aggregate cloud spend across subscriptions
 
 It's inevitable that eventually you'll have more than one Azure subscription. For example, you might need an additional subscription to separate development and production boundaries, or you might have a platform that requires a separate subscription for each client. Having the ability to aggregate data reporting across all the subscriptions into a single platform is a valuable feature.
 
-To do this, you can use Azure Cost Management APIs. Then, after aggregating data into a single source such as Azure SQL, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
+To do this, you can use Azure Cost Management and Billing APIs. Then, after aggregating data into a single source such as Azure SQL Database, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
 
 **Learn more:**
 
@@ -246,7 +234,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 - For example, if your workload is used heavily Monday through Friday, 8am to 6pm, but hardly used outside those hours, you could downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down.
 - Some companies "snooze", VMs by putting them on a calendar that specifies when they should be available, and when they're not needed.
 - In addition to VM monitoring, you should monitor other networking resources such as ExpressRoute and virtual network gateways for under and over use.
-- You can monitor VM usage using Microsoft tools such as Azure Cost Management, Azure Monitor, and Azure Advisor. Third-party tools are also available.
+- You can monitor VM usage using Microsoft tools such as Azure Cost Management and Billing, Azure Monitor, and Azure Advisor. Third-party tools are also available.
 
 **Learn more:**
 
@@ -270,9 +258,9 @@ Additionally, consider general cost reductions for any nonproduction environment
 - [Auto-shutdown VMs](/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they're ready to resume development.
 - Encourage development teams to use [Azure DevTest Labs](/azure/lab-services/devtest-lab-overview) to establish their own cost-control approaches and avoid impact of the standard auto-shutdown timing in the prior step.
 
-## Best practice: Use Azure Cost Management
+## Best practice: Use Azure Cost Management and Billing
 
-Microsoft provides Azure Cost Management to help you track spending:
+Microsoft provides Azure Cost Management and Billing to help you track spending:
 
 - Helps you to monitor and control Azure spending, and optimize use of resources.
 - Reviews your entire subscription and all of its resources, and makes recommendations.
@@ -280,7 +268,7 @@ Microsoft provides Azure Cost Management to help you track spending:
 - Tracks resource usage and manage cloud costs with a single, unified view.
 - Provides rich operational and financial insights to help you make informed decisions.
 
-In Azure Cost Management, you can:
+In Azure Cost Management and Billing, you can:
 
 - **Create a budget:** Create a budget for financial accountability.
   - You can account for the services you consume or subscribe to for a specific period (monthly, quarterly, annually) and a scope (subscriptions/resource groups). For example, you can create an Azure subscription budget for a monthly, quarterly, or annual period.
@@ -288,24 +276,24 @@ In Azure Cost Management, you can:
   - Email notifications can be sent when budget thresholds are reached.
   - You can export costs management data to Azure Storage, for analysis.
 
-    ![View budgets in Azure Cost Management](../../migrate/azure-best-practices/media/migrate-best-practices-costs/budget.png)
-    _Budgets in Azure Cost Management and Billing._
+    ![View budgets in Azure Cost Management and Billing](../../migrate/azure-best-practices/media/migrate-best-practices-costs/budget.png)
+    *Budgets in Azure Cost Management and Billing.*
 
 - **Do a cost analysis:** Get a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
   - Cost analysis is available to EA users.
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-    ![Azure Cost Management analysis](../../migrate/azure-best-practices/media/migrate-best-practices-costs/analysis.png)
-    _Figure: Azure Cost Management analysis._
+    ![Azure Cost Management and Billing analysis](../../migrate/azure-best-practices/media/migrate-best-practices-costs/analysis.png)
+    *Figure: Azure Cost Management and Billing analysis.*
 
 - **Get recommendations:** Get Advisor recommendations that show you how you can optimize and improve efficiency.
 
 **Learn more:**
 
-- Read the [Azure Cost Management overview](/azure/cost-management/overview).
-- Learn how to [optimize your cloud investment with Azure Cost Management](/azure/cost-management-billing/costs/cost-mgt-best-practices).
-- Learn how to use [Azure Cost Management reports](/azure/cost-management/use-reports).
+- Read the [Azure Cost Management and Billing overview](/azure/cost-management/overview).
+- Learn how to [optimize your cloud investment with Azure Cost Management and Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
+- Learn how to use [Azure Cost Management and Billing reports](/azure/cost-management/use-reports).
 - Review a tutorial on [optimizing costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations).
 - Review the [Azure Consumption APIs](/rest/api/consumption/budgets).
 
@@ -367,7 +355,7 @@ You can optimize a VM with Azure Automation, virtual machine scale sets, auto-sh
 **Learn more:**
 
 - Learn about [vertical autoscaling](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision).
-- Review [Azure DevTest Labs: Schedule VM auto-start](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start).
+- Review [Azure DevTest Labs: schedule VM auto-start](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start).
 - Learn how to [start or stop VMs off hours in Azure Automation](/azure/automation/automation-solution-vm-management).
 - Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [Azure resource optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 

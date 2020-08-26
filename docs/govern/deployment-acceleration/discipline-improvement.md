@@ -1,5 +1,5 @@
 ---
-title: "Deployment Acceleration discipline improvement"
+title: Deployment Acceleration discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Deployment Acceleration discipline in each phase of cloud adoption.
 author: alexbuckgit
 ms.author: abuck
@@ -18,7 +18,7 @@ This article outlines some potential tasks your company can engage in to better 
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-_Figure 1: Adoption phases of the incremental approach to cloud governance._
+*Figure 1: Adoption phases of the incremental approach to cloud governance.*
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Identity Baseline discipline.
 
@@ -84,7 +84,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Revise the architecture guidelines to guide future adoption processes.
 - Continue to communicate with and train the affected people and teams on a regular basis to ensure ongoing adherence to architecture guidelines.
 
-<!-- docsTest:ignore "desired state configuration" -->
+<!-- docutune:ignore "desired state configuration" -->
 
 **Potential activities:**
 

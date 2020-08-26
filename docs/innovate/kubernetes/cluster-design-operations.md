@@ -1,5 +1,5 @@
 ---
-title: "Cluster design and operations"
+title: Cluster design and operations
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design and operations.
 author: sabbour
 ms.author: asabbour
@@ -18,8 +18,6 @@ Identify for cluster configuration and network design. Future-proof scalability 
 ## Plan, train, and proof
 
 As you get started, the checklist and resources below will help you plan the cluster design. You should be able answer these questions:
-
-<!-- markdownlint-disable MD033 -->
 
 > [!div class="checklist"]
 >

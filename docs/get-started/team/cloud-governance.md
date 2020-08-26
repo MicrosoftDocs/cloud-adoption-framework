@@ -3,10 +3,10 @@ title: "Get started: Build a cloud governance team"
 description: Establish a governance team's scope, deliverables, and capabilities to prepare for successful cloud governance.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud governance team
@@ -27,9 +27,8 @@ The official guidance in the Cloud Adoption Framework for Azure is to always cre
 **Guidance to support deliverable completion:**
 
 - [Cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title "cloud governance team" isn't important, but the required capabilities should reside with an accountable party or team.
-- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this get-started guide can help ensure that it can deliver on this important function of governance.
+- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this getting started guide can help ensure that it can deliver on this important function of governance.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -52,7 +51,6 @@ Before it establishes policies or automated cloud governance, the cloud governan
 - Review your company's [cloud adoption plan](../../plan/template.md) with members of the cloud adoption team to understand timelines and prioritization.
 - Review the operation team's [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to understand the operational requirements and commitments that have been established with the business.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -72,7 +70,6 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 - For more guidance on cadences for meetings, see [Cloud governance functions](../../organize/cloud-governance.md#deliverable).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -171,7 +168,6 @@ As new adoption efforts are completed, the cloud adoption team hands off operati
 
 - Establish a process for [onboarding new workloads and resources](/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

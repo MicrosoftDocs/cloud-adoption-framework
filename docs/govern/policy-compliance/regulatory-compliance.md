@@ -1,5 +1,5 @@
 ---
-title: "Introduction to regulatory compliance"
+title: Introduction to regulatory compliance
 description: Learn about compliance regulations in various industries and geographies that may affect cloud governance.
 author: BrianBlanchard
 ms.author: brblanch
@@ -22,18 +22,18 @@ As with security controls, organizations should understand the division of respo
 
 The following are descriptions of compliance regulations in various industries and geographies:
 
-<!-- docsTest:ignore PHI "Health Information Portability and Accountability Act" -->
+<!-- docutune:casing PHI "Health Information Portability and Accountability Act" -->
 
 ## HIPAA
 
 A healthcare application that processes protected health information (PHI) is subject to both the privacy rule and the security rule encompassed within the Health Information Portability and Accountability Act (HIPAA). At a minimum, HIPAA could likely require that a healthcare business must receive written assurances from the cloud provider that it will safeguard any PHI received or created.
 
+<!-- docutune:ignore Discover -->
 <!-- cSpell:ignore Visa Mastercard -->
-<!-- docsTest:ignore "American Express" Discover JCB QSA ISA ROC SAQ DPO GRC -->
 
 ## PCI
 
-Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card schemes, including Visa, Mastercard, American Express, Discover, and JCB. The PCI standard is mandated by the card brands and administered by the Payment Card Industry Security Standards Council. The standard was created to increase controls around cardholder data to reduce credit-card fraud. Validation of compliance is performed annually, either by an external qualified security assessor (QSA) or by a firm-specific internal security assessor (ISA) who creates a report on compliance (ROC) for organizations handling large volumes of transactions, or by a self-assessment questionnaire (SAQ) for companies.
+The Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card payment systems, including Visa, Mastercard, American Express, Discover, and JCB. The PCI standard is mandated by the card brands and administered by the Payment Card Industry Security Standards Council. The standard was created to increase controls around cardholder data to reduce credit-card fraud. Validation of compliance is performed annually, either by an external qualified security assessor (QSA) or by a firm-specific internal security assessor (ISA) who creates a report on compliance (ROC) for organizations handling large volumes of transactions, or by a self-assessment questionnaire (SAQ) for companies.
 
 ## Personal data
 
@@ -41,7 +41,7 @@ Personal data is information that could be used to identify a consumer, employee
 
 ## GDPR
 
-One of the most important developments in this area is the general data protection regulation (GDPR), designed to strengthen data protection for individuals within the European Union. GDPR requires that data about individuals (such as "a name, a home address, a photo, an email address, bank details, posts on social networking websites, medical information, or a computer's IP address") be maintained on servers within the eu and not transferred out of it. It also requires that companies notify individuals of any data breaches, and mandates that companies have a data protection officer (DPO). Other countries have, or are developing, similar types of regulations.
+One of the most important developments in this area is the general data protection regulation (GDPR), designed to strengthen data protection for individuals within the European Union. GDPR requires that data about individuals (such as "a name, a home address, a photo, an email address, bank details, posts on social networking websites, medical information, or a computer's IP address") be maintained on servers within the EU and not transferred out of it. It also requires that companies notify individuals of any data breaches, and mandates that companies have a data protection officer (DPO). Other countries have, or are developing, similar types of regulations.
 
 ## Compliant foundation in Azure
 

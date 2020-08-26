@@ -43,7 +43,6 @@ To avoid common migration blockers, create a clear and concise business strategy
 
 - Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -61,7 +60,6 @@ Partners, Microsoft Services, or various Microsoft programs are available to sup
 - Establish terms and conditions or other contractual agreements before you engage supporting partners.
 - Identify approved partners in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -82,7 +80,6 @@ Discovery and assessment provide a deeper level of technical alignment, which he
 - Qualitative analysis of the first 10 workloads.
 - Update business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -99,7 +96,6 @@ Making the business case for migration is likely to be an iterative conversation
 
 - Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record business justification.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -124,7 +120,6 @@ A cloud adoption plan provides an accelerated approach to developing a project b
   - Lack of familiarity with Azure DevOps can slow the deployment process.
   - Complexity and data available for each workload can also affect timelines.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -141,7 +136,6 @@ Existing employees can play a hands-on role in the migration effort, but additio
 
 - Add a skills-readiness plan to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -163,7 +157,6 @@ All migrated assets are deployed within a landing zone. Initially, the landing z
   - Governance, operations, and security requirements for the first 10 workloads can slow this process.
   - Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -189,7 +182,6 @@ With each iteration, the cloud adoption team gets better at migrating workloads.
 
 Continuous improvement of the adoption team's ability to migrate workloads.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -209,7 +201,6 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 - Complete a governance benchmark to plan for future improvements.
 - Timeline risk: improvement policies and governance implementation can add one to four weeks per discipline.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -234,7 +225,6 @@ Operations management is another requirement to reach migration success. Migrati
   - Review the workbook: estimate one hour per application owner.
   - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

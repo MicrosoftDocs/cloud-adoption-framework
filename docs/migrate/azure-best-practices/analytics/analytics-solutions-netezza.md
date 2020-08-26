@@ -27,8 +27,6 @@ In this article, we look at schema migration, with a view to obtaining equivalen
 
 At a high level, the migration process includes the steps that are listed in the following table:
 
-<!-- markdownlint-disable MD033 -->
-
 | Preparation        | Migration                             | Post-migration |
 | :----------------- | :----------------------------- | :---------------- |
 | <ul><li> Define scope: What do we want to migrate?</li><li>Build an inventory of data and processes to migrate.</li><li>Define any data model changes.</li><li>Identify the best Azure and third-party tools and features to use.</li><li>Train staff early on the new platform.</li><li>Set up the Azure target platform.</li></ul> |  <ul><li> Start small and simple.</li><li>Automate where possible.</li><li>Use Azure built-in tools and features to reduce the migration effort.</li><li>Migrate metadata for tables and views.</li><li>Migrate relevant historical data.</li><li>Migrate or refactor stored procedures and business processes.</li><li>Migrate or refactor ETL or ELT incremental load processes.</li></ul> | <ul><li> Monitor and document all stages of the migration process.</li><li>Use experience gained to build a template for future migrations.</li><li>Reengineer the data model if necessary by using the new platform's performance and scalability.</li><li>Test applications and query tools.</li><li>Benchmark and optimize query performance.</li></ul> |
@@ -88,7 +86,7 @@ When you migrate tables between different technologies, you physically move only
 
 However, understanding where performance optimizations like indexes have been used in the source environment can be a helpful indication of where you might optimize performance in the new environment. For example, if queries in the source Netezza environment frequently use zone maps, you might conclude that it would be advantageous to create a nonclustered index in the migrated Azure Synapse environment, or that using other native performance optimization techniques like table replication might be preferable to creating a like-for-like index.
 
-<!-- docsTest:ignore "NZ Toolkit" -->
+<!-- docsTest:casing "NZ Toolkit" -->
 
 ### Unsupported Netezza database object types
 

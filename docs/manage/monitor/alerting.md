@@ -82,8 +82,6 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 | Azure Monitor for VMs | Health criteria are metrics stored in the metrics database. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications. |
 | | Map and guest operating system performance log data is written to the Log Analytics workspace. | Create log query alerts. |
 
-<!-- docsTest:ignore "speed driven by cost" -->
-
 ### Fastest speed driven by cost
 
 Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real-time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it is stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.

@@ -16,7 +16,7 @@ This article advances the narrative by adding security controls that support mov
 
 ## Advancing the narrative
 
-IT and business leadership have been happy with results from early stage experimentation by the IT, app development, and BI teams. To realize tangible business values from these experiments, those teams must be allowed to integrate protected data into solutions. This triggers changes to corporate policy, but also requires incremental improvement of the cloud governance implementations before protected data can land in the cloud.
+IT and business leadership have been happy with results from early stage experimentation by the IT, application development, and BI teams. To realize tangible business values from these experiments, those teams must be allowed to integrate protected data into solutions. This triggers changes to corporate policy, but also requires incremental improvement of the cloud governance implementations before protected data can land in the cloud.
 
 ### Changes to the cloud governance team
 
@@ -30,14 +30,14 @@ At the start of this narrative, the application development teams were still wor
 
 Since then, some things have changed that will affect governance:
 
-- The application development team has implemented a CI/CD pipeline to deploy a cloud-native application with an improved user experience. That app doesn't yet interact with protected data, so it isn't production ready.
+- The application development team has implemented a CI/CD pipeline to deploy a cloud-native application with an improved user experience. That application doesn't yet interact with protected data, so it isn't production ready.
 - The business intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party sources. This data is being used to drive new predictions, which could shape business processes. Those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
 - The IT team is progressing on the CIO and CFO plans to retire the DR datacenter. More than 1,000 of the 2,000 assets in the DR datacenter have been retired or migrated.
 - The loosely defined policies for personal data and financial data have been modernized. The new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
 
 ### Incrementally improve the future state
 
-Early experiments by the app dev and BI teams show potential improvements in customer experiences and data-driven decisions. Both teams want to expand adoption of the cloud over the next 18 months by deploying those solutions to production.
+Early experiments by the application development and BI teams show potential improvements in customer experiences and data-driven decisions. Both teams want to expand adoption of the cloud over the next 18 months by deploying those solutions to production.
 
 During the remaining six months, the cloud governance team will implement security and governance requirements to allow the cloud adoption teams to migrate the protected data in those datacenters.
 
@@ -84,7 +84,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of governance practices
 
-The governance MVP design will change to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
+The governance MVP design will change to include new Azure policies and an implementation of Azure Cost Management and Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
 1. The networking and IT security teams will define network requirements. The cloud governance team will support the conversation.
 2. The identity and IT security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.

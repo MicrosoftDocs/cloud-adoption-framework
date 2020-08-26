@@ -135,7 +135,7 @@ This series focuses on each migration scenario, driven by slightly different bus
 
 ### Demo applications
 
-<!-- docsTest:ignore SmartHotel360 osTicket -->
+<!-- docsTest:casing SmartHotel360 osTicket -->
 
 The example articles provided in this section use two demo applications: SmartHotel360 and osTicket.
 

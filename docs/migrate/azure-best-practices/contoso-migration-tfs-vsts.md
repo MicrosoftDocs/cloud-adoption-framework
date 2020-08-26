@@ -92,7 +92,7 @@ Here's how Contoso will complete the migration:
 - [Introduction to Azure Storage](/azure/storage/common/storage-introduction).
 - [Create a storage account](/azure/storage/common/storage-create-storage-account).
 
-<!-- docsTest:ignore "Server Configuration Wizard" "Configure Features Wizard" "Detach Team Project Collection Wizard" -->
+<!-- docsTest:casing "Server Configuration Wizard" "Configure Features Wizard" "Detach Team Project Collection Wizard" -->
 
 ## Step 2: Upgrade Team Foundation Server
 
@@ -236,7 +236,7 @@ Here is the migration process they'll follow:
 1. **Perform a dry-run import**. A dry-run import helps them test the collection migration. Dry runs have a limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note that informs Contoso when the dry run will be deleted is included in the success email that's sent after the import finishes. The team takes note and plans accordingly.
 1. **Complete the production migration**. With the dry-run migration completed, Contoso admins do the final migration by updating the `import.json` file and then running import again.
 
-<!-- docsTest:ignore "Team Foundation Server Administration Console" -->
+<!-- docsTest:casing "Team Foundation Server Administration Console" -->
 
 ### Detach the collection
 

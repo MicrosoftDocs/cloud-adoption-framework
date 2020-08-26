@@ -90,4 +90,3 @@ The following are best practices for your design:
 - Avoid using overlapping IP address ranges for production and DR sites.
 
   When possible, plan for a business continuity and DR network architecture that provides concurrent connectivity to all sites. DR networks that use the same classless inter-domain routing blocks, such as production networks, require a network failover process that can complicate and delay application failover in the event of an outage.
-

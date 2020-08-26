@@ -23,7 +23,7 @@ Start by creating two subscriptions:
 ![An initial subscription model showing keys next to boxes labeled "production" and "nonproduction"](../../_images/ready/initial-subscription-model.png)
 _Figure 1: An initial subscription model with keys next to boxes labeled "production" and "nonproduction"._
 
-<!-- docsTest:ignore Dev/Test -->
+<!-- docsTest:casing Dev/Test -->
 
 This approach has many benefits:
 

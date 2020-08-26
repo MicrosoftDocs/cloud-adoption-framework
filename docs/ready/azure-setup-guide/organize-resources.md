@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 Organizing your cloud-based resources is critical to securing, managing, and tracking the costs related to your workloads. To organize your resources, define a management group hierarchy, follow a well-considered naming convention and apply resource tagging.
 
-<!-- markdownlint-disable MD024 MD025 -->
+<!-- markdownlint-disable MD024 -->
 
 ## [Azure management groups and hierarchy](#tab/AzureManagementGroupsAndHierarchy)
 

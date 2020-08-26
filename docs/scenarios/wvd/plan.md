@@ -1,5 +1,5 @@
 ---
-title: "Windows Virtual Desktop planning"
+title: Windows Virtual Desktop planning
 description: Use the Cloud Adoption Framework for Azure to learn about Windows Virtual Desktop migration best practices for reducing complexity and standardizing the migration process.
 author: BrianBlanchard
 ms.author: brblanch

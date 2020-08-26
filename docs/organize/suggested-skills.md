@@ -16,7 +16,7 @@ Organizational and environmental (technical) readiness can require new skills fo
 
 ## Organizational readiness learning paths
 
-Depending on the motivations and business outcomes that are associated with a cloud-adoption effort, leaders may need to establish new organizational structures or virtual teams (v-teams) to facilitate various functions. The following articles can help your organization develop the necessary skills to structure those teams to meet the desired outcomes:
+Depending on the motivations and business outcomes that are associated with a cloud-adoption effort, leaders may need to establish new organizational structures or virtual teams to facilitate various functions. The following articles can help your organization develop the necessary skills to structure those teams to meet the desired outcomes:
 
 - [Align your organization](../get-started/org-alignment.md): Discover approaches to establishing the proper organizational structures.
 - [Organization alignment exercises](./index.md): Get an overview of alignment and team structures to help meet specific goals.

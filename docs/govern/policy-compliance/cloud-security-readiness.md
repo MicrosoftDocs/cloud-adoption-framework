@@ -33,7 +33,7 @@ As solutions move further "up stack" to incorporate platform as a service (PaaS)
 
 Knowledge about the cloud is fundamental to approaching a [policy review](./cloud-policy-review.md) with a growth mindset. The following resources can help the CISO better understand the security posture of Microsoft's Azure platform.
 
-<!-- docsTest:ignore "Security Response in the Cloud" -->
+<!-- docutune:casing "Security Response in the Cloud" -->
 
 **Security platform resources:**
 
@@ -51,7 +51,7 @@ Knowledge about the cloud is fundamental to approaching a [policy review](./clou
 - [Responding to law enforcement](https://www.microsoft.com/trust-center/privacy)
 - [Stringent privacy standards](https://www.microsoft.com/trust-center/privacy)
 
-<!-- docsTest:ignore "Cloud Services Due Diligence Checklist" -->
+<!-- docutune:casing "Cloud Services Due Diligence Checklist" -->
 
 **Compliance:**
 

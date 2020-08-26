@@ -1,5 +1,5 @@
 ---
-title: "Plan your Azure Stack Hub migration"
+title: Plan your Azure Stack Hub migration
 description: Plan your Azure Stack Hub migration.
 author: BrianBlanchard
 ms.author: brblanch

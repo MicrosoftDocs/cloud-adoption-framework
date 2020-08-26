@@ -29,7 +29,7 @@ The tools in this article include:
 
 The processes described in this article may also require a partnership with IT managers, finance, or line-of-business application owners.
 
-<!-- markdownlint-disable MD024 MD025 -->
+<!-- markdownlint-disable MD024 -->
 
 ## [Estimate VM costs prior to migration](#tab/EstimateVMCosts)
 

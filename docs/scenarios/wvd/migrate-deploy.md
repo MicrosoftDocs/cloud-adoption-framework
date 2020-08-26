@@ -1,5 +1,5 @@
 ---
-title: "Deploy Windows Virtual Desktop to Azure"
+title: Deploy Windows Virtual Desktop to Azure
 description: Use the Cloud Adoption Framework for Azure to learn Windows Virtual Desktop migration best practices to reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
@@ -53,15 +53,15 @@ The [initial scope](#initial-scope) assumes that you're using a [VM-based FSLogi
 
 You can use [Azure NetApp Files to host user profiles](/azure/virtual-desktop/create-fslogix-profile-container). Doing so will require a few extra steps in the scope, including:
 
-- **Per NetApp instance**: Configure NetApp files, volumes, and Active Directory connections.
-- **Per host/persona**: Configure FSLogix on session host virtual machines.
-- **Per user**: Assign users to the host session.
+- **Per NetApp instance:** Configure NetApp files, volumes, and Active Directory connections.
+- **Per host/persona:** Configure FSLogix on session host virtual machines.
+- **Per user:** Assign users to the host session.
 
 You can also use [Azure Files to host user profiles](/azure/virtual-desktop/create-file-share). Doing so will require a few extra steps in the scope, including:
 
-- **Per Azure Files instance**: Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign role-based access control access for an Active Directory user group, apply New Technology File System permissions, and get the storage account access key.
-- **Per host/persona**: Configure FSLogix on session host virtual machines.
-- **Per user**: Assign users to the host session.
+- **Per Azure Files instance:** Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign role-based access control access for an Active Directory user group, apply new technology file system permissions, and get the storage account access key.
+- **Per host/persona:** Configure FSLogix on session host virtual machines.
+- **Per user:** Assign users to the host session.
 
 The user profiles for some personas or users might also require a data migration effort, which can delay the migration of specific personas until user profiles can be remediated within your local Active Directory or individual user desktops. This delay could significantly affect the scope outside of the Windows Virtual Desktop scenario. After they've been remediated, the initial scope and the preceding approaches can be resumed.
 

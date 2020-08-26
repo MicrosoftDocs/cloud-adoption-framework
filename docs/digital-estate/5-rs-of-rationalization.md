@@ -1,5 +1,5 @@
 ---
-title: "Cloud rationalization"
+title: Cloud rationalization
 description: Learn about cloud rationalization, the process of evaluating assets to determine the best way to migrate or modernize each asset in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -16,7 +16,7 @@ Cloud rationalization is the process of evaluating assets to determine the best 
 
 ## Rationalization context
 
-The _five Rs of rationalization_ listed in this article are a great way to label a potential future state for any workload that's being considered as a cloud candidate. This labeling process should be put into the correct context before you attempt to rationalize an environment. Review the following myths to provide that context:
+The *five Rs of rationalization* listed in this article are a great way to label a potential future state for any workload that's being considered as a cloud candidate. This labeling process should be put into the correct context before you attempt to rationalize an environment. Review the following myths to provide that context:
 
 ### Myth: It's easy to make rationalization decisions early in the process
 
@@ -38,7 +38,7 @@ The five Rs of rationalization that are listed here describe the most common opt
 
 ## Rehost
 
-Also known as a _lift and shift_ migration, a rehost effort moves a current state asset to the chosen cloud provider, with minimal change to overall architecture.
+Also known as a *lift and shift* migration, a rehost effort moves a current state asset to the chosen cloud provider, with minimal change to overall architecture.
 
 Common drivers might include:
 

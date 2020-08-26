@@ -88,7 +88,7 @@ Azure Front Door provides your application with unified regional/stamp maintenan
 
 [Azure Application Gateway][appgw] is a dedicated virtual appliance that provides a managed application delivery controller. It offers various Layer 7 load-balancing capabilities for your application.
 
-<!-- docsTest:ignore "application gateway" TODO -->
+<!-- docsTest:casing "the application gateway" "single application gateway" -->
 
 Azure Application Gateway allows you to optimize web farm productivity by offloading CPU-intensive SSL termination to the application gateway. It also provides other Layer 7 routing capabilities, including round-robin distribution of incoming traffic, cookie-based session affinity, URL path-based routing, and the ability to host multiple websites behind a single application gateway.
 
