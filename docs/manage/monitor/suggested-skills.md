@@ -3,7 +3,7 @@ title: "Skills readiness for cloud monitoring"
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
 ms.author: magoedte
-ms.date: 05/19/2020
+ms.date: 08/26/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -30,7 +30,9 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](/learn/paths/implement-resource-mgmt-security).
 
-- [Monitoring Microsoft Azure Resources and Workloads](https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring-update/table-of-contents) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
+- [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
+
+- Learn about planning and designing your monitoring deployments at-scale and automating actions by viewing [Azure Monitor best practices and recommendations](https://www.youtube.com/watch?v=IWkqqahX_Ck&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6).
 
 ## Infrastructure monitoring
 
@@ -46,13 +48,15 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage native Azure virtual machines.
 
+- [How to monitor your VMs](https://www.youtube.com/watch?v=O7scXPrsM_0&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6&t=0s) provides an intermediate level deep dive to help you learn about monitoring your hybrid servers, and Azure VM or virtual machine scale sets with Azure Monitor for VMs.
+
 ## Application monitoring
 
 - Understand how [Azure Monitor](/azure/azure-monitor/overview) helps you view availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
 
   - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
 
-  - [Microsoft Azure Developer: Monitoring Performance](https://app.pluralsight.com/library/courses/microsoft-azure-performance-monitoring). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
+  - [Capture and view page load times in your Azure web app](https://docs.microsoft.com/learn/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
   
   - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
@@ -62,7 +66,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Data analysis
 
-- Learn how to write [log queries in Azure Monitor](/azure/azure-monitor/log-query/get-started-queries). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
+- Learn how to write [log queries in Azure Monitor](https://docs.microsoft.com/learn/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
 
 - [Kusto Query Language (KQL) from Scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch) is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor logs.
 
