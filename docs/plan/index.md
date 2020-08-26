@@ -15,7 +15,7 @@ Cloud adoption plans convert the aspirational goals of a cloud adoption strategy
 
 The following exercises will help you document your technology strategy. This approach captures prioritized tasks to drive adoption efforts. The cloud adoption plan then maps to the metrics and motivations defined in the cloud adoption strategy.
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> ![1](../_images/icons/1.png) | <br> [Digital estate](../digital-estate/rationalize.md): Inventory and rationalize your digital estate based on assumptions that align with motivations and business outcomes. |
 | <br> ![2](../_images/icons/2.png) | <br> [Initial organizational alignment](./initial-org-alignment.md): Establish a plan for initial organizational alignment to support the adoption plan. |
