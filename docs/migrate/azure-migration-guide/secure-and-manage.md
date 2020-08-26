@@ -146,7 +146,7 @@ Azure Backup is the Azure-based service you can use to backup (or protect) and r
 
 ## [Azure Site Recovery](#tab/siteRecovery)
 
-Earlier in this guide, we discussed how Azure Site Recovery can be used as part of the migration execution. But it also forms a critical component in your disaster recovery strategy after migration is complete.
+Azure Site Recovery forms a critical component in your disaster recovery strategy after migration is complete.
 
 The Azure Site Recovery service allows you to replicate virtual machines and workloads hosted in a primary Azure region to a copy hosted in a secondary region. When an outage occurs in your primary region, you can fail over to the copy running in the secondary region and continue to access your applications and services from there. After the outage in the primary copy of your virtual machine is running again, you can fail back to it.
 

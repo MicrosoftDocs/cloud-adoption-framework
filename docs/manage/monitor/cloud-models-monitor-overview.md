@@ -92,7 +92,7 @@ To collect metrics and logs from Azure infrastructure and platform resources, yo
 
 ### Monitor with System Center Operations Manager
 
-Although System Center Operations Manager was originally designed as an on-premises solution to monitor across applications, workloads, and infrastructure components that are running in your IT environment, it evolved to include cloud-monitoring capabilities. It integrates with Azure, Office 365, and Amazon Web Services (AWS). It can monitor across these diverse environments with management packs that are designed and updated to support them.  
+Although System Center Operations Manager was originally designed as an on-premises solution to monitor across applications, workloads, and infrastructure components that are running in your IT environment, it evolved to include cloud-monitoring capabilities. It integrates with Azure, Microsoft 365, and Amazon Web Services (AWS). It can monitor across these diverse environments with management packs that are designed and updated to support them.  
 
 For customers who have made significant investments in Operations Manager to achieve comprehensive monitoring that's tightly integrated with their IT service management processes and tools, or for customers new to Azure, it's understandable to ask the following questions:
 
