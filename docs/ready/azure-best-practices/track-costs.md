@@ -66,7 +66,7 @@ As a general best practice, we suggest a least-privilege model in assigning peop
 
 ### Roles
 
-<!-- docsTest:ignore Owner Contributor Reader "Cost Management Contributor" "Cost Management Reader" -->
+<!-- docsTest:casing Owner Contributor Reader "Cost Management Contributor" "Cost Management Reader" -->
 
 Azure Cost Management and Billing supports the following built-in roles for each scope:
 

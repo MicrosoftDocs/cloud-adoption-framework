@@ -47,7 +47,6 @@ Whatever cloud provider you choose, all cloud hosting and environmental decision
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of the workloads and assets that are slated for adoption in the cloud.
 - [Digital estate analysis](../digital-estate/approach.md) is an approach to documenting existing workloads and assets that are slated for adoption in the cloud. In Azure, the digital estate is best represented in a tool called [Azure Migrate](/azure/migrate/migrate-support-matrix).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -66,7 +65,6 @@ Hosting assets and workloads in the cloud can be simple, consisting of a single 
 
 - Understand the levels of the [portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md) to align fundamental terms.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -88,7 +86,6 @@ All existing workloads and assets should be properly named and tagged in accorda
 - [Review and update existing tags in Azure](/azure/azure-resource-manager/management/tag-resources).
 - [Enforce tagging policies in Azure](/azure/azure-resource-manager/management/tag-policies).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -115,7 +112,6 @@ Build a subscription strategy:
 - Establish [clear boundaries based on the portfolio hierarchy](../reference/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
 - When required, [move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) to adhere to the organization strategy.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -130,14 +126,11 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 - Complete the getting-started guides for organizational alignment based on these concepts.
 
-<!-- docsTest:ignore "Get started: Align your organization" -->
-
 **Guidance to support deliverable completion:**
 
 - Use the prior steps as a guide to evaluate the [portfolio hierarchy accountability guidance](../reference/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities might need to be delivered by dedicated organizations or virtual teams.
 - Use [Get started: Align your organization](./org-alignment.md) to apply the portfolio hierarchy accountability guidance to the RACI (responsible, accountable, consulted, and informed) diagram.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency tools in Azure"
+title: Resource Consistency tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Resource Consistency discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -14,7 +14,7 @@ ms.custom: governance
 
 [Resource consistency](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. Within the Five Disciplines of Cloud Governance, the Resource Consistency discipline involves monitoring of application, workload, and asset performance. It also involves the tasks required to meet scale demands, remediate performance SLA violations, and proactively avoid performance SLA violations through automated remediation.
 
-<!-- docsTest:ignore "conditional access to resources" -->
+<!-- docutune:casing "conditional access to resources" -->
 
 The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 

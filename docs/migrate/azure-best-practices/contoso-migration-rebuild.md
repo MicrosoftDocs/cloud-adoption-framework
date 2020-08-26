@@ -10,9 +10,9 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-<!-- docsTest:ignore "Enable .NET" SmartHotel360 SmartHotel360-Backend Pet.Checker contoso-datacenter git aks PetCheckerFunction -->
+<!-- docsTest:casing "Enable .NET" SmartHotel360 SmartHotel360-Backend Pet.Checker contoso-datacenter git aks PetCheckerFunction -->
 
-<!-- cSpell:ignore givenscj SQLVM WEBVM contosohost vcenter contosodc smarthotel contososmarthotel smarthotelcontoso smarthotelpetchecker petchecker smarthotelakseus smarthotelacreus smarthotelpets kubectl contosodevops visualstudio azuredeploy cloudapp smarthotelsettingsurl appsettings -->
+<!-- cSpell:ignore SQLVM WEBVM contosohost vcenter contosodc smarthotel contososmarthotel smarthotelcontoso smarthotelpetchecker petchecker smarthotelakseus smarthotelacreus smarthotelpets kubectl contosodevops visualstudio azuredeploy cloudapp smarthotelsettingsurl appsettings -->
 
 # Rebuild an on-premises application in Azure
 
@@ -699,8 +699,8 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 Here are two examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 application in Azure.
 
-<!--docsTest:ignore "Azure Cognitive Vision Services" -->
+<!--docsTest:casing "with the Azure Cognitive Vision Services" -->
 
 - **[Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service)**: By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- **[Process and classify images with the Azure cognitive vision services](/learn/paths/classify-images-with-vision-services)**: Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the cognitive vision services to detect faces, tag and classify images, and identify objects.
+- **[Process and classify images with the Azure Cognitive Vision Services](/learn/paths/classify-images-with-vision-services)**: Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the cognitive vision services to detect faces, tag and classify images, and identify objects.

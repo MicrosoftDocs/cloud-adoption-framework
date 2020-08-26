@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore BYOK postgres psql dvdrental -->
+<!-- cSpell:ignore BYOK postgres psql dvdrental vpngateways -->
 
 # Migrate PostgreSQL databases to Microsoft Azure
 
@@ -125,12 +125,10 @@ Contoso has selected Azure Database Migration Service to allow the company to re
 
 To prepare, set up a virtual network to access the database. Create a virtual network connection by using [VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
-<!-- docsTest:ignore "Azure Database Migration Services" -->
-
 ### Create an Azure Database Migration Service instance
 
 1. In the [Azure portal](https://portal.azure.com), select **Add a resource**.
-1. Search for **Azure Database Migration Service**, and select it.
+1. Search for **Azure Database Migration Services**, and select it.
 1. Select **+ Add**.
 1. Select the subscription and resource group for the service.
 1. Enter a name for the instance.

@@ -92,7 +92,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of the best practices
 
-This section modifies the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
+This section modifies the governance MVP design to include new Azure policies and an implementation of Azure Cost Management and Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
 The new best practices fall into two categories: corporate IT (hub) and cloud adoption (spoke).
 
@@ -168,4 +168,4 @@ Adding these processes and changes to the governance MVP helps remediate many of
 As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed.
 
 > [!div class="nextstepaction"]
-> [Improve the the Resource Consistency discipline](./resource-consistency-improvement.md)
+> [Improve the Resource Consistency discipline](./resource-consistency-improvement.md)

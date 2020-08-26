@@ -11,18 +11,14 @@ ms.custom: fasttrack-new, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- docsTest:ignore "Azure Info Hub" "Azure Charts" "Azure Weekly" -->
-<!-- cSpell:ignore jelledruyts andym endjin AzAdvertizer -->
+<!-- docsTest:casing AzAdvertizer "Azure Info Hub" "Azure Charts" "Azure Weekly" -->
+<!-- cSpell:ignore endjin AzAdvertizer -->
 
 # Stay current with Azure
 
 Cloud platforms like Azure change faster than many organizations are accustomed to. This pace of change means that organizations have to adapt people and processes to a new cadence. If you're responsible for helping your organization keep up with change, you might feel overwhelmed at times. The resources listed in this section can help you stay up to date.
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Top resources](#tab/TopResources)
-
-<!-- markdownlint-enable MD025 -->
 
 The following resources can help you stay current with Azure:
 
@@ -32,11 +28,7 @@ The following resources can help you stay current with Azure:
 - **Service-specific blogs:** Many individual Azure services publish blogs that you can follow if you rely on those services. Find the ones you're interested in via a web search.
 - **Azure Info Hub:** The unofficial [Azure Info Hub](https://azureinfohub.azurewebsites.net) pulls together most of the resources listed here. Follow links to individual services to get detailed information and find service-specific blogs. Subscribe via [the Azure Info Hub RSS feed](https://azureinfohub.azurewebsites.net/Feed?serviceTitle=Azure). \*
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Additional resources](#tab/AdditionalResources)
-
-<!-- markdownlint-enable MD025 -->
 
 For deeper content that helps you stay current with Azure topics, review these resources:
 

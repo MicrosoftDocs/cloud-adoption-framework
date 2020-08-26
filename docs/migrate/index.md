@@ -26,7 +26,7 @@ To prepare you for this phase of the cloud adoption lifecycle, we recommend the 
 
 The Migrate methodology and the steps above build on the following assumptions:
 
-<!-- docsTest:ignore "plan, ready, and Adopt methodologies" -->
+<!-- docsTest:casing "Plan, Ready, and Adopt methodologies" -->
 
 - The methodology governing migration sprints fits within migration waves or releases, which are defined using the Plan, Ready, and Adopt methodologies. Within each migration sprint, a batch of workloads is migrated to the cloud.
 - Before migrating workloads, at least one [landing zone](../ready/index.md) has been identified, configured, and deployed to meet the needs of the near-term cloud adoption plan.

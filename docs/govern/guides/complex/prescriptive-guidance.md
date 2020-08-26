@@ -20,7 +20,7 @@ In this article, we discuss the high-level strategies that are required to creat
 
 Rapid adoption of governance and corporate policy is achievable, thanks to a few simple principles and cloud-based governance tooling. These are the first of the three governance disciplines to approach in any governance process. Each discipline will be explained further on in this article.
 
-<!--docsTest:ignore "Identity Baseline, Security Baseline, and Deployment Acceleration disciplines" -->
+<!-- docutune:casing "Identity Baseline, Security Baseline, and Deployment Acceleration disciplines" -->
 
 To establish the starting point, this article will discuss the high-level strategies behind the Identity Baseline, Security Baseline, and Deployment Acceleration disciplines that are required to create a governance MVP, which will serve as the foundation for all adoption.
 
@@ -49,13 +49,14 @@ The cloud governance team will be responsible for the following decisions and im
 
 The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen a [mixed subscription strategy](../../../decision-guides/subscriptions/index.md#mix-subscription-strategies).
 
-- As new requests for Azure resources arise, a _department_ should be established for each major business unit in each operating geography. Within each of the departments, _subscriptions_ should be created for each application archetype.
+- As new requests for Azure resources arise, a *department* should be established for each major business unit in each operating geography. Within each of the departments, *subscriptions* should be created for each application archetype.
 - An application archetype is a means of grouping applications with similar needs. Common examples include:
   - Applications with protected data, governed applications (such as HIPAA or FedRAMP).
   - Low-risk applications.
   - Applications with on-premises dependencies.
   - SAP or other mainframe applications in Azure.
   - Applications that extend on-premises SAP or mainframe applications.
+
   Each organization has unique needs based on data classifications and the types of applications that support the business. Dependency mapping of the digital estate can help define the application archetypes in an organization.
 - A common naming convention should be adopted as part of the subscription design, based on the above.
 

@@ -288,7 +288,7 @@ The responsibility for securing virtual networks is shared between Microsoft and
 - Read an [overview of best practices for network security](/azure/security/fundamentals/network-best-practices).
 - Learn how to [design for secure networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
 
-<!-- docsTest:ignore "IDS/IPS" -->
+<!-- docsTest:casing "IDS/IPS" -->
 
 ## Best practice: Implement an Azure perimeter network
 

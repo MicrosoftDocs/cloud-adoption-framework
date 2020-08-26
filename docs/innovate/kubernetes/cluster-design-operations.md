@@ -1,5 +1,5 @@
 ---
-title: "Cluster design and operations"
+title: Cluster design and operations
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design and operations.
 author: sabbour
 ms.author: asabbour
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore asabbour sabbour autoscaler PDBs -->
+<!-- cSpell:ignore autoscaler PDBs -->
 
 # Cluster design and operations
 
@@ -18,8 +18,6 @@ Identify for cluster configuration and network design. Future-proof scalability 
 ## Plan, train, and proof
 
 As you get started, the checklist and resources below will help you plan the cluster design. You should be able answer these questions:
-
-<!-- markdownlint-disable MD033 -->
 
 > [!div class="checklist"]
 >
@@ -34,7 +32,7 @@ As you get started, the checklist and resources below will help you plan the clu
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
 > | **Identify network design considerations.** Understand cluster network design considerations, compare network models, and choose the Kubernetes networking plugin that fits your needs.    | [Kubenet and Azure container networking interface (CNI)](/azure/aks/concepts-network#azure-virtual-networks) <br> [Use kubenet networking with your own IP address ranges in Azure Kubernetes Service (AKS)](/azure/aks/configure-kubenet) <br> [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni) <br> [Secure network design for an AKS cluster](https://github.com/azure/sg-aks-workshop/blob/master/cluster-design/NetworkDesign.md) |
 > | **Create multiple node pools.** To support applications that have different compute or storage demands, you can optionally configure your cluster with multiple node pools. For example, use additional node pools to provide GPUs for compute-intensive applications or access to high-performance SSD storage.   | [Create and manage multiple node pools for a cluster in Azure Kubernetes Service](/azure/aks/use-multiple-node-pools) |
-> | **Decide on availability requirements.** To provide a higher level of availability to your applications, clusters can be distributed across Availability Zones. These zones are physically separate datacenters within a given region. When the cluster components are distributed across multiple zones, your cluster cano tolerate a failure in one of those zones. Your applications and management operations continue to be available even if an entire datacenter has a problem.   | [Create an Azure Kubernetes Service (AKS) cluster that uses Availability Zones](/azure/aks/availability-zones) |
+> | **Decide on availability requirements.** To provide a higher level of availability to your applications, clusters can be distributed across Availability Zones. These zones are physically separate datacenters within a given region. When the cluster components are distributed across multiple zones, your cluster can tolerate a failure in one of those zones. Your applications and management operations continue to be available even if an entire datacenter has a problem.   | [Create an Azure Kubernetes Service (AKS) cluster that uses Availability Zones](/azure/aks/availability-zones) |
 
 ## Go to production and apply best practices
 

@@ -55,7 +55,7 @@ When companies support workloads through matrixed approaches or centralized appr
 An accountable team manages each layer of the portfolio hierarchy. The following diagram shows the mapping between the accountable team and the guidance to support its business decisions, technical decisions, and technical implementation.
 
 > [!NOTE]
-> The teams mentioned in the following list might be virtual teams (v-teams) or individuals. For some variants of this hierarchy, some of the accountable teams can be collapsed as described later in the accountability variants.
+> The teams mentioned in the following list might be virtual teams or individuals. For some variants of this hierarchy, some of the accountable teams can be collapsed as described later in the accountability variants.
 
 ![Accountability aligned to the hierarchy](../../_images/ready/hierarchy-with-roles.png)
 

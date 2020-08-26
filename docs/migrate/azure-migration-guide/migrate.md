@@ -17,8 +17,6 @@ ms.localizationpriority: high
 
 In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. You'll explore native tools, third-party tools, and project management tools.
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Native migration tools](#tab/Tools)
 
 The following sections describe the native Azure tools available to perform or assist with migration. For information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
@@ -155,8 +153,6 @@ Azure Cosmos DB data migration tool can import data from various sources into Az
 For more information, see:
 
 - [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data)
-
-<!-- markdownlint-disable MD025 -->
 
 ## [Third-party migration tools](#tab/third-party-tools)
 

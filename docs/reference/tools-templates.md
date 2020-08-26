@@ -9,8 +9,6 @@ ms.subservice: reference
 ms.topic: article
 ---
 
-<!-- cSpell:ignore Terraform's -->
-
 # Tools and templates
 
 The Cloud Adoption Framework includes tools that help you quickly implement technical change. Use these tools, templates, and assessments to accelerate cloud adoption. The following resources can help you in each phase of adoption. Some of the tools and templates can be used in multiple phases.

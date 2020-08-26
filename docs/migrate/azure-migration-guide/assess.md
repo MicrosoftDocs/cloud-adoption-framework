@@ -15,8 +15,6 @@ ms.localizationpriority: high
 
 The resources in this guide help you assess each workload, challenge assumptions about each workload's suitability for migration, and finalize architectural decisions about migration options.
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Tools](#tab/Tools)
 
 If you didn't follow the guidance in the links above, you will likely need data and an assessment tool to make informed migration decisions. Azure Migrate is the native tool for assessing **and** migrating to Azure. If you haven't already, use these steps to create a new server migration project and collect the necessary data.

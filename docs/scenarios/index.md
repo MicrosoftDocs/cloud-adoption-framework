@@ -1,5 +1,5 @@
 ---
-title: "The One Migration approach to Azure adoption"
+title: The One Migration approach to Azure adoption
 description: Follow the One Migration approach of Azure Migrate to migrate and modernize entire IT portfolios.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docsTest:ignore "One Migration" -->
+<!-- docutune:ignore "One Migration" -->
 <!-- cSpell:ignore HANA -->
 
 # The One Migration approach to migrating the IT portfolio
@@ -36,7 +36,7 @@ In each of the preceding migration scenarios, the same basic process will guide 
 
 ![Diagram of the Cloud Adoption Framework migration model.](../_images/migrate/methodology.png)
 
-In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the Plan and Ready methodologies helps to add structure to your migration waves.
+In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the plan and Ready methodologies helps to add structure to your migration waves.
 
 During each iteration, follow the Migrate methodology to assess, deploy, and release workloads. To modify those processes to fit your organization's specific scenario, select any of the migration scenarios listed in the table.
 

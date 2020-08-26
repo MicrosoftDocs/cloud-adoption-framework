@@ -25,13 +25,13 @@ The following exercises will help guide the process of creating a landing zone t
 
 ## Structure type
 
-The following organizational structures do not necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile, matrix organization, these structures may be best represented as virtual teams (or v-teams). There is no limitation suggesting that these organizational structures couldn't be represented in an org chart, but it is not necessary in order to produce an effective operating model.
+The following organizational structures do not necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile, matrix organization, these structures may be best represented as virtual teams. There is no limitation suggesting that these organizational structures couldn't be represented in an org chart, but it is not necessary in order to produce an effective operating model.
 
 The first step of managing organizational alignment is to determine how the following organizational structures will be fulfilled:
 
 - **Org chart alignment:** Management hierarchies, manager responsibilities, and staff alignment will align to organizational structures.
-- **Virtual teams (v-teams):** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functions.
-- **Mixed model:** More commonly, a mixture of org chart and v-team alignment will be required to deliver on transformation goals.
+- **Virtual teams:** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functions.
+- **Mixed model:** More commonly, a mixture of org chart and virtual team alignment will be required to deliver on transformation goals.
 
 ## Understand required cloud functions
 

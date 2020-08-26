@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore givenscj OSTICKETWEB OSTICKETMYSQL OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc osTicket binlog systemctl NSGs distros -->
+<!-- cSpell:ignore OSTICKETWEB OSTICKETMYSQL OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc osTicket binlog systemctl NSGs distros -->
 
 # Rehost an on-premises Linux application to Azure VMs
 
@@ -284,8 +284,6 @@ The Contoso security team reviews the OSTICKETWEB and OSTICKETMYSQL VMs to deter
 - The team also considers securing the data on the VM disks by using Azure Disk Encryption and Azure Key Vault.
 
 For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
-
-<!-- docsTest:ignore "Quickstart: Set" -->
 
 ### Business continuity and disaster recovery
 

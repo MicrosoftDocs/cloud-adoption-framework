@@ -1,5 +1,5 @@
 ---
-title: "Application development and deployment"
+title: Application development and deployment
 description: Learn about using Kubernetes in the Cloud Adoption Framework for application development and architecture.
 author: sabbour
 ms.author: asabbour
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore asabbour sabbour autoscaler Istio Linkerd -->
+<!-- cSpell:ignore autoscaler Istio Linkerd -->
 
 # Application development and deployment
 
@@ -25,7 +25,7 @@ As you get started, the checklist and resources below will help you plan your ap
 > - How will you structure the project folder to support Kubernetes application development?
 > - Have you identified state, configuration, and storage requirements of your application?
 
-<!-- docsTest:ignore "AAD Pod Identity -->
+<!-- docsTest:casing "AAD Pod Identity -->
 
 > [!div class="tdCol2BreakAll"]
 >
@@ -69,12 +69,12 @@ Now that the application is in production, how can you optimize your workflow an
 > - Are cross-cutting application concerns abstracted from your application?
 > - Are you able to maintain system and application reliability, while still iterating on new features and versions?
 
-<!-- docsTest:ignore Consul -->
+<!-- docsTest:casing Consul -->
 
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources                                                                                                     |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
 > | **Deploy an API gateway.** An API gateway serves as an entry point to microservices, decouples clients from your microservices, adds an additional layer of security, and decreases the complexity of your microservices by removing the burden of handling cross-cutting concerns.     | [Use Azure API Management with microservices deployed in Azure Kubernetes Service](/azure/api-management/api-management-kubernetes) |
-> | **Deploy a service mesh.** A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer and down to the infrastructure layer.     | [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?v=izVWk7rYqWI&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=15&t=0s) <br> [Learn about service mesh](/azure/aks/servicemesh-about) <br> [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about) <br> [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about) <br> [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-consul-about) |
+> | **Deploy a service mesh.** A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer and down to the infrastructure layer. | [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?v=izVWk7rYqWI&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=15&t=0s) <br> [Learn about service meshes](/azure/aks/servicemesh-about) <br> [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about) <br> [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about) <br> [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-consul-about) |
 > | **Implement site reliability engineering (SRE) practices.** Site reliability engineering (SRE) is a proven approach to maintain crucial system and application reliability while iterating at the speed demanded by the marketplace.   | [Introduction to site reliability engineering (SRE)](/learn/modules/intro-to-site-reliability-engineering) <br> [DevOps at Microsoft: Game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre) |

@@ -38,7 +38,7 @@ If one or two of the answers are directionally aligned, recognize that your hard
 
 If either team fails to answer all four questions in 30 minutes, then alignment and the considerations in the following sections are likely to have a significant impact on this effort and others. Pay careful attention to each of the following sections.
 
-<!-- docsTest:ignore "Strategy, Plan, Ready, and Adopt" -->
+<!-- docsTest:casing "Strategy, Plan, Ready, and Adopt" -->
 
 ## Address the big picture first
 

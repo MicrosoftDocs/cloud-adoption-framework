@@ -33,7 +33,6 @@ A clear and concise business strategy helps the cloud platform team understand w
 - [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics you can use to measure the overall transformation.
 - [Building a cloud migration business case](../strategy/cloud-migration-business-case.md): Now you can start to develop a migration business case with clear guidance on formulas and tools that can aid in business justification.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Informed teams |
@@ -58,7 +57,6 @@ The output of the digital estate assessment provides the cloud platform team wit
 - [Inventory existing systems](../digital-estate/inventory.md): Understanding the current state from a programmatic, data-driven approach is the first step. Find and gather data to enable all assessment activities.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): Streamline assessment efforts to focus on a qualitative analysis of all assets, possibly even to support the business case. Then add a deep qualitative analysis for the first 10 workloads to be migrated.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Informed teams |
@@ -87,7 +85,6 @@ A review of the short-term cloud adoption plan and backlog helps the cloud platf
 - [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define efforts for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity, and releases for the migrated workloads.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Informed teams |
@@ -110,7 +107,6 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 - [Choose a landing zone](../ready/landing-zone/index.md): Use this section to find the right approach to deploying a landing zone based on your short-term adoption plan. Then deploy that standardized code base.
 - [Expand your landing zone](../ready/considerations/index.md): Don't attempt to meet long-term governance, security, or operation constraints yet, unless they're required to support the short-term adoption plan.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -136,7 +132,6 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 - [Governance benchmark tool](../govern/benchmark.md): Find gaps in your current state so that you can plan for the future.
 - [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the Identity Baseline discipline, Security Baseline discipline, and Deployment Acceleration discipline that are required to create a governance minimum viable product (MVP) to serve as the foundation for all adoption.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
@@ -165,7 +160,6 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 - [Expand the management baseline](../manage/best-practices.md)
 - [Get specific with advanced operations](../manage/design-principles.md)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
@@ -191,7 +185,6 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 - [Expand landing zone operations](../ready/considerations/landing-zone-operations.md)
 - [Expand landing zone security](../ready/considerations/landing-zone-security.md)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
