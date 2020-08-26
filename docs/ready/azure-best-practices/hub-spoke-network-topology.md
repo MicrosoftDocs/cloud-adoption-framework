@@ -11,8 +11,6 @@ manager: rossort
 ms.custom: virtual-network
 ---
 
-<!-- cSpell:ignore tracsman jonor rossort NVAs -->
-
 # Hub and spoke network topology
 
 _Hub and spoke_ is a networking model for efficiently managing common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:

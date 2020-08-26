@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore MPLS -->
-
 # Governance guide for complex enterprises: Improve the Identity Baseline discipline
 
 This article advances the narrative by adding identity baseline controls to the governance MVP.

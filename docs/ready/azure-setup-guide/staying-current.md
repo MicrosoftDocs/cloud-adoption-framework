@@ -12,7 +12,7 @@ ms.localizationpriority: high
 ---
 
 <!-- docsTest:casing AzAdvertizer "Azure Info Hub" "Azure Charts" "Azure Weekly" -->
-<!-- cSpell:ignore jelledruyts andym endjin AzAdvertizer -->
+<!-- cSpell:ignore endjin AzAdvertizer -->
 
 # Stay current with Azure
 

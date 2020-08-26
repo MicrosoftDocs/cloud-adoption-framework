@@ -69,12 +69,10 @@ The following table illustrates a common pattern for dividing IT responsibilitie
 | Group | Common role name | Responsibilities |
 | --- | --- | --- |
 | Security operations | SecOps | Provides general security oversight. <br> Establishes and enforces security policy such as encryption at rest. <br><br> Manages encryption keys. <br><br> Manages firewall rules. |
-| Network operations | Netops | Manages network configuration and operations within virtual networks, such as routes and peerings. |
-| Systems operations | Sysops | Specifies compute and storage infrastructure options, and maintains resources that have been deployed. |
+| Network operations | NetOps | Manages network configuration and operations within virtual networks, such as routes and peerings. |
+| Systems operations | SysOps | Specifies compute and storage infrastructure options, and maintains resources that have been deployed. |
 | Development, test, and operations | DevOps | Builds and deploys workload features and applications. <br><br> Operates features and applications to meet service-level agreements and other quality standards. |
 
 The breakdown of actions and permissions in these standard roles are often the same across your applications, subscriptions, or entire cloud estate, even if these roles are performed by different people at different levels. Accordingly, you can create a common set of RBAC role definitions to apply across different scopes within your environment. Users and groups can then be assigned a common role, but only for the scope of resources, resource groups, subscriptions, or management groups that they're responsible for managing.
-
-<!-- cSpell:ignore NetOps SecOps " -->
 
 For example, in a [hub and spoke network topology](../azure-best-practices/hub-spoke-network-topology.md) with multiple subscriptions, you might have a common set of role definitions for the hub and all workload spokes. A hub subscription's NetOps role can be assigned to members of the organization's Central IT team, who are responsible for maintaining networking for shared services used by all workloads. A workload spoke subscription's NetOps role can then be assigned to members of that specific workload team, allowing them to configure networking within that subscription to best support their workload requirements. The same role definition is used for both, but scope-based assignments ensure that users have only the access that they need to perform their job.

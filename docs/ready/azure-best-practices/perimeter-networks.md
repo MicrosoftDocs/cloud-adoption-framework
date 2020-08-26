@@ -11,8 +11,6 @@ manager: rossort
 ms.custom: virtual-network
 ---
 
-<!-- cSpell:ignore tracsman jonor rossort NVAs WAFs -->
-
 # Perimeter networks
 
 [Perimeter networks][perimeter-network] enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks, along with any connectivity to and from the internet. A perimeter network is sometimes called a demilitarized zone or DMZ.

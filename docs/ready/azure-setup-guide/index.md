@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore timleyden -->
-
 # Azure setup guide overview
 
 ::: zone target="docs"

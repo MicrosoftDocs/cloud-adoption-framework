@@ -11,7 +11,7 @@ ROBOTS: NOINDEX
 ---
 
 <!-- docsTest:disable -->
-<!-- cSpell:ignore rodend subscope ITSM Hashi -->
+<!-- cSpell:ignore subscope ITSM Hashi -->
 
 # Azure enterprise scaffold: Prescriptive subscription governance
 

@@ -33,8 +33,6 @@ When the cloud runs in your datacenter, your stack hub administrators will need 
 
 After the Azure Stack Hub administrator has properly configured your stack instance, migrations can continue as they would with most other Azure migration efforts. By using Azure Stack, your team can run any of the following types of migration:
 
-<!-- cSpell:ignore howto -->
-
 - [Ethereum blockchain network](/azure-stack/user/azure-stack-ethereum?view=azs-2002)
 - [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002)
 - [Azure Cognitive Services](/azure-stack/user/azure-stack-solution-template-cognitive-services?view=azs-2002)

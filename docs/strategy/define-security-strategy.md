@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- cSpell:ignore MarkSimos NIST CISO COVID -->
+<!-- cSpell:ignore NIST CISO COVID -->
 
 # Define a security strategy
 
@@ -235,7 +235,7 @@ This section describes the key relationships that frequently change on the journ
 
   - **Security:** Does the cloud provider follow industry best practices for security? Has this been validated by independent regulatory bodies?
 
-    - [Microsoft cloud app security](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
+    - [Microsoft Cloud App Security](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
     - The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) makes regulatory compliance certifications, audit reports, pen tests, and more available to customers. These documents include many details of internal security practices (notably the SOC 2 type 2 report and FedRAMP Moderate system security plan).
 
   - **Business competitor:** Is the cloud provider a significant business competitor in your industry? Do you have sufficient protections in the cloud services contract or other means to protect your business against potentially hostile actions?

@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore WSUS getting started -->
+<!-- cSpell:ignore WSUS -->
 
 # Operational compliance in Azure
 

@@ -1,13 +1,13 @@
 ---
 title: Cloud monitoring strategy
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
+services: azure-monitor
 author: mgoedtel
 ms.author: magoedte
 ms.date: 06/18/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
 ---
 
 <!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->

@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore Personalizer -->
-
 # What are AI applications?
 
 In Azure, you can build intelligent applications faster by using the tools and technologies of your choice and built-in AI.

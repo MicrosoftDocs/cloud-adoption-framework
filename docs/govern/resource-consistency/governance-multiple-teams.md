@@ -12,8 +12,6 @@ ms.custom: governance
 
 <!-- TODO: Rationalize name formats. -->
 
-<!-- cSpell:ignore NetOps -->
-
 # Governance design for multiple teams
 
 The goal of this guidance is to help you learn the process for designing a resource governance model in Azure to support multiple teams, multiple workloads, and multiple environments. First you'll look at a set of hypothetical governance requirements, then go through several example implementations that satisfy those requirements.

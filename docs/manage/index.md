@@ -26,8 +26,6 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 
 The preceding steps create actionable approaches to deliver on the Cloud Adoption Framework's Manage methodology.
 
-<!-- cSpell:ignore CAF -->
-
 ![Manage methodology of the Cloud Adoption Framework](../_images/manage/caf-manage.png)
 
 As discussed in the [business alignment](./considerations/business-alignment.md) article, not all workloads are mission critical. Within any portfolio are various degrees of operational management needs. Business alignment efforts aid in capturing the business impact and negotiating management costs with the business, to ensure the most appropriate operational management processes and tools.

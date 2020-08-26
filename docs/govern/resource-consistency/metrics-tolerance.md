@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore MTBF MTTR -->
-
 # Risk tolerance metrics and indicators in the Resource Consistency discipline
 
 Learn to quantify business risk tolerance associated with the Resource Consistency discipline. Defining metrics and indicators helps to create a business case for investing in the maturity of this discipline.

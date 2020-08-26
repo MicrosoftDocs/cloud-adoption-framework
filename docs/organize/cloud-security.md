@@ -9,8 +9,6 @@ ms.topic: conceptual
 ms.date: 05/15/2020
 ---
 
-<!-- cSpell:ignore MarkSimos -->
-
 # Cloud security functions
 
 This article provides a summary of the organizational functions required to manage information security risk in an enterprise. These organizational functions collectively form the human portion of an overall cybersecurity system. Each function may be performed by one or more people, and each person may perform one or more functions, depending on various factors such as culture, budget, and available resources.

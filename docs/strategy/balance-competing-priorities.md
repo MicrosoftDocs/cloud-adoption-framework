@@ -17,8 +17,6 @@ Similar to other digital transformations, cloud adoption will expose competing p
 
 This article outlines some of the competing priorities commonly discussed during the execution of each methodology. We hope this advanced awareness will help better prepare for those discussions when developing your cloud adoption strategy.
 
-<!-- cSpell:ignore caf -->
-
 ![Cloud adoption lifecycle overview](../_images/caf-overview.png)
 
 The following sections align to the flow of the cloud adoption lifecycle visual above. However, it's important to recognize that cloud adoption is iterative (not a sequential process) and these competing priorities will emerge (and sometimes reemerge) at various points along your cloud adoption journey.

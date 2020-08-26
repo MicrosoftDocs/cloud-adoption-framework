@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore asabbour sabbour kured -->
+<!-- cSpell:ignore kured -->
 
 # Cluster and application security
 

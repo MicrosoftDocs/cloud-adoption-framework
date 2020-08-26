@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore billyclaymyersmsft wimyers functionapp -->
-
 # Engage customers through applications
 
 Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .net, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.

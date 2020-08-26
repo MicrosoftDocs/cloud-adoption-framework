@@ -10,8 +10,6 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore BYOK -->
-
 # Encryption decision guide
 
 Encrypting data protects it against unauthorized access. Properly implemented encryption policy provides additional layers of security for your cloud-based workloads and guards against attackers and other unauthorized users from both inside and outside your organization and networks.
