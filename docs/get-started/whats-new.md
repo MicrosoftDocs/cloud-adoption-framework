@@ -18,6 +18,34 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built in collaboration with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
 
+## August 25, 2020
+
+This release focuses on better definition and decision criteria regarding landing zone implementations.
+
+### Operating Model
+
+One of the most important factors to consider in landing zone design and implementation is your operating model. How you want to operate in the cloud will have a direct impact on the architecture and controls to implement. The following articles will help align your target operating model with a few common models seen in the cloud. Then map those to the most appropriate implementation to get started.
+
+| Article | Description |
+|---|---|
+| [Compare common operating models](../operating-model/compare.md) | This article is the primary guide for comparing operating models & choosing a course of action. |
+| [Understand cloud operating models](../operating-model/index.md) | Primer for making import decisions regarding your operating model. |
+| [Define your operating model with CAF](../operating-model/define.md) | The cloud adoption framework is an incremental guide to building out your environment and adopting the cloud within your chosen operating model. This article creates a frame of reference to understand how the various CAF methodologies support the development of your operating model. |
+| [Terms](../operating-model/terms.md) | Terms that are likley to come up when discussing your operating model with counterparts. These terms are not as commonly used by architects or technical specialists, but will prove important in those conversations. |
+
+### Azure Landing Zones - Additional implementation options
+
+The concept and implementations options behind Azure Landing Zones was built alongside the leading Microsoft partners. This release recognizes the existing intellectual property (IP) that those partners use to accelerate cloud adoption.
+
+| Article | Description |
+|---|---|
+| [Partner landing zones](../ready/landing-zone/partner-landing-zone.md) | Review and compare Azure Landing Zone offers from your partner. |
+| Update: [Implementation options](../ready/landing-zone/implementation-options.md) | Partner landing zone options added to the existing Azure Landing Zone implementation options |
+| Update: [Enterprise-Scale reference implementations](../ready/enterprise-scale/implementation.md) | Hub-Spoke reference implementation added to Enterprise-Scale reference implementations |
+
+> [!NOTE]
+> The new partner landing zone articles do not attempt to define how a partner should define or implement a landing zone. Instead it is designed to add structure to a complex conversation, so that you the reader can better understand the partner's offering. This list of questions and minimum evaluation criteria can also be used to compare offers from potential partners. It is also being used by some partners to more clearly communicate the value of their Azure Landing Zone offering(s).
+
 ## July 17, 2020
 
 This release adds a number of new scenarios to make cloud adoption more actionable.
