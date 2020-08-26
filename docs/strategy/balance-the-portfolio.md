@@ -17,8 +17,7 @@ Cloud adoption is a portfolio-management effort, cleverly disguised as technical
 
 Balancing the portfolio is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../digital-estate/index.md) or has begun that process. The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
 
-<!-- docsTest TODO: Handle capitalization following numbers and back-ticks -->
-<!-- cSpell:ignore 2M months years datacenters improvement CSAT -->
+<!-- cSpell:ignore 2M CSAT -->
 
 ### Document business outcomes
 

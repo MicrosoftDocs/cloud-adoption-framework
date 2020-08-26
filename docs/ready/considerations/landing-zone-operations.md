@@ -31,8 +31,6 @@ The following links provide best practices for improving landing zone operations
 
 The [Manage methodology](../../manage/index.md) provides overall guidance for building out operations management capacity, see the [Manage methodology](../../manage/index.md). We will use the basic structure of that methodology and the following steps from that methodology to improve landing zone operations and operations across all landing zones.
 
-<!-- cSpell:ignore caf -->
-
 ![Manage methodology](../../_images/manage/caf-manage.png)
 _Figure 1: The CAF Manage methodology._
 

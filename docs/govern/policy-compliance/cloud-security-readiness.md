@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-<!-- cSpell:ignore CISO -->
-
 # CISO cloud readiness guide
 
 Microsoft guidance like the Cloud Adoption Framework is not positioned to determine or guide the unique security constraints of the thousands of enterprises supported by this documentation. When moving to the cloud, the role of the chief information security officer or chief information security office (CISO) isn't supplanted by cloud technologies. Quite the contrary, the CISO and the office of the CISO, become more engrained and integrated. This guide assumes the reader is familiar with CISO processes and is seeking to modernize those processes to enable cloud transformation.

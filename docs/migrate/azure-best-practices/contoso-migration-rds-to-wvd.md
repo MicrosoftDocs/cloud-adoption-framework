@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore benstegink msiexec Logix Lakeside SysTrack Robocopy UPD UPDs -->
+<!-- cSpell:ignore msiexec Logix Lakeside SysTrack Robocopy UPD UPDs -->
 
 # Move on-premises Remote Desktop Services to Azure Windows Virtual Desktop scenario
 

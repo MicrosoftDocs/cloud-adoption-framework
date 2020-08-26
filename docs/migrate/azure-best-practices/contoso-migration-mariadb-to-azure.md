@@ -10,8 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- TODO: Verify GraphDBMS term -->
-<!-- cSpell:ignore ColumnStore GraphDBMS mysqldump Navicat phpMyAdmin -->
+<!-- cSpell:ignore  mysqldump Navicat phpMyAdmin -->
 
 # Migrate MariaDB databases to Azure
 

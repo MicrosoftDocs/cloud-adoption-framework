@@ -10,7 +10,7 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
-<!-- cSpell:ignore kusto multiresource multisignal -->
+<!-- cSpell:ignore multisignal -->
 
 # Cloud monitoring guide: Alerting
 

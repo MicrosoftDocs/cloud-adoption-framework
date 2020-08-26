@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- docsTest:casing "BMC Control-M" ASSGN DLBL EXTENT LIBDEF EXEC -->
 <!-- docsTest:ignore JOB -->
-<!-- cSpell:ignore nanra njray dbspaces dbextents ASSGN DLBL EXTENT LIBDEF EXEC IPLs -->
+<!-- cSpell:ignore dbspaces dbextents ASSGN DLBL EXTENT LIBDEF EXEC IPLs VSAM RACF LPARs -->
 
 # Mainframe migration overview
 

@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore paas NVAs VPNs -->
+<!-- cSpell:ignore NVAs VPNs -->
 
 # Review your network options
 

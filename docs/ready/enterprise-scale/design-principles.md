@@ -23,8 +23,6 @@ Azure Policy should be used to provide guardrails and ensure continued complianc
 
 ## Single control and management plane
 
-<!-- cSpell:ignore AppOps -->
-
 Enterprise-scale architecture shouldn't consider any abstraction layers, such as customer-developed portals or tooling. It should provide a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels subject to role-based access and policy-driven controls. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
 
 ## Application-centric and archetype-neutral

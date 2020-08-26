@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore asabbour sabbour autoscaler Istio Linkerd livedata servicemesh -->
+<!-- cSpell:ignore autoscaler Istio Linkerd -->
 
 # Application development and deployment
 

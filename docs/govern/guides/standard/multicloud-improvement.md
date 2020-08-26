@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore MPLS -->
-
 # Standard enterprise governance guide: Multicloud improvement
 
 This article advances the narrative by adding controls for multicloud adoption.

@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore siterecovery -->
-
 # Protect and recover in Azure
 
 _Protect and recover_ is the third and final discipline in any cloud-management baseline.

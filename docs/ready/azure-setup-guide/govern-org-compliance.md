@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore tvuylsteke -->
-
 # Governance, security, and compliance in Azure
 
 As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).

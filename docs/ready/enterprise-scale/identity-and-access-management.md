@@ -40,13 +40,13 @@ _Figure 1: Identity and access management._
   - Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It's standard practice for any organization that grants or denies access to confidential or critical business resources.
   - Managing application resources that don't violate security boundaries or other aspects required to maintain security and compliance can be delegated to application teams. Allowing users to provision resources within a securely managed environment allows organizations to take advantage of the agile nature of the cloud while preventing the violation of any critical security or governance boundary.
 
-<!-- docsTest:ignore Azure-AD-only Azure-AD-managed NetOps SecOps AppOps -->
+<!-- docsTest:ignore Azure-AD-only Azure-AD-managed -->
 
 **Design recommendations:**
 
 - Use Azure AD [RBAC](/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
-- Enforce multifactor authentication (MFA) for any user with rights to the Azure environments. MFA enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
+- Enforce multi-factor authentication (MFA) for any user with rights to the Azure environments. MFA enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
 - Use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined, or use both as needed.
 - Use Azure-AD-only groups for Azure control-plane resources in Azure AD PIM when you grant access to resources.
   - Add on-premises groups to the Azure-AD-only group if a group management system is already in place.

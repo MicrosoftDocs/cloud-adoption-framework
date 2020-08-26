@@ -10,8 +10,6 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore vcenter -->
-
 # Migrate a dev/test environment to Azure DevTest Labs
 
 This article demonstrates how the fictional company Contoso migrates its dev/test environment to Azure DevTest Labs.
