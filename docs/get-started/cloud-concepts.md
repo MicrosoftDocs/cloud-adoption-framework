@@ -36,6 +36,8 @@ Everyone involved in Azure implementation of the technology strategy should unde
 
 Whatever cloud provider you choose, all cloud hosting and environmental decisions start with an understanding of the portfolio of workloads. The Cloud Adoption Framework includes a few tools for understanding and evaluating the portfolio.
 
+If you already have an environment running in Azure today, the Azure Governance Vizualizer can help you gain insight into policies, RBAC, Blueprints, subscriptions and more. From the collected data AzGovViz provides visibility on your Hierarchy Map, creates a Tenant Summary and builds granular Scope Insights on Management Groups and Subscriptions. The AzGovViz tool can be found here: https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting 
+
 **Deliverables:**
 
 - Record the location, status, and accountable person for the portfolio documentation in the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx).
