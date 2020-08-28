@@ -33,7 +33,6 @@ Your company's cloud is built on a set of foundational decisions that can impact
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md)
 - [Portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md)
 - [Azure hierarchy support](../reference/fundamental-concepts/hierarchy-azure-tools.md)
-- [Operating model terminology](../operating-model/terms.md)
 
 ## Accelerate adoption
 
