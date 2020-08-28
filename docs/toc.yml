@@ -30,34 +30,42 @@ items:
       - name: Operating model terminology
         href: operating-model/terms.md
 
-    - name: Accelerate migration
-      href: get-started/migrate.md
-    - name: Build new products and services
-      href: get-started/innovate.md
-    - name: Unblock environment design and configuration
-      href: get-started/design-and-configuration.md
-    - name: Enable customer success
-      href: get-started/enable.md
-    - name: Deliver operational excellence
-      href: get-started/operational-excellence.md
-    - name: Manage cloud costs
-      href: get-started/manage-costs.md
-    - name: Secure the enterprise environment
-      href: get-started/security.md
-    - name: Improve reliability
-      href: get-started/reliability.md
-    - name: Ensure consistent performance
-      href: get-started/performance.md
-    - name: Align your organization
-      href: get-started/org-alignment.md
-    - name: Build a cloud strategy team
-      href: get-started/team/cloud-strategy.md
-    - name: Build a cloud adoption team
-      href: get-started/team/cloud-adoption.md
-    - name: Build a cloud governance team
-      href: get-started/team/cloud-governance.md
-    - name: Build a cloud operations team
-      href: get-started/team/cloud-operations.md
+    - name: Accelerate adoption
+      items:
+      - name: Accelerate migration
+        href: get-started/migrate.md
+      - name: Build new products and services
+        href: get-started/innovate.md
+      - name: Unblock environment design and configuration
+        href: get-started/design-and-configuration.md
+
+    - name: Improve controls
+      items:
+      - name: Enable customer success
+        href: get-started/enable.md
+      - name: Deliver operational excellence
+        href: get-started/operational-excellence.md
+      - name: Manage cloud costs
+        href: get-started/manage-costs.md
+      - name: Secure the enterprise environment
+        href: get-started/security.md
+      - name: Improve reliability
+        href: get-started/reliability.md
+      - name: Ensure consistent performance
+        href: get-started/performance.md
+
+    - name: Establish teams
+      items:
+      - name: Align your organization
+        href: get-started/org-alignment.md
+      - name: Build a cloud strategy team
+        href: get-started/team/cloud-strategy.md
+      - name: Build a cloud adoption team
+        href: get-started/team/cloud-adoption.md
+      - name: Build a cloud governance team
+        href: get-started/team/cloud-governance.md
+      - name: Build a cloud operations team
+        href: get-started/team/cloud-operations.md
 
   - name: Strategy
     items:
