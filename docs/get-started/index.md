@@ -18,7 +18,7 @@ The Cloud Adoption Framework can help you get started in several different ways,
 <br>
 
 What can we help you get started?
-Each link will take you to a grouped subset of the questions customers typically ask when trying to accomplish common objectives.
+Each link will take you to a grouped subset of the questions customers typically ask when trying to accomplish common goals.
 
 - [Align foundational concepts to onboard a person, project, or team](#align-foundation)
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)
