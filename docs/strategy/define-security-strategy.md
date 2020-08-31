@@ -154,7 +154,7 @@ Building a resilient security posture in the cloud requires several parallel com
 Note that the use of the word *trust* in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
 
 - [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of "zero trust") and designs security accordingly.
-- [Trust but verify](https://www.cloudservicesformsps.com/cloud-technology-articles/trust-but-verify/) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
+- [Trust but verify](https://www.emazzanti.net/wp-content/uploads/2017/11/Trust-but-verify-Article-PDF.pdf) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
 
 A cloud provider and their practices and processes can be accountable to meet contractual and regulatory requirements and could earn or lose trust. A network is a nonliving connection which cannot face consequences if it is used by attackers (much like you cannot hold a road or a car accountable for criminals using them).
 
