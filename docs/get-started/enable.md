@@ -18,7 +18,7 @@ Customer success in cloud adoption efforts often has little to do with technical
 As you drive innovation, alignment between business and technical teams is paramount to the success of your solution.
 
 - For business stakeholders, we've created the [Microsoft AI Business School](https://www.microsoft.com/ai/ai-business-school) to support business strategy development and provide example best practices.
-- For technical stakeholders, the [Microsoft AI learning paths](https://docs.microsoft.com/learn/) are available to help you build new AI skills.
+- For technical stakeholders, the [Microsoft AI learning paths](/learn/) are available to help you build new AI skills.
 
 ## Blockers
 
@@ -36,10 +36,10 @@ The following guides will help you get started with operating model alignment an
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide will help the strategy team lead organizational change management to consistently ensure operational excellence. |
 | [How do we manage enterprise costs?](./manage-costs.md)                                          | Start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This get-started guide can help ensure that the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recovery when a breach occurs.                                       |
-| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This get-started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
-| [How do we ensure performance across the enterprise?](./performance.md)                               | This get-started guide can help you establish processes for maintaining performance across the enterprise.                               |
-| [How do we align our organization?](./org-alignment.md)                               | This get-started guide can help you establish an appropriately staffed organizational structure.                               |
+| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This getting started guide can help ensure that the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recovery when a breach occurs.                                       |
+| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This getting started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
+| [How do we ensure performance across the enterprise?](./performance.md)                               | This getting started guide can help you establish processes for maintaining performance across the enterprise.                               |
+| [How do we align our organization?](./org-alignment.md)                               | This getting started guide can help you establish an appropriately staffed organizational structure.                               |
 
 ## Shared architecture principles
 
@@ -49,7 +49,7 @@ The core principles of a well-managed operating model are based on a set of comm
 
 These principles are shared across Azure Advisor, the Microsoft Azure Well-Architected Framework, and solutions in the Azure Architecture Center:
 
-- [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) evaluates the principles for individual assets across solutions, workloads, and the full portfolio.
-- [Azure Architecture Center](https://docs.microsoft.com/azure/architecture) applies these principles to develop and manage specific technical solutions.
-- [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) helps balance these principles across a workload, to guide architecture decisions.
+- [Azure Advisor](/azure/advisor/advisor-overview) evaluates the principles for individual assets across solutions, workloads, and the full portfolio.
+- [Azure Architecture Center](/azure/architecture/) applies these principles to develop and manage specific technical solutions.
+- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) helps balance these principles across a workload, to guide architecture decisions.
 - [Cloud Adoption Framework](../index.yml) ensures that the principles scale across the portfolio to enable adoption teams through a well-managed environment.

@@ -1,5 +1,5 @@
 ---
-title: "Rationalize the digital estate"
+title: Rationalize the digital estate
 description: Use cloud rationalization to evaluate your digital assets and determine the best approach to hosting them in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -22,9 +22,9 @@ It's easy to understand rationalization when you visualize the traditional proce
 
 **Quantitative analysis:** In the decision tree, quantitative questions drive the first layer of decisions. Common questions include the following:
 
-    - Is the asset in use today?
-    - If so, is it optimized and sized properly?
-    - What dependencies exist between assets? These questions are vital to the classification of the inventory.
+- Is the asset in use today?
+- If so, is it optimized and sized properly?
+- What dependencies exist between assets? These questions are vital to the classification of the inventory.
 
 **Qualitative analysis:** The next set of decisions requires human intelligence in the form of qualitative analysis. Often, the questions that come up here are unique to the solution and can be answered only by business stakeholders and power users. These decisions typically delay the process, slowing things down considerably. This analysis generally consumes 40 to 80 FTE hours per application.
 

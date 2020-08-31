@@ -16,8 +16,6 @@ This article advances the narrative by adding cost controls to the governance MV
 
 ## Advancing the narrative
 
-<!-- docsTest:ignore DR -->
-
 Adoption has grown beyond the cost tolerance indicator defined in the governance MVP. This is a good thing, as it corresponds with migrations from the "DR" datacenter. The increase in spending now justifies an investment of time from the cloud governance team.
 
 ### Changes in the current state
@@ -33,7 +31,7 @@ Since then, some things have changed that will affect governance:
 
 ### Incrementally improve the future state
 
-Cost monitoring and reporting is to be added to the cloud solution. IT is still serving as a cost clearing house. This means that payment for cloud services continues to come from IT procurement. Reporting should tie direct operating expenses to the functions that are consuming the cloud costs. This model is referred to as a _showback_ cloud accounting model.
+Cost monitoring and reporting is to be added to the cloud solution. IT is still serving as a cost clearing house. This means that payment for cloud services continues to come from IT procurement. Reporting should tie direct operating expenses to the functions that are consuming the cloud costs. This model is referred to as a *showback* cloud accounting model.
 
 The changes to current and future state expose new risks that will require new policy statements.
 
@@ -60,13 +58,13 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of the best practices
 
-This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
+This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management and Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
-1. Implement Azure Cost Management.
-    1. Establish the right scope of access to align with the subscription pattern and the Resource Consistency discipline. Assuming alignment with the governance MVP defined in prior articles, this requires **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance may require **Resource Group Scope** access.
-    1. Establish a budget in Azure Cost Management.
+1. Implement Azure Cost Management and Billing.
+    1. Establish the right scope of access to align with the subscription pattern and the Resource Consistency discipline. Assuming alignment with the governance MVP defined in prior articles, this requires **enrollment account scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance may require **resource group scope** access.
+    1. Establish a budget in Azure Cost Management and Billing.
     1. Review and act on initial recommendations. Have a recurring process to support reporting.
-    1. Configure and execute Azure Cost Management reporting, both initial and recurring.
+    1. Configure and execute Azure Cost Management and Billing reporting, both initial and recurring.
 2. Update Azure Policy
     1. Audit the tagging, management group, subscription, and resource group values to identify any deviation.
     1. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.

@@ -1,5 +1,5 @@
 ---
-title: "Cost Management discipline overview"
+title: Cost Management discipline overview
 description: Understand the approach to developing a Cost Management discipline as part of a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
@@ -28,15 +28,13 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Develop governance policy statements
 
-The following six steps will help you define governance policies to control costs in your environment.
+The following steps help you define governance policies to control costs in your environment.
 
-<!-- markdownlint-disable MD033 -->
-
-| | |
-|---|---|
+|  |  |
+|--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Cost Management discipline template](./template.md): Download the template for documenting a Cost Management discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Cost Management discipline. |
-| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand if it is the right time to invest in the Cost Management discipline. |
+| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand whether it is the right time to invest in the Cost Management discipline. |
 | <br> ![Adherence icon](../../_images/govern/process-enforce.png) | <br> [Policy adherence processes](./compliance-processes.md): Suggested processes for supporting policy compliance in the Cost Management discipline. |
 | <br> ![Maturity icon](../../_images/govern/process-maturity.png) | <br> [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption. |
 | <br> ![Toolchain icon](../../_images/govern/process-toolchain.png) | <br> [Toolchain](./toolchain.md): Azure services that can be implemented to support the Cost Management discipline. |
@@ -47,5 +45,3 @@ Get started by evaluating business risks in a specific environment.
 
 > [!div class="nextstepaction"]
 > [Understand business risks](./business-risks.md)
-
-<!-- markdownlint-enable MD033 -->

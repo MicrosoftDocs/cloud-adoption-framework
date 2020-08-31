@@ -21,7 +21,7 @@ Other considerations might necessitate additional subscriptions. Keep the follow
 
 ## Technical considerations
 
-**Subscription limits:** Subscriptions have defined limits for some resource types. For example, the number of virtual networks in a subscription is limited. When a subscription approaches these limits, you'll need to create another subscription and put additional resources there. For more information, see [Azure subscription and service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#general-limits).
+**Subscription limits:** Subscriptions have defined limits for some resource types. For example, the number of virtual networks in a subscription is limited. When a subscription approaches these limits, you'll need to create another subscription and put additional resources there. For more information, see [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#general-limits).
 
 **Classic model resources:** If you've been using Azure for a long time, you may have resources that were created using the classic deployment model. Azure policies, role-based access control, resource grouping, and tags cannot be applied to classic model resources. You should move these resources into subscriptions that contain only classic model resources.
 
@@ -42,14 +42,14 @@ For other considerations about scaling your subscriptions, review the [subscript
 
 ## Moving resources between subscriptions
 
-As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 ## Tips for creating new subscriptions
 
 - Identify who is responsible for creating new subscriptions.
 - Decide which resource types are available in a subscription by default.
 - Decide what all standard subscriptions should look like. Considerations include RBAC access, policies, tags, and infrastructure resources.
-- If possible, [programmatically create new subscriptions](https://docs.microsoft.com/azure/azure-resource-manager/management/programmatically-create-subscription) via a service principal. You must [grant permission to the service principal](https://docs.microsoft.com/azure/azure-resource-manager/grant-access-to-create-subscription) to create subscriptions. Define a security group that can request new subscriptions via an automated workflow.
+- If possible, [programmatically create new subscriptions](/azure/azure-resource-manager/management/programmatically-create-subscription) via a service principal. You must [grant permission to the service principal](/azure/azure-resource-manager/grant-access-to-create-subscription) to create subscriptions. Define a security group that can request new subscriptions via an automated workflow.
 - If you're an Enterprise Agreement (EA) customer, ask Azure support to block creation of non-EA subscriptions for your organization.
 
 ## Next steps

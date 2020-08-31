@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore benstegink msiexec Logix Lakeside SysTrack Robocopy UPD UPDs -->
+<!-- cSpell:ignore msiexec Logix Lakeside SysTrack Robocopy UPD UPDs -->
 
 # Move on-premises Remote Desktop Services to Azure Windows Virtual Desktop scenario
 
@@ -18,7 +18,7 @@ Windows Virtual Desktop is a comprehensive desktop and application virtualizatio
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads by using Azure Windows Virtual Desktop. <br><br> Manage Windows Virtual Desktop with [Windows Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads by using Azure Windows Virtual Desktop. <br><br> Manage Windows Virtual Desktop with [Windows Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
 > [!NOTE]
 > This article focuses on using Windows Virtual Desktop in Azure to move an on-premises RDS environment to Azure.
@@ -112,12 +112,12 @@ Contoso will provision the Windows Virtual Desktop service in the `East US 2` Az
 1. Make sure that domain services, either Active Directory or Azure Active Directory Domain Services, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network to be connected where Windows Virtual Desktop will be deployed.
 
     > [!NOTE]
-    > Learn more about [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express) for synchronizing Active Directory on-premises with Azure AD.
+    > Learn more about [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express) for synchronizing Active Directory on-premises with Azure AD.
 
     <!-- -->
 
     > [!NOTE]
-    > Learn about provisioning [Azure Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
+    > Learn about provisioning [Azure Active Directory Domain Services](/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
 
 1. Create a new Azure Migrate project.
 
@@ -205,7 +205,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
 
     > [!NOTE]
     > Contoso can't create a new virtual network at this step. Before reaching this step, Contoso should have already created a virtual network that has access to Active Directory.
-    
+
    <!-- -->
 
     > [!NOTE]
@@ -220,7 +220,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
 
 Because Windows Virtual Desktop doesn't support user profile disks (UPDs), Contoso needs to convert all the UPDs to FSLogix via the [FSLogixMigration PowerShell module](https://aka.ms/FSLogixMigrationPreviewModule).
 
-<!-- docsTest:ignore FSLogixMigration -->
+<!-- docsTest:casing FSLogixMigration -->
 
 After Contoso imports the FSLogixMigration module, it runs the following PowerShell cmdlets to migrate from UPDs to FSLogix.
 
@@ -290,16 +290,16 @@ With the virtual desktops and application servers now running in Azure, Contoso 
 
 The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
 
-For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
+For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 ## Business continuity and disaster recovery
 
-For business continuity and disaster recovery (BCDR), Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
+For business continuity and disaster recovery (BCDR), Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 ### Licensing and cost optimization
 
 - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments.
-- Contoso will enable [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+- Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 - Contoso has existing licensing for its VMs and will take advantage of the Azure Hybrid Benefit for application servers. Contoso will convert the existing Azure VMs to take advantage of this pricing.
 
 ## Conclusion

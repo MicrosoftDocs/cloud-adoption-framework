@@ -1,5 +1,5 @@
 ---
-title: "Encryption decision guide"
+title: Encryption decision guide
 description: Implement an encryption policy, a core service in Azure migrations that provides additional layers of security for your cloud-based workloads and data.
 author: rotycenh
 ms.author: abuck
@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
 ---
-
-<!-- cSpell:ignore BYOK -->
 
 # Encryption decision guide
 
@@ -118,14 +116,14 @@ Encryption for data in use involves securing data in nonpersistent storage, such
 
 For more information about encryption and key management in Azure, see:
 
-- **[Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview):** A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
-- **[Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
-- **[Azure data security and encryption best practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices).** A discussion of Azure data security and encryption best practices.
+- **[Azure encryption overview](/azure/security/fundamentals/encryption-overview):** A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
+- **[Azure Key Vault](/azure/key-vault/general/overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
+- **[Azure data security and encryption best practices](/azure/security/fundamentals/data-encryption-best-practices).** A discussion of Azure data security and encryption best practices.
 - **[Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute):** Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
 
 ## Next steps
 
-Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [decision guides overview](../index.md).
+Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the architectural decision guides overview.
 
 > [!div class="nextstepaction"]
-> [Architectural decision guides](../index.md)
+> [Architectural decision guides overview](../index.md)

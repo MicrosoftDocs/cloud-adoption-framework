@@ -1,5 +1,5 @@
 ---
-title: "Identity Baseline discipline improvement"
+title: Identity Baseline discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Identity Baseline discipline in each phase of cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore offboarding preintegration -->
-
 # Identity Baseline discipline improvement
 
 The Identity Baseline discipline focuses on ways of establishing policies that ensure consistency and continuity of user identities regardless of the cloud provider that hosts the application or workload. Within the Five Disciplines of Cloud Governance, the Identity Baseline discipline includes decisions regarding the [hybrid identity strategy](../../decision-guides/identity/index.md), evaluation and extension of identity repositories, implementation of single sign-on (same sign-on), auditing and monitoring for unauthorized use or malicious actors. In some cases, it may also involve decisions to modernize, consolidate, or integrate multiple identity providers.
@@ -20,7 +18,7 @@ This article outlines some potential tasks your company can engage in to better 
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-_Figure 1: Adoption phases of the incremental approach to cloud governance._
+*Figure 1: Adoption phases of the incremental approach to cloud governance.*
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Identity Baseline discipline.
 
@@ -58,7 +56,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
 - Consider establishing an early adopter program and rolling out to a limited number of users.
 - Continue to educate the people and teams most affected by the architecture guidelines.
 
-<!-- docsTest:ignore "seamless SSO" -->
+<!-- docutune:casing "seamless SSO" -->
 
 **Potential activities:**
 
@@ -67,17 +65,17 @@ Several technical and nontechnical prerequisites are required to successfully mi
   - If federated, enable tenant restrictions for administrative accounts.
 - Integrate your on-premises and cloud directories.
 - Consider using the following access models:
-  - [Least-privilege administrative](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) access model.
-  - [Privileged identity management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) access model.
-- Finalize all preintegration details and review [identity management and access control security best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices).
-  - Enable single-identity, single-sign-on (SSO), also called seamless SSO.
+  - [Least-privilege administrative](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) access model.
+  - [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) access model.
+- Finalize all preintegration details and review [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices).
+  - Enable single-identity single-sign-on (SSO), also called seamless SSO.
   - Configure multi-factor authentication for administrators.
   - Consolidate or integrate identity providers, where necessary.
   - Implement tooling necessary to centralize management of identities.
   - Enable just-in-time (JIT) access and role change alerting.
   - Conduct a risk analysis of key admin activities for assignment to built-in roles.
   - Consider an updated rollout of stronger authentication for all users.
-  - Enable privileged identity management (PIM) for JIT (using time-limited activation) for additional administrative roles.
+  - Enable Privileged Identity Management (PIM) for JIT (using time-limited activation) for additional administrative roles.
   - Separate user accounts from global admin accounts, to ensure that administrators do not inadvertently open emails or run programs associated with their global admin accounts).
 
 ## Adopt and migrate
@@ -98,7 +96,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Validate that single sign-on (SSO) and seamless SSO is working as expected for your applications.
 - Reduce or eliminate the number of alternative identity stores.
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
-- Enable conditional access for [on-premises federated applications](https://docs.microsoft.com/azure/active-directory/devices/overview).
+- Enable conditional access for [on-premises federated applications](/azure/active-directory/devices/overview).
 - Distribute identity across global regions in multiple hubs with synchronization between regions.
 - Establish central role-based access control (RBAC) federation.
 
@@ -129,7 +127,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Consider implementing a development security operations (DevSecOps) approach.
 - Conduct an impact analysis to gauge results on costs, security, and user adoption.
 - Periodically produce an impact report that shows the changes in metrics created by the system and estimate the business impacts of the [hybrid identity strategy](../../decision-guides/identity/index.md).
-- Establish integrated monitoring recommended by the [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro).
+- Establish integrated monitoring recommended by the [Azure Security Center](/azure/security-center/security-center-intro).
 
 ## Next steps
 

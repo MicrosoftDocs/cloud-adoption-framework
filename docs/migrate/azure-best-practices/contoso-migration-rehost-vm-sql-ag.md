@@ -87,8 +87,8 @@ Contoso evaluates its proposed design by putting together a list of pros and con
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. They might incur charges depending on the tools (first-party or independent software vendor) they decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
+| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
+| [Azure Migrate](/azure/migrate/migrate-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. They might incur charges depending on the tools (first-party or independent software vendor) they decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
 
 ## Migration process
 
@@ -114,7 +114,7 @@ Here's what Contoso needs to do for this scenario.
 | **Azure subscription** | Contoso already created a subscription in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> |
 | **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) requirements for Azure Migrate: Server Migration. |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, 6.5, or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
-| **On-premises VMs** | [Review Linux machines](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
+| **On-premises VMs** | [Review Linux machines](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
 ## Scenario steps
 
@@ -162,8 +162,8 @@ To set up the cluster, the Contoso admins:
 
 **Need more help?**
 
-- Get help with how to [provision a SQL Server VM](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#1-configure-basic-settings).
-- Learn about how to [configure VMs for different SQL Server SKUs](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-prereq#create-sql-server-vms).
+- Get help with how to [provision a SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#1-configure-basic-settings).
+- Learn about how to [configure VMs for different SQL Server SKUs](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-prereq#create-sql-server-vms).
 
 ## Step 2: Deploy and set up the cluster
 
@@ -192,7 +192,7 @@ To create a storage account, the Contoso admins:
 
     ![Screenshot that shows the access key.](./media/contoso-migration-rehost-vm-sql-ag/access-key.png)
 
-<!-- docsTest:ignore "Failover Cluster feature -->
+<!-- docsTest:casing "Failover Cluster feature" -->
 
 ### Add SQL Server VMs to Contoso domain
 
@@ -213,7 +213,7 @@ Before the Contoso admins set up the cluster, they take a snapshot of the OS dis
 
      ![Screenshot that shows the clusters are created.](./media/contoso-migration-rehost-vm-sql-ag/create-cluster2.png)
 
-<!--docsTest:ignore "Failover Cluster Manager" -->
+<!--docsTest:casing "Failover Cluster Manager" -->
 
 ### Configure the cloud witness
 
@@ -237,8 +237,8 @@ With Always On availability groups enabled, Contoso can set up the Always On ava
 
 **Need more help?**
 
-- Read about [cloud witness and setting up a storage account for it](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness).
-- Get instructions for how to [set up a cluster and create an availability group](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial).
+- Read about [cloud witness and setting up a storage account for it](/windows-server/failover-clustering/deploy-cloud-witness).
+- Get instructions for how to [set up a cluster and create an availability group](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial).
 
 ## Step 3: Deploy Azure Load Balancer
 
@@ -296,8 +296,8 @@ To create the rule, the Contoso admins:
 
 **Need more help?**
 
-- Get an overview of [Azure Load Balancer](https://docs.microsoft.com/azure/load-balancer/load-balancer-overview).
-- Learn about how to [create a load balancer](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+- Get an overview of [Azure Load Balancer](/azure/load-balancer/load-balancer-overview).
+- Learn about how to [create a load balancer](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## Step 4: Prepare Azure for Azure Migrate
 
@@ -355,8 +355,8 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 1. Install the Azure agent:
 
-    - [Azure Linux agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux)
-    - [Azure Windows agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows)
+    - [Azure Linux agent](/azure/virtual-machines/extensions/agent-linux)
+    - [Azure Windows agent](/azure/virtual-machines/extensions/agent-windows)
 
 1. Miscellaneous
 
@@ -365,7 +365,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 **Need more help?**
 
-Learn about how to [prepare VMs for migration](https://docs.microsoft.com/azure/migrate/prepare-for-migration).
+Learn about how to [prepare VMs for migration](/azure/migrate/prepare-for-migration).
 
 ## Step 6: Replicate the on-premises VMs to Azure
 
@@ -399,7 +399,7 @@ With discovery finished, they can begin replication of VMware VMs to Azure.
     - Select **No** if they don't want to apply Azure Hybrid Benefit. Then they select **Next**.
     - Select **Yes** if they have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and they want to apply the benefit to the machines they're migrating. Then they select **Next**.
 
-1. In **Compute**, they review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+1. In **Compute**, they review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
     - **VM size:** If they're using assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, they can pick a manual size in **Azure VM size.**
     - **OS disk:** They specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
@@ -416,7 +416,7 @@ With discovery finished, they can begin replication of VMware VMs to Azure.
 
 ## Step 7: Migrate the database via Azure Database Migration Service
 
-The Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
+The Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
 
 As a summary, they must perform the following tasks:
 
@@ -475,9 +475,9 @@ With everything set up, Contoso now has a functional availability group in Azure
 
 **Need more help?**
 
-- Learn about how to create an [availability group](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#create-the-availability-group) and [listener](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#configure-listener).
-- Manually [set up the cluster to use the load balancer IP address](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#configure-the-cluster-to-use-the-load-balancer-ip-address).
-- Learn more about how to [create and use SAS](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
+- Learn about how to create an [availability group](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#create-the-availability-group) and [listener](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#configure-listener).
+- Manually [set up the cluster to use the load balancer IP address](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#configure-the-cluster-to-use-the-load-balancer-ip-address).
+- Learn more about how to [create and use SAS](/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
 
 ## Step 9: Migrate the VM with Azure Migrate
 
@@ -529,9 +529,9 @@ As the final step in the migration process, the Contoso admins update the connec
 
 **Need more help?**
 
-- Learn about how to [run a test failover](https://docs.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure).
-- Learn how to [create a recovery plan](https://docs.microsoft.com/azure/site-recovery/site-recovery-create-recovery-plans).
-- Learn about [failing over to Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-failover).
+- Learn about how to [run a test failover](/azure/site-recovery/tutorial-dr-drill-azure).
+- Learn how to [create a recovery plan](/azure/site-recovery/site-recovery-create-recovery-plans).
+- Learn about [failing over to Azure](/azure/site-recovery/site-recovery-failover).
 
 ### Clean up after migration
 
@@ -555,22 +555,22 @@ The Contoso security team reviews the virtual machines `WEBVM`, `SQLAOG1`, and `
 
 - Review the network security groups (NSGs) for the VM to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - Consider securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
-- Evaluate transparent data encryption. Then enable it on the SmartHotel360 database running on the new Always On availability group. Learn more about [transparent data encryption](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
+- Evaluate transparent data encryption. Then enable it on the SmartHotel360 database running on the new Always On availability group. Learn more about [transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
 
-For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
+For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 ## Business continuity and disaster recovery
 
 For business continuity and disaster recovery, Contoso takes the following actions:
 
-- To keep data safe, Contoso backs up the data on the `WEBVM`, `SQLAOG1`, and `SQLAOG2` VMs via [Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
-- Contoso will also learn about how to use Azure Storage to back up SQL Server directly to Azure Blob storage. Learn more about how to [use Azure Storage for SQL Server backup and restore](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore).
-- To keep applications up and running, Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. Learn more about how to [set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- To keep data safe, Contoso backs up the data on the `WEBVM`, `SQLAOG1`, and `SQLAOG2` VMs via [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+- Contoso will also learn about how to use Azure Storage to back up SQL Server directly to Azure Blob storage. Learn more about how to [use Azure Storage for SQL Server backup and restore](/azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore).
+- To keep applications up and running, Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. Learn more about how to [set up disaster recovery to a secondary Azure region for an Azure VM](/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 
 - Contoso has existing licensing for its WEBVM and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs to take advantage of this pricing.
-- Contoso will use [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
+- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
 
 ## Conclusion
 

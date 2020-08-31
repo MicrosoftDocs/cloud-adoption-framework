@@ -24,9 +24,7 @@ By using the Microsoft Cloud Adoption Framework for Azure best practices, organi
 
 The Cloud Adoption Framework brings together cloud adoption best practices from Microsoft employees, partners, and customers. It provides a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during your adoption effort. This guidance aligns to the following phases of the cloud adoption lifecycle, giving you easy access to the right guidance at the right time.
 
-<!-- markdownlint-disable MD033 -->
-
-| | | | | |
+|  |  |  |  |  |
 |--|--|--|--|--|
 | <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
 | <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
@@ -51,9 +49,9 @@ The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Be
 
 This guidance affects the business, technology, and culture of enterprises. The affected roles include line-of-business leaders, business decision makers, IT decision makers, finance, enterprise administrators, IT operations, IT security and compliance, IT governance, workload development owners, and workload operations owners. Each role uses its own vocabulary, and each has different objectives and key performance indicators. A single set of content can't address all audiences effectively.
 
-Enter the _cloud architect_. The cloud architect serves as the thought leader and facilitator to bring these audiences together. We've designed this collection of guides to help cloud architects facilitate the right conversations with the right audiences and drive decision-making. Business transformation that's empowered by the cloud depends on the cloud architect role to help guide decisions throughout the business and IT.
+Enter the *cloud architect*. The cloud architect serves as the thought leader and facilitator to bring these audiences together. We've designed this collection of guides to help cloud architects facilitate the right conversations with the right audiences and drive decision-making. Business transformation that's empowered by the cloud depends on the cloud architect role to help guide decisions throughout the business and IT.
 
-Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. These sections also create opportunities to share cloud architecture responsibilities across a team of cloud architects. For example, the governance section is designed for cloud architects who have a passion for mitigating technical risks. Some cloud providers refer to these specialists as cloud custodians; we prefer the term _cloud guardian_ or, collectively, the _cloud governance team_.
+Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. These sections also create opportunities to share cloud architecture responsibilities across a team of cloud architects. For example, the governance section is designed for cloud architects who have a passion for mitigating technical risks. Some cloud providers refer to these specialists as cloud custodians; we prefer the term *cloud guardian* or, collectively, the *cloud governance team*.
 
 ## How to use the Microsoft Cloud Adoption Framework for Azure
 

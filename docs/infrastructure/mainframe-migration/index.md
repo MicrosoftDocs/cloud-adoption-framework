@@ -9,7 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore nanra njray dbspaces dbextents VSAM RACF LPARS ASSGN DLBL EXTENT LIBDEF EXEC IPLs -->
+<!-- docsTest:casing "BMC Control-M" ASSGN DLBL EXTENT LIBDEF EXEC -->
+<!-- docsTest:ignore JOB -->
+<!-- cSpell:ignore dbspaces dbextents ASSGN DLBL EXTENT LIBDEF EXEC IPLs VSAM RACF LPARs -->
 
 # Mainframe migration overview
 
@@ -61,14 +63,11 @@ The following are typical mainframe operations:
 
 - **Online:** Workloads include transaction processing, database management, and connections. They are often implemented using IBM DB2, CICS, and z/OS connectors.
 
-<!-- docsTest:ignore "BMC Control-M" -->
-<!-- cSpell:ignore JOB ASSGN DLBL EXTENT LIBDEF EXEC -->
-
 - **Batch:** Jobs run without user interaction, typically on a regular schedule such as every weekday morning. Batch jobs can be run on systems based on Windows or Linux by using a JCL emulator such as Micro Focus Enterprise Server or BMC Control-M software.
 
 - **Job control language (JCL):** Specify resources needed to process batch jobs. JCL conveys this information to z/OS through a set of job control statements. Basic JCL contains six types of statements: JOB, ASSGN, DLBL, EXTENT, LIBDEF, and EXEC. A job can contain several EXEC statements (steps), and each step could have several LIBDEF, ASSGN, DLBL, and EXTENT statements.
 
-- **Initial program load (IPL):**  Refers to loading a copy of the operating system from disk into a processor's real storage and running it. IPLs are used to recover from downtime. An IPL is like booting the operating system on Windows or Linux VMs.
+- **Initial program load (IPL):** Refers to loading a copy of the operating system from disk into a processor's real storage and running it. IPLs are used to recover from downtime. An IPL is like booting the operating system on Windows or Linux VMs.
 
 ## Next steps
 

@@ -9,13 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- cSpell:ignore CISO passwordless -->
-
 # Get started: Implement security across the enterprise environment
 
 Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts.
 
-This getting-started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
+This getting started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
 
 The steps in this guide are intended for all roles that support security assurances for cloud environments and landing zones. Tasks include immediate risk mitigation priorities, guidance on building a modern security strategy, operationalizing the approach, and executing on that strategy.
 
@@ -43,30 +41,29 @@ In addition to meeting any explicit regulatory compliance requirements, we recom
 
 - **Technical:** Mitigate top risks and increase visibility and control of assets by enabling passwordless or multi-factor authentication for admins, and by enabling threat protection for cloud resources.
 
-  - [Passwordless or multi-factor authentication for admins](https://docs.microsoft.com/azure/architecture/framework/security/critical-impact-accounts#passwordless-or-multi-factor-authentication-for-admins)
-  - [Security operations](https://docs.microsoft.com/azure/architecture/framework/security/security-operations) and [Threat protection in Azure Security Center](https://docs.microsoft.com/azure/security-center/threat-protection)
+  - [Passwordless or multi-factor authentication for admins](/azure/architecture/framework/security/critical-impact-accounts#passwordless-or-multi-factor-authentication-for-admins)
+  - [Security operations](/azure/architecture/framework/security/security-operations) and [threat protection in Azure Security Center](/azure/security-center/threat-protection)
 
 - **Process:** Enable rapid security decisions and continuous improvement by assigning security roles and responsibilities, and by establishing an incident response process.
 
-  - [Clear lines of responsibility](https://docs.microsoft.com/azure/architecture/framework/security/governance#clear-lines-of-responsibility), [Assign privileges for managing the environment](https://docs.microsoft.com/azure/architecture/framework/security/governance#assign-privileges-for-managing-the-environment), and Operationalize Secure Score <!-- TODO: Improve this and add link to AAF article -->
+  - [Clear lines of responsibility](/azure/architecture/framework/security/governance#clear-lines-of-responsibility), [Assign privileges for managing the environment](/azure/architecture/framework/security/governance#assign-privileges-for-managing-the-environment), and Operationalize Secure Score <!-- TODO: Improve this and add link to AAF article -->
   - Security roles and responsibilities <!-- TODO: add link to bookmark -->
   - [Incident response reference guide](https://aka.ms/irrg)
 
 - **People:** Provide security teams with the education, tools, and access required to successfully deploy and operate during the transition to the cloud environment.
 
   - **Educate everyone on concepts** of how cloud and cloud security are evolving:
-    - [Evolution of threat environment, roles, and digital strategies](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
-    - [Transformation of security, strategies, tools, and threats](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
-  - **Train technical staff** on technical details of cloud security capabilities for the platforms they use. Microsoft provides extensive [Azure security documentation](https://docs.microsoft.com/azure/security).
+    - [Evolution of threat environment, roles, and digital strategies](/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
+    - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
+  - **Train technical staff** on technical details of cloud security capabilities for the platforms they use. Microsoft provides extensive [Azure security documentation](/azure/security).
 
 - **Long-term architectural decisions:** Establish a long-term foundation with the right decisions. These are difficult and expensive to change later.
 
-  - [Build an enterprise segmentation strategy and align technical architectures with it (network segmentation, identity segmentation, etc.)](https://docs.microsoft.com/azure/architecture/framework/security/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
-  - [Single enterprise directory](https://docs.microsoft.com/azure/architecture/framework/security/identity#single-enterprise-directory)
-  - [Authentication strategy for services](https://docs.microsoft.com/azure/architecture/framework/security/applications-services#prefer-identity-authentication-over-keys)
-  - [Permission assignment strategy](https://docs.microsoft.com/azure/architecture/framework/security/critical-impact-accounts#avoid-granular-and-custom-permissions)
+  - [Build an enterprise segmentation strategy and align technical architectures with it (network segmentation, identity segmentation, etc.)](/azure/architecture/framework/security/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
+  - [Single enterprise directory](/azure/architecture/framework/security/identity#single-enterprise-directory)
+  - [Authentication strategy for services](/azure/architecture/framework/security/applications-services#prefer-identity-authentication-over-keys)
+  - [Permission assignment strategy](/azure/architecture/framework/security/critical-impact-accounts#avoid-granular-and-custom-permissions)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -95,7 +92,7 @@ We recommended capturing the strategy in a presentation to facilitate easy discu
   - **Full presentation:** This should include the full set of elements for the security strategy in the main presentation or in optional reference slides.
   - **Executive summaries:** Versions to use with senior executives and board members might contain only critical elements relevant to their role, such as risk appetite, top priorities, or accepted risks.
 
-- You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 **Best practices for building security strategy:**
 
@@ -112,16 +109,16 @@ Successful programs incorporate these elements into their security strategy proc
 
 - **Modernize security strategy:** The security strategy should include considerations for all aspects of modern technology environment, current threat landscape, and security community resources.
 
-  - **Adapt to the shared responsibility model** of the cloud.
-  - **Include all cloud types and multicloud deployments**.
-  - **Prefer native cloud controls** to avoid unnecessary and harmful friction.
-  - **Integrate the security community** to keep up with the pace of attacker evolution.
+  - Adapt to the shared responsibility model of the cloud.
+  - Include all cloud types and multicloud deployments.
+  - Prefer native cloud controls to avoid unnecessary and harmful friction.
+  - Integrate the security community to keep up with the pace of attacker evolution.
 
 **Related resources for additional context:**
 
-- [Evolution of threat environment, roles, and digital strategies](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
+- [Evolution of threat environment, roles, and digital strategies](/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
 
-- [Transformation of security, strategies, tools, and threats](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
+- [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
 
 - Strategy considerations for the Cloud Adoption Framework:
 
@@ -129,7 +126,6 @@ Successful programs incorporate these elements into their security strategy proc
   - [Cybersecurity resilience](../strategy/define-security-strategy.md#cybersecurity-resilience)
   - [How cloud is changing security relationships and responsibilities](../strategy/define-security-strategy.md#how-the-cloud-is-changing-security)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -148,7 +144,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
 **Deliverables:**
 
-- **Security plan:** A security plan should be part of the main planning documentation for the cloud. It might be a document that uses the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx), a detailed slide deck, or a project file. Or it might be a combination of these formats, depending on organization's size, culture, and standard practices.
+- **Security plan:** A security plan should be part of the main planning documentation for the cloud. It might be a document that uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), a detailed slide deck, or a project file. Or it might be a combination of these formats, depending on organization's size, culture, and standard practices.
 
   The security plan should include all of these elements:
 
@@ -157,19 +153,22 @@ Security planning and cloud adoption planning should not be done in isolation. I
   - **Security skills plan** to support team members as they navigate the significant changes in technology, roles, and responsibilities.
 
   - **Technical security architecture and capabilities roadmap** to guide technical teams.
-  
+
     Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
 
-    - [Azure components and reference model](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
+    - [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
       ![Azure administration model](../_images/security/azure-administration-model.png)
 
       ![Azure RBAC model](../_images/security/azure-rbac-model.png)
 
     - [Microsoft cybersecurity reference architecture](https://aka.ms/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
-    - [Security operations center (SOC) reference architecture](https://docs.microsoft.com/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
-    - [Zero-trust user access reference architecture](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
-    - [Azure Security Center](https://docs.microsoft.com/azure/security-center) and [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security) to help secure cloud assets.
+
+    - [Security operations center (SOC) reference architecture](/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
+
+    - [Zero-trust user access reference architecture](/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
+
+    - [Azure Security Center](/azure/security-center) and [Microsoft cloud application security](/cloud-app-security) to help secure cloud assets.
 
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
 
@@ -200,14 +199,15 @@ Your security plan is likely to be more successful if your planning takes the ap
     - What skills they need to learn.
     - Why they need to learn the skills (and the benefits of doing so).
     - How to get this knowledge (and provide resources to help them learn).
-  
-    You can document the plan by using the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx). And you can use [online Microsoft security training](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
+
+    You can document the plan by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). And you can use [online Microsoft security training](/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
+
   - **Making security awareness engaging** to help people genuinely connect with their part of keeping the organization safe.
 
 - **Review Microsoft learnings and guidance:** Microsoft has published insights and perspectives to help your organization plan its transformation to the cloud and a modern security strategy. The material includes recorded training, documentation, and security best practices and recommended standards.
-  For technical guidance to help build your plan and architecture, see the [Microsoft security documentation](https://docs.microsoft.com/security).
 
-<!-- markdownlint-disable MD033 -->
+  For technical guidance to help build your plan and architecture, see the [Microsoft security documentation](/security).
+
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -222,7 +222,7 @@ The security leadership team (CISO or equivalent) should approve the plan.
 
 It's a lot easier to start in a secure state than to retrofit security later into your environment. We strongly recommend starting with a secure configuration to ensure that workloads are migrated to, and developed and tested in, a secure environment.
 
-During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone) implementation, many decisions can affect security and risk profiles. The cloud security team should review the landing zone configuration to ensure that it meets the security standards and requirements in your organization's security baselines.
+During [landing zone](../ready/landing-zone/index.md) implementation, many decisions can affect security and risk profiles. The cloud security team should review the landing zone configuration to ensure that it meets the security standards and requirements in your organization's security baselines.
 
 **Deliverables:**
 
@@ -233,19 +233,18 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
 - **Blend existing requirements and cloud recommendations:** Start with recommended guidance and then adapt this to your unique security requirements. We have seen challenges with trying to enforce existing on-premises policies and standards, because these often refer to outdated technology or security approaches.
 
   Microsoft has published guidance to help you build your security baselines:
-  - [Azure security standards for strategy and architecture](https://docs.microsoft.com/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
-  - [Azure security benchmarks](https://docs.microsoft.com/azure/security/benchmarks/introduction): Specific configuration recommendations for securing Azure environments.
-  - [Azure security baseline training](https://docs.microsoft.com/learn/modules/create-security-baselines).
+  - [Azure security standards for strategy and architecture](/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
+  - [Azure security benchmarks](/azure/security/benchmarks/introduction): Specific configuration recommendations for securing Azure environments.
+  - [Azure security baseline training](/learn/modules/create-security-baselines).
 
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
 
   Microsoft provides several native capabilities in Azure to enable this:
-  - [Secure score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
-  - [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview): Cloud architects and centralized IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
-  - [Azure Policy](https://docs.microsoft.com/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
-- [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
+  - [Secure score](/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
+  - [Azure Blueprints](/azure/governance/blueprints/overview): Cloud architects and centralized IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
+  - [Azure Policy](/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
+  - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -266,13 +265,12 @@ After you ensure that new applications and landing zones follow security best pr
 
 **Guidance to support deliverable completion:**
 
-- Use the same security baselines that you built in [step 4](#step-4-secure-new-workloads) as your ideal state. You might have to adjust some policy settings to only audit instead of enforcing them.
+- Use the same security baselines that you built in [Step 4](#step-4-secure-new-workloads) as your ideal state. You might have to adjust some policy settings to only audit instead of enforcing them.
 - Balance operational and security risk. Because these environments might host production systems that enable critical business processes, you might need to implement security improvements incrementally to avoid risking operational downtime.
 - Prioritize the discovery and remediation of security risk by business criticality. Start with workloads that have a high business impact if compromised and workloads that have a high exposure to risk.
 
-For more information, see [Identify and classify business-critical applications](https://docs.microsoft.com/azure/architecture/framework/security/applications-services?toc=/security/compass/toc.json&bc=/security/compass/breadcrumb/toc.json#identify-and-classify-business-critical-applications).
+For more information, see [Identify and classify business-critical applications](/azure/architecture/framework/security/applications-services#identify-and-classify-business-critical-applications).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -287,16 +285,15 @@ Consistent application of security requirements comes from sound governance disc
 
 **Deliverables:**
 
-- Ensure that the organization's security baselines are applied to all relevant systems. Audit anomalies by using a [secure score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls) or a similar mechanism.
-- Document security baseline policies, processes, and design guidance in the [Security Baseline Discipline template](../govern/security-baseline/template.md).
+- Ensure that the organization's security baselines are applied to all relevant systems. Audit anomalies by using a [secure score](/azure/security-center/secure-score-security-controls) or a similar mechanism.
+- Document your Security Baseline policies, processes, and design guidance in the [Security Baseline discipline template](../govern/security-baseline/template.md).
 
 **Guidance to support deliverable completion:**
 
-- Use the same security baselines and auditing mechanisms that you built in [step 4](#step-4-secure-new-workloads) as technical components of monitoring the baselines. Complement these baselines with people and process controls to ensure consistency.
-- Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "data sensitivity."
+- Use the same security baselines and auditing mechanisms that you built in [Step 4](#step-4-secure-new-workloads) as technical components of monitoring the baselines. Complement these baselines with people and process controls to ensure consistency.
+- Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "data sensitivity."
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -306,10 +303,11 @@ Consistent application of security requirements comes from sound governance disc
 ## Next steps
 
 The steps in this guide have helped you implement the strategy, controls, processes, skills, and culture needed to consistently manage security risks across the enterprise.
+
 As you continue into the operations mode of cloud security, consider these next steps:
 
-- Review [Microsoft security documentation](https://docs.microsoft.com/security). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
-- Review security information in [Built-in security controls for Azure services](https://docs.microsoft.com/azure/security/fundamentals/security-controls).
-- Review Azure security tools and services in [Security services and technologies available on Azure](https://docs.microsoft.com/azure/security/azure-security-services-technologies).
+- Review [Microsoft security documentation](/security). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
+- Review security information in [Built-in security controls for Azure services](/azure/security/fundamentals/security-controls).
+- Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/azure-security-services-technologies).
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
-- Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-partner-integration).
+- Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](/azure/security-center/security-center-partner-integration).

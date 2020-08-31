@@ -34,7 +34,7 @@ During a cloud transformation, both the business and IT teams have an opportunit
 
 ## What is a business risk MVP?
 
-A _minimum viable product (MVP)_ is commonly used to define the smallest unit of something that can produce tangible value. In a business risk MVP, the cloud governance team starts with the assumption that some assets will be deployed to a cloud environment at some point in time. It's unknown what those assets are at the time, and the team may be unsure what types of data will be stored on those assets.
+A *minimum viable product (MVP)* is commonly used to define the smallest unit of something that can produce tangible value. In a business risk MVP, the cloud governance team starts with the assumption that some assets will be deployed to a cloud environment at some point in time. It's unknown what those assets are at the time, and the team may be unsure what types of data will be stored on those assets.
 
 When planning for business risk, the cloud governance team could build for the worst case scenario and map every possible policy to the cloud. Identifying all potential business risks for all cloud usage scenarios can take considerable time and effort, potentially delaying the implementation of governance to your cloud workloads. This is not recommended, but is an option.
 
@@ -48,6 +48,7 @@ The following are a few basic examples of business risks that can be included as
 - Any asset with open ports exposed to the internet are at risk of compromise.
 
 The above examples are meant to establish MVP business risks as a theory. The actual list will be unique to every environment.
+
 Once the business risk MVP is established, they can be converted to [policies](./index.md) to remediate each risk.
 
 ## Incremental risk mitigation
