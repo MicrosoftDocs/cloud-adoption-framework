@@ -16,9 +16,9 @@ ms.subservice: migrate
 
 Consider the following factors:
 
-- Will your application need to manage secrets (for example, use Azure Keyvault CSI integration)
+- Will your application need to manage secrets (for example, use Azure Keyvault CSI integration)?
 
-- Are stateful workloads required.
+- Are stateful workloads required?
 
 - Multi write-read applications are considered.
 
@@ -26,13 +26,13 @@ Consider the following factors:
 
 - Decide the VM type corresponding to the supported disks needed. 
 
-- consider the different HW resources for different type of applications and whether to use Node pools.
+- Consider the different HW resources for different type of applications and whether to use Node pools.
 
 - Consider creating Storage classes and whether retain policies are needed.
 
 - If NFS is needed and Performance is a must consider using Azure NetApp Files
 
-- Choose the appropriate storage type: Azure Disks, Azure Files, third party
+- Choose the appropriate storage type: Azure Disks, Azure Files, third party.
 
 ## Design recommendations
 
