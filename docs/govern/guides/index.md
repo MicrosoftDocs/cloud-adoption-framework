@@ -65,8 +65,8 @@ To begin a governance journey, choose one of the two options below. The options 
 
 | State | Standard organization | Complex enterprise |
 |---|---|---|
-| Cost management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
-| Security baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. Might need to consider third-party compliance. |
+| Cost Management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
+| Security Baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. Might need to consider third-party compliance. |
 
 ## CAF enterprise-scale landing zone
 

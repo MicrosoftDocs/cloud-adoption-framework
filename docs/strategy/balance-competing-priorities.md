@@ -31,7 +31,7 @@ At times, ambiguity can be scarier (or more dangerous) than false assumptions. W
 
 ## Balance during the Strategy phase
 
-The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
+The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **depth of justification** versus **time to business impact**.
 
 **Competing priorities:**
 
