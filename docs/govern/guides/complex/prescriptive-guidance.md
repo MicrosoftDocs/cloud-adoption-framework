@@ -20,7 +20,7 @@ In this article, we discuss the high-level strategies that are required to creat
 
 Rapid adoption of governance and corporate policy is achievable, thanks to a few simple principles and cloud-based governance tooling. These are the first of the three governance disciplines to approach in any governance process. Each discipline will be explained further on in this article.
 
-To establish the starting point, this article discusses the high-level strategies behind the Security Baseline, Identity Baseline, and deployment acceleration disciplines that are required to create a governance MVP. The MVP serves as the foundation for all cloud adoption.
+To establish the starting point, this article discusses the high-level strategies behind the Security Baseline, Identity Baseline, and Deployment Acceleration disciplines that are required to create a governance MVP. The MVP serves as the foundation for all cloud adoption.
 
 ![Example of an incremental governance MVP](../../../_images/govern/governance-mvp.png)
 
