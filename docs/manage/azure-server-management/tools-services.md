@@ -38,7 +38,7 @@ When you build data-protection strategies, first consider breaking down your wor
 
 The most basic data protection is backup. To speed up the recovery process if servers are lost, back up not just data but also server configurations. Backup is an effective mechanism to handle accidental data deletion and ransomware attacks. [Azure Backup](/azure/backup) can help you protect your data on Azure and on-premises servers running Windows or Linux. For details about what Backup can do and for how-to guides, see the [Azure Backup service overview](/azure/backup/backup-overview).
 
-Recovery via backup can take a long time. The industry standard is usually one day. If a workload requires business continuity for hardware failures or datacenter outage, consider using data replication. [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) provides continuous replication of your VMs, a solution that provides bare-minimum data loss. Site Recovery also supports several replication scenarios, such as replication:
+If a workload requires real-time business continuity for hardware failures or datacenter outage, consider using data replication. [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) provides continuous replication of your VMs, a solution that provides bare-minimum data loss. Site Recovery also supports several replication scenarios, such as replication:
 
 - Of Azure VMs between two Azure regions.
 - Between servers on-premises.
