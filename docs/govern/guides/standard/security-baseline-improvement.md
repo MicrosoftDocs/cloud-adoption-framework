@@ -26,7 +26,7 @@ While the difference is subtle, it's an important distinction when building a go
 
 ### Changes in the current state
 
-At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, named `prod` and `DR`.
+At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as _Prod_ and _DR_.
 
 Since then, some things have changed that will affect governance:
 

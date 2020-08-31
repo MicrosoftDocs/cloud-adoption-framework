@@ -12,7 +12,7 @@ ms.custom: governance
 
 # The Five Disciplines of Cloud Governance
 
-<!-- docutune:casing "Disciplines of Cloud Governance" "Cost Management" "Deployment Acceleration" "Identity Baseline" "Resource Consistency" "Security Baseline" -->
+<!-- docutune:casing "Disciplines of Cloud Governance" -->
 
 |  |  |
 |--|--|

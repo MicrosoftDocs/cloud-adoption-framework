@@ -16,7 +16,7 @@ ms.subservice: overview
 
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
-This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
+This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
 ## August 25, 2020
 
@@ -83,7 +83,7 @@ AI solutions and best practices are now integrated into the Microsoft Cloud Adop
 
 ## June 15, 2020
 
-Proper configuration of the cloud environment is often the first and most common technical blocker during cloud adoption. This release focuses heavily on guidance that accelerates deployment of cloud environments. To overcome this common blocker, the Cloud Adoption Framework for Azure introduces **Azure landing zones**.
+Proper configuration of the cloud environment is often the first and most common technical blocker during cloud adoption. This release focuses heavily on guidance that accelerates deployment of cloud environments. To overcome this common blocker, the Cloud Adoption Framework introduces **Azure landing zones**.
 
 | Article | Description |
 |--|--|

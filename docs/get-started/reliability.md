@@ -131,7 +131,7 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 
 ## Step 5: Implement landing zone best practices
 
-The Ready methodology of the Cloud Adoption Framework for Azure focuses heavily on the development of landing zones to host workloads in the cloud. During landing zone implementation, multiple decisions could affect operations. Consult the cloud operations team to help review the landing zone for operations improvements. Also consult the cloud governance team to understand Resource Consistency policies and design guidance that might affect the landing zone design.
+The Ready methodology of the Cloud Adoption Framework focuses heavily on the development of landing zones to host workloads in the cloud. During landing zone implementation, multiple decisions could affect operations. Consult the cloud operations team to help review the landing zone for operations improvements. Also consult the cloud governance team to understand Resource Consistency policies and design guidance that might affect the landing zone design.
 
 **Deliverables:**
 
