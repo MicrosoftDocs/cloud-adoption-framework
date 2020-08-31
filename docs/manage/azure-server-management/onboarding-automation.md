@@ -27,6 +27,8 @@ The sample files illustrate how to use Azure PowerShell cmdlets to automate the 
 
 - Onboard Azure VMs by using Azure Policy. A policy installs the Log Analytics agent and the Microsoft Dependency Agent on the Azure VMs.
 
+- Auto-enable Azure backup for VMs using [Azure Policy](https://docs.microsoft.com/azure/backup/backup-azure-auto-enable-backup)
+
 - Onboard on-premises servers by installing the Log Analytics agent on them.
 
 The files described in the following table are used in this sample. You can customize them to support your own deployment scenarios.
