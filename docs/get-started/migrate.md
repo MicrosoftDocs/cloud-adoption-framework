@@ -193,7 +193,7 @@ Continuous improvement of the adoption team's ability to migrate workloads.
 Governance is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But speed without governance can be dangerous. Your organization needs to make decisions about governance that align to your adoption patterns and your governance and compliance needs.
 
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about your corporate policy and processes. After determining your approach, you can build the disciplines required to enable governance across your enterprise cloud adoption efforts.
-- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the Identity Baseline, Security Baseline, and Deployment Acceleration disciplines needed to create a governance minimum viable product (MVP) that serves as the foundation for all adoption.
+- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the disciplines needed to create a governance minimum viable product (MVP) that serves as the foundation for all adoption.
 
 **Deliverables:**
 

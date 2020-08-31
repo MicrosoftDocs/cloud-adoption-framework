@@ -124,7 +124,7 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 ::: zone target="docs"
 
 - [Tutorial: Optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
-- [Prevent unexpected charges with Azure billing and cost management](/azure/billing/billing-getting-started)
+- [Prevent unexpected charges with Azure Cost Management + Billing](/azure/billing/billing-getting-started)
 - [Explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis)
 
 ::: zone-end

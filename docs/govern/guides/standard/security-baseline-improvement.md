@@ -59,11 +59,11 @@ This business risk can be expanded into a few technical risks:
 8. Inconsistent deployment processes might result in security gaps, which could lead to data leaks or interruptions.
 9. Configuration drift or missed patches might result in unintended security gaps, which could lead to data leaks or interruptions.
 
-**Data Loss:** There is also an inherent risk of data loss in the new platform. The security and governance strategy should also consider scenarios where a data loss can happen in the following scenarios:
+**Data loss:** There is also an inherent risk of data loss in the new platform. The security and governance strategy should also consider scenarios where a data loss can happen in the following scenarios:
 
-1. Mission-critical Resource can be lost/deleted.
-2. Mission-critical Resource is present, but the data is lost due to accidental deletion.
-3. Mission-critical Resource is present, but the data is lost due to malicious admin.
+1. A mission-critical resource can be lost or deleted.
+2. A mission-critical resource is present, but the data is lost due to accidental deletion.
+3. A mission-critical resource is present, but the data is lost due to malicious admin.
 
 ## Incremental improvement of the policy statements
 
@@ -72,7 +72,7 @@ The following changes to policy will help remediate the new risks and guide impl
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the cloud governance team and the application owner before deployment to the cloud.
 2. Applications that store or access protected data are to be managed differently than those that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
 3. All protected data must be encrypted when at rest. While this is the default for all Azure Storage accounts, additional encryption strategies may be needed, including encryption of the data within the storage account, encryption of VMs, and database-level encryption when using SQL in a VM (TDE and column encryption).
-4. Mission critical data can be deleted accidentally. One needs to think of a ‘data backup’ strategy to handle this and get back the data before the deletion point. A malicious admin can delete the mission critical data and it’s backups as well. To handle this scenario, the delete of the ‘backup data’ should be ‘soft-delete’ where such delete requests can be un-done. Azure Backup can help in both these scenarios.
+4. Mission-critical data can be deleted accidentally. One needs to consider a data backup strategy to handle this and retrieve the data from before the deletion point. A malicious admin can delete the mission-critical data and its backups as well. To handle this scenario, the deletion of the backup data should be a soft-delete so that such deletions can be undone. Azure Backup can help in both of these scenarios.
 5. Elevated permissions in any segment containing protected data should be an exception. Any such exceptions will be recorded with the cloud governance team and audited regularly.
 6. Network subnets containing protected data must be isolated from any other subnets. Network traffic between protected data subnets will be audited regularly.
 7. No subnet containing protected data can be directly accessed over the public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution that can perform packet scanning and blocking functions.

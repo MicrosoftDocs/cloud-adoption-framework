@@ -59,6 +59,8 @@ To begin a governance journey, choose one of the two options below. The options 
 | Networking | No WAN, or 1 &ndash; 2 WAN providers | Complex network or global WAN |
 | Identity | Single forest, single domain. | Complex, multiple forests, multiple domains. |
 
+<!-- docutune:casing "Cost Management" "Security Baseline" -->
+
 ### Desired future state after incremental improvement of cloud governance
 
 | State | Standard organization | Complex enterprise |

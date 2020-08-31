@@ -102,7 +102,7 @@ After the transformation is complete, governance and operations must live on for
 
 ## Next steps
 
-Now that you understand the concept of cloud cost governance, review the [Cost Management discipline best practices](./best-practices.md) to find ways to reduce your overall spend.
+Now that you understand the concept of cloud cost governance, review the Cost Management discipline best practices to find ways to reduce your overall spend.
 
 > [!div class="nextstepaction"]
-> [Cost management best practices](./best-practices.md)
+> [Cost Management discipline best practices](./best-practices.md)
