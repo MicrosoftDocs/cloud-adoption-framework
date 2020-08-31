@@ -130,7 +130,7 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then build the disciplines required to deliver on governance across your cloud enterprise adoption efforts.
 - [Governance benchmark tool](../govern/benchmark.md): Find gaps in your current state so that you can plan for the future.
-- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the Identity Baseline, Security Baseline, and Deployment Acceleration discipline that are required to create a governance minimum viable product (MVP) to serve as the foundation for all adoption.
+- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the governance disciplines that are required to create a governance minimum viable product (MVP) to serve as the foundation for all adoption.
 
 <br>
 
@@ -140,8 +140,7 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 
 ## Step 6: Implement an operations baseline
 
-Migrating to the cloud with understanding ongoing operations is risky. In parallel with migration, start planning for longer-term operations management.
-Feed those plans back into the parallel efforts of the cloud platform team.
+Migrating to the cloud without understanding ongoing operations is risky. In parallel with migration, start planning for longer-term operations management. Feed those plans back into the parallel efforts of the cloud platform team.
 
 **Deliverables:**
 
