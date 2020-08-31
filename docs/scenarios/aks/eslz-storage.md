@@ -3,7 +3,7 @@ title: "AKS Enterprise-scale storage"
 description: AKS Guidelines for Enterprise-scale storage
 author: gbowerman
 ms.author: brblanch
-ms.date: 08/30/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -16,13 +16,13 @@ ms.subservice: migrate
 
 Consider the following factors:
 
-- Will your application need to manage secrets (e.g. use Azure Keyvault CSI integration)
+- Will your application need to manage secrets (for example, use Azure Keyvault CSI integration)
 
 - Are stateful workloads required.
 
 - Multi write-read applications are considered.
 
-- Consider performance characteristics and how this relates to premium storage.
+- Consider performance characteristics and how these relate to premium storage.
 
 - Decide the VM type corresponding to the supported disks needed. 
 
@@ -32,7 +32,7 @@ Consider the following factors:
 
 - If NFS is needed and Performance is a must consider using Azure NetApp Files
 
-- Choose the appropriate storage type: Azure Disks, Azure Files, 3rd party
+- Choose the appropriate storage type: Azure Disks, Azure Files, third party
 
 ## Design recommendations
 
@@ -42,9 +42,9 @@ The following are proven practices for your design:
 
 - If Stateful workloads are considered, prepare the dynamic storage Azure Disks or Azure Files 
 
-- If multi-pod need to write-read in same storage. Support Azure Files or 3rd party as ANF - Azure NetApp Files 
+- If multi-pod need to write-read in same storage. Support Azure Files or third party as ANF - Azure NetApp Files 
 
-- In most of the cases it is recommended to use Premium storage - SSD Based Storage
+- In most cases, it is recommended to use Premium storage - SSD-based Storage
 
 - Node pools
 
