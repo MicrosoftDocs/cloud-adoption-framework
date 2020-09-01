@@ -96,6 +96,36 @@ For more information, see:
 
 ::: zone-end
 
+### Azure App Service Migration Assistant
+
+The Azure App Service Migration Assistant is part of a [larger suite of applications](https://azure.microsoft.com/en-us/services/azure-migrate/) that help organizations with their transition to the cloud. The Migration Assistant provides a guided, wizard-like user experience that performs two tasks:
+
+1. It performs an assessment of a specific web app installed on Windows Server by running pre-migration compatibility checks on the web app to determine whether a migration to Azure App Service is possible without modification to the web app.
+1. If the assessment proves that the web app can be migrated, the Migration Assistant performs the migration. You'll need to give the Migration Assistant access to your Azure account, select which resource group you want to use, and select a name for the web app, among other details.
+Alternatively, the Migration Assistant generates an Azure Resource Manager template that you can use to migrate the web application in a more automated and repeatable way.
+
+#### Migrate a web app to Azure App Service
+
+The Migration Assistant begins the migration process by collecting key details from you about your Azure account and then performs the migration.
+
+First, you'll sign in to your Azure account and associate your Migration Assistant session with your account by using a unique code. Next, you'll choose the subscription, the resource group, and the website's domain name. You can choose to create a new Azure App Service plan to host the app or select an existing plan. The choice affects the geographical region from which your app is hosted. You'll also have a chance to associate this migration effort with an existing Azure Migrate project. Finally, you can either choose to skip database setup or choose to set up a hybrid connection to enable a database connection.
+
+After the Migration Assistant collects and verifies your selections, it creates the needed Azure App Service resources in the selected region and resource group. It zips up the web app's source files and uses the Azure App Service deployment API to deploy them. Finally, it performs optional migration steps, like helping you set up a hybrid connection.
+
+After a successful migration, you'll need to perform any post-migration tasks. They might include:
+
+- Manually moving application settings and connection strings in your web.config file to Azure App Service.
+- Migrating data from an on-premises SQL Server instance to an Azure SQL database.
+- Setting up an SSL certificate.
+- Setting up custom domain names.
+- Setting up permissions in Azure Active Directory.
+
+You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
+
+For more information see: 
+
+[Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure)
+
 ### Data Migration Assistant
 
 Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
