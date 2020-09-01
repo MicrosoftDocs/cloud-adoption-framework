@@ -47,8 +47,6 @@ Consider the following factors:
 
   - Bandwidth capacity planning for Azure ExpressRoute.
 
-  - Paired failover regions.
-
   - Traffic routing if a regional, zonal, or network outage occurs.
 
 - Planned and unplanned failovers.
