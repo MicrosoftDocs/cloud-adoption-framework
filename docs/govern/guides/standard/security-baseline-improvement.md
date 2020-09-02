@@ -1,6 +1,6 @@
 ---
 title: "Standard enterprise governance: Improve the Security Baseline discipline"
-description: Use the Cloud Adoption Framework for Azure to learn about adding security controls that support moving protected data to the cloud.
+description: Use the Azure Cloud Adoption Framework to learn about adding security controls that support moving protected data to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -22,7 +22,7 @@ IT and business leadership are happy with results from early experimentation by 
 
 Given the effect of the changing narrative and support provided so far, the cloud governance team is now viewed differently. The two system administrators who started the team are now viewed as experienced cloud architects. As this narrative develops, the perception of them will shift from that of cloud custodians to more of a cloud guardian role.
 
-The difference is subtle, but it's an important distinction when you're creating a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects. The two roles have natural friction and opposing objectives. On the other hand, a cloud guardian helps keep the cloud safe so other cloud architects can move more quickly, with fewer messes. And a cloud guardian is involved in creating templates that accelerate deployment and adoption. So they're innovation accelerators in addition to being defenders of the Five Disciplines of Cloud Governance.
+The difference is subtle, but it's an important distinction when you're creating a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects. The two roles have natural friction and opposing goals. On the other hand, a cloud guardian helps keep the cloud safe so other cloud architects can move more quickly, with fewer messes. And a cloud guardian is involved in creating templates that accelerate deployment and adoption. So they're innovation accelerators in addition to being defenders of the Five Disciplines of Cloud Governance.
 
 ### Changes in the current state
 
@@ -45,7 +45,7 @@ The changes to current and future state expose new risks that require new policy
 
 ## Changes in tangible risks
 
-**Data breach:** When you adopt any new data platform, there's an inherent increase in liabilities related to potential data breaches. Technicians adopting cloud technologies have increased responsibility to implement solutions that can decrease this risk. A robust security and governance strategy must be implemented to ensure those technicians fulfill those responsibilities.
+**Data breach:** When you adopt any new data platform, there's an inherent increase in liabilities related to potential data breaches. Technicians adopting cloud technologies have increased responsibility to implement solutions that can reduce this risk. A robust security and governance strategy must be implemented to ensure those technicians fulfill those responsibilities.
 
 This business risk can be expanded into a few technical risks:
 
@@ -69,8 +69,8 @@ This business risk can be expanded into a few technical risks:
 
 The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but adopting these policies might be easier than you'd think.
 
-- All deployed assets must be categorized by criticality and data classification. Classifications must be reviewed by the cloud governance team and the application owner before deployment to the cloud.
-- Applications that store or access protected data must be managed differently than those that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
+- All deployed assets must be categorized by criticality and data classification. The cloud governance team and the application owner must review these classifications before deployment to the cloud.
+- Applications that store or access protected data must be managed differently than applications that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
 - All protected data must be encrypted when at rest. This encryption is the default for all Azure Storage accounts. But you might need additional encryption strategies, including encryption of the data within the storage account, encryption of VMs, and database-level encryption when you use SQL in a VM (TDE and column encryption).
 - Mission-critical data can be deleted accidentally. You need to develop a data backup strategy to handle this risk and restore the data before the deletion point. A malicious admin can delete the mission-critical data and its backups as well. To handle this scenario, deletions of backup data should be soft deletions that can be reversed. Azure Backup can help with both of these scenarios.
 - Elevated permissions in any segment that contains protected data should be an exception. Any such exceptions should be recorded with the cloud governance team and audited regularly.
@@ -83,7 +83,7 @@ The following changes to policy will help remediate the new risks and guide impl
 - Governance tooling must enforce that automatic updates are enabled on all deployed assets. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that aren't automatically updated must be included in processes owned by IT operations.
 - Creation of new subscriptions or management groups for any mission-critical applications or protected data will require a review from the cloud governance team to ensure that the proper blueprint is assigned.
 - A least-privilege access model will be applied to any management group or subscription that contains mission-critical applications or protected data.
-- Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team so they can provide updates to security management tooling used in the cloud.
+- Security team members should review trends and exploits that could affect cloud deployments so they can provide updates to security management tooling used in the cloud.
 - Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
 - Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
 - Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
