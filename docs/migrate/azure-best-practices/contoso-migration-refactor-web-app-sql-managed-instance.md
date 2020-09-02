@@ -113,7 +113,7 @@ Here's how Contoso will run the migration:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Assess and migrate the web apps.**. Contoso uses the [Azure App Service Migration Assistant](https://azure.microsoft.com/en-us/migration/web-applications/) tool to run pre-migration compatibility checks and migrate their web apps to Azure App Service.
+> - **Step 1: Assess and migrate the web apps.**. Contoso uses the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool to run pre-migration compatibility checks and migrate their web apps to Azure App Service.
 > - **Step 2: Set up a SQL managed instance**. Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
 > - **Step 3: Migrate via Azure Database Migration Service**. Contoso migrates the application database via Azure Database Migration Service.
 > - **Step 4: Set up Azure DevOps**. Contoso creates a new Azure DevOps project, and imports the Git repo.
@@ -122,7 +122,7 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/en-us/migration/web-applications/) tool. They use the [Microsoft Learning Path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. 
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Microsoft Learning Path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. 
 In brief, the admins perform the following actions:
 
 - They use the Azure [App Service Migration Assessment](https://appmigration.microsoft.com/assessment/) tool to evaluate any dependencies between their web apps and to determine if there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
