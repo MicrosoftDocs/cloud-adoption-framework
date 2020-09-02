@@ -3,7 +3,7 @@ title: "Migrate assets"
 description: Initiate the migration to Azure by identifying the appropriate tools to use, including native tools, third-party tools, and project management tools.
 author: matticusau
 ms.author: mlavery
-ms.date: 08/08/2019
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -98,7 +98,7 @@ For more information, see:
 
 ### Azure App Service Migration Assistant
 
-The Azure App Service Migration Assistant is part of a [larger suite of applications](https://azure.microsoft.com/en-us/services/azure-migrate/) that help organizations with their transition to the cloud. The Migration Assistant provides a guided, wizard-like user experience that performs two tasks:
+The Azure App Service Migration Assistant is part of a [larger suite of applications](https://azure.microsoft.com/services/azure-migrate/) that help organizations with their transition to the cloud. The Migration Assistant provides a guided, wizard-like user experience that performs two tasks:
 
 1. It performs an assessment of a specific web app installed on Windows Server by running pre-migration compatibility checks on the web app to determine whether a migration to Azure App Service is possible without modification to the web app.
 1. If the assessment proves that the web app can be migrated, the Migration Assistant performs the migration. You'll need to give the Migration Assistant access to your Azure account, select which resource group you want to use, and select a name for the web app, among other details.
@@ -112,7 +112,7 @@ First, you'll sign in to your Azure account and associate your Migration Assista
 
 After the Migration Assistant collects and verifies your selections, it creates the needed Azure App Service resources in the selected region and resource group. It zips up the web app's source files and uses the Azure App Service deployment API to deploy them. Finally, it performs optional migration steps, like helping you set up a hybrid connection.
 
-After a successful migration, you'll need to perform any post-migration tasks. They might include:
+After a successful migration, you'll need to perform any post-migration tasks. These might include:
 
 - Manually moving application settings and connection strings in your web.config file to Azure App Service.
 - Migrating data from an on-premises SQL Server instance to an Azure SQL database.
