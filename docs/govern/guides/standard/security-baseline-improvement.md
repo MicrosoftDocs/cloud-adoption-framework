@@ -120,14 +120,14 @@ The governance MVP design will change to include new Azure policies and an imple
         - Audit that password security settings are set correctly inside Linux and Windows machines.
     - Audit and enforce that Azure Recovery Services vaults exist in the subscription.
 - Firewall configuration:
-    - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that is compatible with Azure.
+    - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that's compatible with Azure.
     - Create a Resource Manager template to deploy the firewall with required configurations.
 - Azure blueprint:
-    - Create a new blueprint named `protected-data`.
-    - Add the firewall, Azure Security Center templates and Azure Recovery Services vault templates to the blueprint.
+    - Create a new blueprint named protected-data.
+    - Add the firewall, Azure Security Center templates, and Azure Recovery Services vault templates to the blueprint.
     - Add the new policies for protected data subscriptions.
     - Publish the blueprint to any management group that currently plans on hosting protected data.
-    - Apply the new blueprint to each affected subscription, in addition to existing blueprints.
+    - Apply the new blueprint to each affected subscription and to existing blueprints.
 
 ## Conclusion
 
@@ -135,7 +135,7 @@ Adding the above processes and changes to the governance MVP will help to remedi
 
 ## Next steps
 
-As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed.
+As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. At this point, resource consistency controls are needed.
 
 > [!div class="nextstepaction"]
 > [Improve the Resource Consistency discipline](./resource-consistency-improvement.md)
