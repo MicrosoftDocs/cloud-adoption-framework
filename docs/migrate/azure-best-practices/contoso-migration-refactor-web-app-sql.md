@@ -108,7 +108,7 @@ Here's how Contoso will run the migration:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Assess and migrate the web apps.**. Contoso uses the [Azure App Service Migration Assistant](https://azure.microsoft.com/en-us/migration/web-applications/) tool to run pre-migration compatibility checks and migrate their web apps to Azure App Service.
+> - **Step 1: Assess and migrate the web apps.**. Contoso uses the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool to run pre-migration compatibility checks and migrate their web apps to Azure App Service.
 > - **Step 2: Provision a database in Azure SQL Database**. Contoso provisions an Azure SQL Database instance. After the application website is migrated to Azure, the WCF service web app will point to this instance.
 > - **Step 3: Assess the database**. Contoso assesses the database for migration by using Data Migration Assistant and then migrates it via Azure Database Migration Service.
 > - **Step 4: Set up Azure DevOps**. Contoso creates a new Azure DevOps project, and imports the Git repo.
