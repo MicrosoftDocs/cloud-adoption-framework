@@ -51,6 +51,8 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Identity baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/identity-baseline-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on identity requirements. |
 | [Resource consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on resource consistency. |
 | [Security baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on security baseline. |
+| [Azure Governance Vizualizer - AzGovViz](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) | AzGovViz is a PowerShell script that iterates through Azure Tenants Management Group hierarchy down to the Subscription level. It captures most relevant Azure governance capabilities such as Azure Policy, RBAC and Blueprints. From the collected data AzGovViz provides visibility on your Hierarchy Map, creates a Tenant Summary and builds granular Scope Insights on Management Groups and Subscriptions. |
+
 
 ## Manage
 
