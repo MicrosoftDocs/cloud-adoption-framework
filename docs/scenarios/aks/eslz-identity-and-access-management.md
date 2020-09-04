@@ -13,7 +13,7 @@ ms.subservice: ready
 
 ## Design Considerations
 * Decide on multi-tenancy cluster and how to setup permissions in K8s	
-* Decide on Azure RBAC role(s) for [AKS Lz](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management)
+* Decide on Azure RBAC role(s) for [AKS Lz](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management)
 * Decide how to setup K8s RBAC. 	
 * Decide on AKS-managed Azure AD Integration.	
 * Decide what cluster identity is being used	
