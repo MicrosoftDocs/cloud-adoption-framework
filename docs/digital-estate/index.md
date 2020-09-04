@@ -25,6 +25,8 @@ The measurement of a digital estate changes depending on the desired business ou
 
 - **Data-driven innovation:** In today's digitally driven market, it's difficult to launch a new product or service without a strong foundation in data. During cloud-enabled data innovation efforts, the focus is more on the silos of data across the organization.
 
+- **Business continuity:** Business continuity and resiliency are fundamentals for an organisation to operate. Business needs to run as usual with near-zero downtime which means service relaibility needs to be considered upfront rather than after thought.
+
 After an organization understands the most important form of transformation, digital estate planning becomes much easier to manage.
 
 > [!TIP]
