@@ -30,7 +30,7 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 The following steps help you define governance policies to control costs in your environment.
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Cost Management discipline template](./template.md): Download the template for documenting a Cost Management discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Cost Management discipline. |

@@ -32,7 +32,7 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 The following steps offer examples and potential options to consider when developing your Identity Baseline discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to manage identity-related risks.
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png)   | <br> [Identity Baseline discipline template](./template.md): Download the template for documenting an Identity Baseline discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png)         | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Identity Baseline discipline. |
