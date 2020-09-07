@@ -17,7 +17,7 @@ Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workl
 
 To prepare you for this phase of the cloud adoption lifecycle, we recommend the following:
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> ![1](../_images/icons/1.png) | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration. |
 | <br> ![2](../_images/icons/2.png) | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios. |

@@ -15,7 +15,7 @@ The cloud delivers fundamental technology benefits that can help your enterprise
 
 The following steps can help you document your business strategy efficiently. This approach helps you drive adoption efforts that capture targeted business value in a cross-functional model. Then, you can map your cloud adoption strategy to specific cloud capabilities and business strategies to reach your desired state of transformation.
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> ![1](../_images/icons/1.png) | <br> [Define and document your motivations](./motivations.md): Meet with key stakeholders and executives to document the motivations behind cloud adoption. |
 | <br> ![2](../_images/icons/2.png) | <br> [Document business outcomes](./business-outcomes/index.md): Engage motivated stakeholders and executives to document specific business outcomes. |
