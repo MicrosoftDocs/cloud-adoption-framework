@@ -66,9 +66,9 @@ In the MVP, practices and tools from the [Deployment Acceleration discipline](..
 
 Over time, this governance MVP will be used to improve governance practices. As adoption advances, business risk grows. Various disciplines within the Cloud Adoption Framework governance model will change to manage those risks. Later articles in this series discuss the incremental improvement of corporate policy affecting the fictional company. These improvements happen across three disciplines:
 
-- Cost management, as adoption scales.
-- Security baseline, as protected data is deployed.
-- Resource consistency, as IT operations begins supporting mission-critical workloads.
+- The Cost Management discipline, as adoption scales.
+- The Security Baseline discipline, as protected data is deployed.
+- The Resource Consistency discipline, as IT operations begins supporting mission-critical workloads.
 
 ![Example of an incremental governance MVP](../../../_images/govern/governance-improvement.png)
 

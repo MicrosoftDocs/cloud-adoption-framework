@@ -36,16 +36,11 @@ The guides demonstrate how to implement a governance MVP. From there, each guide
 
 To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. Your decision may be more complex. The following tables outline the differences between the two options.
 
-<!-- TODO: Refactor VDC content below. -->
-<!-- docutune:casing "Azure Virtual Datacenter" -->
-
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
-
-<!-- markdownlint-disable MD028 -->
-
+> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). This approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data) in the cloud. The CAF enterprise-scale landing zone is the typical choice for complex governance scenarios in large cloud adoption efforts.
+<!-- -->
 > [!NOTE]
-> It's unlikely that either guide aligns completely to your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
+> It's unlikely that either guide aligns entirely with your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
 
 ### Business characteristics
 
@@ -64,12 +59,14 @@ To begin a governance journey, choose one of the two options below. The options 
 | Networking | No WAN, or 1 &ndash; 2 WAN providers | Complex network or global WAN |
 | Identity | Single forest, single domain. | Complex, multiple forests, multiple domains. |
 
+<!-- docutune:casing "Cost Management" "Security Baseline" -->
+
 ### Desired future state after incremental improvement of cloud governance
 
 | State | Standard organization | Complex enterprise |
 |---|---|---|
-| Cost management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
-| Security baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. Might need to consider third-party compliance. |
+| Cost Management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
+| Security Baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. Might need to consider third-party compliance. |
 
 ## CAF enterprise-scale landing zone
 

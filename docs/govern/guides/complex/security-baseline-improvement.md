@@ -28,7 +28,7 @@ While the difference is subtle, it is an important distinction when building a g
 
 ### Changes in the current state
 
-In the previous phase of this narrative, the company had begun the process of retiring two datacenters. This ongoing effort includes migrating some applications with legacy authentication requirements, which required incremental improvements to the identity baseline, described in the [previous article](./identity-baseline-improvement.md).
+In the previous phase of this narrative, the company had begun the process of retiring two datacenters. This ongoing effort includes migrating some applications with legacy authentication requirements, which required incremental improvements to the Identity Baseline discipline, described in the [previous article](./identity-baseline-improvement.md).
 
 Since then, some things have changed that will affect governance:
 

@@ -293,7 +293,7 @@ This section expands on the network topology to consider recommended models for 
 
 **Design considerations:**
 
-- Azure ExpressRoute provides dedicated private connectivity to Microsoft Azure infrastructure as a service (IaaS) and platform as a service (PaaS) functionality from on-premises locations.
+- Azure ExpressRoute provides dedicated private connectivity to Azure infrastructure as a service (IaaS) and platform as a service (PaaS) functionality from on-premises locations.
 
 - You can use Private Link to establish connectivity to PaaS services over ExpressRoute with private peering.
 
@@ -306,11 +306,11 @@ This section expands on the network topology to consider recommended models for 
 - ExpressRoute Direct allows creation of multiple ExpressRoute circuits at no additional cost, up to the ExpressRoute Direct port capacity (10 Gbps or 100 Gbps). It also allows you to connect directly to Microsoft's ExpressRoute routers. For the 100-Gbps SKU, the minimum circuit bandwidth is 5 Gbps. For the 10-Gbps SKU, the minimum circuit bandwidth is 1 Gbps.
 
 <!-- cSpell:ignore prepending -->
-<!-- docsTest:ignore "AS PATH prepending -->
+<!-- docsTest:ignore "AS PATH prepending" -->
 
 **Design recommendations:**
 
-- Use ExpressRoute as the primary connectivity channel for connecting an on-premises network to Microsoft Azure. You can use VPNs as a source of backup connectivity to enhance connectivity resiliency.
+- Use ExpressRoute as the primary connectivity channel for connecting an on-premises network to Azure. You can use VPNs as a source of backup connectivity to enhance connectivity resiliency.
 
 - Use dual ExpressRoute circuits from different peering locations when you're connecting an on-premises location to virtual networks in Azure. This setup will ensure redundant paths to Azure by removing single points of failure between on-premises and Azure.
 

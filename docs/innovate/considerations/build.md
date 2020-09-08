@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!--docsTest:casing "Oxford English Dictionary" -->
+<!-- docutune:casing "Oxford English Dictionary" -->
 
 # Build with customer empathy
 
@@ -21,7 +21,7 @@ Why is empathy so important? From the first release of a minimum viable product 
 
 ## How to build with empathy
 
-Planning is intrinsically an exercise in defining assumptions. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions tend to be the product of self-empathy. In other words: "what would I want if I were in this position?" Starting with the build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
+Defining assumptions is a fundamental part of planning. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions are typically the product of self-empathy. In other words, _what would I want if I were in this position?_ Starting with the build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
 
 > [!CAUTION]
 > Properly defining what to build can be tricky and requires some practice. If you build something too quickly, if might not reflect customer needs. If you spend too much time trying to understand initial customer needs and solution requirements, the market may meet them before you have a chance to build anything at all. In either scenario, the opportunity to learn can be significantly delayed or reduced. Sometimes the data can even be corrupted.

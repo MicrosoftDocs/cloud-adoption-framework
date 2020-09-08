@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Standard enterprise governance guide: The narrative behind the governance strategy
 
-The following narrative describes the use case for governance during a [standard enterprise's cloud adoption journey](./index.md). Before implementing the journey, it's important to understand the assumptions and rationale that are reflected in this narrative. Then you can better align the governance strategy to your own organization's journey.
+The following narrative describes the use case for governance during a [standard enterprise's cloud adoption journey](./index.md). Before implementing the journey, it's important to understand the assumptions and rationale that are reflected in this narrative. Then you can better align the governance strategy to your organization's journey.
 
 ## Back story
 
@@ -34,7 +34,7 @@ The company has the following business profile:
 
 Here is the current state of the company's IT and cloud operations:
 
-- IT operates two hosted infrastructure environments. One environment contains production assets. The second environment contains disaster recovery and some dev/test assets. These environments are hosted by two different providers. IT refers to these two datacenters as prod and DR respectively.
+- IT operates two hosted infrastructure environments. One environment contains production assets. The second environment contains disaster recovery and some dev/test assets. These environments are hosted by two different providers. IT refers to these two datacenters as _Prod_ and _DR_ respectively.
 
 - IT entered the cloud by migrating all end-user email accounts to Microsoft 365. This migration was completed six months ago. Few other IT assets have been deployed to the cloud.
 

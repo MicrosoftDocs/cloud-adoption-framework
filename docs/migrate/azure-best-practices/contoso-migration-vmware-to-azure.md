@@ -7,7 +7,6 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
 <!-- docsTest:casing "HCX Bulk Migration" "HCX Cold Migration" -->
@@ -91,7 +90,7 @@ Contoso evaluates its proposed design by putting together a pros and cons list, 
 
 ## Migration process
 
-Contoso will move its VMs to Azure VMware Solution by using the VMware HCX tool. The VMs will run in an Azure VMware Solution private cloud. [VMware HCX migration methods](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include running a bulk or cold migration. vMotion or Replication-assisted vMotion (RAV) is a method reserved for workloads that run through a live migration.
+Contoso will move its VMs to Azure VMware Solution by using the VMware HCX tool. The VMs will run in an Azure VMware Solution private cloud. [VMware HCX migration methods](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include running a bulk or cold migration. VMware vMotion or Replication-assisted vMotion (RAV) is a method reserved for workloads that run through a live migration.
 
 To complete the process, the Contoso team:
 
