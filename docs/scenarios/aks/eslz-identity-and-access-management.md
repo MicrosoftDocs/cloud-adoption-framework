@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Identity and access management for <Insert narrative Name> Enterprise-Scale scenario
 
-## Design Considerations
+## Design considerations
 * Decide on multi-tenancy cluster and how to setup permissions in K8s	
   * Decide on method for isolation - namespace, network policy, compute (node pool), cluster
   * Decide on RBAC groups and compute allocation per app team for isolation.
@@ -26,10 +26,10 @@ ms.subservice: ready
 * Decide what cluster identity is being used	
 * Decide on workload identities.	
 
-## Design Recommendations
+## Design recommendations
 * Define Azure RBAC role(s) for AKS Lz	easily manage cluster identity permissions.
-* Use K8s RBAC. Define required roles in K8s	
-* Use AKS-managed Azure AD Integration.	operator access is secured by AAD
+* Use K8s RBAC. Define required roles in K8s.	
+* Use AKS-managed Azure AD Integration.	Operator access is secured by AAD.
 * Use managed identity as cluster Identity.	
 * Use PIM for SRE Just in time access.	SRE engineer need just in time access to troubleshoot the cluster
 * Use AAD Pod Identity for workload identities.	Pods accessing serices outside of the cluster (e.g. KeyVault) use pod Identity.
