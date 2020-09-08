@@ -1,8 +1,8 @@
 ---
 title: "Enterprise-Scale identity and access management for <Insert narrative Name>"
 description: Describe how this enterprise-scale scenario can improve identity and access management of <Insert Scenario Name>
-author: BrianBlanchard
-ms.author: brblanch
+author: TomGeske
+ms.author: thomasge
 ms.date: 09/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
