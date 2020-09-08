@@ -81,9 +81,9 @@ Network topology is a critical element of the enterprise-scale architecture beca
 
 Use a network topology based on Azure Virtual WAN if any of the following are true:
 
-- Your organization intends to deploy resources across several Azure regions and your organization needs to connect your global locations to both Azure and on-premises.
+- Your organization intends to deploy resources across several Azure regions and needs to connect your global locations to both Azure and on-premises.
 - Your organization intends to use software-defined WAN (SD-WAN) deployments fully integrated with Azure.
-- You intend to deploy up to 2,000 virtual machine workload across all VNets connected to a single Azure Virtual WAN hub.
+- You intend to deploy up to 2,000 virtual machine workloads across all VNets connected to a single Azure Virtual WAN hub.
 
 Virtual WAN is used to meet large-scale interconnectivity requirements. Because it's a Microsoft-managed service, it also reduces overall network complexity and helps to modernize your organization's network.
 
@@ -129,7 +129,7 @@ _Figure 1: Virtual WAN network topology._
 
 - Transit connectivity between the virtual networks in Standard Virtual WAN is enabled due to the presence of a router in every virtual hub. Every virtual hub router supports an aggregate throughput up to 50 Gbps.
 
-- The maximum number of VM workload across all VNets connected to a single Virtual WAN hub is 2,000.
+- A maximum of 2,000 VM workloads across all VNets can be connected to a single Virtual WAN hub.
 
 - Virtual WAN integrates with a variety of [SD-WAN providers](/azure/virtual-wan/virtual-wan-locations-partners).
 
@@ -179,7 +179,7 @@ _Figure 1: Virtual WAN network topology._
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
 
-- Plan your deployment carefully, and ensure network architecture is within the Azure Virtual WAN [limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
+- Plan your deployment carefully, and ensure that your network architecture is within the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
 ## Traditional Azure networking topology
 
