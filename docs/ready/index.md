@@ -15,7 +15,7 @@ Before adoption can begin, you must create a landing zone to host the workloads 
 
 The following exercises help guide you through the process of creating a landing zone to support cloud adoption.
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> ![1](../_images/icons/1.png) | <br> [Azure setup guide](./azure-setup-guide/index.md): Review the Azure setup guide to become familiar with the tools and approaches you need to use to create a landing zone. |
 | <br> ![2](../_images/icons/2.png) | <br> [Azure landing zones](./landing-zone/index.md): Choose the most appropriate landing zone option, to establish a code-based starting point for your environment. |

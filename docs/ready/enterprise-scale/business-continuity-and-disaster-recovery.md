@@ -47,8 +47,6 @@ Consider the following factors:
 
   - Bandwidth capacity planning for Azure ExpressRoute.
 
-  - Paired failover regions.
-
   - Traffic routing if a regional, zonal, or network outage occurs.
 
 - Planned and unplanned failovers.
@@ -65,7 +63,7 @@ The following are best practices for your design:
 
 - Employ Azure Site Recovery for Azure-to-Azure Virtual Machines disaster recovery scenarios. This enables you to replicate workloads across regions.
 
-  Site Recovery provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
+  Site Recovery provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production. You can use Azure Policy to enable replication and also audit the protection of your VMs.
 
 - Use native PaaS service disaster recovery capabilities.
 
@@ -78,14 +76,6 @@ The following are best practices for your design:
 - Use multiple regions and peering locations for ExpressRoute connectivity.
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
-
-- Refer to [Azure region pairs](/azure/best-practices-availability-paired-regions) when you're selecting locations for your organization's disaster recovery layouts.
-
-- Use Azure paired regions when you're planning for business continuity and DR.
-
-- Azure rolls out planned system updates to paired regions sequentially, not at the same time. This helps to minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
-
-- In the event of a broad outage, recovering one region is prioritized within every pair. Applications deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that aren't paired, the worst case scenario is that recovery might be delayed. It's possible that the preferred region would be the last to be recovered.
 
 - Avoid using overlapping IP address ranges for production and DR sites.
 

@@ -24,8 +24,8 @@ By using the Microsoft Cloud Adoption Framework for Azure best practices, organi
 
 The Cloud Adoption Framework brings together cloud adoption best practices from Microsoft employees, partners, and customers. It provides a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during your adoption effort. This guidance aligns to the following phases of the cloud adoption lifecycle, giving you easy access to the right guidance at the right time.
 
-|  |  |  |  |  |
-|--|--|--|--|--|
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|--|--|
 | <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
 | <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
 | <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern the environment and workloads. |
