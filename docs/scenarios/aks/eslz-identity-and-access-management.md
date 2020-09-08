@@ -13,7 +13,14 @@ ms.subservice: ready
 
 ## Design Considerations
 * Decide on multi-tenancy cluster and how to setup permissions in K8s	
+  * Decide on method for isolation - namespace, network policy, compute (node pool), cluster
+  * Decide on RBAC groups and compute allocation per app team for isolation.
 * Decide on Azure RBAC role(s) for [AKS Lz](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management)
+  * Decide on AAD Actions needed for SRE role to administer and/troubleshoot whole cluster – PIM
+  * Decide on AAD Actions needed for Sec ops
+  * Decide on AAD Actions needed for the LZ owner
+  * Decide on AAD Actions needed for App teams to deploy in to cluster.
+  * Decide on whether App teams can read other workloads in cluster or in other clusters
 * Decide how to setup K8s RBAC. 	
 * Decide on AKS-managed Azure AD Integration.	
 * Decide what cluster identity is being used	
