@@ -7,7 +7,6 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
 <!-- cSpell:ignore untrust CIDR RRAS CONTOSODC sysvol ITIL NSGs ASGs -->
@@ -16,7 +15,7 @@ services: azure-migrate
 
 This article shows how the fictional company Contoso prepares its on-premises infrastructure for migration, sets up an Azure infrastructure in preparation for migration, and runs the business in a hybrid environment.
 
-When you use this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample architecture is specific to Contoso. Review your own organization's business needs, structure, and technical requirements when making important infrastructure decisions about subscription design or network architecture.
+When you use this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample architecture is specific to Contoso. Review your organization's business needs, structure, and technical requirements when making important infrastructure decisions about subscription design or network architecture.
 
 Whether you need all the elements described in this article depends on your migration strategy. For example, you might need a less complex network structure if you're building only cloud-native applications in Azure.
 

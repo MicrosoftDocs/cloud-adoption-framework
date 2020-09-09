@@ -1,12 +1,11 @@
 ---
 title: Get started with the Cloud Adoption Framework
 description: Find the most relevant getting started guide for your cloud adoption needs
-services: cloud-adoption-framework
-ms.service: cloud-adoption-framework
-ms.topic: conceptual
 author: JanetCThomas
 ms.author: janet
 ms.date: 08/27/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 

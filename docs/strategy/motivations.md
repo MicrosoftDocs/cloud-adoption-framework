@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Motivations: Why are we moving to the cloud?
 
-"Why are we moving to the cloud?" It's a common question for business and technical stakeholders alike. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud" then it's unlikely that the business will achieve the desired outcomes.
+"Why are we moving to the cloud?" It's a common question for business and technical stakeholders alike. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud," then it's unlikely that the business will achieve the desired outcomes.
 
 This article discusses a few motivations behind cloud migration that can help produce more successful business outcomes. These options help facilitate a conversation about motivations and, ultimately, business outcomes.
 

@@ -31,7 +31,7 @@ At times, ambiguity can be scarier (or more dangerous) than false assumptions. W
 
 ## Balance during the Strategy phase
 
-The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
+The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **depth of justification** versus **time to business impact**.
 
 **Competing priorities:**
 
@@ -66,7 +66,7 @@ When adoption teams are preparing for their first steps into the cloud, there ar
 
 **Minimum scope:** The Ready methodology outlines a direct path from rapid adoption to long-term operations. This approach starts with a basic introduction to the tools that enable environment refactoring. Based on those tools and environmental requirements, customers are guided to a selection of predefined landing zones (each delivered using infrastructure as code models). That code can then be refactored during the course of cloud adoption to improve operations, security, and management postures.
 
-<!-- docutune:ignore "Govern and Manage methodologies" -->
+<!-- docutune:casing "Govern and Manage methodologies" -->
 
 **Expanded scope example:** For teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 assets (apps, infrastructure, or data assets) in the cloud**, a more robust view of landing zones is suggested. In these situations, the Govern and Manage methodologies should be considered during initial landing zone conversations. However, this deeper consideration often adds weeks or months to a cloud adoption plan. To minimize impact on business outcomes, the adoption team should pilot actual workloads in the cloud in parallel to the creation of a more mature landing zone and central architecture solution.
 

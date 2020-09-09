@@ -142,7 +142,7 @@ Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/
 
 Use Azure Cognitive Search to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
 
-<!-- docsTest:ignore "Azure Search" -->
+<!-- docutune:ignore "Azure Search" -->
 
 Azure Cognitive Search uses the same natural language stack that Bing and Microsoft Office use. Spend more time innovating and less time maintaining a complex cloud search solution.
 

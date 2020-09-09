@@ -196,4 +196,4 @@ Establishing a solid management baseline will help you collect data and create o
 
 ## Value statement
 
-Following these steps can help you [build a cost-conscious organization](../organize/cost-conscious-organization.md). Cost optimization is easier to implement when an organization uses shared ownership and a collaborative focus with the right teams at the right times.
+Following these steps helps you [build a cost-conscious organization](../organize/cost-conscious-organization.md). Simplify cost optimization by using shared ownership and driving collaboration with the right teams at the right times.
