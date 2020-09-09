@@ -25,7 +25,7 @@ As you get started, the checklist and resources below will help you plan your ap
 > - How will you structure the project folder to support Kubernetes application development?
 > - Have you identified state, configuration, and storage requirements of your application?
 
-<!-- docsTest:casing "AAD Pod Identity -->
+<!-- docutune:casing "AAD Pod Identity" -->
 
 > [!div class="tdCol2BreakAll"]
 >
@@ -69,7 +69,7 @@ Now that the application is in production, how can you optimize your workflow an
 > - Are cross-cutting application concerns abstracted from your application?
 > - Are you able to maintain system and application reliability, while still iterating on new features and versions?
 
-<!-- docsTest:casing Consul -->
+<!-- docutune:casing Consul -->
 
 > [!div class="tdCol2BreakAll"]
 >
