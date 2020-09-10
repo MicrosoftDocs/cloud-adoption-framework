@@ -137,10 +137,11 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Storage
 
-| Asset type       | Name prefix |
-|------------------|-------------|
-| Storage account  | st          |
-| Azure StorSimple | ssimp       |
+| Asset type               | Name prefix |
+|--------------------------|-------------|
+| Storage account          | st          |
+| Azure StorSimple         | ssimp       |
+| Azure Container Registry | acr         |
 
 ### AI and Machine Learning
 
@@ -297,6 +298,7 @@ The following section provides some example names for common Azure resource type
 | Storage account (general use)     | Global | st\<storage name\>\<\#\#\#\>                                                  | <li> stnavigatordata001 <li> stemissionsoutput001 |
 | Storage account (diagnostic logs) | Global | stdiag\<first 2 letters of subscription name and number\>\<region\>\<\#\#\#\> | <li> stdiagsh001eastus2001 <li> stdiagsh001westus001 |
 | Azure StorSimple                  | Global | ssimp\<App Name\>\<Environment\>                                              | <li> ssimpnavigatorprod <li> ssimpemissionsdev |
+| Azure Container Registry          | Global | acr\<App Name\>\<Environment\>\<\#\#\#\>                                      | <li> acrnavigatorprod001 |
 
 ### Example names: AI and machine learning
 
