@@ -24,8 +24,8 @@ By using the Microsoft Cloud Adoption Framework for Azure best practices, organi
 
 The Cloud Adoption Framework brings together cloud adoption best practices from Microsoft employees, partners, and customers. It provides a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during your adoption effort. This guidance aligns to the following phases of the cloud adoption lifecycle, giving you easy access to the right guidance at the right time.
 
-|  |  |  |  |  |
-|--|--|--|--|--|
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|--|--|
 | <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
 | <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
 | <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern the environment and workloads. |
@@ -41,7 +41,7 @@ Each methodology above is part of a broad cloud adoption lifecycle. The Cloud Ad
 
 The cloud fundamentally changes how enterprises procure, use, and secure technology resources. Traditionally, enterprises assumed ownership of and responsibility for all aspects of technology, from infrastructure to software. By moving to the cloud, enterprises can provision and consume resources only when they're needed. Although the cloud offers tremendous flexibility in design choices, enterprises need a proven and consistent methodology for adopting cloud technologies. The Microsoft Cloud Adoption Framework for Azure meets that need, helping guide decisions throughout cloud adoption.
 
-But cloud adoption is only a means to an end. Successful cloud adoption starts well before a cloud platform vendor is selected. It begins when business and IT decision makers realize that the cloud can accelerate a specific business transformation objective. The Cloud Adoption Framework can help them align strategies for business, culture, and technical change to achieve their desired business outcomes.
+But cloud adoption is only a means to an end. Successful cloud adoption starts well before a cloud platform vendor is selected. It begins when business and IT decision makers realize that the cloud can accelerate a specific business transformation objective. The Cloud Adoption Framework helps align strategies for business, culture, and technical change to achieve their desired business outcomes.
 
 The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Because enterprise customers might still be in the process of choosing a cloud vendor or might have an intentional multicloud strategy, the framework provides cloud-agnostic guidance for strategic decisions whenever possible.
 

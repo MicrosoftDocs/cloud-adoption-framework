@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Get started: Accelerate new product and service innovation in the cloud
 
-Creating new products and services in the cloud requires a different approach than migration requires. The Innovate methodology of the Cloud Adoption Framework for Azure establishes an approach that guides the development of new products and services.
+Creating new products and services in the cloud requires a different approach than migration requires. The Innovate methodology of the Cloud Adoption Framework establishes an approach that guides the development of new products and services.
 
 This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
@@ -164,7 +164,7 @@ Starting with an approved landing zone helps your team to discover policy violat
 - Deploy a first landing zone for initial, low-risk experimentation during early innovation.
 - Develop a plan to refactor with the cloud center of excellence or the central IT team to ensure governance, security, and operational alignment.
 - Timeline risks:
-  - Governance, operations, and security requirements for the first 10 workloads can slow this process. Refactoring of the first landing zone and later landing zones takes longer, but it should happen in parallel with migration efforts.
+  - Governance, operations, and security requirements for the first 10 workloads can slow this process. Refactoring the first landing zone and later landing zones takes longer, but it should happen in parallel with migration efforts.
 
 **Guidance to support deliverable completion:**
 

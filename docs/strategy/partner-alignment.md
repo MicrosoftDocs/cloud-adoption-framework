@@ -13,13 +13,13 @@ ms.subservice: strategy
 
 # Strategy for partner alignment
 
-The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In reality, it is not safe to assume that a self-service approach will be sufficient for all adoption activities.
+The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In practice, you can't assume that a self-service approach will be sufficient for all adoption activities.
 
 Successful cloud adoption programs typically involve at least one level of support. Some cloud adoption efforts may require support from multiple partners working together towards a common goal.
 
 ## Steps to align the partnership strategy
 
-During the early strategy phases of adoption, it's important to start aligning your partnership strategy. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
+During the Strategy phase of adoption, it's important to start aligning your partnership strategy. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
 
 1. Start to understand support needs.
 1. Consider partnership options that fit your culture and needs.

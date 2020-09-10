@@ -7,7 +7,6 @@ ms.date: 10/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
 ---
 
 <!-- cSpell:ignore Savision -->

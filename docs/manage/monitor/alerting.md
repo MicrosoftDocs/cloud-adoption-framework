@@ -7,7 +7,6 @@ ms.date: 08/05/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
 ---
 
 <!-- cSpell:ignore multisignal -->

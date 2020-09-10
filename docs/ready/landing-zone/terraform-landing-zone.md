@@ -189,7 +189,7 @@ security_center = {
 }
 ```
 
-## Get started
+## Take action
 
 After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or macOS. You can get started with the [landing zones](https://github.com/azure/caf-terraform-landingzones).
 

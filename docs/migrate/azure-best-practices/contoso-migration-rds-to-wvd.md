@@ -7,10 +7,10 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
-<!-- cSpell:ignore msiexec Logix Lakeside SysTrack Robocopy UPD UPDs -->
+<!-- docutune:casing Lakeside SysTrack -->
+<!-- cSpell:ignore msiexec Logix Robocopy UPDs -->
 
 # Move on-premises Remote Desktop Services to Azure Windows Virtual Desktop scenario
 
@@ -205,11 +205,9 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
 
     > [!NOTE]
     > Contoso can't create a new virtual network at this step. Before reaching this step, Contoso should have already created a virtual network that has access to Active Directory.
-
-   <!-- -->
-
+    <!-- -->
     > [!NOTE]
-    > Contoso can't use a user account that requires multifactor authentication in this step. If Contoso plans to use multifactor authentication for its users, it will need to create a service principal for this purpose.
+    > Contoso can't use a user account that requires multi-factor authentication in this step. If Contoso plans to use multi-factor authentication for its users, it will need to create a service principal for this purpose.
 
 1. Contoso performs one more validation of the Windows Virtual Desktop settings, and creates the new environment of pooled Windows Virtual Desktop virtual machines.
 

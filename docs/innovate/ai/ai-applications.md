@@ -42,7 +42,7 @@ To get started, first familiarize yourself with the various categories and servi
 
 Select the service you want to use across vision, language, speech, decision, or web search. Each category on the page offers a set of quick starts, tutorials, how-to guides, whether you want to use the REST API or SDKs.
 
-<!-- docsTest:casing "Intelligent Kiosk" -->
+<!-- docutune:casing "Intelligent Kiosk" -->
 
 You can also download the Intelligent Kiosk to experience and demo these services.
 

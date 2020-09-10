@@ -1,7 +1,6 @@
 ---
 title: Cloud monitoring strategy
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
-services: azure-monitor
 author: mgoedtel
 ms.author: magoedte
 ms.date: 06/18/2020
@@ -188,7 +187,7 @@ Learning cycles includes getting monitoring data and insights into the hands of 
 
 <!-- docutune:ignore "Data to Information, Knowledge, and Wisdom" -->
 
-<Sup>1</Sup> The dikw model is an often used method, with roots in knowledge management, to explain the ways we move from Data to Information, Knowledge, and Wisdom with a component of actions and decisions.
+<Sup>1</sup> The dikw model is an often used method, with roots in knowledge management, to explain the ways we move from Data to Information, Knowledge, and Wisdom with a component of actions and decisions.
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 

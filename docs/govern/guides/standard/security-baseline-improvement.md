@@ -26,7 +26,7 @@ The difference is subtle, but it's an important distinction when you're creating
 
 ### Changes in the current state
 
-At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments named prod and DR.
+At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as Prod and DR.
 
 Since then, some things have changed that will affect governance:
 
@@ -59,7 +59,7 @@ This business risk can be expanded into a few technical risks:
 - Inconsistent deployment processes might result in security gaps, which could lead to data leaks or interruptions.
 - Configuration drift or missed patches might result in unintended security gaps, which could lead to data leaks or interruptions.
 
-**Data loss:** There's also an inherent risk of data loss on the new platform. The security and governance strategy should consider the following scenarios in which data loss can happen:
+**Data loss:** There's also an inherent risk of data loss in the new platform. The security and governance strategy should consider the following scenarios in which data loss can happen:
 
 - A mission-critical resource is lost or deleted.
 - A mission-critical resource is present, but the data is lost because of accidental deletion.
@@ -67,14 +67,14 @@ This business risk can be expanded into a few technical risks:
 
 ## Incremental improvement of policy statements
 
-The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but adopting these policies might be easier than you'd think.
+The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but adopting these policies might be easier than you think.
 
 - All deployed assets must be categorized by criticality and data classification. The cloud governance team and the application owner must review these classifications before deployment to the cloud.
 - Applications that store or access protected data must be managed differently than applications that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
 - All protected data must be encrypted when at rest. This encryption is the default for all Azure Storage accounts. But you might need additional encryption strategies, including encryption of the data within the storage account, encryption of VMs, and database-level encryption when you use SQL in a VM (TDE and column encryption).
-- Mission-critical data can be deleted accidentally. You need to develop a data backup strategy to handle this risk and restore the data before the deletion point. A malicious admin can delete the mission-critical data and its backups as well. To handle this scenario, deletions of backup data should be soft deletions that can be reversed. Azure Backup can help with both of these scenarios.
-- Elevated permissions in any segment that contains protected data should be an exception. Any such exceptions should be recorded with the cloud governance team and audited regularly.
-- Network subnets that contain protected data must be isolated from other subnets. Network traffic between protected data subnets must be audited regularly.
+- Mission-critical data can be deleted accidentally. You need to develop a data backup strategy to handle this risk and restore the data from before the deletion point. A malicious admin can delete the mission-critical data and its backups as well. To handle this scenario, deletions of backup data should be soft deletions that can be reversed. Azure Backup can help with both of these scenarios.
+- Elevated permissions in any segment that contains protected data should be an exception. Any such exceptions will be recorded with the cloud governance team and audited regularly.
+- Network subnets that contain protected data must be isolated from other subnets. Network traffic between protected data subnets will be audited regularly.
 - No subnet that contains protected data should be directly accessible over the public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution that can perform packet scanning and blocking functions.
 - Governance tooling must audit and enforce network configuration requirements defined by the security management team.
 - Governance tooling must limit VM deployment to only approved images.
@@ -83,11 +83,11 @@ The following changes to policy will help remediate the new risks and guide impl
 - Governance tooling must enforce that automatic updates are enabled on all deployed assets. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that aren't automatically updated must be included in processes owned by IT operations.
 - Creation of new subscriptions or management groups for any mission-critical applications or protected data will require a review from the cloud governance team to ensure that the proper blueprint is assigned.
 - A least-privilege access model will be applied to any management group or subscription that contains mission-critical applications or protected data.
-- Security team members should review trends and exploits that could affect cloud deployments so they can provide updates to security management tooling used in the cloud.
+- Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to security management tooling used in the cloud.
 - Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
 - Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
 - Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
-- Deployment of applications that require customer authentication must use an approved identity provider that's compatible with the primary identity provider for internal users.
+- Deployment of any applications that require customer authentication must use an approved identity provider that's compatible with the primary identity provider for internal users.
 - Cloud governance processes must include quarterly reviews with identity management teams. These reviews can help identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
 ## Incremental improvement of governance practices

@@ -54,7 +54,7 @@ Platform specialization consists of a disciplined execution of the following fou
 
 ::: zone-end
 
-Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout the Cloud Adoption Framework for Azure.
+Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is beyond the scope of the environment view that's taken throughout the Cloud Adoption Framework.
 
 As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload.The framework focuses on improvement across five pillars of architecture excellence:
 

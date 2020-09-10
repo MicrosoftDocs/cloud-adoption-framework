@@ -17,7 +17,7 @@ A cloud governance team ensures that cloud-adoption risks and risk tolerance are
 
 ## Step 1: Determine whether a cloud governance team is needed
 
-The official guidance in the Cloud Adoption Framework for Azure is to always create a cloud governance team. At first, the team might be exceptionally small. Regardless of its size, its role will prove important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with [cloud governance functions](../../organize/cloud-governance.md).
+The official guidance in the Cloud Adoption Framework is to always create a cloud governance team. At first, the team might be very small. Regardless of its size, its role is important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with [cloud governance functions](../../organize/cloud-governance.md).
 
 **Deliverables:**
 
