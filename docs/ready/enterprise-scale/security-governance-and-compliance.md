@@ -180,6 +180,8 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 <!-- docsTest:ignore "and conditional access" -->
 
+TODO: Add Security Baseline here
+
 ## Service enablement framework
 
 As business units request to deploy workloads to Azure, you need additional visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required, you need to allow it. The following table provides a framework to assess enterprise security readiness of Azure services:
