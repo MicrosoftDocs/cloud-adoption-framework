@@ -180,7 +180,14 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 <!-- docsTest:ignore "and conditional access" -->
 
-TODO: Add Security Baseline here
+## Azure Security Benchmarks
+
+The Azure Security Benchmark includes a collection of high-impact security recommendations you can use to help secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
+
+The Azure Security Benchmark documentation specifies security controls and service recommendations.
+
+- [Security Controls](https://docs.microsoft.com/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
+- [Service Recommendations](https://docs.microsoft.com/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Service enablement framework
 
