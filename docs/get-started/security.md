@@ -60,7 +60,7 @@ In addition to meeting any explicit regulatory compliance requirements, we recom
 - **Long-term architectural decisions:** Establish a long-term foundation with the right decisions. These are difficult and expensive to change later.
 
   - [Build an enterprise segmentation strategy and align technical architectures with it (network segmentation, identity segmentation, etc.)](/azure/architecture/framework/security/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
-  - [Single enterprise directory](/azure/architecture/framework/security/identity#single-enterprise-directory)
+  - [Single enterprise directory](/azure/architecture/framework/security/design-identity#use-a-single-enterprise-directory)
   - [Authentication strategy for services](/azure/architecture/framework/security/applications-services#prefer-identity-authentication-over-keys)
   - [Permission assignment strategy](/azure/architecture/framework/security/critical-impact-accounts#avoid-granular-and-custom-permissions)
 
