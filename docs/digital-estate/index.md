@@ -27,9 +27,9 @@ The measurement of a digital estate changes depending on the desired business ou
 
 - **Operational stability:** Businesses are dependent on stable technologies to operate effectively. Near-zero downtime and service relaibility are crucial in competitive markets. When operational stablity is a priority, the digital estate should be measured on positive/negative impact to stable operations. Business continuity, disaster recovery, and reliability of workloads and each asset are required measures when operational stablity is a priority.
 
-After an organizatioal innovationthe most important form of transformation, digital estate planning become,  much easier to manage.
- Nach stabilityof transformatio and be measured are crucial in competitive markets.> [!TIP]
->  For some organizations,  type of transformation can be measured with any of the three views. Companies commonly complete all three transformations in parallel. We strongly recommend that company leadership and the cloud strategy team agree regarding the transformation that is most important for business success. That understanding serves as the basis for common language and metrics across multiple initiatives.
+After an organization understands the most important form of transformation, digital estate planning becomes much easier to manage.
+
+>  Each type of transformation can be measured with any of the above views. Companies commonly complete all these transformations in parallel. We strongly recommend that company leadership and the cloud strategy team agree regarding the transformation that is most important for business success. That understanding serves as the basis for common language and metrics across multiple initiatives.
 
 ## How can a financial model be updated to reflect the digital estate?
 
