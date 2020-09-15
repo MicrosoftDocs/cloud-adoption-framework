@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore bandersmsft -->
-
 # Migration-focused cost control mechanisms
 
 The cloud introduces a few shifts in how we work, regardless of our role on the technology team. Cost is a great example of this shift. In the past, only finance and IT leadership were concerned with the cost of IT assets (infrastructure, apps, and data). The cloud empowers every member of IT to make and act on decisions that better support the end user. However, with that power comes the responsibility to be cost conscious when making those decisions.
@@ -29,7 +27,7 @@ The tools in this article include:
 
 The processes described in this article may also require a partnership with IT managers, finance, or line-of-business application owners.
 
-<!-- markdownlint-disable MD024 MD025 -->
+<!-- markdownlint-disable MD024 -->
 
 ## [Estimate VM costs prior to migration](#tab/EstimateVMCosts)
 
@@ -67,7 +65,7 @@ _Figure 1: Diagram of the cost details view of an assessment in Azure Migrate._
 
 ### Additional resources
 
-- [Set up and review an assessment with Azure Migrate](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#set-up-an-assessment)
+- [Set up and review an assessment with Azure Migrate](/azure/migrate/tutorial-assess-vmware#set-up-an-assessment)
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see [Cost Management discipline guidance](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 
 ## [Estimate and optimize VM costs during and after migration](#tab/EstimateOptimize)
@@ -102,8 +100,8 @@ This analysis will allow you to review total costs, budget (if available), and a
 ### Additional resources
 
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see the [Cost Management discipline](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
-- For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations).
-- For more information about Azure Cost Management and Billing, see [Understand and work with scopes](https://docs.microsoft.com/azure/cost-management/understand-work-scopes) and [explore and analyze costs with cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis).
+- For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](/azure/advisor/advisor-cost-recommendations).
+- For more information about Azure Cost Management and Billing, see [Understand and work with scopes](/azure/cost-management/understand-work-scopes) and [explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis).
 
 ## [Tips and tricks to optimize costs](#tab/TipsTricks)
 
@@ -127,7 +125,7 @@ Speak with your Microsoft account representative to understand how you can take 
 
 ### Azure Reservations
 
-[Azure Reservations](https://docs.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Reservations can significantly reduce your virtual machine or SQL Database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
+[Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Reservations can significantly reduce your virtual machine or SQL Database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
 
 ### Use Azure Hybrid Benefit
 
@@ -135,7 +133,7 @@ If you already have Windows Server or SQL Server licenses in your on-premises de
 
 ### Low-priority VMs with batch
 
-For lower priority background processes, batch offers a means of managing the background service VMs and reducing costs. However, it is important to understand the performance impact of [low-priority VMs with batch](https://docs.microsoft.com/azure/batch/batch-low-pri-vms) before choosing this discounted option.
+For lower priority background processes, batch offers a means of managing the background service VMs and reducing costs. However, it is important to understand the performance impact of [low-priority VMs with batch](/azure/batch/batch-low-pri-vms) before choosing this discounted option.
 
 ### Additional resources
 

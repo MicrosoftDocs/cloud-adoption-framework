@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore arnaudlh arnaul Arnaud eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
+<!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
 # Use Terraform to build your landing zones
 
@@ -34,8 +34,6 @@ _Figure 1: A foundation landing zone using Terraform._
 
 The components deployed and their purpose include the following:
 
-<!-- markdownlint-disable MD033 -->
-
 | Component | Responsibility |
 |---|---|
 | Resource groups | Core resource groups needed for the foundation |
@@ -43,8 +41,6 @@ The components deployed and their purpose include the following:
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
 | Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> AdAssessment <li> AdReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
 | Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Use this blueprint
 
@@ -54,7 +50,7 @@ Before you use the Cloud Adoption Framework foundation landing zone, review the 
 
 The following assumptions or constraints were considered when this initial landing zone was defined. If these assumptions align with your constraints, you can use the blueprint to create your first landing zone. The blueprint also can be extended to create a landing zone blueprint that meets your unique constraints.
 
-- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
+- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
 - **Compliance:** No third-party compliance requirements are needed for this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
 - **Shared services:** No existing shared services in Azure require this subscription to be treated like a spoke in a hub and spoke architecture.
@@ -69,12 +65,12 @@ The following decisions are represented in the CAF Terraform modules:
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Logging and monitoring | Azure Monitor Log Analytics workspace is used. A diagnostics storage account as well as event hub is provisioned.                                                                                                                                                        |                                                                                                                                                                                                                                                                 |
 | Network                | N/A - network is implemented in another landing zone.                                                                                                                                                                                                                    | [Networking decisions](../considerations/networking-options.md)                                                                                                                                                                                                 |
-| Identity               | It's assumed that the subscription is already associated with an Azure Active Directory instance.                                                                                                                                                                        | [Identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices)                                                                                                                               |
+| Identity               | It's assumed that the subscription is already associated with an Azure Active Directory instance.                                                                                                                                                                        | [Identity management best practices](/azure/security/fundamentals/identity-management-best-practices)                                                                                                                               |
 | Policy                 | This landing zone currently assumes that no Azure policies are to be applied.                                                                                                                                                                                            |                                                                                                                                                                                                                                                                 |
 | Subscription design    | N/A - designed for a single production subscription.                                                                                                                                                                                                                     | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md)                                                                                                                                                                                  |
 | Resource groups        | N/A - designed for a single production subscription.                                                                                                                                                                                                                     | [Scale subscriptions](../azure-best-practices/scale-subscriptions.md)                                                                                                                                                                                           |
 | Management groups      | N/A - designed for a single production subscription.                                                                                                                                                                                                                     | [Organize subscriptions](../azure-best-practices/organize-subscriptions.md)                                                                                                                                                                                     |
-| Data                   | N/A                                                                                                                                                                                                                                                                      | [Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure data store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
+| Data                   | N/A                                                                                                                                                                                                                                                                      | [Choose the correct SQL Server option in Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure data store guidance](/azure/architecture/guide/technology-choices/data-store-overview) |
 | Storage                | N/A                                                                                                                                                                                                                                                                      | [Azure Storage guidance](../considerations/storage-options.md)                                                                                                                                                                                                  |
 | Naming standards       | When the environment is created, a unique prefix is also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)                                                                                                                                                                              |
 | Cost management        | N/A                                                                                                                                                                                                                                                                      | [Tracking costs](../azure-best-practices/track-costs.md)                                                                                                                                                                                                        |
@@ -193,7 +189,7 @@ security_center = {
 }
 ```
 
-## Get started
+## Take action
 
 After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or macOS. You can get started with the [landing zones](https://github.com/azure/caf-terraform-landingzones).
 

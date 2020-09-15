@@ -1,6 +1,6 @@
 ---
-title: "Assess workloads for Azure Stack Hub migration"
-description: Assess workloads for Azure Stack Hub migration
+title: Assess workloads for Azure Stack Hub migration
+description: Assess workloads for Azure Stack Hub migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2020
@@ -13,13 +13,13 @@ ms.subservice: migrate
 
 This article assumes that you've decided to [integrate Azure Stack into your cloud strategy](./index.md), you've developed a [plan for Azure Stack Hub migration](./plan.md), and [your environment is ready for migration](./ready.md).
 
-During rationalization of the digital estate in the plan methodology, each workload was discovered, inventoried, and initial decisions were made based on quantitative data. Prior to deployment of each workload, it's important to validate the data and the decisions with qualitative data.
+During the rationalization of your organization's digital estate in the Plan methodology, each workload was discovered and inventoried, and initial decisions were made based on quantitative data. Before you deploy each workload, it's important to validate the data and the decisions with qualitative data.
 
 ## Placement
 
-The first data point to consider is placement. Will this workload be migrated to your public cloud, private cloud, or some other cloud platform like a sovereign cloud or service provider's Azure environment.
+The first data point to consider is placement. That is, will this workload be migrated to your public cloud, private cloud, or some other cloud platform, such as a sovereign cloud or service provider's Azure environment?
 
-Each of the following sections will help validate placement. They will also provide data that will be useful during the deployment of this workload.
+The information in each of the following sections can help validate your decisions about placement. The information will also help surface data that will be useful during the deployment of your workloads.
 
 ## Stakeholder value
 
@@ -58,20 +58,20 @@ Assess the impact of licensing and support:
 ## Operations requirements
 
 - Avoid duplication of effort and optimize service-level agreements (SLAs) by examining the correlation between IT-managed cloud services and application-specific services.
-- Consider the automation required to orchestrate provisioning of services during deployment and migration of applications.
-- [Scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, VM availability sets, virtual machine scale sets, network adapters, and the ability to add and resize VMs and disks can help you meet your operations requirements.
+- Consider the automation that's required to orchestrate the provisioning of services during deployment and migration of applications.
+- To help meet your operations requirements, consider [scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, virtual machine (VM) availability sets, VM scale sets, network adapters, and the ability to add and resize VMs and disks.
 
 ## Monitoring
 
-- Monitor system health and operational status and performance using well-defined metrics that form the basis of the SLAs guaranteed to the end user.
-- Check security and compliance, evaluating how well the cloud environment meets the regulatory and compliance requirements imposed by the application.
+- Monitor system health and operational status and performance by using well-defined metrics that form the basis of the SLAs that you offer your end users.
+- Check security and compliance, evaluating how well the cloud environment meets the regulatory and compliance requirements that are imposed by the application.
 - What are the processes for backup/restore and replication/failover?
-- Find data-protection services for IaaS, PaaS, and SaaS resources.
+- Find data-protection services for infrastructure as a service, platform as a service, and software as a service resources.
 - Incorporate multiple vendors, technologies, and capabilities to achieve a comprehensive protection strategy.
 
-## Next step: Assess workloads before migration
+## Next steps
 
-The following articles provide guidance found at specific points throughout the cloud adoption journey. The first article on assessing workloads goes deeper than the assessment during the planning process to ensure you're ready to migrate each workload.
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Assess workloads for Azure Stack Hub](./migrate-assess.md)
 - [Deploy workloads to Azure Stack Hub](./migrate-deploy.md)

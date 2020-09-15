@@ -40,7 +40,7 @@ Security standards should include guidance specific to the adoption of cloud suc
 - Secure use of DevOps model and inclusion of cloud applications, APIs, and services in development
 - Use of identity perimeter controls to supplement or replace network perimeter controls
 - Define your segmentation strategy prior to moving your workloads to IaaS platform
-- Tagging and classifying the sensitive of assets
+- Tagging and classifying the sensitivity of assets
 - Define process for assessing and ensuring your assets are configured and secured properly
 
 ## Team composition and key relationships

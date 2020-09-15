@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore billyclaymyersmsft wimyers functionapp -->
-
 # Engage customers through applications
 
 Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .NET, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
@@ -95,25 +93,25 @@ To configure or monitor Azure Bot Service deployments:
 
 ### Azure DevOps
 
-During your innovation journey, you'll eventually find yourself on the path to DevOps. Microsoft has long had an on-premises product known as Team Foundation Server (TFS). During our own innovation journey, Microsoft developed Azure DevOps, a cloud-based service that provides build and release tools supporting many languages and destinations for your releases. For more information, see [Azure DevOps](https://docs.microsoft.com/azure/devops).
+During your innovation journey, you'll eventually find yourself on the path to DevOps. Microsoft has long had an on-premises product known as Team Foundation Server (TFS). During our own innovation journey, Microsoft developed Azure DevOps, a cloud-based service that provides build and release tools supporting many languages and destinations for your releases. For more information, see [Azure DevOps](/azure/devops).
 
 ### Visual Studio App Center
 
-As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](https://docs.microsoft.com/appcenter).
+As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](/appcenter).
 
-Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](https://docs.microsoft.com/appcenter/push).
+Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](/appcenter/push).
 
 ### Learn more
 
-- [App Service overview](https://docs.microsoft.com/azure/app-service/overview)
-- [Web App for Containers: Run a custom container](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)
-- [Introduction to Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)
-- [Azure for .NET and .NET Core developers](https://docs.microsoft.com/dotnet/azure/?view=azure-dotnet)
-- [Azure SDK for Python documentation](https://docs.microsoft.com/azure/python)
-- [Azure for Java cloud developers](https://docs.microsoft.com/azure/java/?view=azure-java-stable)
-- [Create a PHP web app in Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-php)
-- [Azure SDK for JavaScript documentation](https://docs.microsoft.com/azure/javascript)
-- [Azure SDK for Go documentation](https://docs.microsoft.com/azure/go)
+- [App Service overview](/azure/app-service/overview)
+- [Web App for Containers: Run a custom container](/azure/app-service/containers/quickstart-docker)
+- [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
+- [Azure for .NET and .NET Core developers](/dotnet/azure/?view=azure-dotnet)
+- [Azure SDK for Python documentation](/azure/python)
+- [Azure for Java cloud developers](/azure/java/?view=azure-java-stable)
+- [Create a PHP web app in Azure](/azure/app-service/app-service-web-get-started-php)
+- [Azure SDK for JavaScript documentation](/azure/javascript)
+- [Azure SDK for Go documentation](/azure/go)
 - [DevOps solutions](https://azure.microsoft.com/solutions/devops)
 
 ## [Create cloud-native applications](#tab/CloudNative)
@@ -170,17 +168,17 @@ Build cloud-native apps without provisioning and managing infrastructure by usin
 
 Azure Functions provides a platform for running small units of code or functions in the cloud. Functions can be a way to start refactoring your code into a microservices architecture.
 
-The Azure Functions runtime supports many languages, including C#, Java, JavaScript, and Python. For a complete list, see [Supported languages in Azure Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+The Azure Functions runtime supports many languages, including C#, Java, JavaScript, and Python. For a complete list, see [Supported languages in Azure Functions](/azure/azure-functions/supported-languages).
 
-Another benefit of functions is that they can be triggered by different actions and events, like HTTP triggers, timer triggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Another benefit of functions is that they can be triggered by different actions and events, like HTTP triggers, timer triggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](/azure/azure-functions/functions-triggers-bindings).
 
 #### Action
 
 To configure or monitor Azure Functions deployments:
 
 1. Go to **Function App**.
-2. Configure a new function app: Select **Add** and follow the prompts.
-3. Manage existing function apps: Select the desired function app from the list.
+2. Configure a new function app: select **Add** and follow the prompts.
+3. Manage existing function apps: select the desired function app from the list.
 
 ::: zone target="chromeless"
 
@@ -194,15 +192,15 @@ To configure or monitor Azure Functions deployments:
 
 ### Serverless solutions: Azure Logic Apps
 
-Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
+Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft 365, and Dropbox.
 
 #### Action
 
 To configure or monitor Azure Logic Apps:
 
 1. Go to **Logic Apps**.
-2. Configure a new logic app: Select **Add** and follow the prompts.
-3. Manage existing logic apps: Select the desired logic app from the list.
+2. Configure a new logic app: select **Add** and follow the prompts.
+3. Manage existing Logic Apps: select the desired logic app from the list.
 
 ::: zone target="chromeless"
 
@@ -214,7 +212,7 @@ To configure or monitor Azure Logic Apps:
 
 ::: zone-end
 
-### Serverless solutions: API management
+### Serverless solutions: API Management
 
 Publish, secure, transform, maintain, and monitor APIs by using Azure API Management, a fully managed service that offers a usage model designed and implemented to be natural fit for serverless applications.
 
@@ -268,7 +266,7 @@ Azure Red Hat OpenShift provides flexible self-service deployment of fully manag
 
 #### Learn more
 
-- [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)
+- [Azure Red Hat OpenShift](/azure/openshift/intro-openshift)
 
 ## [Isolate points of failure](#tab/IsolatePointsOfFailure)
 
@@ -342,6 +340,6 @@ To configure or monitor Azure CDN profiles:
 
 ### Learn more
 
-- [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
-- [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager)
-- [Azure Content Delivery Network](https://docs.microsoft.com/azure/cdn)
+- [Azure Front Door](/azure/frontdoor/front-door-overview)
+- [Traffic Manager](/azure/traffic-manager)
+- [Azure Content Delivery Network](/azure/cdn)

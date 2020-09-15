@@ -22,18 +22,14 @@ Azure customers employ a continually expanding set of connected systems and devi
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - [Microsoft HoloLens 2](https://docs.microsoft.com/hololens)
-> - [Azure Sphere](https://docs.microsoft.com/azure-sphere/product-overview/what-is-azure-sphere)
-> - [Azure Kinect DK](https://docs.microsoft.com/azure/kinect-dk/about-azure-kinect-dk)
+> - [Microsoft HoloLens 2](/hololens)
+> - [Azure Sphere](/azure-sphere/product-overview/what-is-azure-sphere)
+> - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
-> - [Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview)
-> - [IoT plug and play](https://docs.microsoft.com/azure/iot-pnp/overview-iot-plug-and-play)
-
-<!-- markdownlint-disable MD025 -->
+> - [Azure SQL Edge](/azure/azure-sql-edge/overview)
+> - [IoT plug and play](/azure/iot-pnp/overview-iot-plug-and-play)
 
 ## [Global scale IoT service](#tab/IoTHub)
-
-<!-- markdownlint-enable MD025 -->
 
 Architect solutions that exercise bidirectional communication with IoT devices at billions scale. Use out-of-box, device-to-cloud telemetry data to understand the state of your devices and define message routes to other Azure services just through configuration. By taking advantage of cloud-to-device messages, you can reliably send commands and notifications to your connected devices and track message delivery with acknowledgment receipts. And you'll automatically resend device messages as needed to accommodate intermittent connectivity.
 
@@ -48,8 +44,8 @@ Here are a few features you'll find:
 
 ### Learn more
 
-- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-- [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
+- [Azure IoT Hub](/azure/iot-hub)
+- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
 
 ::: zone-end
 
@@ -87,8 +83,6 @@ To create an Azure IoT Hub Device Provisioning Service:
 
 ::: zone-end
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Azure Digital Twins](#tab/DigitalTwins)
 
 Build reusable, highly scalable, spatially aware experiences that link streaming data across the physical and digital world. Enhance your customer engagement using comprehensive models of physical environments. Generate spatial intelligence graphs to model the relationships and interactions between people, places, and devices. Query data from a physical space rather than disparate sensors.
@@ -101,7 +95,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ### Learn more
 
-- [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)
+- [Azure Digital Twins](/azure/digital-twins/about-digital-twins)
 
 ::: zone-end
 
@@ -112,7 +106,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, then select **Digital Twins**.
+2. Search for **digital twins**, then select **digital twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing digital twins, select this button:
 
@@ -124,11 +118,9 @@ To create Azure Digital Twins:
 
 ::: zone-end
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Location intelligence](#tab/AzureMaps)
 
-In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
+In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence, powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
 **Azure Maps Data Service (preview):** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 
@@ -140,7 +132,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ### Learn more
 
-- [Azure Maps](https://docs.microsoft.com/azure/azure-maps)
+- [Azure Maps](/azure/azure-maps)
 
 ::: zone-end
 
@@ -177,7 +169,7 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ### Learn more
 
-- [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
+- [Azure Spatial Anchors](/azure/spatial-anchors/overview)
 
 ::: zone-end
 
@@ -208,8 +200,8 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ### Learn more
 
-- [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
-- [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
+- [Azure Remote Rendering](/azure/remote-rendering/overview/about)
+- [Rendering using Azure](/azure/batch/batch-rendering-service)
 
 ::: zone-end
 
