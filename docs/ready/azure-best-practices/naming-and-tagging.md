@@ -78,6 +78,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 | Asset type                      | Name prefix |
 |---------------------------------|-------------|
+| Management group                | mg-         |
 | Resource group                  | rg-         |
 | Policy definition               | policy-     |
 | API management service instance | apim-       |
@@ -235,11 +236,12 @@ The following section provides some example names for common Azure resource type
 
 ### Example names: General
 
-| Asset type                      | Scope                              | Format                                                      | Examples                                                                                                                |
-|---------------------------------|------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Subscription                    | Account/ <br> Enterprise Agreement | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001 |
-| Resource group                  | Subscription                       | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
-| API management service instance | Global                             | apim-\<App or service name\>                                | apim-navigator-prod                                                                                                     |
+| Asset type                      | Scope                                 | Format                                                      | Examples                                                                                           |
+|---------------------------------|---------------------------------------|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Management group                | Business unit and/or Environment type | mg-\<Business Unit\>\[-\<Environment type\>\]               | <li> mg-mktg <li> mg-hr <li> mg-corp-prod <li> mg-fin-client                                       |
+| Subscription                    | Account/ <br> Enterprise Agreement    | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001                                        |
+| Resource group                  | Subscription                          | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
+| API management service instance | Global                                | apim-\<App or service name\>                                | apim-navigator-prod                                                                                |
 
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
