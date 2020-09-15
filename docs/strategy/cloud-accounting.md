@@ -1,5 +1,5 @@
 ---
-title: "What is cloud accounting?"
+title: What is cloud accounting?
 description: Use the Cloud Adoption Framework for Azure to understand common cloud accounting models for IT as you begin your cloud migration journey.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,23 +11,21 @@ ms.subservice: strategy
 
 <!-- cSpell:ignore CIOs -->
 
-<!-- markdownlint-disable MD026 -->
-
 # What is cloud accounting?
 
-The cloud changes how IT accounts for costs, as is described in [Creating a financial model for cloud transformation](./financial-models.md). Various IT accounting models are much easier to support because of how the cloud allocates costs. So it's important to understand how to account for cloud costs before you begin a cloud transformation journey. This article outlines the most common cloud accounting models for IT.
+The cloud changes how IT accounts for costs, as is described in [Create a financial model for cloud transformation](./financial-models.md). Various IT accounting models are much easier to support because of how the cloud allocates costs. So it's important to understand how to account for cloud costs before you begin a cloud transformation journey. This article outlines the most common cloud accounting models for IT.
 
 ## Traditional IT accounting (cost center model)
 
 It's often accurate to consider IT a cost center. In the traditional IT accounting model, IT consolidates purchasing power for all IT assets. As we pointed out in the [financial models](./financial-models.md) article, that purchasing power consolidation can include software licenses, recurring charges for CRM licensing, purchase of employee desktops, and other large costs.
 
-When IT serves as a cost center, the perceived value of IT is largely viewed through a procurement management lens. This perception makes it difficult for the board or other executives to understand the true value that IT provides. Procurement costs tend to skew the view of IT by outweighing any other value added by the organization. This view explains why IT is often lumped into the responsibilities of either the chief financial officer or the chief operating officer. This perception of IT is limited and can be short sighted.
+When IT serves as a cost center, the perceived value of IT is largely viewed through a procurement management lens. This perception makes it difficult for the board or other executives to understand the true value that IT provides. Procurement costs tend to skew the view of IT by outweighing any other value added by the organization. This view explains why IT is often lumped into the responsibilities of either the chief financial officer or the chief operating officer. This perception of IT is limited and might be shortsighted.
 
 ## Central IT accounting (profit center model)
 
-To overcome the cost center view of IT, some CIOs opted for a central IT model of accounting. In this type of model, IT is treated like a competing business unit and a peer to revenue-producing business units. In some cases, this model can be entirely logical. For example, some organizations have a professional IT services division that generates a revenue stream. Frequently, central IT models don't generate significant revenue, making it difficult to justify the model.
+To overcome the cost center view of IT, some CIOs opted for a centralized IT model of accounting. In this type of model, IT is treated like a competing business unit and a peer to revenue-producing business units. In some cases, this model can be entirely logical. For example, some organizations have a professional IT services division that generates a revenue stream. Frequently, centralized IT models don't generate significant revenue, making it difficult to justify the model.
 
-Regardless of the revenue model, central IT accounting models are unique because of how the IT unit accounts for costs. In a traditional IT model, the IT team records costs and pays those costs from shared funds like operations and maintenance (O&M) or a dedicated profit and loss (P&L) account.
+Regardless of the revenue model, centralized IT accounting models are unique because of how the IT unit accounts for costs. In a traditional IT model, the IT team records costs and pays those costs from shared funds like operations and maintenance (O&M) or a dedicated profit and loss (P&L) account.
 
 In a central IT accounting model, the IT team marks up the services provided to account for overhead, management, and other estimated expenses. It then bills the competing business units for the marked-up services. In this model, the CIO is expected to manage the P&L associated with the sale of those services. This can create inflated IT costs and contention between central IT and business units, especially when IT needs to cut costs or isn't meeting agreed-upon SLAs. During times of technology or market change, any new technology would cause a disruption to central IT's P&L, making transformation difficult.
 

@@ -21,14 +21,14 @@ Fortunately, the process of developing a cloud adoption strategy and cloud adopt
 
 - **[Criticality](./criticality.md):** Mapping workloads to business processes. Ranking criticality to focus investments.
 - **[Impact](./impact.md):** Understanding the impact of potential outages to aid in evaluating return on investment for cloud management.
-- **[Commitment](./commitment.md):** Developing true partnerships, by creating and documenting agreements *with the business*.
+- **[Commitment](./commitment.md):** Developing true partnerships, by creating and documenting agreements with the business.
 
 > [!NOTE]
 > Underlying these terms are classic IT terms such as SLA, RTO, and RPO. Mapping specific business and IT terms is covered in more detail in the [Commitment](./commitment.md) article.
 
-## Ops Management planning workbook
+## Operations management workbook
 
-To help capture decisions that result from this conversation about term alignment, an [Ops Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) is available on our GitHub site. This workbook does not perform SLA or cost calculations. It serves only to help capture such measures and forecast return on loss-avoidance efforts.
+To help capture decisions that result from this conversation about term alignment, an [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) is available on our GitHub site. This workbook does not perform SLA or cost calculations. It serves only to help capture such measures and forecast return on loss-avoidance efforts.
 
 Alternatively, these same workloads and associated assets could be tagged directly in Azure, if the solutions are already deployed to the cloud.
 

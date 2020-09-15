@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore siterecovery -->
-
 # Protect and recover in Azure
 
 _Protect and recover_ is the third and final discipline in any cloud-management baseline.
@@ -23,10 +21,10 @@ In [Operational compliance in Azure](./operational-compliance.md) the objective 
 
 For any enterprise-grade environment, this table outlines the suggested minimum for any management baseline:
 
-|Process  |Tool  |Purpose  |
-|---------|---------|---------|
-|Protect data|Azure Backup|Back up data and virtual machines in the cloud.|
-|Protect the environment|Azure Security Center|Strengthen security and provide advanced threat protection across your hybrid workloads.|
+| Process                 | Tool                  | Purpose                                                                                  |
+| ----------------------- | --------------------- | ---------------------------------------------------------------------------------------- |
+| Protect data            | Azure Backup          | Back up data and virtual machines in the cloud.                                          |
+| Protect the environment | Azure Security Center | Strengthen security and provide advanced threat protection across your hybrid workloads. |
 
 ::: zone target="docs"
 
@@ -41,15 +39,19 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 With Azure Backup, you can back up, protect, and recover your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or offsite backup solution with a cloud-based solution. This new solution is reliable, secure, and cost competitive. Azure Backup can also help protect and recover on-premises assets through one consistent solution.
 
+For data present in Azure, Azure Backup offer varied levels of protection. For eg: For backing up key cloud infrastructure pieces such as Azure Virtual machines and Azure Files, it offers [Azure virtual machine backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction) and [Azure files backup](https://docs.microsoft.com/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual machines, it offers dedicated database backup solutions for [MS SQL](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) and [SAP HANA](https://docs.microsoft.com/azure/backup/sap-hana-db-about) with far lower RPO.
+
+To get a glimpse of how easy it is to enable backup with Azure Backup, look at the section below to enable backup for Azure Virtual machines
+
 ### Enable backup for an Azure VM
 
-1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to backup.
 1. On the **Operations** pane, select **Backup**.
 1. Create or select an existing Azure Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
 1. Configure the schedule and retention period.
 1. Select **OK**.
-1. Select **Enable Backup**.
+1. Select **Enable backup**.
 
 ::: zone target="chromeless"
 
@@ -59,7 +61,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ::: zone target="docs"
 
-[Overview](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup)
+For more details about Azure Backup and it's varied offering, refer to this [Overview](/azure/backup/backup-overview) section
 
 ## Azure Site Recovery
 
@@ -111,5 +113,5 @@ After the replication job has finished, you can check the replication status, ve
 
 ### Learn more
 
-- [Azure Site Recovery overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
-- [Replicate an Azure VM to another region](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart)
+- [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview)
+- [Replicate an Azure VM to another region](/azure/site-recovery/azure-to-azure-quickstart)

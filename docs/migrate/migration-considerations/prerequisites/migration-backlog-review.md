@@ -1,5 +1,5 @@
 ---
-title: "Migration Backlog Review"
+title: "Migration backlog review"
 description: Use the Cloud Adoption Framework for Azure to understand the importance of creating and reviewing a migration backlog.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Migration backlog review
 
-The actionable output of the plan phase is a migration backlog, which influences all of the prerequisites discussed so far. Development of the migration backlog should be completed as a first prerequisite. This article serves as a milestone to complete prerequisite activities. The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
+The actionable output of the Plan phase is a migration backlog, which influences all of the prerequisites discussed so far. Development of the migration backlog should be completed as a first prerequisite. This article serves as a milestone to complete prerequisite activities. The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
 
 ## Business outcomes and metrics
 
@@ -29,7 +29,7 @@ The article on [digital estate rationalization](../../../digital-estate/rational
 
 ## Next steps
 
-With a general understanding of the digital estate and migration backlog, the team is ready to move beyond prerequisites and to begin [assessing workloads](../assess/index.md).
+With a general understanding of the digital estate and migration backlog, the team is ready to move beyond prerequisites and begin assessing workloads.
 
 > [!div class="nextstepaction"]
 > [Assess workloads](../assess/index.md)

@@ -1,13 +1,12 @@
 ---
 title: "Cloud monitoring platforms overview"
-description: Gain a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
+description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
 ---
 
 <!-- cSpell:ignore opsman ITSM -->
@@ -22,7 +21,7 @@ This article provides a high-level overview of our monitoring platforms to help 
 
 ## The story of System Center Operations Manager
 
-In 2000, we entered the operations management field with Microsoft Operations Manager (MOM) 2000. In 2007, we introduced a reengineered version of the product, named System Center Operations Manager. It moved beyond simple monitoring of a Windows server and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
+In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a reengineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of a Windows server and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
 
 ## The story of Azure Monitor
 
@@ -40,7 +39,7 @@ At the 2018 Ignite conference, we announced that the Azure Monitor brand expande
 - **Application Insights**, for application monitoring.
 - **Log Analytics**, the primary location for collecting and analyzing log data.
 - A new **unified alerting service**, which brought together alert mechanisms from each of the other services mentioned earlier.  
-- **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in an Azure virtual network.
+- **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in a virtual network.
 
 ## The story of Operations Management Suite (OMS)
 
@@ -76,7 +75,7 @@ Azure Monitor is a software as a service (SaaS) offering, so its supporting infr
 
 #### Agents
 
-Operations Manager collects data directly only from agents that are installed on [Windows computers](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
+Operations Manager collects data directly only from agents that are installed on [Windows computers](/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
 
 ![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-opsman-agents-optimized.svg)
 
@@ -84,7 +83,7 @@ The Operations Manager agent can collect from multiple data sources on the local
 
 #### Management packs
 
-Operations Manager performs all monitoring with workflows (rules, monitors, and object discoveries). These workflows are packaged together in a [management pack](https://docs.microsoft.com/system-center/scom/manage-overview-management-pack?view=sc-om-2019) and deployed to agents. Management packs are available for a variety of products and services, which include predefined rules and monitors. You can also author your own management pack for your own applications and custom scenarios.
+Operations Manager performs all monitoring with workflows (rules, monitors, and object discoveries). These workflows are packaged together in a [management pack](/system-center/scom/manage-overview-management-pack?view=sc-om-2019) and deployed to agents. Management packs are available for a variety of products and services, which include predefined rules and monitors. You can also author your own management pack for your own applications and custom scenarios.
 
 #### Monitoring configuration
 
@@ -160,7 +159,7 @@ Management packs include various predefined alerting rules for different critica
 
 ### Azure Monitor
 
-With Azure Monitor, you can create alerts based on a metric crossing a threshold, or based on a scheduled query result. Although alerts based on metrics can achieve near-real-time results, scheduled queries have a longer response time, depending on the speed of data ingestion and indexing. Instead of being limited to a specific agent, log query alerts in Azure Monitor let you analyze data across all data stored in multiple workspaces. These alerts also include data from a specific Application Insights app by using a cross-workspace query.
+With Azure Monitor, you can create alerts based on a metric crossing a threshold, or based on a scheduled query result. Although alerts based on metrics can achieve near-real-time results, scheduled queries have a longer response time, depending on the speed of data ingestion and indexing. Instead of being limited to a specific agent, log query alerts in Azure Monitor let you analyze data across all data stored in multiple workspaces. These alerts also include data from a specific Application Insights application by using a cross-workspace query.
 
 Although monitoring solutions can include alert rules, you ordinarily create them based on your own requirements.
 

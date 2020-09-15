@@ -11,20 +11,20 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-# Azure migration guide: Before you start
+# Azure migration guide overview
 
-The [Cloud Adoption Framework's Migrate methodology](../index.md) guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, the process of Assess, Migration, and Optimize and Promote is followed to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
+The [Cloud Adoption Framework's Migrate methodology](../index.md) guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, the process of assess, migration, and optimize and promote is followed to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
 
 This guide demonstrates a simplified version of that process when migrating from your on-premises environment to **Azure**.
 
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Migrate your environment to Azure**, and then follow the step-by-step instructions.
+> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure migration guide**, and then follow the step-by-step instructions.
 
 ::: zone-end
 
-## [Migration Tools](#tab/MigrationTools)
+## [Migration tools](#tab/MigrationTools)
 
 This guide is the suggested path for your first migration to Azure, as it will expose you to the methodology and the cloud-native tools most commonly used during migration to Azure. Those tools are presented across the following pages:
 
@@ -51,8 +51,6 @@ While the tools discussed in this guide support a wide variety of migration scen
 - Your industry has minimal regulatory requirements relevant to this migration.
 
 If any of these conditions don't apply to your situation, you should instead consider other [best practices for cloud migration](../azure-best-practices/index.md). We also recommend you request assistance from one of our Microsoft teams or partners to perform more complex migrations. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
-
-<!-- markdownlint-enable MD033 -->
 
 ::: zone target="docs"
 

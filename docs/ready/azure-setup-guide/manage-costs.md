@@ -1,5 +1,5 @@
 ---
-title: Manage costs and billing for Azure resources
+title: Manage costs and billing for your Azure resources
 description: Use the Cloud Adoption Framework for Azure to understand invoices and learn how to set up budgets and payments for your Azure resources.
 author: dchimes
 ms.author: kfollis
@@ -11,17 +11,15 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore dchimes -->
-
 # Manage costs and billing for your Azure resources
 
-Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and app teams. Azure Cost Management can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.
+Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and app teams. Azure Cost Management and Billing can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.
 
-For more information on how to integrate cloud cost management processes throughout your organization, see the Cloud Adoption Framework article on how to [track costs across business units, environments, or projects](../azure-best-practices/track-costs.md).
+For more information about integrating cloud cost management processes throughout your organization, see the Cloud Adoption Framework article on how to [track costs across business units, environments, or projects](../azure-best-practices/track-costs.md).
 
-## Manage your costs with Azure Cost Management
+## Manage your costs with Azure Cost Management and Billing
 
-Azure Cost Management provides a few ways to help you predict and manage costs:
+Azure Cost Management and Billing provides a few ways to help you predict and manage costs:
 
 - **Analyze cloud costs** helps you explore and analyze your costs. You can view aggregated cost for your account or view accumulated costs over time.
 - **Monitor with budgets** allows you to create a budget and then configure alerts to warn you when you're close to exceeding it.
@@ -49,23 +47,23 @@ We offer 24-hour access every day for billing and subscription support to Azure 
 
 To submit a new support request:
 
-1. Go to [Help + Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Go to [help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 1. Select **New support request**.
 
 ### View a support request
 
 To view your support requests and their status:
 
-1. Go to [Help + Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Go to [help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 1. Select **All support requests**.
 
 ## Learn more
 
 To learn more, see:
 
-- [Azure billing and cost management documentation](https://docs.microsoft.com/azure/billing)
+- [Azure cost management and billing documentation](/azure/billing)
 - [Cloud Adoption Framework: Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md)
-- [Cloud Adoption Framework: Cost management governance discipline](../../govern/cost-management/index.md)
+- [Cloud Adoption Framework: Cost Management discipline](../../govern/cost-management/index.md)
 
 ::: zone-end
 
@@ -96,8 +94,7 @@ To submit a new support request:
 1. Go to **Help + Support**.
 2. Select **New support request**.
 
-**View a support request:**
-To view your support requests and their status:
+**View a support request:** To view your support requests and their status:
 
 1. Go to **Help + Support**.
 2. Select **All support requests**.

@@ -4,11 +4,10 @@ description: Use this governance benchmark tool to get a personalized report and
 author: alexbuckgit
 ms.author: abuck
 ms.date: 08/27/2019
-ms.topic: landing-page
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Assess your transformation journey
@@ -17,29 +16,10 @@ The Cloud Adoption Framework provides a [governance benchmark tool](https://cafb
 
 ## Governance benchmark tool
 
-The governance benchmark tool provides a personalized report that outlines the difference between your current state and business priorities, along with tailored resources to help you get started.
+Receive a personalized report that outlines the difference between your current state and business priorities, along with tailored resources to help you get started. Assess your current state and future state to establish a vision for applying the framework.
 
-<!-- markdownlint-disable MD033 -->
-
-<ul class="panelContent cardsZ">
-    <li style="display: flex; flex-direction: column;">
-        <a href="https://cafbaseline.com" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-            <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-                <div class="cardPadding" style="display: flex;">
-                    <div class="card">
-                        <div class="cardText">
-                            <h3>Governance benchmark tool</h3>
-                            <p>Assess your current state and future state to establish a vision for applying the framework.</p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
-
-<!-- markdownlint-enable MD033 -->
+> [!div class="nextstepaction"]
+> [Use the governance benchmark tool](https://cafbaseline.com)
 
 ## Next steps
 

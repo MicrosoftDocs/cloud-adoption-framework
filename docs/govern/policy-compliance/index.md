@@ -1,5 +1,5 @@
 ---
-title: "Prepare corporate IT policy for the cloud"
+title: Prepare corporate IT policy for the cloud
 description: Help enable an expanded governance model with key activities like incremental corporate policy changes and automated enforcement.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
-
-<!-- markdownlint-disable MD026 -->
 
 # Prepare corporate IT policy for the cloud
 
@@ -26,9 +24,8 @@ This article outlines key activities that can help you shape your corporate poli
 
 In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud governance is built on similar concepts.
 
-![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-highres.png)
-
-*Figure 1 - Corporate governance and governance disciplines.*
+![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-large.png)
+*Figure 1: Corporate governance and governance disciplines.*
 
 The image above demonstrates the interactions between business risk, policy and compliance, and monitor and enforce to create a governance strategy. Followed by the Five Disciplines of Cloud Governance to realize your strategy.
 
@@ -43,15 +40,17 @@ In the image above, the governance strategy (risk, policy and compliance, monito
 
 An incremental approach to cloud governance assumes that it is unacceptable to exceed the [business's tolerance for risk](./risk-tolerance.md). Instead, it assumes that the role of governance is to accelerate business change, help engineers understand architecture guidelines, and ensure that [business risks](./business-risk.md) are regularly communicated and remediated. Alternatively, the traditional role of governance can become a barrier to adoption by engineers or by the business as a whole.
 
-With an incremental approach to cloud governance, there is sometimes a natural friction between teams building new business solutions and teams protecting the business from risks. However, in this model those two teams can become peers working in increments or sprints. As peers, the cloud governance team and the cloud adoption teams begin to work together to expose, evaluate, and remediate business risks. This effort can create a natural means of reducing friction and building collaboration between teams.
+With an incremental approach to cloud governance, there is sometimes a natural friction between teams building new business solutions and teams protecting the business from risks. In this model, those two teams can become peers working in increments or sprints. As peers, the cloud governance team and the cloud adoption teams begin to work together to expose, evaluate, and remediate business risks. This effort can create a natural means of reducing friction and building collaboration between teams.
 
 ## Minimum viable product (MVP) for policy
 
 The first step in an emerging partnership between your cloud governance and adoption teams is an agreement regarding the policy MVP. Your MVP for cloud governance should acknowledge that business risks are small in the beginning, but will likely grow as your organization adopts more cloud services over time.
 
+<!-- cSpell:ignore HBI -->
+
 For example, the business risk is small for a business deploying five VMs that don't contain any high business impact (HBI) data. Later in the cloud adoption process, when the number reaches 1,000 VMs and the business is starting to move HBI data, the business risk grows.
 
-Policy MVP attempts to define a required foundation for policies needed to deploy the first _x_ VMs or the first _x_ number of applications, where _x_ is a small yet meaningful quantity of the units being adopted. This policy set requires few constraints, but would contain the foundational aspects needed to quickly grow from one incremental cloud adoption effort to the next. Through incremental policy development, this governance strategy would grow over time. Through slow subtle shifts, the policy MVP would grow into feature parity with the outputs of the policy review exercise.
+Policy MVP attempts to define a required foundation for policies needed to deploy the first *x* VMs or the first *x* number of applications, where *x* is a small yet meaningful quantity of the units being adopted. This policy set requires few constraints, but would contain the foundational aspects needed to quickly grow from one incremental cloud adoption effort to the next. Through incremental policy development, this governance strategy would grow over time. Through slow subtle shifts, the policy MVP would grow into feature parity with the outputs of the policy review exercise.
 
 ## Incremental policy growth
 

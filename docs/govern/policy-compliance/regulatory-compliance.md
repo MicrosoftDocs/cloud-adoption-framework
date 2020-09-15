@@ -1,5 +1,5 @@
 ---
-title: "Introduction to regulatory compliance"
+title: Introduction to regulatory compliance
 description: Learn about compliance regulations in various industries and geographies that may affect cloud governance.
 author: BrianBlanchard
 ms.author: brblanch
@@ -18,17 +18,22 @@ Regulatory compliance refers to the discipline and process of ensuring that a co
 
 Compliance is challenging for multinational organizations, especially in heavily regulated industries like healthcare and financial services. Standards and regulations abound, and in certain cases may change frequently, making it difficult for businesses to keep up with changing international electronic data handling laws.
 
-As with security controls, organizations should understand the division of responsibilities regarding regulatory compliance in the cloud. Cloud providers strive to ensure that their platforms and services are compliant. But organizations also need to confirm that their applications, the infrastructure those applications depend on, and services supplied by third parties are also certified as compliant.
+As with security controls, organizations should understand the division of responsibilities regarding regulatory compliance in the cloud. Cloud providers strive to ensure that their platforms and services are compliant. Organizations also need to confirm that their applications, the infrastructure those applications depend on, and services supplied by third parties are also certified as compliant.
 
 The following are descriptions of compliance regulations in various industries and geographies:
 
+<!-- docutune:casing PHI "Health Information Portability and Accountability Act" -->
+
 ## HIPAA
 
-A healthcare application that processes protected health information (PHI) is subject to both the Privacy Rule and the Security Rule encompassed within the Health Information Portability and Accountability Act (HIPAA). At a minimum, HIPAA could likely require that a healthcare business must receive written assurances from the cloud provider that it will safeguard any PHI received or created.
+A healthcare application that processes protected health information (PHI) is subject to both the privacy rule and the security rule encompassed within the Health Information Portability and Accountability Act (HIPAA). At a minimum, HIPAA could likely require that a healthcare business must receive written assurances from the cloud provider that it will safeguard any PHI received or created.
+
+<!-- docutune:ignore Discover -->
+<!-- cSpell:ignore Visa Mastercard -->
 
 ## PCI
 
-Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card schemes, including Visa, MasterCard, American Express, Discover, and JCB. The PCI standard is mandated by the card brands and administered by the Payment Card Industry Security Standards Council. The standard was created to increase controls around cardholder data to reduce credit-card fraud. Validation of compliance is performed annually, either by an external Qualified Security Assessor (QSA) or by a firm-specific Internal Security Assessor (ISA) who creates a Report on Compliance (ROC) for organizations handling large volumes of transactions, or by a Self-Assessment Questionnaire (SAQ) for companies.
+The Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card payment systems, including Visa, Mastercard, American Express, Discover, and JCB. The PCI standard is mandated by the card brands and administered by the Payment Card Industry Security Standards Council. The standard was created to increase controls around cardholder data to reduce credit-card fraud. Validation of compliance is performed annually, either by an external qualified security assessor (QSA) or by a firm-specific internal security assessor (ISA) who creates a report on compliance (ROC) for organizations handling large volumes of transactions, or by a self-assessment questionnaire (SAQ) for companies.
 
 ## Personal data
 
@@ -40,11 +45,16 @@ One of the most important developments in this area is the General Data Protecti
 
 ## Compliant foundation in Azure
 
-To help customers meet their own compliance obligations across regulated industries and markets worldwide, Azure maintains the largest compliance portfolio in the industry&mdash;in breadth (total number of offerings), as well as depth (number of customer-facing services in assessment scope). Azure compliance offerings are grouped into four segments: globally applicable, US Government, industry-specific, and region/country-specific.
+To help customers meet their own compliance obligations across regulated industries and markets worldwide, Azure maintains the largest compliance portfolio in the industry, in breadth (total number of offerings) as well as depth (number of customer-facing services in assessment scope). Azure compliance offerings are grouped into four segments:
+
+- Global
+- US government
+- Industry
+- Regional
 
 Azure compliance offerings are based on various types of assurances, including formal certifications, attestations, validations, authorizations, and assessments produced by independent third-party auditing firms, as well as contractual amendments, self-assessments, and customer guidance documents produced by Microsoft. Each offering description in this document provides an up-to-date scope statement indicating which Azure customer-facing services are in scope for the assessment, as well as links to downloadable resources to assist customers with their own compliance obligations.
 
-The Microsoft Trust Center provides more detailed information about [Azure compliance offerings](https://www.microsoft.com/trust-center/compliance/compliance-overview). Moreover, all downloadable documentation is available to certain Azure customers from the [Service Trust Portal](https://servicetrust.microsoft.com) in the following sections:
+The Microsoft Trust Center provides more detailed information about [Azure compliance offerings](https://www.microsoft.com/trust-center/compliance/compliance-overview). Additionally, all downloadable documentation is available to certain Azure customers from the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) in the following sections:
 
 - **Audit reports:** Includes sections for FedRAMP, GRC assessment, ISO, PCI DSS, and SOC reports.
 - **Data protection resources:** Includes compliance guides, FAQ and white papers, and pen test and security assessment sections.

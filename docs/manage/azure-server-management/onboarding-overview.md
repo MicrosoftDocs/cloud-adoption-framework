@@ -33,7 +33,7 @@ The following diagram shows the recommended deployment model for management serv
 
 ![Diagram of the recommended deployment model](./media/recommended-deployment.png)
 
-As shown in the preceding diagram, the Log Analytics agent has both an *auto-enroll* and *opt-in* configuration for on-premises servers:
+As shown in the preceding diagram, the Log Analytics agent has two configurations for on-premises servers:
 
 - **Auto-enroll:** When the Log Analytics agent is installed on a server and configured to connect to a workspace, the solutions that are enabled on that workspace are applied to the server automatically.
 - **Opt-in:** Even if the agent is installed and connected to the workspace, the solution isn't applied unless it's added to the server's scope configuration in the workspace.

@@ -23,7 +23,7 @@ When the business builds out new technology solutions, it has a clear need that 
 
 The historical IT operating model was sufficient for over 20 years. But that model is now outdated and is less desirable than cloud-first alternatives. When IT management teams move to the cloud, they have an opportunity to rethink this model and drive greater value for the business. This article series outlines a modernized model of IT management.
 
-![Manage methodology in the Cloud Adoption Framework](../../_images/manage/caf-manage.png)
+![Manage methodology of the Cloud Adoption Framework](../../_images/manage/caf-manage.png)
 
 ## Next steps
 

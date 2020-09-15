@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency discipline improvement"
+title: Resource Consistency discipline improvement
 description: Use the Cloud Adoption Framework for Azure to understand tasks necessary to develop and mature the Resource Consistency discipline in each phase of adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,15 +12,15 @@ ms.custom: governance
 
 # Resource Consistency discipline improvement
 
-The Resource Consistency discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. Within the Five Disciplines of Cloud Governance, Resource Consistency includes the monitoring of application, workload, and asset performance. It also includes the tasks required to meet scale demands, remediate performance Service Level Agreement (SLA) violations, and proactively avoid SLA violations through automated remediation.
+The Resource Consistency discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. Within the Five Disciplines of Cloud Governance, the Resource Consistency discipline includes the monitoring of application, workload, and asset performance. It also includes the tasks required to meet scale demands, remediate performance service-level agreement (SLA) violations, and proactively avoid SLA violations through automated remediation.
 
 This article outlines some potential tasks your company can engage in to better develop and mature the Resource Consistency discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
-![Four phases of adoption](../../_images/govern/adoption-phases.png)
+![Phases of an incremental approach to cloud governance](../../_images/govern/adoption-phases.png)
 
-*Figure 1 - Adoption phases of the incremental approach to cloud governance.*
+*Figure 1: Phases of an incremental approach to cloud governance.*
 
-It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [Policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Resource Consistency governance capabilities.
+It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Resource Consistency discipline.
 
 > [!CAUTION]
 > Neither the minimum or potential activities outlined in this article are aligned to specific corporate policies or third-party compliance requirements. This guidance is designed to help facilitate the conversations that will lead to alignment of both requirements with a cloud governance model.
@@ -33,8 +33,8 @@ This phase of governance maturity bridges the divide between business outcomes a
 
 - Evaluate your [Resource Consistency toolchain](./toolchain.md) options.
 - Understand the licensing requirements for your cloud strategy.
-- Develop a draft Architecture Guidelines document and distribute to key stakeholders.
-- Become familiar with the resource manager you use to deploy, manage, and monitor all the resources for your solution as a group.
+- Develop a draft architecture guidelines document and distribute to key stakeholders.
+- Become familiar with the Resource Manager you use to deploy, manage, and monitor all the resources for your solution as a group.
 - Educate and involve the people and teams affected by the development of architecture guidelines.
 - Add prioritized resource deployment tasks to your migration backlog.
 
@@ -53,7 +53,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 **Minimum suggested activities:**
 
 - Implement your [Resource Consistency toolchain](./toolchain.md) by rolling out in a predeployment phase.
-- Update the Architecture Guidelines document and distribute to key stakeholders.
+- Update the architecture guidelines document and distribute to key stakeholders.
 - Implement resource deployment tasks on your prioritized migration backlog.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 
@@ -66,9 +66,9 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Establish a least-privilege permissions model, where users have no permissions by default.
 - Determine who in your organization owns each workload and account, and who will need to access to maintain or modify these resources. Define cloud roles and responsibilities that match these needs and use these roles as the basis for access control.
 - Define dependencies between resources.
-- Implement automated resource scaling to match requirements defined in the Plan stage.
+- Implement automated resource scaling to match requirements defined in the Plan phase.
 - Conduct access performance to measure the quality of services received.
-- Consider deploying [policy](https://docs.microsoft.com/azure/governance/policy/overview) to manage SLA enforcement using configuration settings and resource creation rules.
+- Consider deploying [Azure Policy](/azure/governance/policy/overview) to manage SLA enforcement using configuration settings and resource creation rules.
 
 ## Adopt and migrate
 
@@ -77,21 +77,21 @@ Migration is an incremental process that focuses on the movement, testing, and a
 **Minimum suggested activities:**
 
 - Migrate your [Resource Consistency toolchain](./toolchain.md) from predeployment to production.
-- Update the Architecture Guidelines document and distribute to key stakeholders.
+- Update the architecture guidelines document and distribute to key stakeholders.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 - Migrate any existing automated remediation scripts or tools to support defined SLA requirements.
 
 **Potential activities:**
 
 - Complete and test monitoring and reporting data with your chosen on-premises, cloud gateway, or hybrid solution.
-- Determine if changes need to be made to SLA or management policy for resources.
+- Determine whether changes need to be made to SLA or management policy for resources.
 - Improve operations tasks by implementing query capabilities to efficiently find resource across your cloud estate.
 - Align resources to changing business needs and governance requirements.
 - Ensure that your virtual machines, virtual networks, and storage accounts reflect actual resource access needs during each release, and adjust as necessary.
 - Verify automated scaling of resources meets access requirements.
 - Review user access to resources, resource groups, and Azure subscriptions, and adjust access controls as necessary.
 - Monitor changes in resource access plans and validate with stakeholders if additional sign-offs are needed.
-- Update changes to the Architecture Guidelines document to reflect actual costs.
+- Update changes to the architecture guidelines document to reflect actual costs.
 - Determine whether your organization requires clearer financial alignment to P&Ls for business units.
 - For global organizations, implement your SLA compliance or sovereignty requirements.
 - For cloud aggregation, deploy a gateway solution to a cloud provider.
@@ -103,21 +103,21 @@ Once the transformation is complete, governance and operations must live on for 
 
 **Minimum suggested activities:**
 
-- Customize your [Resource Consistency toolchain](./toolchain.md) based on updates to your organization's changing Cost Management needs.
+- Customize your [Resource Consistency toolchain](./toolchain.md) based on your organization's changing needs.
 - Consider automating any notifications and reports to reflect actual resource usage.
-- Refine Architecture Guidelines to guide future adoption processes.
+- Refine architecture guidelines to guide future adoption processes.
 - Educate affected teams periodically to ensure ongoing adherence to the architecture guidelines.
 
 **Potential activities:**
 
 - Adjust plans quarterly to reflect changes to actual resources.
 - Automatically apply and enforce governance requirements during future deployments.
-- Evaluate underused resources and determine if they're worth continuing.
+- Evaluate underused resources and determine whether they're worth continuing.
 - Detect misalignments and anomalies between planned and actual resource usage.
 - Assist the cloud adoption teams and the cloud strategy team in understanding and resolving these anomalies.
-- Determine if changes need to be made to Resource Consistency for billing and SLAs.
+- Determine whether changes need to be made to your Resource Consistency discipline for billing and SLAs.
 - Evaluate logging and monitoring tools to determine whether your on-premises, cloud gateway, or hybrid solution needs adjusting.
-- For business units and geographically distributed groups, determine if your organization should consider using additional cloud management features such as [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups) to better apply centralized policy and meet SLA requirements.
+- For business units and geographically distributed groups, determine whether your organization should consider using additional cloud management features such as [Azure management groups](/azure/governance/management-groups) to better apply centralized policy and meet SLA requirements.
 
 ## Next steps
 

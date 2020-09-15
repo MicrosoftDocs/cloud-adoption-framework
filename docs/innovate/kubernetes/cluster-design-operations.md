@@ -1,5 +1,5 @@
 ---
-title: "Cluster design and operations"
+title: Cluster design and operations
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design and operations.
 author: sabbour
 ms.author: asabbour

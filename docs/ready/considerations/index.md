@@ -1,46 +1,42 @@
 ---
-title: Azure landing zone considerations
-description: Use the Cloud Adoption Framework for Azure to learn how a landing zone provides the basic building block of any cloud adoption environment.
+title: Expand your landing zone
+description: Use the Cloud Adoption Framework for Azure to learn how to expand a landing zone.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/20/2019
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Landing zone considerations
+# Expand your landing zone
 
-A landing zone is the basic building block of any cloud adoption environment. The term *landing zone* refers to an environment that's been provisioned and prepared to host workloads in a cloud environment like Azure. A fully functioning landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology.
+This section of the Ready methodology builds on the principles of [landing zone refactoring](../landing-zone/refactor.md). As outlined in that article, a refactoring approach to infrastructure as code removes blockers to business success while minimizing risk. This series of articles assumes that you've deployed your first landing zone and would now like to expand that landing zone to meet enterprise requirements.
 
-![Landing zone considerations](../../_images/ready/landing-zone-considerations.png)
+## Shared architecture principles
 
-This image shows the major considerations for implementing any landing zone deployment. The considerations can be broken into three categories or types of considerations: hosting, Azure fundamentals, and governance.
+Expanding your landing zone provides a code-first approach to embedding the following principles into the landing zone and more broadly into your overall cloud environment.
 
-## Hosting considerations
+![Shared architecture principles](../../_images/ready/shared-principles.png)
+_Figure 1: shared architecture principles._
 
-All landing zones provide structure for hosting options. The structure is created explicitly through governance controls or organically through the adoption of services within the landing zone. The following articles can help you make decisions that will be reflected in the blueprint or other automation scripts that create your landing zone:
+These same architecture principles are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework), and the solutions in the [Azure Architecture Center](/azure/architecture).
 
-- **[Compute decisions](./compute-options.md)**. To minimize operational complexity, align compute options with the purpose of the landing zone. This decision can be enforced by using automation toolchains, like Azure Policy initiatives and landing zone blueprints.
-- **[Storage decisions](./storage-options.md)**. Choose the right Azure Storage solution to support your workload requirements.
-- **[Networking decisions](./networking-options.md)**. Choose networking services, tools, and architectures to support your organization's workload, governance, and connectivity requirements.
-- **[Database decisions](./data-options.md)**. Determine which database technology is best suited for your workload requirements.
+## Applying these principles to your landing zone improvements
 
-## Azure fundamentals
+To better align with the methodologies of the Cloud Adoption Framework, the principles above are grouped into actionable landing zone improvements:
 
-Each landing zone is part of a broader solution for organizing resources across a cloud environment. Azure fundamentals are the foundational building blocks for an organization.
+- Basic considerations: refactor a landing zone to refine hosting, fundamentals, and other foundational elements.
+- Operations expansions: add operations management configurations to improve **performance, reliability, and operational excellence**.
+- Governance expansions: add governance configurations to improve **cost, reliability, security**, and consistency.
+- Security expansions: add **security** configurations to improve protection of sensitive data and critical systems.
 
-- **[Azure fundamental concepts](./fundamental-concepts.md)**. Learn fundamental concepts and terms that are used to organize resources in Azure, and how the concepts relate to one another.
-- **[Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)**. When you understand each of the fundamentals, the resource organization decision guide can help you make decisions that shape the landing zone.
+> [!WARNING]
+> Adoption teams who have a midterm objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud** should consider each of these expansions early in their cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration, allowing for early business success.
 
-## Governance considerations
+## Next steps
 
-The Cloud Adoption Framework's Govern methodologies establish a process for governing the environment as a whole. However, there are many use cases that might require you to make governance decisions on a per landing zone basis. In many scenarios, governance baselines are enforced on a per landing zone basis, even though the baselines are established holistically. It's true for the first few landing zones that an organization deploys.
+Before refactoring your first landing zone, it is important to understand [test-driven development of landing zones](./test-driven-development.md).
 
-The following articles can help you make governance-related decisions about your landing zone. You can factor each decision into your governance baselines.
-
-- **Cost requirements**. Based on an organization's motivation for cloud adoption and operational commitments made about its environment, various cost management configurations might need to be changed for the landing zone.
-- **Monitoring decisions**. Depending on the operational requirements for a landing zone, various monitoring tools can be deployed. The monitoring decisions article can help you determine the most appropriate tools to deploy.
-- **Using role-based access control**. Azure [role-based access control (RBAC)](../considerations/roles.md) offers fine-grained, group-based access management for resources that are organized around user roles.
-- **Policy decisions**. [Azure Blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples) provide premade compliance blueprints, each with predefined policy initiatives. Policy decisions help inform a selection of the best blueprint or policy initiative based on your requirements and constraints.
-- **[Create hybrid cloud consistency](./hybrid-consistency.md)**. Create hybrid cloud solutions that give your organization the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.
+> [!div class="nextstepaction"]
+> [Test-driven development of landing zones](./test-driven-development.md)

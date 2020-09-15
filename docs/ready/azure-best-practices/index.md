@@ -1,5 +1,5 @@
 ---
-title: "Best practices for Azure readiness"
+title: Best practices for Azure readiness
 description: Learn about best practices and additional guidance to help your team establish and prepare your Azure environment.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,8 +29,8 @@ Organize and deploy your assets in the Azure environment.
 Prepare your cloud networking infrastructure to support your workloads.
 
 - [Networking decisions](../considerations/networking-options.md). Choose the networking services, tools, and architectures that will support your organization's workload, governance, and connectivity requirements.
-- [Virtual network planning](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Plan virtual networks based on your isolation, connectivity, and location requirements.
-- [Best practices for network security](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for addressing common network security issues using built-in Azure capabilities.
+- [Virtual network planning](/azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Plan virtual networks based on your isolation, connectivity, and location requirements.
+- [Best practices for network security](/azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn best practices for addressing common network security issues using built-in Azure capabilities.
 - [Perimeter networks](./perimeter-networks.md). Enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks, along with any connectivity to and from the internet.
 - [Hub and spoke network topology](./hub-spoke-network-topology.md). Efficiently manage common communication or security requirements for complicated workloads and address potential Azure subscription limitations.
 
@@ -38,26 +38,26 @@ Prepare your cloud networking infrastructure to support your workloads.
 
 Design your identity and access control infrastructure to improve the security and management efficiency of your workloads.
 
-- [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
-- [Best practices for role-based access control](../considerations/roles.md). Enable fine-grained group-based access management for resources organized around user roles.
-- [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Ensure that your organization's administrative access and privileged accounts are secure across your cloud and on-premises environment.
+- [Azure identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
+- [Best practices for role-based access control](../considerations/roles.md). Enable fine-grained and group-based access management for resources organized around user roles.
+- [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-admin-roles-secure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Ensure that your organization's administrative access and privileged accounts are secure across your cloud and on-premises environment.
 
 ## Storage
 
 - [Azure Storage guidance](../considerations/storage-options.md). Select the right Azure Storage solution to support your usage scenarios.
-- [Azure Storage security guide](https://docs.microsoft.com/azure/storage/blobs/security-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn about security features in Azure Storage.
+- [Azure Storage security guide](/azure/storage/blobs/security-recommendations?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn about security features in Azure Storage.
 
 ## Databases
 
-- [Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Choose the PaaS or IaaS solution that best supports your SQL Server workloads.
-- [Database security best practices](https://docs.microsoft.com/azure/security/azure-database-security-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for database security on the Azure platform.
-- [Choose the right data store](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview). Select the right data store to meet your requirements. Hundreds of implementation choices are available among SQL and NoSQL databases. Data stores are often categorized by how they structure data and the types of operations they support. This article describes several common storage models.
+- [Choose the correct SQL Server option in Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Choose the PaaS or IaaS solution that best supports your SQL Server workloads.
+- [Database security best practices](/azure/security/azure-database-security-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn best practices for database security on the Azure platform.
+- [Choose the right data store](/azure/architecture/guide/technology-choices/data-store-overview). Select the right data store to meet your requirements. Hundreds of implementation choices are available among SQL and NoSQL databases. Data stores are often categorized by how they structure data and the types of operations they support. This article describes several common storage models.
 
 ## Cost management
 
 - [Tracking costs across business units, environments, and projects](./track-costs.md). Learn best practices for creating proper cost-tracking mechanisms.
-- [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Implement a strategy for cost management and learn about the tools available for addressing cost challenges.
-- [Create and manage budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn to create and manage budgets using Azure Cost Management.
-- [Export cost data](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-export-acm-data?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn to export cost data using Azure Cost Management.
-- [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn to identify underutilized resources and reduce costs by using Azure Cost Management and Azure Advisor.
-- [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn to use Cost Management alerts to monitor your Azure usage and spending.
+- [How to optimize your cloud investment with Azure Cost Management and Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Implement a strategy for cost management and learn about the tools available for addressing cost challenges.
+- [Create and manage budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn to create and manage budgets using Azure Cost Management and Billing.
+- [Export cost data](/azure/cost-management-billing/costs/tutorial-export-acm-data?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn to export cost data using Azure Cost Management and Billing.
+- [Optimize costs based on recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn to identify underutilized resources and reduce costs by using Azure Cost Management and Billing and Azure Advisor.
+- [Use cost alerts to monitor usage and spending](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Learn to use Azure Cost Management and Billing alerts to monitor your Azure usage and spending.

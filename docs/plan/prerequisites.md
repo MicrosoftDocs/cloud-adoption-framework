@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Prerequisites for an effective cloud adoption plan
 
-A plan is only as effective as the data that's put into it. For a cloud adoption plan to be effective, there are two categories of input: *strategic* and *tactical*. The following sections outline the minimum data points required in each category.
+A plan is only as effective as the data that's put into it. For a cloud adoption plan to be effective, there are two categories of input: _strategic_ and _tactical_. The following sections outline the minimum data points required in each category.
 
 ## Strategic inputs
 
@@ -35,7 +35,7 @@ These questions are essential to the accuracy of the cloud adoption plan. At a m
 
 ## Next steps
 
-[Deploy the cloud adoption plan template](./template.md) to Azure DevOps.
+Define your cloud adoption plan by deploying the template to Azure DevOps Services.
 
 > [!div class="nextstepaction"]
-> [Deploy the template to Azure DevOps](./template.md)
+> [Define your cloud adoption plan using the template](./template.md)

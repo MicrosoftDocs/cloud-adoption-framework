@@ -15,9 +15,14 @@ There are several ways to measure for customer impact. This article will help yo
 
 ## Strategic metrics
 
-During the [strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
+During the [Strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
 
-Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas: [business agility](../../strategy/business-outcomes/agility-outcomes.md), [customer engagement](../../strategy/business-outcomes/engagement-outcomes.md), [customer reach](../../strategy/business-outcomes/reach-outcomes.md), [financial impact](../../strategy/business-outcomes/fiscal-outcomes.md), or in the case of operational innovation: [solution performance](../../strategy/business-outcomes/fiscal-outcomes.md).
+Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas:
+    - [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
+    - [Customer engagement](../../strategy/business-outcomes/engagement-outcomes.md)
+    - [Customer reach](../../strategy/business-outcomes/reach-outcomes.md)
+    - [Financial impact](../../strategy/business-outcomes/fiscal-outcomes.md)
+    - [Solution performance](../../strategy/business-outcomes/fiscal-outcomes.md), in the case of operational innovation.
 
 Document the agreed-upon metrics and track their impact frequently. But don't expect results in any of these metrics to emerge for several iterations. For more information about setting and aligning expectations across the parties involved, see [Commitment to iteration](./index.md#commitment-to-iteration).
 
@@ -35,7 +40,7 @@ Learning about changes to customer behavior starts by mapping the flow that you 
 
 ![Customer flow used to determine learning metrics](../../_images/innovate/customer-flow-learning-metrics.png)
 
-In most cases, a customer flow will have an easily defined starting point and no more than two end points. Between the start and end points are a variety of learning metrics to be used as measures in the feedback loop:
+In most cases, a customer flow will have an easily defined starting point and no more than two endpoints. Between the start and endpoints are a variety of learning metrics to be used as measures in the feedback loop:
 
 1. **Starting point—initial trigger:** The starting point is the scenario that triggers the need for this solution. When the solution is built with customer empathy, that initial trigger should inspire a customer to try the MVP solution.
 2. **Customer need met:** The hypothesis is validated when a customer need has been met by using the solution.
@@ -48,7 +53,7 @@ Each step of the customer flow generates learning metrics. After each iteration 
 
 These alignment and deviation counters create learning metrics. Each should be recorded and tracked as the cloud adoption team progresses toward business outcomes and true innovation. In [Learn with customers](./learn.md), we'll discuss ways to apply these metrics to learn and build better solutions.
 
-### Grouping and observing customer partners
+### Group and observe customer partners
 
 The first measurement in defining learning metrics is the customer partner definition. Any customer who participates in innovation cycles qualifies as a customer partner. To accurately measure behavior, you should use a cohort model to define customer partners. In this model, customers are grouped to sharpen your understanding of their responses to changes in the MVP. These groups typically resemble the following:
 
@@ -65,7 +70,5 @@ As learning metrics accumulate, the team can begin to [learn with customers](./l
 
 > [!div class="nextstepaction"]
 > [Learn with customers](./learn.md)
-
-<!-- cSpell:ignore Ries -->
 
 Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.

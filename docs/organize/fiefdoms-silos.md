@@ -32,7 +32,7 @@ Although healthy IT teams have a passion for the technology that they support, t
 
 At times, the microcultures within healthy IT teams might react poorly to executive or top-down decisions to drive change. This reaction is natural, as collectives of human beings with shared norms often cooperate to overcome external threats.
 
-Changes that affect the team's day-to-day jobs, sense of security, or autonomy can be viewed as a risk to the collective. Signs of resistance are often an early indicator that the team members don't feel like they are part of the decision-making process.
+Changes that affect the team's day-to-day jobs, sense of security, or autonomy can be viewed as a risk to the collective. Signs of resistance are often an early indicator that the team members don't feel like they're part of the decision-making process.
 
 When cloud architects and other leaders invest in abolishing personal biases and driving for inclusion of the existing IT teams, this resistance is likely to lessen quickly and dissolve over time. One tool available to cloud architects and leaders to create inclusive decision making is the formation of a CCoE.
 
@@ -42,7 +42,7 @@ It's easy to confuse resistance with friction. Existing IT teams can be knowledg
 
 Providing these teams with a mechanism for communicating in future-looking terminology will add data points, identify gaps, and create healthy friction around the proposed solutions. That extra friction will sand down rough edges on the solutions and drive longer-term values. Simply changing the conversation can create clarity around complex topics and generate energy to deliver more successful solutions.
 
-The guidance on [defining corporate policy](../govern/corporate-policy.md) is aimed at facilitating risk-based conversations with business stakeholders. However, this same model can be used to facilitate conversations with teams that are perceived as cloud resistant. When the perception of resistance is widespread, it might be wise to include resistance resolution practices in the charter for a [cloud governance team](./cloud-governance.md).
+The guidance on [defining corporate policy](../govern/corporate-policy.md) is aimed at facilitating risk-based conversations with business stakeholders. But this same model can be used to facilitate conversations with teams that are perceived as cloud resistant. When the perception of resistance is widespread, it might be wise to include resistance resolution practices in the charter for a [cloud governance team](./cloud-governance.md).
 
 ## Antipatterns
 
@@ -54,7 +54,7 @@ Even in toxic cultures, the efforts of the CCoE and the cloud governance team sh
 
 ## IT silos
 
-Team members in an IT silo are likely to define themselves through their alignment to a small number of IT vendors or an area of technical specialization. However, don't confuse silos with IT fiefdoms. Silos tend to be driven by comfort and passion, and silos are often easier to overcome than the fear-driven motives behind fiefdoms.
+Team members in an IT silo are likely to define themselves through their alignment to a small number of IT vendors or an area of technical specialization. But don't confuse silos with IT fiefdoms. Silos tend to be driven by comfort and passion, and silos are often easier to overcome than the fear-driven motives behind fiefdoms.
 
 This antipattern often emerges from of a common passion for a specific solution. IT silos are then reinforced by the team's advanced skills as a result of the investment in that specific solution. This superior skill can be an accelerator to cloud adoption efforts if the resistance to change can be overcome. It can also become a major blocker if the silos are broken down or if the team members can't accurately evaluate options. Fortunately, IT silos can often be overcome without any significant changes to the organizational chart.
 
@@ -62,17 +62,17 @@ This antipattern often emerges from of a common passion for a specific solution.
 
 IT silos can be addressed through the following approaches. The best approach will depend on the root cause of the resistance.
 
-**Create virtual teams:** The [organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams (v-teams). One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers will want to participate in. This helps create new cross-solution alignments that aren't bound by organizational-chart constraints, and will drive inclusion of top engineers who have been sheltered by IT silos.
+**Create virtual teams:** The [organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers will want to participate in. This helps create new cross-solution alignments that aren't bound by organizational-chart constraints, and will drive inclusion of top engineers who have been sheltered by IT silos.
 
 Introduction of a [cloud strategy team](./cloud-strategy.md) will create immediate visibility to IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
 
 **Consider experimentation and exposure:** Team members in an IT silo have likely been constrained to think a certain way for some time. Breaking the one-track mind is a first step to addressing resistance.
 
-Experimentation and exposure are powerful tools for breaking down barriers in silos. The team members might be resistant to competing solutions, so it's not wise to put them in charge of an experiment that competes with their existing solution. However, as part of a first workload test of the cloud, the organization should implement competing solutions. The siloed team should be invited to participate as an input and review source, but not as a decision maker. This should be clearly communicated to the team, along with a commitment to engage the team more deeply as a decision maker before moving into production solutions.
+Experimentation and exposure are powerful tools for breaking down barriers in silos. The team members might be resistant to competing solutions, so it's not wise to put them in charge of an experiment that competes with their existing solution. But as part of a first workload test of the cloud, the organization should implement competing solutions. The siloed team should be invited to participate as an input and review source, but not as a decision maker. This should be clearly communicated to the team, along with a commitment to engage the team more deeply as a decision maker before moving into production solutions.
 
 During review of the competing solution, use the practices outlined in [Define corporate policy](../govern/corporate-policy.md) to document tangible risks of the experiment and establish policies that help the siloed team become more comfortable with the future state. This will expose the team to new solutions and harden the future solution.
 
-**Be "boundary-less":** The teams that drive cloud adoption find it easy to push boundaries by exploring exciting, new cloud-native solutions. This is one half of the approach to removing boundaries. However, that thinking can further reinforce IT silos. Pushing for change too quickly and without respect to existing cultures can create unhealthy friction and lead to natural resistance.
+**Be "boundary-less":** The teams that drive cloud adoption find it easy to push boundaries by exploring exciting, new cloud-native solutions. This is one half of the approach to removing boundaries. But that thinking can further reinforce IT silos. Pushing for change too quickly and without respect to existing cultures can create unhealthy friction and lead to natural resistance.
 
 When IT silos start to resist, it's important to be "boundary-less" in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
 
@@ -104,29 +104,29 @@ Team members in an IT fiefdom are likely to define themselves through their alig
 
 Fiefdoms are especially common in organizations that have experienced IT downsizing, frequent turbulence in IT staff, or poor IT leadership. When the business sees IT purely as a cost center, fiefdoms are much more likely to arise.
 
-Generally, fiefdoms are the result of a line manager who fears loss of the team and the associated power base. These leaders often have a sense of duty to their team and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" can be indicators of an overly guarded manager who might need more support from leadership.
+Generally, fiefdoms are the result of a line manager who fears loss of the team and the associated power base. These leaders often have a sense of duties to their team and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" can be indicators of an overly guarded manager who might need more support from leadership.
 
 ### Address resistance from IT fiefdoms
 
 IT fiefdoms can demonstrate some growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up the organizational chart). Challenges that are IT silo-driven are typically simpler to overcome.
 
-When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and [cloud governance team](./cloud-governance.md) before making decisions.
+When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md) , [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
 
 > [!NOTE]
-> IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. However, transformational efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.
+> IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. But transformational efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.
 >
 > Fortunately, removing the leader of a fiefdom doesn't often end in termination. These strong, passionate leaders can often move into a management role after a brief period of reflection. With the right support, this change can be healthy for the leader of the fiefdom and the current team.
 
 <!-- -->
 
 > [!CAUTION]
-> For managers of IT fiefdoms, protecting the team from risk is a clear leadership value. However, there's a fine line between protection and isolation. When the team is blocked from participating in driving changes, it can have psychological and professional consequences on the team. The urge to resist change might be strong, especially during times of visible change.
+> For managers of IT fiefdoms, protecting the team from risk is a clear leadership value. But there's a fine line between protection and isolation. When the team is blocked from participating in driving changes, it can have psychological and professional consequences on the team. The urge to resist change might be strong, especially during times of visible change.
 >
 > The manager of any isolated team can best demonstrate a growth mindset by experimenting with the guidance associated with healthy IT teams in the preceding sections. Active and optimistic participation in governance and CCoE activities can lead to personal growth. Managers of IT fiefdoms are best positioned to change stifling mindsets and help the team develop new ideas.
 
 IT fiefdoms can be a sign of systemic leadership issues. To overcome an IT fiefdom, IT leaders need the ability to make changes to operations, responsibilities, and occasionally even the people who provide line management of specific teams. When those changes are required, it's wise to approach those changes with clear and defensible data points.
 
-Alignment with business stakeholders, business motivations, and business outcomes might be required to drive the necessary change. Partnership with the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and [cloud governance team](./cloud-governance.md) can provide the data points needed for a defensible position. When necessary, these teams should be involved in a group escalation to address challenges that can't be addressed with IT leadership alone.
+Alignment with business stakeholders, business motivations, and business outcomes might be required to drive the necessary change. Partnership with the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) can provide the data points needed for a defensible position. When necessary, these teams should be involved in a group escalation to address challenges that can't be addressed with IT leadership alone.
 
 ## Next steps
 

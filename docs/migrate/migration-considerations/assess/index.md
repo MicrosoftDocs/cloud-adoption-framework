@@ -1,5 +1,5 @@
 ---
-title: "Validate assessment assumptions before migration"
+title: Assess workloads and validate assessment assumptions before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to validate assessment assumptions before beginning migration to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,19 +9,19 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Validate assessment assumptions before migration
+# Assess workloads and validate assumptions before migration
 
 Many of your existing workloads are ideal candidates for cloud migration, but not every asset is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/technical-complexity.md#migration-backlog-aligning-business-priorities-and-timing) of potential workloads to migrate. However, this planning effort is high-level. It relies on assumptions made by the cloud strategy team and does not dig deeply into technical considerations.
 
 As a result, before migrating a workload to the cloud it's critical to assess the individual assets associated with that workload for their migration suitability. During this assessment, your cloud adoption team should evaluate technical compatibility, required architecture, performance/sizing expectations, and dependencies to ensure that the migrated workload can be deployed to the cloud effectively.
 
-The *Assess* process is the first of four incremental activities that occur within an iteration. As discussed in the prerequisite article regarding [technical complexity and change management](../prerequisites/technical-complexity.md), a decision should be made in advance to determine how this phase is executed. In particular, will assessments be completed by the cloud adoption team during the same sprint as the actual migration effort? Alternatively, will a wave or factory model be used to complete assessments in a separate iteration? If the answer to this basic process question can't be answered by every member of the team, it may be wise to revisit the [Prerequisites](../prerequisites/index.md)" section.
+The _assess_ process is the first of four incremental activities that occur within an iteration. As discussed in the prerequisite article regarding [technical complexity and change management](../prerequisites/technical-complexity.md), a decision should be made in advance to determine how this phase is executed. In particular, will assessments be completed by the cloud adoption team during the same sprint as the actual migration effort? Alternatively, will a wave or factory model be used to complete assessments in a separate iteration? If the answer to this basic process question can't be answered by every member of the team, it may be wise to revisit the [prerequisites](../prerequisites/index.md) section.
 
 ## Objective
 
 Assess a migration candidate, evaluating the workload, associated assets, and dependencies prior to migration.
 
-## Definition of *done*
+## Definition of done
 
 This process is complete when the following are known about a single migration candidate:
 
@@ -57,7 +57,7 @@ In addition to the high-level accountability, there are actions that an individu
 
 ## Next steps
 
-With a general understanding of the assessment process, you are ready to begin the process by [classifying workloads](./classify.md).
+With a general understanding of the assessment process, you're ready to begin the process by [classifying workloads](./classify.md).
 
 > [!div class="nextstepaction"]
 > [Classify workloads](./classify.md)

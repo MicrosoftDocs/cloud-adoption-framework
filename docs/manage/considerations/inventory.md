@@ -1,6 +1,6 @@
 ---
-title: "Inventory and visibility in Azure"
-description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility). 
+title: Inventory and visibility in Azure cloud management
+description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -67,7 +67,7 @@ Change is the one constant in a technology environment. Awareness and understand
 
 ### Performance telemetry
 
-Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets which support the workload.
+Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets that support the workload.
 
 The ongoing health and operations of the network, DNS, operating systems, and other foundational aspects of the environment are critical data points that factor into the overall health of any workload.
 
@@ -87,7 +87,7 @@ There are several more processes related to inventory and visibility. The preced
 
 When you're developing processes for operational monitoring, it's equally important to determine responsibilities for daily operation and regular support of each process.
 
-In a central IT organization, IT would provide the operational expertise. The business would be consultative in nature, when issues require remediation.
+In a centralized IT organization, IT provides the operational expertise. The business would be consultative in nature, when issues require remediation.
 
 In a cloud center of excellence organization, business operations would provide the expertise and hold responsibility for management of these processes. IT would focus on the automation and support of teams, as they operate the environment.
 
@@ -105,9 +105,9 @@ Data without action produces little return. Cloud management might expand beyond
 
 Offline processes and communication about commitments to business stakeholders often require reporting. Self-service reporting or periodic reporting might be a necessary component of an enhanced management baseline.
 
-### IT Service Management (ITSM) integration
+### IT service management (ITSM) integration
 
-ITSM integration is often the first example of acting on inventory and visibility. When deviations from expected performance patterns arise, ITSM integration uses alerts from the cloud platform to trigger tickets in a separate service management tool to trigger remediation activities. Some operating models might require ITSM integration as an aspect of the enhanced management baseline.
+ITSM integration is often the first example of acting on inventory and visibility. When deviations from expected performance patterns arise, ITSM integration uses alerts from the cloud platform to trigger tickets in a separate IT service management tool to trigger remediation activities. Some operating models might require ITSM integration as an aspect of the enhanced management baseline.
 
 ### Data centralization
 

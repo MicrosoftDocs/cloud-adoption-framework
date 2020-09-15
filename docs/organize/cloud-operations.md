@@ -1,26 +1,19 @@
 ---
-title: "Cloud operation capabilities"
-description: Use the Cloud Adoption Framework for Azure to learn cloud operation capabilities and allow IT operations to improve and provide additional value.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 09/10/2019
-ms.topic: conceptual
+title: "Understand cloud operation functions"
+description: Understand the formation of cloud operations functionality and staff your team appropriately.
+author: JanetCThomas
+ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.topic: conceptual
+ms.date: 05/15/2020
 ---
 
-# Cloud operation capabilities
+# Cloud operations functions
 
-Business transformation may be enabled by cloud adoption. However, returns are only realized when the workloads deployed to the cloud are operating in alignment with performance expectations. As additional workloads adopt cloud technologies, additional operations capacity will be required.
+An operations team focuses on monitoring, repairing, and the remediation of issues related to traditional IT operations and assets. In the cloud, many of the capital costs and operations activities are transferred to the cloud provider, giving IT operations the opportunity to improve and provide significant additional value.
 
-Traditional IT operations were required to focus on maintaining current-state operations for a wide variety of low-level technical assets. Things like storage, cpu, memory, network equipment, servers, and virtual machine hosts require continuous maintenance to maintain peek operations. Capital budgets often include large expenses related to annual or periodic updates to these low-level assets.
-
- Human capital within operations would also focus heavily on the monitoring, repair, and remediation of issues related to these assets. In the cloud, many of these capital costs and operations activities are transferred to the cloud provider. This provides an opportunity for IT operations to improve and provide significant additional value.
-
-## Possible sources for this capability
-
-The skills needed to provide cloud operations capabilities could be provided by:
+The skills needed to provide cloud operations functions can be provided by:
 
 - IT operations
 - Outsource IT operations vendors
@@ -30,35 +23,56 @@ The skills needed to provide cloud operations capabilities could be provided by:
 - Business application operations teams
 - DevOps teams
 
-## Key responsibilities
+> [!IMPORTANT]
+> The individuals or teams accountable for cloud operations are generally responsible for making reactive changes to configuration during remediation. They're also likely to be responsible for proactive configuration changes to minimize operational disruptions. Depending on the organizations cloud operating model, those changes could be delivered via infrastructure-as-code, Azure Pipelines, or direct configuration in the portal. Since operations team will likely have elevated permissions, it is extremely important that those who fill this role are following [identity and access control best practices](/azure/security/benchmarks/security-control-identity-access-control) to minimize unintended access or production changes.
 
-The duties of the people providing cloud operations capability is to deliver maximum workload performance and minimum business interruptions within agreed upon operations budgets.
+## Preparation
 
-### Strategic tasks
+- [Manage resources in Azure](/learn/paths/manage-resources-in-azure/): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
+- [Azure network services](/learn/modules/intro-to-azure-networking/): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
-- Review [business outcomes](../strategy/business-outcomes/index.md), [financial models](../strategy/financial-models.md), [motivations for cloud adoption](../strategy/motivations.md), [business risks](../govern/policy-compliance/risk-tolerance.md), and [rationalization of the digital estate](../digital-estate/index.md).
-- Determine workload criticality, impact of disruptions or performance degradation.
-- Establish business approved cost/performance commitments.
+Review the following:
+
+- [Business outcomes](../strategy/business-outcomes/index.md)
+- [Financial models](../strategy/financial-models.md)
+- [Motivations for cloud adoption](../strategy/motivations.md)
+- [Business risks](../govern/policy-compliance/risk-tolerance.md)
+- [Rationalization of the digital estate](../digital-estate/index.md)
+
+## Minimum scope
+
+The duties of the people on the cloud operations team involve delivering maximum workload performance and minimum business interruptions within an agreed-upon operations budget.
+
+- Determine workload criticality, impact of disruptions, or performance degradation.
+- Establish business-approved cost and performance commitments.
 - Monitor and operate cloud workloads.
 
-### Technical tasks
+## Deliverables
 
-- Maintain asset and workload inventory.
-- Monitor performance of workloads.
-- Maintain operational compliance.
-- Protect workloads and associated assets.
-- Recover assets in the case of performance degradation or business interruption.
-- Mature capabilities of core platforms.
-- Continuously improve workload performance.
-- Improve budgetary and design requirements of workloads to fit commitments to the business.
+- Maintain asset and workload inventory
+- Monitor performance of workloads
+- Maintain operational compliance
+- Protect workloads and associated assets
+- Recover assets if there is performance degradation or business interruption
+- Mature functionality of core platforms
+- Continuously improve workload performance
+- Improve budgetary and design requirements of workloads to fit commitments to the business
 
-## Meeting cadence
+### Meeting cadence
 
-Those performing cloud operations capabilities should be involved in release planning and cloud center of excellence planning to provide feedback and prepare for operational requirements.
+The cloud operations team should be involved in release planning and cloud center of excellence planning to provide feedback and prepare for operational requirements.
+
+## Out of scope
+
+Traditional IT operations that focus on maintaining current-state operations for low-level technical assets is out of scope for the cloud operations team. Things like storage, CPU, memory, network equipment, servers, and virtual machine hosts require continuous maintenance, monitoring, repair, and remediation of issues to maintain peak operations. In the cloud, many of these capital costs and operations activities are transferred to the cloud provider.
 
 ## Next steps
 
-As adoption and operations scale, it's important to define and automate governance best practices that extend existing IT requirements. Forming a [cloud center of excellence](./cloud-center-of-excellence.md) is an important step to scaling cloud adoption, cloud operations, and cloud governance efforts.
+As adoption and operations scale, it's important to define and automate governance best practices that extend existing IT requirements. Forming a cloud center of excellence is an important step to scaling cloud adoption, cloud operations, and cloud governance efforts.
 
-> [!div class="nextstepaction"]
-> [Establish a cloud center of excellence](./cloud-center-of-excellence.md)
+Learn more about:
+
+- [Cloud center of excellence](../organize/cloud-center-of-excellence.md) functions.
+- [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md).
+
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

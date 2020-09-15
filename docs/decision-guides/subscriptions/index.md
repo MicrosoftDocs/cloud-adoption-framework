@@ -1,5 +1,5 @@
 ---
-title: "Subscription decision guide"
+title: Subscription decision guide
 description: Understand subscription design strategies and management group hierarchy to organize your Azure assets.
 author: alexbuckgit
 ms.author: abuck
@@ -22,14 +22,14 @@ Adopting Azure begins by creating an Azure subscription, associating it with an 
 - [Create additional subscriptions](../../ready/azure-best-practices/scale-subscriptions.md) to scale your Azure environment.
 - [Organize and manage your subscriptions](../../ready/azure-best-practices/organize-subscriptions.md) using Azure management groups.
 
-## Modeling your organization
+## Model your organization
 
 Because every organization is different, Azure management groups are designed to be flexible. Modeling your cloud estate to reflect your organization's hierarchy helps you define and apply policies at higher levels of the hierarchy, and rely on inheritance to ensure that those policies are automatically applied to management groups lower in the hierarchy. Although subscriptions can be moved between different management groups, it is helpful to design an initial management group hierarchy that reflects your anticipated organizational needs.
 
 Before finalizing your subscription design, also consider how [resource consistency](../resource-consistency/index.md) considerations might influence your design choices.
 
 > [!NOTE]
-> Azure Enterprise Agreements (EAs) allows you to define another organizational hierarchy for billing purposes. This hierarchy is distinct from your management group hierarchy, which focuses on providing an inheritance model for easily applying suitable policies and access control to your resources.
+> An Azure Enterprise Agreement (EA) allows you to define another organizational hierarchy for billing purposes. This hierarchy is distinct from your management group hierarchy, which focuses on providing an inheritance model for easily applying suitable policies and access control to your resources.
 
 ## Subscription design strategies
 
@@ -43,14 +43,14 @@ As an organization adds new workloads to the cloud, different ownership of subsc
 
 ### Application category strategy
 
-As an organization's cloud footprint grows, additional subscriptions are typically created to support applications with fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Building from the initial production and nonproduction subscriptions, the subscriptions supporting these application categories are organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by central IT operations staff.
+As an organization's cloud footprint grows, additional subscriptions are typically created to support applications with fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Building from the initial production and nonproduction subscriptions, the subscriptions supporting these application categories are organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by the operations staff of a central IT team.
 
-![Application category strategy](../../_images/infra-subscriptions/application.png)
+![Application category strategy](../../_images\decision-guides\decision-guide-subscriptions-hierarchy.png)
 
-Each organization will categorize their applications differently, often separating subscriptions based on specific applications or services or along the lines of application archetypes. This categorization is often designed to support workloads that are likely to consume most of the resource limits of a subscription, or separate mission-critical workloads to ensure they aren't competing with other workloads under these limits. Some workloads that might justify a separate subscription include:
+Each organization will categorize their applications differently, often separating subscriptions based on specific applications or services or along the lines of application archetypes. This categorization is often designed to support workloads that are likely to consume most of the resource limits of a subscription, or separate mission-critical workloads to ensure they don't compete with other workloads under these limits. Some workloads that might justify a separate subscription include:
 
 - Mission-critical workloads.
-- Applications which are part of "Cost of Goods Sold" (COGS) within your company. Example: every instance of Company X's widget contains an Azure IoT module that sends telemetry. This may necessitate a dedicated subscription for accounting/governance purposes as part of COGS.
+- Applications that are part of cost of goods sold (COGS) within your company. For example, every widget manufactured by a company contains an Azure IoT module that sends telemetry. This may require a dedicated subscription for accounting or governance purposes as part of COGS.
 - Applications subject to regulatory requirements such as HIPAA or FedRAMP.
 
 ### Functional strategy
@@ -65,11 +65,11 @@ The business unit strategy groups subscriptions and accounts based on profit and
 
 For organizations with global operations, the geographic strategy groups subscriptions and accounts based on geographic regions using a management group hierarchy.
 
-## Mixing subscription strategies
+## Mix subscription strategies
 
 Management group hierarchies can be up to six levels deep. This provides you with the flexibility to create a hierarchy that combines several of these strategies to meet your organizational needs. For example, the diagram below shows an organizational hierarchy that combines a business unit strategy with a geographic strategy.
 
-![Mixed subscription strategy](../../_images/infra-subscriptions/mixed.png)
+![Mixed subscription strategy](../../_images\decision-guides\decision-guide-subscriptions-hierarchy-mixed.png)
 
 ## Related resources
 
@@ -79,7 +79,7 @@ Management group hierarchies can be up to six levels deep. This provides you wit
 
 ## Next steps
 
-Subscription design is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about additional strategies used when making design decisions for other types of infrastructure.
+Subscription design is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the architectural decision guides overview to learn about additional strategies used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)
