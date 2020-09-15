@@ -1,5 +1,5 @@
 ---
-title: "Financial model for cloud migration"
+title: Financial model for cloud migration
 description: Learn what you need to create a financial model that accurately represents the full business value of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch

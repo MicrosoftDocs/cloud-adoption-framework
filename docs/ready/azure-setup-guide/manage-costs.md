@@ -1,5 +1,5 @@
 ---
-title: Manage costs and billing for Azure resources
+title: Manage costs and billing for your Azure resources
 description: Use the Cloud Adoption Framework for Azure to understand invoices and learn how to set up budgets and payments for your Azure resources.
 author: dchimes
 ms.author: kfollis
@@ -10,8 +10,6 @@ ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
-
-<!-- cSpell:ignore dchimes -->
 
 # Manage costs and billing for your Azure resources
 
@@ -63,7 +61,7 @@ To view your support requests and their status:
 
 To learn more, see:
 
-- [Azure billing and cost management documentation](https://docs.microsoft.com/azure/billing)
+- [Azure cost management and billing documentation](/azure/billing)
 - [Cloud Adoption Framework: Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md)
 - [Cloud Adoption Framework: Cost Management discipline](../../govern/cost-management/index.md)
 

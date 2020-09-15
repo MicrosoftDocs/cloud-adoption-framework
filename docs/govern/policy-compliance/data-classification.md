@@ -1,5 +1,5 @@
 ---
-title: "What is data classification?"
+title: What is data classification?
 description: Data classification allows you to determine and assign value to your organization's data and provides a common starting point for governance.
 author: BrianBlanchard
 ms.author: brblanch
@@ -32,13 +32,19 @@ The following is a list of classifications Microsoft uses. Depending on your ind
 
 ## Tagging data classification in Azure
 
-Resource tags are a good approach for metadata storage, and you can use these tags to apply data classification information to deployed resources. Although tagging cloud assets by classification isn't a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/what-is-information-protection) is an excellent solution to help you classify data itself, regardless of where it resides (on-premises, in Azure, or somewhere else). Consider it as part of an overall classification strategy.
+Resource tags are a good approach for metadata storage, and you can use these tags to apply data classification information to deployed resources. Although tagging cloud assets by classification isn't a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Azure Information Protection](/azure/information-protection/what-is-information-protection) is an excellent solution to help you classify data itself, regardless of where it resides (on-premises, in Azure, or somewhere else). Consider it as part of an overall classification strategy.
 
-For additional information on resource tagging in Azure, see [Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
+## Take action
+
+Take action by defining and tagging assets with a defined data classification.
+
+- [Choose one of the actionable governance guides](../guides/index.md) for examples of applying tags across your portfolio.
+- Review the [naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md#metadata-tags) article to define a more comprehensive tagging standard.
+- For additional information on resource tagging in Azure, see [Use tags to organize your Azure resources and management hierarchy](/azure/azure-resource-manager/management/tag-resources).
 
 ## Next steps
 
-Apply data classifications during one of the actionable governance guides.
+Continue learning from this article series by reviewing the article on securing sensitive data. The next article contains applicable insights if you are working with data that is classified as confidential or highly confidential.
 
 > [!div class="nextstepaction"]
-> [Choose an actionable governance guide](../guides/index.md)
+> [Secure sensitive data](/azure/architecture/data-guide/scenarios/securing-data-solutions?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)

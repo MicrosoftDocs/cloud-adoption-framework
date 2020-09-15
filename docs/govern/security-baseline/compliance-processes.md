@@ -1,5 +1,5 @@
 ---
-title: "Security Baseline policy compliance processes"
+title: Security Baseline policy compliance processes
 description: Learn an approach to creating processes that support a Security Baseline discipline.
 author: BrianBlanchard
 ms.author: brblanch

@@ -66,14 +66,14 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/ready/considerations/enterprise-scale.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
-         "redirect_document_id": true
-      },
-      {
          "source_path": "docs/infrastructure/misc/hybrid-consistency.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/hybrid-consistency",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/infrastructure/virtual-machines/basic-workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/azure-scaffold-examples.md",
@@ -224,6 +224,56 @@
          "source_path": "docs/organize/cloud-security-apsec-devsecops.md",
          "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-security-application-security-devsecops",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/blockers-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/operating-model-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team-roadmap-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/central-it.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-automation.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-center-of-excellence.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-migration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-platform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/enterprise-scale",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/landing-zone/enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
+         "redirect_document_id": true
       }
    ]
 }

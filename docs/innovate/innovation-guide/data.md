@@ -31,7 +31,7 @@ Azure Data Catalog addresses the discovery challenges of data consumers and enab
 
 ::: zone target="docs"
 
-**Go to the [Azure Data Catalog documentation](https://docs.microsoft.com/azure/data-catalog)**
+**Go to the [Azure Data Catalog documentation](/azure/data-catalog)**
 
 ::: zone-end
 
@@ -39,9 +39,9 @@ Azure Data Catalog addresses the discovery challenges of data consumers and enab
 
 #### Action
 
-You can use only one Azure data catalog per organization. If a data catalog has already been created for your organization, you can't add more catalogs.
+You can use only one Azure Data Catalog per organization. If a catalog has already been created for your organization, you can't add more catalogs.
 
-To create an Azure data catalog for your organization:
+To create a catalog for your organization:
 
 1. Go to **Azure Data Catalog**.
 2. Select **Create**.
@@ -62,13 +62,14 @@ Achieving a balance between openly sharing data and exercising control over what
 
 > [!div class="checklist"]
 >
-> - Create a Data Share.
-> - Add datasets to your Data Share.
-> - Enable a synchronization schedule for your Data Share.
-> - Add recipients to your Data Share.
+> - Create a data share.
+> - Add datasets to your data share.
+> - Enable a synchronization schedule for your data share.
+> - Add recipients to your data share.
 
 ::: zone target="docs"
-**Go to the [Azure Data Share documentation](https://docs.microsoft.com/azure/data-share)**
+
+**Go to the [Azure Data Share documentation](/azure/data-share)**
 
 ::: zone-end
 
@@ -106,7 +107,7 @@ The data innovation capabilities of Azure Time Series Insights are endless. It p
 
 ::: zone target="docs"
 
-**Go to the [Azure Time Series Insights overview](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-update-overview)**
+**Go to the [Azure Time Series Insights overview](/azure/time-series-insights/time-series-insights-update-overview)**
 
 ::: zone-end
 
@@ -117,7 +118,7 @@ The data innovation capabilities of Azure Time Series Insights are endless. It p
 To create an Azure Time Series Insights environment:
 
 1. Go to **Azure Time Series Insights environments**.
-2. Select **Create time series insights environment**.
+2. Select **Create Time Series Insights environment**.
 3. Point this environment to an event source, either Azure IoT Hub or Event Hubs.
 
 <!-- markdownlint-disable DOCSMD001 -->

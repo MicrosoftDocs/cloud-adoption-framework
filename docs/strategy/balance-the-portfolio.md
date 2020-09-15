@@ -1,5 +1,5 @@
 ---
-title: "Balance the portfolio"
+title: Balance the portfolio
 description: Discover strategies for balancing migration, innovation, and experimentation to get the most out of your cloud migration efforts.
 author: BrianBlanchard
 ms.author: brblanch
@@ -17,19 +17,18 @@ Cloud adoption is a portfolio-management effort, cleverly disguised as technical
 
 Balancing the portfolio is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../digital-estate/index.md) or has begun that process. The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
 
-<!-- docsTest TODO: Handle capitalization following numbers and back-ticks -->
-<!-- cSpell:ignore 2M months years datacenters improvement CSAT -->
+<!-- docutune:casing 2M -->
 
 ### Document business outcomes
 
 Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud-migration effort. The following table can help document and share desired business outcomes. It's important to note that most businesses are pursuing several outcomes at a time. The importance of this exercise is to clarify the outcomes that are most directly related to the cloud migration effort:
 
-| Outcome  | Measured by  | Goal  | Time frame  | Priority for this effort  |
-|---------|---------|---------|---------|---------|
-| Reduce IT costs     | Datacenter budget         | Reduce by $2M USD     | 12 months         | #1         |
-| Datacenter exit     | Exit from datacenters         | 2 datacenters         | 6 months         | #2         |
-| Increase business agility     | Improve time to market  | Reduce deployment time by six months         | 2 years         | #3        |
-| Improve customer experience     | Customer satisfaction (CSAT)         | 10% improvement         | 12 months         | #4         |
+| Outcome | Measured by | Goal | Time frame | Priority for this effort |
+|--|--|--|--|--|
+| Reduce IT costs | Datacenter budget | Reduce by $2M USD | 12 months | #1 |
+| Datacenter exit | Exit from datacenters | 2 datacenters | 6 months | #2 |
+| Increase business agility | Improve time to market | Reduce deployment time by six months | 2 years | #3 |
+| Improve customer experience | Customer satisfaction (CSAT) | 10% improvement | 12 months | #4 |
 
 > [!IMPORTANT]
 > The above table is a fictional example and should not used to set priorities. In many cases, this table could be considered an antipattern by placing cost savings above customer experiences.
@@ -44,7 +43,7 @@ The guidance regarding [incremental rationalization of the digital estate](../di
 
 The table in the [documenting business outcomes](#document-business-outcomes) section above misses a key outcome that would support the number one objective of reducing IT costs. When IT costs reductions rank anywhere in the list of business outcomes, it is important to consider the potential to sunset or retire workloads. In some scenarios, cost savings can come from not migrating workloads that don't warrant a short-term investment. Some customers have reported cost savings in excess of 20% total cost reductions by retiring underutilized workloads.
 
-To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload within assess and migrate processes:
+To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload within assess and migrate phases:
 
 - Has the workload been used by end users in the past six months?
 - Is end-user traffic consistent or growing?
@@ -55,7 +54,7 @@ If the answer to any of these questions is "no", then the workload could be a ca
 - Can a retirement plan or sunset plan be established for this workload?
 - Can this workload be retired prior to the datacenter exit?
 
-If the answer to both of these questions is "yes", then it would be wise to consider _not_ migrating the workload. This approach would help meet the objectives of reducing costs and exiting the datacenter.
+If the answer to both of these questions is "yes", then it would be wise to consider *not* migrating the workload. This approach would help meet the objectives of reducing costs and exiting the datacenter.
 
 If the answer to either question is "no", it may be wise to establish a plan for hosting the workload until it can be retired. This plan could include moving the assets to a lower-cost datacenter or alternative datacenter, which would also accomplish the objectives of reducing costs and exiting one datacenter.
 
@@ -86,13 +85,13 @@ To reduce complexity, you should follow a traditional approach to portfolio rati
 
 These questions shouldn't be the extent of the qualitative analysis completed for each workload, but they help guide a conversation about addressing the complexity of an imbalanced portfolio.
 
-## Migrate process changes
+## Migration process changes
 
 During migration, portfolio balancing activities can have a negative impact on migration velocity (the speed at which assets are migrated). The following guidance will expand on why and how to align work to avoid interruptions to the migration effort.
 
 Portfolio rationalization requires diversity of technical effort. It is tempting for cloud adoption teams to match that portfolio diversity within migration efforts. Business stakeholders of ask for a single cloud adoption team to address the entire migration backlog. This is seldom an advisable approach, in many cases this can be counter productive.
 
-These diverse efforts should be segmented across two or more cloud adoption teams. Using a two-team model as an example mode of execution, Team 1 is the migration team and Team 2 is the innovation team. For larger efforts, these teams could be further segmented to address other approaches like replace/PaaS efforts or minor refactoring. The following outlines the skills and roles needed to rehost, refactor, or minor refactoring:
+These diverse efforts should be segmented across two or more cloud adoption teams. Using a two-team model as an example mode of execution, team 1 is the migration team and team 2 is the innovation team. For larger efforts, these teams could be further segmented to address other approaches like replace/PaaS efforts or minor refactoring. The following outlines the skills and roles needed to rehost, refactor, or minor refactoring:
 
 **Rehost:** Rehost requires team members to implement infrastructure focused changes. Generally using a tool like Azure Site Recovery to migrate VMs or other assets to Azure. This work aligns well to datacenter admins or IT implementors. The cloud migration team is well structured to deliver this work at high scale. This is the fastest approach to migrate existing assets in most scenarios.
 

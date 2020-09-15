@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore njray nanra chargebacks IPLs -->
+<!-- cSpell:ignore chargebacks IPLs -->
 
 # Mainframe myths and facts
 

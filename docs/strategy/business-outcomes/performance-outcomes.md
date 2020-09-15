@@ -1,5 +1,5 @@
 ---
-title: "Examples of performance outcomes"
+title: Examples of performance outcomes
 description: Use the Cloud Adoption Framework for Azure to understand performance outcomes in the context of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch
@@ -39,7 +39,7 @@ Azure Site Recovery makes it simple to test disaster recovery by replicating app
 
 ## Next steps
 
-Learn how to use the [business outcome template](./business-outcome-template.md).
+Learn how to use the business outcome template.
 
 > [!div class="nextstepaction"]
 > [Use the business outcome template](./business-outcome-template.md)

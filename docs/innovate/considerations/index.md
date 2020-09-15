@@ -1,5 +1,5 @@
 ---
-title: "Innovation in the digital economy"
+title: Innovation in the digital economy
 description: Focus on understanding customer needs and rapidly building cloud innovations that shape how your customers interact with your products.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Innovation in the digital economy
 
-The digital economy is an undeniable force in almost every industry. During the Industrial Revolution, gasoline, conveyor belts, and human ingenuity were key resources for promoting market innovation. Product quality, price, and logistics drove markets as companies sought to deliver better products to their customers more quickly. Today's digital economy shifts the way in which customers interact with corporations. The primary forms of capital and market differentiators have all shifted as a result. In the digital economy, customers are less concerned with logistics and more concerned with their overall experience of using a product. This shift arises from direct interaction with technology in our daily lives and from a realization of the value associated with those interactions.
+The digital economy is an undeniable force in almost every industry. During the industrial revolution, gasoline, conveyor belts, and human ingenuity were key resources for promoting market innovation. Product quality, price, and logistics drove markets as companies sought to deliver better products to their customers more quickly. Today's digital economy shifts the way in which customers interact with corporations. The primary forms of capital and market differentiators have all shifted as a result. In the digital economy, customers are less concerned with logistics and more concerned with their overall experience of using a product. This shift arises from direct interaction with technology in our daily lives and from a realization of the value associated with those interactions.
 
 In the Innovate methodology of the Cloud Adoption Framework, we'll focus on understanding customer needs and rapidly building innovations that shape how your customers interact with your products. We'll also illustrate an approach to delivering on the value of a minimum viable product (MVP). Finally, we'll map decisions common to innovation cycles to help you understand how the cloud can unlock innovation and create partnerships with your customers.
 
@@ -30,7 +30,7 @@ The following section describes the formula for innovation and the commitments r
 
 ## Formula for innovation
 
-Successful innovation is not a big-bang transformational event or an elusive magical unicorn. Success in innovation is more of a balancing act, illustrated by a simple equation: **Innovation = Invention + Adoption**.
+Successful innovation is not a big-bang transformational event or an elusive magical unicorn. Success in innovation is more of a balancing act, illustrated by a simple equation: **innovation = invention + adoption**.
 
 Innovation happens at the intersection of invention and adoption. True innovation stems from slowly adjusting human experiences through new approaches, new processes, and new technologies. In this formula, invention means creating a new solution that meets a customer need. Conversely, adoption means applying the new solution to shape human behaviors and interactions. Finding the right balance between invention and adoption requires iteration, data-driven decision making, constant learning, and a growth mindset. It also requires technologies that can keep pace with the countless opportunities to learn in today's digital society.
 
@@ -50,13 +50,13 @@ Every development team has a set of tools or technologies that they're most fami
 
 ## Commitment to transparency
 
-To understand measurement in an innovation approach, you must first understand the commitment to transparency. Innovation can only thrive in an environment that adheres to a _growth mindset_. At the root of a growth mindset is a cultural imperative to learn from experiences. Successful innovation and continuous learning start with a commitment to transparency in measurement. This is a brave commitment for the cloud adoption team. However, that commitment is meaningless if it's not matched by a commitment to preserve transparency within the leadership and cloud strategy teams.
+To understand measurement in an innovation approach, you must first understand the commitment to transparency. Innovation can only thrive in an environment that adheres to a *growth mindset*. At the root of a growth mindset is a cultural imperative to learn from experiences. Successful innovation and continuous learning start with a commitment to transparency in measurement. This is a brave commitment for the cloud adoption team. However, that commitment is meaningless if it's not matched by a commitment to preserve transparency within the leadership and cloud strategy teams.
 
 Transparency is important because measuring customer impact doesn't address the question of right or wrong. Nor are impact measurements indicative of the quality of work or the performance of the adoption team. Instead, they represent an opportunity to learn and better meet your customers' needs. Misuse of innovation metrics can stifle that culture. Eventually, such misuse will lead to manipulation of metrics, which in turn causes long-term failure of the invention, the supporting staff, and ultimately the management structure who misused the data. Leaders and contributors alike should avoid using measurements for anything other than an opportunity to learn and improve the MVP solution.
 
 ## Commitment to iteration
 
-Only one promise rings true across all innovation cycles&mdash;you won't get it right on the first try. Measurement helps you understand what adjustments you should make to achieve the desired results. Changes that lead to favorable outcomes stem from iterations of the build-measure-learn process. The cloud adoption team and the cloud strategy team must commit to an iterative mindset before adopting a growth mindset or a build-measure-learn approach.
+Only one promise rings true across all innovation cycles: you won't get it right on the first try. Measurement helps you understand what adjustments you should make to achieve the desired results. Changes that lead to favorable outcomes stem from iterations of the build-measure-learn process. The cloud adoption team and the cloud strategy team must commit to an iterative mindset before adopting a growth mindset or a build-measure-learn approach.
 
 ## Next steps
 

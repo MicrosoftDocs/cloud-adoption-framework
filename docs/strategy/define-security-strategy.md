@@ -1,5 +1,5 @@
 ---
-title: "Define a security strategy"
+title: Define a security strategy
 description: Use the Cloud Adoption Framework for Azure to learn to build a business justification for cloud migration.
 author: MarkSimos
 ms.author: mas
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- cSpell:ignore MarkSimos NIST CISO COVID -->
+<!-- cSpell:ignore NIST CISO COVID -->
 
 # Define a security strategy
 
@@ -31,12 +31,12 @@ As your organization adopts cloud services, security teams will be working towar
 - **Security \*of\* the cloud (securing cloud resources):** Security should be integrated into the planning and operation of cloud services to ensure that those core security assurances are consistently applied across all resources.
 - **Security \*from\* the cloud (using the cloud to transform security):** Security should immediately start planning and thinking about how to use cloud technologies to modernize security tools and processes, particularly natively integrated security tools. More and more security tools are being hosted in the cloud and providing capabilities that are difficult or impossible to do in an on-premises environment.
 
-Many organizations start by treating cloud resources as an additional _virtual datacenter_, which works very well as a starting point for security of the cloud. As organizations modernize using security from the cloud, most will find themselves quickly outgrowing this model of thinking. Securing a software-defined datacenter using cloud-hosted tools enables capabilities beyond what on-premises models can offer:
+Many organizations start by treating cloud resources as an additional *virtual datacenter*, which works very well as a starting point for security of the cloud. As organizations modernize using security from the cloud, most will find themselves quickly outgrowing this model of thinking. Securing a software-defined datacenter using cloud-hosted tools enables capabilities beyond what on-premises models can offer:
 
 - Rapid enablement and scaling of security capabilities.
 - Highly effective asset inventory and security configuration hygiene discovery.
 - Continuous assessment of the organization's security posture and controls.
-- Vastly improved threat detection that leverages vast repositories of threat intelligence and virtually unlimited processing/storage of the cloud.
+- Vastly improved threat detection that uses vast repositories of threat intelligence and virtually unlimited processing/storage of the cloud.
 
 ### The right level of security friction
 
@@ -91,7 +91,7 @@ Many organizations are already on this journey because they have been managing t
 
 The functions of the [NIST cybersecurity framework](https://www.nist.gov/cyberframework) serve as a useful guide on how to balance investments between the complementary activities of identify, protect, detect, respond, and recover in a resilient strategy.
 
-More on cybersecurity resilience and the ultimate goals of cybersecurity controls is discussed in [How do you keep your organization's risk down](https://docs.microsoft.com/azure/architecture/framework/security/resilience).
+More on cybersecurity resilience and the ultimate goals of cybersecurity controls is discussed in [How do you keep your organization's risk down](/azure/architecture/framework/security/resilience).
 
 ### How the cloud is changing security
 
@@ -140,21 +140,21 @@ Building a resilient security posture in the cloud requires several parallel com
 
 - **Trust but verify:** For responsibilities performed by the cloud provider, organizations should take a "trust but verify" approach. Organizations should evaluate the security practices of their cloud providers and the security controls they offer to ensure the cloud provider meets the security needs of the organization.
 
-- **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associate skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
+- **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associated skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
 
   - **Infrastructure security:** Organizations should use the cloud to modernize their approach to protecting and monitoring the common components used by many applications, such as operating systems, networks, and container infrastructure. These cloud capabilities can often including managing infrastructure components across both IaaS and on-premises environments. Optimizing this strategy is important because this infrastructure is a dependency of the applications and data that run on it, which often enable critical business processes and store critical business data.
   - **Application security:** Organizations should also modernize the way they secure the unique applications and technology that is developed by or for their organization. This discipline is changing rapidly with the adoption of agile DevOps processes, the increasing use of open source components, and introduction of cloud APIs and cloud services to replace application components or interconnect applications.
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
 
-  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3).
+  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [Module 3 of the CISO workshop](/security/ciso-workshop/ciso-workshop-module-3).
 
 ### Security and trust
 
-Note that the use of the word "trust" in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
+Note that the use of the word *trust* in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
 
 - [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of "zero trust") and designs security accordingly.
-- [Trust but verify](https://en.wikipedia.org/wiki/trust,_but_verify) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
+- [Trust but verify](https://www.emazzanti.net/wp-content/uploads/2017/11/Trust-but-verify-Article-PDF.pdf) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
 
 A cloud provider and their practices and processes can be accountable to meet contractual and regulatory requirements and could earn or lose trust. A network is a nonliving connection which cannot face consequences if it is used by attackers (much like you cannot hold a road or a car accountable for criminals using them).
 
@@ -199,8 +199,8 @@ This section describes the key relationships that frequently change on the journ
     Developers are also increasingly using cloud services to:
 
     - Run code instead of hosting apps on virtual machines (VMs) and servers.
-    - Provide application functions instead of developing their own components. This has led to a _serverless_ model that uses existing cloud services for common functions. The number and variety of cloud services (and their pace of innovation) has also exceeded the ability of security teams to evaluate and approve the use of those services, leaving them to choose between allowing developers to use any service, attempting to prevent the development teams from using unapproved services, or trying to find a better way.
-    - **Codeless apps and power apps:** Another emerging trend is is the use of codeless technologies like Microsoft power apps. This technology enables people without coding skills to create applications that achieve business outcomes. Because of this low friction and high value potential, this trend has the potential to rise in popularity quickly and security professionals would be wise to rapidly understand its implications. Security efforts should be focused on the areas where a human could make a mistake in the application, namely the design of the application and asset permissions via threat modeling the application components, interactions/relationships, and role permissions.
+    - Provide application functions instead of developing their own components. This has led to a *serverless* model that uses existing cloud services for common functions. The number and variety of cloud services (and their pace of innovation) has also exceeded the ability of security teams to evaluate and approve the use of those services, leaving them to choose between allowing developers to use any service, attempting to prevent the development teams from using unapproved services, or trying to find a better way.
+    - **Codeless apps and Power Apps:** Another emerging trend is the use of codeless technologies like Microsoft Power Apps. This technology enables people without coding skills to create applications that achieve business outcomes. Because of this low friction and high value potential, this trend has the potential to rise in popularity quickly and security professionals would be wise to rapidly understand its implications. Security efforts should be focused on the areas where a human could make a mistake in the application, namely the design of the application and asset permissions via threat modeling the application components, interactions/relationships, and role permissions.
 
 - **Between developers and open source component authors:** Developers are also increasing efficiency by using open source components and libraries instead of developing their own components. This bring value through efficiency, but also introduces security risks by creating an external dependency and a requirement to properly maintain and patch those components. Developers are effectively assuming the risk of security and other bugs when they use these components and have to ensure there is a plan mitigate them at the same standards as code they would develop.
 
@@ -235,7 +235,7 @@ This section describes the key relationships that frequently change on the journ
 
   - **Security:** Does the cloud provider follow industry best practices for security? Has this been validated by independent regulatory bodies?
 
-    - [Microsoft cloud app security](https://docs.microsoft.com/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
+    - [Microsoft Cloud App Security](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud apps, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
     - The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) makes regulatory compliance certifications, audit reports, pen tests, and more available to customers. These documents include many details of internal security practices (notably the SOC 2 type 2 report and FedRAMP Moderate system security plan).
 
   - **Business competitor:** Is the cloud provider a significant business competitor in your industry? Do you have sufficient protections in the cloud services contract or other means to protect your business against potentially hostile actions?

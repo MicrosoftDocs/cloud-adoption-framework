@@ -1,5 +1,5 @@
 ---
-title: "Prepare corporate IT policy for the cloud"
+title: Prepare corporate IT policy for the cloud
 description: Help enable an expanded governance model with key activities like incremental corporate policy changes and automated enforcement.
 author: BrianBlanchard
 ms.author: brblanch
@@ -25,7 +25,7 @@ This article outlines key activities that can help you shape your corporate poli
 In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud governance is built on similar concepts.
 
 ![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-large.png)
-_Figure 1: Corporate governance and governance disciplines._
+*Figure 1: Corporate governance and governance disciplines.*
 
 The image above demonstrates the interactions between business risk, policy and compliance, and monitor and enforce to create a governance strategy. Followed by the Five Disciplines of Cloud Governance to realize your strategy.
 
@@ -50,7 +50,7 @@ The first step in an emerging partnership between your cloud governance and adop
 
 For example, the business risk is small for a business deploying five VMs that don't contain any high business impact (HBI) data. Later in the cloud adoption process, when the number reaches 1,000 VMs and the business is starting to move HBI data, the business risk grows.
 
-Policy MVP attempts to define a required foundation for policies needed to deploy the first _x_ VMs or the first _x_ number of applications, where _x_ is a small yet meaningful quantity of the units being adopted. This policy set requires few constraints, but would contain the foundational aspects needed to quickly grow from one incremental cloud adoption effort to the next. Through incremental policy development, this governance strategy would grow over time. Through slow subtle shifts, the policy MVP would grow into feature parity with the outputs of the policy review exercise.
+Policy MVP attempts to define a required foundation for policies needed to deploy the first *x* VMs or the first *x* number of applications, where *x* is a small yet meaningful quantity of the units being adopted. This policy set requires few constraints, but would contain the foundational aspects needed to quickly grow from one incremental cloud adoption effort to the next. Through incremental policy development, this governance strategy would grow over time. Through slow subtle shifts, the policy MVP would grow into feature parity with the outputs of the policy review exercise.
 
 ## Incremental policy growth
 

@@ -9,24 +9,24 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!--docsTest:ignore "Oxford English Dictionary" -->
+<!-- docutune:casing "Oxford English Dictionary" -->
 
 # Build with customer empathy
 
-"Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you are forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption.
+"Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you're forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption.
 
-Continuing with the analogy, innovation comes from a more extended family. _Customer empathy is the proud parent of innovation._ Creating a solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy&mdash;a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
+Continuing with the analogy, innovation comes from a more extended family. *Customer empathy is the proud parent of innovation.* creating a solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy, a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
 
 Why is empathy so important? From the first release of a minimum viable product (MVP) to the general availability of a market-grade solution, customer empathy helps us understand and share in the experience of the customer. Empathy helps us build a better solution. More importantly, it better positions us to invent solutions that will encourage adoption. In a digital economy, those who can most readily empathize with customer needs can build a brighter future that redefines and leads the market.
 
 ## How to build with empathy
 
-Planning is intrinsically an exercise in defining assumptions. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions tend to be the product of self-empathy&mdash;in other words, "what would I want if I were in this position?" Starting with the Build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
+Defining assumptions is a fundamental part of planning. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions are typically the product of self-empathy. In other words, _what would I want if I were in this position?_ Starting with the build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
 
 > [!CAUTION]
 > Properly defining what to build can be tricky and requires some practice. If you build something too quickly, if might not reflect customer needs. If you spend too much time trying to understand initial customer needs and solution requirements, the market may meet them before you have a chance to build anything at all. In either scenario, the opportunity to learn can be significantly delayed or reduced. Sometimes the data can even be corrupted.
 
-The most innovative solutions in history began with an intuitive belief. That gut feeling comes from both existing expertise and firsthand observation. We start with the Build phase because it allows for a rapid test of that intuition. From there, we can cultivate deeper understanding and clearer degrees of empathy. At every iteration or release of a solution, balance comes from building MVPs that demonstrate customer empathy.
+The most innovative solutions in history began with an intuitive belief. That gut feeling comes from both existing expertise and firsthand observation. We start with the build phase because it allows for a rapid test of that intuition. From there, we can cultivate deeper understanding and clearer degrees of empathy. At every iteration or release of a solution, balance comes from building MVPs that demonstrate customer empathy.
 
 To steady this balancing act, the following two sections discuss the concepts of building with empathy and defining an MVP.
 
@@ -34,27 +34,27 @@ To steady this balancing act, the following two sections discuss the concepts of
 
 Building with empathy means creating a solution based on defined hypotheses that illustrate a specific customer need. The following steps aim to formulate a hypothesis that will encourage building with empathy.
 
-1. When you build with empathy, the customer is always the focus. This intention can take many shapes. You could reference a customer archetype, a specific persona, or even a picture of a customer in the midst of the problem you want to solve. And keep in mind that customers can be internal (employees or partners) or external (consumers or business customers). This definition is the first hypothesis to be tested: Can we help this specific customer?
-2. Understand the customer experience. Building with empathy means you can relate to the customer's experience and understand their challenges. This mindset indicates the next hypothesis to be tested: Can we help this specific customer with this manageable challenge?
-3. Define a simple solution to a single challenge. Relying on expertise across people, processes, and subject matter experts will lead to a potential solution. This is the full hypothesis to be tested: Can we help this specific customer with this manageable challenge through the proposed solution?
-4. Arrive at a value statement. What long-term value do you hope to provide to these customers? The answer to this question creates your full hypothesis: How will these customers' lives be improved by using the proposed solution to address this manageable challenge?
+1. When you build with empathy, the customer is always the focus. This intention can take many shapes. You could reference a customer archetype, a specific persona, or even a picture of a customer in the midst of the problem you want to solve. And keep in mind that customers can be internal (employees or partners) or external (consumers or business customers). This definition is the first hypothesis to be tested: can we help this specific customer?
+2. Understand the customer experience. Building with empathy means you can relate to the customer's experience and understand their challenges. This mindset indicates the next hypothesis to be tested: can we help this specific customer with this manageable challenge?
+3. Define a simple solution to a single challenge. Relying on expertise across people, processes, and subject matter experts will lead to a potential solution. This is the full hypothesis to be tested: can we help this specific customer with this manageable challenge through the proposed solution?
+4. Arrive at a value statement. What long-term value do you hope to provide to these customers? The answer to this question creates your full hypothesis: how will these customers' lives be improved by using the proposed solution to address this manageable challenge?
 
 This last step is the culmination of an empathy-driven hypothesis. It defines the audience, the problem, the solution, and the metric by which improvement is to be made, all of which center on the customer. During the measure and learn phases, each hypothesis should be tested. Changes in the customer, problem statement, or solution are anticipated as the team develops greater empathy for the addressable customer base.
 
 > [!CAUTION]
-> The goal is to _build_ with customer empathy, not to _plan_ with it. It's all too easy to get stuck in endless cycles of planning and tweaking to hit upon the perfect customer empathy statement. Before you try to develop such a statement, review the following sections on defining and building an MVP.
+> The goal is to *build* with customer empathy, not to *plan* with it. It's all too easy to get stuck in endless cycles of planning and tweaking to hit upon the perfect customer empathy statement. Before you try to develop such a statement, review the following sections on defining and building an MVP.
 
-After core assumptions are proven, later iterations will focus on growth tests in addition to empathy tests. After empathy is built, tested, and validated, you can begin to understand the addressable market at scale. This can be done through an expansion of the standard hypothesis formula described earlier. Based on available data, estimate the size of the total market&mdash;the number of potential customers.
+After core assumptions are proven, later iterations will focus on growth tests in addition to empathy tests. After empathy is built, tested, and validated, you can begin to understand the addressable market at scale. This can be done through an expansion of the standard hypothesis formula described earlier. Based on available data, estimate the size of the total market (the number of potential customers).
 
-From there, estimate the percentage of that total market that experiences a similar challenge and that might therefore be interested in this solution. This is your addressable market. The next hypothesis to be tested is: how will _x_% of customers' lives be improved by using the proposed solution to address this manageable challenge? A small sampling of customers will reveal leading indicators that suggest a percentage impact on the pool of customers engaged.
+From there, estimate the percentage of that total market that experiences a similar challenge and that might therefore be interested in this solution. This is your addressable market. The next hypothesis to be tested is: how will *x%* of customers' lives be improved by using the proposed solution to address this manageable challenge? A small sampling of customers will reveal leading indicators that suggest a percentage impact on the pool of customers engaged.
 
 ### Define a solution to test the hypothesis
 
 During each iteration of a build-measure-learn feedback loop, your attempt to build with empathy is defined by an MVP.
 
-An MVP is the smallest unit of effort (invention, engineering, application development, or data architecture) required to create enough of a solution to learn _with the customer_. The goal of every MVP is to test some or all of the prior hypotheses and to receive feedback directly from the customer. The output is not a beautiful application with all the features required to change your industry. The desired output of each iteration is a learning opportunity&mdash;a chance to more deeply test a hypothesis.
+An MVP is the smallest unit of effort (invention, engineering, application development, or data architecture) required to create enough of a solution to learn *with the customer*. The goal of every MVP is to test some or all of the prior hypotheses and to receive feedback directly from the customer. The output is not a beautiful application with all the features required to change your industry. The desired output of each iteration is a learning opportunity, a chance to more deeply test a hypothesis.
 
-_Timeboxing_ is a standard way to make sure a product remains lean. For example, make sure your development team thinks the solution can be created in a single iteration to allow for rapid testing. To better understand using velocity, iterations, and releases to define what minimal means, see [Planning velocity, iterations, release, and iteration paths](../../plan/iteration-paths.md).
+*Timeboxing* is a standard way to make sure a product remains lean. For example, make sure your development team thinks the solution can be created in a single iteration to allow for rapid testing. To better understand using velocity, iterations, and releases to define what minimal means, see [Planning velocity, iterations, release, and iteration paths](../../plan/iteration-paths.md).
 
 ### Reduce complexity and delay technical spikes
 
@@ -62,7 +62,7 @@ The [disciplines of invention](./invention.md) found in the [Innovate methodolog
 
 Feature breadth and the different disciplines of invention can't all be created in a single iteration. It might take several releases for an MVP solution to include the complexity of multiple disciplines. Depending on the investment in development, there might be multiple parallel teams working within different disciplines to test multiple hypotheses. Although it's smart to maintain architectural alignment between those teams, it's unwise to try to build complex, integrated solutions until value hypotheses can be validated.
 
-Complexity is best detected in the frequency or volume of _technical spikes_. Technical spikes are efforts to create technical solutions that can't be easily tested with customers. When customer value and customer empathy are untested, technical spikes represent a risk to innovation and should be minimized. For the types of mature tested solutions found in a migration effort, technical spikes can be common throughout adoption. However, they delay the testing of hypotheses in innovation efforts and should be postponed whenever possible.
+Complexity is best detected in the frequency or volume of *technical spikes*. Technical spikes are efforts to create technical solutions that can't be easily tested with customers. When customer value and customer empathy are untested, technical spikes represent a risk to innovation and should be minimized. For the types of mature tested solutions found in a migration effort, technical spikes can be common throughout adoption. However, they delay the testing of hypotheses in innovation efforts and should be postponed whenever possible.
 
 A relentless simplification approach is suggested for any MVP definition. This approach means removing anything that doesn't add to your ability to validate the hypothesis. To minimize complexity, reduce the number of integrations and features that aren't required to test the hypothesis.
 
@@ -96,13 +96,11 @@ When customer empathy is strong, a clearly existing problem should be easy to id
 
 ## When not to apply this approach
 
-There are many legal, compliance, and industry requirements that might require an alternative approach. If public releases of a developing solution create risk to patent timing, intellectual property protection, customer data leaks, or violation of established compliance requirements, this approach may not be suitable. When perceived risks like these exist, consult legal counsel before adopting any guided approach to release management.
+Many legal, compliance, and industry requirements that might necessitate an alternate approach. If public releases of a developing solution create risk to patent timing, intellectual property protection, customer data leaks, or violation of established compliance requirements, this approach may not be suitable. When perceived risks like these exist, consult legal counsel before adopting any guided approach to release management.
 
 ## References
 
-<!-- cSpell:ignore Ries -->
-
-Some of the concepts in this article build on topics discussed in [_The Lean Startup_](http://theleanstartup.com/book) by Eric Ries.
+Some of the concepts in this article build on topics discussed in [The Lean Startup](http://theleanstartup.com/book) by Eric Ries.
 
 ## Next steps
 
