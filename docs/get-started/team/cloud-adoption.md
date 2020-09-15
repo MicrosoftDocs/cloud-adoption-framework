@@ -17,7 +17,7 @@ Some cloud adoption teams focus exclusively on cloud migration, and others focus
 
 A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL Database virtual machines (VMs) to SQL PaaS instances.
 
-As your journey evolves we recommend that you establish an automation capability in your organization. Most of what we want to achieve in cloud can be automated and reusing code to build infrastructure, application patterns, governance and so on will help drive further efficiencies, consistency and instill cloud principles in your organization. In your early stages of your adoption consider having an automation capability included in your adoption team so that you ca begin to build the cloud muscle.
+As cloud adoption expands, customers can benefit from a team dedicated to [cloud platform function](../../../organize/cloud-platform.md). That team would leverage automated deployment and code reuse to accelerate successful adoption. People focused on a cloud platform function could implement infrastructure, application patterns, governance and other supporting assets to drive further efficiencies, consistency and instill cloud principles in your organization. Small organizations or small adoption teams won't have the luxury of a dedicated cloud platform team. We recommend that you establish an automation capability in your adoption team to begin building this important cloud muscle.
 
 ![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
 
