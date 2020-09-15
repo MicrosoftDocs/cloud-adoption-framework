@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore WSUS getting started -->
+<!-- cSpell:ignore WSUS -->
 
 # Operational compliance in Azure
 
@@ -48,7 +48,7 @@ Computers that are managed by Update Management use the following configurations
 - Azure Automation Hybrid Runbook Worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
-For more information, see [Update Management solution](https://docs.microsoft.com/azure/automation/automation-update-management).
+For more information, see [Update Management solution](/azure/automation/automation-update-management).
 
 > [!WARNING]
 > Before using Update Management, you must onboard virtual machines or an entire subscription into Log Analytics and Azure Automation.
@@ -121,8 +121,8 @@ To apply a policy to a resource group:
 
 To learn more, see:
 
-- [Azure Policy](https://docs.microsoft.com/azure/azure-policy)
-- [Azure Policy: Guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy](/azure/azure-policy)
+- [Azure Policy: Guest configuration](/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
@@ -196,7 +196,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. In the Azure portal, go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".
@@ -209,8 +209,8 @@ To publish blueprint artifacts to your subscription:
 
 To learn more, see:
 
-- [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints)
+- [Azure Blueprints](/azure/governance/blueprints)
 - [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Standards-based blueprints samples](/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
 
 ::: zone-end

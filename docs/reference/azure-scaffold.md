@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: reference
 ---
 
-<!-- cSpell:ignore rodend -->
-
 # Azure enterprise scaffold is now the Microsoft Cloud Adoption Framework for Azure
 
 The Azure enterprise scaffold has been integrated into the Microsoft Cloud Adoption Framework for Azure. The goals of the enterprise scaffold are now addressed in the [Ready methodology](../ready/index.md) of the Cloud Adoption Framework. The enterprise scaffold content has been deprecated.

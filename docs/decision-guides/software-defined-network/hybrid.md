@@ -14,7 +14,7 @@ ms.custom: governance
 
 The hybrid cloud network architecture allows virtual networks to access your on-premises resources and services and vice versa, using a dedicated WAN connection such as ExpressRoute or other connection method to directly connect the networks.
 
-![Hybrid network](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/images/expressroute.png)
+![Hybrid network](/azure/architecture/reference-architectures/hybrid-networking/images/expressroute.png)
 
 Building on the cloud-native virtual network architecture, a hybrid virtual network is isolated when initially created. Adding connectivity to the on-premises environment grants access to and from the on-premises network, although all other inbound traffic targeting resources in the virtual network need to be explicitly allowed. You can secure the connection using virtual firewall devices and routing rules to limit access or you can specify exactly what services can be accessed between the two networks using cloud-native routing features or deploying network virtual appliances (NVAs) to manage traffic.
 
@@ -40,4 +40,4 @@ Your cloud adoption teams should consider the following issues when looking at i
 
 For more information about hybrid networking in Azure, see:
 
-- [Hybrid network reference architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/expressroute). Azure hybrid virtual networks use either an ExpressRoute circuit or Azure VPN to connect your virtual network with your organization's existing IT assets not hosted in Azure. This article discusses the options for creating a hybrid network in Azure.
+- [Hybrid network reference architecture](/azure/architecture/reference-architectures/hybrid-networking/expressroute). Azure hybrid virtual networks use either an ExpressRoute circuit or Azure VPN to connect your virtual network with your organization's existing IT assets not hosted in Azure. This article discusses the options for creating a hybrid network in Azure.

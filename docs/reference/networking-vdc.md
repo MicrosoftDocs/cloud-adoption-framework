@@ -12,7 +12,7 @@ ms.custom: virtual-network
 ---
 
 <!-- docsTest:disable TODO -->
-<!-- cSpell:ignore tracsman jonor rossort NVAs iptables WAFs DDOS ITSM LLAP anycast vwan -->
+<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
 
@@ -311,7 +311,7 @@ There are two fundamental types of logs in Azure Monitor:
 Azure Monitor can collect data from a variety of sources. You can think of monitoring data for your applications in tiers ranging from your application, any operating system, and the services it relies on, down to the Azure platform itself. Azure Monitor collects data from each of the following tiers:
 
 - **Application monitoring data:** Data about the performance and functionality of the code you have written, regardless of its platform.
-- Guest OS monitoring data: Data about the operating system on which your application is running. This OS could be running in Azure, another cloud, or on-premises.
+- **Guest OS monitoring data:** Data about the operating system on which your application is running. This OS could be running in Azure, another cloud, or on-premises.
 - **Azure resource monitoring data:** Data about the operation of an Azure resource.
 - **Azure subscription monitoring data:** Data about the operation and management of an Azure subscription, as well as data about the health and operation of Azure itself.
 - **Azure tenant monitoring data:** Data about the operation of tenant-level Azure services, such as Azure Active Directory.
@@ -412,21 +412,80 @@ A virtual datacenter approach to datacenter migration creates a scalable archite
 
 Learn more about the Azure capabilities discussed in this document.
 
-<!-- markdownlint-disable MD033 -->
+:::row:::
+    :::column:::
+        **Network features** <br>
+        [Azure Virtual Networks][virtual-network] <br>
+        [Network Security Groups][NSG] <br>
+        [Service Endpoints][ServiceEndpoints] <br>
+        [Private Link][PrivateLink] <br>
+        [User-Defined Routes][UDR] <br>
+        [Network Virtual Appliances][NVA] <br>
+        [Public IP Addresses][PIP] <br>
+        [Azure DNS][DNS]
+    :::column-end:::
+    :::column:::
+        **Load balancing** <br>
+        [Azure Front Door][azure-front-door] <br>
+        [Azure Load Balancer (L4)][ALB] <br>
+        [Application Gateway (L7)][AppGW] <br>
+        [Azure Traffic Manager][azure-traffic-manager]
+    :::column-end:::
+    :::column:::
+        **Connectivity** <br>
+        [Virtual Network Peering][virtual-network-peering] <br>
+        [Virtual Private Network][VPN] <br>
+        [Virtual WAN][virtual-wan] <br>
+        [ExpressRoute][ExR] <br>
+        [ExpressRoute Direct][ExRD]
+    :::column-end:::
+:::row-end:::
 
-| Network Features | Load Balancing | Connectivity |
-| --- | --- | --- |
-| [Azure Virtual Networks][virtual-network] <br> [Network Security Groups][NSG] <br> [Service Endpoints][ServiceEndpoints] <br> [Private Link][PrivateLink] <br> [User-Defined Routes][UDR] <br> [Network Virtual Appliances][NVA] <br> [Public IP Addresses][PIP] <br> [Azure DNS][DNS] | [Azure Front Door][azure-front-door] <br> [Azure Load Balancer (L4)][ALB] <br> [Application Gateway (L7)][AppGW] <br> [Azure Traffic Manager][azure-traffic-manager] <br><br><br><br><br> | [Virtual Network Peering][virtual-network-peering] <br> [Virtual Private Network][VPN] <br> [Virtual WAN][virtual-wan] <br> [ExpressRoute][ExR] <br> [ExpressRoute Direct][ExRD] <br><br><br><br><br> |
+:::row:::
+    :::column:::
+        **Identity** <br>
+        [Azure Active Directory][azure-ad] <br>
+        [Multi-Factor Authentication][multi-factor-authentication] <br>
+        [Role-Based Access Control][RBAC] <br>
+        [Default Azure AD Roles][Roles]
+    :::column-end:::
+    :::column:::
+        **Monitoring** <br>
+        [Network Watcher][NetWatch] <br>
+        [Azure Monitor][MonitorOverview] <br>
+        [Log Analytics][LogAnalytics]
+    :::column-end:::
+    :::column:::
+        **Best practices** <br>
+        [Management Group][MgmtGrp] <br>
+        [Subscription Management](../ready/azure-best-practices/scale-subscriptions.md) <br>
+        [Resource Group Management][RGMgmt] <br>
+        [Azure Subscription Limits][limits]
+    :::column-end:::
+:::row-end:::
 
-| Identity | Monitoring | Best Practices |
-| --- | --- | --- |
-| [Azure Active Directory][azure-ad] <br>[Multi-Factor Authentication][multi-factor-authentication] <br> [Role-Based Access Control][RBAC] <br> [Default Azure AD Roles][Roles] <br><br><br> | [Network Watcher][NetWatch] <br> [Azure Monitor][MonitorOverview] <br> [Log Analytics][LogAnalytics] <br> | [Management Group][MgmtGrp] <br> [Subscription Management](../ready/azure-best-practices/scale-subscriptions.md) <br> [Resource Group Management][RGMgmt] <br> [Azure Subscription Limits][limits] <br><br><br> |
-
-| Security | Other Azure Services | |
-|-|-|-|
-| [Azure Firewall][AzFW] <br> [Firewall Manager][AzFWMgr] <br> [Application Gateway WAF][AppGWWAF] <br> [Front Door WAF][AFDWAF] <br> [Azure DDoS][DDoS] <br> | [Azure Storage][Storage] <br> [Azure SQL][SQL] <br> [Azure Web Apps][WebApps] <br> [Azure Cosmos DB][cosmos-db] <br> [HDInsight][HDInsight] | [Event Hubs][EventHubs] <br> [Service Bus][ServiceBus] <br> [Azure IoT][IoT] <br> [Azure Machine Learning][machine-learning] |
-
-<!-- markdownlint-enable MD033 -->
+:::row:::
+    :::column:::
+        **Security** <br>
+        [Azure Firewall][AzFW] <br>
+        [Firewall Manager][AzFWMgr] <br>
+        [Application Gateway WAF][AppGWWAF] <br>
+        [Front Door WAF][AFDWAF] <br>
+        [Azure DDoS][DDoS]
+    :::column-end:::
+    :::column:::
+        **Other Azure services** <br>
+        [Azure Storage][Storage] <br>
+        [Azure SQL][SQL] <br>
+        [Azure Web Apps][WebApps] <br>
+        [Azure Cosmos DB][cosmos-db] <br>
+        [HDInsight][HDInsight] <br>
+        [Event Hubs][EventHubs] <br>
+        [Service Bus][ServiceBus] <br>
+        [Azure IoT][IoT] <br>
+        [Azure Machine Learning][machine-learning]
+    :::column-end:::
+:::row-end:::
 
 ## Next steps
 
@@ -454,49 +513,49 @@ Learn more about the Azure capabilities discussed in this document.
 
 <!-- links -->
 
-[limits]: https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits
-[Roles]: https://docs.microsoft.com/azure/role-based-access-control/built-in-roles
-[virtual-network]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview
-[NSG]: https://docs.microsoft.com/azure/virtual-network/security-overview
-[PrivateLink]: https://docs.microsoft.com/azure/private-link/private-link-overview
-[PrivateLinkSvc]: https://docs.microsoft.com/azure/private-link/private-link-service-overview
-[ServiceEndpoints]: https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview
-[DNS]: https://docs.microsoft.com/azure/dns/dns-overview
-[PrivateDNS]: https://docs.microsoft.com/azure/dns/private-dns-overview
-[virtual-network-peering]: https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview
-[UDR]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
-[RBAC]: https://docs.microsoft.com/azure/role-based-access-control/overview
-[multi-factor-authentication]: https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks
-[azure-ad]: https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis
-[VPN]: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways
-[ExR]: https://docs.microsoft.com/azure/expressroute/expressroute-introduction
-[ExRD]: https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about
-[virtual-wan]: https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about
-[NVA]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
-[AzFW]: https://docs.microsoft.com/azure/firewall/overview
-[AzFWMgr]: https://docs.microsoft.com/azure/firewall-manager/overview
-[MgmtGrp]: https://docs.microsoft.com/azure/governance/management-groups/overview
-[RGMgmt]: https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
-[ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
-[DDoS]: https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview
-[PIP]: https://docs.microsoft.com/azure/virtual-network/virtual-network-public-ip-address
-[azure-front-door]: https://docs.microsoft.com/azure/frontdoor/front-door-overview
-[AFDWAF]: https://docs.microsoft.com/azure/web-application-firewall/afds/afds-overview
-[AppGW]: https://docs.microsoft.com/azure/application-gateway/overview
-[AppGWWAF]: https://docs.microsoft.com/azure/web-application-firewall/ag/ag-overview
-[MonitorOverview]: https://docs.microsoft.com/azure/networking/networking-overview#monitor
-[AzureMonitor]: https://docs.microsoft.com/azure/azure-monitor/overview
-[Metrics]: https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics
-[Logs]: https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs
-[LogAnalytics]: https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal
-[NetWatch]: https://docs.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview
-[WebApps]: https://docs.microsoft.com/azure/app-service/
-[HDInsight]: https://docs.microsoft.com/azure/hdinsight/hdinsight-overview
-[EventHubs]: https://docs.microsoft.com/azure/event-hubs/event-hubs-about
-[ServiceBus]: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview
-[azure-traffic-manager]: https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview
-[Storage]: https://docs.microsoft.com/azure/storage/common/storage-introduction
-[SQL]: https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview
-[cosmos-db]: https://docs.microsoft.com/azure/cosmos-db/introduction
-[IoT]: https://docs.microsoft.com/azure/iot-fundamentals/iot-introduction
-[machine-learning]: https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml
+[limits]: /azure/azure-resource-manager/management/azure-subscription-service-limits
+[Roles]: /azure/role-based-access-control/built-in-roles
+[virtual-network]: /azure/virtual-network/virtual-networks-overview
+[NSG]: /azure/virtual-network/security-overview
+[PrivateLink]: /azure/private-link/private-link-overview
+[PrivateLinkSvc]: /azure/private-link/private-link-service-overview
+[ServiceEndpoints]: /azure/virtual-network/virtual-network-service-endpoints-overview
+[DNS]: /azure/dns/dns-overview
+[PrivateDNS]: /azure/dns/private-dns-overview
+[virtual-network-peering]: /azure/virtual-network/virtual-network-peering-overview
+[UDR]: /azure/virtual-network/virtual-networks-udr-overview
+[RBAC]: /azure/role-based-access-control/overview
+[multi-factor-authentication]: /azure/active-directory/authentication/concept-mfa-howitworks
+[azure-ad]: /azure/active-directory/fundamentals/active-directory-whatis
+[VPN]: /azure/vpn-gateway/vpn-gateway-about-vpngateways
+[ExR]: /azure/expressroute/expressroute-introduction
+[ExRD]: /azure/expressroute/expressroute-erdirect-about
+[virtual-wan]: /azure/virtual-wan/virtual-wan-about
+[NVA]: /azure/architecture/reference-architectures/dmz/nva-ha
+[AzFW]: /azure/firewall/overview
+[AzFWMgr]: /azure/firewall-manager/overview
+[MgmtGrp]: /azure/governance/management-groups/overview
+[RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
+[ALB]: /azure/load-balancer/load-balancer-overview
+[DDoS]: /azure/virtual-network/ddos-protection-overview
+[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[azure-front-door]: /azure/frontdoor/front-door-overview
+[AFDWAF]: /azure/web-application-firewall/afds/afds-overview
+[AppGW]: /azure/application-gateway/overview
+[AppGWWAF]: /azure/web-application-firewall/ag/ag-overview
+[MonitorOverview]: /azure/networking/networking-overview#monitor
+[AzureMonitor]: /azure/azure-monitor/overview
+[Metrics]: /azure/azure-monitor/platform/data-platform-metrics
+[Logs]: /azure/azure-monitor/platform/data-platform-logs
+[LogAnalytics]: /azure/azure-monitor/log-query/get-started-portal
+[NetWatch]: /azure/network-watcher/network-watcher-monitoring-overview
+[WebApps]: /azure/app-service/
+[HDInsight]: /azure/hdinsight/hdinsight-overview
+[EventHubs]: /azure/event-hubs/event-hubs-about
+[ServiceBus]: /azure/service-bus-messaging/service-bus-messaging-overview
+[azure-traffic-manager]: /azure/traffic-manager/traffic-manager-overview
+[Storage]: /azure/storage/common/storage-introduction
+[SQL]: /azure/sql-database/sql-database-technical-overview
+[cosmos-db]: /azure/cosmos-db/introduction
+[IoT]: /azure/iot-fundamentals/iot-introduction
+[machine-learning]: /azure/machine-learning/overview-what-is-azure-ml

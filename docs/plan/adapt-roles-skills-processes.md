@@ -48,7 +48,7 @@ Track these dependencies and make note of the processes that will support them. 
 
 ## Next steps
 
-Ensuring proper support for the translated roles is a team effort. To act on this guidance, review the [organizational readiness introduction](../organize/index.md) to identify the right team structures and participants.
+Ensuring proper support for the translated roles is a team effort. To act on this guidance, review the organizational readiness overview to identify the right team structures and participants.
 
 > [!div class="nextstepaction"]
 > [Identify the right team structures](../organize/index.md)

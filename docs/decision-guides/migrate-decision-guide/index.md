@@ -1,5 +1,5 @@
 ---
-title: "Migration tools decision guide"
+title: Migration tools decision guide
 description: Use this decision tree as high-level guidance for selecting the best tools to use based on your migration decisions.
 author: BrianBlanchard
 ms.author: brblanch
@@ -13,7 +13,7 @@ ms.subservice: decision-guide
 
 The strategy and tools you use to migrate an application to Azure will largely depend on your business motivations, technology strategies, and timelines, as well as a deep understanding of the actual workload and assets (infrastructure, apps, and data) being migrated. The following decision tree serves as high-level guidance for selecting the best tools to use based on migration decisions. Treat this decision tree as a starting point.
 
-The choice to migrate using platform as a service (PaaS) or infrastructure as a service (IaaS) technologies is driven by the balance between cost, time, existing technical debt, and long-term returns. IaaS is often the fastest path to the cloud with the least amount of required change to the workload. PaaS could require modifications to data structures or source code, but produces substantial long-term returns in the form of reduced operating costs and greater technical flexibility. In the following diagram, the term _modernize_ is used to reflect a decision to modernize an asset during migration and migrate the modernized asset to a PaaS platform.
+The choice to migrate using platform as a service (PaaS) or infrastructure as a service (IaaS) technologies is driven by the balance between cost, time, existing technical debt, and long-term returns. IaaS is often the fastest path to the cloud with the least amount of required change to the workload. PaaS could require modifications to data structures or source code, but produces substantial long-term returns in the form of reduced operating costs and greater technical flexibility. In the following diagram, the term *modernize* is used to reflect a decision to modernize an asset during migration and migrate the modernized asset to a PaaS platform.
 
 ![Example migration tools decision tree.](../../_images/migrate/migration-tools-decision-tree.png)
 
@@ -34,7 +34,7 @@ In line with the Cloud Adoption Framework's emphasis on [incremental migration](
 
 ## Learn more
 
-- **[Cloud fundamentals: Overview of Azure compute options](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree):** Provides information on the capabilities of Azure IaaS and PaaS compute options.
-- **[Cloud fundamentals: Choose the right data store](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview):** Discusses PaaS storage options available on the Azure platform.
+- **[Cloud fundamentals: Overview of Azure compute options](/azure/architecture/guide/technology-choices/compute-decision-tree):** Provides information on the capabilities of Azure IaaS and PaaS compute options.
+- **[Cloud fundamentals: Choose the right data store](/azure/architecture/guide/technology-choices/data-store-overview):** Discusses PaaS storage options available on the Azure platform.
 - **[Migration best practices: Data requirements exceed network capacity during a migration effort](../../migrate/azure-best-practices/network-capacity-exceeded.md):** Discusses alternative data migration mechanisms for scenarios where data migration is hindered by available network bandwidth.
-- **[SQL Database: Choose the right SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas#business-motivations-for-choosing-databases-managed-instances-or-sql-virtual-machines):** Discussion of the options and business justifications for choosing to host your SQL Server workloads in a managed infrastructure (IaaS) or a managed service (PaaS) environment.
+- **[SQL Database: Choose the right SQL Server option in Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas#business-motivations-for-choosing-databases-managed-instances-or-sql-virtual-machines):** Discussion of the options and business justifications for choosing to host your SQL Server workloads in a managed infrastructure (IaaS) or a managed service (PaaS) environment.

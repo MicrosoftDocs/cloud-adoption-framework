@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore dchimes -->
-
 # Manage costs and billing for your Azure resources
 
 Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and app teams. Azure Cost Management and Billing can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.
@@ -63,7 +61,7 @@ To view your support requests and their status:
 
 To learn more, see:
 
-- [Azure billing and cost management documentation](https://docs.microsoft.com/azure/billing)
+- [Azure cost management and billing documentation](/azure/billing)
 - [Cloud Adoption Framework: Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md)
 - [Cloud Adoption Framework: Cost Management discipline](../../govern/cost-management/index.md)
 

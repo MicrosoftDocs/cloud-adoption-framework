@@ -11,13 +11,13 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore laraaleite profx fsubscriptions fresource -->
+<!-- cSpell:ignore profx fsubscriptions fresource -->
 
 # Organize your Azure resources effectively
 
 Organizing your cloud-based resources is critical to securing, managing, and tracking the costs related to your workloads. To organize your resources, define a management group hierarchy, follow a well-considered naming convention and apply resource tagging.
 
-<!-- markdownlint-disable MD024 MD025 -->
+<!-- markdownlint-disable MD024 -->
 
 ## [Azure management groups and hierarchy](#tab/AzureManagementGroupsAndHierarchy)
 
@@ -62,7 +62,7 @@ Use subscriptions to manage costs and resources that are created by users, teams
 2. Select **Add**.
 
 > [!NOTE]
-> Subscriptions can also be created programmatically. For more information, see [Programmatically create Azure subscriptions](https://docs.microsoft.com/azure/azure-resource-manager/management/programmatically-create-subscription?tabs=azure-powershell).
+> Subscriptions can also be created programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/azure-resource-manager/management/programmatically-create-subscription?tabs=azure-powershell).
 
 #### Create a resource group
 
@@ -82,9 +82,9 @@ To learn more, see:
 - [Create your initial subscriptions](../azure-best-practices/initial-subscriptions.md)
 - [Create additional Azure subscriptions to scale your Azure environment](../azure-best-practices/scale-subscriptions.md)
 - [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
-- [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview)
+- [Organize your resources with Azure management groups](/azure/azure-resource-manager/management-groups-overview)
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
-- [Subscription service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)
+- [Subscription service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
 ::: zone-end
 
@@ -132,7 +132,7 @@ The business-related side of this strategy should ensure that resource names inc
 
 The operational side should ensure that names include information that IT teams need. Use the details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
-Different resource types have different [naming rules and restrictions](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../azure-best-practices/naming-and-tagging.md).
+Different resource types have different [naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../azure-best-practices/naming-and-tagging.md).
 
 The following table includes naming patterns for a few sample types of Azure resources.
 
@@ -157,8 +157,8 @@ After you apply tags, you can retrieve all the resources in your subscription wi
 
 You can also use tags for many other things. Common uses include:
 
-- **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like `projectowner`.
-- **Automation:** You might have regularly running scripts that can take an action based on a tag value like `shutdowntime` or `deprovisiondate`.
+- **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like `ProjectOwner`.
+- **Automation:** You might have regularly running scripts that can take an action based on a tag value like `ShutdownTime` or `DeprovisionDate`.
 - **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the cost. In the Azure Cost Management and Billing, you can apply the cost center tag as a filter to report the charges based on a team or department usage.
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
@@ -178,7 +178,7 @@ To apply a tag to a resource group:
 
 ### Learn more
 
-To learn more, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
+To learn more, see [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources).
 
 ::: zone-end
 

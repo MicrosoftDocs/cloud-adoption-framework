@@ -1,5 +1,5 @@
 ---
-title: "Align efforts to learning metrics"
+title: Align efforts to learning metrics
 description: Understand how to align efforts to measure and communicate the impact a transformation will have on the business.
 author: BrianBlanchard
 ms.author: brblanch

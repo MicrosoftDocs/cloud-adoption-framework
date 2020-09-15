@@ -21,16 +21,16 @@ In some cases, data alone is enough to drive change and meet customer needs. Mor
 
 Teams that more quickly and accurately respond to customer feedback, market changes, and opportunities to innovate typically lead their respective markets in innovation. The first principle of innovative applications is summed up in the [growth mindset overview](./learn.md#growth-mindset): "Share the code." Over time, innovation emerges from a cultural focus. To sustain innovation, diverse perspectives and contributions are required.
 
-To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
+To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
 
-- [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): Distributed version control.
-- [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): Centralized version control.
+- [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): Distributed version control.
+- [Team Foundation Version Control (TFVC)](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): Centralized version control.
 
 ## Citizen developers
 
 Professional developers are a vital component of innovation. When a hypothesis proves accurate at scale, professional developers are required to stabilize and prepare the solution for scale. Most of the principles referenced in this article require support from professional developers. Unfortunately, current trends suggest there's a greater demand for professional developers than there are developers. Moreover, the cost and pace of innovation can be less favorable when professional development is deemed necessary. In response to these challenges, citizen developers provide a way to scale development efforts and accelerate early hypothesis testing.
 
-The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview) for application interfaces, [AI Builder](https://docs.microsoft.com/powerapps/use-ai-builder) for processes and predictions, [Microsoft Power Automate](https://docs.microsoft.com/power-automate) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
+The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [Power Apps](/powerapps/powerapps-overview) for application interfaces, [AI Builder](/powerapps/use-ai-builder) for processes and predictions, [Microsoft Power Automate](/power-automate) for workflows, and [Power BI](/power-bi) for data consumption.
 
 > [!NOTE]
 > When you rely on citizen developers to test hypotheses, it's advisable to have some professional developers on hand to provide support, review, and guidance. After a hypothesis is validated at scale, a process for transitioning the application into a more robust programming model will accelerate returns on the innovation. By involving professional developers in process definitions early on, you can realize cleaner transitions later.
@@ -77,11 +77,11 @@ Extending a solution is one common form of modernization. This is approach can b
 
 - Existing business logic should meet (or comes close to meeting) the existing customer need.
 - An improved experience would better meet the needs of a specific customer cohort.
-- The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [n-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
+- The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [n-tier](/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
 
 ### Rebuild an existing solution
 
-If an application can't be easily extended, it may be necessary to refactor the solution. In this approach, the workload is migrated to the cloud. After the application is migrated, parts of it are modified or duplicated, as web services or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel with the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
+If an application can't be easily extended, it may be necessary to refactor the solution. In this approach, the workload is migrated to the cloud. After the application is migrated, parts of it are modified or duplicated, as web services or [microservices](/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel with the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
 
 > [!CAUTION]
 > Refactoring or rearchitecting solutions or centralizing business logic can quickly trigger a time-consuming [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) instead of a source of customer value. This is a risk to innovation, especially early in hypothesis validation. With a bit of creativity in the design of a solution, there should be a path to MVP that doesn't require refactoring of existing solutions. It's wise to delay refactoring until the initial hypothesis can be validated at scale.
@@ -98,9 +98,9 @@ If you're trying to scale or meet global demand for an existing solution, this a
 
 The more there is to maintain within a solution, the slower that solution will iterate. This means you can accelerate innovation by reducing the impact of operations on available bandwidth.
 
-To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](https://docs.microsoft.com/azure/app-service/overview) or [containers](https://docs.microsoft.com/azure/containers).
+To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](/azure/app-service/overview) or [containers](/azure/containers).
 
-In parallel, Azure provides serverless transaction data options that also reduce overhead. The [Azure product catalog](https://docs.microsoft.com/azure) provides database options that host data without the need for a full data platform.
+In parallel, Azure provides serverless transaction data options that also reduce overhead. The [Azure product catalog](/azure) provides database options that host data without the need for a full data platform.
 
 ## Next steps
 

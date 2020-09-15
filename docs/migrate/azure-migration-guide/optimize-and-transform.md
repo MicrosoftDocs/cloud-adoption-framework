@@ -11,7 +11,7 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- markdownlint-disable MD025 DOCSMD001 -->
+<!-- markdownlint-disable DOCSMD001 -->
 
 # Release workloads (test, optimize, and handoff)
 
@@ -38,7 +38,7 @@ The following are some common services that you can resize.
 
 ### Resize a virtual machine
 
-Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
+Azure Migrate performs a right-sizing analysis as part of its pre-migration Assess phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
 
 However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing.
 
@@ -57,13 +57,13 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 ::: zone target="docs"
 
-- [Manage reservations for Azure resources](https://docs.microsoft.com/azure/billing/billing-manage-reserved-vm-instance)
-- [Resize a Windows VM](https://docs.microsoft.com/azure/virtual-machines/windows/resize-vm)
-- [Resize a Linux virtual machine using Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/change-vm-size)
+- [Manage reservations for Azure resources](/azure/billing/billing-manage-reserved-vm-instance)
+- [Resize a Windows VM](/azure/virtual-machines/windows/resize-vm)
+- [Resize a Linux virtual machine using Azure CLI](/azure/virtual-machines/linux/change-vm-size)
 
 Partners can use the Partner Center to review the usage.
 
-- [Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
+- [Azure VM sizing for maximum reservation usage](/partner-center/azure-usage)
 
 ::: zone-end
 
@@ -123,8 +123,8 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 
 ::: zone target="docs"
 
-- [Tutorial: Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
-- [Prevent unexpected charges with Azure billing and cost management](https://docs.microsoft.com/azure/billing/billing-getting-started)
-- [Explore and analyze costs with cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
+- [Tutorial: Optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
+- [Prevent unexpected charges with Azure Cost Management + Billing](/azure/billing/billing-getting-started)
+- [Explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis)
 
 ::: zone-end

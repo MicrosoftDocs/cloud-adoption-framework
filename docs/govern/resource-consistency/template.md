@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency discipline template"
+title: Resource Consistency discipline template
 description: Use this template as a starting point for documenting and communicating policy statements that govern IT operations and management in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -19,7 +19,7 @@ As your discussions progress, use this template's structure as a model for captu
 > [!IMPORTANT]
 > This template is a limited sample. Before updating this template to reflect your requirements, you should review the subsequent steps for defining an effective Resource Consistency discipline within your cloud governance strategy.
 
-[Download the Resource Consistency discipline template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Resource%20Consistency%20Discipline%20Template.docx)
+[Download the Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx)
 
 ## Next steps
 

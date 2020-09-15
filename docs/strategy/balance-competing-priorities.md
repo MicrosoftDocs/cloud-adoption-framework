@@ -1,5 +1,5 @@
 ---
-title: "Balance competing priorities"
+title: Balance competing priorities
 description: Discover strategies for balancing competing priorities.
 author: BrianBlanchard
 ms.author: brblanch
@@ -17,8 +17,6 @@ Similar to other digital transformations, cloud adoption will expose competing p
 
 This article outlines some of the competing priorities commonly discussed during the execution of each methodology. We hope this advanced awareness will help better prepare for those discussions when developing your cloud adoption strategy.
 
-<!-- cSpell:ignore caf -->
-
 ![Cloud adoption lifecycle overview](../_images/caf-overview.png)
 
 The following sections align to the flow of the cloud adoption lifecycle visual above. However, it's important to recognize that cloud adoption is iterative (not a sequential process) and these competing priorities will emerge (and sometimes reemerge) at various points along your cloud adoption journey.
@@ -33,7 +31,7 @@ At times, ambiguity can be scarier (or more dangerous) than false assumptions. W
 
 ## Balance during the Strategy phase
 
-The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
+The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **depth of justification** versus **time to business impact**.
 
 **Competing priorities:**
 
@@ -53,7 +51,7 @@ Similar to the Strategy phase priorities, during the Plan phase there is a need 
 - **Depth of initial planning** regarding technical implementation in the cloud often contains a high number of assumptions. Especially when the team has skill gaps, the environment suffers from discovery gaps, or the workloads don't have clearly defined architectural end-states. All of these assumptions are common in detailed cloud adoption plans. Experimentation, pilots, and qualitative analysis are required to remove these assumptions.
 - **Delayed technical decisions** assume that the later a technical decision can be made, the more accurate that decision will be. Following principles of agile product planning will help delay technical decisions, allowing them to happen at the right time with sufficient information. However, this approach results in a much higher degree of ambiguity in the initial plan.
 
-**Minimum scope:** Agile product development approaches are suggested to drive prompt action within manageable plans. The Plan methodology recommends the following steps to achieve this balance. Inventory the full digital estate using automated discovery tools, but use incremental rationalization to plan as far as the next 1-3 months of work. Ensure proper organizational alignment to move quickly. Create a skills readiness plan for the assigned team. Use the cloud adoption plan template to quickly deploy an initial backlog.
+**Minimum scope:** Agile product development approaches are suggested to drive prompt action within manageable plans. The Plan methodology recommends the following steps to achieve this balance. Inventory the full digital estate using automated discovery tools, but use incremental rationalization to plan as far as the next 1-3 months of work. Ensure proper organizational alignment to move quickly. Create a skills readiness plan for the assigned team. Use the strategy and plan template to quickly deploy an initial backlog.
 
 **Expanded scope example:** At times, delivery of a cloud adoption plan may be responding to a time-sensitive or high-impact business event. When success requires the movement of a high-number of assets in a fixed period of time, the steps above are often followed with a deeper planning effort. The key to success in these scenarios, is to plan enough to get going and then plan for the full engagement. This approach reduces the likelihood of planning blocking business outcomes.
 
@@ -68,7 +66,7 @@ When adoption teams are preparing for their first steps into the cloud, there ar
 
 **Minimum scope:** The Ready methodology outlines a direct path from rapid adoption to long-term operations. This approach starts with a basic introduction to the tools that enable environment refactoring. Based on those tools and environmental requirements, customers are guided to a selection of predefined landing zones (each delivered using infrastructure as code models). That code can then be refactored during the course of cloud adoption to improve operations, security, and management postures.
 
-<!-- docsTest:ignore "Govern and Manage methodologies" -->
+<!-- docutune:casing "Govern and Manage methodologies" -->
 
 **Expanded scope example:** For teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 assets (apps, infrastructure, or data assets) in the cloud**, a more robust view of landing zones is suggested. In these situations, the Govern and Manage methodologies should be considered during initial landing zone conversations. However, this deeper consideration often adds weeks or months to a cloud adoption plan. To minimize impact on business outcomes, the adoption team should pilot actual workloads in the cloud in parallel to the creation of a more mature landing zone and central architecture solution.
 
@@ -78,12 +76,12 @@ During migration efforts, it is common for adoption teams to assume that workloa
 
 **Competing priorities:**
 
-- **Rehost:** Customers often equate migration to a _lift and shift_ motion of replicating all assets to the cloud in their current state configuration. This results in little drift within the IT portfolio. This approach is also the fastest way to retire assets in an existing datacenter.
+- **Rehost:** Customers often equate migration to a *lift and shift* motion of replicating all assets to the cloud in their current state configuration. This results in little drift within the IT portfolio. This approach is also the fastest way to retire assets in an existing datacenter.
 - **Rearchitect:** Modernizing the architecture of each workload maximizes the value of the cloud across cost, performance, and operations. However, this approach is much slower and often requires access to each applications' source code.
 
 **Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this option is an initial business assumption and not a technical decision. In the Migrate methodology, the cloud adoption team would then challenge this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group or workloads creating a migration factory. During the Assess phase, the adoption team evaluates technical fit and architecture of each workload. That assessment effort seldom results in a pure lift and shift approach, because many of the components in the architecture tend to be selected for refactoring and modernization.
 
-**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) to refine workload requirements during the assessment.
+**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) to refine workload requirements during the assessment.
 
 ## Balance during the Innovate phase
 
@@ -126,7 +124,7 @@ The IT business model regarding operations management has been continuously evol
 
 ## Balance during the Organize phase
 
-The competing priorities throughout this article are reflective of IT's drive to deliver on business demands for speed and agility. This same shift is showing up in changes to org charts (or v-team structures) to empower greater support for business outcomes. As IT leaders reflect on team structures, two competing priorities are commonly addressed: centralized control versus delegated control.
+The competing priorities throughout this article are reflective of IT's drive to deliver on business demands for speed and agility. This same shift is showing up in changes to org charts (or virtual team structures) to empower greater support for business outcomes. As IT leaders reflect on team structures, two competing priorities are commonly addressed: centralized control versus delegated control.
 
 **Competing priorities:**
 
@@ -135,7 +133,7 @@ The competing priorities throughout this article are reflective of IT's drive to
 
 **Minimum scope:** Most organizations will go through a natural set of evolutions over time. The Organize methodology outlines the most common series of evolutions. The suggested guidance is for teams to strive to move towards a cloud center of excellence (CCoE) structure to deliver delegated control approaches.
 
-**Expanded scope example:** There are many situations that would trigger a need for centralized control. Third-party compliance requirements and temporary security exposure are two examples of triggers for centralized control. In these situations, there is commonly a need to establish limiting policies and rigid, fixed controls. However, to enable innovation and adoption to continue, it is encouraged that Central IT teams deliver those controls based on criticality and sensitivity of each workload. Providing environments with less control but a reduced scope or risk profile, allows for flexibility even when control is required.
+**Expanded scope example:** There are many situations that would trigger a need for centralized control. Third-party compliance requirements and temporary security exposure are two examples of triggers for centralized control. In these situations, there is commonly a need to establish limiting policies and rigid, fixed controls. However, to enable innovation and adoption to continue, it is encouraged that central IT teams deliver those controls based on criticality and sensitivity of each workload. Providing environments with less control but a reduced scope or risk profile, allows for flexibility even when control is required.
 
 ## Next steps
 
