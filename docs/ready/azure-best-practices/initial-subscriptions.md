@@ -1,6 +1,6 @@
 ---
-title: "Create your initial Azure subscriptions"
-description: Begin your adoption of Azure by creating your initial subscriptions.
+title: Create your initial Azure subscriptions
+description: Begin your Azure adoption by creating your initial subscriptions.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 05/20/2019
@@ -18,11 +18,10 @@ Start your Azure adoption by creating an initial set of subscriptions. Learn wha
 Start by creating two subscriptions:
 
 - Create one Azure subscription to contain your production workloads.
-- Create a second subscription to serve as your nonproduction (dev/test) environment, using an [Azure Dev/Test offer](https://azure.microsoft.com/pricing/dev-test) for lower pricing.
+- Create a second subscription to serve as your nonproduction environment, using an [Azure Dev/Test offer](https://azure.microsoft.com/pricing/dev-test) for lower pricing.
 
 ![An initial subscription model showing keys next to boxes labeled "production" and "nonproduction"](../../_images/ready/initial-subscription-model.png)
-
-<!-- docsTest:ignore Dev/Test -->
+_Figure 1: An initial subscription model with keys next to boxes labeled "production" and "nonproduction"._
 
 This approach has many benefits:
 
@@ -38,12 +37,14 @@ This approach has many benefits:
 If innovation goals are part of your cloud adoption strategy, consider creating one or more sandbox subscriptions. You can apply security policies to keep these test subscriptions isolated from your production and nonproduction environments. Users can easily experiment with Azure capabilities in these isolated environments. Use an Azure Dev/Test offer to create these subscriptions.
 
 ![An initial subscription model showing keys next to boxes labeled "production", "nonproduction", and "sandboxes"](../../_images/ready/initial-subscription-model-with-sandboxes.png)
+_Figure 2: A subscription model with sandbox subscriptions._
 
 ## Shared services subscription
 
 If you're planning to host **more than 1,000 VMs or compute instances in the cloud within 24 months**, create another Azure subscription to host shared services. This will prepare you to support your end-state enterprise architecture.
 
 ![An initial subscription model showing keys next to boxes labeled "production" and "shared services"](../../_images/ready/initial-subscription-model-with-shared-services.png)
+_Figure 3: A subscription model with shared services._
 
 ## Next steps
 

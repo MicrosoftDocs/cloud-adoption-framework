@@ -24,7 +24,7 @@ The policies and standards should:
 - Architectural assessment of current state and what is technically possible to design, implement, and enforce
 - Organizational culture and preferences
 - Industry best practices
-- Accountability of security risk assigned to appropriate business stakeholder(s) who are accountable for other risks and business outcomes.
+- Accountability of security risk assigned to appropriate business stakeholders who are accountable for other risks and business outcomes.
 
 **Security standards** define the processes and rules to support execution of the security policy.
 
@@ -40,7 +40,7 @@ Security standards should include guidance specific to the adoption of cloud suc
 - Secure use of DevOps model and inclusion of cloud applications, APIs, and services in development
 - Use of identity perimeter controls to supplement or replace network perimeter controls
 - Define your segmentation strategy prior to moving your workloads to IaaS platform
-- Tagging and classifying the sensitive of assets
+- Tagging and classifying the sensitivity of assets
 - Define process for assessing and ensuring your assets are configured and secured properly
 
 ## Team composition and key relationships

@@ -3,7 +3,7 @@ title: "Azure setup guide: Before you start"
 description: Learn how to set up Azure effectively for your organization with step-by-step guidance.
 author: timleyden
 ms.author: kfollis
-ms.date: 04/09/2019
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,20 +11,12 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore timleyden -->
+# Azure setup guide overview
 
 ::: zone target="docs"
 
-# Azure setup guide: Before you start
-
 > [!NOTE]
-> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in Azure Quickstart Center. See the tip in the article for a link.
-
-::: zone-end
-
-::: zone target="chromeless"
-
-# Before you start
+> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in the Azure Quickstart Center. See the tip in the article for a link.
 
 ::: zone-end
 
@@ -34,12 +26,12 @@ You'll learn how to:
 
 > [!div class="checklist"]
 >
-> - **Organize resources:** Set up a management hierarchy to consistently apply access control, policy, and compliance to groups of resources and use tagging to track related resources.
-> - **Manage access:** Use role-based access control to make sure that users have only the permissions they really need.
-> - **Manage costs and billing:** Identify your subscription type, understand how billing works, and learn how to control costs.
-> - **Plan for governance, security, and compliance:** Enforce and automate policies and security settings that help you follow applicable legal requirements.
-> - **Use monitoring and reporting:** Get visibility across resources to find and fix problems, optimize performance, and gain insight into customer behavior.
-> - **Stay current with Azure:** Track product updates to enable a proactive approach to change management.
+> - **[Organize resources](./organize-resources.md):** Set up a management hierarchy to consistently apply access control, policy, and compliance to groups of resources and use tagging to track related resources.
+> - **[Manage access](./manage-access.md):** Use role-based access control to make sure that users have only the permissions they really need.
+> - **[Manage costs and billing](./manage-costs.md):** Identify your subscription type, understand how billing works, and learn how to control costs.
+> - **[Plan for governance, security, and compliance](./govern-org-compliance.md):** Enforce and automate policies and security settings that help you follow applicable legal requirements.
+> - **[Use monitoring and reporting](./monitoring-reporting.md):** Get visibility across resources to find and fix problems, optimize performance, and gain insight into customer behavior.
+> - **[Stay current with Azure](./staying-current.md):** Track product updates to enable a proactive approach to change management.
 
 ::: zone target="docs"
 

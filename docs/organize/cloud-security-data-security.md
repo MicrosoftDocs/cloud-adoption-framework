@@ -26,8 +26,8 @@ Data security strategies are being shaped primarily by:
 Data security commonly interacts with following roles in the organization:
 
 - Key business leaders or their representatives
-- Records management team(s)
-- Policy and standards team(s)
+- Records management teams
+- Policy and standards teams
 - Privacy teams
 - IT architecture and operations
 - Security architecture and operations
@@ -37,4 +37,4 @@ Data security commonly interacts with following roles in the organization:
 
 ## Next steps
 
-Review the function of a [infrastructure and endpoint security](./cloud-security-infrastructure-endpoint.md) (coe).
+Review the function of [cloud infrastructure and endpoint security](./cloud-security-infrastructure-endpoint.md).

@@ -17,7 +17,7 @@ This guidance has a supporting GitHub repository of sample code, [CloudAdoptionF
 
 The sample files illustrate how to use Azure PowerShell cmdlets to automate the following tasks:
 
-- Create a [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
+- Create a [Log Analytics workspace](/azure/azure-monitor/platform/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
 - Create an Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
@@ -27,20 +27,22 @@ The sample files illustrate how to use Azure PowerShell cmdlets to automate the 
 
 - Onboard Azure VMs by using Azure Policy. A policy installs the Log Analytics agent and the Microsoft Dependency Agent on the Azure VMs.
 
+- Auto-enable Azure backup for VMs using [Azure Policy](https://docs.microsoft.com/azure/backup/backup-azure-auto-enable-backup)
+
 - Onboard on-premises servers by installing the Log Analytics agent on them.
 
 The files described in the following table are used in this sample. You can customize them to support your own deployment scenarios.
 
 | File name | Description |
 |-----------|-------------|
-| New-AMSDeployment.ps1 | The main, orchestrating script that automates onboarding. It creates resource groups, and location, workspace, and Automation accounts, if they don't exist already. This PowerShell script requires an existing subscription. |
-| Workspace-AutomationAccount.json | A Resource Manager template that deploys the workspace and Automation account resources. |
-| WorkspaceSolutions.json | A Resource Manager template that enables the solutions you want in the Log Analytics workspace. |
-| ScopeConfig.json | A Resource Manager template that uses the opt-in model for on-premises servers with the Change Tracking solution. Using the opt-in model is optional. |
-| Enable-VMInsightsPerfCounters.ps1 | A PowerShell script that enables VM Insights for servers and configures performance counters. |
-| ChangeTracking-FileList.json | A Resource Manager template that defines the list of files that will be monitored by Change Tracking. |
+| `New-AMSDeployment.ps1` | The main, orchestrating script that automates onboarding. It creates resource groups, and location, workspace, and Automation accounts, if they don't exist already. This PowerShell script requires an existing subscription. |
+| `Workspace-AutomationAccount.json` | A Resource Manager template that deploys the workspace and Automation account resources. |
+| `WorkspaceSolutions.json` | A Resource Manager template that enables the solutions you want in the Log Analytics workspace. |
+| `ScopeConfig.json` | A Resource Manager template that uses the opt-in model for on-premises servers with the Change Tracking solution. Using the opt-in model is optional. |
+| `Enable-VMInsightsPerfCounters.ps1` | A PowerShell script that enables VM Insights for servers and configures performance counters. |
+| `ChangeTracking-FileList.json` | A Resource Manager template that defines the list of files that will be monitored by Change Tracking. |
 
-Use the following command to run New-AMSDeployment.ps1:
+Use the following command to run `New-AMSDeployment.ps1`:
 
 ```powershell
 .\New-AMSDeployment.ps1 -SubscriptionName '{Subscription Name}' -WorkspaceName '{Workspace Name}' -WorkspaceLocation '{Azure Location}' -AutomationAccountName {Account Name} -AutomationAccountLocation {Account Location}

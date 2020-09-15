@@ -7,7 +7,6 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
 ---
 
 # Cloud monitoring guide: Introduction

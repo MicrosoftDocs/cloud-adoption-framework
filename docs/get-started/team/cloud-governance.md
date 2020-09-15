@@ -3,10 +3,10 @@ title: "Get started: Build a cloud governance team"
 description: Establish a governance team's scope, deliverables, and capabilities to prepare for successful cloud governance.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud governance team
@@ -17,19 +17,18 @@ A cloud governance team ensures that cloud-adoption risks and risk tolerance are
 
 ## Step 1: Determine whether a cloud governance team is needed
 
-The official guidance in the Cloud Adoption Framework for Azure is to always create a cloud governance team. At first, the team might be exceptionally small. Regardless of its size, its role will prove important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with [cloud governance functions](../../organize/cloud-governance.md).
+The official guidance in the Cloud Adoption Framework is to always create a cloud governance team. At first, the team might be very small. Regardless of its size, its role is important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with [cloud governance functions](../../organize/cloud-governance.md).
 
 **Deliverables:**
 
 - Determine whether you need a cloud governance team.
-- Document the decision and the responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Document the decision and the responsible individuals using the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
 - [Cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title "cloud governance team" isn't important, but the required capabilities should reside with an accountable party or team.
-- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this get-started guide can help ensure that it can deliver on this important function of governance.
+- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this getting started guide can help ensure that it can deliver on this important function of governance.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -48,11 +47,10 @@ Before it establishes policies or automated cloud governance, the cloud governan
 
 **Guidance to support deliverable completion:**
 
-- Review your company's [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with members of the cloud strategy team to understand motivations, metrics, and strategy.
-- Review your company's [cloud adoption plan template](../../plan/template.md) with members of the cloud adoption team to understand timelines and prioritization.
+- Review your company's [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with members of the cloud strategy team to understand motivations, metrics, and strategy.
+- Review your company's [cloud adoption plan](../../plan/template.md) with members of the cloud adoption team to understand timelines and prioritization.
 - Review the operation team's [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to understand the operational requirements and commitments that have been established with the business.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -72,7 +70,6 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 - For more guidance on cadences for meetings, see [Cloud governance functions](../../organize/cloud-governance.md#deliverable).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -81,7 +78,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 ## Step 4: Review the methodology
 
-To help establish a future vision for governance and a working approach to that vision, review the Govern methodology in the Cloud Adoption Framework.
+To help establish a future vision for governance and a working approach to that vision, review the Govern methodology of the Cloud Adoption Framework.
 
 **Deliverables:**
 
@@ -169,9 +166,8 @@ As new adoption efforts are completed, the cloud adoption team hands off operati
 
 **Guidance to support deliverable completion:**
 
-- Establish a process for [onboarding new workloads and resources](https://docs.microsoft.com/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
+- Establish a process for [onboarding new workloads and resources](/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

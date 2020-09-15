@@ -1,5 +1,5 @@
 ---
-title: "Impact of global market decisions"
+title: Impact of global market decisions
 description: Use the Cloud Adoption Framework for Azure to understand how global market decisions can affect the transformation journey to the cloud.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,6 @@
 ---
-title: "Deployment Acceleration discipline overview"
-description: Use the Cloud Adoption Framework for Azure to understand Deployment Acceleration in relation to cloud governance.
+title: Deployment Acceleration discipline overview
+description: Use the Cloud Adoption Framework for Azure to understand a Deployment Acceleration discipline in relation to cloud governance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -30,15 +30,13 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Develop governance policy statements
 
-The following six steps will help you define governance policies to control deployment and configuration of resources in your cloud environment.
+The following steps help you define governance policies to control deployment and configuration of resources in your cloud environment.
 
-<!-- markdownlint-disable MD033 -->
-
-| | |
-|---|---|
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Deployment Acceleration discipline template](./template.md): Download the template for documenting a Deployment Acceleration discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Deployment Acceleration discipline.|
-| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand if it is the right time to invest in the Deployment Acceleration discipline. |
+| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand whether it is the right time to invest in the Deployment Acceleration discipline. |
 | <br> ![Adherence icon](../../_images/govern/process-enforce.png) | <br> [Policy adherence processes](./compliance-processes.md): Suggested processes for supporting policy compliance in the Deployment Acceleration discipline. |
 | <br> ![Maturity icon](../../_images/govern/process-maturity.png) | <br> [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption.|
 | <br> ![Toolchain icon](../../_images/govern/process-toolchain.png) | <br> [Toolchain](./toolchain.md): Azure services that can be implemented to support the Deployment Acceleration discipline. |
@@ -49,5 +47,3 @@ Get started by evaluating [business risks](./business-risks.md) in a specific en
 
 > [!div class="nextstepaction"]
 > [Understand business risks](./business-risks.md)
-
-<!-- markdownlint-enable MD033 -->

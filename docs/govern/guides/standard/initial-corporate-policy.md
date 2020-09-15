@@ -19,7 +19,7 @@ The following corporate policy defines an initial governance position, which is 
 
 ## Cloud governance team
 
-In this narrative, the cloud governance team is comprised of two systems administrators who have recognized the need for governance. Over the next several months, they will inherit the job of cleaning up the governance of the company's cloud presence, earning them the title of _cloud custodians_. In subsequent iterations, this title will likely change.
+In this narrative, the cloud governance team is comprised of two systems administrators who have recognized the need for governance. Over the next several months, they will inherit the job of cleaning up the governance of the company's cloud presence, earning them the title of *cloud custodians*. In subsequent iterations, this title will likely change.
 
 [!INCLUDE [business-risk](../../../../includes/business-risks.md)]
 

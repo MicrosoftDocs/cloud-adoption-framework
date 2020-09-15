@@ -28,16 +28,12 @@ This type of digital invention can be delivered through any of the following lev
 
 In Azure, you commonly use the following tools to accelerate digital invention across each of the preceding levels of ambient solutions. These tools are grouped based on the amount of experience required to reduce complexity in aligning tools with those experiences.
 
-<!-- markdownlint-disable MD033 -->
-
 | Category | Tools |
 |---|---|
-| Mobile experiences | <li> Azure App Service <li> PowerApps <li> Microsoft Flow <li> Intune |
+| Mobile experiences | <li> Azure App Service <li> Power Apps <li> Power Automate <li> Intune |
 | Mixed reality | <li> Unity <li> Azure Spatial Anchors <li> HoloLens |
 | Integrated reality | <li> Azure IoT Hub <li> Azure Sphere <li> Azure Kinect DK |
 | Adjusted reality | <li> IoT cloud to device <li> Azure Digital Twins + HoloLens |
-
-<!--markdownlint-enable MD033 -->
 
 ## Get started
 

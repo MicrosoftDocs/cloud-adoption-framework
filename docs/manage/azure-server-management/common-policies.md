@@ -11,10 +11,10 @@ ms.subservice: operate
 
 # Common Azure Policy examples
 
-[Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) can help you apply governance to your cloud resources. This service can help you create guardrails that ensure company-wide compliance to governance policy requirements. To create policies, use either the Azure portal or PowerShell cmdlets. This article provides PowerShell cmdlet examples.
+[Azure Policy](/azure/governance/policy/overview) can help you apply governance to your cloud resources. This service can help you create guardrails that ensure company-wide compliance to governance policy requirements. To create policies, use either the Azure portal or PowerShell cmdlets. This article provides PowerShell cmdlet examples.
 
 > [!NOTE]
-> With Azure Policy, enforcement policies (`DeployIfNotExists`) aren't automatically deployed to existing VMs. Remediation is required to keep VMs in compliance. For more information, see [Remediate noncompliant resources with Azure Policy](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources).
+> With Azure Policy, enforcement policies (`DeployIfNotExists`) aren't automatically deployed to existing VMs. Remediation is required to keep VMs in compliance. For more information, see [Remediate noncompliant resources with Azure Policy](/azure/governance/policy/how-to/remediate-resources).
 
 ## Common policy examples
 
@@ -31,7 +31,7 @@ Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq 'BuiltIn')
   -and ($_.Properties.displayName -like '*location*') }
 ```
 
-The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
+The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
 
 ```powershell
 # Specify the value for $SubscriptionID.
@@ -66,11 +66,11 @@ Azure offers a wide range of VM sizes to support various workloads. To control y
 
 ### Deploy antimalware
 
-You can use this policy to deploy a Microsoft _IaaSAntimalware_ extension with a default configuration to VMs that aren't protected by antimalware.
+You can use this policy to deploy a Microsoft Antimalware extension with a default configuration to VMs that aren't protected by antimalware.
 
 The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 
-The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
+The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
 
 ```powershell
 # Specify the value for $SubscriptionID.

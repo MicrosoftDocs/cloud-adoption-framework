@@ -1,6 +1,6 @@
 ---
 title: Deployment Acceleration policy compliance processes
-description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support a Deployment Management discipline.
+description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support a Deployment Acceleration discipline.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
@@ -50,7 +50,7 @@ The following triggers and enforcement actions provide examples you can use when
 
 - **Unexpected changes in configuration detected.** If the configuration of a resource changes unexpectedly, work with IT staff and workload owners to identify root cause and develop a remediation plan.
 - **Configuration of new resources does not adhere to policy.** Work with DevOps teams and workload owners to review Deployment Acceleration policies during project startup so everyone involved understands the relevant policy requirements.
-- **Deployment failures or configuration issues cause delays in project schedules.** Work with development teams and workload owners to ensure the team understands how to automate the deployment of cloud-based resources for consistency and repeatability. Fully automated deployments should be required early in the development cycle&mdash;trying to accomplish this late in the development cycle usually leads to unexpected issues and delays.
+- **Deployment failures or configuration issues cause delays in project schedules.** Work with development teams and workload owners to ensure the team understands how to automate the deployment of cloud-based resources for consistency and repeatability. Fully automated deployments should be required early in the development cycle. Trying to accomplish this later usually leads to unexpected issues and delays.
 
 ## Next steps
 

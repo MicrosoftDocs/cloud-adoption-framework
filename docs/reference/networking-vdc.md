@@ -12,7 +12,7 @@ ms.custom: virtual-network
 ---
 
 <!-- docsTest:disable TODO -->
-<!-- cSpell:ignore tracsman jonor rossort NVAs iptables WAFs DDOS ITSM LLAP anycast vwan -->
+<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
 
@@ -139,7 +139,7 @@ The hub often contains the common service components consumed by the spokes. The
 
 A virtual datacenter reduces overall cost by using the shared hub infrastructure between multiple spokes.
 
-The role of each spoke can be to host different types of workloads. The spokes also provide a modular approach for repeatable deployments of the same workloads. Examples are dev and test, user acceptance testing, preproduction, and production. The spokes can also segregate and enable different groups within your organization. An example is DevOps groups. Inside a spoke, it's possible to deploy a basic workload or complex multitier workloads with traffic control between the tiers.
+The role of each spoke can be to host different types of workloads. The spokes also provide a modular approach for repeatable deployments of the same workloads. Examples include dev/test, user acceptance testing, preproduction, and production. The spokes can also segregate and enable different groups within your organization. An example is DevOps groups. Inside a spoke, it's possible to deploy a basic workload or complex multitier workloads with traffic control between the tiers.
 
 ### Subscription limits and multiple hubs
 
@@ -150,7 +150,7 @@ The role of each spoke can be to host different types of workloads. The spokes a
 
 In Azure, every component, whatever the type, is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
 
-A single VDC implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of virtual network peerings. See [Azure subscription and service limits, quotas, and constraints][limits] for details). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be connected using virtual network peering, ExpressRoute, Virtual WAN, or site-to-site VPN.
+A single VDC implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of virtual network peerings. For details, see [Azure subscription and service limits, quotas, and constraints][limits]). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be connected using virtual network peering, ExpressRoute, Virtual WAN, or site-to-site VPN.
 
 ![2][2]
 
@@ -185,12 +185,12 @@ Each role group should have a unique prefix on their names. This prefix makes it
 Many organizations use a variation of the following groups to provide a major breakdown of roles:
 
 - The central IT team, **Corp,** has the ownership rights to control infrastructure components. Examples are networking and security. The group needs to have the role of contributor on the subscription, control of the hub, and network contributor rights in the spokes. Large organizations frequently split up these management responsibilities between multiple teams. Examples are a network operations **CorpNetOps** group with exclusive focus on networking and a security operations **CorpSecOps** group responsible for the firewall and security policy. In this specific case, two different groups need to be created for assignment of these custom roles.
-- The dev-test group, **AppDevOps,** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor's roles. See [Built-in roles for Azure resources][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
+- The dev/test group, **AppDevOps,** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor's roles. For more information, see [Built-in roles for Azure resources][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
 - The operation and maintenance group, **CorpInfraOps** or **AppInfraOps,** has the responsibility of managing workloads in production. This group needs to be a subscription contributor on workloads in any production subscriptions. Some organizations might also evaluate if they need an additional escalation support team group with the role of subscription contributor in production and the central hub subscription. The additional group fixes potential configuration issues in the production environment.
 
 The VDC is designed so that groups created for the central IT team, managing the hub, have corresponding groups at the workload level. In addition to managing hub resources only, the central IT team can control external access and top-level permissions on the subscription. Workload groups can also control resources and permissions of their virtual network independently from the central IT team.
 
-The virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (Dev, UAT, and production). Separate Azure subscriptions for each of these environments can provide natural isolation.
+The virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (dev, UAT, and production). Separate Azure subscriptions for each of these environments can provide natural isolation.
 
 ![5][5]
 
@@ -231,7 +231,7 @@ Infrastructure components have the following functionality:
 
 Components of a perimeter network (sometimes called a DMZ network) connect your on-premises or physical datacenter networks, along with any internet connectivity. The perimeter typically requires a significant time investment from your network and security teams.
 
-Incoming packets should flow through the security appliances in the hub before reaching the back-end servers and services in the spokes. Examples are the firewall, IDS, and IPS. Before they leave the network, internet-bound packets from the workloads should also flow through the security appliances in the perimeter network. This flow enables policy enforcement, inspection, and auditing.
+Incoming packets should flow through the security appliances in the hub before reaching the back-end servers and services in the spokes. Examples include the firewall, IDS, and IPS. Before they leave the network, internet-bound packets from the workloads should also flow through the security appliances in the perimeter network. This flow enables policy enforcement, inspection, and auditing.
 
 Perimeter network components include:
 
@@ -284,7 +284,7 @@ Azure Front Door also provides a web application firewall (WAF), which protects 
 
 [Public IPs][PIP]. With some Azure features, you can associate service endpoints to a public IP address so that your resource is accessible from the internet. This endpoint uses NAT to route traffic to the internal address and port on the virtual network in Azure. This path is the primary way for external traffic to pass into the virtual network. You can configure public IP addresses to determine which traffic is passed in and how and where it's translated onto the virtual network.
 
-[Azure DDoS Protection Standard][DDoS] provides additional mitigation capabilities over the [Basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS Protection Standard is simple to enable and requires no application changes. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances. Near real-time, system-generated logs are available through Azure Monitor views during an attack and for history. Application layer protection can be added through the Azure Application Gateway web application firewall. Protection is provided for IPv4 and IPv6 Azure public IP addresses.
+[Azure DDoS Protection Standard][DDoS] provides additional mitigation capabilities over the [Basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS Protection Standard is simple to enable and requires no application changes. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples include Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances. Near real-time, system-generated logs are available through Azure Monitor views during an attack and for history. Application layer protection can be added through the Azure Application Gateway web application firewall. Protection is provided for IPv4 and IPv6 Azure public IP addresses.
 
 The hub and spoke topology uses virtual network peering and user-defined routes to route traffic properly.
 
@@ -311,7 +311,7 @@ There are two fundamental types of logs in Azure Monitor:
 Azure Monitor can collect data from a variety of sources. You can think of monitoring data for your applications in tiers ranging from your application, any operating system, and the services it relies on, down to the Azure platform itself. Azure Monitor collects data from each of the following tiers:
 
 - **Application monitoring data:** Data about the performance and functionality of the code you have written, regardless of its platform.
-- Guest OS monitoring data: Data about the operating system on which your application is running. This OS could be running in Azure, another cloud, or on-premises.
+- **Guest OS monitoring data:** Data about the operating system on which your application is running. This OS could be running in Azure, another cloud, or on-premises.
 - **Azure resource monitoring data:** Data about the operation of an Azure resource.
 - **Azure subscription monitoring data:** Data about the operation and management of an Azure subscription, as well as data about the health and operation of Azure itself.
 - **Azure tenant monitoring data:** Data about the operation of tenant-level Azure services, such as Azure Active Directory.
@@ -364,7 +364,7 @@ You can implement a highly reliable cloud messaging service between applications
 
 ![10][10]
 
-These examples barely scratch the surface of the types of workloads you can create in Azure; everything from a basic Web and SQL app to the latest in IoT, Big Data, Machine Learning, AI, and so much more.
+These examples barely scratch the surface of the types of workloads you can create in Azure&mdash;everything from a basic Web and SQL app to the latest in IoT, big data, machine learning, AI, and so much more.
 
 ### Highly availability: multiple virtual datacenters
 
@@ -412,21 +412,80 @@ A virtual datacenter approach to datacenter migration creates a scalable archite
 
 Learn more about the Azure capabilities discussed in this document.
 
-<!-- markdownlint-disable MD033 -->
+:::row:::
+    :::column:::
+        **Network features** <br>
+        [Azure Virtual Networks][virtual-network] <br>
+        [Network Security Groups][NSG] <br>
+        [Service Endpoints][ServiceEndpoints] <br>
+        [Private Link][PrivateLink] <br>
+        [User-Defined Routes][UDR] <br>
+        [Network Virtual Appliances][NVA] <br>
+        [Public IP Addresses][PIP] <br>
+        [Azure DNS][DNS]
+    :::column-end:::
+    :::column:::
+        **Load balancing** <br>
+        [Azure Front Door][azure-front-door] <br>
+        [Azure Load Balancer (L4)][ALB] <br>
+        [Application Gateway (L7)][AppGW] <br>
+        [Azure Traffic Manager][azure-traffic-manager]
+    :::column-end:::
+    :::column:::
+        **Connectivity** <br>
+        [Virtual Network Peering][virtual-network-peering] <br>
+        [Virtual Private Network][VPN] <br>
+        [Virtual WAN][virtual-wan] <br>
+        [ExpressRoute][ExR] <br>
+        [ExpressRoute Direct][ExRD]
+    :::column-end:::
+:::row-end:::
 
-| Network Features | Load Balancing | Connectivity |
-| --- | --- | --- |
-| [Azure Virtual Networks][virtual-network] <br> [Network Security Groups][NSG] <br> [Service Endpoints][ServiceEndpoints] <br> [Private Link][PrivateLink] <br> [User-Defined Routes][UDR] <br> [Network Virtual Appliances][NVA] <br> [Public IP Addresses][PIP] <br> [Azure DNS][DNS] | [Azure Front Door][azure-front-door] <br> [Azure Load Balancer (L4)][ALB] <br> [Application Gateway (L7)][AppGW] <br> [Azure Traffic Manager][azure-traffic-manager] <br><br><br><br><br> | [Virtual Network Peering][virtual-network-peering] <br> [Virtual Private Network][VPN] <br> [Virtual WAN][virtual-wan] <br> [ExpressRoute][ExR] <br> [ExpressRoute Direct][ExRD] <br><br><br><br><br> |
+:::row:::
+    :::column:::
+        **Identity** <br>
+        [Azure Active Directory][azure-ad] <br>
+        [Multi-Factor Authentication][multi-factor-authentication] <br>
+        [Role-Based Access Control][RBAC] <br>
+        [Default Azure AD Roles][Roles]
+    :::column-end:::
+    :::column:::
+        **Monitoring** <br>
+        [Network Watcher][NetWatch] <br>
+        [Azure Monitor][MonitorOverview] <br>
+        [Log Analytics][LogAnalytics]
+    :::column-end:::
+    :::column:::
+        **Best practices** <br>
+        [Management Group][MgmtGrp] <br>
+        [Subscription Management](../ready/azure-best-practices/scale-subscriptions.md) <br>
+        [Resource Group Management][RGMgmt] <br>
+        [Azure Subscription Limits][limits]
+    :::column-end:::
+:::row-end:::
 
-| Identity | Monitoring | Best Practices |
-| --- | --- | --- |
-| [Azure Active Directory][azure-ad] <br>[Multi-Factor Authentication][multi-factor-authentication] <br> [Role-Based Access Control][RBAC] <br> [Default Azure AD Roles][Roles] <br><br><br> | [Network Watcher][NetWatch] <br> [Azure Monitor][MonitorOverview] <br> [Log Analytics][LogAnalytics] <br> | [Management Group][MgmtGrp] <br> [Subscription Management](../ready/azure-best-practices/scale-subscriptions.md) <br> [Resource Group Management][RGMgmt] <br> [Azure Subscription Limits][limits] <br><br><br> |
-
-| Security | Other Azure Services | |
-|-|-|-|
-| [Azure Firewall][AzFW] <br> [Firewall Manager][AzFWMgr] <br> [Application Gateway WAF][AppGWWAF] <br> [Front Door WAF][AFDWAF] <br> [Azure DDoS][DDoS] <br> | [Azure Storage][Storage] <br> [Azure SQL][SQL] <br> [Azure Web Apps][WebApps] <br> [Azure Cosmos DB][cosmos-db] <br> [HDInsight][HDInsight] | [Event Hubs][EventHubs] <br> [Service Bus][ServiceBus] <br> [Azure IoT][IoT] <br> [Azure Machine Learning][machine-learning] |
-
-<!-- markdownlint-enable MD033 -->
+:::row:::
+    :::column:::
+        **Security** <br>
+        [Azure Firewall][AzFW] <br>
+        [Firewall Manager][AzFWMgr] <br>
+        [Application Gateway WAF][AppGWWAF] <br>
+        [Front Door WAF][AFDWAF] <br>
+        [Azure DDoS][DDoS]
+    :::column-end:::
+    :::column:::
+        **Other Azure services** <br>
+        [Azure Storage][Storage] <br>
+        [Azure SQL][SQL] <br>
+        [Azure Web Apps][WebApps] <br>
+        [Azure Cosmos DB][cosmos-db] <br>
+        [HDInsight][HDInsight] <br>
+        [Event Hubs][EventHubs] <br>
+        [Service Bus][ServiceBus] <br>
+        [Azure IoT][IoT] <br>
+        [Azure Machine Learning][machine-learning]
+    :::column-end:::
+:::row-end:::
 
 ## Next steps
 
@@ -454,49 +513,49 @@ Learn more about the Azure capabilities discussed in this document.
 
 <!-- links -->
 
-[limits]: https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits
-[Roles]: https://docs.microsoft.com/azure/role-based-access-control/built-in-roles
-[virtual-network]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview
-[NSG]: https://docs.microsoft.com/azure/virtual-network/security-overview
-[PrivateLink]: https://docs.microsoft.com/azure/private-link/private-link-overview
-[PrivateLinkSvc]: https://docs.microsoft.com/azure/private-link/private-link-service-overview
-[ServiceEndpoints]: https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview
-[DNS]: https://docs.microsoft.com/azure/dns/dns-overview
-[PrivateDNS]: https://docs.microsoft.com/azure/dns/private-dns-overview
-[virtual-network-peering]: https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview
-[UDR]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
-[RBAC]: https://docs.microsoft.com/azure/role-based-access-control/overview
-[multi-factor-authentication]: https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks
-[azure-ad]: https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis
-[VPN]: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways
-[ExR]: https://docs.microsoft.com/azure/expressroute/expressroute-introduction
-[ExRD]: https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about
-[virtual-wan]: https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about
-[NVA]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
-[AzFW]: https://docs.microsoft.com/azure/firewall/overview
-[AzFWMgr]: https://docs.microsoft.com/azure/firewall-manager/overview
-[MgmtGrp]: https://docs.microsoft.com/azure/governance/management-groups/overview
-[RGMgmt]: https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
-[ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
-[DDoS]: https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview
-[PIP]: https://docs.microsoft.com/azure/virtual-network/virtual-network-public-ip-address
-[azure-front-door]: https://docs.microsoft.com/azure/frontdoor/front-door-overview
-[AFDWAF]: https://docs.microsoft.com/azure/web-application-firewall/afds/afds-overview
-[AppGW]: https://docs.microsoft.com/azure/application-gateway/overview
-[AppGWWAF]: https://docs.microsoft.com/azure/web-application-firewall/ag/ag-overview
-[MonitorOverview]: https://docs.microsoft.com/azure/networking/networking-overview#monitor
-[AzureMonitor]: https://docs.microsoft.com/azure/azure-monitor/overview
-[Metrics]: https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics
-[Logs]: https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs
-[LogAnalytics]: https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal
-[NetWatch]: https://docs.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview
-[WebApps]: https://docs.microsoft.com/azure/app-service/
-[HDInsight]: https://docs.microsoft.com/azure/hdinsight/hdinsight-overview
-[EventHubs]: https://docs.microsoft.com/azure/event-hubs/event-hubs-about
-[ServiceBus]: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview
-[azure-traffic-manager]: https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview
-[Storage]: https://docs.microsoft.com/azure/storage/common/storage-introduction
-[SQL]: https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview
-[cosmos-db]: https://docs.microsoft.com/azure/cosmos-db/introduction
-[IoT]: https://docs.microsoft.com/azure/iot-fundamentals/iot-introduction
-[machine-learning]: https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml
+[limits]: /azure/azure-resource-manager/management/azure-subscription-service-limits
+[Roles]: /azure/role-based-access-control/built-in-roles
+[virtual-network]: /azure/virtual-network/virtual-networks-overview
+[NSG]: /azure/virtual-network/security-overview
+[PrivateLink]: /azure/private-link/private-link-overview
+[PrivateLinkSvc]: /azure/private-link/private-link-service-overview
+[ServiceEndpoints]: /azure/virtual-network/virtual-network-service-endpoints-overview
+[DNS]: /azure/dns/dns-overview
+[PrivateDNS]: /azure/dns/private-dns-overview
+[virtual-network-peering]: /azure/virtual-network/virtual-network-peering-overview
+[UDR]: /azure/virtual-network/virtual-networks-udr-overview
+[RBAC]: /azure/role-based-access-control/overview
+[multi-factor-authentication]: /azure/active-directory/authentication/concept-mfa-howitworks
+[azure-ad]: /azure/active-directory/fundamentals/active-directory-whatis
+[VPN]: /azure/vpn-gateway/vpn-gateway-about-vpngateways
+[ExR]: /azure/expressroute/expressroute-introduction
+[ExRD]: /azure/expressroute/expressroute-erdirect-about
+[virtual-wan]: /azure/virtual-wan/virtual-wan-about
+[NVA]: /azure/architecture/reference-architectures/dmz/nva-ha
+[AzFW]: /azure/firewall/overview
+[AzFWMgr]: /azure/firewall-manager/overview
+[MgmtGrp]: /azure/governance/management-groups/overview
+[RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
+[ALB]: /azure/load-balancer/load-balancer-overview
+[DDoS]: /azure/virtual-network/ddos-protection-overview
+[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[azure-front-door]: /azure/frontdoor/front-door-overview
+[AFDWAF]: /azure/web-application-firewall/afds/afds-overview
+[AppGW]: /azure/application-gateway/overview
+[AppGWWAF]: /azure/web-application-firewall/ag/ag-overview
+[MonitorOverview]: /azure/networking/networking-overview#monitor
+[AzureMonitor]: /azure/azure-monitor/overview
+[Metrics]: /azure/azure-monitor/platform/data-platform-metrics
+[Logs]: /azure/azure-monitor/platform/data-platform-logs
+[LogAnalytics]: /azure/azure-monitor/log-query/get-started-portal
+[NetWatch]: /azure/network-watcher/network-watcher-monitoring-overview
+[WebApps]: /azure/app-service/
+[HDInsight]: /azure/hdinsight/hdinsight-overview
+[EventHubs]: /azure/event-hubs/event-hubs-about
+[ServiceBus]: /azure/service-bus-messaging/service-bus-messaging-overview
+[azure-traffic-manager]: /azure/traffic-manager/traffic-manager-overview
+[Storage]: /azure/storage/common/storage-introduction
+[SQL]: /azure/sql-database/sql-database-technical-overview
+[cosmos-db]: /azure/cosmos-db/introduction
+[IoT]: /azure/iot-fundamentals/iot-introduction
+[machine-learning]: /azure/machine-learning/overview-what-is-azure-ml

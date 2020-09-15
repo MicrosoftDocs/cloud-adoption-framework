@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Promotion models: single-step, staged, or flight
+# Promotion models: Single-step, staged, or flight
 
-Workload migration is often discussed as a single activity. In reality, it is a collection of smaller activities that facilitate the movement of a digital asset to the cloud. One of the last activities in a migration is the promotion of an asset to production. Promotion is the point at which the production system changes for end users. It can often be as simple as changing the network routing, redirecting end users to the new production asset. Promotion is also the point at which IT operations or cloud operations change the focus of operational management processes from the previous production system to the new production systems.
+Workload migration is often discussed as a single activity. In practice, it's a collection of smaller activities that facilitate the movement of a digital asset to the cloud. One of the last activities in a migration is the promotion of an asset to production. Promotion is the point at which the production system changes for end users. It can often be as simple as changing the network routing, redirecting end users to the new production asset. Promotion is also the point at which IT operations or cloud operations change the focus of operational management processes from the previous production system to the new production systems.
 
 There are several promotion models. This article outlines three of the most common ones used in cloud migrations. The choice of a promotion model changes the activities seen within the migrate and optimize processes. As such, promotion model should be decided early in a release.
 
@@ -21,7 +21,7 @@ In each of the following promotion models, the chosen migration tool replicates 
 
 - **Single-step promotion.** In a _single-step_ promotion model, the staging process doubles as the promotion process. After all assets are staged, end-user traffic is rerouted and staging becomes production. In such a case, promotion is part of the migration process. This is the fastest migration model. However, this approach makes it more difficult to integrate robust testing or optimization activities. Further, this type of model assumes that the migration team has access to the staging and production environment, which compromises separation of duties in some environments.
   > [!NOTE]
-  > The table of contents for this site lists the promotion activity as part of the optimize process. In a single-step model, promotion occurs during the migrate process. When using this model, roles and responsibilities should be updated to reflect this.
+  > The table of contents for this site lists the promotion activity as part of the optimize process. In a single-step model, promotion occurs during the Migrate phase. When using this model, roles and responsibilities should be updated to reflect this.
 - **Staged.** In a _staged_ promotion model, the workload is considered migrated after it is staged, but it is not yet promoted. Prior to promotion, the migrated workload undergoes a series of performance tests, business tests, and optimization changes. It is then promoted at a future date in conjunction with a business test plan. This approach improves the balance between cost and performance, while making it easier to obtain business validation.
 - **Flight.** The _flight_ promotion model combines single-step and staged models. In a flight model, the assets in the workload are treated like production after landing in staging. After a condensed period of automated testing, production traffic is routed to the workload. However, it is a subset of the traffic. That traffic serves as the first flight of production and testing. Assuming the workload performs from a feature and performance perspective, additional traffic is migrated. After all production traffic has been moved onto the new assets, the workload is considered fully promoted.
 

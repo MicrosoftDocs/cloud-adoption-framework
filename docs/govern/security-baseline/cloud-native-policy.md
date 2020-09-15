@@ -1,5 +1,5 @@
 ---
-title: "Cloud-native Security Baseline policy"
+title: Cloud-native Security Baseline policy
 description: See a sample cloud-native policy for the Security Baseline discipline, in which Azure tools and platforms are sufficient to manage business risks.
 author: BrianBlanchard
 ms.author: brblanch
@@ -31,7 +31,7 @@ It's hard to maintain a strong security infrastructure when security controls ar
 
 ### Cloud-native identity policies
 
-Identity is becoming the new boundary control plane for security, taking over that role from the traditional network-centric perspective. Network perimeters have become increasingly porous and that perimeter defense cannot be as effective as it was before the advent of bring-your-own-device (BYOD) and cloud applications. Azure identity management and access control enable seamless, secure access to all your applications.
+Identity is becoming the new boundary control plane for security, taking over that role from the traditional network-centric perspective. Network perimeters have become increasingly porous and that perimeter defense cannot be as effective as it was before the advent of bring your own device (BYOD) and cloud applications. Azure identity management and access control enable seamless secure access to all your applications.
 
 A sample cloud-native policy for identity across cloud and on-premises directories, could include requirements like the following:
 
@@ -59,14 +59,14 @@ One of the keys to data protection in the cloud is accounting for the possible s
 
 - Data encryption controls are built into services from virtual machines to storage and SQL Database.
 - As data moves between clouds and customers, it can be protected using industry-standard encryption protocols.
-- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud apps and services.
-- Azure Information Protection will help classify, label, and protect your sensitive data within apps.
+- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud applications and services.
+- Azure Information Protection will help classify, label, and protect your sensitive data within applications.
 
 While these features are built into Azure, each of the above requires configuration and could increase costs. Alignment of each cloud-native feature with a [data classification strategy](../policy-compliance/data-classification.md) is highly suggested.
 
 ### Security monitoring
 
-Security monitoring is a proactive strategy that audits your resources to identify systems that do not meet organizational standards or best practices. Azure Security Center provides unified security baseline and advanced threat protection across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks, including:
+Security monitoring is a proactive strategy that audits your resources to identify systems that do not meet organizational standards or best practices. Azure Security Center provides unified security baseline and Azure Advanced Threat Protection across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks, including:
 
 - Unified view of security across all on-premises and cloud workloads with Azure Security Center.
 - Continuous monitoring and security assessments to ensure compliance and remediate any vulnerabilities.
@@ -77,6 +77,7 @@ Security monitoring is a proactive strategy that audits your resources to identi
 ### Extend cloud-native policies
 
 Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to detect, prevent, or mitigate cyberattacks are considerable. In fact, while organizations used to worry about whether the cloud was secure, most now understand that the level of investment in people and specialized infrastructure made by vendors like Microsoft makes the cloud more secure than most on-premises datacenters.
+
 Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to detect, prevent, or mitigate cyberattacks are considerable. In fact, while organizations used to worry about whether the cloud was secure, most now understand that the level of investment in people and specialized infrastructure made by vendors like Microsoft makes the cloud more secure than most on-premises datacenters.
 
 Even with this investment in a cloud-native security baseline, it is suggested that any Security Baseline policy extend the default cloud-native policies. The following are examples of extended policies that should be considered, even in a cloud-native environment:
@@ -89,7 +90,7 @@ Even with this investment in a cloud-native security baseline, it is suggested t
 
 ## Next steps
 
-Now that you've reviewed the sample Security Baseline policy for cloud-native solutions, return to the [policy review guide](../policy-compliance/cloud-policy-review.md) to start building on this sample to create your own policies for cloud adoption.
+Now that you've reviewed the sample Security Baseline policy for cloud-native solutions, return to the policy review guide to start building on this sample to create your own policies for cloud adoption.
 
 > [!div class="nextstepaction"]
 > [Build your own policies using the policy review guide](../policy-compliance/cloud-policy-review.md)

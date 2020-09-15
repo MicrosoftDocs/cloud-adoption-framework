@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Common blockers and challenges to innovation
 
-As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. This article expands on the common challenges and blockers to innovation, as it aims to help you understand how this approach can add value during your innovation cycles. Formula for innovation: **Innovation = Invention + Adoption**
+As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. This article expands on the common challenges and blockers to innovation, as it aims to help you understand how this approach can add value during your innovation cycles. Formula for innovation: **innovation = invention + adoption**
 
 ## Adoption challenges
 
@@ -22,13 +22,13 @@ The following list elaborates on some of the most common adoption challenges rel
 ### External challenges
 
 - **Time to market:** In a digital economy, time to market is one of the most crucial indicators of market domination. Surprisingly, time to market impact has little to do with positioning or early market share. Both of those factors are fickle and temporary. The time to market advantage comes from the simple truth that more time your solution has on the market, the more time you have to learn, iterate, and improve. Focus heavily on quick definition and rapid build of an effective minimum viable product to shorten time to market and accelerate learning opportunities.
-- **Competitive challenges:** Dominant incumbents reduce opportunities to engage and learn from customers. Competitors also create external pressure to deliver more quickly. Build fast but invest heavily in understanding the proper _measures_. Well-defined niches produce more actionable feedback measures and enhance your ability to partner and learn, resulting in better overall solutions.
+- **Competitive challenges:** Dominant incumbents reduce opportunities to engage and learn from customers. Competitors also create external pressure to deliver more quickly. Build fast but invest heavily in understanding the proper *measures*. Well-defined niches produce more actionable feedback measures and enhance your ability to partner and learn, resulting in better overall solutions.
 - **Understand your customer:** Customer empathy starts with an understanding of the customer and customer base. One of the biggest challenges for innovators is the ability to rapidly categorize measurements and learning within the build-measure-learn cycle. It's important to understand your customer through the lenses of market segmentation, channels, and types of relationships. Throughout the build-measure-learn cycle, these data points help create empathy and shape the lessons learned.
 
 ### Internal challenges
 
-- **Choosing innovation candidates:** When investing in innovation, healthy companies spawn an endless supply of potential inventions. Many of these create compelling business cases that suggest high returns and generate enticing business justification spreadsheets. As described in the build article, _building with customer empathy_ should be prioritized over invention that's based only on gain projections. If customer empathy isn't visible in the proposal, long-term adoption is unlikely.
-- **Balancing the portfolio:** Most technology implementations don't focus on changing the market or improving the lives of customers. In the average IT department, more than 80% of workloads are maintained for basic process automation. With the ease of innovation, it's tempting to innovate and rearchitect those solutions. Most of the times, those workloads can experience similar or better returns by migrating or modernizing the solution, with no change to core business logic or data processes. Balance your portfolio to favor innovation strategies that can be _built_ with clear empathy for the customer (internal or external). For all other workloads, follow a migrate path to financial returns.
+- **Choosing innovation candidates:** When investing in innovation, healthy companies spawn an endless supply of potential inventions. Many of these create compelling business cases that suggest high returns and generate enticing business justification spreadsheets. As described in the build article, *building with customer empathy* should be prioritized over invention that's based only on gain projections. If customer empathy isn't visible in the proposal, long-term adoption is unlikely.
+- **Balancing the portfolio:** Most technology implementations don't focus on changing the market or improving the lives of customers. In the average IT department, more than 80% of workloads are maintained for basic process automation. With the ease of innovation, it's tempting to innovate and rearchitect those solutions. Most of the times, those workloads can experience similar or better returns by migrating or modernizing the solution, with no change to core business logic or data processes. Balance your portfolio to favor innovation strategies that can be *built* with clear empathy for the customer (internal or external). For all other workloads, follow a migrate path to financial returns.
 - **Maintaining focus and protecting priorities:** When you've made a commitment to innovation, it's important to maintain your team's focus. During the first iteration of a build phase, it's relatively easy to keep a team excited about the possibilities of changing the future for your customers. However, that first MVP release is just the beginning. True innovation comes with each build-measure-learn cycle, by learning from the feedback loops to produce a better solution. As a leader in any innovation process, you should concentrate on keeping the team focused and on maintaining your innovation priorities through the subsequent, less-glamorous build iterations.
 
 ## Invention challenges
@@ -53,7 +53,7 @@ In a digital economy, the greatest challenge architects face is to clearly under
 
 ## Next steps
 
-Based on the knowledge gained regarding the build-measure-learn model and growth mindset, you are now ready to [develop digital inventions](./invention.md) within the [Innovate methodology](./index.md).
+With the knowledge you've gained about the build-measure-learn model and a growth mindset, you're ready to [develop digital inventions](./invention.md) within the [Innovate methodology](./index.md).
 
 > [!div class="nextstepaction"]
 > [Develop digital inventions](./invention.md)

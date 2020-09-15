@@ -16,7 +16,7 @@ This article discusses the reasons that customers typically adopt a Resource Con
 
 ## Relevance
 
-When it comes to deploying resources and workloads, the cloud offers increased agility and flexibility over most traditional on-premises datacenters. These potential cloud-based advantages also come with potential management drawbacks that can seriously jeopardize the success of your cloud adoption. What assets have you deployed? What teams own what assets? Do you have enough resources supporting a workload? How do you know if workloads are healthy?
+When it comes to deploying resources and workloads, the cloud offers increased agility and flexibility over most traditional on-premises datacenters. These potential cloud-based advantages also come with potential management drawbacks that can seriously jeopardize the success of your cloud adoption. What assets have you deployed? What teams own what assets? Do you have enough resources supporting a workload? How do you know whether workloads are healthy?
 
 Resource consistency is crucial to ensure that resources are deployed, updated, and configured consistently in a repeatable manner, and that service disruptions are minimized and remedied in as little time as possible.
 

@@ -31,10 +31,10 @@ This helps guide critical prioritization and discovery efforts during cloud adop
 
 ## Preparation
 
-- [Learn the business value of Microsoft Azure](https://docs.microsoft.com/learn/paths/learn-business-value-of-azure).
-- [Learn how the Cloud Adoption Framework](https://docs.microsoft.com/learn/modules/microsoft-cloud-adoption-framework-for-azure) can help you align the strategy for business, people, and technology.
+- [Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure).
+- [Learn how the Cloud Adoption Framework](/learn/modules/microsoft-cloud-adoption-framework-for-azure) can help you align the strategy for business, people, and technology.
 - Review the [cloud adoption strategy](../strategy/index.md) process.
-- Download the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Download the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 ## Minimum scope
 
@@ -80,12 +80,12 @@ The cloud strategy team drives critical prioritization and discovery efforts dur
 
 Cloud strategy team members must be able to allocate time to planning and developing the cloud strategy:
 
-- During early planning efforts, allocate an hour each week to meet with the team. After the adoption plan is solidified (usually within 46 weeks), the time requirements can be reduced.
-- Throughout the adoption efforts, allocate 12 hours each month to review progress and validate continued priorities.
-- Additional time is likely required from delegated members of the executive's team on an as-needed basis. Each member of the cloud strategy team should appoint a delegate who can allocate 510 hours per week to support ongoing prioritization questions and report on any urgent needs.
+- During early planning efforts, allocate an hour each week to meet with the team. After the adoption plan is solidified (usually within 4-6 weeks), the time requirements can be reduced.
+- Throughout the adoption efforts, allocate 1-2 hours each month to review progress and validate continued priorities.
+- Additional time is likely required from delegated members of the executive's team on an as-needed basis. Each member of the cloud strategy team should appoint a delegate who can allocate 5-10 hours per week to support ongoing prioritization questions and report on any urgent needs.
 
 ## Next steps
 
 - Start a [cloud strategy team](../get-started/team/cloud-strategy.md)
 - Align your strategy with the [cloud adoption functions](./cloud-adoption.md) by creating a [cloud adoption team](../get-started/team/cloud-adoption.md) to work with.
-- Use the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) to align responsibilities across teams.
+- Use the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) to align responsibilities across teams.

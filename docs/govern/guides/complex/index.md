@@ -1,5 +1,5 @@
 ---
-title: "Governance guide for complex enterprises"
+title: Governance guide for complex enterprises
 description: Follow a fictional complex enterprise through various stages of governance maturity, as it defines a minimum viable product (MVP) based on best practices.
 author: BrianBlanchard
 ms.author: brblanch
@@ -19,7 +19,7 @@ This governance guide follows the experiences of a fictional company through var
 As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!WARNING]
-> This MVP is a baseline starting point, based on a set of assumptions. Even this minimal set of best practices is based on corporate policies that are driven by unique business risks and risk tolerances. To see if these assumptions apply to you, read the [longer narrative](./narrative.md) that follows this article.
+> This MVP is a baseline starting point, based on a set of assumptions. Even this minimal set of best practices is based on corporate policies that are driven by unique business risks and risk tolerances. To see whether these assumptions apply to you, read the [longer narrative](./narrative.md) that follows this article.
 
 ### Governance best practices
 
@@ -49,7 +49,7 @@ These patterns provide room for growth without making the hierarchy needlessly c
 
 [!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
-<!-- See comments for suggestion to possibly add here -->
+<!-- TODO: See comments for suggestion to possibly add here -->
 
 ## Incremental governance improvements
 
@@ -70,10 +70,10 @@ In the MVP, practices and tools from the [Deployment Acceleration discipline](..
 
 Over time, this governance MVP will be used to incrementally improve governance practices. As adoption advances, business risk grows. Various disciplines within the Cloud Adoption Framework governance model will adapt to manage those risks. Later articles in this series discuss the changes in corporate policy affecting the fictional company. These changes happen across four disciplines:
 
-- Identity baseline, as migration dependencies change in the narrative.
-- Cost management, as adoption scales.
-- Security baseline, as protected data is deployed.
-- Resource consistency, as IT operations begins supporting mission-critical workloads.
+- The Identity Baseline discipline, as migration dependencies change in the narrative.
+- The Cost Management discipline, as adoption scales.
+- The Security Baseline discipline, as protected data is deployed.
+- The Resource Consistency discipline, as IT operations begins supporting mission-critical workloads.
 
 ![Example of an incremental governance MVP](../../../_images/govern/governance-improvement-large.png)
 

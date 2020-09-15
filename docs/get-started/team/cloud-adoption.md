@@ -3,10 +3,10 @@ title: "Get started: Build a cloud adoption team"
 description: Establish a cloud adoption team's scope, deliverables, and the capabilities to prepare for successful cloud adoption.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud adoption team
@@ -36,7 +36,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 - Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
-- Update your company's [RACI (responsible, accountable, consulted, and informed) template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
 **Guidance to support deliverable completion:**
 
@@ -46,7 +46,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 ## Step 2: Align your team with other supporting teams
 
-If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
+If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
 
 **Deliverables:**
 
@@ -59,20 +59,20 @@ If your company's cloud adoption effort is mature enough to have supporting team
 - [Governance disciplines](../../govern/corporate-policy.md) outlines the types of controls or disciplined processes that the governance team has likely implemented to allow for safe, compliant adoption of the cloud.
 - The [Manage methodology](../../manage/index.md) outlines the considerations that go into a cloud operations baseline for providing basic operations management.
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> The cloud strategy team is accountable for maintaining a clear RACI structure across the cloud adoption lifecycle. | Review guidance and requirements from: <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT team <li> Other cloud adoption teams or individuals listed in the RACI |
+| <li> The cloud strategy team is accountable for maintaining a clear RACI structure across the cloud adoption lifecycle. | Review guidance and requirements from: <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team <li> Other cloud adoption teams or individuals listed in the RACI |
 
 ## Step 3: Begin your adoption journey
 
-Depending on the type of adoption team you're a member of, you'll get started with one of these journeys:
+Depending on the type of adoption team you're a member of, you'll get started with one of these guides:
 
 - Get started: Migrate workloads to the cloud
 - Get started: Build new products or services
 
-These getting started guides provide guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
+These guides provide guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
 
 In the end, the cloud adoption team is accountable for delivery across their assigned migration efforts or new product development. Although supporting teams are accountable for ensuring that each step is completed, it's the responsibility of each cloud adoption team to ensure that the supporting team is getting the support it needs to be successful. If the accountable team doesn't yet exist or needs more support to deliver on its accountable steps, the adoption team is encouraged to partner with other teams to complete its deliverables.
 
@@ -83,12 +83,11 @@ In the end, the cloud adoption team is accountable for delivery across their ass
 
 **Guidance to support deliverable completion:**
 
-- In the get-started guide for migration, the adoption team is accountable for delivery of [step 10: migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
-- In the get-started guide for new products, the adoption team is accountable for delivery of [step 8: innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
+- In the getting started guide for migration, the adoption team is accountable for delivery of [step 10: Migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
+- In the getting started guide for new products, the adoption team is accountable for delivery of [step 8: Innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
 
 All other steps on those checklists are designed to make the effort more manageable.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

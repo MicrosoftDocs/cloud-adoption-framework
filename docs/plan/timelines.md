@@ -25,6 +25,6 @@ For any level of granularity, use the last day of the iteration as the date for 
 
 ## Delivery plans in Azure DevOps
 
-<!-- docsTest:ignore "Microsoft Delivery Plans" -->
+<!-- docsTest:casing "Microsoft Delivery Plans" -->
 
 If you're using Azure DevOps to manage your cloud adoption plan, consider using the [Microsoft Delivery Plans extension](https://marketplace.visualstudio.com/items?itemname=ms.vss-plans). This extension can quickly create a visual representation of the timeline that is based on iteration and release assignments.

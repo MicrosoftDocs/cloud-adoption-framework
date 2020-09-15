@@ -26,7 +26,7 @@ In the previous phase of this narrative, the IT team was actively moving product
 
 Since then, some things have changed that will affect governance:
 
-- 5,000 Assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
+- 5,000 assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
 - The application development teams have implemented CI/CD pipelines to deploy some cloud-native applications, significantly affecting customer experiences.
 - The BI team has created aggregation, curation, insight, and prediction processes driving tangible benefits for business operations. Those predictions are now empowering creative new products and services.
 
@@ -52,19 +52,19 @@ The following changes to policy will help remediate the new risks and guide impl
 - All costs must be allocated to a business function for accountability purposes.
 - Cloud assets should be continually monitored for optimization opportunities.
 - Cloud governance tooling must limit asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
-- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as reserved instances or license cost reductions.
+- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as Azure Reserved Virtual Machine Instances or license cost reductions.
 - All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
 
 ## Incremental improvement of the best practices
 
-This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
+This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management and Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
 1. Make changes in the Azure enterprise portal to bill the department administrator for the Canadian deployment.
-2. Implement Azure Cost Management.
-    1. Establish the right level of access scope to align with the subscription pattern and resource grouping pattern. Assuming alignment with the governance MVP defined in prior articles, this would require **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance, like the Canadian procurement team, will require **Resource Group Scope** access.
-    2. Establish a budget in Azure Cost Management.
+2. Implement Azure Cost Management and Billing.
+    1. Establish the right level of access scope to align with the subscription pattern and resource grouping pattern. Assuming alignment with the governance MVP defined in prior articles, this would require **enrollment account scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance, like the Canadian procurement team, will require **resource group scope** access.
+    2. Establish a budget in Azure Cost Management and Billing.
     3. Review and act on initial recommendations. Create a recurring process to support the reporting process.
-    4. Configure and execute Azure Cost Management reporting, both initial and recurring.
+    4. Configure and execute Azure Cost Management and Billing reporting, both initial and recurring.
 3. Update Azure Policy.
     1. Audit tagging, management group, subscription, and resource group values to identify any deviation.
     2. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.

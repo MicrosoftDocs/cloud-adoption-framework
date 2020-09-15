@@ -11,7 +11,7 @@ ms.subservice: operate
 
 # Guest Configuration policy
 
-You can use the Azure Policy [Guest Configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration) extension to audit the configuration settings in a virtual machine. Guest Configuration is currently supported only on Azure VMs.
+You can use the Azure Policy [Guest Configuration](/azure/governance/policy/concepts/guest-configuration) extension to audit the configuration settings in a virtual machine. Guest Configuration is currently supported only on Azure VMs.
 
 To find the list of Guest Configuration policies, search for "Guest Configuration" on the Azure Policy portal page. Or run this cmdlet in a PowerShell window to find the list:
 
@@ -22,15 +22,6 @@ Get-AzPolicySetDefinition | where-object {$_.Properties.metadata.category -eq "G
 > [!NOTE]
 > Guest Configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they'll be useful.
 
-<!-- TODOBACKLOG: Update these links when available. 
-
-By default, we recommend that you enable the following policies:
-
-- **Preview:** Audit to verify that password-security settings are correct on Linux and Windows machines.
-- Audit to verify that certificates are not nearing expiration on Windows VMs.
-
--->
-
 ## Deployment
 
 Use the following example PowerShell script to deploy these policies to:
@@ -38,7 +29,7 @@ Use the following example PowerShell script to deploy these policies to:
 - Verify that password security settings in Windows and Linux computers are set correctly.
 - Verify that certificates aren't close to expiration on Windows VMs.
 
- Before you run this script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
+ Before you run this script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
 
 ```powershell
 

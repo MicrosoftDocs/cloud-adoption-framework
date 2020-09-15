@@ -21,7 +21,7 @@ The following corporate policy defines the initial governance position that's th
 
 The CIO recently held a meeting with the IT governance team to understand the history of the personal data and mission-critical policies and review the effect of changing those policies. The CIO also discussed the overall potential of the cloud for IT and the company.
 
-After the meeting, two members of the IT governance team requested permission to research and support the cloud planning efforts. Recognizing the need for governance and an opportunity to limit shadow IT, the director of IT governance supported this idea. With that, the cloud governance team was born. Over the next several months, they will inherit the cleanup of many mistakes made during exploration in the cloud from a governance perspective. This will earn them the moniker of _cloud custodians_. In later iterations, this guide will show how their roles change over time.
+After the meeting, two members of the IT governance team requested permission to research and support the cloud planning efforts. Recognizing the need for governance and an opportunity to limit shadow IT, the director of IT governance supported this idea. With that, the cloud governance team was born. Over the next several months, they will inherit the cleanup of many mistakes made during exploration in the cloud from a governance perspective. This will earn them the moniker of *cloud custodians*. In later iterations, this guide will show how their roles change over time.
 
 [!INCLUDE [business-risk](../../../../includes/business-risks.md)]
 
@@ -29,10 +29,10 @@ After the meeting, two members of the IT governance team requested permission to
 
 The current risk tolerance is high and the appetite for investing in cloud governance is low. As such, the tolerance indicators act as an early warning system to trigger the investment of time and energy. If the following indicators are observed, it would be wise to advance the governance strategy.
 
-- **Cost management:** Scale of deployment exceeds 1,000 assets to the cloud, or monthly spending exceeds $10,000 USD per month.
-- **Identity baseline:** Inclusion of applications with legacy or third-party multi-factor authentication requirements.
-- **Security baseline:** Inclusion of protected data in defined cloud adoption plans.
-- **Resource consistency:** Inclusion of any mission-critical applications in defined cloud adoption plans.
+- **Cost Management discipline:** Scale of deployment exceeds 1,000 assets to the cloud, or monthly spending exceeds $10,000 USD per month.
+- **Identity Baseline discipline:** Inclusion of applications with legacy or third-party multi-factor authentication requirements.
+- **Security Baseline discipline:** Inclusion of protected data in defined cloud adoption plans.
+- **Resource Consistency discipline:** Inclusion of any mission-critical applications in defined cloud adoption plans.
 
 [!INCLUDE [policy-statements](../../../../includes/policy-statements.md)]
 

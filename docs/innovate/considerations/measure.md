@@ -15,7 +15,7 @@ There are several ways to measure for customer impact. This article will help yo
 
 ## Strategic metrics
 
-During the [strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
+During the [Strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
 
 Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas:
     - [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
@@ -40,14 +40,14 @@ Learning about changes to customer behavior starts by mapping the flow that you 
 
 ![Customer flow used to determine learning metrics](../../_images/innovate/customer-flow-learning-metrics.png)
 
-In most cases, a customer flow will have an easily defined starting point and no more than two end points. Between the start and end points are a variety of learning metrics to be used as measures in the feedback loop:
+In most cases, a customer flow will have an easily defined starting point and no more than two endpoints. Between the start and endpoints are a variety of learning metrics to be used as measures in the feedback loop:
 
 1. **Starting point—initial trigger:** The starting point is the scenario that triggers the need for this solution. When the solution is built with customer empathy, that initial trigger should inspire a customer to try the MVP solution.
 2. **Customer need met:** The hypothesis is validated when a customer need has been met by using the solution.
 3. **Solution steps:** This term refers to the steps that are required to move the customer from the initial trigger to a successful outcome. Each step produces a learning metric based on a customer decision to move on to the next step.
 4. **Individual adoption achieved:** The next time the trigger is encountered, if the customer returns to the solution to get their need met, individual adoption has been achieved.
 5. **Business outcome indicator:** When a customer behaves in a way that contributes to the defined business outcome, a business outcome indicator is observed.
-6. **True innovation:** When _business outcome indicators_ and _individual adoption_ both occur at the desired scale, you've realized true innovation.
+6. **True innovation:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
 
 Each step of the customer flow generates learning metrics. After each iteration (or release), a new version of the hypothesis is tested. At the same time, tweaks to the solution are tested to reflect adjustments in the hypothesis. When customers follow the prescribed path in any given step, a positive metric is recorded. When customers deviate from the prescribed path, a negative metric is recorded.
 
@@ -59,7 +59,7 @@ The first measurement in defining learning metrics is the customer partner defin
 
 - **Experiment or focus group:** Grouping customers based on their participation in a specific experiment designed to test changes over time.
 - **Segment:** Grouping customers by the size of the company.
-- **Vertical:** Grouping customers by the _industry vertical_ they represent.
+- **Vertical:** Grouping customers by the *industry vertical* they represent.
 - **Individual demographics:** Grouping based on personal demographics like age and physical location.
 
 These types of groupings help you validate learning metrics across various cross-sections of those customers who choose to partner with you during your innovation efforts. All subsequent metrics should be derived from definable customer grouping.
@@ -70,7 +70,5 @@ As learning metrics accumulate, the team can begin to [learn with customers](./l
 
 > [!div class="nextstepaction"]
 > [Learn with customers](./learn.md)
-
-<!-- cSpell:ignore Ries -->
 
 Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.

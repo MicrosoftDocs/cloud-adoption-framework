@@ -1,41 +1,44 @@
 ---
-title: "Azure migration best practices"
-description: Use the Cloud Adoption Framework for Azure to learn how to implement the tools necessary to align with best practices for cloud migration.
+title: Azure cloud migration best practices checklist
+description: Explore the Azure cloud migration checklist to learn how to implement the Azure tools used to align with cloud migration best practices.
+keywords: azure cloud migration best practices, azure migration checklist, cloud migration checklist, cloud migration best practices
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: seo-azure-migrate
 ---
 
-# Best practices for cloud migration
+# Azure cloud migration best practices checklist
 
-The [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework is the suggested starting point if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud. This section of the Cloud Adoption Framework addresses many best practices that go beyond the basic cloud-native tools.
+Start with the [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud.
 
-## Cloud migration best practices checklist
+The following checklists provide Azure cloud migration best practices that go beyond the basic cloud-native tools. These outline the common areas of complexity that might require the scope of the migration to expand beyond the [Azure migration guide](../azure-migration-guide/index.md).
 
-The following checklist outlines the common areas of complexity that could require the scope of the migration to expand beyond the [Azure migration guide](../azure-migration-guide/index.md).
+## Migration best practices for business-driven scope expansion
 
-### Business driven scope expansion
+- **[Support global markets](./multiple-regions.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, you should factor in additional considerations to the prerequisite review and distribution of assets during migration.
 
-- **[Support global markets](./multiple-regions.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, additional considerations should be factored into the prerequisite review and distribution of assets during migration.
+## Migration best practices for technology-driven scope expansion
 
-### Technology driven scope expansion
-
-- **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
-- **[SQL Server migration](./sql-migration.md):** Migrating SQL Servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
-- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
+- **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud. After migration, those VMs and workloads can stay in VMware, or be migrated to modern cloud capabilities.
+- **[SQL Server migration](./sql-migration.md):** Migrating instances of SQL Server can accelerate the overall migration process. Each migrated instance can move multiple databases and services, potentially accelerating multiple workloads.
+- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During each process of the move (assess, migrate, optimize, and manage), additional considerations are discussed to prepare for more complex environments.
 - **[Data requirements exceed network capacity](./network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.
-- **[Governance or compliance strategy](./governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, additional alignment between IT governance teams and the cloud adoption team is required.
+- **[Governance or compliance strategy](./governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, IT governance teams and the cloud adoption team must ensure additional alignment with one another.
 
-If any of these complexities are present in your scenario, then this section of the Cloud Adoption Framework will likely provide the type of guidance needed to properly align scope in the migration processes.
+## Additional migration best practices
 
-Each of these scenarios is addressed by the various articles in this section of the Cloud Adoption Framework.
+- [Set up networking for workloads migrated to Azure](./migrate-best-practices-networking.md)
+- [Deploy a migration infrastructure](./contoso-migration-infrastructure.md)
+- [Cost and size workloads migrated to Azure](./migrate-best-practices-costs.md)
+- [Scale a migration to Azure](./contoso-migration-scale.md)
 
 ## Next steps
 
-Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Support global markets](./multiple-regions.md), is a good starting point when reviewing these scenarios.
+The following is a good starting point for reviewing Azure migration best practices.
 
 > [!div class="nextstepaction"]
-> [Support global markets](./multiple-regions.md)
+> [Multiple datacenters](./multiple-datacenters.md)

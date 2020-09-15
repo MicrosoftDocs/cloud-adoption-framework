@@ -1,5 +1,5 @@
 ---
-title: "Evaluate risk tolerance"
+title: Evaluate risk tolerance
 description: Understand the business risks associated with various forms of cloud transformation, and ways to evaluate risk tolerance for a business.
 author: BrianBlanchard
 ms.author: brblanch
@@ -38,7 +38,7 @@ Identifying risk is a fairly direct process. IT-related risks are generally stan
 
 To help understand risk tolerance, let's examine customer data. If a company in any industry posts customer data on an unsecured server, the technical risk of that data being compromised or stolen is roughly the same. Tolerance for that risk will vary wildly based on the nature and potential value of the data.
 
-- Companies in healthcare and finance in the United States, are governed by rigid, third-party compliance requirements. It is assumed that personal data or healthcare-related data is extremely confidential. There are severe consequences for these types of companies, if they're involved in the risks scenario above. Their tolerance will be extremely low. Any customer data published inside or outside of the network will need to be governed by those third-party compliance policies.
+- Companies in healthcare and finance in the United States, are governed by rigid, third-party compliance requirements. It is assumed that personal data or healthcare-related data is extremely confidential. There are severe consequences for these types of companies, if they're involved in the risks scenario above. Their tolerance will be extremely low. Any customer data published inside or outside of the network must be governed by those third-party compliance policies.
 - A gaming company whose customer data is limited to a user name, play times, and high scores is not as likely to suffer significant consequences beyond loss to reputation, if they engage in the risky behavior above. While any unsecured data is at risk, the impact of that risk is small. Therefore, the tolerance for risk in this case is high.
 - A medium-sized enterprise that provides carpet-cleaning services to thousands of customers would fall in between these two tolerance extremes. Customer data may be more robust, containing details like addresses and phone numbers. Both are considered personal data and should be protected, but no specific governance requirement mandates that the data be secured. From an IT perspective, the answer is simple, secure the data. From a business perspective, it may not be as simple. The business would need more details before they could determine a level of tolerance for this risk.
 
