@@ -44,7 +44,7 @@ When companies support workloads through matrixed approaches or centralized appr
 
 ![Image of an IT portfolio with multiple public and private cloud platforms](../../_images/ready/buildout-cloud-platforms.png)
 
-- **Landing zone:** Landing zones provide workloads with access to all of the _foundational utilities_ (or shared plumbing) that are provided from a _platform foundation_ that's required to support one or more workloads. Landing zones are such a critical component in the cloud, that the entire Ready methodology in the Cloud Adoption Framework is dedicated to landing zones. See "[What is a landing zone](../../ready/landing-zone/index.md)" for a deeper definition.
+- **Landing zone:** Landing zones provide workloads with access to all of the _foundational utilities_ (or shared plumbing) that are provided from a _platform foundation_ that's required to support one or more workloads. Landing zones are such a critical component in the cloud, that the entire Ready methodology of the Cloud Adoption Framework is dedicated to landing zones. See "[What is a landing zone](../../ready/landing-zone/index.md)" for a deeper definition.
 - **Foundational utilities:** These shared IT services are required for workloads to operate within the technology and business portfolio.
 - **Platform foundation:** This organizational construct centralizes foundational solutions and helps ensure that those controls are enforced for all landing zones.
 - **Cloud platforms:** Depending on the overall strategy for supporting the full _portfolio_, customers might need multiple cloud platforms with distinct deployments of the platform foundation to govern multiple regions, hybrid solutions, or even multicloud solutions.
@@ -55,7 +55,7 @@ When companies support workloads through matrixed approaches or centralized appr
 An accountable team manages each layer of the portfolio hierarchy. The following diagram shows the mapping between the accountable team and the guidance to support its business decisions, technical decisions, and technical implementation.
 
 > [!NOTE]
-> The teams mentioned in the following list might be virtual teams (v-teams) or individuals. For some variants of this hierarchy, some of the accountable teams can be collapsed as described later in the accountability variants.
+> The teams mentioned in the following list might be virtual teams or individuals. For some variants of this hierarchy, some of the accountable teams can be collapsed as described later in the accountability variants.
 
 ![Accountability aligned to the hierarchy](../../_images/ready/hierarchy-with-roles.png)
 

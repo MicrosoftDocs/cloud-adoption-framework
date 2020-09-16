@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore LijuKodicheraJayadevan -->
-
 # Manage access to your Azure environment with role-based access control
 
 Managing who can access your Azure resources and subscriptions is an important part of your Azure governance strategy, and assigning group-based access rights and privileges is a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Azure role-based access control (RBAC) is the primary method of managing access in Azure.
@@ -84,7 +82,7 @@ To grant a user access to a subscription:
 
 To learn more, see:
 
-- [What is role-based access control (Azure RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
+- [What is role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
 - [Cloud Adoption Framework: Use role-based access control](../considerations/roles.md)
 
 ::: zone-end

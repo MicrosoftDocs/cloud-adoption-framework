@@ -38,7 +38,7 @@ If you decide that a digital estate rationalization isn't needed, we recommend t
 
 In the previous article, [Cloud adoption plan and Azure DevOps](./template.md), you created a cloud adoption plan in Azure DevOps.
 
-You can now represent the workloads in the Power of 10 list in your cloud adoption plan. The easiest way to do this is via bulk editing in Microsoft Excel. To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
+You can now represent the workloads in the Power of 10 list in your cloud adoption plan. The easiest way to do this is via bulk editing in Microsoft Excel. To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
 
 Step 5 in that article tells you to select **Input list**. Instead, select **Query list**. Then, from the **Select a Query** drop-down list, select the **Workload Template** query. That query loads all the efforts related to the migration of a single workload into your spreadsheet.
 
@@ -64,6 +64,9 @@ After initial priorities have been defined and workloads have been added to the 
 | Workload description | In one sentence, what does this workload do? |         |
 | Adoption motivations | Which of the cloud adoption motivations are affected by this workload? |         |
 | Primary sponsor | Of those stakeholders affected, who is the primary sponsor requesting the preceding motivations? |         |
+| Business impact | What is the business impact of this workload?|         |
+| Application impact | What impact does this application have on business processes?|         |
+| Data impact | What impact does the data have on the business?|         |
 | Business unit | Which business unit is responsible for the cost of this workload? |         |
 | Business processes | Which business processes will be affected by changes to the workload? |         |
 | Business teams | Which business teams will be affected by changes? |         |

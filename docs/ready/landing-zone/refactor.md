@@ -1,6 +1,6 @@
 ---
 title: Refactor landing zones
-description: The process for refactoring landing zones.
+description: Learn about the process for refactoring landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020
@@ -31,7 +31,7 @@ It took years and significant effort to reach the current state of security, gov
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 _Figure 2: Acting too soon is a common blocker._
 
-In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload and then their first ten or so workloads before they're ready to release one of them to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red _x_ in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
+In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload and then their first ten or so workloads before they're ready to release one of them to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red *x* in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
 
 ### Blocker: Acting too late
 

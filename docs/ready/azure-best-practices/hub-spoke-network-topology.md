@@ -11,14 +11,12 @@ manager: rossort
 ms.custom: virtual-network
 ---
 
-<!-- cSpell:ignore tracsman jonor rossort NVAs -->
-
 # Hub and spoke network topology
 
 _Hub and spoke_ is a networking model for efficiently managing common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
 
 - **Cost savings and management efficiency.** Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort.
-- **Overcoming subscription limits.** Large cloud-based workloads might require using more resources than are allowed in a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
+- **Overcoming subscription limits.** Large cloud-based workloads might require using more resources than are allowed in a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - **Separation of concerns.** You can deploy individual workloads between Central IT teams and workload teams.
 
 Smaller cloud estates might not benefit from the added structure and capabilities that this model offers. But larger cloud adoption efforts should consider implementing a hub and spoke networking architecture if they have any of the concerns listed previously.
@@ -26,8 +24,8 @@ Smaller cloud estates might not benefit from the added structure and capabilitie
 > [!NOTE]
 > The Azure reference architectures site contains example templates that you can use as the basis for implementing your own hub and spoke networks:
 >
-> - [Implement a hub and spoke network topology in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
-> - [Implement a hub and spoke network topology with shared services in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services)
+> - [Implement a hub and spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
+> - [Implement a hub and spoke network topology with shared services in Azure](/azure/architecture/reference-architectures/hybrid-networking/shared-services)
 
 ## Overview
 
@@ -41,7 +39,7 @@ A hub is a central network zone that controls and inspects ingress or egress tra
 The hub often contains the common service components that the spokes consume. The following examples are common central services:
 
 - The Windows server Active Directory infrastructure, required for user authentication of third parties that gain access from untrusted networks before they get access to the workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
-- A DNS service to resolve naming for the workload in the spokes, to access resources on-premises and on the internet if [Azure DNS](https://docs.microsoft.com/azure/dns/dns-overview) isn't used.
+- A DNS service to resolve naming for the workload in the spokes, to access resources on-premises and on the internet if [Azure DNS](/azure/dns/dns-overview) isn't used.
 - A public key infrastructure (PKI), to implement single sign-on on workloads.
 - Flow control of TCP and UDP traffic between the spoke network zones and the internet.
 - Flow control between the spokes and on-premises.
@@ -57,7 +55,7 @@ The spokes can also segregate and enable different groups within your organizati
 
 In Azure, every component, whatever the type, is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
 
-A single hub and spoke implementation can scale up to a large number of spokes. But as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
+A single hub and spoke implementation can scale up to a large number of spokes. But as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 In cases where limits might be an issue, you can scale up the architecture further by extending the model from a single hub and spoke to a cluster of hubs and spokes. You can interconnect multiple hubs in one or more Azure regions by using virtual network peering, Azure ExpressRoute, Azure Virtual WAN, or a site-to-site VPN.
 

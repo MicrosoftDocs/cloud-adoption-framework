@@ -1,5 +1,5 @@
 ---
-title: "Software Defined Networking decision guide"
+title: Software Defined Networking decision guide
 description: Use the Cloud Adoption Framework for Azure to learn how Software Defined Networking provides centrally-managed virtualized networking through software.
 author: rotycenh
 ms.author: abuck
@@ -57,12 +57,12 @@ Learn more about the primary Software Defined Networking architectures:
 
 For more information about Software Defined Networking in Azure, see:
 
-- [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview). On Azure, the core SDN capability is provided by Azure Virtual Network, which acts as a cloud analog to physical on-premises networks. Virtual networks also act as a default isolation boundary between resources on the platform.
-- [Azure best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices). Recommendations from the Azure security team on how to configure your virtual networks to minimize security vulnerabilities.
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview). On Azure, the core SDN capability is provided by Azure Virtual Network, which acts as a cloud analog to physical on-premises networks. Virtual networks also act as a default isolation boundary between resources on the platform.
+- [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Recommendations from the Azure security team on how to configure your virtual networks to minimize security vulnerabilities.
 
 ## Next steps
 
-Software Defined Networking is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+Software Defined Networking is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the architectural decision guides overview to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)

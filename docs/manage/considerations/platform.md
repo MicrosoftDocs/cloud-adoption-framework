@@ -50,7 +50,7 @@ Although management tools and processes can help improve platform operations, th
 - **Reliability:** Design systems to recover from failures and continue to function.
 - **Security:** Protect applications and data from threats.
 
-The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
+The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
 ## Get started with specific platforms
 

@@ -1,5 +1,5 @@
 ---
-title: "Cloud governance guides"
+title: Cloud governance guides
 description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
 author: BrianBlanchard
 ms.author: brblanch
@@ -18,8 +18,6 @@ The actionable governance guides in this section illustrate the incremental appr
 
 To begin your cloud adoption journey, choose one of the following governance guides. Each guide outlines a set of best practices, based on a set of fictional customer experiences. For readers who are new to the incremental approach of the Cloud Adoption Framework governance model, review the high-level introduction to governance theory below before adopting either set of best practices.
 
-<!-- markdownlint-disable MD033 -->
-
 - [Standard governance guide](./standard/index.md): A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.
 
 > [!div class="nextstepaction"]
@@ -30,8 +28,6 @@ To begin your cloud adoption journey, choose one of the following governance gui
 > [!div class="nextstepaction"]
 > [Governance guide for complex enterprises](./complex/index.md)
 
-<!-- markdownlint-enable MD033 -->
-
 ## An incremental approach to cloud governance
 
 ## Choose a governance guide
@@ -40,16 +36,11 @@ The guides demonstrate how to implement a governance MVP. From there, each guide
 
 To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. Your decision may be more complex. The following tables outline the differences between the two options.
 
-<!-- TODO: Refactor VDC content below. -->
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
-
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
-
-<!-- markdownlint-disable MD028 -->
-
+> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). This approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data) in the cloud. The CAF enterprise-scale landing zone is the typical choice for complex governance scenarios in large cloud adoption efforts.
+<!-- -->
 > [!NOTE]
-> It's unlikely that either guide aligns completely to your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
+> It's unlikely that either guide aligns entirely with your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
 
 ### Business characteristics
 
@@ -68,12 +59,14 @@ To begin a governance journey, choose one of the two options below. The options 
 | Networking | No WAN, or 1 &ndash; 2 WAN providers | Complex network or global WAN |
 | Identity | Single forest, single domain. | Complex, multiple forests, multiple domains. |
 
+<!-- docutune:casing "Cost Management" "Security Baseline" -->
+
 ### Desired future state after incremental improvement of cloud governance
 
 | State | Standard organization | Complex enterprise |
 |---|---|---|
-| Cost management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
-| Security baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. May need to consider third-party compliance. |
+| Cost Management: cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
+| Security Baseline: protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. Might need to consider third-party compliance. |
 
 ## CAF enterprise-scale landing zone
 
@@ -81,15 +74,15 @@ To begin a governance journey, choose one of the two options below. The options 
 
 Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. As your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
 
-The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between Cloud Adoption teams and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
+The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between cloud adoption team requirements and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
 
 CAF enterprise-scale landing zone deploys your own "isolated cloud" within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, CAF enterprise-scale landing zone offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
 
 ### CAF enterprise-scale landing zone qualifications
 
-Although smaller teams may benefit from the architecture and recommendations the CAF enterprise-scale landing zone provides. Our objective is to continue to streamline the CAF enterprise-scale landing zone implementations to make them more friendly for smaller teams. Currently, this approach is designed to guide Central IT teams managing large cloud environments.
+Although smaller teams may benefit from the architecture and recommendations the CAF enterprise-scale landing zone provides. Our objective is to continue to streamline the CAF enterprise-scale landing zone implementations to make them more friendly for smaller teams. Currently, this approach is designed to guide central IT teams managing large cloud environments.
 
-The [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
+The [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (applications, infrastructure, or data assets) in the cloud**.
 
 For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
 

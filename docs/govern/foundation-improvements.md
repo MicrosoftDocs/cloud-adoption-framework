@@ -1,5 +1,5 @@
 ---
-title: "Improve your initial cloud governance foundation"
+title: Improve your initial cloud governance foundation
 description: Use the Cloud Adoption Framework for Azure to learn how to incrementally improve your initial cloud governance foundation.
 author: BrianBlanchard
 ms.author: brblanch
@@ -32,7 +32,7 @@ At any time, the following best practices can be applied to the initial governan
 
 ## Next steps
 
-In addition to the application of best practices, the Govern methodology in the Cloud Adoption Framework can be customized to fit unique business constraints. After following the applicable recommendations, [evaluate corporate policy to understand additional customization requirements](./corporate-policy.md).
+In addition to the application of best practices, the Govern methodology of the Cloud Adoption Framework can be customized to fit unique business constraints. After following the applicable recommendations, [evaluate corporate policy to understand additional customization requirements](./corporate-policy.md).
 
 > [!div class="nextstepaction"]
 > [Evaluate corporate policy](./corporate-policy.md)

@@ -42,13 +42,13 @@ After you've documented the answers to these questions, see [Plans for skills re
 
 The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities.
 
-In an agile matrix organization, these structures might be best represented as virtual teams (v-teams). There's nothing to suggest that v-teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
+In an agile matrix organization, these structures might be best represented as virtual teams. There's nothing to suggest that virtual teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
 
 Determine how the following models fit your organizational structures:
 
 - **Org chart alignment:** Management hierarchies, manager responsibilities, and staff alignment will align with organizational structures.
-- **Virtual teams:** Management structures and org charts remain unchanged. Instead, v-teams will be created and tasked with the required functionality.
-- **Mixed model:** More commonly, a mixture of org chart and v-team alignment will be required to deliver on cloud transformation goals.
+- **Virtual teams:** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functionality.
+- **Mixed model:** More commonly, a mixture of org chart and virtual team alignment will be required to deliver on cloud transformation goals.
 
 ## Step 4: Establish team structures
 
@@ -81,4 +81,4 @@ At each level of maturity, accountability for various cloud functions shifts to 
 
 - [Adapt existing roles, skills, and processes for the cloud](../plan/adapt-roles-skills-processes.md)
 - [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md)
-- [Download the RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx)
+- [Download the RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)

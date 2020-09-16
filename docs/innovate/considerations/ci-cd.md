@@ -9,9 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore deprioritize -->
-
-# Empower adoption
+# Empower adoption with digital invention
 
 The ultimate test of innovation is customer reaction to your invention. Did the hypothesis prove true? Do customers use the solution? Does it scale to meet the needs of the desired percentage of users? Most importantly, do they keep coming back? None of these questions can be asked until the minimum viable product (MVP) solution has been deployed. In this article, we'll focus on the discipline of empowering adoption.
 
@@ -34,7 +32,7 @@ The primary objective of the [Innovate methodology](./index.md) is to build cust
 - [Solution deployment](#solution-deployment): Deploy solutions so that the team can quickly share changes with customers.
 - [Integrated measurement](#integrated-measurements): Add learning metrics to the feedback loop for clear analysis by the full team.
 
-To minimize technical spikes, assume that maturity will initially be low across each of these principles. But definitely plan ahead by aligning to tools and processes that can scale as hypotheses become more fine-grained. In Azure, the [GitHub](https://guides.github.com) and [Azure DevOps](https://docs.microsoft.com/azure/devops) allow small teams to get started with little friction. These teams might grow to include thousands of developers who collaborate on scale solutions and test hundreds of customer hypotheses. The remainder of this article illustrates the "plan big, start small" approach to empowering adoption across each of these principles.
+To minimize technical spikes, assume that maturity will initially be low across each of these principles. But definitely plan ahead by aligning to tools and processes that can scale as hypotheses become more fine-grained. In Azure, the [GitHub](https://guides.github.com) and [Azure DevOps](/azure/devops) allow small teams to get started with little friction. These teams might grow to include thousands of developers who collaborate on scale solutions and test hundreds of customer hypotheses. The remainder of this article illustrates the "plan big, start small" approach to empowering adoption across each of these principles.
 
 ## Shared solution
 
@@ -42,7 +40,7 @@ As described in [Measure for customer impact](./measure.md), positive validation
 
 When you're scaling innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that should never be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
 
-The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [TFVC](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
+The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
 
 ## Feedback loops
 
@@ -50,7 +48,7 @@ Making the customer part of the solution is the key to building customer partner
 
 Every point of feedback is a potential solution to the customer need. More importantly, every bit of direct customer feedback represents an opportunity to improve the partnership. If feedback makes it into an MVP solution, celebrate that with the customer. Even if some feedback isn't actionable, simply being transparent with the decision to deprioritize the feedback demonstrates a [growth mindset](./learn.md#growth-mindset) and a focus on [continuous learning](./learn.md#continuous-learning).
 
-[Azure DevOps](https://docs.microsoft.com/azure/devops) includes ways to [request, provide, and manage feedback](https://docs.microsoft.com/azure/devops/project/feedback). Each of these tools centralizes feedback so that the team can take action and provide follow-up in service of a transparent feedback loop.
+[Azure DevOps](/azure/devops) includes ways to [request, provide, and manage feedback](/azure/devops/project/feedback). Each of these tools centralizes feedback so that the team can take action and provide follow-up in service of a transparent feedback loop.
 
 ## Continuous integration
 
@@ -58,7 +56,7 @@ As adoptions scale and a hypothesis gets closer to true innovation at scale, the
 
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
-Azure DevOps and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines) provide continuous integration capabilities with just a few steps in GitHub or a variety of other repositories. Learn more about [continuous integration](https://docs.microsoft.com/azure/devops/learn/what-is-continuous-integration), or for more information, check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops).
+Azure DevOps and [Azure Pipelines](/azure/devops/pipelines) provide continuous integration capabilities with just a few steps in GitHub or a variety of other repositories. Learn more about [continuous integration](/azure/devops/learn/what-is-continuous-integration), or for more information, check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops).
 
 ## Reliable testing
 
@@ -66,7 +64,7 @@ Defects in any solution can create false positives or false negatives. Unexpecte
 
 During early iterations of an MVP solution, defects are expected; early adopters might even find them endearing. In early releases, acceptance testing is typically nonexistent. However, one aspect of building with empathy concerns the validation of the need and hypothesis. Both can be completed through unit tests at a code level and manual acceptance tests before deployment. Together, these provide some means of reliability in testing. You should strive to automate a well-defined series of build, unit, and acceptance tests. These will ensure reliable metrics related to more granular tweaks to the hypothesis and the resulting solution.
 
-The [Azure Test Plans](https://docs.microsoft.com/azure/devops/test/track-test-status?view=azure-devops) feature provides tooling to develop and operate test plans during manual or automated test execution.
+The [Azure Test Plans](/azure/devops/test/track-test-status?view=azure-devops) feature provides tooling to develop and operate test plans during manual or automated test execution.
 
 ## Solution deployment
 
@@ -82,13 +80,13 @@ During the first iteration of an MVP solution, manual deployment is common, desp
 
 Investing early can lead to lost time. More importantly, it can create dependencies on the release pipeline that make the team more resistant to an early pivot. After the first few iterations or when customer feedback suggests potential success, a more advanced model of deployment should be quickly adopted.
 
-At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines) provide continuous delivery and continuous deployment capabilities. Learn more about [continuous delivery](https://docs.microsoft.com/azure/devops/learn/what-is-continuous-delivery), or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment). Solution architecture can also accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops).
+At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](/azure/devops/pipelines) provide continuous delivery and continuous deployment capabilities. Learn more about [continuous delivery](/azure/devops/learn/what-is-continuous-delivery), or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment). Solution architecture can also accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops).
 
 ## Integrated measurements
 
-When you [measure for customer impact](./measure.md), it's important to understand how customers react to changes in the solution. This data, known as _telemetry_, provides insights into the actions a user (or cohort of users) took when working with the solution. From this data, it's easy to get a quantitative validation of the hypothesis. Those metrics can then be used to adjust the solution and generate more fine-grained hypotheses. Those subtler changes help mature the initial solution in subsequent iterations, ultimately driving to repeat adoption at scale.
+When you [measure for customer impact](./measure.md), it's important to understand how customers react to changes in the solution. This data, known as *telemetry*, provides insights into the actions a user (or cohort of users) took when working with the solution. From this data, it's easy to get a quantitative validation of the hypothesis. Those metrics can then be used to adjust the solution and generate more fine-grained hypotheses. Those subtler changes help mature the initial solution in subsequent iterations, ultimately driving to repeat adoption at scale.
 
-In Azure, [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) provides the tools and interface to collect and review data from customer experiences. You can apply those observations and insights to refine the backlog by using [Azure Boards](https://docs.microsoft.com/azure/devops/boards).
+In Azure, [Azure Monitor](/azure/azure-monitor/overview) provides the tools and interface to collect and review data from customer experiences. You can apply those observations and insights to refine the backlog by using [Azure Boards](/azure/devops/boards).
 
 ## Next steps
 

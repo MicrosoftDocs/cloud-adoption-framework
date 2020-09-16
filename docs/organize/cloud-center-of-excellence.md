@@ -10,8 +10,6 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
-<!-- cSpell:ignore ccoe deprioritize -->
-
 # Cloud center of excellence (CCoE) functions
 
 Business and technical agility are core objectives of most IT organizations. A cloud center of excellence (CCoE) is a function that creates a balance between speed and stability.
