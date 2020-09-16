@@ -11,7 +11,7 @@ ms.custom: readiness, fasttrack-edit
 ---
 
 <!-- docsTest:disable -->
-<!-- cSpell:ignore westeurope usgovia accountlookup messagequery -->
+<!-- cSpell:ignore cdnp cdne westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions
 
@@ -100,6 +100,9 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Application gateway              | agw-        |
 | Route table                      | route-      |
 | Traffic Manager profile          | traf-       |
+| Front door                       | fd-         |
+| CDN profile                      | cdnp-       |
+| CDN endpoint                     | cdne-       |
 
 ### Compute and Web
 
@@ -110,7 +113,8 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Availability set            | avail-      |
 | VM storage account          | stvm        |
 | Azure Arc connected machine | arcm-       |
-| Container instance          | aci-        |
+| Container registry          | cr-         |
+| Container instance          | ci-         |
 | AKS cluster                 | aks-        |
 | Service Fabric cluster      | sf-         |
 | App Service environment     | ase-        |
@@ -154,7 +158,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 | Asset type                      | Name prefix |
 |---------------------------------|-------------|
-| Azure Analysis Services server  | as-         |
+| Azure Analysis Services server  | as          |
 | Azure Databricks workspace      | dbw-        |
 | Azure Stream Analytics          | asa-        |
 | Azure Data Factory              | adf-        |

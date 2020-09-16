@@ -13,9 +13,9 @@ ms.subservice: strategy
 
 There's a learning curve and a time commitment associated with cloud adoption planning. Even for experienced teams, proper planning takes time: time to align stakeholders, time to collect and analyze data, time to validate long-term decisions, and time to align people, processes, and technology. In the most productive adoption efforts, planning grows in parallel with adoption, improving with each release and with each workload migration to the cloud. It's important to understand the difference between a cloud adoption plan and a cloud adoption strategy. You need a well-defined strategy to facilitate and guide the implementation of a cloud adoption plan.
 
-<!-- docutune:ignore "Strategy, Plan, Ready, Adopt, and Operate phases" -->
+<!-- docutune:ignore "Strategy, Plan, Ready, Adopt, and Manage" -->
 
-The Cloud Adoption Framework for Azure outlines the processes for cloud adoption and the operation of workloads hosted in the cloud. Each of the processes across the Strategy, Plan, Ready, Adopt, and Operate phases require slight expansions of technical, business, and operational skills. Some of those skills can come from directed learning. But many of them are most effectively acquired through hands-on experience.
+The Cloud Adoption Framework for Azure outlines the processes for cloud adoption and the operation of workloads hosted in the cloud. Each of the processes across the Strategy, Plan, Ready, Adopt, and Manage methodologies require slight expansions of technical, business, and operational skills. Some of those skills can come from directed learning. But many of them are most effectively acquired through hands-on experience.
 
 Starting a first adoption process in parallel with the development of the plan provides some benefits:
 

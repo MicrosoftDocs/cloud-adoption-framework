@@ -234,7 +234,7 @@ Operations management is another requirement to reach migration success. Migrati
 
 ## Value statement
 
-These steps help teams accelerate their migration efforts through better change management and stakeholder alignment. These steps might slow the process. These steps also remove common blockers and realize business value more quickly.
+These steps help teams accelerate their migration efforts through better change management and stakeholder alignment. These steps also remove common blockers and realize business value more quickly.
 
 ## Next steps
 
