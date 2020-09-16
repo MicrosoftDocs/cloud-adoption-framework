@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Get started: Understand and document foundational alignment decisions
 
-The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand. 
+The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand.
 
 > [!NOTE]
 > Selecting any of the following links might lead you to bounce around the table of contents for the Microsoft Cloud Adoption Framework for Azure, looking for fundamental concepts that you'll use later to help the team implement the associated guidance. Bookmark this page to come back to this checklist often.
@@ -20,7 +20,7 @@ The cloud adoption journey can unlock many business, technical, and organization
 
 As you work through this guide, record our foundational decisions using the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle by clarifying how your cloud environment is configured and why.
 
-If you already have an environment running in Azure, the [CAF Governance Vizualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer) can help you accelerate your documentation. Gain insight into policies, RBAC, Blueprints, subscriptions and more. From the collected data the tool provides visibility on your Hierarchy Map, creates a Tenant Summary and builds granular Scope Insights on Management Groups and Subscriptions. The tool can be found in the Cloud Adoption Framework's accompanying source code repository: https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer. 
+If you already have an environment running in Azure, the [CAF Governance Visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer) can help you accelerate your documentation. Gain insight into policies, role-based access control (RBAC), Azure Blueprints, subscriptions, and more. From the collected data the tool provides visibility on your hierarchy map, creates a tenant summary, and builds granular scope insights about management groups and subscriptions. The tool can be found in the Cloud Adoption Framework's accompanying [GitHub repository](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer).
 
 ## Step 1: Understand how Azure works
 

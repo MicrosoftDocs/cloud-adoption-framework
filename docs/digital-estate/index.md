@@ -25,11 +25,11 @@ The measurement of a digital estate changes depending on the desired business ou
 
 - **Data-driven innovation:** In today's digitally driven market, it's difficult to launch a new product or service without a strong foundation in data. During cloud-enabled data innovation efforts, the focus is more on the silos of data across the organization.
 
-- **Operational stability:** Businesses are dependent on stable technologies to operate effectively. Near-zero downtime and service relaibility are crucial in competitive markets. When operational stablity is a priority, the digital estate should be measured on positive/negative impact to stable operations. Business continuity, disaster recovery, and reliability of workloads and each asset are required measures when operational stablity is a priority.
+- **Operational stability:** Businesses are dependent on stable technologies to operate effectively. Near-zero downtime and service reliability are crucial in competitive markets. When operational stability is a priority, the digital estate should be measured on positive or negative impact to stable operations. Business continuity, disaster recovery, and reliability of workloads and each asset are required measures when operational stability is a priority.
 
 After an organization understands the most important form of transformation, digital estate planning becomes much easier to manage.
 
->  Each type of transformation can be measured with any of the above views. Companies commonly complete all these transformations in parallel. We strongly recommend that company leadership and the cloud strategy team agree regarding the transformation that is most important for business success. That understanding serves as the basis for common language and metrics across multiple initiatives.
+> Each type of transformation can be measured with any of the above views. Companies commonly complete all these transformations in parallel. We strongly recommend that company leadership and the cloud strategy team agree regarding the transformation that is most important for business success. That understanding serves as the basis for common language and metrics across multiple initiatives.
 
 ## How can a financial model be updated to reflect the digital estate?
 
