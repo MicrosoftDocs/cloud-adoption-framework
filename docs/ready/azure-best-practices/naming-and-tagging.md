@@ -11,7 +11,7 @@ ms.custom: readiness, fasttrack-edit
 ---
 
 <!-- docsTest:disable -->
-<!-- cSpell:ignore westeurope usgovia accountlookup messagequery -->
+<!-- cSpell:ignore cdnp cdne westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions
 
@@ -78,6 +78,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 | Asset type                      | Name prefix |
 |---------------------------------|-------------|
+| Management group                | mg-         |
 | Resource group                  | rg-         |
 | Policy definition               | policy-     |
 | API management service instance | apim-       |
@@ -88,6 +89,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 |----------------------------------|-------------|
 | Virtual network                  | vnet-       |
 | Subnet                           | snet-       |
+| Virtual network peering          | peer-       |
 | Network interface (NIC)          | nic-        |
 | Public IP address                | pip-        |
 | Load balancer (internal)         | lbi-        |
@@ -99,7 +101,11 @@ This list recommends Azure resource type prefixes to use when you define your na
 | VPN connection                   | cn-         |
 | Application gateway              | agw-        |
 | Route table                      | route-      |
+| User defined route (UDR)         | udr-        |
 | Traffic Manager profile          | traf-       |
+| Front door                       | fd-         |
+| CDN profile                      | cdnp-       |
+| CDN endpoint                     | cdne-       |
 
 ### Compute and Web
 
@@ -110,7 +116,8 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Availability set            | avail-      |
 | VM storage account          | stvm        |
 | Azure Arc connected machine | arcm-       |
-| Container instance          | aci-        |
+| Container registry          | cr-         |
+| Container instance          | ci-         |
 | AKS cluster                 | aks-        |
 | Service Fabric cluster      | sf-         |
 | App Service environment     | ase-        |
@@ -154,7 +161,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 | Asset type                      | Name prefix |
 |---------------------------------|-------------|
-| Azure Analysis Services server  | as-         |
+| Azure Analysis Services server  | as          |
 | Azure Databricks workspace      | dbw-        |
 | Azure Stream Analytics          | asa-        |
 | Azure Data Factory              | adf-        |
@@ -233,11 +240,12 @@ The following section provides some example names for common Azure resource type
 
 ### Example names: General
 
-| Asset type                      | Scope                              | Format                                                      | Examples                                                                                                                |
-|---------------------------------|------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Subscription                    | Account/ <br> Enterprise Agreement | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001 |
-| Resource group                  | Subscription                       | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
-| API management service instance | Global                             | apim-\<App or service name\>                                | apim-navigator-prod                                                                                                     |
+| Asset type                      | Scope                                 | Format                                                      | Examples                                                                                           |
+|---------------------------------|---------------------------------------|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Management group                | Business unit and/or Environment type | mg-\<Business Unit\>\[-\<Environment type\>\]               | <li> mg-mktg <li> mg-hr <li> mg-corp-prod <li> mg-fin-client                                       |
+| Subscription                    | Account/ <br> Enterprise Agreement    | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001                                        |
+| Resource group                  | Subscription                          | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
+| API management service instance | Global                                | apim-\<App or service name\>                                | apim-navigator-prod                                                                                |
 
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
