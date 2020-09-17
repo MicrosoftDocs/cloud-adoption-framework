@@ -7,7 +7,7 @@ items:
     tocHref: /azure/cloud-adoption-framework/
     topicHref: /azure/cloud-adoption-framework
     items:
-    - name: Strategy 
+    - name: Strategy
       tocHref: /azure/cloud-adoption-framework/strategy/
       topicHref: /azure/cloud-adoption-framework/strategy
     - name: Plan

@@ -105,7 +105,7 @@ Understanding the plan also invites the cloud operations team into the developme
 - [Gather inventory](../digital-estate/inventory.md): Establish a source of data for analysis of the digital estate before adoption.
 - [Best practice: Azure Migrate](../plan/contoso-migration-assessment.md): Use Azure Migrate to gather inventory.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): During incremental rationalization, use a quantitative analysis to identify cloud candidates for budgeting purposes.
-- [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+- [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management + Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Build a plan with actionable workload, asset, and timeline details.
 
 <br>
