@@ -416,9 +416,9 @@ We also find that inclusiveness is a requirement - if some teams are not invited
 Microsoft has published guidance on applying a segmentation strategy to Azure in [this video](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) and documents on [enterprise segmentation](https://docs.microsoft.com/security/compass/governance#enterprise-segmentation-strategy) and [aligning network security to it](https://docs.microsoft.com/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy). 
 
 The cloud adoption framework includes guidance to help your teams with
- - **[Building a cloud strategy team](https://docs.microsoft.com/azure/cloud-adoption-framework/get-started/team/cloud-strategy)**: Ideally, security should be integrated into an existing cloud strategy. 
- - **[Build or modernize a security strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy)**: To meet business and security goals in the current age of cloud services and modern threats.
+ - **[Building a cloud strategy team](/azure/cloud-adoption-framework/get-started/team/cloud-strategy)**: Ideally, security should be integrated into an existing cloud strategy. 
+ - **[Build or modernize a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy)**: To meet business and security goals in the current age of cloud services and modern threats.
 
-Also see the Azure Security Benchmark [Governance and Strategy](https://docs.microsoft.com/azure/security/benchmarks/security-controls-v2-governance-strategy).
+Also see the Azure Security Benchmark [Governance and Strategy](/azure/security/benchmarks/security-controls-v2-governance-strategy).
 
 
