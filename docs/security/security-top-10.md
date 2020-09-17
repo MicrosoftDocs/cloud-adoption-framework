@@ -69,15 +69,15 @@ Microsoft provides extensive resources to help technical professionals ramp up o
 
  - Azure Security
     - AZ-500 [Learning Path](https://docs.microsoft.com/learn/certifications/exams/az-500?tab=tab-learning-paths) (and Certification)
-   - [Azure security benchmark (ASB)](https://aka.ms/benchmarkdocs) –Prescriptive Best Practices and Controls for Azure Security
+   - [Azure security benchmark (ASB)](https://docs.microsoft.com/azure/security/benchmarks/) –Prescriptive Best Practices and Controls for Azure Security
      - [Security Baselines for Azure](https://docs.microsoft.com/azure/security/benchmarks/security-baselines-overview) – Application of ASB to individual Azure Services
    - [Microsoft Security Best Practices](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction) - Videos and Documentation
 - Azure Compliance
    - [Regulatory compliance](https://docs.microsoft.com/azure/security-center/security-center-compliance-dashboard) evaluation with Azure Security Center
  - Identity Protocols and Security 
-   - [Azure security documentation site](https://aka.ms/azuresecuritydocs)
+   - [Azure security documentation site](https://docs.microsoft.com/azure/security/)
    - Azure AD Authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy) 
-   - [Securing Azure Environments with Azure Active Directory](https://aka.ms/azureadsecuredazure) 
+   - [Securing Azure Environments with Azure Active Directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/) 
 
 Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](https://docs.microsoft.com/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
@@ -122,7 +122,7 @@ Also see the Azure Security Benchmark [GS-3: Align organization roles, responsib
 
 *You don’t have time to plan for a crisis during a crisis.*
 
-**What** - Update processes and prepare analysts to for responding to security incidents on your Azure cloud platform (including any [native threat detection tools](https://aka.ms/AzSec8) you have adopted). Update processes, prepare your team, and practice with simulated attacks so they can perform at their best during incident investigation, remediation, and threat hunting. 
+**What** - Update processes and prepare analysts to for responding to security incidents on your Azure cloud platform (including any [native threat detection tools](https://docs.microsoft.com/azure/cloud-adoption-framework/get-started/security#step-1-establish-essential-security-practices) you have adopted). Update processes, prepare your team, and practice with simulated attacks so they can perform at their best during incident investigation, remediation, and threat hunting. 
 
 **Why** - Active attackers present an immediate risk to the organization that can quickly become a difficult to control situation, so you must rapidly effectively respond to attacks. This incident response (IR) process must be effective for your entire estate including all cloud platforms hosting enterprise data, systems, and accounts. 
 
@@ -142,7 +142,7 @@ While similar in many ways, cloud platforms have important technical difference 
 
 _**Key Focus Areas**_ – While there are many details described in the resource links, these are key areas to focus your education and planning efforts:
  - **Shared responsibility model and Cloud Architectures** – To a security analyst, Azure is a software defined datacenter that provides many services including VMs (familiar) and others that are very different from on-premises such as Azure SQL Azure Functions, etc. where the best data is in the service logs or the specialized threat detection services rather than in logs for the underlying OS/VMs (which are operated by Microsoft and service multiple customers). Analysts need to understand and integrate this context into their daily workflows so they know what data to expect, where to get it, and what format it will be in. 
- - **Endpoint data sources** – Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and EDR systems as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it is possible and required for legal proceedings (https://aka.ms/azureforensics), this is often the most inefficient way to detect and investigate attacks. 
+ - **Endpoint data sources** – Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and EDR systems as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it is possible and required for legal proceedings (https://docs.microsoft.com/azure/architecture/example-scenario/forensics/), this is often the most inefficient way to detect and investigate attacks. 
  - **Network and Identity data sources** – Many functions of cloud platforms primarily use identity primarily for access control such as access to the Azure portal (though network access controls are used extensively as well). This requires analysts to develop an understand of cloud identity protocols to get a full rich picture of attacker activity (and legitimate user activity) to support incident investigation and remediation. Identity directories and protocols are also different from on-premises as they are typically based on SAML, OAuth, and OIDC and Cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory that are commonly found on-premises. 
  - **Practice exercises** – simulated attacks and response can help build organizational muscle memory and technical readiness for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you should work to minimize how much you have to learn in a crisis. 
 
@@ -155,7 +155,7 @@ _**Key Focus Areas**_ – While there are many details described in the resource
    - [Transformation of Security, Strategies, Tools, & Threats](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513) 
    - [Security Operations](https://docs.microsoft.com/security/compass/security-operations-videos-and-decks) 
  - Microsoft Learnings from Cyber Defense Operations Center (CDOC) 
-   - [Overall Lessons Learned](https://aka.ms/ITSOC)
+   - [Overall Lessons Learned](https://www.microsoft.com/security/blog/2019/02/21/lessons-learned-from-the-microsoft-soc-part-1-organization/)
    - [Incident Investigation](https://www.microsoft.com/security/blog/2019/12/23/ciso-series-lessons-learned-from-the-microsoft-soc-part-3b-a-day-in-the-life/)
    - [Incident Remediation](https://www.microsoft.com/security/blog/2020/05/04/lessons-learned-microsoft-soc-part-3c/)
 
@@ -175,7 +175,7 @@ Also see the Azure Security Benchmark [IR-1: Preparation – update incident res
 
 The software defined nature of cloud datacenters enables continuous monitoring of security risk (software vulnerabilities, security misconfigurations, etc.) with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources also creates a need to ensure resources are configured securely and actively monitored. 
 
-These new capabilities offer new possibilities, but realizing value from them requires assigning responsibility for using them. Executing consistently on with rapidly evolving cloud operations also requires keeping human processes as simple and automated as possible. See the “Drive Simplicity” [security principle](https://aka.ms/securityprinciples). 
+These new capabilities offer new possibilities, but realizing value from them requires assigning responsibility for using them. Executing consistently on with rapidly evolving cloud operations also requires keeping human processes as simple and automated as possible. See the “Drive Simplicity” [security principle](https://docs.microsoft.com/azure/architecture/framework/security/security-principles). 
 > [!Note]
  >The goal of simplification and automation isn’t about getting rid of jobs, but about removing the burden of repetitive tasks from people so they can focus on higher value human activities like engaging with and educating IT and DevOps teams. 
 
@@ -234,7 +234,7 @@ While MFA was once a burdensome extra step, Passwordless approaches today improv
 
 **How** - Implement Passwordless or MFA authentication, train administrators on how to use it (as needed), and require admins to follow using written policy. This can be accomplished by one or more of these technologies:
  - Passwordless (Windows Hello)
-http://aka.ms/HelloForBusiness
+[https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)
  - Passwordless (Authenticator App)
 https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-phone-sign-in 
  - Azure Multifactor Authentication 
@@ -430,7 +430,7 @@ Microsoft has published guidance on applying a segmentation strategy to Azure in
 
 The cloud adoption framework includes guidance to help your teams with
  - **[Building a cloud strategy team](https://docs.microsoft.com/azure/cloud-adoption-framework/get-started/team/cloud-strategy)** - Ideally, security should be integrated into an existing cloud strategy. 
- - **[Build or modernize a security strategy](https://aka.ms/securitystrategy)** – to meet business and security goals in the current age of cloud services and modern threats.
+ - **[Build or modernize a security strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy)** – to meet business and security goals in the current age of cloud services and modern threats.
 
 Also see the Azure Security Benchmark [Governance and Strategy](https://docs.microsoft.com/azure/security/benchmarks/security-controls-v2-governance-strategy)
 
