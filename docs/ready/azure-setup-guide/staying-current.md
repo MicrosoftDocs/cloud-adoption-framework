@@ -11,7 +11,7 @@ ms.custom: fasttrack-new, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- docsTest:casing AzAdvertizer "Azure Info Hub" "Azure Charts" "Azure Weekly" -->
+<!-- docutune:casing AzAdvertizer "Azure Info Hub" "Azure Charts" "Azure Weekly" -->
 <!-- cSpell:ignore endjin AzAdvertizer -->
 
 # Stay current with Azure

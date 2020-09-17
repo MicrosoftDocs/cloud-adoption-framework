@@ -519,7 +519,7 @@ In many industries, organizations require that traffic in Azure is mirrored to a
 
 **Design considerations:**
 
-<!-- docsTest:ignore TAP -->
+<!-- docutune:ignore TAP -->
 
 - [Azure Virtual Network Terminal Access Point (TAP)](/azure/virtual-network/virtual-network-tap-overview) is in preview. Contact `azurevnettap@microsoft.com` for availability details.
 

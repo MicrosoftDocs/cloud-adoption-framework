@@ -418,7 +418,7 @@ Within the hub-and-spoke model, Contoso needed to think about how traffic from t
 
 With a network and routing topology in place, Contoso is ready to set up Azure networks and subnets:
 
-<!-- docsTest:casing "class-A" "class-B" -->
+<!-- docutune:casing "class-A" "class-B" -->
 
 - Contoso will implement a class-A private network in Azure (`10.0.0.0/8`). This works because of on-premises; it currently has a class-B private address space (`172.160.0.0/16`). Contoso can be sure there won't be any overlap between address ranges.
 - Contoso will deploy virtual networks in both the primary and secondary regions.

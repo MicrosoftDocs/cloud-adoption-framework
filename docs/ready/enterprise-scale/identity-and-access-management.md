@@ -40,7 +40,7 @@ _Figure 1: Identity and access management._
   - Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It's standard practice for any organization that grants or denies access to confidential or critical business resources.
   - Managing application resources that don't violate security boundaries or other aspects required to maintain security and compliance can be delegated to application teams. Allowing users to provision resources within a securely managed environment allows organizations to take advantage of the agile nature of the cloud while preventing the violation of any critical security or governance boundary.
 
-<!-- docsTest:ignore Azure-AD-only Azure-AD-managed -->
+<!-- docutune:ignore Azure-AD-only Azure-AD-managed -->
 
 **Design recommendations:**
 

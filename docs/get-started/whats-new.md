@@ -212,4 +212,4 @@ In response to feedback about continuity in the migration approach through multi
 | [Assess overview](../migrate/migration-considerations/assess/index.md) | Updated to illustrate that the assessment in this phase focuses on assessing the technical fit of a specific workload and related assets. |
 | [Planning checklist](../migrate/migration-considerations/prerequisites/planning-checklist.md) | Updated to clarify the importance of operations alignment during planning for migration efforts to ensure a well-managed workload following migration. |
 
-<!-- docsTest:ignoreNextStep -->
+<!-- docutune:ignoreNextStep -->

@@ -86,7 +86,7 @@ When you migrate tables between different technologies, you physically move only
 
 However, understanding where performance optimizations like indexes have been used in the source environment can be a helpful indication of where you might optimize performance in the new environment. For example, if queries in the source Netezza environment frequently use zone maps, you might conclude that it would be advantageous to create a nonclustered index in the migrated Azure Synapse environment, or that using other native performance optimization techniques like table replication might be preferable to creating a like-for-like index.
 
-<!-- docsTest:casing "NZ Toolkit" -->
+<!-- docutune:casing "NZ Toolkit" -->
 
 ### Unsupported Netezza database object types
 

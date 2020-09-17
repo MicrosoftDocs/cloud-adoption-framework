@@ -66,7 +66,7 @@ As a general best practice, we suggest a least-privilege model in assigning peop
 
 ### Roles
 
-<!-- docsTest:casing Owner Contributor Reader "Cost Management Contributor" "Cost Management Reader" -->
+<!-- docutune:casing Owner Contributor Reader "Cost Management Contributor" "Cost Management Reader" -->
 
 Azure Cost Management and Billing supports the following built-in roles for each scope:
 
@@ -121,7 +121,7 @@ To begin using Azure Cost Management and Billing, see [How to optimize your clou
 - [Optimize costs based on recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Use cost alerts to monitor usage and spending](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
-<!-- docsTest: "AWS Cost and Usage" -->
+<!-- docutune: "AWS Cost and Usage" -->
 
 ### Use Azure Cost Management and Billing to govern AWS costs
 

@@ -10,7 +10,7 @@ ms.subservice: reference
 ROBOTS: NOINDEX
 ---
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 <!-- cSpell:ignore subscope ITSM Hashi -->
 
 # Azure enterprise scaffold: Prescriptive subscription governance
@@ -339,7 +339,7 @@ The final component of the Azure scaffold reference model is core to how your or
 > - Enable effective microsegmentation within a larger subnet, reducing sprawl and increasing flexibility.
 
 <!-- TODO: Refactor VDC content below. -->
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- docutune:ignore "Azure Virtual Datacenter" -->
 
 ### Azure Virtual Datacenter
 

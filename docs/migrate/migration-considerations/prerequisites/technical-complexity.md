@@ -15,7 +15,7 @@ When an entire datacenter can be deprovisioned and re-created with a single line
 
 When shifting to an agile model where flexibility and iteration are emphasized, technical complexity and change management are handled differently than they're in a traditional waterfall model focusing on a linear series of migration steps. This article outlines a high-level approach to change management in an agile-based migration effort. At the end of this article, you should have a general understanding of the levels of change management and documentation involved in an incremental migration approach. Additional training and decisions are required to select and implement agile practices based on that understanding. The intention of this article is to prepare cloud architects for a facilitated conversation with project management to explain the general concept of change management in this approach.
 
-<!-- docsTest:ignore INVEST -->
+<!-- docutune:ignore INVEST -->
 
 ## Address technical complexity
 

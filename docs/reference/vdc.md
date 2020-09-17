@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: reference
 ---
 
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- docutune:ignore "Azure Virtual Datacenter" -->
 
 # Azure Virtual Datacenter
 

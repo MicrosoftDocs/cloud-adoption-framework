@@ -59,7 +59,7 @@ Azure Stack is offered via two deployment options:
 
 You can speed up Azure Stack initiatives by using the complete Azure ecosystem:
 
-<!-- docsTest:casing "EMC Services" "Infront Consulting Group" "HPE Pointnext" -->
+<!-- docutune:casing "EMC Services" "Infront Consulting Group" "HPE Pointnext" -->
 <!-- cSpell:ignore ISVs Bitnami DXC EMC Infront Yourhosting Revera Avanade Pulsant PWC PricewaterhouseCoopers -->
 
 - Azure ensures that most applications and services that are certified for Azure will work on Azure Stack. Several ISVs are extending their solutions to Azure Stack. These ISVs include Bitnami, Docker, kemp technologies, pivotal cloud foundry, Red Hat enterprise Linux, and suse Linux.
