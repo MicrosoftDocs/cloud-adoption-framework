@@ -15,7 +15,7 @@ The Cloud Adoption Framework can help you get started in several ways, so there 
 
 <br>
 
-Each of the following links take you to a the questions that are typically asked when an organization is trying to accomplish a certain goal during their cloud adoption journey.
+Each of the following links takes you to questions that are typically asked when an organization is trying to accomplish a certain goal during their cloud adoption journey.
 
 - [Align foundational concepts to onboard a person, project, or team](#align-foundation)
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)

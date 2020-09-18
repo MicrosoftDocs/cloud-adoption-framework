@@ -10,7 +10,7 @@ ms.subservice: overview
 ms.custom: operating-model
 ---
 
-<!-- docsTest:casing GRC -->
+<!-- docutune:casing GRC -->
 <!-- cspell:ignore reimagine -->
 
 # Understand cloud operating models

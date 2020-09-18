@@ -49,7 +49,7 @@ Discovery is a fundamental tenet of enterprise architecture. If discovery is lim
 
 **Business drivers:** Business drivers capture the current challenge that's preventing the company from achieving desired outcomes. They can also capture new opportunities that the business can capitalize on with the right solution. How would you describe the current challenges or future state of the business? What business functions would be changing to meet the desired outcomes?
 
-**KPIs:** How will this change be measured? How does the business know if they are successful? How frequently will this KPI be observed? Understanding each KPI helps enable incremental change and experimentation.
+**KPIs:** How will this change be measured? How does the business know whether they are successful? How frequently will this KPI be observed? Understanding each KPI helps enable incremental change and experimentation.
 
 **Capabilities:** When you define any transformation journey, how will technical capabilities accelerate realization of the business outcome? What applications must be included in the transformation to achieve business objectives? How do various applications or workloads get prioritized to deliver on capabilities? How do parts of the solution need to be expanded or rearchitected to meet each of the outcomes? Can execution approaches (or timelines) be rearranged to prioritize high-impact business outcomes?
 

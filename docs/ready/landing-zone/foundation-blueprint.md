@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- docsTest:ignore "CAF Foundation blueprint" -->
+<!-- docutune:ignore "CAF Foundation blueprint" -->
 
 # Deploy a CAF Foundation blueprint in Azure
 

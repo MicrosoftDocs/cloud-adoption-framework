@@ -180,7 +180,7 @@ Once resources are in production, data can be aggregated and trends analyzed at 
 - Analyze data to generate a budget baseline for Azure resource groups and resources.
 - Identify patterns of use that would allow you to reduce size and stop or pause resources to further reduce your costs.
 
-Best practices in this section include using Azure Hybrid Benefit and Azure Reserved Virtual Machine Instances, reduce cloud spending across subscriptions, using Azure Cost Management and Billing for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
+Best practices in this section include using Azure Hybrid Benefit and Azure Reserved Virtual Machine Instances, reduce cloud spending across subscriptions, using Azure Cost Management + Billing for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
 
 ## Best practice: Take advantage of Azure Hybrid Benefit
 
@@ -218,7 +218,7 @@ Using Azure Reserved VM Instances, you prepay for either a one-year or three-yea
 
 It's inevitable that eventually you'll have more than one Azure subscription. For example, you might need an additional subscription to separate development and production boundaries, or you might have a platform that requires a separate subscription for each client. Having the ability to aggregate data reporting across all the subscriptions into a single platform is a valuable feature.
 
-To do this, you can use Azure Cost Management and Billing APIs. Then, after aggregating data into a single source such as Azure SQL Database, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
+To do this, you can use Azure Cost Management + Billing APIs. Then, after aggregating data into a single source such as Azure SQL Database, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
 
 **Learn more:**
 
@@ -234,7 +234,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 - For example, if your workload is used heavily Monday through Friday, 8am to 6pm, but hardly used outside those hours, you could downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down.
 - Some companies "snooze", VMs by putting them on a calendar that specifies when they should be available, and when they're not needed.
 - In addition to VM monitoring, you should monitor other networking resources such as ExpressRoute and virtual network gateways for under and over use.
-- You can monitor VM usage using Microsoft tools such as Azure Cost Management and Billing, Azure Monitor, and Azure Advisor. Third-party tools are also available.
+- You can monitor VM usage using Microsoft tools such as Azure Cost Management + Billing, Azure Monitor, and Azure Advisor. Third-party tools are also available.
 
 **Learn more:**
 
@@ -258,9 +258,9 @@ Additionally, consider general cost reductions for any nonproduction environment
 - [Auto-shutdown VMs](/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they're ready to resume development.
 - Encourage development teams to use [Azure DevTest Labs](/azure/lab-services/devtest-lab-overview) to establish their own cost-control approaches and avoid impact of the standard auto-shutdown timing in the prior step.
 
-## Best practice: Use Azure Cost Management and Billing
+## Best practice: Use Azure Cost Management + Billing
 
-Microsoft provides Azure Cost Management and Billing to help you track spending:
+Microsoft provides Azure Cost Management + Billing to help you track spending:
 
 - Helps you to monitor and control Azure spending, and optimize use of resources.
 - Reviews your entire subscription and all of its resources, and makes recommendations.
@@ -268,7 +268,7 @@ Microsoft provides Azure Cost Management and Billing to help you track spending:
 - Tracks resource usage and manage cloud costs with a single, unified view.
 - Provides rich operational and financial insights to help you make informed decisions.
 
-In Azure Cost Management and Billing, you can:
+In Azure Cost Management + Billing, you can:
 
 - **Create a budget:** Create a budget for financial accountability.
   - You can account for the services you consume or subscribe to for a specific period (monthly, quarterly, annually) and a scope (subscriptions/resource groups). For example, you can create an Azure subscription budget for a monthly, quarterly, or annual period.
@@ -276,24 +276,24 @@ In Azure Cost Management and Billing, you can:
   - Email notifications can be sent when budget thresholds are reached.
   - You can export costs management data to Azure Storage, for analysis.
 
-    ![View budgets in Azure Cost Management and Billing](../../migrate/azure-best-practices/media/migrate-best-practices-costs/budget.png)
-    *Budgets in Azure Cost Management and Billing.*
+    ![View budgets in Azure Cost Management + Billing](../../migrate/azure-best-practices/media/migrate-best-practices-costs/budget.png)
+    *Budgets in Azure Cost Management + Billing.*
 
 - **Do a cost analysis:** Get a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
   - Cost analysis is available to EA users.
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-    ![Azure Cost Management and Billing analysis](../../migrate/azure-best-practices/media/migrate-best-practices-costs/analysis.png)
-    *Figure: Azure Cost Management and Billing analysis.*
+    ![Azure Cost Management + Billing analysis](../../migrate/azure-best-practices/media/migrate-best-practices-costs/analysis.png)
+    *Figure: Azure Cost Management + Billing analysis.*
 
 - **Get recommendations:** Get Advisor recommendations that show you how you can optimize and improve efficiency.
 
 **Learn more:**
 
-- Read the [Azure Cost Management and Billing overview](/azure/cost-management/overview).
-- Learn how to [optimize your cloud investment with Azure Cost Management and Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
-- Learn how to use [Azure Cost Management and Billing reports](/azure/cost-management/use-reports).
+- Read the [Azure Cost Management + Billing overview](/azure/cost-management/overview).
+- Learn how to [optimize your cloud investment with Azure Cost Management + Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
+- Learn how to use [Azure Cost Management + Billing reports](/azure/cost-management/use-reports).
 - Review a tutorial on [optimizing costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations).
 - Review the [Azure Consumption APIs](/rest/api/consumption/budgets).
 
@@ -376,7 +376,7 @@ Azure provides a REST API that can access your tenant billing information.
 
 ## Next steps
 
-With an understanding of the best practices, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features to help you execute these best practices.
+With an understanding of best practices, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features to help you execute these best practices.
 
 > [!div class="nextstepaction"]
 > [Cost Management toolchain for Azure](./toolchain.md)

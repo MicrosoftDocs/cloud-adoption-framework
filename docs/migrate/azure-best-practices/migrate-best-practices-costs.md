@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- docsTest:casing ARO -->
+<!-- docutune:casing ARO -->
 
 # Best practices to cost and size workloads migrated to Azure
 

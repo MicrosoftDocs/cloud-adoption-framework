@@ -34,7 +34,7 @@ The following sample policy statements address common cost-related business risk
 
 **Policy statement:** Any cloud deployment must be allocated to a billing unit with approved budget and a mechanism for budgetary limits.
 
-**Design options:** In Azure, budget can be controlled with [Azure Cost Management and Billing](/azure/cost-management/manage-budgets).
+**Design options:** In Azure, budget can be controlled with [Azure Cost Management + Billing](/azure/cost-management/manage-budgets).
 
 ## Underutilization
 
@@ -44,7 +44,7 @@ The following sample policy statements address common cost-related business risk
 
 **Design options:**
 
-- In Azure, planned versus actual spending can be managed via [Azure Cost Management and Billing](/azure/cost-management/quick-acm-cost-analysis).
+- In Azure, planned versus actual spending can be managed via [Azure Cost Management + Billing](/azure/cost-management/quick-acm-cost-analysis).
 - There are several options for grouping resources by billing unit. In Azure, a [resource consistency model](../../decision-guides/resource-consistency/index.md) should be chosen in conjunction with the governance team and applied to all assets.
 
 ## Overprovisioned assets
