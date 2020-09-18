@@ -287,7 +287,7 @@ Also see the Azure Security Benchmark [NS-4: Protect applications and services f
 
 It’s difficult to get high threat detections using existing tools and approaches designed for on-premises threat detection because of differences in cloud technology and its rapid pace of change. Natively integrated detections provide industrial scale solutions maintained by the cloud providers that can keep up with current threats and cloud platform changes. 
 
-These native solutions also enable security operations teams to focus on incident investigation and remediation instead of wasting time trying to create alerts from unfamilliar log data, integrating tools, and maintenance tasks. 
+These native solutions also enable security operations teams to focus on incident investigation and remediation instead of wasting time trying to create alerts from unfamiliar log data, integrating tools, and maintenance tasks. 
 
 **Who**: This is typically driven by the [Security Operations](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center) team.
  - *Sponsorship* - This is typically sponsored by the Security Operations Director (or equivalent).
