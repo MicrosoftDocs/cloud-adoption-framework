@@ -178,7 +178,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
-<!-- docsTest:ignore "and conditional access" -->
+<!-- docutune:ignore "and conditional access" -->
 
 ## Azure Security Benchmarks
 

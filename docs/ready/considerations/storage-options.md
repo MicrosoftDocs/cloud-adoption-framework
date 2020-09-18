@@ -44,7 +44,7 @@ Azure offers multiple products and services for different storage capabilities. 
 
 ### Block storage scenarios
 
-<!-- docsTest:ignore M-series -->
+<!-- docutune:ignore M-series -->
 
 | Scenario | Suggested Azure services | Considerations for suggested services |
 |---|---|---|

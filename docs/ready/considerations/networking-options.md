@@ -76,7 +76,7 @@ The following table summarizes the primary scenarios that these patterns support
 | You have many branch offices that need to connect to each other and to Azure.                                                                                                                                                                                                                                                                                         | [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) |
 
 <!-- TODO: Refactor VDC content below. -->
-<!-- docsTest:casing "Azure Virtual Datacenter" -->
+<!-- docutune:casing "Azure Virtual Datacenter" -->
 
 ### Azure Virtual Datacenter
 

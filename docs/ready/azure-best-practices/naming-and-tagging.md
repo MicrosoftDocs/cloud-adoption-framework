@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit
 ---
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 <!-- cSpell:ignore cdnp cdne westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions

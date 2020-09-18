@@ -19,7 +19,7 @@ This section provides technical guidance for making the switch from a mainframe 
 
 ![Mainframe and Azure](../../_images/mainframe-migration/make-the-switch.png)
 
-<!-- docsTest:casing vCPUs -->
+<!-- docutune:casing vCPUs -->
 
 ## MIPS vs. vCPUs
 

@@ -17,7 +17,7 @@ This article covers how to get started with the enterprise-scale, platform-nativ
 
 In order to implement the enterprise-scale architecture, you must think in terms of the following categories of activities:
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 1. **What must be true for the enterprise-scale architecture:** Encompasses activities that must be performed by the Azure and Azure Active Directory (Azure AD) administrators to establish an initial configuration. These activities are sequential by nature and primarily one-off activities.
 
@@ -25,7 +25,7 @@ In order to implement the enterprise-scale architecture, you must think in terms
 
 3. **Deploy a new landing zone (File > New > Landing Zone):** These are recurring activities that are required to instantiate a new landing zone.
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->
 
 To operationalize at scale, these activities must follow infrastructure-as-code (IaC) principles and must be automated by using deployment pipelines.
 
@@ -180,11 +180,11 @@ The following list shows policies that you can use when you're implementing iden
 |--------------------------|----------------------------------------------------------------------------------------|
 | [`Deploy-VHub`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json) | This policy deploys a virtual hub, Azure Firewall, and gateways (VPN/ExpressRoute). It also configures the default route on connected virtual networks to Azure Firewall. |
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 ## File > New > Landing Zone for applications and workloads
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->
 
 1. Create a subscription and move it under the `Landing Zones` management group scope.
 

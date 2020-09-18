@@ -57,7 +57,7 @@ Each section of the Cloud Adoption Framework represents a different specializati
 
 If your enterprise is new to Azure, begin by [understanding and documenting foundational alignment decisions](./get-started/cloud-concepts.md). When your enterprise's digital transformation involves the cloud, understanding these fundamental concepts will help you during each step of the process.
 
-<!-- docsTest:ignoreNextStep -->
+<!-- docutune:ignoreNextStep -->
 
 > [!div class="nextstepaction"]
 > [Get started](./get-started/index.md)
