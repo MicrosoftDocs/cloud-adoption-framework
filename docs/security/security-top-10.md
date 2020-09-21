@@ -45,9 +45,9 @@ Also see the Azure Security Benchmark [GS-3: Align organization roles, responsib
 
 **What**: Ensure your teams have time set aside for technical education on securing cloud resources including:
 
-1. Cloud technology and cloud security technology
-2. Recommended configurations and best practices
-3. Where to learn more technical details as needed
+- Cloud technology and cloud security technology
+- Recommended configurations and best practices
+- Where to learn more technical details as needed
 
 **Why**: Technical teams need access to technical information to make sound informed security decisions. Technical teams are good at learning new technologies on the job, but the volume of details in the cloud often overwhelms their ability to fit learning into their daily routine.
 
