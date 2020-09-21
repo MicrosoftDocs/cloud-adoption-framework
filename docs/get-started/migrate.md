@@ -200,7 +200,8 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 - Deploy an initial governance foundation.
 - Complete a governance benchmark to plan for future improvements.
-- Timeline risk: improvement policies and governance implementation can add one to four weeks per discipline.
+- Timeline risk:
+  - Improvement of policies and governance implementation can add one to four weeks per discipline.
 
 <br>
 

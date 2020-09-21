@@ -75,7 +75,7 @@ Here are the new best practices:
     1. Define an NSG to block external traffic and allow internal traffic.
     2. Deploy two Active Directory virtual machines in a load-balanced pair based on a golden image. On first boot, that image runs a PowerShell script to join the domain and register with domain services. For more information, see [Extend Active Directory Domain Services (AD DS) to Azure](/azure/architecture/reference-architectures/identity/adds-extend-domain).
 - Azure Policy: apply the NSG to all resources.
-- Azure blueprint:
+- Azure Blueprints:
     1. Create a blueprint named `active-directory-virtual-machines`.
     2. Add each of the Active Directory templates and policies to the blueprint.
     3. Publish the blueprint to any applicable management group.
