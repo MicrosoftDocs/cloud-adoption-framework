@@ -10,7 +10,7 @@ items:
     items:
     - name: Overview
       href: scenarios/sap/index.md
-    - name: strategy
+    - name: Strategy
       href: scenarios/sap/strategy.md
     - name: Planning
       href: scenarios/sap/plan.md
@@ -24,6 +24,10 @@ items:
       href: scenarios/sap/migrate-deploy.md
     - name: Migrate - Release workloads
       href: scenarios/sap/migrate-release.md
+    - name: Govern
+      href: scenarios/sap/govern.md
+    - name: Manage
+      href: scenarios/sap/manage.md
     - name: Enterprise-Scale landing zone
       items:
       - name: Overview
