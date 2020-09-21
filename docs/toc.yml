@@ -1576,6 +1576,8 @@ items:
       items:
       - name: Cloud Operating Model
         href: reference/cloud-operating-model.md
+      - name: Azure security best practices
+        href: ./security/security-top-10.md
       - name: Azure enterprise scaffold
         href: reference/azure-scaffold.md
       - name: Virtual Datacenter (VDC)
