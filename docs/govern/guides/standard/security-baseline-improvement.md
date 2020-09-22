@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Standard enterprise governance guide: Improve the Security Baseline discipline
 
-This article advances the [governance strategy narrative](narrative.md) by adding security controls that support moving protected data to the cloud.
+This article advances the [governance strategy narrative](./narrative.md) by adding security controls that support moving protected data to the cloud.
 
 ## Advancing the narrative
 
@@ -26,7 +26,7 @@ The difference is subtle, but it's an important distinction when you're creating
 
 ### Changes in the current state
 
-At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as Prod and DR.
+At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as `Prod` and `DR`.
 
 Since then, some things have changed that will affect governance:
 
