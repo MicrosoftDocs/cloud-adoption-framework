@@ -942,7 +942,7 @@ items:
               - name: Computer vision in Visual Studio
                 href: /azure/cognitive-services/computer-vision/home?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Translate text in real time
-                href: /azure/cognitive-services/translator/quickstart-translate?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/translator/quickstart-translator?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Understand sentiment using LUIS
                 href: /azure/cognitive-services/luis/tutorial-publish-settings?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Recognize speech from a microphone
