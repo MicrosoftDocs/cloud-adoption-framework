@@ -39,26 +39,26 @@ Whether you're already operating in the cloud or you're planning for future adop
 
 **People:**
 
-1. [Education on cloud Journey](https://aka.ms/AzSec1)
-2. [Education on cloud Technology](https://aka.ms/AzSec2) 
+1. [Education on cloud Journey](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
+2. [Education on cloud Technology](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology) 
 
 **Process:**
 
-3. [Assign Accountability](https://aka.ms/AzSec3)
-4. [Rapid incident response](https://aka.ms/AzSec4)
-5. [Posture management](https://aka.ms/AzSec5)
+3. [Assign Accountability](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#3-process-assign-accountability-for-cloud-security-decisions)
+4. [Rapid incident response](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+5. [Posture management](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#5-process-establish-security-posture-management)
 
 **Technology:**
 
-6. [Passwordless / MFA](https://aka.ms/AzSec6)
-7. [Native Network Security and Firewall](https://aka.ms/AzSec7)
-8. [Native Threat Detection](https://aka.ms/AzSec8)
+6. [Passwordless / MFA](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
+7. [Native Network Security and Firewall](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#7-technology-integrate-native-firewall-and-network-security)
+8. [Native Threat Detection](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#8-technology-integrate-native-threat-detection)
 
 **Foundational Architecture Decisions:**
 
-9. [Single directory and identity](https://aka.ms/AzSec9)
-10. [Identity access controls](https://aka.ms/AzSec10)
-11. [Single Strategy](https://aka.ms/AzSec11)
+9. [Single directory and identity](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity)
+10. [Identity access controls](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#10-architecture-use-identity-based-access-control-instead-of-keys)
+11. [Single Strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
 
 > [!NOTE]
