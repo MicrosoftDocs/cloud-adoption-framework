@@ -318,7 +318,7 @@ The Azure Resource Usage and RateCard APIs can help you accurately predict and m
 
 VM workloads are often migrated "as-is" to avoid downtime. Often, VMs can host tasks that are intermittent, run over a short period, or alternately, take up many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
 
-After migrating and thoroughly reviewing these types of tasks, you might consider migrating them to serverless technologies like Azure Functions or batch jobs. These solutions can cut costs, and you'd no longer need to manage and maintain the VMs.
+After migrating and thoroughly reviewing these types of tasks, you might consider migrating them to serverless technologies like Azure Functions or Azure Batch jobs. These solutions can cut costs, and you'd no longer need to manage and maintain the VMs.
 
 **Learn more:**
 
