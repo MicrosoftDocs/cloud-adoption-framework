@@ -13,6 +13,8 @@ ms.subservice: reference
 
 These are the top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
 
+You can view a video presentation of these best practices in the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/video-hub/top-10-best-practices-for-azure-security/m-p/1698837)
+
 ## 1. People: Educate teams about the cloud security journey
 
 *The team needs to understand the journey they're on.*
