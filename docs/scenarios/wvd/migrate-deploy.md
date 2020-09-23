@@ -1,6 +1,6 @@
 ---
 title: Deploy Windows Virtual Desktop to Azure
-description: Use the Cloud Adoption Framework for Azure to learn Windows Virtual Desktop migration best practices to reduce complexity and standardize the migration process.
+description: Use the Cloud Adoption Framework for Azure to deploy Windows Virtual Desktop using best practices that reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/17/2020
