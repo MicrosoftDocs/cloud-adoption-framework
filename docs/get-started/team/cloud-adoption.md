@@ -36,7 +36,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 **Deliverables:**
 
-- Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
+- Determine whether the team aligns better with the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
 - Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
@@ -71,8 +71,8 @@ If your company's cloud adoption effort is mature enough to have supporting team
 
 Depending on the type of adoption team you're a member of, you'll get started with one of these guides:
 
-- Get started: Migrate workloads to the cloud
-- Get started: Build new products or services
+- [Get started: Migrate workloads to the cloud](../migrate.md)
+- [Get started: Build new products or services](../innovate.md)
 
 These guides provide guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
 
