@@ -31,34 +31,34 @@ The following diagram shows a holistic approach for using security guidance and 
 
 Use these steps to plan and execute your strategy for securing your cloud assets and using the cloud to modernize security operations.
 
-## Step 1: Establish essential security practices (Top 11)
+## Step 1: Establish essential security practices
 
 Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied. 
 
-Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements)
+Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
 
 **People:**
 
-1. [Education on cloud Journey](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
-2. [Education on cloud Technology](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology) 
+1. [Educate teams about the cloud security journey](../security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
+2. [Educate teams on cloud security technology](../security/security-top-10#2-people-educate-teams-on-cloud-security-technology) 
 
 **Process:**
 
-3. [Assign Accountability](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Rapid incident response](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
-5. [Posture management](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#5-process-establish-security-posture-management)
+3. [Assign accountability for cloud security decisions](../security/security-top-10#3-process-assign-accountability-for-cloud-security-decisions)
+4. [Update Incident Response (IR) processes for cloud](../security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+5. [Establish security posture management](../security/security-top-10#5-process-establish-security-posture-management)
 
 **Technology:**
 
-6. [Passwordless / MFA](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
-7. [Native Network Security and Firewall](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#7-technology-integrate-native-firewall-and-network-security)
-8. [Native Threat Detection](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#8-technology-integrate-native-threat-detection)
+6. [Require Passwordless or Multi-Factor Authentication (MFA)](../security/security-top-10#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
+7. [Integrate native firewall and network security](../security/security-top-10#7-technology-integrate-native-firewall-and-network-security)
+8. [Integrate native threat detection](../security/security-top-10#8-technology-integrate-native-threat-detection)
 
 **Foundational Architecture Decisions:**
 
-9. [Single directory and identity](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity)
-10. [Identity access controls](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#10-architecture-use-identity-based-access-control-instead-of-keys)
-11. [Single Strategy](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+9. [Standardize on a single directory and identity](../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity)
+10. [Use identity based access control (instead of keys)](../security/security-top-10#10-architecture-use-identity-based-access-control-instead-of-keys)
+11. [Establish a single unified security strategy](../security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
 
 > [!NOTE]
