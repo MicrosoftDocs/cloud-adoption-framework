@@ -1,6 +1,11 @@
 {
    "redirections": [
       {
+         "source_path": "docs/get-started/help.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/migrate/expanded-scope/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/index",
          "redirect_document_id": true
