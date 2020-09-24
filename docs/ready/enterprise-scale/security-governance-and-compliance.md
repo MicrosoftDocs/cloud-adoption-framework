@@ -170,7 +170,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Develop a security allow-list plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
-- Determine the incident response plan for Azure services before allowing.
+- Determine the incident response plan for Azure services before allowing it into production.
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
