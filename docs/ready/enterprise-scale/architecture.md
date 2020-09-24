@@ -64,6 +64,25 @@ In addition to the key aspects denoted here, the design, configuration, deployme
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
+The above diagram is an example of the enterprise-scale design principles and guidelines for an organizations Azure landing zone. Below is a key that further illustrates a compliant Azure architecure anding zone environment.
+
+A. Enterprise enrollment alignement of all your subscriptions and affects administration of your digital estate.
+
+B. Identity and access management enables access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
+
+C. Management group and subscription organization mapping that must be considered thoroughly when an organization plans Azure adoption at scale.
+
+D. Management Subscription operationalizes the Azure enterprise estate with centralized management and monitoring at a platform level. 
+
+E. Connectivity Subscription operationalizes the supporting networking and connectivity to, from, and within Microsoft Azure.
+
+F. Landing zone subscription enable application migrations and greenfield development at an enterprise scale in Azure.
+
+G. Sandbox subscription operationalize Azure learning and expermentation this allows users to immediately experiment with Azure.
+
+H. Devops proven approach for both application and central teams to create pipelines continuous integration and continuous deployment.
+
+
 _Figure 2: Cloud Adoption Framework enterprise-scale landing zone architecture._
 
 Download the [PDF file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) that contains this architecture diagram.
