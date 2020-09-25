@@ -3,7 +3,7 @@
       {
          "source_path": "docs/get-started/help.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/team/central-it.md",
@@ -18,7 +18,7 @@
       {
          "source_path": "docs/appendix/roadmap.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },      
       {
          "source_path": "docs/business-strategy/index.md",
@@ -53,7 +53,7 @@
       {
          "source_path": "docs/governance/getting-started.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/governance/governance-disciplines.md",
@@ -63,7 +63,7 @@
       {
          "source_path": "docs/governance/journeys/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/governance/resource-consistency/index.md",
@@ -73,7 +73,7 @@
       {
          "source_path": "docs/governance/security-baseline/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/security-baseline/index",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/organization/index.md",
@@ -83,7 +83,7 @@
       {
          "source_path": "docs/reference/roadmap.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },                        
       {
          "source_path": "docs/migrate/expanded-scope/index.md",
