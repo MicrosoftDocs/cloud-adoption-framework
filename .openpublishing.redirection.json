@@ -58,7 +58,7 @@
       {
          "source_path": "docs/governance/governance-disciplines.md",
          "redirect_url": "azure/cloud-adoption-framework/govern/governance-disciplines",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/governance/journeys/index.md",
