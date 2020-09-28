@@ -157,6 +157,8 @@ _Figure 1: Virtual WAN network topology._
 
 - Connect Virtual WAN hubs to on-premises datacenters by using ExpressRoute.
 
+- If the usage of additional shared services like Active Directory domain controllers and DNS servers is required, deploy them in the dedicated [identity subscription](/ready/enterprise-scale/management-group-and-subscription-organization), in an [additional dedicated VNET Hub](azure/architecture/reference-architectures/hybrid-networking/shared-services) next to the Virtual WAN Hub.
+
 - Connect branches and remote locations to the nearest Virtual WAN hub via site-to-site VPN, or enable branch connectivity to Virtual WAN via an SD-WAN partner solution.
 
 - Connect users to the Virtual WAN hub via a point-to-site VPN.
