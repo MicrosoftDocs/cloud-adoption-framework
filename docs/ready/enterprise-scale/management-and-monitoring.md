@@ -29,7 +29,7 @@ _Figure 1: Platform management and monitoring._
   - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs
   - Resource health events
 - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate:
-  - Potential integration with on-premises security information and event management (SIEM) systems such as qRadar or ArcSight
+  - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow, ArcSight, or the Onapsis security platform
   - Azure activity logs
   - Azure Active Directory (Azure AD) audit reports
   - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs
