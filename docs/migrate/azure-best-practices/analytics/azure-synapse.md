@@ -1,6 +1,6 @@
 ---
 title: High availability for Azure Synapse Analytics
-description: Use Azure Synapse Analytics features to address high availability and disaster recovery requirements.
+description: Learn how to use Azure Synapse Analytics features to address high availability and disaster recovery requirements.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020

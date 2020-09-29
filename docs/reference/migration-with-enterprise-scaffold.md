@@ -225,7 +225,7 @@ Collecting and analyzing telemetry that provides line of sight into the activiti
 
 This information can be viewed and acted on at multiple levels and are continually being improved. Azure provides **shared**, **core**, and **deep** monitoring capabilities of Azure resources through the services outlined in the diagram below.
 
-![Monitoring](../_images/reference/monitoring.png)
+![Diagram that depicts Deep Application Monitoring, Deep Infrastructure Monitoring, Core Monitoring, and Shared Capabilities.](../_images/reference/monitoring.png)
 
 ### Shared capabilities
 
