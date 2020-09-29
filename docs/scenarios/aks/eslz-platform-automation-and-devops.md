@@ -41,7 +41,7 @@ Kubernetes is a cloud native construct from the get-go and as such requires a di
 
 - It is recommended to use GitOps for anything touching the Kubernetes cluster. With GitOps, the git repository is used as a single source of truth, avoiding configuration drift, increasing productivity and reliability in case of rollbacks and related procedures.
 
-- It is recommended to store secrets and other sensitive artifacts needed to deploy the solution, in github secrets allowing actions and other workflow parts to read them if needed while executing.
+- It is recommended to store secrets and other sensitive artifacts needed to deploy the solution in GitHub secrets allowing actions and other workflow parts to read them if needed while executing.
 
 - Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings. Instead rely on conventions and derivatives to assure deployments are never blocked. Every deployment blocked due to resource conflict or other reasons is a wasted opportunity to meet the customer needs in an agile manner.
 
