@@ -157,6 +157,8 @@ _Figure 1: Virtual WAN network topology._
 
 - Connect Virtual WAN hubs to on-premises datacenters by using ExpressRoute.
 
+- Deploy required shared services, like DNS servers, in a dedicated landing zone. Required shared resources can't be deployed on a Virtual WAN hub.
+
 - Connect branches and remote locations to the nearest Virtual WAN hub via site-to-site VPN, or enable branch connectivity to Virtual WAN via an SD-WAN partner solution.
 
 - Connect users to the Virtual WAN hub via a point-to-site VPN.
