@@ -20,7 +20,7 @@ Azure and Azure Migrate are both well known for hosting Microsoft technologies. 
 
 The following diagram and table outline a number of scenarios that follow the same iterative Migrate methodology for migration and modernization.
 
-![Diagram of the Cloud Adoption Framework migration model.](../_images/migrate/one-migrate.png)
+![Diagram of the Cloud Adoption Framework migration model showing the V M, Apps, Data, and Hybrid resources you will need.](../_images/migrate/one-migrate.png)
 
 | | | | |
 |---------|---------|---------|---------|
@@ -34,7 +34,7 @@ The following diagram and table outline a number of scenarios that follow the sa
 
 In each of the preceding migration scenarios, the same basic process will guide your efforts as you move your existing workloads to the cloud, as shown here:
 
-![Diagram of the Cloud Adoption Framework migration model.](../_images/migrate/methodology.png)
+![Diagram of the Cloud Adoption Framework migration model showing the Migration waves and the Migration effort.](../_images/migrate/methodology.png)
 
 In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the plan and Ready methodologies helps to add structure to your migration waves.
 

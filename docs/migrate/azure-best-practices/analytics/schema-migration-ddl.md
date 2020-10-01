@@ -1,6 +1,6 @@
 ---
 title: Schema migration data definition languages
-description: Use Azure Synapse Analytics features to address high availability and disaster recovery requirements.
+description: Learn about design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020

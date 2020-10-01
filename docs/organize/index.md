@@ -18,10 +18,10 @@ The following exercises will help guide the process of creating a landing zone t
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> ![1](../_images/icons/1.png) | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model. |
-| <br> ![2](../_images/icons/2.png) | <br> [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud. |
-| <br> ![3](../_images/icons/3.png) | <br> [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions. |
-| <br> ![4](../_images/icons/4.png) | <br> [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model. |
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud. |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model. |
 
 ## Structure type
 
