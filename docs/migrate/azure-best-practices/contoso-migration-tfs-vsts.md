@@ -164,7 +164,7 @@ Contoso admins run the Team Foundation Server migration tool against the `contos
 
 1. In the Azure AD sign-in window that opens, they enter the credentials of a global admin user.
 
-     ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/collection8.png)
+     ![Screenshot of the Azure AD sign in window with admin credentials.](./media/contoso-migration-tfs-vsts/collection8.png)
 
 1. The validation passes and is confirmed by the tool.
 
@@ -187,7 +187,7 @@ With the validation complete, Contoso admins can use the Team Foundation Server 
 
 1. An Azure AD sign-in screen appears, and the admins enter the credentials of a global admin.
 
-    ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/prep2.png)
+    ![Screenshot of the Azure AD sign screen with admin credentials typed in the User text box.](./media/contoso-migration-tfs-vsts/prep2.png)
 
 1. The preparation is completed, and the tool reports that the import files have been generated successfully.
 
@@ -369,7 +369,7 @@ Contoso admins perform a dry-run migration to make sure that everything's workin
 
 1. The Azure AD sign-in window opens. Contoso admins sign in to Azure AD with admin permissions.
 
-    ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
+    ![Screenshot of the Azure AD sign in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
 
     A message is displayed confirming that the import has been started successfully.
 
@@ -414,7 +414,7 @@ Now that the dry run is complete, Contoso admins move on to the production migra
 
 1. In the Azure AD sign-in window, they specify a Contoso admin sign-in.
 
-    ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/full3.png)
+    ![Screenshot of the Azure AD sign in screen in Visual Studio.](./media/contoso-migration-tfs-vsts/full3.png)
 
     A message is displayed that the import has started successfully.
 

@@ -17,9 +17,9 @@ The following steps can help you document your business strategy efficiently. Th
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> ![1](../_images/icons/1.png) | <br> [Define and document your motivations](./motivations.md): Meet with key stakeholders and executives to document the motivations behind cloud adoption. |
-| <br> ![2](../_images/icons/2.png) | <br> [Document business outcomes](./business-outcomes/index.md): Engage motivated stakeholders and executives to document specific business outcomes. |
-| <br> ![3](../_images/icons/3.png) | <br> [Develop a business case](./cloud-migration-business-case.md): Develop a business case to validate the financial model that supports your motivations and outcomes. |
-| <br> ![4](../_images/icons/4.png) | <br> [Choose the right first project](./first-adoption-project.md): Your first cloud adoption project will help align motivations with technical effort. This article can help you choose your first project wisely. |
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Define and document your motivations](./motivations.md): Meet with key stakeholders and executives to document the motivations behind cloud adoption. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Document business outcomes](./business-outcomes/index.md): Engage motivated stakeholders and executives to document specific business outcomes. |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Develop a business case](./cloud-migration-business-case.md): Develop a business case to validate the financial model that supports your motivations and outcomes. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Choose the right first project](./first-adoption-project.md): Your first cloud adoption project will help align motivations with technical effort. This article can help you choose your first project wisely. |
 
 Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to build out your cloud adoption strategy, and to track the output of each of the steps outlined above.

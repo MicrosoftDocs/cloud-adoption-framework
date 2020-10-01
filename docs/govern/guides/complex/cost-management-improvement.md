@@ -1,6 +1,6 @@
 ---
 title: "Complex enterprise governance: Improve the Cost Management discipline"
-description: Use the Cloud Adoption Framework for Azure to learn about adding cost controls to a governance minimum viable product (MVP).
+description: Use the Cloud Adoption Framework for Azure to learn about adding cost controls to a complex governance minimum viable product (MVP).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
