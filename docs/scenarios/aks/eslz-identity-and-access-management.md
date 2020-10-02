@@ -28,12 +28,12 @@ Your organization or enterprise needs to design suitable security settings to me
 
 ## Design recommendations
 * Cluster identities
-  * Use a [managed identity](http://aka.ms/aks/mi) enabled cluster.
+  * Use a [managed identity](https://aka.ms/aks/mi) enabled cluster.
   * Define custom Azure RBAC role for AKS landing zone to simplify management of required permissions for cluster managed identity.
 * Cluster access
   * Use RBAC enabled clusters.
-  * Use [AKS-managed Azure AD Integration](http://aka.ms/aks/managed-aad).	Authentication for operator access is secured by Azure AD.
+  * Use [AKS-managed Azure AD Integration](https://aka.ms/aks/managed-aad).	Authentication for operator access is secured by Azure AD.
   *	Define required K8s RBAC roles and role bindings in K8s
-    * Use [k8s roles and role bindings](https://docs.microsoft.com/en-us/azure/aks/concepts-identity#kubernetes-role-based-access-control-rbac) to Azure AD groups for developer access.
-    * SRE full access should be granted just in time as needed. Consider [Privileged Identity Management in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure).
+    * Use [k8s roles and role bindings](https://docs.microsoft.com/azure/aks/concepts-identity#kubernetes-role-based-access-control-rbac) to Azure AD groups for developer access.
+    * SRE full access should be granted just in time as needed. Consider [Privileged Identity Management in Azure AD](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure).
 * Use [Azure AD Pod Identity](https://github.com/Azure/aad-pod-identity) for workload identities.
