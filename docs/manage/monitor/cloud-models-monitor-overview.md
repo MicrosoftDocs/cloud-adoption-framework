@@ -133,7 +133,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
 - You can monitor cloud-native infrastructure and applications, from a simple or multitier architecture in Azure using Azure Monitor, and you can use Operations Manager to monitor on-premises infrastructure. This monitoring includes one or more VMs, multiple VMs placed in an availability set or virtual machine scale set, or a containerized application deployed to Azure Kubernetes Service (AKS) that's running on Windows Server or Linux containers.
 
-    If you need to monitor Microsoft or third-party workloads on your Azure VMs based on predefined health and service models with complex scenarios, use System Center Operations Manager and it's catalog of management packs to achieve this level of detailed monitoring.
+    If you need comprehensive monitoring of Microsoft or third-party workloads running on your Azure VMs, and you have advanced scenarios that cannot be evaluated based on log or performance data alone, use System Center Operations Manager. Its management packs delivers advanced logic, which includes a service and health model, to determine the operational health of the workload.
 
 - You can use the System Center Operations Manager Health Check solution to proactively assess the risk and health of your System Center Operations Manager management group at regular intervals. This solution can replace or complement any custom functionality you have added to your management group.
 
