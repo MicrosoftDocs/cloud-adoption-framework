@@ -144,7 +144,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
   - Mission-critical multitier applications and microservices.
   - User locations and web-based applications (HTTP/HTTPS).
 
-This strategy delivers visibility of the network layer, without the need for SNMP. It can also present, in an interactive topology map, the hop-by-hop topology of routes between the source and destination endpoint. It's a better choice than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
+    This strategy delivers visibility of the network layer, without the need for SNMP. It can also present, in an interactive topology map, the hop-by-hop topology of routes between the source and destination endpoint. It's a better choice than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
 
 ### Monitor with Azure Monitor
 
