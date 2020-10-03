@@ -135,8 +135,6 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
     If you need comprehensive monitoring of Microsoft or third-party workloads running on your Azure VMs, and you have advanced scenarios that cannot be evaluated based on log or performance data alone, use System Center Operations Manager. Its management packs delivers advanced logic, which includes a service and health model, to determine the operational health of the workload.
 
-- You can use the System Center Operations Manager Health Check solution to proactively assess the risk and health of your System Center Operations Manager management group at regular intervals. This solution can replace or complement any custom functionality you have added to your management group.
-
 - By using the Map feature of Azure Monitor for VMs, you can monitor standard connectivity metrics from network connections between your Azure VMs and on-premises VMs. These metrics include response time, requests per minute, traffic throughput, and links. You can identify failed connections, troubleshoot, perform migration validation, perform security analysis, and verify the overall architecture of the service. Map can automatically discover application components on Windows and Linux systems, and map the communication between services. This automation helps you identify connections and dependencies you were unaware of, plan and validate migration to Azure, and minimize speculation during incident resolution.
 
 - By using Network Performance Monitor, you can monitor the network connectivity between:
