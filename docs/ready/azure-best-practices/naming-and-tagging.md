@@ -82,6 +82,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Resource group                  | rg-         |
 | Policy definition               | policy-     |
 | API management service instance | apim-       |
+| Managed Identity                | id-         |
 
 ### Networking
 
@@ -144,10 +145,11 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Storage
 
-| Asset type       | Name prefix |
-|------------------|-------------|
-| Storage account  | st          |
-| Azure StorSimple | ssimp       |
+| Asset type               | Name prefix |
+|--------------------------|-------------|
+| Storage account          | st          |
+| Azure StorSimple         | ssimp       |
+| Azure Container Registry | acr         |
 
 ### AI and Machine Learning
 
@@ -246,6 +248,7 @@ The following section provides some example names for common Azure resource type
 | Subscription                    | Account/ <br> Enterprise Agreement    | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001                                        |
 | Resource group                  | Subscription                          | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
 | API management service instance | Global                                | apim-\<App or service name\>                                | apim-navigator-prod                                                                                |
+| Managed Identity                | Resource group                        | id-\<App or service name\>                                  | id-appcn-keda-prod-eus-001                                                                         |
 
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
@@ -305,6 +308,7 @@ The following section provides some example names for common Azure resource type
 | Storage account (general use)     | Global | st\<storage name\>\<\#\#\#\>                                                  | <li> stnavigatordata001 <li> stemissionsoutput001 |
 | Storage account (diagnostic logs) | Global | stdiag\<first 2 letters of subscription name and number\>\<region\>\<\#\#\#\> | <li> stdiagsh001eastus2001 <li> stdiagsh001westus001 |
 | Azure StorSimple                  | Global | ssimp\<App Name\>\<Environment\>                                              | <li> ssimpnavigatorprod <li> ssimpemissionsdev |
+| Azure Container Registry          | Global | acr\<App Name\>\<Environment\>\<\#\#\#\>                                      | <li> acrnavigatorprod001 |
 
 ### Example names: AI and machine learning
 
