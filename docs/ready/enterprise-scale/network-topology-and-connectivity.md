@@ -237,7 +237,7 @@ _Figure 4: A traditional Azure network topology._
 
   - A network architecture spans multiple Azure regions, and there's no need for transitive connectivity between virtual networks for landing zones across regions.
 
-  - A network architecture spans multiple Azure regions, and global VNet peering can be used to connect virtual network across Azure regions.
+  - A network architecture spans multiple Azure regions, and global VNet peering can be used to connect virtual networks across Azure regions.
 
   - There's no need for transitive connectivity between VPN and ExpressRoute connections.
 
