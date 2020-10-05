@@ -82,6 +82,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Resource group                  | rg-         |
 | Policy definition               | policy-     |
 | API management service instance | apim-       |
+| Managed Identity                | id-         |
 
 ### Networking
 
@@ -247,6 +248,7 @@ The following section provides some example names for common Azure resource type
 | Subscription                    | Account/ <br> Enterprise Agreement    | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001                                        |
 | Resource group                  | Subscription                          | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
 | API management service instance | Global                                | apim-\<App or service name\>                                | apim-navigator-prod                                                                                |
+| Managed Identity                | Resource group                        | id-\<App or service name\>                                  | id-appcn-keda-prod-eus-001                                                                         |
 
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
