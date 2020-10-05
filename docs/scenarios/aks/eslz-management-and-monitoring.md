@@ -40,6 +40,7 @@ Note that if you want to host a monitoring solution on AKS, you also want to loo
 * Use an alerting system to provide notifications when things need direct action. [Metric alerts](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-metric-alerts)
 * Use [Kured](https://docs.microsoft.com/en-us/azure/aks/node-updates-kured) for node updates.  [Node upgrades](https://docs.microsoft.com/en-us/azure/aks/node-image-upgrade)
 * Use node pools for isolation, different node specifications, and maintenance like Kubernetes upgrades [Multiple Node Pools](https://docs.microsoft.com/en-us/azure/aks/use-multiple-node-pools)
+* Use [Automatic Node Pool Scaling](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler) feature together with [Horizontal Pod Autoscaler](https://docs.microsoft.com/en-us/azure/aks/concepts-scale#horizontal-pod-autoscaler) to meet application demands and to mitigate peak hours loads.
 * Use [Security Center](https://docs.microsoft.com/en-us/azure/security-center/azure-kubernetes-service-integration) to prevent and detect threats like image vulnerabilities.
 * Use Azure Advisor to get best practice recommendations on cost, security, reliability, operational excellence and performance.
 * Use [Azure Arc](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/overview) enabled Kubernetes to manage non-AKS Kubernetes clusters.
