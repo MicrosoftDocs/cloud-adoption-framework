@@ -420,6 +420,25 @@ items:
           - name: Rehost a Linux app on Azure VMs and Azure Database for MySQL
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
 
+        - name: Open-source platforms
+          items:
+          - name: Moodle migration
+            items:
+            - name: Overview
+              href: scenarios/lamp/moodle/index.md
+            - name: Prerequisites
+              href: scenarios/lamp/moodle/migration-pre.md
+            - name: Architecture & Template
+              href: scenarios/lamp/moodle/migration-arch.md
+            - name: Resource Description
+              href: scenarios/lamp/moodle/migration-resource.md
+            - name: Migration Steps
+              href: scenarios/lamp/moodle/migration.md
+            - name: Azure Infrastructure Configuration
+              href: scenarios/lamp/moodle/azure-infra-config.md
+            - name: Post Migration
+              href: scenarios/lamp/moodle/migration-post.md
+
         - name: Dev/test workloads 
           items:
           - name: Migrate dev/test environments to Azure IaaS
