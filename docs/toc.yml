@@ -142,6 +142,12 @@ items:
         href: digital-estate/calculate.md
     - name: Initial organization alignment
       href: plan/initial-org-alignment.md
+    - name: Skills readiness plan
+      items:
+      - name: Build a readiness plan
+        href: plan/adapt-roles-skills-processes.md
+      - name: Map roles and skills
+        href: plan/suggested-skills.md
     - name: Cloud adoption plan
       items:
       - name: Overview
@@ -160,12 +166,6 @@ items:
         href: plan/iteration-paths.md
       - name: Estimate timelines
         href: plan/timelines.md
-    - name: Skills readiness plan
-      items:
-      - name: Build a readiness plan
-        href: plan/adapt-roles-skills-processes.md
-      - name: Map roles and skills
-        href: plan/suggested-skills.md
     - name: Best practices
       items:
       - name: Digital estate assessment in Azure
