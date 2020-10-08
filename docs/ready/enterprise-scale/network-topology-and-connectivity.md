@@ -89,12 +89,12 @@ Virtual WAN is used to meet large-scale interconnectivity requirements. Because 
 
 Use a traditional Azure network topology if any of the following are true:
 
-- Your organization intends to deploy resources in only a few Azure regions.
-- You don't need a global interconnected network.
+- Your organization intends to deploy resources across several Azure regions.
+- You can use global VNet peering to connect virtual networks across Azure regions.
 - You have a low number of remote or branch locations per region. That is, you need fewer than 30 IP security (IPsec) tunnels.
 - You require full control and granularity for manually configuring your Azure network.
 
-This traditional topology helps you build a secure network foundation in Azure.
+A traditional network topology helps you build a secure large-scale network in Azure.
 
 ## Virtual WAN network topology (Microsoft-managed)
 
@@ -171,7 +171,7 @@ _Figure 1: Virtual WAN network topology._
 
 - When you're deploying partner networking technologies and NVAs, follow the partner vendor's guidance to ensure there are no conflicting configurations with Azure networking.
 
-- Don't build a transit network on top of Azure Virtual WAN. Virtual WAN satisfies all transitive network topology requirements, including the ability to use third-party NVAs. Building a transit network on top of Azure Virtual WAN would be redundant and increase complexity. 
+- Don't build a transit network on top of Azure Virtual WAN. Virtual WAN satisfies transitive network topology requirements such as the ability to use third-party NVAs. Building a transit network on top of Azure Virtual WAN would be redundant and increase complexity. 
 
 - Don't use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone. This is because of the performance and uptime characteristics of the Microsoft backbone as well as routing simplicity. This suggestion addresses the performance and uptime characteristics of the Microsoft backbone. It also encourages routing simplicity.
 
@@ -188,6 +188,8 @@ _Figure 1: Virtual WAN network topology._
 Although Virtual WAN offers a wide range of powerful capabilities, a traditional Azure networking approach might be optimal in some cases:
 
 - If a global transitive network across multiple Azure regions or cross-premises isn't required. An example is a branch in the United States that requires connectivity to a virtual network in Europe.
+
+- If you need to deploy a global network across multiple Azure regions, and you can use global VNet peering to connect virtual networks across regions.
 
 - If there's no need to connect to a large number of remote locations via VPN or integration with an SD-WAN solution.
 
@@ -233,15 +235,15 @@ _Figure 4: A traditional Azure network topology._
 
   - The traffic boundary in an Azure deployment is within an Azure region.
 
-  - A network architecture has up to two Azure regions, and there's a requirement for transit connectivity between virtual networks for landing zones across regions.
-
   - A network architecture spans multiple Azure regions, and there's no need for transitive connectivity between virtual networks for landing zones across regions.
+
+  - A network architecture spans multiple Azure regions, and global VNet peering can be used to connect virtual networks across Azure regions.
 
   - There's no need for transitive connectivity between VPN and ExpressRoute connections.
 
   - The main cross-premises connectivity channel is ExpressRoute, and the number of VPN connections is less than 30 per VPN gateway.
 
-  - There's a heavy dependency on centralized NVAs and complex/granular routing.
+  - There's a dependency on centralized NVAs and granular routing.
 
 - For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA. The following figure shows this topology.  This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
@@ -252,7 +254,9 @@ _Figure 4: A traditional Azure network topology._
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
 
   - You need a high level of isolation.
+
   - You need dedicated ExpressRoute bandwidth for specific business units.
+
   - You've reached the maximum number of connections per ExpressRoute gateway (up to four).
   
   The following figure shows this topology.
@@ -268,7 +272,9 @@ _Figure 4: A traditional Azure network topology._
 - When you're deploying partner networking technologies or NVAs, follow the partner vendor's guidance to ensure that:
 
   - The vendor supports deployment.
+
   - The guidance is designed for high availability and maximal performance.
+
   - There are no conflicting configurations with Azure networking.
 
 - Don't deploy L7 inbound NVAs such as Azure Application Gateway as a shared service in the central-hub virtual network. Instead, deploy them together with the app in their respective landing zones.
@@ -283,7 +289,7 @@ _Figure 4: A traditional Azure network topology._
   
   _Figure 7: Landing zone connectivity design._
 
-- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, we recommend deploying a global transit network architecture with Virtual WAN.
+- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, we recommend evaluating a global transit network architecture with Virtual WAN.
 
 - Use [Azure Monitor for Networks (Preview)](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
