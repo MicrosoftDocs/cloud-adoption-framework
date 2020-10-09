@@ -289,7 +289,7 @@ items:
             - name: Azure network security best practices
               href: /azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Azure operational security best practices
-              href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+              href: /azure/security/fundamentals/operational-best-practices?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
       - name: Partner landing zones
         href: ready/landing-zone/partner-landing-zone.md
       - name: Infrastructure-as-code theory

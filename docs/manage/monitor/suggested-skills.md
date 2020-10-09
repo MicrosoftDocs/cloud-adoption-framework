@@ -56,7 +56,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
   - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
 
-  - [Capture and view page load times in your Azure web app](https://docs.microsoft.com/learn/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
+  - [Capture and view page load times in your Azure web app](/learn/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
   
   - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
@@ -66,7 +66,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Data analysis
 
-- Learn how to write [log queries in Azure Monitor](https://docs.microsoft.com/learn/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
+- Learn how to write [log queries in Azure Monitor](/learn/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
 
 - [Kusto Query Language (KQL) from Scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch) is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor logs.
 
