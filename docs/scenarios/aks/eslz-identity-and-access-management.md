@@ -28,7 +28,7 @@ Your organization or enterprise needs to design suitable security settings to me
 
 ## Design recommendations
 * Cluster identities
-  * Use bring your own [managed identity](https://aka.ms/aks/mi) for you AKS cluster.
+  * Use bring your own [managed identity](https://aka.ms/aks/mi) for your AKS cluster.
   * Define custom Azure RBAC role for AKS landing zone to simplify management of required permissions for cluster managed identity.
 * Cluster access
   * Use RBAC enabled clusters.
