@@ -1,6 +1,6 @@
 ---
-title: "Measure business outcomes with AppDynamics"
-description: Understand application performance and user experience and its impact on those business outcomes.
+title: Measure business outcomes with AppDynamics
+description: Understand how an application's performance and user experience impact business outcomes.
 author: BrianBlanchard
 ms.author: wayneme
 ms.date: 09/18/2020
@@ -11,13 +11,11 @@ ms.subservice: plan
 
 # Measure business outcomes with AppDynamics
 
-Measuring and quantifying successful business outcomes is a crucial part of any cloud adoption strategy. Understanding application performance and user experience and its impact on those business outcomes is often a fundamental part of the equation of measuring business outcomes. However accurately measuring that correlation between application performance, user experience, and business impact is often difficult, inaccurate, and time-consuming.
+Measuring and quantifying successful business outcomes is a crucial part of any cloud adoption strategy. Understanding an application's performance and user experience is key to measuring those business outcomes. However, accurately measuring the correlation between application performance, user experience, and business impact is often difficult, inaccurate, and time consuming.
 
-Measuring and quantifying successful business outcomes is a crucial part of any cloud adoption strategy. Understanding application performance and user experience and its impact on those business outcomes is often a fundamental part of the equation of measuring business outcomes. However accurately measuring that correlation between application performance, user experience, and business impact is often difficult, inaccurate, and time-consuming.
+AppDynamics can provide business insights for most use cases, and many organizations start a comprehensive cloud adoption strategy with the following use cases:
 
-AppDynamics can provide business insights for virtually any use case but as part of a comprehensive cloud adoption strategy many organizations start with the following key use cases:
-
-- Pre and post mighration comparison
+- Pre- and post-migration comparison
 - Business health
 - Release validation
 - Segment health
@@ -27,26 +25,26 @@ AppDynamics can provide business insights for virtually any use case but as part
 
 ## How AppDynamics works
 
-A small lightweight agent is deployed alongside your applications prior to migration. Agents are purpose-built for various languages such as .Net, Java, and Node.  The agent collects performance and diagnostic data which is then sent to our controller where it is correlated and analyzed. Controllers can reside in AppDynamics fully managed environment or can optionally be managed by the customer or in Azure. Key user experiences referred to as Business Transactions are identified and application and business performance are then baselined. Baselines identify the thresholds for normal performance whether application or business performance.   All of the components and dependencies of an application, whether that is traditional server infrastructure, database, middleware components, on-premise or in the cloud are all identified in real-time both for the entire application and for each individual Business Transaction.
+Prior to migration, a small, lightweight agent is deployed alongside your applications. Agents are purpose-built for various languages such as .Net, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller to correlate and analyze the information. Controllers can reside in a fully-managed AppDynamics environment, or the customer can choose to manage them in Azure. Key user experiences are identified as 'Business Transactions', which help you to discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, database, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each Business Transaction.
 
-!<-- insert image here -->
+_Figure 1: TBD_
 
 ## Identify business metrics
 
-To verify whether or not your applications are meeting desired business outcomes, AppDynamics enables you to define the business value of an application and identify the key metrics for value fulfillment. For example, you can baseline the sales and average order size of your e-commerce site. If these metrics dip below normal, AppDynamics will correlate the drop with potential application performance issues and help you determine what actions you need to take to fix them.
+To verify whether or not your applications are meeting desired business outcomes, AppDynamics can help you to define their business value and identify the key metrics that they should meet to retain their value. For example, you can baseline the sales and average order size of your e-commerce site. If these metrics dip below normal, AppDynamics will correlate the drop with potential application performance issues and help you determine the actions to fix them.
 
 ## Sample business outcomes
 
-### Pre and post migration comparison
+Insert content here.
 
-The cloud offers vast benefits and potential but those initial steps as part of migration can often be filled with uncertainty and risk. Understanding and ensuring the user experience achieves the desired results alongside successful business outcomes.  Clearly understanding the pre and post cloud migration user and business performance provides direct correlation with the value that Azure provides and also when necessary understanding how and where to make course corrections when appropriate.
+## Pre- and post-migration comparison
 
-### Revenue increases
+The cloud offers vast benefits and potential, but the first steps of a migration are often unclear and risky.Understanding the pre- and post-cloud-migration user experience and business performance helps you to adjust and stabilize both, when needed, which can help to produce successful business outcomes while reinforcing the value that Azure provides throughout your migration journey.
 
-Insert content here
+## Revenue increases
+
+Insert content here.
 
 ## Next steps
 
-Add call to action or next logical step at the end of the article. 
-
-
+Add a call to action or the next logical step here.
