@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Standard enterprise governance guide: Improve the Security Baseline discipline
 
-This article advances the [governance strategy narrative](narrative.md) by adding security controls that support moving protected data to the cloud.
+This article advances the [governance strategy narrative](./narrative.md) by adding security controls that support moving protected data to the cloud.
 
 ## Advancing the narrative
 
@@ -26,7 +26,7 @@ The difference is subtle, but it's an important distinction when you're creating
 
 ### Changes in the current state
 
-At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as Prod and DR.
+At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as `Prod` and `DR`.
 
 Since then, some things have changed that will affect governance:
 
@@ -123,8 +123,8 @@ The governance MVP design will change to include new Azure policies and an imple
   - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that's compatible with Azure.
   - Create a Resource Manager template to deploy the firewall with required configurations.
 - Azure Blueprints:
-  - Create a new blueprint named protected-data.
-  - Add the firewall, Azure Security Center templates, and Azure Recovery Services vault templates to the blueprint.
+  - Create a new blueprint named `protected-data`.
+  - Add the Azure Firewall templates, Azure Security Center templates, and Azure Recovery Services vault templates to the blueprint.
   - Add the new policies for protected data subscriptions.
   - Publish the blueprint to any management group that currently plans on hosting protected data.
   - Apply the new blueprint to each affected subscription and to existing blueprints.

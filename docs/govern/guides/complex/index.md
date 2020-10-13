@@ -64,7 +64,7 @@ Once this MVP has been deployed, additional layers of governance can be quickly 
 
 In the MVP, practices and tools from the [Deployment Acceleration discipline](../../deployment-acceleration/index.md) are established to quickly apply corporate policy. In particular, the MVP uses Azure Blueprints, Azure Policy, and Azure management groups to apply a few basic corporate policies, as defined in the narrative for this fictional company. Those corporate policies are applied using Azure Resource Manager templates and Azure policies to establish a small baseline for identity and security.
 
-![Example of an incremental governance MVP](../../../_images/govern/governance-mvp.png)
+![Diagram showing an example of an incremental governance MVP.](../../../_images/govern/governance-mvp.png)
 
 ## Incremental improvements to governance practices
 
@@ -75,7 +75,7 @@ Over time, this governance MVP will be used to incrementally improve governance 
 - The Security Baseline discipline, as protected data is deployed.
 - The Resource Consistency discipline, as IT operations begins supporting mission-critical workloads.
 
-![Example of an incremental governance MVP](../../../_images/govern/governance-improvement-large.png)
+![Diagram showing an example of incremental improvements to governance practices.](../../../_images/govern/governance-improvement-large.png)
 
 ## Next steps
 
