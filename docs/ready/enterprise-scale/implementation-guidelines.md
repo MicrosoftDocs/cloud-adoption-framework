@@ -65,6 +65,21 @@ The following sections list the steps to complete this category of activity in t
   | [`Deploy-VM-Backup`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/Landing%20Zones%20(landingzones)/.AzState/Microsoft.Authorization_policyAssignments-Deploy-VM-Backup.parameters.json) | Ensures that backup is configured and deployed to all VMs in the landing zones. |
   | [`Deploy-VNet`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json) | Ensures that all landing zones have a virtual network deployed and that it's peered to the regional virtual hub. |
 
+#### Sandbox Management Group Guidance
+
+As detailed in the [Management group and subscription organization critical design area](./management-group-and-subscription-organization.md), subscriptions placed within the Sandbox Management Group hierarchy should have a less restrictive policy approach. As these subscriptions should be used by users within the business to experiment and innovate with Azure products and services, that may not be yet permitted in your Landing Zones hierarchy, to validate if their ideas/concepts could work; before they move into a formal development environment. 
+
+However these subscriptions in the Sandbox hierarchy do still require some guardrails to ensure they are only used in the correct manner; *e.g. preventing connectivity to production networks in Azure or on-premise.*
+
+1. Create the Azure Policy assignments in the following table for the sandboxes:
+
+  | Name                  |     Description                                                                                     | Assignment Notes |
+  |-----------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+  | [`Deny-VNET-Peering-Cross-Subscription`](https://LINKHERE.COM) | Prevents VNET peering connections being created to other VNETs outside of the subscription | N/A |
+  | [`Denied-Resources`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Denied-Resources.parameters.json)           | Resources that are denied for the sandboxes. This will prevent any hybrid connectivity resources from being created; *e.g. VPN/ExpressRoute/VirtualWAN* | When assigning this policy select the following resources to deny the creation of: VPN Gateways:`microsoft.network/vpngateways`,P2S Gateways: `microsoft.network/p2svpngateways`, Virtual WANs: `microsoft.network/virtualwans`, Virtual WAN Hubs: `microsoft.network/virtualhubs`, ExpressRoute Circuits: `microsoft.network/expressroutecircuits`, ExpressRoute Gateways: `microsoft.network/expressroutegateways`, ExpressRoute Ports: `microsoft.network/expressrouteports`, ExpressRoute Cross-Connections: `microsoft.network/expressroutecrossconnections` and Local Network Gateways: `microsoft.network/localnetworkgateways`. | 
+  | [`Deploy-Budget`](https://LINKHERE.COM) | Ensures a budget exists for each sandbox subscriptions created with e-mail alerts enabled | During assignment you must specify a budget amount (this is applied per subscription) and also an e-mail address, or list of (comma delimited) e-mail addresses, that alerts will be sent to when the budget amount is breached |
+
+
 ### Global networking and connectivity
 
 1. Allocate an appropriate virtual network CIDR range for each Azure region where virtual hubs and virtual networks will be deployed.
