@@ -17,7 +17,7 @@ Kubernetes is a cloud native construct from the get-go and as such requires a di
 
 ### Design considerations
 
-- Consider the documented [Azure service limitations](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) and your CI/CD environment as they will define the approach to take in egnieering and automating your solution. As another example see the [GitHub usage limitations](https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration). 
+- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your CI/CD environment, which will determine the approach to take for engineering and automating your solution. For another example, see the [GitHub usage limitations](https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration). 
 
 - Consider the various security options in securing and protecting access to the various environments (development, test, Q&A, production etc.) from an CI/CD perspective. As deployments will happen automatically, access control should be mapped accordingly. 
 
