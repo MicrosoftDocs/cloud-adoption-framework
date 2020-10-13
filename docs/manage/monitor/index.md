@@ -51,12 +51,12 @@ This article is part of a series. The following articles are meant to be read to
 A few software and services are available to help you monitor and manage a variety of resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
 
 - [System Center Operations Manager](/system-center/scom/welcome)
-- [Azure Monitor](/azure-monitor/overview) (includes Log Analytics and Application Insights)
-- [Azure Policy](/governance/policy/overview) and [Azure Blueprints](/governance/blueprints/overview)
-- [Azure Arc](/azure-arc/overview)
-- [Azure Automation](/automation/automation-intro)
-- [Azure Logic Apps](/logic-apps/logic-apps-overview)
-- [Azure Event Hubs](/event-hubs/event-hubs-about)
+- [Azure Monitor](/azure/azure-monitor/overview) (includes Log Analytics and Application Insights)
+- [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview)
+- [Azure Arc](/azure/azure-arc/)
+- [Azure Automation](/azure/automation/automation-intro)
+- [Azure Logic Apps](/azure/logic-apps/logic-apps-overview)
+- [Azure Event Hubs](/azure/event-hubs/event-hubs-about)
 
 This first version of the guide covers our current monitoring platforms: Azure Monitor and System Center Operations Manager. It also outlines our recommended strategy for monitoring each of the cloud deployment models. Also included is the first set of monitoring recommendations, starting with data collection and alerting.
 
