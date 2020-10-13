@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore DDLs Attunity "Attunity Replicate" "Attunity Visibility" Inmon Denodo Teradata Netezza Wherescape DMVs multinode equi Datometry -->
+<!-- cSpell:ignore DDLs Attunity "Attunity Replicate" "Attunity Visibility" Inmon Denodo DMVs multinode equi Datometry -->
 
 # Data definition languages for schema migration
 
@@ -74,13 +74,13 @@ You can migrate the existing system as several layers (for example, data ingest/
 
 If you can use these or similar approaches, the number of tables to be migrated is reduced. Some processes might be simplified or eliminated, again reducing the migration workload. The applicability of these approaches depends on the individual use case. But the general principle is to consider using the features and facilities of the Azure ecosystem, where possible, to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions, such as backup/restore and workflow management and monitoring.
 
-Products and services available from Microsoft partners can assist in data warehouse migration and in some cases automate parts of the process. If the existing system incorporates a third-party ETL product, it might already support Azure Synapse Analytics as a target environment. The existing ETL workflows can be redirected to the new target Azure SQL data warehouse.
+Products and services available from Microsoft partners can assist in data warehouse migration and in some cases automate parts of the process. If the existing system incorporates a third-party ETL product, it might already support Azure Synapse Analytics as a target environment. The existing ETL workflows can be redirected to the new target data warehouse.
 
 ### Data marts: Physical or virtual
 
 It's a common practice for organizations with older data warehouse environments to create data marts that provide their departments or business functions with good ad hoc self-service query and report performance. A data mart typically consists of a subset of the data warehouse that contains aggregated versions of the original data. Its form, typically a dimensional data model, supports users to easily query the data and receive fast response times from user-friendly tools like Tableau, MicroStrategy, or Microsoft Power BI.
 
-One use of data marts is to expose the data in a usable form, even if the underlying warehouse data model is something different (for example, data vault). This approach is also known as a three-tier model.
+One use of data marts is to expose the data in a usable form, even if the underlying warehouse data model is something different (such as a data vault). This approach is also known as a three-tier model.
 
 You can use separate data marts for individual business units within an organization to implement robust data security regimes. For example, you can allow user access to specific data marts relevant to them and eliminate, obfuscate, or anonymize sensitive data.
 
@@ -89,7 +89,7 @@ If these data marts are implemented as physical tables, they require additional 
 With the advent of relatively cheap scalable massively parallel processing (MPP) architectures such as Azure Synapse Analytics and their inherent performance characteristics, you might be able to provide data mart functionality without having to instantiate the mart as a set of physical tables. You achieve this by effectively virtualizing the data marts through one of these methods:
 
 - SQL views on the main data warehouse.
-- A virtualization layer that uses features such as views in Azure Synapse Analytics or third-party virtualization products such as Denodo.
+- A virtualization layer that uses features such as views in Azure Synapse Analytics or third-party virtualization products such as denodo.
 
 This approach simplifies or eliminates the need for additional storage and aggregation processing. It reduces the overall number of database objects to be migrated.
 
@@ -151,17 +151,17 @@ The following table lists common data types that are not currently supported, to
 
 | Unsupported data type | Workaround |
 |--|--|
-| `geometry`              | `varbinary`                                                       |
-| `geography`             | `varbinary`                                                       |
-| `hierarchyid`           | `nvarchar(4000)`                                                  |
-| `image`                 | `varbinary`                                                       |
-| `text`                  | `varchar`                                                         |
-| `ntext`                 | `nvarchar`                                                        |
-| `sql_variant`           | Split column into several strongly typed columns                |
-| `table`                 | Convert to temporary tables                                     |
-| `timestamp`             | Rework code to use `datetime2` and the `CURRENT_TIMESTAMP` function |
-| `xml`                   | `varchar`                                                         |
-| User-defined type     | Convert back to the native data type when possible              |
+| `geometry` | `varbinary` |
+| `geography` | `varbinary` |
+| `hierarchyid` | `nvarchar(4000)` |
+| `image` | `varbinary` |
+| `text` | `varchar` |
+| `ntext` | `nvarchar` |
+| `sql_variant` | Split column into several strongly typed columns |
+| `table` | Convert to temporary tables |
+| `timestamp` | Rework code to use `datetime2` and the `CURRENT_TIMESTAMP` function |
+| `xml` | `varchar` |
+| User-defined type | Convert back to the native data type when possible |
 
 #### Potential data issues
 
@@ -170,7 +170,7 @@ Depending on the source environment, some issues can cause problems when you're 
 - There can be subtle differences in the way that `NULL` data is handled in different database products. Examples include collation sequence and handling of empty character strings.
 - `DATE`, `TIME`, `INTERVAL`, and `TIME ZONE` data and associated functions can vary widely from product to product.
 
-Test these thoroughly to determine if the desired results are achieved in the target environment. The migration exercise can uncover bugs or incorrect results that are currently part of the existing source system, and the migration process is a good opportunity to correct anomalies.
+Test these thoroughly to determine whether the desired results are achieved in the target environment. The migration exercise can uncover bugs or incorrect results that are currently part of the existing source system, and the migration process is a good opportunity to correct anomalies.
 
 #### Best practices for defining columns in Azure Synapse Analytics
 
@@ -178,7 +178,7 @@ It's common for older systems to contain columns with inefficient data types. Fo
 
 It's a good time to check and rationalize current data definitions during a migration exercise. You can automate these tasks by using SQL queries to find the maximum numeric value or character length within a data field and comparing the result to the data type.
 
-In general, it's a good practice to minimize the total defined row length for a table. For the best query performance, you can use the smallest data type for each column, as described earlier. The recommended approach to load data from external tables in Azure Synapse Analytics is to use the PolyBase utility, which supports a maximum defined row length of 1 megabyte (MB). PolyBase won't load tables with rows longer than 1 MB, and you must use the Bulk Copy Program instead.
+In general, it's a good practice to minimize the total defined row length for a table. For the best query performance, you can use the smallest data type for each column, as described earlier. The recommended approach to load data from external tables in Azure Synapse Analytics is to use the PolyBase utility, which supports a maximum defined row length of 1 megabyte (MB). PolyBase won't load tables with rows longer than 1 MB, and you must use BCP instead.
 
 For the most efficient join execution, define the columns on both sides of the join as the same data type. If the key of a dimension table is defined as `SMALLINT`, then the corresponding reference columns in fact tables using that dimension should also be defined as `SMALLINT`.
 
@@ -268,7 +268,7 @@ Indexes are automatically created when `UNIQUE` or `PRIMARY KEY` constraints are
 
 #### Clustered columnstore index
 
-Clustered columnstore index is the default indexing option within Azure Synapse Analytics. It provides the best compression and query performance for large tables. For smaller tables of fewer than 60 million rows, these indexes aren't efficient, so you should use the HEAP option. Similarly, a heap or a temporary table might be more efficient if the data in a table is transient and part of an ETL/ELT process.
+Clustered columnstore index is the default indexing option within Azure Synapse Analytics. It provides the best compression and query performance for large tables. For smaller tables of fewer than 60 million rows, these indexes aren't efficient, so you should use the `HEAP` option. Similarly, a heap or a temporary table might be more efficient if the data in a table is transient and part of an ETL/ELT process.
 
 #### Clustered index
 
