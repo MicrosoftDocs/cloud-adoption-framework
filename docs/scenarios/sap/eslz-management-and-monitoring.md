@@ -11,4 +11,27 @@ ms.subservice: ready
 
 # Management and monitoring for <Insert narrative Name> Enterprise-Scale scenario
 
-Add content here
+## Title
+
+Design Considerations
+
+Monitor SAP systems and solutions
+
+Consider centralized Azure Log Analytics workspace with Azure Monitor and Application Insights for establishing platform and application layer monitoring
+
+Consider Inter-VM latency monitoring for latency sensitive application
+
+Design Recommendations
+
+Leverage "Azure Monitor for SAP (AMS)" to monitor SAP Systems.
+
+Deploy Azure Monitor Agent and Azure Monitoring Extension for SAP
+
+Create monitoring platform using Azure telemetry tools to provide business processes insight
+
+Network Watcher Connection monitor for SAP database and application server latency monitoring  (Metric)
+
+Threat Protection for SAP With Azure Sentinel
+
+Azure Security Center - Ranking based approach for SAP workload (score card based approach)
+
