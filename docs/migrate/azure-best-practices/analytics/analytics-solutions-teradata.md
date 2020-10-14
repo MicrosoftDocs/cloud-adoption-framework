@@ -183,7 +183,7 @@ Here's more information about migrating functions, stored procedures, triggers, 
 
   Teradata provides stored procedure language to create stored procedures. Azure Synapse supports stored procedures by using T-SQL. If you migrate stored procedures to Azure Synapse, you must recode them by using T-SQL.
 
-- **Triggers:** You can't create triggers in Azure Synapse, but you can implement triggers in data factory.
+- **Triggers:** You can't create triggers in Azure Synapse, but you can implement triggers in Data Factory.
 
 - **Sequences:** Azure Synapse sequences are handled similarly to how they are handled in Teradata. Use `IDENTITY` columns or SQL code to create the next sequence number in a series.
 
