@@ -27,11 +27,11 @@ This guidance will focus on how to measure business outcomes a around pre- and p
 
 ## How AppDynamics works
 
-Prior to migration, a small, lightweight agent is deployed alongside your applications. Agents are purpose-built for various languages such as .Net, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller to correlate and analyze the information. Controllers can reside in a fully managed AppDynamics environment, or the customer can choose to manage them in Azure. Key user experiences are identified as 'Business Transactions', which help you to discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, database, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each Business Transaction.
+Prior to migration, a small, lightweight agent is deployed alongside your applications. Agents are purpose-built for various languages such as .Net, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller to correlate and analyze the information. Controllers can reside in a fully managed AppDynamics environment, or the customer can choose to manage them in Azure. Key user experiences are identified as 'business Transactions', which help you to discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, database, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each business transaction.
 
 ![An AppDynamics flowmap](./media/appdynamics_flowmap.jpg)
 
-_Figure 1: The AppDynamics flowmap._
+_Figure 1: An AppDynamics flowmap._
 
 ## AppDynamics identifies business metrics
 
@@ -41,7 +41,7 @@ Business metrics are closely related to business outcomes. Many organizations ha
 
 **Example:**
 
-A company that sells widgets from an online marketplace has identified the following key Business Transactions within their web application:
+A company that sells widgets from an online marketplace has identified the following key business transactions within their web application:
 
 - Landing page
 - Add to Cart
@@ -49,7 +49,7 @@ A company that sells widgets from an online marketplace has identified the follo
 - Billing
 - Confirm order
 
-These types of Business Transactions are common to e-commerce applications. A conversion funnel is the journey that a user takes through these pages, and it directly leads to sales revenue on the company's platform. When users abandon the journey because of poor page performance or errors, this directly impacts the company's underlying profit.
+These types of business transactions are common to e-commerce applications. A conversion funnel is the journey that a user takes through these pages, and it directly leads to sales revenue on the company's platform. When users abandon the journey because of poor page performance or errors, this directly impacts the company's underlying profit.
 
 Additionally, the company has identified the following key business metrics:
 
@@ -62,6 +62,7 @@ Combining application and business performance metrics helps to clearly demonstr
 Configurable dashboards are one of many AppDynamics tools that visualize these insights. In this real-time example, we see the overall conversion funnel and the impact on individual page performance against abandoners alongside shopping cart totals, customer segment, location, and general revenue details.
 
 ![An AppDynamics Business Impact dashboard](./media/appdynamics_businessimpact_dashboard.jpg)
+
 _Figure 2: An AppDynamics Business Impact dashboard._
 
 ## Resources to help identify business metrics
@@ -76,7 +77,7 @@ To build on the foundation of understanding how AppDynamics provides business an
 
 **Example:**
 
-Movie Tickets Online, a fictitious online movie ticket seller, is working to retire their existing datacenters and move their workloads to Azure. Their capacity issues have led to poor Business Transaction performance, and they look forward to the performance optimizations and capacity in Azure.
+Movie Tickets Online, a fictitious online movie ticket seller, is working to retire their existing datacenters and move their workloads to Azure. Their capacity issues have led to poor business transaction performance, and they look forward to the performance optimizations and capacity in Azure.
 
 In addition to improving performance, they want to ensure that the business outcomes of improving their sales funnels and growing their revenue will be met. As part of their migration, they deployed AppDynamics to their existing on-premises environments to clearly understand their current performance. As part of the cloud deployment, Movie Tickets Online can use AppDynamic's native integration with Azure to understand post-migration performance and business outcomes.
 
