@@ -17,6 +17,8 @@ ms.custom: readiness, fasttrack-edit
 
 Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
 
+Accurate representation and naming of resources are critical for security purposes. In the event of a security incident, quickly identifying affected systems, their potential business impact, and what they are being used for is critical to making good risk decisions. Security services such as [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-introduction) and [Azure Sentinel](https://docs.microsoft.com/azure/sentinel) reference resources and their associated logging/alert information by resource name.
+
 Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 
 Changing resource names can be difficult. Establish a comprehensive naming convention before you begin any large cloud deployment.
