@@ -80,7 +80,7 @@ Movie Tickets Online, a fictitious online movie ticket seller, is working to ret
 
 In addition to improving performance, they want to ensure that the business outcomes of improving their sales funnels and growing their revenue will be met. As part of their migration, they deployed AppDynamics to their existing on-premises environments to clearly understand their current performance. As part of the cloud deployment, Movie Tickets Online can use AppDynamic's native integration with Azure to understand post-migration performance and business outcomes.
 
-In this case, they were able to show improved conversion rates (from 48 to 79 percent) and improvements to underlying performance, response time, and increased ticket sales volume.  
+In this case, they were able to see an increase in conversion rates from 48 to 79 percent and improvements to underlying performance, response time, and ticket sales volume.  
 
 ![An AppDynamics migration comparison](./media/appdynamics_migration_comparison.jpg)
 
