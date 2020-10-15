@@ -1,6 +1,6 @@
 ---
 title: Measure business outcomes with AppDynamics
-description: Understand how an application's performance and user experience impact business outcomes.
+description: Use AppDynamics to understand how an application's performance and user experience impact business outcomes.
 author: BrianBlanchard
 ms.author: wayneme
 ms.date: 09/18/2020
@@ -61,8 +61,8 @@ Combining application and business performance metrics helps to clearly demonstr
 
 Configurable dashboards are one of many AppDynamics tools that visualize these insights. In this real-time example, we see the overall conversion funnel and the impact on individual page performance against abandoners alongside shopping cart totals, customer segment, location, and general revenue details.
 
-![An AppDynamics Business Impacts dashboard](./media/appdynamics_businessimpact_dashboard.jpg)
-_Figure 2: An AppDynamics Business Impacts dashboard._
+![An AppDynamics Business Impact dashboard](./media/appdynamics_businessimpact_dashboard.jpg)
+_Figure 2: An AppDynamics Business Impact dashboard._
 
 ## Resources to help identify business metrics
 
