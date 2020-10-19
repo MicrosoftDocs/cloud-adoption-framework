@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# Transitioning existing Azure environments to enterprise-scale
+# Transitioning existing Azure environments to Enterprise-Scale
 
 We recognize that most organizations may have an existing footprint in Azure, one or more subscriptions, and potentially an existing structure of their management groups. Depending on their initial business requirements and scenarios, Azure resources such as hybrid connectivity (for example with Site-to-Site VPN and/or ExpressRoute) may have been deployed.  
 
