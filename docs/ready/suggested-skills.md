@@ -61,7 +61,7 @@ The following examples are a few tailored learning paths on Microsoft Learn, whi
 
 [Azure fundamentals](/learn/paths/azure-fundamentals): Learn cloud concepts such as high availability, scalability, elasticity, agility, fault tolerance, and disaster recovery. Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage, and security.
 
-[Manage resources in Azure](/learn/paths/control-and-organize-with-azure-resource-manager): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
+[Manage resources in Azure](/learn/modules/control-and-organize-with-azure-resource-manager): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
 
 [Administer infrastructure resources in Azure](/learn/paths/administer-infrastructure-resources-in-azure): Learn how to create, manage, secure, and scale virtual machine resources.
 
