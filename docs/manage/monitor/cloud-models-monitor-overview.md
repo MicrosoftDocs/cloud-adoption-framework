@@ -152,7 +152,7 @@ Although a migration to the cloud presents numerous challenges, it also provides
 
 - Use [Azure Arc](/azure-arc/overview) to prepare your servers, virtual machines, Kubernetes clusters, and databases across your environment for management as if they are running in Azure. Azure Arc delivers consistent inventory, management, governance, and security with familiar Azure services and management capabilities.
 
-- Enable [Azure Monitor for VMs, Azure Monitor for containers, and Application Insights to detect and diagnose issues between infrastructure and applications. For a more thorough analysis and correlation of data collected from the multiple components or dependencies supporting the application, you need to use Azure Monitor Logs.
+- Enable Azure Monitor for VMs, Azure Monitor for containers, and Application Insights to detect and diagnose issues between infrastructure and applications. For a more thorough analysis and correlation of data collected from the multiple components or dependencies supporting the application, you need to use Azure Monitor Logs.
 
 - Create intelligent alerts that apply to a core set of applications and service components, help reduce alert noise with dynamic thresholds for complex signals, and use alert aggregation based on machine learning algorithms to help identify the issue quickly.
 
