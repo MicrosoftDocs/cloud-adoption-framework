@@ -67,3 +67,4 @@ ms.subservice: ready
 - Secure egress network traffic using Azure Firewall or a 3rd party network virtual appliance (NVA) deployed in the (managed) hub VNet.
   - Use User-Defined Routes (UDR) with AKS outbound-type `userDefinedRouting` to send egress network traffic from the AKS cluster to the Azure Firewall or 3rd party NVA.
 - Use Calico as network policy model to secure traffic between pods in an AKS cluster, unless you require support from Azure support.
+
