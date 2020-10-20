@@ -152,7 +152,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
 
       _Figure 5: DevTest Labs instance: configuration and policies._
 
-   2. Contoso selects **Virtual Networks** > **+ Add**, chooses **vnet-dev-eus2**, and then selects **Save**. This allows the development virtual network to be used for VM deployments. A virtual network was also created during the deployment of the DevTest Labs instance.
+   2. Contoso selects **Virtual Networks** > **+ Add**, chooses `vnet-dev-eus2`, and then selects **Save**. This allows the development virtual network to be used for VM deployments. A virtual network was also created during the deployment of the DevTest Labs instance.
 
       ![Screenshot of selections for adding the virtual network.](./media/contoso-migration-devtest-to-labs/vnets.png)
 
