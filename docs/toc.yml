@@ -142,6 +142,8 @@ items:
         href: digital-estate/calculate.md
     - name: Initial organization alignment
       href: plan/initial-org-alignment.md
+    - name: Measure business outcomes with AppDynamics
+      href: /digital-estate/app-dynamics.md
     - name: Cloud adoption plan
       items:
       - name: Overview

@@ -67,7 +67,7 @@ _Figure 2: An AppDynamics Business Impact dashboard._
 
 ## Resources to help identify business metrics
 
-The [Strategy](../../strategy/index.md) and [Business outcomes](../../business-outcomes/index.md) sections of the Cloud Adoption Framework provide the guidance and strategies to help you identify business outcomes for your organization.
+The [Strategy](../strategy/index.md) and [Business outcomes](../strategy/business-outcomes/index.md) sections of the Cloud Adoption Framework provide the guidance and strategies to help you identify business outcomes for your organization.
 
 ## Pre- and post-migration comparison
 
