@@ -17,7 +17,7 @@ Azure landing zones are the output of a multisubscription Azure environment that
 
 <!-- markdownlint-disable MD034 -->
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xdvm]
 
 ## Scalable and modular
 
