@@ -1,7 +1,7 @@
 ---
 title: Examples of sustainability outcomes
 description: Use the Cloud Adoption Framework to learn how cloud computing can support you in lightening your environment footprint by reducing carbon emissions and efficiently using resources.
-author: Wayne Meyer
+author: wayneme75
 ms.author: wayneme
 ms.date: 10/21/2020
 ms.topic: conceptual

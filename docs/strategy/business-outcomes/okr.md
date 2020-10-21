@@ -1,7 +1,7 @@
 ---
 title: Measuring business outcomes with Objectives and Key Results (OKRs)
 description: Use the Cloud Adoption Framework to learn how to measure business outcomes using objectives and key results (OKRs).
-author: Wayne Meyer
+author: wayneme75
 ms.author: wayneme
 ms.date: 10/21/2020
 ms.topic: conceptual
@@ -80,4 +80,4 @@ To move forward with OKRs and measuring your there are 5 simple steps to take:
  Contact [Workboard Inc (United States)](https://appsource.microsoft.com/en-us/marketplace/co-sell/SOL-31525-NGJ?debug=true%2F%3FignoreAutoSignIn%3Dtrue&tab=Overview) to get started.
 
 > [!div class="nextstepaction"]
-> [Align Efforts to Learning Metrics](./learning-metrics.md)
+> [Align Efforts to Learning Metrics](../learning-metrics.md)
