@@ -26,8 +26,8 @@ The following tools can aid the team in execution of assess activities:
 - [Balance the portfolio](../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
 - [Build a business justification](../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
 - [Rationalize the digital estate](../digital-estate/rationalize.md): Rationalize assets in the digital estate.
-- [Application portfolio assessment](/learn/modules/app-and-infra-migration-and-modernization): Criteria for making decisions regarding migration or innovation options within the application portfolio.
-- [Assessing and planning Microsoft Azure migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning): A Pluralsight course to aid in assessing on-premises workloads.
+- [Application portfolio assessment](/learn/modules/app-and-infra-migration-and-modernization/): Criteria for making decisions regarding migration or innovation options within the application portfolio.
+- [Assessing and planning Microsoft Azure migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning-update): A Pluralsight course to aid in assessing on-premises workloads.
 
 During assess processes, architects will design solutions for each workload. The following skilling resources help prepare architects for these tasks:
 
