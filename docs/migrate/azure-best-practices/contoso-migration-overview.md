@@ -15,7 +15,7 @@ This section of the Cloud Adoption Framework for Azure provides examples of seve
 
 ## Introduction
 
-Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure plaftorm helps you to figure out how to:
+Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure platform helps you to figure out how to:
 
 - Optimize resources and operations.
 - Engage with your customers and employees.
