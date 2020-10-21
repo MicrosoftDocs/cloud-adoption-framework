@@ -11,7 +11,7 @@ ms.custom: readiness, fasttrack-edit
 ---
 
 <!-- docutune:disable -->
-<!-- cSpell:ignore cdnp cdne westeurope usgovia accountlookup messagequery -->
+<!-- cSpell:ignore appcs arck cdnp cdne osdisk westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions
 
@@ -102,6 +102,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Local network gateway            | lgw-        |
 | Virtual network gateway          | vgw-        |
 | VPN connection                   | cn-         |
+| ExpressRoute circuit             | erc-        |
 | Application gateway              | agw-        |
 | Route table                      | route-      |
 | User defined route (UDR)         | udr-        |
@@ -112,24 +113,27 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Compute and Web
 
-| Asset type                  | Name prefix |
-|-----------------------------|-------------|
-| Virtual machine             | vm          |
-| Virtual machine scale set   | vmss-       |
-| Availability set            | avail-      |
-| VM storage account          | stvm        |
-| Azure Arc connected machine | arcm-       |
-| Container registry          | cr-         |
-| Container instance          | ci-         |
-| AKS cluster                 | aks-        |
-| Service Fabric cluster      | sf-         |
-| App Service environment     | ase-        |
-| App Service plan            | plan-       |
-| Web app                     | app-        |
-| Function app                | func-       |
-| Cloud service               | cld-        |
-| Notification Hubs           | ntf-        |
-| Notification Hubs namespace | ntfns-      |
+| Asset type | Name prefix |
+|--|--|
+| Virtual machine | vm |
+| Virtual machine scale set | vmss- |
+| Availability set | avail- |
+| Managed disk (OS) | osdisk |
+| Managed disk (data) | disk |
+| VM storage account | stvm |
+| Azure Arc enabled server | arcs- |
+| Azure Arc enabled Kubernetes cluster | arck |
+| Container registry | cr |
+| Container instance | ci- |
+| AKS cluster | aks- |
+| Service Fabric cluster | sf- |
+| App Service environment | ase- |
+| App Service plan | plan- |
+| Web app | app- |
+| Function app | func- |
+| Cloud service | cld- |
+| Notification Hubs | ntf- |
+| Notification Hubs namespace | ntfns- |
 
 ### Databases
 
@@ -163,43 +167,54 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Analytics and IoT
 
-| Asset type                      | Name prefix |
-|---------------------------------|-------------|
-| Azure Analysis Services server  | as          |
-| Azure Databricks workspace      | dbw-        |
-| Azure Stream Analytics          | asa-        |
-| Azure Data Factory              | adf-        |
-| Data Lake Store account         | dls         |
-| Data Lake Analytics account     | dla         |
-| Event hub                       | evh-        |
-| HDInsight - Hadoop cluster      | hadoop-     |
-| HDInsight - HBase cluster       | hbase-      |
-| HDInsight - Kafka cluster       | kafka-      |
-| HDInsight - Spark cluster       | spark-      |
-| HDInsight - Storm cluster       | storm-      |
-| HDInsight - ML Services cluster | mls-        |
-| IoT hub                         | iot-        |
-| Power BI Embedded               | pbi-        |
+| Asset type                       | Name prefix |
+|---------------------------------_|-------------|
+| Azure Analysis Services server   | as          |
+| Azure Databricks workspace       | dbw-        |
+| Azure Stream Analytics           | asa-        |
+| Azure Data Explorer cluster      | dec         |
+| Azure Data Factory               | adf-        |
+| Data Lake Store account          | dls         |
+| Data Lake Analytics account      | dla         |
+| Event hub                        | evh-        |
+| HDInsight - Hadoop cluster       | hadoop-     |
+| HDInsight - HBase cluster        | hbase-      |
+| HDInsight - Kafka cluster        | kafka-      |
+| HDInsight - Spark cluster        | spark-      |
+| HDInsight - Storm cluster        | storm-      |
+| HDInsight - ML Services cluster  | mls-        |
+| IoT hub                          | iot-        |
+| Power BI Embedded                | pbi-        |
+| Time Series Insights environment | tsi-        |
+
+### Developer tools
+
+| Asset type | Name prefix |
+|---|---|
+| App Configuration store | appcs- |
 
 ### Integration
 
-| Asset type        | Name prefix |
-|-------------------|-------------|
-| Logic apps        | logic-      |
-| Service Bus       | sb-         |
-| Service Bus queue | sbq-        |
-| Service Bus topic | sbt-        |
+| Asset type          | Name prefix |
+|---------------------|-------------|
+| Integration account | ia-         |
+| Logic apps          | logic-      |
+| Service Bus         | sb-         |
+| Service Bus queue   | sbq-        |
+| Service Bus topic   | sbt-        |
 
 ### Management and governance
 
-| Asset type              | Name prefix |
-|-------------------------|-------------|
-| Blueprint               | bp-         |
-| Blueprint assignment    | bpa-        |
-| Key vault               | kv-         |
-| Log Analytics workspace | log-        |
-| Application Insights    | appi-       |
-| Recovery Services vault | rsv-        |
+| Asset type | Name prefix |
+|--|--|
+| Automation account | aa- |
+| Azure Monitor action group | ag- |
+| Blueprint | bp- |
+| Blueprint assignment | bpa- |
+| Key vault | kv- |
+| Log Analytics workspace | log- |
+| Application Insights | appi- |
+| Recovery Services vault | rsv- |
 
 ### Migration
 
@@ -238,7 +253,7 @@ The following section provides some example names for common Azure resource type
 
 <!-- TODO: Use tick marks for names. -->
 
-<!-- cSpell:ignore mktgsharepoint acctlookupsvc vmhadoop vmtest vmsharepoint vmnavigator vmsqlnode stvmstcoreeastus stvmpmcoreeastus stvmstplmeastus stvmsthadoopeastus stnavigatordata stemissionsoutput stdiag stdiagsh ssimpnavigatorprod ssimpemissionsdev dlanavigatorprod dlsnavigatorprod dlaemissionsdev dlsemissionsdev weballow rdpallow sqlallow dnsblocked cloudapp azurewebsites servicebus -->
+<!-- cSpell:ignore mktgsharepoint acctlookupsvc vmhadoop vmtest vmsharepoint vmnavigator vmsqlnode stvmstcoreeastus stvmpmcoreeastus stvmstplmeastus stvmsthadoopeastus stnavigatordata stemissionsoutput stdiag stdiagsh ssimpnavigatorprod ssimpemissionsdev dlanavigatorprod dlsnavigatorprod dlaemissionsdev dlsemissionsdev weballow rdpallow sqlallow dnsblocked cloudapp azurewebsites servicebus appcn keda acrnavigatorprod -->
 
 <!-- markdownlint-disable MD024 -->
 
