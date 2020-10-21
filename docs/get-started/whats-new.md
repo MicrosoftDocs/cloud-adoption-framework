@@ -3,7 +3,7 @@ title: What's new
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 08/25/2020
+ms.date: 10/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -17,6 +17,17 @@ ms.subservice: overview
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
+
+## October 2020
+
+This release includes contributions to the enterprise scale landing zones and business outcomes. 
+
+| Article | Description |
+|---|---|
+| [Transitioning existing Azure environments to Enterprise-Scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into Enterprise-Scale. |
+| [Measuring business outcomes with Objectives and Key Results (OKRs)](../strategy/business-outcomes/okr.md) | Learn how to measure business outcomes using objectives and key results (OKRs). |
+| [Examples of sustainability outcomes](../strategy/business-outcomes/sustainability.md) | Learn how cloud computing can support you in lightening your environment footprint by reducing carbon emissions and efficiently using resources. |
+| [Measure business outcomes with AppDynamics](../digital-estate/app-dynamic.md) | Understanding an application's performance and user experience is key to measuring business outcomes. See how AppDynamics can provide business insights for most use cases. |
 
 ## August 25, 2020
 
