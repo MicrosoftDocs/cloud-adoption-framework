@@ -359,7 +359,7 @@ Also see the Azure Security Benchmark [ID-1: Standardize Azure Active Directory 
 
 **What**: Use Azure AD identities instead of key based authentication wherever possible (Azure Services, Applications, APIs, etc.).
 
-**Why**: Key based authentication can be used to authenticate to cloud services and APIs but requires managing keys securely, which is challenging to perform well (especially at scale). Secure key management is difficult for non-security processionals like developers and infrastructure professionals and they often fail to do it securely, often creating major security risks for the organization.
+**Why**: Key based authentication can be used to authenticate to cloud services and APIs but requires managing keys securely, which is challenging to perform well (especially at scale). Secure key management is difficult for non-security professionals like developers and infrastructure professionals and they often fail to do it securely, often creating major security risks for the organization.
 
 Identity based authentication overcomes many of these challenges with mature capabilities for secret rotation, lifecycle management, administrative delegation, and more.
 
