@@ -1,6 +1,6 @@
 ---
 title: Schema migration data definition languages
-description: Use Azure Synapse Analytics features to address high availability and disaster recovery requirements.
+description: Learn about design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020
@@ -118,7 +118,7 @@ Here's an alphabetical list of supported data types:
 
 <!-- TODO: Review format of this list. Are the arguments necessary for this list? -->
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 - `bigint`
 - `binary [ (n) ]`
@@ -145,7 +145,7 @@ Here's an alphabetical list of supported data types:
 - `varbinary [ (n | MAX) ]`
 - `varchar [ (n | MAX) ]`
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->
 
 The following table lists common data types that are not currently supported, together with the recommended approach for storing them in Azure Synapse Analytics. For specific environments such as Teradata or Netezza, see the associated documents for more detailed information.
 

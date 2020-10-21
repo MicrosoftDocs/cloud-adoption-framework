@@ -1,6 +1,6 @@
 ---
 title: "Complex enterprise governance: Improve the Cost Management discipline"
-description: Use the Cloud Adoption Framework for Azure to learn about adding cost controls to a governance minimum viable product (MVP).
+description: Use the Cloud Adoption Framework for Azure to learn about adding cost controls to a complex governance minimum viable product (MVP).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -55,16 +55,16 @@ The following changes to policy will help remediate the new risks and guide impl
 - During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as Azure Reserved Virtual Machine Instances or license cost reductions.
 - All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
 
-## Incremental improvement of the best practices
+## Incremental improvement of best practices
 
-This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management and Billing. Together, these two design changes will fulfill the new corporate policy statements.
+This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management + Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
-1. Make changes in the Azure enterprise portal to bill the department administrator for the Canadian deployment.
-2. Implement Azure Cost Management and Billing.
+1. Make changes in the Azure EA portal to bill the department administrator for the Canadian deployment.
+2. Implement Azure Cost Management + Billing.
     1. Establish the right level of access scope to align with the subscription pattern and resource grouping pattern. Assuming alignment with the governance MVP defined in prior articles, this would require **enrollment account scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance, like the Canadian procurement team, will require **resource group scope** access.
-    2. Establish a budget in Azure Cost Management and Billing.
+    2. Establish a budget in Azure Cost Management + Billing.
     3. Review and act on initial recommendations. Create a recurring process to support the reporting process.
-    4. Configure and execute Azure Cost Management and Billing reporting, both initial and recurring.
+    4. Configure and execute Azure Cost Management + Billing reporting, both initial and recurring.
 3. Update Azure Policy.
     1. Audit tagging, management group, subscription, and resource group values to identify any deviation.
     2. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.

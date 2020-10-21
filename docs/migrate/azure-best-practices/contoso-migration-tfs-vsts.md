@@ -91,7 +91,7 @@ Here's how Contoso will complete the migration:
 - [Introduction to Azure Storage](/azure/storage/common/storage-introduction).
 - [Create a storage account](/azure/storage/common/storage-create-storage-account).
 
-<!-- docsTest:casing "Server Configuration Wizard" "Configure Features Wizard" "Detach Team Project Collection Wizard" -->
+<!-- docutune:casing "Server Configuration Wizard" "Configure Features Wizard" "Detach Team Project Collection Wizard" -->
 
 ## Step 2: Upgrade Team Foundation Server
 
@@ -164,7 +164,7 @@ Contoso admins run the Team Foundation Server migration tool against the `contos
 
 1. In the Azure AD sign-in window that opens, they enter the credentials of a global admin user.
 
-     ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/collection8.png)
+     ![Screenshot of the Azure AD sign in window with admin credentials.](./media/contoso-migration-tfs-vsts/collection8.png)
 
 1. The validation passes and is confirmed by the tool.
 
@@ -187,7 +187,7 @@ With the validation complete, Contoso admins can use the Team Foundation Server 
 
 1. An Azure AD sign-in screen appears, and the admins enter the credentials of a global admin.
 
-    ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/prep2.png)
+    ![Screenshot of the Azure AD sign screen with admin credentials typed in the User text box.](./media/contoso-migration-tfs-vsts/prep2.png)
 
 1. The preparation is completed, and the tool reports that the import files have been generated successfully.
 
@@ -235,7 +235,7 @@ Here is the migration process they'll follow:
 1. **Perform a dry-run import**. A dry-run import helps them test the collection migration. Dry runs have a limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note that informs Contoso when the dry run will be deleted is included in the success email that's sent after the import finishes. The team takes note and plans accordingly.
 1. **Complete the production migration**. With the dry-run migration completed, Contoso admins do the final migration by updating the `import.json` file and then running import again.
 
-<!-- docsTest:casing "Team Foundation Server Administration Console" -->
+<!-- docutune:casing "Team Foundation Server Administration Console" -->
 
 ### Detach the collection
 
@@ -369,7 +369,7 @@ Contoso admins perform a dry-run migration to make sure that everything's workin
 
 1. The Azure AD sign-in window opens. Contoso admins sign in to Azure AD with admin permissions.
 
-    ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
+    ![Screenshot of the Azure AD sign in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
 
     A message is displayed confirming that the import has been started successfully.
 
@@ -414,7 +414,7 @@ Now that the dry run is complete, Contoso admins move on to the production migra
 
 1. In the Azure AD sign-in window, they specify a Contoso admin sign-in.
 
-    ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/full3.png)
+    ![Screenshot of the Azure AD sign in screen in Visual Studio.](./media/contoso-migration-tfs-vsts/full3.png)
 
     A message is displayed that the import has started successfully.
 

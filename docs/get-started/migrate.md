@@ -173,7 +173,7 @@ Cloud migration tools enable migrating all virtual machines in a datacenter in o
 
 With each iteration, the cloud adoption team gets better at migrating workloads. These steps help the technical team mature their capabilities:
 
-1. Migrate your first workload in a pure information as a service (IaaS) approach by using the tools outlined in the [Azure migration guide](../migrate/azure-migration-guide/index.md).
+1. Migrate your first workload in a pure infrastructure as a service (IaaS) approach by using the tools outlined in the [Azure migration guide](../migrate/azure-migration-guide/index.md).
 2. Expand tooling options to use migration and modernization by using the [migration examples](../migrate/azure-best-practices/contoso-migration-overview.md).
 3. Develop your technical strategy by using broader approaches outlined in [Azure cloud migration best practices](../migrate/azure-best-practices/index.md).
 4. Improve consistency, reliability, and performance through an efficient migration-factory approach as outlined in [Migration process improvements](../migrate/migration-considerations/index.md).
@@ -200,7 +200,8 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 - Deploy an initial governance foundation.
 - Complete a governance benchmark to plan for future improvements.
-- Timeline risk: improvement policies and governance implementation can add one to four weeks per discipline.
+- Timeline risk:
+  - Improvement of policies and governance implementation can add one to four weeks per discipline.
 
 <br>
 

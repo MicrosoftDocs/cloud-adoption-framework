@@ -1,9 +1,9 @@
 ---
 title: Windows Virtual Desktop proof of concept
-description: Use the Cloud Adoption Framework for Azure to learn Windows Virtual Desktop migration best practices to reduce complexity and standardize the migration process.
+description: Use the Cloud Adoption Framework to learn about best practices for completing and testing a Windows Virtual Desktop proof of concept.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

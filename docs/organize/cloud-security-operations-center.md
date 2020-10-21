@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 05/15/2020
 ---
 
-<!-- docsTest:casing "Cyber Defense Operations Center" -->
+<!-- docutune:casing "Cyber Defense Operations Center" -->
 <!-- cSpell:ignore CISO MTTA MTTR SIEM NIST SOCs CDOC -->
 
 # Cloud SOC functions

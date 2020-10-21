@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Standard enterprise governance guide: Improve the Security Baseline discipline
 
-This article advances the [governance strategy narrative](narrative.md) by adding security controls that support moving protected data to the cloud.
+This article advances the [governance strategy narrative](./narrative.md) by adding security controls that support moving protected data to the cloud.
 
 ## Advancing the narrative
 
@@ -26,7 +26,7 @@ The difference is subtle, but it's an important distinction when you're creating
 
 ### Changes in the current state
 
-At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as Prod and DR.
+At the start of this narrative, the application development teams were still working in a dev/test capacity, and the BI team was still in the experimental phase. IT operated two hosted infrastructure environments, referred to as `Prod` and `DR`.
 
 Since then, some things have changed that will affect governance:
 
@@ -98,36 +98,36 @@ The governance MVP design will change to include new Azure policies and an imple
 - The identity and IT security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.
 - Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
 - Azure Recovery Services vault implementation:
-    - Define and deploy an Azure Recovery Services vault for backup and recovery processes.
-    - Create a Resource Manager template for creation of a vault in each subscription.
+  - Define and deploy an Azure Recovery Services vault for backup and recovery processes.
+  - Create a Resource Manager template for creation of a vault in each subscription.
 - Azure Security Center implementation:
-    - Configure Azure Security Center for any management group that contains protected data classifications.
-    - Set automatic provisioning to on by default to ensure patching compliance.
-    - Establish OS security configurations. The IT security team will define the configuration.
-    - Support the IT security team in the initial use of Security Center. Transition the use of Security Center to the IT security team, but maintain access for the purpose of continually improving governance.
-    - Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
+  - Configure Azure Security Center for any management group that contains protected data classifications.
+  - Set automatic provisioning to on by default to ensure patching compliance.
+  - Establish OS security configurations. The IT security team will define the configuration.
+  - Support the IT security team in the initial use of Security Center. Transition the use of Security Center to the IT security team, but maintain access for the purpose of continually improving governance.
+  - Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
 - Update Azure policies for all subscriptions:
-    - Audit and enforce the criticality of data and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.
-    - Audit and enforce the use of approved images only.
+  - Audit and enforce the criticality of data and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.
+  - Audit and enforce the use of approved images only.
 - Update Azure policies for all subscriptions that contain protected data classifications:
-    - Audit and enforce the use of standard Azure RBAC roles only.
-    - Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
-    - Audit and enforce the application of an NSG to all NICs and subnets. The networking and IT security teams will define the NSG.
-    - Audit and enforce the use of approved network subnet and virtual network per network interface.
-    - Audit and enforce the limitation of user-defined routing tables.
-    - Apply the built-in policies for guest configuration as follows:
-        - Audit that Windows web servers are using secure communication protocols.
-        - Audit that password security settings are set correctly inside Linux and Windows machines.
-    - Audit and enforce that Azure Recovery Services vaults exist in the subscription.
+  - Audit and enforce the use of standard Azure RBAC roles only.
+  - Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
+  - Audit and enforce the application of an NSG to all NICs and subnets. The networking and IT security teams will define the NSG.
+  - Audit and enforce the use of approved network subnet and virtual network per network interface.
+  - Audit and enforce the limitation of user-defined routing tables.
+  - Apply the built-in policies for guest configuration as follows:
+    - Audit that Windows web servers are using secure communication protocols.
+    - Audit that password security settings are set correctly inside Linux and Windows machines.
+  - Audit and enforce that Azure Recovery Services vaults exist in the subscription.
 - Firewall configuration:
-    - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that's compatible with Azure.
-    - Create a Resource Manager template to deploy the firewall with required configurations.
-- Azure blueprint:
-    - Create a new blueprint named protected-data.
-    - Add the firewall, Azure Security Center templates, and Azure Recovery Services vault templates to the blueprint.
-    - Add the new policies for protected data subscriptions.
-    - Publish the blueprint to any management group that currently plans on hosting protected data.
-    - Apply the new blueprint to each affected subscription and to existing blueprints.
+  - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that's compatible with Azure.
+  - Create a Resource Manager template to deploy the firewall with required configurations.
+- Azure Blueprints:
+  - Create a new blueprint named `protected-data`.
+  - Add the Azure Firewall templates, Azure Security Center templates, and Azure Recovery Services vault templates to the blueprint.
+  - Add the new policies for protected data subscriptions.
+  - Publish the blueprint to any management group that currently plans on hosting protected data.
+  - Apply the new blueprint to each affected subscription and to existing blueprints.
 
 ## Conclusion
 

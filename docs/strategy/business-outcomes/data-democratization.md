@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Data democratization
 
-Many companies have kept data warehouses in their datacenters to help different parts of their business to analyze data and make decisions. Sales, marketing, and finance departments have relied heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc query and analysis on data in data marts. These data marts use self-service business intelligence tools to perform multi-dimensional analysis.
+Many companies keep data warehouses in their datacenters to help different parts of their business analyze data and make decisions. Sales, marketing, and finance departments rely heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc querying and analysis of data in data marts. These data marts use self-service business intelligence tools to perform multidimensional analysis.
 
 A business that's supported by data innovation and a modern data estate can empower a broad range of contributors, from an IT stakeholder to a data professional and beyond. They can take action on this repository of centralized data, which is often referred to as "the single source of truth."
 

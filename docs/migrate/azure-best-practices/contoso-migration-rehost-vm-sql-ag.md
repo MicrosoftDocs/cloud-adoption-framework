@@ -191,7 +191,7 @@ To create a storage account, the Contoso admins:
 
     ![Screenshot that shows the access key.](./media/contoso-migration-rehost-vm-sql-ag/access-key.png)
 
-<!-- docsTest:casing "Failover Cluster feature" -->
+<!-- docutune:casing "Failover Cluster feature" -->
 
 ### Add SQL Server VMs to Contoso domain
 

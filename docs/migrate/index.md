@@ -19,14 +19,14 @@ To prepare you for this phase of the cloud adoption lifecycle, we recommend the 
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> ![1](../_images/icons/1.png) | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration. |
-| <br> ![2](../_images/icons/2.png) | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios. |
-| <br> ![3](../_images/icons/3.png) | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices. |
-| <br> ![4](../_images/icons/4.png) | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration. |
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios. |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration. |
 
 The Migrate methodology and the steps above build on the following assumptions:
 
-<!-- docsTest:casing "Plan, Ready, and Adopt methodologies" -->
+<!-- docutune:casing "Plan, Ready, and Adopt methodologies" -->
 
 - The methodology governing migration sprints fits within migration waves or releases, which are defined using the Plan, Ready, and Adopt methodologies. Within each migration sprint, a batch of workloads is migrated to the cloud.
 - Before migrating workloads, at least one [landing zone](../ready/index.md) has been identified, configured, and deployed to meet the needs of the near-term cloud adoption plan.

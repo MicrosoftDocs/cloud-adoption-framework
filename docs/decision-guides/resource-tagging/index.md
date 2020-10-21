@@ -24,7 +24,7 @@ Organizing cloud-based resources is a crucial task for IT, unless you only have 
   - [Alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Recurring spend tracking and reporting](../../govern/cost-management/compliance-processes.md)
   - [Post-implementation optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
-  - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
+  - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices)
 - **Operations management:** Visibility for the operations management team regarding business commitments and SLAs is an important aspect of ongoing operations. To be well-managed, tagging for [mission criticality](../../manage/considerations/criticality.md) tagging is a requirement.
 - **Security:** Classification of data and security impact is a vital data point for the team, when breaches or other security issues arise. To operate securely, tagging for [data classification](../../govern/policy-compliance/data-classification.md) is required.
 - **Governance and regulatory compliance:** Maintaining consistency across resources helps identify deviation from agreed-upon policies. [This governance foundation article](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the patterns below can help when deploying governance practices. Similar patterns are available to evaluate regulatory compliance using tags.

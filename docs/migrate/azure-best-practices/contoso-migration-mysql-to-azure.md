@@ -53,7 +53,7 @@ Use Azure Database Migration Service to migrate the database to an Azure Databas
 ### Database considerations
 
 <!-- TODO: Verify GraphDBMS term -->
-<!-- docsTest:casing ColumnStore "Graph DBMS" -->
+<!-- docutune:casing ColumnStore "Graph DBMS" -->
 
 As part of the solution design process, Contoso reviewed the features in Azure for hosting its MySQL data. The following considerations helped the company decide to use Azure:
 

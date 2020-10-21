@@ -67,7 +67,7 @@ Enterprise reliability requires consistent application of the management baselin
 
 - Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for criticality.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
-- If you're new to the Cost Management discipline, follow the guidance in the [Cost Management discipline improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- If you're new to the Cost Management discipline, follow the guidance in the [Cost Management discipline improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices) section.
 
 > [!NOTE]
 > **Steps to start reliability partnerships with other teams:** Various decisions throughout the cloud adoption lifecycle can have a direct impact on reliability. The following steps outline the partnerships and supporting efforts required to deliver consistent reliability across the IT portfolio.
@@ -120,7 +120,7 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 - [Gather inventory](../digital-estate/inventory.md): Establish a source of data for analysis of the digital estate prior to adoption.
 - [Best practice: Azure Migrate](../plan/contoso-migration-assessment.md): Use Azure Migrate to gather inventory.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): During incremental rationalization, a quantitative analysis can identify cloud candidates for budgeting purposes.
-- [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management and Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+- [Align cost models and forecast models](../digital-estate/calculate.md): Use Azure Cost Management + Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Build a plan with actionable workload, assets, and timeline details.
 
 <br>
