@@ -73,7 +73,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 
 # Compute
 
-![AzureComputeSKUOptions](media\BCDR_Compute_Options.jpg)
+![AzureComputeSKUOptions](./media/BCDR_Compute_Options.jpg)
 
 ## Design Considerations
 
@@ -84,9 +84,6 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - Consider Scale-out for SAP application server over scale-up.
 - Consider using E-series SKU for non-prod cost-conscious deployments.
 - For AnyDB production deployment consider IOPS and throughput limits of VM SKUs.
-
-![BCDR_Compute_Options](media\BCDR_Compute_Options.jpg)
-
 
 ## Design Recommendations
 
@@ -100,6 +97,9 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - [HANA Large Instances (HLI)](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-overview-architecture) for scale-up deployments larger than 12TB for OLTP.
 
 # Storage
+
+![AzureStorageSKUOptions](./media/BCDR_Scalability_Storage_SKU.jpg)
+
 
 ## Design Considerations
 
@@ -128,7 +128,6 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - Consider using [Azure Disk encryption](https://docs.microsoft.com/en-us/azure/security/fundamentals/azure-disk-encryption-vms-vmss) for data disk on SAP application servers.
 - Consider using [Azure Storage Service encryption](https://docs.microsoft.com/en-us/azure/storage/common/encryption-customer-managed-keys?toc=/azure/storage/blobs/toc.json) with customer managed keys(CMK) for database disks.
 
-![Conceptual](media\BCDR_Storage_Options.jpg)
 
 ## Design Recommendations
 
