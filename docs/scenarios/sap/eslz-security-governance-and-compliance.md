@@ -18,9 +18,9 @@ Build SAP Landing zone to meet the requirements of 80% of SAP Production Environ
 It’s important to understand the shared responsibility model between you as a customer and Microsoft. The division of responsibility is dependent on the cloud model used - SaaS, PaaS, or IaaS. As a customer, you are always responsible for your data, endpoints, account/access management, irrespective of the chosen cloud deployment.  
 This is showcased in two pictures below. 
 
-![Responsibility Zones](media\SGC_ResponsIbilityZones.jpg)
+![Responsibility Zones](./media/SGC_ResponsIbilityZones.jpg)
 
-![Security layers](media\SGC_SecurityScope.jpg)
+![Security layers](./media/SGC_SecurityScope.jpg)
 
 ## Goals
 
@@ -34,11 +34,11 @@ Generic guidance related with Azure Platform Security, Compliance and Governance
 The following are considerations and scope for Enterprise Scale Landing Zone (ESLZ) SAP on Azure in this section. 
 SAP on Azure Security , Compliance and Governance quick view:-
 
-![Conceptual](media\SGC_SAP_ELZ.jpg)
+![Conceptual](./media/SGC_SAP_ELZ.jpg)
 
 Reference Architecture: As we see from the diagram below Network security groups (NSG) contain a list of security rules that allow or deny network traffic to resources within your Azure VNet. NSGs can be associated to subnets or individual network interfaces attached to VMs. Security rules can be configured based on source/destination, port, and protocol. NSG’s influence network traffic for the SAP system. In the diagram below, three subnets are implemented, each having an NSG assigned - FE (Front-End), App and DB.
 
-![NSG](media\SGC_SAP_NSG_Diagram.jpg)
+![NSG](./media/SGC_SAP_NSG_Diagram.jpg)
 
 Refer: Deployment checklist: https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/planning-guide
 
@@ -61,17 +61,17 @@ Cloud solutions were initially designed to host single, relatively isolated appl
 Customers deploy their Cloud architecture patterns across multiple subscriptions following Hub- Spoke topology and hence it’s important to get have a holistic view of entire security posture with Azure Security Center. In the example of cloud deployment diagram below, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads. 
 Azure Security Center helps customers to  strengthens the security posture of their data centres, and provides advanced threat protection across the hybrid workloads in the cloud - whether they're in Azure or not - as well as on premises.
 
-![ASC](media\SGC_ASC.jpg)
+![ASC](./media/SGC_ASC.jpg)
 
 Please find Azure Security Center Dashboard view below for reference:-
 
-![ASC](media\SGC_ASC_View.jpg)
+![ASC](./media/SGC_ASC_View.jpg)
 
 •	Operating System Hardening – Azure Update Manager. Security is a shared responsibility between Microsoft and you as a customer where your customer specific security controls need to be applied to the operating system, database, and the SAP application layer. For example, you need to ensure the operating system is hardened to eradicate vulnerabilities which could lead to attacks on the SAP database. To build end to end orchestration, you can configure to send notifications to your Devops/Git Repo as work items or issues. 
 
 The following diagram illustrates how Update Management assesses and applies security updates to all connected Windows Server and Linux servers in a workspace:
 
-![ASC](media\SGC_Update_Automation.jpg)
+![ASC](./media/SGC_Update_Automation.jpg)
 
 •	Security for data in Transit/In-Flight:-  To add context here.
 You have the option of Microsoft managing the encryption keys or you can manage your own keys with Azure Key Vault. Azure Key Vault can be used to manage your SSL/TLS certificates which are used to secure interfaces and internal communications within the SAP system.
@@ -82,7 +82,7 @@ Additionally, "encryption by default" using MACsec (an IEEE standard at the data
 o	Network Security: - 
 From a network perspective, let’s have a look at the standard SAP on Azure Reference Architecture. This depicts how to administer an Azure virtual network topology, isolation, restriction of network services and protocols through the concept of Azure Network Security Groups. This network security would need to comply with security policy requirements that your organization dictates.
 
-![ASC](media\SGC_Network_Security.jpg)
+![ASC](./media/SGC_Network_Security.jpg)
 
 Source Microsoft and https://blogs.sap.com/2019/07/21/sap-security-operations-on-azure/
 
@@ -131,7 +131,7 @@ Azure Load Balancer is a high-performance, ultra-low-latency Layer 4 load-balanc
 
 Decision tree for load balancing in Azure
 
-![ASC](media\SGC_Application_Decesion_Tree.jpg)
+![ASC](./media/SGC_Application_Decesion_Tree.jpg)
 
 Treat above flowchart as a starting point. Every SAP application has unique requirements, so use the recommendation as a starting point. Then perform a more detailed evaluation.
 If your SAP application consists of multiple workloads, evaluate each workload separately. A complete solution may incorporate two or more load-balancing solutions.
@@ -143,7 +143,7 @@ Design Recommendations
 •	Configure Azure Sentinel i.e. a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 •	For advance network segmentation where you need direct access to the internet and private DMZ to your corporate network at the same time, please follow the recommendations at https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/dmz/secure-vnet-dmz with reference architecture as below. 
 
-![ASC](media\SGC_Firewall.jpg)
+![ASC](./media/SGC_Firewall.jpg)
 
 Scoping Decisions
 
