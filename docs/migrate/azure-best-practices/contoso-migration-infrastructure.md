@@ -627,7 +627,7 @@ After updating network settings, Contoso admins are ready to build out the domai
 
     _Figure 29: A VM NIC._
 
-4. They attach a new data disk to the VM. This disk contains the Active Directory database and the sysvol share.
+4. They attach a new data disk to the VM. This disk contains the Active Directory database and the SYSVOL share.
 
    The size of the disk will determine the number of IOPS that it supports. Over time, the disk size might need to increase as the environment grows.
 
