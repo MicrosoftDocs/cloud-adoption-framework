@@ -14,7 +14,7 @@ ms.custom: csu
 
 We recognize that most organizations may have an existing footprint in Azure, one or more subscriptions, and potentially an existing structure of their management groups. Depending on their initial business requirements and scenarios, Azure resources such as hybrid connectivity (for example with Site-to-Site VPN and/or ExpressRoute) may have been deployed.  
 
-This article helps organizations to navigate the right path based on an existing Azure environment transitioning into Enterprise-Scale. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment to Enterprise-Scale landing zones. 
+This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment to enterprise-scale landing zones. 
 
 ## Moving resources in Azure 
 
@@ -30,7 +30,7 @@ To understand which move strategy you should use, we will go through examples of
 
 ## Subscription move 
 
-The common use cases for moving subscriptions are primarily to 1) organize subscriptions into management groups, and 2) transfer subscriptions to a new Azure Active Directory tenant. We will focus on moving subscriptions to management groups in this section as moving to a new tenant is mainly for [transferring billing ownership](https://docs.microsoft.com/azure/cost-management-billing/manage/billing-subscription-transfer). 
+The common use cases for moving subscriptions are to organize subscriptions into management groups or when transfering subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups, when moving a subscription to a new tenant this is mainly for [transferring billing ownership](https://docs.microsoft.com/azure/cost-management-billing/manage/billing-subscription-transfer). 
 
 ### RBAC requirements 
 
