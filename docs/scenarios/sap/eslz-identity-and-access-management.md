@@ -47,9 +47,9 @@ Azure services such as Azure Data Factory, on-prem Data Gateway (Logic Apps, Pow
 **Design Recommendations**
 
  - Implement Single Sign-on (SSO) using Azure Active Directory or Active Directory Federation Services (AD FS) for end users to connect to SAP applications where possible.
-  - SSO to [SAP Netweaver](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like Fiori, webgui etc. can be implemented using SAML
-  - SSO to SAP GUI can be implemented using either SAP SSO or a 3rd party solution
-  - SSO to [SAP SaaS applications](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) like SAP Analytics Cloud, SAP Cloud Platform, SAP Cloud Platform IAS and SAP C4C with Azure AD can be implemented using SAML.
+    - SSO to [SAP Netweaver](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like Fiori, webgui etc. can be implemented using SAML
+    - SSO to SAP GUI can be implemented using either SAP SSO or a 3rd party solution
+    - SSO to [SAP SaaS applications](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) like SAP Analytics Cloud, SAP Cloud Platform, SAP Cloud Platform IAS and SAP C4C with Azure AD can be implemented using SAML.
 
  - If SAP Cloud Identity Authentication Service is used it is recommended to integrate it with Azure AD.  With this integration Identity Authentication acts as a proxy Identity Provider and Azure AD as the main authentication authority. The authentication requests sent to Identity Authentication are redirected to Azure AD. User management and authentication is done on Azure AD side.
 
@@ -57,9 +57,9 @@ Azure services such as Azure Data Factory, on-prem Data Gateway (Logic Apps, Pow
 
 - If SuccessFactors is used as HCM application leverage the [automated user provisioning](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) feature to Azure AD. When a new employee is added to SuccessFactors, a user account is automatically created in Azure Active Directory and optionally Microsoft 365 and other SaaS applications supported by Azure AD, with write-back of the email address to SuccessFactors"
 
- - Use Azure Key vault to store 
-  - Keys and secrets to the orchestration layer such as ansible and terraform 
-  - Passwords of SAP administrative user accounts, keys and certificates such as HANA or OS administrator users
-  - Disk encryption keys
+- Use Azure Key vault to store 
+    - Keys and secrets to the orchestration layer such as ansible and terraform 
+    - Passwords of SAP administrative user accounts, keys and certificates such as HANA or OS administrator users
+    - Disk encryption keys
 
 
