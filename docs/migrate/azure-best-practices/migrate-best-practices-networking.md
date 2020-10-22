@@ -1,6 +1,6 @@
 ---
 title: Best practices to set up networking for workloads migrated to Azure
-description: Use the Cloud Adoption Framework for Azure to learn best practices for setting up networking for your migrated workloads.
+description: Use the Cloud Adoption Framework for Azure to learn best practices that help you to set up networking for your migrated workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2020
@@ -27,8 +27,8 @@ Azure provides virtual networks with these capabilities:
 - A virtual network is a logical isolation of the Azure cloud that's dedicated to your subscription.
 - You can implement multiple virtual networks within each Azure subscription and Azure region.
 - Each virtual network is isolated from other virtual networks.
-- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://tools.ietf.org/html/rfc1918), expressed in CIDR notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
-- Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same or different regions. Thus, resources in one virtual network can connect to resources in other virtual networks.
+- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://tools.ietf.org/html/rfc1918), expressed in classless inter-domain routing (CIDR) notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
+- Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same region or different regions; resources in one virtual network can connect to resources in other virtual networks.
 - By default, Azure routes traffic between subnets within a virtual network, connected virtual networks, on-premises networks, and the internet.
 
 When planning your virtual network topology, you should consider how to arrange IP address spaces, how to implement a hub-and-spoke network, how to segment virtual networks into subnets, setting up DNS, and implementing Azure Availability Zones.
@@ -127,7 +127,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
 
 - Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure.
 
-- With Availability Zones, Azure offers an SLA of 99.99 percent VM uptime.
+- With Availability Zones, Azure offers an SLA of 99.99-percent VM uptime.
 
     ![Diagram of Availability Zones within an Azure region.](./media/migrate-best-practices-networking/availability-zone.png)
 
@@ -139,7 +139,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
 - To provide zonal fault tolerance, you can deploy a standard Azure load balancer with internet-facing workloads or application tiers.
 
     ![Diagram of standard Azure load balancer](./media/migrate-best-practices-networking/load-balancer.png)
-    _Figure 4: Load balancer._
+    _Figure 4: An Azure load balancer._
 
 **Learn more:**
 
@@ -183,8 +183,8 @@ When setting up a site-to-site VPN:
 - You specify the gateway SKU that you want to use. This depends on your workload requirements, throughput, features, and SLAs.
 - Border gateway protocol (BGP) is an optional feature. You can use it with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your virtual networks.
 
-![Diagram of site-to-site VPN.](./media/migrate-best-practices-networking/vpn.png)
-_Figure 5: Site-to-site VPN._
+![Diagram of a site-to-site VPN.](./media/migrate-best-practices-networking/vpn.png)
+_Figure 5: A site-to-site VPN._
 
 **Learn more:**
 
@@ -259,8 +259,8 @@ Now imagine that you have an Azure deployment (for example, Azure App Service) i
   - Without knowing which prefix is from which region, prefixes aren't treated differently.
   - Your WAN network can assume that both prefixes are closer to `East US` than `West US`, and thus route users from both offices to the ExpressRoute circuit in `East US`. This provides a worse experience for users in the Los Angeles office.
 
-![Diagram of VPN with route path through wrong circuit.](./media/migrate-best-practices-networking/bgp1.png)
-_Figure 6: BGP communities unoptimized connection._
+![Diagram of VPN with a route path through the wrong circuit.](./media/migrate-best-practices-networking/bgp1.png)
+_Figure 6: A BGP communities unoptimized connection._
 
 **Solution:**
 
@@ -272,8 +272,8 @@ To optimize routing for both offices, you need to know which prefix is from Azur
 - In our example, you assign a higher local preference value to `13.100.0.0/16` in `West US` than in `East US`. Similarly, you assign a higher local preference value to `23.100.0.0/16` in `East US` than in `West US`.
 - This configuration ensures that when both paths to Microsoft are available, users in Los Angeles connect to the `West US` region by using the west circuit, and users in New York connect to the `East US` region by using the east circuit.
 
-![Diagram of VPN with route path through correct circuit.](./media/migrate-best-practices-networking/bgp2.png)
-_Figure 7: BGP communities optimized connection._
+![Diagram of a VPN with a route path through the correct circuit.](./media/migrate-best-practices-networking/bgp2.png)
+_Figure 7: A BGP communities optimized connection._
 
 **Learn more:**
 
@@ -305,7 +305,7 @@ Although Microsoft invests heavily in protecting the cloud infrastructure, you m
 Here's an example of a single subnet perimeter network in a corporate network, with two security boundaries.
 
 ![Diagram of Azure Virtual Network perimeter network deployment.](./media/migrate-best-practices-networking/perimeter.png)
-_Figure 8: Perimeter network deployment._
+_Figure 8: An Azure Virtual Network perimeter network deployment._
 
 **Learn more:**
 
@@ -363,7 +363,7 @@ Application security groups enable you to configure network security as a natura
 **Example:**
 
 ![Diagram of application security group](./media/migrate-best-practices-networking/asg.png)
-_Figure 9: Application security group example._
+_Figure 9: An example of an application security group._
 
 | Network interface | Application security group |
 | --- | --- |
@@ -420,7 +420,7 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 ## Take advantage of Azure security features for networking
 
-Azure has platform-level security features, including Azure Firewall, Web Application Firewall, and Network Watcher.
+Azure has platform-level security features, including Azure Firewall, Azure Web Application Firewall, and Azure Network Watcher.
 
 ## Best practice: Deploy Azure Firewall
 
@@ -464,11 +464,12 @@ Here are some additional notes about WAF:
 - Learn about [WAF](/azure/application-gateway/waf-overview).
 - Review [WAF limitations and exclusions](/azure/application-gateway/application-gateway-waf-configuration).
 
-## Best practice: Implement Azure Network Watcher
+## Best practice: Implement Network Watcher
 
-Azure Network Watcher provides tools to monitor resources and communications in an Azure virtual network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
+Network Watcher provides tools to monitor resources and communications in an Azure virtual network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
 
-![Screenshot of Network Watcher.](./media/migrate-best-practices-networking/network-watcher.png)
+![Screenshot of Azure Network Watcher.](./media/migrate-best-practices-networking/network-watcher.png)
+
 _Figure 12: Network Watcher._
 
 Here are a few more details:
