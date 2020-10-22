@@ -20,40 +20,21 @@ The Cloud Adoption Framework enterprise-scale landing zone architecture represen
 
 Not all enterprises adopt Azure the same way, so the Cloud Adoption Framework enterprise-scale landing zone architecture varies between customers. The technical considerations and design recommendations in this guide might yield different trade-offs based on your organization's scenario. Some variation is expected, but if you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale.
 
-## Landing zone: Expanded definition
-
-[Landing zone considerations](../../ready/considerations/index.md) provides a detailed definition of the term _landing zone_. The audience of the Cloud Adoption Framework enterprise-scale landing zone needs an even more specific definition.
-
-- **Scope:** Within the Cloud Adoption Framework enterprise-scale landing zone, the scope of a landing zone grows considerably to support application migrations and green-field development at an enterprise scale in Azure. This expansion allows for design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
-
-- **Refactoring:** The number of subscriptions required to support a full enterprise-scale IT portfolio can be large. At first, the Cloud Adoption Framework encourages a high frequency of refactoring, which should stabilize before the tenth production workload is deployed to the cloud. When you work across an enterprise portfolio, 10 applications can be deployed quickly and make refactoring impractical. Instead, a central IT team or a cloud center of excellence should deliver a more complete landing zone during the first release.
-
-- **Goal:** Provide consistent landing zones based on an application archetype subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise. For an overview, see Figure 1.
-
-- **Principal purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to mature the customer's landing zones faster. The Cloud Adoption Framework enterprise-scale landing zone broadens the principle purpose of the landing zone to focus on aspects of governance, compliance, security, and operational management. Each of these areas is addressed in the first release of the landing zone and supporting shared services.
-
-An example is how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared utility services that must be readily available to help streamline the application migration process before it begins.
-
-![Diagram that shows a landing zone design.](./media/lz-design.png)
-
-_Figure 1: Landing zone design._
-
-
 ## High-level architecture
 
-An Enterprise-Scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an Enterprise-Scale architecture based on an Azure Virtual WAN network topology (depictured on figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted on figure 3).   
+An Enterprise-Scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an Enterprise-Scale architecture based on an Azure Virtual WAN network topology (depictured on figure 1), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted on figure 2).   
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
-_Figure 2: Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology._
+_Figure 1: Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology._
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture.](./media/ns-arch-cust-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
-_Figure 3: Cloud Adoption Framework enterprise-scale landing zone architecture based on a traditional Azure networking topology._
+_Figure 2: Cloud Adoption Framework enterprise-scale landing zone architecture based on a traditional Azure networking topology._
 
 Download the PDF files that contain the Enterprise-Scale architecture diagrams based on the [Virtual WAN](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) network topology or a traditional Azure network topology based on the [hub and spoke](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) architecture.
 
-On figures 2 and 3 you can see references to the Enterprise-Scale critical design areas, indicated with the letters A to I:
+On figures 1 and 2 there are references to the Enterprise-Scale critical design areas, which are indicated with the letters A to I:
 
 - **A -** [Enterprise Agreement (EA) enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md) critical design area. An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via an Azure enterprise portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. An Azure AD tenant provides identity and access management, which is an important part of your security posture. An Azure AD tenant ensures that authenticated and authorized users have access to only the resources for which they have access permissions.
 - **B -** [Identity and access management](./identity-and-access-management.md). Azure Active Directory design and integration must be built to ensure both server and user authentication. Resource-based access control (RBAC) must be modeled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
