@@ -44,6 +44,7 @@ You can use several tools to forecast your monthly bill for migrated workloads.
 - **Azure pricing calculator:** Select the products you want to estimate, such as VMs and storage. Then, input costs into the calculator to build an estimate.
 
   ![Screenshot of the Azure pricing calculator.](./media/migrate-best-practices-costs/pricing.png)
+
   _Figure 1: The Azure pricing calculator._
 
 - **Azure Migrate:** To estimate costs, you need to review and account for all the resources required to run your workloads in Azure. To acquire this data, you create inventory of your assets, including servers, VMs, databases, and storage. You can use Azure Migrate to collect this information.
@@ -55,6 +56,7 @@ You can use several tools to forecast your monthly bill for migrated workloads.
     - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Screenshot of Azure Migrate](./media/migrate-best-practices-costs/assess.png)
+
     _Figure 2: An Azure Migrate assessment._
 
 **Learn more:**
@@ -171,6 +173,7 @@ When you use Azure Reserved VM Instances, you prepay for a one-year or three-yea
 - You can cancel reserved instances.
 
 ![Screenshot of comparison of pay-as-you-go and Azure Hybrid Benefit with Reserved Instances.](./media/migrate-best-practices-costs/reserve.png)
+
 _Figure 3: Azure Reserved VM Instances._
 
 **Learn more:**
@@ -214,6 +217,7 @@ With Azure Cost Management + Billing, you can:
   - You can export costs management data to Azure Storage to analyze it.
 
   ![Screenshot of an Azure Cost Management budget.](./media/migrate-best-practices-costs/budget.png)
+
   _Figure 4: An Azure Cost Management + Billing budget._
 
 - Perform a cost analysis to explore and analyze your organizational costs, to understand how costs are accrued, and identify spending trends.
@@ -222,6 +226,7 @@ With Azure Cost Management + Billing, you can:
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
   ![Screenshot of Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+
   _Figure 5: An Azure Cost Management + Billing analysis._
 
 - Get Azure Advisor recommendations that show you how you can optimize and improve efficiency.
