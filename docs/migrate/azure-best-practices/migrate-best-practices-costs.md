@@ -269,7 +269,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 - Not all log data is equal, and some resources will generate more log data than others.
 - Due to regulations and compliance, it's likely that you'll need to retain log data for some resources longer than for others.
 - You should walk a careful line between optimizing your log storage costs, and keeping the log data you need.
-- We recommend evaluating and setting up the logging immediately after completing a migration so that you don't spend money on retaining non-essential logs.
+- We recommend evaluating and setting up the logging immediately after completing a migration so that you don't spend money on retaining nonessential logs.
 
 **Learn more:**
 
