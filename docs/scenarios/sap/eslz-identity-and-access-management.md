@@ -53,13 +53,9 @@ Azure services such as Azure Data Factory, on-prem Data Gateway (Logic Apps, Pow
 
  - If SAP Cloud Identity Authentication Service is used it is recommended to integrate it with Azure AD.  With this integration Identity Authentication acts as a proxy Identity Provider and Azure AD as the main authentication authority. The authentication requests sent to Identity Authentication are redirected to Azure AD. User management and authentication is done on Azure AD side.
 
-- Consider using automatic user provisioning feature of Azure AD to provison/de-provision users in SAP SaaS applications. SAP Analytics Cloud and SAP identity Authentication Service currently support this scenario.  
+- Consider using automatic user provisioning feature of Azure AD to provision/de-provision users in SAP SaaS applications. SAP Analytics Cloud and SAP identity Authentication Service currently support this scenario.  
 
 - If SuccessFactors is used as HCM application leverage the [automated user provisioning](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) feature to Azure AD. When a new employee is added to SuccessFactors, a user account is automatically created in Azure Active Directory and optionally Microsoft 365 and other SaaS applications supported by Azure AD, with write-back of the email address to SuccessFactors"
 
-- Use Azure Key vault to store 
-    - Keys and secrets to the orchestration layer such as ansible and terraform 
-    - Passwords of SAP administrative user accounts, keys and certificates such as HANA or OS administrator users
-    - Disk encryption keys
 
 
