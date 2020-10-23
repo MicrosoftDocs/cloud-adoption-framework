@@ -75,7 +75,7 @@ As you plan your migration from a legacy Netezza environment to Azure Synapse, i
 
 In a Netezza environment, you might have multiple, separate databases for different parts of the overall environment. For example, you might have a separate database for data ingestion and staging tables, a database for core warehouse tables, and another database for data marts, sometimes called a *semantic layer*. Processing separate databases as ETL/ELT pipelines in Azure Synapse might require implementing cross-database joins and moving data between the separate databases.
 
-The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a series of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Netezza. If you use schemas in the Netezza environment, you might need to use a new naming convention to move the existing Netezza tables and views to the new environment. For example, you might concatenate the existing Netezza schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names.
+The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a set of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Netezza. If you use schemas in the Netezza environment, you might need to use a new naming convention to move the existing Netezza tables and views to the new environment. For example, you might concatenate the existing Netezza schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names.
 
 Another option is to use SQL views over the underlying tables to maintain the logical structures. There are some potential downsides to using SQL views:
 
@@ -174,7 +174,7 @@ You can access system catalog tables in Netezza by using a utility like nz_ddl_t
 
 - **Data extraction:** You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like nzsql and nzunload, and by using external tables. Compress the files by using gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob storage.
 
-  During a migration exercise, it's important to extract data as efficiently as possible. The recommended approach for Netezza is to use external tables, which also is the fastest method. You can complete multiple extracts in parallel to maximize the throughput for data extraction.
+  During a migration exercise, it's important to extract data as efficiently as possible. The recommended approach for Netezza is to use external tables, which is also the fastest method. You can complete multiple extracts in parallel to maximize the throughput for data extraction.
 
 Here's a simple example of an external table extract:
 

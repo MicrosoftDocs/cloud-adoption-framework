@@ -195,7 +195,7 @@ Don't migrate unnecessary objects or processes. Use built-in features and functi
 
 Automate wherever possible, and use metadata from system catalogs in the source system to generate DDLs for the target environment. If possible, also automate generating documents. Microsoft partners such as WhereScape can provide specialized tools and services to assist with automation.
 
-Perform any required data model changes or data mapping optimizations on the target platform. You can make these changes more efficiently in Azure Synapse Analytics. This approach reduces the impact on source systems that might already be running close to full capacity.
+Perform any required data model changes or data-mapping optimizations on the target platform. You can make these changes more efficiently in Azure Synapse Analytics. This approach reduces the impact on source systems that might already be running close to full capacity.
 
 ## Performance options
 
