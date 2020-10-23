@@ -1,6 +1,6 @@
 ---
-title: MLOps with Azure Machine Learning
-description: Learn about Machine Learning Operations (MLOps) principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
+title: Machine learning operations with Azure Machine Learning
+description: Learn about how machine learning operations principles and practices increase workflow efficiencies like continuous integration, delivery, and deployment.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -9,10 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Machine Learning Operations with Azure Machine Learning
+# Machine learning operations with Azure Machine Learning
 
-Machine Learning Operations (MLOps) is based on DevOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
-MLOps applies these principles to the machine learning process in order to:
+Machine learning operations (MLOps) is based on DevOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process in order to:
 
 - Experiment and develop models more quickly.
 - Deploy models to production more quickly.
@@ -20,7 +19,7 @@ MLOps applies these principles to the machine learning process in order to:
 
 Azure Machine Learning provides the following MLOps capabilities:
 
-- **Create reproducible pipelines**. Machine Learning pipelines enable you to define repeatable and reusable steps for your data preparation, training, and scoring processes.
+- **Create reproducible pipelines**. Machine Learning pipelines help you to define repeatable and reusable steps for your data preparation, training, and scoring processes.
 - **Create reusable software environments** for training and deploying models.
 - **Register, package, and deploy models from anywhere**. You can track the associated metadata required to use the model.
 - **Capture the governance data for the end-to-end lifecycle**. The logged information can include who is publishing models, why changes were made, and when models were deployed or used in production.
@@ -48,7 +47,7 @@ Learn more by reading and exploring the following resources:
 - How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where)
 - Tutorial: [Deploy an image classification model in ACI](/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
-- [CI/CD of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops)
+- [Continous integration/continuous deployment of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops)
 - Create clients that [consume a deployed model](/azure/machine-learning/how-to-consume-web-service)
 - [Machine learning at scale](/azure/architecture/data-guide/big-data/machine-learning-at-scale)
 - [Azure AI reference architectures and best practices repo](https://github.com/microsoft/AI)

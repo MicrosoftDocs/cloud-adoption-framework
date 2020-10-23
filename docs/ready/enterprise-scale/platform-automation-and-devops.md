@@ -1,6 +1,6 @@
 ---
-title: Platform automation and DevOps
-description: Platform automation and DevOps.
+title: CAF platform automation and DevOps
+description: Learn about platform automation and DevOps in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and DevOps
+# CAF platform automation and DevOps
 
 ![Diagram of platform automation and DevOps.](./media/DevOps.png)
 
@@ -19,7 +19,7 @@ _Figure 1: Platform automation and DevOps._
 
 Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. You should use a DevOps approach for both application and central teams.
 
-### Design considerations
+**Design considerations:**
 
 - Where central teams are concerned, you should use pipelines for continuous integration and continuous deployment. Use the pipelines to manage policy definitions, role definitions, policy assignments, management group hierarchies, and subscriptions. These pipelines help ensure that you can operationally manage multiple subscriptions while still conforming to a desired state.
 
@@ -33,7 +33,7 @@ Many traditional IT operating models aren't compatible with the cloud, and organ
 
 <!-- cSpell:ignore PlatformOps SecOps NetOps AppDevOps AppDataOps AppSecOps -->
 
-### Design recommendations
+**Design recommendations:**
 
 Establish a cross-functional DevOps platform team to build, manage, and maintain your enterprise-scale architecture. This team should include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. The following list presents a recommended set of DevOps roles for a central platform team:
 
@@ -47,7 +47,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Platform-as-code (managing templates, scripts, and other assets).
 
-  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, Graph API registration, and defining roles).
+  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, registering the Microsoft Graph API, and defining roles).
 
 - **SecOps** (security operations)
 
@@ -93,11 +93,11 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 The distribution of roles, responsibilities, and trust between central IT teams and apps teams is paramount to the operational transformation your organization must undergo when adopting the cloud at scale.
 
-### Design considerations
+**Design considerations:**
 
 Central teams strive to maintain full control while app owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration.
 
-### Design recommendations
+**Design recommendations:**
 
 The following list presents a recommended distribution of responsibilities between the central IT team and application teams. You're striving to empower migration and transformation activities with minimal central dependencies. At the same time, you want to support the centralized governance of security and operability across the entire estate.
 

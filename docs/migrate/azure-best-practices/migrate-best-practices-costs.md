@@ -225,7 +225,7 @@ With Azure Cost Management + Billing, you can:
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-  ![Screenshot of Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+  ![Screenshot of an Azure Cost Management analysis.](./media/migrate-best-practices-costs/analysis.png)
 
   _Figure 5: An Azure Cost Management + Billing analysis._
 

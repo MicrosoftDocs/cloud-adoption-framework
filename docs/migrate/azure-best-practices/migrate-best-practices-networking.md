@@ -63,7 +63,7 @@ Consider the following:
 - You can use spoke virtual networks to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers, and multiple subnets that are connected with Azure load balancers.
 - You can implement hub-and-spoke virtual networks in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
 
-![Diagram of hub-and-spoke topology](./media/migrate-best-practices-networking/hub-spoke.png)
+![Diagram of hub-and-spoke topology.](./media/migrate-best-practices-networking/hub-spoke.png)
 
 _Figure 1: Hub-and-spoke topology._
 
@@ -140,7 +140,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
 - To provide zonal fault tolerance, you can deploy a standard Azure load balancer with internet-facing workloads or application tiers.
 
-    ![Diagram of standard Azure load balancer](./media/migrate-best-practices-networking/load-balancer.png)
+    ![Diagram of a standard Azure load balancer.](./media/migrate-best-practices-networking/load-balancer.png)
 
     _Figure 4: An Azure load balancer._
 
@@ -369,7 +369,7 @@ Application security groups enable you to configure network security as a natura
 
 **Example:**
 
-![Diagram of application security group](./media/migrate-best-practices-networking/asg.png)
+![Diagram of application security group.](./media/migrate-best-practices-networking/asg.png)
 
 _Figure 9: An example of an application security group._
 

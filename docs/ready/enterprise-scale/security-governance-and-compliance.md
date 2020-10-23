@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale security governance and compliance
+title: CAF enterprise-scale security governance and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise-scale security governance and compliance
+# CAF enterprise-scale security governance and compliance
 
 This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
@@ -17,7 +17,7 @@ This article covers defining encryption and key management, planning for governa
 
 Encryption is a vital step toward ensuring data privacy, compliance, and data residency in Microsoft Azure. It's also one of the most important security concerns of many enterprises. This section covers design considerations and recommendations as they pertain to encryption and key management.
 
-### Design considerations
+**Design considerations:**
 
 - Subscription and scale limits as they apply to Azure Key Vault: Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see [Azure limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
@@ -50,7 +50,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
   - Data-in-transit encryption.
   - Data-at-rest encryption.
 
-### Design recommendations
+**Design recommendations:**
 
 - Use a federated Azure Key Vault model to avoid transaction scale limits.
 
@@ -78,7 +78,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement role-based access control (RBAC) that controls what actions authorized users can perform.
 
-### Design considerations
+**Design considerations:**
 
 - Determine what Azure policies are needed.
 
@@ -92,7 +92,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand regulatory compliance policies. These might include the health insurance portability and accountability act, payment card industry, data security standards, service organization controls trust service principals, and criteria.
 
-### Design recommendations
+**Design recommendations:**
 
 - Identify required Azure tags and use the append policy mode to enforce usage.
 
@@ -114,7 +114,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 An enterprise must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
-### Design considerations
+**Design considerations:**
 
 - Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period.
 
@@ -132,7 +132,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Vulnerability assessment of VMs.
 
-### Design recommendations
+**Design recommendations:**
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
@@ -154,7 +154,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 You must maintain a healthy security posture as you adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
 
-### Design considerations
+**Design considerations:**
 
 - Shared responsibility.
 
@@ -164,7 +164,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Multitenancy for key platform components. This includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
 
-### Design recommendations
+**Design recommendations:**
 
 - In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, this might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
@@ -220,7 +220,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 | Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
 |                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
-|                              |                                                                       | Does Azure-to-Azure (service-to-service) authentication use an MSI/service principal?                                                         |
+|                              |                                                                       | Does Azure-to-Azure (service-to-service) authentication use Managed identities for Azure resources/service principal?                                                         |
 |                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
 |                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |

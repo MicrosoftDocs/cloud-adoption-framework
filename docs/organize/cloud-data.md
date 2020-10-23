@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 07/14/2020
 ---
 
-# Cloud data functions
+# Understand loud data functions
 
 There are multiple audiences involved in an analytics conversation, including the typical seller, database architect, and infrastructure team. In addition, analytics solutions involve influencers, recommenders, and decision-makers from enterprise architecture, data science, business analysts, and executive leadership roles.
 
@@ -38,11 +38,11 @@ These teams are responsible for putting together complex solutions with componen
 - Message-based middleware
 - Data marts
 - Geo-redundancy and data consistency
-- Dashboarding and reporting
+- Dashboards and reporting
 
  Enterprise architects and data engineers are generally concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
 
-Using Azure Synapse Analytics, data engineers can simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
+Data engineers can use Azure Synapse Analytics to simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
 
 ## Data scientists
 
