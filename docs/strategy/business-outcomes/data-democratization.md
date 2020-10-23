@@ -17,15 +17,15 @@ A business that's supported by data innovation and a modern data estate can empo
 
 Azure Synapse Analytics is a single service for seamless collaboration and accelerated time-to-insight. To understand this service in more detail, first consider the various roles and skills involved in a typical data estate:
 
-**Data warehousing**: Database admins support the management of data lakes and data warehouses while intelligently optimizing workloads and automatically securing data.
+**Data warehousing:** Database admins support the management of data lakes and data warehouses while intelligently optimizing workloads and automatically securing data.
 
-**Data integration**: Data engineers use a code-free environment to easily connect multiple sources and types of data.
+**Data integration:** Data engineers use a code-free environment to easily connect multiple sources and types of data.
 
-**Big data and machine learning**: Data scientists build proofs of concept rapidly and provision resources while working in the language of their choice (for example, T-SQL, Python, Scala, .NET, or Spark SQL).
+**Big data and machine learning:** Data scientists build proofs of concept rapidly and provision resources while working in the language of their choice (for example, T-SQL, Python, Scala, .NET, or Spark SQL).
 
-**Management and security**: IT pros protect and manage data more efficiently, enforce privacy requirements, and secure access to cloud and hybrid configurations.
+**Management and security:** IT pros protect and manage data more efficiently, enforce privacy requirements, and secure access to cloud and hybrid configurations.
 
-**Business intelligence**: Business analysts securely access datasets, build dashboards, and share data within and outside their organization.
+**Business intelligence:** Business analysts securely access datasets, build dashboards, and share data within and outside their organization.
 
 ## An overview of classic data warehouse architecture
 

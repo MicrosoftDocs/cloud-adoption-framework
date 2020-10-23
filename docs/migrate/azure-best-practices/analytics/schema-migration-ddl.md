@@ -17,6 +17,8 @@ This article describes design considerations and performance options for data de
 
 ## Design considerations
 
+TBD
+
 ### Preparation for migration
 
 When you're preparing to migrate existing data to Azure Synapse Analytics, it's important to clearly define the scope of the exercise (especially for an initial migration project). The time spent up front to understand how database objects and related processes will migrate can reduce both effort and risk later in the project.
@@ -68,7 +70,7 @@ If the migration project includes any changes to the data model, the best practi
 You can migrate the existing system as several layers; for example, the data ingest/staging layer, data warehouse layer, and reporting or data mart layer. Each layer consists of relational tables and views. Although you can migrate these to Azure Synapse Analytics as they are, it might be more cost-effective and reliable to use some of the features and capabilities of the Azure ecosystem. For example:
 
 - **Data ingest and staging:** Instead of using relational tables for fast parallel data loading, you can use Azure Blob storage with PolyBase during part of the ETL (extract, transform, load) or ELT (extract, load, transform) process.
--
+
 - **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics might eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It might be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, you can achieve the process for migrating historical data and possibly, making incremental updates, as shown in this diagram:
 
    ![Diagram that illustrates a modern data warehouse.](../../../_images/analytics/schema-migration-ddl.png)
@@ -145,8 +147,8 @@ Here's an alphabetical list of supported data types:
 - `time [ (n) ]`
 - `tinyint`
 - `uniqueidentifier`
-- `varbinary [ (n | MAX) ]`
-- `varchar [ (n | MAX) ]`
+- `varbinary [ (n) | MAX) ]`
+- `varchar [ (n) | MAX) ]`
 
 <!-- docutune:enable -->
 
