@@ -156,7 +156,7 @@ Contoso will provision the Windows Virtual Desktop service in the `East US 2` Az
 1. Contoso connects Azure Migrate and Lakeside, and accepts any requested permissions.
 
    ![Screenshot that shows signing in to connect Azure and Lakeside.](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
-   _Figure 8: Connecting Azure to lakeside._
+   _Figure 8: Connecting Azure to Lakeside._
 
 1. Contoso continues with the Lakeside tool to create a new tenant and start assessing the current on-premises RDS environment. From the dashboard, Contoso can access the deployment guide, download the assessment client to deploy to the current environment, and review the data collected from these agents.
 
@@ -196,7 +196,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
 
    - Contoso configures the VM and chooses a custom size by selecting **Change size** or using the default.
    - Windows Virtual Desktop is chosen as the VM name prefix for these pooled desktops.
-   - Because Contoso is creating the pooled servers to use the new Windows 10 multi-session functionality for the virtual machine settings, leave the image source set to **Gallery**. This option enables Contoso to select the Windows 10 Enterprise multi-session image for the VMs.
+   - Because Contoso is creating the pooled servers to use the new Windows 10 Enterprise multi-session functionality for the virtual machine settings, leave the image source set to **Gallery**. This option enables Contoso to select the Windows 10 Enterprise multi-session image for the VMs.
    - Based on the personas of the users from the Lakeside assessment, Contoso sets the total users to **150**.
    - Other settings include the disk type, an AD domain join UPN field, an admin password, an optional OU path to which machines are added, the virtual network, and a subnet for adding servers.
 
@@ -297,7 +297,7 @@ For business continuity and disaster recovery (BCDR), Contoso backs up the data 
 ### Licensing and cost optimization
 
 - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments.
-- Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+- Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 - Contoso has existing licensing for its VMs and will take advantage of the Azure Hybrid Benefit for application servers. Contoso will convert the existing Azure VMs to take advantage of this pricing.
 
 ## Conclusion

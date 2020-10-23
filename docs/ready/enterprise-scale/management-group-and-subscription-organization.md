@@ -23,6 +23,8 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
 - A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
+- Any principal (user, service principal) within an Azure AD tenant can create new management groups as RBAC authorization for management group operations is not enabled by default.
+- All new subscription will be placed under the root management group by default.
 
 **Design recommendations:**
 
@@ -31,12 +33,14 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 - Create management groups under your root-level management group to represent the types of workloads (archetype) that you'll host and ones based on their security, compliance, connectivity, and feature needs. This grouping structure allows you to have a set of Azure policies applied at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
 - Use resource tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the management group hierarchy. Then you can group resources for search needs without having to use a complex management group hierarchy.
 - Create a top-level sandbox management group to allow users to immediately experiment with Azure. Users can then experiment with resources that might not yet be allowed in production environments. The sandbox provides isolation from your development, test, and production environments.
+  - For further  guidance of the top-level sandbox management group review the [implementation guidelines](./implementation-guidelines.md#sandbox-governance-guidance).
 - Use a dedicated service principal name (SPN) to execute management group management operations, subscription management operations, and role assignment. Using an SPN reduces the number of users who have elevated rights and follows least-privilege guidelines.
 - Assign the `User Access Administrator` Azure role-based access control (RBAC) role at the root management group scope (`/`) to grant the SPN just mentioned access at the root level. After the SPN is granted permissions, the `User Access Administrator` role can be safely removed. In this way, only the SPN is part of the `User Access Administrator` role.
 - Assign `Contributor` permission to the SPN previously mentioned at the root management group scope (`/`), which allows tenant-level operations. This permission level ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
 - Create a `Platform` management group under the root management group to support common platform policy and RBAC assignment. This grouping structure ensures that different policies can be applied to the subscriptions used for your Azure foundation. It also ensures that the billing for common resources is centralized in one set of foundational subscriptions.
 - Limit the number of Azure Policy assignments made at the root management group scope (`/`). This limitation minimizes debugging inherited policies in lower-level management groups.
-- Don't create any subscriptions under the root management group. This hierarchy ensures that subscriptions don't only inherit the small set of Azure policies assigned at the root-level management group, which don't represent a full set necessary for a workload.
+- Ensure only privileged users can operate management groups in the tenant by enabling RBAC authorization in the management group hierarchy settings.
+- Configure a default, dedicated management group for new subscriptions to ensure no subscriptions are placed under the root management group.
 
 ## Subscription organization and governance
 
