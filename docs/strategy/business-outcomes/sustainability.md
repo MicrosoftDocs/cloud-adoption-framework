@@ -1,6 +1,6 @@
 ---
 title: Examples of sustainability outcomes
-description: Use the Cloud Adoption Framework to learn how cloud computing can support you in lightening your environment footprint by reducing carbon emissions and efficiently using resources.
+description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 author: wayneme75
 ms.author: wayneme
 ms.date: 10/21/2020
@@ -9,45 +9,46 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Examples of sustainability outcomes
+# Why sustainability matters
 
-Traditionally we have measured impact of cloud through financial and efficiency lenses, more and more we are beginning to see customers wanting to understand how cloud can positively affect their business in other ways such as sustainability and meeting environmental goals. Cloud computing can support you in lightening your environment footprint by reducing carbon emissions and efficiently using resources.
+Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek understanding about how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 
-Microsoft has been leading in many areas, as of 2012 we have been operating as carbon neutral and have commitments to be carbon negative by 2030. Studies show that by moving on premise datacenters to the Microsoft cloud can significantly reduce carbon footprint. See [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft Cloud
-in partnership with WSP,
+Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft Cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
 
-## Why is sustainability important?
+## The Microsoft sustainability journey
 
-Not only is focusing on sustainability key to our future by protecting the limited environmental resources, it is also good for business. Today we have the an enormous set of assets and resources at our fingertips, this enables us to expand into new areas to build innovative solutions. AGL, one of Australia's leading integrated energy companies built a solution on Azure which enables customers across the country to give back to the grid through remote management of networked solar batteries, read the story here: [Growing an innovative energy partnership across Australia](https://customers.microsoft.com/story/847171-agl-energy-azure-en-australia).
+The Microsoft journey started over a decade ago when the company started to apply new business practices and adopt cloud technology. We lowered our carbon emissions by 30 percent in 2009. Since then, Microsoft has made large strides forward by investing in reducing the company's carbon footprint further. Microsoft has focused on these four areas:
 
-Bee'ah is a sustainability pioneer in the Middle East. They are driven by the belief that technology and sustainability are creating solutions for the future. Their ventures include waste management, environmental consulting, renewable energy and sustainable transportation. Azure have enabled them to launch the first AI platform to digitize all operations and services. Read more of the story here: [Cloud drives sustainable management and digital innovation](https://customers.microsoft.com/story/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates)
+- **Carbon:** Cutting energy consumption across corporate offices, charging carbon tax to business divisions, and using cloud-powered technology to lower emissions.
+- **Ecosystem:** Making a commitment to green datacenters and purchasing of 1.1 billion kilowatt-hours of green energy.
+- **Water:** Reducing use intensity and investing in technology for managing water.
+- **Waste:** Practicing responsible sourcing, recycling and disposal and using software and technology to make buildings more efficient.
 
-From these two examples we can see how addressing sustainability can open up new business opportunities while delivering against important environment goals.
+Read more about how [our commitment to a planet-sized challenge](https://www.microsoft.com/sustainability/approach?activetab=pivot1:primaryr4) has helped Microsoft to plan and achieve sustainability goals.
 
-## Microsoft's sustainability journey
+## Examples of sustainability outcomes
 
-Microsoft's journey started over a decade ago by employing new business practices and adopting cloud technology. We lowered our carbon emissions by 30% in 2009. Since then we have made large strides forward through investments in further reducing our carbon footprint. Our focus has addressed 4 areas:
+Focusing on sustainability and protecting limited environmental resources is key to our future, and this focus also benefits business. Today, companies can draw from a broad range of assets and resources that can help them to expand into new geographic areas and develop innovative resource management solutions.
 
-- **Carbon**: cutting energy consumption across our offices, charging carbon tax to business divisions and use of cloud-enabled technology to lower emissions.
-- **Ecosystem**: commitment to green datacenters and purchasing of 1.1billion kWh of green energy.
-- **Water**: reduction of use intensity, technology investments in water management.
-- **Waste**: responsible sourcing, recycling and disposal. The use of software and technology to make buildings more efficient.
+AGL, one of Australia's leading integrated energy companies, built a solution on Azure that remotely manages networked solar batteries. Learn about how the company is [growing an innovative energy partnership across Australia](https://customers.microsoft.com/story/847171-agl-energy-azure-en-australia) to help local customers give back to the grid.
 
-Get more details on how we achieved that here: [Our commitment to a planet-sized challenge](https://www.microsoft.com/sustainability/approach?activetab=pivot1:primaryr4).
+Bee'ah is a sustainability pioneer in the Middle East that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/story/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
+
+These customer stories demonstrate how prioritizing sustainability and environmental solutions can help organizations to create new business opportunities.
 
 ## Next steps
 
-We need to have an intentional approach to sustainability for our organizations. To influence this business outcome there are 4 areas to review:
+An intentional approach can help organizations to navigate their sustainability journey. These four steps can influence outcomes for your company:
 
-**Step 1**: Take note of your carbon emissions, start by categorizing your emissions. This will enable you to create a short-list of areas to focus on. Use the [sustainability calculator](https://www.microsoft.com/sustainability/sustainability-guide/sustainability-calculator) to help do this.
+**Step 1:** Understand your carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. The [sustainability calculator](https://www.microsoft.com/sustainability/sustainability-guide/sustainability-calculator) can assist you with this task.
 
-**Step 2**: Evaluate vendors, partners and providers. Evaluate who you work with and whether they are taking the same steps as you to reduce emissions.
+**Step 2:** Evaluate if your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
-**Step 3**: Create an incentive for teams to reduce carbon usage, read [The Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) this will help drive alignment and accountability across the organization.
+**Step 3:** Create an incentive for teams to reduce carbon usage. [The Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) can help to drive alignment and accountability across the organization.
 
-**Step 4**: Enlist the support of the teams in your business to ideate on areas for improvement. Build an innovation culture so that individuals are participants and have a sense of ownership.
+**Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
-Learn more about [measuring outcomes](./okr.md).
+Learn more about how your organization can [measure](./okr.md) and [reach](./reach-outcomes.md) sustainability outcomes with the cloud.
 
 > [!div class="nextstepaction"]
 > [Reach outcomes](./reach-outcomes.md)
