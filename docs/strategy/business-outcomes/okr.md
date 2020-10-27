@@ -44,8 +44,8 @@ To do this, focus on what happens in a month, a quarter, and other shorter terms
 
 OKRs help to create alignment and accountability within organizations.
 
-![How OKRs increase alignment and accountability.](../images/strategy/OKR.jpg)
-_Figure 1: How OKRs alignment and accountability._
+![How OKRs increase alignment and accountability within companies.](../images/strategy/OKR.jpg)
+_Figure 1: How OKRs increase alignment and accountability within companies._
 
 Learn more about how your team can align [strategy and execution](https://www.workboard.com/blog/execution-vs-strategy.php) during planning and execution phases.
 
