@@ -40,7 +40,7 @@ To do this, focus on what happens in a month, a quarter, and other shorter terms
 
 - **Transparent:** OKRs, alignment, and progress are visible to everyone with OKR software, simplifying collaboration and making good decisions faster.
 
-## Why are OKRs important?  
+## How OKRs add value to an organization
 
 OKRs help to create alignment and accountability within organizations.
 
