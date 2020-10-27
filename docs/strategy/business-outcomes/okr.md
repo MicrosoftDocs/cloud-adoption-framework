@@ -14,10 +14,10 @@ ms.subservice: strategy
 Modern operations require modern ways to measure business outcomes, and cloud technology can help to increase velocity for a business. An organization's measurement platform should support a company's outcomes and plan for growth by:
 
 - Providing insights to team members and groups.
-- Supporting staff to pivot quickly when outcomes don't align with expectations.
+- Supporting staff to pivot quickly when outcomes don't align with strategy and expectations.
 - Offering a structured format, templates, sequences, and tools to help teams plan and visualize for increasing velocity.
 
-## An overview of Objectives and Key Results
+## An overview of Objectives and Key Results, OKRs
 
 Many organizations have started to adopt Objectives and Key Results (OKRs). OKRs have proven to drive alignment in complex work environments, foster innovation, and help individuals to focus on what matters. The two components comprising OKRs are an objective and the key result(s). An objectives is the statement of intent; what is the team trying to accomplish, and why is it important? Key results are specific outcomes that track impact on the objective.
 
