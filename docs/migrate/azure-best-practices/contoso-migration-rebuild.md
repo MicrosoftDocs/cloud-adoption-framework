@@ -331,9 +331,9 @@ The admins create the pipeline:
 
 1. In Visual Studio, they update the */deploy/k8s/config_local.yml* file with the database connection information that they noted earlier.
 
-    ![Screenshot showing the "New pipeline" button in Visual Studio.](./media/contoso-migration-rebuild/back-pipe1.png)
+    ![TBD.](./media/contoso-migration-rebuild/back-pipe1.png)
 
-    _Figure 28: Database connections._
+    _Figure 28: TBD._
 
 2. They open Azure DevOps and, in the SmartHotel360 project, they select **+ New pipeline** on the **Releases** pane.
 
@@ -431,7 +431,7 @@ Instructions for this section use the [SmartHotel360-website](https://github.com
 
 4. They capture the access details for the storage account in a text file for future reference.
 
-    ![Screenshot of a text file capturing access details.](./media/contoso-migration-rebuild/blob2.png)
+    ![Screenshot of a text file capturing access details.](./media/contoso-migration-rebuild/blob3.png)
 
     _Figure 42: A text file capturing access details._
 
