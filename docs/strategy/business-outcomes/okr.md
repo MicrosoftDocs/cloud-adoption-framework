@@ -22,11 +22,11 @@ Modern operations require modern ways to measure business outcomes, and cloud te
 Many organizations have started to adopt Objectives and Key Results (OKRs). OKRs have proven to drive alignment in complex work environments, foster innovation, and help individuals to focus on what matters. The two components comprising OKRs are an objective and the key result(s). An objectives is the statement of intent; what is the team trying to accomplish, and why is it important? Key results are specific outcomes that track impact on the objective.
 
 **Objective:** Clarity and intent
-**Key Results:** A measurement of success within the quarter
+**Key results:** A measurement of success within a quarter
 
-It's important to understand that OKRs are useful for measuring team outcomes versus individual performance. Key results are also established quarterly, as deadlines often motivate team performance. OKRs help teams to focus on the most important tasks instead of the volume of work at hand.
+It's important to understand that OKRs are useful for measuring team outcomes versus individual performance. Since deadlines often motivate team performance, key results are established quarterly. OKRs help teams to focus on the most important tasks instead of the volume of work at hand.
 
-To do this, focus on what happens in a month, a quarter, and other shorter terms. This doesn't mean that you can't have OKRs that last longer, but it does emphasize the need for OKRs that help to track short-term impact.
+To do this, focus on what happens in a month, a quarter, and other shorter terms. This doesn't mean that you can't have OKRs that last longer, but it does emphasize the need for OKRs to help to track short-term impact.
 
 ## OKR key principles
 
@@ -44,8 +44,9 @@ To do this, focus on what happens in a month, a quarter, and other shorter terms
 
 OKRs help to create alignment and accountability within organizations.
 
-![How OKRs increase alignment and accountability within companies.](../images/strategy/OKR.jpg)
-_Figure 1: How OKRs increase alignment and accountability within companies._
+![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/OKR.jpg)
+
+_Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster._
 
 Learn more about how your team can align [strategy and execution](https://www.workboard.com/blog/execution-vs-strategy.php) during planning and execution phases.
 
@@ -83,7 +84,7 @@ Five steps can help your organization to move forward with OKRs:
 
 **Step 3: Launch:** Each organization launches initiatives differently. Maintain a strong communication plan, and build the OKR calibration and celebration process into your operating model.
 
-**Step 4: Drive:** To maintain rigor and focus, make sure that you are sharing outcomes and results across the organization. This will help your teams to adopt a habit of using OKRs.
+**Step 4: Drive:** To maintain rigor and focus, make sure that you're sharing outcomes and results across the organization. This will help your teams to adopt a habit of using OKRs.
 
 **Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful, but an organization can benefit most from everyone participating to meet objectives and gaining insights from the aligned data.
 
