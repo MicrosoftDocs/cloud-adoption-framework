@@ -22,9 +22,9 @@ The Microsoft journey started over a decade ago when the company started to appl
 - **Carbon:** Cutting energy consumption across corporate offices, charging carbon tax to business divisions, and using cloud-powered technology to lower emissions.
 - **Ecosystem:** Making a commitment to green datacenters and purchasing of 1.1 billion kilowatt-hours of green energy.
 - **Water:** Reducing use intensity and investing in technology for managing water.
-- **Waste:** Practicing responsible sourcing, recycling and disposal and using software and technology to make buildings more efficient.
+- **Waste:** Practicing responsible sourcing, recycling, and disposal; using software and technology to make buildings more efficient.
 
-Read more about how [our commitment to a planet-sized challenge](https://www.microsoft.com/sustainability/approach?activetab=pivot1:primaryr4) has helped Microsoft to plan and achieve sustainability goals.
+Read more about how the Microsoft [commitment to a planet-sized challenge](https://www.microsoft.com/sustainability/approach?activetab=pivot1:primaryr4) has helped us to plan out and achieve sustainability goals.
 
 ## Examples of sustainability outcomes
 
