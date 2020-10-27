@@ -9,11 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Measuring business outcomes with Objectives and Key Results
+# Measuring business outcomes with Objectives and Key Results, OKRs
 
-After exploring examples of different outcomes, you can start examining how to measure impact.
+Modern operations require modern ways to measure business outcomes, and cloud technology can help to increase velocity for a business. An organization's measurement platform should support a company's outcomes and plan for growth by:
 
-Modern operations require modern ways to measure outcomes. The cloud world is intended to help drive increased velocity within the business, our measurement platform needs to support that. We need to think about how we provide insights to team members and groups, we need to build the capability to pivot quickly when measures or outcomes are not what we expect and lastly we need to have a cadence which aligns to the philosophy of increased velocity.
+- Providing insights to team members and groups.
+- Supporting staff to pivot quickly when outcomes don't align with expectations.
+- Offering a structured format, templates, sequences, and tools to help teams plan and visualize for increasing velocity.
 
 ## An overview of Objectives and Key Results
 
