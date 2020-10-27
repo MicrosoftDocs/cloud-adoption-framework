@@ -1,5 +1,5 @@
 ---
-title: Examples of sustainability outcomes
+title: Sustainability outcomes and benefits for business
 description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 author: wayneme75
 ms.author: wayneme
@@ -9,7 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Why sustainability matters
+# Sustainability outcomes and benefits for business
+
+## Why sustainability is important for business
 
 Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek understanding about how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 
