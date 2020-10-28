@@ -15,7 +15,7 @@ Your organization or enterprise needs to design suitable security settings to me
 ## Design considerations
 * Decide what cluster identity is being used (Managed Identity or service principal).
 * Decide on how-to authenticate cluster access (cert-based or Azure AD).	
-* Decide on multitenancy cluster and how-to setup permissions in K8s	
+* Decide on multitenancy cluster and how-to setup RBAC in Kubernetes	
   * Decide on method for isolation - namespace, network policy, compute (node pool), cluster.
   * Decide on K8s RBAC roles and compute allocation per app team for isolation.
   * Decide on whether App teams can read other workloads in cluster or in other clusters.
