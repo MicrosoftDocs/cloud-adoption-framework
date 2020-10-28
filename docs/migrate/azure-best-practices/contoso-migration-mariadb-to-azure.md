@@ -1,16 +1,15 @@
 ---
 title: Migrate MariaDB databases to Azure
-description: Learn how Contoso migrated its on-premises MariaDB Databases to Azure.
+description: Learn how Contoso migrated its on-premises MariaDB databases to Azure.
 author: deltadan
 ms.author: abuck
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
-<!-- cSpell:ignore  mysqldump Navicat phpMyAdmin -->
+<!-- cSpell:ignore mysqldump -->
 
 # Migrate MariaDB databases to Azure
 
@@ -18,10 +17,10 @@ This article demonstrates how the fictional company Contoso planned and migrated
 
 Contoso is using MariaDB instead of MySQL because of its:
 
-- Myriad storage engines.
+- Numerous storage engine options.
 - Cache and index performance.
 - Open-source support with features and extensions.
-- Analytics ColumnStore support.
+- ColumnStore storage engine for analytical workloads.
 
 The company's migration goal is to continue to use MariaDB but not worry about managing the environment needed to support it.
 
@@ -71,8 +70,8 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Azure Database for MariaDB has the required compliance and privacy certifications that Contoso must meet for its auditors.
 - Report and application processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no-public access) by using [Azure Private Link](/azure/mariadb/concepts-data-access-security-private-link).
-- Contoso chose not to move to Azure Database for MySQL because it's looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
-- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
+- Contoso chose not to move to Azure Database for MySQL because it's looking at potentially using the MariaDB ColumnStore and graph database model in the future.
+- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or Site-to-Site VPN).
 
 ### Solution review
 
@@ -189,10 +188,10 @@ Contoso needs to:
 
 ### Backups
 
-Ensure that the Azure Databases for MariaDB databases are backed up by using geo-restore. In this way, backups can be used in a paired region if a regional outage occurs.
+Ensure that the Azure Database for MariaDB instances are backed up by using geo-restore. In this way, backups can be used in a paired region if a regional outage occurs.
 
 > [!IMPORTANT]
-> Make sure that the Azure Database for MariaDB resource has a [resource lock](/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
+> Make sure that the Azure Database for MariaDB instance has a [resource lock](/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
 
 ### Licensing and cost optimization
 

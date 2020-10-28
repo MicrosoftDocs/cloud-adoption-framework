@@ -25,7 +25,7 @@ As you get started, the checklist and resources below will help you plan your ap
 > - How will you structure the project folder to support Kubernetes application development?
 > - Have you identified state, configuration, and storage requirements of your application?
 
-<!-- docsTest:casing "AAD Pod Identity -->
+<!-- docutune:casing "AAD Pod Identity" -->
 
 > [!div class="tdCol2BreakAll"]
 >
@@ -36,7 +36,7 @@ As you get started, the checklist and resources below will help you plan your ap
 > | **Review common Kubernetes scenarios.** Kubernetes is often thought of as a platform for delivering microservices, but it's becoming a much broader platform. Watch this video to learn about common Kubernetes scenarios such as batch analytics and workflow.    | [Common&nbsp;scenarios&nbsp;to&nbsp;use&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?v=zd8vYhrFXp4&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=7) |
 > | **Prepare your application for Kubernetes.** Prepare your application file system layout for Kubernetes and organize for weekly or daily releases. Learn how the Kubernetes deployment process enables reliable, zero-downtime upgrades. | [Project design and layout for successful Kubernetes applications (webinar)](https://info.microsoft.com/ww-OnDemandRegistration-successful-kubernetes-applications-webinar.html) <br> [How Kubernetes deployments work (video)](https://www.youtube.com/watch?v=mNK14yXIZF4&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=3) <br> [Go through an AKS workshop](https://aka.ms/learn/aksworkshop) |
 > | **Manage application storage.** Understand the performance needs and access methods for pods so that you can provide the appropriate storage options. You should also plan for ways to back up and test the restore process for attached storage. | [The basics of stateful applications in Kubernetes (video)](https://www.youtube.com/watch?v=GieXzb91I40&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=9) <br> [State and data in Docker applications](/dotnet/architecture/microservices/architect-microservice-container-applications/docker-application-state-data) <br> [Storage options in Azure Kubernetes Service](/azure/aks/operator-best-practices-storage) |
-> | **Manage application secrets.** Don't store credentials in your application code. a key vault should be used to store and retrieve keys and credentials.  | [How Kubernetes and configuration management work (video)](https://www.youtube.com/watch?v=vRcQOZLnKUk&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=11) <br> [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?v=KmhM33j5WYk&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=10) <br> [Using Azure Key Vault with Kubernetes](https://github.com/azure/kubernetes-keyvault-flexvol) <br> [Use Azure AD pod identity to authenticate and access Azure resources](https://github.com/azure/aad-pod-identity) |
+> | **Manage application secrets.** Don't store credentials in your application code. A key vault should be used to store and retrieve keys and credentials.  | [How Kubernetes and configuration management work (video)](https://www.youtube.com/watch?v=vRcQOZLnKUk&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=11) <br> [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?v=KmhM33j5WYk&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=10) <br> [Using Azure Key Vault with Kubernetes](https://github.com/azure/kubernetes-keyvault-flexvol) <br> [Use Azure AD pod identity to authenticate and access Azure resources](https://github.com/azure/aad-pod-identity) |
 
 ## Deploy to production and apply best practices
 
@@ -69,7 +69,7 @@ Now that the application is in production, how can you optimize your workflow an
 > - Are cross-cutting application concerns abstracted from your application?
 > - Are you able to maintain system and application reliability, while still iterating on new features and versions?
 
-<!-- docsTest:casing Consul -->
+<!-- docutune:casing Consul -->
 
 > [!div class="tdCol2BreakAll"]
 >

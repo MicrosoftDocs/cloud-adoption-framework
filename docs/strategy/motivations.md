@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Motivations: Why are we moving to the cloud?
 
-"Why are we moving to the cloud?" It's a common question for business and technical stakeholders alike. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud" then it's unlikely that the business will achieve the desired outcomes.
+"Why are we moving to the cloud?" It's a common question for business and technical stakeholders alike. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud," then it's unlikely that the business will achieve the desired outcomes.
 
 This article discusses a few motivations behind cloud migration that can help produce more successful business outcomes. These options help facilitate a conversation about motivations and, ultimately, business outcomes.
 
@@ -21,7 +21,7 @@ Business transformations that are supported by cloud adoption can be driven by v
 
 | Critical business events | Migration | Innovation |
 |---|---|---|
-| Datacenter exit <br><br> Merger, acquisition, or divestiture <br><br> Reduction in capital expenses <br><br> End of support for mission-critical technologies <br><br> Response to regulatory compliance changes <br><br> New data sovereignty requirements <br><br> Reduction of disruptions and improvement of it stability <br><br> <br><br> | Cost savings <br><br> Reduction in vendor or technical complexity <br><br> Optimization of internal operations <br><br> Increase in business agility <br><br> Preparation for new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Integration of a complex it portfolio <br><br> | Preparation for new technical capabilities <br><br> Building new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Improved customer experiences and engagements <br><br> Transformation of products or services <br><br> Market disruption with new products or services <br><br> Democratization and/or self-service environments |
+| Datacenter exit <br><br> Merger, acquisition, or divestiture <br><br> Reduction in capital expenses <br><br> End of support for mission-critical technologies <br><br> Response to regulatory compliance changes <br><br> New data sovereignty requirements <br><br> Reduction of disruptions and improvement of IT stability <br><br>Reduce carbon footprint <br><br> | Cost savings <br><br> Reduction in vendor or technical complexity <br><br> Optimization of internal operations <br><br> Increase in business agility <br><br> Preparation for new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Integration of a complex it portfolio <br><br> | Preparation for new technical capabilities <br><br> Building new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Improved customer experiences and engagements <br><br> Transformation of products or services <br><br> Market disruption with new products or services <br><br> Democratization and/or self-service environments |
 
 ## Classify your motivations
 

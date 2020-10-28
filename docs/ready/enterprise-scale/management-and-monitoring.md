@@ -29,7 +29,7 @@ _Figure 1: Platform management and monitoring._
   - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs
   - Resource health events
 - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate:
-  - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow or ArcSight
+  - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow, ArcSight, or the Onapsis security platform
   - Azure activity logs
   - Azure Active Directory (Azure AD) audit reports
   - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs
@@ -47,11 +47,11 @@ _Figure 1: Platform management and monitoring._
 
 **Design recommendations:**
 
-- Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
+- Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC), data sovereignty requirements and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
     In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources such as web apps or Azure Cosmos DB databases, application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
 
-<!-- docsTest:ignore WORM -->
+<!-- docutune:ignore WORM -->
 
 - Export logs to Azure Storage if log retention requirements exceed two years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
 - Use Azure Policy for access control and compliance reporting. Azure Policy provides the ability to enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).

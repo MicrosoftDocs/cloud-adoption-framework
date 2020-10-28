@@ -107,7 +107,7 @@ With Azure, your developers can build cloud-native applications by using canonic
 
 Sparking innovation for customer experiences and line-of-business applications is a high priority for every business leader. Whether you're building web, mobile, IoT, or mixed reality experiences, innovation is key to the future success of your organization. To scale innovation, organizations need to focus on packaging and shipping their unique business value as composable services so that partners and employees can participate in shared value generation easily and efficiently.
 
-<!-- docsTest:casing "spark and scale innovation" -->
+<!-- docutune:casing "spark and scale innovation" -->
 
 Azure has a unique offering to help you spark and scale innovation in your organization. To drive more innovation, professional developers today can create applications and building blocks that empower other experts in your organization to build applications on a reliable foundation. With Azure, they get security from the ground up, backed by a team of experts, and proactive compliance trusted by enterprises, governments, and startups.
 

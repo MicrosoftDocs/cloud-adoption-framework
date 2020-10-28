@@ -33,44 +33,33 @@ Use these steps to plan and execute your strategy for securing your cloud assets
 
 ## Step 1: Establish essential security practices
 
-Security in the cloud starts with sound practices. Whether you're already operating in the cloud or you're planning for future adoption, it's important to rapidly establish essential security practices.
+Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied. 
 
-In addition to meeting any explicit regulatory compliance requirements, we recommend the following steps to address the top security challenges that most organizations face as they move to the cloud.
+Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
 
-**Deliverables and supporting guidance:**
+**People:**
 
-- **Technical:** Mitigate top risks and increase visibility and control of assets by enabling passwordless or multi-factor authentication for admins, and by enabling threat protection for cloud resources.
+1. [Educate teams about the cloud security journey](../security/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
+2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology) 
 
-  - [Passwordless or multi-factor authentication for admins](/azure/architecture/framework/security/critical-impact-accounts#passwordless-or-multi-factor-authentication-for-admins)
-  - [Security operations](/azure/architecture/framework/security/security-operations) and [threat protection in Azure Security Center](/azure/security-center/threat-protection)
+**Process:**
 
-- **Process:** Enable rapid security decisions and continuous improvement by assigning security roles and responsibilities, and by establishing an incident response process.
+3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
+4. [Update Incident Response (IR) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
+5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
 
-  - [Clear lines of responsibility](/azure/architecture/framework/security/governance#clear-lines-of-responsibility), [Assign privileges for managing the environment](/azure/architecture/framework/security/governance#assign-privileges-for-managing-the-environment), and Operationalize Secure Score <!-- TODO: Improve this and add link to AAF article -->
-  - Security roles and responsibilities <!-- TODO: add link to bookmark -->
-  - [Incident response reference guide](https://aka.ms/irrg)
+**Technology:**
 
-- **People:** Provide security teams with the education, tools, and access required to successfully deploy and operate during the transition to the cloud environment.
+6. [Require Passwordless or Multi-Factor Authentication (MFA)](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
+7. [Integrate native firewall and network security](../security/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
+8. [Integrate native threat detection](../security/security-top-10.md#8-technology-integrate-native-threat-detection)
 
-  - **Educate everyone on concepts** of how cloud and cloud security are evolving:
-    - [Evolution of threat environment, roles, and digital strategies](/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
-    - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
-  - **Train technical staff** on technical details of cloud security capabilities for the platforms they use. Microsoft provides extensive [Azure security documentation](/azure/security).
+**Foundational Architecture Decisions:**
 
-- **Long-term architectural decisions:** Establish a long-term foundation with the right decisions. These are difficult and expensive to change later.
+9. [Standardize on a single directory and identity](../security/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
+10. [Use identity based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
+11. [Establish a single unified security strategy](../security/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
-  - [Build an enterprise segmentation strategy and align technical architectures with it (network segmentation, identity segmentation, etc.)](/azure/architecture/framework/security/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
-  - [Single enterprise directory](/azure/architecture/framework/security/identity#single-enterprise-directory)
-  - [Authentication strategy for services](/azure/architecture/framework/security/applications-services#prefer-identity-authentication-over-keys)
-  - [Permission assignment strategy](/azure/architecture/framework/security/critical-impact-accounts#avoid-granular-and-custom-permissions)
-
-<br>
-
-| Accountable team | Responsible and supporting teams |
-| --- | --- |
-| <li> Cloud security team <br><br><br> | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
-
-During this initial step, governance teams should also start coordinating the creation of security baselines that can be monitored, managed, and enforced across environments. Additional guidance on building this is discussed later in step 4.
 
 > [!NOTE]
 > Each organization should define its own minimum standards. Risk posture and subsequent tolerance to that risk can vary widely based on industry, culture, and other factors. For example, a bank might not tolerate any potential damage to its reputation from even a minor attack on a test system. Some organizations would gladly accept that same risk if it accelerated their digital transformation by three to six months.
@@ -144,7 +133,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
 **Deliverables:**
 
-- **Security plan:** A security plan should be part of the main planning documentation for the cloud. It might be a document that uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), a detailed slide deck, or a project file. Or it might be a combination of these formats, depending on organization's size, culture, and standard practices.
+- **Security plan:** A security plan should be part of the main planning documentation for the cloud. It might be a document that uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), a detailed slide deck, or a project file. Or it might be a combination of these formats, depending on the organization's size, culture, and standard practices.
 
   The security plan should include all of these elements:
 

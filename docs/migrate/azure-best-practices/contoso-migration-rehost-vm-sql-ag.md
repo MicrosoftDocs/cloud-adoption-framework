@@ -7,7 +7,6 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
 <!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc AOAG SQLAOG SQLAOGAVSET contosoadmin contosocloudwitness MSSQLSERVER BEPOOL contosovmsacc SHAOG NSGs inetpub iisreset -->
@@ -192,7 +191,7 @@ To create a storage account, the Contoso admins:
 
     ![Screenshot that shows the access key.](./media/contoso-migration-rehost-vm-sql-ag/access-key.png)
 
-<!-- docsTest:casing "Failover Cluster feature" -->
+<!-- docutune:casing "Failover Cluster feature" -->
 
 ### Add SQL Server VMs to Contoso domain
 

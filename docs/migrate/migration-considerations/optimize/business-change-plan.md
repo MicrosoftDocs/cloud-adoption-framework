@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore Eason -->
 
-<!-- docsTest:casing "Eason Matrix" -->
+<!-- docutune:casing "Eason Matrix" -->
 
 # Business change plan
 
@@ -64,8 +64,8 @@ After business change is documented and planned, [business testing](./business-t
 
 ## References
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 - Eason, K. (1988) _Information Technology and Organizational Change_, New York: Taylor and Francis.
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->

@@ -4,7 +4,7 @@ description: Test-driven development for landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
@@ -66,7 +66,7 @@ The Govern methodology within the Cloud Adoption Framework provides a narrative 
 - [Operations expansion](../../govern/guides/complex/resource-consistency-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing ("definition of done") to meet basic operations management requirements.
 - [Cost expansion](../../govern/guides/complex/cost-management-improvement.md#changes-to-the-policy-statements): Example of corporate policies governing ("definition of done") to meet cost management requirements.
 
-The above examples are basic samples to help develop a "definition of done" for your landing zones. Additional sample policies are available under each of the [disciplines of cloud governance](../../govern/governance-disciplines.md).
+The above examples are basic samples to help develop a "definition of done" for your landing zones. Additional sample policies are available for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
 
 ## Next steps
 

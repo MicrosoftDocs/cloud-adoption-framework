@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Standard enterprise governance guide: The narrative behind the governance strategy
 
-The following narrative describes the use case for governance during a [standard enterprise's cloud adoption journey](./index.md). Before implementing the journey, it's important to understand the assumptions and rationale that are reflected in this narrative. Then you can better align the governance strategy to your own organization's journey.
+The following narrative describes the use case for governance during a [standard enterprise's cloud adoption journey](./index.md). Before implementing the journey, it's important to understand the assumptions and rationale that are reflected in this narrative. Then you can better align the governance strategy to your organization's journey.
 
 ## Back story
 
@@ -34,7 +34,7 @@ The company has the following business profile:
 
 Here is the current state of the company's IT and cloud operations:
 
-- IT operates two hosted infrastructure environments. One environment contains production assets. The second environment contains disaster recovery and some dev/test assets. These environments are hosted by two different providers. IT refers to these two datacenters as prod and DR respectively.
+- IT operates two hosted infrastructure environments. One environment contains production assets. The second environment contains disaster recovery and some dev/test assets. These environments are hosted by two different providers. IT refers to these two datacenters as _Prod_ and _DR_ respectively.
 
 - IT entered the cloud by migrating all end-user email accounts to Microsoft 365. This migration was completed six months ago. Few other IT assets have been deployed to the cloud.
 
@@ -54,7 +54,9 @@ The following changes are anticipated over the next several years:
 
 - The application development and BI teams want to release cloud-based solutions to production over the next 24 months based on the vision for customer engagement and new products.
 
-- This year, the IT team will finish retiring the disaster recovery workloads of the DR datacenter by migrating 2,000 VMs to the cloud. This is expected to produce an estimated $25m USD cost savings over the next five years. ![On-premises costs versus Azure costs demonstrating a return of $25m USD over the next five years](../../../_images/govern/calculator-small-to-medium-enterprise.png)
+- This year, the IT team will finish retiring the disaster recovery workloads of the DR datacenter by migrating 2,000 VMs to the cloud. This is expected to produce an estimated $25m USD cost savings over the next five years.
+
+  ![On-premises costs versus Azure costs demonstrating a return of $25m USD over the next five years](../../../_images/govern/calculator-small-to-medium-enterprise.png)
 
 - The company plans to change how it makes IT investments by repositioning the committed capital expense as an operating expense within IT. This change will provide greater cost control and enable IT to accelerate other planned efforts.
 

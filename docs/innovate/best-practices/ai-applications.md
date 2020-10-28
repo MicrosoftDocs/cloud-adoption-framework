@@ -72,7 +72,7 @@ Cognitive Services provides a layered security model, which includes [authentica
 
 Cognitive Services provides containers for deployment in the cloud or on-premises. Learn more about [Cognitive Services containers](/azure/cognitive-services/cognitive-services-container-support).
 
-<!-- docsTest:casing "HIPAA BAA" "CSA STAR" -->
+<!-- docutune:casing "HIPAA BAA" "CSA STAR" -->
 
 ### Certifications and compliance
 

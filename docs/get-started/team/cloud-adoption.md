@@ -17,6 +17,8 @@ Some cloud adoption teams focus exclusively on cloud migration, and others focus
 
 A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL Database virtual machines (VMs) to SQL PaaS instances.
 
+As cloud adoption expands, customers benefit from a team that's dedicated to the [cloud platform function](../../organize/cloud-platform.md). That team uses automated deployment and code reuse to accelerate successful adoption. People focused on a cloud platform function can implement infrastructure, application patterns, governance, and other supporting assets to drive further efficiencies and consistency, and to instill cloud principles in your organization. Small organizations and small adoption teams don't have the luxury of a dedicated cloud platform team. We recommend that you establish an automation capability in your adoption team to begin building this important cloud muscle.
+
 ![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
 
 ## Step 1: Determine the type of adoption team you need
@@ -34,7 +36,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 **Deliverables:**
 
-- Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
+- Determine whether the team aligns better with the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
 - Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
@@ -69,8 +71,8 @@ If your company's cloud adoption effort is mature enough to have supporting team
 
 Depending on the type of adoption team you're a member of, you'll get started with one of these guides:
 
-- Get started: Migrate workloads to the cloud
-- Get started: Build new products or services
+- [Get started: Migrate workloads to the cloud](../migrate.md)
+- [Get started: Build new products or services](../innovate.md)
 
 These guides provide guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
 

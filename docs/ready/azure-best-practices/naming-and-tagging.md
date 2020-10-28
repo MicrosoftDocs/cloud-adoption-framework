@@ -10,12 +10,14 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit
 ---
 
-<!-- docsTest:disable -->
-<!-- cSpell:ignore westeurope usgovia accountlookup messagequery -->
+<!-- docutune:disable -->
+<!-- cSpell:ignore appcs arck cdnp cdne osdisk westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions
 
 Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
+
+Accurate representation and naming of resources are critical for security purposes. In the event of a security incident, quickly identifying affected systems, their potential business impact, and what they are being used for is critical to making good risk decisions. Security services such as [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-introduction) and [Azure Sentinel](https://docs.microsoft.com/azure/sentinel) reference resources and their associated logging/alert information by resource name.
 
 Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 
@@ -78,9 +80,11 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 | Asset type                      | Name prefix |
 |---------------------------------|-------------|
+| Management group                | mg-         |
 | Resource group                  | rg-         |
 | Policy definition               | policy-     |
 | API management service instance | apim-       |
+| Managed Identity                | id-         |
 
 ### Networking
 
@@ -88,6 +92,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 |----------------------------------|-------------|
 | Virtual network                  | vnet-       |
 | Subnet                           | snet-       |
+| Virtual network peering          | peer-       |
 | Network interface (NIC)          | nic-        |
 | Public IP address                | pip-        |
 | Load balancer (internal)         | lbi-        |
@@ -97,29 +102,38 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Local network gateway            | lgw-        |
 | Virtual network gateway          | vgw-        |
 | VPN connection                   | cn-         |
+| ExpressRoute circuit             | erc-        |
 | Application gateway              | agw-        |
 | Route table                      | route-      |
+| User defined route (UDR)         | udr-        |
 | Traffic Manager profile          | traf-       |
+| Front door                       | fd-         |
+| CDN profile                      | cdnp-       |
+| CDN endpoint                     | cdne-       |
 
 ### Compute and Web
 
-| Asset type                  | Name prefix |
-|-----------------------------|-------------|
-| Virtual machine             | vm          |
-| Virtual machine scale set   | vmss-       |
-| Availability set            | avail-      |
-| VM storage account          | stvm        |
-| Azure Arc connected machine | arcm-       |
-| Container instance          | aci-        |
-| AKS cluster                 | aks-        |
-| Service Fabric cluster      | sf-         |
-| App Service environment     | ase-        |
-| App Service plan            | plan-       |
-| Web app                     | app-        |
-| Function app                | func-       |
-| Cloud service               | cld-        |
-| Notification Hubs           | ntf-        |
-| Notification Hubs namespace | ntfns-      |
+| Asset type | Name prefix |
+|--|--|
+| Virtual machine | vm |
+| Virtual machine scale set | vmss- |
+| Availability set | avail- |
+| Managed disk (OS) | osdisk |
+| Managed disk (data) | disk |
+| VM storage account | stvm |
+| Azure Arc enabled server | arcs- |
+| Azure Arc enabled Kubernetes cluster | arck |
+| Container registry | cr |
+| Container instance | ci- |
+| AKS cluster | aks- |
+| Service Fabric cluster | sf- |
+| App Service environment | ase- |
+| App Service plan | plan- |
+| Web app | app- |
+| Function app | func- |
+| Cloud service | cld- |
+| Notification Hubs | ntf- |
+| Notification Hubs namespace | ntfns- |
 
 ### Databases
 
@@ -137,10 +151,11 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Storage
 
-| Asset type       | Name prefix |
-|------------------|-------------|
-| Storage account  | st          |
-| Azure StorSimple | ssimp       |
+| Asset type               | Name prefix |
+|--------------------------|-------------|
+| Storage account          | st          |
+| Azure StorSimple         | ssimp       |
+| Azure Container Registry | acr         |
 
 ### AI and Machine Learning
 
@@ -152,43 +167,54 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Analytics and IoT
 
-| Asset type                      | Name prefix |
-|---------------------------------|-------------|
-| Azure Analysis Services server  | as-         |
-| Azure Databricks workspace      | dbw-        |
-| Azure Stream Analytics          | asa-        |
-| Azure Data Factory              | adf-        |
-| Data Lake Store account         | dls         |
-| Data Lake Analytics account     | dla         |
-| Event hub                       | evh-        |
-| HDInsight - Hadoop cluster      | hadoop-     |
-| HDInsight - HBase cluster       | hbase-      |
-| HDInsight - Kafka cluster       | kafka-      |
-| HDInsight - Spark cluster       | spark-      |
-| HDInsight - Storm cluster       | storm-      |
-| HDInsight - ML Services cluster | mls-        |
-| IoT hub                         | iot-        |
-| Power BI Embedded               | pbi-        |
+| Asset type                       | Name prefix |
+|---------------------------------_|-------------|
+| Azure Analysis Services server   | as          |
+| Azure Databricks workspace       | dbw-        |
+| Azure Stream Analytics           | asa-        |
+| Azure Data Explorer cluster      | dec         |
+| Azure Data Factory               | adf-        |
+| Data Lake Store account          | dls         |
+| Data Lake Analytics account      | dla         |
+| Event hub                        | evh-        |
+| HDInsight - Hadoop cluster       | hadoop-     |
+| HDInsight - HBase cluster        | hbase-      |
+| HDInsight - Kafka cluster        | kafka-      |
+| HDInsight - Spark cluster        | spark-      |
+| HDInsight - Storm cluster        | storm-      |
+| HDInsight - ML Services cluster  | mls-        |
+| IoT hub                          | iot-        |
+| Power BI Embedded                | pbi-        |
+| Time Series Insights environment | tsi-        |
+
+### Developer tools
+
+| Asset type | Name prefix |
+|---|---|
+| App Configuration store | appcs- |
 
 ### Integration
 
-| Asset type        | Name prefix |
-|-------------------|-------------|
-| Logic apps        | logic-      |
-| Service Bus       | sb-         |
-| Service Bus queue | sbq-        |
-| Service Bus topic | sbt-        |
+| Asset type          | Name prefix |
+|---------------------|-------------|
+| Integration account | ia-         |
+| Logic apps          | logic-      |
+| Service Bus         | sb-         |
+| Service Bus queue   | sbq-        |
+| Service Bus topic   | sbt-        |
 
 ### Management and governance
 
-| Asset type              | Name prefix |
-|-------------------------|-------------|
-| Blueprint               | bp-         |
-| Blueprint assignment    | bpa-        |
-| Key vault               | kv-         |
-| Log Analytics workspace | log-        |
-| Application Insights    | appi-       |
-| Recovery Services vault | rsv-        |
+| Asset type | Name prefix |
+|--|--|
+| Automation account | aa- |
+| Azure Monitor action group | ag- |
+| Blueprint | bp- |
+| Blueprint assignment | bpa- |
+| Key vault | kv- |
+| Log Analytics workspace | log- |
+| Application Insights | appi- |
+| Recovery Services vault | rsv- |
 
 ### Migration
 
@@ -227,17 +253,19 @@ The following section provides some example names for common Azure resource type
 
 <!-- TODO: Use tick marks for names. -->
 
-<!-- cSpell:ignore mktgsharepoint acctlookupsvc vmhadoop vmtest vmsharepoint vmnavigator vmsqlnode stvmstcoreeastus stvmpmcoreeastus stvmstplmeastus stvmsthadoopeastus stnavigatordata stemissionsoutput stdiag stdiagsh ssimpnavigatorprod ssimpemissionsdev dlanavigatorprod dlsnavigatorprod dlaemissionsdev dlsemissionsdev weballow rdpallow sqlallow dnsblocked cloudapp azurewebsites servicebus -->
+<!-- cSpell:ignore mktgsharepoint acctlookupsvc vmhadoop vmtest vmsharepoint vmnavigator vmsqlnode stvmstcoreeastus stvmpmcoreeastus stvmstplmeastus stvmsthadoopeastus stnavigatordata stemissionsoutput stdiag stdiagsh ssimpnavigatorprod ssimpemissionsdev dlanavigatorprod dlsnavigatorprod dlaemissionsdev dlsemissionsdev weballow rdpallow sqlallow dnsblocked cloudapp azurewebsites servicebus appcn keda acrnavigatorprod -->
 
 <!-- markdownlint-disable MD024 -->
 
 ### Example names: General
 
-| Asset type                      | Scope                              | Format                                                      | Examples                                                                                                                |
-|---------------------------------|------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Subscription                    | Account/ <br> Enterprise Agreement | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001 |
-| Resource group                  | Subscription                       | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
-| API management service instance | Global                             | apim-\<App or service name\>                                | apim-navigator-prod                                                                                                     |
+| Asset type                      | Scope                                 | Format                                                      | Examples                                                                                           |
+|---------------------------------|---------------------------------------|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Management group                | Business unit and/or Environment type | mg-\<Business Unit\>\[-\<Environment type\>\]               | <li> mg-mktg <li> mg-hr <li> mg-corp-prod <li> mg-fin-client                                       |
+| Subscription                    | Account/ <br> Enterprise Agreement    | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>          | <li> mktg-prod-001 <li> corp-shared-001 <li> fin-client-001                                        |
+| Resource group                  | Subscription                          | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
+| API management service instance | Global                                | apim-\<App or service name\>                                | apim-navigator-prod                                                                                |
+| Managed Identity                | Resource group                        | id-\<App or service name\>                                  | id-appcn-keda-prod-eus-001                                                                         |
 
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
@@ -297,6 +325,7 @@ The following section provides some example names for common Azure resource type
 | Storage account (general use)     | Global | st\<storage name\>\<\#\#\#\>                                                  | <li> stnavigatordata001 <li> stemissionsoutput001 |
 | Storage account (diagnostic logs) | Global | stdiag\<first 2 letters of subscription name and number\>\<region\>\<\#\#\#\> | <li> stdiagsh001eastus2001 <li> stdiagsh001westus001 |
 | Azure StorSimple                  | Global | ssimp\<App Name\>\<Environment\>                                              | <li> ssimpnavigatorprod <li> ssimpemissionsdev |
+| Azure Container Registry          | Global | acr\<App Name\>\<Environment\>\<\#\#\#\>                                      | <li> acrnavigatorprod001 |
 
 ### Example names: AI and machine learning
 

@@ -1,6 +1,6 @@
 ---
 title: What is Azure Cognitive Search?
-description: Formerly known as Azure Search, Azure Cognitive Search helps you to apply AI processes during indexing. 
+description: Formerly known as Azure Search, Azure Cognitive Search helps you to apply AI processes during indexing.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -11,8 +11,8 @@ ms.subservice: innovate
 
 <!-- cSpell:ignore Lucene -->
 
-<!-- docsTest:casing "JFK Files" -->
-<!-- docsTest:ignore "Azure Search" -->
+<!-- docutune:casing "JFK Files" -->
+<!-- docutune:ignore "Azure Search" -->
 
 # What is Azure Cognitive Search?
 

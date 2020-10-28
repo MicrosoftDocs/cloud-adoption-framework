@@ -1,9 +1,9 @@
 ---
 title: Migrate or deploy Windows Virtual Desktop instances to Azure
-description: Migrate or deploy Windows Virtual Desktop instances to Azure.
+description: Use the Cloud Adoption Framework best practices to migrate or deploy Windows Virtual Desktop instances to Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy

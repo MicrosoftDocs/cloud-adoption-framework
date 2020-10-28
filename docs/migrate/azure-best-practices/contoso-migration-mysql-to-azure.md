@@ -7,7 +7,6 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
 <!-- cSpell:ignore mysqldump InnoDB binlog Navicat -->
@@ -53,9 +52,6 @@ Use Azure Database Migration Service to migrate the database to an Azure Databas
 
 ### Database considerations
 
-<!-- TODO: Verify GraphDBMS term -->
-<!-- docsTest:casing ColumnStore "Graph DBMS" -->
-
 As part of the solution design process, Contoso reviewed the features in Azure for hosting its MySQL data. The following considerations helped the company decide to use Azure:
 
 - Similar to Azure SQL Database, Azure Database for MySQL allows for [firewall rules](/azure/mysql/concepts-firewall-rules).
@@ -63,9 +59,9 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Azure Database for MySQL has the required compliance and privacy certifications that Contoso must meet for its auditors.
 - Report and application processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no public access) by using [Azure Private Link](/azure/mysql/concepts-data-access-security-private-link).
-- Contoso chose not to move to Azure Database for MySQL because it's looking at potentially using the MariaDB ColumnStore and Graph DBMS database model in the future.
+- Contoso chose not to move to Azure Database for MySQL because it's considering using the MariaDB ColumnStore and graph database model in the future.
 - Aside from MySQL features, Contoso is a proponent of true open-source projects and chose not to use MySQL.
-- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or Site-to-Site VPN).
 
 ### Solution review
 
@@ -89,9 +85,9 @@ Before you can migrate your MySQL databases, you need to ensure that those insta
 
 #### Supported versions
 
-MySQL uses the X.Y.Z versioning scheme. For example, X is the major version, Y is the minor version, and Z is the patch version.
+MySQL uses the _x.y.z_ versioning scheme, where _x_ is the major version, _y_ is the minor version, and _z_ is the patch version.
 
-Azure currently supports 10.2.25 and 10.3.16.
+Azure currently supports MySQL versions 10.2.25 and 10.3.16.
 
 Azure automatically manages upgrades for patch updates. Examples are 10.2.21 to 10.2.23. Minor and major version upgrades aren't supported. For example, upgrading from MySQL 10.2 to MySQL 10.3 isn't supported. If you want to upgrade from 10.2 to 10.3, take a dump and restore it to a server created with the new engine version.
 
@@ -113,7 +109,7 @@ As a summary, they must do the following tasks:
 
 - Ensure all migration prerequisites are met:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration wizard: "Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full'." For more information, see this [MySQL website](https://go.microsoft.com/fwlink/?linkid=873009`).
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration Wizard: "Error in binary logging. Variable binlog_row_image has value 'minimal.' please change it to 'full'." For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
   - User must have the `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or a VPN to your on-premises network.
@@ -155,7 +151,7 @@ Contoso needs to:
 
 ### Backups
 
-Ensure that the Azure Databases for MySQL instances are backed up by using geo-restore. In this way, backups can be used in a paired region if a regional outage occurs.
+Ensure that the Azure Database for MySQL instances are backed up by using geo-restore, so that backups can be used in a paired region if a regional outage occurs.
 
 > [!IMPORTANT]
 > Ensure that the Azure Database for MySQL resource has a resource lock to prevent it from being deleted. Deleted servers can't be restored.

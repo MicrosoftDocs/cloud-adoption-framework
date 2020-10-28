@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Data democratization
 
-Many companies have kept data warehouses in their datacenters to help different parts of their business to analyze data and make decisions. Sales, marketing, and finance departments have relied heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc query and analysis on data in data marts. These data marts use self-service business intelligence tools to perform multi-dimensional analysis.
+Many companies keep data warehouses in their datacenters to help different parts of their business analyze data and make decisions. Sales, marketing, and finance departments rely heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc querying and analysis of data in data marts. These data marts use self-service business intelligence tools to perform multidimensional analysis.
 
 A business that's supported by data innovation and a modern data estate can empower a broad range of contributors, from an IT stakeholder to a data professional and beyond. They can take action on this repository of centralized data, which is often referred to as "the single source of truth."
 
@@ -21,7 +21,7 @@ Azure Synapse Analytics is a single service for seamless collaboration and accel
 
 **Data integration**: *data engineers* use a code-free environment to easily connect multiple sources and types of data.
 
-**Big data and machine learning**: *data scientists* build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (for example, T-SQL, Python, scala, .net, or sparksql).
+**Big data and machine learning**: *data scientists* build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (for example, T-SQL, Python, Scala, .NET, or Spark SQL).
 
 **Management and security**: *IT pros* protect and manage data more efficiently, enforce privacy requirements, and secure access to cloud and hybrid configurations.
 

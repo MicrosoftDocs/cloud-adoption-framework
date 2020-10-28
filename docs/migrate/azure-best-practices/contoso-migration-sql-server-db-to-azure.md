@@ -7,7 +7,6 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
 <!-- cSpell:ignore BACPAC FILESTREAM -->
@@ -103,7 +102,7 @@ Contoso also added Data Migration Assistant to their Azure Migrate project. By s
 
 #### Step 2: Application assessment
 
-<!-- docsTest:casing "mainly .NET-based" "non-.NET-based" -->
+<!-- docutune:casing "mainly .NET-based" "non-.NET-based" -->
 
 The results from the assessment provided Contoso with the visibility that they utilizes mainly .NET-based applications, however, over the years various projects have used other technologies such as PHP and Node.js. Vendor purchased systems also introduced non-.NET-based applications. They have identified the following:
 
@@ -137,9 +136,9 @@ With the database information now loaded into Azure Migrate, Contoso has identif
 When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
 
 > [!NOTE]
-> As part of the assessment phase, Contoso discovered various open source databases. Separately, they followed [this guide](./contoso-migration-oss-db-to-azure.md) for their migration planning.
+> As part of the Assess phase, Contoso discovered various open source databases. Separately, they followed [this guide](./contoso-migration-oss-db-to-azure.md) for their migration planning.
 
-<!-- docsTest:casing "custom .NET" -->
+<!-- docutune:casing "custom .NET" -->
 
 #### Step 4: Migration planning
 

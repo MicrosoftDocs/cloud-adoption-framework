@@ -28,7 +28,7 @@ While the difference is subtle, it is an important distinction when building a g
 
 ### Changes in the current state
 
-In the previous phase of this narrative, the company had begun the process of retiring two datacenters. This ongoing effort includes migrating some applications with legacy authentication requirements, which required incremental improvements to the identity baseline, described in the [previous article](./identity-baseline-improvement.md).
+In the previous phase of this narrative, the company had begun the process of retiring two datacenters. This ongoing effort includes migrating some applications with legacy authentication requirements, which required incremental improvements to the Identity Baseline discipline, described in the [previous article](./identity-baseline-improvement.md).
 
 Since then, some things have changed that will affect governance:
 
@@ -52,73 +52,71 @@ Since then, some things have changed that will affect governance:
 This business risk can be expanded into several technical risks:
 
 1. Mission-critical applications or protected data might be deployed unintentionally.
-2. Protected data might be exposed during storage due to poor encryption decisions.
-3. Unauthorized users might access protected data.
-4. External intrusion could result in access to protected data.
-5. External intrusion or denial of service attacks could cause a business interruption.
-6. Organization or employment changes could allow for unauthorized access to protected data.
-7. New exploits might create opportunities for intrusion or unauthorized access.
-8. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-9. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-10. Disparate edge devices might increase network operations costs.
-11. Disparate device configurations might lead to oversights in configuration and compromises in security.
-12. The cybersecurity team insists there is a risk of vendor lock-in from generating encryption keys on a single cloud provider's platform. While this claim is unsubstantiated, it was accepted by the team for the time being.
+1. Protected data might be exposed during storage due to poor encryption decisions.
+1. Unauthorized users might access protected data.
+1. External intrusion could result in access to protected data.
+1. External intrusion or denial of service attacks could cause a business interruption.
+1. Organization or employment changes could allow for unauthorized access to protected data.
+1. New exploits might create opportunities for intrusion or unauthorized access.
+1. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+1. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+1. Disparate edge devices might increase network operations costs.
+1. Disparate device configurations might lead to oversights in configuration and compromises in security.
+1. The cybersecurity team insists there is a risk of vendor lock-in from generating encryption keys on a single cloud provider's platform. While this claim is unsubstantiated, it was accepted by the team for the time being.
 
 ## Incremental improvement of the policy statements
 
 The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but the adoption of these policies may be easier than it would appear.
 
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the cloud governance team and the application before deployment to the cloud.
-2. Applications that store or access protected data are to be managed differently than those that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
-3. All protected data must be encrypted when at rest.
-4. Elevated permissions in any segment containing protected data should be an exception. Any such exceptions will be recorded with the cloud governance team and audited regularly.
-5. Network subnets containing protected data must be isolated from any other subnets. Network traffic between protected data subnets will be audited regularly.
-6. No subnet containing protected data can be directly accessed over the public internet or across datacenters. Access to these subnets must be routed through intermediate subnets. All access into these subnets must come through a firewall solution that can perform packet scanning and blocking functions.
-7. Governance tooling must audit and enforce network configuration requirements defined by the security management team.
-8. Governance tooling must limit VM deployment to approved images only.
-9. Whenever possible, node configuration management should apply policy requirements to the configuration of any guest operating system. Node configuration management should respect the existing investment in group policy objects (GPO) for resource configuration.
-10. Governance tooling will audit that automatic updates are enabled on all deployed assets. When possible, automatic updates will be enforced. When not enforced by tooling, node-level violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
-11. Creation of new subscriptions or management groups for any mission-critical applications or protected data requires a review from the cloud governance team to ensure proper blueprint assignment.
-12. A least-privilege access model will be applied to any subscription that contains mission-critical applications or protected data.
-13. The cloud vendor must be capable of integrating encryption keys managed by the existing on-premises solution.
-14. The cloud vendor must be capable of supporting the existing edge device solution and any required configurations to protect any publicly exposed network boundary.
-15. The cloud vendor must be capable of supporting a shared connection to the global WAN, with data transmission routed through the existing edge device solution.
-16. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
-17. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
-18. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
-19. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
-20. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
-21. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
+1. Applications that store or access protected data are to be managed differently than those that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
+1. All protected data must be encrypted when at rest.
+1. Elevated permissions in any segment containing protected data should be an exception. Any such exceptions will be recorded with the cloud governance team and audited regularly.
+1. Network subnets containing protected data must be isolated from any other subnets. Network traffic between protected data subnets will be audited regularly.
+1. No subnet containing protected data can be directly accessed over the public internet or across datacenters. Access to these subnets must be routed through intermediate subnets. All access into these subnets must come through a firewall solution that can perform packet scanning and blocking functions.
+1. Governance tooling must audit and enforce network configuration requirements defined by the security management team.
+1. Governance tooling must limit VM deployment to approved images only.
+1. Whenever possible, node configuration management should apply policy requirements to the configuration of any guest operating system. Node configuration management should respect the existing investment in group policy objects (GPO) for resource configuration.
+1. Governance tooling will audit that automatic updates are enabled on all deployed assets. When possible, automatic updates will be enforced. When not enforced by tooling, node-level violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
+1. Creation of new subscriptions or management groups for any mission-critical applications or protected data requires a review from the cloud governance team to ensure proper blueprint assignment.
+1. A least-privilege access model will be applied to any subscription that contains mission-critical applications or protected data.
+1. The cloud vendor must be capable of integrating encryption keys managed by the existing on-premises solution.
+1. The cloud vendor must be capable of supporting the existing edge device solution and any required configurations to protect any publicly exposed network boundary.
+1. The cloud vendor must be capable of supporting a shared connection to the global WAN, with data transmission routed through the existing edge device solution.
+1. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
+1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets. 18. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
+1. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
+1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users. 1. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
-## Incremental improvement of the best practices
+## Incremental improvement of best practices
 
-This section modifies the governance MVP design to include new Azure policies and an implementation of Azure Cost Management and Billing. Together, these two design changes will fulfill the new corporate policy statements.
+This section modifies the governance MVP design to include new Azure policies and an implementation of Azure Cost Management + Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
 The new best practices fall into two categories: corporate IT (hub) and cloud adoption (spoke).
 
 **Establishing a corporate IT hub and spoke subscription to centralize the security baseline:** In this best practice, the existing governance capacity is wrapped by a [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services), with a few key additions from the cloud governance team.
 
 1. Azure DevOps repository. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
-2. Hub and spoke template:
+1. Hub and spoke template:
     1. The guidance in the [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services) reference architecture can be used to generate Resource Manager templates for the assets required in a corporate IT hub.
-    2. Using those templates, this structure can be made repeatable, as part of a central governance strategy.
-    3. In addition to the current reference architecture, a network security group template should be created to capture any port blocking or allow-listing requirements for the virtual network to host the firewall. This network security group differs from prior groups, because it will be the first network security group to allow public traffic into a virtual network.
-3. Create Azure policies. Create a policy named `hub NSG enforcement` to enforce the configuration of the network security group assigned to any virtual network created in this subscription. Apply the built-in policies for guest configuration as follows:
+    1. Using those templates, this structure can be made repeatable, as part of a central governance strategy.
+    1. In addition to the current reference architecture, a network security group template should be created to capture any port blocking or allow-listing requirements for the virtual network to host the firewall. This network security group differs from prior groups, because it will be the first network security group to allow public traffic into a virtual network.
+1. Create Azure policies. Create a policy named `hub NSG enforcement` to enforce the configuration of the network security group assigned to any virtual network created in this subscription. Apply the built-in policies for guest configuration as follows:
     1. Audit that Windows web servers are using secure communication protocols.
-    2. Audit that password security settings are set correctly inside Linux and Windows machines.
-4. Create the corporate IT blueprint.
+    1. Audit that password security settings are set correctly inside Linux and Windows machines.
+1. Create the corporate IT blueprint.
     1. Create an Azure blueprint named `corporate-it-subscription`.
-    2. Add the hub and spoke templates and `hub NSG enforcement` policy.
-5. Expanding on initial management group hierarchy.
+    1. Add the hub and spoke templates and `hub NSG enforcement` policy.
+1. Expanding on initial management group hierarchy.
     1. For each management group that has requested support for protected data, the `corporate-it-subscription-blueprint` blueprint provides an accelerated hub solution.
-    2. Because management groups in this fictional example include a regional hierarchy in addition to a business unit hierarchy, this blueprint will be deployed in each region.
-    3. For each region in the management group hierarchy, create a subscription named `corporate IT subscription`.
-    4. Apply the `corporate-it-subscription-blueprint` blueprint to each regional instance.
-    5. This will establish a hub for each business unit in each region. Note: further cost savings could be achieved, but sharing hubs across business units in each region.
-6. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
+    1. Because management groups in this fictional example include a regional hierarchy in addition to a business unit hierarchy, this blueprint will be deployed in each region.
+    1. For each region in the management group hierarchy, create a subscription named `corporate IT subscription`.
+    1. Apply the `corporate-it-subscription-blueprint` blueprint to each regional instance.
+    1. This will establish a hub for each business unit in each region. Note: further cost savings could be achieved by sharing hubs across business units in each region.
+1. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
     1. Convert GPO to DSC. The [Microsoft baseline management project](https://github.com/microsoft/baselinemanagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
-    2. Deploy Azure Automation state configuration to any instances of the corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
-    3. The current roadmap aims to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
+    1. Deploy Azure Automation state configuration to any instances of the corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
+    1. The current roadmap aims to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 
 **Applying additional governance to a cloud adoption subscription (spoke):** Building on the `corporate IT subscription`, minor changes to the governance MVP applied to each subscription dedicated to the support of application archetypes can produce rapid improvement.
 

@@ -16,7 +16,7 @@ ms.subservice: overview
 
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
-This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
+This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
 ## August 25, 2020
 
@@ -30,7 +30,7 @@ One of the most important considerations in landing zone design and implementati
 |---|---|
 | [Compare common operating models](../operating-model/compare.md) | This article is the primary guide for comparing operating models and choosing a course of action. |
 | [Understand cloud operating models](../operating-model/index.md) | Primer for making import decisions regarding your operating model. |
-| [Define your operating model with CAF](../operating-model/define.md) | The Cloud Adoption Framework is an incremental guide to building out your environment and adopting the cloud within your chosen operating model. This article creates a frame of reference to understand how the various CAF methodologies support the development of your operating model. |
+| [Define your operating model with CAF](../operating-model/define.md) | The Cloud Adoption Framework is an incremental guide to building out your environment and adopting the cloud within your chosen operating model. This article creates a frame of reference to understand how the various methodologies support the development of your operating model. |
 | [Terms](../operating-model/terms.md) | Terms that are likely to come up when discussing your operating model with counterparts. These terms are not as commonly used by architects or technical specialists, but will prove important in those conversations. |
 
 ### Azure landing zones: Additional implementation options
@@ -52,7 +52,7 @@ This release adds a number of new scenarios to make cloud adoption more actionab
 
 **Migration scenarios:**
 
-The new [migration scenarios overview page](../scenarios/index.md) builds on the CAF Migrate methodology to demonstrate how Azure delivers on the "#OneMigrate" promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes three new migration scenarios:
+The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the "#OneMigrate" promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes three new migration scenarios:
 
 | Article | Description |
 |--|--|
@@ -83,7 +83,7 @@ AI solutions and best practices are now integrated into the Microsoft Cloud Adop
 
 ## June 15, 2020
 
-Proper configuration of the cloud environment is often the first and most common technical blocker during cloud adoption. This release focuses heavily on guidance that accelerates deployment of cloud environments. To overcome this common blocker, the Cloud Adoption Framework for Azure introduces **Azure landing zones**.
+Proper configuration of the cloud environment is often the first and most common technical blocker during cloud adoption. This release focuses heavily on guidance that accelerates deployment of cloud environments. To overcome this common blocker, the Cloud Adoption Framework introduces **Azure landing zones**.
 
 | Article | Description |
 |--|--|
@@ -200,7 +200,7 @@ In response to feedback about continuity in the migration approach through multi
 | [CAF Migration landing zone](../ready/landing-zone/migrate-landing-zone.md) | Separated the blueprint definition from the selection of the first landing zone. |
 | [CAF Terraform modules](../ready/landing-zone/terraform-landing-zone.md) | Moved to the new "landing zone" section of the Ready methodology, to elevate Terraform in the landing zone conversation. |
 
-**Migration methodology updates:**
+**Migrate methodology updates:**
 
 | Article | Description |
 |--|--|
@@ -212,4 +212,4 @@ In response to feedback about continuity in the migration approach through multi
 | [Assess overview](../migrate/migration-considerations/assess/index.md) | Updated to illustrate that the assessment in this phase focuses on assessing the technical fit of a specific workload and related assets. |
 | [Planning checklist](../migrate/migration-considerations/prerequisites/planning-checklist.md) | Updated to clarify the importance of operations alignment during planning for migration efforts to ensure a well-managed workload following migration. |
 
-<!-- docsTest:ignoreNextStep -->
+<!-- docutune:ignoreNextStep -->

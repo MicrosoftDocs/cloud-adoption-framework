@@ -18,12 +18,10 @@ Start your Azure adoption by creating an initial set of subscriptions. Learn wha
 Start by creating two subscriptions:
 
 - Create one Azure subscription to contain your production workloads.
-- Create a second subscription to serve as your nonproduction (dev/test) environment, using an [Azure Dev/Test offer](https://azure.microsoft.com/pricing/dev-test) for lower pricing.
+- Create a second subscription to serve as your nonproduction environment, using an [Azure Dev/Test offer](https://azure.microsoft.com/pricing/dev-test) for lower pricing.
 
 ![An initial subscription model showing keys next to boxes labeled "production" and "nonproduction"](../../_images/ready/initial-subscription-model.png)
 _Figure 1: An initial subscription model with keys next to boxes labeled "production" and "nonproduction"._
-
-<!-- docsTest:casing Dev/Test -->
 
 This approach has many benefits:
 
