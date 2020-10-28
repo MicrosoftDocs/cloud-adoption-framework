@@ -1,7 +1,7 @@
 ---
-title: "Enterprise-Scale business continuity and disaster recovery for <Insert narrative Name>"
+title: "Enterprise-Scale business continuity and disaster recovery for SAP enterprise-scale sceanrio"
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of SAP
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 09/11/2020
 ms.topic: conceptual
@@ -28,7 +28,7 @@ The recommendations and considerations made in this document are against the fol
 - RTO: 24h; RPO:4h 
 - Backup: Long term retention required; full backup must be completed in 8h 
 - Cost optimization deployment (QA instance on DR region running the prod instance) 
-- Architecture Reference: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/sap/sap-s4hana
+- Architecture Reference: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-s4hana
 
 ## Design considerations
 Consider the following factors:
@@ -53,14 +53,14 @@ The following are best practices for your design:
 For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. You will need to use utilities like AZCOPY to copy the backup files to blob.
 - Setup an express route connectivity between customer site (on-prem) to primary and secondary (DR) regions of Azure 
 - You can also setup VPN connection between customer site (on-prem) to primary and secondary (DR) regions of Azure
-- SLES: Either use SBD device (Up to 3 SBD devices in different FD’s) or use Azure fence agent (No additional VM’s required). In case if you are going to use Fence agents then ensure to refer the doc: https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker 
+- SLES: Either use SBD device (Up to 3 SBD devices in different FD’s) or use Azure fence agent (No additional VM’s required). In case if you are going to use Fence agents then ensure to refer the doc: https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker 
 - For RHEL: Use Azure Fencing agent  
 - For ASCS cluster: Use ASR to replicate teh cluster VMs to the DR site. When you  invoke DR, you will need to reconfigure  the pacemaker cluster on the DR site (Ex: replace VIP, corosync config etc)
 - Use ASR for Application server replication to DR site
 - Do NOT use ASR for DB server replication
 - Use DB native replication method like HSR (HANA) DB DR sync
 - Make sure VNET application requiring DR network access, that VNET is peered to the secondary (DR) region. For ex: HANA HSR replication will required SAP/HANADB VNET peered to the SAP/HANADB VNET of the secondary site - The best recommended
-- You can also use VNET to ER peering - https://docs.microsoft.com/en-us/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager
+- You can also use VNET to ER peering - https://docs.microsoft.com/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager
 - You can also use GlobalReach instead of VNET peerign 
 - CIDR for the primary VNET should not conflict/overlap CIDR for the disaster site VNET 
 - Load balancer configuration in front of dual web dispatchers, ASCS nodes and DB nodes
@@ -69,14 +69,14 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - You can also use rsync utility to sync the data from one region to another in ANF, (One zone to another if using Zonal deployment)
 - Deploy the DR resources in a RG, assigned to the same Azure region, where the DR  resources are created, so that the resource metadata is stored in the DR region. That will allow changes to the DR Azure resources, in case the production Azure region is down.
 
-# The following are considerations and scope for ESLZ SAP on Azure Scalability.
+## The following are considerations and scope for ESLZ SAP on Azure Scalability.
 
 •	Compute
 •	Storage
 •	Network
 •	Cost optimization deployment (QA instance on DR region running the prod instance)
 
-![Conceptual](media\SGC_SAP_ELZ.jpg)
+![Azure scalability for SAP](media\SGC_SAP_ELZ.jpg)
 
 2	Compute
 
@@ -93,7 +93,7 @@ Azure SKUs
 •	Consider using E-series SKU’s for non-prod cost-conscious deployments. 
 •	For AnyDB production deployment consider IOPS and throughput limits of VM SKUs. 
 
-![Conceptual](media\BCDR_Compute_Options.jpg)
+![Compute options for business continuity and disaster recovery](media\BCDR_Compute_Options.jpg)
 
 2.3	Design Recommendations
 
@@ -154,7 +154,7 @@ o	ANF
 •	Consider using Azure Disk encryption for data disk on SAP application servers.
 •	Consider using Azure Storage Service encryption with customer managed keys(CMK) for database disks.
 
-![Conceptual](media\BCDR_Storage_Options.jpg)
+![Storage options for business continuity and disaster recovery](media\BCDR_Storage_Options.jpg)
 
 3.3	Design Recommendations
 
