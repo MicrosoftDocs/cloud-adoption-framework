@@ -11,8 +11,11 @@ ms.subservice: ready
 
 # Platform automation and devops for SAP Enterprise-Scale scenario
 
+## Planning for a SAP AppOps approach
+How to approach SID Automation with SAP. 
 
-Design Considerations 
+### Design Considerations
+
 Create and manage SPN specifically for Automation
 Decide whether to use Azure marketplace image or custom built image
 Secrets/creds management - KV
@@ -22,7 +25,8 @@ Store archival copies of the automation tool binaries
 Naming conventions, using default SAP Automation standard is recommended
 
 
-Design Recommendations
+### Design Recommendations
+
 Custom built images have several advantages e.g., customer specific OS configuration, security hardening, compliance tooling etc. Additionally, it can potentially streamline the management of image lifecycle
 Azure KeyVault is the recommended solution for key management/key storage. SAP Automation will use SPN credentials from Azure KeyVault  
 Three methods to ocrhestrate automation -               
