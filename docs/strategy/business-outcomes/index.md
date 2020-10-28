@@ -3,7 +3,7 @@ title: Business outcomes from transformation journeys
 description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 03/27/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -25,6 +25,7 @@ The following are a few business outcomes that tend to trigger conversations wit
 - **Marketing:** Acquire and retain customers, build reputation.
 - **Sales:** Accelerate sales, improve customer lifetime value.
 - **Human resources:** Retain, recruit, and empower employees.
+- **Executive leadership:** Meeting market growth requirements, and environmental sustainability metrics.
 
 ## Sample outcomes by category
 
@@ -63,6 +64,12 @@ Learn more about [customer engagement outcomes](./engagement-outcomes.md).
 Performance and reliability are assumed. When either falters, reputation damage can be painful and long-lasting.
 
 Learn more about [performance outcomes](./performance-outcomes.md).
+
+### Sustainability goals
+
+More and more we are finding that organizations are starting to talk about environmental goals and sustainability targets.
+
+Learn more about [sustainability goals](./sustainability.md).
 
 Each of the business outcomes listed in the preceding categories can help facilitate a focused conversation among your business and technical team members. However, you shouldn't limit your conversations to these generic samples. Understanding the unique needs of your own business, and building outcomes that match, maximizes the value of a cloud transformation.
 
