@@ -150,7 +150,7 @@ Although a migration to the cloud presents numerous challenges, it also provides
 
 - Monitor the hybrid infrastructure and applications, from a simple or multitier architecture where components are hosted between Azure, other cloud providers, and your corporate network. The components might include one or more VMs, multiple VMs placed in an availability set or virtual machine scale set, or a containerized application that's deployed to Azure Kubernetes Service (AKS) running on Windows Server or Linux containers.
 
-- Use [Azure Arc](/azure-arc/overview) to prepare your servers, virtual machines, Kubernetes clusters, and databases across your environment for management as if they are running in Azure. Azure Arc delivers consistent inventory, management, governance, and security with familiar Azure services and management capabilities.
+- Use [Azure Arc](/azure/azure-arc/overview) to prepare your servers, virtual machines, Kubernetes clusters, and databases across your environment for management as if they are running in Azure. Azure Arc delivers consistent inventory, management, governance, and security with familiar Azure services and management capabilities.
 
 - Enable Azure Monitor for VMs, Azure Monitor for containers, and Application Insights to detect and diagnose issues between infrastructure and applications. For a more thorough analysis and correlation of data collected from the multiple components or dependencies supporting the application, you need to use Azure Monitor Logs.
 

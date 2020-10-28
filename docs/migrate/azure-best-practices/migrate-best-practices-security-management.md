@@ -514,7 +514,7 @@ Keeping Azure VMs updated with the latest operating system and software updates 
 
 **Learn more:**
 
-- Learn about [update management in Azure](/azure/automation/automation-update-management).
+- Learn about [update management in Azure](/azure/automation/update-management/overview).
 - Learn how to [integrate Configuration Manager with update management](/azure/automation/oms-solution-updatemgmt-sccmintegration).
 - [Frequently asked questions](/sccm/core/understand/configuration-manager-on-azure) about Configuration Manager in Azure.
 
