@@ -467,7 +467,7 @@ Contoso admins provision an Azure Cosmos DB database to be used for pet informat
 
 Contoso admins provision the Computer Vision API. The API will be called by the function, to evaluate pictures that are uploaded by users.
 
-1. The admins create a **Computer Vision** instance in Azure Marketplace.
+1. The admins create a **Computer Vision** instance in Azure Marketplace. 
 
      ![Screenshot of creating a new computer vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
 
