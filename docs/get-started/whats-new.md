@@ -24,9 +24,9 @@ This release includes contributions to the enterprise scale landing zones and bu
 
 | Article | Description |
 |---|---|
-| [Transitioning existing Azure environments to Enterprise-Scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into Enterprise-Scale. |
-| [Measuring business outcomes with Objectives and Key Results (OKRs)](../strategy/business-outcomes/okr.md) | Learn how to measure business outcomes using objectives and key results (OKRs). |
-| [Examples of sustainability outcomes](../strategy/business-outcomes/sustainability.md) | Learn how cloud computing can support you in lightening your environment footprint by reducing carbon emissions and efficiently using resources. |
+| [Transition existing Azure environments to enterprise-scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. |
+| [Examples of sustainability outcomes](../strategy/business-outcomes/sustainability.md) | Learn how cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint. |
+| [Measure business outcomes with Objectives and Key Results (OKRs)](../strategy/business-outcomes/okr.md) | Learn how to use OKRs to measure business outcomes. |
 | [Measure business outcomes with AppDynamics](../digital-estate/app-dynamic.md) | Understanding an application's performance and user experience is key to measuring business outcomes. See how AppDynamics can provide business insights for most use cases. |
 
 ## August 25, 2020
