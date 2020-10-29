@@ -48,7 +48,7 @@ Computers that are managed by Update Management use the following configurations
 - Azure Automation Hybrid Runbook Worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
-For more information, see [Update Management solution](/azure/automation/automation-update-management).
+For more information, see [Update Management solution](/azure/automation/update-management/overview).
 
 > [!WARNING]
 > Before using Update Management, you must onboard virtual machines or an entire subscription into Log Analytics and Azure Automation.
