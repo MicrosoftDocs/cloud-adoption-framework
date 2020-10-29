@@ -88,28 +88,29 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Networking
 
-| Asset type                       | Name prefix |
-|----------------------------------|-------------|
-| Virtual network                  | vnet-       |
-| Subnet                           | snet-       |
-| Virtual network peering          | peer-       |
-| Network interface (NIC)          | nic-        |
-| Public IP address                | pip-        |
-| Load balancer (internal)         | lbi-        |
-| Load balancer (external)         | lbe-        |
-| Network security group (NSG)     | nsg-        |
-| Application security group (ASG) | asg-        |
-| Local network gateway            | lgw-        |
-| Virtual network gateway          | vgw-        |
-| VPN connection                   | cn-         |
-| ExpressRoute circuit             | erc-        |
-| Application gateway              | agw-        |
-| Route table                      | route-      |
-| User defined route (UDR)         | udr-        |
-| Traffic Manager profile          | traf-       |
-| Front door                       | fd-         |
-| CDN profile                      | cdnp-       |
-| CDN endpoint                     | cdne-       |
+| Asset type                            | Name prefix |
+|---------------------------------------|-------------|
+| Virtual network                       | vnet-       |
+| Subnet                                | snet-       |
+| Virtual network peering               | peer-       |
+| Network interface (NIC)               | nic-        |
+| Public IP address                     | pip-        |
+| Load balancer (internal)              | lbi-        |
+| Load balancer (external)              | lbe-        |
+| Network security group (NSG)          | nsg-        |
+| Application security group (ASG)      | asg-        |
+| Local network gateway                 | lgw-        |
+| Virtual network gateway               | vgw-        |
+| VPN connection                        | cn-         |
+| ExpressRoute circuit                  | erc-        |
+| Application gateway                   | agw-        |
+| Route table                           | route-      |
+| User defined route (UDR)              | udr-        |
+| Traffic Manager profile               | traf-       |
+| Front door                            | fd-         |
+| CDN profile                           | cdnp-       |
+| CDN endpoint                          | cdne-       |
+| Web Application Firewall (WAF) policy | waf         |
 
 ### Compute and Web
 
@@ -148,6 +149,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Azure SQL Data Warehouse       | sqldw-      |
 | Azure Synapse Analytics        | syn-        |
 | SQL Server Stretch Database    | sqlstrdb-   |
+| SQL Managed Instance           | sqlmi-      |
 
 ### Storage
 
