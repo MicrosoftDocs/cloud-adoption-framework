@@ -35,7 +35,7 @@ ms.subservice: ready
     - An off-cluster Ingress controller offloads compute (HTTP traffic routing, TLS termination, etc.) to another service outside of AKS, e.g.  [Azure Application Gateway Ingress Controller (AGIC) add-on](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview "Azure Application Gateway Ingress Controller (AGIC) add-on").
     - An in-cluster solution consumes AKS cluster resources for compute (HTTP traffic routing, TLS termination, etc.). In-cluster ingress-controllers can offer lower cost, but they require careful resource planning and maintenance.
   - If using the Basic HTTP Application Routing Add-on, read the considerations in [HTTP Application Routing](https://docs.microsoft.com/azure/aks/http-application-routing).
-- Decide on the network for the Ingress controller, and therefore availability of applications and APIs.
+- Decide on the network visibility (public or private IP address) for the Ingress controller, and therefore availability of applications and APIs.
   - An Ingress controller can be configured with a public IP address or private IP address; however, the configuration should be aligned with the egress filtering in order to avoid asymmetric routing.
   - Decide whether TLS termination is required, and what TLS certificates are used.
 - Decide whether using Azure Policy and the Azure Policy add-on for AKS to control and limit the objects created in your AKS cluster, such as for example to deny the creation of public IP addresses in the cluster.
@@ -44,7 +44,7 @@ ms.subservice: ready
   - Decide whether egress network traffic must go through Azure Firewall or a Network Virtual Appliance.
 - Decide whether network traffic between pods in a cluster must be filtered.
   - By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security.
-  - Decide on any of the supported [network policy models](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks) based on the supported capabilities and requirement for support. 
+  - Decide on any of the available [network policy models](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks) based on the capabilities and requirement for support. 
 - Decide whether a service mesh is required.
   - A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability.
   - Understand the requirements and reasons for installing a service mesh, and verify the documented [selection criteria](https://docs.microsoft.com/azure/aks/servicemesh-about#selection-criteria "selection criteria").
