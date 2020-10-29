@@ -1,5 +1,5 @@
 ---
-title: Measuring business outcomes with Objectives and Key Results, OKRs
+title: Measure business outcomes with Objectives and Key Results, OKRs
 description: Use the Cloud Adoption Framework to learn how to measure business outcomes with Objectives and Key Results, OKRs.
 author: wayneme75
 ms.author: wayneme
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Measuring business outcomes with Objectives and Key Results, OKRs
+# Measure business outcomes with Objectives and Key Results, OKRs
 
 Modern operations require modern ways to measure business outcomes, and cloud technology can help to increase velocity for a business. An organization's measurement platform should support a company's outcomes and plan for growth by:
 
