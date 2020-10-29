@@ -34,7 +34,7 @@ Some of the management services require an [Azure Automation](/azure/automation/
 
 The following Azure server management services require a linked Log Analytics workspace and Automation account:
 
-- [Azure Update Management](/azure/automation/automation-update-management)
+- [Azure Update Management](/azure/automation/update-management/overview)
 - [Change Tracking and Inventory](/azure/automation/change-tracking)
 - [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker)
 - [Desired State Configuration](/azure/virtual-machines/extensions/dsc-overview)
