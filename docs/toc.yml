@@ -180,6 +180,8 @@ items:
         href: digital-estate/rationalize.md
       - name: Align cost models to forecast costs
         href: digital-estate/calculate.md
+      - name: Measure business outcomes with AppDynamics
+        href: digital-estate/app-dynamics.md
     - name: Initial organization alignment
       href: plan/initial-org-alignment.md
     - name: Skills readiness plan

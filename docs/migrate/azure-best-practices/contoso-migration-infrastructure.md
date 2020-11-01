@@ -138,7 +138,7 @@ Contoso is using the Azure AD Free edition that's included with an Azure subscri
 
 ### Add the domain name
 
-To use the standard domain name, Contoso admins need to add it as a custom domain name to Azure AD. This option allows them to assign familiar user names. For example, a user can sign in with the email address `billg@contoso.com` instead of `billg@contosomigration.microsoft.com`.
+To use the standard domain name, Contoso admins need to add it as a custom domain name to Azure AD. This option allows them to assign familiar user names. For example, a user can sign in with the email address `billg@contoso.com` instead of `billg@contosomigration.onmicrosoft.com`.
 
 To set up a custom domain name, the admins add it to the directory, add a DNS entry, and then verify the name in Azure AD.
 
