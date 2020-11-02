@@ -9,17 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# SAP
+# SAP on Azure
 
-Describe your scenario
+This article series outlines the process for integrating SAP into your cloud adoption efforts.
 
 ## SAP executive summary
 
-What are we promising the ready as part of this scenario
+This article series outlines how SAP impacts your overall strategy, cloud adoption plan, and environmental readiness efforts with detailed guidance on common drift for each effort. Once an environment is established, the series explains the processes for migrating an SAP platform and innovating on that platform using cloud technologies. To support your cloud adoption needs, the series also outlines the considerations for governance and operations management commonly neccessitated by an SAP deployment.
 
-## SAP narrative
-
-This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single CAF methodology, but instead looks at the overall adoption journey.
+To accelerate each of the above efforts, the article series also includes detailed technical references demonstrating how you can build an enterprise-scale landing zone to support all of your mission critical SAP needs.
 
 ## Next step: Integrate SAP into your cloud adoption journey
 
