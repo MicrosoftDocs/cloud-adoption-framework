@@ -10,7 +10,7 @@ items:
     items:
     - name: Overview
       href: scenarios/unified-operations/index.md
-    - name: strategy
+    - name: Strategy
       href: scenarios/unified-operations/strategy.md
     - name: Planning
       href: scenarios/unified-operations/plan.md
