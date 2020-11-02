@@ -11,19 +11,21 @@ ms.subservice: migrate
 
 # Assess for SAP
 
-Describe how your scenario changes the assessment process during migration in a standard migration factory
+SAP is a powerful platform with specific technical requirements. Given the complexity and strict requirements for security and compliance, this platform can seldom be moved in a standardized migration factory. However, it can leverage the same standardized processes to ensure consistency and integration with other efforts. 
 
 ## SAP data points
 
-Are there data points outside of a standard Azure Migrate assessment that you need to prepare for migration?
+When assessing your SAP Platform and dependent workloads there are a few considerations that aren't commonly factored into the migration process:
+
+- Is the current inventory of platform assets running operating systems which are supported in Azure? Unsupported operating systems will need to be remediated during or before migration.
+- Is the current database management system supported in Azure? Unsupported databases will need to be remediated during or before migration.
+- Will you be upgrading all or part of the SAP solution before or during migration?
 
 ## SAP partners/tools
 
-Are there Azure migrate partners that can help get the data? What about other 3rd parties?
+SAP provides a tool called **SAP Software Update Manager** which can help facilitate the migration of your SAP platform. This tool leverages **Software Provisioning Manager** and **Data Migration Option** features to complete the actual migration.
 
-## SAP analysis
-
-Is there a unique process to follow during migration assessment for this scenario?
+Dependent workloads can then be migrated using the standardized Azure Migrate tool and processes.
 
 ## Next step: Migrate SAP
 
