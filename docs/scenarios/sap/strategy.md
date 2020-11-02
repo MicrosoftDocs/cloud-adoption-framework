@@ -27,6 +27,12 @@ When considering a cloud strategy for SAP, the following motivations tend to sha
 
 Often times, SAP customers are driven by motivations that span all three categories above. To ensure a successful implementation of SAP in the cloud, it is imperative that cloud strategy team (including business and IT leaders) review and prioritize the motivations listed in the [cloud motivations article](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations.md). Those inputs will help the cloud adoption team make informed decisions throughout the implementation process.
 
+Motivations to adopt SAP in the cloud are often based on an organizations strategic objectives. But the majority of motivations cite you common motivations for prioritizing SAP adoption in the near future. The following three are likely already topics of conversation in your organization, if you are reviewing this adoption scenario:
+
+- SAP infrastructure refresh cycles require significant capital expenditures. If your SAP infrastructure is due for a refresh, the benefits of cloud adoption unlock timely cost avoidance strategies. 
+- SAP hosting contracts create vendor lock-in spanning multiple fiscal years. If your hosting, managed service, or maintenance contracts are coming up for renewal, there is an opportunistic benefit to cloud adoption that can improve agile, unlock new innovations, and streamline operations for your most mission critical platform.
+- Refresh and contract renewals can be triggered by SAP upgrade cycles or a business driver to expand into HANA, SAP Business Suite or others features of of SAP. If your organization is attempting to expand SAP capabilities, cloud adoption will provide cost avoidance and opportunities to innovate, optimize, and be more agile.
+
 ## How can we measure progress during SAP adoption?
 
 Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on [business outcomes](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/).
