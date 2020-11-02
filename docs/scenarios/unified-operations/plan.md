@@ -15,6 +15,8 @@ Describe how your scenario impacts the adoption plan
 
 ## unified operations estate
 
+If unified operations is a core part of your strategy, you should start by lighting up Azure Arc for all resources before starting you Azure Migrate integration.
+
 Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient?
 https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/inventory
 
