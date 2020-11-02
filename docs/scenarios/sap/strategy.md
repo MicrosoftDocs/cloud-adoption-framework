@@ -9,24 +9,45 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of SAP
+# Strategic impact of SAP in the cloud
 
-Describe how your scenario impacts the overall strategy
+SAP is a mission critical platform for many organizations. When organizations leverage SAP as the foundation for business processes, the dependencies on SAP can be seen throughout the portfolio. The cloud adoption plan for this platform can have direct and indirect impacts on cloud adoption for all related workloads. While SAP isn't commonly the first platform an organization will move to the cloud, it can be the most important. Understanding the strategy for SAP's cloud migration and future state innovation targets is critical to the success of all other cloud adoption plans.
 
-## SAP motivations
+This article will aid in capturing the strategic impact of SAP cloud adoption using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
-What would motivate the customer to act on this scenario?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
+## Why are we moving SAP to the cloud?
 
-## SAP outcomes
+As a broad reaching platform, there are several motivations for adopting SAP in the cloud. 
 
-When customers act on this scenario, what do they expect to see as an outcome?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
+When considering a cloud strategy for SAP, the following motivations tend to shape cloud adoption plans:
 
-## SAP business justification
+- **Critical business events:** Adopting SAP in the cloud is often used by customers to mitigate contractural, regulatory, compliance, or sovereignty risks.
+- **Migration motivations:** If SAP is a dependency for successful migration of other assets, the motivations tend to focus on reductions in cost, complexity, or operational overhead.
+- **Innovation motivations:** The cloud unlocks new opportunities to expand SAP capabilities to deliver transformative products/services.
 
-Is there something special that customers have to do to justify doing this thing?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+Often times, SAP customers are driven by motivations that span all three categories above. To ensure a successful implementation of SAP in the cloud, it is imperative that cloud strategy team (including business and IT leaders) review and prioritize the motivations listed in the [cloud motivations article](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations.md). Those inputs will help the cloud adoption team make informed decisions throughout the implementation process.
+
+## How can we measure progress during SAP adoption?
+
+Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on [business outcomes](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/).
+
+Given the impact of SAP, it is likely that you will need to define a number of *Objectives*, each defined and measurable *Key Results*. Objectives and Key Results, commonly referred to as OKRs, can help you break down the adoption of SAP into manageable efforts. Learn more in the [Objectives and Key Results article](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/okr.md).
+
+## How can we build a business justification for cloud migration?
+
+The article series about [building a business justification for cloud migration](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case.md) can help build out your financial plan by dispelling a number of common myths. However, you will likely need to develop a detailed finanical model with your finance team to account for all of the moving pieces associated with SAP cloud adoption.
+
+For a analyst perspective, see the [Forrester study on the Total Economic Impact of Microsoft Azure for SAP](https://azure.microsoft.com/en-us/resources/sap-on-azure-forrester-tei/). According to that study, the following are common defensible justifications:
+
+- Time to market benefits in excess of $3 million USD
+- Cost avoidance in excess of $7 million USD
+- 102% Return on Investment
+- Payback in 9 months
+
+Individual customers are likely to experience variations in actual return. However, the tables in that study can aid in capturing your organizations financial data for validation and justification.
+
+> [!NOTE]
+> During strategic alignment, understand that your initial business justification is a directional estimate to drive alignment. Create transparency with the cloud strategy team and other stakeholders that this justification is likely to change significantly as you complete planning acitivities. Look primarily for concensus that there is sufficient value to [gather inventory and develop a plan](./plan.md). Once your digital estate is catalogued & assessed, you will be able to refine your justification and present clearer plans for financial returns.
 
 ## Next step: Plan for SAP
 
