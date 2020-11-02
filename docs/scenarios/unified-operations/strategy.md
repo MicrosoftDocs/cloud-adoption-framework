@@ -23,7 +23,7 @@ https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
 When customers act on this scenario, what do they expect to see as an outcome?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
 
-## unified operations business justification
+## What is the business justification for a multi-cloud control plane?
 
 Is there something special that customers have to do to justify doing this thing?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
