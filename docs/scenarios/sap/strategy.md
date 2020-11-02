@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 SAP is a mission critical platform for many organizations. When organizations leverage SAP as the foundation for business processes, the dependencies on SAP can be seen throughout the portfolio. The cloud adoption plan for this platform can have direct and indirect impacts on cloud adoption for all related workloads. While SAP isn't commonly the first platform an organization will move to the cloud, it can be the most important. Understanding the strategy for SAP's cloud migration and future state innovation targets is critical to the success of all other cloud adoption plans.
 
-This article will aid in capturing the strategic impact of SAP cloud adoption using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
+This article will aid in capturing the strategic impact of SAP cloud adoption using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other references from the Cloud Adoption Framework.
 
 ## Why are we moving SAP to the cloud?
 
