@@ -14,8 +14,12 @@ items:
       href: scenarios/unified-operations/strategy.md
     - name: Planning
       href: scenarios/unified-operations/plan.md
-    - name: Azure landing zone review
+    - name: Ready
       href: scenarios/unified-operations/ready.md
+    - name: Govern
+      href: scenarios/unified-operations/govern.md
+    - name: Operations Management
+      href: scenarios/unified-operations/manage.md
     - name: Innovate
       href: scenarios/unified-operations/innovate.md
     - name: Migrate - Assess workloads
