@@ -11,19 +11,11 @@ ms.subservice: migrate
 
 # Migrate SAP
 
-Describe how your scenario changes the deployment process during migration in a standard migration factory
-
-## SAP process details
-
-Are there data points outside of a standard Azure Migrate assessment that you need to prepare for migration?
+Azure Migrate is the de facto tool for migrating most platform. To migrate the SAP platform, you can use the same process and similar activities to your standard migration factory with Azure Migrate. But, the actual tools will be different.
 
 ## SAP process flow
 
-Are there Azure migrate partners that can help get the data? What about other 3rd parties?
-
-## SAP workload specific activities
-
-Are there specific criteria for workloads in that portfolio that would require the customer to run a well-architected review for any workloads?
+To understand the process for migrating the SAP Platform, see the learn module on [Migrating an SAP platform to Azure](https://docs.microsoft.com/learn/modules/migrate-sap-workloads-azure/).
 
 ## Next step: Release SAP
 
