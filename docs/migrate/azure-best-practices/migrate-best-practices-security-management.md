@@ -451,7 +451,7 @@ _Figure 14: Diagnostic logging._
 **Learn more:**
 
 - Learn about [collecting and consuming log data](/azure/azure-monitor/platform/platform-logs-overview).
-- Lean what's supported for [diagnostic logging](/azure/azure-monitor/platform/diagnostic-logs-schema).
+- Learn what's supported for [diagnostic logging](/azure/azure-monitor/platform/diagnostic-logs-schema).
 
 ## Best practice: Set up alerts and playbooks
 
