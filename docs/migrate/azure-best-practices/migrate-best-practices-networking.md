@@ -96,7 +96,7 @@ The table shows an example of a virtual network with an address space of `10.245
 **Learn more:**
 
 - Learn about [designing subnets](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
-- [Learn how](/azure/migrate/contoso-migration-infrastructure) a fictional company (Contoso) prepared their networking infrastructure for migration.
+- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](/azure/migrate/contoso-migration-infrastructure).
 
 ## Best practice: Set up a DNS server
 
