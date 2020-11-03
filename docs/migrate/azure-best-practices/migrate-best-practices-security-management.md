@@ -159,8 +159,8 @@ Ensure that admins with Azure access can access only resources that you want to 
 
 **Learn more:**
 
-- [About](/azure/role-based-access-control/overview) RBAC.
-- [Learn](/azure/role-based-access-control/role-assignments-portal) to manage access by using RBAC and the Azure portal.
+- Learn about [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview).
+- Learn to manage access via [RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 - Learn about [custom roles](/azure/role-based-access-control/custom-roles).
 
 ## Best practice: Review audit and security logs
@@ -373,7 +373,7 @@ You can copy an entire blob, or use an incremental snapshot copy to copy only de
 - Learn about [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction).
 - Learn how to [create a blob snapshot](/azure/storage/blobs/storage-blob-snapshots).
 - [Review a sample scenario](https://azure.microsoft.com/blog/microsoft-azure-block-blob-storage-backup) for Blob storage backup.
-- [Read about](/azure/storage/blobs/storage-blob-soft-delete) soft delete.
+- Read about [soft delete for blobs](/azure/storage/blobs/storage-blob-soft-delete).
 - [Disaster recovery and forced failover (preview) in Azure Storage](/azure/storage/common/storage-disaster-recovery-guidance)
 
 #### Third-party backup
@@ -451,7 +451,7 @@ _Figure 14: Diagnostic logging._
 **Learn more:**
 
 - Learn about [collecting and consuming log data](/azure/azure-monitor/platform/platform-logs-overview).
-- [Learn what's supported](/azure/azure-monitor/platform/diagnostic-logs-schema) for diagnostic logging.
+- Lean what's supported for [diagnostic logging](/azure/azure-monitor/platform/diagnostic-logs-schema).
 
 ## Best practice: Set up alerts and playbooks
 
