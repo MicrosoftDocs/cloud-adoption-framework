@@ -95,7 +95,7 @@ items:
         href: strategy/business-outcomes/business-outcome-template.md
       - name: Align efforts to learning metrics
         href: strategy/learning-metrics.md
-      - name: Objectives and Key Results
+      - name: Objectives and key results
         href: strategy/business-outcomes/okr.md        
     - name: Business justification
       items:
@@ -1571,7 +1571,7 @@ items:
       - name: Microsoft Azure Well-Architected Framework for workload architecture
         href: /azure/architecture/framework
       - name: Docs for product implementation
-        href: 
+        href: /
       - name: Learn to develop skills
         href: /learn
       - name: Assessments to personalize guidance

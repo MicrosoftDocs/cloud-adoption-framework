@@ -73,14 +73,13 @@ Here are some example of OKRs:
 
 1. Five new applications developed and adopted across the organization
 1. Every team with at least two members using the Microsoft Power Platform
-
 1. Including new cloud technologies like data analytics and machine learning in all customer-facing applications
 
-**Objective 3:** Transform our approach from sales- to data-driven.
+**Objective 3:** Transform our approach from sales-driven to data-driven.
 
 **Key results:**
 
-1. Increasing pipeline coverage from 50 to 200 percent
+1. Increasing pipeline coverage from 50 percent to 200 percent
 1. Increasing closing rates for sales engagements by 5 percent
 1. Reducing the time to close deals by 8 percent
 
@@ -98,7 +97,7 @@ Five steps can help your organization to move forward with OKRs:
 
 **Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful, but an organization can benefit most from everyone participating to meet objectives and gaining insights from the aligned data.
 
-Contact [WorkBoard, Inc. (United States)](https://appsource.microsoft.com/en-us/marketplace/co-sell/SOL-31525-NGJ?debug=true%2F%3FignoreAutoSignIn%3Dtrue&tab=Overview) to get started.
+Contact [WorkBoard](https://appsource.microsoft.com/en-us/marketplace/co-sell/SOL-31525-NGJ?debug=true%2F%3FignoreAutoSignIn%3Dtrue&tab=Overview) to get started.
 
 > [!div class="nextstepaction"]
 > [Align efforts for learning metrics](../learning-metrics.md)
