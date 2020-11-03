@@ -25,7 +25,7 @@ The following are a few business outcomes that tend to trigger conversations wit
 - **Marketing:** Acquire and retain customers, build reputation.
 - **Sales:** Accelerate sales, improve customer lifetime value.
 - **Human resources:** Retain, recruit, and empower employees.
-- **Executive leadership:** Meeting market growth requirements, and environmental sustainability metrics.
+- **Executive leadership:** Meeting market growth requirements and environmental sustainability metrics.
 
 ## Sample outcomes by category
 
@@ -67,7 +67,7 @@ Learn more about [performance outcomes](./performance-outcomes.md).
 
 ### Sustainability goals
 
-More and more we are finding that organizations are starting to talk about environmental goals and sustainability targets.
+Organizations are increasingly discussing environmental goals and sustainability targets.
 
 Learn more about [sustainability goals](./sustainability.md).
 
