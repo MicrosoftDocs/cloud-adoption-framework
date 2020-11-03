@@ -45,6 +45,8 @@ The biggest question we hear regarding the enterprise-scale architecture and lan
 | Article | Description |
 |---|---|
 | [Transition existing Azure environments to enterprise-scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. |
+| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) | This article was updated to include a high level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross reference the critical design areas for an enterprise-scale landing zone architecture. |
+
 
 ## August 25, 2020
 
