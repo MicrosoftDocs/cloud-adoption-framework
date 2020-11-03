@@ -177,7 +177,7 @@ For more information, see [Configure networking for your VMware private cloud in
 
     ![Screenshot of the "Add connection" pane for connecting ExpressRoute to the virtual network.](./media/contoso-migration-vmware-to-azure/add-connection.png)
 
-For more information, see [Tutorial: Access an Azure VMware Solution private cloud](/azure/azure-vmware/tutorial-access-private-cloud).
+For more information, see [Learn how to access an Azure VMware Solution private cloud](/azure/azure-vmware/tutorial-access-private-cloud).
 
 ### Step 4: Migrate by using VMware HCX
 

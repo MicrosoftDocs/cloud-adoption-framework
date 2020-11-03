@@ -703,7 +703,7 @@ As it configures identity and access control, Contoso has already begun to put s
 
 The Azure Policy service evaluates your resources by scanning for those not compliant with policy definitions. For example, you might have a policy that only allows certain types of VMs or requires resources to have a specific tag.
 
-Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. Learn how to [create and manage policies](/azure/governance/policy/tutorials/create-and-manage).
+Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. [Learn](/azure/governance/policy/tutorials/create-and-manage) about creating and managing policies.
 
 Contoso wants to begin two policies. It wants a policy to ensure that resources can be deployed in the `East US 2` and `Central US` regions only. It also wants a policy to limit VM SKUs to approved SKUs only. The intention is to ensure that expensive VM SKUs aren't used.
 
@@ -739,6 +739,7 @@ _Figure 40: A policy SKU._
 Policies go into effect immediately, and Contoso can check resources for compliance. In the Azure portal, select the **Compliance** link. The compliance dashboard appears. You can drill down for more details.
 
 ![Screenshot that shows the compliance dashboard.](./media/contoso-migration-infrastructure/policy-compliance.png)
+
 
 _Figure 41: Policy compliance._
 

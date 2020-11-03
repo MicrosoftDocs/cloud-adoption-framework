@@ -11,6 +11,8 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore Cloudamize agentless uncontained SSMA Carbonite Movere -->
+
 # Deploy workloads and assets (infrastructure, apps, and data)
 
 In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. You'll explore native tools, third-party tools, and project management tools.
@@ -27,12 +29,12 @@ Azure Migrate is a centralized hub to assess and migrate on-premises servers, in
 
 - Unified platform with assessment, migration, and progress tracking.
 - Enhanced assessment and migration capabilities:
-  - On-premises servers including Hyper-V & VMware.
-  - Agentless migration of VMware virtual machines to Azure.
-  - Database migrations to Azure SQL Database or SQL Managed Instance
-  - Web applications
-  - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
-  - Large data collections using Azure Data Box products
+    - On-premises servers including Hyper-V & VMware.
+    - Agentless migration of VMware virtual machines to Azure.
+    - Database migrations to Azure SQL Database or SQL Managed Instance
+    - Web applications
+    - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
+    - Large data collections using Azure Data Box products
 - Extensible approach with ISV integration (such as Cloudamize).
 
 To perform a migration using Azure Migrate, follow these steps:
@@ -98,8 +100,9 @@ For more information, see:
 
 The Azure App Service Migration Assistant is part of a [larger suite of applications](https://azure.microsoft.com/services/azure-migrate/) that help organizations with their transition to the cloud. The Migration Assistant provides a guided, wizard-like user experience that performs two tasks:
 
-1. It performs an assessment of a specific web app installed on Windows Server by running pre-migration compatibility checks on the web app to determine whether a migration to Azure App Service is possible without modifying the web app.
-1. If the assessment proves that the web app can be migrated, the Migration Assistant performs the migration. You'll need to give the Migration Assistant access to your Azure account, select which resource group you want to use, and select a name for the web app, among other details. Alternatively, the Migration Assistant generates an Azure Resource Manager template that you can use to migrate the web application in a more automated and repeatable way.
+1. It performs an assessment of a specific web app installed on Windows Server by running pre-migration compatibility checks on the web app to determine whether a migration to Azure App Service is possible without modification to the web app.
+1. If the assessment proves that the web app can be migrated, the Migration Assistant performs the migration. You'll need to give the Migration Assistant access to your Azure account, select which resource group you want to use, and select a name for the web app, among other details.
+Alternatively, the Migration Assistant generates an Azure Resource Manager template that you can use to migrate the web application in a more automated and repeatable way.
 
 #### Migrate a web app to Azure App Service
 
@@ -119,7 +122,9 @@ After a successful migration, you'll need to perform any post-migration tasks. T
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information, see [Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure)
+For more information see: 
+
+[Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure)
 
 ### Data Migration Assistant
 
