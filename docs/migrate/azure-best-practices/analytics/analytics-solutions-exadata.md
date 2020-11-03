@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore Exadata SSMA -->
-
 # Azure Synapse Analytics solutions and migration for an Oracle data warehouse
 
 An Oracle data warehouse schema is different from Azure Synapse Analytics in several ways. The differences include databases, data types, and a range of Oracle Database object types that aren't supported in Azure Synapse.
