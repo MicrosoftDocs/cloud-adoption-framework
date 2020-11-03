@@ -13,8 +13,6 @@ ms.subservice: strategy
 
 # Sustainability outcomes and benefits for business
 
-## Why sustainability is important for business
-
 Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek understanding about how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
