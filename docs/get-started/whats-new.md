@@ -9,8 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docutune:casing "internal Microsoft teams" OneMigrate -->
-<!-- cSpell:ignore MSPs Teradata Netezza Exadata mlops -->
+<!-- docutune:casing "Getting Started module" "internal Microsoft teams" OneMigrate -->
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
@@ -20,33 +19,32 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ## October 2020
 
-This month has focused on incremental improvements throughout the cloud adoption framework & supporting web assets.
+This month's updates include incremental improvements throughout the Cloud Adoption Framework and supporting web assets.
 
-Our biggest investments have focused on building out learn modules to accelerate application of the framework. This month we released the following modules. Note: The Getting Started Module starts our first industry vertical aligned guidance, by introducing a retail customer (Tailwind Traders) who we will follow through all of the core methodology modules to follow. 
+Our biggest investments have focused on building out Microsoft Learn modules to accelerate application of the Cloud Adoption Framework. This month, we released the modules listed below. Note that the Getting Started module provides our first guidance aligned with an industry vertical, by introducing a retail customer (Tailwind Traders) who we will follow through all of the core methodology modules to follow.
 
 | Module | Description |
 |---|---|
-| [Overview module](https://docs.microsoft.com/learn/modules/microsoft-cloud-adoption-framework-for-azure/) | Entry level introduction to the framework. |
-| [Getting started module](https://docs.microsoft.com/learn/modules/cloud-adoption-framework-getting-started/) | Introduction to the getting started guides to accelerate application of the right methodologies to overcome specific blockers. |
-| [Azure Landing Zones](https://docs.microsoft.com/learn/modules/cloud-adoption-framework-ready/) | Before building out your cloud environment, understand your operating requirements and choose the most appropriate Azure Landing Zone product to get you started. |
-| [Create an enterprise-scale architecture](https://docs.microsoft.com/learn/paths/enterprise-scale-architecture/) | Create landing zones at scale following a set of enterprise-scale design principles, reference architectures, and reference implementations. Four modules to create a single learning path to success.|
+| [Overview module](https://docs.microsoft.com/learn/modules/microsoft-cloud-adoption-framework-for-azure/) | Entry-level introduction to the framework. |
+| [Getting Started module](https://docs.microsoft.com/learn/modules/cloud-adoption-framework-getting-started/) | Introduction to the getting started guides to accelerate application of the proper methodologies for overcoming specific blockers. |
+| [Azure landing zones](https://docs.microsoft.com/learn/modules/cloud-adoption-framework-ready/) | Before building out your cloud environment, understand your operating requirements and choose the most appropriate Azure landing zone product to get you started. |
+| [Create an enterprise-scale architecture](https://docs.microsoft.com/learn/paths/enterprise-scale-architecture/) | Create landing zones at scale following a set of enterprise-scale design principles, reference architectures, and reference implementations. Four modules to create a single learning path to success. |
 
-We've also expanded the business outcomes to share a number of common business motivations and approaches that continue to emerge in the post-covid market.
+We've also expanded the business outcomes to share a number of common business motivations and approaches that continue to emerge in the post-COVID marketplace.
 
 | Article | Description |
 |---|---|
-| [Examples of sustainability outcomes](../strategy/business-outcomes/sustainability.md) | Learn how cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint. |
-| [Measure business outcomes with Objectives and Key Results (OKRs)](../strategy/business-outcomes/okr.md) | Learn how to use OKRs to measure business outcomes. |
+| [Examples of sustainability outcomes](../strategy/business-outcomes/sustainability.md) | Learn how cloud computing can help you reduce carbon emissions, use resources more efficiently, and shrink your environmental footprint. |
+| [Measure business outcomes with objectives and key results (OKRs)](../strategy/business-outcomes/okr.md) | Learn how to use OKRs to measure business outcomes. |
 | [Measure business outcomes with AppDynamics](../digital-estate/app-dynamic.md) | Understanding an application's performance and user experience is key to measuring business outcomes. See how AppDynamics can provide business insights for most use cases. |
 | [Cost management update: Spot VMs](..//govern/cost-management/best-practices.md#best-practice-reduce-nonproduction-costs) | Use of Spot VMs in non-production environments is a rapidly emerging practice to further reduce costs in those environments. |
 
-The biggest question we hear regarding the enterprise-scale architecture and landing zones centers around existing environments. "I already have a working environment. How can I apply the design principles of enterprise-scale?" The new article on transitioning to enterprise-scale can help. 
+The most common question about the enterprise-scale architecture and landing zones is centered on existing environments. "I already have a working environment. How can I apply the design principles of enterprise-scale?" The new article on transitioning to enterprise-scale can help.
 
 | Article | Description |
 |---|---|
 | [Transition existing Azure environments to enterprise-scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. |
-| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) | This article was updated to include a high level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross reference the critical design areas for an enterprise-scale landing zone architecture. |
-
+| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) | This article was updated to include a high-level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross-reference the critical design areas for an enterprise-scale landing zone architecture. |
 
 ## August 25, 2020
 
