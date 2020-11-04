@@ -11,14 +11,27 @@ ms.subservice: strategy
 
 # Strategic impact of unified operations
 
-Describe how your scenario impacts the overall strategy
+Few organizations jump straight into a cloud-native portfolio. 
+For most customers, hybrid environments across multiple clouds is the undeniable reality.
 
-## unified operations motivations
+You will likely be operating in a hybrid environment. 
+The big decision: 
+- Are you hybrid because of a one-way trip to the cloud?
+- Are you hybrid by choice, supporting a mixture of assets living in public & private cloud
+
+If you plan to be hybrid by design for the next 12 months or longer, you should consider unified operations to manage you overall digital estate.
+
+## Unified operations motivations
+
+- Regulatory requirements
+- Latency & connectivity
+- Aging assets with no migration compatibility
+- Sprawl across clouds
 
 What would motivate the customer to act on this scenario?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
 
-## unified operations outcomes
+## Unified operations outcomes
 
 When customers act on this scenario, what do they expect to see as an outcome?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
