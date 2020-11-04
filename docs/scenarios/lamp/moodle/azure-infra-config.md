@@ -20,7 +20,7 @@ To create a virtual machine scale set instances private IP:
 - Log in to [Azure](portal.azure.com) and go to the created Resource Group.
 - Find and navigate to the virtual machine scale set resource.
 - In the left panel, select the Instances.
-- Navigate to the running instance and find the Private IP associated to it in the Overview section.
+- Navigate to the running instance and find the private IP associated to it in the Overview section.
 
 To log in into a virtual machine scale set, log into the controller virtual machine and run these commands:
 
@@ -29,11 +29,15 @@ To log in into a virtual machine scale set, log into the controller virtual mach
     sudo ssh azureadmin@172.31.X.X 
 
 172.31.X.X is the virtual machine scale set Instance private IP.
-        ```
-Log in to Scale set virtual machine instance. Perform the following steps:
+
+    ```
+
+Log in to scale set virtual machine instance. Perform the following steps:
 
 - A backup directory is extracted as storage/ at /home/azureadmin. This storage directory contains Moodle, moodledata, and a configuration directory, plus a database backup file. These will be copied to desired locations.
+
 - Create a backup directory.
+
     ```bash
     cd /home/azureadmin/
     mkdir -p backup
@@ -62,7 +66,7 @@ Configure the PHP and web server:
     sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
     ```
 
-- Install missing PHP extensions, and use an Azure Resource Manager Template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml and bz2.
+- Install missing PHP extensions, and use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml and bz2.
                     
 - To obtain the list of PHP extensions installed on-premises, run the following command on an on-premises virtual machine:
 

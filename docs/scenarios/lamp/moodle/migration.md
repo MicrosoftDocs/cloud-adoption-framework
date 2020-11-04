@@ -209,7 +209,7 @@ Configure directory permissions.
   ```bash
    nano /etc/nginx/sites-enabled/*.conf
 
- - Azure Resource Manager Template deployment will set the nginx server on port 81. Update the server port to 81 if it is not 81.
+ - Azure Resource Manager template deployment will set the nginx server on port 81. Update the server port to 81 if it is not 81.
 -  Update the server name. For example, if the server_name on-premises.com, update the on-premises.com with the DNS name. In most of the cases, DNS may remain same in the migration.
 -  Update the HTML root directory location. For example, if 'root /var/www/html/moodle;', update it to be 'root /moodle/html/moodle;'.
 - The on-premises root directory can be at any location
@@ -221,7 +221,7 @@ Configure directory permissions.
   sudo systemctl restart php$_PHPVER-fpm  
   ``` 
 
-- Stop the web servers. When a request reaches the load balancer, it will be redirected to virtual machine scale set instances but not to the controller virtual machine.
+- Stop the web servers. When a request reaches Azure Load Balancer, it will be redirected to virtual machine scale set instances but not to the controller virtual machine.
 
   ```bash
   sudo systemctl stop nginx 

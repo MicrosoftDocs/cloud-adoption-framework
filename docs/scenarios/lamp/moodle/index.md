@@ -26,13 +26,13 @@ If the versions of the software stack deployed on-premises are lagging with resp
 - This migration guide supports the following software versions: 
     - Ubuntu 18.04 LTS
     - Nginx 1.14
-    - MySQL 5.6, 5.7 or 8.0 database server (This guide uses Azure Database for MYSQL)
+    - MySQL 5.6, 5.7, or 8.0 database server. This guide uses Azure Database for MYSQL.
     - PHP 7.2, 7.3, or 7.4
-    - Moodle 3.8 & 3.
+    - Moodle 3.8 and 3.
 
-## When to use ARM Template for Moodle migrations
+## When to use Azure Resource Manager template for Moodle migrations
 
-Migration of Moodle with an ARM template creates the infrastructure in Azure. Once the infrastructure is created, the Moodle software stack and associated dependencies are migrated.
+Migration of Moodle with an Azure Resource Manager template creates the infrastructure in Azure. Once the infrastructure is created, the Moodle software stack and associated dependencies are migrated.
 
 ## Moodle migration tasks
 

@@ -42,7 +42,7 @@ Exporting data from on-premises to Azure involves the following tasks:
 ## Create subscription
         - If you have a subscription handy, set the subscription and skip this step.
            
-        - And if you do not have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [Pay-As-You-Go](https://azure.microsoft.com/en-us/offers/ms-azr-0003p/)
+        - And if you do not have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0003p/)
         - To create the subscription using azure portal, navigate to Subscription from Home section.
         ![image](/images/subscription1.png)
 
@@ -121,7 +121,7 @@ Exporting data from on-premises to Azure involves the following tasks:
         cp -R /var/www/html/moodle /home/azureadmin/storage/
         cp -R /var/moodledata /home/azureadmin/storage/
         ```
-### Backup of PHP and webserver configuration
+### Backup of PHP and web server configuration
 
 		- Copy the PHP configuration files such as php-fpm.conf, php.ini, pool.d and conf.d directory to phpconfig directory under the configuration directory.
 		- Copy the ngnix configuration such as nginx.conf, sites-enabled/dns.conf to the nginxconfig directory under the configuration directory.

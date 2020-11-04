@@ -11,51 +11,55 @@ ms.subservice: scenarios
 
 # How to create a virtual network gateWay and connect through a private IP
 
-This document explains how to setup a virtual network gateway in Azure.
+This document explains how to set up a virtual network gateway in Azure.
 
 ## Getting started
 
 Create a virtual network gate in Azure Portal with the following steps:
 
-- Search for virtual network gateway and click on that.
-- Click on create and it will open a window.
-- Fill all the details like Name, Region, Gateway type, sku, vnet and keep the rest to default values.
-- Select the vnet which is associated with VM's created under the same resource group.
--Click on create then it will start deploying.
+- Search for and select **Virtual network gateway**.
+- Select **Create** to open a window.
+- Fill in all fields like **Name, Region, Gateway type, sku,** and **vnet**. Keep the rest of the default values.
+- Select the vnet associated with virtual machines created under the same resource group.
+- Select **Create** to start deploying.
 
 ![TBD](images/vpngateway.png)
 		
 - Create a virtual network gateway with this Azure CLI command:
--
+
 	```bash
 	az network vnet-gateway create -g MyResourceGroup -n MyVnetGateway --public-ip-address MyGatewayIp --vnet MyVnet --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
 	```
 
 ## Generate certificates
 
-- Now open Windows PowerShell ISE and generate the root and child certificates.
-- Command to generate root certificate
-    ```bash
-    $cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
-    -Subject "CN=P2SRootCert" -KeyExportPolicy Exportable `
-    -HashAlgorithm sha256 -KeyLength 2048 `
-    -CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
-    ```
+- Open Windows PowerShell ISE to the root and child certificates.
+
+- The command to generate root certificates:
+
+  ```bash
+  $cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
+  -Subject "CN=P2SRootCert" -KeyExportPolicy Exportable `
+  -HashAlgorithm sha256 -KeyLength 2048 `
+   -CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+  ```
+
 - The command to generate the child certificate:
-     ```bash
-    New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
-    -Subject "CN=P2SChildCert" -KeyExportPolicy Exportable `
-    -HashAlgorithm sha256 -KeyLength 2048 `
-    -CertStoreLocation "Cert:\CurrentUser\My" `
-    -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
-    ```
+
+  ```bash
+  New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
+  -Subject "CN=P2SChildCert" -KeyExportPolicy Exportable `
+  -HashAlgorithm sha256 -KeyLength 2048 `
+  -CertStoreLocation "Cert:\CurrentUser\My" `
+  -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+  ```
 
 ## Export certificates
 
-- Open Microsoft Management Console (mmc) to export the certificates.
-- Go to Run and type “mmc” to open certificates
-- Under personal folder select certificates folder and it will open a page.
-- Refresh the page and find Root and child certificates
+- Open the Microsoft Management Console to export the certificates.
+- Go to **Run** and enter "MMC" to open certificates.
+- Select the **Certificates** under the **Personal** folder to open a page.
+- Refresh the page and find **Root and child certificates**.
 
 Exporting certificate types:
 
@@ -86,10 +90,10 @@ Exporting certificate types:
 - Go to the resource group where the virtual network gateway is created.
 - Go to Point-to-Site-configuration on the left panel.
 - Click on Configure now in the center panel.
-- Add the address pool (ex: 192.168.xx.0/24)
-- Select the tunnel type to IKEv2
-- Authentication type to Azure certification
-- Paste the copied root certificate code in the portal and give name as root & click on Save.
+- Add the address pool (ex: 192.168.xx.0/24).
+- Select the tunnel type, IKEv2.
+- Set the authentication type to Azure certification.
+- Paste the copied root certificate code in the portal, name it as "root", and select **Save**.
 
 ## Download and Connect to VPN Client
 
@@ -101,9 +105,9 @@ Exporting certificate types:
 
 The VPN Gateway connection is established.
 
-## Log in to the VM
+## Log in to the virtual machine
 
-- Log in to VM with private IP through the SSH key.
+- Log in to virtual machine with private IP through the SSH key.
 
 - Run this command to set the password authentication:
 
@@ -132,11 +136,11 @@ The VPN Gateway connection is established.
 
 Password authentication has been completed.
 
-## Log in to VM instance from a controller VM
+## Log in to virtual machine instance from a controller virtual machine
 
-- Log in to your client VM.
+- Log in to your client virtual machine.
 
-- Run these commands to connect to private VM:
+- Run these commands to connect to private virtual machine:
 
   ```bash
   sudo ssh <username>@<private_IP>

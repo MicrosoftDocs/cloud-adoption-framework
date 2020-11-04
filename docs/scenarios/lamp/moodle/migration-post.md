@@ -13,16 +13,16 @@ ms.subservice: scenarios
 
 ## Post-migration tasks
 
-Post migration tasks are around final application configuration that includes setup of logging destinations, SSL certificates and scheduled tasks / cron jobs.
+Post migration tasks are around final application configuration that includes setting up logging destinations, SSL certificates and scheduled tasks / cron jobs.
 
 - Post migration tasks that include application configuration.
-- Update Log paths in VMSS instance(s).
-- Restart servers in VMSS instance(s).
+- Update log paths in virtual machine scale set instance(s).
+- Restart servers in virtual machine scale set instance(s).
 - Update Certificates.
 - Update certificate location.
 - Update HTML Local Copy.
-- Restarting PHP and nginx servers.
-- Map DNS Name with Load Balancer IP.
+- Restartt PHP and nginx servers.
+- Map the DNS name to the Azure Load Balancer IP.
 
 ## Controller virtual machine scale set
     
@@ -84,13 +84,13 @@ Restart the nginx and php-fpm servers:
             # /moodle/certs//moodle/certs/nginx.crt;
             # /moodle/certs/nginx.key;
             #
-            # After the changes, Save the file. 
+            # After the changes, save the file. 
             # Press CTRL+o to save and CTRL+x to exit. 
             ```
 
 ### Update the local HTML copy
         
-        - Moodle html site (/moodle/html/moodle) content's local copy is created in VMSS at /var/www/html/moodle.
+        - Moodle html site (/moodle/html/moodle) content's local copy is created in the virtual machine scale set at /var/www/html/moodle.
         - Local copy is updated only when there is an update in timestamp.
         -   Execute the below command from Controller Virtual Machine to update the timestamp. 
             ```bash
@@ -107,9 +107,9 @@ Restart the nginx and php-fpm servers:
             sudo systemctl restart php<phpVersion>-fpm
             ```
 
-### Map DNS name with the load balancer IP
+### Map DNS name with the Azure Load Balancer IP
 
-        -   DNS name mapping with the load balancer IP must be done at the hosting provider level.
+        -   DNS name mapping with the Azure Load Balancer IP must be done at the hosting provider level.
         -   Disable Moodle website from Maintenance mode.
             - Run the below command in Controller Virtual Machine.
                 ```bash
@@ -144,7 +144,7 @@ Restart the nginx and php-fpm servers:
 		nginx -t
 		```
     - you may also see a 403: Forbidden error.
-	-  the webserver executes under your own username and all files have a maximum permissions level of 755. Check that this is set for your Moodle directory in your control panel or (if you have access to the shell) use this command:
+	-  the web server executes under your own username and all files have a maximum permissions level of 755. Check that this is set for your Moodle directory in your control panel or (if you have access to the shell) use this command:
 		```
 		chmod -R 755 moodle
 		```
@@ -163,9 +163,9 @@ Restart the nginx and php-fpm servers:
 		```
 	- Remember that you need to restart your web server to make changes to php.ini effective. An alternative is to disable the memory_limit by using the command memory_limit 0.
 
-4. I cannot log in - I just stay stuck on the login screen
+4. I can't log in - I just stay stuck on the login screen
 	
-	- This may also apply if you are seeing “Your session has timed out. Please login again” or "A server error that affects your login session was detected. Please login again or restart your browser" and cannot log in.
+	- This may also apply if you are seeing “Your session has timed out. Please login again” or "A server error that affects your login session was detected. Please login again or restart your browser" and can't log in.
 	- The following are possible causes and actions you can take.
 	- Check first that your main admin account (which will be a manual account) is also a problem. If your users are using an external authentication method (e.g. LDAP) that could be the problem. Isolate the fault and make sure it really is Moodle before going any further.
 	- Check that your hard disk is not full or if your server is on shared hosting check that you have not reached your disk space quota. This will prevent new sessions being created and nobody will be able to log in.
