@@ -21,7 +21,7 @@ To create a virtual machine scale set instances private IP:
 - Find and navigate to the virtual machine scale set resource.
 - In the left panel, select the Instances.
 - Navigate to the running instance and find the Private IP associated to it in the Overview section.
-    
+
 To log in into a virtual machine scale set, log into the controller virtual machine and run these commands:
 
     ```bash
@@ -43,9 +43,11 @@ Log in to Scale set virtual machine instance. Perform the following steps:
 Configure the PHP and web server:
 
 - Create a backup of PHP and web server configurations.
+
     ```bash
 
 - Set the PHP version to a variable.
+
     _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
     echo $_PHPVER
 
@@ -54,6 +56,7 @@ Configure the PHP and web server:
     ```
 
 - Copy the PHP and web server configuration files.
+
     ```bash
     sudo cp /moodle/config/nginx/*.conf  /etc/nginx/sites-enabled/
     sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
@@ -62,11 +65,13 @@ Configure the PHP and web server:
 - Install missing PHP extensions, and use an Azure Resource Manager Template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml and bz2.
                     
 - To obtain the list of PHP extensions installed on-premises, run the following command on an on-premises virtual machine:
+
     ```bash
     php -m
     ```
 
 - ![Note] If on-premises has any additional PHP extensions that aren't present in the controller virtual machine, they can be installed manually.
+
      ```bash
     sudo apt-get install -y php-<extensionName>
     ```

@@ -1,5 +1,5 @@
 ---
-title: How to manually migrate Moodle from an on-premises environment to Azure.
+title: How to manually migrate Moodle from an on-premises environment to Azure. 
 description: Learn how to manually migrate Moodle from an on-premises environment to Azure.
 author: TBD
 ms.author: TBD
