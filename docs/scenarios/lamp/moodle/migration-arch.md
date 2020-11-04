@@ -1,7 +1,19 @@
-## **Actual Migration:**
+---
+title: Moodle migration tasks.
+description: Learn how to perform a manual Moodle migration.
+author: TBD
+ms.author: TBD
+ms.date: 11/06/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenarios
+---
 
-- Actual migration tasks involve the following tasks.
+# Moodle migration tasks
 
+## Moodle migration outline
+
+- Moodle migrations include the following tasks:
     -   Deploy Azure Infrastructure with Azure ARM Templates.
     -   Download and install AzCopy.
     -   Copy over the backup archive to the Controller Virtual Machine instance from the ARM deployment.
@@ -9,7 +21,7 @@
     -   Setup Moodle controller instance and worker nodes. 
     -   Configuring PHP & webserver.
 
-### Deploy Azure Infrastructure with Azure ARM Templates
+## Deploy Azure Infrastructure with Azure ARM emplates
 - Deploying Azure infrastructure using ARM template.
 - When using an ARM template to deploy infrastructure on Azure, you have a couple of available options.
 - The following diagram will give an idea about Infrastructure Resources.

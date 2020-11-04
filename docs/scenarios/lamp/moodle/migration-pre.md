@@ -1,15 +1,29 @@
-## **Pre-Migration:**
-- Data Export from on-premises to Azure involves the following tasks.
-    -   Install Azure CLI.
-    -   Create Subscription.
-    -   Create Resource Group.
-    -   Create Storage Account.
-    -   Backup of on-premises data.
-    -   Download and install AzCopy.
-    -   Copy Archive file to Blob storage.
+---
+title: How to prepare for a Moodle migration
+description: Learn how to prepare for a Moodle migration.
+author: TBD
+ms.author: TBD
+ms.date: 11/06/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenarios
+---
 
--   **Data Export from on-premises to Azure Cloud:**
-    -   **Install Azure CLI**
+# How to prepare for a Moodle migration
+
+## Pre-migration tasks
+
+Exporting data from on-premises to Azure involves the following tasks:
+
+- Install Azure CLI.
+- Create Subscription.
+- Create Resource Group.
+- Create Storage Account.
+- Back up on-premises data.
+- Download and install AzCopy.
+- Copy archive files to Blob.
+
+## **Install Azure CLI**
         -   Install Azure CLI on a host inside the on-premises infrastructure for all Azure related tasks.
             ```bash
             curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -25,7 +39,7 @@
             az login -u <username> -p <password>
             ```
     
-    -   **Create Subscription:**
+## Create subscription
         - If you have a subscription handy, set the subscription and skip this step.
            
         - And if you do not have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [Pay-As-You-Go](https://azure.microsoft.com/en-us/offers/ms-azr-0003p/)
@@ -39,8 +53,8 @@
             # Example: az account set --subscription "ComputePM LibrarySub"
             ```
 
-        
-    -   **Create Resource Group:**
+## Create a resource group
+
         - Once you have a subscription handy, you will need to create a Resource Group.
         - One option is to create resource group using Azure portal.
         - Navigate to home section and search for resource group, after clicking on add fill the mandatory fields and click on create.
@@ -56,7 +70,9 @@
             # example: az group create -l eastus -n manual_migration -s ComputePM LibrarySub
             ```
          - In above step resource group is created as "manual_migration". Use the same resource group in further steps.
-    -   **Create Storage Account:**
+         - 
+## Create a storage account
+
         -  The next step would be to [create a Storage Account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount) in the Resource Group you've just created.
         - Storage account can also be created using Azure portal or Azure CLI command.
         - To create using portal, navigate to portal and search for storage account and click on Add button.
@@ -73,7 +89,8 @@
 
         - Once the storage account "onpremisesstorage" is created, this is used as the destination to take the on-premises backup.
     
-    -   **Backup of on-premises data:**
+## Back up on-premises data
+
         - Before taking backup of on-premises data, enable maintenance mode for moodle site.
             - Run the below command in on-premises virtual machine.
                 ```bash
@@ -96,15 +113,16 @@
             mkdir storage
             ```
 
-    - **Backup of moodle and moodledata**
-        - The moodle directory consists of site HTML content and moodledata contains moodle site data.
+### Backup of moodle and moodledata
 
+        - The moodle directory consists of site HTML content and moodledata contains moodle site data.
         ```bash
         # Commands to copy moodle and moodledata 
         cp -R /var/www/html/moodle /home/azureadmin/storage/
         cp -R /var/moodledata /home/azureadmin/storage/
         ```
-	- **Backup of PHP and webserver configuration**
+### Backup of PHP and webserver configuration
+
 		- Copy the PHP configuration files such as php-fpm.conf, php.ini, pool.d and conf.d directory to phpconfig directory under the configuration directory.
 		- Copy the ngnix configuration such as nginx.conf, sites-enabled/dns.conf to the nginxconfig directory under the configuration directory.
             ```bash
@@ -115,7 +133,7 @@
             cp -R /etc/php /home/azureadmin/storage/configuration/php
             ```
 
-	- **Create a backup of database**
+### Create a backup of the database
 		- If you already have mysql-client installed, skip the step to install mysql-client.
 		- If you do not have mysql-client, now would be a good time to do that.
 			```bash
@@ -137,7 +155,7 @@
         tar -zcvf storage.tar.gz storage
     	```
 
-    -   **Download and install AzCopy**
+## Download and install AzCopy
         - Execute the below commands to install AzCopy.
         ```bash
         sudo -s
@@ -147,7 +165,7 @@
         sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
         ```
 
-    -   **Copy Archive file to Blob storage**
+## Copy Archive file to Blob storage
         - Copy the on-premises archive file to blob storage using AzCopy.
         - To use AzCopy, user should generate SAS Token first.
         - Go to the created Storage Account Resource and navigate to Shared access signature in the left panel.
@@ -183,3 +201,4 @@
         ![image](images/ArchivefileinBlobstorage.PNG)
     -  Now, you should have a copy of your archive inside the Azure blob storage account.
 
+## Next steps

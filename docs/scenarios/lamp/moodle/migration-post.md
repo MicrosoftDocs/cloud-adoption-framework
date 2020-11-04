@@ -1,49 +1,59 @@
-## **Post Migration:**
+---
+title: How to follow up after a Moodle migration
+description: Learn how to follow up after Moodle migration.
+author: TBD
+ms.author: TBD
+ms.date: 11/06/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenarios
+---
 
-- Post Migration involves the following tasks.
-    - Post migration tasks that include application configuration.
-    - Update Log paths in VMSS instance(s).
-    - Restart servers in VMSS instance(s).
-    - Update Certificates.
-    - Update certificate location.
-    - Update HTML Local Copy.
-    - Restarting PHP and nginx servers.
-    - Map DNS Name with Load Balancer IP.
+# How to follow up after a Moodle migration
 
-- Post migration tasks are around final application configuration that includes setup of logging destinations, SSL certificates and scheduled tasks / cron jobs.
--   **Controller Virtual Machine Scale Set:**
+## Post-migration tasks
+
+Post migration tasks are around final application configuration that includes setup of logging destinations, SSL certificates and scheduled tasks / cron jobs.
+
+- Post migration tasks that include application configuration.
+- Update Log paths in VMSS instance(s).
+- Restart servers in VMSS instance(s).
+- Update Certificates.
+- Update certificate location.
+- Update HTML Local Copy.
+- Restarting PHP and nginx servers.
+- Map DNS Name with Load Balancer IP.
+
+## Controller virtual machine scale set
     
-    -   **Log Paths**
+### Log paths
         
-        -   on-premises might be having different log path location and those paths need to be updated with Azure log paths. 
-            -   Ex: /var/log/syslogs/moodle/access.log
-            -   Ex: /var/log/syslogs/moodle/error.log 
-         - Update log files location
-            ```bash
-            nano /etc/nginx/nginx.conf
-            # Above command will open the configuration file.
-            # 
-            # Change the log path location.
-            # Find access_log and error_log and update the log path.
-            #
-            # After the changes, Save the file. 
-            # Press CTRL+o to save and CTRL+x to exit.
-            ``` 
-
-    -   **Restart Servers**
+- On-premises might be having different log path location and those paths need to be updated with Azure log paths.
+    - Ex: /var/log/syslogs/moodle/access.log
+    - Ex: /var/log/syslogs/moodle/error.log 
+- Update log files location. This command will open the configuration file:
+      ```bash
+      nano /etc/nginx/nginx.conf
+      ```
+- Change the log path location.
+- Find access_log and error_log and update the log path.
+- After the changes, and save the file. 
+- Press CTRL+o to save and CTRL+x to exit.
+            
+### Restart servers
         
-        -   Restart the nginx and php-fpm servers.
-            ```bash
-            sudo systemctl restart nginx
-            sudo systemctl restart php<phpVersion>-fpm
-            ```
+Restart the nginx and php-fpm servers:
+       ```bash
+       sudo systemctl restart nginx
+       sudo systemctl restart php<phpVersion>-fpm
+       ```
 
--   **Controller Virtual Machine:**
+## Controller virtual machine
 
-    -   **Certs:**
-        -   Login to the Controller Virtual Machine and follow the below steps.
+### Certificates
+
+        -   Log in to the Controller Virtual Machine and follow the below steps.
         -   The certificates for your moodle application reside in /moodle/certs.
-         
         -   Copy over the .crt and .key files over to /moodle/certs/. The file names should be changed to nginx.crt and nginx.key in order to be recognized by the configured nginx servers. Depending on your local environment, you may choose to use the utility SCP or a tool like WinSCP to copy these files over to the controller virtual machine.
             -   Command to change the certs name.
                 ```bash
@@ -78,7 +88,7 @@
             # Press CTRL+o to save and CTRL+x to exit. 
             ```
 
-    -   **Updating HTML Local Copy:**
+### Update the local HTML copy
         
         - Moodle html site (/moodle/html/moodle) content's local copy is created in VMSS at /var/www/html/moodle.
         - Local copy is updated only when there is an update in timestamp.
@@ -88,9 +98,8 @@
             /usr/local/bin/update_last_modified_time.moodle_on_azure.sh
             ```
         -  By executing the script last modified timestamp file (/moodle/html/moodle/last_modified_time.moodle_on_azure)  every time the /moodle/html/moodle directory content is updated in local copy (/var/www/html).
-
         
-    -   **Restart Servers**
+### Restart servers
         
         -   Restart the nginx and php-fpm servers.
             ```bash
@@ -98,7 +107,8 @@
             sudo systemctl restart php<phpVersion>-fpm
             ```
 
-    -   **Map DNS Name with Load Balancer IP:**
+### Map DNS name with the load balancer IP
+
         -   DNS name mapping with the load balancer IP must be done at the hosting provider level.
         -   Disable Moodle website from Maintenance mode.
             - Run the below command in Controller Virtual Machine.
@@ -111,7 +121,7 @@
                 ```
         -   Hit the DNS name to get the migrated Moodle web page.
 
-**General FAQ/Troubleshooting Questions**
+## Frequently asked questions and troubleshooting
 
 <details> 
 <summary>(For Similar questions click on expand!)</summary>
@@ -198,3 +208,5 @@
         - Cron job will be running and it will update the local copy in instance.
         -  The path is  /var/log/sitelogs/moodle/cron.log.
 </details> 
+
+## Next steps
