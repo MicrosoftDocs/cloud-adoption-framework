@@ -14,9 +14,9 @@ ms.subservice: scenarios
 Documentation for how to manually migrate Moodle from an on-premises environment to Azure.
 
 1. [Introduction](/intro.md)
-2. [Moodle: migration prerequisites](/migration-pre.md)
-3. [Moodle: migration architecture and template](/migration-arch.md)
-4. [Moodle: migration resource description](/migration-resource.md)
-5. [Moodle: migration steps](/migration.md)
+2. [Moodle: Migration prerequisites](/migration-pre.md)
+3. [Moodle: Migration architecture and template](/migration-arch.md)
+4. [Moodle: Migration resource description](/migration-resource.md)
+5. [Moodle: Migration steps](/migration.md)
 6. [Moodle: Azure Infrastructure Configuration](/azure-infra-config.md)
 7. [Moodle: Post migration](/migration-post.md)
