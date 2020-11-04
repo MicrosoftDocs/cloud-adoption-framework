@@ -89,10 +89,14 @@ items:
         href: strategy/business-outcomes/engagement-outcomes.md
       - name: Performance outcomes
         href: strategy/business-outcomes/performance-outcomes.md
+      - name: Sustainability outcomes
+        href: strategy/business-outcomes/sustainability.md       
       - name: Business outcome template
         href: strategy/business-outcomes/business-outcome-template.md
       - name: Align efforts to learning metrics
         href: strategy/learning-metrics.md
+      - name: Objectives and key results
+        href: strategy/business-outcomes/okr.md        
     - name: Business justification
       items:
       - name: Build a business justification
