@@ -1,10 +1,22 @@
-# Moodle_Manual_Migration
-Documentation of Manual Migration of Moodle from on-premises environment to Azure.
+---
+title: How to manually migrate Moodle from an on-premises environment to Azure.
+description: Learn how to manually migrate Moodle from an on-premises environment to Azure.
+author: TBD
+ms.author: TBD
+ms.date: 11/06/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenarios
+---
 
-1. [Introduction](/intro.md).
-2. [Moodle Migration Pre-Requisites](/migration-pre.md).
-3. [Moodle Migration: Architecture & Template](/migration-arch.md).
-4. [Moodle Migration: Resource Description](/migration-resource.md).
-5. [Moodle: Migration Steps](/migration.md).
-6. [Moodle: Azure Infrastructure Configuration](/azure-infra-config.md).
-7. [Moodle: Post Migration](/migration-post.md).
+# How to manually migrate Moodle from an on-premises environment to Azure.
+
+Documentation for how to manually migrate Moodle from an on-premises environment to Azure.
+
+1. [Introduction](/intro.md)
+2. [Moodle: migration prerequisites](/migration-pre.md)
+3. [Moodle: migration architecture and template](/migration-arch.md)
+4. [Moodle: migration resource description](/migration-resource.md)
+5. [Moodle: migration steps](/migration.md)
+6. [Moodle: Azure Infrastructure Configuration](/azure-infra-config.md)
+7. [Moodle: Post migration](/migration-post.md)
