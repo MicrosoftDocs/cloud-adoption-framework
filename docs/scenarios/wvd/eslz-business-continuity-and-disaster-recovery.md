@@ -1,7 +1,7 @@
 ---
-title: "Enterprise-Scale business continuity and disaster recovery for <Insert narrative Name>"
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of <Insert Scenario Name>
-author: IgorPagliai
+title: "Enterprise-Scale business continuity and disaster recovery for Windows Virtual Desktop (WVD)"
+description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of Windows Virtual Desktop (WVD)
+author: igorpag
 ms.author: igorpag
 ms.date: 10/31/2020
 ms.topic: conceptual
@@ -9,24 +9,24 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery for <Insert narrative Name> Enterprise-Scale scenario
+# Business Continuity and Disaster Recovery (BCDR) for Windows Virtual Desktop (WVD) Enterprise-Scale scenario
 
 Windows Virtual Desktop (WVD) is a managed service aiming to provide Microsoft control plane for your VDI environment.
 WVD is a service free of charge, Microsoft does not offer a financially backed service level agreement (SLA) but strive to attain at least 99.9% availability for the Windows Virtual Desktop service URLs.
 
 > [!NOTE]
-> The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_9/).
+> The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9/).
 
 Windows Virtual Desktop offers Business Continuity and Disaster Recovery (BCDR) to preserve customer metadata during outages. When an outage occurs in a region, the service infrastructure components will fail over to the secondary location and continue functioning as normal.
 To keep your organization's data safe, you may need to adopt a BCDR strategy for resources that will be deployed in your subscription as part of the WVD data plane (Host Pools, Storage, etc.).
 A sound BCDR strategy keeps your apps and workload up and running during planned and unplanned service or Azure outages.
 
-Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://docs.microsoft.com/en-us/azure/virtual-desktop/disaster-recovery)
+Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://docs.microsoft.com/azure/virtual-desktop/disaster-recovery)
 
 To keep your users connected during an outage, you'll need to do consider the following points:
 
 - How and where to keep Virtual Machines in the WVD Host Pool running and accessible.
-- How to ensure WVD Profile and Office Containers are safely protected and made highly available. 
+- How to ensure WVD Profile and Office Containers are safely protected and made highly available.
 - Make sure user identities you set up in the primary location are available in the secondary location.
 - Ensure Azure connectivity resiliency design is adequate to provide access to users to all necessary resources also in case of a major disaster.
 - Make sure any line-of-business applications relying on data in your primary location are failed over to the secondary location.
@@ -34,8 +34,8 @@ To keep your users connected during an outage, you'll need to do consider the fo
 ## Design considerations
 
 - For WVD Host Pool, both *active-active* and *active-passive* can be viable approaches, depending on the requirements. 
-   - With *active-active*, a single Host Pool can have VMs from multiple regions (geo-paired and proximity recommended). In this case usage of [Cloud Cache](https://docs.microsoft.com/en-us/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one. This is a complex configuration, should be used only if necessary and justified by requirements.
-    - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
+   - With *active-active*, a single Host Pool can have VMs from multiple regions (geo-paired and proximity recommended). In this case usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one. This is a complex configuration, should be used only if necessary and justified by requirements.
+    - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
         - Azure Site Recovery is supported for both Personal (dedicated) and Pooled (shared) Host Pools, and will permit to maintain a single Host Pool.
         - Create a new Host Pool in the failover region is also possible, while keeping all resources in your failover location turned off. For this method, you’d need to set up new App Groups and Workspaces in the failover region.
 
@@ -44,27 +44,27 @@ To keep your users connected during an outage, you'll need to do consider the fo
   - For Pooled (*shared*) Host Pool, ASR can still be used. You can also and eventually create a new host pool in the failover region while keeping all resources in your failover location turned off. For this method, will be necessary to set up new App Groups and Workspaces in the failover region. You can then use an Azure Site Recovery “*Recovery Plan*” to turn on host pools and arrange an orchestrated process. 
 
 - Host Pool VM Resiliency 
-  - Different [options](https://docs.microsoft.com/en-us/azure/virtual-machines/availability) for VM resiliency are available when creating a new WVD Host Pool. It is important to select the right one, based on requirements, at creation time since cannot be changed later.
+  - Different [options](https://docs.microsoft.com/azure/virtual-machines/availability) for VM resiliency are available when creating a new WVD Host Pool. It is important to select the right one, based on requirements, at creation time since cannot be changed later.
 
-  - Default resiliency option for WVD Host Pool deployment is Availability Set: it will only ensure VM resiliency at the single Azure datacenter level, with formal 99.95% high-availability [SLA](https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_9).  
+  - Default resiliency option for WVD Host Pool deployment is Availability Set: it will only ensure VM resiliency at the single Azure datacenter level, with formal 99.95% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9).  
 
-  - With [Availability Zones](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview) instead, VM in the Host pool will be allocated across different datacenters, still inside the same region, with higher resiliency and higher formal 99.99% high-availability [SLA](https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_9).
+  - With [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) instead, VM in the Host pool will be allocated across different datacenters, still inside the same region, with higher resiliency and higher formal 99.99% high-availability [SLA](https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_9).
 
      > [!NOTE]
      > ARM template must be used at the moment to specify zones, option not yet available in the Azure Portal.
 
 - Optimal Storage for Profile and Office containers
-  - Azure offers multiple storage solutions that you can use to store your FSLogix Profile and Office container. The article [Storage options for FSLogix profile containers in Windows Virtual Desktop](https://docs.microsoft.com/en-us/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions Azure offers for Windows Virtual Desktop FSLogix user profile containers. Storage Spaces Direct (S2D) is supported in conjunction with FSLogix and Windows Virtual Desktop as well. It is a self-managed storage solution that is out of scope for this article. Customers can get most value out of either Azure Files or Azure NetApp Files while simplifying management of Windows Virtual Desktop.
+  - Azure offers multiple storage solutions that you can use to store your FSLogix Profile and Office container. The article [Storage options for FSLogix profile containers in Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions Azure offers for Windows Virtual Desktop FSLogix user profile containers. Storage Spaces Direct (S2D) is supported in conjunction with FSLogix and Windows Virtual Desktop as well. It is a self-managed storage solution that is out of scope for this article. Customers can get most value out of either Azure Files or Azure NetApp Files while simplifying management of Windows Virtual Desktop.
   - A T-Shirt sizing approach can be used to provide to different set of users different set of capabilities and resiliency levels.
-  - The FSLogix agent can support multiple profile locations for higher resiliency, if you configure the registry entries for FSLogix. Proper [replication mechanism](https://docs.microsoft.com/en-us/azure/virtual-desktop/disaster-recovery#fslogix-configuration) must be in place, based on the storage type used, or Cloud Cache should be used. This will be needed as part of the DR strategy when using ASR.
+  - The FSLogix agent can support multiple profile locations for higher resiliency, if you configure the registry entries for FSLogix. Proper [replication mechanism](https://docs.microsoft.com/azure/virtual-desktop/disaster-recovery#fslogix-configuration) must be in place, based on the storage type used, or Cloud Cache should be used. This will be needed as part of the DR strategy when using ASR.
   - For optimal performance, the storage solution and the FSLogix profile container should be in the same data-center location. We also recommend using a separate profile container storage account per host pool. This will be needed as part of the DR strategy when using ASR.
 
 - User Data Storage Replication and Resiliency
-  - A suitable replication strategy should be put in place for user data residing in [FSLogix](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) Profile and Office containers:
+  - A suitable replication strategy should be put in place for user data residing in [FSLogix](https://docs.microsoft.com/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) Profile and Office containers:
 
-  1. **Profile Pattern #1**: Native Azure storage replication mechanisms, for example Azure Files Standard [GRS replication](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region), Azure NetApp Files [Cross Region Replication](https://docs.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction), or Azure [Files Sync](https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide) for VM-based file servers 
+  1. **Profile Pattern #1**: Native Azure storage replication mechanisms, for example Azure Files Standard [GRS replication](https://docs.microsoft.com/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region), Azure NetApp Files [Cross Region Replication](https://docs.microsoft.com/azure/azure-netapp-files/cross-region-replication-introduction), or Azure [Files Sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-deployment-guide) for VM-based file servers 
 
-  2. **Profile Pattern #2**: FSLogix [Cloud Cache](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) is built in automatic mechanism to replicate containers between different (up to 4) storage accounts.
+  2. **Profile Pattern #2**: FSLogix [Cloud Cache](https://docs.microsoft.com/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) is built in automatic mechanism to replicate containers between different (up to 4) storage accounts.
 
   3. **Profile Pattern #3**: Only set up geo disaster recovery for application data and not for user data/profile: store important application data in separate storages, like OneDrive or other external storage with its own built-in DR mechanism.
 
@@ -72,12 +72,12 @@ To keep your users connected during an outage, you'll need to do consider the fo
   - Differentiate when users really need to save and make Profile containers data highly available and resilient to region failure. If critical, then usage of Cloud Cache is recommended. Otherwise, for less critical environment, usage of Zone Replicated Storage (ZRS) or Geo replicated storage (GRS) for Azure Files is recommended. LRS with local only resiliency can be used if no zone/region protection is required.
 
 - Golden Image Availability
-  - If a custom image is used to deploy WVD Host Pool VMs, [Azure Shared Image Gallery](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/shared-image-galleries) should be used to replicate across all regions where WVD is used, and in at least two regions.
+  - If a custom image is used to deploy WVD Host Pool VMs, [Azure Shared Image Gallery](https://docs.microsoft.com/azure/virtual-machines/windows/shared-image-galleries) should be used to replicate across all regions where WVD is used, and in at least two regions.
   - Storage used for image creation should be Zone Replicated Storage (ZRS), and at least two copies per region should be maintained.
   - If DevOps techniques are used and build pipeline used, the produced artifact should be imported in Azure Shared Image Gallery and replicated to the secondary region.
 
 - Backup Protection
-  - [Azure Backup](https://docs.microsoft.com/en-us/azure/backup/backup-overview) is the recommended solution for data protection for Azure Files Standard and Premium tiers, while Azure NetApp Files [Snapshots](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [Policies](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies)  should be used for Azure NetApp Files (all tiers).
+  - [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) is the recommended solution for data protection for Azure Files Standard and Premium tiers, while Azure NetApp Files [Snapshots](https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [Policies](https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies)  should be used for Azure NetApp Files (all tiers).
   - When data backup size is a concern, a strategy to minimize the volume of data inside the containers should be evaluated.
     - Split of Profile and Office containers can be evaluated to use different backup policies but not a recommended configuration for the majority of environments.
     - For Office data, if OneDrive is used, size will be minimal or zero since no backup will be necessary for Office container.
