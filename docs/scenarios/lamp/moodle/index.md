@@ -12,7 +12,8 @@ ms.subservice: scenarios
 # How to perform a manual Moodle migration
 
 This document explains how to migrate Moodle application from an on-premises environment to Azure. Two approaches are provided for each step:
-- An approach that lets you use Azure Portal.
+
+- An approach that lets you use the Azure portal.
 - An approach that lets you accomplish the same tasks with command line while using Azure CLI.
 
 ## Prerequisites
@@ -20,11 +21,11 @@ This document explains how to migrate Moodle application from an on-premises env
 If the versions of the software stack deployed on-premises are lagging with respect to the versions supported in this guide, the expectation is that the on-premises versions will be updated/patched to the versions listed in this guide.
 
 - Must have access to the on-premises infrastructure to take backup of Moodle deployment and configurations (including DB configurations).
-- Azure subscription and Azure Blob storage should be created prior to migration.
-- Make sure to have Azure CLI and Az Copy handy.
-- Make sure Moodle website should be in maintenance mode.
+- An Azure subscription and Azure Blob storage account should be created prior to migration.
+- Open Azure CLI and AzCopy to use them throughout the process.
+- Set the Moodle website to **Maintenance mode**.
 
-This migration guide supports the following software versions: 
+This migration guide supports the following software versions:
 
 - Ubuntu 18.04 LTS
 - Nginx 1.14

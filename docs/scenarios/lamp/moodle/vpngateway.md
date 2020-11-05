@@ -19,8 +19,8 @@ Create a virtual network gate in Azure Portal with the following steps:
 
 - Search for and select **Virtual network gateway**.
 - Select **Create** to open a window.
-- Fill in all fields like **Name, Region, Gateway type, sku,** and **vnet**. Keep the rest of the default values.
-- Select the vnet associated with virtual machines created under the same resource group.
+- Fill in all fields like **Name, Region, Gateway type, SKU,** and **VNet**. Keep the rest of the default values.
+- Select the virtual network associated with virtual machines created under the same resource group.
 - Select **Create** to start deploying.
 
 ![TBD](images/vpngateway.png)
@@ -56,34 +56,35 @@ Create a virtual network gate in Azure Portal with the following steps:
 
 ## Export certificates
 
+Following these steps should allow you to successfully install certificates on your local systems.
+
 - Open the Microsoft Management Console to export the certificates.
 - Go to **Run** and enter "MMC" to open certificates.
 - Select the **Certificates** under the **Personal** folder to open a page.
 - Refresh the page and find **Root and child certificates**.
 
-Exporting certificate types:
+Certificate types:
 
-- Exporting root certificates:
+**Exporting root certificates:**
 
-  - Select the root certificate, right click on the certificate then go to the All Tasks.
-  - Click on export, will open a window and Click on Next.
-  - Select “No, do not export private key” and Click Next.
-  - Select “Base-64 encoded X.509(.cer) and Click Next.
-  - Select the browse and select the path, give a name and click on Next.
-  - By this you will get a message “Exported successfully”.
+- Select the root certificate, right-click on the certificate, and then go to **All Tasks**.
+- Select **Export** for a new window and then **Next**.
+- Select **No, do not export private key** and then **Next**.
+- Select **Base-64 encoded X.509(.cer)** and then **Next**.
+- Select the **Browse and select the path**, enter a name, and select **Next**. 
+- This message will appear: **Exported successfully**.
     
-- Exporting child certificates:
+**Exporting child certificates:**
 
-  - Select the client certificate,right click on the certificate then go to the All Tasks.
-  - Click on export, will open a window and click on Next.
-  - Select “Yes, export private key” and Click on next.
-  - Select the personal Information Exchange, PKCS, and click on Next.
-  - Select the password checkbox and provide the password.
-  - Select the encryption to TripleDES-SHA1 and click on Next.
-  - Select the browse and select the path and give a name and click on Next.
-  - By this you will get a message “Exported successfully”.
-  - With the above to steps certificates are installed successfully to your local systems
-  - Open the root certificate file in your favorite editor and copy the code.
+- Select the client certificate, right-click on the certificate, and then go to **All Tasks**.
+- Select **Export** for a new window and then **Next**.
+- Select **Yes**, **Export private key**, and then **Next**.
+- Select the **Personal information exchange**, **PKCS**, and then **Next**.
+- Select the password checkbox and provide the password.
+- Set the encryption to TripleDES-SHA1, and select **Next**.
+- Select the **Browse and select the path**, enter a name, and select **Next**. 
+- This message will appear: **Exported successfully**.
+- Open the root certificate file in your choice editor, and copy the code.
 
 ## Configure the virtual network gateway
 
@@ -146,7 +147,7 @@ Password authentication has been completed.
   sudo ssh <username>@<private_IP>
 
   For example, sudo ssh azureadmin@102.xx.xx.xx
-      
+
   
 - Follow the prompt to enter the password.
 

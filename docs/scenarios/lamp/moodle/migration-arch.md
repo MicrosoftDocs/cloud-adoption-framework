@@ -64,4 +64,4 @@ If the PHP and Moodle versions are lagging with on-premises, then update the ver
 - For moodle 3.9, value should be "MOODLE_39_STABLE"
     ```
 
-- Select **Save** to save your changes. 
+- Select **Save** to save your changes.

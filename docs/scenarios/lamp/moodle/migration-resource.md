@@ -18,13 +18,13 @@ When the Azure Resource Manager template is used, the following resources are cr
 - Creates a virtual network with string as name, apiVersion, Location and DNS server name.
 - The AddressSpace that contains an array of IP address ranges that can be used by subnets.
    
-- **Virtual network:** An Azure Virtual Network is a representation of your own network in the cloud. It is a logical isolation of the Azure cloud dedicated to your subscription. When you create a Vnet, your services and virtual machines within your Vnet can communicate directly and securely in the cloud. Explore [virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) for more information.
+- **Virtual network:** An Azure Virtual Network is a representation of your own network in the cloud. It's a logical isolation of the Azure cloud dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. Explore [virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) for more information.
 
 - **Network security group:** A network security group (NSG) is a networking filter (firewall) containing a list of security rules allowing or denying network traffic to resources connected to an Azure Virtual Network. Explore [network security group](https://docs.microsoft.com/azure/virtual-network/security-overview) for more information.
 
 - **Network interface:** A network interface enables an Azure Virtual Machine to communicate with internet, Azure and on-premises resources. Explore [network interface](https://docs.microsoft.com/azure/virtual-network/virtual-network-netwAork-interface) for more information.
 
-- **Subnet:** A subnet or subnetwork is a smaller network inside a large network. By default, an IP in a subnet can communicate with any other IP inside the Vnet. Explore [subnet](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-subnet) for more information.
+- **Subnet:** A subnet or subnetwork is a smaller network inside a large network. By default, an IP in a subnet can communicate with any other IP inside the virtual network. Explore [subnet](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-subnet) for more information.
 
 - **Public IP:** Public IP addresses are used to communicate Azure resources to the Internet. The address is dedicated to the Azure resource. Explore [public IP](https://docs.microsoft.com/azure/virtual-network/public-ip-addresses#:~:text=Public%20IP%20addresses%20enable%20Azure,IP%20assigned%20can%20communicate%20outbound) for more information.
 
@@ -46,7 +46,7 @@ The following storage account types feature Azure Resource Manager template supp
 
 - GluserFS: An open-source distributed file system that can scale out in building-block fashion to store multiple petabytes of data. Explore [Gluster FS](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs) for more information.
 
-- Azure Files: It is the only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. Explore [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) for more information. For NFS and glusterFS, the replication is standard LRS, and the storage type is general purpose v1. For Azure Files, the replication is premium locally-redundant storage, LRS, and the type is FileStorage.
+- Azure Files: The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. Explore [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) for more information. For NFS and glusterFS, the replication is standard LRS, and the storage type is general purpose v1. For Azure Files, the replication is premium locally-redundant storage, LRS, and the type is FileStorage.
 
 These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and Fle Share, navigate to portal and select the storage account in resource group.
 

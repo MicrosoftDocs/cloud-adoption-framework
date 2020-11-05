@@ -24,13 +24,12 @@ To create a virtual machine scale set instance private IP:
 
 To log in into a virtual machine scale set, log into the controller virtual machine and run these commands:
 
-    ```bash
-    sudo -s
-    sudo ssh azureadmin@172.31.X.X 
+```bash
+ sudo -s
+ sudo ssh azureadmin@172.31.X.X 
+```
 
 172.31.X.X is the virtual machine scale set Instance private IP.
-
-    ```
 
 Log in to scale set virtual machine instance. Perform the following steps:
 
@@ -38,44 +37,44 @@ Log in to scale set virtual machine instance. Perform the following steps:
 
 - Create a backup directory.
 
-    ```bash
-    cd /home/azureadmin/
-    mkdir -p backup
-    mkdir -p backup/moodle
-    ```
+  ```bash
+  cd /home/azureadmin/
+  mkdir -p backup
+  mkdir -p backup/moodle
+  ```
         
 Configure the PHP and web server:
 
 - Create a backup of PHP and web server configurations.
 
-    ```bash
+  ```bash
 
 - Set the PHP version to a variable.
 
-    _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
-    echo $_PHPVER
+  _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
+  echo $_PHPVER
 
-    sudo mv /etc/nginx/sites-enabled/*.conf  /home/azureadmin/backup/
-    sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf  
-    ```
+  sudo mv /etc/nginx/sites-enabled/*.conf  /home/azureadmin/backup/
+  sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf  
+  ```
 
 - Copy the PHP and web server configuration files.
 
-    ```bash
-    sudo cp /moodle/config/nginx/*.conf  /etc/nginx/sites-enabled/
-    sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
-    ```
+  ```bash
+  sudo cp /moodle/config/nginx/*.conf  /etc/nginx/sites-enabled/
+  sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
+  ```
 
 - Install missing PHP extensions, and use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
                     
 - To obtain the list of PHP extensions installed on-premises, run the following command on an on-premises virtual machine:
 
-    ```bash
-    php -m
-    ```
+  ```bash
+  php -m
+  ```
 
 - ![Note] If on-premises has any additional PHP extensions that aren't present in the controller virtual machine, they can be installed manually.
 
-     ```bash
-    sudo apt-get install -y php-<extensionName>
-    ```
+  ```bash
+  sudo apt-get install -y php-<extensionName>
+  ```
