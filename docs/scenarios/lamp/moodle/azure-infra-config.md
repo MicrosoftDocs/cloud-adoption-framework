@@ -13,14 +13,14 @@ ms.subservice: scenarios
 
 ## Virtual machine scale set instances
 
-Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instances instance to a private IP, and follow [deploy the virtual network gateway](/vpngateway.md) to gain gateway access to virtual machine scale set instances instances. Before accessing a virtual machine scale set, set it to being password-enabled.
+Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [deploy the virtual network gateway](/vpngateway.md) to gain gateway access to virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
 
-To create a virtual machine scale set instances private IP:
+To create a virtual machine scale set instance private IP:
 
 - Log in to [Azure](portal.azure.com) and go to the created Resource Group.
 - Find and navigate to the virtual machine scale set resource.
-- In the left panel, select the Instances.
-- Navigate to the running instance and find the private IP associated to it in the Overview section.
+- In the left panel, select **Instances**.
+- Navigate to the running instance and find the private IP associated to it in the **Overview** section.
 
 To log in into a virtual machine scale set, log into the controller virtual machine and run these commands:
 
@@ -66,7 +66,7 @@ Configure the PHP and web server:
     sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
     ```
 
-- Install missing PHP extensions, and use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml and bz2.
+- Install missing PHP extensions, and use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
                     
 - To obtain the list of PHP extensions installed on-premises, run the following command on an on-premises virtual machine:
 
