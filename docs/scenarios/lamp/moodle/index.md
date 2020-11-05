@@ -12,8 +12,8 @@ ms.subservice: scenarios
 # How to perform a manual Moodle migration
 
 This document explains how to migrate Moodle application from an on-premises environment to Azure. Two approaches are provided for each step:
-    - One that lets you to use Azure Portal.
-    - One that lets you accomplish the same tasks on a command line using Azure CLI.
+- An approach that lets you use Azure Portal.
+- An approach that lets you accomplish the same tasks with command line while using Azure CLI.
 
 ## Prerequisites
 
@@ -23,12 +23,14 @@ If the versions of the software stack deployed on-premises are lagging with resp
 - Azure subscription and Azure Blob storage should be created prior to migration.
 - Make sure to have Azure CLI and Az Copy handy.
 - Make sure Moodle website should be in maintenance mode.
-- This migration guide supports the following software versions: 
-    - Ubuntu 18.04 LTS
-    - Nginx 1.14
-    - MySQL 5.6, 5.7, or 8.0 database server. This guide uses Azure Database for MYSQL.
-    - PHP 7.2, 7.3, or 7.4
-    - Moodle 3.8 and 3.
+
+This migration guide supports the following software versions: 
+
+- Ubuntu 18.04 LTS
+- Nginx 1.14
+- MySQL 5.6, 5.7, or 8.0 database server. This guide uses Azure Database for MYSQL.
+- PHP 7.2, 7.3, or 7.4
+- Moodle 3.8 and 3
 
 ## When to use Azure Resource Manager template for Moodle migrations
 

@@ -95,7 +95,7 @@ Exporting certificate types:
 - Set the authentication type to Azure certification.
 - Paste the copied root certificate code in the portal, name it as "root", and select **Save**.
 
-## Download and Connect to VPN Client
+## Download and Connect to the VPN Client
 
 - Download the VPN Client after saving the configuration from portal.
 - Open the downloaded VPN Client zip file and open “WindowsAMD64” folder and install the “VPNClinetsetupAMD64” file.
@@ -148,6 +148,6 @@ Password authentication has been completed.
   For example, sudo ssh azureadmin@102.xx.xx.xx
       
   
-- It will prompt to enter the password. 
+- Follow the prompt to enter the password.
 
 ## Next steps

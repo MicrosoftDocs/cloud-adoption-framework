@@ -24,7 +24,7 @@ Moodle migrations include the following tasks:
 ## Deploy Azure Infrastructure with Azure Azure Resource Manager templates
 
 - When using an Azure Resource Manager template to deploy infrastructure on Azure, a couple of options are available to you. The following diagram provides an overview of infrastructure resources.
-- 
+
 ![TBD](images/architecture.png)
 
 A fully configurable deployment gives more flexibility and choices for deployments. A predefined deployment size uses one of four predefined Moodle sizes. The four predefined templates options, minimal, short-to-mid, large, and maximal, are available at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
@@ -33,7 +33,7 @@ A fully configurable deployment gives more flexibility and choices for deploymen
 
 - [Small-to-mid](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json): Supports up to 1,000 concurrent users. This deployment will use NFS (no high availability) and MySQL (eight vCores) without other options like elastic search or Redis cache.  
 
-- [Large (high-availability)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-large-ha.json): Supports more than 2,000 concurrent users. This deployment will use Azure Files, MySQL (16 vCores) and Redis cache without other options like elastic search.  
+- [Large (high-availability)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-large-ha.json): Supports more than 2,000 concurrent users. This deployment will use Azure Files, MySQL (16 vCores), and Redis cache without other options like elastic search.  
 
 - [Maximum](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json): This maximal deployment will use Azure Files, MySQL with the highest SKU, Redis cache, elastic search (three virtual machines), and large storage sizes (both data disks and databases).
 
