@@ -42,7 +42,7 @@ Reference Architecture: As we see from the diagram below Network security groups
 
 Refer: Deployment checklist: https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/planning-guide
 
-SAP deployments using the Azure virtual Ddatacenter architecture will be implemented using a hub and spoke model. The hub VNet is the central point for connectivity where an Azure Firewall or other type of network virtual appliances (NVA) is implemented to inspect and control the routing of traffic to the spoke VNet where your SAP applications reside.
+SAP deployments using the Azure virtual datacenter architecture will be implemented using a hub and spoke model. The hub VNet is the central point for connectivity where an Azure Firewall or other type of network virtual appliances (NVA) is implemented to inspect and control the routing of traffic to the spoke VNet where your SAP applications reside.
 
 Within your SAP on Azure project, it is recommended to validate that that inspection devices and NSG security rules are working as desired, this will ensure that your SAP resources are shielded appropriately against network vulnerabilities.
 
