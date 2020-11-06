@@ -1,6 +1,6 @@
 ---
 title: "Azure Landing Zone review for SAP"
-description: Describe the scenario's impact on Azure Landing Zone design
+description: Prepare your Azure environment for SAP with Azure Landing Zones
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -30,7 +30,7 @@ If the landing zone provided by the cloud platform team doesn't address the basi
 
 ## SAP Azure Landing Zone acceleration
 
-Development of an enterprise-scale enviroment can be complex and time-consuming. To accelerate Azure Landing Zone deployment for SAP, review the [SAP enterprise-scale construction set](./enterprise-scale-landing-zone.md).
+Development of an enterprise-scale environment can be complex and time-consuming. To accelerate Azure Landing Zone deployment for SAP, review the [SAP enterprise-scale construction set](./enterprise-scale-landing-zone.md) for a reference to architect and implement an environment capable of supporting your SAP platform deployment.
 
 ## Next step: Assess for SAP
 
@@ -38,9 +38,6 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for SAP](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for SAP migration](./migrate-assess.md)
-- [Migrate SAP](./migrate-deploy.md)
-- [Release SAP to production](./migrate-release.md)
+- [Migrate SAP](./migrate.md)
 - [Innovate with SAP](./innovate.md)
-- [Govern SAP](./govern.md)
 - [Manage SAP](./manage.md)
