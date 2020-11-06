@@ -56,6 +56,3 @@ Azure services such as Azure Data Factory, on-prem Data Gateway (Logic Apps, Pow
 - Consider using automatic user provisioning feature of Azure AD to provision/de-provision users in SAP SaaS applications. SAP Analytics Cloud and SAP identity Authentication Service currently support this scenario.  
 
 - If SuccessFactors is used as HCM application leverage the [automated user provisioning](https://docs.microsoft.com/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) feature to Azure AD. When a new employee is added to SuccessFactors, a user account is automatically created in Azure Active Directory and optionally Microsoft 365 and other SaaS applications supported by Azure AD, with write-back of the email address to SuccessFactors"
-
-
-

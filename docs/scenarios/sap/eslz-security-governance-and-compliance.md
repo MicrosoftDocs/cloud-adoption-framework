@@ -18,9 +18,9 @@ Build SAP Landing zone to meet the requirements of 80% of SAP Production Environ
 It’s important to understand the shared responsibility model between you as a customer and Microsoft. The division of responsibility is dependent on the cloud model used - SaaS, PaaS, or IaaS. As a customer, you are always responsible for your data, endpoints, account/access management, irrespective of the chosen cloud deployment.  
 This is showcased in two pictures below. 
 
-![Responsibility Zones](./media/SGC_ResponsIbilityZones.jpg)
+![Responsibility Zones](media\SGC_ResponsIbilityZones.jpg)
 
-![Security layers](./media/SGC_SecurityScope.jpg)
+![Security layers](media\SGC_SecurityScope.jpg)
 
 ## Goals
 
@@ -30,17 +30,17 @@ Please follow SAP specific guidelines for SAP application security, compliance, 
 
 ## Scope
 
-Generic guidance related with Azure Platform Security, Compliance and Governance is available at https://docs.microsoft.com/azure/security/fundamentals/overview 	
+Generic guidance related with Azure Platform Security, Compliance and Governance is available at https://docs.microsoft.com/en-us/azure/security/fundamentals/overview 	
 The following are considerations and scope for Enterprise Scale Landing Zone (ESLZ) SAP on Azure in this section. 
 SAP on Azure Security , Compliance and Governance quick view:-
 
-![Conceptual](./media/SGC_SAP_ELZ.jpg)
+![Conceptual](media\SGC_SAP_ELZ.jpg)
 
 Reference Architecture: As we see from the diagram below Network security groups (NSG) contain a list of security rules that allow or deny network traffic to resources within your Azure VNet. NSGs can be associated to subnets or individual network interfaces attached to VMs. Security rules can be configured based on source/destination, port, and protocol. NSG’s influence network traffic for the SAP system. In the diagram below, three subnets are implemented, each having an NSG assigned - FE (Front-End), App and DB.
 
-![NSG](./media/SGC_SAP_NSG_Diagram.jpg)
+![NSG](media\SGC_SAP_NSG_Diagram.jpg)
 
-Refer: Deployment checklist: https://docs.microsoft.com/azure/virtual-machines/workloads/sap/planning-guide
+Refer: Deployment checklist: https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/planning-guide
 
 SAP deployments using the Azure virtual datacenter architecture will be implemented using a hub and spoke model. The hub VNet is the central point for connectivity where an Azure Firewall or other type of network virtual appliances (NVA) is implemented to inspect and control the routing of traffic to the spoke VNet where your SAP applications reside.
 

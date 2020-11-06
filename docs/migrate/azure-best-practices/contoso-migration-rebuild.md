@@ -469,8 +469,6 @@ Contoso admins provision the Computer Vision API. The API will be called by the 
 
 1. The admins create a **Computer Vision** instance in Azure Marketplace. 
 
-     ![Screenshot of creating a new computer vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
-
     _Figure 47: A new instance in Azure Marketplace._
 
 2. They provision the API (`smarthotelpets`) in the production resource group `ContosoRG`, in the main region (`East US 2`).
