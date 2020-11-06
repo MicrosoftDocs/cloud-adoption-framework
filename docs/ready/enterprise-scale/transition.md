@@ -29,7 +29,7 @@ To understand which move strategy you should use, we will go through examples of
 
 ## Subscription move
 
-The common use cases for moving subscriptions are primarily to 1) organize subscriptions into management groups, and 2) transfer subscriptions to a new Azure Active Directory tenant. We will focus on moving subscriptions to management groups in this section as moving to a new tenant is mainly for [transferring billing ownership](https://docs.microsoft.com/azure/cost-management-billing/manage/billing-subscription-transfer).
+The common use cases for moving subscriptions are to organize subscriptions into management groups or when transfering subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](https://docs.microsoft.com/azure/cost-management-billing/manage/billing-subscription-transfer). 
 
 ### RBAC requirements
 
