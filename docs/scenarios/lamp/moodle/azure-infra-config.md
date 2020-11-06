@@ -20,9 +20,9 @@ To create a virtual machine scale set instance private IP:
 - Log in to the [Azure portal](https://ms.portal.azure.com/#home), and go to the created resource group.
 - Find and navigate to the virtual machine scale set resource.
 - In the left panel, select **Instances**.
-- Navigate to the running instance and find the private IP associated to it in the **Overview** section.
+- Navigate to the running instance and find the private IP associated with it in the **Overview** section.
 
-To log in into a virtual machine scale set, log into the controller virtual machine. Run these commands:
+Log in to a virtual machine scale set and the controller virtual machine; run these commands:
 
 ```bash
  sudo -s
@@ -31,7 +31,7 @@ To log in into a virtual machine scale set, log into the controller virtual mach
 
 172.31.X.X is the virtual machine scale set Instance private IP.
 
-Log in to scale set virtual machine instance. Perform the following steps:
+Log in to a scale set virtual machine instance. Perform the following steps:
 
 - A backup directory is extracted as storage/ at /home/azureadmin. This storage directory contains Moodle, moodledata, and a configuration directory, plus a database backup file. These will be copied to desired locations.
 

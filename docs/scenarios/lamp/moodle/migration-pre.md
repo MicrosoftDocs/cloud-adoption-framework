@@ -31,13 +31,13 @@ Exporting data from on-premises to Azure involves the following tasks:
    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
   ```
         
-- Log into your Azure account.
+- Log in to your Azure account.
 
   ```bash
   az login
   ```
 
-- The az login command: Azure CLI will likely launch an instance or a tab inside of your default web browser and prompt you to log into Azure with your Microsoft account. If the browser launch doesn't happen, open a new page at [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
+- The az login command: Azure CLI will likely launch an instance or a tab inside of your default web browser and prompt you to log in to Azure with your Microsoft account. If the browser launch doesn't happen, open a new page at [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
 
 -  To use command line, enter the following command:
 
@@ -133,7 +133,7 @@ Storage accounts can be created with the Azure portal or the Azure CLI.
 
 ### Back up Moodle and moodledata
 
-- The Moodle directory consists of site HTML content, and moodledata contains Moodle site data.
+- The Moodle directory consists of site HTML content. Moodledata contains Moodle site data.
 
 - The commands to copy Moodle and moodledata are:
 
@@ -143,9 +143,9 @@ Storage accounts can be created with the Azure portal or the Azure CLI.
 
 ### Backup PHP and web server configurations
 
-- Copy the PHP configuration files such as php-fpm.conf, php.ini, pool.d,and conf.d directory to the phpconfig directory under the configuration directory.
+- Copy the PHP configuration files like php-fpm.conf, php.ini, pool.d, and conf.d directory to the phpconfig directory under the configuration directory.
 
-- Copy the ngnix configurations such as nginx.conf and sites-enabled/dns.conf to the nginxconfig directory under the configuration directory.
+- Copy the ngnix configurations like nginx.conf and sites-enabled/dns.conf to the nginxconfig directory under the configuration directory.
 
   ```bash
   cd /home/azureadmin/storage
@@ -224,10 +224,11 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
   Example: az storage container create --account-name onpremisesstorage --name migration --auth-mode login
 
   --auth-mode login means authentication mode at login. After login, the container will be created.
-            ```
+  ```
+
 - The container can also be created with the Azure portal. Navigate to the same storage account created, select the container, and then select the **Add** button.
             
-- After giving the mandatory container name, select the **Create** button.
+- After entering the mandatory container name, select the **Create** button.
     
   ![A new container.](images/new-container.png)
     
@@ -239,7 +240,7 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
   Example: azcopy copy '/home/azureadmin/storage.tar.gz' 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='
   ```
 
-  ![An archive in Azure Blob.](images/archived-file-in-blob.png)
+  ![An archive in Azure Blob.](images/archive-in-blob.png)
 
 - There should now be a copy of your archive inside of the Azure Blob account.
 

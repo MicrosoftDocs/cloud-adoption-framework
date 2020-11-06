@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # How to start a manual Moodle migration
 
-To start a Moodle migration, log in into [Azure](https://portal.azure.com/) after completing deployment. Go to the created resource group, and find all the created resources. The following image demonstrates how resources will be created:
+To start a Moodle migration, log into [Azure](https://portal.azure.com/) after completing deployment. Go to the created resource group, and find all the created resources. The following image demonstrates how resources will be created:
 
 [Resources overview](images/resource-creation-overview.png)
 
@@ -24,7 +24,7 @@ To start a Moodle migration, log in into [Azure](https://portal.azure.com/) afte
     
 [The PuTTY login page.](images/putty-login.png)
     
-[The PuTTY key login.](images/putty-key-login.png)
+[PuTTY key criteria.](images/putty-key-criteria.png)
 
  - Browse and select the SSH key and click on Open button.
 
