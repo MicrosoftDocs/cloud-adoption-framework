@@ -1,6 +1,91 @@
 {
    "redirections": [
       {
+         "source_path": "docs/get-started/help.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team/central-it.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/central-it",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/appendix/cloud-operating-model.md",
+         "redirect_url": "/azure/cloud-adoption-framework/operating-model/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/appendix/roadmap.md",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
+         "redirect_document_id": false
+      },      
+      {
+         "source_path": "docs/business-strategy/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/governance/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/governance/benchmark.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/benchmark",
+         "redirect_document_id": true
+      },      
+      {
+         "source_path": "docs/governance/best-practices.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/guides/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/governance/corporate-policy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/corporate-policy",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/governance/deployment-acceleration/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/deployment-acceleration/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/governance/getting-started.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/governance-disciplines.md",
+         "redirect_url": "azure/cloud-adoption-framework/govern/governance-disciplines",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/journeys/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/governance/security-baseline/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/security-baseline/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organization/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/roadmap.md",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
+         "redirect_document_id": false
+      },                        
+      {
          "source_path": "docs/migrate/expanded-scope/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/index",
          "redirect_document_id": true
@@ -212,7 +297,7 @@
       },
       {
          "source_path": "docs/getting-started/index.yml",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
          "redirect_document_id": true
       },
       {

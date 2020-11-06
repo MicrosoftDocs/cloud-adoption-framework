@@ -1,5 +1,5 @@
 ---
-title: "Approaches to digital estate planning"
+title: Approaches to digital estate planning
 description: Understand the characteristics and requirements of top-down workload-driven, asset-driven, or incremental approaches to digital estate planning.
 author: BrianBlanchard
 ms.author: brblanch
@@ -20,7 +20,7 @@ The top-down assessment approach evaluates security aspects. Security includes t
 
 The top-down approach also measures the operational requirements of the application, such as service levels, integration, maintenance windows, monitoring, and insight. When these aspects have been analyzed and considered, the resulting score reflects the relative difficulty of migrating this application to each cloud platform: IaaS, PaaS, and SaaS.
 
-In addition, the top-down assessment evaluates the financial benefits of the application, such as operational efficiencies, TCO, return on investment, and other appropriate financial metrics. The assessment also examines the seasonality of the application (for example, are there times of the year when demand spikes?) and overall compute load.
+In addition, the top-down assessment evaluates the financial benefits of the application, such as operational efficiencies, TCO, return on investment, and other appropriate financial metrics. The assessment also examines the seasonality of the application (such as whether there are certain times of the year when demand spikes) and overall compute load.
 
 It also looks at the types of users it supports (casual/expert, always/occasionally logged on), and the required scalability and elasticity. Finally, the assessment concludes by examining business continuity and resiliency requirements, as well as dependencies for running the application if a disruption of service should occur.
 

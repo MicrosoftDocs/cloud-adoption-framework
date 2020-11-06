@@ -1,5 +1,5 @@
 ---
-title: "Identity Baseline sample policy statements"
+title: Identity Baseline sample policy statements
 description: Use the Cloud Adoption Framework for Azure to get sample Identity Baseline policy statements that can help you draft policy statements.
 author: BrianBlanchard
 ms.author: brblanch
@@ -26,7 +26,7 @@ The following sample policy statements address common identity-related business 
 
 **Policy statement:** All assets deployed to the cloud should be controlled using identities and roles approved by current governance policies.
 
-**Potential design options:** [Azure Active Directory conditional access](/azure/active-directory/conditional-access/overview) is the default access control mechanism in Azure.
+**Potential design options:** [Azure Active Directory Conditional Access](/azure/active-directory/conditional-access/overview) is the default access control mechanism in Azure.
 
 ## Overprovisioned access
 

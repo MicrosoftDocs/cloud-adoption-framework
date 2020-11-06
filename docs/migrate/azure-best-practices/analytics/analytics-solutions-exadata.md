@@ -9,15 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore Exadata SSMA -->
-
 # Azure Synapse Analytics solutions and migration for an Oracle data warehouse
 
-An Oracle data warehouse schema is different from Azure Synapse Analytics in several ways. The differences include databases, data types, and a range of Oracle database object types that aren't supported in Azure Synapse.
+An Oracle data warehouse schema is different from Azure Synapse Analytics in several ways. The differences include databases, data types, and a range of Oracle Database object types that aren't supported in Azure Synapse.
 
 Like other database management systems, when you migrate an Oracle data warehouse to Azure Synapse, you'll find that Oracle has multiple, separate databases and Azure Synapse has only one database. You might need to use a new naming convention, such as concatenating Oracle schema and table names, to move tables and views in your Oracle data warehouse staging database, production database, and data mart databases to Azure Synapse.
 
-Several Oracle database objects aren't supported in Azure Synapse. Database objects that aren't supported in Azure Synapse include Oracle bit-mapped indexes, function-based indexes, domain indexes, Oracle clustered tables, row-level triggers, user-defined data types, and PL/SQL stored procedures. You can identify these objects by querying various Oracle system catalog tables and views. In some cases, you can use workarounds. For example, you can use partitioning or other index types in Azure Synapse to work around the unsupported index types in Oracle. You might be able to use materialized views instead of Oracle clustered tables, and migration tools like SQL Server Migration Assistant (SSMA) for Oracle can translate at least some PL/SQL.
+Several Oracle Database objects aren't supported in Azure Synapse. Database objects that aren't supported in Azure Synapse include Oracle bit-mapped indexes, function-based indexes, domain indexes, Oracle clustered tables, row-level triggers, user-defined data types, and PL/SQL stored procedures. You can identify these objects by querying various Oracle system catalog tables and views. In some cases, you can use workarounds. For example, you can use partitioning or other index types in Azure Synapse to work around the unsupported index types in Oracle. You might be able to use materialized views instead of Oracle clustered tables, and migration tools like SQL Server Migration Assistant (SSMA) for Oracle can translate at least some PL/SQL.
 
 When you migrate an Oracle data warehouse schema, you also must take into account data type differences on columns. To find the columns in your Oracle data warehouse and data mart schemas that have data types that don't map to data types in Azure Synapse, query the Oracle catalog. You can use workarounds for several of these instances.
 

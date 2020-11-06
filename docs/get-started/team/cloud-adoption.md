@@ -3,10 +3,10 @@ title: "Get started: Build a cloud adoption team"
 description: Establish a cloud adoption team's scope, deliverables, and the capabilities to prepare for successful cloud adoption.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud adoption team
@@ -16,6 +16,8 @@ Cloud adoption teams are the modern-day equivalent of technical implementation t
 Some cloud adoption teams focus exclusively on cloud migration, and others focus on innovations that take advantage of cloud technologies. Some teams include the broad technical expertise that's required to complete large adoption efforts, such as a full datacenter migration, and others have a tighter technical focus.
 
 A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL Database virtual machines (VMs) to SQL PaaS instances.
+
+As cloud adoption expands, customers benefit from a team that's dedicated to the [cloud platform function](../../organize/cloud-platform.md). That team uses automated deployment and code reuse to accelerate successful adoption. People focused on a cloud platform function can implement infrastructure, application patterns, governance, and other supporting assets to drive further efficiencies and consistency, and to instill cloud principles in your organization. Small organizations and small adoption teams don't have the luxury of a dedicated cloud platform team. We recommend that you establish an automation capability in your adoption team to begin building this important cloud muscle.
 
 ![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
 
@@ -34,7 +36,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 **Deliverables:**
 
-- Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
+- Determine whether the team aligns better with the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
 - Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
@@ -59,7 +61,7 @@ If your company's cloud adoption effort is mature enough to have supporting team
 - [Governance disciplines](../../govern/corporate-policy.md) outlines the types of controls or disciplined processes that the governance team has likely implemented to allow for safe, compliant adoption of the cloud.
 - The [Manage methodology](../../manage/index.md) outlines the considerations that go into a cloud operations baseline for providing basic operations management.
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -67,12 +69,12 @@ If your company's cloud adoption effort is mature enough to have supporting team
 
 ## Step 3: Begin your adoption journey
 
-Depending on the type of adoption team you're a member of, you'll get started with one of these journeys:
+Depending on the type of adoption team you're a member of, you'll get started with one of these guides:
 
-- Get started: Migrate workloads to the cloud
-- Get started: Build new products or services
+- [Get started: Migrate workloads to the cloud](../migrate.md)
+- [Get started: Build new products or services](../innovate.md)
 
-These getting started guides provide guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
+These guides provide guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
 
 In the end, the cloud adoption team is accountable for delivery across their assigned migration efforts or new product development. Although supporting teams are accountable for ensuring that each step is completed, it's the responsibility of each cloud adoption team to ensure that the supporting team is getting the support it needs to be successful. If the accountable team doesn't yet exist or needs more support to deliver on its accountable steps, the adoption team is encouraged to partner with other teams to complete its deliverables.
 
@@ -83,12 +85,11 @@ In the end, the cloud adoption team is accountable for delivery across their ass
 
 **Guidance to support deliverable completion:**
 
-- In the get-started guide for migration, the adoption team is accountable for delivery of [step 10: migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
-- In the get-started guide for new products, the adoption team is accountable for delivery of [step 8: innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
+- In the getting started guide for migration, the adoption team is accountable for delivery of [step 10: Migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
+- In the getting started guide for new products, the adoption team is accountable for delivery of [step 8: Innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
 
 All other steps on those checklists are designed to make the effort more manageable.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

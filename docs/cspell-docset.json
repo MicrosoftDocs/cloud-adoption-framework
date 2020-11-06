@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "words": [
+      "deprioritize",
+      "offboarding",
+      "passwordless",
+      "personalizer",
+      "preintegration"
+  ],
+  "ignoreWords": [
+      "AppOps",
+      "BYOK",
+      "CCoE",
+      "CDO's",
+      "CIO's",
+      "CISO",
+      "HDFS",
+      "ISVs",
+      "ITSM",
+      "MPLS",
+      "MTBF",
+      "MTTR",
+      "NVAs",
+      "SIEM",
+      "SQLVM",
+      "TOGAF",
+      "VPNs",
+      "WAFs",
+      "WEBVM"
+  ],
+  "flagWords": [
+  ]
+}

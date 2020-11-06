@@ -38,7 +38,7 @@ When you build data-protection strategies, first consider breaking down your wor
 
 The most basic data protection is backup. To speed up the recovery process if servers are lost, back up not just data but also server configurations. Backup is an effective mechanism to handle accidental data deletion and ransomware attacks. [Azure Backup](/azure/backup) can help you protect your data on Azure and on-premises servers running Windows or Linux. For details about what Backup can do and for how-to guides, see the [Azure Backup service overview](/azure/backup/backup-overview).
 
-Recovery via backup can take a long time. The industry standard is usually one day. If a workload requires business continuity for hardware failures or datacenter outage, consider using data replication. [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) provides continuous replication of your VMs, a solution that provides bare-minimum data loss. Site Recovery also supports several replication scenarios, such as replication:
+If a workload requires real-time business continuity for hardware failures or datacenter outage, consider using data replication. [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) provides continuous replication of your VMs, a solution that provides bare-minimum data loss. Site Recovery also supports several replication scenarios, such as replication:
 
 - Of Azure VMs between two Azure regions.
 - Between servers on-premises.
@@ -68,14 +68,14 @@ Several services fit into this category. They can help you to:
 
 These services are essential to supporting ongoing operations:
 
-- [Update Management](/azure/automation/automation-update-management) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
+- [Update Management](/azure/automation/update-management/overview) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
 - [Change Tracking and Inventory](/azure/automation/change-tracking) provides insight into the software that's running in your environment, and highlights any changes that have occurred.
 - [Azure Automation](/azure/automation/automation-intro) lets you run Python and PowerShell scripts or runbooks to automate tasks across your environment. When you use Automation with the [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker), you can extend your runbooks to your on-premises resources as well.
 - [Azure Automation State Configuration](/azure/automation/automation-dsc-overview) enables you to push PowerShell Desired State Configuration (DSC) configurations directly from Azure. DSC also lets you monitor and preserve configurations for guest operating systems and workloads.
 
 ## Govern
 
-Adopting and moving to the cloud creates new management challenges. It requires a different mindset as you shift from an operational management burden to monitoring and governance. The Cloud Adoption Framework for Azure starts with [governance](../../govern/index.md). The framework explains how to migrate to the cloud, what the journey will look like, and who should be involved.
+Adopting and moving to the cloud creates new management challenges. It requires a different mindset as you shift from an operational management burden to monitoring and governance. The Cloud Adoption Framework starts with [governance](../../govern/index.md). The framework explains how to migrate to the cloud, what the journey will look like, and who should be involved.
 
 The governance design for standard organizations often differs from governance design for complex enterprises. To learn more about governance best practices for a standard organization, see the [standard enterprise governance guide](../../govern/guides/standard/index.md). To learn more about governance best practices for a complex enterprise, see the [governance guide for complex enterprises](../../govern/guides/complex/index.md).
 

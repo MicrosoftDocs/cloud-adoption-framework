@@ -271,7 +271,7 @@ In brief, Contoso does the following:
 
     ![Screenshot of the Azure portal, displaying restored data.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench5.png)
 
-    ![Screenshot of the Azure portal, displaying restored data.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench6.png)
+    ![Screenshot of the My SQL databases blade with an arrow pointing to the osticket database.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench6.png)
 
 8. The admins update the database information on the web apps. On the MySQL instance, they open **Connection Strings**.
 

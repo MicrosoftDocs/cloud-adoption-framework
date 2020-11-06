@@ -42,19 +42,19 @@ To assign the policies that described in the previous section:
 
 1. In the Azure portal, go to **Policy** > **Assignments** > **Assign initiative**.
 
-    ![Screenshot of the portal's policy interface](./media/onboarding-at-scale1.png)
+    ![Screenshot of the portal's policy interface with the Assignments option and Assign initiative option called out.](./media/onboarding-at-scale1.png)
 
 2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (...) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
 3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
-    ![Screenshot of the portal's policy interface](./media/onboarding-at-scale2.png)
+    ![Screenshot of the Enable Azure Monitor for V M initiative definition.](./media/onboarding-at-scale2.png)
 
 4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and it supports custom values.
 
 5. For this policy, select **Log Analytics workspace** for the Log analytics agent to associate.
 
-    ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
+    ![Screenshot of the Log Analytics workspace option.](./media/onboarding-at-scale3.png)
 
 6. Select the **Managed Identity location** check box. If this policy is of the type [`DeployIfNotExists`](/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
@@ -77,9 +77,9 @@ To enable solutions, you need to configure the Log Analytics workspace. Onboarde
 
 ### Update Management
 
-The Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you onboard through your Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](/azure/automation/automation-onboard-solutions-from-automation-account).
+The Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you onboard through your Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](/azure/automation/change-tracking/manage-change-tracking).
 
-We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. Manually update the scope to include machines that are covered by the Update Management service.
+We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](/azure/automation/change-tracking/manage-change-tracking) is created in the workspace. Manually update the scope to include machines that are covered by the Update Management service.
 
 To cover your existing servers as well as future servers, you need to remove the scope configuration. To do this, view your Automation account in the Azure portal. Select **Update Management** > **Manage machine** > **Enable on all available and future machines**. This setting allows all Azure VMs that are connected to the workspace to use Update Management.
 
@@ -87,7 +87,7 @@ To cover your existing servers as well as future servers, you need to remove the
 
 ### Change Tracking and Inventory solutions
 
-To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about how to onboard these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](/azure/automation/automation-onboard-solutions-from-automation-account).
+To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about how to onboard these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](/azure/automation/change-tracking/manage-change-tracking).
 
 The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
 

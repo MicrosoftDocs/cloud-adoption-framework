@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-<!-- cSpell:ignore CISO -->
-
 # CISO cloud readiness guide
 
 Microsoft guidance like the Cloud Adoption Framework is not positioned to determine or guide the unique security constraints of the thousands of enterprises supported by this documentation. When moving to the cloud, the role of the chief information security officer or chief information security office (CISO) isn't supplanted by cloud technologies. Quite the contrary, the CISO and the office of the CISO, become more engrained and integrated. This guide assumes the reader is familiar with CISO processes and is seeking to modernize those processes to enable cloud transformation.
@@ -33,7 +31,7 @@ As solutions move further "up stack" to incorporate platform as a service (PaaS)
 
 Knowledge about the cloud is fundamental to approaching a [policy review](./cloud-policy-review.md) with a growth mindset. The following resources can help the CISO better understand the security posture of Microsoft's Azure platform.
 
-<!-- docsTest:ignore "Security Response in the Cloud" -->
+<!-- docutune:casing "Security Response in the Cloud" -->
 
 **Security platform resources:**
 
@@ -51,7 +49,7 @@ Knowledge about the cloud is fundamental to approaching a [policy review](./clou
 - [Responding to law enforcement](https://www.microsoft.com/trust-center/privacy)
 - [Stringent privacy standards](https://www.microsoft.com/trust-center/privacy)
 
-<!-- docsTest:ignore "Cloud Services Due Diligence Checklist" -->
+<!-- docutune:casing "Cloud Services Due Diligence Checklist" -->
 
 **Compliance:**
 

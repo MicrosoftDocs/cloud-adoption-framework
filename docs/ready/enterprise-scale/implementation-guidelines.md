@@ -17,7 +17,7 @@ This article covers how to get started with the enterprise-scale, platform-nativ
 
 In order to implement the enterprise-scale architecture, you must think in terms of the following categories of activities:
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 1. **What must be true for the enterprise-scale architecture:** Encompasses activities that must be performed by the Azure and Azure Active Directory (Azure AD) administrators to establish an initial configuration. These activities are sequential by nature and primarily one-off activities.
 
@@ -25,7 +25,7 @@ In order to implement the enterprise-scale architecture, you must think in terms
 
 3. **Deploy a new landing zone (File > New > Landing Zone):** These are recurring activities that are required to instantiate a new landing zone.
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->
 
 To operationalize at scale, these activities must follow infrastructure-as-code (IaC) principles and must be automated by using deployment pipelines.
 
@@ -64,6 +64,22 @@ The following sections list the steps to complete this category of activity in t
   | [`Deny-PublicEndpoints`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policySetDefinitions-Deny-PublicEndpoints.parameters.json) | Denies the creation of services with public endpoints on all landing zones. |
   | [`Deploy-VM-Backup`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/Landing%20Zones%20(landingzones)/.AzState/Microsoft.Authorization_policyAssignments-Deploy-VM-Backup.parameters.json) | Ensures that backup is configured and deployed to all VMs in the landing zones. |
   | [`Deploy-VNet`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json) | Ensures that all landing zones have a virtual network deployed and that it's peered to the regional virtual hub. |
+
+#### Sandbox Governance Guidance
+
+As detailed in the [Management group and subscription organization critical design area](./management-group-and-subscription-organization.md), subscriptions placed within the Sandbox Management Group hierarchy should have a less restrictive policy approach. As these subscriptions should be used by users within the business to experiment and innovate with Azure products and services, that may not be yet permitted in your Landing Zones hierarchy, to validate if their ideas/concepts could work; before they move into a formal development environment.
+
+However these subscriptions in the Sandbox Management Group hierarchy do still require some guardrails applied to ensure they are only used in the correct manner; e.g. for innovation, trialling new Azure services/products/features and ideation validation. 
+
+**We therefore recommend:**
+
+1. Create the Azure Policy assignments in the following table at the Sandbox Management Group scope:
+
+  | Name                  |     Description                                                                                     | Assignment Notes |
+  |-----------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+  | [`Deny-VNET-Peering-Cross-Subscription`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState) | Prevents VNET peering connections being created to other VNETs outside of the subscription. | Ensure this policy is only assigned to the Sandbox Management Group hierarchy scoping level. |
+  | [`Denied-Resources`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyAssignments-Denied-Resources.parameters.json)           | Resources that are denied from creation in the sandbox subscriptions. This will prevent any hybrid connectivity resources from being created; *e.g. VPN/ExpressRoute/VirtualWAN* | When assigning this policy select the following resources to deny the creation of: VPN Gateways: `microsoft.network/vpngateways`, P2S Gateways: `microsoft.network/p2svpngateways`, Virtual WANs: `microsoft.network/virtualwans`, Virtual WAN Hubs: `microsoft.network/virtualhubs`, ExpressRoute Circuits: `microsoft.network/expressroutecircuits`, ExpressRoute Gateways: `microsoft.network/expressroutegateways`, ExpressRoute Ports: `microsoft.network/expressrouteports`, ExpressRoute Cross-Connections: `microsoft.network/expressroutecrossconnections` and Local Network Gateways: `microsoft.network/localnetworkgateways`. | 
+  | [`Deploy-Budget-Sandbox`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState) | Ensures a budget exists for each sandbox subscription, with e-mail alerts enabled. The budget will be named: `default-sandbox-budget` in each subscription. | If during the assignment of the policy the parameters are not amended from their defaults a the budget (`default-sandbox-budget`) will be created with a 1000 currency threshold limit and will send an e-mail alert to the subscription's owners and contributors (based on RBAC role assignment) at 90% and 100% of the budget threshold. |
 
 ### Global networking and connectivity
 
@@ -180,11 +196,11 @@ The following list shows policies that you can use when you're implementing iden
 |--------------------------|----------------------------------------------------------------------------------------|
 | [`Deploy-VHub`](https://github.com/Azure/Enterprise-Scale/blob/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)/contoso%20(contoso)/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json) | This policy deploys a virtual hub, Azure Firewall, and gateways (VPN/ExpressRoute). It also configures the default route on connected virtual networks to Azure Firewall. |
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 ## File > New > Landing Zone for applications and workloads
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->
 
 1. Create a subscription and move it under the `Landing Zones` management group scope.
 
