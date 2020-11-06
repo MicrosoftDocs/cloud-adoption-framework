@@ -17,12 +17,12 @@ Virtual machine scale set instances are assigned with private IPs that can be ac
 
 To create a virtual machine scale set instance private IP:
 
-- Log in to [Azure](portal.azure.com) and go to the created Resource Group.
+- Log in to the [Azure portal](https://ms.portal.azure.com/#home), and go to the created resource group.
 - Find and navigate to the virtual machine scale set resource.
 - In the left panel, select **Instances**.
 - Navigate to the running instance and find the private IP associated to it in the **Overview** section.
 
-To log in into a virtual machine scale set, log into the controller virtual machine and run these commands:
+To log in into a virtual machine scale set, log into the controller virtual machine. Run these commands:
 
 ```bash
  sudo -s

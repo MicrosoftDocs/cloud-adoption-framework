@@ -2,7 +2,7 @@
 title: Moodle migration resources
 description: Learn about resources for a Moodle migration.
 author: BrianBlanchard
-ms.author: Umakanth
+ms.author: brblanch 
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -54,7 +54,7 @@ These storage mechanisms will differ according to the deployment selected. NFS a
 
 Explore [storage account](https://docs.microsoft.com/azure/storage/common/storage-account-overview) to learn more about storage accounts.
 
-- **Database template:** A database template will create an [Azure Database for MySQL server](https://docs.microsoft.com/en-in/azure/mysql/). Azure Database for MySQL is easy to set up, manage, and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups, and security. Build with the latest community edition of MySQL, including versions 5.6, 5.7, and 8.0. To access the database server created, navigate to the **Resource group** provided during deployment and go to **Azure Database for MySQL server**. The database server will have a server name, server admin login name, MySQL version, and a performance configuration.
+- **Database template:** A database template will create an [Azure Database for MySQL server](https://docs.microsoft.com/azure/mysql). Azure Database for MySQL server is easy to set up, manage, and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups, and security. Build with the latest community edition of MySQL, including versions 5.6, 5.7, and 8.0. To access the database server created, navigate to the **Resource group** provided during deployment and go to **Azure Database for MySQL server**. The database server will have a server name, server admin login name, MySQL version, and a performance configuration.
         
 - **Virtual machine template:** This template will distinguish a virtual Machine as a controller virtual machine. The operating system for a controller virtual machine is Ubuntu 18.04.
 
