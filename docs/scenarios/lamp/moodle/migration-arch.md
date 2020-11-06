@@ -61,7 +61,7 @@ If the PHP and Moodle versions are lagging with on-premises, then update the ver
     "phpVersion":       { "value": "7.2" },
     "moodleVersion":    { "value": "MOODLE_38_STABLE"}
 
-- For moodle 3.9, value should be "MOODLE_39_STABLE"
+- For Moodle 3.9, value should be "MOODLE_39_STABLE"
     ```
 
 - Select **Save** to save your changes.

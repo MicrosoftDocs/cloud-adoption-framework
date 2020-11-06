@@ -149,11 +149,11 @@ Update parameters in config.php. Make sure to store the DNS name for this task:
   nano config.php
 
 - Update the database details, and save the file. For example:
-  - $CFG->dbhost    = 'localhost';                - Change the localhost to the server name.
-  - $CFG->dbname    = 'moodle';                   - Change moodle to newly created database name.
-  - $CFG->dbuser    = 'root';                     - Change root to the server admin login name.
-  - $CFG->dbpass    = 'password';                 - Change the password to the server admin login password.
-  - $CFG->wwwroot   = 'https://on-premises.com';   - Change on-premises to the DNS name.
+  - $CFG->dbhost    = 'localhost';                - Change 'localhost' to the server name.
+  - $CFG->dbname    = 'moodle';                   - Change 'moodle' to newly created database name.
+  - $CFG->dbuser    = 'root';                     - Change 'root' to the server admin login name.
+  - $CFG->dbpass    = 'password';                 - Change 'password' to the server admin login password.
+  - $CFG->wwwroot   = 'https://on-premises.com';  - Change 'on-premises' to the DNS name.
   - $CFG->dataroot  = '/var/moodledata';          - Change the path to '/moodle/moodledata'.
 
 The on-premises dataroot directory can be stored at any location. After making the the changes, save the file. Press **CTRL+o** to save and **CTRL+x** to exit.
