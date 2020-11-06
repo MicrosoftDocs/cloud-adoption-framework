@@ -39,7 +39,7 @@ Exporting data from on-premises to Azure involves the following tasks:
 
 - The az login command: Azure CLI will likely launch an instance or a tab inside of your default web browser and prompt you to log in to Azure with your Microsoft account. If the browser launch doesn't happen, open a new page at [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
 
--  To use command line, enter the following command:
+-  To use the command line, enter the following command:
 
   ```bash
   az login -u <username> -p <password>

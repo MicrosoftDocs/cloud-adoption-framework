@@ -147,7 +147,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
 
 1. Error: The database connection has failed: For errors like _database connection failed_ or _could not connect to the database you specified_, here are some potential reasons and solutions.
 	
-- Your database server isn't installed or running. To check this for MySQL, try typing the following command line:
+- Your database server isn't installed or running. To check this for MySQL, try typing the following the following command:
 
   ```
   $telnet database_host_name 3306

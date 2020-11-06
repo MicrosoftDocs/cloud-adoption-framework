@@ -1,6 +1,6 @@
 ---
-title: How to perform a manual Moodle migration
-description: Learn how to perform a manual Moodle migration.
+title: Overview of how to perform a manual Moodle migration
+description: Overview of how to perform a manual Moodle migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/06/2020
@@ -9,12 +9,12 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# How to perform a manual Moodle migration
+# Overview of how to perform a manual Moodle migration
 
 This document explains how to migrate Moodle application from an on-premises environment to Azure. Two approaches are provided for each step:
 
 - An approach that lets you use the Azure portal.
-- An approach that lets you accomplish the same tasks with command line while using Azure CLI.
+- An approach that lets you accomplish the same tasks with the command line while using the Azure CLI.
 
 ## Prerequisites
 
@@ -46,3 +46,5 @@ The steps of how to migrate a Moodle application to Azure are broken down into t
 1. Post-migration
 
 ## Next steps
+
+Continue to [how to prepare for a Moodle migration](/migration-pre.md) for preliminary information about the Moodle migration process.
