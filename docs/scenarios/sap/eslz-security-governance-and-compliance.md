@@ -25,7 +25,7 @@ It’s important to understand the shared responsibility model between you as a 
 
 This is shown in the picture below.
 
-![Responsibility Zones](media/SGC_ResponsIbilityZones.jpg)
+![Responsibility Zones](media\SGC_ResponsIbilityZones.jpg)
 
 Picture 1: Cloud Responsibility Model
 
@@ -147,7 +147,7 @@ If your SAP application consists of multiple workloads, evaluate each workload s
 
 **Sample Security posture for SAP on Azure Workload**: As we see from the diagram below Network security groups (NSG) contain a list of security rules that allow or deny network traffic to resources within your Azure VNet. NSGs can be associated to subnets or individual network interfaces attached to VMs. Security rules can be configured based on source/destination, port, and protocol. NSG’s influence network traffic for the SAP system. In the diagram below, three subnets are implemented, each having an NSG assigned - FE (Front-End), App and DB.
 
-![A diagram showing three subnets with NSGs influencing network traffic.](media\SGC_SAP_NSG_Diagram.jpg)
+![A diagram showing three subnets with NSGs influencing network traffic](media\SGC_SAP_NSG_Diagram.jpg)
 
 ### Compliance and Governance
 
