@@ -25,7 +25,7 @@ Moodle migrations include the following tasks:
 
 - When using an Azure Resource Manager template to deploy infrastructure on Azure, a couple of options are available to you. The following diagram provides an overview of infrastructure resources.
 
-![To be determined](images/architecture.png)
+![Azure infrastructure resources.](images/architecture.png)
 
 A fully configurable deployment gives more flexibility and choices for deployments. A predefined deployment size uses one of four predefined Moodle sizes. The four predefined templates options, minimal, short-to-mid, large, and maximal, are available at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
 
@@ -39,7 +39,7 @@ A fully configurable deployment gives more flexibility and choices for deploymen
 
 Select **Launch** to deploy any of the predefined templates. This will direct you to the Azure Portal, where you'll need to complete mandatory fields such as **Subscription**, **Resource Group**, [**SSH key**](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), and **Region**.
 
-![To be determined](images/customdeployment.png)
+![Custom deployment: Deploy from a custom template.](images/customdeployment.png)
 
 The preceding predefined templates will deploy the default versions.
 
@@ -53,7 +53,7 @@ If the PHP and Moodle versions are lagging with on-premises, then update the ver
 
 - Select **Edit Template** on the **Custom deployment** page.
     
-![To be determined](images/edittemplate.png)
+![Edit template: Edit your Azure Resource Manager template.](images/edittemplate.png)
 
 - In the **Resources** section, add the Moodle and PHT versions to the **Parameters** block.
 

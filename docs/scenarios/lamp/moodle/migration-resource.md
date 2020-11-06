@@ -46,11 +46,11 @@ The following storage account types feature Azure Resource Manager template supp
 
 - GluserFS: An open-source distributed file system that can scale out in building-block fashion to store multiple petabytes of data. Explore [Gluster FS](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs) for more information.
 
-- Azure Files: The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. Explore [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) for more information. For NFS and glusterFS, the replication is standard LRS, and the storage type is general purpose v1. For Azure Files, the replication is premium locally-redundant storage, LRS, and the type is FileStorage.
+- Azure Files: The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. Explore [Azure files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) for more information. For NFS and glusterFS, the replication is standard LRS, and the storage type is general purpose v1. For Azure Files, the replication is premium locally-redundant storage, LRS, and the type is FileStorage.
 
-These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and Fle Share, navigate to portal and select the storage account in resource group.
+These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and Fle Share, navigate to portal, and select the storage account in resource group.
 
-![To be determined](images/storage-account.png)
+![A storage account.](images/storage-account.png)
 
 Explore [storage account](https://docs.microsoft.com/azure/storage/common/storage-account-overview) to learn more about storage accounts.
 

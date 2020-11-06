@@ -49,9 +49,9 @@ Exporting data from on-premises to Azure involves the following tasks:
 
 Skip this step if you have a subscription. If you don't have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription.
 
-- To create the subscription with the Azure portal, navigate to **Subscription** from the **Home** section.
+- To create the subscription with the Azure portal, navigate to **Subscriptions** from the **Home** section.
 
-  ![To be determined](/images/subscription1.png)
+  ![Azure subscriptions.](/images/subscriptions.png)
 
 - This command sets the subscription:
 
@@ -65,9 +65,9 @@ Skip this step if you have a subscription. If you don't have a subscription, you
 
 Once the subscription is set up, you need to create a resource group. One option is to use Azure portal to create it. Navigate to **Home** section, search for **Resource group**, select it, fill in the mandatory fields, and select on **Create**.
 
-![To be determined](/images/rg1.png)
+![Resource groups: Create a resource group.](/images/resource-group.png)
 
-Alternatively, you can use the Azure CLI to create a resource group. 
+Alternatively, you can use the Azure CLI to create a resource group.
 
 - Provide the same default location from the previous steps.
 
@@ -90,7 +90,7 @@ Storage accounts can be created with the Azure portal or the Azure CLI.
 
 - To create with the portal, navigate to it, search for the storage account, and select the **Add** button. After filling in the mandatory fields, select **Create**.
 
-  ![To be determined](/images/storageaccountcreating.png)
+  ![Creating a storage account.](/images/create-storage-account.png)
 
 - Alternatively, you can use the Azure CLI:
 
@@ -118,7 +118,7 @@ Storage accounts can be created with the Azure portal or the Azure CLI.
 
 - When backing up on-premises Moodle and moodledata files, configurations, and databases, back up to a single directory. The following diagram summarizes this:
 
-  ![To be determined](/images/directorystructure.png)
+  ![The Moodle backup directory structure.](/images/directory-structure.png)
 
 - To copy all data, create an empty storage directory in any desired location:
 
@@ -201,17 +201,17 @@ Execute the following commands to install AzCopy:
   sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
   ```
 
-## Copy archived files to Azure Blob 
+## Copy archived files to Azure Blob
 
 Use AzCopy to copy archived on-premises files to Azure Blob.
 
 - To use AzCopy, generate the SAS token first. Go to the created **Storage account resource**, and navigate to **Shared access signature** in the left panel.
 
-  ![To be determined](/images/storageaccountcreated.PNG)
+  ![A sample storage account.](/images/storage-account-created.png)
 
-- Select **Container** and checkboxes, and set the start and expiry date of the SAS token. Select **Generate SAS and Connection String**.
+- Select **Container** and checkboxes, and set the start and expiry date of the SAS token. Select **Generate SAS and connection string**.
 
-  ![To be determined](images/SAStokengeneration.PNG)
+  ![Generating an SAS token.](images/SAS-token-generation.png)
         
 - Copy and save the SAS token for future use.
 
@@ -225,11 +225,11 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
 
   --auth-mode login means authentication mode at login. After login, the container will be created.
             ```
-- The container can also be created with the Azure portal. Navigate to the same storage account created, select the container, and then the **Add** button.
+- The container can also be created with the Azure portal. Navigate to the same storage account created, select the container, and then select the **Add** button.
             
-- After giving the mandatory container name, click on create button.
+- After giving the mandatory container name, select the **Create** button.
     
-  ![To be determined](images/cc.png)
+  ![A new container.](images/new-container.png)
     
 - The command to copy archive file to blob storage:
 
@@ -239,7 +239,7 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
   Example: azcopy copy '/home/azureadmin/storage.tar.gz' 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='
   ```
 
-  ![To be determined](images/ArchivefileinBlobstorage.PNG)
+  ![An archive in Azure Blob.](images/archived-file-in-blob.png)
 
 - There should now be a copy of your archive inside of the Azure Blob account.
 

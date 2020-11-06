@@ -23,7 +23,7 @@ Create a virtual network gate in Azure Portal with the following steps:
 - Select the virtual network associated with virtual machines created under the same resource group.
 - Select **Create** to start deploying.
 
-![To be determined](images/vpngateway.png)
+![Creating a virtual network gateway.](images/vpn-gateway.png)
 		
 - Create a virtual network gateway with this Azure CLI command:
 
@@ -65,7 +65,7 @@ Following these steps should allow you to successfully install certificates on y
 
 Certificate types:
 
-**Exporting root certificates:**
+**To export root certificates:**
 
 - Select the root certificate, right-click on the certificate, and then go to **All Tasks**.
 - Select **Export** for a new window and then **Next**.
@@ -74,7 +74,7 @@ Certificate types:
 - Select the **Browse and select the path**, enter a name, and select **Next**. 
 - This message will appear: **Exported successfully**.
     
-**Exporting child certificates:**
+**To export child certificates:**
 
 - Select the client certificate, right-click on the certificate, and then go to **All Tasks**.
 - Select **Export** for a new window and then **Next**.
@@ -82,7 +82,7 @@ Certificate types:
 - Select the **Personal information exchange**, **PKCS**, and then **Next**.
 - Select the password checkbox and provide the password.
 - Set the encryption to TripleDES-SHA1, and select **Next**.
-- Select the **Browse and select the path**, enter a name, and select **Next**. 
+- Select the **Browse and select the path**, enter a name, and select **Next**.
 - This message will appear: **Exported successfully**.
 - Open the root certificate file in your choice editor, and copy the code.
 
@@ -93,8 +93,8 @@ Certificate types:
 - Click on Configure now in the center panel.
 - Add the address pool (ex: 192.168.xx.0/24).
 - Select the tunnel type, IKEv2.
-- Set the authentication type to Azure certification.
-- Paste the copied root certificate code in the portal, name it as "root", and select **Save**.
+- Set the authentication type to **Azure certification**.
+- Paste the copied root certificate code in the portal, name it **Root**, and select **Save**.
 
 ## Download and Connect to the VPN Client
 

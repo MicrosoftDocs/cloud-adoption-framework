@@ -13,27 +13,28 @@ ms.subservice: plan
 
 To start a Moodle migration, log in into [Azure](https://portal.azure.com/) after completing deployment. Go to the created resource group, and find all the created resources. The following image demonstrates how resources will be created:
 
-[Resources overview](images/overview.PNG)
+[Resources overview](images/resource-creation-overview.png)
 
 ## Controller virtual machine
 
-- Use a free open-source terminal emulator or serial console tool to log in into a controller machine.
+- Use a free open-source terminal emulator or serial console tool to log in to a controller machine.
 - Copy the public IP of the controller virtual machine to use as the host name.
-- Expand SSH in the navigation panel, select **Auth**, and find the SSH key file from deploying the Azure infrastructure with an Azure Resource Manager Template.
-- Select Open and it will prompt for give the username. Give it as azureadmin as it is hard coded in template.
+- Expand **SSH** in the navigation panel, select **Auth**, and find the SSH key file from deploying the Azure infrastructure with an Azure Resource Manager Template.
+- Select **Open**. You will be prompted for the user name. Enter **azureadmin**, as it's hard-coded in the template.
     
-[Putty login page](images/puttylogin.PNG)
+[The PuTTY login page.](images/putty-login.png)
     
-[Putty key](images/puttykeylogin.PNG)
+[The PuTTY key login.](images/putty-key-login.png)
 
  - Browse and select the SSH key and click on Open button.
 
-Browse [Putty general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html) to learn more about Putty.
+Browse [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html) to learn more about PuTTY.
 After logging in, run the next set of commands to migrate.
         
 ## Download and install AzCopy
 
-Perform the following commands to install AzCopy:
+Run: the following commands to install AzCopy:
+
   ```bash
   sudo -s
   wget https://aka.ms/downloadazcopy-v10-linux
@@ -95,13 +96,13 @@ Before migrating, back up the current configuration. A backup directory is extra
 
 - Select the new MySQL server and then **Connection security**.
 
-![Select **Connection security**.](images/databaseconnectionsecurity.png)
+![Select **Connection security**.](images/database-connection-security.png)
 			
 - You can add an IP or configure firewall rules here. Select **Save** after you've created the rules.
 
 You can now connect to the server using the mysql command-line tool or the mySQL Workbench tool. To obtain connection information, copy the **Server name** and **Server admin login name** from the **MySQL server resource** page. You can select the copy button next to each field to do this.
 
-![Setting up a new connection](images/databaseconnection.png)
+![Setting up a new connection.](images/database-connection.png)
 
 For example, if the server name is mydemoserver.mysql.database.azure.com, and the server admin login name is myadmin@mydemoserver:
 
@@ -207,13 +208,18 @@ Configure directory permissions.
   ```bash
    nano /etc/nginx/sites-enabled/*.conf
 
- - Azure Resource Manager template deployment will set the nginx server on port 81. Update the server port to 81 if it's not 81.
+- Azure Resource Manager template deployment will set the nginx server on port 81. Update the server port to 81 if it's not 81.
+
 -  Update the server name. For example, if the server_name on-premises.com, update the on-premises.com with the DNS name. In most of the cases, DNS may remain same in the migration.
+
 -  Update the HTML root directory location. For example, if 'root /var/www/html/moodle;', update it to be 'root /moodle/html/moodle;'.
-- The on-premises root directory can be at any location
+
+- The on-premises root directory can be at any location.
+
 - After the changes, press **CTRL+o** to save the file and **CTRL+x** to exit.
 
 - Restart the web servers.
+
   ```bash
   sudo systemctl restart nginx 
   sudo systemctl restart php$_PHPVER-fpm  
