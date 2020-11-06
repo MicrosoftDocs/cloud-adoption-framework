@@ -2,7 +2,7 @@
 title: How to perform a manual Moodle migration
 description: Learn how to perform a manual Moodle migration.
 author: BrianBlanchard
-ms.author: TBD
+ms.author: Umakanth
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -39,10 +39,10 @@ Migration of Moodle with an Azure Resource Manager template creates the infrastr
 
 ## Moodle migration tasks
 
-The steps of migration a Moodle application to Azure is broken down in the following three tasks:
+The steps of how to migrate a Moodle application to Azure are broken down into the following three tasks:
 
 1. Pre-migration
-1. The practical migration of the application
+1. The practical steps of migrating the application
 1. Post-migration
 
 ## Next steps

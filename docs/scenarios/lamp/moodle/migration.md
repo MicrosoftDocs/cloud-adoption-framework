@@ -2,7 +2,7 @@
 title: How to perform a manual Moodle migration
 description: Learn how to perform a manual Moodle migration.
 author: BrianBlanchard
-ms.author: TBD
+ms.author: Umakanth
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
