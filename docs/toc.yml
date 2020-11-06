@@ -431,9 +431,9 @@ items:
             - name: Architecture & Template
               href: scenarios/lamp/moodle/migration-arch.md
             - name: Resource Description
-              href: scenarios/lamp/moodle/migration-resource.md
+              href: scenarios/lamp/moodle/migration-resources.md
             - name: Migration Steps
-              href: scenarios/lamp/moodle/migration.md
+              href: scenarios/lamp/moodle/migration-start.md
             - name: Azure Infrastructure Configuration
               href: scenarios/lamp/moodle/azure-infra-config.md
             - name: Post Migration
