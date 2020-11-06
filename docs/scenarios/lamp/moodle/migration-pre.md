@@ -2,7 +2,7 @@
 title: How to prepare for a Moodle migration
 description: Learn how to prepare for a Moodle migration.
 author: BrianBlanchard
-ms.author: Umakanth
+ms.author: brblanch
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -81,7 +81,7 @@ Alternatively, you can use the Azure CLI to create a resource group.
 
 - In the previous step, a resource group is created as a "manual_migration". Use the same resource group in further steps.
 
-Explore [location in Azure](https://azure.microsoft.com/en-in/global-infrastructure/data-residency/) for more information.
+Explore [location in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for more information.
 
 ## Create a storage account
 

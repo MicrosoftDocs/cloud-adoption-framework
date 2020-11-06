@@ -9,15 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# How to perform a manual Moodle migration
-
-## How to start a Moodle migration
+# How to start a manual Moodle migration
 
 To start a Moodle migration, log in into [Azure](http://portal.azure.com/) after completing deployment. Go to the created resource group, and find all the created resources. The following image demonstrates how resources will be created:
 
 [Resources overview](images/overview.PNG)
 
-### Controller virtual machine
+## Controller virtual machine
 
 - Use a free open-source terminal emulator or serial console tool to log in into a controller machine.
 - Copy the public IP of the controller virtual machine to use as the host name.
@@ -33,7 +31,7 @@ To start a Moodle migration, log in into [Azure](http://portal.azure.com/) after
 Browse [Putty general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html) to learn more about Putty.
 After logging in, run the next set of commands to migrate.
         
-### Download and install AzCopy
+## Download and install AzCopy
 
 Perform the following commands to install AzCopy:
   ```bash
@@ -44,7 +42,7 @@ Perform the following commands to install AzCopy:
   sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
   ```
 
-### Copy the backup
+## Copy the backup
 
 To copy the backup archive to the controller virtual machine instance from an Azure Resource Manager deployment:
 
