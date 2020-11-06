@@ -30,7 +30,7 @@ When the Azure Resource Manager template is used, the following resources are cr
 
 - **Azure Load Balancer:** An efficient distribution of network or application traffic across multiple servers in a server farm. Ensures high availability and reliability by sending requests only to servers that are online. Explore [Azure Load Balancer](https://docs.microsoft.com/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=An%20Azure%20load%20balancer%20is,traffic%20to%20an%20operational%20VM) for more information.
 
-![Note] Any of the four predefined templates will deploy Azure Load Balancer. In a fully configurable deployment, the user can choose Azure Application Gateway instead of Load Balancer.
+Note that any of the four predefined templates will deploy Azure Load Balancer. In a fully configurable deployment, the user can choose Azure Application Gateway instead of Load Balancer.
     
 -  **Azure Application Gateway**: A web traffic Azure Load Balancer that enables you to manage traffic to your web applications. Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers. Explore [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview) for more information.
 

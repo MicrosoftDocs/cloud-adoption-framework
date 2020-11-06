@@ -74,7 +74,7 @@ Configure the PHP and web server:
   php -m
   ```
 
-- ![Note] If on-premises has any additional PHP extensions that aren't present in the controller virtual machine, they can be installed manually.
+- Note that if on-premises has any additional PHP extensions that aren't present in the controller virtual machine, they can be installed manually.
 
   ```bash
   sudo apt-get install -y php-<extensionName>

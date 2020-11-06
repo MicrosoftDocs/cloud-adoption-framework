@@ -133,7 +133,7 @@ The VPN gateway connection is established.
 
   For example: sudo passwd azureadmin
 
-![Note:] The password must be 14 characters long. 
+  Note that the password must be 14 characters long.
 
 Password authentication has been completed.
 
