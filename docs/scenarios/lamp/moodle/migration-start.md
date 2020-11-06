@@ -200,7 +200,7 @@ Configure directory permissions.
   php -m
   ```
 
-Note that if on-premises has any additional PHP extensions that aren't present in the controller virtual machine, they can be installed manually.
+- If on-premises has any additional PHP extensions that aren't present in the controller virtual machine, they can be installed manually.
 
   ```bash
   sudo apt-get install -y php-<extensionName>

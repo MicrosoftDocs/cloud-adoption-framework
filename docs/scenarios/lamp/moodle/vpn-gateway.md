@@ -126,14 +126,12 @@ The VPN gateway connection is established.
   sudo systemctl restart sshd
   ```
 
-- Set the password with this command:
+- The password must be 14 characters long. Set the password with this command:
 
   ```bash
   sudo passwd <username>
 
   For example: sudo passwd azureadmin
-
-  Note that the password must be 14 characters long.
 
 Password authentication has been completed.
 
