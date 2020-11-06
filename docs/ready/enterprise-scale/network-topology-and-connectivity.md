@@ -171,7 +171,7 @@ _Figure 1: Virtual WAN network topology._
 
 - When you're deploying partner networking technologies and NVAs, follow the partner vendor's guidance to ensure there are no conflicting configurations with Azure networking.
 
-- Don't build a transit network on top of Azure Virtual WAN. Virtual WAN satisfies transitive network topology requirements such as the ability to use third-party NVAs. Building a transit network on top of Azure Virtual WAN would be redundant and increase complexity. 
+- Don't build a transit network on top of Azure Virtual WAN. Virtual WAN satisfies transitive network topology requirements such as the ability to use third-party NVAs. Building a transit network on top of Azure Virtual WAN would be redundant and increase complexity.
 
 - Don't use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone. This is because of the performance and uptime characteristics of the Microsoft backbone as well as routing simplicity. This suggestion addresses the performance and uptime characteristics of the Microsoft backbone. It also encourages routing simplicity.
 
@@ -496,9 +496,11 @@ This section explores key recommendations to achieve network encryption between 
 
 - When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
 
+- Configuring a Site-to-Site VPN connection over ExpressRoute private peering is now in [preview](https://docs.microsoft.com/azure/vpn-gateway/site-to-site-vpn-private-peering).
+
 - You can apply [media access control security (MACsec)](/azure/expressroute/expressroute-howto-MACsec) encryption to ExpressRoute Direct to achieve network encryption.
 
-- Azure doesn't currently offer native encryption over global virtual network peering. If you need encryption between Azure regions, it's possible to connect virtual networks by using VPN gateways rather than global virtual network peering.
+- When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is utilized on the underlying network hardware. This is applicable to VNet peering traffic.
 
 **Design recommendations:**
 
@@ -510,14 +512,15 @@ _Figure 8: Encryption flows._
 
 - When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at the layer-two level between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
 
-- For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use a Virtual WAN VPN gateway to establish IPsec tunnels over ExpressRoute private peering. The diagram shows this encryption in flow `C`.
+- For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use a Virtual WAN VPN gateway to establish [IPsec tunnels over ExpressRoute private peering](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute). The diagram shows this encryption in flow `C`.
 
 - For non-Virtual WAN scenarios, and where MACsec isn't an option (for example, not using ExpressRoute Direct), the only options are:
   
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
+  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](https://docs.microsoft.com/azure/vpn-gateway/site-to-site-vpn-private-peering)).
 
-- If traffic between Azure regions must be encrypted, use VPN gateways to connect virtual networks across regions.
+- If traffic between Azure regions must be encrypted, use Global VNet Peering to connect virtual networks across regions.
 
 - If native Azure solutions (as shown in flows `B` and `C` in the diagram) don't meet your requirements, use partner NVAs in Azure to encrypt traffic over ExpressRoute private peering.
 
