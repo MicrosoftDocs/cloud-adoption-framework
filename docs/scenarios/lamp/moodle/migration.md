@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # How to start a manual Moodle migration
 
-To start a Moodle migration, log in into [Azure](http://portal.azure.com/) after completing deployment. Go to the created resource group, and find all the created resources. The following image demonstrates how resources will be created:
+To start a Moodle migration, log in into [Azure](https://portal.azure.com/) after completing deployment. Go to the created resource group, and find all the created resources. The following image demonstrates how resources will be created:
 
 [Resources overview](images/overview.PNG)
 
@@ -152,7 +152,7 @@ Update parameters in config.php. Make sure to store the DNS name for this task:
   - $CFG->dbname    = 'moodle';                   - Change moodle to newly created database name.
   - $CFG->dbuser    = 'root';                     - Change root to the server admin login name.
   - $CFG->dbpass    = 'password';                 - Change the password to the server admin login password.
-  - $CFG->wwwroot   = 'http://on-premises.com';   - Change on-premises to the DNS name.
+  - $CFG->wwwroot   = 'https://on-premises.com';   - Change on-premises to the DNS name.
   - $CFG->dataroot  = '/var/moodledata';          - Change the path to '/moodle/moodledata'.
 
 The on-premises dataroot directory can be stored at any location. After making the the changes, save the file. Press **CTRL+o** to save and **CTRL+x** to exit.
