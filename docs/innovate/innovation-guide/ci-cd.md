@@ -1,8 +1,8 @@
 ---
 title: "Azure innovation: Empower adoption"
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation in Azure.
-author: absheik
-ms.author: absheik
+author: BrianBlanchard
+ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -90,6 +90,7 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 
 ### Learn more
 
+- [Open source starts in GitHub](https://azure.microsoft.com/en-in/products/github/)
 - [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
 - [Microsoft Teams](/MicrosoftTeams/teams-overview)
 
