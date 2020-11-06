@@ -2,7 +2,7 @@
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after Moodle migration.
 author: BrianBlanchard
-ms.author: Umakanth
+ms.author: brblanch 
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
