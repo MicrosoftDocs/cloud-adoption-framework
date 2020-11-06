@@ -47,13 +47,14 @@ Configure the PHP and web server:
 
 - Create a backup of PHP and web server configurations.
 
-  ```bash
-
 - Set the PHP version to a variable.
 
+   ```bash
   _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
   echo $_PHPVER
+   ```
 
+  ```bash
   sudo mv /etc/nginx/sites-enabled/*.conf  /home/azureadmin/backup/
   sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf  
   ```
