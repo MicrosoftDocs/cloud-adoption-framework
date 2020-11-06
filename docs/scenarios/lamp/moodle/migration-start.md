@@ -135,11 +135,11 @@ Use these database server details for the following commands:
   ```
 [Database general FAQ/troubleshooting questions](https://docs.azure.cn/mysql-database-on-azure/mysql-database-tech-faq).
 
-- Update the database details in the moodle configuration file (/moodle/config.php).
+- Update the database details in the Moodle configuration file (/moodle/config.php).
 
 Update parameters in config.php. Make sure to store the DNS name for this task:
 
-- Navigate to Azure Portal, and find your resource group.
+- Navigate to the Azure Portal, and find your resource group.
   
 - Locate the **Load Balancer public IP**, and get the DNS name from the **Overview** panel:
 
@@ -148,7 +148,10 @@ Update parameters in config.php. Make sure to store the DNS name for this task:
   cd /moodle/html/moodle/
   nano config.php
 
-- Update the database details, and save the file. For example:
+- Update the database details, and save the file. 
+
+  For example:
+
   - $CFG->dbhost    = 'localhost';                - Change 'localhost' to the server name.
   - $CFG->dbname    = 'moodle';                   - Change 'moodle' to newly created database name.
   - $CFG->dbuser    = 'root';                     - Change 'root' to the server admin login name.
@@ -160,7 +163,7 @@ The on-premises dataroot directory can be stored at any location. After making t
 
 Configure directory permissions.
 
-- Set 755 and www-data owner:group permissions to the moodle directory.
+- Set 755 and www-data owner:group permissions to the Moodle directory.
 
   ```bash
   sudo chmod 755 /moodle/html/moodle
