@@ -1,7 +1,7 @@
 ---
-title: "Enterprise-Scale business continuity and disaster recovery for SAP enterprise-scale sceanrio"
+title: "Enterprise-Scale business continuity and disaster recovery for an SAP enterprise-scale scenario"
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of SAP
-author: JefferyMitchell
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
 ms.topic: conceptual
