@@ -23,7 +23,7 @@ To accelerate each of the above efforts, the article series also includes detail
 
 Adoption of SAP in the cloud will touch on most of the methodologies within the cloud adoption framework. In each of those phases, there are distinct constraints which will require SAP specific actions. This article series includes a mapping between the standard processes & SAP specific tasks.
 
-![Get started with migration in Azure](../_images/get-started/migration-map.png)
+![Get started with migration in Azure](../../_images/get-started/caf-baseline-journey.png)
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful adopting SAP in Azure.
 
