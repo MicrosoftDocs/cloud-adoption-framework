@@ -14,6 +14,7 @@ ms.subservice: plan
 Documentation for how to manually migrate Moodle from an on-premises environment to Azure.
 
 1. [Introduction](/intro.md)
+1. [Overview of how to perform a manual Moodle migration](/index.md)
 1. [How to prepare for a Moodle migration](/migration-pre.md)
 1. [Moodle migration tasks, architecture, and template](/migration-arch.md)
 1. [Moodle migration resources](/migration-resources.md)
