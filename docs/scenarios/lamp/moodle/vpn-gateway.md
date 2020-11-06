@@ -59,7 +59,7 @@ Create a virtual network gate in Azure Portal with the following steps:
 Following these steps should allow you to successfully install certificates on your local systems.
 
 - Open the Microsoft Management Console to export the certificates.
-- Go to **Run** and enter "MMC" to open certificates.
+- Go to **Run** and enter **MMC** to open certificates.
 - Select the **Certificates** under the **Personal** folder to open a page.
 - Refresh the page and find **Root and child certificates**.
 
@@ -96,15 +96,15 @@ Certificate types:
 - Set the authentication type to **Azure certification**.
 - Paste the copied root certificate code in the portal, name it **Root**, and select **Save**.
 
-## Download and Connect to the VPN Client
+## Download and connect to the VPN Client
 
 - Download the VPN Client after saving the configuration from portal.
-- Open the downloaded VPN Client zip file and open “WindowsAMD64” folder and install the “VPNClinetsetupAMD64” file.
+- Open the downloaded VPN Client zip file and open 'WindowsAMD64' folder, and install the 'VPNClinetsetupAMD64' file.
 - Go to **Control Panel\Network and Internet\Network Connections** to see your installed VPN.
 - Right-click the VPN, and select **Connect**.
 - A new window will appear. Select the **Connect** button to get connected.
 
-The VPN Gateway connection is established.
+The VPN gateway connection is established.
 
 ## Log in to the virtual machine
 
@@ -151,3 +151,5 @@ Password authentication has been completed.
 - Follow the prompt to enter the password.
 
 ## Next steps
+
+Continue to [how to start a manual Moodle migration](/migration-start.md) for information about the next steps in the Moodle migration process.

@@ -245,3 +245,5 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
 - There should now be a copy of your archive inside of the Azure Blob account.
 
 ## Next steps
+
+Continue to [Moodle migration tasks, architecture, and template](/migration-arch.md) for more information about the Moodle migration process.

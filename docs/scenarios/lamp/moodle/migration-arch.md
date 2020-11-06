@@ -1,6 +1,6 @@
 ---
-title: Moodle migration tasks
-description: Learn about the tasks involved in a Moodle migration.
+title: Moodle migration tasks, architecture, and template
+description: Learn about the task and architecture, and template involved in a Moodle migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/06/2020
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# Moodle migration tasks
+# Moodle migration tasks, architecture, and template
 
-## Moodle migration outline
+## Moodle migration task outline
 
 Moodle migrations include the following tasks:
 - Deploy Azure Infrastructure with Azure Azure Resource Manager Templates.
@@ -39,7 +39,7 @@ A fully configurable deployment gives more flexibility and choices for deploymen
 
 Select **Launch** to deploy any of the predefined templates. This will direct you to the Azure Portal, where you'll need to complete mandatory fields such as **Subscription**, **Resource Group**, [**SSH key**](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), and **Region**.
 
-![Custom deployment: Deploy from a custom template.](images/customdeployment.png)
+![Custom deployment: Deploy from a custom template.](images/custom-deployment.png)
 
 The preceding predefined templates will deploy the default versions.
 
@@ -53,7 +53,7 @@ If the PHP and Moodle versions are lagging with on-premises, then update the ver
 
 - Select **Edit Template** on the **Custom deployment** page.
     
-![Edit template: Edit your Azure Resource Manager template.](images/edittemplate.png)
+![Edit template: Edit your Azure Resource Manager template.](images/edit-template.png)
 
 - In the **Resources** section, add the Moodle and PHT versions to the **Parameters** block.
 
@@ -65,3 +65,7 @@ If the PHP and Moodle versions are lagging with on-premises, then update the ver
     ```
 
 - Select **Save** to save your changes.
+
+## Next steps
+
+Continue to [Moodle migration resources](/migration-resources.md) for more information about the Moodle migration process.

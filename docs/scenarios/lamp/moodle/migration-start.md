@@ -250,3 +250,5 @@ cp /etc/php/$_PHPVER/fpm/pool.d/www.conf /moodle/config/php
 ```
 
 ## Next steps
+
+Continue to [how to up Moodle controller instance and worker nodes (Azure infrastructure configuration)](/azure-infra-config.md) for information about the next steps in the Moodle migration process.

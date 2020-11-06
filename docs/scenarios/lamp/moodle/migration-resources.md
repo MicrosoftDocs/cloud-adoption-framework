@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Moodle migration resources
 
-When the Azure Resource Manager template is used, the following resources are created within Azure.
+When the Azure Resource Manager template is used, the following resources are created within Azure:
 
 - **Network template:** The network template will create virtual network, Network Security Group, Network Interface, Subnet, Public IP, Load Balancer/App gateway and Redis Cache etc.
 
@@ -60,6 +60,8 @@ Explore [storage account](https://docs.microsoft.com/azure/storage/common/storag
 
 - **Virtual machine extension:** Virtual machine extensions can an be small applications that provide post-deployment configuration and automation tasks on [Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/extensions/overview). A virtual machine extension will executes a shell script file that installs Moodle on the controller virtual machine and captures log files. Log files 'stderr' and 'stdout' are created at the '/var/lib/waagent/custom-script/download/0/', and the user can view them as a root user.
 
-- **Scale set template**: This template creates a [virtual machine scale set](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview). A virtual machine scale set allows you to deploy and manage a set of autoscaling virtual machines. You can scale the number of virtual machines in the scale set manually or define rules to auto scale based on resource usage like CPU, memory demand, or network traffic. Autoscaling virtual machine instances depends on [CPU utilization](https://docs.microsoft.com/visualstudio/profiling/average-cpu-utilization?view=vs-2019). While scaling up an instance, a virtual machine is deployed, and a shell script executes to install Moodle prerequisites and set up cron jobs. Virtual machine instances have a private IP. Follow the steps in [VPN gateway](/vpngateway.md) to connect to virtual machines on a scale set with a private IP.
+- **Scale set template**: This template creates a [virtual machine scale set](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview). A virtual machine scale set allows you to deploy and manage a set of autoscaling virtual machines. You can scale the number of virtual machines in the scale set manually or define rules to auto scale based on resource usage like CPU, memory demand, or network traffic. Autoscaling virtual machine instances depends on [CPU utilization](https://docs.microsoft.com/visualstudio/profiling/average-cpu-utilization?view=vs-2019). While scaling up an instance, a virtual machine is deployed, and a shell script executes to install Moodle prerequisites and set up cron jobs. Virtual machine instances have a private IP. Follow the steps in [how to create a virtual network gateWay and connect through a private IP](/vpn-gateway.md) to connect to virtual machines on a scale set with a private IP.
 
 ## Next steps
+
+Continue to [how to create a virtual network gateWay and connect through a private IP](vpn-gateway.md) for more information about the Moodle migration process.

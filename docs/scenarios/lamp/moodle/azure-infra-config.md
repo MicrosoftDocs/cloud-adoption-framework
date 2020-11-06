@@ -1,6 +1,6 @@
 ---
-title: Set up Moodle controller instance and worker nodes
-description: Learn how to Set up Moodle controller instance and worker nodes.
+title: How to set up Moodle controller instance and worker nodes
+description: Learn how to Set up Moodle controller instance and worker nodes (Azure infrastructure configuration).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/06/2020
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# Set up Moodle controller instance and worker nodes
+# How to set up Moodle controller instance and worker nodes
 
 ## Virtual machine scale set instances
 
-Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [deploy the virtual network gateway](/vpngateway.md) to gain gateway access to virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
+Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](/vpn-gateway.md) to gain gateway access to virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
 
 To create a virtual machine scale set instance private IP:
 
-- Log in to the [Azure portal](https://ms.portal.azure.com/#home), and go to the created resource group.
+- Log in to the [Azure portal](https://ms.portal.azure.com/#home), and locate the created resource group.
 - Find and navigate to the virtual machine scale set resource.
 - In the left panel, select **Instances**.
 - Navigate to the running instance and find the private IP associated with it in the **Overview** section.
@@ -26,7 +26,7 @@ Log in to a virtual machine scale set and the controller virtual machine; run th
 
 ```bash
  sudo -s
- sudo ssh azureadmin@172.31.X.X 
+ sudo ssh azureadmin@172.31.X.X
 ```
 
 172.31.X.X is the virtual machine scale set Instance private IP.
@@ -78,3 +78,7 @@ Configure the PHP and web server:
   ```bash
   sudo apt-get install -y php-<extensionName>
   ```
+
+## Next steps
+
+Continue to [how to follow up after a Moodle migration](/migration-post.md) for information about the next step in the Moodle migration process.
