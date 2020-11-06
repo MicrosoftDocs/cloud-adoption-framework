@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore arnaudlh arnaul Arnaud eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
+<!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
 # Use Terraform to build your landing zones
 
@@ -34,8 +34,6 @@ _Figure 1: A foundation landing zone using Terraform._
 
 The components deployed and their purpose include the following:
 
-<!-- markdownlint-disable MD033 -->
-
 | Component | Responsibility |
 |---|---|
 | Resource groups | Core resource groups needed for the foundation |
@@ -43,8 +41,6 @@ The components deployed and their purpose include the following:
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
 | Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> AdAssessment <li> AdReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
 | Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Use this blueprint
 
@@ -193,7 +189,7 @@ security_center = {
 }
 ```
 
-## Get started
+## Take action
 
 After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or macOS. You can get started with the [landing zones](https://github.com/azure/caf-terraform-landingzones).
 

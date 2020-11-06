@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore njray nanra vCPUs Proliant Sysplex IPLs DASDs LPARs ISPF Panvalet -->
+<!-- cSpell:ignore vCPUs Proliant Sysplex IPLs DASDs LPARs ISPF Panvalet -->
 
 # Make the switch from mainframes to Azure
 
@@ -19,9 +19,9 @@ This section provides technical guidance for making the switch from a mainframe 
 
 ![Mainframe and Azure](../../_images/mainframe-migration/make-the-switch.png)
 
-<!-- docsTest:ignore "vs. vCPUs" -->
+<!-- docutune:casing vCPUs -->
 
-## MIPS and vCPUs
+## MIPS vs. vCPUs
 
 There is no universal mapping formula that exists for determining the number of virtual central processing units (vCPUs) needed to run mainframe workloads. However, the metric of a million instructions per second (MIPS) is often mapped to vCPUs on Azure. MIPS measures the overall compute power of a mainframe by providing a constant value of the number of cycles per second for a given machine.
 

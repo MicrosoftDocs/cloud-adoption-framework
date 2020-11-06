@@ -1,6 +1,6 @@
 ---
 title: MLOps with Azure Machine Learning
-description: Use the Cloud Adoption Framework for Azure to understand the various transitions that must be made to enable operational management in the cloud.
+description: Learn about Machine Learning Operations (MLOps) principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020

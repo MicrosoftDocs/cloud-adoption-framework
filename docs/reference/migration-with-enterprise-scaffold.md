@@ -10,8 +10,8 @@ ms.subservice: reference
 ROBOTS: NOINDEX
 ---
 
-<!-- docsTest:disable -->
-<!-- cSpell:ignore rodend subscope ITSM Hashi -->
+<!-- docutune:disable -->
+<!-- cSpell:ignore subscope ITSM Hashi -->
 
 # Azure enterprise scaffold: Prescriptive subscription governance
 
@@ -42,7 +42,7 @@ The enterprise scaffold can serve as the foundation of each new subscription wit
 
 > [!NOTE]
 > Microsoft has released into preview a new capability called [Azure Blueprints](/azure/governance/blueprints/overview) that will enable you to package, manage, and deploy common images, templates, policies, and scripts across subscriptions and management groups. This capability is the bridge between the scaffold's purpose as reference model and deploying that model to your organization.
->
+
 The following image shows the components of the scaffold. The foundation relies on a solid plan for the management hierarchy and subscriptions. The pillars consist of Resource Manager policies and strong naming standards. The rest of the scaffold are core Azure capabilities and features that enable and connect a secure and manageable environment.
 
 ![Enterprise scaffold](../_images/reference/scaffold-v2.png)
@@ -213,7 +213,7 @@ AzSK is a rich set of tools, scripts, and information that are an important part
 
 ### Azure Update Management
 
-One of the key tasks you can do to keep your environment safe is ensure that your servers are patched with the latest updates. While there are many tools to accomplish this, Azure provides the [Azure Update Management](/azure/automation/automation-update-management) solution to address the identification and rollout of critical OS patches. It uses Azure Automation, covered in the [Automate](#automate) section later in this guide.
+One of the key tasks you can do to keep your environment safe is ensure that your servers are patched with the latest updates. While there are many tools to accomplish this, Azure provides the [Azure Update Management](/azure/automation/update-management/overview) solution to address the identification and rollout of critical OS patches. It uses Azure Automation, covered in the [Automate](#automate) section later in this guide.
 
 ## Monitor and alerts
 
@@ -225,7 +225,7 @@ Collecting and analyzing telemetry that provides line of sight into the activiti
 
 This information can be viewed and acted on at multiple levels and are continually being improved. Azure provides **shared**, **core**, and **deep** monitoring capabilities of Azure resources through the services outlined in the diagram below.
 
-![Monitoring](../_images/reference/monitoring.png)
+![Diagram that depicts Deep Application Monitoring, Deep Infrastructure Monitoring, Core Monitoring, and Shared Capabilities.](../_images/reference/monitoring.png)
 
 ### Shared capabilities
 
@@ -339,7 +339,7 @@ The final component of the Azure scaffold reference model is core to how your or
 > - Enable effective microsegmentation within a larger subnet, reducing sprawl and increasing flexibility.
 
 <!-- TODO: Refactor VDC content below. -->
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- docutune:ignore "Azure Virtual Datacenter" -->
 
 ### Azure Virtual Datacenter
 
