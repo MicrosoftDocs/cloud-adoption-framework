@@ -6,7 +6,7 @@ ms.author: TBD
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: scenarios
+ms.subservice: plan
 ---
 
 # How to follow up after a Moodle migration

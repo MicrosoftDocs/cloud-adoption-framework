@@ -1,12 +1,12 @@
 ---
 title: How to create a virtual network gateWay and connect through a private IP
 description: Learn how to create a virtual network gateWay and connect through a private IP.
-author: TBD
+author: BrianBlanchard
 ms.author: TBD
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: scenarios
+ms.subservice: plan
 ---
 
 # How to create a virtual network gateWay and connect through a private IP

@@ -1,12 +1,12 @@
 ---
 title: How to perform a manual Moodle migration
 description: Learn how to perform a manual Moodle migration.
-author: TBD
+author: BrianBlanchard
 ms.author: TBD
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: scenarios
+ms.subservice: plan
 ---
 
 # How to perform a manual Moodle migration
@@ -209,7 +209,7 @@ Configure directory permissions.
   ```bash
    nano /etc/nginx/sites-enabled/*.conf
 
- - Azure Resource Manager template deployment will set the nginx server on port 81. Update the server port to 81 if it is not 81.
+ - Azure Resource Manager template deployment will set the nginx server on port 81. Update the server port to 81 if it's not 81.
 -  Update the server name. For example, if the server_name on-premises.com, update the on-premises.com with the DNS name. In most of the cases, DNS may remain same in the migration.
 -  Update the HTML root directory location. For example, if 'root /var/www/html/moodle;', update it to be 'root /moodle/html/moodle;'.
 - The on-premises root directory can be at any location

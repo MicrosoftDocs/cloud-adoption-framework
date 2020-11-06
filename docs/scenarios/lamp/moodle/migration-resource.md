@@ -1,12 +1,12 @@
 ---
 title: Moodle migration resources
 description: Learn about resources for a Moodle migration.
-author: TBD
+author: BrianBlanchard
 ms.author: TBD
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: scenarios
+ms.subservice: plan
 ---
 
 # Moodle migration resources

@@ -1,12 +1,12 @@
 ---
 title: How to prepare for a Moodle migration
 description: Learn how to prepare for a Moodle migration.
-author: TBD
+author: BrianBlanchard
 ms.author: TBD
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: scenarios
+ms.subservice: plan
 ---
 
 # How to prepare for a Moodle migration
@@ -47,7 +47,7 @@ Exporting data from on-premises to Azure involves the following tasks:
     
 ## Create a subscription
 
-Skip this step if you have a subscription. If you don't have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription. 
+Skip this step if you have a subscription. If you don't have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription.
 
 - To create the subscription with the Azure portal, navigate to **Subscription** from the **Home** section.
 
