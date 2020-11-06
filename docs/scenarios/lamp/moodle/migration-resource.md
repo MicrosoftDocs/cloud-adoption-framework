@@ -50,7 +50,7 @@ The following storage account types feature Azure Resource Manager template supp
 
 These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and Fle Share, navigate to portal and select the storage account in resource group.
 
-![TBD](images/storage-account.png)
+![To be determined](images/storage-account.png)
 
 Explore [storage account](https://docs.microsoft.com/azure/storage/common/storage-account-overview) to learn more about storage accounts.
 

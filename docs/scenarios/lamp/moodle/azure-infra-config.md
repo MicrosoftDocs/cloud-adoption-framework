@@ -2,7 +2,7 @@
 title: Set up Moodle controller instance and worker nodes
 description: Learn how to Set up Moodle controller instance and worker nodes.
 author: BrianBlanchard
-ms.author: TBD
+ms.author: Umakanth
 ms.date: 11/06/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

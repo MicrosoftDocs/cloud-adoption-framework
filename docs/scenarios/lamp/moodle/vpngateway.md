@@ -23,7 +23,7 @@ Create a virtual network gate in Azure Portal with the following steps:
 - Select the virtual network associated with virtual machines created under the same resource group.
 - Select **Create** to start deploying.
 
-![TBD](images/vpngateway.png)
+![To be determined](images/vpngateway.png)
 		
 - Create a virtual network gateway with this Azure CLI command:
 
