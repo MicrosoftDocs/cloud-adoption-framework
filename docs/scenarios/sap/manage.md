@@ -38,7 +38,7 @@ If your organization has a centralized SAP platform team, you will want to consi
 
 Each of the workloads that depend on SAP are likely to have material impact on business processes. The downtime costs of those individual workloads is unlikely to impact the business to the same degree as downtime for the core SAP platform. Since there is less downtime impact, there is likely to be a lower ROI when investing in reliability and business continuity for each workload. However, some of those workloads will still require dedicated, specialized operations.
 
-When dependent workloads have their own specialized operations requirements, run the [Well-Architected Review](https://docs.microsoft.com/en-us/assessments/?id=azure-architecture-review&mode=pre-assessment) and review the [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) to understand how to optimize operations for those specific workloads.
+When dependent workloads have their own specialized operations requirements, run the [Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review&mode=pre-assessment) and review the [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) to understand how to optimize operations for those specific workloads.
 
 ## Next step: Your next migration iteration
 

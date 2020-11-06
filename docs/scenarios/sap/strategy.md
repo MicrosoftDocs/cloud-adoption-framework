@@ -41,7 +41,7 @@ Given the impact of SAP, it is likely that you will need to define a number of *
 
 ## How can we build a business justification for cloud migration?
 
-The article series about [building a business justification for cloud migration](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case.md) can help build out your financial plan by dispelling a number of common myths. However, you will likely need to develop a detailed finanical model with your finance team to account for all of the moving pieces associated with SAP cloud adoption.
+The article series about [building a business justification for cloud migration](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case.md) can help build out your financial plan by dispelling a number of common myths. However, you will likely need to develop a detailed financial model with your finance team to account for all of the moving pieces associated with SAP cloud adoption.
 
 For a analyst perspective, see the [Forrester study on the Total Economic Impact of Microsoft Azure for SAP](https://azure.microsoft.com/en-us/resources/sap-on-azure-forrester-tei/). According to that study, the following are common defensible justifications:
 
@@ -53,7 +53,7 @@ For a analyst perspective, see the [Forrester study on the Total Economic Impact
 Individual customers are likely to experience variations in actual return. However, the tables in that study can aid in capturing your organizations financial data for validation and justification.
 
 > [!NOTE]
-> During strategic alignment, understand that your initial business justification is a directional estimate to drive alignment. Create transparency with the cloud strategy team and other stakeholders that this justification is likely to change significantly as you complete planning acitivities. Look primarily for concensus that there is sufficient value to [gather inventory and develop a plan](./plan.md). Once your digital estate is catalogued & assessed, you will be able to refine your justification and present clearer plans for financial returns.
+> During strategic alignment, understand that your initial business justification is a directional estimate to drive alignment. Create transparency with the cloud strategy team and other stakeholders that this justification is likely to change significantly as you complete planning acitivities. Look primarily for consensus that there is sufficient value to [gather inventory and develop a plan](./plan.md). Once your digital estate is catalogued & assessed, you will be able to refine your justification and present clearer plans for financial returns.
 
 ## Next step: Plan for SAP
 
@@ -61,7 +61,6 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for SAP](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for SAP migration](./migrate-assess.md)
 - [Migrate SAP](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)
