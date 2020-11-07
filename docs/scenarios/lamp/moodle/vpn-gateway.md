@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# How to create a virtual network gateWay and connect through a private IP
+# How to create a virtual network gateway and connect through a private IP
 
 This document explains how to set up a virtual network gateway in Azure.
 
