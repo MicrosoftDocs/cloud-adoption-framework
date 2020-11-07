@@ -92,7 +92,7 @@ Restart the nginx and php-fpm servers:
   nano /etc/nginx/sites-enabled/*.conf
   ```
 
- - To change the certificate's path location, find ssl_certificate. Update the certs path as below:
+ - To change the certificate's path location, find 'ssl_certificate'. Update the certificate's path as below:
    
    /moodle/certs//moodle/certs/nginx.crt;
    /moodle/certs/nginx.key;
@@ -209,7 +209,7 @@ This can also apply if you see _Your session has timed out. Please log in again.
  
 5. Fatal error: _$CFG->dataroot is not writable. The admin has to fix directory permissions! Exiting._
 
-- Check that Moodle and moodledata permissions are www-data:www-data only. If not, change the group and ownership permissions. The following command updates the permissions.
+- Check that Moodle and moodledata permissions are www-data:www-data only. If not, change the group and ownership permissions. The following command updates the permissions:
 
   ```
   sudo chown -R /moodle/moodledata
