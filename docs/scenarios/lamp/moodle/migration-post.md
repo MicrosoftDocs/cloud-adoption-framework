@@ -132,7 +132,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
   sudo /usr/bin/php admin/cli/maintenance.php --disable
   ```
 
-- To check the status of the moodle site, run the following command:
+- To check the status of the Moodle site, run the following command:
 
   ```bash
   sudo /usr/bin/php admin/cli/maintenance.php

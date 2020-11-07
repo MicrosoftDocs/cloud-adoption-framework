@@ -81,7 +81,7 @@ Before migrating, back up the current configuration. A backup directory is extra
   mv /moodle/moodledata /home/azureadmin/backup/moodle/moodledata
    ```
 
-- Copy on-premises moodle and moodledata directories to a shared location (/moodle).
+- Copy on-premises Moodle and moodledata directories to a shared location (/moodle).
 
   ```bash
   cp -rf /home/azureadmin/storage/moodle /moodle/html/
