@@ -37,7 +37,7 @@ On-premises might have different log path locations that need to be updated with
   ```
 
 - Change the log path location.
-- 
+
 - Find access_log and error_log, and update the log path.
 
 - Press **CTRL+o** to save and **CTRL+x** to exit.
@@ -97,7 +97,7 @@ Restart the nginx and php-fpm servers:
    /moodle/certs//moodle/certs/nginx.crt;
    /moodle/certs/nginx.key;
 
-_ # Press **CTRL+o** to save the file and **CTRL+x** to exit.
+- Press **CTRL+o** to save the file and **CTRL+x** to exit.
           
 
 ### Update the local HTML copy

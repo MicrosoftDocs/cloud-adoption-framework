@@ -118,7 +118,7 @@ The VPN gateway connection is established.
 
 - Update these parameters: Change the password authentication type from **no** to **yes**, find the commented UserLogin, remove the **#** comment, and change to **yes**.
   
-- Press the ESC key and type “:wq!” to save the changes.
+- Press the ESC key and type ':wq!' to save the changes.
 
 - Restart the SSHD:
 
