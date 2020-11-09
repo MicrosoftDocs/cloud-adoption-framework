@@ -519,7 +519,7 @@ _Figure 21: A hub-and-spoke model in a paired region._
 | `IB-TrustZone` | `10.250.1.0/24` | 251 |
 | `OB-UntrustZone` | `10.250.2.0/24` | 251 |
 | `OB-TrustZone` | `10.250.3.0/24` | 251 |
-| `GatewaySubnet` | `10.250.2.0/24` | 251 |
+| `GatewaySubnet` | `10.250.10.0/24` | 251 |
 
 #### Subnets in the `Central US` production network (`VNET-PROD-CUS`)
 
