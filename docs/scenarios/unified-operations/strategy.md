@@ -36,6 +36,17 @@ https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
 When customers act on this scenario, what do they expect to see as an outcome?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
 
+- IT Estate visibility and control - ability to see all resources in a single location and be able to query through them to gain insights.
+  
+- Cloud-based management - ability to modernize operations by being able to use the same cloud management services on resources outside of Azure.
+  
+- Governance - ability to ensure consistent configurations in all  resources from a central location.
+  
+- DevOps and cloud native app deployment flexibility - ability to deploy apps’ infra through templates and apps’ configurations through GitOps.
+  
+- Increased flexibility when adopting PaaS - ability to run PaaS services on infrastructure of choice.
+
+
 ## What is the business justification for a multi-cloud control plane?
 
 Is there something special that customers have to do to justify doing this thing?
