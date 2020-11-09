@@ -250,12 +250,14 @@ Development, testing, and quality assurance (QA) environments are needed during 
 Additionally, consider general cost reductions for any nonproduction environments:
 
 - Reduce nonproduction resources to use lower cost B-series VMs and standard storage.
+- Reduce nonproduction compute costs by using Spot VMs.
 - Apply Azure policies to require resource level cost-reductions for any nonproduction resources.
 
 **Learn more:**
 
 - [Use tags](/azure/azure-resource-manager/management/tag-resources) to identify dev, test, or QA targets for resizing or termination.
 - [Auto-shutdown VMs](/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they're ready to resume development.
+- [Spot VMs](/azure/virtual-machines/spot-vms) allows it to take advantage of unused Azure capacity at a significant cost savings. However, at any point in time when Azure needs the capacity back, the Azure infrastructure will evict Spot VMs.
 - Encourage development teams to use [Azure DevTest Labs](/azure/lab-services/devtest-lab-overview) to establish their own cost-control approaches and avoid impact of the standard auto-shutdown timing in the prior step.
 
 ## Best practice: Use Azure Cost Management + Billing

@@ -15,16 +15,17 @@ There are several ways to measure for customer impact. This article will help yo
 
 ## Strategic metrics
 
-During the [Strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
+The [Strategy methodology](../../strategy/index.md) examines [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics to test customer impact. When innovation is successful, you'll usually see results that are aligned with your strategic objectives.
 
-Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas:
-    - [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
-    - [Customer engagement](../../strategy/business-outcomes/engagement-outcomes.md)
-    - [Customer reach](../../strategy/business-outcomes/reach-outcomes.md)
-    - [Financial impact](../../strategy/business-outcomes/fiscal-outcomes.md)
-    - [Solution performance](../../strategy/business-outcomes/fiscal-outcomes.md), in the case of operational innovation.
+Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally, those strategic metrics align with one or more of the following outcome areas:
 
-Document the agreed-upon metrics and track their impact frequently. But don't expect results in any of these metrics to emerge for several iterations. For more information about setting and aligning expectations across the parties involved, see [Commitment to iteration](./index.md#commitment-to-iteration).
+- [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
+- [Customer engagement](../../strategy/business-outcomes/engagement-outcomes.md)
+- [Customer reach](../../strategy/business-outcomes/reach-outcomes.md)
+- [Financial impact](../../strategy/business-outcomes/fiscal-outcomes.md)
+- [Solution performance](../../strategy/business-outcomes/fiscal-outcomes.md), in the case of operational innovation.
+
+Document the agreed-upon metrics and track their impact frequently, but don't expect results in any of these metrics to emerge for several iterations. For more information about setting and aligning expectations across the parties involved, see [Commitment to iteration](./index.md#commitment-to-iteration).
 
 Aside from motivation and business outcome metrics, the remainder of this article focuses on learning metrics designed to guide transparent discovery and customer-focused iterations. For more information about these aspects, see [Commitment to transparency](./index.md#commitment-to-transparency).
 
@@ -47,7 +48,7 @@ In most cases, a customer flow will have an easily defined starting point and no
 3. **Solution steps:** This term refers to the steps that are required to move the customer from the initial trigger to a successful outcome. Each step produces a learning metric based on a customer decision to move on to the next step.
 4. **Individual adoption achieved:** The next time the trigger is encountered, if the customer returns to the solution to get their need met, individual adoption has been achieved.
 5. **Business outcome indicator:** When a customer behaves in a way that contributes to the defined business outcome, a business outcome indicator is observed.
-6. **True innovation:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
+6. **True innovation:** When _business outcome indicators_ and _individual adoption_ both occur at the desired scale, you've realized true innovation.
 
 Each step of the customer flow generates learning metrics. After each iteration (or release), a new version of the hypothesis is tested. At the same time, tweaks to the solution are tested to reflect adjustments in the hypothesis. When customers follow the prescribed path in any given step, a positive metric is recorded. When customers deviate from the prescribed path, a negative metric is recorded.
 
@@ -59,7 +60,7 @@ The first measurement in defining learning metrics is the customer partner defin
 
 - **Experiment or focus group:** Grouping customers based on their participation in a specific experiment designed to test changes over time.
 - **Segment:** Grouping customers by the size of the company.
-- **Vertical:** Grouping customers by the *industry vertical* they represent.
+- **Vertical:** Grouping customers by the _industry vertical_ they represent.
 - **Individual demographics:** Grouping based on personal demographics like age and physical location.
 
 These types of groupings help you validate learning metrics across various cross-sections of those customers who choose to partner with you during your innovation efforts. All subsequent metrics should be derived from definable customer grouping.

@@ -55,7 +55,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Azure will provide a single pane of glass into the database workloads. <br><br> Costs will be monitored via Azure Cost Management and Billing. <br><br> Business chargeback billing will be easy to perform with the Azure Billing APIs. <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
+| **Pros** | Azure will provide a single pane of glass into the database workloads. <br><br> Costs will be monitored via Azure Cost Management + Billing. <br><br> Business chargeback billing will be easy to perform with the Azure Billing APIs. <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
 | **Cons** | Because of the requirement of IaaS-based VMs, there will still be a need to manage the software on those machines. |
 
 ### Budget and management
@@ -86,7 +86,7 @@ Data migrations follow a standard and repeatable pattern. This process involves 
 
 #### Step 1: Discovery
 
-Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](/azure/log-analytics/log-analytics-agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows).
+Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid#install-the-dependency-agent-on-windows).
 
 Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40 percent can be moved to PaaS-based services. Of the remaining 60 percent, they must be moved to an IaaS-based approach with a VM running the respective database software.
 
@@ -140,7 +140,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 Contoso needs to:
 
-- Ensure that its new Azure database workloads are secure. For more information, see [Azure SQL Database and SQL Managed Instance security capabilities](/azure/sql-database/sql-database-security-overview).
+- Ensure that its new Azure database workloads are secure. For more information, see [Azure SQL Database and SQL Managed Instance security capabilities](/azure/azure-sql/database/security-overview).
 - Review the firewall and virtual network configurations.
 - Set up Azure Private Link so that all database traffic is kept inside Azure and the on-premises network.
 - Enable Azure Advanced Threat Protection.
@@ -150,7 +150,7 @@ Contoso needs to:
 Ensure that the Azure databases are backed up by using geo-restore. In this way, backups can be used in a paired region if a regional outage occurs.
 
 > [!IMPORTANT]
->Make sure that the Azure resource has a [resource lock](/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
+> Make sure that the Azure resource has a [resource lock](/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
 
 #### Licensing and cost optimization
 

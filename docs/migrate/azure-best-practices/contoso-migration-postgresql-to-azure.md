@@ -43,7 +43,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Current environment
 
-PostgreSQL 9.6.7 is running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter. Contoso already has an Azure subscription with a site-to-site virtual network gateway to an on-premises datacenter network.
+PostgreSQL 9.6.7 is running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter. Contoso already has an Azure subscription with a Site-to-Site VPN gateway to an on-premises datacenter network.
 
 ### Proposed solution
 
@@ -62,7 +62,7 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Processing performance can be enhanced by using read replicas.
 - Support for bring your own key (BYOK) for data encryption.
 - Ability to expose the service to internal network traffic only (no-public access) by using Azure Private Link.
-- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or Site-to-Site VPN).
 
 ### Solution review
 
@@ -123,6 +123,8 @@ Contoso can perform the migration in several ways:
 Contoso has selected Azure Database Migration Service to allow the company to reuse the migration project whenever it needs to perform major-to-major upgrades. Because a single Database Migration Service activity only accommodates up to four databases, Contoso sets up several jobs by using the following steps.
 
 To prepare, set up a virtual network to access the database. Create a virtual network connection by using [VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
+
+<!-- docutune:ignore "Azure Database Migration Services" -->
 
 ### Create an Azure Database Migration Service instance
 
@@ -264,7 +266,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 Contoso needs to:
 
-- Ensure that its new Azure Databases for PostgreSQL instance and databases are secure. For more information, see [Security in Azure Database for PostgreSQL - Single Server](/azure/postgresql/concepts-security).
+- Ensure that the new Azure Database for PostgreSQL instance and databases are secure. For more information, see [Security in Azure Database for PostgreSQL - Single Server](/azure/postgresql/concepts-security).
 - Review the [firewall rules](/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
 - Implement [BYOK](/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
 - Update all applications to [require SSL](/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
