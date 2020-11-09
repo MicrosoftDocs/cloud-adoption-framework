@@ -48,4 +48,4 @@ Hub and spoke architectures are commonly implemented with virtual networks deplo
 For reference architectures showing how to implement hub and spoke networks on Azure, see:
 
 - [Implement a hub and spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
-- [Implement a hub and spoke network topology with shared services in Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology)
+- [Implement a hub and spoke network topology with shared services in Azure](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology)
