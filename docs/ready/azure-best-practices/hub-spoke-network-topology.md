@@ -25,7 +25,7 @@ Smaller cloud estates might not benefit from the added structure and capabilitie
 > The Azure reference architectures site contains example templates that you can use as the basis for implementing your own hub and spoke networks:
 >
 > - [Implement a hub and spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
-> - [Implement a hub and spoke network topology with shared services in Azure](/azure/architecture/reference-architectures/hybrid-networking/shared-services)
+> - [Implement a hub and spoke network topology with shared services in Azure](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology)
 
 ## Overview
 
