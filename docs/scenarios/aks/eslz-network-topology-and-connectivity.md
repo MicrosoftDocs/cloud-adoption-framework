@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for <Insert narrative Name>"
-description: Describe how this enterprise-scale scenario can improve network topology and connectivity of <Insert Scenario Name>
+title: "Enterprise-Scale network topology and connectivity for AKS"
+description: Describe how this enterprise-scale scenario can improve network topology and connectivity of AKS
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for <Insert narrative Name> Enterprise-Scale scenario
+# Network topology and connectivity for AKS Enterprise-Scale scenario
 
-**Design considerations**
+## Design considerations
 
 - Decide on cluster IP visibility, whether it should have a public or a private IP address
 - Plan the IP addressing and the size of the VNet subnet, to support the scaling of the cluster by adding more nodes, etc.
 - Decide on the supported network model for the VNet integration, kubenet or Azure Container Networking Interface (CNI).
   - CNI requires additional planning for IP addresses.
-  - Only CNI supports Windows Server node pool.
+  - Only CNI supports Windows Server node and Network Policies pool.
   - kubenet requires UDRs to be manually applied.
   - Verify the [current list](https://docs.microsoft.com/azure/aks/concepts-network#compare-network-models) of supported capabilities by each CNI plugin.
 - Plan and decide on the usage of virtual nodes, and verify the documented [known limitations](https://docs.microsoft.com/azure/aks/virtual-nodes-portal#known-limitations).
@@ -38,7 +38,7 @@ ms.subservice: ready
 - Decide on the network visibility (public or private IP address) for the Ingress controller, and therefore availability of applications and APIs.
   - An Ingress controller can be configured with a public IP address or private IP address; however, the configuration should be aligned with the egress filtering in order to avoid asymmetric routing.
   - Decide whether TLS termination is required, and what TLS certificates are used.
-- Decide whether using Azure Policy and the Azure Policy add-on for AKS to control and limit the objects created in your AKS cluster, such as for example to deny the creation of public IP addresses in the cluster.
+- Decide whether using Azure Policy and the [Azure Policy add-on for AKS](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes "Azure Policy for AKS") to control and limit the objects created in your AKS cluster, such as for example to deny the creation of public IP addresses in the cluster.
 - Plan and decide on the egress network traffic.
   - By default, AKS clusters have unrestricted outbound (egress) internet access.
   - Decide whether egress network traffic must go through Azure Firewall or a Network Virtual Appliance.
@@ -50,7 +50,7 @@ ms.subservice: ready
   - Understand the requirements and reasons for installing a service mesh, and verify the documented [selection criteria](https://docs.microsoft.com/azure/aks/servicemesh-about#selection-criteria).
 - Consider using a global load balancing mechanism like [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) or [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview) to increase resiliency by routing traffic across multiple clusters
 
-**Design recommendations**
+## Design recommendations
 
 - If your security policy mandates having the Kubernetes API with a private IP address (instead of a public IP address), [deploy a private AKS cluster](https://docs.microsoft.com/azure/aks/private-clusters).
 - Use Azure Container Networking Interface (CNI) as network model, unless you have a limited range of IP addresses that can be assigned to the AKS cluster.

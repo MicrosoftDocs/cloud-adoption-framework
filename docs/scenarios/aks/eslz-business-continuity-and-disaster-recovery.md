@@ -50,6 +50,7 @@ Consider the following factors:
   - When provisioning each Azure service, choose features that support disaster recovery. For example, in this architecture, Azure Container Registry is enabled for geo-replication. If a region goes down, you can still pull images from the replicated region.
 
   - Maintained engineering DevOps capabilities for Service level objectives.
+- Consider if you need a [financially backed SLA](https://docs.microsoft.com/azure/aks/uptime-sla) for Kubernetes API server.
 
 ## Design recommendations
 

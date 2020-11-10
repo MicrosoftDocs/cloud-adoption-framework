@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale platform automation and devops for <Insert narrative Name>"
-description: Describe how this enterprise-scale scenario can improve platform automation and devops of <Insert Scenario Name>
+title: "Enterprise-Scale platform automation and devops for AKS"
+description: Describe how this enterprise-scale scenario can improve platform automation and devops of AKS
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -9,42 +9,36 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and devops for <Insert narrative Name> Enterprise-Scale scenario
+# Platform automation and devops for AKS Enterprise-Scale scenario
 
 ## Planning for a DevOps and highly automated approach
 
-Kubernetes is a cloud native construct from the get-go and as such requires a different more cloud native approach in deploying and operating it, by heavily relying on automation and general DevOps best practices. 
+Kubernetes is a cloud native construct from the get-go and as such requires a different more cloud native approach in deploying and operating it, by heavily relying on automation and general DevOps best practices.
 
 ### Design considerations
 
-- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your CI/CD environment, which will determine the approach to take for engineering and automating your solution. For another example, see the [GitHub usage limitations](https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration). 
-
-- Consider the various security options in securing and protecting access to the various environments (development, test, Q&A, production etc.) from an CI/CD perspective. As deployments will happen automatically, access control should be mapped accordingly. 
-
-- Consider the various options in storing secrets and other sensitive artifacts needed to deploy and maintain the solution. A typical CI/CD environment provides the means to store those secrets in a safe and managed manner, alternatively a seperate keystore could be considered, accessible from the CI/CD pipeline.
-
-- Consider usage of prefixes and post fixes together with well defined conventions to identify uniquely every deployed resource. Doing so will avoid conflicts in deploying solutions next to each other and improve overall agility and throughput of the team. 
-
-- Consider the various workflows to support in engineering, updating and deploying your solution in normal and DRP regime. Consider mapping pipelines according to those workflows, maximizing familiarity, productivity. 
-
-- Consider additional resources to be deployed in a separate subscription to support your devops experience across environments. Tagging, labels, and other concepts can be used to track and trace deployments and related artefacts including secrets.  
-
-- Consider the impact of teh cattle versus pets paradigm shift. Get familiar with pods and other aspects of Kubernetes to be ephemeral and align your automation and pipeline infrastructure accordingly. Don't rely on IP addresses or other concepts to be fixed and always to be there.
+- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your CI/CD environment, which will determine the approach to take for engineering and automating your solution. For another example, see the [GitHub usage limitations](https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration).
+- Consider the various security options in securing and protecting access to the various environments (development, test, Q&A, production etc.) from an CI/CD perspective. As deployments will happen automatically, access control should be mapped accordingly.
+- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your CI/CD environment, which will determine the approach to take for engineering and automating your solution. For another example, see the [GitHub usage limitations](https://docs.github.com/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration). 
+- Consider usage of prefixes and post fixes together with well defined conventions to identify uniquely every deployed resource. Doing so will avoid conflicts in deploying solutions next to each other and improve overall agility and throughput of the team.
+- Consider the various workflows to support in engineering, updating and deploying your solution in normal and DRP regime. Consider mapping pipelines according to those workflows, maximizing familiarity, productivity.
+- Consider the various workflows to support in engineering and deploying your solution and map your pipelines accordingly. Some example scenarios and pipelines to consider are:
+  - Deploying, patching and upgrading clusters
+  - Deploying and upgrading applications
+  - Deploying and maintaining addons
+  - Failing over in case of Disaster Recovery
+  - Deploying in Blue/Green fashion
+  - Maintaining canary environments 
+- Consider additional resources to be deployed to support your devops experience. Subscriptions, tagging, labels etc. should be considered to track and trace deployments and related artefacts.  
+- Consider the impact of the cattle versus pets paradigm shift. Get familiar with pods and other aspects of Kubernetes to be ephemeral and align your automation and pipeline infrastructure accordingly. Don't rely on IP addresses or other concepts to be fixed and always to be there.
 
 ### Design recommendations
 
-- Strive for non-human intervention where possible. While some tasks might seem daunting to overcome through automation at first, it is always worth the investment further down the road. Automation always gives you a predictable way of testing and validating the expected outcomes , improving overall quality and agility of the team. It's is recommended to rely on pipelines or actions infrastructure, maximizing applied practices across the team, removing much of the burden of setting up and engineering the automation plumbing code and providing tremendous insights in overall build and deployment quality and agility.
-
-- Deploy early and often through usage of pipelines executing a deployment through triggers and on a scheduled basis. The first will assure any change goes through the proper testing and validation while the second will tell you more about its behaviour on a changing environment independent of actual code and configuration changes. Azure and Kubernetes are always an evolving platform and subject to changes and updates .
-
-- Separate the infrastructure deployment from the actual application deployment. Think about this as two separate lifecycles. The core infrastructure including the control plane is expected to change less compared to the actual application on top. It is also not uncommon to host multiple applications on the same cluster. Lastly from a development productivity angle it is more beneficial and agile having an existing cluster while developing new features or fixing bugs. As such it is recommended to treat each type of deployment as a separate flow and pipeline, potentially linked in case a single application belongs to a single cluster.
-
-- It is recommended to deploy using the most native approach possible for the platform. While many tools are available supporting cloud deployments in a more abstract and agnostic way, there is always a trade-off to be made when it comes to performance and compatibility in those case. In that context it is recommended to use ARM for deploying any infrastructure including the control plane and use Helm for deploying any Kubernetes native components.
-
-- It is recommended to use GitOps for anything touching the Kubernetes cluster. With GitOps, the git repository is used as a single source of truth, avoiding configuration drift, increasing productivity and reliability in case of rollbacks and related procedures.
-
+- It is recommended to rely on pipelines or actions, maximizing applied practices across the team, removing much of the burden of reinventing the wheel while providing predictability and insights in overall quality and agility.
+- Deploy early and often through usage of pipelines based on triggers and on a scheduled basis. The first will assure any change goes through proper validation while the second will tell you more about its behaviour on a changing environment.
+- Separate the infrastructure deployment from the actual application deployment. The core infrastructure is expected to change less compared to the applications. It is recommended to treat each type of deployment as a separate flow and pipeline.
+- It is recommended to deploy using [cloud native](/dotnet/architecture/cloud-native/introduction) concepts. It is recommended to use [infrastructure as code](/azure/devops/learn/what-is-infrastructure-as-code) for deploying any infrastructure including the control plane and use [Helm](https://helm.sh/) and [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) for deploying and maintaining Kubernetes native components.
+- It is recommended to use [GitOps](/azure/azure-arc/kubernetes/use-gitops-connected-cluster) for deploying and maintaining applications. With GitOps, the git repository is used as a single source of truth, avoiding configuration drift, increasing productivity and reliability in case of rollbacks and related procedures.
 - It is recommended to store secrets and other sensitive artifacts needed to deploy the solution in GitHub secrets allowing actions and other workflow parts to read them if needed while executing.
-
-- Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings. Instead rely on conventions and derivatives to assure deployments are never blocked. Every deployment blocked due to resource conflict or other reasons is a wasted opportunity to meet the customer needs in an agile manner.
-
-- Treat every failure, error, or outage as an opportunity to automate and improve the overall quality of the solution, independent if happening in development, testing or production environments. Azure and Kubernetes are both an open and extensible platform with a rich, well documented, and well architected API, providing all means to automate it to the full extent. 
+- Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings, instead rely on well known conventions across infrastructure and application related deployments. It is recommended to use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) to validate and enforce those conventions.
+- Treat every failure, error, or outage as an opportunity to automate and improve the overall quality of the solution. It is recommended to integrate this approach in your [Shift Left](/azure/devops/learn/devops-at-microsoft/shift-left-make-testing-fast-reliable) and [Site Reliability Engineering (SRE)](/azure/site-reliability-engineering/) framework. Azure and Kubernetes are both an open and extensible platform with a rich, and well architected API, providing an opportunity and means to automate it to the full extent. 
