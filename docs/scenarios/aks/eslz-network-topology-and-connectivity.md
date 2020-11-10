@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for <Insert narrative Name>"
-description: Describe how this enterprise-scale scenario can improve network topology and connectivity of <Insert Scenario Name>
+title: "Enterprise-Scale network topology and connectivity for AKS"
+description: Describe how this enterprise-scale scenario can improve network topology and connectivity of AKS
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -9,18 +9,18 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for <Insert narrative Name> Enterprise-Scale scenario
+# Network topology and connectivity for AKS Enterprise-Scale scenario
 
-**Design considerations**
+## Design considerations
 
-- Plan the IP addressing and the size of the VNet subnet, to support the scaling of the cluster by adding more nodes, etc.
+- Plan the IP addressing and the size of the VNet subnet, to support the scaling of the cluster by adding more nodes, services, etc.
 - Decide on the supported network model for the VNet integration, kubenet or Azure Container Networking Interface (CNI).
   - CNI requires additional planning for IP addresses.
-  - Only CNI supports Windows Server node pool.
+  - Only CNI supports Windows Server node and Network Policies pool.
   - kubenet requires UDRs to be manually applied.
   - Verify the [current list](https://docs.microsoft.com/azure/aks/concepts-network#compare-network-models "list") of supported capabilities by each CNI plugin.
 - Plan and decide on the usage of virtual nodes, and verify the documented [known limitations](https://docs.microsoft.com/azure/aks/virtual-nodes-portal#known-limitations "known limitations").
-- Decide on the Azure Load Balancer SKU for the AKS cluster: AKS supports Basic and Standard load balancer SKUs.
+- Decide on the Azure Load Balancer SKU for the AKS cluster: AKS supports [Basic and Standard load balancer SKUs](https://docs.microsoft.com/azure/load-balancer/skus "load balancer skus").
 - Decide on the VNet subnet setup with an internal load balancer: An internal load balancer can be deployed in the same VNet subnet as the nodes, or in a dedicated subnet.
 - Plan and decide on the DNS integration.
   - CoreDNS will resolve cluster-internal domains directly
@@ -36,7 +36,7 @@ ms.subservice: ready
 - Decide on the network for the Ingress controller, and therefore availability of applications and APIs.
   - An Ingress controller can be configured with a public IP address or private IP address; however, the configuration should be aligned with the egress filtering in order to avoid asymmetric routing.
   - Decide whether TLS termination is required, and what TLS certificates are used.
-- Decide whether using Azure Policy and the Azure Policy add-on for AKS to control and limit the objects created in your AKS cluster, such as for example to deny the creation of public IP addresses in the cluster.
+- Decide whether using Azure Policy and the [Azure Policy add-on for AKS](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes "Azure Policy for AKS") to control and limit the objects created in your AKS cluster, such as for example to deny the creation of public IP addresses in the cluster.
 - Plan and decide on the egress network traffic.
   - By default, AKS clusters have unrestricted outbound (egress) internet access.
   - Decide whether egress network traffic must go through Azure Firewall or a Network Virtual Appliance.
@@ -48,7 +48,7 @@ ms.subservice: ready
   - Understand the requirements and reasons for installing a service mesh, and verify the documented [selection criteria](https://docs.microsoft.com/azure/aks/servicemesh-about#selection-criteria "selection criteria").
 - Consider using a global load balancing mechanism like Azure Traffic Manager or Azure Front Door to increase resiliency by routing traffic across multiple clusters
 
-**Design recommendations**
+## Design recommendations
 
 - Use Azure Container Networking Interface (CNI) as network model, unless you have a limited range of IP addresses that can be assigned to the AKS cluster.
   - Follow the documentation with regards to [IP address planning](https://docs.microsoft.com/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster "IP address planning") with CNI.
@@ -62,7 +62,7 @@ ms.subservice: ready
   - Use the [Azure Application Gateway Ingress Controller (AGIC)](https://docs.microsoft.com/azure/application-gateway/ingress-controller-overview "Azure Application Gateway Ingress Controller (AGIC)") add-on, which is a 1st party managed Azure service.
   - With AGIC, deploy a dedicated Azure Application Gateway for each AKS cluster, do not share the same Application Gateway across multiple AKS clusters.
   - If there are no resource constraints, or AGIC does not provide the required features, use an in-cluster Ingress controller solution like NGINX or Traefik, or any other Kubernetes-supported solution.
-- For Internet-facing  and security-critical internal-facing web applications, use a Web Application Firewall (WAF) with the Ingress controller.
+- For Internet-facing and security-critical internal-facing web applications, use a Web Application Firewall (WAF) with the Ingress controller.
   - Azure Application Gateway and Azure Front Door both integrate the [Azure WAF](https://docs.microsoft.com/azure/web-application-firewall/ag/ag-overview "Azure WAF") to protect web-based applications.
 - Secure egress network traffic using Azure Firewall or a 3rd party network virtual appliance (NVA) deployed in the (managed) hub VNet.
   - Use User-Defined Routes (UDR) with AKS outbound-type `userDefinedRouting` to send egress network traffic from the AKS cluster to the Azure Firewall or 3rd party NVA.
