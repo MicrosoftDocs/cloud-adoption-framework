@@ -37,6 +37,7 @@ Consider the following factors:
 
   - A non-stateful workload can be replicated efficiently. If you need to store state in the cluster (not recommended), make sure you back up the data frequently in the paired region.
 
+
 - Cluster update and maintenance.
 
   - Always keep your cluster up to date. Be aware of the release and deprecation process, plan your updates and maintenance in advance.
@@ -60,7 +61,9 @@ The following are best practices for your design:
 
 - Isolate your application from the system services by placing it in a separate node pool. This way, Kubernetes services run on dedicated nodes and don’t compete with your workload. Use of tags, labels, and taints is recommended to identify the node pool to schedule your workload.
 
+
 - Regular upkeep of your cluster such as timely updates is crucial for reliability. Be mindful of [supported window of Kubernetes versions on AKS](https://docs.microsoft.comazure/aks/supported-kubernetes-versions) and plan your updates in advance. Also, monitoring the health of the pods through probes is recommended.
+
 
 - Where possible, don't [store service state inside the container.](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers) Instead, use an Azure platform as a service (PaaS) that supports multiregion replication.
 
@@ -75,7 +78,7 @@ The following are best practices for your design:
 
 - Estimate Pod limits, test and establish a baseline. Start with equal values for requests and limits. Then, gradually tune those values until you have established a threshold that can cause instability in the cluster. Pod Limits can be specified in your deployment manifests.
 
-  The built-in features provide an easy solution to the complex task of handling failures and disruptions in workload architecture, This configurations help simplifying both design and deployment automation. An organization that has defined a standard for the SLA, RTO, and RPO on an application can utilize built in services to kubernetes and Azure to achieve these business objectives.
+  The built-in features provide an easy solution to the complex task of handling failures and disruptions in workload architecture, Thes configurations help simplifying both design and deployment automation. An organization that has defined a standard for the SLA, RTO, and RPO on an application can utillize built in services to kubernetes and Azure to achieve these business objectives. 
 
 - Set [pod disruption budgets.](https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets) This setting determines how many replicas in a deployment can come down during an update or upgrade event. For more information, see Pod disruption budgets.
 
