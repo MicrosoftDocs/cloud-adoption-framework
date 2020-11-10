@@ -3,7 +3,7 @@ title: "Enterprise-Scale business continuity and disaster recovery for Windows V
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of Windows Virtual Desktop (WVD)
 author: igorpag
 author: jimmoyle
-ms.author: igorpag
+ms.author: brblanch
 ms.date: 10/31/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
