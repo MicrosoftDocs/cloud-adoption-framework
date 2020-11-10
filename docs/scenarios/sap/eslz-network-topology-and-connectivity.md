@@ -18,7 +18,9 @@ It's vital that your organization plans for IP addressing in Azure to ensure tha
 ### Design considerations for SAP Implementations:
 1.	Dedicated and Delegated Subnets: You can dedicate and delegate subnets to certain services to create instances of a service within the subnet. Azure enables you to create multiple delegated subnets in a VNet., However you can have only a single delegated subnet in a VNet for Azure Netapp files. Any attempts to create a new volume will fail if you use more than one delegated subnet for Azure NetApp Files.
 
-Use Case:
+Dedicated and Delegated Subnets: You can dedicate and delegate subnets to certain services to create instances of a service within the subnet. Azure enables you to create multiple delegated subnets in a VNet., However you can have only a single delegated subnet in a VNet for Azure Netapp files. Any attempts to create a new volume will fail if you use more than one delegated subnet for Azure NetApp Files.
+
+#### Use Case:
 
 •	Delegated subnets are required for Azure NetApp files implementations which is popular in SAP deployments for shared file systems. 
 •	For all the SAP implementations including Fiori, SAP App Gateway is needed which needs its own dedicated subnet.
@@ -26,15 +28,14 @@ Use Case:
 ## Configure DNS and name resolution for on-premises and Azure resources
 Domain Name System (DNS) is a critical design topic in the overall enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
 
-### Design Recommendations for SAP implementations:
-1.	It is recommended to not change DNS names / virtual names for virtual machines during an SAP to Azure migration.
+### Design Recommendations for SAP implementations
+Recommendation will be for not changing the DNS names / Virtual names for a VM while Migration.
 
-
-Use Case: 
-
+#### Use Case:
 •	In SAP landscape many system interfaces are connected using the DNS names and virtual names in the background. Not in all the cases, customers are aware of all the interfaces defined over the years by developers. After the migration if the Virtual names or DNS names changes, this poses challenges while connection of various systems. In this type of cases, we recommend maintaining the aliases in DNS to avoid difficulties after migration.
-•	Use different DNS Zones for each environment (sandbox, dev, pre-production and production), to ensure each environment are separate from each other.
-•	Exception will be if SAP deployments have their own VNET then private DNS zones may not be a necessity. 
+•	For environments where name resolution in Azure is all that is required, use Azure Private DNS for resolution. Create a delegated zone for name resolution (such as azure.contoso.com).
+•	Use different DNS Zones for each environment (sandbox, dev, pre-production and production), to ensure each environment is separate from each other.
+•	Exception will be if SAP deployments have their own VNET then private DNS zones may not be a necessity.
 
 Use a network topology based on Azure Virtual WAN if any of the following are true:
 
@@ -77,13 +78,9 @@ Azure-native network security services such as Azure Firewall, Azure Web Applica
 
 ### Design Recommendations for SAP Implementations:
 1.	For SAP deployments use of Azure Front Door services provide a good experience for WAF and Internet facing application. Use Azure Front Door Service with WAF policies to deliver and help protect global HTTP/S apps that span Azure regions. This can be very good option for enterprise customers having global footprints. For more information on Azure front door refer: https://docs.microsoft.com/en-us/azure/frontdoor/front-door-overview
-
-2.	When you're using Azure Front Door Service and Azure Application Gateway to help protect HTTP/S apps, WAF should be used where required, as some policies are only applicable to WAF in Front Door, or WAF in Application Gateway, as described on the following article: https://docs.microsoft.com/en-us/azure/web-application-firewall/afds/waf-faq#do-you-support-same-waf-features-in-all-integrated-platforms. 
-
-3.	When using Azure Application Gateway (AAG) as a reverse proxy for SAP web apps, AAG+WAF have limitations AAG does not have intelligence of SAP applications like WD or Netscalersome 3rd party solutions. Extensive testing would be necessary if replacing WD with AAG. Verify latest status and possibly list all supported and not supported (or tested/not tested) scenarios.  However there are some scenarios where WebDispatcher needs to be best combined with App Gateway, specially around Fiori.
-
+2.	When you're using Azure Front Door Service and Azure Application Gateway to help protect HTTP/S apps, use WAF policies in Azure Front Door Service. Lock down Azure Application Gateway to receive traffic only from Azure Front Door Service.
+3. When using Azure Application Gateway as a reverse proxy for SAP web apps, AAG+WAF have limitations as shown in the picture (comparison between AAG, SAP Web Dispatcher and 3rd Party such as Netscaler). AAG does not have intelligence of SAP appliations like WD or Netscaler. Extensive testing necessary if replacing WD with AAG. Verify latest status and possibly list all supported and not supported (or tested/not tested) scenarios. 
 4.	When the traffic is exposed to the internet its recommended to use a Web Application Firewall (WAF) to scan your traffic or on top of your load balancer or resources which has in built firewall capabilities like Azure application Application gateway Gateway or third party solutions.
-
 5.	Use Azure private link for securely and privately access to your PaaS resources like blob storage, Files, Data Lake Gen 2, ADF etc to protect data leakage. You can also use private end point to secure your traffic between VNET and service like Azure Storage, Azure Backup etc. Traffic between your virtual network and the private endpoint enabled service traverses over the Microsoft backbone network, eliminating exposure from the public Internet.
 
 ## Define Network Encryption Requirements
@@ -92,13 +89,12 @@ This section explores key recommendations to achieve network encryption between 
 ### Design considerations for SAP Implementations:
 1.	When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
 
+•	When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
 2.	For SAP deployments it’s not necessary to encrypt the traffic over ExpressRoute. SAP traffic is usually heavy in bandwidth consumption and sensitive to performance. Encryption and decryption might have inverse effects on performance. Traffic is encrypted over the internet via IPsec tunnels by default.
-
 3.	However, it is on customer’s requirement if the SAP traffic needs to be encrypted or not. Refer the following article for network encryption options in Enterprise-Scale Landing Zones: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity#define-network-encryption-requirements
 
 ## Segregation of Systems:
-In a typical SAP scenario, we have different types of landscapes like Dev, test, quality, pre-production, production etc. Due to security and compliance reasons customers usually like to segregate these systems in logical/physical constructs. This segregation can be done on various level like subscription or resource group level. The idea is to maintain all the systems having the same lifecycle in the one common resource group. One should also keep in mind the security and policy structure while grouping the resources in the SAP landscape.
-
+In a typical SAP scenario, we have different types of landscapes like Dev, test, quality, pre-production, production etc. Due to security and compliance reasons customers usually like to segregate these systems in logical/physical constructs. This segregation can be done on various level like subscription or resource group level. The idea is to maintain all the systems having the same lifecycle in the one common resource group. One should also keep in my mind the security and policy structure while grouping the resources in the SAP landscape.
 However, to SAP transports to flow between different dev, test, quality and production, we might need to have:
 
 o	VNET peering and associated costs
