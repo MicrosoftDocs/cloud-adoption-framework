@@ -36,11 +36,11 @@ An Enterprise-Scale architecture is defined by a set of design considerations an
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
-_Figure 2: Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology._
+_Figure 2: Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology. Note that the Connectivity subscription uses a VWAN hub._
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture.](./media/ns-arch-cust-inline.png)](./media/ns-arch-cust-expanded.png#lightbox)
 
-_Figure 3: Cloud Adoption Framework enterprise-scale landing zone architecture based on a traditional Azure networking topology._
+_Figure 3: Cloud Adoption Framework enterprise-scale landing zone architecture based on a traditional Azure networking topology. Note that the Connectivity subscription uses a Hub VNet._
 
 Download the PDF files that contain the Enterprise-Scale architecture diagrams based on the [Virtual WAN](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) network topology or a traditional Azure network topology based on the [hub and spoke](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-cust.pdf) architecture.
 
