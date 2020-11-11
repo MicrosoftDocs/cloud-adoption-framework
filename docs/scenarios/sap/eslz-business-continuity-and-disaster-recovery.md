@@ -75,12 +75,12 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 
 ![AzureComputeSKUOptions](./media/BCDR_Compute_Options.jpg)
 
-- Consider using D-Series SKU for SAP application servers. D-Series provide 1:4 for CPU: Memory mapping.
+- Consider using D-Series SKU for SAP application servers. D-Series provide 1:4 for CPU: Memory mapping.Consider using latest SKU generation eg: V3 or V4.
   Please refer the SAP note [1928533](https://launchpad.support.sap.com/#/notes/1928533) for certified D-series SKU for SAP deployment.
 - Consider using [E-series](https://docs.microsoft.com/azure/virtual-machines/ev3-esv3-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-Series](https://docs.microsoft.com/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for AnyDB.  M & E series SKU's are memory optimized provide better CPU:Memory ratio.
 - Consider design principle of scale-up first then scale-out. However, from cost perspective in some scenarios scale-out deployments could be cheaper compared to scale-up setup.
 - Consider Scale-out for SAP application server over scale-up.
-- Consider using E-series SKU for non-prod cost-conscious deployments.
+- Consider using E-series SKU for production non-prod cost-conscious deployments.
 - For AnyDB production deployment consider IOPS and throughput limits of VM SKUs.
 
 ### Design Recommendations for Compute
@@ -91,7 +91,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
   - Constrained core options available to save DB license costs without a compromise on IO and throughput limits.
 - Combined IOPS/throughput of all the disks attached to a VM should be less than or equal IOPS and Throughput limits of VM. eg: P50 disk give 7500 IOPS with 250MBps throughput when this is attached to a Standard D8s_v3 which can only support 192 MBps doesn’t help realize throughput of P50 disk.
 - Use M series SKU for HANA Production deployment. M series support 256GB to 12TB scale-up and 96TB of scale out.Refer to SAP [Hardware directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/iaas.html#categories=Microsoft%20Azure) for supported setup.
-- Ultra-SSD or ANF should be used for log volumes in Production HANA deployments while using  E-series SKUs.
+- Ultra-SSD or ANF should be used for log volumes in Production HANA deployments while using  E-series SKUs. Whilst using ANF for log volumes ANF should also be used  HANA data volumes.
 - [HANA Large Instances (HLI)](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-overview-architecture) for scale-up deployments larger than 12TB for OLTP.
 
 ### Design Considerations for Storage
@@ -99,7 +99,6 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 ![AzureStorageSKUOptions](./media/BCDR_Scalability_Storage_SKU.jpg)
 
 - Azure has plethora of storage options to choose from, however for running SAP application servers consider the following storage options.
-  - Standard HDD
   - Standard SSD
   - Premium SSD
   - Ultra SSD
@@ -118,7 +117,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
   - Ultra SSD
   - Azure Netapp Files (ANF)
 - In a cost-conscious deployment consider deploying Pre-Production or test systems on standard SDD and convert to Premium for the period of test cycles as required. Eg: E20 disk is half the cost of a P20.
-- In cost-conscious deployments consider [disk bursting](https://docs.microsoft.com/azure/virtual-machines/linux/disk-bursting#disk-level-bursting) feature for non-production workloads.
+- In cost-conscious deployments consider [disk bursting](https://docs.microsoft.com/azure/virtual-machines/linux/disk-bursting#disk-level-bursting) feature for non-production workloads or [document](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) in case of HANA deployment.
 - Every Azure premium disk come with IOPS and throughout limit, consider striping disk instead of using single large disk for a cost-conscious deployment. Further details about stripe sizes can be found [here](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage).
 - Consider using [Azure Disk encryption](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss) for data disk on SAP application servers.
 - Consider using [Azure Storage Service encryption](https://docs.microsoft.com/azure/storage/common/encryption-customer-managed-keys?toc=/azure/storage/blobs/toc.json) with customer managed keys(CMK) for database disks.
@@ -127,8 +126,9 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 ### Design Recommendations for Storage
 
 - In a cost-conscious deployment use Standard SSD storage for SAP Non-Production (dev/test).
-- Do not use IaaS NFS clusters for SAP Shared file systems, use [Azure shared disk](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk) for Windows deployment, in Linux deployment use Azure Files or [Azure NetApp Files](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files).
-- Use Azure premium managed SSD disks for SAP application servers e.g.: usr/sap file systems 
+- Do not use IaaS NFS clusters for SAP Shared file systems, use [Azure shared disk on premium storage](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk) for Windows deployment, in Linux deployment use NFS on Azure Files or [Azure NetApp Files](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files).
+- Use Azure premium managed SSD disks for SAP application servers e.g.: usr/sap file systems.
+- Azure premium managed storage must be used for the SAP Global Transport directory.  
 - In Production deployments the OS disk size should be minimum of 128GB (P10), from our customer experiences all the application logging and monitoring agents actively write data on OS disk driving high IO requirement using a smaller disk will throttle  the disk performance.
 - [Read-Only](https://docs.microsoft.com/azure/virtual-machines/premium-storage-performance#disk-caching) cache must be enabled for the data disks holding database data files for AnyDB deployment. Read-Only cache can only be enabled on disks smaller than 4095GB.
 - Do not use Azure disk encryption for database disk, use only DB native encryption for databases. Example - Transparent Data Encryption (TDE) for Oracle or SQL server.
