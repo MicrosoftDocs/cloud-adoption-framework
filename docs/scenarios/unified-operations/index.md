@@ -11,7 +11,8 @@ ms.subservice: overview
 
 # unified operations
 
-Describe your scenario
+Hybrid is an mixture of customer solutions which span On-prem, Private cloud/On-prem, Multi-cloud, and Edge devices.
+Unified operations is an enterprise control plane that provides operations management control across those hybrid solutions.
 
 ## unified operations executive summary
 
