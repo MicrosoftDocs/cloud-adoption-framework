@@ -91,7 +91,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
   - Constrained core options available to save DB license costs without a compromise on IO and throughput limits.
 - Combined IOPS/throughput of all the disks attached to a VM should be less than or equal IOPS and Throughput limits of VM. eg: P50 disk give 7500 IOPS with 250MBps throughput when this is attached to a Standard D8s_v3 which can only support 192 MBps doesn’t help realize throughput of P50 disk.
 - Use M series SKU for HANA Production deployment. M series support 256GB to 12TB scale-up and 96TB of scale out.Refer to SAP [Hardware directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/iaas.html#categories=Microsoft%20Azure) for supported setup.
-- Ultra-SSD or ANF should be used for log volumes in Production HANA deployments while using  E-series SKUs. Whilst using ANF for log volumes ANF, should also be used  HANA data volumes.
+- Ultra-SSD or ANF should be used for log volumes in Production HANA deployments while using  E-series SKUs. Whilst using ANF for log volumes, ANF should also be used  HANA data volumes.
 - [HANA Large Instances (HLI)](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-overview-architecture) for scale-up deployments larger than 12TB for OLTP.
 
 ### Design Considerations for Storage
@@ -115,10 +115,10 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - Storage option to be considered for database logs which require a lower latency of <1ms
   - Premium Storage with WA (only on M-series VM’s)
   - Ultra SSD
-  - Azure Netapp Files (ANF)
+  - Azure Netapp Files (HANA only)
 - In a cost-conscious deployment consider deploying Pre-Production or test systems on standard SDD and convert to Premium for the period of test cycles as required. Eg: E20 disk is half the cost of a P20.
 - In cost-conscious deployments consider [disk bursting](https://docs.microsoft.com/azure/virtual-machines/linux/disk-bursting#disk-level-bursting) feature for non-production workloads or [document](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) in case of HANA deployment.
-- Every Azure premium disk come with IOPS and throughout limit, consider striping disk instead of using single large disk for a cost-conscious deployment. Further details about stripe sizes can be found [here](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage).
+- Every Azure premium disk comes with IOPS and throughout limit, consider striping disk instead of using single large disk for a cost-conscious deployment. Further details about stripe sizes can be found [here](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage).
 - Consider using [Azure Disk encryption](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss) for data disk on SAP application servers.
 - Consider using [Azure Storage Service encryption](https://docs.microsoft.com/azure/storage/common/encryption-customer-managed-keys?toc=/azure/storage/blobs/toc.json) with customer managed keys(CMK) for database disks.
 
