@@ -891,7 +891,7 @@ items:
           - name: Govern data
             items:
             - name: Classify data
-              href: govern/policy-compliance/data-classification.md
+              href: innovate/best-practices/data-classification.md
             - name: Secure data
               href: /azure/architecture/data-guide/scenarios/securing-data-solutions?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Annotate data with Data Catalog
