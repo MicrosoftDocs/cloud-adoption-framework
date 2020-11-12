@@ -10,4 +10,13 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
+# What is data classification?
+
 [!INCLUDE [data-classification](../../../includes/data-classification.md)]
+
+## Next steps
+
+Continue learning from this article series by reviewing the article on securing sensitive data. The next article contains applicable insights if you are working with data that is classified as confidential or highly confidential.
+
+> [!div class="nextstepaction"]
+> [Secure sensitive data](/azure/architecture/data-guide/scenarios/securing-data-solutions?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
