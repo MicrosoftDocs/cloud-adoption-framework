@@ -77,7 +77,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 
 - Consider using D-Series SKU for SAP application servers. D-Series provide 1:4 for CPU: Memory mapping.Consider using latest SKU generation eg: V3 or V4.
   Please refer the SAP note [1928533](https://launchpad.support.sap.com/#/notes/1928533) for certified D-series SKU for SAP deployment.
-- Consider using [E-series](https://docs.microsoft.com/azure/virtual-machines/ev3-esv3-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-Series](https://docs.microsoft.com/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for AnyDB.  M & E series SKU's are memory optimized provide better CPU:Memory ratio.
+- Consider using [E-series](https://docs.microsoft.com/azure/virtual-machines/ev3-esv3-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-Series](https://docs.microsoft.com/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for AnyDB.  M & E series SKUs are memory optimized provide better CPU:Memory ratio.
 - Consider design principle of scale-up first then scale-out. However, from cost perspective in some scenarios scale-out deployments could be cheaper compared to scale-up setup.
 - Consider Scale-out for SAP application server over scale-up.
 - Consider using E-series SKU for production non-prod cost-conscious deployments.
