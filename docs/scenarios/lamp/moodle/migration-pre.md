@@ -47,7 +47,7 @@ Exporting data from on-premises to Azure involves the following tasks:
     
 ## Create a subscription
 
-Skip this step if you have a subscription. If you don't have a subscription, you can choose to [create one within the Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription.
+Skip this step if you have a subscription. If you don't have a subscription, you can choose to [create one within the Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription.
 
 - To create the subscription with the Azure portal, navigate to **Subscriptions** from the **Home** section.
 
@@ -100,7 +100,7 @@ Storage accounts can be created with the Azure portal or the Azure CLI.
 
   Example: az storage account create -n onpremisesstorage -g manual_migration --sku Standard_LRS --kind BlobStorage -l eastus
 
-- In the previous command, --kind Indicates the type of storage account. Once the storage account "onpremisesstorage" is created, this is used as the destination to take the on-premises backup.
+- In the previous command, '--kind' indicates the type of storage account. Once 'onpremisesstorage' account is created, it's becomes the destination for an on-premises backup.
 
 ## Back up on-premises data
 

@@ -1,5 +1,5 @@
 ---
-title: How start a manual Moodle migration
+title: How to start a manual Moodle migration
 description: Learn how to start a manual Moodle migration.
 author: BrianBlanchard
 ms.author: brblanch
@@ -100,14 +100,14 @@ Before migrating, back up the current configuration. A backup directory is extra
 			
 - You can add an IP or configure firewall rules here. Select **Save** after you've created the rules.
 
-You can now connect to the server using the mysql command-line tool or the mySQL Workbench tool. To obtain connection information, copy the **Server name** and **Server admin login name** from the **MySQL server resource** page. You can select the copy button next to each field to do this.
+You can now connect to the server using the mysql command-line tool or the MySQL Workbench tool. To obtain connection information, copy the **Server name** and **Server admin login name** from the **MySQL server resource** page. You can select the copy button next to each field to do this.
 
 ![Setting up a new connection.](images/database-connection.png)
 
-For example, if the server name is mydemoserver.mysql.database.azure.com, and the server admin login name is myadmin@mydemoserver:
+For example, if the server name is 'mydemoserver.mysql.database.azure.com, and the server admin login name is 'myadmin@mydemoserver':
 
-- Before importing database, make sure that Azure Database for MySQL server details are handy.
-- Navigate to Azure Portal and go to the created Resource Group.
+- Before importing a database, make sure that Azure Database details for MySQL server details are ready.
+- Navigate to Azure portal, and go to the created resource group.
 - Select the Azure Database for MySQL server resource.
 - In the overview panel find Azure Database for MySQL server details such as Server name, Server admin login name.
 - Reset the password by clicking the Reset Password button at top let of the page.
@@ -139,7 +139,7 @@ Use these database server details for the following commands:
 
 Update parameters in config.php. Make sure to store the DNS name for this task:
 
-- Navigate to the Azure Portal, and find your resource group.
+- Navigate to the Azure portal, and find your resource group.
   
 - Locate the **Load Balancer public IP**, and get the DNS name from the **Overview** panel:
 
@@ -153,13 +153,13 @@ Update parameters in config.php. Make sure to store the DNS name for this task:
   For example:
 
   - $CFG->dbhost    = 'localhost';                - Change 'localhost' to the server name.
-  - $CFG->dbname    = 'moodle';                   - Change 'moodle' to newly created database name.
+  - $CFG->dbname    = 'moodle';                   - Change 'moodle' to the newly created database name.
   - $CFG->dbuser    = 'root';                     - Change 'root' to the server admin login name.
   - $CFG->dbpass    = 'password';                 - Change 'password' to the server admin login password.
   - $CFG->wwwroot   = 'https://on-premises.com';  - Change 'on-premises' to the DNS name.
   - $CFG->dataroot  = '/var/moodledata';          - Change the path to '/moodle/moodledata'.
 
-The on-premises dataroot directory can be stored at any location. After making the the changes, save the file. Press **CTRL+o** to save and **CTRL+x** to exit.
+The on-premises dataroot directory can be stored at any location. After making the changes, save the file. Press **CTRL+o** to save and **CTRL+x** to exit.
 
 Configure directory permissions.
 

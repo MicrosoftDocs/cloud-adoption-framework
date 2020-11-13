@@ -15,22 +15,22 @@ ms.subservice: plan
 
 Moodle migrations include the following tasks:
 
-- Deploy Azure Infrastructure with Azure Azure Resource Manager Templates.
+- Deploy Azure infrastructure with Azure Resource Manager templates.
 - Download and install AzCopy.
 - Copy over the backup archive to the Controller Virtual Machine instance from the Azure Resource Manager deployment.
 - Migration of Moodle application and configuration.
 - Set up Moodle controller instance and worker nodes.
 - Configuring PHP and the web server.
 
-## Deploy Azure Infrastructure with Azure Azure Resource Manager templates
+## Deploy Azure infrastructure with Azure Resource Manager templates
 
 - When using an Azure Resource Manager template to deploy infrastructure on Azure, a couple of options are available to you. The following diagram provides an overview of infrastructure resources.
 
 ![Azure infrastructure resources.](images/architecture.png)
 
-A fully configurable deployment gives more flexibility and choices for deployments. A predefined deployment size uses one of four predefined Moodle sizes. The four predefined templates options, minimal, short-to-mid, large, and maximal, are available at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
+A fully configurable deployment gives more flexibility and choices for deployments. A predefined deployment size uses one of four predefined Moodle sizes. The four predefined templates options are minimal, short-to-mid, large, and maximal, and they're available at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
 
-- [Minimal](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json): This deployment will use NFS, MySQL, and smaller auto scale web front-end virtual machine sku (one vCore) that will give faster deployment time (less than 30 minutes) and currently requires only two virtual machines will fit into a Azure free trial subscription.  
+- [Minimal](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json): This deployment will use NFS, MySQL, and smaller auto scale web front-end virtual machine sku (one vCore) that will give faster deployment time (less than 30 minutes) and currently requires only two virtual machines will fit into an Azure free trial subscription.  
 
 - [Small-to-mid](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json): Supports up to 1,000 concurrent users. This deployment will use NFS (no high availability) and MySQL (eight vCores) without other options like elastic search or Redis cache.  
 
@@ -38,7 +38,7 @@ A fully configurable deployment gives more flexibility and choices for deploymen
 
 - [Maximum](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json): This maximal deployment will use Azure Files, MySQL with the highest SKU, Redis cache, elastic search (three virtual machines), and large storage sizes (both data disks and databases).
 
-Select **Launch** to deploy any of the predefined templates. This will direct you to the Azure Portal, where you'll need to complete mandatory fields such as **Subscription**, **Resource Group**, [**SSH key**](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), and **Region**.
+Select **Launch** to deploy any of the predefined templates. This will direct you to the Azure portal, where you'll need to complete mandatory fields such as **Subscription**, **Resource Group**, [**SSH key**](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), and **Region**.
 
 ![Custom deployment: Deploy from a custom template.](images/custom-deployment.png)
 

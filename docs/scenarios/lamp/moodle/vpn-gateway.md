@@ -15,7 +15,7 @@ This document explains how to set up a virtual network gateway in Azure.
 
 ## Getting started
 
-Create a virtual network gate in Azure Portal with the following steps:
+Create a virtual network gateway in the Azure portal with the following steps:
 
 - Search for and select **Virtual network gateway**.
 - Select **Create** to open a window.

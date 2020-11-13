@@ -124,7 +124,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
 
 - DNS name mapping to the Azure Load Balancer IP must be done at the hosting-provider level.
 
-- Disable the Moodle website from the maintenance mode.
+- Disable **Maintenance mode** on the Moodle website.
 
 - Run the following command in the controller virtual machine:
 
@@ -153,19 +153,19 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
   $telnet database_host_name 3306
   ```
 
-- You should get a cryptic response which includes the version number of the MySQL server.
+- You should get a cryptic response, which includes the version number of the MySQL server.
 
-- If you're attempting to run two instances of Moodle on different ports, use the IP address of the host (not localhost) in the $CFG->dbhost setting; for example, $CFG->dbhost = 127.0.0.1:3308.
+- If you're attempting to run two instances of Moodle on different ports, use the IP address of the host (not localhost) in the '$CFG->dbhost' setting; for example, $CFG->dbhost = 127.0.0.1:3308.
 
 - You haven't created a Moodle database or assigned a user with the correct privileges to access it.
 
-- The Moodle database settings aren't correct. The database name, database user, or database user password in your Moodle configuration file config.php aren't correct.
+- The Moodle database settings aren't correct. The database name, database user, or database user password in your Moodle configuration file, 'config.php', aren't correct.
         
 - Check that there aren't apostrophes or non-alphabetic letters in your MySQL username or password.
 		
-2. Error: _500:Internal Server Error": There are several possible causes for this error. Start by checking your web server error log, which should have a more comprehensive explanation. Here are some known possibilities:
+2. Error: _500:Internal Server Error_: There are several possible causes for this error. Start by checking your web server error log, which should have a more comprehensive explanation. Here are some known possibilities:
 			
-- There's a syntax error in your .htaccess or httpd.conf files. The way in which directives are written differs depending on which file you are using. You can use the following command to test for configuration errors in your nginx files:
+- There's a syntax error in your '.htaccess' or 'httpd.conf' files. The way in which directives are written differs depending on which file you are using. You can use the following command to test for configuration errors in your nginx files:
 
   ```
   nginx -t
@@ -181,7 +181,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
 
 This error means that the PHP memory_limit value isn't enough for the PHP script. The memory_limit value is the allowed memory size, which is 64M in the example above (67108864 bytes / 1024 = 65536 KB. 65536 KB / 1024 = 64 MB). You'll need to increase the PHP memory_limit value until this message is gone. There are two methods of doing this:
 
-Method one: For a hosted installation, you should ask your host's support how to do this. Many allow .htaccess files. If yours does, add the following line to your '.htaccess' file, or create one in the Moodle directory if it doesn't already exist:
+Method one: For a hosted installation, you should ask your host's support how to do this. Many allow '.htaccess' files. If yours does, add the following line to your '.htaccess' file, or create one in the Moodle directory if it doesn't already exist:
 
 ```
 php_value memory_limit <value>M
@@ -199,7 +199,7 @@ Remember that you need to restart your web server to make changes to 'php.ini' e
 
 4. Can't log in; stuck on the login screen.
 
-This can also apply if you see _Your session has timed out. Please log in again._ or _A server error that affects your login session was detected. Please login again or restart your browser._ The following are potential causes and actions that you can take to resolve this:
+This can also apply if you see _Your session has timed out. Please log in again._ or _A server error that affects your login session was detected. Please log in again or restart your browser._ The following are potential causes and actions that you can take to resolve this:
 
 - First, check if your main admin account, another manual account, is also a problem. If your users are using an external authentication method (for example, LDAP), then that could be the problem. Isolate the cause, and verify that it's with Moodle before going any further.
 
@@ -225,14 +225,14 @@ This can also apply if you see _Your session has timed out. Please log in again.
 
 - If you obtain a _File not found_ error when uploading a file, it indicates that slash arguments aren't enabled on your web server. Try enabling it.
 
-- If your web server doesn't support slash arguments, then they can be disabled in in Moodle by un-ticking the checkbox **Use slash arguments** in Administration > Site administration > Server > HTTP.
+- If your web server doesn't support slash arguments, then they can be disabled in in Moodle by unticking the **Use slash arguments** checkbox in Administration > Site administration > Server > HTTP.
 
 - ![Warning:] Disabling slash arguments will result in SCORM packages not working and slash arguments warnings being displayed!
 
-9. The site is stuck in maintenance mode. Sometimes Moodle gets stuck in maintenance mode, and the message _This site is undergoing maintenance and is currently unavailable_ appears despite your attempts to turn off maintenance mode. When you put Moodle into maintenance mode, it creates a file called maintenance.html in moodledata/maintenance.html, the site file's directory). To fix this, try the following:
+9. The site is stuck in **Maintenance mode**. Sometimes Moodle gets stuck in **Maintenance mode**, and the message _This site is undergoing maintenance and is currently unavailable_ appears despite your attempts to turn it off. When you put Moodle into **Maintenance mode**, it creates a 'maintenance.html' file in 'moodledata/maintenance.html', the site file's directory. To fix this, try the following:
 
 - Check that the web server user has write permissions to the moodledata directory.
-- Manually delete the maintenance.html file.
+- Manually delete the 'maintenance.html' file.
 	
 10. Where to find the logs:
 
