@@ -13,7 +13,7 @@ ms.subservice: plan
 
 ## Virtual machine scale set instances
 
-Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](/vpn-gateway.md) to gain gateway access to virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
+Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](/vpn-gateway.md) to gain gateway access to the virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
 
 To create a virtual machine scale set instance private IP:
 
@@ -43,11 +43,7 @@ Log in to a scale set virtual machine instance. Perform the following steps:
   mkdir -p backup/moodle
   ```
         
-Configure the PHP and web server:
-
-- Create a backup of PHP and web server configurations.
-
-- Set the PHP version to a variable.
+- To configure the PHP and web server, create a backup of PHP and web server configurations, and set the PHP version to a variable.
 
    ```bash
   _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`

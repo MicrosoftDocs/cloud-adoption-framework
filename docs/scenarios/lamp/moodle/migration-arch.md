@@ -14,11 +14,12 @@ ms.subservice: plan
 ## Moodle migration task outline
 
 Moodle migrations include the following tasks:
+
 - Deploy Azure Infrastructure with Azure Azure Resource Manager Templates.
 - Download and install AzCopy.
 - Copy over the backup archive to the Controller Virtual Machine instance from the Azure Resource Manager deployment.
 - Migration of Moodle application and configuration.
-- Set up Moodle controller instance and worker nodes. 
+- Set up Moodle controller instance and worker nodes.
 - Configuring PHP and the web server.
 
 ## Deploy Azure Infrastructure with Azure Azure Resource Manager templates

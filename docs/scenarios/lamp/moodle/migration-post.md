@@ -28,9 +28,9 @@ Post-migration tasks are final application configurations that include setting u
     
 ### Log paths
         
-On-premises might have different log path locations that need to be updated with Azure log paths. For example, /var/log/syslogs/moodle/access.log and /var/log/syslogs/moodle/error.log 
+On-premises might have different log path locations that need to be updated with Azure log paths. For example, /var/log/syslogs/moodle/access.log and /var/log/syslogs/moodle/error.log.
     
-- Update the log files location. This command will open the configuration file:
+- Update the log file location. This command will open the configuration file:
 
   ```bash
   nano /etc/nginx/nginx.conf
@@ -38,7 +38,7 @@ On-premises might have different log path locations that need to be updated with
 
 - Change the log path location.
 
-- Find access_log and error_log, and update the log path.
+- Find 'access_log' and 'error_log', and update the log path.
 
 - Press **CTRL+o** to save and **CTRL+x** to exit.
 
@@ -79,7 +79,7 @@ Restart the nginx and php-fpm servers:
   -subj "/C=US/ST=WA/L=Redmond/O=IT/CN=mydomain.com"
   ```
 
-- It's recommended for the certificate files to be read-only to the owner and for these files to be owned by owned by www-data:www-data.
+- It's recommended for the certificate files to be read-only to the owner and for these files to be owned by 'www-data:www-data'.
 
   ```bash
   chown www-data:www-data /moodle/certs/nginx.*
@@ -102,7 +102,7 @@ Restart the nginx and php-fpm servers:
 
 ### Update the local HTML copy
         
-The Moodle html site (/moodle/html/moodle) content's local copy is created in the virtual machine scale set at /var/www/html/moodle. The local copy is updated only when there is an update in timestamp. Execute the following command from the controller virtual machine to update the timestamp. 
+The Moodle html site (/moodle/html/moodle) content's local copy is created in the virtual machine scale set at '/var/www/html/moodle'. The local copy is updated only when there is an update in timestamp. Execute the following command from the controller virtual machine to update the timestamp. 
 
   ```bash
   sudo -s
@@ -113,7 +113,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
         
 ### Restart servers
         
-- Restart the nginx and php-fpm servers.
+- Restart the 'nginx' and 'php-fpm' servers.
 
   ```bash
   sudo systemctl restart nginx
@@ -145,7 +145,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
 <details> 
 <summary>(Select expand for similar questions!)</summary>
 
-1. Error: The database connection has failed: For errors like _database connection failed_ or _could not connect to the database you specified_, here are some potential reasons and solutions.
+1. Error: The database connection has failed: For errors like _database connection failed_ or _could not connect to the database you specified_, some potential reasons and solutions are:
 	
 - Your database server isn't installed or running. To check this for MySQL, try typing the following the following command:
 
@@ -159,7 +159,7 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
 
 - You haven't created a Moodle database or assigned a user with the correct privileges to access it.
 
-- The Moodle database settings aren't correct. The database name, database user, or database user password in your Moodle configuration file config.php aren't correct. 
+- The Moodle database settings aren't correct. The database name, database user, or database user password in your Moodle configuration file config.php aren't correct.
         
 - Check that there aren't apostrophes or non-alphabetic letters in your MySQL username or password.
 		
@@ -181,27 +181,27 @@ The Moodle html site (/moodle/html/moodle) content's local copy is created in th
 
 This error means that the PHP memory_limit value isn't enough for the PHP script. The memory_limit value is the allowed memory size, which is 64M in the example above (67108864 bytes / 1024 = 65536 KB. 65536 KB / 1024 = 64 MB). You'll need to increase the PHP memory_limit value until this message is gone. There are two methods of doing this:
 
-Method one: On a hosted installation, you should ask your host's support how to do this. Many allow .htaccess files. If yours does, add the following line to your .htaccess file, or create one in the Moodle directory if it doesn't already exist:
+Method one: For a hosted installation, you should ask your host's support how to do this. Many allow .htaccess files. If yours does, add the following line to your '.htaccess' file, or create one in the Moodle directory if it doesn't already exist:
 
 ```
 php_value memory_limit <value>M
 Example: php_value memory_limit 40M
 ```
 
-Method two: If you have your own server with shell access, edit your php.ini file. Make sure that it's the correct one by checking in your phpinfo output:
+Method two: If you have your own server with shell access, edit your 'php.ini' file. Make sure that it's the correct one by checking in your 'phpinfo' output:
 
 ```
 memory_limit <value>M
 Example: memory_limit 40M
 ```
 
-Remember that you need to restart your web server to make changes to php.ini effective. An alternative is to disable the memory_limit by using the command memory_limit 0.
+Remember that you need to restart your web server to make changes to 'php.ini' effective. An alternative is to disable the 'memory_limit' by using the command 'memory_limit 0'.
 
 4. Can't log in; stuck on the login screen.
 
 This can also apply if you see _Your session has timed out. Please log in again._ or _A server error that affects your login session was detected. Please login again or restart your browser._ The following are potential causes and actions that you can take to resolve this:
 
-- Check first that your main admin account (which will be a manual account) is also a problem. If your users are using an external authentication method (for example, LDAP), then that could be the problem. Isolate the cause, and verify that it's with Moodle before going any further.
+- First, check if your main admin account, another manual account, is also a problem. If your users are using an external authentication method (for example, LDAP), then that could be the problem. Isolate the cause, and verify that it's with Moodle before going any further.
 
 - Check that your hard disk isn't full, that your server is on shared hosting, and that you haven't reached your disk space quota. This will prevent new sessions from being created, and no one will be able to log in.
 
@@ -217,15 +217,15 @@ This can also apply if you see _Your session has timed out. Please log in again.
 
 6. Couldn't find a top-level course.
 
-- If this appears immediately after you attempted to install, Moodle it almost certainly means that the installation didn't complete. A complete installation will ask you for the administrator profile and to name the site just before it completes. Check your logs for errors. Then drop the database and start again. If you used the web-based installer, try the command line one.
+- If this appears immediately after you attempted to install Moodle, it likely means that the installation didn't complete. A complete installation will ask you for the administrator profile and to name the site just before it finishes. Check your logs for errors, and then drop the database to start again. If you used the web-based installer, try the command line one.
 
-7. The login link does not change upon logging in. I am logged in and can't navigate freely: Make sure the URL in your $CFG->wwwroot setting is exactly the same as the one you are actually using to access the site.
+7. The login link doesn't change upon logging in. I'm logged in but can't navigate freely. Make sure the URL in your '$CFG->wwwroot' setting is exactly the same as the one you are actually using to access the site.
 
 8. Errors when uploading a file:
 
 - If you obtain a _File not found_ error when uploading a file, it indicates that slash arguments aren't enabled on your web server. Try enabling it.
 
-- If your web server doesn't support slash arguments, its use in Moodle can be disabled by un-ticking the checkbox **Use slash arguments** in Administration > Site administration > Server > HTTP
+- If your web server doesn't support slash arguments, then they can be disabled in in Moodle by un-ticking the checkbox **Use slash arguments** in Administration > Site administration > Server > HTTP.
 
 - ![Warning:] Disabling slash arguments will result in SCORM packages not working and slash arguments warnings being displayed!
 
@@ -238,13 +238,13 @@ This can also apply if you see _Your session has timed out. Please log in again.
 
 - Syslog:
   - Either an error or access log is generated while someone accesses a page.
-  - They're captured at /var/log/nginx/ location.
+  - They're captured at this location: '/var/log/nginx/'.
         
 - Cron log:
   - The cron job will be running, and it will update the local copy in instance.
-  -  The path is /var/log/sitelogs/moodle/cron.log.
+  - The path is '/var/log/sitelogs/moodle/cron.log'.
   
-</details> 
+</details>
 
 ## Next steps
 

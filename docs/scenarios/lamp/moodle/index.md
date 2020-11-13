@@ -20,7 +20,7 @@ This document explains how to migrate Moodle application from an on-premises env
 
 If the versions of the software stack deployed on-premises are lagging with respect to the versions supported in this guide, the expectation is that the on-premises versions will be updated/patched to the versions listed in this guide.
 
-- Must have access to the on-premises infrastructure to take backup of Moodle deployment and configurations (including DB configurations).
+- Must have access to the on-premises infrastructure to take backup of Moodle deployment and configurations (including database configurations).
 - An Azure subscription and Azure Blob storage account should be created prior to migration.
 - Open Azure CLI and AzCopy to use them throughout the process.
 - Set the Moodle website to **Maintenance mode**.

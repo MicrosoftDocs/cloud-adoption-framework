@@ -175,9 +175,9 @@ Configure directory permissions.
    ```bash
   sudo chmod 770 /moodle/moodledata
   sudo chown -R www-data:www-data /moodle/moodledata
-  ``` 
+  ```
 
-- Update the nginx conf file.
+- Update the 'nginx conf' file.
 
   ```bash
   sudo mv /etc/nginx/sites-enabled/*.conf  /home/azureadmin/backup/ 
@@ -185,7 +185,7 @@ Configure directory permissions.
   sudo cp -rf nginx/sites-enabled/*.conf  /etc/nginx/sites-enabled/
   ```
 
-- Update the PHP config file.
+- Update the 'PHP config' file.
 
   ```bash
   _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
@@ -194,7 +194,7 @@ Configure directory permissions.
  sudo cp -rf /home/azureadmin/storage/configuration/php/$_PHPVER/fpm/pool.d/www.conf /etc/php/$_PHPVER/fpm/pool.d/ 
  ```
 
-- Install Missing PHP extensions. Azure Resource Manager Templates install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2. To obtain the list of PHP extensions that are installed on on-premises, run the following command:
+- Install missing PHP extensions. Azure Resource Manager templates install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2. To obtain the list of PHP extensions that are installed on on-premises, run the following command:
 
   ```bash
   php -m
@@ -224,20 +224,21 @@ Configure directory permissions.
 - Restart the web servers.
 
   ```bash
-  sudo systemctl restart nginx 
+  sudo systemctl restart nginx
   sudo systemctl restart php$_PHPVER-fpm  
   ``` 
 
 - Stop the web servers. When a request reaches Azure Load Balancer, it will be redirected to virtual machine scale set instances but not to the controller virtual machine.
 
   ```bash
-  sudo systemctl stop nginx 
+  sudo systemctl stop nginx
   sudo systemctl stop php$_PHPVER-fpm  
   ```
 
 ## How to copy configuration files
 
 Copy PHP and web server configuration files to a shared location. Configuration files can be copied to virtual machine scale set instances from the shared location.
+
 To create a directory for configuration in a shared location:
 
 ```bash
@@ -245,6 +246,7 @@ mkdir -p /moodle/config
 mkdir -p /moodle/config/php
 mkdir -p /moodle/config/nginx
 ```
+
 To copy the PHP and web server configuration files to a configuration directory:
 
 ```bash

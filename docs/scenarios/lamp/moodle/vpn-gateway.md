@@ -59,9 +59,9 @@ Create a virtual network gate in Azure Portal with the following steps:
 Following these steps should allow you to successfully install certificates on your local systems.
 
 - Open the Microsoft Management Console to export the certificates.
-- Go to **Run** and enter **MMC** to open certificates.
+- Go to **Run**. Enter **MMC** to open certificates.
 - Select the **Certificates** under the **Personal** folder to open a page.
-- Refresh the page and find **Root and child certificates**.
+- Refresh the page to find **Root and child certificates**.
 
 Certificate types:
 
@@ -71,7 +71,7 @@ Certificate types:
 - Select **Export** for a new window and then **Next**.
 - Select **No, do not export private key** and then **Next**.
 - Select **Base-64 encoded X.509(.cer)** and then **Next**.
-- Select the **Browse and select the path**, enter a name, and select **Next**. 
+- Select the **Browse and select the path**, enter a name, and select **Next**.
 - This message will appear: **Exported successfully**.
     
 **To export child certificates:**
@@ -92,14 +92,14 @@ Certificate types:
 - Go to Point-to-Site-configuration on the left panel.
 - Click on Configure now in the center panel.
 - Add the address pool (ex: 192.168.xx.0/24).
-- Select the tunnel type, IKEv2.
+- Select **IKEv2** for the **Tunnel type**.
 - Set the authentication type to **Azure certification**.
 - Paste the copied root certificate code in the portal, name it **Root**, and select **Save**.
 
 ## Download and connect to the VPN Client
 
 - Download the VPN Client after saving the configuration from portal.
-- Open the downloaded VPN Client zip file and open 'WindowsAMD64' folder, and install the 'VPNClinetsetupAMD64' file.
+- Open the downloaded VPN Client zip file, open the 'WindowsAMD64' folder, and install the 'VPNClinetsetupAMD64' file.
 - Go to **Control Panel\Network and Internet\Network Connections** to see your installed VPN.
 - Right-click the VPN, and select **Connect**.
 - A new window will appear. Select the **Connect** button to get connected.
@@ -118,7 +118,7 @@ The VPN gateway connection is established.
 
 - Update these parameters: Change the password authentication type from **no** to **yes**, find the commented UserLogin, remove the **#** comment, and change to **yes**.
   
-- Press the ESC key and type ':wq!' to save the changes.
+- Press the ESC key, and type ':wq!' to save the changes.
 
 - Restart the SSHD:
 

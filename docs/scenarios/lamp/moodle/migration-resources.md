@@ -13,12 +13,11 @@ ms.subservice: plan
 
 When the Azure Resource Manager template is used, the following resources are created within Azure:
 
-- **Network template:** The network template will create virtual network, Network Security Group, Network Interface, Subnet, Public IP, Load Balancer/App gateway and Redis Cache etc.
+- **Network template:** The network template will create virtual network, network security group, network interface, subnet, public IP address, Azure Load Balancer/Application Gateway, Redis cache, and more.
 
-- Creates a virtual network with string as name, apiVersion, Location and DNS server name.
-- The AddressSpace that contains an array of IP address ranges that can be used by subnets.
-   
-- **Virtual network:** An Azure Virtual Network is a representation of your own network in the cloud. It's a logical isolation of the Azure cloud dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. Explore [virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) for more information.
+The network template also creates a virtual network with string as name, apiVersion, location, and DNS server name. The 'AddressSpace' contains a range of IP addresses that can be used by subnets.
+
+- **Virtual network:** Azure Virtual Network is a representation of your own network in the cloud. It's a logical isolation of the Azure cloud that's specifically dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. Explore [virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) for more information.
 
 - **Network security group:** A network security group (NSG) is a networking filter (firewall) containing a list of security rules allowing or denying network traffic to resources connected to an Azure Virtual Network. Explore [network security group](https://docs.microsoft.com/azure/virtual-network/security-overview) for more information.
 
@@ -32,7 +31,7 @@ When the Azure Resource Manager template is used, the following resources are cr
 
 Any of the four predefined templates will deploy Azure Load Balancer. In a fully configurable deployment, the user can choose Azure Application Gateway instead of Load Balancer.
     
--  **Azure Application Gateway**: A web traffic Azure Load Balancer that enables you to manage traffic to your web applications. Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers. Explore [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview) for more information.
+-  **Azure Application Gateway**: A web traffic Azure Load Balancer that enables you to manage traffic to your web applications. Application Gateway can make routing decisions based on additional attributes of an HTTP request, as with a URI path or host headers. Explore [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview) for more information.
 
 - **Redis cache:** Azure Cache for Redis provides an in-memory data store based on the open-source software, Redis. Redis improves the performance and scalability of an application heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory, and this data can be written to and read from quickly. Explore [Redis cache](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-overview) for more information.
 
@@ -48,13 +47,13 @@ The following storage account types feature Azure Resource Manager template supp
 
 - Azure Files: The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. Explore [Azure files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) for more information. For NFS and glusterFS, the replication is standard LRS, and the storage type is general purpose v1. For Azure Files, the replication is premium locally-redundant storage, LRS, and the type is FileStorage.
 
-These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and Fle Share, navigate to portal, and select the storage account in resource group.
+These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and Fle Share, navigate to portal, and select the storage account in the resource group.
 
 ![A storage account.](images/storage-account.png)
 
 Explore [storage account](https://docs.microsoft.com/azure/storage/common/storage-account-overview) to learn more about storage accounts.
 
-- **Database template:** A database template will create an [Azure Database for MySQL server](https://docs.microsoft.com/azure/mysql). Azure Database for MySQL server is easy to set up, manage, and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups, and security. Build with the latest community edition of MySQL, including versions 5.6, 5.7, and 8.0. To access the database server created, navigate to the **Resource group** provided during deployment and go to **Azure Database for MySQL server**. The database server will have a server name, server admin login name, MySQL version, and a performance configuration.
+- **Database template:** A database template will create an [Azure Database for MySQL server](https://docs.microsoft.com/azure/mysql). Azure Database for MySQL server is easy to set up, manage, and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups, and security. Build with the latest community edition of MySQL, including versions 5.6, 5.7, and 8.0. To access the database server created, navigate to the **Resource group** provided during deployment, and go to **Azure Database for MySQL server**. The database server will have a server name, server admin login name, MySQL version, and a performance configuration.
         
 - **Virtual machine template:** This template will distinguish a virtual Machine as a controller virtual machine. The operating system for a controller virtual machine is Ubuntu 18.04.
 

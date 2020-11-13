@@ -227,12 +227,12 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
   ```
 
 - The container can also be created with the Azure portal. Navigate to the same storage account created, select the container, and then select the **Add** button.
-            
+
 - After entering the mandatory container name, select the **Create** button.
     
   ![A new container.](images/new-container.png)
     
-- The command to copy archive file to blob storage:
+- The command to copy an archive file to an Azure Blob account:
 
   ```bash
   sudo azcopy copy '/home/azureadmin/storage.tar.gz' 'https://<storageAccountName>.blob.core.windows.net/<containerName>/<SAStoken>'
