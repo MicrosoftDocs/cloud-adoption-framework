@@ -92,7 +92,7 @@ Certificate types:
 - Go to Point-to-Site-configuration on the left panel.
 - Click on Configure now in the center panel.
 - Add the address pool (ex: 192.168.xx.0/24).
-- Select **IKEv2** for the **Tunnel type**.
+- For the **Tunnel type**, select **IKEv2**.
 - Set the authentication type to **Azure certification**.
 - Paste the copied root certificate code in the portal, name it **Root**, and select **Save**.
 
