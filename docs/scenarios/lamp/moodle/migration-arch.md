@@ -44,11 +44,11 @@ Select **Launch** to deploy any of the predefined templates. This will direct yo
 
 The preceding predefined templates will deploy the default versions.
 
-    ```
-    Ubuntu: 18.04-LTS
-    PHP: 7.4
-    Moodle: 3.8
-    ```
+```
+Ubuntu: 18.04-LTS
+PHP: 7.4
+Moodle: 3.8
+```
 
 If the PHP and Moodle versions are lagging with on-premises, then update the versions with following steps:
 
