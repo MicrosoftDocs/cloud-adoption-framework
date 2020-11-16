@@ -23,7 +23,7 @@ Some resources in Azure can be moved post creation, and there are different appr
 | Scope | Destination | Pros | Cons |
 |--|--|--|--|
 | Resources in resource groups | Can be moved to new resource group in same or different subscription  | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - ResourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
-| Subscriptions in a tenant  | Can be moved to different management groups, and different tenants | No impact to existing resources within the subscription, as no resourceId’s will be changed | Requires assessment of policies and RBAC pre and post-move operation |
+| Subscriptions in a tenant  | Can be moved to different management groups, and different tenants | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
 
 To understand which move strategy you should use, we will go through examples of both:
 
@@ -61,7 +61,7 @@ When performing a resource move, both the source resource group and the target r
 
 ### Before you move resources
 
-Prior to a move operation, you must verify that the [resources in scope are supported](https://docs.microsoft.com/azure/azure-resource-manager/management/move-support-resources) as well as assessing their requirements and dependencies. For instance, moving a peered virtual network requires you to disable virtual network peering first, and re-enable the peering once the move operation has completed. This disable/re-enable dependency requires planning upfront to understand the impact to any existing workload that may be connected to your virtual networks.
+Prior to a move operation, you must verify that the [resources in scope are supported](/azure/azure-resource-manager/management/move-support-resources) as well as assessing their requirements and dependencies. For instance, moving a peered virtual network requires you to disable virtual network peering first, and re-enable the peering once the move operation has completed. This disable/re-enable dependency requires planning upfront to understand the impact to any existing workload that may be connected to your virtual networks.
 
 ### Post-move operation
 
