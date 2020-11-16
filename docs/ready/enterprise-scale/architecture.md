@@ -32,7 +32,7 @@ _Figure 1: Landing zone design._
 
 ## High-level architecture
 
-An Enterprise-Scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an Enterprise-Scale architecture based on an Azure Virtual WAN network topology (depictured on figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted on figure 3).   
+An Enterprise-Scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an Enterprise-Scale architecture based on an Azure Virtual WAN network topology (depictured on figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted on figure 3).
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 

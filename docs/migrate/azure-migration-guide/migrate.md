@@ -27,12 +27,12 @@ Azure Migrate is a centralized hub to assess and migrate on-premises servers, in
 
 - Unified platform with assessment, migration, and progress tracking.
 - Enhanced assessment and migration capabilities:
-    - On-premises servers including Hyper-V & VMware.
-    - Agentless migration of VMware virtual machines to Azure.
-    - Database migrations to Azure SQL Database or SQL Managed Instance
-    - Web applications
-    - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
-    - Large data collections using Azure Data Box products
+  - On-premises servers including Hyper-V and VMware.
+  - Agentless migration of VMware virtual machines to Azure.
+  - Database migrations to Azure SQL Database or SQL Managed Instance
+  - Web applications
+  - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
+  - Large data collections using Azure Data Box products
 - Extensible approach with ISV integration (such as Cloudamize).
 
 To perform a migration using Azure Migrate, follow these steps:
@@ -120,7 +120,7 @@ After a successful migration, you'll need to perform any post-migration tasks. T
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information see: 
+For more information see:
 
 [Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure)
 

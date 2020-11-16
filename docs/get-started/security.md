@@ -33,7 +33,7 @@ Use these steps to plan and execute your strategy for securing your cloud assets
 
 ## Step 1: Establish essential security practices
 
-Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied. 
+Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied.
 
 Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
 
