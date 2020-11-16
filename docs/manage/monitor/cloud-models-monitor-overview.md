@@ -91,7 +91,7 @@ To collect metrics and logs from Azure infrastructure and platform resources, yo
 
 ### Monitor with System Center Operations Manager
 
-Although System Center Operations Manager was originally designed as an on-premises solution to monitor across applications, workloads, and infrastructure components that are running in your IT environment, it evolved to include cloud-monitoring capabilities. It integrates with Azure, Microsoft 365, and Amazon Web Services (AWS). It can monitor across these diverse environments with management packs that are designed and updated to support them.  
+Although System Center Operations Manager was originally designed as an on-premises solution to monitor across applications, workloads, and infrastructure components that are running in your IT environment, it evolved to include cloud-monitoring capabilities. It integrates with Azure, Microsoft 365, and Amazon Web Services (AWS). It can monitor across these diverse environments with management packs that are designed and updated to support them.
 
 For customers who have made significant investments in Operations Manager to achieve comprehensive monitoring that's tightly integrated with their IT service management processes and tools, or for customers new to Azure, it's understandable to ask the following questions:
 
@@ -115,7 +115,7 @@ At the application tier, Operations Manager offers basic application performance
 
 For any web application that can be reached externally, you should enable a type of synthetic transaction known as [availability monitoring](/azure/azure-monitor/app/monitor-web-app-availability). It's important to know whether your application or a critical HTTP/HTTPS endpoint that your app relies on, is available and responsive. With Application Insights availability monitoring, you can run tests from multiple Azure datacenters and provide insight into the health of your application from a global perspective.
 
-Although Operations Manager is capable of monitoring resources that are hosted in Azure, there are several advantages to including Azure Monitor, because its strengths overcome the limitations in Operations Manager and can establish a strong foundation to support eventual migration from it. Here we review each of those strengths and weaknesses, with our recommendation to include Azure Monitor in your hybrid monitoring strategy.  
+Although Operations Manager is capable of monitoring resources that are hosted in Azure, there are several advantages to including Azure Monitor, because its strengths overcome the limitations in Operations Manager and can establish a strong foundation to support eventual migration from it. Here we review each of those strengths and weaknesses, with our recommendation to include Azure Monitor in your hybrid monitoring strategy.
 
 #### Disadvantages of using Operations Manager by itself
 
@@ -158,7 +158,7 @@ Although a migration to the cloud presents numerous challenges, it also provides
 
 - Define a library of queries and dashboards to support the requirements of the various personas in the IT organization.
 
-- Define standards and methods for enabling monitoring across the hybrid and cloud resources, a monitoring baseline for each resource, alert thresholds, and so on.  
+- Define standards and methods for enabling monitoring across the hybrid and cloud resources, a monitoring baseline for each resource, alert thresholds, and so on.
 
 - Configure role-based access control (RBAC) so you grant users and groups only the access required to monitor data from the resources they manage.
 

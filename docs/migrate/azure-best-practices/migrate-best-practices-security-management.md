@@ -210,7 +210,6 @@ Ensure that your resource groups have meaningful names that admins and support t
 If you're synchronizing your on-premises Active Directory to Azure AD by using Azure AD Connect, consider matching the names of security groups on-premises to the names of resource groups in Azure.
 
   ![Screenshot of resource group naming.](./media/migrate-best-practices-security-management/naming.png)
-  
   _Figure 5: Resource group naming._
 
 **Learn more:**
@@ -222,7 +221,6 @@ If you're synchronizing your on-premises Active Directory to Azure AD by using A
 The last thing you need is for a resource group to disappear because it was deleted accidentally. We recommend that you implement delete locks, so that this doesn't happen.
 
   ![Screenshot of delete locks.](./media/migrate-best-practices-security-management/locks.png)
-
   _Figure 6: Delete locks._
 
 **Learn more:**

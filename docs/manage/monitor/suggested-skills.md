@@ -15,7 +15,7 @@ ms.subservice: migrate
 
 During the Plan phase of your migration journey, the objective is to develop the plans necessary to guide implementation. The plans need to also include how you will operate these workloads before they are transitioned or released into production, and not afterwards. Business stakeholders expect valuable services, and they expect them without disruption. IT staff members realize they need to learn new skills and adapt so they are prepared to confidently use the integrated Azure services to effectively monitor resources in Azure and hybrid environments.
 
-Developing the necessary skills can be accelerated with the following learning paths. They are organized starting with learning the fundamentals and then divided across three primary subject domains - infrastructure, application, and data analysis.  
+Developing the necessary skills can be accelerated with the following learning paths. They are organized starting with learning the fundamentals and then divided across three primary subject domains: infrastructure, application, and data analysis.
 
 ## Fundamentals
 
@@ -57,7 +57,7 @@ Developing the necessary skills can be accelerated with the following learning p
   - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
 
   - [Capture and view page load times in your Azure web app](/learn/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
-  
+
   - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
   - [Instrument Applications with Azure Monitor Application Insights](https://app.pluralsight.com/library/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an app with Angular and Node.js components.

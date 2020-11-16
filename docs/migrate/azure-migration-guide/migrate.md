@@ -100,6 +100,7 @@ The Azure App Service Migration Assistant is part of a [larger suite of applicat
 
 1. It performs an assessment of a specific web app installed on Windows Server by running pre-migration compatibility checks on the web app to determine whether a migration to Azure App Service is possible without modification to the web app.
 1. If the assessment proves that the web app can be migrated, the Migration Assistant performs the migration. You'll need to give the Migration Assistant access to your Azure account, select which resource group you want to use, and select a name for the web app, among other details.
+
 Alternatively, the Migration Assistant generates an Azure Resource Manager template that you can use to migrate the web application in a more automated and repeatable way.
 
 #### Migrate a web app to Azure App Service
