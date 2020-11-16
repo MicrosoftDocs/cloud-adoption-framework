@@ -275,9 +275,9 @@ Azure Load Balancer can probe the health of the various server instances as well
 
 [Azure Front Door][azure-front-door] (AFD) is Microsoft's highly available and scalable Web Application Acceleration Platform, Global HTTP Load Balancer, Application Protection, and Content Delivery Network. Running in more than 100 locations at the edge of Microsoft's Global Network, AFD enables you to build, operate, and scale out your dynamic web application and static content. AFD provides your application with world-class end-user performance, unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers:
 
-    - Performance, reliability, and support service-level agreements (SLAs).
-    - Compliance certifications.
-    - Auditable security practices that are developed, operated, and natively supported by Azure.
+- Performance, reliability, and support service-level agreements (SLAs).
+- Compliance certifications.
+- Auditable security practices that are developed, operated, and natively supported by Azure.
 
 Azure Front Door also provides a web application firewall (WAF), which protects web applications from common vulnerabilities and exploits.
 
