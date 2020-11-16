@@ -128,7 +128,7 @@ In brief, the admins perform the following actions:
 
 - They download the Azure App Service Migration Assistant and sign in to their Azure account.
 
-- They choose a subscription, a resource group, and the website’s domain name.
+- They choose a subscription, a resource group, and the website's domain name.
 
 ## Step 2: Set up a SQL managed instance
 

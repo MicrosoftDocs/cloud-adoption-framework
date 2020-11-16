@@ -37,10 +37,12 @@ Security in the cloud starts with applying the most important security practices
 
 Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
 
+<!-- markdownlint-disable MD029 -->
+
 **People:**
 
 1. [Educate teams about the cloud security journey](../security/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
-2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology) 
+2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
 
 **Process:**
 
@@ -60,6 +62,7 @@ Whether you're already operating in the cloud or you're planning for future adop
 10. [Use identity based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
 11. [Establish a single unified security strategy](../security/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
+<!-- markdownlint-enable MD029 -->
 
 > [!NOTE]
 > Each organization should define its own minimum standards. Risk posture and subsequent tolerance to that risk can vary widely based on industry, culture, and other factors. For example, a bank might not tolerate any potential damage to its reputation from even a minor attack on a test system. Some organizations would gladly accept that same risk if it accelerated their digital transformation by three to six months.
