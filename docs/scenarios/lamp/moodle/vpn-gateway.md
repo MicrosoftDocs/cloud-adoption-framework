@@ -24,12 +24,12 @@ Create a virtual network gateway in the Azure portal with the following steps:
 - Select **Create** to start deploying.
 
 ![Creating a virtual network gateway.](images/vpn-gateway.png)
-		
+
 - Create a virtual network gateway with this Azure CLI command:
 
-	```bash
-	az network vnet-gateway create -g MyResourceGroup -n MyVnetGateway --public-ip-address MyGatewayIp --vnet MyVnet --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
-	```
+    ```bash
+    az network vnet-gateway create -g MyResourceGroup -n MyVnetGateway --public-ip-address MyGatewayIp --vnet MyVnet --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
+    ```
 
 ## Generate certificates
 
@@ -67,16 +67,16 @@ Certificate types:
 
 **To export root certificates:**
 
-- Select the root certificate, right-click on the certificate, and then go to **All Tasks**.
+- Select the root certificate, select and hold (or right-click) on the certificate, and then go to **All Tasks**.
 - Select **Export** for a new window and then **Next**.
 - Select **No, do not export private key** and then **Next**.
 - Select **Base-64 encoded X.509(.cer)** and then **Next**.
 - Select the **Browse and select the path**, enter a name, and select **Next**.
 - This message will appear: **Exported successfully**.
-    
+
 **To export child certificates:**
 
-- Select the client certificate, right-click on the certificate, and then go to **All Tasks**.
+- Select the client certificate, select and hold (or right-click) on the certificate, and then go to **All Tasks**.
 - Select **Export** for a new window and then **Next**.
 - Select **Yes**, **Export private key**, and then **Next**.
 - Select the **Personal information exchange**, **PKCS**, and then **Next**.
@@ -99,7 +99,7 @@ Certificate types:
 ## Download and connect to the VPN Client
 
 - Download the VPN Client after saving the configuration from portal.
-- Open the downloaded VPN Client zip file, open the 'WindowsAMD64' folder, and install the 'VPNClinetsetupAMD64' file.
+- Open the downloaded VPN Client zip file, open the `WindowsAMD64` folder, and install the `VPNClinetsetupAMD64` file.
 - Go to **Control Panel\Network and Internet\Network Connections** to see your installed VPN.
 - Right-click the VPN, and select **Connect**.
 - A new window will appear. Select the **Connect** button to get connected.
@@ -117,8 +117,8 @@ The VPN gateway connection is established.
   ```
 
 - Update these parameters: Change the password authentication type from **no** to **yes**, find the commented UserLogin, remove the **#** comment, and change to **yes**.
-  
-- Press the ESC key, and type ':wq!' to save the changes.
+
+- Press the `ESC` key, and type `:wq!` to save the changes.
 
 - Restart the SSHD:
 
@@ -130,8 +130,9 @@ The VPN gateway connection is established.
 
   ```bash
   sudo passwd <username>
+  ```
 
-  For example: sudo passwd azureadmin
+  For example: `sudo passwd azureadmin`
 
 Password authentication has been completed.
 
@@ -143,11 +144,12 @@ Password authentication has been completed.
 
   ```bash
   sudo ssh <username>@<private_IP>
-
-  For example, sudo ssh azureadmin@102.xx.xx.xx
+  ```
+  
+  For example: `sudo ssh azureadmin@102.xx.xx.xx`
 
 - Follow the prompt to enter the password.
 
 ## Next steps
 
-Continue to [how to start a manual Moodle migration](/migration-start.md) for information about the next steps in the Moodle migration process.
+Continue to [how to start a manual Moodle migration](./migration-start.md) for information about the next steps in the Moodle migration process.

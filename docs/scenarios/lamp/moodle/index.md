@@ -47,4 +47,4 @@ The steps of how to migrate a Moodle application to Azure are broken down into t
 
 ## Next steps
 
-Continue to [how to prepare for a Moodle migration](/migration-pre.md) for preliminary information about the Moodle migration process.
+Continue to [how to prepare for a Moodle migration](./migration-pre.md) for preliminary information about the Moodle migration process.

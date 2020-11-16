@@ -428,15 +428,15 @@ items:
               href: scenarios/lamp/moodle/index.md
             - name: Prerequisites
               href: scenarios/lamp/moodle/migration-pre.md
-            - name: Architecture & Template
+            - name: Architecture and template
               href: scenarios/lamp/moodle/migration-arch.md
-            - name: Resource Description
+            - name: Resource description
               href: scenarios/lamp/moodle/migration-resources.md
-            - name: Migration Steps
+            - name: Migration steps
               href: scenarios/lamp/moodle/migration-start.md
-            - name: Azure Infrastructure Configuration
+            - name: Azure infrastructure configuration
               href: scenarios/lamp/moodle/azure-infra-config.md
-            - name: Post Migration
+            - name: Post-migration
               href: scenarios/lamp/moodle/migration-post.md
 
         - name: Dev/test workloads 

@@ -13,7 +13,7 @@ ms.subservice: plan
 
 ## Virtual machine scale set instances
 
-Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](/vpn-gateway.md) to gain gateway access to the virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
+Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md) to gain gateway access to the virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
 
 To create a virtual machine scale set instance private IP:
 
@@ -42,7 +42,7 @@ Log in to a scale set virtual machine instance. Perform the following steps:
   mkdir -p backup
   mkdir -p backup/moodle
   ```
-        
+
 - To configure the PHP and web server, create a backup of PHP and web server configurations, and set the PHP version to a variable.
 
    ```bash
@@ -63,7 +63,7 @@ Log in to a scale set virtual machine instance. Perform the following steps:
   ```
 
 - Install missing PHP extensions, and use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
-                    
+
 - To obtain the list of PHP extensions installed on-premises, run the following command on an on-premises virtual machine:
 
   ```bash
@@ -78,4 +78,4 @@ Log in to a scale set virtual machine instance. Perform the following steps:
 
 ## Next steps
 
-Continue to [how to follow up after a Moodle migration](/migration-post.md) for information about the next step in the Moodle migration process.
+Continue to [how to follow up after a Moodle migration](./migration-post.md) for information about the next step in the Moodle migration process.
