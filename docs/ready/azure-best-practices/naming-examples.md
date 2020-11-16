@@ -14,21 +14,8 @@ ms.custom: readiness, fasttrack-edit
 
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment.
 
-<!-- TODO: Use tick marks for names. -->
-<!-- cSpell:disable -->
-
-## Example names: General
-
-| Asset type | Scope | Format | Examples |
-|--|--|--|--|
-| Management group | Business unit and/or environment type | mg-\<business&nbsp;unit>[-\<environment&nbsp;type>\] | <li> `mg-mktg` <li> `mg-hr` <li> `mg-corp-prod` <li> `mg-fin-client` |
-| Subscription | Account / enterprise agreement | \<business&nbsp;unit>-\<subscription&nbsp;type>-<###> | <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
-| Resource group | Subscription | rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;type>-<###> | <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-share-001` <li> `rg-ad-dir-services-shared-001` |
-| API management service instance | Global | apim-\<app&nbsp;or&nbsp;service&nbsp;name> | `apim-navigator-prod` |
-| Managed Identity | Resource group | id-\<app&nbsp;or&nbsp;service&nbsp;name> | `id-appcn-keda-prod-eus-001` |
-
 > [!NOTE]
-> Some of the example names in this document use a three-digit padding scheme (\<\#\#\#\>). such as `mktg-prod-*001*`.
+> Some of these example names use a three-digit padding scheme (\<###>). such as `mktg-prod-*001*`.
 >
 > Padding improves readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 >
@@ -36,12 +23,24 @@ The following section provides some example names for common Azure resource type
 >
 > Which approach you choose to implement is a personal decision. The padding in this article is meant to illustrate the importance of using a consistent approach to inventory numbering, not which approach is superior. Before deciding on a number schema (with or without padding) evaluate which will have a bigger impact on long term operations: CMDB/asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs.
 
+<!-- cSpell:disable -->
+
+## Example names: General
+
+| Asset type | Scope | Format and examples |
+|--|--|--|
+| Management group | Business unit and/or environment type | _mg-\<business&nbsp;unit>[-\<environment&nbsp;type>\]_ <br><br> <li> `mg-mktg` <li> `mg-hr` <li> `mg-corp-prod` <li> `mg-fin-client` |
+| Subscription | Account / enterprise agreement | _\<business&nbsp;unit>-\<subscription&nbsp;type>-\<###>_ <br><br> <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
+| Resource group | Subscription | _rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;type>-\<###>_ <br><br> <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-share-001` <li> `rg-ad-dir-services-shared-001` |
+| API management service instance | Global | _apim-\<app&nbsp;or&nbsp;service&nbsp;name>_ | `apim-navigator-prod` |
+| Managed Identity | Resource group | _id-\<app&nbsp;or&nbsp;service&nbsp;name>_ <br><br> <li> `id-appcn-keda-prod-eus-001` |
+
 ## Example names: Networking
 
 | Asset type | Scope | Format | Examples |
 |--|--|--|--|
-| Virtual network | Resource group | vnet-\<subscription&nbsp;type>-\<region><###> | <li> `vnet-shared-eastus2-001` <li> `vnet-prod-westus-001` <li> `vnet-client-eastus2-001` |
-| Subnet | Virtual network | snet-\<subscription>-\<subregion>-<###> | <li> `snet-shared-eastus2-001` <li> `snet-prod-westus-001` <li> `snet-client-eastus2-001` |
+| Virtual network | Resource group | _vnet-\<subscription&nbsp;type>-\<region>\<###>_ | <br><br> <li> `vnet-shared-eastus2-001` <li> `vnet-prod-westus-001` <li> `vnet-client-eastus2-001` |
+| Subnet | Virtual network | _snet-\<subscription>-\<subregion>-\<###>_ <br><br> <li> `snet-shared-eastus2-001` <li> `snet-prod-westus-001` <li> `snet-client-eastus2-001` |
 | Network interface (NIC) | Resource group | nic-<##>-\<vm&nbsp;name>-\<subscription>-<###> | <li> `nic-01-dc1-shared-001` <li> `nic-02-vmhadoop1-prod-001` <li> `nic-02-vmtest1-client-001` |
 | Public IP address | Resource group | pip-\<vm&nbsp;name&nbsp;or&nbsp;app&nbsp;name>-\<environment>-\<subregion>-<###> | <li> `pip-dc1-shared-eastus2-001` <li> `pip-hadoop-prod-westus-001` |
 | Load balancer | Resource group | lb-\<app&nbsp;name&nbsp;or&nbsp;role><Environment><###> | <li> `lb-navigator-prod-001` <li> `lb-sharepoint-dev-001` |
