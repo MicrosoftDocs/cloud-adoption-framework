@@ -136,7 +136,7 @@ The next step is to [create a storage account](https://ms.portal.azure.com/#crea
 
 - The commands to copy Moodle and moodledata are:
 
-  ``bash
+  ```bash
   cp -R /var/www/html/moodle /home/azureadmin/storage/
   cp -R /var/moodledata /home/azureadmin/storage/
   ```
@@ -147,10 +147,9 @@ The next step is to [create a storage account](https://ms.portal.azure.com/#crea
 
 - Copy the ngnix configurations like `nginx.conf` and `sites-enabled/dns.conf` to the `nginxconfig` directory under the `configuration` directory.
 
-    ```bash
-    cd /home/azureadmin/storage
-    mkdir configuration
-    ```
+  ```bash
+  cd /home/azureadmin/storage mkdir configuration
+  ```
 
 - The commands to copy nginx and PHP configurations are:
 
@@ -166,6 +165,7 @@ The next step is to [create a storage account](https://ms.portal.azure.com/#crea
   ```bash
   sudo -s
   ```
+
 - Run the following command to check whether or not mysql-client is installed:
 
   ```bash
