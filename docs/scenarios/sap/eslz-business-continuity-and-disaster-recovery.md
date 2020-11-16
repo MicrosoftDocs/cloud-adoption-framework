@@ -85,7 +85,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 
 ### Design Recommendations for Compute
 
-- Use E-series SKU for SAP Java application servers. E-series has better memory compared to a D-series SKU with same IO and throughput limits. Java application servers are memory intensive and E-series will provide a better CPU: Memory mapping.
+- Use E-series SKU for SAP Java application servers. E-series has better memory compared to a D-series SKU with same IO and throughput limits. Java application servers are memory intensive and E-series will provide a better CPU: Memory mapping.It is recommended to use [Gen2 VM SKU’s](https://docs.microsoft.com/en-us/azure/virtual-machines/generation-2) where possible.
 - Use E-series SKU for SAP AnyDB deployment compared to D-series. Bigger the cache better the performance of database. E-series SKUs have the following advantages over D-series:
   - 1:8 Memory mapping
   - Constrained core options available to save DB license costs without a compromise on IO and throughput limits.
@@ -109,13 +109,13 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
   - Premium SSD
   - ANF
 - Storage options to be considered for SAP Shared file systems eg: SAPMNT, TRANS
-  - Azure Shared Disk (windows deployments)
-  - Azure NetApp files
+  - Azure Shared Disk on Azure Premium storage  (windows deployments)
+  - Azure NetApp files (SMB & NFS)
   - Azure Files NFS4.1 (preview)
 - Storage option to be considered for database logs which require a lower latency of <1ms
   - Premium Storage with WA (only on M-series VM’s)
   - Ultra SSD
-  - Azure Netapp Files (HANA only)
+  - Azure Netapp Files (supported for HANA only)
 - In a cost-conscious deployment consider deploying Pre-Production or test systems on standard SDD and convert to Premium for the period of test cycles as required. Eg: E20 disk is half the cost of a P20.
 - In cost-conscious deployments consider [disk bursting](https://docs.microsoft.com/azure/virtual-machines/linux/disk-bursting#disk-level-bursting) feature for non-production workloads or [document](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) in case of HANA deployment.
 - Every Azure premium disk comes with IOPS and throughout limit, consider striping disk instead of using single large disk for a cost-conscious deployment. Further details about stripe sizes can be found [here](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage).
@@ -133,3 +133,4 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - [Read-Only](https://docs.microsoft.com/azure/virtual-machines/premium-storage-performance#disk-caching) cache must be enabled for the data disks holding database data files for AnyDB deployment. Read-Only cache can only be enabled on disks smaller than 4095GB.
 - Do not use Azure disk encryption for database disk, use only DB native encryption for databases. Example - Transparent Data Encryption (TDE) for Oracle or SQL server.
 - Combined IOPS/throughput of all the disks attached to a VM should be less than or equal IOPS and Throughput limits of VM. eg: P50 disk give 7500 IOPS with 250MBps throughput when this is attached to a Standard D8s_v3 which can only support 192 MBps doesn’t help realize throughput of P50 disk.
+
