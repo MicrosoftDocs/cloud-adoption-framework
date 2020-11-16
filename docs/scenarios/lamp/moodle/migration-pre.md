@@ -77,7 +77,7 @@ Alternatively, you can use the Azure CLI to create a resource group.
 
 - Update the screenshot and subscription name with the sample test account.
 
-  Example: az group create -l eastus -n manual_migration -s ComputePM LibrarySub
+  For example: `az group create -l eastus -n manual_migration -s ComputePM LibrarySub`
 
 - In the previous step, a resource group is created as a "manual_migration". Use the same resource group in further steps.
 
@@ -123,9 +123,11 @@ The next step is to [create a storage account](https://ms.portal.azure.com/#crea
 
   ```bash
   sudo -s
+  ```
 
-  For example, the location is /home/azureadmin.
+  For example, the location is `/home/azureadmin`.
 
+  ```bash
   cd /home/azureadmin
   mkdir storage
   ```
@@ -221,13 +223,12 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
 - The command to create a container in the storage account:
 
   ```bash
-  az storage container create --account-name <storageAccontName> --name <containerName> --auth-mode login
+  az storage container create --account-name <storageAccountName> --name <containerName> --auth-mode login
   ```
 
-  Example: az storage container create --account-name onpremisesstorage --name migration --auth-mode login
+  For example: `az storage container create --account-name onpremisesstorage --name migration --auth-mode login`
 
-  --auth-mode login means authentication mode at login. After login, the container will be created.
-  ```
+  `--auth-mode login` means authentication mode at login. After login, the container will be created.
 
 - The container can also be created with the Azure portal. Navigate to the same storage account created, select the container, and then select the **Add** button.
 
@@ -238,10 +239,10 @@ Use AzCopy to copy archived on-premises files to Azure Blob.
 - The command to copy an archive file to an Azure Blob account:
 
   ```bash
-  sudo azcopy copy `/home/azureadmin/storage.tar.gz` `https://<storageAccountName>.blob.core.windows.net/<containerName>/<SAStoken>`
-
-  Example: azcopy copy `/home/azureadmin/storage.tar.gz` 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='
+  sudo azcopy copy /home/azureadmin/storage.tar.gz 'https://<storageAccountName>.blob.core.windows.net/<containerName>/<SAStoken>'
   ```
+
+  For example: `azcopy copy /home/azureadmin/storage.tar.gz 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='`
 
   ![An archive in Azure Blob.](images/archive-in-blob.png)
 

@@ -55,12 +55,12 @@ To copy the backup archive to the controller virtual machine instance from an Az
   cd /home/azureadmin/
   azcopy copy `https://storageaccount.blob.core.windows.net/container/BlobDirectoryName<SASToken>` `/home/azureadmin/`
   ```
-  
+
   For example: `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
 
 - Extract the compressed content to a directory.
 
-  ``bash
+  ```bash
   d /home/azureadmin
   ar -zxvf storage.tar.gz
   ```

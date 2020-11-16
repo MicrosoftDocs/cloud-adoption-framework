@@ -145,8 +145,8 @@ Password authentication has been completed.
   ```bash
   sudo ssh <username>@<private_IP>
   ```
-  
-  For example: `sudo ssh azureadmin@102.xx.xx.xx`
+
+For example: `sudo ssh azureadmin@102.xx.xx.xx`
 
 - Follow the prompt to enter the password.
 
