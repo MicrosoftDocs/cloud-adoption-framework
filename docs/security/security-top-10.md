@@ -66,17 +66,17 @@ Additionally security and IT technical managers (and often project managers) sho
 
 Microsoft provides extensive resources to help technical professionals ramp up on securing Azure resources and report compliance:
 
- - Azure Security
-    - AZ-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and Certification)
-   - [Azure security benchmark (ASB)](/azure/security/benchmarks/) –Prescriptive Best Practices and Controls for Azure Security
-     - [Security Baselines for Azure](/azure/security/benchmarks/security-baselines-overview) – Application of ASB to individual Azure Services
-   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction) - Videos and Documentation
+- Azure Security
+  - AZ-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and Certification)
+  - [Azure security benchmark (ASB)](/azure/security/benchmarks/) –Prescriptive Best Practices and Controls for Azure Security
+    - [Security Baselines for Azure](/azure/security/benchmarks/security-baselines-overview) – Application of ASB to individual Azure Services
+  - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction) - Videos and Documentation
 - Azure Compliance
-   - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard) evaluation with Azure Security Center
- - Identity Protocols and Security 
-   - [Azure security documentation site](/azure/security/)
-   - Azure AD Authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy) 
-   - [Securing Azure environments with Azure active directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/) 
+  - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard) evaluation with Azure Security Center
+- Identity Protocols and Security
+  - [Azure security documentation site](/azure/security/)
+  - Azure AD Authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
+  - [Securing Azure environments with Azure active directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
 
 Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
@@ -88,8 +88,8 @@ Also see the Azure Security Benchmark [GS-3: Align organization roles, responsib
 
 **Why**: Clear ownership of security decisions speeds up cloud adoption *and* increases security. Lack of typically creates friction because nobody feels empowered to make decisions, nobody knows who to ask for a decision, and nobody is incented to research a well-informed decision. This friction frequently impedes business goals, developer timelines, IT goals, and security assurances, resulting in:
 
-- Stalled projects that are waiting for security approval 
-- Insecure deployments that couldn’t wait for security approval 
+- Stalled projects that are waiting for security approval
+- Insecure deployments that couldn’t wait for security approval
 
 **Who**: Security leadership designates which teams or individuals are accountable for making security decisions about the cloud.
 
@@ -109,6 +109,7 @@ These are the typical areas where security decisions are needed, descriptions, a
 | Identity Security and Standards | Set direction for Azure AD directories, PIM/PAM usage, MFA, password/synchronization configuration, Application Identity Standards | *Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly*  |
 
 > [!Note]
+>
 >- Ensure decision makers have the appropriate education in their area of the cloud to accompany this responsibility.
 >- Ensure decisions are documented in policy and standards to provide a record and guide the organization over the long term.
 
@@ -330,7 +331,7 @@ While it  sometimes seems easier to quickly stand up a custom directory (based o
 
 - *Sponsorship* - This is typically sponsored by [Identity and Key management](../organize/cloud-security-identity-keys.md) and [Security Architecture](../organize/cloud-security-architecture.md) (though some organizations may require sponsorship by CISO or CIO)
 - *Execution* – This is a collaborative effort involving:
-  -  **[Security Architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture documents and diagrams
+  - **[Security Architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture documents and diagrams
   - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Document policy and monitor for compliance
   - **[Identity and Key Management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
   - **Application developers** and/or **[Central IT Operations](../organize/central-it.md)**: Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption)
@@ -388,7 +389,7 @@ For services that do not support managed identities, use Azure AD to create a [S
 
 Also see the Azure Security Benchmark [ID-2: Manage application identities securely and automatically](/azure/security/benchmarks/security-controls-v2-identity-management#id-2-manage-application-identities-securely-and-automatically).
 
-## 11. Architecture: Establish a single unified security strategy 
+## 11. Architecture: Establish a single unified security strategy
 
 *Everyone needs to row in the same direction for the boat to go forward.*
 
@@ -407,18 +408,19 @@ In organizations where this happens, teams frequently experience conflicts over 
 While security can create healthy friction by forcing critical thinking, this conflict only creates unhealthy friction that impedes goals. For more information, see *The right level of security friction* in the [security strategy guidance](../strategy/define-security-strategy.md#modernize-your-security-strategy).
 
 **Who**:
+
 - *Sponsorship* - The unified strategy typically co-sponsored by CIO, CISO, and CTO (often with business leadership support for some high-level elements) and championed by representatives from each team.
 - *Execution* – Security strategy must be implemented by everyone, so it should integrate input from across teams to increase ownership, buy-in, and likelihood of success.
   - **[Security Architecture](../organize/cloud-security-architecture.md)**: Leads the effort to build security strategy and resulting architecture, actively gather feedback from teams, and document it in presentations, documents, and diagrams for the various audiences.
-   - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Captures the appropriate elements into standards and policy and then monitors for compliance.
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Captures the appropriate elements into standards and policy and then monitors for compliance.
   - **All Technical IT and security teams**: Provide input requirements, then align to and implement the enterprise strategy.
-   - **Application owners and developers**: Read and understand strategy documentation that applies to them (ideally, guidance tailored to their role).
+  - **Application owners and developers**: Read and understand strategy documentation that applies to them (ideally, guidance tailored to their role).
 
 **How**:
 
 Build and implement a security strategy for cloud that includes the input and active participation of all teams. While the process documentation format will vary, this should always include:
 
-- **Active input from teams**: Strategies typically fail if people in the organization don’t buy into them. Ideally, get all teams in the same room to collaboratively build the strategy. In the workshops we conduct with customers, we often find organizations have been operating in de facto silos and these meetings often result in people meeting each other for the first time. 
+- **Active input from teams**: Strategies typically fail if people in the organization don’t buy into them. Ideally, get all teams in the same room to collaboratively build the strategy. In the workshops we conduct with customers, we often find organizations have been operating in de facto silos and these meetings often result in people meeting each other for the first time.
 We also find that inclusiveness is a requirement - if some teams are not invited, this meeting typically has to be repeated until all participants join it (or the project doesn’t move forward).
 - **Documented and communicated clearly**: All teams should have awareness of the security strategy (ideally a security component of the overall technology strategy) including why to integrate security, what is important in security, and what security success looks like. This should include specific guidance for application and development teams so they can get a clear prioritized guidance without having to read through non-relevant parts of the guidance.
 - **Stable, but flexible**: Strategies should remain relatively consistent and stable, but the architectures and the documentation may need changes to add clarity and accommodate the dynamic nature of cloud. For example, filtering out malicious external traffic would stay consistent as a strategic imperative even if you shift from the use of a third-party next generation firewall to Azure firewall and adjust diagrams/guidance on how to do it.
