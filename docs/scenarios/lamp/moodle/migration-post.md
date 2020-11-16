@@ -222,7 +222,7 @@ The Moodle html site (`/moodle/html/moodle`) content's local copy is created in 
 
     - If your web server doesn't support slash arguments, then they can be disabled in Moodle by unticking the **Use slash arguments** checkbox in Administration > Site administration > Server > HTTP.
 
-      > ![WARNING]
+      > [!WARNING]
       > Disabling slash arguments will result in SCORM packages not working and slash arguments warnings being displayed!
 
 9. The site is stuck in **Maintenance mode**. Sometimes Moodle gets stuck in **Maintenance mode**, and the message _This site is undergoing maintenance and is currently unavailable_ appears despite your attempts to turn it off. When you put Moodle into **Maintenance mode**, it creates a `maintenance.html` file in `moodledata/maintenance.html`, the site file's directory. To fix this, try the following:
