@@ -1,5 +1,5 @@
 ---
-title: "Strategy for unified operations adoption"
+title: "Strategy for Hybrid and Multicloud adoption"
 description: Describe the scenario's impact on strategy
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,29 +9,32 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of unified operations
+# Strategic impact of Hybrid and Multicloud
 
 Few organizations jump straight into a cloud-native portfolio. 
-For most customers, hybrid environments across multiple clouds is the undeniable reality.
+For most customers, hybrid environments across multiple clouds is the undeniable reality.Organizations are modernizing datacenters, building applications in the cloud, and deploying smart IoT devices. As a result, IT environments are continuously evolving, with different types of applications often running on different hardware across distributed locations including on premises, multicloud and the edge.
 
-You will likely be operating in a hybrid environment. 
-The big decision: 
-- Are you hybrid because of a one-way trip to the cloud?
-- Are you hybrid by choice, supporting a mixture of assets living in public & private cloud
+The IT department faces a set of key challenges:
+- How to seamlessly govern and secure IT resources regardless of where they are running?
+- How to bring cloud innovation to existing infrastructure?
+- How to modernize local datacenters with new cloud infrastructure?
+- How to extend compute and AI to the edge to unlock new business scenarios?   
+
 
 If you plan to be hybrid by design for the next 12 months or longer, you should consider unified operations to manage you overall digital estate.
 
-## Unified operations motivations
+## Hybrid and Multicloud motivations
 
-- Regulatory requirements
-- Latency & connectivity
+Here are key reasons why cusotmers adopt a hybrid strategy: 
+- Regulatory and data sovereignty requirements 
+- Low latency & edge connectivity requirements 
 - Aging assets with no migration compatibility
 - Sprawl across clouds
 
 What would motivate the customer to act on this scenario?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
 
-## Unified operations outcomes
+## Hybrid and Multicloud outcomes
 
 When customers act on this scenario, what do they expect to see as an outcome?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
@@ -46,11 +49,24 @@ https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outc
   
 - Increased flexibility when adopting PaaS - ability to run PaaS services on infrastructure of choice.
 
+## What is the business justification for Hybrid and Multicloud?
+
+Is there something special that customers have to do to justify doing this thing?
+https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+
+Is the justification the same for hybrid, multi-cloud, and the controlplane? Or do we need two sets of justification?
 
 ## What is the business justification for a multi-cloud control plane?
 
 Is there something special that customers have to do to justify doing this thing?
 https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+
+1. Azure Arc enables you to have a single pane of glass view of all your resources – Windows, Linux and SQL Servers as well as Kubernetes containers so you have a better inventory of your IT assets. You can also reduce risk within your organization by establishing a governance framework and applying a standard set of policies for all your workloads. Server/app owners  can now view compliance status of their own servers and take necessary remediation steps from the Azure Portal, This removes some of the management overhead on central IT in tracking and ensuring adherence to compliance standards. Lastly, Azure Arc also helps you adopt cloud practices on-premises – you can deploy applications using a consistent approach (familiar tools/practices) across all your Kubernetes clusters, on any infrastructure. You can standardize change control with declarative configuration management systems like GitOps and you can also easily adopt DevOps techniques, such as Infrastructure as code and empower developers with self service and a selection of tools.
+
+2. With Azure Arc enabled data services, you have the flexibility to deploy fully managed Azure services anywhere – on-premises or in other public clouds so you can take advantage of cloud benefits everywhere, such as scalability, fast deployment, and always up-to-date cloud innovation, while adhering to regulatory requirements. 
+These data services can be deployed and managed from within your on-premises environment or in your own customers’ regions, thus reducing the latency. Finally, you can access the latest Azure features and capabilities for on-premises data workloads. Today, in public preview you can deploy evergreen SQL (SQL Managed Instance) and PostgreSQL Hyperscale on any infrastructure and benefit from automatic updates, patches and upgrades without application downtime.
+
+For IT admins, Azure Arc  brings that consistency and single pane of glass experiences to thousands of servers in customer environments.mA key point is that you can continue to use your existing tools on-premises to interact with these resources, we are not interfering with any of those management tools. 
 
 	1. Inventory and Organization
 		○ Get control over resources at organizational, team, and personal levels.
@@ -90,15 +106,15 @@ https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migrati
 
 
 
-## Next step: Plan for unified operations
+## Next step: Plan for Hybrid and Multicloud
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for unified operations](./plan.md)
+- [Plan for Hybrid and Multicloud](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for unified operations migration](./migrate-assess.md)
-- [Migrate unified operations](./migrate-deploy.md)
-- [Release unified operations to production](./migrate-release.md)
-- [Innovate with unified operations](./innovate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Hybrid and Multicloud migration assessment](./migrate-assess.md)
+- [Hybrid and Multicloud migration](./migrate-deploy.md)
+- [Release Hybrid and Multicloud migrations to production](./migrate-release.md)
+- [Innovate with Hybrid and Multicloud](./innovate.md)
+- [Govern with unified operations](./govern.md)
+- [Manage with unified operations](./manage.md)
