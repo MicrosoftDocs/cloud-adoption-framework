@@ -303,3 +303,4 @@ Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-b
 ## Conclusion
 
 In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool.
+For guidance on completing a similar project in your environment, check out the Azure DevOps project template for [Server Migration Project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration). 

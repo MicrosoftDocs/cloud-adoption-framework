@@ -27,6 +27,8 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy&nbsp;and&nbsp;plan&nbsp;template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions, as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
+| [Using the Strategy-Plan-Ready-Govern ADO template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |  
+
 
 ## Ready
 
@@ -58,6 +60,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | Resource | Description |
 |----------|-------------|
 | [Datacenter migration discovery checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/migrate/datacenter-migration-discovery-checklist.docx) | Review this checklist for information that helps identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
+| [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator we have built a number of templates which you can use to help streamline your projects. Templates have been created for [WVD](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [Server Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
 
 ## Manage
 
