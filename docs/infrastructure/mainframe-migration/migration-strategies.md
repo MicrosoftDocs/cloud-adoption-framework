@@ -78,7 +78,7 @@ The cloud offers a range of flexible, scalable options, and you will pay only fo
 
 A major driver in mainframe migration projects is the changing face of application development. Organizations want their development environment to be more agile and responsive to business needs.
 
-Mainframes typically have separate logical partitions (LPARs) for development and testing, such as QA and staging LPARs. Mainframe development solutions include compilers (COBOL, PL/I, Assembler) and editors. The most common is the Interactive System Productivity Facility (ISPF) for the z/OS operating system that runs on IBM mainframes. Others include roscoe programming facility (rpf) and Computer Associates tools, such as CA Librarian and CA-Panvalet.
+Mainframes typically have separate logical partitions (LPARs) for development and testing, such as QA and staging LPARs. Mainframe development solutions include compilers (COBOL, PL/I, Assembler) and editors. The most common is the Interactive System Productivity Facility (ISPF) for the z/OS operating system that runs on IBM mainframes. Others include Roscoe Programming Facility (RPF) and Computer Associates tools, such as CA Librarian and CA-Panvalet.
 
 Emulation environments and compilers are available on x86 platforms, so development and testing can typically be among the first workloads to migrate from a mainframe to Azure. The availability and widespread use of [DevOps tools in Azure](https://azure.microsoft.com/solutions/devops) is accelerating the migration of development and testing environments.
 
