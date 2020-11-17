@@ -1,6 +1,6 @@
 ---
-title: How to set up Moodle controller instance and worker nodes
-description: Learn how to Set up Moodle controller instance and worker nodes (Azure infrastructure configuration).
+title: How to set up a Moodle controller instance and worker nodes
+description: Learn how to set up a Moodle controller instance and worker nodes (Azure infrastructure configuration).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/06/2020
@@ -9,11 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# How to set up Moodle controller instance and worker nodes
+# How to set up a Moodle controller instance and worker nodes
+
+Follow these steps to set up a controller virtual machine and a virtual machine scale set for Moodle.
 
 ## Virtual machine scale set instances
 
-Virtual machine scale set instances are assigned with private IPs that can be accessed only with the controller virtual machine, which is in the same virtual network. Enable the gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md) to gain gateway access to the virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
+Virtual machine scale set instances are assigned private IP addresses. You can only access these IP addresses with a controller virtual machine that is in the same virtual network as the IP addresses. Enable your gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md) to gain gateway access to the virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
 
 To create a virtual machine scale set instance private IP:
 
