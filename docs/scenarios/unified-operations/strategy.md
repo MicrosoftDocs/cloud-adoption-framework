@@ -20,7 +20,6 @@ The IT department faces a set of key challenges:
 - How to modernize local datacenters with new cloud infrastructure?
 - How to extend compute and AI to the edge to unlock new business scenarios?   
 
-
 If you plan to be hybrid by design for the next 12 months or longer, you should consider unified operations to manage you overall digital estate.
 
 ## Hybrid and Multicloud motivations
@@ -103,9 +102,6 @@ For IT admins, Azure Arc  brings that consistency and single pane of glass exper
 		○ Common templating for automating configuration and infrastructure as code provide repeatable deployments.
 		○ End-to-end identity for users and resources with Azure Active Directory (Azure AD) and Azure Resource Manager.
 		
-
-
-
 ## Next step: Plan for Hybrid and Multicloud
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
