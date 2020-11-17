@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
+<!-- docutune:casing IR -->
+
 # Get started: Implement security across the enterprise environment
 
 Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts.
@@ -37,7 +39,6 @@ Security in the cloud starts with applying the most important security practices
 
 Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
 
-<!-- docutune:Casing IR -->
 <!-- markdownlint-disable MD029 -->
 
 **People:**
@@ -48,7 +49,7 @@ Whether you're already operating in the cloud or you're planning for future adop
 **Process:**
 
 3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update incident response (ir) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
+4. [Update incident response (IR) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
 5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**
