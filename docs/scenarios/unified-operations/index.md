@@ -12,10 +12,13 @@ ms.subservice: overview
 # Hybrid and Multicloud
 
 A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
-
 The hybrid cloud is evolving to include edge workloads as well. Edge computing brings the computing power of the cloud to IoT devices—closer to where the data resides. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
 
-Unified operations is an enterprise control plane that provides operations management control across those hybrid solutions.
+Unified operations is an enterprise control plane that provides operations management control across hybrid solutions.For customers running workloads in multiple locations, whether their datacenter, other clouds, or at the edge, there is a common need to get control over resources at the organizaional, team, and personal levels. By bringing all your resources into a single system, you can organize and inventory through a variety of Azure scopes, such as Management Groups, Subscriptions, and Resource Groups. Unifying operations under a single control plane, like Azure Arc, allows customers to: 
+- Extend cloud pratices on premise 
+- Easily implement Azure security anywhere 
+- Integrate DevOps and management capabilities 
+- Streamline governance and configuration on Kubernetes apps, data, and infrastructure anywhere 
 
 ## Hybrid and Multicloud narrative
 
@@ -31,7 +34,6 @@ However, as companies spread resources across on-premises, multiple clouds, and 
 3. Since there are often different app development teams in the organization, there exists a wide range of skills across on-premises and cloud. Customers are looking for consistent inter-operability between the two so they can unify development practices.
 
 Now, let’s also consider the deployment of cloud native services. Some customers operate in highly regulated industries (e.g. government infrastructure, healthcare, financial services) where both internal and customer data are deemed critical and must remain within the boundaries of on-premises datacenters. There could also be a need for latency requirements where the data processing needs to happen close to the source of data while minimizing disruptions that may arise from internet connectivity issues. Another common scenario is that customers don’t want the management overhead of maintaining these services on-premises and would like to flip to a cloud billing model.
-
 
 ## Next step: Integrate Hybrid and Multicloud into your cloud adoption journey
 
