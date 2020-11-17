@@ -29,8 +29,7 @@ As a starting point, consider establishing the management levels that are shown 
 
 Organizations might also choose to [outsource functions related to one or more of these management levels to a service provider](https://aka.ms/adopt/partneroffers). These service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to provide greater precision and transparency.
 
-The remaining articles in this series outline processes that are commonly found within each of these disciplines.
-In parallel, the [Azure Management Guide](../azure-management-guide/index.md) demonstrates the tools that can support each of those processes. For assistance with building your management baseline, start with the Azure Management Guide. After you've established the baseline, this article series and the accompanying best practices can help expand that baseline to define other levels of management support.
+The remaining articles in this series outline processes that are commonly found within each of these disciplines. In parallel, the [Azure Management Guide](../azure-management-guide/index.md) demonstrates the tools that can support each of those processes. For assistance with building your management baseline, start with the Azure Management Guide. After you've established the baseline, this article series and the accompanying best practices can help expand that baseline to define other levels of management support.
 
 ## Cloud management disciplines
 

@@ -34,7 +34,7 @@ You can also add an alert for changes to files that you're tracking. For example
 ![Screenshot of the Log Analytics query editor in the Azure portal](./media/change-tracking2.png)
 
 This query searches for changes to the contents of files that have a path that contains the word "hosts." You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
-  
+
 After the query returns the results, select **New alert rule** to open the alert-rule editor. You can also get to this editor via Azure Monitor in the Azure portal.
 
 In the alert-rule editor, review the query and change the alert logic if you need to. In this case, we want the alert to be raised if any changes are detected on any machine in the environment.

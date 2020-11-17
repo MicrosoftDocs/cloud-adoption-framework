@@ -63,7 +63,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Network management (holistic).
 
-- **AppDevOps**. Allow app owners to create and manage app resources through a DevOps model. The following list presents a recommended DevOps role for application teams:
+- **AppDevOps.** Allow app owners to create and manage app resources through a DevOps model. The following list presents a recommended DevOps role for application teams:
 
   - App migration or transformation.
 
