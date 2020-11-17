@@ -13,7 +13,7 @@ ms.subservice: plan
 
 ## Pre-migration tasks
 
-Exporting data from on-premises to Azure involves the following tasks:
+Exporting data from an on-premises environment to Azure involves the following tasks:
 
 - Install the Azure CLI.
 - Create a subscription.
@@ -25,19 +25,19 @@ Exporting data from on-premises to Azure involves the following tasks:
 
 ## Install the Azure CLI
 
-- Install Azure CLI on a host inside the on-premises infrastructure for all Azure-related tasks.
+- Inside your on-premises infrastructure, on a host that you use for Azure tasks, use this command to install Azure CLI:
 
   ```bash
    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
   ```
 
-- Log in to your Azure account.
+- In the Azure CLI, use this command to sign in to your Azure account:
 
   ```bash
-  az login
+  az login -u <username> -p <password>
   ```
 
-- The az login command: Azure CLI will likely launch an instance or a tab inside of your default web browser and prompt you to log in to Azure with your Microsoft account. If the browser launch doesn't happen, open a new page at [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
+  Azure CLI will likely launch your default web browser, or a new browser tab, and prompt you to sign in to Azure with your Microsoft account. If the browser launch doesn't happen, open a new page at [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
 
 - To use the command line, enter the following command:
 
@@ -51,7 +51,7 @@ Skip this step if you have a subscription. If you don't have a subscription, you
 
 - To create the subscription with the Azure portal, navigate to **Subscriptions** from the **Home** section.
 
-  ![Azure subscriptions.](./images/subscriptions.png)
+:::image type="content" source="./images/azure-subscriptions-page.png" alt-text="Azure subscriptions.":::
 
 - This command sets the subscription:
 
