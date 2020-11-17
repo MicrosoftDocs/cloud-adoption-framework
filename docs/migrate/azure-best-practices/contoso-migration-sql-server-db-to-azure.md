@@ -207,4 +207,6 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ## Conclusion
 
-In this article, Contoso assessed, planned and migrated their Microsoft SQL Server workloads to Azure.
+In this article, Contoso assessed, planned and migrated their Microsoft SQL Server workloads to Azure.  
+An Azure DevOps project has been developed for you to leverage in your SQL Migration journey. The project aligns to the Cloud Adoption Framework. 
+The project will step you through the key decisions required, [click here](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) to go to the Azure DevOps project. 
