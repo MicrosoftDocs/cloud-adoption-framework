@@ -75,12 +75,12 @@ Each RBAC role is applied at one of three scopes in Azure: **subscription**, **r
 
 Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in owner role at the subscription scope, each workload owner would have management access to all workloads.
 
-Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the service administrator to create resource groups. In the second example, the model assigns the built-in owner role to each workload owner at the subscription scope.
+Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the Service Administrator to create resource groups. In the second example, the model assigns the built-in owner role to each workload owner at the subscription scope.
 
-In both examples, there is a subscription service administrator that is assigned the built-in owner role at the subscription scope. Recall that the built-in owner role grants all permissions including the management of access to resources.
+In both examples, there is a subscription Service Administrator that is assigned the built-in owner role at the subscription scope. Recall that the built-in owner role grants all permissions including the management of access to resources.
 
 ![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
-_Figure 3: A subscription with a service administrator assigned the built-in owner role._
+_Figure 3: A subscription with a Service Administrator assigned the built-in owner role._
 
 <!-- docutune:casing "group A" "groups A and B" "owner A" -->
 
@@ -92,7 +92,7 @@ _Figure 3: A subscription with a service administrator assigned the built-in own
   ![Service administrator adds workload owner A to resource group A](../../_images/govern/design/governance-2-4.png)
 1. Let's assume that **workload owner A** has a requirement for a pair of team members to view the CPU and network traffic monitoring data as part of capacity planning for the workload. Because **workload owner A** is assigned the Contributor role, they do not have permission to add a user to **resource group A**. They must send this request to the **service administrator**.
   ![Workload owner requests workload contributors be added to resource group](../../_images/govern/design/governance-2-5.png)
-1. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in reader role](/azure/role-based-access-control/built-in-roles#contributor).
+1. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in Reader role](/azure/role-based-access-control/built-in-roles#contributor).
   ![Service administrator adds workload contributors to resource group A](../../_images/govern/design/governance-2-6.png)
 1. Next, **workload owner B** also requires a resource group to contain the resources for their workload. As with **workload owner A**, **workload owner B** initially does not have permission to take any action at the subscription scope so they must send a request to the **service administrator**.
   ![Workload owner B requests creation of resource group B](../../_images/govern/design/governance-2-7.png)
@@ -115,17 +115,17 @@ Let's take a look at second example that reduces the number of tasks performed b
   ![Service administrator adds workload owner A to subscription](../../_images/govern/design/governance-2-11.png)
 1. When **resource group A** is created, **workload owner A** is added by default and inherits the built-in owner role from the subscription scope.
   ![Workload owner A creates resource group A](../../_images/govern/design/governance-2-12.png)
-1. The built-in owner role grants **workload owner A** permission to manage access to the resource group. **Workload owner A** adds two **workload contributors** and assigns the built-in reader role to each of them.
+1. The built-in owner role grants **workload owner A** permission to manage access to the resource group. **Workload owner A** adds two **workload contributors** and assigns the built-in Reader role to each of them.
   ![Workload owner A adds workload contributors](../../_images/govern/design/governance-2-13.png)
-1. **Service administrator** now adds **workload owner B** to the subscription with the built-in owner role.
-  ![Service administrator adds workload owner B to subscription](../../_images/govern/design/governance-2-14.png)
+1. The **Service Administrator** now adds **workload owner B** to the subscription with the built-in owner role.
+  ![Service Administrator adds workload owner B to subscription](../../_images/govern/design/governance-2-14.png)
 1. **Workload owner B** creates **resource group B** and is added by default. Again, **workload owner B** inherits the built-in owner role from the subscription scope.
   ![Workload owner B creates resource group B](../../_images/govern/design/governance-2-15.png)
 
 Note that in this model, the **service administrator** performed fewer actions than they did in the first example due to the delegation of management access to each of the individual workload owners.
 
 ![A diagram showing a Service Administrator and two workload owners for resource groups A and B.](../../_images/govern/design/governance-2-16.png)
-_Figure 5: A subscription with a service administrator and two workload owners, all assigned the built-in owner role._
+_Figure 5: A subscription with a Service Administrator and two workload owners, all assigned the built-in owner role._
 
 Because both **workload owner A** and **workload owner B** are assigned the built-in owner role at the subscription scope, they have each inherited the built-in owner role for each other's resource group. This means that not only do they have full access to each other's resources, they can also delegate management access to each other's resource groups. For example, **workload owner B** has rights to add any other user to **resource group A** and can assign any role to them, including the built-in owner role.
 
@@ -162,7 +162,7 @@ First let's look at an example resource management model using a single subscrip
 1. Align each environment to a single resource group. All shared infrastructure resources are deployed to a single **shared infrastructure** resource group. All resources associated with development workloads are deployed to a single **development** resource group. All resources associated with production workloads are deployed into a single **production** resource group for the **production** environment.
 1. Create separate resource groups for each workload, using a naming convention and tags to align resource groups with each of the three environments.
 
-Let's begin by evaluating the first option. You'll be using the permissions model that was discussed in the previous section, with a single subscription service administrator who creates resource groups and adds users to them with either the built-in **contributor** or **reader** role.
+Let's begin by evaluating the first option. You'll be using the permissions model that was discussed in the previous section, with a single subscription Service Administrator who creates resource groups and adds users to them with either the built-in **contributor** or **reader** role.
 
 1. The first resource group deployed represents the **shared infrastructure** environment. The **subscription owner** account creates a resource group for the shared infrastructure resources named `netops-shared-rg`.
   ![Creating a resource group](../../_images/govern/design/governance-3-0d.png)

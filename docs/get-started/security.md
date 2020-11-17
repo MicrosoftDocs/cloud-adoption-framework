@@ -37,6 +37,7 @@ Security in the cloud starts with applying the most important security practices
 
 Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
 
+<!-- docutune:Casing IR -->
 <!-- markdownlint-disable MD029 -->
 
 **People:**
@@ -47,19 +48,19 @@ Whether you're already operating in the cloud or you're planning for future adop
 **Process:**
 
 3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update Incident Response (IR) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
+4. [Update incident response (ir) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
 5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**
 
-6. [Require Passwordless or Multi-Factor Authentication (MFA)](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
+6. [Require passwordless or multi-factor authentication](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
 7. [Integrate native firewall and network security](../security/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
 8. [Integrate native threat detection](../security/security-top-10.md#8-technology-integrate-native-threat-detection)
 
-**Foundational Architecture Decisions:**
+**Foundational architecture decisions:**
 
 9. [Standardize on a single directory and identity](../security/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
-10. [Use identity based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
+10. [Use identity-based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
 11. [Establish a single unified security strategy](../security/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
 <!-- markdownlint-enable MD029 -->

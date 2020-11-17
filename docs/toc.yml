@@ -415,7 +415,7 @@ items:
 
         - name: Linux and open-source databases
           items:
-          - name: Migrate open source databases to Azure
+          - name: Migrate open-source databases to Azure
             href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
           - name: Migrate MySQL to Azure
             href: migrate/azure-best-practices/contoso-migration-mysql-to-azure.md

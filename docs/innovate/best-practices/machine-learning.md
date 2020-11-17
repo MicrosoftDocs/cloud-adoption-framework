@@ -94,7 +94,7 @@ Learn more about how to implement [Responsible ML](/azure/machine-learning/conce
 
 ## Integration with other services
 
-Azure Machine Learning works with other services on the Azure platform, and also integrates with open source tools such as Git and MLflow.
+Azure Machine Learning works with other services on the Azure platform, and also integrates with open-source tools such as Git and MLflow.
 
 - Compute targets such as Azure Kubernetes Service, Azure Container Instances, Azure Databricks, Azure Data Lake Analytics, and Azure HDInsight. For more information on compute targets, see [What are compute targets?](/azure/machine-learning/concept-compute-target).
 - Azure Event Grid. For more information, see [Consume Azure Machine Learning events](/azure/machine-learning/how-to-use-event-grid).
