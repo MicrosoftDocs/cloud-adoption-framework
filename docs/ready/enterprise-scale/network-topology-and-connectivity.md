@@ -99,7 +99,6 @@ A traditional network topology helps you build a secure large-scale network in A
 ## Virtual WAN network topology (Microsoft-managed)
 
 ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
-
 _Figure 1: Virtual WAN network topology._
 
 **Design considerations:**
@@ -109,7 +108,6 @@ _Figure 1: Virtual WAN network topology._
 - Virtual WAN greatly simplifies end-to-end network connectivity in Azure and cross-premises by creating a [hub-and-spoke network architecture](/azure/virtual-wan/virtual-wan-global-transit-network-architecture). The architecture spans multiple Azure regions and on-premises locations (any-to-any connectivity) out of the box, as shown in this figure:
 
   ![Diagram that illustrates a global transit network with Virtual WAN.](./media/global-transit.png)
-  
   _Figure 2: Global transit network with Virtual WAN._
 
 - Virtual WAN any-to-any transitive connectivity supports the following paths (within the same region and across regions):
@@ -150,7 +148,6 @@ _Figure 1: Virtual WAN network topology._
   The following figure shows a sample global enterprise deployment with datacenters spread across Europe and the United States. The deployment also has a large number of branch offices within both regions. The environment is globally connected via Virtual WAN and ExpressRoute Global Reach.
 
   ![Diagram of a sample network topology.](./media/global-reach-topology.png)
-  
   _Figure 3: Sample network topology._
 
 - Use Virtual WAN as a global connectivity resource. Use a Virtual WAN hub per Azure region to connect multiple landing zones together across Azure regions via the local Virtual WAN hub.
@@ -245,10 +242,9 @@ _Figure 4: A traditional Azure network topology._
 
   - There's a dependency on centralized NVAs and granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA. The following figure shows this topology.  This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
+- For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA. The following figure shows this topology. This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
   ![Diagram that illustrates a hub-and-spoke network topology.](./media/hub-and-spoke-topology.png)
-
   _Figure 5: Hub-and-spoke network topology._
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
@@ -258,11 +254,10 @@ _Figure 4: A traditional Azure network topology._
   - You need dedicated ExpressRoute bandwidth for specific business units.
 
   - You've reached the maximum number of connections per ExpressRoute gateway (up to four).
-  
-  The following figure shows this topology.
+
+The following figure shows this topology.
 
   ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/vnet-multiple-circuits.png)
-  
   _Figure 6: Multiple virtual networks connected with multiple ExpressRoute circuits._
 
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
@@ -286,7 +281,6 @@ _Figure 4: A traditional Azure network topology._
 - When you deploy a hub-and-spoke network architecture in two Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing-zone virtual networks across Azure regions. In this scenario, landing zones can transit within a region via NVA in local-hub virtual network and across regions via ExpressRoute circuit. Traffic must hairpin at the MSEE routers. The following figure shows this design.
 
   ![Diagram that illustrates a landing zone connectivity design.](./media/vnet-dual-circuits.png)
-  
   _Figure 7: Landing zone connectivity design._
 
 - When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, we recommend evaluating a global transit network architecture with Virtual WAN.
@@ -496,11 +490,11 @@ This section explores key recommendations to achieve network encryption between 
 
 - When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
 
-- Configuring a Site-to-Site VPN connection over ExpressRoute private peering is now in [preview](https://docs.microsoft.com/azure/vpn-gateway/site-to-site-vpn-private-peering).
+- Configuring a Site-to-Site VPN connection over ExpressRoute private peering is now in [preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - You can apply [media access control security (MACsec)](/azure/expressroute/expressroute-howto-MACsec) encryption to ExpressRoute Direct to achieve network encryption.
 
-- When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is utilized on the underlying network hardware. This is applicable to VNet peering traffic.
+- When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is utilized on the underlying network hardware. This is applicable to VNet peering traffic.
 
 **Design recommendations:**
 
@@ -512,13 +506,13 @@ _Figure 8: Encryption flows._
 
 - When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at the layer-two level between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
 
-- For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use a Virtual WAN VPN gateway to establish [IPsec tunnels over ExpressRoute private peering](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute). The diagram shows this encryption in flow `C`.
+- For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use a Virtual WAN VPN gateway to establish [IPsec tunnels over ExpressRoute private peering](/azure/virtual-wan/vpn-over-expressroute). The diagram shows this encryption in flow `C`.
 
 - For non-Virtual WAN scenarios, and where MACsec isn't an option (for example, not using ExpressRoute Direct), the only options are:
-  
+
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
-  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](https://docs.microsoft.com/azure/vpn-gateway/site-to-site-vpn-private-peering)).
+  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering)).
 
 - If traffic between Azure regions must be encrypted, use Global VNet Peering to connect virtual networks across regions.
 

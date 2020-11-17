@@ -160,7 +160,7 @@ The Antimalware Assessment solution helps you identify servers that are infected
 
 To implement this solution:
 
-1. In the Azure portal, open **All services**, select select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for and then select **Antimalware Assessment**.
 4. Select **Create**.

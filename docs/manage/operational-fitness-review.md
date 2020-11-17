@@ -122,11 +122,7 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
   - Performance efficiency
   - Reliability
   - Security
-- [Ten design principles for Azure applications](/azure/architecture/guide/design-principles).
-    Follow these design principles to make your application more scalable, resilient, and manageable.
-- [Designing resilient applications for Azure](/azure/architecture/resiliency).
-    Build and maintain reliable systems using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
-- [Cloud design patterns](/azure/architecture/patterns).
-    Use design patterns to build applications on the pillars of architecture excellence.
-- [Azure Advisor](/azure/advisor).
-    Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources for high availability, security, performance, and cost.
+- [Ten design principles for Azure applications](/azure/architecture/guide/design-principles). Follow these design principles to make your application more scalable, resilient, and manageable.
+- [Designing resilient applications for Azure](/azure/architecture/resiliency). Build and maintain reliable systems using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
+- [Cloud design patterns](/azure/architecture/patterns). Use design patterns to build applications on the pillars of architecture excellence.
+- [Azure Advisor](/azure/advisor). Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources for high availability, security, performance, and cost.

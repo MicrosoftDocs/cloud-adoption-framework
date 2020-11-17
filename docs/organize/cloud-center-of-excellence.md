@@ -110,8 +110,7 @@ CCoE efforts can be accelerated with support from the business stakeholders. Muc
 
 These data points are not an attack on IT. Instead, they help CCoE learn from the past and establish a realistic backlog and plan for improvement.
 
-**Ongoing support and engagement:**
-CCoE teams can demonstrate quick returns in some areas. But the higher-level goals, like business agility and time-to-market, can take much longer. During maturation, there is a high risk of the CCoE becoming discouraged or being pulled off to focus on other IT efforts.
+**Ongoing support and engagement:** CCoE teams can demonstrate quick returns in some areas. But the higher-level goals, like business agility and time-to-market, can take much longer. During maturation, there is a high risk of the CCoE becoming discouraged or being pulled off to focus on other IT efforts.
 
 During the first six to nine months of CCoE efforts, we recommend that business stakeholders allocate time to meet monthly with the IT leadership and the CCoE. There is little need for formal ceremony to these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go along way to driving CCoE success.
 

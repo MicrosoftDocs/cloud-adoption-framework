@@ -25,11 +25,11 @@ In 2000, we entered the operations management field with Microsoft Operations Ma
 
 ## The story of Azure Monitor
 
-When Azure was released in 2010, monitoring of cloud services was provided with the Azure Diagnostics agent, which provided a way to collect diagnostics data from Azure resources. This capability was considered a general monitoring tool rather than an enterprise-class monitoring platform.  
+When Azure was released in 2010, monitoring of cloud services was provided with the Azure Diagnostics agent, which provided a way to collect diagnostics data from Azure resources. This capability was considered a general monitoring tool rather than an enterprise-class monitoring platform.
 
 Application Insights was introduced to shift with changes in the industry where proliferation of cloud, mobile, and IoT devices was growing and the introduction of DevOps practices. It grew from Application Performance Monitoring in Operations Manager to a service in Azure, where it delivers rich monitoring of web applications written in a variety of languages. In 2015, the preview of Application Insights for Visual Studio was announced and later, it became known as just Application Insights. It collects details about application performance, requests and exceptions, and traces.
 
-In 2015, Azure Operational Insights was made generally available. It delivered the Log Analytics analysis service that collected and searched data from machines in Azure, on-premises, or other cloud environments, and connected to System Center Operations Manager. Intelligence packs were offered that delivered a variety of prepackaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management. Later, Azure Operational Insights became known as Log Analytics.  
+In 2015, Azure Operational Insights was made generally available. It delivered the Log Analytics analysis service that collected and searched data from machines in Azure, on-premises, or other cloud environments, and connected to System Center Operations Manager. Intelligence packs were offered that delivered a variety of prepackaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management. Later, Azure Operational Insights became known as Log Analytics.
 
 In 2016, the preview of Azure Monitor was announced at the Microsoft Ignite conference. It provided a common framework to collect platform metrics, resource diagnostics logs, and subscription-level activity log events from any Azure service that started using the framework. Previously, each Azure service had its own monitoring method.
 
@@ -38,7 +38,8 @@ At the 2018 Ignite conference, we announced that the Azure Monitor brand expande
 - The original **Azure Monitor**, for collecting platform metrics, resource diagnostics logs, and activity logs for Azure platform resources only.
 - **Application Insights**, for application monitoring.
 - **Log Analytics**, the primary location for collecting and analyzing log data.
-- A new **unified alerting service**, which brought together alert mechanisms from each of the other services mentioned earlier.  
+- A new **unified alerting service**, which brought together alert mechanisms from each of the other services mentioned earlier.
+
 - **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in a virtual network.
 
 ## The story of Operations Management Suite (OMS)
@@ -63,7 +64,7 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 ### Azure Monitor
 
-Azure Monitor is a software as a service (SaaS) offering, so its supporting infrastructure runs in Azure and is managed by Microsoft. It's performs monitoring, analytics, and diagnostics at scale. It is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that support Azure Monitor are maintained by Microsoft.  
+Azure Monitor is a software as a service (SaaS) offering, so its supporting infrastructure runs in Azure and is managed by Microsoft. It's performs monitoring, analytics, and diagnostics at scale. It is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that support Azure Monitor are maintained by Microsoft.
 
 ![Diagram of Azure Monitor](./media/monitoring-management-guidance-cloud-and-on-premises/azure-monitor-greyed-optimized.svg)
 
