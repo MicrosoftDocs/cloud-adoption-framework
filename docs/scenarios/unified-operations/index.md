@@ -11,6 +11,14 @@ ms.subservice: overview
 
 # Hybrid and Multicloud
 
+This series of articles in the Cloud Adoption Framework outline the scenario of Hybrid and Multicloud to guide your holistic cloud adoption journey.
+
+## Executive Scenario
+
+Michael to fill in information outlining why this scenario is important.
+
+## Hybrid and Multicloud definitions
+
 A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
 The hybrid cloud is evolving to include edge workloads as well. Edge computing brings the computing power of the cloud to IoT devices—closer to where the data resides. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
 
