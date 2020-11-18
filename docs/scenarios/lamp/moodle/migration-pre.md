@@ -23,7 +23,9 @@ Before you migrate a Moodle application from your on-premises environment to Azu
 
 ## Install the Azure CLI
 
-1. In your on-premises environment, on a host that you can use for Azure tasks, use this command to install Azure CLI:
+Follow these steps to set up the Azure CLI in your on-premises environment:
+
+1. On a host that you can use for Azure tasks, use this command to install the Azure CLI:
 
    ```bash
    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -35,7 +37,7 @@ Before you migrate a Moodle application from your on-premises environment to Azu
    az login -u <username> -p <password>
    ```
 
-   Azure CLI will likely open a browser window or tab and then prompt you to sign in to Azure with your Microsoft account. If a browser window doesn't open, go to [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
+1. If the Azure CLI opens a browser window or tab, sign in to Azure with your Microsoft account. If a browser window doesn't open, go to [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
 
 ## Create a subscription
 
