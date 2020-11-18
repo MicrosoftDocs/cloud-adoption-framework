@@ -1,12 +1,13 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for <Insert narrative Name>"
+title: "Enterprise-Scale security, governance, and compliance for SAP"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of SAP
 author: deepakonics
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
 # Security, governance, and compliance for Enterprise-Scale scenario
