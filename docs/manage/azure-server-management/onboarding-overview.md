@@ -1,6 +1,6 @@
 ---
 title: "Onboard Azure server management services"
-description: Onboard Azure server management services with information for Azure virtual machines and on-premises servers.
+description: Onboard Azure server management services with information for virtual machines in Azure and on-premises servers.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -18,7 +18,7 @@ After you're familiar with the [tools](./tools-services.md) and [planning](./pre
 
 ## Onboarding processes
 
-This section of the guidance covers the following onboarding processes for both Azure virtual machines and on-premises servers:
+This section of the guidance covers the following onboarding processes for both virtual machines in Azure and on-premises servers:
 
 - **Enable management services on a single VM for evaluation by using the portal.** Use this process to familiarize yourself with the Azure server management services.
 - **Configure management services for a subscription by using the portal.** This process helps you configure the Azure environment so that any new VMs that are provisioned will automatically use management services. Use this approach if you prefer the Azure portal experience to scripts and command lines.

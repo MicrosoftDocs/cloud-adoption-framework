@@ -1,6 +1,6 @@
 ---
 title: "Azure innovation: Engage via applications"
-description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
+description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native applications.
 author: billyclaymyersmsft
 ms.author: wimyers
 ms.date: 10/17/2019
@@ -158,7 +158,7 @@ To configure or monitor an AKS service:
 
 ### Serverless solutions
 
-Build cloud-native apps without provisioning and managing infrastructure by using a fully managed platform that handles scaling, availability, and performance for you. Benefits of Azure serverless solutions include:
+Build cloud-native applications without provisioning and managing infrastructure by using a fully managed platform that handles scaling, availability, and performance for you. Benefits of Azure serverless solutions include:
 
 - Increasing developer velocity.
 - Boosting team performance.

@@ -32,7 +32,7 @@ Ask these questions when you're initially developing a monitoring configuration.
 
 After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users, and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery, as part of an ongoing, continuous monitoring improvement process. It's not just about evaluating alert noise or missed alerts, but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine whether you're improving.
 
-Both System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support IT Service Management (ITSM) integration, to automate the creation of incident records and escalate to the correct support team, or any other alert management system that uses a webhook.
+Both System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support IT service management (ITSM) integration, to automate the creation of incident records and escalate to the correct support team, or any other alert management system that uses a webhook.
 
 When possible, you can use any of several services to automate recovery actions. These include System Center Orchestrator, Azure Automation, Azure Logic Apps, or autoscaling in the case of elastic workloads. While notifying the responsible teams is the most common action for alerting, automating corrective actions might also be appropriate. This automation can help streamline the entire incident management process. Automating these recovery tasks can also reduce the risk of human error.
 
@@ -66,7 +66,7 @@ Azure Monitor has four types of alerts, each somewhat tied to the repository tha
 
 ### Enable alerting through partner tools
 
-If you're using an external alerting solution, route as much as you can through Azure Event Hubs, which is the fastest path out of Azure Monitor. You'll have to pay for ingestion into Event Hub. If cost is an issue and speed isn't, you can use Azure Storage as a less expensive alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
+If you're using an external alerting solution, route as much as you can through Azure Event Hubs, which is the fastest path out of Azure Monitor. You'll have to pay for ingestion into Event Hubs. If cost is an issue and speed isn't, you can use Azure Storage as a less expensive alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
 
 Azure Monitor includes support for integrating with other monitoring platforms, and ITSM software such as ServiceNow. You can use Azure alerting and still trigger actions outside of Azure, as required by your incident management or DevOps process. If you want to alert in Azure Monitor and automate the response, you can initiate automated actions by using Azure Functions, Azure Logic Apps, or Azure Automation, based on your scenario and requirements.
 
@@ -78,10 +78,10 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 |---| ---| --- |
 | Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics database. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time. |
 | | Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the workspace. Container logs and inventory information are also written to the workspace. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts. |
-| Azure Monitor for VMs | Health criteria are metrics stored in the metrics database. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications. |
+| Azure Monitor for VMs | Health criteria are metrics stored in the metrics database. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only action groups that are configured to send SMS or email notifications. |
 | | Map and guest operating system performance log data is written to the Log Analytics workspace. | Create log query alerts. |
 
-### Fastest speed driven by cost
+### Fastest speed, driven by cost
 
 Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real-time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it is stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.
 
@@ -89,11 +89,11 @@ That said, there are some important footnotes to this rule.
 
 **Guest OS telemetry** has multiple paths to get into the system.
 
-- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
+- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
 
 - The least expensive, but with some ingestion latency, is to send it to a Log Analytics workspace. Running the Log Analytics agent on the VM is the best way to get all guest operating system metric and log data into the workspace.
 
-- You can send it for storage as a metric and a log in Azure Monitor by running both the Diagnostic extension and the Log Analytics agent on the same VM. You can then alert quicker, but also use the guest operating system data as part of more complex queries when you combine it with other telemetry.
+- You can send it for storage as a metric and a log in Azure Monitor by running both the Azure diagnostics extension and the Log Analytics agent on the same VM. You can then alert quicker, but also use the guest operating system data as part of more complex queries when you combine it with other telemetry.
 
 **Importing data from on-premises:** If you're trying to query and monitor across machines running in Azure and on-premises, you can use the Log Analytics agent to collect guest operating system data. You can then use a feature called [logs to metrics](/azure/azure-monitor/platform/alerts-metric-logs) to collect and store as metrics in Azure Monitor. This method bypasses part of the ingestion process into Azure Monitor Logs, and the data is thus available sooner.
 
@@ -120,4 +120,4 @@ Be sure to note the [limits on the number of alerts you can create](/azure/azure
 
 ### Best query experience
 
-If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Azure Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.
+If you're looking for trends across all your data, it makes sense to import all your data into Azure Monitor Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Azure Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.

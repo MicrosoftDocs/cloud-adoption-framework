@@ -11,6 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- docutune:casing "Update Management" "Guest Configuration" "Blueprints: Getting started" "Blueprints: Blueprint definition" MMA -->
 <!-- cSpell:ignore WSUS -->
 
 # Operational compliance in Azure
@@ -25,10 +26,10 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 | Process | Tool | Purpose |
 |---|---|---|
-| Patch management | Update Management | Management and scheduling of updates |
+| Patch management | Azure Automation Update Management | Management and scheduling of updates |
 | Policy enforcement | Azure Policy | Policy enforcement to ensure environment and guest compliance |
 | Environment configuration | Azure Blueprints | Automated compliance for core services |
-| Resource Configuration | Desired State Configuration | Automated configuration on Guest OS and some aspects of the environment |
+| Resource configuration | Desired State Configuration | Automated configuration on guest OS and some aspects of the environment |
 
 ::: zone target="docs"
 
@@ -41,14 +42,14 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 ::: zone-end
 
-Computers that are managed by Update Management use the following configurations to do assessment and update deployments:
+Computers that are managed by the Update Management solution for Azure Automation use the following configurations to do assessment and update deployments:
 
 - Microsoft Monitoring Agent (MMA) for Windows or Linux.
 - PowerShell Desired State Configuration (DSC) for Linux.
-- Azure Automation Hybrid Runbook Worker.
+- Azure Automation hybrid runbook worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
-For more information, see [Update Management solution](/azure/automation/update-management/overview).
+For more information, see [Update Management solution for Azure Automation](/azure/automation/update-management/overview).
 
 > [!WARNING]
 > Before using Update Management, you must onboard virtual machines or an entire subscription into Log Analytics and Azure Automation.
@@ -122,7 +123,7 @@ To apply a policy to a resource group:
 To learn more, see:
 
 - [Azure Policy](/azure/azure-policy)
-- [Azure Policy: Guest configuration](/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy: Guest Configuration](/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
@@ -158,7 +159,7 @@ To create a blueprint:
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
-1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
+1. Select **Next : Artifacts**, and review the artifacts included in the blueprint.
 1. Select **Save draft**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
@@ -172,7 +173,7 @@ To create a blueprint:
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
-1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
+1. Select **Next : Artifacts**, and review the artifacts included in the blueprint.
 1. Select **Save draft**.
 
 ::: zone-end
@@ -196,7 +197,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. In the Azure portal, go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. In the Azure portal, go to [Blueprints: blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".

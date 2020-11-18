@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<-- docutune:Ignore "provide advanced threat protection" -->
+
 # Protect and recover in Azure
 
 _Protect and recover_ is the third and final discipline in any cloud-management baseline.
@@ -39,9 +41,9 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 With Azure Backup, you can back up, protect, and recover your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or offsite backup solution with a cloud-based solution. This new solution is reliable, secure, and cost competitive. Azure Backup can also help protect and recover on-premises assets through one consistent solution.
 
-For data present in Azure, Azure Backup offer varied levels of protection. For eg: For backing up key cloud infrastructure pieces such as Azure Virtual machines and Azure Files, it offers [Azure virtual machine backup](/azure/backup/backup-azure-vms-introduction) and [Azure files backup](/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual machines, it offers dedicated database backup solutions for [MS SQL](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) with far lower RPO.
+For data present in Azure, Azure Backup offer varied levels of protection. For example, when backing up key cloud infrastructure pieces such as Azure Virtual Machines and Azure Files, it offers [Azure Virtual Machines backup](/azure/backup/backup-azure-vms-introduction) and [Azure Files backup](/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual Machines, it offers dedicated database backup solutions for [MS SQL](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) with far lower RPO.
 
-To get a glimpse of how easy it is to enable backup with Azure Backup, look at the section below to enable backup for Azure Virtual machines
+To get a glimpse of how easy it is to enable backup with Azure Backup, look at the section below to enable backup for Azure Virtual Machines.
 
 ### Enable backup for an Azure VM
 
@@ -61,7 +63,7 @@ To get a glimpse of how easy it is to enable backup with Azure Backup, look at t
 
 ::: zone target="docs"
 
-For more details about Azure Backup and it's varied offering, refer to this [Overview](/azure/backup/backup-overview) section
+For more details about Azure Backup, see [Overview of Azure Backup](/azure/backup/backup-overview).
 
 ## Azure Site Recovery
 

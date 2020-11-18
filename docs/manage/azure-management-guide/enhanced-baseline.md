@@ -11,8 +11,6 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore ITSMC -->
-
 # Enhanced management baseline in Azure
 
 The first three cloud management disciplines describe a management baseline. The preceding articles in this guide outline a minimum viable product (MVP) for cloud management services, which is referred to as a management baseline. This article outlines a few common improvements to the baseline.
@@ -40,6 +38,8 @@ However, you might need a greater commitment to the business beyond the standard
 
 Both workload operations and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads that require such investments, an enhanced management baseline can provide enough of an improvement to the business commitment.
 
+<!-- docutune:casing "IT Service Management" "IT Service Management Connector" ITSMC "Hybrid Runbook Worker" "Free and Standard" -->
+
 This table outlines a few processes, tools, and potential effects common in customers' enhanced management baselines:
 
 | Discipline  | Process  | Tool | Potential impact | Learn more |
@@ -49,7 +49,7 @@ This table outlines a few processes, tools, and potential effects common in cust
 | Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
 | Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
-| Operational compliance | Guest automation |  Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC Overview](/powershell/scripting/dsc/overview/overview) |
+| Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview/overview) |
 | Protect and recover | Breach notification | Azure Security Center | Extend protection to include security-breach recovery triggers. | See the following sections |
 
 ::: zone target="docs"
