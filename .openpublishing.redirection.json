@@ -218,12 +218,12 @@
       {
          "source_path": "docs/migrate/azure-migration-guide/secure-and-manage.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/migrate",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/prerequisites.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/index",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/cloud-security-baseline.md",
