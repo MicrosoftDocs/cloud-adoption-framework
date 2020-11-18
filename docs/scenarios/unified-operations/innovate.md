@@ -13,6 +13,8 @@ ms.subservice: innovate
 
 Describe how your scenario provides new abilities to innovate
 
+General purpose K8S & Azure Services... Custom locations...
+
 ## Customer adoption of unified operations
 
 How does this new innovation change the way customers will adopt our readers solution?
