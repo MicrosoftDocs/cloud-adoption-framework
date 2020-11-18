@@ -46,5 +46,5 @@ The following list of articles will take you to guidance found at specific point
 - [Hybrid and Multicloud migration](./migrate-deploy.md)
 - [Release Hybrid and Multicloud architectures to production](./migrate-release.md)
 - [Innovate with Hybrid and Multicloud](./innovate.md)
-- [Govern with unified operations](./govern.md)
-- [Manage with unified operations](./manage.md)
+- [Govern](./govern.md)
+- [Manage](./manage.md)
