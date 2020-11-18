@@ -26,7 +26,7 @@ Does this workload have special requirements for **Visibility**, Operational Com
 ## Enhanced baseline
 
 **P1 is Arc + (monitoring, inventory/change tracking, & defender)**
-
+Expand your baseline to attach monitoring, inventory, & change tracking to IaaS and PaaS assets.
 
 ## unified operations platform operations
 
