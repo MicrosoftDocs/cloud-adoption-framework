@@ -15,7 +15,7 @@ This series of articles in the Cloud Adoption Framework outline the scenario of 
 
 ## Executive Scenario
 
-Michael to fill in information outlining why this scenario is important.
+Michael to fill in information outlining why this scenario is important. "orientation towards market reality" "This is a good business decision"
 
 ## Hybrid and Multicloud definitions
 
