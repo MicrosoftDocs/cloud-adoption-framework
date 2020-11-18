@@ -30,7 +30,7 @@ A small organization might require less than 500 MIPS, while a large organizatio
 
 An accurate calculation of MIPS to vCPUs with Azure depends on the type of vCPU and the exact workload you are running. However, benchmark studies provide a good basis for estimating the number and type of vCPUs you will need. A recent HPE zRef benchmark provides the following estimates:
 
-- 288 MIPS per Intel-based core running on HP Proliant servers for online (CICS) jobs.
+- 288 MIPS per Intel-based core running on HPE ProLiant servers for online (CICS) jobs.
 
 - 170 MIPS per Intel core for COBOL batch jobs.
 

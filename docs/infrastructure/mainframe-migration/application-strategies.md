@@ -32,7 +32,7 @@ You should consider starting by planning those workloads that you want to initia
 
 ## Mainframe emulation in Azure
 
-Azure cloud services can emulate traditional mainframe environments, enabling you to reuse existing mainframe code and applications. Common server components that you can emulate include online transaction processing (OLTP), batch, and data ingestion systems.
+Azure services can emulate traditional mainframe environments, enabling you to reuse existing mainframe code and applications. Common server components that you can emulate include online transaction processing (OLTP), batch, and data ingestion systems.
 
 ### OLTP systems
 
