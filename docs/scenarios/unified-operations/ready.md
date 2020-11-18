@@ -28,6 +28,9 @@ Same mix on workload level for WAF
 
 **Out of Scope: ESLZ for Hybrid & Multicloud (Q3-Q4 target) - Ask for Jeff Mitchell**
 
+
+The P0 is Resource Organization... Plus Monitoring/visibility from operate...
+
 ## unified operations evaluation
 
 What should the customer be looking for when evaluating an Azure Landing Zone for compatibility?
