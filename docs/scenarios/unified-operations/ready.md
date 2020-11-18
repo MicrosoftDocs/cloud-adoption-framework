@@ -24,6 +24,7 @@ What do I add or change to any of the Azure Landing Zones...
 
 How does this change as your cloud mix changes (100% Cloud, 50% Cloud, 0% Cloud)
 How does this change with multi-cloud mix changes (100% Azure, 50% Azure, 0% Azure)
+Same mix on workload level for WAF
 
 **Out of Scope: ESLZ for Hybrid & Multicloud (Q3-Q4 target) - Ask for Jeff Mitchell**
 
