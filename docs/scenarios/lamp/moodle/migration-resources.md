@@ -11,29 +11,25 @@ ms.subservice: plan
 
 # Moodle migration resources
 
-When the Azure Resource Manager template is used, the following resources are created within Azure:
+When you migrate Moodle with an Azure Resource Manager (ARM) template, a network template is created within Azure. The network template creates a virtual network with an address that includes the virtual network name, API version, location, and DNS server name. The `AddressSpace` contains a range of IP addresses that subnets can use.
 
-- **Network template:** The network template will create virtual network, network security group, network interface, subnet, public IP address, Azure Load Balancer/Application Gateway, Redis cache, and more.
+The network template also creates the following resources:
 
-The network template also creates a virtual network with string as name, apiVersion, location, and DNS server name. The `AddressSpace` contains a range of IP addresses that can be used by subnets.
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual Network is a logical isolation of the Azure cloud that's specifically dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud.
 
-- **Virtual network:** Azure Virtual Network is a representation of your own network in the cloud. It's a logical isolation of the Azure cloud that's specifically dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. For more information, see [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview).
+- [Network security group (NSG)](/azure/virtual-network/network-security-groups-overview): A networking filter, or firewall, that contains a list of security rules. These rules allow or deny network traffic to resources connected to a virtual network.
 
-- **Network security group:** A network security group (NSG) is a networking filter (firewall) containing a list of security rules allowing or denying network traffic to resources connected to an Azure Virtual Network. Explore [network security group](/azure/virtual-network/network-security-groups-overview) for more information.
+- [Network interface](/azure/virtual-network/virtual-network-network-interface): An interface that an Azure Virtual Machine can use to communicate with the Internet, Azure, and on-premises resources.
 
-- **Network interface:** A network interface enables an Azure Virtual Machine to communicate with internet, Azure, and on-premises resources. Explore [network interface](/azure/virtual-network/virtual-network-network-interface) for more information.
+- [Subnet](/azure/virtual-network/virtual-network-manage-subnet): A smaller network inside a large network. Subnets are also known as subnetworks. By default, an IP address in a subnet can communicate with any other IP address inside the virtual network.
 
-- **Subnet:** A subnet or subnetwork is a smaller network inside a large network. By default, an IP in a subnet can communicate with any other IP inside the virtual network. Explore [subnet](/azure/virtual-network/virtual-network-manage-subnet) for more information.
+- [Public IP address](/azure/virtual-network/public-ip-addresses#:~:text=Public%20IP%20addresses%20enable%20Azure,IP%20assigned%20can%20communicate%20outbound): An IP address that an Azure resource uses to communicate with the Internet. The address is dedicated to the Azure resource.
 
-- **Public IP:** Public IP addresses are used to communicate Azure resources to the Internet. The address is dedicated to the Azure resource. Explore [public IP](/azure/virtual-network/public-ip-addresses#:~:text=Public%20IP%20addresses%20enable%20Azure,IP%20assigned%20can%20communicate%20outbound) for more information.
+- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=An%20Azure%20load%20balancer%20is,traffic%20to%20an%20operational%20VM): An efficient distribution of network or application traffic across multiple servers in a server farm. Load Balancer ensures high availability and reliability by sending requests only to servers that are online.
 
-- **Azure Load Balancer:** An efficient distribution of network or application traffic across multiple servers in a server farm. Ensures high availability and reliability by sending requests only to servers that are online. Explore [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=An%20Azure%20load%20balancer%20is,traffic%20to%20an%20operational%20VM) for more information.
+- [Azure Application Gateway](/azure/application-gateway/overview): An alternative to Load Balancer. All four predefined ARM templates deploy Load Balancer. If you use a fully configurable deployment instead of an ARM template, you can choose Application Gateway instead of Load Balancer. Application Gateway is a web traffic Load Balancer that you can use to manage traffic to your web applications. Application Gateway can make routing decisions based on additional attributes of an HTTP request, such as a URI path or host header.
 
-Any of the four predefined templates will deploy Azure Load Balancer. In a fully configurable deployment, the user can choose Azure Application Gateway instead of Load Balancer.
-
-- **Azure Application Gateway:** A web traffic Azure Load Balancer that enables you to manage traffic to your web applications. Application Gateway can make routing decisions based on additional attributes of an HTTP request, as with a URI path or host headers. Explore [Azure Application Gateway](/azure/application-gateway/overview) for more information.
-
-- **Redis cache:** Azure Cache for Redis provides an in-memory data store based on the open-source software, Redis. Redis improves the performance and scalability of an application heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory, and this data can be written to and read from quickly. Explore [Redis cache](/azure/azure-cache-for-redis/cache-overview) for more information.
+- [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview): An in-memory data store based on the open-source software Redis. Redis improves the performance and scalability of an application that heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory, and this data can be written to and read from quickly.
 
 - **Storage template:** A storage account template will create a storage account with FileStorage Kind and Premium locally redundant storage (LRS) replication that's 1 terabyte (TB). Per the predefined template, a storage account with Azure Files creates file shares.
 
