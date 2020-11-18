@@ -89,11 +89,11 @@ That said, there are some important footnotes to this rule.
 
 **Guest OS telemetry** has multiple paths to get into the system.
 
-- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
+- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
 
 - The least expensive, but with some ingestion latency, is to send it to a Log Analytics workspace. Running the Log Analytics agent on the VM is the best way to get all guest operating system metric and log data into the workspace.
 
-- You can send it for storage as a metric and a log in Azure Monitor by running both the Azure diagnostics extension and the Log Analytics agent on the same VM. You can then alert quicker, but also use the guest operating system data as part of more complex queries when you combine it with other telemetry.
+- You can send it for storage as a metric and a log in Azure Monitor by running both the Azure Diagnostics extension and the Log Analytics agent on the same VM. You can then alert quicker, but also use the guest operating system data as part of more complex queries when you combine it with other telemetry.
 
 **Importing data from on-premises:** If you're trying to query and monitor across machines running in Azure and on-premises, you can use the Log Analytics agent to collect guest operating system data. You can then use a feature called [logs to metrics](/azure/azure-monitor/platform/alerts-metric-logs) to collect and store as metrics in Azure Monitor. This method bypasses part of the ingestion process into Azure Monitor Logs, and the data is thus available sooner.
 

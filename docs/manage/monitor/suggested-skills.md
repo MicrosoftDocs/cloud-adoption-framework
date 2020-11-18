@@ -30,21 +30,21 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [implement resource management security in Azure](/learn/paths/implement-resource-mgmt-security).
 
-- [Monitoring Microsoft Azure resources and workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
+- [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
 
 - Learn about planning and designing your monitoring deployments at-scale and automating actions by viewing [Azure Monitor best practices and recommendations](https://www.youtube.com/watch?v=IWkqqahX_Ck&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6).
 
 ## Infrastructure monitoring
 
-- [Design a monitoring strategy for infrastructure in Microsoft Azure](https://www.pluralsight.com/courses/microsoft-azure-monitoring-strategy-infrastructure-design-update) helps you learn foundational knowledge of monitoring capabilities and solutions in Azure.
+- [Design a Monitoring Strategy for Infrastructure in Microsoft Azure](https://www.pluralsight.com/courses/microsoft-azure-monitoring-strategy-infrastructure-design-update) helps you learn foundational knowledge of monitoring capabilities and solutions in Azure.
 
 - [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?time_continue=3&v=RjsNmapggPU&feature=emb_logo) provides an intermediate level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
 
 - Learn with Azure Monitor how to monitor data from [Azure Storage and HDInsight](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
 
-- [Microsoft Azure database monitoring playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities that can be used to gain insight and actionable steps for Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
+- [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities that can be used to gain insight and actionable steps for Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
-- [Monitoring Microsoft Azure hybrid cloud networks](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course that helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize virtual networks and virtual private network connections for your hybrid cloud implementation.
+- [Monitoring Microsoft Azure Hybrid Cloud Networks](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course that helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize virtual networks and virtual private network connections for your hybrid cloud implementation.
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage virtual machines running in Azure.
 
@@ -54,21 +54,23 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Understand how [Azure Monitor](/azure/azure-monitor/overview) helps you view availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
 
-  - [Microsoft Azure DevOps engineer: Optimize feedback mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
+  - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
 
   - [Capture and view page load times in your Azure web app](/learn/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
 
-  - [Microsoft Azure database monitoring playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
+  - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
   - [Instrument applications with Azure Monitor Application Insights](https://app.pluralsight.com/library/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an application with angular and Node.js components.
 
-  - [Application debugging and profiling](https://www.pluralsight.com/courses/devintersection-azureai-session-31) is a recording from a Microsoft conference session on using and interpreting data provided by the Azure Monitor Application Insights snapshot debugger and profiler.
+  - [Application Debugging and Profiling](https://www.pluralsight.com/courses/devintersection-azureai-session-31) is a recording from a Microsoft conference session on using and interpreting data provided by the Azure Monitor Application Insights snapshot debugger and profiler.
+
+<!-- docutune:ignore "from Scratch" -->
 
 ## Data analysis
 
-- Learn how to write [log queries in Azure Monitor](/learn/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto query language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
+- Learn how to write [log queries in Azure Monitor](/learn/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto Query Language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
 
-- [Kusto query language (kql) from scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch) is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor Logs.
+- [Kusto Query Language (KQL) from Scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch) is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor Logs.
 
 ## Deeper skills exploration
 
@@ -86,7 +88,7 @@ Turn your knowledge of Azure into official recognition with [Azure certification
 
 The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern service management practices, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
 
-As part of migrating to a cloud monitoring platform, the IT team responsible for managing monitoring in the enterprise need to include agile training and participation in DevOps activities. This also includes following the _Dev_ in DevOps by taking requirements and turning into organized agile requirements, in order to deliver minimally viable monitoring solutions that are refined iteratively and in line with business needs. For source control to manage the iterative monitoring solution packages and any other related collateral, connect your Azure DevOps Server project with a GitHub enterprise server repository. This provides a link between GitHub commits and pull requests to work items. You can use GitHub enterprise for development in support of continuous monitoring integration and deployment, while using Azure Boards to plan and track your work.
+As part of migrating to a cloud monitoring platform, the IT team responsible for managing monitoring in the enterprise needs to include agile training and participation in DevOps activities. This also includes following the _Dev_ in DevOps by taking requirements and turning into organized agile requirements, in order to deliver minimally viable monitoring solutions that are refined iteratively and in line with business needs. For source control to manage the iterative monitoring solution packages and any other related collateral, connect your Azure DevOps Server project with a GitHub Enterprise Server repository. This provides a link between GitHub commits and pull requests to work items. You can use GitHub Enterprise for development in support of continuous monitoring integration and deployment, while using Azure Boards to plan and track your work.
 
 To learn more, review the following:
 

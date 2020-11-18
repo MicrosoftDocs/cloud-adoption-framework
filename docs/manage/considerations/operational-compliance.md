@@ -41,7 +41,7 @@ When inconsistencies are discovered, some are addressed by consistency in update
 
 Stability in approach can lead to more stable operations. But some changes are required within cloud management processes. In particular, regular patching and performance changes are essential to reducing interruptions and controlling costs.
 
-<!-- docutune:casing "a cloud management methodology" -->
+<!-- docutune:ignore "a cloud management methodology" -->
 
 One of the many values of a mature cloud management methodology is a focus on stabilizing and controlling necessary change.
 

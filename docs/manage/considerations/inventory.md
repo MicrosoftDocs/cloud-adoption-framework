@@ -71,7 +71,7 @@ Business commitments about cloud management are driven by data. To properly main
 
 The ongoing health and operations of the network, DNS, operating systems, and other foundational aspects of the environment are critical data points that factor into the overall health of any workload.
 
-<!-- docutune:casing "cloud management methodology" "service management integration" -->
+<!-- docutune:ignore "cloud management methodology" "service management integration" -->
 
 ## Processes
 
