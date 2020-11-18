@@ -13,9 +13,13 @@ ms.subservice: govern
 
 Describe how your scenario requires governance changes
 
-## unified operations policies
+## unified operations Governance MVP
 
-Are there specific corporate policies that should be in place prior to adopting this scenario?
+**The P0 is the free stuff, Resource Consistency: tagging, resource groups, search, & resource graph across data centers, hybrid, & multicloud...**
+
+## Enhanced MVP
+
+**P1 is Arc + (Policy & defender)** to add the other disciplines to data centers, hybrid, & multicloud
 
 ## unified operations disciplines
 
