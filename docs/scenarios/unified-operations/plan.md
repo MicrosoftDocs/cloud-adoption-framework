@@ -14,7 +14,7 @@ ms.subservice: strategy
 In most cloud scenarios, we assume that you want to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. This changes in hybrid:
 - **Retain** workloads or assets on-prem. 
 - **Replatform** workloads to multiple cloud platforms. 
-- **Reverse Rehost (Cloud to on-prem)** IaaS/PaaS workloads into on-premise hosting environments.
+- **Custom locations (Rehost portability)** IaaS/PaaS workloads into on-premise hosting environments.
 
 Most planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized.
 
