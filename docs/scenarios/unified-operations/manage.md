@@ -19,7 +19,14 @@ Does this scenario require the customer to rethink business alignment or how the
 
 ## unified operations operations baseline
 
-Does this workload have special requirements for Visibility, Operational Compliance, or BCDR?
+Does this workload have special requirements for **Visibility**, Operational Compliance, or BCDR?
+
+**The P0 is the free stuff, tagging, resource groups, visibility, search, & resource graph across data centers, hybrid, & multicloud...**
+
+## Enhanced baseline
+
+**P1 is Arc + (monitoring, inventory/change tracking, & defender)**
+
 
 ## unified operations platform operations
 
