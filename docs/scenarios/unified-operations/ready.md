@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure Landing Zone review for unified operations
 
-Describe how your scenario impacts the Azure landing zone design
+If I'm going to do hybrid & multicloud adoption, I need some stuff in my landing zone... AKA Arc
 
 ## unified operations evaluation
 
