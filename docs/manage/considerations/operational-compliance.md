@@ -25,7 +25,7 @@ Maintaining compliance with operational commitments requires analysis, automatio
 
 ### Resource consistency
 
-The most effective step that a cloud management team can take toward operational compliance is to establish consistency in resource organization and tagging. When resources are consistently organized and tagged, all other operational tasks become easier. For deeper guidance on resource consistency, see the [Governance methodology](../../govern/index.md). Specifically, review the [initial governance foundation articles](../../govern/initial-foundation.md) to learn how to start developing resource consistency.
+The most effective step that a cloud management team can take toward operational compliance is to establish consistency in resource organization and tagging. When resources are consistently organized and tagged, all other operational tasks become easier. For deeper guidance on resource consistency, see the [Govern methodology](../../govern/index.md). Specifically, review the [initial governance foundation articles](../../govern/initial-foundation.md) to learn how to start developing resource consistency.
 
 ### Environment consistency
 
@@ -40,6 +40,8 @@ When inconsistencies are discovered, some are addressed by consistency in update
 ### Update consistency
 
 Stability in approach can lead to more stable operations. But some changes are required within cloud management processes. In particular, regular patching and performance changes are essential to reducing interruptions and controlling costs.
+
+<!-- docutune:ignore "a cloud management methodology" -->
 
 One of the many values of a mature cloud management methodology is a focus on stabilizing and controlling necessary change.
 

@@ -34,7 +34,7 @@ As an innovator, your company has rich information about its business and its cu
 
 Azure provides advanced machine learning capabilities. Build, train, and deploy your machine learning models across the cloud and edge by using Azure Machine Learning. Develop models faster by using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml) and [getting started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
+For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml) and [getting started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open-source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
 
 <!-- markdownlint-disable MD024 -->
 

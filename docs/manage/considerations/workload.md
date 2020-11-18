@@ -93,7 +93,7 @@ To help improve overall operations, the [Microsoft Azure Well-Architected Framew
 
 ## Next steps
 
-With a full understanding of the manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
+With a full understanding of the Manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
 
 > [!div class="nextstepaction"]
 > [Apply this methodology](../index.md)
