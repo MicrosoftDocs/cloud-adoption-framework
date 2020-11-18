@@ -71,16 +71,16 @@ Now that your identity management system and user accounts have been created, yo
 
 There's another requirement stating the resources associated with each workload be isolated from one another such that no one workload owner has management access to any other workload they do not own. There's also a requirement to implement this model using only built-in roles for Azure role-based access control.
 
-Each RBAC role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
+Each RBAC role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in Owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
 
-Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in owner role at the subscription scope, each workload owner would have management access to all workloads.
+Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in Owner role at the subscription scope, each workload owner would have management access to all workloads.
 
-Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the Service Administrator to create resource groups. In the second example, the model assigns the built-in owner role to each workload owner at the subscription scope.
+Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the Service Administrator to create resource groups. In the second example, the model assigns the built-in Owner role to each workload owner at the subscription scope.
 
-In both examples, there is a subscription Service Administrator that is assigned the built-in owner role at the subscription scope. Recall that the built-in owner role grants all permissions including the management of access to resources.
+In both examples, there is a subscription Service Administrator that is assigned the built-in Owner role at the subscription scope. Recall that the built-in Owner role grants all permissions including the management of access to resources.
 
 ![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
-_Figure 3: A subscription with a Service Administrator assigned the built-in owner role._
+_Figure 3: A subscription with a Service Administrator assigned the built-in Owner role._
 
 <!-- docutune:casing "group A" "groups A and B" "owner A" -->
 
@@ -111,23 +111,23 @@ Consider that every task in this example was performed by the **service administ
 
 Let's take a look at second example that reduces the number of tasks performed by the **service administrator**.
 
-1. In this model, **workload owner A** is assigned the built-in owner role at the subscription scope, enabling them to create their own resource group: **resource group A**.
+1. In this model, **workload owner A** is assigned the built-in Owner role at the subscription scope, enabling them to create their own resource group: **resource group A**.
   ![Service administrator adds workload owner A to subscription](../../_images/govern/design/governance-2-11.png)
-1. When **resource group A** is created, **workload owner A** is added by default and inherits the built-in owner role from the subscription scope.
+1. When **resource group A** is created, **workload owner A** is added by default and inherits the built-in Owner role from the subscription scope.
   ![Workload owner A creates resource group A](../../_images/govern/design/governance-2-12.png)
-1. The built-in owner role grants **workload owner A** permission to manage access to the resource group. **Workload owner A** adds two **workload contributors** and assigns the built-in Reader role to each of them.
+1. The built-in Owner role grants **workload owner A** permission to manage access to the resource group. **Workload owner A** adds two **workload contributors** and assigns the built-in Reader role to each of them.
   ![Workload owner A adds workload contributors](../../_images/govern/design/governance-2-13.png)
-1. The **Service Administrator** now adds **workload owner B** to the subscription with the built-in owner role.
+1. The **Service Administrator** now adds **workload owner B** to the subscription with the built-in Owner role.
   ![Service Administrator adds workload owner B to subscription](../../_images/govern/design/governance-2-14.png)
-1. **Workload owner B** creates **resource group B** and is added by default. Again, **workload owner B** inherits the built-in owner role from the subscription scope.
+1. **Workload owner B** creates **resource group B** and is added by default. Again, **workload owner B** inherits the built-in Owner role from the subscription scope.
   ![Workload owner B creates resource group B](../../_images/govern/design/governance-2-15.png)
 
 Note that in this model, the **service administrator** performed fewer actions than they did in the first example due to the delegation of management access to each of the individual workload owners.
 
 ![A diagram showing a Service Administrator and two workload owners for resource groups A and B.](../../_images/govern/design/governance-2-16.png)
-_Figure 5: A subscription with a Service Administrator and two workload owners, all assigned the built-in owner role._
+_Figure 5: A subscription with a Service Administrator and two workload owners, all assigned the built-in Owner role._
 
-Because both **workload owner A** and **workload owner B** are assigned the built-in owner role at the subscription scope, they have each inherited the built-in owner role for each other's resource group. This means that not only do they have full access to each other's resources, they can also delegate management access to each other's resource groups. For example, **workload owner B** has rights to add any other user to **resource group A** and can assign any role to them, including the built-in owner role.
+Because both **workload owner A** and **workload owner B** are assigned the built-in Owner role at the subscription scope, they have each inherited the built-in Owner role for each other's resource group. This means that not only do they have full access to each other's resources, they can also delegate management access to each other's resource groups. For example, **workload owner B** has rights to add any other user to **resource group A** and can assign any role to them, including the built-in Owner role.
 
 If you compare each example to the requirements, you'll see that both examples support a single trusted user at the subscription scope with permission to grant resource access rights to the two workload owners. Each of the two workload owners did not have access to resource management by default and required the **service administrator** to explicitly assign permissions to them. Only the first example supports the requirement that the resources associated with each workload are isolated from one another such that no workload owner has access to the resources of any other workload.
 

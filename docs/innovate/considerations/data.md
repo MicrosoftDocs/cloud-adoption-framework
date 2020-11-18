@@ -66,7 +66,7 @@ When you need data to be centralized to address a customer need, it's very likel
 
 **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 
-Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like Azure Database Migration Service and Azure Data Factory are two examples. The reference architecture for [data factory with an OLAP data store](/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
+Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like Azure Database Migration Service and Azure Data Factory are two examples. The reference architecture for [Data Factory with an OLAP data store](/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
 
 **Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
 

@@ -104,8 +104,8 @@ AI solutions and best practices are now integrated into the Microsoft Cloud Adop
 | [Responsible AI](../strategy/responsible-ai.md) | Learn about the AI principles you should consider when implementing AI solutions and learn how to establish a responsible AI strategy. |
 | [Azure innovation guide: Innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
 | [AI in the Cloud Adoption Framework](../innovate/ai/index.md) | Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale. |
-| [MLOps with Azure Machine Learning](../manage/mlops-machine-learning.md) | Learn about Machine Learning operations (MLOps) best practices. |
-| [Innovate with AI](../innovate/best-practices/predict.md) | Learn about AI solutions (Machine Learning, AI applications and agents, knowledge mining) and best practices that can accelerate digital invention. |
+| [MLOps with Azure Machine Learning](../manage/mlops-machine-learning.md) | Learn about machine learning operations (MLOps) best practices. |
+| [Innovate with AI](../innovate/best-practices/predict.md) | Learn about AI solutions (machine learning, AI applications and agents, knowledge mining) and best practices that can accelerate digital invention. |
 
 ## June 15, 2020
 
