@@ -1,12 +1,13 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for <Insert narrative Name>"
+title: "Enterprise-Scale security, governance, and compliance for SAP"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of SAP
-author: BrianBlanchard
+author: deepakonics
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
 # Security, governance, and compliance for Enterprise-Scale scenario
@@ -47,7 +48,7 @@ The following are recommendations for Enterprise Scale Landing Zone (ESLZ) SAP o
 - [https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [https://docs.microsoft.com/azure/virtual-machines/workloads/sap/planning-guide](/azure/virtual-machines/workloads/sap/planning-guide)
 
-As you consider and evaluate public cloud services, it’s critical to understand the shared responsibility model and which security tasks are handled by the cloud provider and which tasks are handled by you. The workload responsibilities vary depending on whether the workload is hosted on Software as a Service (SaaS), Platform as a Service (PaaS), Infrastructure as a Service (IaaS), or in an on-premises datacenter. Please find more details about shared responsibility model at https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
+As you consider and evaluate public cloud services, it’s critical to understand the shared responsibility model and which security tasks are handled by the cloud provider and which tasks are handled by you. The workload responsibilities vary depending on whether the workload is hosted on Software as a Service (SaaS), Platform as a Service (PaaS), Infrastructure as a Service (IaaS), or in an on-premises datacenter. Please find more details about shared responsibility model at https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility
 
 ### Design Recommendations
 
@@ -70,7 +71,7 @@ As you consider and evaluate public cloud services, it’s critical to understan
   2. Restrict access to the operating system.
   3. Restrict physical access to the server.
   4. Protect access to the server at the network level.
-- Security for data in rest: - Data at rest includes information that resides in persistent storage on physical media, in any digital format. The media can include files on magnetic or optical media, archived data, and data backups. Microsoft Azure offers a variety of data storage solutions to meet different needs, including file, disk, blob, and table storage and there are few encryptions which is available by default and on top of it customer have more options to configure the same. Server Side Encryption is recommended for SAP on Azure VM estate. Please find more details at [Microsoft Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest) and  https://docs.microsoft.com/en-us/azure/security/fundamentals/encryption-overview
+- Security for data in rest: - Data at rest includes information that resides in persistent storage on physical media, in any digital format. The media can include files on magnetic or optical media, archived data, and data backups. Microsoft Azure offers a variety of data storage solutions to meet different needs, including file, disk, blob, and table storage and there are few encryptions which is available by default and on top of it customer have more options to configure the same. Server Side Encryption is recommended for SAP on Azure VM estate. Please find more details at [Microsoft Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest) and  https://docs.microsoft.com/azure/security/fundamentals/encryption-overview
 - For data in transit/in-flight Azure offers many mechanisms for keeping data private as it moves from one location to another. All data in transit, either exchanged with remote components or internal, can be protected by methods such as encryption.From Security for Data in Transit/In-flight perspective Microsoft provides a number of options that can be utilized by customers for securing data in transit internally within the Azure network and externally across the Internet to the end user. These include communication through Virtual Private Networks (utilizing IPsec/IKE encryption), Transport Layer Security (TLS) 1.2 or later (via Azure components such as Application Gateway or Azure Front Door), protocols directly on the Azure virtual machines (such as Windows IPsec or SMB), and more.
 - Additionally, "encryption by default" using MACsec (an IEEE standard at the data-link layer) is enabled for all Azure traffic travelling between Azure datacentres to ensure confidentiality and integrity of customer data. Please find more details at [Protection of customer data in Azure](/azure/security/fundamentals/protection-customer-data) 
 - Isolation/Restriction of Network services and Protocols: - The recommended network architecture of Hub and Spoke can further be secured by using various Azure security mechanisms for tighter control.The SAP application and database servers are all isolated from either internet or even to the on-premises network and Instead all traffic to-and-from on-premises must traverse through to the hub which VNet peered to a spoke. This guarantees network isolation for the SAP solution on Azure from the public internet. We can monitor and filter traffic using Azure Monitor, NSG and ASG. This guarantees network isolation for the SAP solution on Azure from the public internet. For more advanced network security measures, a [network DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) – “[Implement a DMZ between Azure and your on-premises datacentre](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid)”, you can also use any of the marketplace available NVA or [Azure Firewall](/azure/firewall/overview).
