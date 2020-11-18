@@ -36,7 +36,7 @@ The following Azure server management services require a linked Log Analytics wo
 
 - [Update Management](/azure/automation/update-management/overview)
 - [Change Tracking and Inventory](/azure/automation/change-tracking)
-- [Hybrid runbook worker](/azure/automation/automation-hybrid-runbook-worker)
+- [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker)
 - [Desired State Configuration](/azure/virtual-machines/extensions/dsc-overview)
 
 The second phase of this guidance focuses on deploying services and automation scripts. It shows you how to create a Log Analytics workspace and an Automation account. This guidance also shows you how to use Azure Policy to ensure that new virtual machines are connected to the correct workspace.

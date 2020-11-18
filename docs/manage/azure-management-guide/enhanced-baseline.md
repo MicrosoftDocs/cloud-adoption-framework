@@ -38,7 +38,7 @@ However, you might need a greater commitment to the business beyond the standard
 
 Both workload operations and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads that require such investments, an enhanced management baseline can provide enough of an improvement to the business commitment.
 
-<!-- docutune:casing "IT Service Management" "IT Service Management Connector" ITSMC "Hybrid Runbook Worker" "Free and Standard" -->
+<!-- docutune:casing "IT Service Management" "IT Service Management Connector" ITSMC "Free and Standard" -->
 
 This table outlines a few processes, tools, and potential effects common in customers' enhanced management baselines:
 

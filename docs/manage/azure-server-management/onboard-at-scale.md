@@ -89,7 +89,7 @@ To cover your existing servers as well as future servers, you need to remove the
 
 To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about how to onboard these solutions from your Automation account, see [Onboard the Update Management solution and the Change Tracking and Inventory solution](/azure/automation/change-tracking/manage-change-tracking).
 
-The change tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers change tracking, inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
+The Change Tracking and Inventory solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers change tracking, inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
 
 #### Opt in via the Azure portal
 
@@ -113,7 +113,7 @@ To create or modify the saved search, follow these steps:
 
 1. In the **Filter** box, enter **Change Tracking** to filter the list of saved searches. In the results, select **MicrosoftDefaultComputerGroup**.
 
-1. Enter the computer name or the VMUUID to include the computers that you want to opt in for change tracking.
+1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking and Inventory.
 
   ```kusto
   Heartbeat

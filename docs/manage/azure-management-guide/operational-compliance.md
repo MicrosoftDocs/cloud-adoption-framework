@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- docutune:casing "Update Management" "Guest Configuration" "Blueprints: Getting started" "Blueprints: Blueprint definition" MMA -->
+<!-- docutune:casing "Update Management" "Guest Configuration" "Blueprints: Getting started" "Blueprints: Blueprint definitions" MMA -->
 <!-- cSpell:ignore WSUS -->
 
 # Operational compliance in Azure
@@ -46,7 +46,7 @@ Computers that are managed by the Update Management solution for Azure Automatio
 
 - Microsoft Monitoring Agent (MMA) for Windows or Linux.
 - PowerShell Desired State Configuration (DSC) for Linux.
-- Azure Automation hybrid runbook worker.
+- Azure Automation Hybrid Runbook Worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
 For more information, see [Update Management solution for Azure Automation](/azure/automation/update-management/overview).
@@ -197,7 +197,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. In the Azure portal, go to [Blueprints: blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. In the Azure portal, go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".
