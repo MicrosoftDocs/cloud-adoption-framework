@@ -12,6 +12,20 @@ ms.subservice: ready
 # Azure Landing Zone review for unified operations
 
 If I'm going to do hybrid & multicloud adoption, I need some stuff in my landing zone... AKA Arc
+This is where we capture day 0, onboarding chart & best practice steps...
+
+What do I add or change to any of the Azure Landing Zones...
+- Identity 
+- Network
+- Resource Organization
+- Governance (Arc)
+- Operations (Arc)
+- BCDR
+
+How does this change as your cloud mix changes (100% Cloud, 50% Cloud, 0% Cloud)
+How does this change with multi-cloud mix changes (100% Azure, 50% Azure, 0% Azure)
+
+**Out of Scope: ESLZ for Hybrid & Multicloud (Q3-Q4 target) - Ask for Jeff Mitchell**
 
 ## unified operations evaluation
 
