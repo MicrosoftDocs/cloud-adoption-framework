@@ -1,72 +1,82 @@
 ---
-title: Moodle migration tasks, architecture, and template
-description: Learn about the task and architecture, and template involved in a Moodle migration.
+title: Moodle migration Azure Resource Manager (ARM) template
+description: Learn about the Azure Resource Manager (ARM) templates for Moodle Azure infrastructure deployment, and how to run or edit them.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/06/2020
+ms.date: 11/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# Moodle migration tasks, architecture, and template
+# Moodle migration architecture and template
 
-## Moodle migration task outline
+Moodle migration include the following tasks:
 
-Moodle migrations include the following tasks:
+1. Deploy Azure infrastructure with Azure Resource Manager (ARM) templates.
+1. [Download and install AzCopy](migration-start.md#download-and-install-azcopy).
+1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-backup) instance in the Azure Resource Manager deployment.
+1. [Migrate the Moodle application and configuration](migration-start.md#how-to-migrate-and-configure-a-moodle-application).
+1. [Set up the Moodle controller instance and worker nodes](azure-infra-config.md).
+1. [Configure PHP and the web server](azure-infra-config.md).
 
-- Deploy Azure infrastructure with Azure Resource Manager templates.
-- Download and install AzCopy.
-- Copy over the backup archive to the Controller Virtual Machine instance from the Azure Resource Manager deployment.
-- Migration of Moodle application and configuration.
-- Set up Moodle controller instance and worker nodes.
-- Configuring PHP and the web server.
+This article describes Moodle Azure infrastructure options, and how to deploy the Azure resources you want by using your choice of ARM templates.
 
-## Deploy Azure infrastructure with Azure Resource Manager templates
+## Azure infrastructure
 
-- When using an Azure Resource Manager template to deploy infrastructure on Azure, a couple of options are available to you. The following diagram provides an overview of infrastructure resources.
+The following diagram shows an overview of Azure Moodle infrastructure resources:
 
-![Azure infrastructure resources.](images/architecture.png)
+![Diagram showing Azure infrastructure resources.](images/architecture.png)
 
-A fully configurable deployment gives more flexibility and choices for deployments. A predefined deployment size uses one of four predefined Moodle sizes. The four predefined templates options are minimal, short-to-mid, large, and maximal, and they're available at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
+## ARM template options
 
-- [Minimal](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json): This deployment will use NFS, MySQL, and smaller auto scale web front-end virtual machine sku (one vCore) that will give faster deployment time (less than 30 minutes) and currently requires only two virtual machines will fit into an Azure free trial subscription.
+To deploy Moodle resources on Azure, you can use a fully configurable ARM template, or one of several predefined ARM templates. A [fully configurable deployment](https://github.com/Azure/Moodle/blob/master/azuredeploy.json) gives you the most flexibility and deployment choices. You can find the predefined and fully configurable ARM templates at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
 
-- [Small-to-mid](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json): Supports up to 1,000 concurrent users. This deployment will use NFS (no high availability) and MySQL (eight vCores) without other options like elastic search or Redis cache.
+A predefined deployment template uses one of four predefined Moodle sizes: minimal, short-to-mid, large, or maximal.
 
-- [Large (high-availability)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-large-ha.json): Supports more than 2,000 concurrent users. This deployment will use Azure Files, MySQL (16 vCores), and Redis cache without other options like elastic search.
+- *Minimal deployment* requires only two virtual machines (VMs), so it fits into an Azure free trial subscription. This deployment uses network file system (NFS), MySQL, and a smaller autoscale web front-end VM SKU with one vCore. This template has a fast deployment time of under 30 minutes. [![Button that launches the minimal Moodle deployment ARM template.](deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json)
 
-- [Maximum](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json): This maximal deployment will use Azure Files, MySQL with the highest SKU, Redis cache, elastic search (three virtual machines), and large storage sizes (both data disks and databases).
+- *Small-to-mid deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Redis cache. [![Button that launches the small-to-mid Moodle deployment ARM template.](deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
 
-Select **Launch** to deploy any of the predefined templates. This will direct you to the Azure portal, where you'll need to complete mandatory fields such as **Subscription**, **Resource Group**, [**SSH key**](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), and **Region**.
+- *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL  with 16 vCores, and Redis cache, without other options like Elasticsearch.[![Button that launches the large, high-availability Moodle deployment ARM template.](deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-large-ha.json)
 
-![Custom deployment: Deploy from a custom template.](images/custom-deployment.png)
+- *Maximal* deployment uses Azure Files, MySQL with the highest SKU, Redis cache, Elasticsearch on three VMs, and large storage sizes for both data disks and databases. [![Button that launches the maximal Moodle deployment ARM template.](deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json)
 
-The preceding predefined templates will deploy the default versions.
+## Deploy the template
 
-```bash
-Ubuntu: 18.04-LTS
-PHP: 7.4
-Moodle: 3.8
-```
+To deploy one of the ARM templates:
 
-If the PHP and Moodle versions are lagging with on-premises, then update the versions with following steps:
+1. In the preceding section, select the **Deploy to Azure** button for the deployment you want.
+   
+1. On the **Custom deployment** page in the Azure portal, complete the mandatory fields **Subscription**, **Resource group**, **Region**, and **SSH key**. For information on how to set the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+   
+   :::image type="content" source="images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
 
-- Select **Edit Template** on the **Custom deployment** page.
+### Edit the template
 
-![Edit template: Edit your Azure Resource Manager template.](images/edit-template.png)
+The predefined ARM templates deploy the following default software versions:
 
-- In the **Resources** section, add the Moodle and PHT versions to the **Parameters** block.
+- Ubuntu: 18.04 LTS
+- PHP: 7.4
+- Moodle: 3.8
+
+If your on-premises PHP and Moodle versions differ from the preceding values, update the versions in the template to match by following these steps:
+
+1. On the **Custom deployment** page, select **Edit template** .
+   
+1. In the **resources** section of the template, under **parameters**, add parameters for your Moodle and PHP versions.
 
     ```json
     "phpVersion":       { "value": "7.2" },
     "moodleVersion":    { "value": "MOODLE_38_STABLE"}
     ```
-
-- For Moodle 3.9, the value should be `MOODLE_39_STABLE`.
-
-- Select **Save** to save your changes.
+   
+   For example, for Moodle 3.9, the value should be `MOODLE_39_STABLE`.
+   
+   :::image type="content" source="images/edit-template.png" alt-text="Screenshot showing the Edit template page for a Moodle deployment ARM template.":::
+   
+1. Select **Save**.
 
 ## Next steps
 
-Continue to [Moodle migration resources](./migration-resources.md) for more information about the Moodle migration process.
+Continue to [Moodle migration resources](migration-resources.md) for information about the resources that the ARM template deployment adds to Azure.
