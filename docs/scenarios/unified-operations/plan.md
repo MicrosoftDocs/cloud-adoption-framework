@@ -11,8 +11,12 @@ ms.subservice: strategy
 
 # Plan for unified operations
 
-In most cloud scenarios, we assume that you want to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native). 
-**Retaining** workloads or assets on-prem, has been seen as an anti-pattern. **Replatforming** to multiple cloud providers has also been an antipattern. Most planning efforts focus on getting things migrated while minimizing those anti-patterns.
+In most cloud scenarios, we assume that you want to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. This changes in hybrid:
+- **Retain** workloads or assets on-prem. 
+- **Replatform** workloads to multiple cloud platforms. 
+- **Reverse Rehost (Cloud to on-prem)** IaaS/PaaS workloads into on-premise hosting environments.
+
+Most planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized.
 
 The biggest change in planning for unified operations is that you no longer need to minimize dependencies on retained (hybrid/on-prem) workloads or replatform (multi-cloud) workloads. The biggest change in planning, is to evaluate these decisions alongside the primary 3 Rs of migration above. In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management.
 
