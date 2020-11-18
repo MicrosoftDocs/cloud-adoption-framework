@@ -25,13 +25,13 @@ Before you migrate a Moodle application from your on-premises environment to Azu
 
 Follow these steps to set up the Azure CLI in your on-premises environment:
 
-1. On a host that you can use for Azure tasks, use this command to install the Azure CLI:
+1. On a host that you can use for Azure tasks, enter this command to install the Azure CLI:
 
    ```bash
    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
    ```
 
-1. In the Azure CLI, use this command to sign in to your Azure account:
+1. In the Azure CLI, enter this command to sign in to your Azure account:
 
    ```bash
    az login -u <username> -p <password>
@@ -73,7 +73,7 @@ Once the subscription is set up, create a resource group in Azure. You can eithe
 
   :::image type="content" source="./images/resource-group.png" alt-text="Screenshot of the Create a resource group page in the Azure portal, with subscription, resource group, and region boxes and a Review + create button.":::
 
-- To use the Azure CLI to create a resource group, use this command:
+- To use the Azure CLI to create a resource group, enter this command:
 
   ```azurecli
   az group create -l <region> -n <resource group name> -s '<subscription name>'
@@ -110,7 +110,7 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
 
   :::image type="content" source="./images/create-storage-account.png" alt-text="Screenshot of the Create storage account page in the Azure portal, with multiple input boxes and a Review + create button.":::
 
-- To use the Azure CLI to create the storage account, use this command:
+- To use the Azure CLI to create the storage account, enter this command:
 
   ```azurecli
   az storage account create -n <storage account name> -g <resource group name> --sku <storage account SKU> --kind <storage account type> -l <region>
@@ -126,13 +126,13 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
 
 Before backing up your on-premises Moodle data, turn on **Maintenance mode** on your Moodle website by following these steps:
 
-1. On an on-premises virtual machine, run this command:
+1. On an on-premises virtual machine, enter this command:
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php --enable
    ```
 
-2. Run the following command to check the status of your Moodle website:
+2. Enter the following command to check the status of your Moodle website:
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php
@@ -144,7 +144,7 @@ When backing up on-premises Moodle and moodledata files, configurations, and dat
 
 ### Create a storage directory
 
-Before copying your data, create an empty storage directory in any desired location. For example, if the location is `/home/azureadmin`, use these commands:
+Before copying your data, create an empty storage directory in any desired location. For example, if the location is `/home/azureadmin`, enter these commands:
 
   ```bash
   sudo -s
@@ -156,7 +156,7 @@ Before copying your data, create an empty storage directory in any desired locat
 
 In your on-premises environment, the `moodle` directory contains website HTML content. The `moodledata` directory contains Moodle website data.
 
-Use these commands to copy files from the `moodle` and `moodledata` directories into the storage directory:
+Enter these commands to copy files from the `moodle` and `moodledata` directories into the storage directory:
 
   ```bash
   cp -R /var/www/html/moodle /home/azureadmin/storage/
@@ -167,7 +167,7 @@ Use these commands to copy files from the `moodle` and `moodledata` directories 
 
 To back up configuration files, follow these steps:
 
-1. Use these commands to create new directories under your storage directory:
+1. Enter these commands to create new directories under your storage directory:
 
    ```bash
    cd /home/azureadmin/storage mkdir configuration
@@ -177,7 +177,7 @@ To back up configuration files, follow these steps:
 
    The `phpconfig` directory will store PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginxconfig` directory will store ngnix configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
 
-2. Use these commands to copy the PHP and nginx configuration files:
+2. Enter these commands to copy the PHP and nginx configuration files:
 
    ```bash
    cp -R /etc/nginx /home/azureadmin/storage/configuration/nginxconfig
@@ -188,20 +188,20 @@ To back up configuration files, follow these steps:
 
 Follow these steps to back up your database:
 
-1. Use these commands to check whether mysql-client is installed:
+1. Enter these commands to check whether mysql-client is installed:
 
    ```bash
    sudo -s
    mysql -V
    ```
 
-2. If mysql-client is installed, skip this step. Otherwise, use this command to install mysql-client:
+2. If mysql-client is installed, skip this step. Otherwise, enter this command to install mysql-client:
 
    ```bash
    sudo apt-get install mysql-client
    ```
 
-3. Use this command to back up the database:
+3. Enter this command to back up the database:
 
    ```bash
    mysqldump -h <database server name> -u <database user ID> -p<database password> <database name> > /home/azureadmin/storage/database.sql
@@ -211,7 +211,7 @@ Follow these steps to back up your database:
 
 ### Create an archive
 
-Use this command to create an archive file, `storage.tar.gz`, of your backup directory:
+Enter this command to create an archive file, `storage.tar.gz`, of your backup directory:
 
 ```bash
 cd /home/azureadmin/ tar -zcvf storage.tar.gz storage
@@ -219,7 +219,7 @@ cd /home/azureadmin/ tar -zcvf storage.tar.gz storage
 
 ## Download and install AzCopy
 
-Use the following commands to install AzCopy:
+Enter the following commands to install AzCopy:
 
 ```bash
 sudo -s
@@ -269,7 +269,7 @@ To generate a shared access signature (SAS) token for AzCopy, follow these steps
 
 Create a container in the storage account. You can either use the Azure CLI or the Azure portal for this step.
 
-- To use the Azure CLI, use this command:
+- To use the Azure CLI, enter this command:
 
   ```bash
   az storage container create --account-name <storage account name> --name <container name> --auth-mode login
@@ -293,7 +293,7 @@ Create a container in the storage account. You can either use the Azure CLI or t
 
 ### Copy the archive file to Azure Blob Storage
 
-Use this command to copy your archive file to the container that you created in Blob Storage:
+Enter this command to copy your archive file to the container that you created in Blob Storage:
 
 ```bash
 sudo azcopy copy /home/azureadmin/storage.tar.gz 'https://<storage account name>.blob.core.windows.net/<container name>/<SAS token>'
