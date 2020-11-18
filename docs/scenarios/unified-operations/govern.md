@@ -19,7 +19,8 @@ Describe how your scenario requires governance changes
 
 ## Enhanced MVP
 
-**P1 is Arc + (Policy & defender)** to add the other disciplines to data centers, hybrid, & multicloud
+**P1 is Arc + (Policy & defender)** to add the other disciplines to data centers, hybrid, & multicloud.
+Expand your baseline to attach resource consistency, policy, & defender to IaaS and PaaS assets.
 
 ## unified operations disciplines
 
