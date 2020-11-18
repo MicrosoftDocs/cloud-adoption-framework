@@ -13,7 +13,7 @@ ms.subservice: overview
 
 This series of articles in the Cloud Adoption Framework outline the scenario of Hybrid and Multicloud to guide your holistic cloud adoption journey.
 
-## Executive Scenario
+## Executive Summary
 
 Michael to fill in information outlining why this scenario is important. "orientation towards market reality" "This is a good business decision"
 
