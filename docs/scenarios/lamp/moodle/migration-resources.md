@@ -1,6 +1,6 @@
 ---
 title: Moodle migration resources
-description: Learn about resources for a Moodle migration.
+description: Learn about the resources that a Moodle migration creates within Azure, such as an Azure Virtual Network, a network security group, and a network interface.
 author: BrianBlanchard
 ms.author: brblanch 
 ms.date: 11/06/2020
@@ -11,11 +11,13 @@ ms.subservice: plan
 
 # Moodle migration resources
 
-When you migrate Moodle with an Azure Resource Manager (ARM) template, a network template is created within Azure. The network template creates a virtual network with an address that includes the virtual network name, API version, location, and DNS server name. The `AddressSpace` contains a range of IP addresses that subnets can use.
+When you use an Azure Resource Manager (ARM) template to migrate Moodle, the template creates many resources within Azure.
 
-The network template also creates the following resources:
+## Network template
 
-- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual Network is a logical isolation of the Azure cloud that's specifically dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud.
+The network template creates the following resources:
+
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual Network is a logical isolation of the Azure cloud that's specifically dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. The virtual network that the network template creates includes the virtual network name, API version, location, and DNS server name. The `AddressSpace` contains a range of IP addresses that subnets can use.
 
 - [Network security group (NSG)](/azure/virtual-network/network-security-groups-overview): A networking filter, or firewall, that contains a list of security rules. These rules allow or deny network traffic to resources connected to a virtual network.
 
@@ -25,38 +27,44 @@ The network template also creates the following resources:
 
 - [Public IP address](/azure/virtual-network/public-ip-addresses#:~:text=Public%20IP%20addresses%20enable%20Azure,IP%20assigned%20can%20communicate%20outbound): An IP address that an Azure resource uses to communicate with the Internet. The address is dedicated to the Azure resource.
 
-- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=An%20Azure%20load%20balancer%20is,traffic%20to%20an%20operational%20VM): An efficient distribution of network or application traffic across multiple servers in a server farm. Load Balancer ensures high availability and reliability by sending requests only to servers that are online.
+- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=An%20Azure%20load%20balancer%20is,traffic%20to%20an%20operational%20VM): A load balancer that efficiently distributes network or application traffic across multiple servers in a server farm. Load Balancer ensures high availability and reliability by sending requests only to servers that are online.
 
 - [Azure Application Gateway](/azure/application-gateway/overview): An alternative to Load Balancer. All four predefined ARM templates deploy Load Balancer. If you use a fully configurable deployment instead of an ARM template, you can choose Application Gateway instead of Load Balancer. Application Gateway is a web traffic Load Balancer that you can use to manage traffic to your web applications. Application Gateway can make routing decisions based on additional attributes of an HTTP request, such as a URI path or host header.
 
 - [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview): An in-memory data store based on the open-source software Redis. Redis improves the performance and scalability of an application that heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory, and this data can be written to and read from quickly.
 
-- **Storage template:** A storage account template will create a storage account with FileStorage Kind and Premium locally redundant storage (LRS) replication that's 1 terabyte (TB). Per the predefined template, a storage account with Azure Files creates file shares.
+## Storage template
 
-An Azure storage account contains blobs, files, queues, tables, and disks, all of which are Azure Storage data objects. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. The types of Azure storage accounts are general-purpose V1, general-purpose V2, BlockBlobStorage, FileStorage, and Blob storage. Replication types are LRS and zone-redundant or geo-redundant storage. The performance types are standard and premium, and an individual storage account can store up to 500 TB of data like any other Azure service.
+A strage account template creates an Azure storage account of type FileStorage. The account has premium performance, locally redundant storage (LRS) replication, and 1 terabyte (TB) of storage. The predefined template is configured so that a storage account with Azure Files creates file shares.
 
-The following storage account types feature Azure Resource Manager template support:
+An [Azure storage account](/azure/storage/common/storage-account-overview) contains Azure Storage data objects, such as blobs, files, queues, tables, and disks. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. The following types of Azure storage accounts are available: general-purpose v1, general-purpose v2, BlockBlobStorage, FileStorage, and Blob storage. The replication type can be geo-redundant or LRS and zone-redundant storage. The performance types are standard and premium, and an individual storage account can store up to 500 TB of data, like any other Azure service.
 
-- NFS: A network file system (NFS) allows remote hosts to mount file systems over a network and interact with those file systems as though they're mounted locally. This enables system administrators to consolidate resources onto centralized servers on the network. Explore [NFS](/windows-server/storage/nfs/nfs-overview) for more information.
+ARM templates support the following storage account types:
 
-- GluserFS: An open-source distributed file system that can scale out in building-block fashion to store multiple petabytes of data. Explore [Gluster FS](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs) for more information.
+- [Network file system (NFS)](/windows-server/storage/nfs/nfs-overview): An account type that a remote host can use to mount file systems over a network. The remote host can interact with those file systems as though they're mounted locally. With this design, system administrators can consolidate resources onto centralized servers in the network.
 
-- Azure Files: The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. Explore [Azure files](/azure/storage/files/storage-files-introduction) for more information. For NFS and glusterFS, the replication is standard LRS, and the storage type is general purpose v1. For Azure Files, the replication is premium locally-redundant storage, LRS, and the type is FileStorage.
+- [GlusterFS](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs): An open-source distributed file system that can scale out in building-block fashion to store multiple petabytes of data.
 
-These storage mechanisms will differ according to the deployment selected. NFS and glusterFS will create a container, and Azure Files will create a file share. For Minimal and short2mid, the template will support NFS, and for large and maximal, the template will support Azure Files. To access the containers and file share, navigate to portal, and select the storage account in the resource group.
+- [Azure Files](/azure/storage/files/storage-files-introduction): The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. For NFS and GlusterFS, the replication is standard LRS, and the storage type is general-purpose v1. For Azure Files, the replication is premium LRS, and the type is FileStorage.
 
-![A storage account.](images/storage-account.png)
+These storage mechanisms differ according to the selected deployment. NFS and GlusterFS create a container, and Azure Files creates a file share. For minimal and short-to-mid Moodle sizes, the template supports NFS. For large and maximal sizes, the template supports Azure Files. To access the containers and file shares, go to the Azure portal, and select the storage account in the resource group.
 
-Explore [storage account](/azure/storage/common/storage-account-overview) to learn more about storage accounts.
+:::image type="content" source="./images/storage-account.png" alt-text="Screenshot of the Azure portal. A page for a storage account is visible, and buttons are available for accessing containers and file shares.":::
 
-- **Database template:** A database template will create an [Azure Database for MySQL server](/azure/mysql/). Azure Database for MySQL server is easy to set up, manage, and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups, and security. Build with the latest community edition of MySQL, including versions 5.6, 5.7, and 8.0. To access the database server created, navigate to the **Resource group** provided during deployment, and go to **Azure Database for MySQL server.** The database server will have a server name, server admin login name, MySQL version, and a performance configuration.
+## Database template
 
-- **Virtual machine template:** This template will distinguish a virtual Machine as a controller virtual machine. The operating system for a controller virtual machine is Ubuntu 18.04.
+A database template creates an [Azure Database for MySQL](/azure/mysql/) server. Azure Database for MySQL is easy to set up, manage, and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups, and security. Azure Database for MySQL is built with the latest community edition of MySQL, including versions 5.6, 5.7, and 8.0. To access the database server that the template creates, go to the Azure portal and open the resource group that the deployment process provides. Then go to **Azure Database for MySQL server**. The template gives the database server a server name, a server admin login name, a MySQL version, and a performance configuration.
 
-- **Virtual machine extension:** Virtual machine extensions can be small applications that provide post-deployment configuration and automation tasks on [Azure Virtual Machines](/azure/virtual-machines/extensions/overview). A virtual machine extension will executes a shell script file that installs Moodle on the controller virtual machine and captures log files. Log files `stderr` and `stdout` are created at the `/var/lib/waagent/custom-script/download/0/`, and the user can view them as a root user.
+## Virtual machine template
 
-- **Scale set template:** This template creates a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview). A virtual machine scale set allows you to deploy and manage a set of autoscaling virtual machines. You can scale the number of virtual machines in the scale set manually or define rules to autoscale based on resource usage like CPU, memory demand, or network traffic. Autoscaling virtual machine instances depends on [CPU utilization](/visualstudio/profiling/average-cpu-utilization). While scaling up an instance, a virtual machine is deployed, and a shell script executes to install Moodle prerequisites and set up cron jobs. Virtual machine instances have a private IP. Follow the steps in [how to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to connect to virtual machines on a scale set with a private IP.
+This template designates a virtual machine as a controller virtual machine. The operating system for the controller virtual machine is Ubuntu 18.04.
+
+Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks on [Azure Virtual Machines](/azure/virtual-machines/extensions/overview). A virtual machine extension runs a shell script that installs Moodle on the controller virtual machine and captures log files. It creates the `stderr` and `stdout` log files in the `/var/lib/waagent/custom-script/download/0/` folder. You can view these files as a root user.
+
+## Scale set template
+
+A scale set template creates a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview). By using a virtual machine scale set, you can deploy and manage a set of autoscaling virtual machines. You can scale the number of virtual machines in the scale set manually or define rules to autoscale based on resource usage like [CPU](/visualstudio/profiling/average-cpu-utilization), memory demand, or network traffic. When an instance scales up, it deploys a virtual machine. Then a shell script runs that installs Moodle prerequisites and sets up cron jobs. A virtual machine in a scale set has a private IP address. Follow the steps in [how to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to connect to virtual machines in a scale set with a private IP address.
 
 ## Next steps
 
-Continue to [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md) for more information about the Moodle migration process.
+Continue to [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md).
