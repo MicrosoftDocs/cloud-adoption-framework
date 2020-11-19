@@ -22,10 +22,10 @@ items:
       href: scenarios/sap/innovate.md
     - name: Manage SAP platform and workloads
       href: scenarios/sap/manage.md
-    - name: SAP architecture on Azure
+    - name: Well-Architected considerations
+      href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    - name: Accelerate with SAP architectures
       items:
-      - name: Architecture guide
-        href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: SAP HANA on Azure (Large Instances)
         href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/hana-large-instances?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: SAP HANA Scale-up on Linux
