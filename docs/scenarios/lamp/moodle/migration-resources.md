@@ -35,7 +35,7 @@ The network template creates the following resources:
 
 ## Storage template
 
-A strage account template creates an Azure storage account of type FileStorage. The account has premium performance, locally redundant storage (LRS) replication, and 1 terabyte (TB) of storage. The predefined template is configured so that a storage account with Azure Files creates file shares.
+A storage account template creates an Azure storage account of type FileStorage. The account has premium performance, locally redundant storage (LRS) replication, and 1 terabyte (TB) of storage. The predefined template is configured so that a storage account with Azure Files creates file shares.
 
 An [Azure storage account](/azure/storage/common/storage-account-overview) contains Azure Storage data objects, such as blobs, files, queues, tables, and disks. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. The following types of Azure storage accounts are available: general-purpose v1, general-purpose v2, BlockBlobStorage, FileStorage, and Blob storage. The replication type can be geo-redundant or LRS and zone-redundant storage. The performance types are standard and premium, and an individual storage account can store up to 500 TB of data, like any other Azure service.
 
