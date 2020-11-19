@@ -11,15 +11,7 @@ ms.subservice: plan
 
 # How to prepare for a Moodle migration
 
-Before you migrate a Moodle application from your on-premises environment to Azure, you should export your data. This guide explains the export process, which involves the following tasks:
-
-- Install the Azure command-line interface (Azure CLI).
-- Create an Azure subscription.
-- Create a resource group in Azure.
-- Create a storage account in Azure.
-- Back up on-premises Moodle data.
-- Download and install AzCopy.
-- Copy archived files to Azure Blob.
+Before you migrate a Moodle application from your on-premises environment to Azure, you should export your data. This guide explains the steps of the export process.
 
 ## Install the Azure CLI
 
@@ -43,7 +35,7 @@ Follow these steps to set up the Azure CLI in your on-premises environment:
 
 Skip this step if you already have an Azure subscription.
 
-If you don't have a subscription, you can either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in Azure.
+If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in Azure.
 
 - To use the Azure portal to create a subscription, open [Subscriptions](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
 
@@ -65,7 +57,7 @@ Once the subscription is set up, create a resource group in Azure. You can eithe
 
 - To use the Azure portal, follow these steps:
 
-  1. Open **Resource group**.
+  1. Open [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceGroups), and select **Add**.
   
   1. Enter your subscription name, a resource group name, and a region. See [Data residency in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for a list of available regions. Make a note of the name of the resource group that you enter so that you can use that name in later steps.
   
@@ -104,7 +96,7 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
    
   1. For **Account kind**, enter **BlobStorage**.
   
-  1. For **Replication**, enter **Read-access geo-redundant storage (RA-DRS)**.
+  1. For **Replication**, enter **Read-access geo-redundant storage (RA-GRS)**.
 
   1. Select **Review + create**.
 
@@ -140,7 +132,7 @@ Before backing up your on-premises Moodle data, turn on **Maintenance mode** on 
 
 When backing up on-premises Moodle and moodledata files, configurations, and databases, back up to a single directory. The following diagram summarizes this idea:
 
-:::image type="content" source="./images/directory-structure.png" alt-text="Diagram showing the structure of the Moodle backup storage directory.":::
+:::image type="content" source="./images/directory-structure.png" alt-text="Diagram showing the structure of the Moodle backup storage directory." border="false":::
 
 ### Create a storage directory
 
@@ -211,7 +203,7 @@ Follow these steps to back up your database:
 
 ### Create an archive
 
-Enter this command to create an archive file, `storage.tar.gz`, of your backup directory:
+Enter this command to create an archive file, `storage.tar.gz`, for your backup directory:
 
 ```bash
 cd /home/azureadmin/ tar -zcvf storage.tar.gz storage
@@ -241,27 +233,15 @@ To generate a shared access signature (SAS) token for AzCopy, follow these steps
 
 1. In the left panel, select **Shared access signature**.
 
-1. Select **Container**.
+   :::image type="content" source="./images/new-storage-account-page.png" alt-text="Screenshot of the page in the Azure portal for a storage account, with a Container button.":::
 
-   :::image type="content" source="./images/storage-account-created.png" alt-text="Screenshot of the page in the Azure portal for a storage account, with a Container button.":::
-
-1. Under **Allowed services**, select **Blob**.
-
-1. Under **Allowed permissions**, select the following check boxes:
-   - Read
-   - Write
-   - Delete
-   - List
-   - Add
-   - Create
-
-1. Under **Blob versioning permissions**, select **Enables deletion of versions**.
+1. Under **Allowed resource types**, select **Container**.
 
 1. Under **Start and expiry date/time**, enter a start and end time for the SAS token.
 
 1. Select **Generate SAS and connection string**.
 
-   :::image type="content" source="./images/SAS-token-generation.png" alt-text="Screenshot of the Azure portal showing the Shared access signature page for a storage account.":::
+   :::image type="content" source="./images/SAS-token-generation-page.png" alt-text="Screenshot of the Azure portal showing the Shared access signature page for a storage account." :::
 
 1. Make a copy of the SAS token to use in later steps.
 
@@ -305,8 +285,8 @@ For example, enter:
 
 Your Blob Storage account should now contain a copy of your archive.
 
-:::image type="content" source="./images/archive-in-blob.png" alt-text="An archive in Azure Blob.":::
+:::image type="content" source="./images/archive-in-blob-storage.png" alt-text="An archive in Azure Blob.":::
 
 ## Next steps
 
-Continue to [Moodle migration tasks, architecture, and template](./migration-arch.md).
+Continue to [Moodle migration architecture and templates](./migration-arch.md).
