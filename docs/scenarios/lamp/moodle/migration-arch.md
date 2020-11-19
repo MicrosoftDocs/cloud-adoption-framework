@@ -30,7 +30,7 @@ The following diagram shows an overview of Azure Moodle infrastructure resources
 
 ## ARM template options
 
-To deploy Moodle resources on Azure, you can use a fully configurable ARM template, or one of several predefined ARM templates. A [fully configurable deployment](https://github.com/Azure/Moodle/blob/master/azuredeploy.json) gives you the most flexibility and deployment choices. You can find the predefined and fully configurable ARM templates at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
+To deploy Moodle resources on Azure, you can use a fully configurable ARM template, or one of several predefined ARM templates. A fully configurable deployment gives you the most flexibility and deployment choices. You can find the fully configurable template and the predefined templates at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
 
 A predefined deployment template uses one of four predefined Moodle sizes: minimal, short-to-mid, large, or maximal.
 
