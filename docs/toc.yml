@@ -18,16 +18,14 @@ items:
       href: scenarios/unified-operations/ready.md
     - name: Govern
       href: scenarios/unified-operations/govern.md
-    - name: Operations Management
+    - name: Manage
       href: scenarios/unified-operations/manage.md
     - name: Innovate
       href: scenarios/unified-operations/innovate.md
-    - name: Migrate - Assess workloads
+    - name: Assess workloads
       href: scenarios/unified-operations/migrate-assess.md
-    - name: Migrate - Deploy workloads
+    - name: Migrate workloads
       href: scenarios/unified-operations/migrate-deploy.md
-    - name: Migrate - Release workloads
-      href: scenarios/unified-operations/migrate-release.md
     - name: Well-architected alignment
       items:
       - name: TBD
