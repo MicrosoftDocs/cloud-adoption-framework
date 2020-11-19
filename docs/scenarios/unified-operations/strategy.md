@@ -15,14 +15,9 @@ ms.subservice: strategy
 
 Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). To move forward, identify business outcomes that drive observable results or a change in business performance, supported by a specific measure. There may be sound business justifications to reserve part of your digital estate to an on-premises environment, but you still want the innovation that cloud services can bring to your datacenter. You may realize that a hybrid cloud is not simply two different environments, but a steady state that enables a consistent experience across end users, IT management & security, and app development, far beyond "lifting and shifting" virtual machines. Consistency in a hybrid cloud environment enables uniform development, unified dev-ops and management, common identity and security, and extension of existing applications and infrastructure to the cloud. Consistency across these key areas enables controlled transformation for your organization, backed with data-justified financial models for your business.  
 
-Hybrid is a evolution to globally distributed data paradigm that extends across platforms——bringing consistent, real-time access to data and apps across on-premises, public cloud, and edge computing environments.
+Hybrid and multi-cloud is an evolution to truly distributed computing and unified operations, bringing consistent, cross-platform access to data and apps across private, public cloud, and edge computing environments. The most common environment across the enterprise remains a hybrid one. For most customers, moving to a hybrid and multi-cloud scenario is simply embracing market reality, and, as previously mentioned, a sound business decision.
 
-The most common environment across the enterprise remains a hybrid one. For most customers, accepting hybrid and multi-cloud is simply embracing market reality, and, as previously mentioned, a sound business decision.
-
-You will likely be operating across on-premises, one (or more) physical datacenter(s) with some combination of private or multi-cloud environments.
-The next decision remains committing to a viable environment that supports a mixture of assets hosted across public and private cloud, and having one control pane that monitors, governs, and manages your resources.
-
-If you plan to be hybrid by design for the next 12 months or longer, you should consider unified operations to manage you overall digital estate.
+The next decision for your organization is committing to a viable environment that supports a collection of resources hosted across public and private clouds, and having one control plane that monitors, governs, and manages your resources. Consider a hybrid and multi-cloud environment to manage you overall digital estate if you are planning to be hybrid by design for the next 12 months or longer.
 
 ## Unified operations motivations
 
