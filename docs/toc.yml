@@ -28,6 +28,60 @@ items:
       href: scenarios/unified-operations/migrate-deploy.md
     - name: Migrate - Release workloads
       href: scenarios/unified-operations/migrate-release.md
+    - name: Well-architected alignment
+      items:
+      - name: TBD
+        href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    - name: Hybrid and Multicloud Architectures
+      items:
+      - name: Overview
+        href: https://docs.microsoft.com/azure/architecture/browse/hybrid_index?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Hybrid & multicloud networking
+        items:
+        - name: Connecting an on-premises network to Azure
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Connect over Express Route
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Connect over VPN gateway
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/vpn?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: ExpressRoute with VPN failover
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Standalone server connection with Azure Network Adapter
+          href: https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-network-adapter?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Hybrid Domain Name System solution
+          href: https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-dns-infra?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Hybrid & multicloud identity
+        items:
+        - name: Hybrid Active Directory (AD) options
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Integrate AD and Azure AD 
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/azure-ad?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Extend AD with AD Federation Services (AD FS)
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/adfs?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Extend AD with AD Domain Services (AD DS)
+          href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/adds-forest?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Azure Stack Hub identity integration
+          href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/hybrid-identity?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Hybrid & multicloud management
+        items:
+        - name: TBD
+          href: https://docs.microsoft.com/en-us/azure/architecture/hybrid/arc-hybrid-kubernetes?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Hybrid & multicloud security
+        items:
+        - name: TBD
+          href: https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-security-monitoring?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Hybrid & multicloud apps
+        items:
+        - name: TBD
+          href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/ai-at-the-edge?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Hybrid & multicloud data
+        items:
+        - name: TBD
+          href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    - name: Hybrid and Multicloud products
+      items:
+      - name: TBD
+        href: ?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Enterprise-Scale landing zone
       items:
       - name: Overview
