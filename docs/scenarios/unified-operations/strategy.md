@@ -3,13 +3,13 @@ title: "Strategy for unified operations adoption"
 description: Describe the scenario's impact on strategy
 author: mpvenables
 ms.author: brblanch
-ms.date: 11/17/2020
+ms.date: 11/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of hybrid/unified operations
+# Strategic impact of hybrid and multi-cloud operations
 
 ## Executive summary
 
