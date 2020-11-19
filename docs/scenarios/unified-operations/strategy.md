@@ -13,19 +13,14 @@ ms.subservice: strategy
 
 ## Executive summary
 
-Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). To move forward, identify business outcomes that drive observable results or a change in business performance, supported by a specific measure. There may be sound business justifications to reserve part of your digital estate to an on-premises environment, but you still want the innovation that cloud services can bring to your datacenter. You may realize that a hybrid cloud is not simply two different environments, but a steady state that enables a consistent experience across end users, IT management & security, and app development, far beyond "lifting and shifting" virtual machines. Consistency across a hybrid cloud environment enables uniform development, unified dev-ops and management, common identity and security, and seamless extension of existing applications and infrastructure to the cloud. And consistency across these areas allows predictable business outcomes.  
+Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). To move forward, identify business outcomes that drive observable results or a change in business performance, supported by a specific measure. There may be sound business justifications to reserve part of your digital estate to an on-premises environment, but you still want the innovation that cloud services can bring to your datacenter. You may realize that a hybrid cloud is not simply two different environments, but a steady state that enables a consistent experience across end users, IT management & security, and app development, far beyond "lifting and shifting" virtual machines. Consistency in a hybrid cloud environment enables uniform development——unified dev-ops and management——common identity and security——and seamless extension of existing applications and infrastructure to the cloud. Consistency across these key areas enables transformation with data-justified financial models.  
 
-**link back to the reality and eventuality of the hybrid environment today, highlighting the impending importance of hybrid across the enterprise.**
+Hybrid is a evolution to globally distributed data paradigm that extends across platforms——bringing consistent, real-time access to data and apps across on-premises, public cloud, and edge computing environments. 
 
-Cloud computing is about distributed data that extends across platforms. Hybrid makes that possible INSERT POINT FROM JULIA WHITE ARTICLE
+The most common environment across the enterprise remains a hybrid one. For most customers, accepting hybrid and multi-cloud is simply embracing market reality, and, as previously mentioned, a sound business decision.
 
-The most common environment across the enterprise is a hybrid one. For most customers, a hybrid environments across multiple clouds is the undeniable reality in the existing global IT landscape.
-
-Your will likely be operating across on-premises, one (or more) physical datacenter(s) with some combination of private or multi-cloud environments.
-The big decision:
-
-- Are you hybrid because of a one-way trip to the cloud?
-- Are you hybrid by choice, supporting a mixture of assets living in public & private cloud
+You will likely be operating across on-premises, one (or more) physical datacenter(s) with some combination of private or multi-cloud environments.
+The next decision remains committing to a viable environment that supports a mixture of assets hosted across public and private cloud, and having one control pane that monitors, governs, and manages your resources.
 
 If you plan to be hybrid by design for the next 12 months or longer, you should consider unified operations to manage you overall digital estate.
 
