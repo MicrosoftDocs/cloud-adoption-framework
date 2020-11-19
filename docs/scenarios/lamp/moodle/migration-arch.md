@@ -52,11 +52,11 @@ A predefined deployment template uses one of four predefined Moodle sizes: minim
 
 ## Deploy the template
 
-To deploy one of the ARM templates:
+To deploy one of the predefined ARM templates:
 
-1. In the preceding section, select the **Deploy to Azure** button for the deployment you want.
+1. In the preceding section, select the **Deploy to Azure** button for the deployment you want. This action takes you to the Azure portal.
    
-1. On the **Custom deployment** page in the Azure portal, complete the mandatory fields **Subscription**, **Resource group**, **Region**, and **SSH key**. For information on how to add the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+1. On the **Custom deployment** page in the Azure portal, complete the mandatory **Subscription**, **Resource group**, **Region**, and **Ssh Public Key** fields. For information on how to add the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
    
    :::image type="content" source="images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
    
@@ -74,7 +74,7 @@ If your on-premises PHP and Moodle versions differ from the preceding values, up
 
 1. In the Azure portal, on the ARM template **Custom deployment** page, select **Edit template**.
    
-1. In the **resources** section of the template, under **parameters**, add the following parameters for your Moodle and PHP versions.
+1. In the **resources** section of the template, under **parameters**, add parameters for your Moodle and PHP versions.
 
    ```json
                        "phpVersion":       { "value": "7.2" },
@@ -83,7 +83,7 @@ If your on-premises PHP and Moodle versions differ from the preceding values, up
    
    For example, for Moodle 3.9, the `moodleVersion` value should be `MOODLE_39_STABLE`.
    
-   :::image type="content" source="images/edit-template.png" alt-text="Screenshot showing the Edit template page for a Moodle deployment ARM template.":::
+   :::image type="content" source="images/edit-template.png" alt-text="Screenshot showing the Edit template page for a Moodle deployment ARM template." border="false":::
    
 1. Select **Save**.
 
