@@ -144,15 +144,15 @@ The Moodle html site (`/moodle/html/moodle`) content's local copy is created in 
 
 1. Error: The database connection has failed: For errors like _database connection failed_ or _could not connect to the database you specified_, some potential reasons and solutions are:
 
-    - Your database server isn't installed or running. To check this for MySQL, try typing the following the following command:
+    - Your database server isn't installed or running. To check for this condition in MySQL, try typing the following command:
 
       ```bash
       $telnet database_host_name 3306
       ```
 
-    - You should get a cryptic response, which includes the version number of the MySQL server.
+      If your database is running, you should get a response that includes the version number of the MySQL server.
 
-    - If you're attempting to run two instances of Moodle on different ports, use the IP address of the host (not localhost) in the `$CFG->dbhost` setting; for example, `$CFG->dbhost = 127.0.0.1:3308`.
+    - If you're attempting to run two instances of Moodle on different ports, use the IP address of the host, not `localhost`, in the `$CFG->dbhost` setting. For example, use `$CFG->dbhost = 127.0.0.1:3308`.
 
     - You haven't created a Moodle database or assigned a user with the correct privileges to access it.
 
