@@ -1,5 +1,5 @@
 ---
-title: Moodle migration Azure Resource Manager (ARM) template
+title: Moodle migration architecture and templates
 description: Learn about the Azure Resource Manager (ARM) templates for Moodle Azure infrastructure deployment, and how to deploy or edit them.
 author: BrianBlanchard
 ms.author: brblanch
