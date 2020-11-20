@@ -72,7 +72,7 @@ Often, migrations are driven by a compelling business event that is time sensiti
 Before proceeding, document the following assumptions and share them with the cloud strategy team and the cloud adoption teams:
 
 - Business outcomes.
-- Roles, documented and refined for the *Assess*, *Migrate*, *Optimize*, and *Secure and manage* migration processes.
+- Roles, documented and refined for the _Assess_, _Migrate_, _Optimize_, and _Secure and manage_ migration processes.
 - Definition of done, documented and refined separately for these migration processes.
 - Effort type.
 - Effort scale.

@@ -57,7 +57,7 @@ Additional examples of first adoption projects include:
 - **End of support (EOS):** Migrating assets that have reached the end of support is another quick win that builds technical skills. It could also provide some cost avoidance from expensive support contracts or licensing costs.
 - **Virtual desktop interface (VDI):** Creating virtual desktops for remote employees can provide a quick win. In some cases, this first adoption project could also reduce dependence on expensive private networks in favor of commodity public internet connectivity.
 - **Dev/test:** Remove dev/test from on-premises environments to give developers control, agility, and self-service capacity.
-- **Simple apps (less than five):** Modernize and migrate a simple app to quickly gain developer and operations experience.
+- **Simple applications (less than five):** Modernize and migrate a simple application to quickly gain developer and operations experience.
 - **Performance labs:** When you need high-scale performance in a lab setting, use the cloud to quickly and cost-effectively provision those labs for a short time.
 - **Data platform:** Creating a data lake with scalable compute for analytics, reporting, or machine learning workloads, and migrating to managed databases using dump/restore methods or data migration services.
 

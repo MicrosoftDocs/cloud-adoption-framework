@@ -10,11 +10,13 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# Transition existing Azure environments to Enterprise-Scale
+<!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
+
+# Transition existing Azure environments to enterprise-scale
 
 We recognize that most organizations may have an existing footprint in Azure, one or more subscriptions, and potentially an existing structure of their management groups. Depending on their initial business requirements and scenarios, Azure resources such as hybrid connectivity (for example with Site-to-Site VPN and/or ExpressRoute) may have been deployed.
 
-This article helps organizations to navigate the right path based on an existing Azure environment transitioning into Enterprise-Scale. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment to Enterprise-Scale landing zones.
+This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment to enterprise-scale landing zones.
 
 ## Moving resources in Azure
 
@@ -22,7 +24,7 @@ Some resources in Azure can be moved post creation, and there are different appr
 
 | Scope | Destination | Pros | Cons |
 |--|--|--|--|
-| Resources in resource groups | Can be moved to new resource group in same or different subscription  | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - ResourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
+| Resources in resource groups | Can be moved to new resource group in same or different subscription  | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
 | Subscriptions in a tenant  | Can be moved to different management groups, and different tenants | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
 
 To understand which move strategy you should use, we will go through examples of both:
@@ -33,9 +35,9 @@ The common use cases for moving subscriptions are to organize subscriptions into
 
 ### RBAC requirements
 
-To assess a subscription prior to a move, it is important that the user has the appropriate RBAC such as being an Owner on the subscription (direct roleAssignment), and has write permission on the target management group (built-in roles that support this is Owner, Contributor, Management Group Contributor).
+To assess a subscription prior to a move, it is important that the user has the appropriate RBAC such as being an owner on the subscription (direct role assignment), and has write permission on the target management group (built-in roles that support this are the Owner role, the Contributor role, and the Management Group Contributor role).
 
-If the user has an inherited Owner permission on the subscription from an existing management group, the subscription can only be moved to the management group where the user has been assigned the Owner role.
+If the user has an inherited Owner role permission on the subscription from an existing management group, the subscription can only be moved to the management group where the user has been assigned the Owner role.
 
 ### Policy
 
@@ -55,7 +57,7 @@ Once subscriptions are moved to a management group with existing RBAC and polici
 
 ## Resource move
 
-The primary use cases to perform a resource move is when you want to consolidate resources into the same resource group if they share the same life-cycle, or move resources to a different subscription due to cost, ownership, or RBAC requirements.
+The primary use cases to perform a resource move is when you want to consolidate resources into the same resource group if they share the same lifecycle, or move resources to a different subscription due to cost, ownership, or RBAC requirements.
 
 When performing a resource move, both the source resource group and the target resource group are locked (this lock will not affect any of the resources in the resource group) during the move operation, meaning you cannot add, update, or delete resources in the resource groups. A resource move operation will not change the location of the resources.
 

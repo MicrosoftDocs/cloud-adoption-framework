@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- docutune:casing PlatformOps AppDevOps AppDataOps AppSecOps -->
+
 # Platform automation and DevOps
 
 ![Diagram of platform automation and DevOps.](./media/DevOps.png)
@@ -29,7 +31,7 @@ Many traditional IT operating models aren't compatible with the cloud, and organ
 
 - You can arrange internal and external DevOps roles and functions from a variety of sources that align with your organization's strategy.
 
-- For some legacy apps, the associated app team might not have engineering resources required to align with a DevOps strategy.
+- For some legacy applications, the associated application team might not have engineering resources required to align with a DevOps strategy.
 
 <!-- cSpell:ignore PlatformOps SecOps NetOps AppDevOps AppDataOps AppSecOps -->
 
@@ -63,59 +65,59 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Network management (holistic).
 
-- **AppDevOps.** Allow app owners to create and manage app resources through a DevOps model. The following list presents a recommended DevOps role for application teams:
+- **AppDevOps.** Allow application owners to create and manage application resources through a DevOps model. The following list presents a recommended DevOps role for application teams:
 
-  - App migration or transformation.
+  - Application migration or transformation.
 
-  - App management and monitoring.
+  - Application management and monitoring.
 
-  - RBAC (app resources).
+  - RBAC (application resources).
 
-  - Security monitoring and audit (app resources).
+  - Security monitoring and audit (application resources).
 
-  - Cost management (app resources).
+  - Cost management (application resources).
 
-  - Network management (app resources).
+  - Network management (application resources).
 
-  - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management or AppSecOps for more security-sensitive apps.
+  - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management or AppSecOps for more security-sensitive applications.
 
-  - Provide a central app DevOps function to support apps that don't have existing DevOps capabilities or a business case to establish one (for example, legacy apps with minimal development capabilities).
+  - Provide a central application DevOps function to support applications that don't have existing DevOps capabilities or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
   - Use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
   - To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
-  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and RBAC assignments. This ensures that app (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
+  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and RBAC assignments. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
-  - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of app resources. Existing teams that already rely on a DevOps pipeline for app delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guard rails, independent of how resources are deployed in Azure.
+  - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources. Existing teams that already rely on a DevOps pipeline for application delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of how resources are deployed in Azure.
 
 ## Define central and federated responsibilities
 
-The distribution of roles, responsibilities, and trust between central IT teams and apps teams is paramount to the operational transformation your organization must undergo when adopting the cloud at scale.
+The distribution of roles, responsibilities, and trust between central IT teams and applications teams is paramount to the operational transformation your organization must undergo when adopting the cloud at scale.
 
 ### Design considerations
 
-Central teams strive to maintain full control while app owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration.
+Central teams strive to maintain full control while application owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration.
 
 ### Design recommendations
 
 The following list presents a recommended distribution of responsibilities between the central IT team and application teams. You're striving to empower migration and transformation activities with minimal central dependencies. At the same time, you want to support the centralized governance of security and operability across the entire estate.
 
-- **App functions**
+- **Application functions**
 
-  - App migration and transformation.
+  - Application migration and transformation.
 
-  - App management and monitoring (app resources).
+  - Application management and monitoring (application resources).
 
-  - Key management (app keys).
+  - Key management (application keys).
 
-  - RBAC (app resources).
+  - RBAC (application resources).
 
-  - Security monitoring and audit (app resources).
+  - Security monitoring and audit (application resources).
 
-  - Cost management (app resources).
+  - Cost management (application resources).
 
-  - Network management (app resources).
+  - Network management (application resources).
 
 - **Central functions**
 
