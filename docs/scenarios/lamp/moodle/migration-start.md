@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Moodle manual migration steps
 
-This article describes the steps to import the on-premises Moodle archive to the Azure infrastructure resources, and then configure the Azure Moodle application. Before you begin this process, make sure you complete all the steps in [How to prepare for a Moodle migration](migration-pre.md) and [Moodle migration architecture and templates](migration-arch.md).
+This article describes the steps to import the on-premises Moodle archive to Azure Database for MySQL, and then configure the Azure Moodle application. Before you begin this process, make sure you complete all the steps in [How to prepare for a Moodle migration](migration-pre.md) and [Moodle migration architecture and templates](migration-arch.md).
 
 After the Azure Resource Manager (ARM) template deployment completes, sign in to the [Azure portal](https://portal.azure.com/), go to the resource group you created, and view all the created infrastructure resources. The created resources look similar to the following image, depending on which ARM template you used.
 
@@ -61,7 +61,9 @@ After you sign in to the controller VM, run the following commands to install Az
    azcopy copy 'https://storageaccount.blob.core.windows.net/container/BlobDirectoryName<SASToken>' '/home/azureadmin/'
    ```
    
-   Substitute your own Storage Account and SAS Token values. For example: `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
+   Substitute your own Storage Account and SAS Token values. For example:
+   
+   `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
    
 1. Extract the compressed file to a directory.
    
@@ -127,7 +129,7 @@ To get connection information, go to your MySQL server's **Overview** page in th
 
 You also need the password. If you need to reset the password, select **Reset password** in the menu bar.
 
-Use these database server details in the following sections.
+Use the database server details in the following sections.
 
 ### Import the Moodle database to Azure
 
@@ -209,7 +211,7 @@ You can store the on-premises *dataroot* directory at any location.
   
 ### Configure the PHP and web server
 
-Create backups of the PHP and web server configurations, and set the PHP version to a variable.
+Set the PHP version to a variable, and create backups of the PHP and web server configurations.
 
 ```bash
 _PHPVER='/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3'
