@@ -11,9 +11,9 @@ ms.subservice: plan
 
 # Moodle manual migration steps
 
-This article describes the steps to migrate the on-premises Moodle archive you copied to the Azure infrastructure resources you deployed, and then configure the Azure Moodle application. Before you begin, make sure to complete all the steps in [Moodle pre-migration] and [Deploy ARM template].
+This article describes the steps to migrate the on-premises Moodle archive you copied to the Azure infrastructure resources you deployed, and then configure the Azure Moodle application. Before you begin, make sure to complete all the steps in [How to prepare for a Moodle migration](migration-pre.md) and [Moodle migration architecture and templates](migration-arch.md).
 
-After the Azure infrastructure deployment completes, sign in to the [Azure portal](https://portal.azure.com/), go to the resource group you created, and view all the infrastructure resources. The created resources look similar to the following image, depending on which Azure Resource Manager (ARM) template you used:
+After the Azure infrastructure deployment completes, sign in to the [Azure portal](https://portal.azure.com/), go to the resource group you created, and view all the created infrastructure resources. The created resources look similar to the following image, depending on which Azure Resource Manager (ARM) template you used:
 
 ![Screenshot showing infrastructure resources created in the Moodle migration resource group.](images/resource-creation-overview.png)
 
