@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Moodle migration resources
 
-When you use an Azure Resource Manager (ARM) template to migrate Moodle, the deployment creates resources within Azure. The deployment process also starts additional deployments through other templates. The following sections describe these deployments and the resources they create.
+When you use an Azure Resource Manager (ARM) template to migrate Moodle, the deployment creates resources within Azure. As part of this deployment process, additional deployments automatically run through child templates. The following sections describe these deployments and the resources they create.
 
 ## Network template
 
