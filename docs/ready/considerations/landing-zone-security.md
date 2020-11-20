@@ -15,7 +15,7 @@ When a workload or the landing zones that hosts it require access to any sensiti
 
 ## Landing zone security best practices
 
-The following list of reference architectures and best practices provides examples of ways to improve landing security:
+The following list of reference architectures and best practices provides examples of ways to improve landing zone security:
 
 - [Azure Security Center](/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard a subscription to Security Center.
 - [Azure Sentinel](/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard Azure Sentinel to provide a **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution.

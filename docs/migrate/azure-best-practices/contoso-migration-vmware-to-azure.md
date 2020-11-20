@@ -150,7 +150,7 @@ To learn how to create Azure VMware Solution private clouds, see [Deploy an Azur
 
     ![Screenshot of the Azure portal pane for creating an Azure VMware Solution private cloud.](./media/contoso-migration-vmware-to-azure/create-private-cloud.png)
 
-1. The team verifies that the Azure VMware Solution private cloud deployment is complete by going to the resource group and selecting the private cloud resource. The status is displayed as *Succeeded*.
+1. The team verifies that the Azure VMware Solution private cloud deployment is complete by going to the resource group and selecting the private cloud resource. The status is displayed as **Succeeded**.
 
     ![Screenshot of the Contoso Azure VMware Solution private cloud page showing that the deployment is successful.](./media/contoso-migration-vmware-to-azure/validate-deployment.png)
 
@@ -163,7 +163,7 @@ For more information, see [Configure networking for your VMware private cloud in
 1. The Contoso team first creates a virtual network with a gateway subnet.
 
     > [!IMPORTANT]
-    > The team must use an address space that *does not* overlap with the address space that it used when it created the private cloud.
+    > The team must use an address space that _does not_ overlap with the address space that it used when it created the private cloud.
 
 1. The team creates the ExpressRoute VPN gateway, making sure to select the correct SKU, and then selects **Review + create**.
 

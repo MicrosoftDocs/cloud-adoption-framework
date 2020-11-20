@@ -38,15 +38,15 @@ When planning your access control strategy, use a least-privilege access model t
 
 Azure provides a many built-in role definitions, with three core roles for providing access:
 
-- The [Owner](/azure/role-based-access-control/built-in-roles#owner) role can manage everything, including access to resources.
-- The [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role can manage everything except access to resources.
-- The [Reader](/azure/role-based-access-control/built-in-roles#reader) role can view everything but not make any changes.
+- The [Owner role](/azure/role-based-access-control/built-in-roles#owner) can manage everything, including access to resources.
+- The [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) can manage everything except access to resources.
+- The [Reader role](/azure/role-based-access-control/built-in-roles#reader) can view everything but not make any changes.
 
 Beginning from these core access levels, additional built-in roles provide more detailed controls for accessing specific resource types or Azure features. For example, you can manage access to virtual machines by using the following built-in roles:
 
-- The [virtual machine administrator login](/azure/role-based-access-control/built-in-roles#virtual-machine-administrator-login) role can view virtual machines in the portal and sign in as `administrator`.
-- The [virtual machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role can manage virtual machines, but it can't access them or the virtual network or storage account they're connected to.
-- The [virtual machine user login](/azure/role-based-access-control/built-in-roles#virtual-machine-user-login) role can view virtual machines in the portal and sign in as a regular user.
+- The [Virtual Machine Administrator Login role](/azure/role-based-access-control/built-in-roles#virtual-machine-administrator-login) can view virtual machines in the portal and sign in as `administrator`.
+- The [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) can manage virtual machines, but it can't access them or the virtual network or storage account they're connected to.
+- The [Virtual Machine User Login role](/azure/role-based-access-control/built-in-roles#virtual-machine-user-login) can view virtual machines in the portal and sign in as a regular user.
 
 For another example of using built-in roles to manage access to particular features, see the discussion on controlling access to cost-tracking features in [Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md#provide-the-right-level-of-cost-access).
 
@@ -60,7 +60,7 @@ The Azure RBAC documentation contains instructions on [creating custom roles](/a
 
 ## Separation of responsibilities and roles for large organizations
 
-RBAC allows organizations to assign different teams to various management tasks within large cloud estates. It can allow Central IT teams to control core access and security features, while also giving software developers and other teams large amounts of control over specific workloads or groups of resources.
+RBAC allows organizations to assign different teams to various management tasks within large cloud estates. It can allow central IT teams to control core access and security features, while also giving software developers and other teams large amounts of control over specific workloads or groups of resources.
 
 Most cloud environments can also benefit from an access-control strategy that uses multiple roles and emphasizes a separation of responsibilities between these roles. This approach requires that any significant change to resources or infrastructure involves multiple roles to complete, ensuring that more than one person must review and approve a change. This separation of responsibilities limits the ability of a single person to access sensitive data or introduce vulnerabilities without the knowledge of other team members.
 
@@ -75,4 +75,4 @@ The following table illustrates a common pattern for dividing IT responsibilitie
 
 The breakdown of actions and permissions in these standard roles are often the same across your applications, subscriptions, or entire cloud estate, even if these roles are performed by different people at different levels. Accordingly, you can create a common set of RBAC role definitions to apply across different scopes within your environment. Users and groups can then be assigned a common role, but only for the scope of resources, resource groups, subscriptions, or management groups that they're responsible for managing.
 
-For example, in a [hub and spoke network topology](../azure-best-practices/hub-spoke-network-topology.md) with multiple subscriptions, you might have a common set of role definitions for the hub and all workload spokes. A hub subscription's NetOps role can be assigned to members of the organization's Central IT team, who are responsible for maintaining networking for shared services used by all workloads. A workload spoke subscription's NetOps role can then be assigned to members of that specific workload team, allowing them to configure networking within that subscription to best support their workload requirements. The same role definition is used for both, but scope-based assignments ensure that users have only the access that they need to perform their job.
+For example, in a [hub and spoke network topology](../azure-best-practices/hub-spoke-network-topology.md) with multiple subscriptions, you might have a common set of role definitions for the hub and all workload spokes. A hub subscription's NetOps role can be assigned to members of the organization's central IT team, who are responsible for maintaining networking for shared services used by all workloads. A workload spoke subscription's NetOps role can then be assigned to members of that specific workload team, allowing them to configure networking within that subscription to best support their workload requirements. The same role definition is used for both, but scope-based assignments ensure that users have only the access that they need to perform their job.

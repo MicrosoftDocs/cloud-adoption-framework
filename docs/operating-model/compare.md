@@ -12,7 +12,7 @@ ms.custom: operating-model
 
 # Compare common cloud operating models
 
-Operating models are unique and specific to the business they support, based on their current requirements and constraints. But, this uniqueness shouldn't suggest that operating models are *snowflakes*. There are a few common patterns of customer operating models. This article outlines the four most common patterns.
+Operating models are unique and specific to the business they support, based on their current requirements and constraints. But, this uniqueness shouldn't suggest that operating models are _snowflakes_. There are a few common patterns of customer operating models. This article outlines the four most common patterns.
 
 ## Operating model comparison
 

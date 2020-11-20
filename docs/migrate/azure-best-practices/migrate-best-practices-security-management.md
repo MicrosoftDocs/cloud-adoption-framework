@@ -318,7 +318,7 @@ Azure Policy evaluates your resources, scanning for those not compliant with you
 
 ## Best practice: Implement a BCDR strategy
 
-Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a *force majeure* clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strikes. Your ability to do this can make or break your company's future.
+Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a _force majeure_ clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strikes. Your ability to do this can make or break your company's future.
 
 Broadly, your BCDR strategy must consider:
 

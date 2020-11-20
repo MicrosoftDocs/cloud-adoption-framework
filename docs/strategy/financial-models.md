@@ -52,7 +52,7 @@ For guidance on depreciation, speak with the CFO or finance team. The following 
 
 When capital is invested in the acquisition of an asset, that investment could be used for financial or tax purposes to produce ongoing benefits over the expected lifespan of the asset. Some companies see depreciation as a positive tax advantage. Others see it as a committed, ongoing expense similar to other recurring expenses attributed to the annual IT budget.
 
-Speak with the finance office to find out if elimination of depreciation is possible and if it would make a positive contribution to cost deltas.
+Speak with the finance office to find out whether elimination of depreciation is possible and if it would make a positive contribution to cost deltas.
 
 ### Physical asset recovery
 

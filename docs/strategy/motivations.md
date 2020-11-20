@@ -37,11 +37,11 @@ To ensure wiser decision-making, all participants in the migration process shoul
 
 ## Motivation-driven strategies
 
-This section highlights the *migration* and *innovation* motivations and their corresponding strategies.
+This section highlights the _migration_ and _innovation_ motivations and their corresponding strategies.
 
 ### Migration
 
-The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The framework refers to the strategy for executing a cloud migration by using the term [migrate](../get-started/migrate.md).
+The _migration_ motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a _cloud migration_. The framework refers to the strategy for executing a cloud migration by using the term [migrate](../get-started/migrate.md).
 
 Some motivations align well with a migrate strategy. The motives at the top of this list will likely have significantly less business impact than those toward the bottom of the list.
 
@@ -55,7 +55,7 @@ Some motivations align well with a migrate strategy. The motives at the top of t
 
 ### Innovation
 
-Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the *innovation* list align to a technology strategy referred to in this framework as the [Innovate methodology](../get-started/innovate.md).
+Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the _innovation_ list align to a technology strategy referred to in this framework as the [Innovate methodology](../get-started/innovate.md).
 
 The following list includes motivations that cause an IT organization to focus more on an innovate strategy than a migrate strategy.
 
