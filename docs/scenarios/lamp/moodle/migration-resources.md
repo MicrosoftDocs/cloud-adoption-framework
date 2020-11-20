@@ -1,6 +1,6 @@
 ---
 title: Moodle migration resources
-description: Learn about the resources that a Moodle migration creates within Azure, such as an Azure Virtual Network, a network security group, and a network interface.
+description: Learn about the resources that a Moodle migration creates within Azure. Examples include an Azure Virtual Network, a network security group, and a subnet.
 author: BrianBlanchard
 ms.author: brblanch 
 ms.date: 11/06/2020
@@ -11,13 +11,13 @@ ms.subservice: plan
 
 # Moodle migration resources
 
-When you use an Azure Resource Manager (ARM) template to migrate Moodle, the deployment creates many resources within Azure. The process also starts additional deployments through other templates. The following sections describe these deployments and the resources they create.
+When you use an Azure Resource Manager (ARM) template to migrate Moodle, the deployment creates resources within Azure. The deployment process also starts additional deployments through other templates. The following sections describe these deployments and the resources they create.
 
 ## Network template
 
 The network template deployment creates the following resources:
 
-- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual Network is a logical isolation of the Azure cloud that's specifically dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. The virtual network that the network template creates includes the virtual network name, API version, location, DNS server name, and AddressSpace, which contains a range of IP addresses that subnets can use.
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual Network is a logical isolation of the Azure cloud that's dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. The virtual network that the network template creates includes the virtual network name, API version, location, DNS server name, and AddressSpace. The AddressSpace contains a range of IP addresses that subnets can use.
 
 - [Network security group (NSG)](/azure/virtual-network/network-security-groups-overview): A networking filter, or firewall, that contains a list of security rules. These rules allow or deny network traffic to resources connected to a virtual network.
 
@@ -31,7 +31,7 @@ The network template deployment creates the following resources:
 
 - [Azure Application Gateway](/azure/application-gateway/overview): An alternative to Load Balancer. All four predefined ARM templates deploy Load Balancer. If you use a fully configurable deployment instead of an ARM template, you can choose Application Gateway instead of Load Balancer. Application Gateway is a web traffic Load Balancer that you can use to manage traffic to your web applications. Application Gateway can make routing decisions based on the additional attributes of an HTTP request, such as a URI path or host header.
 
-- [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview): An in-memory data store based on the open-source software Redis. Redis improves the performance and scalability of an application that heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory, and this data can be written to and read from quickly.
+- [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview): An in-memory data store based on the open-source software Redis. Redis improves the performance and scalability of an application that heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory. This data can be written to and read from quickly.
 
 ## Storage template
 
@@ -41,13 +41,13 @@ An [Azure storage account](/azure/storage/common/storage-account-overview) conta
 
 ARM templates support the following storage account types:
 
-- [Network file system (NFS)](/windows-server/storage/nfs/nfs-overview): An account type that a remote host can use to mount file systems over a network. The remote host can interact with those file systems as though they're mounted locally. With this design, system administrators can consolidate resources onto centralized servers in the network.
+- [Network file system (NFS)](/windows-server/storage/nfs/nfs-overview): An account type that a remote host can use to mount file systems over a network. The remote host can interact with those file systems as though they're mounted locally. With this design, system administrators can consolidate resources into centralized servers in the network.
 
 - [GlusterFS](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs): An open-source distributed file system that can scale out in building-block fashion to store multiple petabytes of data.
 
 - [Azure Files](/azure/storage/files/storage-files-introduction): The only public cloud file storage that delivers secure, SMB-based, and fully managed cloud file shares that can also be cached on-premises for performance and compatibility. For NFS and GlusterFS, the replication is standard LRS, and the storage type is general-purpose v1. For Azure Files, the replication is premium LRS, and the type is FileStorage.
 
-These storage mechanisms differ according to the selected deployment. NFS and GlusterFS create a container, and Azure Files creates a file share. For minimal and short-to-mid Moodle sizes, the template supports NFS. For large and maximal sizes, the template supports Azure Files. To access the containers and file shares, go to the Azure portal, and select the storage account in the resource group.
+These storage mechanisms differ depending on which deployment you choose. NFS and GlusterFS create a container, and Azure Files creates a file share. For minimal and short-to-mid Moodle sizes, the template supports NFS. For large and maximal sizes, the template supports Azure Files. To access the containers and file shares, go to the Azure portal, and select the storage account in the resource group.
 
 :::image type="content" source="./images/storage-account.png" alt-text="Screenshot of the Azure portal. A page for a storage account is visible, and buttons are available for accessing containers and file shares.":::
 
