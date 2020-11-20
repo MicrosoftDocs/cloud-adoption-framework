@@ -191,7 +191,7 @@ To update the *config.php* file:
    $CFG->dbpass    = 'password';                 // Change 'password' to the server admin login password.
    $CFG->wwwroot   = 'https://on-premises.com';  // Change 'on-premises' to the DNS name.
    $CFG->dataroot  = '/var/moodledata';          // Change the path to '/moodle/moodledata'.
-```
+   ```
    
 1. After making the changes, press CTRL+O to save the file and CTRL+X to exit the editor.
 
