@@ -184,7 +184,7 @@ To update the *config.php* file:
    
 1. Update the database details in the file, using the values you copied from the Azure portal:
    
-```php
+   ```php
    $CFG->dbhost    = 'localhost';                // Change 'localhost' to the server name.
    $CFG->dbname    = 'moodle';                   // Change 'moodle' to the newly created database name.
    $CFG->dbuser    = 'root';                     // Change 'root' to the server admin login name.
