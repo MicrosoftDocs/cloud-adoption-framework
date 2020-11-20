@@ -142,95 +142,126 @@ The Moodle html site (`/moodle/html/moodle`) content's local copy is created in 
 
 ## Frequently asked questions and troubleshooting
 
-1. Error: The database connection has failed: For errors like _database connection failed_ or _could not connect to the database you specified_, some potential reasons and solutions are:
+1. The database connection has failed.
 
-    - Your database server isn't installed or running. To check for this condition in MySQL, try typing the following command:
+   For errors like *database connection failed* or *could not connect to the database you specified*, here are some potential reasons and solutions:
 
-      ```bash
-      $telnet database_host_name 3306
-      ```
+   - Your database server isn't installed or running. To check for this condition in MySQL, enter the following command:
 
-      If your database is running, you should get a response that includes the version number of the MySQL server.
+     ```bash
+     $telnet database_host_name 3306
+     ```
 
-    - If you're attempting to run two instances of Moodle on different ports, use the IP address of the host, not `localhost`, in the `$CFG->dbhost` setting. For example, use `$CFG->dbhost = 127.0.0.1:3308`.
+     If your database is running, you should get a response that includes the version number of the MySQL server.
 
-    - You haven't created a Moodle database or assigned a user with the correct privileges to access it.
+   - The host address is configured incorrectly. If you're running two instances of Moodle on different ports, use the IP address of the host, not `localhost`, in the `$CFG->dbhost` setting. For example, use:
 
-    - The Moodle database settings aren't correct. The database name, database user, or database user password in your Moodle configuration file `config.php` aren't correct.
+     `$CFG->dbhost = 127.0.0.1:3308`
 
-    - Check that there aren't apostrophes or non-alphabetic letters in your MySQL username or password.
+   - You haven't created a Moodle database. Or you haven't assigned adequate permissions for accessing the database. Check the database and the permissions that you granted.
 
-2. Error: _500:Internal Server Error_: There are several possible causes for this error. Start by checking your web server error log, which should have a more comprehensive explanation. Here are some known possibilities:
+   - The Moodle database settings aren't correct. For instance, the database name, username, or password in your Moodle configuration file, `config.php`, aren't correct. Make sure your MySQL username and password don't contain apostrophes or non-alphanumeric characters.
 
-    - There's a syntax error in your `.htaccess` or `httpd.conf` files. The way in which directives are written differs depending on which file you are using. You can use the following command to test for configuration errors in your nginx files:
+1. Error: *500: Internal Server Error*
 
-      `nginx -t`
+   There are several possible causes for this error. Start by checking your web server error log, which should contain a detailed explanation. Here are some possibilities:
 
-    - The web server executes under your own user name, and all files have a maximum permissions level of 755. Check that this is set for your Moodle directory in your control panel, or use this command if you have access to the shell:
+   - There's a syntax error in your `.htaccess` or `httpd.conf` files. The correct syntax for directives differs depending on which file you're using. Use the following command to test for configuration errors in your nginx files:
 
-      ```bash
-      chmod -R 755 moodle
-      ```
+     ```bash
+     `nginx -t`
+     ```
 
-3. Error: _403: Forbidden_.
+   - The web server runs under your own user name, and the access permisisons are incorrect. In this case, all files have a maximum permissions level of 755. Check that this level is set for your Moodle directory in your control panel. Or use this command to set the levels if you have access to the shell:
 
-    This error means that the PHP memory_limit value isn't enough for the PHP script. The memory_limit value is the allowed memory size, which is `64M` in the example above (67108864 bytes / 1024 = 65536 KB. 65536 KB / 1024 = 64 MB). You'll need to increase the PHP memory_limit value until this message is gone. There are two methods of doing this:
+     ```bash
+     chmod -R 755 moodle
+     ```
 
-    Method one: For a hosted installation, you should ask your host's support how to do this. Many allow `.htaccess` files. If yours does, add the following line to your `.htaccess` file, or create one in the Moodle directory if it doesn't already exist:
+1. Error: *403: Forbidden*
 
-      ```bash
-      php_value memory_limit <value>M
-      Example: php_value memory_limit 40M
-      ```
+   When this error occurs, the PHP `memory_limit` value isn't large enough for the PHP script. The `memory_limit` value is the allowed memory size. Increase the PHP `memory_limit` value by small amounts until the message disappears. Use one of these methods:
 
-    Method two: If you have your own server with shell access, edit your `php.ini` file. Make sure that it's the correct one by checking in your `phpinfo` output:
+   - For a hosted installation, ask your host's support how to increase the value. Many environments use `.htaccess` files. If your installation does, add the following line to your `.htaccess` file:
 
-      ```bash
-      memory_limit <value>M
-      Example: memory_limit 40M
-      ```
+     ```bash
+     php_value memory_limit <value>M
+     ```
 
-    Remember that you need to restart your web server to make changes to `php.ini` effective. An alternative is to disable the `memory_limit` by using the command 'memory_limit 0'.
+     For example, to increase the value to 40 megabytes, enter:
 
-4. Can't log in; stuck on the login screen.
+     `php_value memory_limit 40M`
 
-    This can also apply if you see _Your session has timed out. Please log in again._ or _A server error that affects your login session was detected. Please log in again or restart your browser._ The following are potential causes and actions that you can take to resolve this:
+     If no `.htaccess` file exists, create one in the Moodle directory with that line.
 
-    - First, check if your main admin account, another manual account, is also a problem. If your users are using an external authentication method (for example, LDAP), then that could be the problem. Isolate the cause, and verify that it's with Moodle before going any further.
+   - If you have your own server with shell access, edit your `php.ini` file. Then restart your web server to apply the changes that you made in `php.ini`. To make sure you've updated the value correctly, enter this command:
 
-    - Check that your hard disk isn't full, that your server is on shared hosting, and that you haven't reached your disk space quota. This will prevent new sessions from being created, and no one will be able to log in.
+     ```bash
+     `phpinfo`
+     ```
 
-    - Carefully check the permissions in your `moodledata` area. The web server needs to be able to write to the `sessions` subdirectory.
+     The output from `phpinfo` should contain a line similar to this one:
 
-5. Fatal error: _$CFG->dataroot is not writable. The admin has to fix directory permissions! Exiting._
+     ```bash
+     memory_limit <value>M
+     ```
 
-    - Check that Moodle and moodledata permissions are www-data:www-data only. If not, change the group and ownership permissions. The following command updates the permissions:
+     For example, it might contain this line:
 
-      ```bash
-      sudo chown -R /moodle/moodledata
-      ```
+     `memory_limit 40M`
 
-6. Couldn't find a top-level course.
+   An alternative to increasing the `memory_limit` value is to turn off the memory limit by entering this command:
 
-    - If this appears immediately after you attempted to install Moodle, it likely means that the installation didn't complete. A complete installation will ask you for the administrator profile and to name the site just before it finishes. Check your logs for errors, and then drop the database to start again. If you used the web-based installer, try the command line one.
+   ```bash
+   memory_limit 0
+   ```
 
-7. The login link doesn't change upon logging in. I'm logged in but can't navigate freely. Make sure the URL in your `$CFG->wwwroot` setting is exactly the same as the one you are actually using to access the site.
+1. Sign-in errors
 
-8. Errors when uploading a file:
+   Sometimes you can't sign in, or you see one of these messages:
 
-    - If you obtain a _File not found_ error when uploading a file, it indicates that slash arguments aren't enabled on your web server. Try enabling it.
+   - *Your session has timed out. Please log in again.*
+   - *A server error that affects your login session was detected. Please log in again or restart your browser.*
 
-    - If your web server doesn't support slash arguments, then they can be disabled in Moodle by unticking the **Use slash arguments** checkbox in Administration > Site administration > Server > HTTP.
+   There might be a problem with your authentication method, especially if you use an external method like LDAP to authenticate users. Try to sign in to another manual account, such as your main admin account. If you cannot sign in, check your authentication. If you can sign in to the other account, here are possible reasons and solutions for the Moodle sign-in problem:
+
+   - Your hard disk might be full. In this situation, Moodle can't create new sessions, and users can't sign in. Check that your hard disk isn't full, that your server is on shared hosting, and that you haven't reached your disk space quota.
+
+   - The web server can't write to the `sessions` subdirectory. Carefully check the permissions in your `moodledata` area.
+
+1. Fatal error: *$CFG->dataroot is not writable. The admin has to fix directory permissions! Exiting.*
+
+   The Moodle and moodledata permissions might be incorrect. Check that these permissions are `www-data:www-data` only. If the permissions are at a different level, use this command to change the group and ownership permissions:
+
+   ```bash
+   sudo chown -R /moodle/moodledata
+   ```
+
+1. You can't find a top-level course.
+
+   If you run into this problem right after you installed Moodle, the installation probably didn't finish. Right before the end of a complete installation, Moodle asks you for the administrator profile and prompts you to name the site. If these steps were missing, check your logs for errors. Then restart the database. If you used the web-based installer, install Moodle again by using the command line.
+
+1. After you sign in, you can't navigate freely in Moodle.
+
+   Your URL configuration might be incorrect. Make sure that the URL in your `$CFG->wwwroot` setting is the same one that you use to access the site.
+
+1. File uploading errors
+
+   If you see a *File not found* error when uploading a file, your web server has not turned on slash arguments.
+
+   - If your web server supports slash arguments, turn them on.
+
+   - If your web server doesn't support slash arguments, turn them off in Moodle by unticking the **Use slash arguments** checkbox in Administration > Site administration > Server > HTTP.
 
       > [!WARNING]
       > Disabling slash arguments will result in SCORM packages not working and slash arguments warnings being displayed!
 
-9. The site is stuck in **Maintenance mode**. Sometimes Moodle gets stuck in **Maintenance mode**, and the message _This site is undergoing maintenance and is currently unavailable_ appears despite your attempts to turn it off. When you put Moodle into **Maintenance mode**, it creates a `maintenance.html` file in `moodledata/maintenance.html`, the site file's directory. To fix this, try the following:
+1. The site is stuck in **Maintenance mode**. Sometimes Moodle gets stuck in **Maintenance mode**, and the message _This site is undergoing maintenance and is currently unavailable_ appears despite your attempts to turn it off. When you put Moodle into **Maintenance mode**, it creates a `maintenance.html` file in `moodledata/maintenance.html`, the site file's directory. To fix this, try the following:
 
     - Check that the web server user has write permissions to the moodledata directory.
     - Manually delete the `maintenance.html` file.
 
-10. Where to find the logs:
+1. Where to find the logs:
 
     - Syslog:
       - Either an error or access log is generated while someone accesses a page.
