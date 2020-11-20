@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit
 ---
 
-### Recommended abbreviations for Azure resources and assets
+# Recommended abbreviations for Azure resources and assets
 
 Azure workloads are typically composed of multiple resources and services. Including a naming component in your resource names that represents the type of the Azure resource makes it easier to visually recognize application or service components.
 
@@ -20,7 +20,7 @@ This list provides recommended abbreviations for various Azure resource types to
 <!-- cSpell:ignore osdisk stvm arck ssimp -->
 <!-- cSpell:ignoreRegExp [a-z]+- -->
 
-### General
+## General
 
 | Asset type | Name prefix |
 |--|--|
@@ -30,7 +30,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | API management service instance | apim- |
 | Managed Identity | id- |
 
-### Networking
+## Networking
 
 | Asset type | Name prefix |
 |--|--|
@@ -56,7 +56,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | CDN endpoint | cdne- |
 | Web Application Firewall (WAF) policy | waf |
 
-### Compute and Web
+## Compute and Web
 
 | Asset type | Name prefix |
 |--|--|
@@ -80,7 +80,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Notification Hubs | ntf- |
 | Notification Hubs namespace | ntfns- |
 
-### Databases
+## Databases
 
 | Asset type | Name prefix |
 |--|--|
@@ -95,7 +95,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | SQL Server Stretch Database | sqlstrdb- |
 | SQL Managed Instance | sqlmi- |
 
-### Storage
+## Storage
 
 | Asset type | Name prefix |
 |--|--|
@@ -103,7 +103,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure StorSimple | ssimp |
 | Azure Container Registry | acr |
 
-### AI and Machine Learning
+## AI and Machine Learning
 
 | Asset type | Name prefix |
 |--|--|
@@ -111,7 +111,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Cognitive Services | cog- |
 | Azure Machine Learning workspace | mlw- |
 
-### Analytics and IoT
+## Analytics and IoT
 
 | Asset type | Name prefix |
 |--|--|
@@ -133,13 +133,13 @@ This list provides recommended abbreviations for various Azure resource types to
 | Power BI Embedded | pbi- |
 | Time Series Insights environment | tsi- |
 
-### Developer tools
+## Developer tools
 
 | Asset type | Name prefix |
 |---|---|
 | App Configuration store | appcs- |
 
-### Integration
+## Integration
 
 | Asset type | Name prefix |
 |--|--|
@@ -149,7 +149,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Service Bus queue | sbq- |
 | Service Bus topic | sbt- |
 
-### Management and governance
+## Management and governance
 
 | Asset type | Name prefix |
 |--|--|
@@ -162,7 +162,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Application Insights | appi- |
 | Recovery Services vault | rsv- |
 
-### Migration
+## Migration
 
 | Asset type | Name prefix |
 |--|--|
