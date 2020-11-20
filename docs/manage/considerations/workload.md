@@ -15,8 +15,6 @@ Some workloads are critical to the success of the business. For those workloads,
 
 In return, the investment in workload operations can lead to improved performance, decreased risk of business interruption, and faster recovery when system failures occur. This article discusses an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 
-<!-- docutune:disable Pareto -->
-
 ## When to invest in workload operations
 
 The _Pareto principle_ (also known as the _80/20 rule_) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:

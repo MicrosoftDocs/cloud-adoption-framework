@@ -9,6 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
+<!-- docutune:casing AGL WSP -->
 <!-- cSpell:ignore AGL Bee'ah WSP -->
 
 # Sustainability outcomes and benefits for business

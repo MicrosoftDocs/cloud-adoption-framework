@@ -13,20 +13,20 @@ ms.subservice: ready
 
 ## Plan for enterprise enrollment
 
-An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via an Azure enterprise portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
+An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
 
 ![Diagram that shows Azure EA hierarchies.](./media/ea.png)
 
 _Figure 1: An Azure EA enrollment hierarchy._
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level. The quota isn't enforced firmly and is used for reporting purposes.
-- Accounts are organizational units in the Azure enterprise portal. They can be used to manage subscriptions and access reports.
-- Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They're where your organization deploys Azure services.
+- Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
+- Subscriptions are the smallest unit in the Azure EA portal. They're containers for Azure services managed by the Service Administrator. They're where your organization deploys Azure services.
 - EA enrollment roles link users with their functional role. These roles are:
   - Enterprise administrator
   - Department administrator
   - Account owner
-  - Service administrator
+  - Service Administrator
   - Notification contact
 
 **Design considerations:**
@@ -69,7 +69,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Use Azure AD seamless single sign-on based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
 - If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Such deployment with [Azure AD Domain Services](/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
-- Multifactor authentication provides another layer of security and a second barrier of authentication. Enforce [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security.
+- Multi-factor authentication provides another layer of security and a second barrier of authentication. Enforce [multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security.
 - Plan and implement for [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
 - If dev/test and production are going to be isolated environments from an identity perspective, separate them at a tenant level via multiple tenants.
