@@ -10,7 +10,7 @@ ms.subservice: ready
 ---
 
 <!-- cSpell:ignore FIPS SIEM majeure NSGs -->
-<!-- docutune:casing "FIPS 140-2 Level" "Patch and update management" -->
+<!-- docutune:casing "FIPS 140-2 Level" "Patch and update management" "SOC2 Trust Service Principles and Criteria" -->
 
 # Enterprise-scale security, governance and compliance
 
@@ -91,7 +91,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- Understand regulatory compliance policies. These might include the HIPAA, PCI-DSS, and SOC2 Trust Service Principles and Criteria.
+- Understand regulatory compliance policies. These might include the HIPAA, PCI DSS, and SOC2 Trust Service Principles and Criteria.
 
 ### Design recommendations
 
