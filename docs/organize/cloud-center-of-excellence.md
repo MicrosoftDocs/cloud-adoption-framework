@@ -114,7 +114,7 @@ These data points are not an attack on IT. Instead, they help CCoE learn from th
 
 During the first six to nine months of CCoE efforts, we recommend that business stakeholders allocate time to meet monthly with the IT leadership and the CCoE. There is little need for formal ceremony to these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go along way to driving CCoE success.
 
-Additionally, we recommend that the business stakeholders stay informed of the progress and blockers experienced by the CCoE team. Many of their efforts will seem like technical minutiae. But it is important for business stakeholders to understand the progress of the plan, so they can engage when the team looses steam or becomes distracted by other priorities.
+Additionally, we recommend that the business stakeholders stay informed of the progress and blockers experienced by the CCoE team. Many of their efforts will seem like technical minutiae. But it is important for business stakeholders to understand the progress of the plan, so they can engage when the team loses steam or becomes distracted by other priorities.
 
 ### IT stakeholder support
 

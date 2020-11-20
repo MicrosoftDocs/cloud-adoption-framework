@@ -27,7 +27,7 @@ Practice exercises have become powerful tools to ensure stakeholders are informe
 <!-- docutune:casing "Incident Response Reference Guide" "IRRG" -->
 <!-- cSpell:ignore IRRG -->
 
-Microsoft has published lessons learned and recommendations in the [incident response reference guide (IRRG)](https://aka.ms/IRRG).
+Microsoft has published lessons learned and recommendations in the [Incident Response Reference Guide (IRRG)](https://aka.ms/IRRG).
 
 ## Team composition and key relationships
 
