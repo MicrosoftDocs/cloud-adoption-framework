@@ -103,7 +103,7 @@ The section of the Ready methodology on expanding your landing zone will aid in 
 ![Parallel landing zone iteration](../../_images/ready/refactor-methodologies.png)
 _Figure 5: Deeper methodologies assisting a parallel landing zone iteration._
 
-Each subsection of [Expand your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
+Each subsection of [expand your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
 
 ## Next steps
 

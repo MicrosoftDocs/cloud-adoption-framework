@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- docutune:casing PlatformOps AppDevOps AppDataOps AppSecOps -->
+
 # Platform automation and DevOps
 
 ![Diagram of platform automation and DevOps.](./media/DevOps.png)

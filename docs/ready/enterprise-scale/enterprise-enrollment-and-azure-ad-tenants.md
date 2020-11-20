@@ -23,31 +23,31 @@ _Figure 1: An Azure EA enrollment hierarchy._
 - Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
 - Subscriptions are the smallest unit in the Azure EA portal. They're containers for Azure services managed by the Service Administrator. They're where your organization deploys Azure services.
 - EA enrollment roles link users with their functional role. These roles are:
-  - Enterprise administrator
-  - Department administrator
-  - Account owner
+  - Enterprise Administrator
+  - Department Administrator
+  - Account Owner
   - Service Administrator
-  - Notification contact
+  - Notification Contact
 
 **Design considerations:**
 
 - The enrollment provides a hierarchical organizational structure to govern the management of subscriptions.
 - Multiple environments can be separated at an EA-account level to support holistic isolation.
 - There can be multiple administrators appointed to a single enrollment.
-- Each subscription must have an associated account owner.
-- Each account owner will be made a subscription owner for any subscriptions provisioned under that account.
+- Each subscription must have an associated Account Owner.
+- Each Account Owner will be made a subscription owner for any subscriptions provisioned under that account.
 - A subscription can belong to only one account at any given time.
 - A subscription can be suspended based on a specified set of criteria.
 
 **Design recommendations:**
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
-- Set up the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
+- Set up the Notification Contact email address to ensure notifications are sent to an appropriate group mailbox.
 - Assign a budget for each account, and establish an alert associated with the budget.
 - An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map your organization structure to your enrollment hierarchy.
 - Create a new department for IT if business domains have independent IT capabilities.
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
-- If multiple Azure Active Directory (Azure AD) tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If multiple Azure Active Directory (Azure AD) tenants are used, verify that the Account Owner is associated with the same tenant as where subscriptions for the account are provisioned.
 - Set up Enterprise Dev/Test and production environments at an EA account level to support holistic isolation.
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 - Don't move or rename an EA account in Azure AD.
