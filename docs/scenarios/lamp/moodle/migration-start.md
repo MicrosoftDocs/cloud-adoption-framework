@@ -1,6 +1,6 @@
 ---
 title: Moodle manual migration steps
-description: Follow these steps to manually migrate the Moodle archive copy to Azure resources, and configure the Azure Moodle application.
+description: Follow these steps to import the Moodle on-premises backup archive to Azure resources and configure the Moodle application.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/19/2020
@@ -11,13 +11,17 @@ ms.subservice: plan
 
 # Moodle manual migration steps
 
-This article describes the steps to migrate the on-premises Moodle archive you copied to the Azure infrastructure resources you deployed, and then configure the Azure Moodle application. Before you begin, make sure to complete all the steps in [How to prepare for a Moodle migration](migration-pre.md) and [Moodle migration architecture and templates](migration-arch.md).
+This article describes the steps to import the on-premises Moodle archive to the Azure infrastructure resources, and then configure the Azure Moodle application. Before you begin this process, make sure you complete all the steps in [How to prepare for a Moodle migration](migration-pre.md) and [Moodle migration architecture and templates](migration-arch.md).
 
-After the Azure infrastructure deployment completes, sign in to the [Azure portal](https://portal.azure.com/), go to the resource group you created, and view all the created infrastructure resources. The created resources look similar to the following image, depending on which Azure Resource Manager (ARM) template you used:
+After the Azure Resource Manager (ARM) template deployment completes, sign in to the [Azure portal](https://portal.azure.com/), go to the resource group you created, and view all the created infrastructure resources. The created resources look similar to the following image, depending on which ARM template you used.
 
 ![Screenshot showing infrastructure resources created in the Moodle migration resource group.](images/resource-creation-overview.png)
 
-## Sign in to the controller virtual machine
+## Copy the Moodle archive
+
+Copy the Moodle backup archive from Azure Blob Storage to the controller virtual machine (VM).
+
+### Sign in to the controller virtual machine
 
 1. Use a free, open-source terminal emulator or serial console tool like [PuTTY](https://www.putty.org/) to sign in to a controller virtual machine (VM).
    
@@ -35,9 +39,7 @@ After the Azure infrastructure deployment completes, sign in to the [Azure porta
    
 For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
 
-After logging in, run the next set of commands to migrate.
-
-## Download and install AzCopy
+### Download and install AzCopy on the controller VM
 
 After you sign in to the controller VM, run the following commands to install AzCopy:
 
@@ -49,9 +51,7 @@ After you sign in to the controller VM, run the following commands to install Az
   sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
   ```
 
-## Copy the Moodle backup archive
-
-To copy the Moodle backup archive from the Azure Storage Account to the controller VM:
+### Copy the archive to the controller VM
 
 1. Run the following commands to download the compressed *storage.tar.gz* backup file from Azure Blob Storage to the controller VM */home/azureadmin/* directory:
    
@@ -70,7 +70,7 @@ To copy the Moodle backup archive from the Azure Storage Account to the controll
    ar -zxvf storage.tar.gz
    ```
 
-## Back up current configuration
+### Back up the current configuration
 
 Before migrating, back up the current configuration. A backup directory is extracted as *storage/at/home/azureadmin*. This storage directory contains *Moodle*, *moodledata*, and *configuration* directories, and a database backup file, which you copy to desired locations.
 
@@ -97,7 +97,11 @@ Before migrating, back up the current configuration. A backup directory is extra
    cp -rf /home/azureadmin/storage/moodledata /moodle/moodledata
    ```
 
-## Connect to the MySQL server
+## Import the Moodle database to Azure
+
+Connect to the Azure Database for MySQL server, and import the on-premises Moodle database archive to Azure Database for MySQL.
+
+### Connect to the MySQL server
 
 Azure Database for MySQL instances are protected by a firewall. All connections to the server and the databases inside the server are rejected by default. Before connecting to Azure Database for MySQL for the first time, configure the firewall to allow access for the controller VM's public IP address or IP address range.
 
@@ -105,47 +109,57 @@ You can configure the firewall by using the Azure command line (Azure CLI) or th
 
 Run the following Azure CLI command, substituting your own values for the placeholders:
 
-```azure-cli
+```azurecli
 az mysql server firewall-rule create --resource-group <myresourcegroup> --server <mydemoserver> --name <AllowMyIP> --start-ip-address <192.168.0.1> --end-ip-address <192.168.0.1>
 ```
 
 Or, in the Azure portal, select the Azure Database for MySQL server from your deployed Moodle infrastructure resources. In the server page's left navigation, select **Connection security**.
 
-![Screenshot of the Connection security pane for the Azure Database for MySQL server.](images/database-connection-security.png)
-
 You can add allowed IP addresses and configure firewall rules here. Select **Save** after you've created the rules.
+
+![Screenshot of the Connection security pane for the Azure Database for MySQL server.](images/database-connection-security.png)
 
 You can now connect to the MySQL server by using the [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) command-line tool or [MySQL Workbench](https://dev.mysql.com/doc/workbench/en/).
 
 ![Screenshot of the MySQL Workbench Setup New Connection screen.](images/database-connection.png)
 
-To get connection information, go to your MySQL server's **Overview** page in the Azure portal. Use the copy icons next to each field to copy the **Server name** and **Server admin login name**. You also need the password. If you need to reset the password, select **Reset password** in the menu bar.
+To get connection information, go to your MySQL server's **Overview** page in the Azure portal. Use the copy icons next to each field to copy the **Server name** and **Server admin login name**. For example, your server name might be `mydemoserver.mysql.database.azure.com`, and the server admin login name might be `myadmin@mydemoserver`.
 
-For example, your server name might be `mydemoserver.mysql.database.azure.com`, and the server admin login name might be `myadmin@mydemoserver`. Use these database server details in the following sections.
+You also need the password. If you need to reset the password, select **Reset password** in the menu bar.
 
-## Import the Moodle database to Azure
+Use these database server details in the following sections.
 
-To import the on-premises Moodle database archive to Azure Database for MySQL:
+### Import the Moodle database to Azure
 
 1. Create a MySQL database to import the on-premises database into.
    
-   ```bash
+   ```mysql
    mysql -h $server_name -u $server_admin_login_name -p$admin_password -e "CREATE DATABASE $moodledbname CHARACTER SET utf8;"
    ```
    
 1. Assign the correct permissions to the database.
    
-   ```bash
+   ```mysql
    mysql -h $server_name -u $server_admin_login_name -p$admin_password -e "GRANT ALL ON $moodledbname.* TO `$server_admin_login_name` IDENTIFIED BY `$admin_password`;"
    ```
    
 1. Import the database.
    
-   ```bash
+   ```mysql
    mysql -h $server_name -u $server_admin_login_name -p$admin_password $moodledbname < /home/azureadmin/storage/database.sql
    ```
 
-## Update configurations
+## Update Moodle configurations
+
+After importing the on-premises database archive to Azure Database for MySQL, update the following configurations on the controller VM as necessary:
+
+- Update the Moodle config file.
+- Configure Moodle directory permissions.
+- Update the PHP and web servers
+- Update the DNS name and other variables.
+- Install any missing PHP extensions.
+- Restart and then stop the web servers.
+- Copy the config files to a shared location for copying to virtual machine scale sets.
 
 ### Update the Moodle config file
 
@@ -154,98 +168,97 @@ Update the database detail parameters in the Moodle configuration file, */moodle
 To get the DNS name for this task:
 
 1. In the Azure portal, select the Load Balancer public IP address from your deployed Moodle infrastructure resources.
-
+   
 1. On the **Overview** page, select the copy icon next to the **DNS name**.
-
+   
 To update the *config.php* file:
 
 1. Enter the following commands to edit *config.php* in the `nano` editor:
    
-  ```bash
-  cd /moodle/html/moodle/
-  nano config.php
-```
-
+   ```bash
+   cd /moodle/html/moodle/
+   nano config.php
+   ```
+   
 1. Update the database details, using the values you copied from the portal where indicated:
-
-  - $CFG->dbhost    = 'localhost';                - Change 'localhost' to the server name.
-  - $CFG->dbname    = 'moodle';                   - Change 'moodle' to the newly created database name.
-  - $CFG->dbuser    = 'root';                     - Change 'root' to the server admin login name.
-  - $CFG->dbpass    = 'password';                 - Change 'password' to the server admin login password.
-  - $CFG->wwwroot   = 'https://on-premises.com';  - Change 'on-premises' to the DNS name.
-  - $CFG->dataroot  = '/var/moodledata';          - Change the path to '/moodle/moodledata'.
+   
+   - $CFG->dbhost    = 'localhost';                - Change 'localhost' to the server name.
+   - $CFG->dbname    = 'moodle';                   - Change 'moodle' to the newly created database name.
+   - $CFG->dbuser    = 'root';                     - Change 'root' to the server admin login name.
+   - $CFG->dbpass    = 'password';                 - Change 'password' to the server admin login password.
+   - $CFG->wwwroot   = 'https://on-premises.com';  - Change 'on-premises' to the DNS name.
+   - $CFG->dataroot  = '/var/moodledata';          - Change the path to '/moodle/moodledata'.
    
 1. After making the changes, press **CTRL+O** to save the file and **CTRL+X** to exit the editor.
 
-You can store the on-premises *dataroot* directory at any location. 
+You can store the on-premises *dataroot* directory at any location.
 
 ### Configure directory permissions
 
-- Set 755 and www-data owner:group permissions to the Moodle directory.
+- Set 755 and www-data owner:group permissions to the *Moodle* directory.
   
   ```bash
   sudo chmod 755 /moodle/html/moodle sudo chown -R www-data:www-data /moodle/html/moodle
   ```
   
-- Set 770 and www-data owner:group permissions to the moodledata directory.
+- Set 770 and www-data owner:group permissions to the *moodledata* directory.
   
   ```bash
   sudo chmod 770 /moodle/moodledata sudo chown -R www-data:www-data /moodle/moodledata
   ```
   
-### Update nginx and PHP config files
+### Configure the PHP and web server
 
-- Update the nginx *conf* file.
+Create backups of the PHP and web server configurations, and set the PHP version to a variable.
 
-  ```bash
-  sudo mv /etc/nginx/sites-enabled/*.conf /home/azureadmin/backup/
-  cd /home/azureadmin/storage/configuration/
-  sudo cp -rf nginx/sites-enabled/*.conf /etc/nginx/sites-enabled/
-  ```
+```bash
+_PHPVER='/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3'
+echo $_PHPVER
+sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf
+sudo cp -rf /home/azureadmin/storage/configuration/php/$_PHPVER/fpm/pool.d/www.conf /etc/php/$_PHPVER/fpm/pool.d/
+```
 
-- Update the PHP *config* file.
-  
-  ```bash
-  _PHPVER='/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3'
-  echo $_PHPVER
-  sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf
-  sudo cp -rf /home/azureadmin/storage/configuration/php/$_PHPVER/fpm/pool.d/www.conf /etc/php/$_PHPVER/fpm/pool.d/
-  ```
-  
-## Install missing PHP extensions
+```bash
+sudo mv /etc/nginx/sites-enabled/*.conf /home/azureadmin/backup/
+cd /home/azureadmin/storage/configuration/
+sudo cp -rf nginx/sites-enabled/*.conf /etc/nginx/sites-enabled/
+```
 
-The ARM templates install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2. To get the list of PHP extensions in the on-premises application, run the following command:
-  
-  ```bash
-  php -m
-  ```
-  
-  If the on-premises application has any PHP extensions that aren't on the controller VM, you can install them manually:
-  
-  ```bash
-  sudo apt-get install -y php-<extensionName>
-  ```
+### Update the DNS name and other variables
 
-### Update the DNS name and root directory location
-
-Update the Azure cloud DNS name with the on-premises application's DNS name.
+Update the Azure cloud DNS name to the on-premises application's DNS name.
 
 1. Open the configuration file:
-
-  ```bash
-  nano /etc/nginx/sites-enabled/*.conf
-  ```
-  
-  - The ARM template deployment sets the nginx server on port 81. Update the server port to 81 if it's not 81.
-  
-  - Update the server name. For example, for server_name `on-premises.com`, update `on-premises.com` with the DNS name. In most cases, the DNS name remains the same in the migration.
-  
-  - Update the HTML root directory location. For example, if `root /var/www/html/moodle;`, update it to `root /moodle/html/moodle;`.
-  
-  - The on-premises root directory can be at any location.
-  
+   
+   ```bash
+   nano /etc/nginx/sites-enabled/*.conf
+   ```
+   
+1. The ARM template deployment sets the nginx server on port 81. Update the server port to 81 if it's not 81.
+   
+1. Update the server name. For example, for server_name `on-premises.com`, update `on-premises.com` with the DNS name. In most cases, the DNS name remains the same in the migration.
+   
+1. Update the HTML root directory location. For example, if `root /var/www/html/moodle;`, update it to `root /moodle/html/moodle;`.
+   
+   The on-premises root directory can be at any location.
+   
 1. After making the changes, press **CTRL+O** to save the file and **CTRL+X** to exit.
 
+### Install any missing PHP extensions
+
+The ARM deployment templates install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2. If the on-premises application has any PHP extensions that aren't on the controller VM, you can install them manually.
+
+To get the list of PHP extensions in the on-premises application, run:
+
+```bash
+php -m
+```
+
+To install missing extensions, run:
+
+```bash
+sudo apt-get install -y php-<extensionName>
+```
 
 ### Restart and stop the web servers
 
@@ -256,16 +269,16 @@ Update the Azure cloud DNS name with the on-premises application's DNS name.
    sudo systemctl restart php$_PHPVER-fpm  
    ```
    
-1. Stop the web servers. When a request reaches Azure Load Balancer, it is redirected to virtual machine scale set instances and not to the controller VM.
+1. Stop the web servers. When a request reaches Azure Load Balancer, it now redirects to virtual machine scale set instances and not to the controller VM.
    
    ```bash
    sudo systemctl stop nginx
    sudo systemctl stop php$_PHPVER-fpm  
    ```
 
-## Copy configuration files
+### Copy configuration files
 
-Copy PHP and web server configuration files to a shared location, and then to virtual machine scale set instances from the shared location.
+Copy PHP and web server configuration files to a shared location for later copying to virtual machine scale set instances.
 
 To create the directory for configuration files in a shared location, run:
 
