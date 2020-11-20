@@ -83,7 +83,7 @@ In addition to preparing and readying your migration team for your target enviro
 
 - AzCopy to Azure Blob storage.
 - Microsoft Azure ExpressRoute to transfer compressed data directly to Azure.
-- File export to Microsoft Azure Data Box.
+- File export to Azure Data Box.
 
 The main factors influencing which of these options is selected are data volume size (in terabytes) and network speed (in Mbps). A calculation is needed to determine how long it would take to migrate the data via the network, considering that data might be compressed in your data warehouse and become uncompressed when you export it. This situation can slow data transfer. Recompress data via Gzip when moving data by any of the above methods. PolyBase can process gzipped data directly.
 Large data volumes will likely be migrated via Azure Data Box if it will take too long to move the data.

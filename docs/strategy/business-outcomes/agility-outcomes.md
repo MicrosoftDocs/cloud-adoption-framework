@@ -1,5 +1,5 @@
 ---
-title: "Examples of agility outcomes"
+title: Examples of agility outcomes
 description: Use the Cloud Adoption Framework for Azure to understand your company's market position and competitive landscape.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,7 +29,7 @@ During cloud-enabled innovation efforts, time to market is a key measure of IT's
 
 - **Example 2:** A logistics company has discovered an untapped segment of the market, but it needs a new version of their flagship application to capture this market share. Their larger competitor has made the same discovery. Through the execution of a cloud-enabled application innovation effort, the company embraces customer obsession and a DevOps-driven development approach to beat their slower, legacy competitor by *x* months. This jump on market entrance secured the customer base.
 
-<!-- docsTest:ignore "Jamey Shiels" "Vice President of Digital Experience" "Aurora Health Care" -->
+<!-- docutune:ignore "Jamey Shiels" "Vice President of Digital Experience" "Aurora Health Care" -->
 
 ### Aurora Health Care
 

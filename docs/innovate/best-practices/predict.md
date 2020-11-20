@@ -24,4 +24,4 @@ You can accelerate this type of digital invention through each of the following 
 The table of contents on the left side of this page outlines many articles. These articles help you get started with each of the solution areas.
 
 > [!NOTE]
-> Some links might leave the Cloud Adoption Framework for Azure to help you go beyond the scope of this framework.
+> Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.

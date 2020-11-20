@@ -9,15 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore ISVs MSPs -->
-
 # Evaluate a Microsoft partner's Azure landing zone
 
-The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each team that supports adoption through standardized approaches. In reality, you can't assume that a self-service approach is sufficient for all adoption activities.
+The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each team that supports adoption through standardized approaches. In practice, you can't assume that a self-service approach is sufficient for all adoption activities.
 
 Successful cloud adoption programs typically involve at least one level of third-party support. Many cloud adoption efforts require support from a systems integrator (SI) or consulting partner who provides services that accelerate cloud adoption. Managed service providers (MSPs) provide enduring value by supporting landing zones and cloud adoption, but they also provide post-adoption operations management support. Additionally, successful cloud adoption efforts tend to engage one or more independent software vendors (ISV) who provide software-based services that accelerate cloud adoption. The rich partner ecosystems of SIs, ISVs, MSPs, and other forms of Microsoft partners have aligned their offerings to specific methodologies found in the Cloud Adoption Framework. When a partner is aligned to the Ready methodology of this framework, they will likely offer their own Azure landing zone implementation option.
 
-This article provides a set of questions that help create an understanding of the scope of the partner's Azure landing zone offering.
+This article provides a set of questions that help create an understanding of the scope of the partner's Azure landing zone implementation options.
 
 > [!IMPORTANT]
 > Partner offers and Azure landing zone implementation options are defined by the partner, based on their extensive experience helping customers adopt the cloud.

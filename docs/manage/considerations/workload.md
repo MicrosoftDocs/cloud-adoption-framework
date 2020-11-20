@@ -15,7 +15,7 @@ Some workloads are critical to the success of the business. For those workloads,
 
 In return, the investment in workload operations can lead to improved performance, decreased risk of business interruption, and faster recovery when system failures occur. This article discusses an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 
-<!-- docsTest:disable Pareto -->
+<!-- docutune:disable Pareto -->
 
 ## When to invest in workload operations
 

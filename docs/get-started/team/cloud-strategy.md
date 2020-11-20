@@ -3,15 +3,15 @@ title: "Get started: Build a cloud strategy team"
 description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you're prepared for a successful cloud adoption journey.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud strategy team
 
-To be successful, every cloud adoption journey needs to involve some level of strategic planning. This get-started guide is designed to help you establish a dedicated team or virtual team (v-team) that can build and deliver on a solid cloud strategy.
+To be successful, every cloud adoption journey needs to involve some level of strategic planning. This getting started guide is designed to help you establish a dedicated team or virtual team that can build and deliver on a solid cloud strategy.
 
 The first step in the journey is to decide whether you need a strategy team, or whether your existing team members can deliver on cloud strategy as a distributed responsibility.
 
@@ -34,8 +34,6 @@ A cloud strategy team delivers on a required capability in the cloud, referred t
 
 Creating a cloud strategy team is often necessary for the following reasons:
 
-<!-- markdownlint-disable MD033 -->
-
 | Reason | Considerations |
 |---|---|
 | **Cloud adoption is important to the business.** | <li> The cloud adoption effort has board-level visibility. <li> Success of the cloud adoption effort will improve market positioning, customer retention, or revenue. <li> The programs in the adoption portfolio map directly to strategic business outcomes. <li> The portfolio of workloads in this adoption effort is strategic and mission-critical and could affect multiple business units. |
@@ -50,7 +48,7 @@ If any or all of the preceding reasons represent your existing business consider
 
 ## What if I don't need a cloud strategy team?
 
-Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team (v-team) to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
+Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
 
 ## Step 2: Establish the cloud strategy team
 
@@ -106,9 +104,8 @@ This exercise will surface conversations that can help build alignment among the
 
 **Guidance to support deliverable completion:**
 
-- [Understand motivations](../../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all subsequent efforts. Other forward-looking motivations that are related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps team members understand how high the cost management priority should be.
+- [Understand motivations](../../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all subsequent efforts. Other forward-looking motivations that are related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps team members decide how high to prioritize your cost management.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -154,7 +151,7 @@ Each member of the strategy team should review common myths and approaches to bu
 
 - The [business justification](../../strategy/cloud-migration-business-case.md) serves as a high-level view of the overall financial plan for cloud adoption. This can be a good source for initial budgeting efforts.
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -177,7 +174,6 @@ After a go-forward decision has been agreed upon with the cloud strategy team, t
 - [Incremental rationalization](../../digital-estate/rationalize.md): Consider an agile approach to rationalization that properly aligns late-bound technical decisions.
 - The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

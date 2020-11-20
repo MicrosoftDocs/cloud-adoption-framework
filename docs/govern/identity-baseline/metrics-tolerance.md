@@ -1,5 +1,6 @@
 ---
 title: Risk tolerance metrics and indicators in the Identity Baseline discipline.
+
 description: Use the Cloud Adoption Framework for Azure to learn how to quantify business risk tolerance related to the Identity Baseline discipline.
 author: BrianBlanchard
 ms.author: brblanch

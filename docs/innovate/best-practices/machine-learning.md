@@ -30,7 +30,7 @@ Azure Machine Learning provides all the tools developers and data scientists nee
 - Open-source frameworks such as PyTorch, TensorFlow, and scikit-learn and many more
 - [Reinforcement learning](/azure/machine-learning/how-to-use-reinforcement-learning) with Ray RLlib.
 
-You can even use [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow) or [Kubeflow](https://www.kubeflow.org/docs/azure/) to build end-to-end workflow pipelines.
+You can even use [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow) or [kubeflow](https://www.kubeflow.org/docs/azure/) to build end-to-end workflow pipelines.
 
 ## Build machine learning models in Python or R
 
@@ -57,7 +57,7 @@ Machine Learning operations (MLOps) is based on [DevOps](https://azure.microsoft
 - Faster deployment of models into production
 - Quality assurance
 
-When you have the right model, you can easily use it in a web service, on an IoT device, or from Power BI. For more information, see the article on [how to deploy and where](/azure/machine-learning/how-to-deploy-and-where).
+When you have the right model, you can easily use it in a web service, on an IoT device, or from Power BI. For more information, see [Deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where).
 
 Then you can manage your deployed models by using the [Azure Machine Learning SDK for Python](/python/api/overview/azure/ml/?view=azure-ml-py), [Azure Machine Learning studio](https://ml.azure.com/), or the [Machine learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli).
 
@@ -94,7 +94,7 @@ Learn more about how to implement [Responsible ML](/azure/machine-learning/conce
 
 ## Integration with other services
 
-Azure Machine Learning works with other services on the Azure platform, and also integrates with open source tools such as Git and MLFlow.
+Azure Machine Learning works with other services on the Azure platform, and also integrates with open source tools such as Git and MLflow.
 
 - Compute targets such as Azure Kubernetes Service, Azure Container Instances, Azure Databricks, Azure Data Lake Analytics, and Azure HDInsight. For more information on compute targets, see [What are compute targets?](/azure/machine-learning/concept-compute-target).
 - Azure Event Grid. For more information, see [Consume Azure Machine Learning events](/azure/machine-learning/how-to-use-event-grid).
@@ -103,11 +103,11 @@ Azure Machine Learning works with other services on the Azure platform, and also
 - Azure Virtual Network. For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-enable-virtual-network).
 - Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops).
 - Git repository logs. For more information, see [Git integration](/azure/machine-learning/concept-train-model-git-integration).
-- MLFlow. For more information, see [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow).
+- MLflow. For more information, see [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow).
 - Kubeflow. For more information, see [Build end-to-end workflow pipelines](https://www.kubeflow.org/docs/azure/).
 - Secure communications. Your Azure Storage account, compute targets, and other resources can be used securely inside a virtual network to train models and perform inference. For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-enable-virtual-network).
 
 ## Next steps
 
-- Review machine learning whitepapers and e-books on [Machine Learning studio](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-studio) and [Machine Learning service](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-service).
+- Review machine learning white papers and e-books on [Machine Learning studio](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-studio) and [Machine Learning service](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-service).
 - Review [AI + Machine Learning architectures](/azure/architecture/browse/).

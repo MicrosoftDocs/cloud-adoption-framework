@@ -42,8 +42,9 @@ You should assign an address space that isn't larger than a CIDR range of `/16` 
 Other tips for planning are:
 
 - The virtual network address space shouldn't overlap with on-premises network ranges.
-- Don't use network address translation (NAT).
-- Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use NAT.
+- Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly. 
+- If networks overlap, you'll need to redesign the network.
+- If you absolutely can't redesign the network, network address translation (NAT) can help. But should be avoid or limited as much as possible.
 
 **Learn more:**
 
@@ -96,7 +97,7 @@ The table shows an example of a virtual network with an address space of `10.245
 **Learn more:**
 
 - Learn about [designing subnets](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
-- [Learn how](/azure/migrate/contoso-migration-infrastructure) a fictional company (Contoso) prepared their networking infrastructure for migration.
+- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](/azure/migrate/contoso-migration-infrastructure).
 
 ## Best practice: Set up a DNS server
 
@@ -288,7 +289,7 @@ The responsibility for securing virtual networks is shared between Microsoft and
 - Read an [overview of best practices for network security](/azure/security/fundamentals/network-best-practices).
 - Learn how to [design for secure networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
 
-<!-- docsTest:ignore "IDS/IPS" -->
+<!-- docutune:casing "IDS/IPS" -->
 
 ## Best practice: Implement an Azure perimeter network
 

@@ -37,7 +37,7 @@ The enterprise-scale approach to construct landing zones includes three sets of 
 
 ## Community
 
-<!-- docsTest:ignore "Cloud Solutions Unit" -->
+<!-- docutune:ignore "Cloud Solutions Unit" -->
 
 This guide is developed largely by Microsoft architects and the broader Cloud Solutions Unit technical community. This community actively advances this guide to share lessons learned during enterprise-scale adoption efforts.
 

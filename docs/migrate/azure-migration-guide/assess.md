@@ -15,8 +15,6 @@ ms.localizationpriority: high
 
 The resources in this guide help you assess each workload, challenge assumptions about each workload's suitability for migration, and finalize architectural decisions about migration options.
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Tools](#tab/Tools)
 
 If you didn't follow the guidance in the links above, you will likely need data and an assessment tool to make informed migration decisions. Azure Migrate is the native tool for assessing **and** migrating to Azure. If you haven't already, use these steps to create a new server migration project and collect the necessary data.
@@ -87,7 +85,7 @@ To use dependency visualization, download and install agents on each on-premises
 
 ## [Challenge assumptions](#tab/Challenge-Assumptions)
 
-In an ideal migration, every asset (infrastructure, app, or data) would be compatible with a cloud platform and ready for migration or modernization. In reality, not every workload should be migrated to the cloud. Not every asset is compatible with cloud platforms. Before migrating a workload to the cloud, assess each workload and all dependent assets (infrastructure, apps, and data).
+In an ideal migration, every asset (infrastructure, app, or data) would be compatible with a cloud platform and ready for migration or modernization. In practice, not every workload should be migrated to the cloud. Not every asset is compatible with cloud platforms. Before migrating a workload to the cloud, assess each workload and all dependent assets (infrastructure, apps, and data).
 
 The [Plan methodology of the Cloud Adoption Framework](../../plan/index.md) advises readers to use [incremental rationalization](../../digital-estate/rationalize.md#incremental-rationalization) and [power of ten](../../digital-estate/rationalize.md#release-planning) approaches to assess and plan for the migration. That guidance also includes a detailed best practice for [using Azure Migrate to assess your digital estate](../../plan/contoso-migration-assessment.md).
 
