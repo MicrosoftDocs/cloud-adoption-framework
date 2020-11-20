@@ -129,35 +129,35 @@ To get connection information, go to your MySQL server's **Overview** page in th
 
 You also need the password. If you need to reset the password, select **Reset password** in the menu bar.
 
-Use the database server details in the following sections.
+Use these database server details in the following sections.
 
-### Import the Moodle database to Azure
+### Import the Moodle database to Azure Database for MySQL
 
-1. Create a MySQL database to import the on-premises database into.
+1. Create a MySQL database to import the on-premises database into:
    
-   ```mysql
+   ```bash
    mysql -h $server_name -u $server_admin_login_name -p$admin_password -e "CREATE DATABASE $moodledbname CHARACTER SET utf8;"
    ```
    
-1. Assign the correct permissions to the database.
+1. Assign the correct permissions to the database:
    
-   ```mysql
-   mysql -h $server_name -u $server_admin_login_name -p$admin_password -e "GRANT ALL ON $moodledbname.* TO `$server_admin_login_name` IDENTIFIED BY `$admin_password`;"
+   ```bash
+   mysql -h $server_name -u $server_admin_login_name -p$admin_password -e "GRANT ALL ON $moodledbname.* TO '$server_admin_login_name' IDENTIFIED BY '$admin_password';"
    ```
    
-1. Import the database.
+1. Import the database:
    
-   ```mysql
+   ```bash
    mysql -h $server_name -u $server_admin_login_name -p$admin_password $moodledbname < /home/azureadmin/storage/database.sql
    ```
 
 ## Update Moodle configurations
 
-After importing the on-premises database archive to Azure Database for MySQL, update the following configurations on the controller VM as necessary:
+After importing the on-premises Moodle database archive to Azure Database for MySQL, update the following configurations on the controller VM as necessary:
 
 - Update the Moodle config file.
 - Configure Moodle directory permissions.
-- Update the PHP and web servers
+- Configure PHP and web servers.
 - Update the DNS name and other variables.
 - Install any missing PHP extensions.
 - Restart and then stop the web servers.
@@ -169,7 +169,7 @@ Update the database detail parameters in the Moodle configuration file, */moodle
 
 To get the DNS name for this task:
 
-1. In the Azure portal, select the Load Balancer public IP address from your deployed Moodle infrastructure resources.
+1. In the Azure portal, select the **Load Balancer public IP address** from your deployed Moodle infrastructure resources.
    
 1. On the **Overview** page, select the copy icon next to the **DNS name**.
    
@@ -182,16 +182,18 @@ To update the *config.php* file:
    nano config.php
    ```
    
-1. Update the database details, using the values you copied from the portal where indicated:
+1. Update the database details in the file, using the values you copied from the Azure portal:
    
-   - $CFG->dbhost    = 'localhost';                - Change 'localhost' to the server name.
-   - $CFG->dbname    = 'moodle';                   - Change 'moodle' to the newly created database name.
-   - $CFG->dbuser    = 'root';                     - Change 'root' to the server admin login name.
-   - $CFG->dbpass    = 'password';                 - Change 'password' to the server admin login password.
-   - $CFG->wwwroot   = 'https://on-premises.com';  - Change 'on-premises' to the DNS name.
-   - $CFG->dataroot  = '/var/moodledata';          - Change the path to '/moodle/moodledata'.
+```php
+   $CFG->dbhost    = 'localhost';                // Change 'localhost' to the server name.
+   $CFG->dbname    = 'moodle';                   // Change 'moodle' to the newly created database name.
+   $CFG->dbuser    = 'root';                     // Change 'root' to the server admin login name.
+   $CFG->dbpass    = 'password';                 // Change 'password' to the server admin login password.
+   $CFG->wwwroot   = 'https://on-premises.com';  // Change 'on-premises' to the DNS name.
+   $CFG->dataroot  = '/var/moodledata';          // Change the path to '/moodle/moodledata'.
+```
    
-1. After making the changes, press **CTRL+O** to save the file and **CTRL+X** to exit the editor.
+1. After making the changes, press CTRL+O to save the file and CTRL+X to exit the editor.
 
 You can store the on-premises *dataroot* directory at any location.
 
@@ -209,7 +211,7 @@ You can store the on-premises *dataroot* directory at any location.
   sudo chmod 770 /moodle/moodledata sudo chown -R www-data:www-data /moodle/moodledata
   ```
   
-### Configure the PHP and web server
+### Configure PHP and web servers
 
 Set the PHP version to a variable, and create backups of the PHP and web server configurations.
 
@@ -228,7 +230,7 @@ sudo cp -rf nginx/sites-enabled/*.conf /etc/nginx/sites-enabled/
 
 ### Update the DNS name and other variables
 
-Update the Azure cloud DNS name to the on-premises application's DNS name.
+Update the Azure cloud DNS name to the on-premises Moodle application's DNS name.
 
 1. Open the configuration file:
    
@@ -236,19 +238,19 @@ Update the Azure cloud DNS name to the on-premises application's DNS name.
    nano /etc/nginx/sites-enabled/*.conf
    ```
    
-1. The ARM template deployment sets the nginx server on port 81. Update the server port to 81 if it's not 81.
+1. The ARM template deployment sets the nginx server on port 81. Update the server port in the file to 81 if it's not 81.
    
-1. Update the server name. For example, for server_name `on-premises.com`, update `on-premises.com` with the DNS name. In most cases, the DNS name remains the same in the migration.
+1. Update the server name. For example, for server_name `on-premises.com`, update `on-premises.com` with the DNS name. In most cases, the DNS name doesn't change in the migration.
    
-1. Update the HTML root directory location. For example, if `root /var/www/html/moodle;`, update it to `root /moodle/html/moodle;`.
+1. Update the HTML root directory location. For example, update `root /var/www/html/moodle;` to `root /moodle/html/moodle;`.
    
    The on-premises root directory can be at any location.
    
-1. After making the changes, press **CTRL+O** to save the file and **CTRL+X** to exit.
+1. After making the changes, press CTRL+O to save the file and CTRL+X to exit.
 
 ### Install any missing PHP extensions
 
-The ARM deployment templates install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2. If the on-premises application has any PHP extensions that aren't on the controller VM, you can install them manually.
+The ARM deployment templates install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2. If the on-premises Moodle application has any PHP extensions that aren't on the controller VM, you can install them manually.
 
 To get the list of PHP extensions in the on-premises application, run:
 
@@ -268,14 +270,14 @@ sudo apt-get install -y php-<extensionName>
    
    ```bash
    sudo systemctl restart nginx
-   sudo systemctl restart php$_PHPVER-fpm  
+   sudo systemctl restart php$_PHPVER-fpm
    ```
    
 1. Stop the web servers. When a request reaches Azure Load Balancer, it now redirects to virtual machine scale set instances and not to the controller VM.
    
    ```bash
    sudo systemctl stop nginx
-   sudo systemctl stop php$_PHPVER-fpm  
+   sudo systemctl stop php$_PHPVER-fpm
    ```
 
 ### Copy configuration files
@@ -290,7 +292,7 @@ mkdir -p /moodle/config/php
 mkdir -p /moodle/config/nginx
 ```
 
-To copy the PHP and web server configuration files to the configuration directory, run:
+To copy the PHP and web server configuration files to the shared directory, run:
 
 ```bash
 cp /etc/nginx/sites-enabled/* /moodle/config/nginx
