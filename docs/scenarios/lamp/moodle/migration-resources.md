@@ -63,8 +63,8 @@ Virtual machine extensions are small applications that provide post-deployment c
 
 ## Scale set template
 
-The scale set template deployment creates a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview). By using a virtual machine scale set, you can deploy and manage a set of autoscaling virtual machines. You can scale the number of virtual machines in the scale set manually or define rules to autoscale based on resource usage like [CPU](/visualstudio/profiling/average-cpu-utilization), memory demand, or network traffic. When an instance scales up, it deploys a virtual machine. Then a shell script runs that installs Moodle prerequisites and sets up cron jobs. A virtual machine in a scale set has a private IP address. Follow the steps in [how to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to connect to virtual machines in a scale set with a private IP address.
+The scale set template deployment creates a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview). By using a virtual machine scale set, you can deploy and manage a set of autoscaling virtual machines. You can scale the number of virtual machines in the scale set manually or define rules to autoscale based on resource usage like [CPU](/visualstudio/profiling/average-cpu-utilization), memory demand, or network traffic. When an instance scales up, it deploys a virtual machine. Then a shell script runs that installs Moodle prerequisites and sets up cron jobs. A virtual machine in a scale set has a private IP address. Follow the steps in [How to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to connect to virtual machines in a scale set with a private IP address.
 
 ## Next steps
 
-Continue to [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md).
+Continue to [How to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md).
