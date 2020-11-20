@@ -23,16 +23,12 @@ Consider Inter-VM latency monitoring for latency sensitive application
 
 ### Design Recommendations
 
-Leverage SAP Solution Manager and "Azure Monitor for SAP Solutions (AMS)" to monitor SAP HANA, HA SuSE Cluster and SQL Systems.	 
+Leverage SAP Solution Manager and [Azure Monitor for SAP Solutions](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, HA SuSE Cluster and SQL Systems.
 
-Deploy  Azure Monitoring Extension for SAP. 
+Deploy [Azure Monitoring Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/deployment-guide) for SAP.
 
-Leverage Azure Backup Services to protect data.  
+Leverage [Azure Backup Services](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-hana-backup-guide) to protect data.  
 
-Create monitoring platform using Azure telemetry tools to provide business processes insight. 
+Create monitoring platform using [Azure telemetry](https://github.com/microsoft/SAPTELEMETRY) tools to provide business processes insight.
 
-Network Watcher Connection monitor for SAP database and application server latency monitoring  (Metric). 
-
-Threat Protection for SAP with Azure Sentinel 
-
-Azure Security Center - Ranking based approach for SAP workload (scorecard-based approach) 
+Network Watcher [Connection monitor](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor) for SAP database and application server latency monitoring  (Metric) or by leveraging [Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
