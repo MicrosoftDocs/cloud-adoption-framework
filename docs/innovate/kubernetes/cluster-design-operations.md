@@ -26,8 +26,6 @@ As you get started, the checklist and resources below will help you plan the clu
 
 <!-- -->
 
-> [!div class="tdCol2BreakAll"]
->
 > | Checklist  | Resources |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
 > | **Identify network design considerations.** Understand cluster network design considerations, compare network models, and choose the Kubernetes networking plug-in that fits your needs. For Azure container networking interface (CNI) networking, consider the number of IP addresses required as a multiple of the maximum pods per node (default of 30) and number of nodes. Add one node required during upgrade. When choosing load balancer services, consider using an ingress controller when there are too many services to reduce the number of exposed endpoints. For Azure CNI, the service CIDR has to be unique across the virtual network and all connected virtual networks to ensure appropriate routing. | <li> [Kubenet and Azure CNI networking](/azure/aks/concepts-network#azure-virtual-networks) <li> [Use kubenet networking with your own IP address ranges in Azure Kubernetes Service (AKS)](/azure/aks/configure-kubenet) <li> [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni) <li> [Secure network design for an AKS cluster](https://github.com/Azure/sg-aks-workshop/blob/master/cluster-design/NetworkDesign.md)|
@@ -45,8 +43,6 @@ As you prepare the application for production, you should implement a minimum se
 
 <!-- -->
 
-> [!div class="tdCol2BreakAll"]
->
 > | Checklist  | Resources                                                                                                     |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
 > | **Automate cluster provisioning.** With infrastructure as code, you can automate infrastructure provisioning to provide more resiliency during disasters and gain agility to quickly redeploy the infrastructure as needed.  | <li> [Create a Kubernetes cluster with Azure Kubernetes Service using Terraform](/azure/terraform/terraform-create-k8s-cluster-with-tf-and-aks)|
@@ -65,8 +61,6 @@ Now that the application is in production, how can you optimize your workflow an
 
 <!-- -->
 
-> [!div class="tdCol2BreakAll"]
->
 > | Checklist | Resources |
 > |--|--|
 > | **Automatically scale a cluster to meet application demands.** To keep up with application demands, you may need to adjust the number of nodes that run your workloads automatically using the cluster autoscaler. | <li> [Configure Kubernetes cluster autoscaler](/azure/aks/cluster-autoscaler) |
