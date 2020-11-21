@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Create a virtual network gateway and connect to VMs
 
-After you deploy the Azure Moodle resources, create an Azure virtual network gateway and connect to the Moodle virtual machine scale set instances through private IP addresses.
+After you deploy the Azure Moodle resources, create an Azure virtual network gateway so you can connect to the Moodle virtual machine scale set instances through private IP addresses.
 
 ## Create a virtual network gateway
 
@@ -31,13 +31,13 @@ In the [Azure portal](https://portal.azure.com):
    
 1. Leave the rest of the fields at their default filled-in values.
    
-1. Select **Create**.
+1. Select **Review + Create**, and when validation passes, select **Create**.
 
 ![Screenshot showing the Azure portal Create virtual network gateway screen.](images/vpn-gateway.png)
 
 Or, run the following Azure CLI command to create the gateway:
 
-```azcli
+```azurecli
 az network vnet-gateway create -g <MyResourceGroup> -n <MyVnetGateway> --public-ip-address <MyGatewayIp> --vnet <MyVnet> --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
 ```
 
@@ -72,7 +72,7 @@ Export the certificates to install them on your systems.
    
 1. In Microsoft Management Console left navigation pane, under the **Personal** folder, select **Certificates**.
    
-   Find the **P2SRootCert** and **P2SChildCert** certificates.
+Find the **P2SRootCert** and **P2SChildCert** certificates.
 
 To export the root certificate:
 
@@ -95,8 +95,6 @@ To export the child certificate:
 1. Enter a file name, and select **Next**.
 1. Select **Finish**.
 1. The message **The export was successful** appears. Select **OK**.
-
-- Open the root certificate file in your choice editor, and copy the code.
 
 ## Configure the virtual network gateway
 
@@ -145,15 +143,15 @@ To configure password authentication:
    sudo systemctl restart sshd
    ```
    
-1. Run the following command to set a new password:
+1. Run the following command to set a password:
    
    ```bash
    sudo passwd <username>
    ```
    
-   For example, `sudo passwd azureadmin` sets a new password for the user `azureadmin`.
+   For example, `sudo passwd azureadmin` sets the password for the user `azureadmin`.
    
-1. At the prompts, type and retype the new password.
+1. At the prompts, type and retype the password.
 
 Password authentication is now complete.
 
@@ -169,7 +167,7 @@ Sign in to virtual machines (VMs) with private IP addresses through SSH.
    sudo ssh <username>@<private_IP>
    ```
    
-   For example: `sudo ssh azureadmin@102.xx.xx.xx`
+   For example, `sudo ssh azureadmin@102.xx.xx.xx`
    
 1. At the prompt, enter the password.
 

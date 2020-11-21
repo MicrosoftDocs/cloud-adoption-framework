@@ -440,6 +440,8 @@ items:
               href: scenarios/lamp/moodle/migration-arch.md
             - name: Resource description
               href: scenarios/lamp/moodle/migration-resources.md
+            - name: Virtual network gateway connection
+              href: scenarios/lamp/moodle/vpn-gateway.md
             - name: Migration steps
               href: scenarios/lamp/moodle/migration-start.md
             - name: Azure infrastructure configuration
