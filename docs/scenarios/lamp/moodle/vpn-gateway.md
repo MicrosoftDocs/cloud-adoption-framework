@@ -47,7 +47,7 @@ Use the Windows PowerShell ISE to generate root and child certificates.
 
 - Run the following command to generate the root certificate:
 
-  ```azurepowershell
+  ```powershell
   $cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
   -Subject "CN=P2SRootCert" -KeyExportPolicy Exportable `
   -HashAlgorithm sha256 -KeyLength 2048 `
@@ -56,7 +56,7 @@ Use the Windows PowerShell ISE to generate root and child certificates.
 
 - Run the following command to generate the child certificate:
 
-  ```azurepowershell
+  ```powershell
   New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
   -Subject "CN=P2SChildCert" -KeyExportPolicy Exportable `
   -HashAlgorithm sha256 -KeyLength 2048 `
