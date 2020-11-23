@@ -3,7 +3,7 @@ title: Create a virtual network gateway and connect to VMs
 description: Create a virtual network gateway, certificates, and VPN, and connect to virtual machine scale set instances with SSH using a private IP address and password.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/20/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -102,7 +102,7 @@ To export the child certificate:
 1. In the Azure portal, go to your virtual network gateway.
 1. In the left navigation, select **Point-to-site-configuration**.
 1. Select **Configure now**.
-1. Under **Address pool**, add the GatewaySubnet address pool, for example `192.168.xx.0/24`.
+1. Under **Address pool**, enter the GatewaySubnet address pool, for example `192.168.xx.0/24`.
 1. Under **Tunnel type**, select **IKEv2**.
 1. Under **Authentication type**, select **Azure certification**.
 1. Under **Root certificates**:
@@ -143,7 +143,7 @@ To configure password authentication, from the controller virtual machine (VM):
    sudo systemctl restart sshd
    ```
    
-1. Run the following command to set a password:
+1. Run the following command to set the password:
    
    ```bash
    sudo passwd <username>
