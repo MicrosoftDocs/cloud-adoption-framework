@@ -1,6 +1,6 @@
 ---
-title: How to set up a Moodle controller instance and worker nodes
-description: Learn how to set up a Moodle controller instance and worker nodes (Azure infrastructure configuration).
+title: How to set up Moodle worker nodes
+description: Learn how to configure a virtual machine scale set for Moodle. See how to access the scale set from the controller by using a private IP address.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/06/2020
@@ -9,75 +9,100 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# How to set up a Moodle controller instance and worker nodes
+# How to set up Moodle worker nodes
 
-Follow these steps to set up a controller virtual machine and a virtual machine scale set for Moodle.
+Follow these steps to configure a virtual machine scale set, or worker nodes, for Moodle.
 
 ## Virtual machine scale set instances
 
-Virtual machine scale set instances are assigned private IP addresses. You can only access these IP addresses with a controller virtual machine that is in the same virtual network as the IP addresses. Enable your gateway to connect the virtual machine scale set instance to a private IP, and follow [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md) to gain gateway access to the virtual machine scale set instance. Before accessing a virtual machine scale set, set it to password-enabled.
+A virtual machine scale set instance is assigned a private IP address. You can only access this IP address with a controller virtual machine that is in the same virtual network as the IP address. This guide describes how to set up that IP address and use it to configure the virtual machine scale set.
 
-To create a virtual machine scale set instance private IP:
+### Access the virtual machine scale set
 
-- Log in to the [Azure portal](https://ms.portal.azure.com/#home), and locate the created resource group.
-- Find and navigate to the virtual machine scale set resource.
-- In the left panel, select **Instances**.
-- Navigate to the running instance and find the private IP associated with it in the **Overview** section.
+Follow these steps to access the virtual machine scale set:
 
-Log in to a virtual machine scale set and the controller virtual machine; run these commands:
+1. Enable your gateway to connect the virtual machine scale set instance to a private IP address.
 
-```bash
- sudo -s
- sudo ssh azureadmin@172.31.X.X
-```
+1. Follow [how to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md) to use the gateway to access the virtual machine scale set instance.
 
-172.31.X.X is the virtual machine scale set Instance private IP.
+1. Set your virtual machine scale set to password-enabled.
 
-Log in to a scale set virtual machine instance. Perform the following steps:
+1. Determine the private IP address that Azure uses for your virtual machine scale set instance:
 
-- A backup directory is extracted as storage/ at /home/azureadmin. This storage directory contains Moodle, moodledata, and a configuration directory, plus a database backup file. These will be copied to desired locations.
+   1. Sign in to the [Azure portal](https://ms.portal.azure.com/#home), and locate the resource group that deployment created.
 
-- Create a backup directory.
+   1. Open the page for the virtual machine scale set resource.
 
-  ```bash
-  cd /home/azureadmin/
-  mkdir -p backup
-  mkdir -p backup/moodle
-  ```
+   1. In the left panel, select **Instances**.
 
-- To configure the PHP and web server, create a backup of PHP and web server configurations, and set the PHP version to a variable.
+   1. Open the running instance. In the **Overview** section, copy the private IP address that is associated with that instance.
+
+1. Enter these commands to sign in to the virtual machine scale set from the controller virtual machine:
 
    ```bash
-  _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
-  echo $_PHPVER
+   sudo -s
+   sudo ssh azureadmin@<private IP address>
    ```
 
-  ```bash
-  sudo mv /etc/nginx/sites-enabled/*.conf  /home/azureadmin/backup/
-  sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf  
-  ```
+   In the command, `<private IP address>` is the private IP address of the virtual machine scale set. For example, enter:
 
-- Copy the PHP and web server configuration files.
+   ```bash
+   sudo -s
+   sudo ssh azureadmin@172.31.X.X
+   ```
 
-  ```bash
-  sudo cp /moodle/config/nginx/*.conf  /etc/nginx/sites-enabled/
-  sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
-  ```
+### Create a backup directory
 
-- Install missing PHP extensions, and use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
+An earlier step of the migration process extracted backup files to a directory named `storage` in `/home/azureadmin`. This `storage` directory contains the `moodle` and `moodledata` directories, a configuration directory, and a database backup file. After signing in to your scale set virtual machine instance, enter these commands to create a backup directory for these files:
 
-- To obtain the list of PHP extensions installed on-premises, run the following command on an on-premises virtual machine:
+```bash
+cd /home/azureadmin/
+mkdir -p backup
+mkdir -p backup/moodle
+```
 
-  ```bash
-  php -m
-  ```
+### Configure the PHP and web server
+To configure the PHP and web server, take these steps:
 
-- If on-premises has any additional PHP extensions that aren't in the controller virtual machine, they can be installed manually.
+1. Set the PHP version to a variable:
 
-  ```bash
-  sudo apt-get install -y php-<extensionName>
-  ```
+   ```bash
+   _PHPVER=`/usr/bin/php -r "echo PHP_VERSION;" | /usr/bin/cut -c 1,2,3`
+   echo $_PHPVER
+   ```
+
+1. Create a backup of the PHP and web server configurations:
+
+   ```bash
+   sudo mv /etc/nginx/sites-enabled/*.conf /home/azureadmin/backup/
+   sudo mv /etc/php/$_PHPVER/fpm/pool.d/www.conf /home/azureadmin/backup/www.conf  
+   ```
+
+1. Copy the PHP and web server configuration files:
+
+   ```bash
+   sudo cp /moodle/config/nginx/*.conf  /etc/nginx/sites-enabled/
+   sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
+   ```
+
+### Install missing extensions
+
+Take these steps to install missing extensions:
+
+1. To obtain a list of PHP extensions that are installed on-premises, enter the following command on an on-premises virtual machine:
+
+   ```bash
+   php -m
+   ```
+
+1. Use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
+
+1. If the on-premises Moodle application has any additional PHP extensions that aren't in the controller virtual machine, install them manually with this command:
+
+   ```bash
+   sudo apt-get install -y php-<extension name>
+   ```
 
 ## Next steps
 
-Continue to [how to follow up after a Moodle migration](./migration-post.md) for information about the next step in the Moodle migration process.
+Continue to [How to follow up after a Moodle migration](./migration-post.md).
