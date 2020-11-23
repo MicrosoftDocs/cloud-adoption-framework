@@ -49,7 +49,7 @@ ARM templates support the following storage account types:
 
 These storage mechanisms differ depending on which deployment you choose. NFS and GlusterFS create a container, and Azure Files creates a file share. For minimal and short-to-mid Moodle sizes, the template supports NFS. For large and maximal sizes, the template supports Azure Files. To access the containers and file shares, go to the Azure portal, and select the storage account in the resource group.
 
-:::image type="content" source="./images/storage-account.png" alt-text="Screenshot of the Azure portal. A page for a storage account is visible, and buttons are available for accessing containers and file shares.":::
+![Screenshot of the Azure portal. A page for a storage account is visible, and buttons are available for accessing containers and file shares.](./images/storage-account.png)
 
 ## Database template
 
