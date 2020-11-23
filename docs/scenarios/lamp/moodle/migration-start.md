@@ -275,7 +275,7 @@ sudo apt-get install -y php-<extension>
 
 ### Restart and stop the web servers
 
-1. Restart the web servers
+1. Restart the web servers.
    
    ```bash
    sudo systemctl restart nginx
