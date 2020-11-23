@@ -11,6 +11,7 @@ ms.subservice: strategy
 
 # Plan for unified operations
 
+This is a test line.
 In most cloud scenarios, we assume that you want to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. This changes in hybrid:
 - **Retain** workloads or assets on-prem. 
 - **Replatform** workloads to multiple cloud platforms. 
