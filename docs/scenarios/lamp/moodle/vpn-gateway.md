@@ -112,7 +112,7 @@ To export the child certificate:
 
 ## Download and connect through the VPN client
 
-1. After the virtual private network configuration saves, select **Download VPN client** in the menu bar.
+1. After you save the virtual private network configuration, select **Download VPN client** in the menu bar.
 1. Extract the contents of the downloaded VPN client zip file, open the `WindowsAMD64` folder, and run the `VpnClientSetupAmd64.exe` file to install the VPN client.
 1. In Windows, go to **Control Panel** > **Network and Internet** > **Network Connections** to see the installed VPN.
 1. Right-click the VPN, and select **Connect**.
