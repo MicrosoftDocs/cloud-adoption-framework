@@ -7,6 +7,7 @@ ms.date: 10/21/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank
 ---
 
 <!-- docutune:casing WorkBoard -->
