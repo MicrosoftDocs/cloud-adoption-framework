@@ -433,7 +433,7 @@ items:
           - name: Moodle migration
             items:
             - name: Overview
-              href: scenarios/lamp/moodle/index.md
+              href: scenarios/lamp/moodle/migration-overview.md
             - name: Prerequisites
               href: scenarios/lamp/moodle/migration-pre.md
             - name: Architecture and template
