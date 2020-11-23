@@ -38,7 +38,7 @@ In the [Azure portal](https://portal.azure.com):
 Or, run the following Azure CLI command to create the gateway:
 
 ```azurecli
-az network vnet-gateway create -g <MyResourceGroup> -n <MyVnetGateway> --public-ip-address <MyGatewayIp> --vnet <MyVnet> --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
+az network vnet-gateway create -g <moodle resource group> -n <new virtual network gateway name> --public-ip-address <new gateway public ip address name> --vnet <moodle virtual network> --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
 ```
 
 ## Generate certificates
@@ -70,7 +70,7 @@ Export the certificates to install them on your systems.
 
 1. From the Windows Start menu, select **Run**, and enter **mmc**.
    
-1. In Microsoft Management Console left navigation pane, under the **Personal** folder, select **Certificates**.
+1. In the Microsoft Management Console left navigation pane, under the **Personal** folder, select **Certificates**.
    
 Find the **P2SRootCert** and **P2SChildCert** certificates.
 
@@ -112,19 +112,19 @@ To export the child certificate:
 
 ## Download and connect through the VPN client
 
+To establish the VPN gateway connection:
+
 1. After you save the virtual private network configuration, select **Download VPN client** in the menu bar.
 1. Extract the contents of the downloaded VPN client zip file, open the `WindowsAMD64` folder, and run the `VpnClientSetupAmd64.exe` file to install the VPN client.
 1. In Windows, go to **Control Panel** > **Network and Internet** > **Network Connections** to see the installed VPN.
 1. Right-click the VPN, and select **Connect**.
 1. In the **VPN** window, select **Connect**.
 
-The VPN gateway connection is established.
-
 ## Configure SSH password authentication
 
-To configure password authentication:
+To configure password authentication, from the controller virtual machine (VM):
 
-1. Open the `sshd` config file with the `vi` text editor:
+1. Open the `sshd` config file for editing:
    
    ```bash
    sudo vi /etc/ssh/sshd_config
@@ -149,22 +149,20 @@ To configure password authentication:
    sudo passwd <username>
    ```
    
-   For example, `sudo passwd azureadmin` sets the password for the user `azureadmin`.
+   For example, the command `sudo passwd azureadmin` sets the password for the user `azureadmin`.
    
 1. At the prompts, type and retype the password.
 
-Password authentication is now complete.
+## Sign in to VMs from the controller VM
 
-## Sign in to a VM instance from the controller VM
-
-Sign in to virtual machines (VMs) with private IP addresses through SSH.
+Sign in to the scale set VMs with private IP addresses through SSH.
 
 1. Sign in to the controller VM.
    
 1. Run this command to connect to a private VM:
    
    ```bash
-   sudo ssh <username>@<private_IP>
+   sudo ssh <username>@<private IP address>
    ```
    
    For example, `sudo ssh azureadmin@102.xx.xx.xx`
