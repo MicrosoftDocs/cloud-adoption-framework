@@ -1,9 +1,9 @@
 ---
 title: Moodle migration architecture and templates
-description: Learn about the Azure Resource Manager (ARM) templates for Moodle Azure infrastructure deployment, and how to deploy or edit them.
+description: Learn about the Azure Resource Manager (ARM) templates for Moodle Azure infrastructure deployment and how to deploy or edit them.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/18/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -30,7 +30,7 @@ The following diagram shows an overview of Azure Moodle infrastructure resources
 
 ## ARM template options
 
-To deploy Moodle resources on Azure, you can use a fully configurable ARM template, or one of several predefined ARM templates. A fully configurable deployment gives you the most flexibility and deployment choices. You can find the fully configurable template and the predefined templates at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
+To deploy Moodle resources on Azure, you can use a fully configurable ARM template or one of several predefined ARM templates. A fully configurable deployment gives you the most flexibility and deployment choices. You can find the fully configurable template and the predefined templates at the [Moodle GitHub repository](https://github.com/Azure/Moodle).
 
 A predefined deployment template uses one of four predefined Moodle sizes: minimal, short-to-mid, large, or maximal.
 
@@ -42,7 +42,7 @@ A predefined deployment template uses one of four predefined Moodle sizes: minim
   
   [![Button that launches the small-to-mid Moodle deployment ARM template.](images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
 
-- *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL  with 16 vCores, and Redis cache, without other options like Elasticsearch.
+- *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL  with 16 vCores, and Redis cache without other options like Elasticsearch.
   
   [![Button that launches the large, high-availability Moodle deployment ARM template.](images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-large-ha.json)
 
