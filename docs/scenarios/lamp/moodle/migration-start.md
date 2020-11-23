@@ -158,7 +158,7 @@ Use these database server details in the following sections.
    mysql -h $server_name -u $server_admin_login_name -p$admin_password $moodledbname < /home/azureadmin/storage/database.sql
    ```
 
-## Update Moodle configurations
+## Update configurations
 
 After importing the on-premises Moodle database archive to Azure Database for MySQL, update the following configurations on the controller VM as necessary:
 
@@ -282,12 +282,14 @@ sudo apt-get install -y php-<extension>
    sudo systemctl restart php$_PHPVER-fpm
    ```
    
-1. Stop the web servers. When a request reaches Azure Load Balancer, it now redirects to virtual machine scale set instances and not to the controller VM.
+1. Stop the web servers.
    
    ```bash
    sudo systemctl stop nginx
    sudo systemctl stop php$_PHPVER-fpm
    ```
+
+When a request reaches Azure Load Balancer, it now redirects to virtual machine scale set instances and not to the controller VM.
 
 ### Copy configuration files
 
