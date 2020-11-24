@@ -39,7 +39,7 @@ If you don't have an Azure subscription, you can [create one for free](https://a
 
 - To use the Azure portal to create a subscription, open [Subscriptions](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
 
-  :::image type="content" source="./images/azure-subscriptions-page.png" alt-text="Screenshot of the Subscriptions page in the Azure portal.":::
+  ![Screenshot of the Subscriptions page in the Azure portal.](./images/azure-subscriptions-page.png)
 
 - To use the Azure CLI to create a subscription, enter this command:
 
@@ -63,7 +63,7 @@ Once the subscription is set up, create a resource group in Azure. You can eithe
   
   1. Select **Review + create**.
 
-  :::image type="content" source="./images/resource-group.png" alt-text="Screenshot of the Create a resource group page in the Azure portal, with subscription, resource group, and region boxes and a Review + create button.":::
+  ![Screenshot of the Create a resource group page in the Azure portal, with subscription, resource group, and region boxes and a Review + create button.](./images/resource-group.png)
 
 - To use the Azure CLI to create a resource group, enter this command:
 
@@ -100,7 +100,7 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
 
   1. Select **Review + create**.
 
-  :::image type="content" source="./images/create-storage-account.png" alt-text="Screenshot of the Create storage account page in the Azure portal, with multiple input boxes and a Review + create button.":::
+  ![Screenshot of the Create storage account page in the Azure portal, with multiple input boxes and a Review + create button.](./images/create-storage-account.png)
 
 - To use the Azure CLI to create the storage account, enter this command:
 
@@ -132,7 +132,7 @@ Before backing up your on-premises Moodle data, turn on **Maintenance mode** on 
 
 When backing up on-premises Moodle and moodledata files, configurations, and databases, back up to a single directory. The following diagram summarizes this idea:
 
-:::image type="content" source="./images/directory-structure.png" alt-text="Diagram showing the structure of the Moodle backup storage directory." border="false":::
+![Diagram showing the structure of the Moodle backup storage directory.](./images/directory-structure.png)
 
 ### Create a storage directory
 
@@ -159,22 +159,21 @@ Enter these commands to copy files from the `moodle` and `moodledata` directorie
 
 To back up configuration files, follow these steps:
 
-1. Enter these commands to create new directories under your storage directory:
+1. Enter these commands to create a new directory under your storage directory:
 
    ```bash
-   cd /home/azureadmin/storage mkdir configuration
-   cd /home/azureadmin/storage/configuration mkdir phpconfig
-   cd /home/azureadmin/storage/configuration mkdir nginxconfig
+   cd /home/azureadmin/storage
+   mkdir configuration
    ```
-
-   The `phpconfig` directory will store PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginxconfig` directory will store ngnix configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
 
 2. Enter these commands to copy the PHP and nginx configuration files:
 
    ```bash
-   cp -R /etc/nginx /home/azureadmin/storage/configuration/nginxconfig
-   cp -R /etc/php /home/azureadmin/storage/configuration/php
+   cp -R /etc/php /home/azureadmin/storage/configuration/
+   cp -R /etc/nginx /home/azureadmin/storage/configuration/
    ```
+
+   The `php` directory stores PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginx` directory stores ngnix configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
 
 ### Back up the database
 
@@ -233,7 +232,7 @@ To generate a shared access signature (SAS) token for AzCopy, follow these steps
 
 1. In the left panel, select **Shared access signature**.
 
-   :::image type="content" source="./images/new-storage-account-page.png" alt-text="Screenshot of the page in the Azure portal for a storage account, with a Container button.":::
+   ![Screenshot of the page in the Azure portal for a storage account, with Shared access signature highlighted in the left panel.](./images/new-storage-account-page.png)
 
 1. Under **Allowed resource types**, select **Container**.
 
@@ -241,7 +240,7 @@ To generate a shared access signature (SAS) token for AzCopy, follow these steps
 
 1. Select **Generate SAS and connection string**.
 
-   :::image type="content" source="./images/SAS-token-generation-page.png" alt-text="Screenshot of the Azure portal showing the Shared access signature page for a storage account." :::
+   ![Screenshot of the Azure portal showing the Shared access signature page for a storage account.](./images/SAS-token-generation-page.png)
 
 1. Make a copy of the SAS token to use in later steps.
 
@@ -269,7 +268,7 @@ Create a container in the storage account. You can either use the Azure CLI or t
 
   1. Enter a name for the container, and then select **Create**.
 
-     :::image type="content" source="./images/new-container.png" alt-text="Screenshot of a dialog box in the Azure portal for creating a new container, with a name box and a Create button.":::
+     ![Screenshot of a dialog box in the Azure portal for creating a new container, with a name box and a Create button.](./images/new-container.png)
 
 ### Copy the archive file to Azure Blob Storage
 
@@ -285,7 +284,7 @@ For example, enter:
 
 Your Blob Storage account should now contain a copy of your archive.
 
-:::image type="content" source="./images/archive-in-blob-storage.png" alt-text="An archive in Azure Blob.":::
+![Screenshot of a page in the Azure portal showing Blob Storage accounts. A zipped tar file of the storage directory is visible.](./images/archive-in-blob-storage.png)
 
 ## Next steps
 
