@@ -434,17 +434,17 @@ items:
             items:
             - name: Overview
               href: scenarios/lamp/moodle/index.md
-            - name: Prerequisites
+            - name: Prepare for Moodle migration
               href: scenarios/lamp/moodle/migration-pre.md
             - name: Architecture and template
               href: scenarios/lamp/moodle/migration-arch.md
-            - name: Resource description
+            - name: Moodle migration resources
               href: scenarios/lamp/moodle/migration-resources.md
             - name: Migration steps
               href: scenarios/lamp/moodle/migration-start.md
-            - name: Azure infrastructure configuration
+            - name: Set up Moodle worker nodes
               href: scenarios/lamp/moodle/azure-infra-config.md
-            - name: Post-migration
+            - name: Follow up Moodle migration
               href: scenarios/lamp/moodle/migration-post.md
 
         - name: Dev/test workloads 
