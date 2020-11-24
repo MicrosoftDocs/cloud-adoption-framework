@@ -14,9 +14,9 @@ ms.subservice: plan
 Moodle migration includes the following tasks:
 
 1. Deploy Azure infrastructure with Azure Resource Manager (ARM) templates.
-1. [Download and install AzCopy](migration-start.md#download-and-install-azcopy).
-1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-backup) instance in the Azure Resource Manager deployment.
-1. [Migrate the Moodle application and configuration](migration-start.md#how-to-migrate-and-configure-a-moodle-application).
+1. [Download and install AzCopy](migration-start.md#download-and-install-azcopy-on-the-controller-vm).
+1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-archive-to-the-controller-vm) instance in the Azure Resource Manager deployment.
+1. [Migrate the Moodle application and configuration](migration-start.md#import-the-moodle-database-to-azure).
 1. [Set up the Moodle controller instance and worker nodes](azure-infra-config.md).
 1. [Configure PHP and the web server](azure-infra-config.md).
 
