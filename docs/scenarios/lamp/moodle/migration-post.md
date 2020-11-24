@@ -1,6 +1,6 @@
 ---
 title: How to follow up after a Moodle migration
-description: Learn how to follow up after Moodle migration.
+description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
 author: BrianBlanchard
 ms.author: brblanch 
 ms.date: 11/06/2020
@@ -15,7 +15,6 @@ ms.subservice: plan
 
 After migrating Moodle, you need to take care of some post-migration tasks to complete your configuration. These tasks include:
 
-- Configuring applications.
 - Updating log paths in virtual machine scale set instances.
 - Restarting servers in virtual machine scale set instances.
 - Updating certificates.
@@ -60,7 +59,7 @@ sudo systemctl restart php<php version>-fpm
 
 Take these steps to complete the controller virtual machine configuration.
 
-### Update SSL certificates
+### Update security certificates
 
 1. Sign in to the controller virtual machine. You can find the certificates for your Moodle application in the `/moodle/certs` folder.
 
@@ -129,7 +128,7 @@ sudo systemctl restart nginx
 sudo systemctl restart php<php version>-fpm
 ```
 
-### Map the DNS name to the Azure Load Balancer IP
+### Map the DNS name to the Azure Load Balancer IP address
 
 Follow these steps at the hosting-provider level to map the DNS name to the Azure Load Balancer IP:
 
@@ -157,9 +156,9 @@ Refer to the following information when you have questions about your Moodle mig
   - Whenever a user goes to your webpage, the system generates either an error log or an access log.
   - You can find them in this folder: `/var/log/nginx/`.
 
-- Cron log files:
+- Cron log file:
   - When a cron job runs, it updates the local copy of the log file.
-  - You can find the files in this folder: `/var/log/sitelogs/moodle/cron.log`.
+  - You can find the file in this folder: `/var/log/sitelogs/moodle/cron.log`.
 
 ### Database connection failure
 
@@ -251,7 +250,7 @@ There might be a problem with your authentication method, especially if you use 
 
 ### Fatal errors
 
-When you see this error, the Moodle and moodledata permissions might be incorrect: *Fatal error: $CFG->dataroot is not writable. The admin has to fix directory permissions! Exiting.*
+The Moodle and moodledata permissions might be incorrect if you see this error: *Fatal error: $CFG->dataroot is not writable. The admin has to fix directory permissions! Exiting.*
 
 Check that these permissions are `www-data:www-data` only. If the permissions are at a different level, use this command to change the group and ownership permissions:
 
@@ -284,3 +283,9 @@ When Moodle is in maintenance mode and you try to leave that mode, sometimes you
 
 - Check that the web server user has write permissions in the `moodledata` directory.
 - Manually delete the `maintenance.html` file.
+
+## Next steps
+
+- [Azure Database for MySQL documentation](https://docs.microsoft.com/azure/mysql/)
+- [What are virtual machine scale sets?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
+- [Storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
