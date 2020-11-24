@@ -77,8 +77,8 @@ If your on-premises PHP and Moodle versions differ from the preceding values, up
 1. In the **resources** section of the template, under **parameters**, add parameters for your Moodle and PHP versions.
 
    ```json
-                       "phpVersion":       { "value": "7.2" },
-                       "moodleVersion":    { "value": "MOODLE_38_STABLE"}
+   "phpVersion":       { "value": "7.2" },
+   "moodleVersion":    { "value": "MOODLE_38_STABLE"}
    ```
    
    For example, for Moodle 3.9, the `moodleVersion` value should be `MOODLE_39_STABLE`.
