@@ -157,8 +157,8 @@ Contoso will use Azure Migrate as follows:
 
 - In vCenter, organize VMs into folders. This will make it easy for the admins to focus as they run an assessment against VMs in a specific folder.
 - Assess dependencies between machines. This requires agents to be installed on VMs to be assessed.
-  
-  Contoso will use automated scripts to install the required Windows or Linux agents. By scripting, Contoso can push the installation to VMs within a vCenter folder.
+
+Contoso will use automated scripts to install the required Windows or Linux agents. By scripting, Contoso can push the installation to VMs within a vCenter folder.
 
 #### Database tools
 
@@ -324,7 +324,7 @@ Contoso will rely on Azure Security Center for unified security management and A
 
 Security Center provides full visibility into and control over the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
 
-[Learn more](https://azure.microsoft.com/services/security-center) about Security Center.
+Learn more about [Security Center](https://azure.microsoft.com/services/security-center).
 
 ### Monitoring
 

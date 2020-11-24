@@ -17,7 +17,7 @@ ms.custom: readiness, fasttrack-edit
 
 Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
 
-Accurate representation and naming of resources are critical for security purposes. In the event of a security incident, quickly identifying affected systems, their potential business impact, and what they are being used for is critical to making good risk decisions. Security services such as [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-introduction) and [Azure Sentinel](https://docs.microsoft.com/azure/sentinel) reference resources and their associated logging/alert information by resource name.
+Accurate representation and naming of resources are critical for security purposes. In the event of a security incident, quickly identifying affected systems, their potential business impact, and what they are being used for is critical to making good risk decisions. Security services such as [Azure Security Center](/azure/security-center/security-center-introduction) and [Azure Sentinel](/azure/sentinel) reference resources and their associated logging/alert information by resource name.
 
 Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 
@@ -88,28 +88,29 @@ This list recommends Azure resource type prefixes to use when you define your na
 
 ### Networking
 
-| Asset type                       | Name prefix |
-|----------------------------------|-------------|
-| Virtual network                  | vnet-       |
-| Subnet                           | snet-       |
-| Virtual network peering          | peer-       |
-| Network interface (NIC)          | nic-        |
-| Public IP address                | pip-        |
-| Load balancer (internal)         | lbi-        |
-| Load balancer (external)         | lbe-        |
-| Network security group (NSG)     | nsg-        |
-| Application security group (ASG) | asg-        |
-| Local network gateway            | lgw-        |
-| Virtual network gateway          | vgw-        |
-| VPN connection                   | cn-         |
-| ExpressRoute circuit             | erc-        |
-| Application gateway              | agw-        |
-| Route table                      | route-      |
-| User defined route (UDR)         | udr-        |
-| Traffic Manager profile          | traf-       |
-| Front door                       | fd-         |
-| CDN profile                      | cdnp-       |
-| CDN endpoint                     | cdne-       |
+| Asset type                            | Name prefix |
+|---------------------------------------|-------------|
+| Virtual network                       | vnet-       |
+| Subnet                                | snet-       |
+| Virtual network peering               | peer-       |
+| Network interface (NIC)               | nic-        |
+| Public IP address                     | pip-        |
+| Load balancer (internal)              | lbi-        |
+| Load balancer (external)              | lbe-        |
+| Network security group (NSG)          | nsg-        |
+| Application security group (ASG)      | asg-        |
+| Local network gateway                 | lgw-        |
+| Virtual network gateway               | vgw-        |
+| VPN connection                        | cn-         |
+| ExpressRoute circuit                  | erc-        |
+| Application gateway                   | agw-        |
+| Route table                           | route-      |
+| User defined route (UDR)              | udr-        |
+| Traffic Manager profile               | traf-       |
+| Front door                            | fd-         |
+| CDN profile                           | cdnp-       |
+| CDN endpoint                          | cdne-       |
+| Web Application Firewall (WAF) policy | waf         |
 
 ### Compute and Web
 
@@ -148,6 +149,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Azure SQL Data Warehouse       | sqldw-      |
 | Azure Synapse Analytics        | syn-        |
 | SQL Server Stretch Database    | sqlstrdb-   |
+| SQL Managed Instance           | sqlmi-      |
 
 ### Storage
 
@@ -268,7 +270,7 @@ The following section provides some example names for common Azure resource type
 | Managed Identity                | Resource group                        | id-\<App or service name\>                                  | id-appcn-keda-prod-eus-001                                                                         |
 
 > [!NOTE]
-> The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
+> The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E. mktg-prod-*001*
 >
 > Padding aids in human readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 >
@@ -282,7 +284,7 @@ The following section provides some example names for common Azure resource type
 |------------------------------|-----------------|----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Virtual network              | Resource group  | vnet-\<Subscription type\>-\<Region\>-\<\#\#\#\>                     | <li> vnet-shared-eastus2-001 <li> vnet-prod-westus-001 <li> vnet-client-eastus2-001 |
 | Subnet                       | Virtual network | snet-\<subscription\>-\<subregion\>-\<\#\#\#\>                       | <li> snet-shared-eastus2-001 <li> snet-prod-westus-001 <li> snet-client-eastus2-001 |
-| Network interface (NIC)      | Resource group  | nic-\<\#\#\>-\<vm name\>-\<subscription\>\<\#\#\#\>                   | <li> nic-01-dc1-shared-001 <li> nic-02-vmhadoop1-prod-001 <li> nic-02-vmtest1-client-001 |
+| Network interface (NIC)      | Resource group  | nic-\<\#\#\>-\<vm name\>-\<subscription\>-\<\#\#\#\>                   | <li> nic-01-dc1-shared-001 <li> nic-02-vmhadoop1-prod-001 <li> nic-02-vmtest1-client-001 |
 | Public IP address            | Resource group  | pip-\<vm name or app name\>-\<Environment\>-\<subregion\>-\<\#\#\#\> | <li> pip-dc1-shared-eastus2-001 <li> pip-hadoop-prod-westus-001 |
 | Load balancer                | Resource group  | lb-\<app name or role\>\<Environment\>\<\#\#\#\>                     | <li> lb-navigator-prod-001 <li> lb-sharepoint-dev-001 |
 | Network security group (NSG) | Subnet or NIC   | nsg-\<policy name or app name\>-\<\#\#\#\>                           | <li> nsg-weballow-001 <li> nsg-rdpallow-001 <li> nsg-sqlallow-001 <li> nsg-dnsblocked-001 |

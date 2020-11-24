@@ -21,11 +21,11 @@ The SmartHotel360 application that we use in this example is provided as open so
 
 The Contoso IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Address business growth**. Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
-- **Increase efficiency**. Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility**. Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
-- **Scale**. As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
-- **Reduce costs**. Contoso wants to minimize licensing costs.
+- **Address business growth.** Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
+- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
+- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
+- **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
+- **Reduce costs.** Contoso wants to minimize licensing costs.
 
 ## Migration goals
 
@@ -73,7 +73,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | The SmartHotel360 application code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of their investment in Software Assurance by using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](https://aka.ms/lifecycle). <br><br> Contoso can configure the web tier of the application with multiple instances, so that the web tier is no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> Their managed instance will provide 100 percent compatibility with their current deployment, while moving them away from SQL Server 2008 R2. <br><br> Contoso can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> They can reuse Azure Database Migration Service for additional future migrations. <br><br> Their managed instance has built-in fault tolerance that Contoso doesn't need to configure. This ensures that the data tier is no longer a single point of failover. |
+| **Pros** | The SmartHotel360 application code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of their investment in Software Assurance by using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](/lifecycle/). <br><br> Contoso can configure the web tier of the application with multiple instances, so that the web tier is no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> Their managed instance will provide 100 percent compatibility with their current deployment, while moving them away from SQL Server 2008 R2. <br><br> Contoso can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> They can reuse Azure Database Migration Service for additional future migrations. <br><br> Their managed instance has built-in fault tolerance that Contoso doesn't need to configure. This ensures that the data tier is no longer a single point of failover. |
 | **Cons** | Azure App Service supports only one application deployment for each web app. This means that two web apps must be provisioned, one for the website and one for the WCF service. <br><br> For the data tier, SQL Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if they want to run third-party applications along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility. |
 
 ## Proposed architecture
@@ -121,14 +121,13 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Microsoft Learning Path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process.
-In brief, the admins perform the following actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Microsoft Learning Path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. In brief, the admins perform the following actions:
 
 - They use the Azure [App Service Migration Assessment](https://appmigration.microsoft.com/assessment/) tool to evaluate any dependencies between their web apps and to determine if there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 
 - They download the Azure App Service Migration Assistant and sign in to their Azure account.
 
-- They choose a subscription, a resource group, and the website’s domain name.
+- They choose a subscription, a resource group, and the website's domain name.
 
 ## Step 2: Set up a SQL managed instance
 
@@ -157,16 +156,20 @@ Contoso admins set up the virtual network as follows:
 
 1. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).  
+    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).
+
     - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
       ![Screenshot of the peered networks.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 1. They set custom DNS settings. The DNS settings point first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the PROD-DC-EUS2 subnet of the production network (VNET-PROD-EUS2) in the East US 2 region.  
-    - `CONTOSODC3` address: `10.245.42.4`  
-    - `CONTOSODC4` address: `10.245.42.5`  
+    - Located in the PROD-DC-EUS2 subnet of the production network (VNET-PROD-EUS2) in the East US 2 region.
+
+    - `CONTOSODC3` address: `10.245.42.4`
+
+    - `CONTOSODC4` address: `10.245.42.5`
+
     - Azure DNS resolver: `168.63.129.16`
 
     ![Screenshot of Network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
@@ -217,7 +220,8 @@ Now, Contoso admins provision a SQL managed instance by doing the following:
     ![Screenshot of the "SQL Managed Instance" pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
 
     After the managed instance is deployed, two new resources appear in the ContosoRG resource group:
-    - The new SQL managed instance.  
+    - The new SQL managed instance.
+
     - A virtual cluster, in case Contoso has multiple managed instances.
 
       ![Screenshot of new resources in the ContosoRG resource group.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
@@ -405,7 +409,7 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 ### Backups
 
 - The Contoso team reviews the backup requirements for the database in Azure SQL Managed Instance. [Learn more](/azure/sql-database/sql-database-automated-backups).
-- They also learn about managing SQL Database backups and restores. [Learn more](/azure/sql-database/sql-database-automated-backups) about automatic backups.
+- They also learn about managing SQL Database backups and restores. Learn more about [automatic backups](/azure/sql-database/sql-database-automated-backups).
 - They consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/sql-database/sql-database-geo-replication-overview).
 - They consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`) for resilience. The team could configure Traffic Manager to ensure failover during regional outages.
 

@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 ::: zone target="docs"
 
-# Azure management guide: Before you start
+# Azure Management Guide: Before you start
 
 ::: zone-end
 

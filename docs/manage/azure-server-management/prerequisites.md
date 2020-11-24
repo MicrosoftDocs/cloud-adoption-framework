@@ -34,7 +34,7 @@ Some of the management services require an [Azure Automation](/azure/automation/
 
 The following Azure server management services require a linked Log Analytics workspace and Automation account:
 
-- [Azure Update Management](/azure/automation/automation-update-management)
+- [Update Management](/azure/automation/update-management/overview)
 - [Change Tracking and Inventory](/azure/automation/change-tracking)
 - [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker)
 - [Desired State Configuration](/azure/virtual-machines/extensions/dsc-overview)
@@ -49,13 +49,13 @@ When preparing the workspaces and accounts that you need for onboarding manageme
 
 - **Azure geographies and regulatory compliance:** Azure regions are organized into _geographies_. An [Azure geography](https://azure.microsoft.com/global-infrastructure/geographies) ensures that data residency, sovereignty, compliance, and resiliency requirements are honored within geographical boundaries. If your workloads are subject to data-sovereignty or other compliance requirements, workspace and Automation accounts must be deployed to regions within the same Azure geography as the workload resources they support.
 - **Number of workspaces:** As a guiding principle, create the minimum number of workspaces required per Azure geography. We recommend at least one workspace for each Azure geography where your compute or storage resources are located. This initial alignment helps avoid future regulatory issues when you migrate data to different geographies.
-- **Data retention and capping:** You may also need to take Data retention policies or data capping requirements into consideration when creating workspaces or Automation accounts. For more information about these principles, and for additional considerations when planning your workspaces, see [Manage log data and workspaces in Azure Monitor](/azure/azure-monitor/platform/manage-access).
+- **Data retention and capping:** You may also need to take data retention policies or data capping requirements into consideration when creating workspaces or Automation accounts. For more information about these principles, and for additional considerations when planning your workspaces, see [Manage log data and workspaces in Azure Monitor](/azure/azure-monitor/platform/manage-access).
 - **Region mapping:** Linking a Log Analytics workspace and an Azure Automation account is supported only between certain Azure regions. For example, if the Log Analytics workspace is hosted in the `East US` region, the linked Automation account must be created in the `East US 2` region to be used with management services. If you have an Automation account that was created in another region, it can't link to a workspace in `East US`. The choice of deployment region can significantly affect Azure geography requirements. Consult the [region mapping table](/azure/automation/how-to/region-mappings) to decide which region should host your workspaces and Automation accounts.
 - **Workspace multihoming:** The Azure Log Analytics agent supports multihoming in some scenarios, but the agent faces several limitations and challenges when running in this configuration. Unless Microsoft has recommended it for your specific scenario, don't configure multihoming on the Log Analytics agent.
 
 ## Resource placement examples
 
-There are several different models for choosing the subscription in which you place the Log Analytics workspace and Automation account. In short, place the workspace and Automation accounts in a subscription owned by the team that's responsible for implementing the Update Management service and the Change Tracking and Inventory service.
+There are several different models for choosing the subscription in which you place the Log Analytics workspace and Automation account. In short, place the workspace and Automation accounts in a subscription owned by the team that's responsible for implementing the Update Management solution and the Change Tracking and Inventory service.
 
 The following are examples of some ways to deploy workspaces and Automation accounts.
 
@@ -90,7 +90,7 @@ After you've chosen the best way to place and organize workspace and account pai
 To create a Log Analytics workspace by using the Azure portal, see [Create a workspace](/azure/azure-monitor/learn/quick-create-workspace#create-a-workspace). Next, create a matching Automation account for each workspace by following the steps in [Create an Azure Automation account](/azure/automation/automation-quickstart-create-account).
 
 > [!NOTE]
-> When you create an Automation account by using the Azure portal, the portal attempts by default to create Run As accounts for both Azure Resource Manager and the classic deployment model resources. If you don't have classic virtual machines in your environment and you're not the co-administrator on the subscription, the portal creates a Run As account for Resource Manager, but it generates an error when deploying the classic Run As account. If you don't intend to support classic resources, you can ignore this error.
+> When you create an Automation account by using the Azure portal, the portal attempts by default to create Run As accounts for both Azure Resource Manager and the classic deployment model resources. If you don't have classic virtual machines in your environment and you're not the Co-Administrator on the subscription, the portal creates a Run As account for Resource Manager, but it generates an error when deploying the classic Run As account. If you don't intend to support classic resources, you can ignore this error.
 >
 > You can also create Run As accounts by using [PowerShell](/azure/automation/manage-runas-account#creating-a-run-as-account-using-powershell).
 

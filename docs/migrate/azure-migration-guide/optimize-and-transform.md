@@ -80,7 +80,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-### Resize a SQL Database
+### Resize a SQL database
 
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
@@ -97,7 +97,7 @@ Partners can use the Partner Center to review the usage.
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
-Azure Cost Management and Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
+Azure Cost Management + Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 
 1. Select **Cost Management + Billing**.
 1. Select **Advisor recommendations** and the **Costs** tab.

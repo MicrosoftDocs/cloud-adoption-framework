@@ -29,12 +29,12 @@ This article covers the three processes that are necessary to complete these tas
 
 ## Use Azure Policy to deploy extensions to Azure VMs
 
-All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
+All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on virtual machines in Azure as well as on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a [built-in policy initiative](/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics Agent and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a [built-in policy initiative](/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 > [!NOTE]
-> For more information about various agents for Azure monitoring, see [Overview of the Azure monitoring agents](/azure/azure-monitor/platform/agents-overview).
+> For more information about various agents for monitoring Azure, see [Overview of the Azure monitoring agents](/azure/azure-monitor/platform/agents-overview).
 
 ### Assign policies
 
@@ -44,7 +44,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the portal's policy interface with the Assignments option and Assign initiative option called out.](./media/onboarding-at-scale1.png)
 
-2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (...) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
+2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (**...**) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
 3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
@@ -52,7 +52,7 @@ To assign the policies that described in the previous section:
 
 4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and it supports custom values.
 
-5. For this policy, select **Log Analytics workspace** for the Log analytics agent to associate.
+5. For this policy, select **Log Analytics workspace** for the Log Analytics agent to associate.
 
     ![Screenshot of the Log Analytics workspace option.](./media/onboarding-at-scale3.png)
 
@@ -67,7 +67,7 @@ After you complete the wizard, the policy assignment will be deployed to the env
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard Azure server management services to servers.
 
-For on-premises servers, you need to download and install the [Log Analytics Agent and the Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 
@@ -77,9 +77,9 @@ To enable solutions, you need to configure the Log Analytics workspace. Onboarde
 
 ### Update Management
 
-The Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you onboard through your Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](/azure/automation/automation-onboard-solutions-from-automation-account).
+The Update Management solution and the Change Tracking and Inventory solution require both a Log Analytics workspace and an Azure Automation account. To ensure that these resources are properly configured, we recommend that you onboard through your Automation account. For more information, see [Onboard the Update Management solution and the Change Tracking and Inventory solution](/azure/automation/change-tracking/manage-change-tracking).
 
-We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. Manually update the scope to include machines that are covered by the Update Management service.
+We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](/azure/automation/change-tracking/manage-change-tracking) is created in the workspace. Manually update the scope to include machines that are covered by the Update Management solution.
 
 To cover your existing servers as well as future servers, you need to remove the scope configuration. To do this, view your Automation account in the Azure portal. Select **Update Management** > **Manage machine** > **Enable on all available and future machines**. This setting allows all Azure VMs that are connected to the workspace to use Update Management.
 
@@ -87,9 +87,9 @@ To cover your existing servers as well as future servers, you need to remove the
 
 ### Change Tracking and Inventory solutions
 
-To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about how to onboard these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](/azure/automation/automation-onboard-solutions-from-automation-account).
+To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about how to onboard these solutions from your Automation account, see [Onboard the Update Management solution and the Change Tracking and Inventory solution](/azure/automation/change-tracking/manage-change-tracking).
 
-The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
+The Change Tracking and Inventory solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers change tracking, inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
 
 #### Opt in via the Azure portal
 
@@ -113,7 +113,7 @@ To create or modify the saved search, follow these steps:
 
 1. In the **Filter** box, enter **Change Tracking** to filter the list of saved searches. In the results, select **MicrosoftDefaultComputerGroup**.
 
-1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking.
+1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking and Inventory.
 
   ```kusto
   Heartbeat
@@ -126,9 +126,9 @@ To create or modify the saved search, follow these steps:
 
 1. Select **Save**. By default, the scope configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
 
-### Azure Activity Log
+### Azure activity log
 
-[Azure Activity Log](/azure/azure-monitor/platform/activity-logs-overview) is also part of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
+[Azure activity log](/azure/azure-monitor/platform/activity-logs-overview) is also part of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
 
 To implement this solution:
 
@@ -154,13 +154,13 @@ You need to specify the **Workspace name** of the workspace that you created in 
 
 After creation is complete, the workspace resource instance displays **AgentHealthAssessment** when you select **View** > **Solutions**.
 
-### Antimalware Assessment
+### Antimalware assessment
 
-The Antimalware Assessment solution helps you identify servers that are infected or at increased risk of infection by malware.
+The antimalware assessment solution helps you identify servers that are infected or at increased risk of infection by malware.
 
 To implement this solution:
 
-1. In the Azure portal, open **All services**, select select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for and then select **Antimalware Assessment**.
 4. Select **Create**.

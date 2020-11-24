@@ -24,8 +24,8 @@ It's simple to onboard Azure server management services to individual virtual ma
 
 For more information about how to onboard these solutions to individual VMs, see:
 
-- [Onboard Update Management, Change Tracking, and Inventory solutions from Azure virtual machine](/azure/automation/automation-onboard-solutions-from-vm)
-- [Onboard Azure Monitoring for VMs](/azure/azure-monitor/insights/vminsights-enable-single-vm)
+- [Onboard the Update Management solution and the Change Tracking and Inventory solution for a VM in Azure](/azure/automation/change-tracking/manage-inventory-vms)
+- [Onboard Azure Monitor for VMs](/azure/azure-monitor/insights/vminsights-enable-single-vm)
 
 ## Next steps
 

@@ -19,9 +19,9 @@ This article shows how the fictional company Contoso refactors its on-premises V
 
 The Contoso IT leadership team has worked closely with business partners to identify future goals. The partners aren't overly concerned with dev tools and technologies, but the team has captured these points:
 
-- **Software**: Regardless of the core business, all companies are now software companies, including Contoso. Business leadership is interested in how IT can help lead the company with new working practices for users and new experiences for its customers.
-- **Efficiency**: Contoso needs to streamline its processes and remove unnecessary procedures for developers and users. Doing so will allow the company to deliver on customer requirements more efficiently. The business needs IT to move quickly, without wasting time or money.
-- **Agility**: To enable its success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
+- **Software:** Regardless of the core business, all companies are now software companies, including Contoso. Business leadership is interested in how IT can help lead the company with new working practices for users and new experiences for its customers.
+- **Efficiency:** Contoso needs to streamline its processes and remove unnecessary procedures for developers and users. Doing so will allow the company to deliver on customer requirements more efficiently. The business needs IT to move quickly, without wasting time or money.
+- **Agility:** To enable its success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
 
 ## Migration goals
 
@@ -124,7 +124,7 @@ They upgrade as follows:
      ![Screenshot of the "Product backlog" pane for verifying the Team Foundation Server installation.](./media/contoso-migration-tfs-vsts/upgrade5.png)
 
 > [!NOTE]
-> Some Team Foundation Server upgrades need to run the Configure Features wizard after the upgrade finishes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?utm_campaign=vstsdataimportguide&utm_medium=guide&utm_source=ms&view=vsts).
+> Some Team Foundation Server upgrades need to run the Configure Features Wizard after the upgrade finishes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?view=vsts).
 
 **Need more help?**
 
@@ -330,9 +330,9 @@ Earlier, Contoso admins partially filled in the import specification file, *impo
 
 They open the *import.json* file and complete the following fields:
 
-- **Location**: They enter the location of the SAS key that was generated previously.
-- **Dacpac**: They enter the name of the DACPAC file that they uploaded earlier to the storage account, making sure to include the *.dacpac* extension.
-- **ImportType**: They enter **DryRun** for now.
+- **Location:** They enter the location of the SAS key that was generated previously.
+- **DACPAC:** They enter the name of the DACPAC file that they uploaded earlier to the storage account, making sure to include the *.dacpac* extension.
+- **ImportType:** They enter **DryRun** for now.
 
 ![Screenshot of the "import.json" file with the fields filled in.](./media/contoso-migration-tfs-vsts/import1.png)
 

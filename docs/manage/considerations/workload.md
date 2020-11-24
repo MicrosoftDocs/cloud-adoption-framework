@@ -15,8 +15,6 @@ Some workloads are critical to the success of the business. For those workloads,
 
 In return, the investment in workload operations can lead to improved performance, decreased risk of business interruption, and faster recovery when system failures occur. This article discusses an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 
-<!-- docutune:disable Pareto -->
-
 ## When to invest in workload operations
 
 The _Pareto principle_ (also known as the _80/20 rule_) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
@@ -93,7 +91,7 @@ To help improve overall operations, the [Microsoft Azure Well-Architected Framew
 
 ## Next steps
 
-With a full understanding of the manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
+With a full understanding of the Manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
 
 > [!div class="nextstepaction"]
 > [Apply this methodology](../index.md)

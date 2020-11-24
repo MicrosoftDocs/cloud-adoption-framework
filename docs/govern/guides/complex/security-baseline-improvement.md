@@ -94,11 +94,11 @@ This section modifies the governance MVP design to include new Azure policies an
 
 The new best practices fall into two categories: corporate IT (hub) and cloud adoption (spoke).
 
-**Establishing a corporate IT hub and spoke subscription to centralize the security baseline:** In this best practice, the existing governance capacity is wrapped by a [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services), with a few key additions from the cloud governance team.
+**Establishing a corporate IT hub and spoke subscription to centralize the security baseline:** In this best practice, the existing governance capacity is wrapped by a [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology), with a few key additions from the cloud governance team.
 
 1. Azure DevOps repository. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
 1. Hub and spoke template:
-    1. The guidance in the [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services) reference architecture can be used to generate Resource Manager templates for the assets required in a corporate IT hub.
+    1. The guidance in the [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology) reference architecture can be used to generate Resource Manager templates for the assets required in a corporate IT hub.
     1. Using those templates, this structure can be made repeatable, as part of a central governance strategy.
     1. In addition to the current reference architecture, a network security group template should be created to capture any port blocking or allow-listing requirements for the virtual network to host the firewall. This network security group differs from prior groups, because it will be the first network security group to allow public traffic into a virtual network.
 1. Create Azure policies. Create a policy named `hub NSG enforcement` to enforce the configuration of the network security group assigned to any virtual network created in this subscription. Apply the built-in policies for guest configuration as follows:
@@ -115,7 +115,7 @@ The new best practices fall into two categories: corporate IT (hub) and cloud ad
     1. This will establish a hub for each business unit in each region. Note: further cost savings could be achieved by sharing hubs across business units in each region.
 1. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
     1. Convert GPO to DSC. The [Microsoft baseline management project](https://github.com/microsoft/baselinemanagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
-    1. Deploy Azure Automation state configuration to any instances of the corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
+    1. Deploy Azure Automation State Configuration to any instances of the corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
     1. The current roadmap aims to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 
 **Applying additional governance to a cloud adoption subscription (spoke):** Building on the `corporate IT subscription`, minor changes to the governance MVP applied to each subscription dedicated to the support of application archetypes can produce rapid improvement.
@@ -123,7 +123,7 @@ The new best practices fall into two categories: corporate IT (hub) and cloud ad
 In prior iterative changes to the best practice, we defined network security groups to block public traffic and allow internal traffic. Additionally, the Azure blueprint temporarily created DMZ and Active Directory capabilities. In this iteration, we will tweak those assets a bit, creating a new version of the Azure blueprint.
 
 1. Network peering template. This template will peer the virtual network in each subscription with the hub virtual network in the corporate IT subscription.
-    1. The reference architecture from the prior section, [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services), generated a Resource Manager template for enabling virtual network peering.
+    1. The reference architecture from the prior section, [hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology), generated a Resource Manager template for enabling virtual network peering.
     2. That template can be used as a guide to modify the DMZ template from the prior governance iteration.
     3. We are now adding virtual network peering to the DMZ virtual network that was previously connected to the local edge device over VPN.
     4. The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outage.
