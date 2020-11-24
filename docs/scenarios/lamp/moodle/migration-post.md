@@ -242,7 +242,7 @@ Sometimes you can't sign in, or you see one of these messages:
 
 - *A server error that affects your login session was detected. Please log in again or restart your browser.*
 
-There might be a problem with your authentication method, especially if you use an external method like LDAP to authenticate users. Try to sign in to another manual account, such as your main admin account. If you cannot sign in, check your authentication. If you can sign in to the other account, here are possible reasons and solutions for the Moodle sign-in problem:
+There might be a problem with your authentication method, especially if you use an external method like LDAP to authenticate users. Try to sign in to another manual account, such as your main admin account. If you can't sign in, check your authentication. If you can sign in to the other account, here are possible reasons and solutions for the Moodle sign-in problem:
 
 - Your hard disk might be full. In this situation, Moodle can't create new sessions, and users can't sign in. Check that your hard disk isn't full, that your server is on shared hosting, and that you haven't reached your disk space quota.
 
