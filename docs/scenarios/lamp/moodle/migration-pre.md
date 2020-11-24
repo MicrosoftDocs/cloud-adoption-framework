@@ -240,7 +240,7 @@ To generate a shared access signature (SAS) token for AzCopy, follow these steps
 
 1. Select **Generate SAS and connection string**.
 
-   ![Screenshot of the Azure portal showing the Shared access signature page for a storage account.](./images/SAS-token-generation-page.png)
+   ![Screenshot of the Azure portal showing the Shared access signature page for a storage account.](./images/shared-access-signature-page.png)
 
 1. Make a copy of the SAS token to use in later steps.
 
