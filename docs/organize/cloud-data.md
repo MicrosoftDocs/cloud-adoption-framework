@@ -52,7 +52,7 @@ Using Azure Synapse Analytics, data scientists can build proofs of concept in mi
 
 ## Business analysts
 
-These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized apps can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.
+These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized applications can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.
 
 Using Azure Synapse Analytics, business analysts can securely access datasets and use Power BI to build dashboards. They can also securely share data within and outside their organization through Azure Data Share.
 

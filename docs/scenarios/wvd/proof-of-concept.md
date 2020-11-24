@@ -35,7 +35,7 @@ It's unlikely that all the following assumptions will prove to be true for any e
 - All users can use the Windows&nbsp;10 Enterprise multi-session image from Azure Marketplace.
 - All user profiles will be migrated to either Azure Files, Azure NetApp Files, or a VM-based storage service for the FSLogix profile containers.
 - All users can be described by a common persona with a density of six users per virtual central processing unit (vCPU) and 4&nbsp;gigabytes (GB) of RAM, [as per the VM sizing recommendations](/windows-server/remote/remote-desktop-services/virtual-machine-recs#multi-session-recommendations).
-- All workloads are compatible with Windows&nbsp;10 multi-session.
+- All workloads are compatible with Windows&nbsp;10 Enterprise multi-session.
 - Latency between the virtual desktops and application groups is acceptable for production usage.
 
 To calculate the cost of the Windows Virtual Desktop scenario based on the proof-of-concept configuration reference, the team uses the pricing calculator for [East US](https://azure.com/e/448606254c9a44f88798892bb8e0ef3c), [West Europe](https://azure.com/e/61a376d5f5a641e8ac31d1884ade9e55), or [Southeast Asia](https://azure.com/e/7cf555068922461587d0aa99a476f926).

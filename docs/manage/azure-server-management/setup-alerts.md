@@ -29,7 +29,9 @@ For details about manually creating and managing alerts by using the Azure porta
 
 ## Automated deployment of recommended alerts
 
-In this guide, we recommend that you create a set of 15 alerts for basic infrastructure monitoring. Find the deployment scripts in the [Azure Alert Toolkit GitHub repository](https://github.com/Microsoft/manageability-toolkits).
+<!-- docutune:casing "Alert Toolkit" -->
+
+In this guide, we recommend that you create a set of 15 alerts for basic infrastructure monitoring. Find the deployment scripts in the [Alert Toolkit](https://github.com/Microsoft/manageability-toolkits) GitHub repository.
 
 This package creates alerts for:
 
@@ -40,7 +42,7 @@ This package creates alerts for:
 - Corrupted file systems
 - Common hardware failures
 
-The package uses HP server hardware as an example. Change the settings in the associated configuration file to reflect your OEM hardware. You can also add more performance counters to the configuration file. To deploy the package, run the New-CoreAlerts.ps1 file.
+The package uses HPE server hardware as an example. Change the settings in the associated configuration file to reflect your OEM hardware. You can also add more performance counters to the configuration file. To deploy the package, run the `New-CoreAlerts.ps1` file.
 
 ## Next steps
 

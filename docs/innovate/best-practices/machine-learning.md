@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore scikit RLlib Jupyter MLflow Kubeflow -->
@@ -51,7 +52,7 @@ For code-free or low-code training and deployment, try:
 
 ## MLOps: Deploy and lifecycle management
 
-Machine Learning operations (MLOps) is based on [DevOps](https://azure.microsoft.com/overview/what-is-devops/) principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
+Machine learning operations (MLOps) is based on [DevOps](https://azure.microsoft.com/overview/what-is-devops/) principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
 
 - Faster experimentation and development of models
 - Faster deployment of models into production
