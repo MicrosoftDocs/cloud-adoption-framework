@@ -15,7 +15,7 @@ Follow these steps to configure a virtual machine scale set, or worker nodes, fo
 
 ## Virtual machine scale set instances
 
-A virtual machine scale set instance is assigned a private IP address. You can only access this IP address with a controller virtual machine that is in the same virtual network as the IP address. This guide describes how to set up that IP address and then configure the Azure virtual machine scale set that your Moodle migration creates.
+A virtual machine scale set instance is assigned a private IP address. You can only access this IP address with a controller virtual machine that is in the same virtual network as the IP address. This article describes how to set up that IP address and then configure the Azure virtual machine scale set that your Moodle migration creates.
 
 ### Access the virtual machine scale set
 
@@ -53,7 +53,7 @@ Follow these steps to access the virtual machine scale set:
 
 ### Create a backup directory
 
-An earlier step of the migration process extracted backup files to a directory named `storage` in `/home/azureadmin`. This `storage` directory contains the `moodle` and `moodledata` directories, a configuration directory, and a database backup file. After signing in to your scale set virtual machine instance, enter these commands to create a backup directory for these files:
+An [earlier step of the migration process extracted backup files](./migration-start.md#back-up-the-current-configuration) to a directory named `storage` in `/home/azureadmin`. This `storage` directory contains the `moodle` and `moodledata` directories, a configuration directory, and a database backup file. After signing in to your scale set virtual machine instance, enter these commands to create a backup directory for these files:
 
 ```bash
 cd /home/azureadmin/
@@ -82,7 +82,7 @@ To configure the PHP and web server, take these steps:
 
    ```bash
    sudo cp /moodle/config/nginx/*.conf  /etc/nginx/sites-enabled/
-   sudo  cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
+   sudo cp /moodle/config/php/www.conf /etc/php/$_PHPVER/fpm/pool.d/
    ```
 
 ### Install missing extensions
