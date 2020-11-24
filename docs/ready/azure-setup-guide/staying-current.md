@@ -22,7 +22,7 @@ Cloud platforms like Azure change faster than many organizations are accustomed 
 
 The following resources can help you stay current with Azure:
 
-- **Azure Service Health:** [Service Health](/azure/service-health/service-health-overview) alerts provide timely notifications about ongoing service issues, planned maintenance, and health advisories. These alerts also includes information about Azure features scheduled for retirement.
+- **Azure Service Health:** [Service Health alerts](/azure/service-health/service-health-overview) provide timely notifications about ongoing service issues, planned maintenance, and health advisories. These alerts also includes information about Azure features scheduled for retirement.
 - **Azure updates:** Review [Azure updates](https://azure.microsoft.com/updates) for announcements about product updates. Brief summaries link to additional details, making the updates easy to follow. Subscribe via the [Azure updates RSS feed](https://azurecomcdn.azureedge.net/updates/feed).
 - **Azure blog:** The [Azure blog](https://azure.microsoft.com/blog)communicates the most important announcements for the Azure platform. Follow this blog to stay up to date on critical information. Subscribe via the [Azure blog RSS feed](https://azurecomcdn.azureedge.net/blog/feed).
 - **Service-specific blogs:** Many individual Azure services publish blogs that you can follow if you rely on those services. Find the ones you're interested in via a web search.
@@ -32,7 +32,7 @@ The following resources can help you stay current with Azure:
 
 For deeper content that helps you stay current with Azure topics, review these resources:
 
-- [Azure Friday](https://channel9.msdn.com/Shows/Azure-Friday): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights. - Subscribe via the [Azure Friday RSS feed](https://channel9.msdn.com/Shows/Azure-Friday/feed).
+- [Azure Friday](https://channel9.msdn.com/shows/Azure-Friday): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights. Subscribe via the [Azure Friday RSS feed](https://channel9.msdn.com/Shows/Azure-Friday/feed).
 - [Azure Charts](https://azurecharts.com): This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes. \*
 - [AzAdvertizer](https://www.azadvertizer.net): Release and change tracking on Azure governance capabilities such as Azure Policy, policy initiatives, policy aliases and role-based access control (RBAC). \*
 - [Azure Weekly](https://azureweekly.info)*

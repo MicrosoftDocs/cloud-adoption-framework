@@ -26,15 +26,15 @@ In a hybrid environment, some parts of your IT portfolio are in the Azure public
 
 **Landing zone and cloud platform connections**: During the process, ensure that you have a stable network connection between your current datacenter and Azure. After you've established the network connection, test the latency, bandwidth, and reliability of the connection to Azure.
 
-**Governance and operations**: When you migrate to both clouds, you need to make a few early decisions that will affect the environment. By applying best practices, you build on cloud-native operations and governance tools that run in the public cloud. This approach reduces the cost of running expensive systems in your datacenter or consuming capacity on your Azure Stack Hub. When you migrate to either form of the cloud, you need to either follow best practices or continue using existing systems for operations, governance, and change management.
+**Governance and operations**: When you migrate to both clouds, you need to make a few early decisions that will affect the environment. By applying best practices, you build on cloud-native operations and governance tools that run in the public cloud. This approach reduces the cost of running expensive systems in your datacenter or consuming capacity on your Azure Stack Hub deployment. When you migrate to either form of the cloud, you need to either follow best practices or continue using existing systems for operations, governance, and change management.
 
 ## Private cloud environment
 
-If you choose to only use the private cloud version of Azure, an Azure Stack Hub, you'll need to consider the same decision points:
+If you choose to only use the private cloud version of Azure, an Azure Stack Hub deployment, you'll need to consider the same decision points:
 
 **On-premises governance and operations**: The best practice still suggests using the cloud-native operations and governance tools found in the public cloud version of Azure. It's important to evaluate this best practice early and determine whether it's applicable to your scenario.
 
-**Landing zone and cloud platform connections**: If your workload migrations will be deployed to your Azure Stack Hub, it will be important to document and test the latency, bandwidth, and reliability of the network routes between end users and your Azure Stack appliance.
+**Landing zone and cloud platform connections**: If your workload migrations will reside in your Azure Stack Hub deployment, it will be important to document and test the latency, bandwidth, and reliability of the network routes between end users and your Azure Stack appliance.
 
 ## Next steps
 

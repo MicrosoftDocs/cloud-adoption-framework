@@ -49,7 +49,7 @@ Whether you're already operating in the cloud or you're planning for future adop
 **Process:**
 
 3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update incident response (IR) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
+4. [Update incident response processes for cloud](../security/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
 5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**

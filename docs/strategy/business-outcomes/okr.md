@@ -7,9 +7,10 @@ ms.date: 10/21/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank
 ---
 
-<!--docutune:casing WorkBoard -->
+<!-- docutune:casing WorkBoard -->
 
 # Measure business outcomes using objectives and key results (OKRs)
 
@@ -97,7 +98,7 @@ Five steps can help your organization to move forward with OKRs:
 
 **Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful, but an organization can benefit most from everyone participating to meet objectives and gaining insights from the aligned data.
 
-Contact [WorkBoard](https://appsource.microsoft.com/en-us/marketplace/co-sell/SOL-31525-NGJ?debug=true%2F%3FignoreAutoSignIn%3Dtrue&tab=Overview) to get started.
+Contact [WorkBoard](https://appsource.microsoft.com/en-us/marketplace/co-sell/SOL-31525-NGJ) to get started.
 
 > [!div class="nextstepaction"]
 > [Align efforts for learning metrics](../learning-metrics.md)
