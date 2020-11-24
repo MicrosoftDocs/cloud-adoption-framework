@@ -287,5 +287,5 @@ When Moodle is in maintenance mode and you try to leave that mode, sometimes you
 ## Next steps
 
 - [Azure Database for MySQL documentation](https://docs.microsoft.com/azure/mysql/)
-- [What are virtual machine scale sets?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
+- [What are virtual machine scale sets?](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview)
 - [Storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
