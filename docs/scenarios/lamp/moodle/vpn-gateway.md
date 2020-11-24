@@ -1,52 +1,62 @@
 ---
-title: How to create a virtual network gateWay and connect through a private IP
-description: Learn how to create a virtual network gateWay and connect through a private IP.
+title: Create a virtual network gateway and connect to VMs
+description: Create a virtual network gateway, certificates, and VPN, and connect to virtual machine scale set instances with SSH using a private IP address and password.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/06/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# How to create a virtual network gateway and connect through a private IP
+# Create a virtual network gateway and connect to VMs
 
-This document explains how to set up a virtual network gateway in Azure.
+After you deploy the Azure Moodle resources, create an Azure virtual network gateway so you can connect to the Moodle virtual machine scale set instances through private IP addresses.
 
-## Getting started
+## Create a virtual network gateway
 
-Create a virtual network gateway in the Azure portal with the following steps:
+You can create the virtual network gateway by using the Azure portal or the Azure command-line interface (Azure CLI).
 
-- Search for and select **Virtual network gateway**.
-- Select **Create** to open a window.
-- Fill in all fields like **Name, Region, Gateway type, SKU,** and **VNet**. Keep the rest of the default values.
-- Select the virtual network associated with virtual machines created under the same resource group.
-- Select **Create** to start deploying.
+In the [Azure portal](https://portal.azure.com):
 
-![Creating a virtual network gateway.](images/vpn-gateway.png)
+1. Search for and select **Virtual network gateways**.
+   
+1. Select **Create virtual network gateway**.
+   
+1. On the **Create virtual network gateway** page, complete the following fields:
+   - Select your **Subscription**.
+   - Fill in a **Name** for the gateway.
+   - Select the **Virtual network** that the Moodle Azure Resource Manager (ARM) template deployed.
+   - Fill in a **Public IP address name**.
+   
+1. Leave the rest of the fields at their default filled-in values.
+   
+1. Select **Review + Create**, and when validation passes, select **Create**.
 
-- Create a virtual network gateway with this Azure CLI command:
+![Screenshot showing the Azure portal Create virtual network gateway screen.](images/vpn-gateway.png)
 
-    ```bash
-    az network vnet-gateway create -g MyResourceGroup -n MyVnetGateway --public-ip-address MyGatewayIp --vnet MyVnet --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
-    ```
+Or, run the following Azure CLI command to create the gateway:
+
+```azurecli
+az network vnet-gateway create -g <moodle resource group> -n <new virtual network gateway name> --public-ip-address <new gateway public ip address name> --vnet <moodle virtual network> --gateway-type Vpn --sku VpnGw1 --vpn-type RouteBased --no-wait
+```
 
 ## Generate certificates
 
-- Open Windows PowerShell ISE to the root and child certificates.
+Use the Windows PowerShell ISE to generate root and child certificates.
 
-- The command to generate root certificates:
+- Run the following command to generate the root certificate:
 
-  ```bash
+  ```powershell
   $cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
   -Subject "CN=P2SRootCert" -KeyExportPolicy Exportable `
   -HashAlgorithm sha256 -KeyLength 2048 `
-   -CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+  -CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
   ```
 
-- The command to generate the child certificate:
+- Run the following command to generate the child certificate:
 
-  ```bash
+  ```powershell
   New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
   -Subject "CN=P2SChildCert" -KeyExportPolicy Exportable `
   -HashAlgorithm sha256 -KeyLength 2048 `
@@ -54,102 +64,111 @@ Create a virtual network gateway in the Azure portal with the following steps:
   -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
   ```
 
-## Export certificates
+## Export the certificates
 
-Following these steps should allow you to successfully install certificates on your local systems.
+Export the certificates to install them on your systems.
 
-- Open the Microsoft Management Console to export the certificates.
-- Go to **Run**. Enter **MMC** to open certificates.
-- Select the **Certificates** under the **Personal** folder to open a page.
-- Refresh the page to find **Root and child certificates**.
+1. From the Windows Start menu, select **Run**, and enter **mmc**.
+   
+1. In the Microsoft Management Console left navigation pane, under the **Personal** folder, select **Certificates**.
+   
+Find the **P2SRootCert** and **P2SChildCert** certificates.
 
-Certificate types:
+To export the root certificate:
 
-**To export root certificates:**
+1. Right-click or press and hold **P2SRootCert**, point to **All Tasks**, and then select **Export**.
+1. In the **Certificate Export Wizard**, select **Next**.
+1. Select **No, do not export the private key**, and then select **Next**.
+1. Select **Base-64 encoded X.509(.cer)**, and then select **Next**.
+1. Enter a file name, and select **Next**.
+1. Select **Finish**.
+1. The message **The export was successful** appears. Select **OK**.
 
-- Select the root certificate, select and hold (or right-click) on the certificate, and then go to **All Tasks**.
-- Select **Export** for a new window and then **Next**.
-- Select **No, do not export private key** and then **Next**.
-- Select **Base-64 encoded X.509(.cer)** and then **Next**.
-- Select the **Browse and select the path**, enter a name, and select **Next**.
-- This message will appear: **Exported successfully**.
+To export the child certificate:
 
-**To export child certificates:**
-
-- Select the client certificate, select and hold (or right-click) on the certificate, and then go to **All Tasks**.
-- Select **Export** for a new window and then **Next**.
-- Select **Yes**, **Export private key**, and then **Next**.
-- Select the **Personal information exchange**, **PKCS**, and then **Next**.
-- Select the password checkbox and provide the password.
-- Set the encryption to TripleDES-SHA1, and select **Next**.
-- Select the **Browse and select the path**, enter a name, and select **Next**.
-- This message will appear: **Exported successfully**.
-- Open the root certificate file in your choice editor, and copy the code.
+1. Right-click or press and hold **P2SChildCert**, point to **All Tasks**, and then select **Export**.
+1. In the **Certificate Export Wizard**, select **Next**.
+1. Select **Yes, export the private key**, and then select **Next**.
+1. Select **Personal information exchange - PKCS #12 (.PFX)**, and then select **Next**.
+1. Select the **Password** checkbox, and provide and confirm the password.
+1. Under **Encryption**, select **TripleDES-SHA1**, and then select **Next**.
+1. Enter a file name, and select **Next**.
+1. Select **Finish**.
+1. The message **The export was successful** appears. Select **OK**.
 
 ## Configure the virtual network gateway
 
-- Go to the resource group where the virtual network gateway is created.
-- Go to Point-to-Site-configuration on the left panel.
-- Click on Configure now in the center panel.
-- Add the address pool (ex: 192.168.xx.0/24).
-- For the **Tunnel type**, select **IKEv2**.
-- Set the authentication type to **Azure certification**.
-- Paste the copied root certificate code in the portal, name it **Root**, and select **Save**.
+1. Open the exported root certificate file in a text editor, and copy the contents.
+1. In the Azure portal, go to your virtual network gateway.
+1. In the left navigation, select **Point-to-site-configuration**.
+1. Select **Configure now**.
+1. Under **Address pool**, enter the GatewaySubnet address pool, for example `192.168.xx.0/24`.
+1. Under **Tunnel type**, select **IKEv2**.
+1. Under **Authentication type**, select **Azure certification**.
+1. Under **Root certificates**:
+   - Enter **Root** for **Name**.
+   - Paste the copied root certificate code under **Public certificate data**.
+1. Select **Save**.
 
-## Download and connect to the VPN Client
+## Download and connect through the VPN client
 
-- Download the VPN Client after saving the configuration from portal.
-- Open the downloaded VPN Client zip file, open the `WindowsAMD64` folder, and install the `VPNClinetsetupAMD64` file.
-- Go to **Control Panel\Network and Internet\Network Connections** to see your installed VPN.
-- Right-click the VPN, and select **Connect**.
-- A new window will appear. Select the **Connect** button to get connected.
+To establish the VPN gateway connection:
 
-The VPN gateway connection is established.
+1. After you save the virtual private network configuration, select **Download VPN client** in the menu bar.
+1. Extract the contents of the downloaded VPN client zip file, open the `WindowsAMD64` folder, and run the `VpnClientSetupAmd64.exe` file to install the VPN client.
+1. In Windows, go to **Control Panel** > **Network and Internet** > **Network Connections** to see the installed VPN.
+1. Right-click the VPN, and select **Connect**.
+1. In the **VPN** window, select **Connect**.
 
-## Log in to the virtual machine
+## Configure SSH password authentication
 
-- Log in to virtual machine with private IP through the SSH key.
+To configure password authentication, from the controller virtual machine (VM):
 
-- Run this command to set the password authentication:
+1. Open the `sshd` config file for editing:
+   
+   ```bash
+   sudo vi /etc/ssh/sshd_config
+   ```
+   
+1. Update the following parameters:
+   
+   - Change `PasswordAuthentication` from `no` to `yes`.
+   - Find the commented `UseLogin`, remove the `#`, and change the value to `yes`.
+   
+1. Press ESC and type `:wq!` to save the changes.
+   
+1. Restart `sshd` by running the following command:
+   
+   ```bash
+   sudo systemctl restart sshd
+   ```
+   
+1. Run the following command to set the password:
+   
+   ```bash
+   sudo passwd <username>
+   ```
+   
+   For example, the command `sudo passwd azureadmin` sets the password for the user `azureadmin`.
+   
+1. At the prompts, type and retype the password.
 
-  ```bash
-  sudo vi /etc/ssh/sshd_config
-  ```
+## Sign in to VMs from the controller VM
 
-- Update these parameters: Change the password authentication type from **no** to **yes**, find the commented UserLogin, remove the **#** comment, and change to **yes**.
+Sign in to the scale set VMs with private IP addresses through SSH.
 
-- Press the `ESC` key, and type `:wq!` to save the changes.
-
-- Restart the SSHD:
-
-  ```bash
-  sudo systemctl restart sshd
-  ```
-
-- The password must be 14 characters long. Set the password with this command:
-
-  ```bash
-  sudo passwd <username>
-  ```
-
-  For example: `sudo passwd azureadmin`
-
-Password authentication has been completed.
-
-## Log in to virtual machine instance from a controller virtual machine
-
-- Log in to your client virtual machine.
-
-- Run these commands to connect to private virtual machine:
-
-  ```bash
-  sudo ssh <username>@<private_IP>
-  ```
-
-For example: `sudo ssh azureadmin@102.xx.xx.xx`
-
-- Follow the prompt to enter the password.
+1. Sign in to the controller VM.
+   
+1. Run this command to connect to a private VM:
+   
+   ```bash
+   sudo ssh <username>@<private IP address>
+   ```
+   
+   For example, `sudo ssh azureadmin@102.xx.xx.xx`
+   
+1. At the prompt, enter the password.
 
 ## Next steps
 
-Continue to [how to start a manual Moodle migration](./migration-start.md) for information about the next steps in the Moodle migration process.
+Continue to [Moodle manual migration steps](migration-start.md) for the next steps in the Moodle migration process.
