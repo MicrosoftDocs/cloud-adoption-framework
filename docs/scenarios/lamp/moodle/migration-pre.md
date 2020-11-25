@@ -1,6 +1,6 @@
 ---
 title: How to prepare for a Moodle migration
-description: Learn how to prepare for a Moodle migration.
+description: Learn how to prepare for a Moodle migration. See how to back up Moodle files and create resources that are needed for migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/06/2020
@@ -11,243 +11,281 @@ ms.subservice: plan
 
 # How to prepare for a Moodle migration
 
-## Pre-migration tasks
-
-Exporting data from on-premises to Azure involves the following tasks:
-
-- Install the Azure CLI.
-- Create a subscription.
-- Create a resource group.
-- Create a storage account.
-- Back up on-premises data.
-- Download and install AzCopy.
-- Copy archived files to Azure Blob.
+Before you migrate a Moodle application from your on-premises environment to Azure, you should export your data. This guide explains the steps of the export process.
 
 ## Install the Azure CLI
 
-- Install Azure CLI on a host inside the on-premises infrastructure for all Azure-related tasks.
+Follow these steps to set up the Azure CLI in your on-premises environment:
 
-  ```bash
+1. On a host that you can use for Azure tasks, enter this command to install the Azure CLI:
+
+   ```bash
    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-  ```
+   ```
 
-- Log in to your Azure account.
+1. In the Azure CLI, enter this command to sign in to your Azure account:
 
-  ```bash
-  az login
-  ```
+   ```bash
+   az login -u <username> -p <password>
+   ```
 
-- The az login command: Azure CLI will likely launch an instance or a tab inside of your default web browser and prompt you to log in to Azure with your Microsoft account. If the browser launch doesn't happen, open a new page at [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
-
-- To use the command line, enter the following command:
-
-  ```bash
-  az login -u <username> -p <password>
-  ```
+1. If the Azure CLI opens a browser window or tab, sign in to Azure with your Microsoft account. If a browser window doesn't open, go to [https://aka.ms/devicelogin](https://aka.ms/devicelogin), and enter the authorization code displayed in your terminal.
 
 ## Create a subscription
 
-Skip this step if you have a subscription. If you don't have a subscription, you can choose to [create one within the Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) or opt for a [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription.
+Skip this step if you already have an Azure subscription.
 
-- To create the subscription with the Azure portal, navigate to **Subscriptions** from the **Home** section.
+If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in Azure.
 
-  ![Azure subscriptions.](./images/subscriptions.png)
+- To use the Azure portal to create a subscription, open [Subscriptions](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
 
-- This command sets the subscription:
+  ![Screenshot of the Subscriptions page in the Azure portal.](./images/azure-subscriptions-page.png)
 
-  ```bash
-  az account set --subscription "Subscription Name"
+- To use the Azure CLI to create a subscription, enter this command:
 
-  Example: az account set --subscription "ComputePM LibrarySub"
+  ```azurecli
+  az account set --subscription '<subscription name>'
   ```
+
+  For example, enter:
+
+  `az account set --subscription 'ComputePM LibrarySub'`
 
 ## Create a resource group
 
-Once the subscription is set up, you need to create a resource group. One option is to use Azure portal to create it. Navigate to **Home** section, search for **Resource group**, select it, fill in the mandatory fields, and select on **Create**.
+Once the subscription is set up, create a resource group in Azure. You can either use the Azure portal or the CLI to create the group.
 
-![Resource groups: Create a resource group.](./images/resource-group.png)
+- To use the Azure portal, follow these steps:
 
-Alternatively, you can use the Azure CLI to create a resource group.
+  1. Open [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceGroups), and select **Add**.
+  
+  1. Enter your subscription name, a resource group name, and a region. See [Data residency in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for a list of available regions. Make a note of the name of the resource group that you enter so that you can use that name in later steps.
+  
+  1. Select **Review + create**.
 
-- Provide the same default location from the previous steps.
+  ![Screenshot of the Create a resource group page in the Azure portal, with subscription, resource group, and region boxes and a Review + create button.](./images/resource-group.png)
 
-  ```bash
-  az group create -l location -n name -s Subscription_NAME_OR_ID
+- To use the Azure CLI to create a resource group, enter this command:
+
+  ```azurecli
+  az group create -l <region> -n <resource group name> -s '<subscription name>'
   ```
 
-- Update the screenshot and subscription name with the sample test account.
+  For example, enter:
 
-  For example: `az group create -l eastus -n manual_migration -s ComputePM LibrarySub`
+  `az group create -l eastus -n manual_migration -s 'ComputePM LibrarySub'`
 
-- In the previous step, a resource group is created as a "manual_migration". Use the same resource group in further steps.
-
-Explore [location in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for more information.
+  The value you provide with the `-l` parameter specifies the default location. Use the same location that you used in previous steps. Make a note of the name of the resource group that you create, and use that name in later steps.
 
 ## Create a storage account
 
-The next step is to [create a storage account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount) within the resource group that's been created. Storage accounts can be created with the Azure portal or the Azure CLI.
+Next, create a storage account within the resource group that you just created. You'll use this storage account to back up your on-premises Moodle data.
 
-- To create with the portal, navigate to it, search for the storage account, and select the **Add** button. After filling in the mandatory fields, select **Create**.
+You can either use the Azure portal or the Azure CLI to create the storage account.
 
-  ![Creating a storage account.](./images/create-storage-account.png)
+- To use the Azure portal, follow these steps:
 
-- Alternatively, you can use the Azure CLI:
+  1. Open [Create storage account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount).
 
-  ```bash
-  az storage account create -n storageAccountName -g resourceGroupName --sku Standard_LRS --kind BlobStorage -l location
+  1. Enter the following information:
+
+     - Your subscription name
+     - The name of the resource group that you just created
+     - A storage account name
+     - Your region
+   
+  1. For **Account kind**, enter **BlobStorage**.
+  
+  1. For **Replication**, enter **Read-access geo-redundant storage (RA-GRS)**.
+
+  1. Select **Review + create**.
+
+  ![Screenshot of the Create storage account page in the Azure portal, with multiple input boxes and a Review + create button.](./images/create-storage-account.png)
+
+- To use the Azure CLI to create the storage account, enter this command:
+
+  ```azurecli
+  az storage account create -n <storage account name> -g <resource group name> --sku <storage account SKU> --kind <storage account type> -l <region>
   ```
 
-  Example: `az storage account create -n onpremisesstorage -g manual_migration --sku Standard_LRS --kind BlobStorage -l eastus`
+  For example, enter:
 
-- In the previous command, `--kind` indicates the type of storage account. Once `onpremisesstorage` account is created, it's becomes the destination for an on-premises backup.
+  `az storage account create -n onpremisesstorage -g manual_migration --sku Standard_LRS --kind BlobStorage -l eastus`
+
+  The `--kind` parameter specifies the storage account's type.
 
 ## Back up on-premises data
 
-- Before backing up on-premises data, enable **Maintenance mode** for the Moodle site. Run the following command from an on-premises virtual machine:
+Before backing up your on-premises Moodle data, turn on **Maintenance mode** on your Moodle website by following these steps:
 
-  ```bash
-  sudo /usr/bin/php admin/cli/maintenance.php --enable
-  ```
+1. On an on-premises virtual machine, enter this command:
 
-- Run the following command to check the status of the Moodle site:
+   ```bash
+   sudo /usr/bin/php admin/cli/maintenance.php --enable
+   ```
 
-  ```bash
-  sudo /usr/bin/php admin/cli/maintenance.php
-  ```
+2. Enter the following command to check the status of your Moodle website:
 
-- When backing up on-premises Moodle and moodledata files, configurations, and databases, back up to a single directory. The following diagram summarizes this:
+   ```bash
+   sudo /usr/bin/php admin/cli/maintenance.php
+   ```
 
-  ![The Moodle backup directory structure.](./images/directory-structure.png)
+When backing up on-premises Moodle and moodledata files, configurations, and databases, back up to a single directory. The following diagram summarizes this idea:
 
-- To copy all data, create an empty storage directory in any desired location:
+![Diagram showing the structure of the Moodle backup storage directory.](./images/directory-structure.png)
+
+### Create a storage directory
+
+Before copying your data, create an empty storage directory in any desired location. For example, if the location is `/home/azureadmin`, enter these commands:
 
   ```bash
   sudo -s
-  ```
-
-  For example, the location is `/home/azureadmin`.
-
-  ```bash
   cd /home/azureadmin
   mkdir storage
   ```
 
-### Back up Moodle and moodledata
+### Back up Moodle directories
 
-- The Moodle directory consists of site HTML content. Moodledata contains Moodle site data.
+In your on-premises environment, the `moodle` directory contains website HTML content. The `moodledata` directory contains Moodle website data.
 
-- The commands to copy Moodle and moodledata are:
+Enter these commands to copy files from the `moodle` and `moodledata` directories into the storage directory:
 
   ```bash
   cp -R /var/www/html/moodle /home/azureadmin/storage/
   cp -R /var/moodledata /home/azureadmin/storage/
   ```
 
-### Backup PHP and web server configurations
+### Back up PHP and web server configurations
 
-- Copy the PHP configuration files like `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d` directory to the `phpconfig` directory under the `configuration` directory.
+To back up configuration files, follow these steps:
 
-- Copy the ngnix configurations like `nginx.conf` and `sites-enabled/dns.conf` to the `nginxconfig` directory under the `configuration` directory.
+1. Enter these commands to create a new directory under your storage directory:
 
-  ```bash
-  cd /home/azureadmin/storage mkdir configuration
-  ```
+   ```bash
+   cd /home/azureadmin/storage
+   mkdir configuration
+   ```
 
-- The commands to copy nginx and PHP configurations are:
+2. Enter these commands to copy the PHP and nginx configuration files:
 
-  ```bash
-  cp -R /etc/nginx /home/azureadmin/storage/configuration/nginx
-  cp -R /etc/php /home/azureadmin/storage/configuration/php
-  ```
+   ```bash
+   cp -R /etc/php /home/azureadmin/storage/configuration/
+   cp -R /etc/nginx /home/azureadmin/storage/configuration/
+   ```
 
-### Create a backup of the database
+   The `php` directory stores PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginx` directory stores ngnix configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
 
-- If you already have mysql-client installed, skip the step to install it. If you don't have mysql-client, install it now:
+### Back up the database
 
-  ```bash
-  sudo -s
-  ```
+Follow these steps to back up your database:
 
-- Run the following command to check whether or not mysql-client is installed:
+1. Enter these commands to check whether mysql-client is installed:
 
-  ```bash
-  mysql -V
-  ```
+   ```bash
+   sudo -s
+   mysql -V
+   ```
 
-- If the mysql-client isn't installed, run the following command:
+2. If mysql-client is installed, skip this step. Otherwise, enter this command to install mysql-client:
 
-  ```bash
-  sudo apt-get install mysql-client
-  ```
+   ```bash
+   sudo apt-get install mysql-client
+   ```
 
-- This command will allow to you to back up the database:
+3. Enter this command to back up the database:
 
-  ```bash
-  mysqldump -h dbServerName -u dbUserId -pdbPassword dbName > /home/azureadmin/storage/database.sql
-  ```
+   ```bash
+   mysqldump -h <database server name> -u <database user ID> -p<database password> <database name> > /home/azureadmin/storage/database.sql
+   ```
 
-- Replace dbServerName, dbUserId, dbPassword, and dbName with on-premises database details.
+   For `<database server name>`, `<database user ID>`, `<database password>`, and `<database name>`, use the values that your on-premises database uses.
 
-- Create an archive `storage.tar.gz` file of backup directory:
+### Create an archive
 
-  ```bash
-  cd /home/azureadmin/ tar -zcvf storage.tar.gz storage
-  ```
+Enter this command to create an archive file, `storage.tar.gz`, for your backup directory:
+
+```bash
+cd /home/azureadmin/ tar -zcvf storage.tar.gz storage
+```
 
 ## Download and install AzCopy
 
-Execute the following commands to install AzCopy:
+Enter the following commands to install AzCopy:
+
+```bash
+sudo -s
+wget https://aka.ms/downloadazcopy-v10-linux
+tar -xvf downloadazcopy-v10-linux
+sudo rm /usr/bin/azcopy
+sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+```
+
+## Copy archived files to Azure Blob Storage
+
+Follow these steps to use AzCopy to copy archived on-premises files to Azure Blob Storage.
+
+### Generate a security token
+
+To generate a shared access signature (SAS) token for AzCopy, follow these steps:
+
+1. In the Azure portal, go to the page for the storage account you created earlier.
+
+1. In the left panel, select **Shared access signature**.
+
+   ![Screenshot of the page in the Azure portal for a storage account, with Shared access signature highlighted in the left panel.](./images/new-storage-account-page.png)
+
+1. Under **Allowed resource types**, select **Container**.
+
+1. Under **Start and expiry date/time**, enter a start and end time for the SAS token.
+
+1. Select **Generate SAS and connection string**.
+
+   ![Screenshot of the Azure portal showing the Shared access signature page for a storage account.](./images/shared-access-signature-page.png)
+
+1. Make a copy of the SAS token to use in later steps.
+
+### Create a container
+
+Create a container in the storage account. You can either use the Azure CLI or the Azure portal for this step.
+
+- To use the Azure CLI, enter this command:
 
   ```bash
-  sudo -s
-  wget https://aka.ms/downloadazcopy-v10-linux
-  tar -xvf downloadazcopy-v10-linux
-  sudo rm /usr/bin/azcopy
-  sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+  az storage container create --account-name <storage account name> --name <container name> --auth-mode login
   ```
 
-## Copy archived files to Azure Blob
+  For example, enter:
 
-Use AzCopy to copy archived on-premises files to Azure Blob.
+  `az storage container create --account-name onpremisesstorage --name migration --auth-mode login`
 
-- To use AzCopy, generate the SAS token first. Go to the created **Storage account resource**, and navigate to **Shared access signature** in the left panel.
+  When you use the `--auth-mode` parameter with a value of `login`, Azure uses your credentials for authentication and then creates the container.
 
-  ![A sample storage account.](./images/storage-account-created.png)
+- To use the Azure portal to create the container, follow these steps:
 
-- Select **Container** and checkboxes, and set the start and expiry date of the SAS token. Select **Generate SAS and connection string**.
+  1. In the portal, go to the page for the storage account you created earlier.
 
-  ![Generating an SAS token.](images/SAS-token-generation.png)
+  1. Select **Container**, and then select **Add**.
 
-- Copy and save the SAS token for future use.
+  1. Enter a name for the container, and then select **Create**.
 
-- The command to create a container in the storage account:
+     ![Screenshot of a dialog box in the Azure portal for creating a new container, with a name box and a Create button.](./images/new-container.png)
 
-  ```bash
-  az storage container create --account-name <storageAccountName> --name <containerName> --auth-mode login
-  ```
+### Copy the archive file to Azure Blob Storage
 
-  For example: `az storage container create --account-name onpremisesstorage --name migration --auth-mode login`
+Enter this command to copy your archive file to the container that you created in Blob Storage:
 
-  `--auth-mode login` means authentication mode at login. After login, the container will be created.
+```bash
+sudo azcopy copy /home/azureadmin/storage.tar.gz 'https://<storage account name>.blob.core.windows.net/<container name>/<SAS token>'
+```
 
-- The container can also be created with the Azure portal. Navigate to the same storage account created, select the container, and then select the **Add** button.
+For example, enter:
 
-- After entering the mandatory container name, select the **Create** button.
+`azcopy copy /home/azureadmin/storage.tar.gz 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='`
 
-  ![A new container.](images/new-container.png)
+Your Blob Storage account should now contain a copy of your archive.
 
-- The command to copy an archive file to an Azure Blob account:
-
-  ```bash
-  sudo azcopy copy /home/azureadmin/storage.tar.gz 'https://<storageAccountName>.blob.core.windows.net/<containerName>/<SAStoken>'
-  ```
-
-  For example: `azcopy copy /home/azureadmin/storage.tar.gz 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='`
-
-  ![An archive in Azure Blob.](images/archive-in-blob.png)
-
-- There should now be a copy of your archive inside of the Azure Blob account.
+![Screenshot of a page in the Azure portal showing Blob Storage accounts. A zipped tar file of the storage directory is visible.](./images/archive-in-blob-storage.png)
 
 ## Next steps
 
-Continue to [Moodle migration tasks, architecture, and template](./migration-arch.md) for more information about the Moodle migration process.
+Continue to [Moodle migration architecture and templates](./migration-arch.md).
