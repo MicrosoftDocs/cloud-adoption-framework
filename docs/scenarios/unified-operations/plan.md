@@ -9,9 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
+# Executive summary
+Most cloud adoption scenarios assume common rationalization of workload assets to be rehosted, rearchitected, or rebuilt to fit IaaS lift and shift scenarios, PaaS services configurations, or cloud-native workloads. Planning efforts that center on unified operations migration efforts greatly expand the availability of form factors across the digital estate with the benefits of Azure Arc and Azure Stack with unified cloud benefits.
+
+Because Azure Stack brings you the benefits of cloud innovation to any platform, retaining assets on-prem is no longer a barrier to implementing cloud benefits to physical datacenters anywhere. In addition, a unified operations and management of your digital estate enables consistent management and governance, bringing cloud innovation across on-prem, multi-cloud, and edge environments, eliminating the need to resolve dependencies, being no longer locked to platform restrictive configurations or policies. Azure Arc remains a single control plane across environments that manages all your digital estate assets, wherever they reside.
+
+Finally, a unified operations plan that onboards on-prem assets with Azure Arc facilitates Azure-consistent migrations. Azure Arc implements Azure management across on-premises, multi-cloud and edge and enables Azure services anywhere, so migration efforts can standardize the management and governance of your entire digital estate from Azure. Assuming a unified operations plan changes how you consider asset inventory and rationalizing, deploying your cloud adoption plan, and readiness plan with more platform options, specific DevOps plan to manage deployment pipelines, and specific skilling for a hybrid and multicloud migration effort.
+
 # Plan for unified operations
 
-This is a test line.
 In most cloud scenarios, we assume that you want to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. This changes in hybrid:
 - **Retain** workloads or assets on-prem. 
 - **Replatform** workloads to multiple cloud platforms. 
