@@ -3,7 +3,7 @@ title: Moodle manual migration steps
 description: Follow these steps to import the Moodle on-premises backup archive to Azure resources and configure the Moodle application.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/23/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan

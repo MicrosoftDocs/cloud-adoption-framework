@@ -3,7 +3,7 @@ title: Create a virtual network gateway and connect to VMs
 description: Create a virtual network gateway, certificates, and VPN, and connect to virtual machine scale set instances with SSH using a private IP address and password.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/23/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan

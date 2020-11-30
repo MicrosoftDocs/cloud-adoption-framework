@@ -3,7 +3,7 @@ title: Moodle migration resources
 description: Learn about the resources that a Moodle migration creates within Azure. Examples include an Azure Virtual Network, a network security group, and a subnet.
 author: BrianBlanchard
 ms.author: brblanch 
-ms.date: 11/06/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
