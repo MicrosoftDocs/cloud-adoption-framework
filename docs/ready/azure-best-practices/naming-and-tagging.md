@@ -3,15 +3,12 @@ title: Recommended naming and tagging conventions
 description: Learn detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 03/05/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: readiness, fasttrack-edit
 ---
-
-<!-- docutune:disable -->
-<!-- cSpell:ignore appcs arck cdnp cdne osdisk westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions
 
