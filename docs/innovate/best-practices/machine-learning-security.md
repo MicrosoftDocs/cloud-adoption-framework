@@ -1,9 +1,9 @@
 ---
-title: Machine Learning Security
-description: Machine learning poses unique security issues for businesses and a number of security principles must be considered when designing and assessing ML Architectures.
+title: Machine learning security
+description: Machine learning poses unique security issues for businesses, and a number of security principles must be considered when designing and assessing machine learning architectures.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 12/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Machine Learning Security
 
-Machine learning poses unique security issues for businesses and a number of security principles must be considered when designing and assessing ML Architectures.
+Machine learning poses unique security issues for businesses, and a number of security principles must be considered when designing and assessing machine learning architectures.
 
 - **Resilience:** ML Systems should be able to identify abnormal behaviours and prevent manipulation or coercion.
 - **Discretion:** Any data access scenarios involving AI should limit access to the data to the minimum extent required.
@@ -19,14 +19,14 @@ Machine learning poses unique security issues for businesses and a number of sec
 - **Transparency and Accountability:** AI must have built in forensic capabilities to provide transparency and accountability and to function as an early form of “AI intrusion detection” to enable engineers to understand the exact point in time a decision was made and the data that was used.
 - **Secured Environments:** Access to development, training and inferencing environments must be secured such data and model results / predictions can not be compromised.
 
-## Securing inference environment (AKS deployment)
+## Securing inference environment: Azure Kubernetes Service deployment
 
-As it is recommended to use Azure Kubernetes Service (AKS) for inferencing in production environment, there are two options available for securing an inference environment with AKS in your virtual network:
+As it's recommended to use Azure Kubernetes Service (AKS) for inferencing in production environment, there are two options available for securing an inference environment with AKS in your virtual network:
 
-- Deploy or attach an AKS cluster with public IP address to your VNET
-- Attach a private AKS cluster to your VNET
+- Deploy or attach an AKS cluster with public IP address to your VNET.
+- Attach a private AKS cluster to your VNET.
 
-Default AKS clusters have a control plane with public IP address. If you need private IP address for your AKS cluster, then you need to use the private AKS cluster. For inference, the AKS cluster and AML workspace must be in the same VNET.
+Default AKS clusters have a control plane with public IP address. If you need private IP address for your AKS cluster, then you need to use the private AKS cluster. For inference, the AKS cluster and Azure Machine Learning workspace must be in the same VNET.
 
 For securing the default AKS inferencing cluster inside your VNET, you need to specify three IP addresses:
 

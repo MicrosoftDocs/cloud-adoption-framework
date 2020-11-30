@@ -1,44 +1,48 @@
 ---
-title: Set up your Machine Learning Workspaces
-description: When setting up your machine learning workspaces in Azure Machine Learning service there are multiple considerations to take into account when determining the best structure and controls.
+title: Set up your Azure Machine Learning workspaces
+description: There are multiple factors to consider when setting up your Azure Machine Learning workspaces and determining the best structure and controls for each type of workspace.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 12/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Set up your Machine Learning Workspaces
+# Set up Azure Machine Learning workspaces
 
-When setting up your machine learning workspaces in Azure Machine Learning service there are multiple considerations to take into account when determining the best structure and controls.
+There are multiple factors to consider when setting up your Azure Machine Learning workspaces and determining the best structure and controls for each type of workspace:
 
-![A diagram of setting up the Machine Learning Workspaces](media/image13.png)
+![A diagram of how to set up Azure Machine Learning workspaces.](media/set-up-workspaces.png)
 
-1. **Public / Restricted:**
-   - Dev, Test & Prod Workspace
-   - Data Scientist Custom Role
-   - Git Integration for Version Control and CI/CD
-1. **Public / Non Restricted:**
-   - Dev, Test & Prod Workspace
-   - Contributor Role
-   - Git Integration for Version Control and CI/CD
-1. **Private / Restricted:**
-   - Dev, Test & Prod Workspace
-   - Private Link Enabled
-   - Data Scientist Custom Role
-   - Git Integration for Version Control and CI/CD
-1. **Private / Non Restricted:**
-   - Dev, Test & Prod Workspace
-   - Private Link Enabled
-   - Contributor Role
-   - Git Integration for Version Control and CI/CD
-1. **All Workspaces**
-   - One AMLS Workspace per Project
-   - One Compute Instance per Data Scientist
-   - One Compute Cluster per VM size shared with Data Scientists for Development
-   - One Compute Cluster per Production Pipeline
-   - Set Compute Cluster Minimum Node Size to 0 to save Costs
-   - Instruct users to shutdown Compute Instances manually after use
-   - Workspace admin Custom Role who has access to create Compute Instances and Clusters
-   - Data Scientist Custom Role requires all infrastructure to be set up by another user before the Data Scientist can begin work
+1. **Public, restricted:**
+   - Development, test, and production workspace
+   - Custom role: data scientist
+   - Git integration for version control and continuos integration/continuous development (CI/CD)
+   
+1. **Public, not restricted:**
+   - Development, test, and production workspace
+   - Role: contributor
+   - Git Integration for version Control and CI/CD
+   
+1. **Private, restricted:**
+   - Development, test, and production workspace
+   - Private link enabled
+   - Custom role: data scientist
+   - Git integration for version control and CI/CD
+   
+1. **Private, not restricted:**
+   - Development, test, and production workspace
+   - Private link enabled
+   - Role: contributor
+   - Git integration for version control and CI/CD
+   
+1. **All workspaces:**
+   - One Azure Machine Learning Studio workspace per project
+   - One compute instance per data scientist
+   - One compute cluster per virtual machine size shared with data scientists for development
+   - One compute cluster per production pipeline
+   - Setting the compute cluster minimum node size to 0 to reduce costs
+   - Instructing users to shut down compute instances manually after use
+   - A 'workspace admin' custom role with access to create compute instances and clusters
+   - A 'data scientist' custom role requiring all infrastructure to be set up by another user before the data scientist can begin work

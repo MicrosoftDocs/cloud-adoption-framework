@@ -15,7 +15,7 @@ Microsoft provides six guiding principles for responsible AI, namely Fairless, r
 
 We can think of these principles from two lenses, Ethical and explainable. 
 
-![A diagram of Trusted AI](media/image14.png)
+![A diagram of trusted AI.](media/trusted-ai.png)
 
 ## Ethical
 
@@ -27,7 +27,7 @@ More details on the body can be found on the following link:  [Aether Committee
 
 ## Accountability ​
 
-Accountability is an essential pillar of responsible AI.  The people who design and deploy the AI system need to be accountable for the action or decision it takes, especially, as we are heading towards more autonomous systems.  Organizations should consider establishing an internal review body, which provides oversight and insight, as well as guidance regarding the development and deployment on AI systems.  While these guidelines many vary depending on the company and region, it should however reflect their AI journey.  
+Accountability is an essential pillar of responsible AI. The people who design and deploy the AI system need to be accountable for the action or decision it takes, especially, as we are heading towards more autonomous systems. Organizations should consider establishing an internal review body, which provides oversight and insight, as well as guidance regarding the development and deployment on AI systems.  While these guidelines many vary depending on the company and region, it should however reflect their AI journey.  
 
 ## Inclusiveness​
 
@@ -35,67 +35,67 @@ Inclusiveness mandates that AI should consider all broad ranges of human race an
 
 Inclusive design practices can help developers to understand and address potential barriers that may unintentionally exclude people.
 
-## Reliability & Safety
+## Reliability and safety
 
 AI systems need to be reliable and safe in order for it to be trusted.  It is important that the system performs as it was originally designed, and responses safely in unanticipated conditions.   It should have inherent resilience that resists from intended or unintended manipulation. A rigorous testing and validation should be mandated for various operating conditions to ensure that it responds safely even in edge cases.  Methods such as A/B testing and Champion/Challenger or other methods should be considered as part of the process.
 
 AI system’s performance can degrade over time; therefore, a robust monitoring and model tracking process needs to be established that reactively and proactively measure the performance of the and retrain as necessary to refresh the model.
 
-## Explainable
+## What is explainable
 
-Explainability is imperative for Data Scientist, Auditors, Business decision makers to ensure that an AI system is reasonably able to justify the decision it has made, and how it came to this conclusion.  This is of utmost import to ensure compliance with companies’ policies, industry standards, and government regulation.   A Data Scientist should be able to explain to the stakeholder how they have achieved a certain level of accuracy and what is influencing or attributing to this outcome.  Likewise, an Auditor needs a tool to validate the model in order to comply with the company’s policies. And a business decision maker needs to be able to provide transparency of the model in order to gain trust.
+Explainability is imperative for data scientist, auditors, and business decision makers to ensure that an AI system can reasonably justify its decision and how it came to this conclusion.  This is important to ensure compliance with company policies, industry standards, and government regulation. A data scientist should be able to explain to the stakeholder how they achieved a certain level of accuracy and what's influencing or attributing to this outcome. Likewise, an auditor needs a tool to validate the model in order to comply with the company’s policies. And a business decision maker needs to be able to provide transparency of the model in order to gain trust.
 
-In order to achieve the model explainability, MS has been working toward an open-source toolkit called InterpretML, that supports two types of models: Glass-box and Black-box.
+In order to achieve the model explainability, Microsoft has been developing an open-source toolkit, called InterpretML, which supports glass-box and black-box models.
 
-Glass-box models are interpretable due to their structure, it is recommended to use EBM (Explainable Boosting Machine), which is the state of the algorithm based on decision tree, or linear models.   They provide lossless explanation and are editable by domain experts.
+Glass-box models are interpretable due to their structure. It's recommended to use Explainable Boosting Machine, which is the state of the algorithm based on decision tree or linear models. They provide lossless explanation and are editable by domain experts.
 
-BlackBox models are more difficult to interpret due to inherent complex internal working structure, such as the Neural Network. For these kinds of models, the explainer analyzes the relationship between the input and output to interpret the model. Typical explainers such as LIME or SHAP are used for these kinds of models.
+Black-box models are more challenging to interpret because of a complex internal structure, the Neural Network. For these types models, the explainer analyzes the relationship between the input and output to interpret the model. Typical explainers like LIME or SHapley Additive exPlanation are used for these types of models.
 
-AML integrates FairLearn as part of the offering, both for the SDK and the AutoML GUI.  It is recommended that explainers are used to understand the key influencer of the model, and domain experts are used to validate these influencers.
+Azure Machine Learning integrates FairLearn as part of the offering, both for the SDK and the AutoML GUI.  It is recommended that explainers are used to understand the key influencer of the model, and domain experts are used to validate these influencers.
 
 More details can be found on the following links: [InpretML](http://interpret.ml/), [AML Interpretability](/azure/machine-learning/how-to-machine-learning-interpretability)
 
 ## Fairness​
 
-Fairness is a fundamental principle all human beings strive to achieve, as it is one of cornerstones of our ethical principles.  It is more so important when it comes to development of AI systems, where right check and balances needs to be in place to ensure that the decision that a system is making does not inherently discriminate or biased towards a certain group or individual, regardless of their gender, race, sexual orientation or religion.
+Fairness is a fundamental principle all human beings strive to achieve, as it's one of cornerstones of our ethical principles.  It is more so important when it comes to development of AI systems, where right check and balances needs to be in place to ensure that the decision that a system is making does not inherently discriminate or biased towards a certain group or individual, regardless of their gender, race, sexual orientation or religion.
 
 As a starting point, Microsoft provides an **AI fairness checklist**, to guide the fairness in AI systems in a prescriptive way.  They can be broadly categorized in five stages, Envision, Prototype, Build, Launch and Evolve. Each category entails a list of recommended activities to ensure various due diligence is completed to minimize the impact of unfairness in the system.
 
 More details can be found in the following link: [Fairness Checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)
 
-On a practical level, MS has been working toward an **open-source toolkit known as Fairlean**, that enables Data Scientist and Developers to assess and improve the fairness of their AI systems.  The toolbox provides various unfairness mitigation algorithms, as well as an interactive dashboard for visualizing the fairness of your model.  It is recommended that when a model is built, the toolkit is used to assess the fairness of the model, and it should be an integral part of the DS process. Fairlearn is also integrated with AzureML.  
+On a practical level, Microsoft has been working toward an open-source toolkit known, Fairlean, that supports data scientists and developers to assess and improve the fairness of their AI systems.  The toolbox provides various unfairness mitigation algorithms, as well as an interactive dashboard for visualizing the fairness of your model.  It is recommended that when a model is built, the toolkit's used to assess the fairness of the model, and it should be an integral part of the DS process. Fairlearn is also integrated with AzureML.  
 
-More details of the toolbox can be found on the following links: [FairLearn](https://fairlearn.github.io/), [AML FairLearn](/azure/machine-learning/concept-fairness-ml)
+More details of the toolbox can be found on the following links: [FairLearn](https://fairlearn.github.io/), [Azure Machine Learning FairLearn](/azure/machine-learning/concept-fairness-ml)
 
 ## Transparency
 
-Transparency is important to understand which data was used to train the model, what transformation logic has been applied to the data, which algorithms were used to train the model, what was the final model generated, and what are the associated assets with the model.  These information help to get a better understanding of the process involved in creating the model, which can enable us to reproduce the model in a transparent way.  AML workspace facilitates this by recording or retraining all training related assets using “Snapshot”, and all metrics associated with an experiment.  
+Transparency is important to understand which data was used to train the model, what transformation logic has been applied to the data, which algorithms were used to train the model, what was the final model generated, and what are the associated assets with the model.  These information help to get a better understanding of the process involved in creating the model, which can enable us to reproduce the model in a transparent way.  Azure Machine Learning workspace facilitates this by recording or retraining all training related assets using “Snapshot”, and all metrics associated with an experiment.  
 
-More information can be found on the following link: [AML Workspace](/azure/machine-learning/concept-workspace)
+More information can be found on the following link: [Azure Machine Learning workspace](/azure/machine-learning/concept-workspace)
 
-## Privacy & security
+## Privacy and security
 
-Privacy and security are an integral part of the AI system, whereby protecting data is a mandatory obligation of the data holder.  More so, when dealing with personal data, one must not only ensure it is secure, but also accessed in a way that does compromise or infringe an individual's privacy.  MS ensues this through a technology known as **differential privacy**.  Differential privacy addresses this by adding randomness or “noise” to the data so that the Data Scientist cannot identify any individual data; hence preserving the data privacy.
+Privacy and security are an integral part of the AI system, whereby protecting data is a mandatory obligation of the data holder.  More so, when dealing with personal data, one must not only ensure that it's secure but also accessed in a way that doesn'y compromise or infringe an individual's privacy. Microsoft ensues this through a technology known as **differential privacy**.  Differential privacy addresses this by adding randomness or “noise” to the data so that the data scientist can't identify any individual data, which preserves the data's privacy.
 
 More details can be found on the following link: [Differential Privacy](/azure/machine-learning/concept-differential-privacy)
 
-## Human AI Guidelines​
+## Human AI guidelines​
 
 Human AI design guidelines consist of 18 principles, and they are broadly categories in four areas: ‘initially’, ‘during interaction’, ‘when wrong’ and ‘over time’. These principles are designed to result in a more inclusive and more human-centric AI-infused system. Below are some of the key principles in each category.
 
-![A diagram of Human AI Guidelines​](media/image15.png)
+![A diagram of human AI guidelines​.](media/human-ai-guidelines.png)
 
 ## Initially:
 
-- **Make clear what the system can do**. As an example, if the AI system use/generate metrics, it is important to show all the metrics that are used and how they are tracked.
+- **Make clear what the system can do**. As an example, if the AI system use/generate metrics, it's important to show all the metrics that are used and how they are tracked.
 - **Make clear how well the system can do what it can do**. Help the users to understand that AI will not be 100% accurate and set the expectation when the AI system may make mistake.
 
-## During Interaction:
+## During interaction:
 
 - **Show contextually relevant information.** Visually provide information related to the user’s current context and environment. Such as searching for a hotel return details close proximity to the intended destination and date.
 - **Mitigate social biases**. Ensure that the language and behaviour do not introduce any unintended stereotype and biases. As an example, an auto-complete feature considers both genders.
 
-## When Wrong:
+## When wrong:
 
 - **Support efficient dismissal.** Provide an easy mechanism to ignore or dismiss undesirable features/services.
 - **Support efficient correction.** Provide an intuitive way of making it easier way to edit, refine or recover.
@@ -112,7 +112,7 @@ Full listings can be found on the following link: [Human AI Guidelines](/ai/guid
 
 ## Persona–centric Trusted AI Framework
 
-![A diagram of Persona–centric Trusted AI Framework](media/image16.png)
+![A diagram of persona–centric, trusted AI framework](media/AI-framework.png)
 
 ## AI Designer
 
@@ -122,12 +122,12 @@ As an AI model Builder, the AI Designer has the responsibility for the following
 - Data Assessment of the source data in the System Source of Record to define the initial state of bias of data
 - AI and algorithm design to remove bias such as define the elimination of minority groups within the data due to binning, grouping, normalization especially in traditional ML models (e.g. tree-based models). Furthermore, such categorical AI design reiterates bias implications by defining social, racial, gender classes especially in industry verticals that rely on PHI and PII.
 - Identification and alerting of any risk of causing target leakage and strengthen development of the model.
-- Best practice for model reporting and insights focusing on enabling a granular understanding of the model avoiding Blackbox approaches e.g. by using feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. The dimensionality and complexity of modern datasets requires identification metrics of correlations to the target to define the predictive influence, relationship and dependencies of features.
+- Best practice for model reporting and insights focusing on enabling a granular understanding of the model avoiding black-box approaches e.g. by using feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. The dimensionality and complexity of modern datasets requires identification metrics of correlations to the target to define the predictive influence, relationship and dependencies of features.
 - Following Microsoft’s Ethical guidelines
 
-## AI Administrators & Officers
+## AI administrators and officers
 
-AI Administrators & Officers responsibilities involve operationalization and performance metrics of AI, governance and audit frameworks, and enablement of AI security and ROI to the business.
+AI administrator and officer responsibilities involve the operationalization and performance metrics of AI, governance and audit frameworks, and enablement of AI security and ROI to the business.
 
 - Model monitoring​ is one of the central cornerstones of AI development and is served through a tracking dashboard that combines model metrics for production models by focusing specifically on accuracy and model degradation, data drift and deviation, and changes in speed/error of inference.
 - Flexibility of deployment and re-deployment (REST API preferred) allows agile model implementation into an open tool-agnostic architecture integrating the model into business processes and business feedback loops generation value.

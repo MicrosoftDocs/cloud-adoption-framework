@@ -1,21 +1,21 @@
 ---
-title: How to approach MLOps
-description: Data Scientists within an organization will have a wide spectrum of skills and there could be variation in the maturity of experimentation methods and the tools used.
+title: How to approach machine learning operations
+description: Data scientists within an organization will have a wide spectrum of skills, and there could be variation in the maturity of experimentation methods and the tools used.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 11/4/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# How to approach MLOps
+# How to approach machine learning operations
 
-## Approaches to ML Ops
+## Approaches to machine learning operations
 
-Data Scientists within an organization will have a wide spectrum of skills and there could be variation in the maturity of experimentation methods and the tools used. Standardization can either be mandated or encouraged through templates and experiment galleries. Full conformity is probably not possible or even desirable as it is important to encourage as many people as people to embrace AI, regardless of experience.
+Data scientists within an organization will have a wide spectrum of skills, and there could be variation in the maturity of experimentation methods and the tools used. Standardization can either be mandated or encouraged through templates and experiment galleries. Full conformity is probably not possible or even desirable as it's important to encourage as many people as people to embrace AI, regardless of experience.
 
-The size and maturity of the company is a deciding factor in whether the whole ML lifecycle falls under the Data Scientists responsibility or whether specialist teams will be in place for each of the phases. We tend to find that either one of two approaches are followed.
+The size and maturity of the company is a deciding factor in whether the whole ML lifecycle falls under the data scientists responsibility or whether specialist teams will be in place for each of the phases. We tend to find that either one of two approaches are followed.
 
 ## Centralized approach
 
@@ -47,9 +47,9 @@ The type of Information that they might need to collect form the data scientist 
 - Are their existing project workflow that can be leveraged?
 - How much work will it take to get the model into production?
 
-At this this point the ML engineer will be able to design the workflow and estimate the amount of work required. It is good practice to ensure that the Data Scientists is engaged throughout the workflow build process.
+At this this point the ML engineer will be able to design the workflow and estimate the amount of work required. It is good practice to ensure that the data scientists is engaged throughout the workflow build process.
 
-During this period there is the opportunity to cross train the Data Scientist, so they are familiar with the final repo, in many circumstances the Data Scientist may be required to work on the use case in the future.
+During this period there is the opportunity to cross train the data scientist so they are familiar with the final repo, in many circumstances the data scientist may be required to work on the use case in the future.
 
 ## Benefits of MLOps for businesses:
 
@@ -68,15 +68,15 @@ Microsoft’s AI Business School is a great resource to leverage and provides a 
 
 Machine Learning Operations (MLOps) consists of a set of principles and best practices on how to organize and orchestrate the development, deployment and maintenance of Machine Learning models in a scalable and standardized way.
 
-![A diagram of MLOps Explained](media/image1.png)
+![A diagram showing an overview of machine learning operations.](media/machine-learning-operations-overview.png)
 
-The main components at play of the development and deployment of a Machine Learning system are outlined below.
+The main components at play of the development and deployment of a machine learning system are outlined below.
 
-![A diagram of the Components of a productionalized Machine Learning system](media/image2.png)
+![A diagram showing the components of a machine learning system in production.](media/machine-learning-system-in-production.png)
 
-*Source: Sculley et al. 2015. Hidden technical debt in Machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’15)*
+*Source: Sculley et al. 2015. Hidden technical debt in machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’15)*
 
-## MLOps vs Dev Ops
+## Machine learning operations versus Dev Ops
 
 Given that MLOps draws its inspiration from DevOps, it remains to wonder what the differences between the two are.
 
@@ -86,7 +86,7 @@ In addition to DevOps practices, MLOps addresses the following concepts not cove
 - **Model tracking:** Model artifacts are often stored in a Model Registry, which should expose storage, versioning and tagging capabilities. Furthermore, those registries need to help with linking where a model was created from, e.g., the source code, its parameters, as well as the associated data that has been used to train the model.
 - **Digital audit trail**: all changes need to be tracked when dealing with code and data.
 - **Generalization:** models are different than code for reuse, as models must be tuned based on input data / scenario. To reuse a model for a new scenario, you may need to fine-tune the model for the new data.
-- **Model re-training**: model performance can decrease over time and it is important to be able to retrain them when required to remain useful.
+- **Model re-training**: model performance can decrease over time and it's important to be able to retrain them when required to remain useful.
 
 ## Model Development process
 
@@ -96,9 +96,9 @@ The process of development is then standardized given the following:
 - Automation for deployment to the infrastructure used for inferencing including monitoring.
 - Mechanisms to create an end-to-end data audit trail, as well as automatic model retraining when data drifts over time (especially relevant for large-scale, ML-infused systems).
 
-![A diagram of the End-to-end ML lifecycle](media/image3.png)
+![A diagram of the machine learning lifecycle](media/ml-lifecycle.png)
 
-Given the Components in the previous diagram above, the deployment lifecycle of a Machine Learning system can be organized as in the diagram immediately above. Once developed, a Machine Learning model is then trained, validated, deployed and monitored. From the organizational perspective, it is important to define who owns and implements this process both on managerial and technical level. In larger enterprises, a data scientist might own the model training and validation steps and an ML engineer might take care of the reminder steps. In smaller companies, a data scientist might own all steps.
+Given the components in the previous diagram above, the deployment lifecycle of a Machine Learning system can be organized as in the diagram immediately above. Once developed, a Machine Learning model is then trained, validated, deployed and monitored. From the organizational perspective, it's important to define who owns and implements this process both on managerial and technical level. In larger enterprises, a data scientist might own the model training and validation steps and an ML engineer might take care of the reminder steps. In smaller companies, a data scientist might own all steps.
 
 ## Train Model
 
@@ -106,7 +106,7 @@ In this step, the Machine Learning model is trained using a training data set. T
 
 ## Validate Model
 
-This step automatically validates the newly trained model based on established metrics (e.g. an accuracy metric to compare it to older models). Did its accuracy increase? If yes, this model might be registered in the model registry for ensuring that next steps can consume it. If the new model performs worse, either a Data Scientist can be alerted to investigate why, or the newly trained model can just be discarded.
+This step automatically validates the newly trained model based on established metrics (e.g. an accuracy metric to compare it to older models). Did its accuracy increase? If yes, this model might be registered in the model registry for ensuring that next steps can consume it. If the new model performs worse, then a data scientist can be alerted to investigate why, or the newly trained model can be discarded.
 
 ## Deploy/Consume Model
 
@@ -139,11 +139,11 @@ Make sure [Enabling data collection](/azure/machine-learning/how-to-enable-data-
 
 3. **Decide if retraining with the collected data is warranted**
 
-There are many reasons you may experience data drift, ranging from a sensor issue, seasonality, change in user behavior as well as data quality issues related to the data source. In some cases model retraining is not required so it is recommended that the cause of the data drift is investigated and understood before the model is retrained.
+There are many reasons you may experience data drift, ranging from a sensor issue, seasonality, change in user behavior as well as data quality issues related to the data source. In some cases model retraining is not required so it's recommended that the cause of the data drift is investigated and understood before the model is retrained.
 
 4. **Retraining the model**
 
-As model training should already be automated, this step is about triggering the existing training step. This could be for example when Data Drift has been detected (and it is not related to a data issue) or when a Data Engineer has published a new version of a dataset.
+As model training should already be automated, this step is about triggering the existing training step. This could be for example when Data Drift has been detected (and it's not related to a data issue) or when a data engineer has published a new version of a dataset.
 
 Depending on the use case, these steps can be fully automated or supervised by a human. Some use cases, such as product recommendations might be running fully autonomous in the future, while other others (e.g. finance) require a human in the loop to approved newly trained models, given metrics about model fairness, transparency, etc.
 
@@ -162,30 +162,30 @@ The goals, tasks, and documentation artifacts for each stage of the lifecycle in
 
 ## MLOps Roles
 
-Within the AI Project and as described in the Data Science Lifecycle process there are 3 key roles, the Data Engineer, the Data Scientist and the MLOps Engineer. These roles are all critical in the success of your project and must work together to ensure that the end solution is accurate, repeatable, scalable and production ready.
+Within the AI Project and as described in the Data Science Lifecycle process there are 3 key roles, the data engineer, the data scientist, and the MLOps Engineer. These roles are all critical in the success of your project and must work together to ensure that the end solution is accurate, repeatable, scalable, and production-ready.
 
-![A diagram of the MLOps Process](media/image4.png)
+![A diagram showing the machine learning operations process.](media/machine-learning-operations-process.png)
 
-**A Data Engineer** A Data engineer undertakes the responsibility of ingesting the data, data validation and cleansing activities.  Once the data is at sufficient quality and it is cataloged and made available for data scientists to use.  It is important to do some level exploratory analysis at this stage, such as checking for duplication of data, outliers are removed, missing data is computed. All these activities should be defined in a pipeline steps and are executed as the pre-processing of the train pipeline.  A meaningful naming convention should be used for naming the core and derived features.  
+A data engineer is responsible for ingesting the data, data validation and cleansing activities.  Once the data is at sufficient quality and it's cataloged and made available for data scientists to use. It is important to do some level exploratory analysis at this stage, such as checking for duplication of data, outliers are removed, missing data is computed. All these activities should be defined in a pipeline steps and are executed as the pre-processing of the train pipeline.  A meaningful naming convention should be used for naming the core and derived features.  
 
-**Data Scientist (or AI Designer)** is responsible for preparing, training and evaluating models. The data that was prepared by a Data Engineer would go through a further exploratory analysis phase, where a Data Scientist identifies various patterns and relationships within the data and may undergo feature engineering to select/derive features for the experiment. It is important that this phase is completed as comprehensively as possible, since feature engineering plays a major role in building a good, generalized model. Various experiments would be carried out using different algorithms and hyper parameters.  Tooling such as AutomatedML can be used to automate this task, which can also help with the underfitting and overfitting of a model.  A successful trained model is then registered in the model registry. A meaningful model naming convention should be used, and version history should be retained for lineage and traceability.  This process can be formalized as a training pipeline.
+A data scientist (or AI Designer) is responsible for preparing, training and evaluating models. The data that was prepared by a data engineer would go through a further exploratory analysis phase, where a data scientist identifies various patterns and relationships within the data and may undergo feature engineering to select/derive features for the experiment. It is important that this phase is completed as comprehensively as possible, since feature engineering plays a major role in building a good, generalized model. Various experiments would be carried out using different algorithms and hyper parameters. Tooling such as AutomatedML can be used to automate this task, which can also help with under- and overfitting a model. A successful trained model is then registered in the model registry. A meaningful model naming convention should be used, and version history should be retained for lineage and traceability. This process can be formalized as a training pipeline.
 
-**A ML Ops Engineer** undertakes the responsibility of building the end-to-end pipelines for continuous integration and delivery.   This includes packing the model in a Docker Image, validating and profiling the model, followed by the necessary approval from a stakeholder, then deploying the model in a container orchestration service, such as AKS.  As part of the continuous integration, various triggers may be set, such as, on commit of the model code to trigger the train pipeline, followed by the release pipeline.  
+A machine learning operations engineer is responsible for building the end-to-end pipelines for continuous integration and delivery.   This includes packing the model in a Docker Image, validating and profiling the model, followed by the necessary approval from a stakeholder, then deploying the model in a container orchestration service, such as AKS.  As part of the continuous integration, various triggers may be set, such as, on commit of the model code to trigger the train pipeline, followed by the release pipeline.  
 
 In a production setting, we may see a number of environments being used to orchestrate the MlOps process, namely: Dev, Test and Prod.
 
-## Machine Learning Environments & Role-based Access Control
+## Machine learning environments and role-based access control
 
-![A diagram of the Machine Learning Environments & Role-based Access Control process](media/image5.png)
+![A diagram showing machine learning environments and the role-based access control process.](media/ml-environments-and-rbac-process.png)
 
-**In a Dev environment** a Data Scientist and a Data Engineer will normally carry out data engineering and data science activities. These activities should be facilitated by the ML Pipelines.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create Workspaces, add or remove workspace users.
+**In a development environment:** Data scientists and a data engineers normally carry out data engineering and data science activities. These activities should be facilitated by the ML Pipelines.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
-**In a Test environment**, various tests are carried out on the environment deployment and the model.  For the model, it is recommended to use either Champion/Challenger or A/B testing.  The test environment should mimic as close to the deployment environment; therefore, it is recommended to run tests such as load, model response time, and others.  A Data Scientist and Data Engineer has limited access to this environment, primarily read only access, with some right access, such as configuration.  A DevOps on the other hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the Prod environment.
+**In a test environment:** Various tests are carried out on the environment deployment and the model.  For the model, it's recommended to use either champion/challenger or A/B testing.  The test environment should mimic as close to the deployment environment; therefore, it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read only access, with some right access, such as configuration.  A DevOps on the other hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the Prod environment.
 
-**In a Prod environment**, deployment of a model takes place either for batch or real-time inference.  A Prod is typically a read-only environment, however, a DevOps engineer has full access to the environment, and is responsible for on-going support and maintenance of the environment.  A Data Scientist and a Data Engineer has limited access to the environment and is read-only.
+**In a production environment:** A model is deployed during batch or real-time inference. A production environment is typically a read-only; however, a DevOps engineer has full access to this environment and is responsible for continually supporting and maintaining it. Data scientists and a data engineers have limited access to the environment, and it's read-only.
 
-The role-based access control for all the environments can be summarized as follows:
+Role-based access control for all the environments is shown in the following diagram:
 
-![A diagram of the role-based access control for all the environments](media/image17.png)
+![A diagram of role-based access control for all environments.](media/rbac-for-all-environments.png)
 
-From this table, it can be observed that the Data Engineer and Data Scientist’s level of access decreases as we go up the higher environments, while DevOPs Engineer increases.  This is because an MLOPs engineer is tasked with building the pipeline, gluing things together, and ultimately deploying models in production. This is the recommended level of granularity should be provided for each role.
+This table shows that the data engineer and data scientist’s level of access decreases into higher environments as the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This is the recommended level of granularity that should be provided for each role.

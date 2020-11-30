@@ -1,9 +1,9 @@
 ---
-title: Select and size Compute Instances for Machine Learning
-description: When selecting and sizing your compute instances for the development and training of your ML models you need to consider the type of algorithm you are using, data type and sizes and if you will be utilizing distributed training. 
+title: Select and size compute instances for Azure Machine Learning
+description: When selecting and sizing your compute instances for developing and training your machine learning models, consider the type of algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. 
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 12/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -13,12 +13,12 @@ ms.subservice: innovate
 
 ## Development and Training
 
-When selecting and sizing your compute instances for the development and training of your ML models you need to consider the type of algorithm you are using, data type and sizes and if you will be utilizing distributed training. Refer to the following decision tree for selection of compute Instances.
+When selecting and sizing your compute instances for developing and training your machine learning models, consider the type of algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. To select compute instances, reference to the following decision tree:
 
-![A diagram of Development and Training](media/image11.png)
+![A development and training diagram.](media/development-and-training.png)
 
 ## Inferencing
 
-For inferencing of your ML Model you can use the following decision tree to select the appropriate compute instances.
+You can use the following decision tree to determine and select the appropriate compute instances for inferencing with your machine learning model.
 
-![A diagram of Inferencing](media/image12.png)
+![A diagram showing inferencing.](media/inferencing.png)
