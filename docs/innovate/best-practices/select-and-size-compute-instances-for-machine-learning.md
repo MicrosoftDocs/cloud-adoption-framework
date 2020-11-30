@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Select and size Compute Instances for Machine Learning
+# Select and size compute instances for machine learning
 
 ## Development and Training
 
