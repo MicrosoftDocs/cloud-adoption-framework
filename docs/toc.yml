@@ -415,7 +415,7 @@ items:
 
         - name: Linux and open-source databases
           items:
-          - name: Migrate open source databases to Azure
+          - name: Migrate open-source databases to Azure
             href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
           - name: Migrate MySQL to Azure
             href: migrate/azure-best-practices/contoso-migration-mysql-to-azure.md
@@ -427,6 +427,27 @@ items:
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
           - name: Rehost a Linux app on Azure VMs and Azure Database for MySQL
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
+
+        - name: Open-source platforms
+          items:
+          - name: Moodle migration
+            items:
+            - name: Overview
+              href: scenarios/lamp/moodle/migration-overview.md
+            - name: Prepare for Moodle migration
+              href: scenarios/lamp/moodle/migration-pre.md
+            - name: Architecture and template
+              href: scenarios/lamp/moodle/migration-arch.md
+            - name: Moodle migration resources
+              href: scenarios/lamp/moodle/migration-resources.md
+            - name: Virtual network gateway connection
+              href: scenarios/lamp/moodle/vpn-gateway.md
+            - name: Migration steps
+              href: scenarios/lamp/moodle/migration-start.md
+            - name: Set up Moodle worker nodes
+              href: scenarios/lamp/moodle/azure-infra-config.md
+            - name: Follow up Moodle migration
+              href: scenarios/lamp/moodle/migration-post.md
 
         - name: Dev/test workloads 
           items:
@@ -1128,7 +1149,7 @@ items:
             href: innovate/best-practices/predict.md
           - name: Machine learning
             items:
-            - name: What is Machine Learning
+            - name: What is machine learning?
               href: innovate\best-practices\machine-learning.md
             - name: Azure Machine Learning workflow
               href: /azure/machine-learning/concept-azure-machine-learning-architecture?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1144,7 +1165,7 @@ items:
               href: innovate\best-practices\conversational-ai.md
           - name: Knowledge mining
             items:
-            - name: What is Azure Cognitive search
+            - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
       - name: Process improvements
         items:

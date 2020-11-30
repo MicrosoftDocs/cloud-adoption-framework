@@ -27,12 +27,12 @@ Azure Migrate is a centralized hub to assess and migrate on-premises servers, in
 
 - Unified platform with assessment, migration, and progress tracking.
 - Enhanced assessment and migration capabilities:
-    - On-premises servers including Hyper-V & VMware.
-    - Agentless migration of VMware virtual machines to Azure.
-    - Database migrations to Azure SQL Database or SQL Managed Instance
-    - Web applications
-    - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
-    - Large data collections using Azure Data Box products
+  - On-premises servers including Hyper-V and VMware.
+  - Agentless migration of VMware virtual machines to Azure.
+  - Database migrations to Azure SQL Database or SQL Managed Instance
+  - Web applications
+  - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
+  - Large data collections using Azure Data Box products
 - Extensible approach with ISV integration (such as Cloudamize).
 
 To perform a migration using Azure Migrate, follow these steps:
@@ -70,10 +70,11 @@ If this is the first time using Azure Database Migration Service, you need to re
 
 ::: zone-end
 
+<!-- docutune:casing "Create Migration Service wizard" -->
 After you register the resource provider, you can create an instance of Azure Database Migration Service.
 
 1. Select **+ Create a resource** and search the marketplace for **Azure Database Migration Service**.
-1. Complete the Create Migration Service Wizard, then select **Create**.
+1. Complete the Create Migration Service wizard, then select **Create**.
 
 The service is now ready to migrate the supported source databases to target platforms such as SQL Server, MySQL, PostgreSQL, or MongoDB.
 
@@ -100,35 +101,36 @@ The Azure App Service Migration Assistant is part of a [larger suite of applicat
 
 1. It performs an assessment of a specific web app installed on Windows Server by running pre-migration compatibility checks on the web app to determine whether a migration to Azure App Service is possible without modification to the web app.
 1. If the assessment proves that the web app can be migrated, the Migration Assistant performs the migration. You'll need to give the Migration Assistant access to your Azure account, select which resource group you want to use, and select a name for the web app, among other details.
+
 Alternatively, the Migration Assistant generates an Azure Resource Manager template that you can use to migrate the web application in a more automated and repeatable way.
 
 #### Migrate a web app to Azure App Service
 
 The Migration Assistant begins the migration process by collecting key details from you about your Azure account and then performs the migration.
 
-First, you'll sign in to your Azure account and associate your Migration Assistant session with your account by using a unique code. Next, you'll choose the subscription, the resource group, and the website's domain name. You can choose to create a new Azure App Service plan to host the app or select an existing plan. The choice affects the geographical region from which your app is hosted. You'll also have a chance to associate this migration effort with an existing Azure Migrate project. Finally, you can either choose to skip database setup or choose to set up a hybrid connection to enable a database connection.
+First, you'll sign in to your Azure account and associate your Migration Assistant session with your account by using a unique code. Next, you'll choose the subscription, the resource group, and the website's domain name. You can choose to create a new Azure App Service plan to host the web app or select an existing plan. The choice affects the geographical region from which your web app is hosted. You'll also have a chance to associate this migration effort with an existing Azure Migrate project. Finally, you can either choose to skip database setup or choose to set up a hybrid connection to enable a database connection.
 
 After the Migration Assistant collects and verifies your selections, it creates the needed Azure App Service resources in the selected region and resource group. It zips up the web app's source files and uses the Azure App Service deployment API to deploy them. Finally, it performs optional migration steps, like helping you set up a hybrid connection.
 
 After a successful migration, you'll need to perform any post-migration tasks. These might include:
 
 - Manually moving application settings and connection strings in your web.config file to Azure App Service.
-- Migrating data from an on-premises SQL Server instance to an Azure SQL database.
+- Migrating data from an on-premises SQL Server instance to an Azure SQL Database instance.
 - Setting up an SSL certificate.
 - Setting up custom domain names.
 - Setting up permissions in Azure Active Directory.
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information see: 
+For more information, see:
 
-[Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure)
+[Migrate ASP.NET applications to Azure](/learn/paths/migrate-dotnet-apps-azure)
 
 ### Data Migration Assistant
 
 Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
-Data Migration Assistant is integrated with Azure Migrate, allowing you to track all assessment progress in the Azure Migrate dashboard. Launch DMA from Azure Migrate by adding the Azure Migrate: Database Assessment tool, and add your database assessment to Azure Migrate by selecting the "Upload to Azure Migrate" button in DMA.
+Data Migration Assistant is integrated with Azure Migrate, allowing you to track all assessment progress in the Azure Migrate dashboard. Launch DMA from Azure Migrate by adding the Azure Migrate: database assessment tool, and add your database assessment to Azure Migrate by selecting the **Upload to Azure Migrate** button in DMA.
 
 > [!NOTE]
 > For large migrations (in terms of number and size of databases), we recommend that you use Azure Database Migration Service, which can migrate databases at scale.
@@ -152,17 +154,17 @@ For more information, including detailed usage steps, see:
 - [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports)
 - [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/sql/dma/dma-powerbiassesreport)
 
-### SQL Server migration assistant
+### SQL Server Migration Assistant
 
-Microsoft SQL Server migration assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server migration assistant documentation](/sql/ssma/sql-server-migration-assistant).
+Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server Migration Assistant documentation](/sql/ssma/sql-server-migration-assistant).
 
 For more information, see:
 
-- [SQL Server migration assistant overview](/sql/ssma/sql-server-migration-assistant)
+- [SQL Server Migration Assistant overview](/sql/ssma/sql-server-migration-assistant)
 
-### Database experimentation assistant
+### Database Experimentation Assistant
 
-Database experimentation assistant (DEA) is a new A/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
+Database Experimentation Assistant (DEA) is a new A/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
 
 The database experimentation assistant contains the following workflow activities:
 
@@ -236,7 +238,7 @@ Microsoft also offers the following project management tools, which can work tog
 
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
-- [Microsoft teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
+- [Microsoft Teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
 - [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These project management tools are not the only tools available. Many other third-party tools are widely used in the project management community.

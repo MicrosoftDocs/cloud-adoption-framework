@@ -7,7 +7,11 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
+
+<!-- cSpell:ignore FIPS SIEM majeure NSGs -->
+<!-- docutune:casing "FIPS 140-2 Level" "Patch and update management" "SOC2 Trust Service Principles and Criteria" -->
 
 # Enterprise-scale security, governance and compliance
 
@@ -25,9 +29,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate [control access](/azure/key-vault/general/best-practices).
 
-<!-- cSpell:ignore FIPS -->
-
-- You can optimize premium SKUs where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 level 3 compliance by considering the supported scenarios.
+- You can optimize Premium SKUs where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 Level 3 compliance by considering the supported scenarios.
 
 - Key rotation and secret expiration.
 
@@ -90,7 +92,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- Understand regulatory compliance policies. These might include the health insurance portability and accountability act, payment card industry, data security standards, service organization controls trust service principals, and criteria.
+- Understand regulatory compliance policies. These might include the HIPAA, PCI DSS, and SOC2 Trust Service Principles and Criteria.
 
 ### Design recommendations
 
@@ -106,7 +108,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Use built-in policies where possible to minimize operational overhead.
 
-- Assign the built-in policy contributor role at a particular scope to enable application-level governance.
+- Assign the built-in Policy Contributor role at a particular scope to enable application-level governance.
 
 - Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 
@@ -136,11 +138,11 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
-- Export Azure activity logs to Azure Monitor logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
+- Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
 - Enable Security Center Standard for all subscriptions, and use Azure Policy to ensure compliance.
 
-- Monitor base operating system patching drift via Azure Monitor logs and Azure Security Center.
+- Monitor base operating system patching drift via Azure Monitor Logs and Azure Security Center.
 
 - Use Azure policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration.
 
@@ -180,14 +182,14 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 <!-- docutune:ignore "and conditional access" -->
 
-## Azure Security Benchmarks
+## Azure Security Benchmark
 
 The Azure Security Benchmark includes a collection of high-impact security recommendations you can use to help secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
 
 The Azure Security Benchmark documentation specifies security controls and service recommendations.
 
-- [Security Controls](/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service Recommendations](/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
+- [Security controls](/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
+- [Service recommendations](/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Service enablement framework
 

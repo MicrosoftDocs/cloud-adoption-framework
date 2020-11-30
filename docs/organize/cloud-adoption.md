@@ -26,7 +26,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 - Data scientists
 - Data or application platform specialists
 
-For optimal collaboration and efficiency, we recommend that cloud adoption teams have an average team size of six people. These teams should be self-organizing from a technical execution perspective. We highly recommend that these teams also include project management expertise, with deep experience in agile, scrum, or other iterative models. This team is most effective when managed using a flat structure.
+For optimal collaboration and efficiency, we recommend that cloud adoption teams have an average team size of six people. These teams should be self-organizing from a technical execution perspective. We highly recommend that these teams also include project management expertise, with deep experience in agile, Scrum, or other iterative models. This team is most effective when managed using a flat structure.
 
 ## Preparation
 

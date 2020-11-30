@@ -20,7 +20,7 @@ Building an innovative new solution isn't about giving users what they want or t
 - **Quantitative (testing feedback):** This feedback measures the actions we hope to see.
 - **Qualitative (customer feedback):** This feedback tells us what those metrics mean in the customer's voice.
 
-Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops) can help you get started with your repo.
+Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open-source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops) can help you get started with your repo.
 
 Each of the following tools in Azure integrates with (or is compatible with) projects hosted in GitHub:
 

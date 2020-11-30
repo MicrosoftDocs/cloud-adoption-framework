@@ -1,6 +1,6 @@
 ---
 title: Engage via applications for digital invention
-description: Understand how to create app solutions to shape data and create experiences that engage customers and support innovation.
+description: Understand how to create application solutions to shape data and create experiences that engage customers and support innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

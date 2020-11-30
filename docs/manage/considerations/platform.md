@@ -15,7 +15,7 @@ A cloud management baseline that spans [inventory and visibility](./inventory.md
 
 A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
 
-For some organizations, there will be a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or Enterprise Resource Planning (ERP) systems, such as SAP, Oracle, or others.
+For some organizations, there will be a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or enterprise resource planning (ERP) systems such as SAP or Oracle.
 
 By understanding these commonalities, the cloud management team can specialize in higher levels of support for those prioritized platforms.
 
@@ -66,7 +66,7 @@ In most scenarios, the cost of improving management commitments is easily justif
 
 When data is hosted in a traditional infrastructure as a service (IaaS) solution, the effort to improve RPO and RTO can be significantly higher. Yet the business stakeholders' desire to achieve better management commitments is seldom affected by a PaaS versus IaaS decision. If anything, an understanding of the fundamental differences in architecture might prompt the business to ask for PaaS solutions or commitments that match what's available on PaaS solutions. Modernization of any IaaS data platforms should be considered as a first step into platform operations.
 
-When modernization isn't an option, cloud management teams commonly prioritize IaaS-based data platforms as a first required service in the service catalog. Providing the business with a choice between standalone data servers and clustered, high-availability, data solutions makes the business commitment conversation much easier to facilitate. A basic understanding of the operational improvements and the increased costs will arm the business to make the best decision for the business processes and supporting workloads.
+When modernization isn't an option, cloud management teams commonly prioritize IaaS-based data platforms as a first required service in the service catalog. Providing the business with a choice between standalone data servers and clustered, high-availability, data solutions makes the business commitment conversation much easier to facilitate. A basic understanding of the operational improvements and the increased costs will help the business make the best decision for the business processes and supporting workloads.
 
 ### Other common platform operations
 

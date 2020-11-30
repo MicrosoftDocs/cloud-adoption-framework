@@ -36,11 +36,11 @@ This implementation option doesn't take an inherent position on enterprise enrol
 
 ### Identity
 
-This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
+This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
 ### Network topology and connectivity
 
-This implementation option creates a virtual network with subnets for gateway, firewall, jump box, and landing zone. As a next step iteration, the team would follow the [networking decisions guide](../considerations/networking-options.md) to implement the appropriate form of connectivity between the gateway subnet and other networks in alignment with [network security best practices](/azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
+This implementation option creates a virtual network with subnets for gateway, firewall, jump box, and landing zone. As a next step iteration, the team would follow the [networking decisions guide](../considerations/networking-options.md) to implement the appropriate form of connectivity between the gateway subnet and other networks in alignment with [network security best practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Resource organization
 
@@ -57,7 +57,7 @@ This implementation option doesn't implement any governance tooling. In the abse
 To accelerate parallel development of governance disciplines, review the [Govern methodology](../../govern/index.md) and consider deploying the [CAF Foundation blueprint](./foundation-blueprint.md) in addition to the CAF Migration landing zone blueprint.
 
 > [!WARNING]
-> As the governance disciplines mature, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
+> As the governance disciplines mature, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Operations baseline
 
@@ -66,7 +66,7 @@ This implementation option doesn't implement any operations. In the absence of a
 To accelerate parallel development of an operations baseline, review the [Manage methodology](../../manage/index.md) and consider deploying the [Azure server management guide](../../manage/azure-server-management/index.md).
 
 > [!WARNING]
-> As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json).
+> As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Business continuity and disaster recovery (BCDR)
 
@@ -93,7 +93,7 @@ The following decisions are represented in the landing zone blueprint.
 | Migration tools              | Azure Site Recovery will be deployed and an Azure Migrate project will be created.                | [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)                                                                                                                                                                                               |
 | Logging and monitoring       | Operational insights workspace and diagnostic storage account will be provisioned.                |                                                                                                                                                                                                                                                                                       |
 | Network                      | A virtual network will be created with subnets for gateway, firewall, jump box, and landing zone.  | [Networking decisions](../considerations/networking-options.md)                                                                                                                                                                                                                       |
-| Identity                     | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) |
+| Identity                     | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [Identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) |
 | Policy                       | This blueprint currently assumes that no Azure policies are to be applied.                        |                                                                                                                                                                                                                                                                                       |
 | Subscription design          | N/A - designed for a single production subscription.                                              | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md)                                                                                                                                                                                                      |
 | Resource groups              | N/A - designed for a single production subscription.                                              | [Scale subscriptions](../azure-best-practices/scale-subscriptions.md)                                                                                                                                                                                                                 |

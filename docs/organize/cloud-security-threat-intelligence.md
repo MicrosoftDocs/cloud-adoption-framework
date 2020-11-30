@@ -17,7 +17,7 @@ Security threat intelligence provides context and actionable insights on active 
 
 Threat intelligence teams are emerging and evolving to meet the needs of the security operations center (SOC) and others managing security risk for the organization.
 
-These teams should focus on on a strategy that includes:
+These teams should focus on a strategy that includes:
 
 - **Strategic threat intelligence** tailored to executive audiences increases awareness of cybersecurity risk, funding requirements, and supports sound risk decision making by organizational leadership.
 - **Incremental program growth** to provide quick wins with direct incident support and evolving into a threat intelligence platform to track and inform stakeholders.
