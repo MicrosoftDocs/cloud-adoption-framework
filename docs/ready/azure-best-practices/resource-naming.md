@@ -12,9 +12,7 @@ ms.custom: readiness, fasttrack-edit
 
 # Name your Azure resources and assets
 
-An effective naming convention composes resource names from important information about each resource. For example, a public IP resource for a production SharePoint workload residing in the West US region might be `pip-sharepoint-prod-westus-001`.
-
-The name helps you quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it.
+An effective naming convention composes resource names from important information about each resource. A well-chosen name helps you quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload residing in the West US region might be `pip-sharepoint-prod-westus-001`.
 
 ## Naming scope
 
@@ -32,21 +30,21 @@ When you construct your naming convention, identify the key pieces of informatio
 
 Keep the length of naming components short to prevent exceeding resource name length limits.
 
-| Naming component | Description | Examples |
+| Naming component | Description |
 |--|--|--|
-| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is a prefix or suffix for the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)| <li> `rg` <li> `vm` |
-| **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. | <li> `fin` <li> `mktg` <li> `product` <li> `it` <li> `corp` |
-| **Subscription type** | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. |  <li>`prod` <li> `shared` <li> `client` |
-| **Application or service name** | Name of the application, workload, or service that the resource is a part of. | <li> `navigator` <li> `emissions` <li> `sharepoint` <li> `hadoop` |
-| **Deployment&nbsp;environment** | The stage of the development lifecycle for the workload that the resource supports. | <li> `prod` <li> `dev` <li> `qa` <li> `stage` <li> `test` |
-| **Region** | The Azure region where the resource is deployed. | <li> `westus` <li> `eastus2` <li> `westeurope` <li> `usgovia` |
+| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is a prefix or suffix for the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
+| **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
+| **Subscription type** | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. Examples: `prod`, `shared`, `client` |
+| **Application or service name** | Name of the application, workload, or service that the resource is a part of. Examples: `navigator` , `emissions`, `sharepoint`, `hadoop` |
+| **Deployment&nbsp;environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
+| **Region** | The Azure region where the resource is deployed. Examples: `westus`, `eastus2`, `westeurope`, `usgovia` |
 
 ## Example names for common Azure resource types
 
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment.
 
 > [!NOTE]
-> Some of these example names use a three-digit padding scheme (###). such as `mktg-prod-001`.
+> Some of these example names use a three-digit padding scheme (`###`), such as `mktg-prod-001`.
 >
 > Padding improves readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 >
@@ -68,7 +66,7 @@ The following section provides some example names for common Azure resource type
 | **Management group** | Business unit and/or <br> environment type | _mg-\<business unit>[-\<environment type>]_ <br><br> <li> `mg-mktg` <li> `mg-hr` <li> `mg-corp-prod` <li> `mg-fin-client` |
 | **Subscription** | Account / enterprise agreement | _\<business&nbsp;unit>-\<subscription&nbsp;type>-\<###>_ <br><br> <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
 | **Resource group** | Subscription | _rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;type>-\<###>_ <br><br> <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-share-001` <li> `rg-ad-dir-services-shared-001` |
-| **API management service instance** | Global | _apim-\<app&nbsp;or&nbsp;service&nbsp;name>_ | `apim-navigator-prod` |
+| **API management service instance** | Global | _apim-\<app&nbsp;or&nbsp;service&nbsp;name>_ <br><br> `apim-navigator-prod` |
 | **Managed identity** | Resource group | _id-\<app&nbsp;or&nbsp;service&nbsp;name>_ <br><br> <li> `id-appcn-keda-prod-eus-001` |
 
 ## Example names: Networking
@@ -141,8 +139,8 @@ The following section provides some example names for common Azure resource type
 | **Data Lake Storage account** | Global | _dls\<app name>\<environment>_ <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
 | **Event hub** | Global | _evh-\<app name>-\<environment>_ <br><br> <li> `evh-navigator-prod` <li> `evh-emissions-dev` |
 | **HDInsight - HBase cluster** | Global | _hbase-\<app name>-\<environment>_ <br><br> <li> `hbase-navigator-prod` <li> `hbase-emissions-dev` |
-| **HDInsight - Hadoop cluster** | Global | _hadoop-\<app name>-\<environment>_ | <li> `hadoop-navigator-prod` <li> `hadoop-emissions-dev` |
-| **HDInsight - Spark cluster** | Global | _spark-\<app name>-\<environment>_ | <li> `spark-navigator-prod` <li> `spark-emissions-dev` |
+| **HDInsight - Hadoop cluster** | Global | _hadoop-\<app name>-\<environment>_ <br><br> <li> `hadoop-navigator-prod` <li> `hadoop-emissions-dev` |
+| **HDInsight - Spark cluster** | Global | _spark-\<app name>-\<environment>_ <br><br> <li> `spark-navigator-prod` <li> `spark-emissions-dev` |
 | **IoT hub** | Global | _iot-\<app name>-\<environment>_ <br><br> <li> `iot-navigator-prod` <li> `iot-emissions-dev` |
 | **Power BI Embedded** | Global | _pbi-\<app Name>\<environment>_ <br><br> <li> `pbi-navigator-prod` <li> `pbi-emissions-dev` |
 
