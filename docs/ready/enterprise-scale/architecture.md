@@ -7,7 +7,7 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: csu
+ms.custom: csu, think-tank
 ---
 
 # Cloud Adoption Framework enterprise-scale landing zone architecture

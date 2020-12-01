@@ -379,6 +379,11 @@
          "source_path": "docs/ready/enterprise-scale/faq.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/lamp/moodle/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
+         "redirect_document_id": true
       }
    ]
 }
