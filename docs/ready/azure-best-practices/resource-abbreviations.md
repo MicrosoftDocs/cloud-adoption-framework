@@ -7,22 +7,21 @@ ms.date: 11/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness, fasttrack-edit
+ms.custom: readiness, fasttrack-edit, internal
 ---
 
 # Recommended abbreviations for Azure resources and assets
 
 Azure workloads are typically composed of multiple resources and services. Including a naming component in your resource names that represents the type of the Azure resource makes it easier to visually recognize application or service components.
 
-This list provides recommended abbreviations for various Azure resource types to include in your naming conventions. These abbreviations are often used as prefixes in user names, so each abbreviation is shown below followed by a hyphen (`-`), except for resource types that disallow hyphens in the resource name. Your naming convention might place the resource type abbreviation in a different location of the name if it's more suitable for your organization's needs.
+This list provides recommended abbreviations for various Azure resource types to include in your naming conventions. These abbreviations are often used as prefixes in resource names, so each abbreviation is shown below followed by a hyphen (`-`), except for resource types that disallow hyphens in the resource name. Your naming convention might place the resource type abbreviation in a different location of the name if it's more suitable for your organization's needs.
 
-<!-- docutune:disable -->
 <!-- cSpell:ignore osdisk stvm arck ssimp -->
 <!-- cSpell:ignoreRegExp [a-z]+- -->
 
 ## General
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Management group | `mg-` |
 | Resource group | `rg-` |
@@ -32,7 +31,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Networking
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Virtual network | `vnet-` |
 | Subnet | `snet-` |
@@ -58,7 +57,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Compute and Web
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Virtual machine | `vm` |
 | Virtual machine scale set | `vmss-` |
@@ -82,7 +81,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Databases
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Azure SQL Database server | `sql-` |
 | Azure SQL database | `sqldb-` |
@@ -97,7 +96,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Storage
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Storage account | `st` |
 | Azure StorSimple | `ssimp` |
@@ -105,7 +104,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## AI and Machine Learning
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Azure Cognitive Search | `srch-` |
 | Azure Cognitive Services | `cog-` |
@@ -113,7 +112,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Analytics and IoT
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Azure Analysis Services server | `as` |
 | Azure Databricks workspace | `dbw-` |
@@ -135,13 +134,13 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Developer tools
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |---|---|
 | App Configuration store | `appcs-` |
 
 ## Integration
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Integration account | `ia-` |
 | Logic apps | `logic-` |
@@ -151,7 +150,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Management and governance
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Automation account | `aa-` |
 | Azure Monitor action group | `ag-` |
@@ -163,7 +162,7 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Migration
 
-| Asset type | Name prefix |
+| Asset type | Abbreviation |
 |--|--|
 | Azure Migrate project | `migr-` |
 | Database Migration Service instance | `dms-` |

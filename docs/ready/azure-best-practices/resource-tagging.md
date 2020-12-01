@@ -7,7 +7,7 @@ ms.date: 11/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness, fasttrack-edit
+ms.custom: readiness, fasttrack-edit, internal
 ---
 
 # Tag your Azure resources
@@ -25,7 +25,7 @@ What tags you apply to resources and what tags are required or optional differs 
 | **Budget required/approved** | Money allocated for this application, service, or workload. | _BudgetAmount_ | _{\$}_ |
 | **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | _BusinessUnit_ | _FINANCE_, _MARKETING_, _{Product Name}_, _CORP_, _SHARED_ |
 | **Cost center** | Accounting cost center associated with this resource. | _CostCenter_ | _{number}_ |
-| Disaster recovery | Business criticality of the application, workload, or service. | _DR_ | _Mission-critical_, _Critical_, _Essential_ |
+| **Disaster recovery** | Business criticality of the application, workload, or service. | _DR_ | _Mission-critical_, _Critical_, _Essential_ |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | _EndDate_ | _{date}_ |
 | **Environment** | Deployment environment of the application, workload, or service. | _Env_ | _Prod_, _Dev_, _QA_, _Stage_, _Test_ |
 | **Owner name** | Owner of the application, workload, or service. | _Owner_ | _{email}_ |

@@ -7,7 +7,7 @@ ms.date: 11/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness, fasttrack-edit
+ms.custom: readiness, fasttrack-edit, internal
 ---
 
 # Develop your naming and tagging strategy for Azure resources
