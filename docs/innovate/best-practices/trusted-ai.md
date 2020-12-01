@@ -1,6 +1,6 @@
 ---
 title: Trusted AI
-description: Microsoft provides six guiding principles for responsible AI, namely Fairless, reliability and safety, privacy and security, inclusiveness, transparency and accountability.
+description: Microsoft provides six guiding principles for responsible AI-fairness, reliability and safety, privacy and security, inclusiveness, transparency and accountability.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -11,9 +11,9 @@ ms.subservice: innovate
 
 # Trusted AI
 
-Microsoft provides six guiding principles for responsible AI, namely Fairless, reliability and safety, privacy and security, inclusiveness, transparency and accountability.  These principles are the cornerstone of a responsible and trustworthy AI, especially as AI moves into more mainstream products and services.
+Microsoft provides six guiding principles for responsible AI: fairness, reliability and safety, privacy and security, inclusiveness, transparency and accountability. These principles are the cornerstone of a responsible and trustworthy AI, especially as AI moves into more mainstream products and services.
 
-We can think of these principles from two lenses, Ethical and explainable. 
+We can think of these principles from two lenses, ethical and explainable.
 
 ![A diagram of trusted AI.](media/trusted-ai.png)
 
@@ -21,7 +21,7 @@ We can think of these principles from two lenses, Ethical and explainable. 
 
 From an ethical perspective, AI should be fair and inclusive in its assertion and does not discriminate or hinder groups from various races, disability or background, and be accountable for the decision it makes.
 
-Microsoft has an ethical AI committee called the [Aehter](/learn/modules/microsoft-responsible-ai-practices/3-microsoft-governance-model), which was established in 2017.  The core responsibility of the committee is to make recommendations on responsible issues, technologies, processes and best practices.
+Microsoft has an ethical AI committee called the [Aehter](/learn/modules/microsoft-responsible-ai-practices/3-microsoft-governance-model), which was established in 2017.  The core responsibility of the committee is to make recommendations on responsible issues, technologies, processes, and best practices.
 
 More details on the body can be found on the following link:  [Aether Committee](https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1%3aprimaryr5)  
 
@@ -57,7 +57,7 @@ More details can be found on the following links: [InpretML](http://interpret.ml
 
 ## Fairness​
 
-Fairness is a fundamental principle all human beings strive to achieve, as it's one of cornerstones of our ethical principles.  It is more so important when it comes to development of AI systems, where right check and balances needs to be in place to ensure that the decision that a system is making does not inherently discriminate or biased towards a certain group or individual, regardless of their gender, race, sexual orientation or religion.
+Fairness is a fundamental principle all human beings strive to achieve, as it's one of cornerstones of our ethical principles. This principle is even more important during the development of AI systems, where key checks and balances need to ensure that the system's decision doesn't discriminate or run a bias towards a certain group or individual that's based on their gender, race, sexual orientation, or religion.
 
 As a starting point, Microsoft provides an **AI fairness checklist**, to guide the fairness in AI systems in a prescriptive way.  They can be broadly categorized in five stages, Envision, Prototype, Build, Launch and Evolve. Each category entails a list of recommended activities to ensure various due diligence is completed to minimize the impact of unfairness in the system.
 
@@ -85,23 +85,23 @@ Human AI design guidelines consist of 18 principles, and they are broadly catego
 
 ![A diagram of human AI guidelines​.](media/human-ai-guidelines.png)
 
-## Initially:
+## Initially
 
 - **Make clear what the system can do**. As an example, if the AI system use/generate metrics, it's important to show all the metrics that are used and how they are tracked.
 - **Make clear how well the system can do what it can do**. Help the users to understand that AI will not be 100% accurate and set the expectation when the AI system may make mistake.
 
-## During interaction:
+## During interaction
 
 - **Show contextually relevant information.** Visually provide information related to the user’s current context and environment. Such as searching for a hotel return details close proximity to the intended destination and date.
 - **Mitigate social biases**. Ensure that the language and behaviour do not introduce any unintended stereotype and biases. As an example, an auto-complete feature considers both genders.
 
-## When wrong:
+## When wrong
 
 - **Support efficient dismissal.** Provide an easy mechanism to ignore or dismiss undesirable features/services.
 - **Support efficient correction.** Provide an intuitive way of making it easier way to edit, refine or recover.
 - **Make clear why the system did what it did.** Enable explainable AI to provide insights into assertion made by the AI system.
 
-## Over time:
+## Over time
 
 - **Remember recent interactions.** Retain history of interaction for future reference.
 - **Learn from user behavior**. Personalize the interaction based on user’s behaviour.
@@ -134,7 +134,7 @@ AI administrator and officer responsibilities involve the operationalization and
 - Model governance and access sets boundaries to mitigate negative business and operational impact. Security implications based on RBAC standards preserve restricted production environments and IP.
 - AI audit frameworks and compliance to track detailed model generations and changes of model development to adhere industry-specific regulations. The foundation of interpretable and trusted AI is based on explain-ability measures, concise features and model visualizations, and industry vertical specific language.
 
-## AI Business Consumer
+## AI business consumer
 
 AI Business Consumers (Business experts) act as the conduit to close the feedback loop and provide input back to the AI Designer. AI systems are evaluated by their predictive decision-making, potential bias implications including fairness and ethical measures, privacy and compliance, and business efficiency:
 
