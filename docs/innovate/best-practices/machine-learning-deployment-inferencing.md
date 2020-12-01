@@ -32,7 +32,7 @@ The decision tree outlined below can help guide the decision on which deployment
 
 ## Batch Inferencing
 
-Batch inferencing, sometimes called Offline Inferencing, is the simpler form of inferencing and allows models to be run at a timed interval and the results (or predictions) stored for use by the end business application.
+Batch inferencing, sometimes called offline inferencing, is the simpler form of inferencing and allows models to be run at a timed interval and the results (or predictions) stored for use by the end business application.
 
 If Batch Inferencing is the right model for running your model there are a number of considerations and best practices to be aware of:
 
