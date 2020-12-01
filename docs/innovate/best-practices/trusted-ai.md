@@ -23,7 +23,7 @@ From an ethical perspective, AI should be fair and inclusive in its assertion an
 
 Microsoft has an ethical AI committee called the [Aehter](/learn/modules/microsoft-responsible-ai-practices/3-microsoft-governance-model), which was established in 2017.  The core responsibility of the committee is to make recommendations on responsible issues, technologies, processes, and best practices.
 
-More details on the body can be found on the following link:  [Aether Committee](https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1%3aprimaryr5)  
+More details on the body can be found at [Aether Committee](https://www.microsoft.com/ai/our-approach?activetab=pivot1%3aprimaryr5).  
 
 ## Accountability ​
 

@@ -13,9 +13,9 @@ ms.subservice: innovate
 
 When deploying your AI model in production you will need to consider how you will use model for prediction. There are 2 main patterns for AI models:
 
-- **Batch Inference:** Batch inference is an asynchronous process, the result of model inference shall be stored as files or in a database for further consumptions by end-users or business applications.
+- **Batch inference:** Batch inference is an asynchronous process, the result of model inference shall be stored as files or in a database for further consumptions by end-users or business applications.
 
-- **Real Time Inference**: Real-time or interactive inference imply that model inference can be triggered any time and immediate response is expected. This pattern can be used to analyses streaming data, interactive application data.
+- **Real-time inference**: Real-time or interactive inference imply that model inference can be triggered any time and immediate response is expected. This pattern can be used to analyses streaming data, interactive application data.
 
 To compare and select between the two models, you need to take into consideration some aspects, like:
 
@@ -30,7 +30,7 @@ The decision tree outlined below can help guide the decision on which deployment
 
 ![A diagram of the real-time or batch inferencing decision tree.](media/inferencing-decision-tree.png)
 
-## Batch Inferencing
+## Batch inferencing
 
 Batch inferencing, sometimes called offline inferencing, is the simpler form of inferencing and allows models to be run at a timed interval and the results (or predictions) stored for use by the end business application.
 
@@ -42,11 +42,11 @@ If Batch Inferencing is the right model for running your model there are a numbe
 
 ![A diagram of the compute decision tree.](media/compute-decision-tree.png)
 
-- **Implement Batch inferencing:** There are multiple options to implement Batch inferencing. In Azure Machine Learning, it's recommended to utilize a feature called ParallelRunStep, which allows customers to inference terabytes of structured or unstructured data on Azure. ParallelRunStep provides out of the box parallelism and works within Azure Machine Learning pipelines.
+- **Implement batch inferencing:** There are multiple options to implement Batch inferencing. In Azure Machine Learning, it's recommended to utilize a feature called ParallelRunStep, which allows customers to inference terabytes of structured or unstructured data on Azure. ParallelRunStep provides out of the box parallelism and works within Azure Machine Learning pipelines.
 
-- **Challenges of Batch inferencing:** Batch inferencing is a simpler way to use and deploy your model in production, but it does pose some challenges. Depending on the frequency at which inferencing is run the data / result available may be considered aged and not as relevant as an up-to-date result. A second challenge is a variation of the cold start problem, if there is new data, there may not be a result available for that data i.e. for a retail recommendation system, if a new user creates and account and starts shopping there will be no product recommendations available until after the next batch inferencing run. If this is a significant issue for your use case, you should consider real time inferencing.
+- **Challenges of batch inferencing:** Batch inferencing is a simpler way to use and deploy your model in production, but it does pose some challenges. Depending on the frequency at which inferencing is run the data / result available may be considered aged and not as relevant as an up-to-date result. A second challenge is a variation of the cold start problem, if there is new data, there may not be a result available for that data i.e. for a retail recommendation system, if a new user creates and account and starts shopping there will be no product recommendations available until after the next batch inferencing run. If this is a significant issue for your use case, you should consider real time inferencing.
 
-- **Multiregional deployment and High Availability:** Multiregional deployment and high availability is not as significant as a concern in a batch inference scenario as the model does not need to be deployed regionally, rather the model results data store may need to be deployed in many locations with a HA strategy. This will normally follow the application HA design and strategy.
+- **Multiregional deployment and high availability:** Multiregional deployment and high availability is not as significant as a concern in a batch inference scenario as the model does not need to be deployed regionally, rather the model results data store may need to be deployed in many locations with a HA strategy. This will normally follow the application HA design and strategy.
 
 **More information:**
 - [Build an Azure Machine Learning pipeline for batch scoring](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
@@ -65,7 +65,7 @@ If real-time Inferencing is the right model for running your model there are a n
 
 - **Multi-regional deployment and high availability**: In Real time inferencing scenarios regional deployment and high availability architectures need to be considered as latency and performance of the model will be one of the critical issues to resolve. It is recommended that in multiregional deployments to locate the model as close as possible to the consumption point will reduce latency. It is recommended that the model and supporting infrastructure follows the business application HA and DR principles and strategy.
 
-## Many Models Scenario
+## Many-models scenario
 
 Sometimes, a single model may not be able to capture the complex nature of real-world problems, such as predicting the sales of a supermarket, where the customers’ behavior may significantly vary depending on the demography, brand, SKUs and other features.  Or, building predictive maintenance of smart meters, which may vary significantly depending on the regions.  In such cases, having many models to capture the regional based or store level relationship may yield in better accuracy than a single model.  However, this assumes that there is sufficient data available to model such level of granularity.
 
