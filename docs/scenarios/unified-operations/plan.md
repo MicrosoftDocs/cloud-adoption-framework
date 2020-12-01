@@ -10,7 +10,7 @@ ms.subservice: strategy
 ---
 
 # Executive summary
-Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift and shift scenarios, PaaS services configurations, or cloud-native workloads. Planning efforts that center on unified operations migration efforts expands migratable assets beyond simply VMs and PaaS services, widening the availability of form factors and bring innovation benefits beyond brick and mortar. Azure Arc and Azure Stack can bring transformation efforts under unified operations and management across private cloud, public cloud and the edge.
+Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift and shift scenarios, PaaS services configurations, or cloud-native workloads. Planning efforts that center on unified operations migration efforts includes assets beyond simply VMs and PaaS services in migration efforts, widening the availability of form factors to bring innovation benefits beyond private cloud. Azure Arc and Azure Stack can bring transformation efforts under unified operations and management across private cloud, public cloud and the edge.
 
 Because Azure Stack brings the benefits of cloud innovation to any platform, retaining assets on-prem is no longer a barrier to implementing cloud benefits to physical datacenters anywhere. In addition, a unified operations and management of your digital estate enables consistent management and governance, bringing cloud innovation across on-prem, multi-cloud, and edge environments, eliminating the need to resolve dependencies, being no longer locked to platform restrictive configurations or policies. Azure Arc remains a single control plane across environments that manages all your digital estate assets, wherever they reside.
 
@@ -18,7 +18,7 @@ Finally, a unified operations plan that onboards on-prem assets with Azure Arc f
 
 # Plan for unified operations
 
-In most cloud adoption scenarios, we assume that you want to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. 
+In most cloud adoption scenarios, we assume an intention to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. 
 
 This changes in hybrid:
 - **Retain** workloads or assets on-prem. 
