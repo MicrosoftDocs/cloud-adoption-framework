@@ -10,7 +10,7 @@ ms.subservice: strategy
 ---
 
 # Executive summary
-Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift and shift scenarios, PaaS services configurations, or cloud-native workloads. Planning efforts that center on unified operations migration efforts includes assets beyond simply VMs and PaaS services in migration efforts, widening the availability of form factors to bring innovation benefits beyond private cloud. Azure Arc and Azure Stack can bring transformation efforts under unified operations and management across private cloud, public cloud and the edge.
+Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift and shift scenarios, PaaS services configurations, or cloud-native workloads. Planning efforts that center on unified operations includes assets beyond VMs and PaaS services in migration efforts, widening the availability of form factors to bring innovation benefits beyond private cloud to anywhere . Azure Arc and Azure Stack can bring transformation efforts under unified operations and management across private cloud, public cloud and the edge.
 
 Because Azure Stack brings the benefits of cloud innovation to any platform, retaining assets on-prem is no longer a barrier to implementing cloud benefits to physical datacenters anywhere. In addition, a unified operations and management of your digital estate enables consistent management and governance, bringing cloud innovation across on-prem, multi-cloud, and edge environments, eliminating the need to resolve dependencies, being no longer locked to platform restrictive configurations or policies. Azure Arc remains a single control plane across environments that manages all your digital estate assets, wherever they reside.
 
@@ -18,15 +18,18 @@ Finally, a unified operations plan that onboards on-prem assets with Azure Arc f
 
 # Plan for unified operations
 
-In most cloud adoption scenarios, we assume an intention to rehost (IaaS VMs), rearchitect (PaaS services), or Rebuild (Cloud native) workloads with Azure as a target platform. 
+In most cloud adoption scenarios, we assume an intention to rehost (IaaS VMs), rearchitect (PaaS services), or rebuild (Cloud-native) workloads with Azure as a target platform, given a uni-directional migration to Azure with these standard workload rationalizations.  
 
-This changes in hybrid:
-- **Retain** workloads or assets on-prem. 
-- **Replatform** workloads to multiple cloud platforms. 
-- **Custom locations (Rehost portability)** IaaS/PaaS workloads into on-premise hosting environments.
+When considering a hybrid and multi-cloud migration, the rationalization criteria change, and migration goals that were formerly uni-directional now incorporate a more distributed and multi-platform cloud service model. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration model. 
+ 
+In a hybrid and multi-cloud migration scenario, rationalization decisions change to:
+- **Retain** workloads or assets on-premises.
+- **Replatform** workloads to multiple cloud platforms.
+- **Custom locations (Rehost portability)** reverse rehosting IaaS/PaaS workloads into on-premise hosting environments.
 
-Most planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized.
+Most planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the rubric of on-premises environments migrating assets to a single public cloud solution such as Azure.
 
+***Rework***
 The biggest change in planning for unified operations is that you no longer need to minimize dependencies on retained (hybrid/on-prem) workloads or replatform (multi-cloud) workloads. The biggest change in planning, is to evaluate these decisions alongside the primary 3 Rs of migration above. In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management.
 
 ## Unified operations digital estate
