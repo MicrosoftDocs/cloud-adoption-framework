@@ -12,7 +12,7 @@ ms.custom: readiness, fasttrack-edit, internal
 
 # Develop your naming and tagging strategy for Azure resources
 
-Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
+Organize your cloud assets to support governance, operational management, and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
 
 When you're ready to define your naming and tagging strategy, use these links to assist you:
 
