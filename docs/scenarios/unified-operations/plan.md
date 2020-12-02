@@ -18,16 +18,13 @@ Finally, a unified operations plan that onboards on-prem assets with Azure Arc f
 
 # Plan for unified operations
 
-In most cloud adoption scenarios, we assume an intention to rehost (IaaS VMs), rearchitect (PaaS services), or rebuild (Cloud-native) workloads with Azure as a target platform, given a uni-directional migration to Azure with these standard workload rationalizations.  
+In most cloud adoption scenarios, we assume an intention to Rehost (IaaS VMs), Rearchitect (PaaS services), or Rebuild (Cloud-native) workloads with Azure as a target platform, with a uni-directional migration to Azure, given these standard workload rationalizations.  
 
-When considering a hybrid and multi-cloud migration, the rationalization criteria change, and migration goals that were formerly uni-directional now incorporate a more distributed and multi-platform cloud service model. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration model. 
+When considering a hybrid and multi-cloud migration, the rationalization criteria change, and migration goals that were formerly uni-directional now incorporate a more distributed and multi-platform cloud service model. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration model.
  
-In a hybrid and multi-cloud migration scenario, rationalization decisions change to:
-- **Retain** workloads or assets on-premises.
-- **Replatform** workloads to multiple cloud platforms.
-- **Custom locations (Rehost portability)** reverse rehosting IaaS/PaaS workloads into on-premise hosting environments.
+In a hybrid and multi-cloud migration scenario, we assume a distributed, multi-platform cloud service model that is no longer limited to one on-premises environment and a single public cloud to an expansive on-prem, multi-cloud, and edge model of cloud computing. Rationalization decisions now become—**Retain** workloads or assets on-premises, **Replatform** workloads to multiple cloud platforms, and **Custom locations (Rehost portability)** reverse rehosting IaaS/PaaS workloads into on-premise hosting environments.
 
-Most planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the rubric of on-premises environments migrating assets to a single public cloud solution such as Azure.
+Most migration planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the rubric of on-premises environments migrating assets to a single public cloud solution such as Azure.
 
 **Rework**
 
