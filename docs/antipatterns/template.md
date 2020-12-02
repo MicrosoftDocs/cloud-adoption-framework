@@ -1,7 +1,7 @@
 ---
 title: "Antipattern - <Insert pattern name>"
 description: Describe the Antipattern
-author: BrianBlanchard - <Replace with Author's GitHub Alias>
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/15/2020
 ms.topic: conceptual
