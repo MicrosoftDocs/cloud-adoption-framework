@@ -1,9 +1,9 @@
 ---
 title: Select and size compute instances for Azure Machine Learning
-description: When selecting and sizing your compute instances for developing and training your machine learning models, consider the type of algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. 
+description: When measuring and selecting compute instances for developing and training your machine learning model, consider the algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. 
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/04/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -11,14 +11,16 @@ ms.subservice: innovate
 
 # Select and size compute instances for machine learning
 
-## Development and training
+## Development and training for your machine learning model
 
-When selecting and sizing your compute instances for developing and training your machine learning models, consider the type of algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. To select compute instances, reference to the following decision tree:
+When measuring and selecting compute instances for developing and training your machine learning model, consider the algorithm that you're using, the data type, data sizes, and if you'll perform distributed training.
+
+Reference the following diagram to understand development and training for your machine learning model:
 
 ![A development and training diagram.](media/development-and-training.png)
 
-## Inferencing
+## Inference for your machine learning model
 
-You can use the following decision tree to determine and select the appropriate compute instances for inferencing with your machine learning model.
+The following inference diagram can help you to determine compute instances that will help your machine learning model to run inference.
 
-![A diagram showing inferencing.](media/inferencing.png)
+![A diagram that shows inference.](media/inference.png)

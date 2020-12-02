@@ -3,7 +3,7 @@ title: Machine learning security
 description: Machine learning poses unique security issues for businesses, and a number of security principles must be considered when designing and assessing machine learning architectures.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/04/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
