@@ -1,5 +1,5 @@
 ---
-title: Name your Azure resources and assets
+title: Define your naming convention
 description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,9 +10,12 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit, internal
 ---
 
-# Name your Azure resources and assets
+# Define your naming convention
 
 An effective naming convention composes resource names from important information about each resource. A well-chosen name helps you quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload residing in the West US region might be `pip-sharepoint-prod-westus-001`.
+
+![Components of an Azure resource name](../../_images/ready/resource-naming.png)
+_Diagram 1: Components of an Azure resource name._
 
 ## Naming scope
 
@@ -21,6 +24,9 @@ All Azure resource types have a scope that defines the level that resource names
 For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups could have their own virtual network named `vnet-prod-westus-001`. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
 
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, so they must be unique across the entire Azure platform.
+
+![Scope levels for Azure resource names](../../_images/ready/resource-naming-scope.png)
+_Diagram 2: Scope levels for Azure resource names._
 
 Resource names have length limits. Balancing the context embedded in a name with its scope and length limit is important when you develop your naming conventions. For more information, see [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
 

@@ -14,27 +14,27 @@ ms.custom: readiness, fasttrack-edit, internal
 
 Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
 
-When you're ready to define your naming and tagging strategy, use these links to assist you:
+Define your naming and tagging strategy as early as possible. Use the following links to help you define and implement your strategy:
 
 - [Name your Azure resources and assets](./resource-naming.md)
 - [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
 - [Tag your Azure resources](./resource-tagging.md)
 - [Resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md)
 
+> [!NOTE]
+> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams.
+>
+> As the discussion proceeds, use the template below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
+>
+> Download the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
+
 ## Purpose of naming and tagging
 
-Accurate representation and naming of resources are critical for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-introduction) and [Azure Sentinel](https://docs.microsoft.com/azure/sentinel) reference resources and their associated logging and alert information by resource name.
+Accurately representing and naming your resources is essential for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Azure Security Center](/azure/security-center/security-center-introduction) and [Azure Sentinel](/azure/sentinel) reference resources and their associated logging and alert information by resource name.
 
 Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 
 Changing resource names can be difficult. Establish a comprehensive naming convention before you begin any large cloud deployment.
-
-> [!NOTE]
-> Every business has different organizational and management requirements. These recommendations provide a starting point for discussions within your cloud adoption teams.
->
-> As these discussions proceed, use the following template to capture the naming and tagging decisions you make when you align these recommendations to your specific business needs.
->
-> Download the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 ## Naming and tagging strategy
 
