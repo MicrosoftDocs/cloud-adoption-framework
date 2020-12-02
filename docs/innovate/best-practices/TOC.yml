@@ -1,14 +1,14 @@
 - name: Adopt best practices-Innovate with AI
   items:
-  - name: How to approach Azure Machine Learning operations
+  - name: How to approach machine learning operations
     href: how-to-approach-mlops.md
-  - name: Azure Machine Learning security 
-    href: machine-learning-security.md
-  - name: Azure Machine Learning deployment-Inferencing
-    href: machine-learning-deployment-inferencing.md
-  - name: Select and size compute instances for Azure Machine Learning
-    href: select-and-size-compute-instances-for-machine-learning.md
-  - name: Set up your workspaces in Azure Machine Learning 
-    href: set-up-machine-learning-workspaces.md
+  - name: Machine learning security 
+    href: ml-security.md
+  - name: Machine learning inference during deployment
+    href: ml-deployment-inference.md
+  - name: Select and size compute instances for your machine learning model
+    href: select-and-size-compute-instances-for-ml.md
+  - name: Set up machine learning workspaces
+    href: set-up-ml-workspaces.md
   - name: Trusted AI
     href: trusted-ai.md

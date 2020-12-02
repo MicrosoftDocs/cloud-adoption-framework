@@ -1,6 +1,6 @@
 ---
 title: How to approach machine learning operations
-description: Understand the principles and best practices of machine learning operations, and determine how to best adapt machine learning operations for your organization.
+description: Understand the principles and best practices of machine learning operations, and determine how to best adapt them for your organization.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/07/2020
@@ -13,13 +13,13 @@ ms.subservice: innovate
 
 ## An overview of machine learning operations
 
-Machine learning operations consist of a set of principles and best practices about to organize and orchestrate the development, deployment, and maintenance of machine learning models in a scalable and standardized way.
+Machine learning operations consist of principles and best practices about to organize and standardize machine model development, deployment, and maintenance in a scalable way.
 
 ![A diagram showing an overview of machine learning operations.](media/ml-operations-overview.png)
 
 The main components influencing how a machine learning system develops are outlined below:
 
-![A diagram showing the components of a machine learning system in production.](media/ml-system-in-production.png)
+![A diagram showing the components of a machine learning system in production.](media/system-in-production.png)
 
 *Source: Sculley et al. 2015. Hidden technical debt in machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’15)*
 
@@ -61,7 +61,7 @@ This step uses established metrics like an accuracy metric to automatically vali
 
 ## Deploy the model
 
-In the deployment step, the model is either deployed as an API service that applications can use. This is the recommended approach for web applications, as it enables the model to be scaled and updated independently of the application itself. Alternatively, the model can be used to perform batch scoring. In this case, the model is used once or periodically to calculate predictions on new data points. This is useful when large amounts of data need to be processed asynchronously. More details on deployment models can be found on the [Deployment](machine-learning-deployment-inferencing.md) page.
+In the deployment step, the model is either deployed as an API service that applications can use. This is the recommended approach for web applications, as it enables the model to be scaled and updated independently of the application itself. Alternatively, the model can be used to perform batch scoring. In this case, the model is used once or periodically to calculate predictions on new data points. This is useful when large amounts of data need to be processed asynchronously. More details on deployment models can be found on the [Deployment](ml-deployment-inference.md) page.
 
 ## Monitor the model
 
@@ -117,7 +117,7 @@ The goals, tasks, and documentation artifacts for each stage of the TDSP lifecyc
 
 Per the TDSP lifecyle, the key roles in the AI project are data engineer, data scientist, and machine learning operations engineer. These roles are critical to your project's success and must work together toward accurate, repeatable, scalable, and production-ready solutions.
 
-![A diagram showing the machine learning operations process.](media/machine-learning-operations-process.png)
+![A diagram showing the machine learning operations process.](media/ml-operations-process.png)
 
 - **Data engineer:** This role ingests, validates, and cleans the data. Once the data is refined, it's cataloged and made available for data scientists to use. At this stage, it's important to explore and analyze duplicate data, remove outliers, and identify missing data. These activities should be defined in a pipeline steps and are executed as the pre-processing of the train pipeline.  A meaningful naming convention should be used for naming the core and derived features.  
 

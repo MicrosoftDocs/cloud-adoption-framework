@@ -1,9 +1,9 @@
 ---
-title: Set up your Azure Machine Learning workspaces
-description: There are multiple factors to consider when setting up your Azure Machine Learning workspaces and determining the best structure and controls for each type of workspace.
+title: Set up machine learning workspaces
+description: Understand the factors that influence how you set up your machine learning workspaces, and determine the best structure and controls for each workspace.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/04/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Set up Azure Machine Learning workspaces
 
-There are multiple factors to consider when setting up your Azure Machine Learning workspaces and determining the best structure and controls for each type of workspace:
+Multiple factors can influence how you set up your machine learning workspaces, and they can help you to determine the best structure and controls for each type:
 
 ![A diagram of how to set up Azure Machine Learning workspaces.](media/set-up-workspaces.png)
 
