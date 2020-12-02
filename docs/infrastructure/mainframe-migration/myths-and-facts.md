@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore njray nanra chargebacks IPLs -->
+<!-- cSpell:ignore chargebacks IPLs -->
 
 # Mainframe myths and facts
 
@@ -25,7 +25,7 @@ Mainframes also remain as vulnerable to disasters as any other servers do, and r
 
 ## Myth: Mainframes have limitless scalability
 
-A mainframe's scalability depends on the capacity of its system software, such as the customer information control system (CICS), and the capacity of new instances of mainframe engines and storage. Some large companies that use mainframes have customized their CICS for performance, and have otherwise outgrown the capability of the largest available mainframes.
+A mainframe's scalability depends on the capacity of its system software, such as the Customer Information Control System (CICS), and the capacity of new instances of mainframe engines and storage. Some large companies that use mainframes have customized their CICS for performance, and have otherwise outgrown the capability of the largest available mainframes.
 
 ## Myth: Intel-based servers are not as powerful as mainframes
 

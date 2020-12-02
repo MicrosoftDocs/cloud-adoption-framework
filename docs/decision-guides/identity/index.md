@@ -1,5 +1,5 @@
 ---
-title: "Identity decision guide"
+title: Identity decision guide
 description: Learn how identity and access management (IAM) services enable you to manage access control in the cloud.
 author: rotycenh
 ms.author: abuck
@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
 ---
-
-<!-- cSpell:ignore Kerberos NTLM SAML -->
 
 # Identity decision guide
 
@@ -58,7 +56,7 @@ Azure AD is the native identity and access management (IAM) system for granting 
 For organizations with existing on-premises Active Directory infrastructure, directory synchronization is often the best solution for preserving existing user and access management while providing the required IAM capabilities for managing cloud resources. This process continuously replicates directory information between Azure AD and on-premises directory services, allowing common credentials for users and a consistent identity, role, and permission system across your entire organization.
 
 > [!NOTE]
-> Organizations that have adopted Office 365 might have already implemented [directory synchronization](/office365/enterprise/set-up-directory-synchronization) between their on-premises Active Directory infrastructure and Azure Active Directory.
+> Organizations that have adopted Microsoft 365 might have already implemented [directory synchronization](/office365/enterprise/set-up-directory-synchronization) between their on-premises Active Directory infrastructure and Azure Active Directory.
 
 **Directory synchronization assumptions:** Using a synchronized identity solution assumes the following:
 

@@ -7,10 +7,9 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
 ---
 
-<!-- docsTest:ignore "Bulk Migration" "Cold Migration" -->
+<!-- docutune:casing "HCX Bulk Migration" "HCX Cold Migration" -->
 
 # Move on-premises VMware infrastructure to Azure
 
@@ -27,11 +26,11 @@ In this article, Contoso uses Azure VMware Solution to create a private cloud in
 
 Working closely with business partners, the Contoso IT team defines the business drivers for a VMware migration to Azure. These drivers can include:
 
-- **Datacenter evacuation or shutdown**: Seamlessly move VMware-based workloads when they consolidate or retire existing datacenters.
-- **Disaster recovery and business continuity**: Use a VMware stack deployed in Azure as a primary or secondary on-demand disaster recovery site for on-premises datacenter infrastructure.
-- **Application modernization**: Tap into the Azure ecosystem to modernize Contoso applications without having to rebuild VMware-based environments.
-- **Implementing DevOps**: Bring Azure DevOps tool chains to VMware environments and modernize applications at its own pace.
-- **Ensure operational continuity**: Redeploy vSphere-based applications to Azure while avoiding hypervisor conversions and application refactoring. Extend support for legacy applications that run Windows and SQL Server.
+- **Datacenter evacuation or shutdown:** Seamlessly move VMware-based workloads when they consolidate or retire existing datacenters.
+- **Disaster recovery and business continuity:** Use a VMware stack deployed in Azure as a primary or secondary on-demand disaster recovery site for on-premises datacenter infrastructure.
+- **Application modernization:** Tap into the Azure ecosystem to modernize Contoso applications without having to rebuild VMware-based environments.
+- **Implementing DevOps:** Bring Azure DevOps tool chains to VMware environments and modernize applications at its own pace.
+- **Ensure operational continuity:** Redeploy vSphere-based applications to Azure while avoiding hypervisor conversions and application refactoring. Extend support for legacy applications that run Windows and SQL Server.
 
 ## Goals for migrating VMware on-premises to VMware in the cloud
 
@@ -91,7 +90,7 @@ Contoso evaluates its proposed design by putting together a pros and cons list, 
 
 ## Migration process
 
-Contoso will move its VMs to Azure VMware Solution by using the VMware HCX tool. The VMs will run in an Azure VMware Solution private cloud. [VMware HCX migration methods](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include running a bulk or cold migration. vMotion or Replication-assisted vMotion (RAV) is a method reserved for workloads that run through a live migration.
+Contoso will move its VMs to Azure VMware Solution by using the VMware HCX tool. The VMs will run in an Azure VMware Solution private cloud. [VMware HCX migration methods](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include running a bulk or cold migration. VMware vMotion or Replication-assisted vMotion (RAV) is a method reserved for workloads that run through a live migration.
 
 To complete the process, the Contoso team:
 
@@ -151,7 +150,7 @@ To learn how to create Azure VMware Solution private clouds, see [Deploy an Azur
 
     ![Screenshot of the Azure portal pane for creating an Azure VMware Solution private cloud.](./media/contoso-migration-vmware-to-azure/create-private-cloud.png)
 
-1. The team verifies that the Azure VMware Solution private cloud deployment is complete by going to the resource group and selecting the private cloud resource. The status is displayed as *Succeeded*.
+1. The team verifies that the Azure VMware Solution private cloud deployment is complete by going to the resource group and selecting the private cloud resource. The status is displayed as **Succeeded**.
 
     ![Screenshot of the Contoso Azure VMware Solution private cloud page showing that the deployment is successful.](./media/contoso-migration-vmware-to-azure/validate-deployment.png)
 
@@ -164,7 +163,7 @@ For more information, see [Configure networking for your VMware private cloud in
 1. The Contoso team first creates a virtual network with a gateway subnet.
 
     > [!IMPORTANT]
-    > The team must use an address space that *does not* overlap with the address space that it used when it created the private cloud.
+    > The team must use an address space that _does not_ overlap with the address space that it used when it created the private cloud.
 
 1. The team creates the ExpressRoute VPN gateway, making sure to select the correct SKU, and then selects **Review + create**.
 
@@ -189,7 +188,7 @@ To move VMware VMs to Azure using HCX, the Contoso team will need to follow thes
 
 For more information, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/hybrid-cloud-extension-installation).
 
-<!-- docsTest:ignore L2 -->
+<!-- docutune:casing L2 -->
 
 #### Install and configure VMware HCX for the public cloud
 
@@ -217,7 +216,7 @@ When both the on-premises datacenter (source) and the Azure VMware Solution priv
 
   ![Screenshot of the VMware vSphere Web Client page.](./media/contoso-migration-vmware-to-azure/appliance-status.png)
 
-#### VMware HCX bulk migration
+#### VMware HCX Bulk Migration
 
 This migration method uses the VMware vSphere replication protocols to move multiple VMs simultaneously to a destination site. Benefits include:
 
@@ -232,13 +231,13 @@ This migration method uses the VMware vMotion protocol to move a single VM to a 
 - This method is designed to move one VM at a time.
 - There's no service interruption when the VM state is migrated.
 
-#### VMware HCX cold migration
+#### VMware HCX Cold Migration
 
 This migration method uses the VMware near-field communication protocol. The option is automatically selected when the source VM is powered off.
 
 #### VMware HCX Replication-assisted vMotion
 
-VMware HCX RAV combines the benefits of VMware HCX bulk migration, which include parallel operations, resiliency, and scheduling, with the benefits of VMware HCX vMotion migration, which include zero downtime during VM state migration.
+VMware HCX RAV combines the benefits of VMware HCX Bulk Migration, which include parallel operations, resiliency, and scheduling, with the benefits of VMware HCX vMotion migration, which include zero downtime during VM state migration.
 
 ## Additional resources
 

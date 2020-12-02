@@ -16,11 +16,11 @@ Organizational and environmental (technical) readiness can require new skills fo
 
 ## Organizational readiness learning paths
 
-Depending on the motivations and business outcomes that are associated with a cloud-adoption effort, leaders may need to establish new organizational structures or virtual teams (v-teams) to facilitate various functions. The following articles can help your organization develop the necessary skills to structure those teams to meet the desired outcomes:
+Depending on the motivations and business outcomes that are associated with a cloud-adoption effort, leaders may need to establish new organizational structures or virtual teams to facilitate various functions. The following articles can help your organization develop the necessary skills to structure those teams to meet the desired outcomes:
 
 - [Align your organization](../get-started/org-alignment.md): Discover approaches to establishing the proper organizational structures.
 - [Organization alignment exercises](./index.md): Get an overview of alignment and team structures to help meet specific goals.
-- [Establish teams](../get-started/help.md#establish-teams): Learn how to establish teams within your organization that are responsible for delivering cloud functionality.
+- [Establish teams](../get-started/index.md#establish-teams): Learn how to establish teams within your organization that are responsible for delivering cloud functionality.
 - [Break down silos and fiefdoms](./fiefdoms-silos.md): Learn about two common organizational antipatterns and ways to guide the teams to productive collaboration.
 
 ## Environmental (technical) readiness learning paths
@@ -40,7 +40,7 @@ During the Ready phase, technical staff have to create a migration landing zone 
 
 During the Ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
 - [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 

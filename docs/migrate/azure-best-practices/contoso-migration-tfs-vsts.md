@@ -7,7 +7,6 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: site-recovery
 ---
 
 <!-- cSpell:ignore contosodev contosodevmigration contosomigration onmicrosoft visualstudio sourceconnectionstring smarthotelcontainer identitymaplog CONTOSOTFS DACPAC SQLDB SQLSERVERNAME INSTANCENAME sqlpackage SSDT azuredevopsmigration validateonly ImportType -->
@@ -20,9 +19,9 @@ This article shows how the fictional company Contoso refactors its on-premises V
 
 The Contoso IT leadership team has worked closely with business partners to identify future goals. The partners aren't overly concerned with dev tools and technologies, but the team has captured these points:
 
-- **Software**: Regardless of the core business, all companies are now software companies, including Contoso. Business leadership is interested in how IT can help lead the company with new working practices for users and new experiences for its customers.
-- **Efficiency**: Contoso needs to streamline its processes and remove unnecessary procedures for developers and users. Doing so will allow the company to deliver on customer requirements more efficiently. The business needs IT to move quickly, without wasting time or money.
-- **Agility**: To enable its success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
+- **Software:** Regardless of the core business, all companies are now software companies, including Contoso. Business leadership is interested in how IT can help lead the company with new working practices for users and new experiences for its customers.
+- **Efficiency:** Contoso needs to streamline its processes and remove unnecessary procedures for developers and users. Doing so will allow the company to deliver on customer requirements more efficiently. The business needs IT to move quickly, without wasting time or money.
+- **Agility:** To enable its success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
 
 ## Migration goals
 
@@ -92,7 +91,7 @@ Here's how Contoso will complete the migration:
 - [Introduction to Azure Storage](/azure/storage/common/storage-introduction).
 - [Create a storage account](/azure/storage/common/storage-create-storage-account).
 
-<!-- docsTest:ignore "Server Configuration Wizard" "Configure Features Wizard" "Detach Team Project Collection Wizard" -->
+<!-- docutune:casing "Server Configuration Wizard" "Configure Features Wizard" "Detach Team Project Collection Wizard" -->
 
 ## Step 2: Upgrade Team Foundation Server
 
@@ -125,7 +124,7 @@ They upgrade as follows:
      ![Screenshot of the "Product backlog" pane for verifying the Team Foundation Server installation.](./media/contoso-migration-tfs-vsts/upgrade5.png)
 
 > [!NOTE]
-> Some Team Foundation Server upgrades need to run the Configure Features wizard after the upgrade finishes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?utm_campaign=vstsdataimportguide&utm_medium=guide&utm_source=ms&view=vsts).
+> Some Team Foundation Server upgrades need to run the Configure Features Wizard after the upgrade finishes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?view=vsts).
 
 **Need more help?**
 
@@ -165,7 +164,7 @@ Contoso admins run the Team Foundation Server migration tool against the `contos
 
 1. In the Azure AD sign-in window that opens, they enter the credentials of a global admin user.
 
-     ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/collection8.png)
+     ![Screenshot of the Azure AD sign in window with admin credentials.](./media/contoso-migration-tfs-vsts/collection8.png)
 
 1. The validation passes and is confirmed by the tool.
 
@@ -188,7 +187,7 @@ With the validation complete, Contoso admins can use the Team Foundation Server 
 
 1. An Azure AD sign-in screen appears, and the admins enter the credentials of a global admin.
 
-    ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/prep2.png)
+    ![Screenshot of the Azure AD sign screen with admin credentials typed in the User text box.](./media/contoso-migration-tfs-vsts/prep2.png)
 
 1. The preparation is completed, and the tool reports that the import files have been generated successfully.
 
@@ -236,7 +235,7 @@ Here is the migration process they'll follow:
 1. **Perform a dry-run import**. A dry-run import helps them test the collection migration. Dry runs have a limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note that informs Contoso when the dry run will be deleted is included in the success email that's sent after the import finishes. The team takes note and plans accordingly.
 1. **Complete the production migration**. With the dry-run migration completed, Contoso admins do the final migration by updating the `import.json` file and then running import again.
 
-<!-- docsTest:ignore "Team Foundation Server Administration Console" -->
+<!-- docutune:casing "Team Foundation Server Administration Console" -->
 
 ### Detach the collection
 
@@ -331,9 +330,9 @@ Earlier, Contoso admins partially filled in the import specification file, *impo
 
 They open the *import.json* file and complete the following fields:
 
-- **Location**: They enter the location of the SAS key that was generated previously.
-- **Dacpac**: They enter the name of the DACPAC file that they uploaded earlier to the storage account, making sure to include the *.dacpac* extension.
-- **ImportType**: They enter **DryRun** for now.
+- **Location:** They enter the location of the SAS key that was generated previously.
+- **DACPAC:** They enter the name of the DACPAC file that they uploaded earlier to the storage account, making sure to include the *.dacpac* extension.
+- **ImportType:** They enter **DryRun** for now.
 
 ![Screenshot of the "import.json" file with the fields filled in.](./media/contoso-migration-tfs-vsts/import1.png)
 
@@ -370,7 +369,7 @@ Contoso admins perform a dry-run migration to make sure that everything's workin
 
 1. The Azure AD sign-in window opens. Contoso admins sign in to Azure AD with admin permissions.
 
-    ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
+    ![Screenshot of the Azure AD sign in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
 
     A message is displayed confirming that the import has been started successfully.
 
@@ -415,7 +414,7 @@ Now that the dry run is complete, Contoso admins move on to the production migra
 
 1. In the Azure AD sign-in window, they specify a Contoso admin sign-in.
 
-    ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/full3.png)
+    ![Screenshot of the Azure AD sign in screen in Visual Studio.](./media/contoso-migration-tfs-vsts/full3.png)
 
     A message is displayed that the import has started successfully.
 

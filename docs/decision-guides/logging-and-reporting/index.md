@@ -1,5 +1,5 @@
 ---
-title: "Logging and reporting decision guide"
+title: Logging and reporting decision guide
 description: Develop a core logging, reporting, and monitoring strategy to ensure your organization meets uptime, security, and policy compliance goals.
 author: rotycenh
 ms.author: abuck
@@ -105,13 +105,14 @@ Mirroring the on-premises centered approach, in this scenario cloud-based worklo
 ### Multicloud
 
 Integrating logging and reporting capabilities across a multiple-cloud platform can be complicated. Services offered between platforms are often not directly comparable, and logging and telemetry capabilities provided by these services differ as well.
+
 Multicloud logging support often requires the use of gateway services to process log data into a common format before submitting data to a hybrid logging solution.
 
 ## Learn more
 
 [Azure Monitor](/azure/azure-monitor/overview) is the default reporting and monitoring service for Azure. It provides:
 
-- A unified platform for collecting app telemetry, host telemetry (such as VMs), container metrics, Azure platform metrics, and event logs.
+- A unified platform for collecting application telemetry, host telemetry (such as VMs), container metrics, Azure platform metrics, and event logs.
 - Visualization, queries, alerts, and analytical tools. It can provide insights into virtual machines, guest operating systems, virtual networks, and workload application events.
 - [REST APIs](/azure/azure-monitor/platform/rest-api-walkthrough) for integration with external services and automation of monitoring and alerting services.
 - [Integration](/azure/azure-monitor/platform/partners) with many popular third-party vendors.

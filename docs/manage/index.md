@@ -17,18 +17,16 @@ Delivering on a [cloud strategy](../strategy/index.md) requires solid planning, 
 
 To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> ![1](../_images/icons/1.png) | <br> [Establish a management baseline](./azure-management-guide/index.md): Define the criticality classifications, cloud management tools, and processes required to deliver your minimum commitment to operations management. |
-| <br> ![2](../_images/icons/2.png) | <br> [Define business commitments](./considerations/business-alignment.md): Document supported workloads to establish operational commitments with the business and agree on cloud management investments for each workload. |
-| <br> ![3](../_images/icons/3.png) | <br> [Expand the management baseline](./best-practices.md): Based on business commitments and operations decisions, make use of the included best practices to implement the required cloud management tooling. |
-| <br> ![4](../_images/icons/4.png) | <br> [Advanced operations and design principles](./design-principles.md): Platforms or workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments. |
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Establish a management baseline](./azure-management-guide/index.md): Define the criticality classifications, cloud management tools, and processes required to deliver your minimum commitment to operations management. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Define business commitments](./considerations/business-alignment.md): Document supported workloads to establish operational commitments with the business and agree on cloud management investments for each workload. |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Expand the management baseline](./best-practices.md): Based on business commitments and operations decisions, make use of the included best practices to implement the required cloud management tooling. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Advanced operations and design principles](./design-principles.md): Platforms or workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments. |
 
 The preceding steps create actionable approaches to deliver on the Cloud Adoption Framework's Manage methodology.
 
-<!-- cSpell:ignore CAF -->
-
-![Manage methodology in the Cloud Adoption Framework](../_images/manage/caf-manage.png)
+![Manage methodology of the Cloud Adoption Framework](../_images/manage/caf-manage.png)
 
 As discussed in the [business alignment](./considerations/business-alignment.md) article, not all workloads are mission critical. Within any portfolio are various degrees of operational management needs. Business alignment efforts aid in capturing the business impact and negotiating management costs with the business, to ensure the most appropriate operational management processes and tools.
 
@@ -47,6 +45,6 @@ Each section of the Cloud Adoption Framework represents a different specializati
 
 If you want to follow this guide from beginning to end, this content aids in developing a robust cloud operations strategy. The guidance walks you through the theory and implementation of such a strategy.
 
-You can also apply the methodology to [Establish clear business commitments](./considerations/business-alignment.md).
+You can also apply the methodology to [establish clear business commitments](./considerations/business-alignment.md).
 
 <!-- TODO: For a crash course on the theory and quick access to Azure implementation, get started with the [governance guides overview](TODO). Using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts. -->

@@ -1,17 +1,17 @@
 ---
 title: "Get started: Build a cloud strategy team"
-description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you are prepared for a successful cloud adoption journey.
+description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you're prepared for a successful cloud adoption journey.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud strategy team
 
-To be successful, every cloud adoption journey needs to involve some level of strategic planning. This get-started guide is designed to help you establish a dedicated team or virtual team (v-team) that can build and deliver on a solid cloud strategy.
+To be successful, every cloud adoption journey needs to involve some level of strategic planning. This getting started guide is designed to help you establish a dedicated team or virtual team that can build and deliver on a solid cloud strategy.
 
 The first step in the journey is to decide whether you need a strategy team, or whether your existing team members can deliver on cloud strategy as a distributed responsibility.
 
@@ -20,7 +20,7 @@ Whichever approach you choose, you'll want to create a cloud strategy team that 
 ![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
 
 > [!NOTE]
-> This article discusses a _strategy facilitator_, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
+> This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
 ## Step 1: Determine whether a cloud strategy team is needed
 
@@ -33,8 +33,6 @@ A cloud strategy team delivers on a required capability in the cloud, referred t
 **Guidance to support deliverable completion:**
 
 Creating a cloud strategy team is often necessary for the following reasons:
-
-<!-- markdownlint-disable MD033 -->
 
 | Reason | Considerations |
 |---|---|
@@ -50,7 +48,7 @@ If any or all of the preceding reasons represent your existing business consider
 
 ## What if I don't need a cloud strategy team?
 
-Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team (v-team) to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
+Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
 
 ## Step 2: Establish the cloud strategy team
 
@@ -106,9 +104,8 @@ This exercise will surface conversations that can help build alignment among the
 
 **Guidance to support deliverable completion:**
 
-- [Understand motivations](../../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all subsequent efforts. Other forward-looking motivations that are related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps team members understand how high the cost management priority should be.
+- [Understand motivations](../../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive, which increases the importance of cost control for all subsequent efforts. Other forward-looking motivations that are related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps team members decide how high to prioritize your cost management.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -154,7 +151,7 @@ Each member of the strategy team should review common myths and approaches to bu
 
 - The [business justification](../../strategy/cloud-migration-business-case.md) serves as a high-level view of the overall financial plan for cloud adoption. This can be a good source for initial budgeting efforts.
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -177,7 +174,6 @@ After a go-forward decision has been agreed upon with the cloud strategy team, t
 - [Incremental rationalization](../../digital-estate/rationalize.md): Consider an agile approach to rationalization that properly aligns late-bound technical decisions.
 - The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

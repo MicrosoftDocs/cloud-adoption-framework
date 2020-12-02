@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore CSPs MSPs -->
 
-# Understand partnership options
+# Understand partnership and support options
 
 During migration, the cloud adoption team performs the actual migration of workloads to the cloud. Unlike the collaborative and problem-solving tasks when defining the [digital estate](../../../digital-estate/index.md) or building the core cloud infrastructure, migration tends to be a series of repetitive execution tasks. Beyond the repetitive aspects, there are likely testing and tuning efforts that require deep knowledge of the chosen cloud provider. The repetitive nature of this process can sometimes be best addressed by a partner, reducing strain on full-time staff. Additionally, partners may be able to better align deep technical expertise when the repetitive processes encounter execution anomalies.
 
@@ -63,7 +63,7 @@ During a typical FastTrack for Azure engagement, Microsoft helps to define the b
 The main phases of a typical FastTrack for Azure engagement are:
 
 - **Discovery.** Identify key stakeholders, understand the goal or vision for problems to be solved, and then assess architectural needs.
-- **Solution enablement.** Learn design principles for building applications, review architecture of applications and solutions, and receive guidance and tools to drive proof of concept (PoC) work through to production.
+- **Solution enablement.** Learn design principles for building applications, review architecture of applications and solutions, and receive guidance and tools to drive proof-of-concept work through to production.
 - **Continuous partnership.** Azure engineers and program managers check in every so often to ensure that deployment is on track and to help remove blockers.
 
 ## Microsoft Services offerings aligned to Cloud Adoption Framework approaches
@@ -88,8 +88,8 @@ Microsoft certified solution providers specialize in providing modern customer s
 
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 
-- **[Find a cloud solutions partner](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
-- **[Find a managed service partner](https://www.microsoft.com/solution-providers/search?cacheId=16a3b49b-fef2-449d-bdf0-628008114cca).** An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
+- [Find a cloud solutions partner](https://www.microsoft.com/solution-providers/home). A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
+- [Find an Azure expert managed service provider (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all). MSPs help businesses transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
 
 ## Next steps
 

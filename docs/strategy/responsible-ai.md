@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- docsTest:ignore InterpretML FairLearn -->
+<!-- docutune:ignore InterpretML FairLearn -->
 
 # Responsible AI
 
@@ -19,12 +19,12 @@ Driven by ethical principles that put people first, Microsoft is committed to ad
 
 As you implement AI solutions, consider the following principles in your solution:
 
-- Fairness: AI systems should treat all people fairly.
-- Reliability and safety: AI systems should perform reliably and safely.
-- Privacy and security: AI systems should be secure and respect privacy.
-- Inclusiveness: AI systems should empower everyone and engage people.
-- Transparency: AI systems should be understandable.
-- Accountability: People should be accountable for AI systems.
+- **Fairness:** AI systems should treat all people fairly.
+- **Reliability and safety:** AI systems should perform reliably and safely.
+- **Privacy and security:** AI systems should be secure and respect privacy.
+- **Inclusiveness:** AI systems should empower everyone and engage people.
+- **Transparency:** AI systems should be understandable.
+- **Accountability:** People should be accountable for AI systems.
 
 ## Establish a responsible AI strategy
 
@@ -45,16 +45,16 @@ Put responsible AI into practice with these guidelines, designed to help you ant
 
 ## Tools for responsible AI
 
-There are tools available that can help developers and data scientists understand, protect, and control AI systems. These tools can come from a variety of sources, including Azure Machine Learning, open source projects, and research.
+Tools are available to help developers and data scientists understand, protect, and control AI systems. These tools can come from a variety of sources, including Azure Machine Learning, open-source projects, and research.
 
-- **Understand**: AI systems can behave unexpectedly for a variety of reasons. Software tools can help you understand the behavior of your AI systems so that you can better tailor them to your needs. Examples of this type of tool include InterpretML and Fairlearn.
-- **Protect**: AI systems rely on data. Software tools can help you protect that data by preserving privacy and ensuring confidentiality. Examples of this type of tool include confidential computing for machine learning, WhiteNoise differential privacy, SEAL homomorphic encryption, and Presidio.
-- **Control**: Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control to meet regulatory requirements. Examples include Audit trail and traceability.
+- **Understand:** AI systems can behave unexpectedly for a variety of reasons. Software tools can help you understand the behavior of your AI systems so that you can better tailor them to your needs. Examples of this type of tool include InterpretML and Fairlearn.
+- **Protect:** AI systems rely on data. Software tools can help you protect that data by preserving privacy and ensuring confidentiality. Examples of this type of tool include confidential computing for machine learning, white noise differential privacy, seal homomorphic encryption, and Presidio.
+- **Control:** Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control to meet regulatory requirements. Examples include audit trail and traceability.
 
 ## Next steps
 
 For further resources to support your responsible solution development, visit:
 
-- [Responsible AI Overview](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6)
+- [Responsible AI overview](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6)
 - [Responsible AI resources](https://www.microsoft.com/ai/responsible-ai-resources)
 - [Responsible bots: 10 guidelines for developers of conversational AI](https://www.microsoft.com/research/publication/responsible-bots/)

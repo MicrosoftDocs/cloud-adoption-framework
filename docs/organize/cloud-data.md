@@ -39,7 +39,7 @@ These teams are responsible for putting together complex solutions with componen
 - Data marts
 - Geo-redundancy and data consistency
 - Dashboarding and reporting
- 
+
  Enterprise architects and data engineers are generally concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
 
 Using Azure Synapse Analytics, data engineers can simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
@@ -52,11 +52,10 @@ Using Azure Synapse Analytics, data scientists can build proofs of concept in mi
 
 ## Business analysts
 
-These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized apps can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.  
+These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized applications can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.
 
 Using Azure Synapse Analytics, business analysts can securely access datasets and use Power BI to build dashboards. They can also securely share data within and outside their organization through Azure Data Share.
 
 ## Executives
 
 Executives are responsible for charting strategy and ensuring strategic initiatives are implemented effectively across both IT and line-of-business departments. Solutions must be cost-effective, prevent disruption to the business, allow for easy extensibility as requirements change and grow, and deliver results to the business.
-

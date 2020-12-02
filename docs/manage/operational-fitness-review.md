@@ -39,7 +39,7 @@ During this process, the focus is often on the features of the service: the set 
 
 The _nonfunctional_ requirements, in contrast, relate to properties such as the service's [availability](/azure/architecture/checklist/availability), [resiliency](/azure/architecture/resiliency), and [scalability](/azure/architecture/framework/scalability/performance-efficiency). These properties differ from the functional requirements because they don't directly affect the final function of any particular feature in the service. However, nonfunctional requirements do relate to the performance and continuity of the service.
 
-You can specify some nonfunctional requirements in terms of a service-level agreement (SLA). For example, you can express service continuity as a percentage of availability: "Available 99.99 percent of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
+You can specify some nonfunctional requirements in terms of a service-level agreement (SLA). For example, you can express service continuity as a percentage of availability: "available 99.99 percent of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
 
 > [!NOTE]
 > For more information about resiliency requirements, see [Designing reliable Azure applications](/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), and SLA.
@@ -122,11 +122,7 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
   - Performance efficiency
   - Reliability
   - Security
-- [Ten design principles for Azure applications](/azure/architecture/guide/design-principles).
-    Follow these design principles to make your application more scalable, resilient, and manageable.
-- [Designing resilient applications for Azure](/azure/architecture/resiliency).
-    Build and maintain reliable systems using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
-- [Cloud design patterns](/azure/architecture/patterns).
-    Use design patterns to build applications on the pillars of architecture excellence.
-- [Azure Advisor](/azure/advisor).
-    Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources for high availability, security, performance, and cost.
+- [Ten design principles for Azure applications](/azure/architecture/guide/design-principles). Follow these design principles to make your application more scalable, resilient, and manageable.
+- [Designing resilient applications for Azure](/azure/architecture/resiliency). Build and maintain reliable systems using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
+- [Cloud design patterns](/azure/architecture/patterns). Use design patterns to build applications on the pillars of architecture excellence.
+- [Azure Advisor](/azure/advisor). Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources for high availability, security, performance, and cost.

@@ -1,6 +1,6 @@
 ---
 title: "Azure innovation: Engage via applications"
-description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
+description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native applications.
 author: billyclaymyersmsft
 ms.author: wimyers
 ms.date: 10/17/2019
@@ -10,8 +10,6 @@ ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
-
-<!-- cSpell:ignore billyclaymyersmsft wimyers functionapp -->
 
 # Engage customers through applications
 
@@ -160,7 +158,7 @@ To configure or monitor an AKS service:
 
 ### Serverless solutions
 
-Build cloud-native apps without provisioning and managing infrastructure by using a fully managed platform that handles scaling, availability, and performance for you. Benefits of Azure serverless solutions include:
+Build cloud-native applications without provisioning and managing infrastructure by using a fully managed platform that handles scaling, availability, and performance for you. Benefits of Azure serverless solutions include:
 
 - Increasing developer velocity.
 - Boosting team performance.
@@ -179,8 +177,8 @@ Another benefit of functions is that they can be triggered by different actions 
 To configure or monitor Azure Functions deployments:
 
 1. Go to **Function App**.
-2. Configure a new function app: Select **Add** and follow the prompts.
-3. Manage existing function apps: Select the desired function app from the list.
+2. Configure a new function app: select **Add** and follow the prompts.
+3. Manage existing function apps: select the desired function app from the list.
 
 ::: zone target="chromeless"
 
@@ -194,15 +192,15 @@ To configure or monitor Azure Functions deployments:
 
 ### Serverless solutions: Azure Logic Apps
 
-Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
+Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft 365, and Dropbox.
 
 #### Action
 
 To configure or monitor Azure Logic Apps:
 
 1. Go to **Logic Apps**.
-2. Configure a new logic app: Select **Add** and follow the prompts.
-3. Manage existing logic apps: Select the desired logic app from the list.
+2. Configure a new logic app: select **Add** and follow the prompts.
+3. Manage existing Logic Apps: select the desired logic app from the list.
 
 ::: zone target="chromeless"
 
@@ -214,7 +212,7 @@ To configure or monitor Azure Logic Apps:
 
 ::: zone-end
 
-### Serverless solutions: API management
+### Serverless solutions: API Management
 
 Publish, secure, transform, maintain, and monitor APIs by using Azure API Management, a fully managed service that offers a usage model designed and implemented to be natural fit for serverless applications.
 

@@ -23,7 +23,7 @@ A data warehouse migration project involves many components. These include schem
 
 After your data warehouse has been migrated to Azure Synapse Analytics, you can take advantage of other technologies in the Microsoft analytical ecosystem. Doing so allows you to not only modernize your data warehouse but also bring together insights produced in other analytical data stores on Azure.
 
-You can broaden ETL processing to ingest data of any type into Azure Data Lake Storage. You can prepare and integrate it at scale by using Azure Data Factory. This produces trusted, commonly understood data assets that can be consumed by your data warehouse, and also accessed by data scientists and other applications. You can build real-time, batch-oriented analytical pipelines. You can also create machine learning models that can deploy to run in batch, in real time on streaming data, and on demand as a service.
+You can broaden ETL processing to ingest data of any type into Azure Data Lake Storage. You can prepare and integrate it at scale by using Azure Data Factory. This produces trusted, commonly understood data assets that can be consumed by your data warehouse, and also accessed by data scientists and other applications. You can build real-time, batch-oriented analytical pipelines. You can also create machine learning models that can deploy to run in batch, in real time on streaming data, and on demand.
 
 In addition, you can use PolyBase to go beyond your data warehouse. This simplifies access to insights being produced in multiple underlying analytical platforms on Azure. You create holistic, integrated views in a logical data warehouse to gain access to streaming, big data, and traditional data warehouse insights from BI tools and applications.
 
@@ -74,7 +74,7 @@ Use cases, business cases, and technology advances all support how Azure Synapse
 - Avoid building expensive data marts that use storage and databases software licenses on on-premises hardware. You can build them in Azure Synapse Analytics instead. This is especially helpful if your data warehouse is a data vault design, which often causes an increased demand for data marts.
 - Avoid the cost of analyzing and storing high-velocity, high-volume data on on-premises hardware. For example, if you need to analyze real-time, machine generated data like click-stream and streaming IoT data in your data warehouse, you can use Azure Synapse Analytics.
 - You can avoid paying a premium for storing data on expensive warehouse hardware in the datacenter as your data warehouse grows. Azure Synapse Analytics can store your data in cloud storage at a lower cost.
-  
+
 ## Next steps
 
 <!-- TODO: More detail needed here. -->

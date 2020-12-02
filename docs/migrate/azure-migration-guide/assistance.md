@@ -21,7 +21,7 @@ We know that getting the right support at the right time will accelerate your mi
 
 ### Microsoft Support
 
-Microsoft offers a basic support plan to all Azure customers. You have 24x7 access to billing and subscription support, online self-help, documentation, whitepapers, and support forums.
+Microsoft offers a basic support plan to all Azure customers. You have 24x7 access to billing and subscription support, online self-help, documentation, white papers, and support forums.
 
 If you need help from Microsoft Support while using Azure, follow these steps to create a support request:
 
@@ -97,4 +97,4 @@ Microsoft certified solution providers specialize in providing modern customer s
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 
 - [Find a Cloud Solution Provider (CSP)](https://www.microsoft.com/solution-providers/home). A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
-- [Find a managed service partner](https://www.microsoft.com/solution-providers/search?cacheId=16a3b49b-fef2-449d-bdf0-628008114cca). An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning and the billing experience&mdash;all with a flexible pay-as-you-go business model.
+- [Find an Azure Expert Managed Service Provider (MSP)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all). MSPs help organizations transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.

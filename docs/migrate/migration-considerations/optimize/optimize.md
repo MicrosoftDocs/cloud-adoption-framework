@@ -26,15 +26,15 @@ Should an asset be optimized during or after the migration? The simple answer is
 
 During the migration, use educated guesses and experiment with sizing. However, true optimization of resources requires data based on actual performance in a cloud environment. For true optimization to occur, the IT team must first implement approaches to monitoring performance and resource utilization.
 
-## Benchmark and optimize with Azure Cost Management and Billing
+## Benchmark and optimize with Azure Cost Management + Billing
 
-[Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) manages cloud spend with transparency and accuracy. This service monitors, benchmarks, allocates, and optimizes cloud costs.
+[Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) manages cloud spend with transparency and accuracy. This service monitors, benchmarks, allocates, and optimizes cloud costs.
 
 Historical data can help manage costs by analyzing usage and costs over time to identify trends, which are then used to forecast future spending. Cost management also includes useful projected cost reports. Cost allocation manages costs by analyzing costs based on tagging policies. Use cost allocation for showback/chargeback to show resource utilization and associated costs to influence consumption behaviors or charge tenant customers. Access control helps manage costs by ensuring that users and teams access only the cost management data that they need. Alerting helps manage costs through automatic notification when unusual spending or overspending occurs. Alerts can also notify other stakeholders automatically for spending anomalies and overspending risks. Various reports support alerts based on budget and cost thresholds.
 
 ## Improve efficiency
 
-Determine optimal VM usage, identify idle VMs, or remove idle VMs and unattached disks using Cost Management and Billing. Using information in sizing optimization and inefficiency reports, create a plan to downsize or remove idle VMs.
+Determine optimal VM usage, identify idle VMs, or remove idle VMs and unattached disks using Azure Cost Management + Billing. Using information in sizing optimization and inefficiency reports, create a plan to downsize or remove idle VMs.
 
 ## Next steps
 

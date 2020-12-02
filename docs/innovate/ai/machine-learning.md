@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
@@ -44,7 +45,7 @@ Common scenarios for machine learning solutions include:
   - [Classify images with scikit-learn](/azure/machine-learning/tutorial-train-models-with-aml)
   - [Build a Machine Learning pipeline for batch scoring](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 
-- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, MLOps, ONNX Runtime, model interpretability and transparency, and more.
+- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, machine learning operations (MLOps), ONNX Runtime, model interpretability and transparency, and more.
 
   - [What's new with Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
   - [Use AutoML to build models](https://aka.ms/automlvideo)

@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Azure Stack: A strategic option for running Azure in your datacenter
 
-Microsoft takes a cloud-first approach to application and data storage. The priority is to move applications and data to one or more of the hyperscale clouds, including the global Azure option or a sovereign, locale-specific cloud such as Azure Germany or Azure Government. 
+Microsoft takes a cloud-first approach to application and data storage. The priority is to move applications and data to one or more of the hyperscale clouds, including the global Azure option or a sovereign, locale-specific cloud such as Azure Germany or Azure Government.
 
 Azure Stack Hub acts as another instance of a sovereign cloud, whether it's operated by customers in their datacenters or consumed through a cloud service provider. However, Azure Stack Hub is not a hyperscale cloud, and Microsoft doesn't publish or support any service-level agreements for Azure Stack Hub.
 
@@ -23,7 +23,7 @@ Your organization's journey might identify clear benefits to using the cloud as 
 
 ## Azure Stack Hub in your strategy
 
-Azure Stack Hub provides an alternative approach to the migration of existing applications that run on either physical servers or existing virtualization platforms. By moving these workloads to the Azure Stack Hub IaaS environment, teams can benefit from smoother operations, self-service deployments, standardized hardware configurations, and Azure consistency. Using Azure Stack Hub for modernization or innovation support enables your teams to prepare your applications and workloads to take full advantage of the cloud.
+Azure Stack Hub provides an alternative approach to the migration of existing applications that run on either physical servers or existing virtualization platforms. By moving these workloads to an Azure Stack Hub deployment IaaS environment, teams can benefit from smoother operations, self-service deployments, standardized hardware configurations, and Azure consistency. Using Azure Stack Hub for modernization or innovation support enables your teams to prepare your applications and workloads to take full advantage of the cloud.
 
 By following a consistent practice for cloud adoption across Azure and Azure Stack Hub, you can apply the same governance and operations models to assets in the public cloud or your own datacenter. Azure Stack Hub uses the same Azure Resource Manager model as Azure, enabling that single-pane of glass view for your solutions.
 

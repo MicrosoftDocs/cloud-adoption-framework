@@ -37,7 +37,7 @@ During the Ready phase, technical staff are called upon to create a migration la
 
 During the Ready phase, architects are called upon to architect solutions that span all Azure environments. The following skill-building resources can prepare architects for these tasks:
 
-- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
 - [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
@@ -57,11 +57,11 @@ Turn your knowledge of Azure into official recognition with [Microsoft Azure cer
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels and achieve more.
 
-The following examples are a few tailored learning paths on Microsoft Learn which align to the Ready methodology in the Cloud Adoption Framework:
+The following examples are a few tailored learning paths on Microsoft Learn, which align to the Ready methodology of the Cloud Adoption Framework:
 
-[Azure fundamentals](/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as high availability, scalability, elasticity, agility, fault tolerance, and disaster recovery. Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage, and security.
+[Azure fundamentals](/learn/paths/azure-fundamentals): Learn cloud concepts such as high availability, scalability, elasticity, agility, fault tolerance, and disaster recovery. Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage, and security.
 
-[Manage resources in Azure](/learn/paths/azure-for-the-data-engineer): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
+[Manage resources in Azure](/learn/modules/control-and-organize-with-azure-resource-manager): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
 
 [Administer infrastructure resources in Azure](/learn/paths/administer-infrastructure-resources-in-azure): Learn how to create, manage, secure, and scale virtual machine resources.
 

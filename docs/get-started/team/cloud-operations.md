@@ -1,12 +1,12 @@
 ---
 title: "Get started: Build a cloud operations team"
-description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that they are responsible for.
+description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.topic: conceptual
-ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud operations team
@@ -24,14 +24,14 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 **Deliverables:**
 
 - Determine whether you need a cloud operations team.
-- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
 - [Cloud operations functions](../../organize/cloud-operations.md) might be spread across multiple individuals or teams already. Decide whether a cloud operations team is required. Some level of operations is always needed for production workloads.
 - If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the governance and operations efforts might be small enough to be delivered by one person or one team. That team is unlikely to be called cloud operations, because it will serve many functions. For that individual or team, the following guidance can help ensure that it can deliver on this important function of operations.
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -53,7 +53,6 @@ Before the cloud operations team implements any ongoing operations practices, it
 - To understand timelines and prioritization, review your company's [cloud adoption plan](../../plan/template.md) with members of the cloud adoption team.
 - To understand the operational requirements and commitments that the team has established with the business, begin developing the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -73,7 +72,6 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 - For additional guidance on cadences for meetings, see the "deliverables" section of [cloud operations functions](../../organize/cloud-operations.md#deliverables).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -82,7 +80,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 ## Step 4: Review the methodology
 
-To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology in the Cloud Adoption Framework.
+To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology of the Cloud Adoption Framework.
 
 **Deliverables:**
 
@@ -90,7 +88,7 @@ To help establish a future vision for operations management and a working approa
 
 **Guidance to support deliverable completion:**
 
-- Review the [Manage methodology in the Cloud Adoption Framework](../../manage/index.md).
+- Review the [Manage methodology of the Cloud Adoption Framework](../../manage/index.md).
 
 **Accountable team:**
 
@@ -164,7 +162,7 @@ As operations planning continues to mature, the team should coordinate with the 
 
 - Review the [governance guide for improving resource consistency](../../govern/guides/complex/resource-consistency-improvement.md).
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -182,7 +180,7 @@ As new adoption efforts are completed, the cloud adoption team hands off operati
 
 - Establish a process for [onboarding new workloads and resources](/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
-<!-- markdownlint-disable MD033 -->
+<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |

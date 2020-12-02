@@ -10,8 +10,6 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
-<!-- cSpell:ignore ccoe -->
-
 # Align responsibilities across teams
 
 Learn to align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):

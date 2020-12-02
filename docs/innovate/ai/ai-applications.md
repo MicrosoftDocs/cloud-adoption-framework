@@ -1,5 +1,5 @@
 ---
-title: "AI applications"
+title: AI applications
 description: Infusing AI into an application with Microsoft Azure Cognitive Services.
 author: v-hanki
 ms.author: janet
@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 # AI applications and agents
@@ -30,7 +31,7 @@ As you get started, the checklist and resources below will help you plan your ap
 - Are you familiar with the multitude of capabilities and services offered within Azure Cognitive Services, and which ones in particular you will be using?
 - Determine whether or not you have custom data with which you want to train and customize these models. There are Cognitive Services that are customizable.
 - There are several ways to use Azure Cognitive Services. Explore the quickstart tutorials for getting up and running for both SDK and REST APIs. Note: the Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript and Go.
-- Determine if you will need to deploy these Cognitive Services in containers.
+- Determine whether you will need to deploy these Cognitive Services in containers.
 
 ## AI applications checklist
 
@@ -42,7 +43,7 @@ To get started, first familiarize yourself with the various categories and servi
 
 Select the service you want to use across vision, language, speech, decision, or web search. Each category on the page offers a set of quick starts, tutorials, how-to guides, whether you want to use the REST API or SDKs.
 
-<!-- docsTest:ignore "Intelligent Kiosk" -->
+<!-- docutune:casing "Intelligent Kiosk" -->
 
 You can also download the Intelligent Kiosk to experience and demo these services.
 
@@ -80,16 +81,16 @@ Familiarize yourself with Azure Bot Service and Microsoft Bot Framework.
 - Bot Framework is an open-source offering that provides an SDK (available in C#, JavaScript, Python, and Java) to help you design, build, and test your bot. It also offers a free visual authoring canvas in Bot Framework Composer and a testing tool in Bot Framework Emulator.
 - Azure Bot Service is a dedicated service within Azure that allows you to host or publish your bot in Azure and connect to popular channels.
 
-- [Learn about Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
-- [Principles of bot design](/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0)
-- [Find the latest versions of Bot Framework SDK and tools](/azure/bot-service/what-is-new?view=azure-bot-service-4.0)
+- Read the [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
+- Learn about [principles of bot design](/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0)
+- Get the [latest versions of Bot Framework SDK and tools](/azure/bot-service/what-is-new?view=azure-bot-service-4.0)
 
 One of the simplest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes.
 
-- [Learn how to create a bot with Q&A abilities quickly with QnA Maker](/azure/bot-service/bot-builder-tutorial-add-qna?tabs=csharp&view=azure-bot-service-4.0)
-- [Test out the QnA Maker service directly](https://www.qnamaker.ai/)
+- [Create a bot with Q&A abilities quickly with QnA Maker](/azure/bot-service/bot-builder-tutorial-add-qna?tabs=csharp&view=azure-bot-service-4.0)
+- Test out the [QnA Maker service](https://www.qnamaker.ai/)
 
-Download and use Bot Framework SDK and tools for bot development
+Download and use Bot Framework SDK and tools for bot development.
 
 - [5 minute quickstart with Bot Framework Composer](/composer/)
 - [Build and test bots with Bot Framework SDK (C#, JavaScript, Python)](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0)
