@@ -29,7 +29,7 @@ In a hybrid and multi-cloud migration scenario, rationalization decisions change
 
 Most planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the rubric of on-premises environments migrating assets to a single public cloud solution such as Azure.
 
-***Rework***
+**Rework**
 The biggest change in planning for unified operations is that you no longer need to minimize dependencies on retained (hybrid/on-prem) workloads or replatform (multi-cloud) workloads. The biggest change in planning, is to evaluate these decisions alongside the primary 3 Rs of migration above. In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management.
 
 ## Unified operations digital estate
