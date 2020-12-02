@@ -16,14 +16,28 @@ When you apply metadata tags to your cloud resources, you can include informatio
 
 What tags you apply to resources and what tags are required or optional differs among organizations. The following list provides examples of common tags that capture important context and information about a resource. Use this list as a starting point to establish your own tagging conventions.
 
-## Tagging examples
+## Minimum suggested tags
+
+The following tags will guide implementation and processes in all subsequent cloud adoption framework methodologies. Many of the best practices in those methodologies demonstrate automation of cloud operations and governance based on the following tags.
 
 | Tag Name | Description | Key | Example value |
 |--|--|--|--|
-| **Application name** | Name of the application, service, or workload the resource is associated with. | _ApplicationName_ | _{application name}_ |
+| **Workload name** | Name of the workload the resource is associated with. | _WorkloadName_ | _{workload name}_ |
+| **Data classification** | Sensitivity of data hosted by this resource | _DataClassification_ | _Non-business_, _Public_, _General_, _Confidential_, _Highly confidential_ |
+| **Business criticality** | Business impact of the resource or supported workload | _Criticality_ | _Low_, _Medium_, _High_, _Business Unit-Critical_, _Mission-Critical_ |
+| **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | _BusinessUnit_ | _FINANCE_, _MARKETING_, _{Product Name}_, _CORP_, _SHARED_ |
+| **Operations commitment** | Level of operations support provided for this workload or resource | _OpsCommitment_ | _Baseline only_, _Enhanced baseline_, _Platform operations_, _Workload operations_ |
+| **Operations team** | Team accountable for day to day operations | _OpsTeam_ | _Central IT_, _Cloud Operations_, _Workload Team_, _MSP-{Managed Service Provider name}_ |
+
+## Additional common tagging examples
+
+The following are a number of tags commonly used across Azure to increase visibility into the usage of Azure resources.
+
+| Tag Name | Description | Key | Example value |
+|--|--|--|--|
+| **Application name** | Added granularity, if the workload is subdivided across multiple applications or services. | _ApplicationName_ | _{application name}_ |
 | **Approver name** | Person responsible for approving costs related to this resource. | _Approver_ | _{email}_ |
 | **Budget required/approved** | Money allocated for this application, service, or workload. | _BudgetAmount_ | _{\$}_ |
-| **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | _BusinessUnit_ | _FINANCE_, _MARKETING_, _{Product Name}_, _CORP_, _SHARED_ |
 | **Cost center** | Accounting cost center associated with this resource. | _CostCenter_ | _{number}_ |
 | **Disaster recovery** | Business criticality of the application, workload, or service. | _DR_ | _Mission-critical_, _Critical_, _Essential_ |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | _EndDate_ | _{date}_ |
