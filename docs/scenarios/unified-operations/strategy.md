@@ -3,7 +3,7 @@ title: "Strategy for unified operations adoption"
 description: Describe the scenario's impact on strategy
 author: mpvenables
 ms.author: brblanch
-ms.date: 11/20/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -13,9 +13,9 @@ ms.subservice: strategy
 
 ## Executive summary
 
-Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). To move forward, identify business outcomes supported by specific efforts that drive crucial business results. There may be sound business justifications to reserve part of your digital estate to an on-premises environment, but you still want the innovation that cloud services can bring to your datacenter.
+Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and also want the innovation that comes with cloud services—where you might consider a hybrid and multi-cloud scenario to be beneficial. Your challenge is how to consistently operate both on-premises and cloud environments with one cloud management solution.
 
-At this point, you realize that a hybrid cloud is not simply two different environments, but a steady state that enables a consistent experience across end users, IT management & security, and app development, far beyond "lifting and shifting" virtual machines. Consistency in a hybrid cloud environment enables uniform development, unified dev-ops and management, common identity and security, and extension of existing applications and infrastructure to the cloud. Consistency across these key areas enables controlled transformation for your organization, backed with data-justified financial models for your business.  
+**To accelerate your cloud adoption efforts and migration initiatives, implement a uniform control plane such as Azure Arc. A hybrid and multi-cloud environment is a steady state, enabling a consistent experience across your end users, IT management & security, and app development, beyond lifting and shifting. Consistency in a hybrid cloud environment enables uniform development, unified dev-ops and management, common identity and security, and extension of existing applications and infrastructure to the cloud. Consistency across these key areas enables controlled transformation for your organization, backed with data-justified financial models for your business.**  
 
 Hybrid and multi-cloud is an evolution to distributed computing and unified operations, bringing consistent, cross-platform access to data and apps across private and public clouds—and edge computing environments. The most common environment across the enterprise is hybrid and multi-cloud. For most customers, moving to a hybrid and multi-cloud scenario is simply embracing market reality, and, as previously mentioned, remains a sound business decision.
 
