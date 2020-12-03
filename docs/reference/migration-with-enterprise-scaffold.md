@@ -7,7 +7,7 @@ ms.date: 09/22/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
-ROBOTS: NOINDEX
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 
 <!-- docutune:disable -->
