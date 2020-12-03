@@ -15,6 +15,7 @@ ms.custom: readiness, fasttrack-edit, internal
 An effective naming convention composes resource names from important information about each resource. A well-chosen name helps you quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload residing in the West US region might be `pip-sharepoint-prod-westus-001`.
 
 ![Components of an Azure resource name](../../_images/ready/resource-naming.png)
+
 _Diagram 1: Components of an Azure resource name._
 
 ## Naming scope
