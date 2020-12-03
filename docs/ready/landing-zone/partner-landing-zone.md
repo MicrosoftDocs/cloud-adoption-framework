@@ -87,7 +87,7 @@ Sound governance and operational management of the cloud starts with best practi
 **Question for the partner:** Does the partner's landing zone design include considerations for the following resource organization practices?
 
 - **Naming standards:** What [naming standards](../azure-best-practices/naming-and-tagging.md) will this offering follow and is that standard automatically enforced through policy?
-- **Tagging standards:** Does the landing zone configuration follow and enforce a specific [standards for tagging assets](../azure-best-practices/naming-and-tagging.md#metadata-tags)?
+- **Tagging standards:** Does the landing zone configuration follow and enforce specific [standards for tagging assets](../azure-best-practices/resource-tagging.md)?
 - **Subscription design:** What [subscription design strategies](../../decision-guides/subscriptions/index.md) are supported by the partner offer?
 - **Management group design:** Does the partner offer follow a defined pattern for the [Azure management group hierarchy](../azure-best-practices/organize-subscriptions.md) to organize subscriptions?
 - **Resource group alignment:** How are resource groups used to group assets deployed to the cloud? In the partner offer, are resource groups used to group assets into workloads, deployment packages, or other organization standards?
