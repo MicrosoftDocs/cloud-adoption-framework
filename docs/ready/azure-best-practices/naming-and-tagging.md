@@ -16,15 +16,13 @@ Organize your cloud assets to support governance, operational management, and ac
 
 Define your naming and tagging strategy as early as possible. Use the following links to help you define and implement your strategy:
 
-- [Name your Azure resources and assets](./resource-naming.md)
+- [Define your naming convention](./resource-naming.md)
 - [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
-- [Tag your Azure resources](./resource-tagging.md)
+- [Define your tagging strategy](./resource-tagging.md)
 - [Resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md)
 
 > [!NOTE]
-> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams.
->
-> As the discussion proceeds, use the template below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
+> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams. As the discussion proceeds, use the template below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
 >
 > Download the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
@@ -46,7 +44,7 @@ A naming and tagging strategy includes business and operational details as compo
 
 ## Next steps
 
-Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
+Learn about the considerations for defining your naming convention your Azure resources and assets, and review example names for resources and assets in Azure.
 
 > [!div class="nextstepaction"]
 > [Name your Azure resources and assets](./resource-naming.md)

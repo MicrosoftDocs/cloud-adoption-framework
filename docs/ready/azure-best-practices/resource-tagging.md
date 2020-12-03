@@ -1,5 +1,5 @@
 ---
-title: Tag your Azure resources
+title: Define your tagging strategy
 description: Review recommendations for tagging your Azure resources and assets.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit, internal
 ---
 
-# Tag your Azure resources
+# Define your tagging strategy
 
 When you apply metadata tags to your cloud resources, you can include information about those assets that couldn't be included in the resource name. You can use that information to perform more sophisticated filtering and reporting on resources. You want these tags to include context about the resource's associated workload or application, operational requirements, and ownership information. This information can be used by IT or business teams to find resources or generate reports about resource usage and billing.
 
@@ -46,3 +46,14 @@ The following are a number of tags commonly used across Azure to increase visibi
 | **Requester name** | User who requested the creation of this application. | _Requester_ <br><br> <li> `john@contoso.com` |
 | **Service class** | Service level agreement level of the application, workload, or service. | _ServiceClass_ <br><br> <li> `Dev` <li> `Bronze` <li> `Silver` <li> `Gold` |
 | **Start date of the project** | Date when the application, workload, or service was first deployed. | _StartDate_ <br><br> <li> `10/15/2020` |
+
+## Take action
+
+Review the [resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md).
+
+## Next steps
+
+Learn how to move resource groups and assets between subscriptions in Azure.
+
+> [!div class="nextstepaction"]
+> [Move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription)

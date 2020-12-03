@@ -173,4 +173,4 @@ This list provides recommended abbreviations for various Azure resource types to
 Review recommendations for tagging your Azure resources and assets.
 
 > [!div class="nextstepaction"]
-> [Recommendations for tagging Azure resources](./resource-tagging.md)
+> [Define your tagging strategy](./resource-tagging.md)
