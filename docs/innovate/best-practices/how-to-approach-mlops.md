@@ -51,28 +51,29 @@ The following diagram depicts the deployment lifecycle of a machine learning sys
 
 Once developed, a machine learning model is trained, validated, deployed, and monitored. From an organizational perspective and on the managerial and technical level, it's important to define who owns and implements this process. In larger enterprises, a data scientist might own the model training and validation steps, and an machine learning engineer might tend to the remaining steps. In smaller companies, a data scientist might own all steps.
 
-## Train the model
+### Train the model
 
 In this step, a training dataset trains the machine learning model. The training code is version-controlled and reusable, and this feature optimizes button clicks and event triggers (such as a new version of the data becoming available) to automate how the model is trained.
 
-## Validate the model
+### Validate the model
 
 This step uses established metrics like an accuracy metric to automatically validate the newly trained model and compare it to older ones. Did its accuracy increase? If yes, this model might be registered in the model registry for ensuring that next steps can consume it. If the new model performs worse, then a data scientist can be alerted to investigate why, or the newly trained model can be discarded.
 
-## Deploy the model
+### Deploy the model
 
 In the deployment step, the model is either deployed as an API service that applications can use. This is the recommended approach for web applications, as it enables the model to be scaled and updated independently of the application itself. Alternatively, the model can be used to perform batch scoring. In this case, the model is used once or periodically to calculate predictions on new data points. This is useful when large amounts of data need to be processed asynchronously. More details on deployment models can be found on the [Deployment](ml-deployment-inference.md) page.
 
-## Monitor the model
+### Monitor the model
 
 It's necessary to monitor the model for two key reasons. First, monitoring the model helps to ensure that it's technically functional; for example, able to generate predictions. This is important if an organization's applications depend on the model and use it in real time. Monitoring the model also helps organizations to gauge if it continuously generates useful predictions. This might not be useful when data drift occurs, such as when the data used to train the model significantly differs from the data that's sent to the model during prediction phase. For example, a model trained for recommending products to young people might produce very undesirable results when recommending products for people from a different age group. Model monitoring with data drift can detect this type of mismatch, alert machine learning engineers, and automatically retrain the model with more relevant or newer data.
 
-## How to monitor models
+### How to monitor models
 
-Since data drift, seasonality, or a newer model architecture tuned for better performance can all cause model performance to wane over time, it's important to establish a process to continuously deploy models. Some best practices include:
+Since data drift, seasonality, or newer architecture tuned for better performance can all cause model performance to wane over time, it's important to establish a process to continuously deploy models. Some best practices include:
 
 - **Ownership:** An owner should be assigned to the model performance monitoring process to actively manage its performance.
-- **Release pipelines:** It is recommended to set up a release pipeline in Azure DevOps \[Github\] first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers a sign-off and deployment process.
+
+- **Release pipelines:** Set up a release pipeline in Azure DevOps \[Github\] first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers sign-off and a deployment process.
 
 ## Prerequisites for retraining models
 
@@ -121,7 +122,7 @@ Per the TDSP lifecyle, the key roles in the AI project are data engineer, data s
 
 - **Data engineer:** This role ingests, validates, and cleans the data. Once the data is refined, it's cataloged and made available for data scientists to use. At this stage, it's important to explore and analyze duplicate data, remove outliers, and identify missing data. These activities should be defined in a pipeline steps and are executed as the pre-processing of the train pipeline.  A meaningful naming convention should be used for naming the core and derived features.  
 
-- **Data scientist (or AI engineer):** This role prepares, navigates the training pipeline process, evaluates models. A data scientist identifies various patterns and relationships within the data from a data engineer, possibly selecting or generating features for the experiment. Since feature engineering plays a major role in building a sound generalized model, it's key for this phase to be completed as thoroughly as possible. Various experiments can be performed with different algorithms and hyperparameters. Azure tools like Automated-ML can automate this task, which can also help with under- and overfitting a model. A successfully trained model is then registered in the model registry. A meaningful model naming convention should be used, and version history should be retained for lineage and traceability.
+- **Data scientist (or AI engineer):** This role navigates the training pipeline process and evaluates models. A data scientist receives data from the data engineer and identifies patterns and relationships within it, possibly selecting or generating features for the experiment. Since feature engineering plays a major role in building a sound generalized model, it's key for this phase to be completed as thoroughly as possible. Various experiments can be performed with different algorithms and hyperparameters. Azure tools like Automated-ML can automate this task, which can also help with under- and overfitting a model. A successfully trained model is then registered in the model registry. A meaningful model naming convention should be used, and version history should be retained for lineage and traceability.
 
 - **Machine learning operations engineer:** This role builds end-to-end pipelines for continuous integration and delivery. This includes packing the model in a Docker image, validating and profiling the model, awaiting approval from a stakeholder, and deploying the model in a container orchestration service such as AKS. Various triggers can be set as part of continuous integration, such as for the model's code to trigger the train pipeline and then the release pipeline.  
 
@@ -131,7 +132,7 @@ Development, testing, and production environments support machine learning opera
 
 ![A diagram showing machine learning environments and the role-based access control.](media/ml-environments-and-rbac.png)
 
-**In a development environment:** Data scientists and a data engineers normally carry out data engineering and data science activities. These activities should be facilitated by the machine learning pipelines.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
+**In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
 **In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
 
