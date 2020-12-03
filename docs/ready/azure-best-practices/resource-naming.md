@@ -27,6 +27,7 @@ For example, a virtual network has a resource group scope, which means that ther
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, so they must be unique across the entire Azure platform.
 
 ![Scope levels for Azure resource names](../../_images/ready/resource-naming-scope.png)
+
 _Diagram 2: Scope levels for Azure resource names._
 
 Resource names have length limits. Balancing the context embedded in a name with its scope and length limit is important when you develop your naming conventions. For more information, see [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
