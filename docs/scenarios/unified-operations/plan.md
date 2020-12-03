@@ -20,15 +20,15 @@ Finally, a unified operations plan that onboards on-prem assets with Azure Arc f
 
 In most cloud adoption scenarios, we assume an intention to Rehost (IaaS VMs), Rearchitect (PaaS services), or Rebuild (Cloud-native) workloads with Azure as a target platform, with a uni-directional migration to Azure, given these standard workload rationalizations.  
 
-When considering a hybrid and multi-cloud migration, the rationalization criteria change, and migration goals that were formerly uni-directional now incorporate a more distributed and multi-platform cloud service model. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration model.
+When considering a hybrid and multi-cloud migration, the rationalization criteria change, and migration goals that were formerly uni-directional now incorporate a more distributed and multi-platform cloud environment service model. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration effort.
  
 In a hybrid and multi-cloud migration scenario, we assume a distributed, multi-platform cloud service model that is no longer limited to one on-premises environment and a single public cloud to an expansive on-prem, multi-cloud, and edge model of cloud computing. Rationalization decisions now become—**Retain** workloads or assets on-premises, **Replatform** workloads to multiple cloud platforms, and **Custom locations (Rehost portability)** reverse rehosting IaaS/PaaS workloads into on-premise hosting environments.
 
 Most migration planning efforts focus on single direction migrations with an objective of getting things migrated to the cloud. In that model, Retain, Replatform, & Reverse Rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the rubric of on-premises environments migrating assets to a single public cloud solution such as Azure.
 
-**Rework**
+**The biggest change in planning for unified operations is that you no longer need to minimize dependencies on retained (hybrid/on-prem) workloads or replatform (multi-cloud) workloads. Azure Arc extends Azure services and management to existing infrastructure. It provides flexibility for customers who want to continue using their existing systems and toolsets.**
 
-The biggest change in planning for unified operations is that you no longer need to minimize dependencies on retained (hybrid/on-prem) workloads or replatform (multi-cloud) workloads. The biggest change in planning, is to evaluate these decisions alongside the primary 3 Rs of migration above. In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management.
+The biggest change in planning, is to evaluate these decisions alongside the primary 3 Rs of migration above. In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management.
 
 ## Unified operations digital estate
 
