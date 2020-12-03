@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit, internal
 ---
 
-# Recommended abbreviations for Azure resources and assets
+# Recommended abbreviations for Azure resource types
 
 Azure workloads are typically composed of multiple resources and services. Including a naming component in your resource names that represents the type of the Azure resource makes it easier to visually recognize application or service components.
 
