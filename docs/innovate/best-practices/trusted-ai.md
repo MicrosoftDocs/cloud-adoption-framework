@@ -69,7 +69,7 @@ Achieving transparency helps the team to understand which data and algorithms we
 
 ### Privacy and security
 
-A data holder is obligated to protected the data in an AI system, and privacy and security are an integral part of this system. Presonal data doesn't just need to be secured, but it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects protects and preserves privacy by adding randomness/noise to the data so that the data scientist can't identify individual information.
+A data holder is obligated to protected the data in an AI system, and privacy and security are an integral part of this system. Personal data doesn't just need to be secured, but it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects protects and preserves privacy by adding randomness/noise to the data so that the data scientist can't identify individual information.
 
 ## Human AI guidelines​
 
@@ -79,21 +79,21 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 ### Initially
 
-- **Clarify what the system can do.** For example, if the AI system use/generate metrics, it's important to show all metrics used and how they're tracked.
+- **Clarify what the system can do.** If the AI system uses or generates metrics, it's important to show them all and how they're tracked.
 
 - **Clarify how well the system can do what it can do.** Help users to understand that AI will not be 100-percent accurate, and set expectations for when the AI system might make mistakes.
 
 ### During interaction
 
-- **Show contextually relevant information.** Provide visual information related to the user’s current context and environment, such as approximate hotels and return details close to the intended destination and date.
+- **Show contextually relevant information.** Provide visual information related to the user’s current context and environment, such as nearby hotels and return details close to the target destination and date.
 
-- **Mitigate social biases.**. Ensure that the language and behavior don't introduce unintended stereotypes or biases. For example, an auto-complete feature considers both genders.
+- **Mitigate social biases.** Make sure that the language and behavior don't introduce unintended stereotypes or biases. For example, an auto-complete feature needs to acknowledge both genders.
 
 ### When wrong
 
 - **Support efficient dismissal.** Provide an easy mechanism to ignore or dismiss undesirable features/services.
-- **Support efficient correction.** Provide an intuitive way of making it easier way to edit, refine or recover.
-- **Make clear why the system did what it did.** Enable explainable AI to provide insights into assertion made by the AI system.
+- **Support efficient correction.** Provide an intuitive way of making it easier way to edit, refine, or recover.
+- **Make clear why the system did what it did.** Enable explainable AI to offer insights about the AI system's assertions.
 
 ### Over time
 
@@ -112,38 +112,36 @@ Explore hHuman AI Guidelines](/ai/guidelines-human-ai-interaction.md) to learn m
 
 The AI designer builds the model and is responsible for:
 
-- Data drift and quality checks by enabling outlier detection, data quality checks for missing value elimination, distribution normalization, data imputation, and project/use-case level reporting
+- Data drift and quality checks. They enable outlier detection and perform data quality checks to identify missing values, standardize distribution, scrutinize data, and produce use case and project reports.
 
-- Data Assessment of the source data in the System Source of Record to define the initial state of bias of data
+- Assessing data in the system's source to identify potential bias.
 
-- AI and algorithm design to remove bias such as define the elimination of minority groups within the data due to binning, grouping, normalization especially in traditional ML models (e.g. tree-based models). Furthermore, such categorical AI design reiterates bias implications by defining social, racial, gender classes especially in industry verticals that rely on PHI and PII.
+- Designing AI algorithms to minimize data biases, such as finding the elimination of minority groups within data due to binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones). Categorical AI design reiterates bias implications by exposing social, racial, and gender classes in industry verticals that rely on protected health information and personally identifiable information.
 
-- Identification and alerting of any risk of causing target leakage and strengthen development of the model.
+- Monitoring and alerts about target leakage to strengthen the model's development.
 
-- Best practice for model reporting and insights focusing on enabling a granular understanding of the model avoiding black-box approaches e.g. by using feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. The dimensionality and complexity of modern datasets requires identification metrics of correlations to the target to define the predictive influence, relationship and dependencies of features.
-
-- Following Microsoft’s Ethical guidelines
+- Establishing best practices for model reporting and insights that offer a granular understanding of the model, and avoiding black-box approaches that use feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. Correlations to the target within complex and modern datasets require identification metrics that define predictive influence, relationship and dependencies for their features.
 
 ## AI administrators and officers
 
-AI administrator and officer responsibilities involve the operationalization and performance metrics of AI, governance, audit frameworks, and enablement of AI security and ROI to the business.
+The AI administrator and officer oversees AI, governance, and audit framework operations and performance metrics, plus how AI security is implemented and the business' return on investment.
 
-- Model monitoring​ is one of the central cornerstones of AI development and is served through a tracking dashboard that combines model metrics for production models by focusing specifically on accuracy and model degradation, data drift and deviation, and changes in speed/error of inference.
+- A tracking dashboard assists model monitoring, combines model metrics for production models, and focuses on accuracy, model degradation, data drift, deviation, and changes in speed/error of inference.
 
-- Flexibility of deployment and re-deployment (REST API preferred) allows agile model implementation into an open tool-agnostic architecture integrating the model into business processes and business feedback loops generation value.
+- Flexible deployment and redeployment (preferably, REST API) allows models to be implemented into open, agnostic architecture, which integrates the model with business processes and generates value for feedback loops.
 
-- Model governance and access sets boundaries to mitigate negative business and operational impact. Security implications based on RBAC standards preserve restricted production environments and IP.
+- Model governance and access sets boundaries and mitigates negative business and operational impact. Security implications based on role-based access control standards preserve restricted production environments and IP.
 
-- AI audit frameworks and compliance to track detailed model generations and changes of model development to adhere industry-specific regulations. The foundation of interpretable and trusted AI is based on explain-ability measures, concise features, model visualizations, and vertical-specific industry language.
+- AI audit frameworks and compliance track how models develop, change, and changes to uphold industry-specific standards. The foundation of interpretable and trusted AI is based on explainability measures, concise features, model visualizations, and vertical-specific industry language.
 
 ## AI business consumer
 
-AI Business Consumers (Business experts) act as the conduit to close the feedback loop and provide input back to the AI Designer. AI systems are evaluated by their predictive decision-making, potential bias implications including fairness and ethical measures, privacy and compliance, and business efficiency:
+AI business consumers (business experts) close the feedback loop and provide input for the AI designer. AI systems are evaluated by predictive decision-making and potential bias implications, including fairness and ethical measures, privacy and compliance, and business efficiency:
 
-- As part of a business ecosystem, a feedback loop on model bias, error, prediction speed, and fairness enable a framework of trust and balance in-between the AI Designer and AI Administrators & Officers. The AI should positively improve over time by such human-centric assessment and possibly limit the AI on learning on biased data by minimizing current approached learning on modern datasets of dimensionality and complexity (LO-shot Learning).
+- Feedback loops belong to a business' ecosystem. Data showing a model's bias, errors, prediction speed, and fairness establish trust and balance between the AI designer and AI administrators and officers. Human-centric assessment should gradually improve AI over time, and minimizing AI learning from multi-dimensional and complex data (L0-shot learning) can help to prevent biased learning.
 
-- Through enabled interpretability design and tools, the AI systems can be held accountable and any bias identified. Model bias and fairness issues should be flagged feeding into an alerting and anomaly detection system learning from unsatisfying model behavior ensuring addressing such issues downstream automatically.
+- Using interpretability design and tools hold AI systems accountable for potential biases. Model bias and fairness issues should be flagged feeding into an alerting and anomaly detection system learning from unsatisfying model behavior ensuring addressing such issues downstream automatically.
 
 - Each predictive value should be able to be broken down into individual feature or vector importance/impact delivering full explanations of predictions ready to be exported into a business report for audit and compliance reviews, customer transparency, and business readiness.
 
-- Due to worldwide increasing security and privacy risks, best practices regarding data violations when running inference are required complying with regulations in individual industry verticals e.g. alerting by non-compliant PHI/PII usage, violation national security laws.
+- Due to increasing global security and privacy risks, best practices for resolving data violations when running inference require complying with regulations in individual industry verticals; for example, alerting about non-compliance PHI/PII usage, violation of national security laws, and more.

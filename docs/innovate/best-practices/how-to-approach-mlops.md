@@ -25,7 +25,7 @@ The main components influencing how a machine learning system develops are outli
 
 ## Machine learning operations vs. development operations
 
-While development operations (DevOps) does influence machine learning operations, there are differences between their processes. In addition to DevOps practices, machine learning operations addresses the following concepts not covered in DevOps:
+While development operations (DevOps) influence machine learning operations, there are differences between their processes. In addition to DevOps practices, machine learning operations addresses the following concepts not covered in DevOps:
 
 - **Data versioning:** In addition to code versioning, there must also be versioning of datasets, as the schema and actual data can change over time. This allows data to be reproduced, makes the data visible other team members, and helps use cases to be audited.
 
@@ -49,7 +49,7 @@ The following diagram depicts the deployment lifecycle of a machine learning sys
 
 ![A diagram of the machine learning lifecycle.](media/ml-lifecycle.png)
 
-Once developed, a machine learning model is trained, validated, deployed, and monitored. From an organizational perspective and on the managerial and technical level, it's important to define who owns and implements this process. In larger enterprises, a data scientist might own the model training and validation steps, and an machine learning engineer might tend to the remaining steps. In smaller companies, a data scientist might own all steps.
+Once developed, a machine learning model is trained, validated, deployed, and monitored. From an organizational perspective and on the managerial and technical level, it's important to define who owns and implements this process. In larger enterprises, a data scientist might own the model training and validation steps, and a machine learning engineer might tend to the remaining steps. In smaller companies, a data scientist might own all steps.
 
 ### Train the model
 
@@ -65,7 +65,7 @@ In the deployment step, the model is either deployed as an API service that appl
 
 ### Monitor the model
 
-It's necessary to monitor the model for two key reasons. First, monitoring the model helps to ensure that it's technically functional; for example, able to generate predictions. This is important if an organization's applications depend on the model and use it in real time. Monitoring the model also helps organizations to gauge if it continuously generates useful predictions. This might not be useful when data drift occurs, such as when the data used to train the model significantly differs from the data that's sent to the model during prediction phase. For example, a model trained for recommending products to young people might produce very undesirable results when recommending products for people from a different age group. Model monitoring with data drift can detect this type of mismatch, alert machine learning engineers, and automatically retrain the model with more relevant or newer data.
+It's necessary to monitor the model for two key reasons. First, monitoring the model helps to ensure that it's technically functional; for example, able to generate predictions. This is important if an organization's applications depend on the model and use it in real time. Monitoring the model also helps organizations to gauge if it continuously generates useful predictions. This might not be useful when data drift occurs, such as when the data used to train the model significantly differs from the data that's sent to the model during prediction phase. For example, a model trained for recommending products to young people might produce  undesirable results when recommending products to people from a different age group. Model monitoring with data drift can detect this type of mismatch, alert machine learning engineers, and automatically retrain the model with more relevant or newer data.
 
 ### How to monitor models
 
@@ -73,7 +73,7 @@ Since data drift, seasonality, or newer architecture tuned for better performanc
 
 - **Ownership:** An owner should be assigned to the model performance monitoring process to actively manage its performance.
 
-- **Release pipelines:** Set up a release pipeline in Azure DevOps \[Github\] first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers sign-off and a deployment process.
+- **Release pipelines:** Set up a release pipeline in Azure DevOps \[Github\] first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers sign off and a deployment process.
 
 ## Prerequisites for retraining models
 
@@ -93,7 +93,7 @@ Make sure to [collect data from models in production](/azure/machine-learning/ho
 
 3. **Decide if retraining with the collected data is necessary.**
 
-Many things cause data drift, ranging from a sensor issues, seasonality, changes in user behavior, and data quality issues related to the data source. Model retraining isn't required in all cases, so it's recommended to investigate and understand the cause of the data drift before pursuing retraining.
+Many things cause data drift, ranging from sensor issues to seasonality, changes in user behavior, and data quality issues related to the data source. Model retraining isn't required in all cases, so it's recommended to investigate and understand the cause of the data drift before pursuing this.
 
 4. **Retrain the model.**
 
@@ -116,11 +116,11 @@ The goals, tasks, and documentation artifacts for each stage of the TDSP lifecyc
 
 ## The roles and activities within machine learning operations
 
-Per the TDSP lifecyle, the key roles in the AI project are data engineer, data scientist, and machine learning operations engineer. These roles are critical to your project's success and must work together toward accurate, repeatable, scalable, and production-ready solutions.
+Per the TDSP lifecycle, the key roles in the AI project are data engineer, data scientist, and machine learning operations engineer. These roles are critical to your project's success and must work together toward accurate, repeatable, scalable, and production-ready solutions.
 
 ![A diagram showing the machine learning operations process.](media/ml-operations-process.png)
 
-- **Data engineer:** This role ingests, validates, and cleans the data. Once the data is refined, it's cataloged and made available for data scientists to use. At this stage, it's important to explore and analyze duplicate data, remove outliers, and identify missing data. These activities should be defined in a pipeline steps and are executed as the pre-processing of the train pipeline.  A meaningful naming convention should be used for naming the core and derived features.  
+- **Data engineer:** This role ingests, validates, and cleans the data. Once the data is refined, it's cataloged and made available for data scientists to use. At this stage, it's important to explore and analyze duplicate data, remove outliers, and identify missing data. These activities should be defined in the pipeline steps and are executed during the preprocessing of the train pipeline. A meaningful naming convention should be used for naming the core and derived features.  
 
 - **Data scientist (or AI engineer):** This role navigates the training pipeline process and evaluates models. A data scientist receives data from the data engineer and identifies patterns and relationships within it, possibly selecting or generating features for the experiment. Since feature engineering plays a major role in building a sound generalized model, it's key for this phase to be completed as thoroughly as possible. Various experiments can be performed with different algorithms and hyperparameters. Azure tools like Automated-ML can automate this task, which can also help with under- and overfitting a model. A successfully trained model is then registered in the model registry. A meaningful model naming convention should be used, and version history should be retained for lineage and traceability.
 
@@ -134,9 +134,9 @@ Development, testing, and production environments support machine learning opera
 
 **In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
-**In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
+**In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read-only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
 
-**In a production environment:** A model is deployed during batch or real-time inference. A production environment is typically read-only; however, a DevOps engineer has full access to this environment and is responsible for continually supporting and maintaining it. Data scientists and a data engineers have limited access to the environment, and it's read-only.
+**In a production environment:** A model is deployed during batch or real-time inference. A production environment is typically read-only; however, a DevOps engineer has full access to this environment and is responsible for continually supporting and maintaining it. Data scientists and data engineers have limited access to the environment, and it's read-only.
 
 Role-based access control for all environments is shown in the following diagram:
 
@@ -150,13 +150,13 @@ Data scientists within an organization apply a broad spectrum of experience, mat
 
 A company's size and maturity indicate if data science teams or individuals with unique roles will own the machine learning lifecycle and navigate each phase. The following approaches to the lifecycle are the most common to each scenario:
 
-## A centralized approach
+### A centralized approach
 
 Data science teams will likely monitor the machine learning lifecycle in small companies with limited resources and specialists. This team applies their technical expertise to cleaning and aggregating data, developing a model, deployment, and monitoring and maintaining deployed models.
 
 One advantage of this method is that it progresses the model quickly to production, but it increases costs because of the specialized skill levels that need to be maintained on the data science team. Quality suffers when those required levels of expertise aren't present.
 
-## A decentralized approach
+### A decentralized approach
 
 Individuals with specialized roles will likely monitor and be responsible for the machine learning lifecycle in companies with dedicated operations teams. Once a use case is approved, a machine learning engineer is assigned to assess its current state and the amount of work needed to elevate it to format that can be supported.
 
@@ -178,7 +178,7 @@ Next, a machine learning engineer designs the workflow and estimates the amount 
 
 ## How machine learning operations benefits business
 
-Machine learning operations connects traditional development operations, data operations, and data science/AI. Understanding how machine learning operations can benefit your business will help your AI journey.
+Machine learning operations connect traditional development operations, data operations, and data science/AI. Understanding how machine learning operations can benefit your business will help your AI journey.
 
 Integrating machine learning operations with your business can create the following benefits:
 
@@ -186,7 +186,7 @@ Integrating machine learning operations with your business can create the follow
 
 - Model versioning and data realization allow the enterprise to generate iterated and versioned models to adjust to the nuances of the data or the particular use case. This provides flexibility and agility in responding to business challenges and changes.
 
-- Model monitoring and management helps organizations to quickly respond to significant changes in the data or the scenario. For example, an implemented model might experience extreme data drift because of an external factor or a change in the underlying data. This would make the previous models unusable and require the current model to be retrained as soon as possible. Machine learning operations supports models to be tracked for accuracy and performance. It alerts stakeholders when changes impact model reliability and performance, which leads to quick retraining and deployment.
+- Model monitoring and management helps organizations to quickly respond to significant changes in the data or the scenario. For example, an implemented model might experience extreme data drift because of an external factor or a change in the underlying data. This would make the previous models unusable and require the current model to be retrained as soon as possible. Machine learning  models to be tracked for accuracy and performance. It alerts stakeholders when changes impact model reliability and performance, which leads to quick retraining and deployment.
 
 - Applied machine learning operations processes support business outcomes by allowing rapid auditing, compliance, governance, and access control throughout the development lifecycle. The visibility of model generation, data usage, and regulatory compliance is clear as changes take place in the business.
 
