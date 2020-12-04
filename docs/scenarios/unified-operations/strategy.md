@@ -3,7 +3,7 @@ title: "Strategy for unified operations adoption"
 description: Describe the scenario's impact on strategy
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/02/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -13,13 +13,33 @@ ms.subservice: strategy
 
 ## Executive summary
 
-Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and also want the innovation that comes with cloud services—where you might consider a hybrid and multi-cloud scenario to be beneficial. Your challenge is how to consistently operate both on-premises and cloud environments with one cloud management solution.
+Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and also want the innovation that comes with cloud services—where you might consider a hybrid and multi-cloud scenario to be beneficial. Your challenge is how to consistently operate on-premises and cloud environments with one cloud management solution, while accelerating innovation across all environments.
 
-**To accelerate your cloud adoption efforts and migration initiatives, implement a uniform control plane such as Azure Arc. A hybrid and multi-cloud environment is a steady state, enabling a consistent experience across your end users, IT management & security, and app development, beyond lifting and shifting. Consistency in a hybrid cloud environment enables uniform development, unified dev-ops and management, common identity and security, and extension of existing applications and infrastructure to the cloud. Consistency across these key areas enables controlled transformation for your organization, backed with data-justified financial models for your business.**  
+## Speed up cloud adoption and migration with one control plane
 
-Hybrid and multi-cloud is an evolution to distributed computing and unified operations, bringing consistent, cross-platform access to data and apps across private and public clouds—and edge computing environments. The most common environment across the enterprise is hybrid and multi-cloud. For most customers, moving to a hybrid and multi-cloud scenario is simply embracing market reality, and, as previously mentioned, remains a sound business decision.
+Initiating cloud readiness and skilling initiatives will accelerate both your cloud adoption and migration efforts. Move towards cloud-readiness, and implement innovative cloud practices in workloads staying on-premises, and adopt cloud technologies to prepare other workloads that are moving to the cloud. Work with your cloud strategy team, and build the necessary cloud skills and processes to prepare for your migration effort to a hybrid and multi-cloud environment.
 
-The next decision for your organization is committing to a viable environment that supports a collection of resources hosted across public and private clouds, and having one control plane that uniformly protects and monitors resources, standardizes governance, and manages all operations. Consider a hybrid and multi-cloud environment to manage your overall digital estate if you are planning to be hybrid by design for the next 12 months or longer.
+Azure Arc extends Azure management and services with one control plane across hybrid, multi-cloud and edge environments, enabling a consistent state across resource environments and infrastructure.
+
+How does deploying one control plane transform your cloud adoption and migration efforts?
+
+**Promote greater accountability for enterprise IT teams,** extending a uniform control plane from Azure Arc by centralizing visibility, operations, and compliance. across resources and locations.
+
+**Organize, govern, and secure across on-prem, multi-cloud, and edge** on Windows, LInux, SQL Server, and Kubernetes.
+
+**Empower developer teams across the enterprise with the ability to build cloud apps anywhere, at scale,** coding and shipping applications to Kubernetes clusters anywhere, all from Azure.
+
+**Consistently speed up development, at scale**, with templatized deployment, configuration, and security, and reduce errors with policy-driven deployment and operations.
+
+**Bring innovative Azure-Arc enabled services to any location,** deploy faster, consistently, and achieve elastic scale based on capacity.
+
+**Leverage unified operations, management, and security** to ensure consistency across data workloads.
+
+**Practice frictionless development** supporting both disconnected and connected use cases.
+
+Hybrid and multi-cloud is the most common reality across current enterprise environments. For most customers, moving to a hybrid and multi-cloud scenario is simply embracing market reality, and, as previously mentioned, remains a sound business decision. The next decision for your organization is committing to a distributed computing paradigm that will increase the speed of both your cloud adoption and migration efforts. Beginning cross-team initiatives to increase your cloud readiness with innovative cloud practices and technologies is the first step towards deploying one control plane that uniformly protects and monitors resources, standardizes governance and security, and manages all operations. Consider a hybrid and multi-cloud environment to manage your overall digital estate if you are planning to be hybrid by design for the next 12 months or longer.
+
+Work with your [cloud strategy team](<https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/get-started/team/cloud-strategy>), to build the necessary skilling and processes to prepare for the move to greater accountability, developer empowerment, and Azure-services anywhere with a unified control plane across hybrid, multi-cloud, and edge.
 
 ## Unified operations motivations
 
@@ -27,7 +47,7 @@ There are various [motivations](<https://docs.microsoft.com/azure/cloud-adoption
 
 Customers may have a digital estate bound by specific regulatory requirements and data localization laws that constrain in what geographical location it must reside. A particular industry might require low-latency and high connectivity for efficient operational capacity, such as financial services, also a common requirement for other industries like media, healthcare, education, and government, for example.
 
-A large MNC (multi-national corporation), for example, might have globally distributed, legacy datacenters, with aging assets that are simply not compatible with an organization-wide migration effort. Or there may be corporations with even larger cloud estates that are sprawled across several cloud environments, and visibility and control of operations is challenging.
+A multi-national organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that is simply not compatible with a company-wide migration effort. Or there may be corporations with even larger cloud estates that are sprawled across several cloud environments, and visibility and control of operations is challenging.
 
 ## Unified operations outcomes
 
