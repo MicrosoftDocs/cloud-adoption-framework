@@ -1,6 +1,6 @@
 ---
 title: Machine learning inference during deployment
-description: When deploying your AI model during production, you need to understand how it will make predictions.
+description: Understand how your AI model makes predictions while it's being deployed in production.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/07/2020
@@ -38,7 +38,7 @@ Consider the following best practices for batch inference:
 
 - **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For further guidance, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
 
-- **Compute options for batch inference:** Since batch inference process don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
+- **Compute options for batch inference:** Since batch inference process don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Since different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
 
 ![A diagram of the compute decision tree.](media/compute-decision-tree.png)
 
@@ -52,54 +52,56 @@ Consider the following best practices for batch inference:
   
   - Multiregional deployment and high availability aren't critical concerns in a batch inference scenario. The model doesn't need to be deployed regionally, and the data store might need to be deployed with a high-availability strategy in many locations. This will normally follow the application HA design and strategy.
 
-**More information:**
+## Real-time inference
+
+Real-time, or interactive, inference is architecture where model inference can be triggered any time, and an immediate response is expected. This pattern can be used to analyze streaming data, interactive application data, and more. This mode allows you to take advantage of your machine learning model in real time and resolves the cold-start problem outlined above in batch inference.
+
+The following considerations and best practices are available if real-time inference is right for your model:
+
+- **Challenges of real-time inference:** Latency and performance requirements make real-time inference architecture more complex for your model. A system might need to respond in 100 milliseconds or less, during which it needs to retrieve the data, perform inference, validate and store the model results, run any required business logic, and return the results to the system or application.
+
+- **Compute options for real-time inference:** The best way to implement real-time inference is to deploy the model in a container form to Docker or AKS cluster and expose it as a web-service with REST API. This way, the model executes in its own isolated environment and can be managed like any other web service there. Docker/AKS capabilities can then be used for management, monitoring, scaling, and more. The model can be deployed on-premises, in the cloud, or on the edge. The following compute decision tree provides an overview of real-time inference.
+
+![A diagram of the compute decision tree.](media/compute-decision-tree.png)
+
+- **Multiregional deployment and high availability**: Regional deployment and high availability architectures need to be considered in real-time inference scenarios, as latency and the model's performance will be critical to resolve. To reduce latency in multiregional deployments, it's recommended to locate the model as close as possible to the consumption point. The model and supporting infrastructure should follow the business' high availability and DR principles and strategy.
+
+## Many-models scenario
+
+A singular model might not be able to capture the complex nature of real-world problems, such as predicting sales for a supermarket where demographics, brand, SKUs, and other features could cause customer behavior to vary significantly. Regions could cause developing predictive maintenance for smart meters to also vary significantly. Having many models for these scenarios to capture regional data or store-level relationships could produce higher accuracy than a single model. This approach assumes that enough data is available to such a level of granularity.
+
+At a high level, a many-models scenario occurs in three stages: data source, data science, and many models.
+
+![A diagram of the many-models scenario.](media/many-models-scenario.png)
+
+**Data source:** Tt's important to segment data without too many cardinalities in the data source stage. The product ID or barcode shouldn't be factored into the main partition, as this will produce too many segments and could inhibit meaningful models. The brand, SKU, or locality could be more fitting features. It is also important to homogenize the data by removing anomalies that would skew data distribution.
+
+**Data science:** Several experiments run parallel to each data partition in the data science stage. This is a typically iterative process where models from the experiments are evaluated to determine the best one.  
+
+**Many models:** The best models for each segment or category are registered in the model registry. Assign meaningful names to the models, which will make them more discoverable for inference. Use tagging where necessary to group the model into specific categories.  
+## Batch inference for many models
+
+In batch inference for many models, predictions are typically scheduled, recurring, and can handle large volumes of data running in parallel. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones.
+The following diagram shows the reference pattern for many-models batch inference.
+
+![A diagram of the reference pattern for many-models batch inference.](media/many-models-batch-inference.png)
+
+The core purpose of this pattern is to observe the model and run multiple models simultaneously to achieve a highly scalable inference solution that can handle large data volumes. To achieve hierarchical model inference, many models can be split into categories. Each category can have its own inference storage, like an Azure Data Lake. When implementing this pattern, one needs to balance scaling the models horizontally and vertically, as this would impact the cost and performance. Running too many model instances might increase performance but impact the cost. Too few instances with high spec nodes might be more cost effective but could cause issues with scaling.
+
+## Real-time inference for many models
+
+Real-time many-models inference requires low latency and on-demand requests, typically via a REST endpoint. This is useful when external applications or services require a standard interface to interact with the model, typically via the a REST interface with a JSON payload.
+
+![A diagram of many-models real-time inference.](media/many-models-real-time-inference.png)
+
+The core purpose of this pattern is to use the discovery service to identify a list of services and their metadata. This can be implemented as an Azure Function and enables clients to obtain relevant service details of service, that can be invoked with a secure REST URI. A JSON payload be sent to the service, which would summon the relevant model and provide a JSON response back to the client.
+
+Each service is stateless microservice that can handle multiple requests simultaneously and is limited to the physical virtual machine resource. The service can deploy multiple models if multiple groups are selected; homogeneous groupings like the category, SKU, and more are recommended for this. The mapping between the service request and model selected for a given service needs to be baked into the inference logic, typically via the score script. If the size of models is relatively small (a few megabytes), it's recommended to load them in memory for performance reasons; otherwise, each model can loaded dynamically per request.
+
+## Next steps
+
+Explore the following resources to learn more:
 
 - [Build an Azure Machine Learning pipeline for batch scoring](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 - [Run batch prediction using Azure Machine Learning designer](/azure/machine-learning/how-to-run-batch-predictions-designer)
 - [Batch inference in Azure Machine Learning](https://techcommunity.microsoft.com/t5/azure-ai/batch-inference-in-azure-machine-learning/ba-p/1417010#:~:text=%20Batch%20Inference%20in%20Azure%20Machine%20Learning%20,Learning%20Pipelines.%20ParallelRunStep%20is%20available%20through...%20More%20)
-
-## Real-time inference
-
-Real-time or interactive inference is architecture where model inference can be triggered any time, and an immediate response is expected. This pattern can be used to analyze streaming data, interactive application data, and more. This mode allows you to take advantage of your machine learning model in real time and resolves the cold-start problem outlined above in batch inference.
-
-There are a number of considerations and best practices if real-time inference is the right model for your model:
-
-- **Challenges of real-time inference:** Real-time inference is a more complex architecture for using your model due to latency and performance requirements. Typically a system may need to respond in 100 milliseconds or less and during that time, the system needs to retrieve the data, perform inference, validate and store the model results, run any business logic required, and return the results to the system or application.
-
-- **Compute options for real-time inference:** The best way to implement real-time inference is to deploy the model in a container form to Docker or Kubernetes cluster and expose it as a web-service with rest API. In this way, the model will be executed in its own isolated environment and can be managed as any other web-services in the environment. Docker/Kubernetes capabilities can be used then for management, monitoring, scaling, and so on. This can then be deployed on premise, in the cloud or on the edge. See the Compute Decision Tree diagram for the compute decision tree for real-time inference.
-
-- **Multiregional deployment and high availability**: In real-time inference scenarios, regional deployment and high availability architectures need to be considered as latency and performance of the model will be one of the critical issues to resolve. It is recommended that in multiregional deployments to locate the model as close as possible to the consumption point will reduce latency. It is recommended that the model and supporting infrastructure follows the business application HA and DR principles and strategy.
-
-## Many-models scenario
-
-Sometimes, a single model may not be able to capture the complex nature of real-world problems, such as predicting the sales of a supermarket, where the customers’ behavior may significantly vary depending on the demography, brand, SKUs, and other features.  Or, building predictive maintenance of smart meters, which may vary significantly depending on the regions.  In such cases, having many models to capture the regional based or store level relationship may yield in better accuracy than a single model.  However, this assumes that there is sufficient data available to model such level of granularity.
-
-At a high level, we can think of a many-models scenario in three stages: data source, data science, and many models.
-
-![A diagram of the many-models scenario.](media/many-models-scenario.png)
-
-**Data source:** In the data source stage, it's important to group your data into various segments without having too many cardinalities.  Features like product ID or barcode shouldn't be considered the main partition, as this will result in too many segments and might not produce meaningful models. Features such as brand, SKU, or locality could be more fitting options.  It is also important to homogenize the data by removing anomalies that would skew data distribution.
-
-**Data science:** In the data science stage, several experiments run parallel to each data partition. This is a typically iterative process where models generated by the experiments are evaluated to find the best model.  
-
-**Many models:** The best models for each segment or category are registered in the model registry. It is recommended to give meaningful names to the models that would make it easier to identify for inference. It's recommended to use tagging where it's necessary to group the model into specific categories.  
-
-## Batch inference for many models
-
-In batch inference for many models, predictions typically occur in a recurring scheduled manner and can handle large volumes of data running in parallel. The interesting thing to note here, is that unlike the single model scenario, many models inference at the same time, it's therefore important that the correct models are selected.
-
-The diagram below shows the reference pattern for many-models batch inference.
-
-![A diagram of the reference pattern for many-models batch inference.](media/many-models-batch-inference.png)
-
-The core part of the pattern is the ability to handle many observations per model, as well as being able to run multiple models simultaneously to achieve a highly scalable inference solution that can handle large volumes of data. Many models can also be split into multiple categories to achieve hierarchical model inference, with each category having its own inference storage, such as an Azure Data Lake.  When implementing this pattern, one needs to strike the right balance between the horizontal and vertical scaling of the models, as this would have implications on the cost and performance.  Running too many model instances in parallel, may increase the performance but will have an impact on the cost and likewise, too few instances with high spec nodes may be more cost effective, but may run into scaling issues.
-
-## Real-time inference for many models
-
-In the many models real-time inference requires relatively low latency, and on-demand request, typically via a REST endpoint.  This is useful when there are external applications or services that require a standard interface to interact with the model, typically via the REST interface with JSON payload.
-
-![A diagram of many-models real-time inference.](media/many-models-real-time-inference.png)
-
-The core part of this pattern is the ability to discover the list of services with associated metadata, through the service discovery service, this can be implemented as an Azure Function.  This enables the clients to identify and obtain relevant details of service, which can be invoked via a secure REST URI.  A JSON payload would send to the service, that would invoke the relevant model, and provide a JSON response back to the client.
-
-Each service (AKS) is stateless microservice, therefore can handle multiple requests simultaneously, limiting to the physical VM resource constraint.  A service can deploy multiple models, depending on the choice of groupings.  It is recommended to use homogeneous grouping, such as category, SKU, etc.  The mapping between the service request and model selection for a given service needs to be baked into the inference logic, typically via the score script.  If the size of models is relatively small (few MB), it's recommended to load them in memory for performance reasons, otherwise each model can dynamically be loaded as per request.

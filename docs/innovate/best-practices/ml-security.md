@@ -38,10 +38,10 @@ For securing the default AKS inference cluster inside your virtual network, spec
 
 1. An **AKS DNS service IP address** is assigned for the DNS service within AKS. It must be within the AKS address range.
 
-1. A **Docker bridge address** is assigned to the Docker bridge, which executes your scoring script as a container. This address must not be within your subnet IP range or the AKS address range.
+1. A **Docker bridge address** is assigned to the Docker bridge, which executes your scoring script as a container. This address must not be within your subnet IP or AKS address range.
 
-Reference [Secure the inference environment](/azure/machine-learning/how-to-network-security-overview#secure-the-inferencing-environment) to see an IP address range and a practice assignment for inference in a virtual network.
+You can configure AKS to use an internal (private) load balancer with a private AKS cluster. Only private IPs are allowed for this scenario, and you can use a Python SDK or Azure command-line extension but not Azure Machine Learning Studio for this task. When using a private load balancer, you have to grant a 'Network contributor' role to the AKS cluster resource group that contains the virtual network.
 
-You can configure AKS to use an internal (private) load balancer when using a private AKS cluster. Only private IPs are allowed in this scenario. You can create an AKS cluster that uses internal load balancer through a Python SDK or Azure command-line interfact extension but not through Azure Machine Learning Studio. When using a private load balancer, you have to grant a 'Network contributor' role to the AKS cluster resource group containing the virtual network.
+## Next steps
 
-You may find instruction configuring private load balancer and how to grant the aforementioned role in [here](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#internal-aks-load-balancer).
+Reference [Secure an Azure Machine Learning inferencing environment with virtual networks](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) to see an IP address range and the steps for inference in a virtual network. See the [network contributor role section](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#network-contributor-role) to learn how to configure a private load balancer, and how to grant a 'Network contributor' role.
