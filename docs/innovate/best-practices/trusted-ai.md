@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Trusted AI
 
-Microsoft outlines key six principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into more mainstream products and services. They are guided by two perspective: ethical and explainable.
+Microsoft outlines key six principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into more mainstream products and services. They are guided by two perspectives: ethical and explainable.
 
 ![A diagram of trusted AI.](media/trusted-ai.png)
 
@@ -31,7 +31,7 @@ Inclusiveness mandates that AI should consider all human races and experiences, 
 
 ### Reliability and safety
 
-AI systems need to be reliable and safe in order to be trusted.  It is important for a system to perform as it was originally designed and for it to respond safely to new situations. Its inherent resilience should resists intended or unintended manipulation. Rigorous testing and validation should be established for operating conditions to ensure that the system responds safely to edge cases, and A/B testing and champion/challenger methods should be integrated into the evaluation process.
+AI systems need to be reliable and safe in order to be trusted.  It is important for a system to perform as it was originally designed and for it to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation. Rigorous testing and validation should be established for operating conditions to ensure that the system responds safely to edge cases, and A/B testing and champion/challenger methods should be integrated into the evaluation process.
 
 An AI system’s performance can degrade over time, so a robust monitoring and model tracking process needs to be established to reactively and proactively measure the model's performance and retrain it, as necessary, to modernize it.
 
@@ -63,11 +63,11 @@ Explore [Mitigate fairness in machine learning models](/azure/machine-learning/c
 
 ### Transparency
 
-Achieving transparency helps the team to understand the data and algorithms used to train the model, what transformation logic was applied to the data, the final model generated, and its associated assets. This information offers insights about how the model was created, which allows it to be reproduced in a transparent way. Snapshots within [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace) support transparency by recording or retraining all training related assets and metrics involved in the experiment.  
+Achieving transparency helps the team to understand the data and algorithms used to train the model, what transformation logic was applied to the data, the final model generated, and its associated assets. This information offers insights about how the model was created, which allows it to be reproduced in a transparent way. Snapshots within [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace) support transparency by recording or retraining all training-related assets and metrics involved in the experiment.  
 
 ### Privacy and security
 
-A data holder is obligated to protected the data in an AI system, and privacy and security are an integral part of this system. Personal data doesn't just need to be secured; it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects protects and preserves privacy by randomize data and adding noise to conceal personal information from data scientists.
+A data holder is obligated to protect the data in an AI system, and privacy and security are an integral part of this system. Personal data doesn't just need to be secured; it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects and preserves privacy by randomizing data and adding noise to conceal personal information from data scientists.
 
 ## Human AI guidelines​
 
