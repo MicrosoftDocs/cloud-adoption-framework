@@ -3,7 +3,7 @@ title: Define your tagging strategy
 description: Review recommendations for tagging your Azure resources and assets.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/20/2020
+ms.date: 12/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

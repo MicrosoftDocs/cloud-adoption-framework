@@ -3,7 +3,7 @@ title: Recommended abbreviations for Azure resource types
 description: Review recommended abbreviations to use for various Azure resource types when naming your resources and assets.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/20/2020
+ms.date: 12/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
