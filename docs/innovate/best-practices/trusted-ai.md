@@ -116,7 +116,7 @@ The AI designer builds the model and is responsible for:
 
 - Assessing data in the system's source to identify potential bias.
 
-- Designing AI algorithms to minimize data biases, such as finding the elimination of minority groups within data due to binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones). Categorical AI design reiterates bias implications by exposing social, racial, and gender classes in industry verticals that rely on protected health information and personally identifiable information.
+- Designing AI algorithms to minimize data biases, such as finding the elimination of minority groups within data due to binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones). Categorical AI design reiterates bias implications by exposing social, racial, and gender classes in industry verticals that rely on protected health information (PHI) and personally identifiable information (PII).
 
 - Monitoring and alerts about target leakage to strengthen the model's development.
 
@@ -144,4 +144,4 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 - Each predictive value should be able to be broken down into individual feature or vector importance/impact delivering full explanations of predictions ready to be exported into a business report for audit and compliance reviews, customer transparency, and business readiness.
 
-- Due to increasing global security and privacy risks, best practices for resolving data violations when running inference require complying with regulations in individual industry verticals; for example, alerting about non-compliance PHI/PII usage, violation of national security laws, and more.
+- Due to increasing global security and privacy risks, best practices for resolving data violations when running inference require complying with regulations in individual industry verticals; for example, alerts about PHI/PII non-compliance, violation of national security laws, and more.

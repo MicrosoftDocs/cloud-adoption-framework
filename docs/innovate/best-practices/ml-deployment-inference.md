@@ -15,7 +15,7 @@ When deploying your AI model during production, you need to consider how it will
 
 - **Batch inference:** An asynchronous process that bases its predictions on a batch of observations. The predictions are stored as files or in a database for end users or business applications.
 
-- **Real-time (or interactive) inference**: Frees the model to make predictions at any time and trigger an immediate response. This pattern can be used to analyze streaming and interactive application data.
+- **Real-time (or interactive) inference**: Frees the model to make predictions any time and trigger an immediate response. This pattern can be used to analyze streaming and interactive application data.
 
 Consider the following questions to evaluate your model, compare the two processes, and select the one that suits your model:
 
@@ -34,9 +34,9 @@ The decision tree below can help you to determine which deployment model is best
 
 Batch inference, sometimes called offline inference, is a less complex inference process that helps models to run in timed intervals and business applications to store predictions.
 
-Consider the the following best practices for batch inference:
+Consider the following best practices for batch inference:
 
-- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For further guidance, see [How to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
+- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For further guidance, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
 
 - **Compute options for batch inference:** Since batch inference process don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
 
@@ -64,15 +64,15 @@ Real-time or interactive inference is architecture where model inference can be 
 
 There are a number of considerations and best practices if real-time inference is the right model for your model:
 
-- **Challenges of real-time inference:** Real-time inference is a more complex architecture for using your model due to latency and performance requirements. Typically a system may need to respond in 100ms or less and during that time the system needs to retrieve the data, perform inference, validate, and store the model results, run any business logic required and return the results to the system or application.
+- **Challenges of real-time inference:** Real-time inference is a more complex architecture for using your model due to latency and performance requirements. Typically a system may need to respond in 100 milliseconds or less and during that time, the system needs to retrieve the data, perform inference, validate and store the model results, run any business logic required, and return the results to the system or application.
 
-- **Compute options for real-time inference:** The best way to implement real-time inference is to deploy the model in a container form to Docker or Kubernetes cluster and expose it as a web-service with rest API. In this way, the model will be executed in its own isolated environment and can be managed as any other web-services in the environment. Docker/Kubernetes capabilities can be used then for management, monitoring, scaling and so on. This can then be deployed on premise, in the cloud or on the edge. See the Compute Decision Tree diagram for the compute decision tree for real-time inference.
+- **Compute options for real-time inference:** The best way to implement real-time inference is to deploy the model in a container form to Docker or Kubernetes cluster and expose it as a web-service with rest API. In this way, the model will be executed in its own isolated environment and can be managed as any other web-services in the environment. Docker/Kubernetes capabilities can be used then for management, monitoring, scaling, and so on. This can then be deployed on premise, in the cloud or on the edge. See the Compute Decision Tree diagram for the compute decision tree for real-time inference.
 
-- **Multiregional deployment and high availability**: In real time inference scenarios, regional deployment and high availability architectures need to be considered as latency and performance of the model will be one of the critical issues to resolve. It is recommended that in multiregional deployments to locate the model as close as possible to the consumption point will reduce latency. It is recommended that the model and supporting infrastructure follows the business application HA and DR principles and strategy.
+- **Multiregional deployment and high availability**: In real-time inference scenarios, regional deployment and high availability architectures need to be considered as latency and performance of the model will be one of the critical issues to resolve. It is recommended that in multiregional deployments to locate the model as close as possible to the consumption point will reduce latency. It is recommended that the model and supporting infrastructure follows the business application HA and DR principles and strategy.
 
 ## Many-models scenario
 
-Sometimes, a single model may not be able to capture the complex nature of real-world problems, such as predicting the sales of a supermarket, where the customers’ behavior may significantly vary depending on the demography, brand, SKUs and other features.  Or, building predictive maintenance of smart meters, which may vary significantly depending on the regions.  In such cases, having many models to capture the regional based or store level relationship may yield in better accuracy than a single model.  However, this assumes that there is sufficient data available to model such level of granularity.
+Sometimes, a single model may not be able to capture the complex nature of real-world problems, such as predicting the sales of a supermarket, where the customers’ behavior may significantly vary depending on the demography, brand, SKUs, and other features.  Or, building predictive maintenance of smart meters, which may vary significantly depending on the regions.  In such cases, having many models to capture the regional based or store level relationship may yield in better accuracy than a single model.  However, this assumes that there is sufficient data available to model such level of granularity.
 
 At a high level, we can think of a many-models scenario in three stages: data source, data science, and many models.
 
@@ -90,15 +90,15 @@ In batch inference for many models, predictions typically occur in a recurring s
 
 The diagram below shows the reference pattern for many-models batch inference.
 
-![A diagram of the reference pattern for many-models batch inference](media/many-models-batch-inference.png)
+![A diagram of the reference pattern for many-models batch inference.](media/many-models-batch-inference.png)
 
-The core part of the pattern is the ability to handle many observations per model, as well as being able to run multiple models simultaneously to achieve a highly scalable inference solution that can handle very large volumes of data. Many models can also be split into multiple categories to achieve hierarchical model inference, with each category having its own inference storage, such as a Azure Data Lake.  When implementing this pattern, one needs to strike the right balance between the horizontal and vertical scaling of the models, as this would have implications on the cost and performance.  Running too many model instances in parallel, may increase the performance but will have an impact on the cost and likewise, too few instances with high spec nodes may be more cost effective, but may run into scaling issues.
+The core part of the pattern is the ability to handle many observations per model, as well as being able to run multiple models simultaneously to achieve a highly scalable inference solution that can handle large volumes of data. Many models can also be split into multiple categories to achieve hierarchical model inference, with each category having its own inference storage, such as an Azure Data Lake.  When implementing this pattern, one needs to strike the right balance between the horizontal and vertical scaling of the models, as this would have implications on the cost and performance.  Running too many model instances in parallel, may increase the performance but will have an impact on the cost and likewise, too few instances with high spec nodes may be more cost effective, but may run into scaling issues.
 
 ## Real-time inference for many models
 
-In the many models real-time inference requires relatively low latency, and on-demand request, typically via a REST endpoint.  This is particularly useful when there are external applications or services that require a standard interface to interact with the model, typically via the REST interface with JSON payload.
+In the many models real-time inference requires relatively low latency, and on-demand request, typically via a REST endpoint.  This is useful when there are external applications or services that require a standard interface to interact with the model, typically via the REST interface with JSON payload.
 
-![A diagram of many-models real-time inference](media/many-models-real-time-inference.png)
+![A diagram of many-models real-time inference.](media/many-models-real-time-inference.png)
 
 The core part of this pattern is the ability to discover the list of services with associated metadata, through the service discovery service, this can be implemented as an Azure Function.  This enables the clients to identify and obtain relevant details of service, which can be invoked via a secure REST URI.  A JSON payload would send to the service, that would invoke the relevant model, and provide a JSON response back to the client.
 
