@@ -1,5 +1,5 @@
 ---
-title: Set up machine learning workspaces
+title: How to set up machine learning workspaces
 description: Understand machine learning environments, consider the factors that influence how you set up your machine learning workspaces, and determine the best structure and controls for each workspace.
 author: BrianBlanchard
 ms.author: brblanch
@@ -8,6 +8,8 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
+
+# How to set up machine learning workspaces
 
 ## Machine learning environments and role-based access control
 
@@ -27,7 +29,7 @@ Role-based access control for all environments is shown in the following diagram
 
 This table shows that the data engineer and data scientist’s access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
 
-# Set up Azure Machine Learning workspaces
+# Factors that influence machine learning workspaces
 
 Multiple factors can influence how you set up your machine learning workspaces, and they can help you to determine the best structure and controls for each type:
 

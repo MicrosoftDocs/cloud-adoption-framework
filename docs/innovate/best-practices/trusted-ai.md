@@ -118,7 +118,7 @@ The AI designer builds the model and is responsible for:
 
 - Establishing best practices for reporting and insights that offer a granular understanding of the model, and avoiding black-box approaches that use feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. Identification metrics help to define predictive influence, relationships, and dependencies between correlations in complex and modern datasets.
 
-## AI administrators and officers
+### AI administrators and officers
 
 The AI administrator and officer oversees AI, governance, and audit framework operations and performance metrics, plus how AI security is implemented and the business' return on investment.
 
@@ -130,7 +130,7 @@ The AI administrator and officer oversees AI, governance, and audit framework op
 
 - Using AI audit and compliance frameworks to track how models develop and change to uphold industry-specific standards. Interpretable and trusted AI is founded on explainability measures, concise features, model visualizations, and industry vertical language.
 
-## AI business consumer
+### AI business consumer
 
 AI business consumers (business experts) close the feedback loop and provide input for the AI designer. Predictive decision-making and potential bias implications like fairness and ethical measures, privacy and compliance, and business efficiency help to evaluate AI systems.
 
