@@ -2,7 +2,7 @@
 title: How to approach machine learning operations
 description: Understand the principles and best practices of machine learning operations, and determine how to best adapt them for your organization.
 author: Mufajjul Ali
-ms.author: brblanch
+ms.author: mufajjul
 ms.date: 12/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -125,24 +125,6 @@ Per the TDSP lifecycle, the key roles in the AI project are data engineer, data 
 - **Data scientist (or AI engineer):** This role navigates the training pipeline process and evaluates models. A data scientist receives data from the data engineer and identifies patterns and relationships within it, possibly selecting or generating features for the experiment. Since feature engineering plays a major role in building a sound generalized model, it's key for this phase to be completed as thoroughly as possible. Various experiments can be performed with different algorithms and hyperparameters. Azure tools like Automated-ML can automate this task, which can also help with under- and overfitting a model. A successfully trained model is then registered in the model registry. A meaningful model naming convention should be used, and version history should be retained for lineage and traceability.
 
 - **Machine learning operations engineer:** This role builds end-to-end pipelines for continuous integration and delivery. This includes packing the model in a Docker image, validating and profiling the model, awaiting approval from a stakeholder, and deploying the model in a container orchestration service such as AKS. Various triggers can be set as part of continuous integration, such as for the model's code to trigger the train pipeline and then the release pipeline.  
-
-## Machine learning environments and role-based access control
-
-Development, testing, and production environments support machine learning operations processes.
-
-![A diagram showing machine learning environments and the role-based access control.](media/ml-environments-and-rbac.png)
-
-**In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
-
-**In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read-only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
-
-**In a production environment:** A model is deployed during batch or real-time inference. A production environment is typically read-only; however, a DevOps engineer has full access to this environment and is responsible for continually supporting and maintaining it. Data scientists and data engineers have limited access to the environment, and it's read-only.
-
-Role-based access control for all environments is shown in the following diagram:
-
-![A diagram of role-based access control for all environments.](media/rbac-all-environments.png)
-
-This table shows that the data engineer and data scientist’s access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
 
 ## Approaches to machine learning operations
 

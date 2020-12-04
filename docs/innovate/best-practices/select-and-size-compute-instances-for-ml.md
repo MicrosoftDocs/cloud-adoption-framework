@@ -1,8 +1,8 @@
 ---
 title: Select and size compute instances for your machine learning model
 description: When measuring and selecting compute instances for developing and training your machine learning model, consider the algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. 
-author: BrianBlanchard
-ms.author: brblanch
+author: SudhandKumar
+ms.author: kumarsud
 ms.date: 12/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
