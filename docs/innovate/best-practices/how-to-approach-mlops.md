@@ -158,7 +158,7 @@ The data scientist will need to gather information for the following questions:
 
 Next, a machine learning engineer designs the workflow and estimates the amount of work required. One best practice is to involve the data scientist(s) in building out the workflow; this time presents a key opportunity to cross-train and familiarize them with the final repo since it's common for the data scientist to work on the use case in the future.
 
-## How machine learning operations benefits business
+## How machine learning operations benefit business
 
 Machine learning operations connect traditional development operations, data operations, and data science/AI. Understanding how machine learning operations can benefit your business will help your AI journey.
 
@@ -173,3 +173,5 @@ Integrating machine learning operations with your business can create the follow
 - Applied machine learning operations processes support business outcomes by allowing rapid auditing, compliance, governance, and access control throughout the development lifecycle. The visibility of model generation, data usage, and regulatory compliance is clear as changes take place in the business.
 
 The [Microsoft AI Business School](https://docs.microsoft.com/learn/topics/ai-business-school) is a resource that outlines AI, including holistic approaches to its implementation, understanding dependencies above and beyond the technology, and how to drive lasting business impact.
+
+## Next steps

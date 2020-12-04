@@ -19,7 +19,7 @@ Development, testing, and production environments support machine learning opera
 
 **In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
-**In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read-only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
+**In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others. A data scientist and data engineer has limited access to this environment, primarily read-only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible. Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
 
 **In a production environment:** A model is deployed during batch or real-time inference. A production environment is typically read-only; however, a DevOps engineer has full access to this environment and is responsible for continually supporting and maintaining it. Data scientists and data engineers have limited access to the environment, and it's read-only.
 
@@ -29,7 +29,7 @@ Role-based access control for all environments is shown in the following diagram
 
 This table shows that the data engineer and data scientist’s access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
 
-# Factors that influence machine learning workspaces
+## Factors that influence machine learning workspaces
 
 Multiple factors can influence how you set up your machine learning workspaces, and they can help you to determine the best structure and controls for each type:
 
