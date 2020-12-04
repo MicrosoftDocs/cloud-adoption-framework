@@ -41,7 +41,7 @@ Explainability helps data scientists, auditors, and business decision makers to 
 
 ### Explainability tools
 
-Microsoft has developed [InpretML](http://interpret.ml/), an open-source toolkit that helps to achieve model explanability and supports glass- and black-box models.
+Microsoft has developed [InpretML](http://interpret.ml/), an open-source toolkit that helps to achieve model explainability and supports glass- and black-box models.
 
 - Glass-box models are interpretable because of their structure. For these models, use Explainable Boosting Machine, which is the state of the algorithm based on a decision tree or linear models, provides lossless explanations, and is editable by domain experts.
 
@@ -63,7 +63,7 @@ Explore [Mitigate fairness in machine learning models](/azure/machine-learning/c
 
 ### Transparency
 
-Achieving transparency helps the team to understand the data and algorithms used to train the model, what transformation logic was applied to the data, the final model generated, and its associated assets. This information offers insights about how the model was created, which allows it to be reproduced in a transparent way. **Shapshots** within [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace) support transparency by recording or retraining all training related assets and metrics involved in the experiment.  
+Achieving transparency helps the team to understand the data and algorithms used to train the model, what transformation logic was applied to the data, the final model generated, and its associated assets. This information offers insights about how the model was created, which allows it to be reproduced in a transparent way. Snapshots within [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace) support transparency by recording or retraining all training related assets and metrics involved in the experiment.  
 
 ### Privacy and security
 
