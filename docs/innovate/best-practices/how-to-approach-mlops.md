@@ -1,7 +1,7 @@
 ---
 title: How to approach machine learning operations
 description: Understand the principles and best practices of machine learning operations, and determine how to best adapt them for your organization.
-author: BrianBlanchard
+author: Mufajjul Ali
 ms.author: brblanch
 ms.date: 12/07/2020
 ms.topic: conceptual

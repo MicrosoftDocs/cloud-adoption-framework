@@ -44,4 +44,6 @@ You can configure AKS to use an internal (private) load balancer with a private 
 
 ## Next steps
 
-Reference [Secure an Azure Machine Learning inferencing environment with virtual networks](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) to see an IP address range and the steps for inference in a virtual network. See the [network contributor role section](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#network-contributor-role) to learn how to configure a private load balancer, and how to grant a 'Network contributor' role.
+- Reference [Secure an Azure Machine Learning inferencing environment with virtual networks](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) to see an IP address range and the steps for inference in a virtual network.
+
+- See the [network contributor role section](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#network-contributor-role) to learn how to configure a private load balancer and how to grant a 'Network contributor' role.

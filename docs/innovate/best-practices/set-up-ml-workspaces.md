@@ -1,6 +1,6 @@
 ---
 title: Set up machine learning workspaces
-description: Understand the factors that influence how you set up your machine learning workspaces, and determine the best structure and controls for each workspace.
+description: Understand machine learning environments, consider the factors that influence how you set up your machine learning workspaces, and determine the best structure and controls for each workspace.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/07/2020
@@ -8,6 +8,24 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
+
+## Machine learning environments and role-based access control
+
+Development, testing, and production environments support machine learning operations processes.
+
+![A diagram showing machine learning environments and the role-based access control.](media/ml-environments-and-rbac.png)
+
+**In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
+
+**In a test environment:** Various tests are carried out on the environment deployment and the model. For the model, it's recommended to use either champion/challenger or A/B testing. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others.  A data scientist and data engineer has limited access to this environment, primarily read-only access, with some right access, such as configuration. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible.  Once all the tests are completed, an approval form a stakeholder is required to be deployed in the production environment.
+
+**In a production environment:** A model is deployed during batch or real-time inference. A production environment is typically read-only; however, a DevOps engineer has full access to this environment and is responsible for continually supporting and maintaining it. Data scientists and data engineers have limited access to the environment, and it's read-only.
+
+Role-based access control for all environments is shown in the following diagram:
+
+![A diagram of role-based access control for all environments.](media/rbac-all-environments.png)
+
+This table shows that the data engineer and data scientist’s access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
 
 # Set up Azure Machine Learning workspaces
 
@@ -46,3 +64,7 @@ Multiple factors can influence how you set up your machine learning workspaces, 
    - Instructing users to shut down compute instances manually after use
    - A 'workspace admin' custom role with access to create compute instances and clusters
    - A 'data scientist' custom role requiring all infrastructure to be set up by another user before the data scientist can begin work
+
+## Next steps
+
+TBD
