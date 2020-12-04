@@ -26,7 +26,7 @@ Consider the following questions to evaluate your model, compare the two process
 - How much compute power is needed to execute the model?
 - Are there operational implications and costs to maintain the model?
 
-The decision tree below can help you to determine which deployment model is best fits your use case.
+The decision tree below can help you to determine which deployment model best fits your use case.
 
 ![A diagram of the real-time or batch inference decision tree.](media/inference-decision-tree.png)
 
@@ -81,8 +81,7 @@ At a high level, a many-models scenario occurs in three stages: data source, dat
 **Many models:** The best models for each segment or category are registered in the model registry. Assign meaningful names to the models, which will make them more discoverable for inference. Use tagging where necessary to group the model into specific categories.  
 ## Batch inference for many models
 
-In batch inference for many models, predictions are typically scheduled, recurring, and can handle large volumes of data running in parallel. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones.
-The following diagram shows the reference pattern for many-models batch inference.
+In batch inference for many models, predictions are typically scheduled, recurring, and they can handle large volumes of data running at the same time. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones. The following diagram shows the reference pattern for many-models batch inference.
 
 ![A diagram of the reference pattern for many-models batch inference.](media/many-models-batch-inference.png)
 
