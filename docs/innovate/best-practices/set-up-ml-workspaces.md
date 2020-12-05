@@ -38,7 +38,7 @@ Multiple factors can influence how you set up your machine learning workspaces, 
 1. **Public, restricted:**
    - Development, test, and production workspace
    - Custom role: data scientist
-   - Git integration for version control and continuos integration/continuous development (CI/CD)
+   - Git integration for version control and continuous integration/continuous development (CI/CD)
    
 1. **Public, not restricted:**
    - Development, test, and production workspace

@@ -67,7 +67,7 @@ Achieving transparency helps the team to understand the data and algorithms used
 
 ### Privacy and security
 
-A data holder is obligated to protect the data in an AI system, and privacy and security are an integral part of this system. Personal data doesn't just need to be secured; it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects and preserves privacy by randomizing data and adding noise to conceal personal information from data scientists.
+A data holder is obligated to protect the data in an AI system, and privacy and security are an integral part of this system. Personal data not only needs to be secured, but it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects and preserves privacy by randomizing data and adding noise to conceal personal information from data scientists.
 
 ## Human AI guidelines​
 
@@ -112,7 +112,7 @@ The AI designer builds the model and is responsible for:
 
 - Assessing data in the system's source to identify potential bias.
 
-- Designing AI algorithms to minimize data biases, such as discovering how binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones) can eliminate minority groups from data. Categorical AI design reiterates data biases by grouping social, racial, and gender classes in industry verticals that rely on protected health information (PHI) and personally identifiable information (PII).
+- Designing AI algorithms to minimize data biases, such as discovering how binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones) can eliminate minority groups from data. Categorical AI design reiterates data biases by grouping social, racial, and gender classes in industry verticals that rely on protected health information and personally identifiable information.
 
 - Optimizing monitoring and alerts to identify target leakage and strengthen the model's development.
 
@@ -140,7 +140,7 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 - Each predictive value should be broken down into individual features or vectors by importance or impact and deliver thorough prediction explanations that can be exported into a business report for audit and compliance reviews, customer transparency, and business readiness.
 
-- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about PHI/PII non-compliance, violation of national security laws, and more.
+- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about non-compliance with protected health information and personally identifiable information, violation of national security laws, and more.
 
 ## Next steps
 
