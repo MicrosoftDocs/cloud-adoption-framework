@@ -21,7 +21,7 @@ The main components influencing how a machine learning system develops are outli
 
 ![A diagram showing the components of a machine learning system in production.](media/system-in-production.png)
 
-*Source: Sculley et al. 2015. Hidden technical debt in machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’15)*
+*Sculley et al. 2015. Hidden technical debt in machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’15)*
 
 ## Machine learning operations vs. development operations
 
