@@ -6,8 +6,8 @@
     href: ml-security.md
   - name: Machine learning inference during deployment
     href: ml-deployment-inference.md
-  - name: Select and size compute instances for your machine learning model
-    href: select-and-size-compute-instances-for-ml.md
+  - name: Determine development, training, and compute instances for your machine learning model
+    href: dev-train-comp-instances-for-ml.md
   - name: Set up machine learning workspaces
     href: set-up-ml-workspaces.md
   - name: Trusted AI

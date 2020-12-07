@@ -112,15 +112,15 @@ The AI designer builds the model and is responsible for:
 
 - Assessing data in the system's source to identify potential bias.
 
-- Designing AI algorithms to minimize data biases, such as discovering how binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones) can eliminate minority groups from data. Categorical AI design reiterates data biases by grouping social, racial, and gender classes in industry verticals that rely on protected health information and personally identifiable information.
+- Designing AI algorithms to minimize data biases, such as discovering how binning, grouping, and normalization (especially in traditional machine learning models like tree-based ones) can eliminate minority groups from data. Categorical AI design reiterates data biases by grouping social, racial, and gender classes in industry verticals that rely on protected health information (PHI) and personally identifiable information (PII).
 
 - Optimizing monitoring and alerts to identify target leakage and strengthen the model's development.
 
-- Establishing best practices for reporting and insights that offer a granular understanding of the model, and avoiding black-box approaches that use feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. Identification metrics help to define predictive influence, relationships, and dependencies between correlations in complex and modern datasets.
+- Establishing best practices for reporting and insights that offer a granular understanding of the model and avoiding black-box approaches that use feature or vector importance, UMAP clustering, Friedman's H-statistic, feature effects, and others. Identification metrics help to define predictive influence, relationships, and dependencies between correlations in complex and modern datasets.
 
 ### AI administrators and officers
 
-The AI administrator and officer oversees AI, governance, and audit framework operations and performance metrics, plus how AI security is implemented and the business' return on investment.
+The AI administrator and officers oversee AI, governance, and audit framework operations and performance metrics, plus how AI security is implemented and the business' return on investment.
 
 - Monitoring a tracking dashboard that assists model monitoring, combines model metrics for production models, and focuses on accuracy, model degradation, data drift, deviation, and changes in speed/error of inference.
 
@@ -134,13 +134,13 @@ The AI administrator and officer oversees AI, governance, and audit framework op
 
 AI business consumers (business experts) close the feedback loop and provide input for the AI designer. Predictive decision-making and potential bias implications like fairness and ethical measures, privacy and compliance, and business efficiency help to evaluate AI systems.
 
-- Feedback loops belong to a business' ecosystem. Data showing a model's bias, errors, prediction speed, and fairness establish trust and balance between the AI designer and AI administrators and officers. Human-centric assessment should gradually improve AI over time, and minimizing AI learning from multidimensional, complex data (L0-shot learning) can help to prevent biased learning.
+- Feedback loops belong to a business' ecosystem. Data showing a model's bias, errors, prediction speed, and fairness establish trust and balance between the AI designer, administrator, and officers. Human-centric assessment should gradually improve AI over time, and minimizing AI learning from multidimensional, complex data (L0-shot learning) can help to prevent biased learning.
 
 - Using interpretability design and tools hold AI systems accountable for potential biases. Model bias and fairness issues should be flagged and fed to an alerting and anomaly detection system that learns from this behavior and automatically addresses biases.
 
 - Each predictive value should be broken down into individual features or vectors by importance or impact and deliver thorough prediction explanations that can be exported into a business report for audit and compliance reviews, customer transparency, and business readiness.
 
-- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about non-compliance with protected health information and personally identifiable information, violation of national security laws, and more.
+- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about non-compliance with PHI and PII, violation of national security laws, and more.
 
 ## Next steps
 

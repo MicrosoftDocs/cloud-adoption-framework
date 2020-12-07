@@ -42,7 +42,7 @@ Consider the following best practices for batch inference:
 
 ![A diagram of the compute decision tree.](media/compute-decision-tree.png)
 
-- **Implement batch inference:** Azure supports multiple features for batch inference. One feature is **ParallelRunStep** in Azure Machine Learning, which allows customers to gain insights from terabytes of structured or unstructured data stored in Azure. ParallelRunStep provides out-of-the-box parallelism and works within Azure Machine Learning pipelines.
+- **Implement batch inference:** Azure supports multiple features for batch inference. One feature is ParallelRunStep in Azure Machine Learning, which allows customers to gain insights from terabytes of structured or unstructured data stored in Azure. ParallelRunStep provides out-of-the-box parallelism and works within Azure Machine Learning pipelines.
 
 - **Batch inference challenges:** While batch inference is a simpler way to use and deploy your model in production, it does present select challenges:
 
@@ -78,7 +78,8 @@ At a high level, a many-models scenario occurs in three stages: data source, dat
 
 **Data science:** Several experiments run parallel to each data partition in the data science stage. This is a typically iterative process where models from the experiments are evaluated to determine the best one.  
 
-**Many models:** The best models for each segment or category are registered in the model registry. Assign meaningful names to the models, which will make them more discoverable for inference. Use tagging where necessary to group the model into specific categories.  
+**Many models:** The best models for each segment or category are registered in the model registry. Assign meaningful names to the models, which will make them more discoverable for inference. Use tagging where necessary to group the model into specific categories. \
+ 
 ## Batch inference for many models
 
 In batch inference for many models, predictions are typically scheduled, recurring, and they can handle large volumes of data running at the same time. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones. The following diagram shows the reference pattern for many-models batch inference.
