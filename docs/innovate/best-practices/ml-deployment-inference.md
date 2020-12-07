@@ -15,7 +15,7 @@ When deploying your AI model during production, you need to consider how it will
 
 - **Batch inference:** An asynchronous process that bases its predictions on a batch of observations. The predictions are stored as files or in a database for end users or business applications.
 
-- **Real-time (or interactive) inference**: Frees the model to make predictions any time and trigger an immediate response. This pattern can be used to analyze streaming and interactive application data.
+- **Real-time (or interactive) inference**: Frees the model to make predictions at any time and trigger an immediate response. This pattern can be used to analyze streaming and interactive application data.
 
 Consider the following questions to evaluate your model, compare the two processes, and select the one that suits your model:
 
@@ -38,7 +38,7 @@ Consider the following best practices for batch inference:
 
 - **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For further guidance, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
 
-- **Compute options for batch inference:** Since batch inference process don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Since different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
+- **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Since different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
 
 ![A diagram of the compute decision tree.](media/compute-decision-tree.png)
 
@@ -54,7 +54,7 @@ Consider the following best practices for batch inference:
 
 ## Real-time inference
 
-Real-time, or interactive, inference is architecture where model inference can be triggered any time, and an immediate response is expected. This pattern can be used to analyze streaming data, interactive application data, and more. This mode allows you to take advantage of your machine learning model in real time and resolves the cold-start problem outlined above in batch inference.
+Real-time, or interactive, inference is architecture where model inference can be triggered at any time, and an immediate response is expected. This pattern can be used to analyze streaming data, interactive application data, and more. This mode allows you to take advantage of your machine learning model in real time and resolves the cold-start problem outlined above in batch inference.
 
 The following considerations and best practices are available if real-time inference is right for your model:
 
