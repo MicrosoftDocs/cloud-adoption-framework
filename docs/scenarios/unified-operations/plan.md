@@ -35,11 +35,12 @@ Opening deployment options across on-premises and public cloud enables organizat
 
 The biggest change in planning unified operations with expanded deployment options is the process of evaluating deployment decisions against **Retain**, **Replatform,** and **Rehost portability,** the primary 3 Rs of migration. Because we can now have a truly distributed cloud ecosystem with expanded deployment options, cloud practices and technologies can be brought to any location, allowing reverse re-hosting of IaaS/PasS workloads on-premises, reversing the uni-directional migration model that assumed "migrate everything to the cloud."
 
-In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management. One enterprise control plane not only **speeds up cloud adoption and migration efforts** with consistent cloud practices and technologies across on-prem and migration-candidate workloads, but also **controls sprawling IT assets** with unified management and operations across on-premises and public cloud—**maintains regulatory and data sovereignty compliance** with consistent data governance, security, and cost management—and **ensure uniform deployments and configuration** with consistent workload deployments, configured at scale.
+In many cases, we start by assuming that every asset fits a **Retain** pattern, by adding each asset to the enterprise control plane for unified operations and management. One enterprise control plane not only **speeds up cloud adoption and migration efforts** with consistent cloud practices and technologies across on-prem and migration-candidate workloads, but also **controls sprawling IT assets** with unified management and operations across on-premises and public cloud—**maintains regulatory and data sovereignty compliance** with consistent data governance, security, and cost management—and **ensures uniform deployments and configuration** with consistent workload deployments, configured at scale.
 
 ## Unified operations digital estate
 
-Assumption: You've assumed to adopt cloud. That could take days or years
+The current assumption is that many in the current enterprise landscape will adopt the cloud. A complete enterprise migration could take days or even years.
+
 Evaluate your entire estate looking for standard opportunities: Rehost/Rearchitect
 
 In hybrid we commonly see the following:
