@@ -72,7 +72,7 @@ Since data drift, seasonality, or newer architecture tuned for better performanc
 
 - **Ownership:** An owner should be assigned to the model performance monitoring process to actively manage its performance.
 
-- **Release pipelines:** Set up a release pipeline in [Azure DevOps](https://github.com/MicrosoftDocs/azure-devops-docs-pr) first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers sign-off and a deployment process.
+- **Release pipelines:** Set up a release pipeline in [Azure DevOps](https://github.com/MicrosoftDocs/azure-devops-docs-pr) first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers and signs off on a deployment process.
 
 ## Prerequisites for retraining models
 
@@ -82,7 +82,7 @@ To prepare for retraining a model:
 
 1. **Monitor data drift from the input data collected.**
 
-Setting up a monitoring process requires extraction of timestamp from the production data. This is required to compare the production data and the baseline data (the training data which used to build the model).
+Setting up a monitoring process requires extraction of timestamp from the production data. This is required to compare the production data and the baseline data (the training data used to build the model).
 
 The preferred way to monitor data drift is through Azure Monitor Application Insights. This feature provides an [alert](/azure/machine-learning/how-to-monitor-datasets#metrics-alerts-and-events) that can trigger actions like email, SMS text, push, or Azure Functions. You need to [enable](/azure/machine-learning/how-to-enable-app-insights#configure-logging-with-azure-machine-learning-studio) Application Insights to log data.
 

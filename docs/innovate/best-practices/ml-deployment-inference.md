@@ -36,7 +36,7 @@ Batch inference, sometimes called offline inference, is a less complex inference
 
 Consider the following best practices for batch inference:
 
-- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For further guidance, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
+- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For more information, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
 
 - **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Since different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
 
@@ -90,13 +90,13 @@ The core purpose of this pattern is to observe the model and run multiple models
 
 ## Real-time inference for many models
 
-Real-time many-models inference requires low latency and on-demand requests, typically via a REST endpoint. This is useful when external applications or services require a standard interface to interact with the model, typically via the a REST interface with a JSON payload.
+Real-time many-models inference requires low latency and on-demand requests, typically via a REST endpoint. This is useful when external applications or services require a standard interface to interact with the model, typically via a REST interface with a JSON payload.
 
 ![A diagram of many-models real-time inference.](media/many-models-real-time-inference.png)
 
 The core purpose of this pattern is to use the discovery service to identify a list of services and their metadata. This can be implemented as an Azure Function and enables clients to obtain relevant service details of service, that can be invoked with a secure REST URI. A JSON payload be sent to the service, which would summon the relevant model and provide a JSON response back to the client.
 
-Each service is stateless microservice that can handle multiple requests simultaneously and is limited to the physical virtual machine resource. The service can deploy multiple models if multiple groups are selected; homogeneous groupings like the category, SKU, and more are recommended for this. The mapping between the service request and model selected for a given service needs to be baked into the inference logic, typically via the score script. If the size of models is relatively small (a few megabytes), it's recommended to load them in memory for performance reasons; otherwise, each model can loaded dynamically per request.
+Each service is stateless microservice that can handle multiple requests simultaneously and is limited to the physical virtual machine resource. The service can deploy multiple models if multiple groups are selected; homogeneous groupings like the category, SKU, and more are recommended for this. The mapping between the service request and model selected for a given service needs to be baked into the inference logic, typically via the score script. If the size of models is relatively small (a few megabytes), it's recommended to load them in memory for performance reasons; otherwise, each model can be loaded dynamically per request.
 
 ## Next steps
 

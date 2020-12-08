@@ -85,7 +85,7 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 - **Show contextually relevant information.** Provide visual information related to the user’s current context and environment, such as nearby hotels and return details close to the target destination and date.
 
-- **Mitigate social biases.** Make sure that the language and behavior don't introduce unintended stereotypes or biases. For example, an auto-complete feature needs to acknowledge both genders.
+- **Mitigate social biases.** Make sure that the language and behavior don't introduce unintended stereotypes or biases. For example, an autocomplete feature needs to acknowledge both genders.
 
 ### When wrong
 
