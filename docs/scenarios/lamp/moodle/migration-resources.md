@@ -67,4 +67,4 @@ The scale set template deployment creates a [virtual machine scale set](/azure/v
 
 ## Next steps
 
-Continue to [How to create a virtual network gateWay and connect through a private IP](./vpn-gateway.md).
+Continue to [Moodle manual migration steps](migration-start.md) for the next steps in the Moodle migration process.
