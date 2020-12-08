@@ -11,29 +11,44 @@ ms.subservice: operate
 
 # Manage hybrid and multicloud operations
 
-When customers shift to a hybrid and multicloud strategy, operations and management of resources also shifts. This article outlines those shifts and how to implement effective hybrid and multicloud operations.
+Hybrid and multicloud leads to nature shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how your implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
 
-## Managing a variety of operating model priorities
+This article outlines you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 
-The Manage methodology in the cloud adoption framework outlines a path for getting started with operations throughout your cloud adoption lifecycle. However, that guidance is built assumes that the cloud operating model is your primary operating model. When customers' purposefully implementat a hybrid and multicloud strategy, that assumption changes. As do the best practices for managing your mixed environment.
+## Always start with business alignment
 
-## unified operations business alignment
+Before implementing unified operations solution, its important to understand the scope of your hybrid, multicloud, and edge deployments. It's also important to understand the business impact of the workloads that will be hosted on a secondary cloud platform. This implementation guide will start with suggested steps for extending your operations baseline. That baseline may be sufficient to avoid duplicated or fractured operations.
 
-Does this scenario require the customer to rethink business alignment or how the platform is supported in operations management?
+However, you should evaluate the hybrid and multicloud strategy to determine if any of the following will exist in your future state:
 
-## unified operations operations baseline
+- Do any of the environments have operational requirements beyond that of your operations baseline? If so, you may need to also implement an expanded baseline.
+- Are there any shared platforms (like SQL, SAP, WVD, etc...) that will be deployed to a hybrid or multicloud environment? If so, you may need to invest more in platform operations for that technology platform.
+- Do any of the workloads in your hybrid and multicloud strategy have higher operational requirements or abnormally high business impacts? If so, you may need to invest in workload operations and a well-architected review.
 
-Does this workload have special requirements for **Visibility**, Operational Compliance, or BCDR?
+## Extending your operations baseline
 
-**The P0 is the free stuff, tagging, resource groups, visibility, search, & resource graph across data centers, hybrid, & multicloud...**
+Azure Arc reduces the complexity and cost of extending your operations baseline. Deploying Azure Arc across your data center, hybrid cloud, and multicloud environments will extend the built-in features of Azure that are included in Azure Resource Manager.
+
+This simple deployment automatically provides you with all of the basic cloud control features:
+    - Search, Index, Group, and Tag all deployed assets for basic visibility
+    - Template, Automate, and Extend tooling for consistent deployment
+    - Create Access and Security boundaries to protect deployed assets
+
+**TODO: Add link** Get started today by deploying Azure Arc.
+
+From there you can add additional cloud controls to create an enhanced baseline for all resources in that environment. You could also add further features and automated controls to improve operations of specific workloads or shared technology platforms running in your hybrid and multicloud environments.
 
 ## Enhanced baseline
 
-**P1 is Arc + (monitoring, inventory/change tracking, & defender)**
-Expand your baseline to attach monitoring, inventory, & change tracking to IaaS and PaaS assets.
+If the hybrid and multicloud environment is governed by higher operations management requirements, then you may need to expand the operations baseline to include a number of common features. The following are a few of the most common features we see added to customers' enhanced baselines:
 
-## unified operations platform operations
+- Monitoring: Expand monitoring & alerts to include cloud service performance, and/or application performance.
+- Inventory & change tracking: Consistently log, diagnose, and remediate issues related to inventory, change tracking, and patch management.
 
+## Best Practices (Blocked - TODO Here)
+
+> [!WARNING]
+> TODO: We need to figure out how these integrate into the story. We can't drive traffic away from approved customer facing properties here. These articles are very similar to the Azure Server Management guide in CAF Manage. Should these be converted to MD files in that section?
 
 ### Azure Arc enabled Servers - Day-2 Scenarios & Use-Cases
 
@@ -60,14 +75,6 @@ The following guides are designed to provide scaled onboarding experience to Azu
  * [Scaled Onboarding VMware vSphere Linux VMs to Azure Arc](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/vmware_scaled_powercli_linux.md)
 
  * [Scaled Onboarding AWS EC2 instances to Azure Arc using Ansible](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/aws_scale_ansible.md)
-
-### Azure Arc enabled SQL Server
-
-The deployment scenarios below will guide you through onboarding Microsoft SQL Server, deployed on various platform to Azure Arc. 
-
-## unified operations workload operations
-
-Are there specific requirements for operations of the individual workloads running on this platform?
 
 ## Next step: Your next migration iteration
 
