@@ -14,6 +14,12 @@ ms.custom: governance
 
 ## Architecture vs Governance
 
+Previous to the cloud world, control and consistency was implemented by the architecture team, having influence and seeding each project.
+
+In a cloud based world, with many implementations teams and the embrace of technological diversity, a central architecture team often struggles to scale and can be seen as a bottleneck to innovation. This causes many projects to implement without the involvement of the central team.
+
+To embrace this level of diversity, empower the adoption teams and still maintain control the traditional architecture team need to drive the cloud governance function.
+
 | Waterfall Architecture | Cloud Governance |
 |--------------|------------|
 | Dedicated team | Virtual team |
@@ -23,13 +29,7 @@ ms.custom: governance
 | Could be a bottleneck for new projects | Works with a distributed adoption teams |
 | Distributed adoption teams bypassed much of the process | Focus on all voices being heard and quality control |
 | Architecture review used to check controls | Focus on all voices being heard and quality control |
-| No enforcement on result | |
-
-Previous to the cloud world, control and consistency was implemented by the architecture team, having influence and seeding each project.
-
-In a cloud based world, with many implementations teams and the embrace of technological diversity, a central architecture team often struggles to scale and can be seen as a bottleneck to innovation. This causes many projects to implement without the involvement of the central team.
-
-To embrace this level of diversity, empower the adoption teams and still maintain control the traditional architecture team need to drive the cloud governance function.
+| No enforcement on result |
 
 By moving these controls to cloud governance, the same level of value can be implemented, while completely removing the bottleneck of the architecture team.
 
@@ -41,7 +41,7 @@ This process describes one possible implementation of governance allowing a cont
 
 ![Infographic of the Cloud as the arbitrator](../_images/govern/cloud-arbiter.png)
 
-One of the core components in providing control at cloud scale is to leverage the cloud itself to implement those controls. This is where we get the core concept where the [cloud becomes the arbiter of the controls](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/organization-structures).
+One of the core components in providing control at cloud scale is to leverage the cloud itself to implement those controls. This is where we get the core concept where the [cloud becomes the arbiter of the controls](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/organization-structures).
 
 The cloud governance team decides, designs and builds the controls for the cloud, but ultimately the cloud executes the controls.
 
