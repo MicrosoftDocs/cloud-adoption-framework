@@ -89,4 +89,4 @@ If your on-premises PHP and Moodle versions differ from the preceding values, up
 
 ## Next steps
 
-Continue to [Moodle migration resources](migration-resources.md) for information about the resources that the ARM template deploys to Azure.
+Continue to [Moodle manual migration steps](migration-start.md) for the next steps in the Moodle migration process.
