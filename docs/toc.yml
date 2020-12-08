@@ -16,10 +16,12 @@ items:
       href: scenarios/unified-operations/plan.md
     - name: Ready
       href: scenarios/unified-operations/ready.md
-    - name: Govern
-      href: scenarios/unified-operations/govern.md
+    - name: Unified operations
+      href: scenarios/unified-operations/unified-operations.md
     - name: Manage
       href: scenarios/unified-operations/manage.md
+    - name: Govern
+      href: scenarios/unified-operations/govern.md
     - name: Innovate
       href: scenarios/unified-operations/innovate.md
     - name: Assess workloads

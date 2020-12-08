@@ -3,7 +3,7 @@ title: "Govern unified operations"
 description: Describe the scenario's impact on Governance
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 01/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern

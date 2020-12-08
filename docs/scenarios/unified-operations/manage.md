@@ -34,7 +34,7 @@ This simple deployment automatically provides you with all of the basic cloud co
     - Template, Automate, and Extend tooling for consistent deployment
     - Create Access and Security boundaries to protect deployed assets
 
-**TODO: Add link** Get started today by deploying Azure Arc.
+Get started today. Onboard [linux VMs](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/onboard_server_linux.md) or [Windows VMs](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/onboard_server_win.md) to Azure Arc. **TODO: Replace with Docs link**
 
 From there you can add additional cloud controls to create an enhanced baseline for all resources in that environment. You could also add further features and automated controls to improve operations of specific workloads or shared technology platforms running in your hybrid and multicloud environments.
 
@@ -43,14 +43,14 @@ From there you can add additional cloud controls to create an enhanced baseline 
 If the hybrid and multicloud environment is governed by higher operations management requirements, then you may need to expand the operations baseline to include a number of common features. The following are a few of the most common features we see added to customers' enhanced baselines:
 
 - Monitoring: Expand monitoring & alerts to include cloud service performance, and/or application performance.
-- Inventory & change tracking: Consistently log, diagnose, and remediate issues related to inventory, change tracking, and patch management.
+- Inventory & change tracking: Consistently log, diagnose, and remediate issues related to inventory, change tracking, and [patch management](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_updateManagement.md). **TODO: Replace with Docs link**
 
 ## Best Practices (Blocked - TODO Here)
 
 > [!WARNING]
 > TODO: We need to figure out how these integrate into the story. We can't drive traffic away from approved customer facing properties here. These articles are very similar to the Azure Server Management guide in CAF Manage. Should these be converted to MD files in that section?
 
-### Azure Arc enabled Servers - Day-2 Scenarios & Use-Cases
+### Azure Arc enabled Servers - Day-2 Scenarios & Use-Cases **TODO: Replace with Docs link**
 
 Once you have server resources projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the servers as native Azure resources. The following guides show examples of using Azure management tools such as resource tags, Azure Policy, Log Analytics, and more with Azure Arc enabled servers.
 
@@ -66,7 +66,7 @@ Once you have server resources projected into Azure with Azure Arc, you can star
 
 * [Integrate Azure Sentinel with Azure Arc enabled Servers](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_azuresentinel.md)
 
-### Azure Arc enabled Servers - Scaled Deployment Scenarios
+### Azure Arc enabled Servers - Scaled Deployment Scenarios **TODO: Replace with Docs link**
 
 The following guides are designed to provide scaled onboarding experience to Azure Arc of virtual machines deployed in various platforms and existing environments.
 
