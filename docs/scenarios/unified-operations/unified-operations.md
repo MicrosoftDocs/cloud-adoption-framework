@@ -19,7 +19,7 @@ Fortunately, there is a surprisingly simple approach to overcoming these risks, 
 
 The most successful hybrid, multicloud, and edge strategies begin with a primary cloud platform.
 
-![Primary cloud platform with facilities, services, and controls to support your processes.](./media/primary-cloud-provider-extended.png)
+![Primary cloud platform with facilities, services, and controls to support your processes.](./media/primary-cloud-provider.png)
 
 Your primary cloud platform, be it public or private cloud, is where your operational processes live. In that primary platform, you will find a set of defined cloud facilities. In Azure those facilities are regions, on-prem they may be datacenters. Those facilities host cloud services that are required for core operations and to support any other workloads hosted on that platform. Your primary cloud platform will also include a series of controls designed to support operations within that cloud.
 
