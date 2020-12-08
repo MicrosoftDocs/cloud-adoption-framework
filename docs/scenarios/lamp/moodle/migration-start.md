@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Moodle manual migration steps
 
-This article describes the steps to import the on-premises Moodle archive to Azure Database for MySQL, and then configure the Azure Moodle application.
+This article describes the steps to migrate the on-premises Moodle archive to Azure. The contents of this Moodle archive include the Moodle application, relevant configuration, and a copy of the database from the on-premises Moodle deployment. Once the on-premises backup is successfully imported into the Azure infrastructure, configuration updates for Moodle are carried out.
 
 Before you begin this process, make sure to complete all the steps in these articles:
 - [How to prepare for a Moodle migration](migration-pre.md)
@@ -56,30 +56,9 @@ After you sign in to the controller VM, run the following commands to install Az
   sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
   ```
 
-### Copy the archive to the controller VM
-
-1. Run the following commands to download the compressed `storage.tar.gz` backup file from Azure Blob Storage to the controller VM `/home/azureadmin/` directory:
-   
-   ```bash
-   sudo -s
-   cd /home/azureadmin/
-   azcopy copy 'https://<storageaccount>.blob.core.windows.net/container/BlobDirectoryName<SAStoken>' '/home/azureadmin/'
-   ```
-   
-   Substitute your own storage account and SAS token values. For example:
-   
-   `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
-   
-1. Extract the compressed file to a directory.
-   
-   ```bash
-   d /home/azureadmin
-   ar -zxvf storage.tar.gz
-   ```
-
 ### Back up the current configuration
 
-Before migrating, back up the current configuration. The backup directory is extracted as `storage` at `home/azureadmin`. This `storage` directory contains `moodle`, `moodledata`, and configuration directories, and a database backup file, which you copy to desired locations.
+Before you start the import process, it's is recommended to back up the default/current configuration. 
 
 1. Create a backup directory:
    
@@ -97,6 +76,31 @@ Before migrating, back up the current configuration. The backup directory is ext
    mv /moodle/moodledata /home/azureadmin/backup/moodle/moodledata
    ```
    
+### Copy the Moodle archive to the controller VM
+
+1. Run the following commands to download the compressed `storage.tar.gz` backup file from Azure Blob Storage to the controller VM `/home/azureadmin/` directory:
+   
+   ```bash
+   sudo -s
+   cd /home/azureadmin/
+   azcopy copy 'https://<storageaccount>.blob.core.windows.net/container/BlobDirectoryName<SAStoken>' '/home/azureadmin/'
+   ```
+   
+   Substitute your own storage account and SAS token values. For example:
+   
+   `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
+   
+1. Extract the compressed file to a directory.
+   
+   ```bash
+   cd /home/azureadmin
+   tar -zxvf storage.tar.gz
+   ```
+  
+### Import Moodle files to Azure
+
+Once extracted, you can find the `storage` directory under `home/azureadmin`. This `storage` directory contains `moodle`, `moodledata`, and configuration directories, and a database backup file; each of which will get copied to the target locations as described in the following steps.
+
 1. Copy the `moodle` and `moodledata` directories to a shared location, `/moodle`.
    
    ```bash
