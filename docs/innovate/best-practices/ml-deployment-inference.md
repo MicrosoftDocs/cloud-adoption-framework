@@ -38,7 +38,7 @@ Consider the following best practices for batch inference:
 
 - **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For more information, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
 
-- **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Since different models require different environments, your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
+- **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
 
 ![A diagram of the compute decision tree.](media/compute-decision-tree.png)
 

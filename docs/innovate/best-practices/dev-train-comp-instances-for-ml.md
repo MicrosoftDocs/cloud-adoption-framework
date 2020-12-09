@@ -21,6 +21,6 @@ Reference the following diagram to understand development and training for your 
 
 ## Compute instances for your machine learning model
 
-The following diagram can help you to decide on the appropriate compute instances for your machine learning model to run inference.
+The following diagram can help you to choose compute instances that help your machine learning model to run inference.
 
 ![A diagram that shows inference.](media/inference.png)

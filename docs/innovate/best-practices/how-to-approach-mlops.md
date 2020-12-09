@@ -13,23 +13,23 @@ ms.subservice: innovate
 
 ## An overview of machine learning operations
 
-Machine learning operations consist of principles and best practices about to organize and standardize machine model development, deployment, and maintenance in a scalable way.
+Machine learning operations consist of principles and best practices about how to organize and standardize machine model development, deployment, and maintenance in a scalable way.
 
 ![A diagram showing an overview of machine learning operations.](media/ml-operations-overview.png)
 
-The main components influencing how a machine learning system develops are outlined below:
+The main components of how a machine learning system develops are outlined below:
 
 ![A diagram showing the components of a machine learning system in production.](media/system-in-production.png)
 
-*Sculley et al. 2015. Hidden technical debt in machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’15)*
+*Sculley et al. 2015. Hidden technical debt in machine learning systems. Proceedings of the 28th International Conference on Neural Information Processing Systems-Volume 2 (NIPS 2015).*
 
 ## Machine learning operations vs. development operations
 
-While development operations (DevOps) influence machine learning operations, there are differences between their processes. In addition to DevOps practices, machine learning operations addresses the following concepts not covered in DevOps:
+While development operations (DevOps) influence machine learning operations, there are differences between their processes. In addition to DevOps practices, machine learning operations address the following concepts not covered in DevOps:
 
-- **Data versioning:** In addition to code versioning, there must also be versioning of datasets, as the schema and actual data can change over time. This allows data to be reproduced, makes the data visible other team members, and helps use cases to be audited.
+- **Data versioning:** There must be code versioning and dataset versioning, as the schema and actual data can change over time. This allows data to be reproduced, makes the data visible other team members, and helps use cases to be audited.
 
-- **Model tracking:** Model artifacts are often stored in a model registry that should expose storage, versioning, and tagging capabilities. These registries need to identify the source code, its parameters, and the corresponding data used to train the model, all of which indicate where a model was created.
+- **Model tracking:** Model artifacts are often stored in a model registry that should identify storage, versioning, and tagging capabilities. These registries need to identify the source code, its parameters, and the corresponding data used to train the model, all of which indicate where a model was created.
 
 - **Digital audit trail**: When working with code and data, all changes need to be tracked.
 
@@ -58,6 +58,7 @@ In this step, a training dataset trains the machine learning model. The training
 ### Validate the model
 
 This step uses established metrics like an accuracy metric to automatically validate the newly trained model and compare it to older ones. Did its accuracy increase? If yes, this model might be registered in the model registry for ensuring that next steps can consume it. If the new model performs worse, then a data scientist can be alerted to investigate why or discard the newly trained model.
+
 ### Deploy the model
 
 Deploy the model as an API service for web applications in the deployment step. This approach enables the model to be scaled and updated independently of the applications. Alternatively, the model can be used to perform batch scoring where it's used once or periodically to calculate predictions on new data points. This is useful when large amounts of data need to be processed asynchronously. More details on deployment models can be found on the [machine learning inference during deployment](ml-deployment-inference.md) page.
