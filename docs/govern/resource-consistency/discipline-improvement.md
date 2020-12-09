@@ -66,7 +66,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Establish a least-privilege permissions model, where users have no permissions by default.
 - Determine who in your organization owns each workload and account, and who will need to access to maintain or modify these resources. Define cloud roles and responsibilities that match these needs and use these roles as the basis for access control.
 - Define dependencies between resources.
-- Implement automated resource scaling to match requirements defined in the Plan phase.
+- Implement automated resource scaling to match requirements defined during the planning phase.
 - Conduct access performance to measure the quality of services received.
 - Consider deploying [Azure Policy](/azure/governance/policy/overview) to manage SLA enforcement using configuration settings and resource creation rules.
 

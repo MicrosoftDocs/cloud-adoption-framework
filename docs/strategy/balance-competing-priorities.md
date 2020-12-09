@@ -42,7 +42,7 @@ The core objective of the Strategy methodology is to develop alignment between s
 
 **Expanded scope example:** If the initial business analysis indicates a high risk of negatively affecting the business, then stakeholders may need to slow down and more cautiously evaluate a deeper analysis during business justification.
 
-## Balance during the Plan phase
+## Balance during the planning phase
 
 Similar to the Strategy phase priorities, during the Plan phase there is a need to balance the depth of initial planning versus delayed technical decisions.
 

@@ -1,6 +1,6 @@
 ---
-title: Skills readiness path during the Plan phase of a migration journey
-description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the Plan phase of migration.
+title: Skills readiness path during the planning phase of a migration journey
+description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the planning phase of migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2019
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Skills readiness path during the Plan phase of a migration journey
+# Skills readiness path during the planning phase of a migration journey
 
-During the Plan phase of a migration journey, the objective is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
+The objective during the planning phase of a migration journey is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
 
 - Establishing the vision.
 - Building the business justification.
