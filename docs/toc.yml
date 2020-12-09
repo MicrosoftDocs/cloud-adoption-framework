@@ -70,7 +70,7 @@ items:
       items:
       - name: Overview
         href: scenarios/unified-operations/index.md
-      - name: Unified operations
+      - name: Intro to unified operations
         href: scenarios/unified-operations/unified-operations.md
       - name: Strategy
         href: scenarios/unified-operations/strategy.md
