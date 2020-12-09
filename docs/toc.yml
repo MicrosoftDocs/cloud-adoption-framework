@@ -70,6 +70,8 @@ items:
       items:
       - name: Overview
         href: scenarios/unified-operations/index.md
+      - name: Unified operations
+        href: scenarios/unified-operations/unified-operations.md
       - name: Strategy
         href: scenarios/unified-operations/strategy.md
       - name: Planning
@@ -80,15 +82,13 @@ items:
         href: scenarios/unified-operations/migrate-assess.md
       - name: Migrate workloads
         href: scenarios/unified-operations/migrate-deploy.md
-      - name: Innovate
+      - name: Innovate (Not MVP)
         href: scenarios/unified-operations/innovate.md
       - name: Govern
         href: scenarios/unified-operations/govern.md
       - name: Manage
         href: scenarios/unified-operations/manage.md
-      - name: Unified operations
-        href: scenarios/unified-operations/unified-operations.md
-      - name: Well-architected alignment
+      - name: Well-architected alignment (Not MVP)
         items:
         - name: TBD
           href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -142,7 +142,7 @@ items:
         items:
         - name: TBD
           href: ?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: Enterprise-Scale landing zone
+      - name: Enterprise-Scale landing zone (Not MVP)
         items:
         - name: Overview
           href: scenarios/unified-operations/enterprise-scale-landing-zone.md
