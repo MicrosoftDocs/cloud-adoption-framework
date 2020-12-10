@@ -42,7 +42,9 @@ Copy the Moodle backup archive from Azure Blob Storage to the controller virtual
 
 1. Select **Open**. For user name, enter **azureadmin**, as it's hard-coded in the template.
 
-   ![Screenshot of the PuTTY Configuration page showing SSH authentication settings.](images/putty-ssh-key.png) For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
+   ![Screenshot of the PuTTY Configuration page showing SSH authentication settings.](images/putty-ssh-key.png)
+
+For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
 
 ### Download and install AzCopy on the controller VM
 
@@ -64,7 +66,9 @@ After you sign in to the controller VM, run the following commands to install Az
    sudo -s
    cd /home/azureadmin/
    azcopy copy 'https://<storageaccount>.blob.core.windows.net/container/BlobDirectoryName<SAStoken>' '/home/azureadmin/'
-   ``` Substitute your own storage account and SAS token values. For example:
+   ```
+
+Substitute your own storage account and SAS token values. For example:
 
    `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
 
