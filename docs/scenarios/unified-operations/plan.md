@@ -41,16 +41,23 @@ In many cases, we start by assuming that every asset fits a **Retain** pattern, 
 
 The current assumption in today's enterprise landscape is that most organizations will adopt the cloud. A complete enterprise migration could take days or even years, depending on what assets are included as migration candidates in the digital estate. Consider an enterprise environment with thousands of VMs and hundreds of applications, where the human effort required can easily exceed 1,500 FTE hours and nine months of planning. With standard (uni-directional) migration efforts, the assumption is that you will look for standard opportunities for Rehost/Rearchitect (assets that surface as standard migration candidates when rationalizing your digital estate).
 
-In moving to a hybrid and multi-cloud scenario, where we assume unified operations for all resources in the digital estate, certain rationalization decisions will surface. 
+In moving to a hybrid and multi-cloud scenario, where we assume unified operations for all resources in the digital estate, certain rationalization decisions will surface.
 
 Because on-premises assets are added to the enterprise control plane for unified operations and management, we commonly see the following rationalizations: workloads recommended to remain on-premises (for example, limited by regulatory or compliance reasons); new application development for the enterprise that needs to be supported by workloads that haven't been migrated, or can't be migrated; the business requirement to build new on-premises applications that have speed of light, connectivity, or regulatory requirements.
 
-Standard migration assumes that everything is a VM or PaaS service in terms of either Rehost or Rearchitect. As mentioned, *standard migration efforts* assume a uni-directional, "migrate everything to the cloud" approach—lifting and shifting (IaaS VMs) and rearchitecting (PaaS services).
+Standard migration assumes that every asset in the workload is a VM or PaaS service in terms of either Rehost or Rearchitect. As mentioned, *standard migration efforts* assume a uni-directional, "migrate everything to the cloud" approach—lifting and shifting (IaaS VMs) and rearchitecting (PaaS services).
 
-Hybrid/Unified operations opens up more form factors for distributing cloud innovation using Azure technology outside of our facilities:
+A unified operations approach that considers hybrid and multi-cloud environments opens up more form factors for distributing cloud innovation using Azure services across other multi-cloud environments and the edge.
 
-- Azure Stack: Standard cloud form factor using Azure services
-- Azure Arc: More traditional form factors adding governance, management, etc... to the technologies you use today
+The Azure Stack product family opens up standard cloud form factors and extends Azure services and capabilities across datacenters, cloud, and edge locations.
+
+**Azure Stack Hub** extends full stack Azure services to on-premises, enabling you to run apps in on-premises environments and deliver Azure services in your datacenter. It unlocks new hybrid cloud use cases for both customer-facing and internal line-of-business apps: edge and disconnected solutions, cloud apps with varied regulatory requirements, and cloud app models on-premises using Azure services, containers, serverless, and microservice architectures.
+
+**Azure Stack HCI** is a hyperconverged cluster that uses validated hardware to run virtualized Windows and Linux workloads on-premises and easily connect to Azure for cloud-based backup, recovery, and monitoring. Its software-defined infrastructure enables high-performance hyperconverged compute, storage, and networking, based on Hyper-V and storage Spaces Direct. Delivered as an Azure service with built-in hybrid capabilities, the Azure Stack HCI (virtualization host) is backed by Microsoft-validated hardware components.
+
+**Azure Stack Edge** is purpose-built (enterprise datacenter or rugged environment) hardware-as-a-service. It is optimized for edge compute, machine learning, and IoT scenarios to run your workloads at the edge for faster data insights, and manages your hardware appliance and workloads through the Azure portal. It allows ou to run machine learning models with hardware-accelerated machine learning capabilities (with on-board FPGAs and GPUs)—leverages edge computing to process data close to the source (with VMs, Azure services, Kubernetes clusters, and containers)—and acts as a cloud storage gateway, transferring data to Azure over the network, retaining local access to blobs and files.
+
+Azure Arc: More traditional form factors adding governance, management, etc... to the technologies you use today
 
 Unified operations is a single control to manage all of these form factors across all facilities
 
