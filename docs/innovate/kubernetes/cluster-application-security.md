@@ -2,11 +2,12 @@
 title: Cluster and application security
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
-ms.author: asabbour
+ms.author: brblanch
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore kured -->

@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
@@ -86,7 +87,7 @@ Contoso will migrate the application front-end and database VMs to Azure VMs by 
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of on-premises applications and workloads as well as Amazon Web Services (AWS)  and Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate).  |
+| [Azure Migrate: Server Migration](/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of on-premises applications and workloads as well as Amazon Web Services (AWS) and Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate).  |
 
 ## Prerequisites
 
@@ -302,5 +303,4 @@ Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-b
 
 ## Conclusion
 
-In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool.
-For guidance on completing a similar project in your environment, check out the Azure DevOps project template for [Server Migration Project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration). 
+In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool. For guidance on completing a similar project in your environment, check out the Azure DevOps project template for [Server Migration Project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration). 

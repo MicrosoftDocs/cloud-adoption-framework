@@ -3,10 +3,11 @@ title: Understand cloud data functions
 description: Understand cloud data functions, including the source of the functionality, the scope, and the deliverable.
 author: v-hanki
 ms.author: janet
+ms.date: 07/14/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 07/14/2020
+ms.custom: think-tank
 ---
 
 # Cloud data functions

@@ -1,12 +1,13 @@
 ---
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch 
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # How to follow up after a Moodle migration
@@ -48,7 +49,7 @@ Follow these steps to update the log file locations:
 
 ### Restart servers
 
-Enter these commands to restart the nginx and php-fpm servers:
+Enter these commands to restart the `nginx` and `php-fpm` servers:
 
 ```bash
 sudo systemctl restart nginx
@@ -106,7 +107,7 @@ Take these steps to complete the controller virtual machine configuration.
       /moodle/certs/nginx.key;
       ```
 
-    1. Press CTRL+O to save your changes and CTRL+X to close the file.
+   1. Press CTRL+O to save your changes and CTRL+X to close the file.
 
 ### Update the local HTML copy
 
@@ -133,7 +134,6 @@ sudo systemctl restart php<php version>-fpm
 Follow these steps at the hosting-provider level to map the DNS name to the Azure Load Balancer IP:
 
 1. Enter the following command in the controller virtual machine to turn off maintenance mode on the Moodle website:
-
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php --disable
@@ -286,6 +286,6 @@ When Moodle is in maintenance mode and you try to leave that mode, sometimes you
 
 ## Next steps
 
-- [Azure Database for MySQL documentation](https://docs.microsoft.com/azure/mysql/)
-- [What are virtual machine scale sets?](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview)
-- [Storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
+- [Azure Database for MySQL documentation](/azure/mysql/)
+- [What are virtual machine scale sets?](/azure/virtual-machine-scale-sets/overview)
+- [Storage account overview](/azure/storage/common/storage-account-overview)

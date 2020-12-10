@@ -7,7 +7,7 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: csu, think-tank
+ms.custom: think-tank, csu
 ---
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->

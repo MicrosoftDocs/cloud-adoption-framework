@@ -7,7 +7,7 @@ ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Encryption decision guide
@@ -76,7 +76,7 @@ Consider several different states of data with different encryption needs when p
 
 ### Data in transit
 
-Data in transit is data moving between resources on the internal, between datacenters or external networks, or over the internet.
+Data in transit is data moving between resources on the internal network, between datacenters or external networks, or over the internet.
 
 Data in transit is usually encrypted by requiring SSL/TLS protocols for network traffic. Always encrypt traffic between your cloud-hosted resources and external networks or the public internet. PaaS resources typically enforce SSL/TLS encryption by default. Your cloud adoption teams and workload owners should consider enforcing encryption for traffic between IaaS resources hosted inside your virtual networks.
 

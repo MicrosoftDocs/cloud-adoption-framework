@@ -2,11 +2,12 @@
 title: Azure security best practices
 description: Find out what Microsoft recommends as the top Azure security best practices.
 author: JanetCThomas
-ms.author: mas
+ms.author: brblanch
 ms.date: 09/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
+ms.custom: internal
 ---
 
 # Azure security best practices

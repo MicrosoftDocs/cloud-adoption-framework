@@ -7,9 +7,10 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
-<!-- docutune:casing ARO "standard HDD" -->
+<!-- docutune:casing ARO -->
 
 # Best practices for costing and sizing resources hosted in Azure
 

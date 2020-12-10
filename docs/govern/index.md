@@ -7,7 +7,7 @@ ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Governance in the Microsoft Cloud Adoption Framework for Azure
