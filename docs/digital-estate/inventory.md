@@ -7,6 +7,7 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Gather inventory data for a digital estate

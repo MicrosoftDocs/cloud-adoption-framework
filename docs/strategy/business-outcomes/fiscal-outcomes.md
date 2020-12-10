@@ -7,7 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: XX
+ms.custom: internal
 ---
 
 # Examples of fiscal outcomes

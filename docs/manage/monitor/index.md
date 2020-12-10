@@ -7,6 +7,7 @@ ms.date: 10/05/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
 # Cloud monitoring guide: Introduction

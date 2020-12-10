@@ -7,6 +7,7 @@ ms.date: 7/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Enable .NET" SmartHotel360-Backend Pet.Checker "contoso-datacenter" PetCheckerFunction -->

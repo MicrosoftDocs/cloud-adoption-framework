@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: XX
+ms.custom: internal
 ---
 
 # Risk tolerance metrics and indicators in the Deployment Acceleration discipline

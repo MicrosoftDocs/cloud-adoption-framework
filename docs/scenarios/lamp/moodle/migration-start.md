@@ -7,6 +7,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Moodle manual migration steps
@@ -40,9 +41,7 @@ Copy the Moodle backup archive from Azure Blob Storage to the controller virtual
    
 1. Select **Open**. For user name, enter **azureadmin**, as it's hard-coded in the template.
    
-   ![Screenshot of the PuTTY Configuration page showing SSH authentication settings.](images/putty-ssh-key.png)
-   
-For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
+   ![Screenshot of the PuTTY Configuration page showing SSH authentication settings.](images/putty-ssh-key.png) For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
 
 ### Download and install AzCopy on the controller VM
 
@@ -64,9 +63,7 @@ After you sign in to the controller VM, run the following commands to install Az
    sudo -s
    cd /home/azureadmin/
    azcopy copy 'https://<storageaccount>.blob.core.windows.net/container/BlobDirectoryName<SAStoken>' '/home/azureadmin/'
-   ```
-   
-   Substitute your own storage account and SAS token values. For example:
+   ``` Substitute your own storage account and SAS token values. For example:
    
    `azcopy copy 'https://onpremisesstorage.blob.core.windows.net/migration/storage.tar.gz?sv=2019-12-12&ss=' /home/azureadmin/storage.tar.gz`
    
@@ -178,9 +175,7 @@ To get the DNS name for this task:
 
 1. In the Azure portal, select the **Load Balancer public IP address** from your deployed Moodle infrastructure resources.
    
-1. On the **Overview** page, select the copy icon next to the **DNS name**.
-   
-To update the `config.php` file:
+1. On the **Overview** page, select the copy icon next to the **DNS name**. To update the `config.php` file:
 
 1. Enter the following commands to edit `config.php` in the `nano` editor:
    
@@ -207,17 +202,21 @@ You can store the on-premises `dataroot` directory at any location.
 ### Configure directory permissions
 
 - Assign 755 and www-data owner:group permissions to the `moodle` directory.
-  
+
+
   ```bash
   sudo chmod 755 /moodle/html/moodle sudo chown -R www-data:www-data /moodle/html/moodle
   ```
-  
+
+
 - Assign 770 and www-data owner:group permissions to the `moodledata` directory.
-  
+
+
   ```bash
   sudo chmod 770 /moodle/moodledata sudo chown -R www-data:www-data /moodle/moodledata
   ```
-  
+
+
 ### Update web config files
 
 Back up and update the nginx `conf` file:
@@ -251,9 +250,7 @@ Update the Azure cloud DNS name to the on-premises Moodle application's DNS name
    
 1. Update the `server_name`. For example, for a `server_name on-premises.com`, update `on-premises.com` with the DNS name. In most cases, the DNS name doesn't change in the migration.
    
-1. Update the HTML `root` directory location. For example, update `root /var/www/html/moodle;` to `root /moodle/html/moodle;`.
-   
-   The on-premises root directory can be at any location.
+1. Update the HTML `root` directory location. For example, update `root /var/www/html/moodle;` to `root /moodle/html/moodle;`. The on-premises root directory can be at any location.
    
 1. After making the changes, press CTRL+O to save the file and CTRL+X to exit.
 

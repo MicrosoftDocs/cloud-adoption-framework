@@ -7,7 +7,7 @@ ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: XX
+ms.custom: internal
 ---
 
 # Cloud rationalization

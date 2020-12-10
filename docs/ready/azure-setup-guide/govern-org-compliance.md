@@ -7,8 +7,8 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 <!-- docutune:casing "Blueprints: Blueprint definitions" "Blueprints: Get started" -->

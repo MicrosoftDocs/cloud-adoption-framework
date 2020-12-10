@@ -7,6 +7,7 @@ ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Landing zone considerations

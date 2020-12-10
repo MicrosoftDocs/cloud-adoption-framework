@@ -7,6 +7,7 @@ ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Windows Virtual Desktop planning

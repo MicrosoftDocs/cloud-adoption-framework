@@ -7,7 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, think-tank
 ---
 
 <!-- cSpell:ignore Lucene -->

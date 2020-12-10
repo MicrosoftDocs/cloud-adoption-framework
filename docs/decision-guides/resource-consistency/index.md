@@ -7,7 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: XX
+ms.custom: internal
 ---
 
 # Resource consistency decision guide

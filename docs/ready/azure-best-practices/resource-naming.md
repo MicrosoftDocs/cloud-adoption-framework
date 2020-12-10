@@ -7,7 +7,7 @@ ms.date: 12/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness, fasttrack-edit, internal
+ms.custom: internal, readiness, fasttrack-edit, internal
 ---
 
 # Define your naming convention
@@ -42,7 +42,7 @@ Keep the length of naming components short to prevent exceeding resource name le
 |--|--|--|
 | **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often used as a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
 | **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
-| **Application or service name** | Name of the application, workload, or service that the resource is a part of. Examples: `navigator` , `emissions`, `sharepoint`, `hadoop` |
+| **Application or service name** | Name of the application, workload, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Subscription type** | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. Examples: `prod`, `shared`, `client` |
 | **Deployment&nbsp;environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Region** | The Azure region where the resource is deployed. Examples: `westus`, `eastus2`, `westeu`, `usva`, `ustx` |

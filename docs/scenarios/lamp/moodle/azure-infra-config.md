@@ -7,6 +7,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # How to set up Moodle worker nodes
@@ -61,8 +62,7 @@ mkdir -p backup
 mkdir -p backup/moodle
 ```
 
-### Configure the PHP and web server
-To configure the PHP and web server, take these steps:
+### Configure the PHP and web server To configure the PHP and web server, take these steps:
 
 1. Set the PHP version to a variable:
 

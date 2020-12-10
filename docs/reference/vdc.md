@@ -7,6 +7,7 @@ ms.date: 06/16/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
+ms.custom: think-tank
 ---
 
 <!-- docutune:ignore "Azure Virtual Datacenter" -->

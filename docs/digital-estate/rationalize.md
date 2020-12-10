@@ -7,7 +7,7 @@ ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: XX
+ms.custom: internal
 ---
 
 # Rationalize the digital estate

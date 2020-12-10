@@ -7,6 +7,7 @@ ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Evaluate a Microsoft partner's Azure landing zone

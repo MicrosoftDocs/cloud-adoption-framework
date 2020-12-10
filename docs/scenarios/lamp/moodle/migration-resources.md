@@ -7,6 +7,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Moodle migration resources

@@ -7,6 +7,7 @@ ms.date: 09/27/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 <!-- docutune:ignore "CAF Foundation blueprint" -->

@@ -7,6 +7,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Create a virtual network gateway and connect to VMs
@@ -70,9 +71,7 @@ Export the certificates to install them on your systems.
 
 1. From the Windows Start menu, select **Run**, and enter **mmc**.
    
-1. In the Microsoft Management Console left navigation pane, under the **Personal** folder, select **Certificates**.
-   
-Find the **P2SRootCert** and **P2SChildCert** certificates.
+1. In the Microsoft Management Console left navigation pane, under the **Personal** folder, select **Certificates**. Find the **P2SRootCert** and **P2SChildCert** certificates.
 
 To export the root certificate:
 
@@ -147,9 +146,7 @@ To configure password authentication, from the controller virtual machine (VM):
    
    ```bash
    sudo passwd <username>
-   ```
-   
-   For example, the command `sudo passwd azureadmin` sets the password for the user `azureadmin`.
+   ``` For example, the command `sudo passwd azureadmin` sets the password for the user `azureadmin`.
    
 1. At the prompts, type and retype the password.
 
@@ -163,9 +160,7 @@ Sign in to the scale set VMs with private IP addresses through SSH.
    
    ```bash
    sudo ssh <username>@<private IP address>
-   ```
-   
-   For example, `sudo ssh azureadmin@102.xx.xx.xx`
+   ``` For example, `sudo ssh azureadmin@102.xx.xx.xx`
    
 1. At the prompt, enter the password.
 

@@ -7,6 +7,7 @@ ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore autoscaler Istio Linkerd -->

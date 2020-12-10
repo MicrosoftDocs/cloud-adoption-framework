@@ -7,7 +7,7 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: XX
+ms.custom: internal
 ---
 
 # Align cost models with the digital estate to forecast cloud costs

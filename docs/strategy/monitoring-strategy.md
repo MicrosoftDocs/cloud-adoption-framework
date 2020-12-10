@@ -7,6 +7,7 @@ ms.date: 06/18/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->

@@ -7,8 +7,8 @@ ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-new, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC, setup
 ---
 
 <!-- docutune:casing AzAdvertizer "Azure Info Hub" "Azure Charts" "Azure Weekly" -->

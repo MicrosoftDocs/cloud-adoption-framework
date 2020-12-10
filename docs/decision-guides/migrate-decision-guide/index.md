@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
+ms.custom: internal
 ---
 
 # Migration tools decision guide
