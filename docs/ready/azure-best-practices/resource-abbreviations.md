@@ -159,6 +159,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Key vault | `kv-` |
 | Log Analytics workspace | `log-` |
 | Application Insights | `appi-` |
+| Azure Purview | `pvw-` |
 
 ## Migration
 
