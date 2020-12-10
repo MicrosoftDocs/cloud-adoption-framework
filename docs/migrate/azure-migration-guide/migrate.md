@@ -2,7 +2,7 @@
 title: "Migrate assets"
 description: Initiate the migration to Azure by identifying the appropriate tools to use, including native tools, third-party tools, and project management tools.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

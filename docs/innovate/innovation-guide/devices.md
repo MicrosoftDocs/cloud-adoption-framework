@@ -2,7 +2,7 @@
 title: "Azure innovation: Interact via devices"
 description: Learn how Azure provides a framework for building immersive and effective business solutions through connected and perceptive edge devices.
 author: umarmohamedusman
-ms.author: umarm
+ms.author: brblanch
 ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

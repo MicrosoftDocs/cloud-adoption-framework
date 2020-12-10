@@ -2,7 +2,7 @@
 title: Cloud security functions
 description: An overview of organizational functions required to manage information security risk in an enterprise
 author: MarkSimos
-ms.author: mas
+ms.author: brblanch
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

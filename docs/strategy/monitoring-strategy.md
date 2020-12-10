@@ -2,7 +2,7 @@
 title: Cloud monitoring strategy
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 06/18/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework

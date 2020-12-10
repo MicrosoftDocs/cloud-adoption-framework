@@ -2,7 +2,7 @@
 title: "Azure innovation: Engage via applications"
 description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native applications.
 author: billyclaymyersmsft
-ms.author: wimyers
+ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
