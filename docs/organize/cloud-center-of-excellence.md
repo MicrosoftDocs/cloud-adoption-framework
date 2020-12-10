@@ -7,7 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal, organize
+ms.custom: internal
 ---
 
 # Cloud center of excellence (CCoE) functions

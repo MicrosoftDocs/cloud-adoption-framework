@@ -7,7 +7,7 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, think-tank
+ms.custom: think-tank
 ---
 
 # Start with Cloud Adoption Framework enterprise-scale landing zones

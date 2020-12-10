@@ -7,7 +7,7 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal, think-tank
+ms.custom: think-tank
 ---
 
 <!-- docutune:casing "Movie Tickets Online" -->
