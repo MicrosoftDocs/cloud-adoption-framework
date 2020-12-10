@@ -1,7 +1,7 @@
 ---
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch 
 ms.date: 11/30/2020
 ms.topic: conceptual
@@ -49,7 +49,7 @@ Follow these steps to update the log file locations:
 
 ### Restart servers
 
-Enter these commands to restart the nginx and php-fpm servers:
+Enter these commands to restart the `nginx` and `php-fpm` servers:
 
 ```bash
 sudo systemctl restart nginx
@@ -107,7 +107,7 @@ Take these steps to complete the controller virtual machine configuration.
       /moodle/certs/nginx.key;
       ```
 
-    1. Press CTRL+O to save your changes and CTRL+X to close the file.
+   1. Press CTRL+O to save your changes and CTRL+X to close the file.
 
 ### Update the local HTML copy
 
