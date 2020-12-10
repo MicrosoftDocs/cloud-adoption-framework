@@ -359,7 +359,7 @@ The admins create the pipeline:
 
     _Figure 32: Adding an artifact._
 
-6. They select **Git** as the source type and specify the project, source, and master branch for the SmartHotel360 application.
+6. They select **Git** as the source type and specify the project, source, and main branch for the SmartHotel360 application.
 
     ![Screenshot of the "Add an artifact" pane, with Git as the source type.](./media/contoso-migration-rebuild/back-pipe7.png)
 
@@ -601,9 +601,9 @@ Contoso admins can now publish the website.
 
     _Figure 61: Pipeline settings._
 
-5. In **Triggers**, they enable continuous integration and add the master branch. This ensures that the build pipeline starts each time the solution has new code committed to the master branch.
+5. In **Triggers**, they enable continuous integration and add the main branch. This ensures that the build pipeline starts each time the solution has new code committed to the main branch.
 
-    ![Screenshot of enabling continuous integration and adding the master branch.](./media/contoso-migration-rebuild/vsts-publish-front3.png)
+    ![Screenshot of enabling continuous integration and adding the main branch.](./media/contoso-migration-rebuild/vsts-publish-front3.png)
 
     _Figure 62: Enabling continuous integration._
 
