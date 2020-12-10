@@ -3,7 +3,7 @@ title: Hub and spoke network topology
 description: Learn about hub and spoke network topologies for more efficient management of common communication or security requirements.
 author: tracsman
 manager: rossort
-ms.author: jonor
+ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
