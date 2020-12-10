@@ -60,9 +60,7 @@ Once the subscription is set up, create a resource group in Azure. You can eithe
 
   1. Open [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceGroups), and select **Add**.
 
-
   1. Enter your subscription name, a resource group name, and a region. See [Data residency in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for a list of available regions. Make a note of the name of the resource group that you enter so that you can use that name in later steps.
-
 
   1. Select **Review + create**.
 
@@ -96,9 +94,8 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
      - The name of the resource group that you just created
      - A storage account name
      - Your region
-   
-  1. For **Account kind**, enter **BlobStorage**.
 
+  1. For **Account kind**, enter **BlobStorage**.
 
   1. For **Replication**, enter **Read-access geo-redundant storage (RA-GRS)**.
 

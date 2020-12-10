@@ -474,7 +474,7 @@ items:
             href: migrate/azure-best-practices/contoso-migration-rebuild.md
           - name: Refactor TFS to Azure DevOps Services
             href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
-            
+
         - name: Java apps
           items:
           - name: Migration overview
@@ -896,7 +896,7 @@ items:
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
             href: innovate/ai/knowledge-mining.md  
-            
+
       - name: Best practices
         items:
         - name: Overview and Azure toolchain
