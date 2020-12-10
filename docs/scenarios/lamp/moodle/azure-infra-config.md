@@ -62,7 +62,9 @@ mkdir -p backup
 mkdir -p backup/moodle
 ```
 
-### Configure the PHP and web server To configure the PHP and web server, take these steps:
+### Configure the PHP and web server
+
+To configure the PHP and web server, take these steps:
 
 1. Set the PHP version to a variable:
 

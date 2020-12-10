@@ -70,7 +70,9 @@ If this is the first time using Azure Database Migration Service, you need to re
 
 ::: zone-end
 
-<!-- docutune:casing "Create Migration Service wizard" --> After you register the resource provider, you can create an instance of Azure Database Migration Service.
+<!-- docutune:casing "Create Migration Service wizard" -->
+
+After you register the resource provider, you can create an instance of Azure Database Migration Service.
 
 1. Select **+ Create a resource** and search the marketplace for **Azure Database Migration Service**.
 1. Complete the Create Migration Service wizard, then select **Create**.
