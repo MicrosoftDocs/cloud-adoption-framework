@@ -85,30 +85,40 @@ Following Enterprise Scale proven practices, DNS resolution for Azure workloads 
 
 [AKS private clusters](https://docs.microsoft.com/azure/aks/private-clusters) expose the Kubernetes API over a private IP address, and not over a public one. This private IP address is actually represented in the AKS Virtual Network through a [Private Endpoint](https://docs.microsoft.com/azure/private-link/private-endpoint-overview). The Kubernetes API should not be accessed via its IP address but through its Fully Qualified Domain Name (FQDN). The resolution from the Kubernetes API FQDN to its IP address will be typically performed by an [Azure Private DNS Zone](https://docs.microsoft.com/azure/dns/private-dns-overview) that the cluster creation process will deploy in the AKS node resource group (see [Why are two resource groups created with AKS?](https://docs.microsoft.com/azure/aks/faq#why-are-two-resource-groups-created-with-aks) for more details on the node resource group).
 
-As a consequence, the private DNS zone created in the AKS node resource group will have to be linked to the connectivity Virtual Network, so that the shared DNS servers can resolve the Kubernetes API FQDN. Note that each AKS will have a different private zone name, since a random GUID is prepended to the zone name. As a consequence, for each new AKS cluster its corresponding private DNS zone will be connected to the linked VNet.
+As a consequence, the private DNS zone created in the AKS node resource group should be linked to the connectivity Virtual Network, so that the shared DNS servers can resolve the Kubernetes API FQDN. Note that each AKS will have a different private zone name, since a random GUID is prepended to the zone name. As a consequence, for each new AKS cluster its corresponding private DNS zone will be connected to the linked VNet.
 
-![Private Cluster](media/Network_PrivateCluster_500.png)
+![Private Cluster](media/Network_PrivateCluster.png)
 
 The previous image describes how DNS resolution would work, taking as example an AKS administrator connecting to the Kubernetes API from the on-premises network:
 
 1. The administrator will resolve the FQDN of the Kubernetes API. The on-premises DNS servers will forward the request to the authoritative servers - the DNS resolvers in Azure. These servers will forward the request to the Azure DNS server (168.63.129.16), which will find out the IP address from the Azure Private DNS Zone.
 1. After resolving the IP address, traffic to the Kubernetes API will be routed from on-premises to the VPN or ExpressRoute gateway in Azure, depending on the connectivity model.
-1. Note that the private endpoint will have introduced a /32 route in the hub Virtual Network, that route needs to be overwritten with a User-Defined Route (UDR) in the Gateway Subnet, so that traffic is forwarded to the Azure Firewall and not directly to the private endpoint bypassing the firewall.
-1. Finally, the Azure Firewall will deliver the traffic to the Kubernetes API private endpoint.
+1. Note that the private endpoint will have introduced a /32 route in the Connectivity Virtual Network, so the VPN or ExpressRoute gateways will send traffic straight to the Kubernetes API private endpoint deployed in the AKS Virtual Network
 
 ### Traffic from application users to the cluster
 
 Application traffic can come from either on-premises or the public Internet, as the following picture describes.
 
-![Application Traffic](media/Network_AppAccess_500.png)
+![Application Traffic](media/Network_AppAccess.png)
 
-Traffic from on-premises will start with internal DNS resolution, either using the DNS servers deployed in the connectivity Virtual Network or on-premises DNS servers. After resolving the application FQDN to an IP address (the private IP address of the Application Gateway), traffic will be routed through a VPN or ExpressRoute gateway. The GatewaySubnet will typically have a User-Defined Route to send all traffic addressed to the Application VNet to the central Azure Firewall. The Azure Firewall will then forward the traffic to a private IP address configured in the Application Gateway.
+Traffic from on-premises will follow this flow:
 
-The Application Gateway is typically deployed in the same subscription as the AKS cluster, since its configuration is very closely related to the workloads deployed in AKS, and hence it is managed by the same application team. That is the reason why applications are usually exposed to the public Internet directly from the Application Gateway in the AKS Virtual Network. Clients from the public Internet would resolve the DNS name for the application using [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview), which would send the clients to the public IP address of the Application Gateway. Alternatively other global load balancing technologies can be used, such as [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview).
+1. The client will resolve the FQDN assigned to the application, either using the DNS servers deployed in the connectivity Virtual Network or on-premises DNS servers.
+1. After resolving the application FQDN to an IP address (the private IP address of the Application Gateway), traffic will be routed through a VPN or ExpressRoute gateway.
+1. Routing in the GatewaySubnet will be configured to send the request to the Web Application Firewall.
+1. The Web Application Firewall will send valid requests to the workload running in the AKS cluster.
+
+The Application Gateway is typically deployed in the same subscription as the AKS cluster, since its configuration is very closely related to the workloads deployed in AKS, and hence it is managed by the same application team. That is the reason why applications are usually exposed to the public Internet directly from the Application Gateway in the AKS Virtual Network. Access from the Internet will follow this sequence:
+
+1. Clients from the public Internet will resolve the DNS name for the application using [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).  Alternatively other global load balancing technologies can be used, such as [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview).
+1. The application public FQDN will be resolved by Traffic Manager to the public IP address of the Application Gateway, which clients will access over the public Internet.
+1. The Application Gateway will access the workload deployed in AKS.
 
 It is recommended protecting the public IP address of the Application Gateway with [Azure DDoS Protection Standard](https://docs.microsoft.com/azure/ddos-protection/ddos-protection-overview) for a higher security.
 
-Another possibility is exposing the applications from the Azure Firewall in the hub, for consistent traffic flows for on-premises and Internet users. This approach has the advantage of offering some additional protection, such as [Azure Firewall Intelligence-based Filtering](https://docs.microsoft.com/azure/firewall/threat-intel) to drop traffic from known malicious IP addresses. However it has some drawbacks too, such as the loss of the original client IP address, as well as the additional coordination required between the Firewall and the Application teams when exposing applications, since DNAT rules will be needed in the Azure Firewall.
+Note that these flows are only valid for web applications. Non-web applications are outside of the scope of this document, but suffice to say that should be exposed through the Azure Firewall in the Connectivity Virtual Network.
+
+Alternatively, the traffic flows for web-based applications can be made to traverse both the Azure Firewall in the Connectivity VNet as the WAF in the AKS VNet. This approach has the advantage of offering some additional protection, such as [Azure Firewall Intelligence-based Filtering](https://docs.microsoft.com/azure/firewall/threat-intel) to drop traffic from known malicious IP addresses in the Internet. However it has some drawbacks too, such as the loss of the original client IP address, as well as the additional coordination required between the Firewall and the Application teams when exposing applications, since Destination Network Address Translation (DNAT) rules will be needed in the Azure Firewall.
 
 ### Traffic from the AKS pods to backend services
 
@@ -118,6 +128,11 @@ DNS resolution of Azure PaaS services exposed over Private Endpoints is carried 
 
 It is possible creating the A-records manually as well, but associating the private DNS zone with the private endpoint would result in a setup less prone to misconfigurations.
 
-![Backend traffic](media/Network_BackendAccess_500.png)
+![Backend traffic](media/Network_BackendAccess.png)
 
-The next point to consider is whether traffic between the AKS pods and the private endpoints for the backend services should go through the Azure Firewall in the hub. Per default it will not, even if the AKS cluster is configured for [egress filtering with Azure Firewall](https://docs.microsoft.com/azure/aks/limit-egress-traffic). The reason is that the private endpoint will create a /32 route in the Application VNet as well as in the Connectivity VNet. If going through the Azure Firewall is required, an User-Defined Route for the IP address of the private endpoint needs to be created. Note that there is a limit of 400 User-Defined Routes in an Azure route table (see the [Azure Networking Limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-resource-manager-virtual-networking-limits) for more details). If you are planning on more than 400 private endpoints, a workaround is deploying the private endpoints in a separate virtual network, as [this scenario](https://docs.microsoft.com/azure/private-link/inspect-traffic-with-azure-firewall#scenario-1-hub-and-spoke-architecture---dedicated-virtual-network-for-private-endpoints) describes.
+Backend connectivity will follow this sequence:
+
+1. The AKS pods will resolve the FQDN of the Azure PaaS service using the DNS servers in the Connectivity VNet, which are defined as custom DNS servers in the AKS VNet.
+1. The resolved IP will be the private IP address of the private endpoints, which will be accessed then directly from the AKS pods
+
+Note that traffic between the AKS pods and the private endpoints per default will not go through the Azure Firewall in the Connectivity VNet (or the secure virtual hub if using Virtual WAN), even if the AKS cluster is configured for [egress filtering with Azure Firewall](https://docs.microsoft.com/azure/aks/limit-egress-traffic). The reason is that the private endpoint will create a /32 route in the subnets in both the Application Virtual Network (where AKS is deployed) and the Connectivity Virtual Network.
