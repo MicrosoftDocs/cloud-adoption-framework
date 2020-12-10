@@ -18,13 +18,13 @@ Before you begin this process, make sure to complete all the steps in these arti
 - [Moodle migration architecture and templates](migration-arch.md)
 - [Create a virtual network gateway and connect to VMs](vpn-gateway.md)
 
-After the Azure Resource Manager (ARM) template deployment finishes, sign in to the [Azure portal](https://portal.azure.com/), go to the resource group the template created, and view all the created infrastructure resources. The created resources look similar to the following image, depending on which ARM template you used.
+After the Azure Resource Manager (ARM) template deployment finishes, sign in to the [Azure portal](https://portal.azure.com/) and locate the resource group that was created as plart of the deployment process. Once you locate the resource group, please review the list of newly-created infrastructure resources. The created resources look similar to the following image, depending on the ARM template used for deployment.
 
 ![Screenshot showing infrastructure resources created in the Moodle migration resource group.](images/resource-creation-overview.png)
 
 ## Copy the Moodle archive
 
-Copy the Moodle backup archive from Azure Blob Storage to the controller virtual machine (VM).
+The first step in this migration process would be to copy the Moodle backup archive from Azure Blob Storage to the controller virtual machine (VM) for the Moodle deployment. This is the same archive that was created in the preparation for migration step in this documentation.  
 
 ### Sign in to the controller virtual machine
 
@@ -171,7 +171,7 @@ After importing the on-premises Moodle database archive to Azure Database for My
 - Configure PHP and nginx web servers.
 - Update the DNS name and other variables.
 - Install any missing PHP extensions.
-- Restart and then stop the web servers.
+- Ensure the webserver instances on the controller VM are stopped.
 - Copy the config files to a shared location for copying to virtual machine scale sets.
 
 ### Update the Moodle config file
@@ -277,7 +277,7 @@ To install missing extensions, run:
 sudo apt-get install -y php-<extension>
 ```
 
-### Restart and stop the web servers
+### Ensure the webserver instances on the controller VM are stopped
 
 1. Restart the web servers.
    
