@@ -7,6 +7,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # How to prepare for a Moodle migration
@@ -58,9 +59,9 @@ Once the subscription is set up, create a resource group in Azure. You can eithe
 - To use the Azure portal, follow these steps:
 
   1. Open [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceGroups), and select **Add**.
-  
+
   1. Enter your subscription name, a resource group name, and a region. See [Data residency in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for a list of available regions. Make a note of the name of the resource group that you enter so that you can use that name in later steps.
-  
+
   1. Select **Review + create**.
 
   ![Screenshot of the Create a resource group page in the Azure portal, with subscription, resource group, and region boxes and a Review + create button.](./images/resource-group.png)
@@ -93,9 +94,9 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
      - The name of the resource group that you just created
      - A storage account name
      - Your region
-   
+
   1. For **Account kind**, enter **BlobStorage**.
-  
+
   1. For **Replication**, enter **Read-access geo-redundant storage (RA-GRS)**.
 
   1. Select **Review + create**.

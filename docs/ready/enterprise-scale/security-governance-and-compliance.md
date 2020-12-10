@@ -80,7 +80,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement role-based access control (RBAC) that controls what actions authorized users can perform.
 
-### Design considerations
+**Design considerations:**
 
 - Determine what Azure policies are needed.
 
@@ -94,7 +94,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand regulatory compliance policies. These might include the HIPAA, PCI DSS, and SOC2 Trust Service Principles and Criteria.
 
-### Design recommendations
+**Design recommendations:**
 
 - Identify required Azure tags and use the append policy mode to enforce usage.
 
@@ -116,7 +116,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 An enterprise must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
-### Design considerations
+**Design considerations:**
 
 - Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period.
 
@@ -134,7 +134,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Vulnerability assessment of VMs.
 
-### Design recommendations
+**Design recommendations:**
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
@@ -156,7 +156,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 You must maintain a healthy security posture as you adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
 
-### Design considerations
+**Design considerations:**
 
 - Shared responsibility.
 
@@ -166,7 +166,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Multitenancy for key platform components. This includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
 
-### Design recommendations
+**Design recommendations:**
 
 - In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, this might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 

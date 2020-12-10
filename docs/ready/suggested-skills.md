@@ -7,6 +7,7 @@ ms.date: 05/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Skills readiness path during the Ready phase of a migration journey

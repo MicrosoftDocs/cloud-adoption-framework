@@ -2,13 +2,13 @@
 title: Recommended role-based access control
 description: Learn how to separate duties within your team and grant role-based access control so that users and groups can perform their jobs.
 author: alexbuckgit
+manager: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-manager: BrianBlanchard
-ms.custom: virtual-network
+ms.custom: internal, virtual-network
 ---
 
 # Role-based access control

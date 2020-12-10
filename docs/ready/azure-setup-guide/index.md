@@ -7,8 +7,8 @@ ms.date: 07/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 # Azure setup guide overview

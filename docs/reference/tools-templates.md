@@ -4,9 +4,10 @@ description: Find the tools and templates that are available in the Cloud Adopti
 author: JanetCThomas
 ms.author: janet
 ms.date: 04/14/2020
+ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: reference
-ms.topic: article
+ms.custom: internal
 ---
 
 # Tools and templates
@@ -27,8 +28,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy&nbsp;and&nbsp;plan&nbsp;template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions, as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
-| [Using the Strategy-Plan-Ready-Govern ADO template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |  
-
+| [Using the Strategy-Plan-Ready-Govern ADO template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
 
 ## Ready
 

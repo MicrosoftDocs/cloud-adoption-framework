@@ -7,6 +7,7 @@ ms.date: 12/26/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- docutune:casing GDGs "GT Software" "NTT Data" -->

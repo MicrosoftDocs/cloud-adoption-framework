@@ -7,6 +7,7 @@ ms.date: 10/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Getting Started module" "internal Microsoft teams" OneMigrate -->

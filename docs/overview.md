@@ -7,7 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.custom: homepage
+ms.custom: internal, homepage
 ---
 
 # What is the Microsoft Cloud Adoption Framework for Azure?

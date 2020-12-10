@@ -7,8 +7,8 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 # Deploy workloads and assets (infrastructure, apps, and data)
@@ -71,6 +71,7 @@ If this is the first time using Azure Database Migration Service, you need to re
 ::: zone-end
 
 <!-- docutune:casing "Create Migration Service wizard" -->
+
 After you register the resource provider, you can create an instance of Azure Database Migration Service.
 
 1. Select **+ Create a resource** and search the marketplace for **Azure Database Migration Service**.
