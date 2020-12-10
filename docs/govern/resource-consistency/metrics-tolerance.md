@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: XX
 ---
 
 # Risk tolerance metrics and indicators in the Resource Consistency discipline

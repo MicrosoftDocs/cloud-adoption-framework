@@ -7,7 +7,7 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: governance
+ms.custom: XX
 ---
 
 # Build a business justification for cloud migration

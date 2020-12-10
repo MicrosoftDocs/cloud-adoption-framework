@@ -7,7 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: XX
 ---
 
 # Azure regions decision guide

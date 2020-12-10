@@ -7,7 +7,7 @@ ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: XX
 ---
 
 # Assess your transformation journey

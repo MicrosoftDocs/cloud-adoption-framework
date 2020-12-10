@@ -7,7 +7,7 @@ ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: XX
 ---
 
 # Standard enterprise governance guide: The narrative behind the governance strategy

@@ -7,7 +7,7 @@ ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: XX
 ---
 
 # Software Defined Networking: Hybrid network
