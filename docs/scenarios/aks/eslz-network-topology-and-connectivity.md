@@ -70,13 +70,22 @@ ms.subservice: ready
 
 ## Implementation details
 
+### Connectivity Virtual Network
+
+There are essentially two major network connectivity models you can deploy in Azure and recommended for Enterprise Scale designs:
+
+- Customer-managed Hub and Spoke, where there is a Connectivity Virtual Network that contains both networking elements such as Azure Firewall, ExpressRoute and VPN Gateways, as well as shared services such as Windows Domain Controllers or DNS servers.
+- Virtual WAN, where the Azure Firewall, ExpressRoute and VPN Gateways are deployed in a Microsoft-managed Virtual Network, and shared services such as the DNS servers are deployed to a Virtual WAN spoke.
+
+In the following sections the diagrams refer to the customer-managed, traditional hub and spoke design, but the considerations are the same for Virtual WAN environments, where the DNS resolvers would be in the Shared Services Spoke in the Connectivity subscription.
+
 ### DNS considerations for private clusters
 
-Following Enterprise Scale proven practices, DNS resolution for Azure workloads is offered by DNS servers deployed in the connectivity hub Virtual Network. These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), as well as private names. All Virtual Networks should be configured to use these DNS servers for name resolution.
+Following Enterprise Scale proven practices, DNS resolution for Azure workloads is offered by DNS servers deployed in the Connectivity Virtual Network (either in a customer-managed hub VNet, or in a Microsoft-managed Virtual WAN spoke VNet). These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), as well as private names using corporate DNS servers. All Virtual Networks should be configured to use these DNS servers for name resolution.
 
 [AKS private clusters](https://docs.microsoft.com/azure/aks/private-clusters) expose the Kubernetes API over a private IP address, and not over a public one. This private IP address is actually represented in the AKS Virtual Network through a [Private Endpoint](https://docs.microsoft.com/azure/private-link/private-endpoint-overview). The Kubernetes API should not be accessed via its IP address but through its Fully Qualified Domain Name (FQDN). The resolution from the Kubernetes API FQDN to its IP address will be typically performed by an [Azure Private DNS Zone](https://docs.microsoft.com/azure/dns/private-dns-overview) that the cluster creation process will deploy in the AKS node resource group (see [Why are two resource groups created with AKS?](https://docs.microsoft.com/azure/aks/faq#why-are-two-resource-groups-created-with-aks) for more details on the node resource group).
 
-As a consequence, the private DNS zone created in the AKS node resource group will have to be linked to the connectivity hub Virtual Network, so that the central DNS servers can resolve the Kubernetes API FQDN. Note that each AKS will have a different private zone name, since a random GUID is prepended to the zone name. As a consequence, for each new AKS cluster its corresponding private DNS zone will be connected to the linked VNet.
+As a consequence, the private DNS zone created in the AKS node resource group will have to be linked to the connectivity Virtual Network, so that the shared DNS servers can resolve the Kubernetes API FQDN. Note that each AKS will have a different private zone name, since a random GUID is prepended to the zone name. As a consequence, for each new AKS cluster its corresponding private DNS zone will be connected to the linked VNet.
 
 ![Private Cluster](media/Network_PrivateCluster_500.png)
 
@@ -93,7 +102,7 @@ Application traffic can come from either on-premises or the public Internet, as 
 
 ![Application Traffic](media/Network_AppAccess_500.png)
 
-Traffic from on-premises will start with internal DNS resolution, either using the DNS servers deployed in the connectivity hub Virtual Network or on-premises DNS servers. After resolving the application FQDN to an IP address (the private IP address of the Application Gateway), traffic will be routed through a VPN or ExpressRoute gateway. The GatewaySubnet will typically have a User-Defined Route to send all traffic addressed to the Application VNet to the central Azure Firewall. The Azure Firewall will then forward the traffic to a private IP address configured in the Application Gateway.
+Traffic from on-premises will start with internal DNS resolution, either using the DNS servers deployed in the connectivity Virtual Network or on-premises DNS servers. After resolving the application FQDN to an IP address (the private IP address of the Application Gateway), traffic will be routed through a VPN or ExpressRoute gateway. The GatewaySubnet will typically have a User-Defined Route to send all traffic addressed to the Application VNet to the central Azure Firewall. The Azure Firewall will then forward the traffic to a private IP address configured in the Application Gateway.
 
 The Application Gateway is typically deployed in the same subscription as the AKS cluster, since its configuration is very closely related to the workloads deployed in AKS, and hence it is managed by the same application team. That is the reason why applications are usually exposed to the public Internet directly from the Application Gateway in the AKS Virtual Network. Clients from the public Internet would resolve the DNS name for the application using [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview), which would send the clients to the public IP address of the Application Gateway. Alternatively other global load balancing technologies can be used, such as [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview).
 
@@ -105,7 +114,7 @@ Another possibility is exposing the applications from the Azure Firewall in the 
 
 The pods running inside of the AKS cluster will potentially need to access backend services such as Azure Storage, Azure SQL Databases or Azure Cosmos DB noSQL databases. For security reasons, this services should be deployed as [Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview).
 
-DNS resolution of Azure PaaS services exposed over Private Endpoints is carried out using Azure Private DNS Zones. Since the DNS resolvers for the whole environment are in the connectivity hub VNet, these private zones should be created in the Connectivity subscription too. To create the A-record required to resolve the FQDN of the private service, it is recommended associating the private DNS zone (in the Connectivity subscription) with the private endpoint (in the Application subscription). This operation will require certain privilege in each of those subscriptions.
+DNS resolution of Azure PaaS services exposed over Private Endpoints is carried out using Azure Private DNS Zones. Since the DNS resolvers for the whole environment are in the Connectivity VNet, these private zones should be created in the Connectivity subscription too. To create the A-record required to resolve the FQDN of the private service, it is recommended associating the private DNS zone (in the Connectivity subscription) with the private endpoint (in the Application subscription). This operation will require certain privilege in each of those subscriptions.
 
 It is possible creating the A-records manually as well, but associating the private DNS zone with the private endpoint would result in a setup less prone to misconfigurations.
 
