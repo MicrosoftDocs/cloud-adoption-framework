@@ -43,7 +43,7 @@ The guidance regarding [incremental rationalization of the digital estate](../di
 
 The table in the [documenting business outcomes](#document-business-outcomes) section above misses a key outcome that would support the number one objective of reducing IT costs. When IT costs reductions rank anywhere in the list of business outcomes, it is important to consider the potential to sunset or retire workloads. In some scenarios, cost savings can come from not migrating workloads that don't warrant a short-term investment. Some customers have reported cost savings in excess of 20% total cost reductions by retiring underutilized workloads.
 
-To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload within assess and migrate phases:
+To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload during assessment and migration phases:
 
 - Has the workload been used by end users in the past six months?
 - Is end-user traffic consistent or growing?

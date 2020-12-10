@@ -238,7 +238,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
     _Figure 16: Setting up the build pipeline._
 
-7. In **Phase 1**, they add a **Docker Compose** task. This task builds the Docker Compose.
+7. In **Step 1**, they add a **Docker Compose** task. This task builds the Docker Compose.
 
     ![Screenshot of building a Docker Compose task in Azure DevOps.](./media/contoso-migration-rebuild/vsts6.png)
 

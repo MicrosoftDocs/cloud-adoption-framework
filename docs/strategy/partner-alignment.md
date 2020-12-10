@@ -19,7 +19,7 @@ Successful cloud adoption programs typically involve at least one level of suppo
 
 ## Steps to align the partnership strategy
 
-During the Strategy phase of adoption, it's important to start aligning your partnership strategy. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
+It's important to start aligning your partnership strategy during the strategizing phase of adoption. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
 
 1. Start to understand support needs.
 1. Consider partnership options that fit your culture and needs.

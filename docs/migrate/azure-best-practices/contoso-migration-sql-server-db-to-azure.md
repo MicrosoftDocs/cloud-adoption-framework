@@ -136,7 +136,7 @@ With the database information now loaded into Azure Migrate, Contoso has identif
 When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
 
 > [!NOTE]
-> As part of the Assess phase, Contoso discovered various open source databases. Separately, they followed [Migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
+> Contoso discovered various open source databases during the assessment phase. Separately, they followed [Migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
 
 <!-- docutune:casing "custom .NET" -->
 

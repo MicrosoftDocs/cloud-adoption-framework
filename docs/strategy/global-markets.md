@@ -35,7 +35,7 @@ It is equally important to understand the usage patterns of external users, like
 
 ## Next steps
 
-Learn about the [skills needed during the Strategy phase](./suggested-skills.md) of your cloud adoption journey.
+Learn about the [skills needed during the strategizing phase](./suggested-skills.md) of your cloud adoption journey.
 
 > [!div class="nextstepaction"]
-> [Skills needed during the Strategy phase](./suggested-skills.md)
+> [Skills needed during the strategizing phase](./suggested-skills.md)

@@ -1,5 +1,5 @@
 ---
-title: Skills readiness path during the Ready phase of a migration journey
+title: Skills readiness path during the readiness phase of a migration journey
 description: Use the Cloud Adoption Framework for Azure to learn how to build the skills necessary to complete your migration journey.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Skills readiness path during the Ready phase of a migration journey
+# Skills readiness path during the readiness phase of a migration journey
 
-During the Ready phase of a migration journey, the objective is to prepare for the journey ahead. This phase is accomplished in two primary areas: organizational readiness and environmental (technical) readiness. Each area might require new skills for both technical and nontechnical contributors. The following sections describe a few options to help build the necessary skills.
+During the readiness phase of a migration journey, the objective is to prepare for the journey ahead. This phase is accomplished in two primary areas: organizational readiness and environmental (technical) readiness. Each area might require new skills for both technical and nontechnical contributors. The following sections describe a few options to help build the necessary skills.
 
 ## Organizational readiness learning paths
 
@@ -22,7 +22,7 @@ Depending on the motivations and business outcomes associated with a cloud adopt
 
 ## Environmental (technical) readiness learning paths
 
-During the Ready phase, technical staff are called upon to create a migration landing zone that's capable of hosting, operating, and governing workloads that were migrated to the cloud. Developing the necessary skills can be accelerated with the following learning paths:
+During the readiness phase, technical staff are called upon to create a migration landing zone that's capable of hosting, operating, and governing workloads that were migrated to the cloud. Developing the necessary skills can be accelerated with the following learning paths:
 
 - [Create an Azure account](/learn/modules/create-an-azure-account): The first step to using Azure is to create an account. Your account holds the Azure services you provision and handles your personal settings like identity, billing, and preferences.
 - [Azure portal](/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
@@ -35,7 +35,7 @@ During the Ready phase, technical staff are called upon to create a migration la
 - [Secure resources with role-based access control (RBAC)](/learn/modules/secure-azure-resources-with-rbac): Use RBAC to secure resources.
 - [Data storage options](/learn/modules/intro-to-data-in-azure): Benefits of Azure data storage.
 
-During the Ready phase, architects are called upon to architect solutions that span all Azure environments. The following skill-building resources can prepare architects for these tasks:
+During the readiness phase, architects are called upon to architect solutions that span all Azure environments. The following skill-building resources can prepare architects for these tasks:
 
 - [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.

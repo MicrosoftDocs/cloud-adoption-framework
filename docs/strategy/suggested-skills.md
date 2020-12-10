@@ -47,7 +47,7 @@ Convert the business case and rationalized digital estate into an actionable mig
 
 ## Business planning skills
 
-During the Ready phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
+During the readiness phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
 
 - [Create an Azure account](/learn/modules/create-an-azure-account). The first step to using Azure is to create an account. Your account holds the Azure services you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](/learn/modules/tour-azure-portal). Tour the Azure portal features and services, and customize the portal.
