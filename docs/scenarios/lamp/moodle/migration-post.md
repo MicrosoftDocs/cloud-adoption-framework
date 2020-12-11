@@ -25,7 +25,7 @@ After migrating Moodle, you need to take care of some post-migration tasks to co
 
 ## Controller virtual machine scale set
 
-Take the following steps to finish configuring your virtual machine scale set.
+Take the following steps to finish configuring your virtual machine scale set. Please note that you will need to SSH to your VMSS instance (with the private IP address) as described in the previous section.
 
 ### Update log paths
 
@@ -108,7 +108,7 @@ Take these steps to complete the controller virtual machine configuration.
 
     1. Press CTRL+O to save your changes and CTRL+X to close the file.
 
-### Update the local HTML copy
+### Update local HTML copy
 
 The local copy of the Moodle HTML site content, `/moodle/html/moodle`, is created in the virtual machine scale set in this folder: `/var/www/html/moodle`. The local copy is updated only when the time stamp changes. Enter this command in the controller virtual machine to update the time stamp:
 
