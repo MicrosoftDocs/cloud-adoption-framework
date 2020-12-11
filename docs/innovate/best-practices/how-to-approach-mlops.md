@@ -37,7 +37,7 @@ While development operations (DevOps) influence machine learning operations, the
 
 - **Model retraining:** Model performance can decrease over time, and it's important to retrain models for them to remain useful.
 
-## Model Development process
+## Model development process
 
 The following steps comprise the development process:
 
