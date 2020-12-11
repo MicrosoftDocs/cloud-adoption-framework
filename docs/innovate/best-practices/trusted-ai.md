@@ -102,7 +102,7 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 ## A persona–centric, trusted AI framework
 
-![A diagram of a persona–centric, trusted AI framework](media/ai-framework.png)
+![A diagram of a persona–centric, trusted AI framework.](media/ai-framework.png)
 
 ### AI designer
 
