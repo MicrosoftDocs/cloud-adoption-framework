@@ -71,9 +71,7 @@ A data holder is obligated to protect the data in an AI system, and privacy and 
 
 ## Human AI guidelines​
 
-Human AI design guidelines consist of 18 principles that occur over four periods: initially, during interaction, when wrong, and over time. These principles are designed to produce a more inclusive and human-centric AI system. The following diagram lists these principles. **Need updated image; only shows the periods.**
-
-![A diagram of human AI design guidelines​.](media/human-ai-guidelines.png)
+Human AI design guidelines consist of 18 principles that occur over four periods: initially, during interaction, when wrong, and over time. These principles are designed to produce a more inclusive and human-centric AI system. 
 
 ### Initially
 
