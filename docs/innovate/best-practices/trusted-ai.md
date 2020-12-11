@@ -1,5 +1,5 @@
 ---
-title: Trusted AI
+title: Responsible and trusted AI
 description: Understand the six guiding Microsoft principles for responsible AI-accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Trusted AI
+# Responsible and trusted AI
 
 Microsoft outlines key six principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into more mainstream products and services. They are guided by two perspectives: ethical and explainable.
 
-![A diagram of trusted AI.](media/trusted-ai.png)
+![A diagram of responsible AI principles.](media/responsible-ai.png)
 
 ## Ethical
 
@@ -128,7 +128,7 @@ The AI administrator and officers oversee AI, governance, and audit framework op
 
 - Working toward building model governance and access sets boundaries and mitigates negative business and operational impact. Role-based access control standards determine security controls, which preserve restricted production environments and the IP.
 
-- Using AI audit and compliance frameworks to track how models develop and change to uphold industry-specific standards. Interpretable and trusted AI is founded on explainability measures, concise features, model visualizations, and industry vertical language.
+- Using AI audit and compliance frameworks to track how models develop and change to uphold industry-specific standards. Interpretable and responsible AI is founded on explainability measures, concise features, model visualizations, and industry vertical language.
 
 ### AI business consumer
 
@@ -144,4 +144,4 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 ## Next steps
 
-See [human AI guidelines](/ai/guidelines-human-ai-interaction.md) to learn more.
+Explore [human AI guidelines](/ai/guidelines-human-ai-interaction.md) to learn more about responsible AI.
