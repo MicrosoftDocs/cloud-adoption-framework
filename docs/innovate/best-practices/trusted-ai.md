@@ -67,7 +67,7 @@ Achieving transparency helps the team to understand the data and algorithms used
 
 ### Privacy and security
 
-A data holder is obligated to protect the data in an AI system, and privacy and security are an integral part of this system. Personal data not only needs to be secured, but it should also be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects and preserves privacy by randomizing data and adding noise to conceal personal information from data scientists.
+A data holder is obligated to protect the data in an AI system, and privacy and security are an integral part of this system. Personal needs to be secured, and it should be accessed in a way that doesn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) protects and preserves privacy by randomizing data and adding noise to conceal personal information from data scientists.
 
 ## Human AI guidelines​
 
