@@ -42,7 +42,9 @@ While development operations (DevOps) influence machine learning operations, the
 The following steps comprise the development process:
 
 - Training is automated, and models are validated, which includes testing functionality and performance (for example, using accuracy metrics).
+
 - Deployment to the infrastructure used for inferencing (including monitoring) is automated.
+
 - Mechanisms create an end-to-end data audit trail. Automatic model retraining occurs when data drifts over time, which is relevant to large-scale, machine-learning-infused systems.
 
 The following diagram depicts the deployment lifecycle of a machine learning system:
