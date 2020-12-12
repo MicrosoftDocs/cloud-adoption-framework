@@ -87,4 +87,4 @@ Integrating machine learning operations with your business can create the follow
 
 - The [Microsoft AI Business School](https://docs.microsoft.com/learn/topics/ai-business-school) is a resource that outlines AI, including holistic approaches to its implementation, understanding dependencies above and beyond the technology, and how to drive lasting business impact.
 
-- Read about [the machine learning operations process](../best-practices/ml-ops-process.md) to explore this process in more detail.
+- Read about [the machine learning operations process](../best-practices/mlops-process.md) to explore this process in more detail.
