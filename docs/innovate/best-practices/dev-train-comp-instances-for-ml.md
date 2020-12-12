@@ -17,7 +17,7 @@ When determining development, training, and compute instances for your machine l
 
 Reference the following diagram to understand development and training for your machine learning model:
 
-![A development and training diagram.](media/development-and-training.png)
+![A development and training diagram.](media/dev-and-training.png)
 
 ## Compute instances for your machine learning model
 
