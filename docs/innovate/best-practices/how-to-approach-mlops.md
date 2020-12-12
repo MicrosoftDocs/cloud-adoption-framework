@@ -15,7 +15,7 @@ ms.subservice: innovate
 
 Machine learning operations consist of principles and best practices about how to organize and standardize machine model development, deployment, and maintenance in a scalable way.
 
-![A diagram showing an overview of machine learning operations.](media/ml-operations-overview.png)
+![A diagram showing an overview of machine learning operations.](media/mlops-overview.png)
 
 The main components of how a machine learning system develops are outlined below:
 
