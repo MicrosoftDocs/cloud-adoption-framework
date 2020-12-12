@@ -3,7 +3,7 @@ title: Responsible and trusted AI
 description: Understand the six guiding Microsoft principles for responsible AI-accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/07/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -45,7 +45,7 @@ Microsoft has developed [InpretML](http://interpret.ml/), an open-source toolkit
 
 - Glass-box models are interpretable because of their structure. For these models, use Explainable Boosting Machine, which is the state of the algorithm based on a decision tree or linear models, provides lossless explanations, and is editable by domain experts.
 
-- Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like LIME or SHapley Additive exPlanation interpret these models by analyzing the relationship between the input and output.  
+- Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like LIME or SHapley Additive exPlanation interpret these models by analyzing the relationship between the input and output.
 
 - [FairLearn](https://fairlearn.github.io/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. Use explainers to understand what mainly influences the model and domain experts to validate these influences.
 
@@ -126,7 +126,7 @@ The AI administrator and officers oversee AI, governance, and audit framework op
 
 - Working toward building model governance and access sets boundaries and mitigates negative business and operational impact. Role-based access control standards determine security controls, which preserve restricted production environments and the IP.
 
-- Using AI audit and compliance frameworks to track how models develop and change to uphold industry-specific standards. Interpretable and responsible AI is founded on explainability measures, concise features, model visualizations, and industry vertical language.
+- Using AI audit and compliance frameworks to track how models develop and change to uphold industry-specific standards. Interpretable and responsible AI is founded on explainability measures, concise features, model visualizations, and industry-vertical language.
 
 ### AI business consumer
 
@@ -138,7 +138,7 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 - Each predictive value should be broken down into individual features or vectors by importance or impact and deliver thorough prediction explanations that can be exported into a business report for audit and compliance reviews, customer transparency, and business readiness.
 
-- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about non-compliance with PHI and PII, violation of national security laws, and more.
+- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about noncompliance with PHI and PII, violation of national security laws, and more.
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: How to set up machine learning workspaces
 description: Understand machine learning environments, consider the factors that influence how you set up your machine learning workspaces, and determine the best structure and controls for each workspace.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/07/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -69,4 +69,4 @@ Multiple factors can influence how you set up your machine learning workspaces, 
 
 ## Next steps
 
-TBD
+To be added.

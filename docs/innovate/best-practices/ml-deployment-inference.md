@@ -3,7 +3,7 @@ title: Machine learning inference during deployment
 description: Understand how your AI model makes predictions while it's being deployed in production.
 author: DonnaForlin
 ms.author: doforlin
-ms.date: 12/07/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -50,7 +50,7 @@ Consider the following best practices for batch inference:
   
   - A variation of the cold-start problem; results might not be available for new data. For example, if a new user creates and account and starts shopping with a retail recommendation system, product recommendations won't be available until after the next batch inference run. If this is an obstacle for your use case, consider real-time inference.
   
-  - Multiregional deployment and high availability aren't critical concerns in a batch inference scenario. The model doesn't need to be deployed regionally, and the data store might need to be deployed with a high-availability strategy in many locations. This will normally follow the application HA design and strategy.
+  - Deploying to many regions and high availability aren't critical concerns in a batch inference scenario. The model doesn't need to be deployed regionally, and the data store might need to be deployed with a high-availability strategy in many locations. This will normally follow the application HA design and strategy.
 
 ## Real-time inference
 
@@ -68,7 +68,7 @@ The following considerations and best practices are available if real-time infer
 
 ## Many-models scenario
 
-A singular model might not be able to capture the complex nature of real-world problems, such as predicting sales for a supermarket where demographics, brand, SKUs, and other features could cause customer behavior to vary significantly. Regions could cause developing predictive maintenance for smart meters to also vary significantly. Having many models for these scenarios to capture regional data or store-level relationships could produce higher accuracy than a single model. This approach assumes that enough data is available to such a level of granularity.
+A singular model might not be able to capture the complex nature of real-world problems, such as predicting sales for a supermarket where demographics, brand, SKUs, and other features could cause customer behavior to vary significantly. Regions could cause developing predictive maintenance for smart meters to also vary significantly. Having many models for these scenarios to capture regional data or store-level relationships could produce higher accuracy than a single model. This approach assumes that enough data is available for this level of granularity.
 
 At a high level, a many-models scenario occurs in three stages: data source, data science, and many models.
 
@@ -100,7 +100,7 @@ Each service is stateless microservice that can handle multiple requests simulta
 
 ## Next steps
 
-Explore the following resources to learn more:
+Explore the following resources to learn more about inferencing with Azure Machine Learning:
 
 - [Build an Azure Machine Learning pipeline for batch scoring](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 - [Run batch prediction using Azure Machine Learning designer](/azure/machine-learning/how-to-run-batch-predictions-designer)
