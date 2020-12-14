@@ -27,4 +27,6 @@ The following diagram can help you to choose compute instances that help your ma
 
 ## Next steps
 
-To be added.
+- [Create and manage a compute instance](/azure/machine-learning/how-to-create-manage-compute-instance) in your Azure Machine Learning workspace to understand the process in more detail.
+
+- Read about [compute targets in Azure Machine Learning](azure/machine-learning/concept-compute-target) to understand how these environments can help you to train and deploy your model during the development lifecycle.

@@ -69,4 +69,8 @@ Multiple factors can influence how you set up your machine learning workspaces, 
 
 ## Next steps
 
-To be added.
+- Explore [Create and manage a workspace in Azure Machine Learning](/azure/machine-learning/how-to-manage-workspace) to understand this process in more detail.
+
+- [Use the Phython SDK](azure/machine-learning/tutorial-1st-experiment-sdk-setup-local) to create a workspace in your development environment.
+
+- [Use the Azure portal and Jupyter Notebooks](azure/machine-learning/tutorial-1st-experiment-sdk-setup) during the development lifecycle to set up your Azure Machine Learning development environment and train your model.
