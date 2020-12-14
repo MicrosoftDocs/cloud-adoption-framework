@@ -1,18 +1,17 @@
 ---
 title: Overview of Moodle manual migration
 description: Review the prerequisites and overall steps for manually migrating Moodle from an on-premises environment to Azure.
-author: UmakanthOS
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
 ---
 
 # Overview of Moodle manual migration
 
-[Moodle](https://moodle.org/) is a free, open-source learning management system written in PHP. This guide explains how to migrate a Moodle deployment from an on-premises environment to Azure. The guide provides steps for two different approaches that use either the Azure portal or the Azure command-line interface (Azure CLI).
+[Moodle](https://moodle.org/) is a free, open-source learning management system written in PHP. This guide explains how to migrate the Moodle application from an on-premises environment to Azure. The guide provides steps for two different approaches that use either the Azure portal or the Azure command-line interface (Azure CLI).
 
 ## Prerequisites
 
