@@ -15,12 +15,12 @@ A Moodle migration to Azure includes the following tasks:
 
 1. Deploy Azure infrastructure with Azure Resource Manager (ARM) templates.
 1. [Download and install AzCopy](migration-start.md#download-and-install-azcopy-on-the-controller-vm).
-1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-archive-to-the-controller-vm) instance in the Azure Resource Manager deployment.
+1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-moodle-archive-to-the-controller-vm) instance in the Azure Resource Manager deployment.
 1. [Migrate the Moodle application and configuration](migration-start.md#import-the-moodle-database-to-azure).
 1. [Set up the Moodle controller instance and worker nodes](azure-infra-config.md).
 1. [Configure PHP and the web server](azure-infra-config.md).
 
-This article describes Moodle Azure infrastructure options, and how to deploy the Azure resources you want by using an ARM template and your choice of Azure functionality.
+This article describes Moodle Azure infrastructure options, and how to deploy Azure resources by using an ARM template that offers your choice of Azure functionality.
 
 ## Azure infrastructure
 
@@ -56,7 +56,7 @@ To deploy one of the predefined ARM templates:
 
 1. In the preceding section, select the **Deploy to Azure** button for the deployment you want. This action takes you to the Azure portal.
    
-1. On the **Custom deployment** page in the Azure portal, complete the mandatory **Subscription**, **Resource group**, **Region**, and **SSH Public Key** fields. For information on how to add the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+1. On the **Custom deployment** page in the Azure portal, complete the mandatory **Subscription**, **Resource group**, **Region**, and **Ssh Public Key** fields. For information on how to add the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
    
    :::image type="content" source="images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
    

@@ -25,7 +25,7 @@ After migrating Moodle, you need to take care of some post-migration tasks to co
 
 ## Controller virtual machine scale set
 
-Take the following steps to finish configuring your virtual machine scale set. Please note that you will need to SSH to your VMSS instance (with the private IP address) as described in the previous section.
+Take the following steps to finish configuring your virtual machine scale set. You will need to SSH to your virtual machine scale set instance by using the private IP address, as described in [Access the virtual machine scale set](azure-infra-config.md#access-the-virtual-machine-scale-set).
 
 ### Update log paths
 
@@ -286,6 +286,6 @@ When Moodle is in maintenance mode and you try to leave that mode, sometimes you
 
 ## Next steps
 
-- [Azure Database for MySQL documentation](https://docs.microsoft.com/azure/mysql/)
-- [What are virtual machine scale sets?](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview)
-- [Storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
+- [Azure Database for MySQL documentation](/azure/mysql/)
+- [What are virtual machine scale sets?](/azure/virtual-machine-scale-sets/overview)
+- [Storage account overview](/azure/storage/common/storage-account-overview)

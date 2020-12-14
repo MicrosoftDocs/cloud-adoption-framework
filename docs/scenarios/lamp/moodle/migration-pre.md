@@ -35,7 +35,7 @@ Follow these steps to set up the Azure CLI in your on-premises environment:
 
 Skip this step if you already have an Azure subscription.
 
-If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in Azure.
+If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in the Azure portal.
 
 - To use the Azure portal to create a subscription, open [Subscriptions](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
 
@@ -53,7 +53,7 @@ If you don't have an Azure subscription, you can [create one for free](https://a
 
 ## Create a resource group
 
-Once you Azure subscription is set up, create a resource group in Azure. You can either use the Azure portal **or** the CLI to create a resource group.
+Once you set up your Azure subscription, create a resource group in Azure. You can either use the Azure portal **or** the Azure CLI to create a resource group.
 
 - To use the Azure portal, follow these steps:
 
@@ -94,9 +94,9 @@ You can either use the Azure portal **or** the Azure CLI to create a storage acc
      - A storage account name
      - Your region
    
-  1. For **Account kind**, select **BlobStorage** from the drop-down.
+  1. For **Account kind**, select **BlobStorage** from the drop-down list.
   
-  1. For **Replication**, select **Read-access geo-redundant storage (RA-GRS)** from the drop-down.
+  1. For **Replication**, select **Read-access geo-redundant storage (RA-GRS)** from the drop-down list.
 
   1. Select **Review + create**.
 
@@ -118,7 +118,7 @@ You can either use the Azure portal **or** the Azure CLI to create a storage acc
 
 Before backing up your on-premises Moodle data, turn on **Maintenance mode** on your Moodle website by following these steps:
 
-1. On the Moodle instance in your on-premises environment, enter this command:
+1. From the Moodle instance in your on-premises environment, enter this command:
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php --enable
@@ -130,7 +130,7 @@ Before backing up your on-premises Moodle data, turn on **Maintenance mode** on 
    sudo /usr/bin/php admin/cli/maintenance.php
    ```
 
-When backing up on-premises Moodle and moodledata files, configurations, and databases, the recommendation is to back these resources up to a single directory. The following diagram summarizes this idea:
+When backing up on-premises Moodle and moodledata files, configurations, and databases, the recommendation is to back up these resources to a single directory. The following diagram summarizes this idea:
 
 ![Diagram showing the structure of the Moodle backup storage directory.](./images/directory-structure.png)
 
