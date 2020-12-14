@@ -11,19 +11,9 @@ ms.subservice: operate
 
 # Manage hybrid and multicloud operations
 
-Hybrid and multicloud leads to nature shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how your implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
+Hybrid and multicloud leads to natural shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how your implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
 
-This article outlines you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
-
-## Always start with business alignment
-
-Before implementing unified operations solution, its important to understand the scope of your hybrid, multicloud, and edge deployments. It's also important to understand the business impact of the workloads that will be hosted on a secondary cloud platform. This implementation guide will start with suggested steps for extending your operations baseline. That baseline may be sufficient to avoid duplicated or fractured operations.
-
-However, you should evaluate the hybrid and multicloud strategy to determine if any of the following will exist in your future state:
-
-- Do any of the environments have operational requirements beyond that of your operations baseline? If so, you may need to also implement an expanded baseline.
-- Are there any shared platforms (like SQL, SAP, WVD, etc...) that will be deployed to a hybrid or multicloud environment? If so, you may need to invest more in platform operations for that technology platform.
-- Do any of the workloads in your hybrid and multicloud strategy have higher operational requirements or abnormally high business impacts? If so, you may need to invest in workload operations and a well-architected review.
+This article outlines how you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 
 ## Extending your operations baseline
 
