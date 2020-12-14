@@ -19,52 +19,37 @@ This article outlines how you can apply the concept of unified operations and im
 
 Azure Arc reduces the complexity and cost of extending your operations baseline. Deploying Azure Arc across your data center, hybrid cloud, and multicloud environments will extend the built-in features of Azure that are included in Azure Resource Manager.
 
-This simple deployment automatically provides you with all of the basic cloud control features:
-    - Search, Index, Group, and Tag all deployed assets for basic visibility
-    - Template, Automate, and Extend tooling for consistent deployment
-    - Create Access and Security boundaries to protect deployed assets
+To get started with an operations baseline that spans multiple cloud providers, complete a simple inventory and tagging exercise. This simple exercise will begin to extend your operations baselines in a few simple steps:
 
-Get started today. Onboard [linux VMs](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/onboard_server_linux.md) or [Windows VMs](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/onboard_server_win.md) to Azure Arc. **TODO: Replace with Docs link**
+- Add a tag for "hosting platform" to all hybrid, multicloud, and edge assets
+- Tag resources from AWS, GCP, etc...
+- Query your resources to see where they are all hosted.
 
-From there you can add additional cloud controls to create an enhanced baseline for all resources in that environment. You could also add further features and automated controls to improve operations of specific workloads or shared technology platforms running in your hybrid and multicloud environments.
+To get started, [inventory and tag your hybrid and multicloud resources](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_inventory_tagging?branch=pr-en-us-884)
+**TODO Point to relative link**
+
+Once you complete the basic exercise your can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds, is to establish a consistent plan for patch and update management. Follow this guide on [hybrid and multicloud update management](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_updatemanagement?branch=pr-en-us-884) to deploy tools that can control patching across cloud providers.
 
 ## Enhanced baseline
 
-If the hybrid and multicloud environment is governed by higher operations management requirements, then you may need to expand the operations baseline to include a number of common features. The following are a few of the most common features we see added to customers' enhanced baselines:
+Enhance your operations baseline by onboarding a continuously broader range of assets and cloud providers. The follow list provides a few examples of the type of assets you can add to your expanded operations baseline.
 
-- Monitoring: Expand monitoring & alerts to include cloud service performance, and/or application performance.
-- Inventory & change tracking: Consistently log, diagnose, and remediate issues related to inventory, change tracking, and [patch management](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_updateManagement.md). **TODO: Replace with Docs link**
+- Onboard Azure assets: [linux VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/azure_arm_template_linux) and [Windows VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/azure_arm_template_win)
+- Onboard assets in your local data center: [linux VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/onboard_server_linux) and [Windows VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/onboard_server_win)
+- Onboard VMWare assets: [linux VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux) and [Windows VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware_scaled_powercli_win)
+- Onboard AWS assets: [linux VMs with Terraform](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/aws_terraform_al2) and [AWS Ubuntu with Terraform](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/aws_terraform_ubuntu)
+- Onboard GCP assets: [Ubuntu VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/gcp_terraform_ubuntu) and [Windows VMs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/gcp_terraform_windows)
 
-## Best Practices (Blocked - TODO Here)
+## Operations management disciplines
 
-> [!WARNING]
-> TODO: We need to figure out how these integrate into the story. We can't drive traffic away from approved customer facing properties here. These articles are very similar to the Azure Server Management guide in CAF Manage. Should these be converted to MD files in that section?
+In addition to tagging and onboarding assets, you can also deliver a number of operations management disciplines using hybrid and multicloud tools.
 
-### Azure Arc enabled Servers - Day-2 Scenarios & Use-Cases **TODO: Replace with Docs link**
+Once example of a mature operations management discipline, is the use of Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
-Once you have server resources projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the servers as native Azure resources. The following guides show examples of using Azure management tools such as resource tags, Azure Policy, Log Analytics, and more with Azure Arc enabled servers.
+- [Manage VMs with MMA](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_vm_extension_mma_arm?branch=pr-en-us-884)
+- [Scale configuration of MMA](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_vm_extension_customscript_arm)
 
-* [Tagging and querying server inventory across multiple clouds using Resource Graph Explorer](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_inventory_tagging.md)
-
-* [Deploying Microsoft Monitoring Agent Extension (MMA) to Azure Arc Linux and Windows VMs using Extension Management](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_vm_extension_mma_arm.md)
-
-* [Deploying Custom Script Extension to Azure Arc Linux and Windows VMs using Extension Management](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_vm_extension_customscript_arm.md)
-
-* [Deploying Microsoft Monitoring Agent Extension (MMA) to Azure Arc Linux and Windows VMs using Azure Policies](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_policies_mma.md)
- 
-* [Integrate Azure Security Center with Azure Arc enabled Servers](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_securitycenter.md)
-
-* [Integrate Azure Sentinel with Azure Arc enabled Servers](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/arc_azuresentinel.md)
-
-### Azure Arc enabled Servers - Scaled Deployment Scenarios **TODO: Replace with Docs link**
-
-The following guides are designed to provide scaled onboarding experience to Azure Arc of virtual machines deployed in various platforms and existing environments.
-
- * [Scaled Onboarding VMware vSphere Windows Server VMs to Azure Arc](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/vmware_scaled_powercli_win.md)
-
- * [Scaled Onboarding VMware vSphere Linux VMs to Azure Arc](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/vmware_scaled_powercli_linux.md)
-
- * [Scaled Onboarding AWS EC2 instances to Azure Arc using Ansible](https://github.com/microsoft/azure_arc/blob/master/azure_arc_servers_jumpstart/docs/aws_scale_ansible.md)
+As you mature your hybrid and multicloud operations, periodically check the [Unified Operations best practices](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/unified-operations/?branch=pr-en-us-884) for frequent updates and new examples of best practice implementations.
 
 ## Next step: Your next migration iteration
 
