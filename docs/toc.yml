@@ -719,6 +719,11 @@ items:
           - name: Exadata
             href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
 
+        - name: Multitenant migration
+          items:
+          - name: Azure Lighthouse for scale migration
+            href: https://docs.microsoft.com/azure/lighthouse/how-to/migration-at-scale?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
         - name: Mainframes
           items:
           - name: Overview
