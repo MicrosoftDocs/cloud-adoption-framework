@@ -170,7 +170,7 @@ After importing the on-premises Moodle database archive to Azure Database for My
 - Configure PHP and nginx web servers.
 - Update the DNS name and other variables.
 - Install any missing PHP extensions.
-- Ensure the webserver instances on the controller VM are stopped.
+- Ensure the web server instances on the controller VM are stopped.
 - Copy the config files to a shared location for copying to virtual machine scale sets.
 
 ### Update the Moodle config file
@@ -276,7 +276,7 @@ To install missing extensions, run:
 sudo apt-get install -y php-<extension>
 ```
 
-### Ensure the webserver instances on the controller VM are stopped
+### Ensure the web server instances on the controller VM are stopped
 
 1. Restart the web servers.
    
