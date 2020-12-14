@@ -21,7 +21,7 @@ Reference the following diagram to understand development and training for your 
 
 ## Compute instances for your machine learning model
 
-The following diagram can help you to choose compute instances that help your machine learning model to run inference.
+The following diagram can help you to choose compute instances that help your machine learning model to run inference:
 
 ![A diagram that shows inference.](media/inference.png)
 
@@ -29,4 +29,4 @@ The following diagram can help you to choose compute instances that help your ma
 
 - [Create and manage a compute instance](/azure/machine-learning/how-to-create-manage-compute-instance) in your Azure Machine Learning workspace to understand the process in more detail.
 
-- Read about [compute targets in Azure Machine Learning](azure/machine-learning/concept-compute-target) to understand how these environments can help you to train and deploy your model during the development lifecycle.
+- Read about [compute targets in Azure Machine Learning](azure/machine-learning/concept-compute-target) to learn how these environments can help you to train and deploy your model during the development lifecycle.

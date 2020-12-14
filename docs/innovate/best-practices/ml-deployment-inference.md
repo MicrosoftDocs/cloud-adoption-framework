@@ -26,19 +26,19 @@ Consider the following questions to evaluate your model, compare the two process
 - How much compute power is needed to execute the model?
 - Are there operational implications and costs to maintain the model?
 
-The decision tree below can help you to determine which deployment model best fits your use case.
+The following decision tree can help you to determine which deployment model best fits your use case:
 
 ![A diagram of the real-time or batch inference decision tree.](media/inference-decision-tree.png)
 
 ## Batch inference
 
-Batch inference, sometimes called offline inference, is a less complex inference process that helps models to run in timed intervals and business applications to store predictions.
+Batch inference, sometimes called offline inference, is a simpler inference process that helps models to run in timed intervals and business applications to store predictions.
 
 Consider the following best practices for batch inference:
 
-- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the **ParallelRunStep** feature in Azure Machine Learning to set up a schedule or event-based automation. For more information, see [how to do batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep).
+- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the ParallelRunStep feature in Azure Machine Learning to set up a schedule or event-based automation. Navigate to the AI show to perform [batch inference using Azure Machine Learning ParallelRunStep](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep) and learn more about the process.
 
-- **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the decision tree below to identify the right compute instance for your model.
+- **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the following decision tree to identify the right compute instance for your model:
 
 ![A diagram of the compute decision tree.](media/compute-decision-tree.png)
 
@@ -58,7 +58,7 @@ Real-time, or interactive, inference is architecture where model inference can b
 
 The following considerations and best practices are available if real-time inference is right for your model:
 
-- **Challenges of real-time inference:** Latency and performance requirements make real-time inference architecture more complex for your model. A system might need to respond in 100 milliseconds or less, during which it needs to retrieve the data, perform inference, validate and store the model results, run any required business logic, and return the results to the system or application.
+- **The challenges of real-time inference:** Latency and performance requirements make real-time inference architecture more complex for your model. A system might need to respond in 100 milliseconds or less, during which it needs to retrieve the data, perform inference, validate and store the model results, run any required business logic, and return the results to the system or application.
 
 - **Compute options for real-time inference:** The best way to implement real-time inference is to deploy the model in a container form to Docker or AKS cluster and expose it as a web-service with REST API. This way, the model executes in its own isolated environment and can be managed like any other web service there. Docker/AKS capabilities can then be used for management, monitoring, scaling, and more. The model can be deployed on-premises, in the cloud, or on the edge. The following compute decision tree provides an overview of real-time inference.
 
@@ -82,7 +82,7 @@ At a high level, a many-models scenario occurs in three stages: data source, dat
  
 ## Batch inference for many models
 
-In batch inference for many models, predictions are typically scheduled, recurring, and they can handle large volumes of data running at the same time. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones. The following diagram shows the reference pattern for many-models batch inference.
+In batch inference for many models, predictions are typically scheduled, recurring, and they can handle large volumes of data running at the same time. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones. The following diagram shows the reference pattern for many-models batch inference:
 
 ![A diagram of the reference pattern for many-models batch inference.](media/many-models-batch-inference.png)
 

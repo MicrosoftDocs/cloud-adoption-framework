@@ -65,7 +65,7 @@ The data scientist will need to gather information for the following questions:
 - How will the model and code be modified in the future?
 - How much of the current experiment is reusable?
 - Are there existing project workflows that can assist?
-- How much work will it take to get the model into production?
+- How much work will be required to advance the model to production?
 
 Next, a machine learning engineer designs the workflow and estimates the amount of work required. One best practice is to involve the data scientist(s) in building out the workflow; this time presents a key opportunity to cross-train and familiarize them with the final repo since it's common for the data scientist to work on the use case in the future.
 
@@ -85,6 +85,6 @@ Integrating machine learning operations with your business can create the follow
 
 ## Next steps
 
-- The [Microsoft AI Business School](https://docs.microsoft.com/learn/topics/ai-business-school) is a resource that outlines AI, including holistic approaches to its implementation, understanding dependencies above and beyond the technology, and how to drive lasting business impact.
+- The [Microsoft AI Business School](https://docs.microsoft.com/learn/topics/ai-business-school) is a resource that outlines AI, including how to approach implementation holistically, understand dependencies beyond the technology, and drive lasting business impact.
 
 - Read further about [the machine learning operations process](../best-practices/mlops-process.md) to explore this process in more detail.
