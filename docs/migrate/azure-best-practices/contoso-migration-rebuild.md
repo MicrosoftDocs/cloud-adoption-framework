@@ -347,11 +347,11 @@ The admins create the pipeline:
 
       ![Screenshot showing creation of a stage name in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe4.png)
 
-        _Figure 30: The stage name._
+    _Figure 30: The stage name._
 
       ![Screenshot showing creation of a pipeline name in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe5.png)
 
-        _Figure 31: The pipeline name._
+    _Figure 31: The pipeline name._
 
 5. They add an artifact.
 
