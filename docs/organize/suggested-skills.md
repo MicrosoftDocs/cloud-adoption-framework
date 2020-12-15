@@ -50,11 +50,7 @@ The following information describes resources for additional learning.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and its partners offer options to help all audiences develop their skills for using Azure services.
-
-- [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
-
-We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+Microsoft and its partners offer options to help all audiences develop their skills for using Azure services. We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ### Microsoft Learn
 
