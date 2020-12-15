@@ -47,7 +47,9 @@ Because on-premises assets are added to the enterprise control plane for unified
 
 Standard migration assumes that every asset in the workload is a VM or PaaS service in terms of either Rehost or Rearchitect. As mentioned, *standard migration efforts* assume a uni-directional, "migrate everything to the cloud" approach—lifting and shifting (IaaS VMs) and rearchitecting (PaaS services).
 
-A unified operations approach that considers hybrid and multi-cloud environments opens up more form factors for distributing cloud innovation using Azure services across other multi-cloud environments and the edge.
+## A unified operations approach across Azure Stack and Azure Arc
+
+A unified operations approach that considers hybrid and multi-cloud environments opens up more form factors for distributing cloud innovation by using Azure services and server management practices across other multi-cloud environments and the edge.
 
 The Azure Stack product family opens up standard cloud form factors and extends Azure services and capabilities across datacenters, cloud, and edge locations.
 
@@ -55,11 +57,66 @@ The Azure Stack product family opens up standard cloud form factors and extends 
 
 **Azure Stack HCI** is a hyperconverged cluster that uses validated hardware to run virtualized Windows and Linux workloads on-premises and easily connect to Azure for cloud-based backup, recovery, and monitoring. Its software-defined infrastructure enables high-performance hyperconverged compute, storage, and networking, based on Hyper-V and storage Spaces Direct. Delivered as an Azure service with built-in hybrid capabilities, the Azure Stack HCI (virtualization host) is backed by Microsoft-validated hardware components.
 
-**Azure Stack Edge** is purpose-built (enterprise datacenter or rugged environment) hardware-as-a-service. It is optimized for edge compute, machine learning, and IoT scenarios to run your workloads at the edge for faster data insights, and manages your hardware appliance and workloads through the Azure portal. It allows ou to run machine learning models with hardware-accelerated machine learning capabilities (with on-board FPGAs and GPUs)—leverages edge computing to process data close to the source (with VMs, Azure services, Kubernetes clusters, and containers)—and acts as a cloud storage gateway, transferring data to Azure over the network, retaining local access to blobs and files.
+**Azure Stack Edge** is purpose-built (enterprise datacenter or rugged environment) hardware-as-a-service. It is optimized for edge compute, machine learning, and IoT scenarios to run your workloads at the edge for faster data insights, and manages your hardware appliance and workloads through the Azure portal. It allows you to run machine learning models with hardware-accelerated machine learning capabilities (with on-board FPGAs and GPUs)—leverages edge computing to process data close to the source (with VMs, Azure services, Kubernetes clusters, and containers)—and acts as a cloud storage gateway, transferring data to Azure over the network, retaining local access to blobs and files.
 
-Azure Arc: More traditional form factors adding governance, management, etc... to the technologies you use today
+## Azure Arc's single pane of glass 
 
-Unified operations is a single control to manage all of these form factors across all facilities
+Azure Arc opens up more traditional form factors because its unified operations approach offers you a **consistent Azure framework across hybrid, multi-cloud, and edge environments, reaching outside Azure and projecting your existing resources into Azure Resource Manager as first-class citizens.** Azure Arc is a multi-cloud and on-premises management platform that with a unified operations approach, a single control plane to manage all of these form factors across all on premises, multi-cloud, and edge facilities.
+
+## What can you do with Azure Arc?
+
+**Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure , placing you in control** of resources across on-premises, multi-cloud, and edge environments, providing one reference for your management, data services, governance, security, and identity. 
+
+- **Azure Arc-enabled infrastructure connects to and operates hybrid resources as native Azure resources**—giving you greater visibility, compliance, and consistency across distributed resources, unified governance (reduced risk and cost across workloads), consistent tooling, and cloud-native practices.
+
+- **Operating from Azure, deploy Azure Arc-enabled services and run Azure services outside Azure**—providing flexibility, less latency, and always-current datacenter environments—risk-reduced, compliant cloud services deployed on-premises—data services deployed on-premises, supporting connected and disconnected workloads—a cloud billing model, and always-current evergreen SQL and PostgreSQL Hyperscale on-premises,.
+
+## What are the use cases for Azure Arc?
+
+Azure Arc simplifies complex and distributed environments across on-premises, edge and multi-cloud, enables deployment of Azure services anywhere, and extends Azure management to any infrastructure.
+
+**Organize and govern across environments—** 
+Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge and multi-cloud environments under control by centrally organizing and governing from a single place.
+
+**Manage Kubernetes apps at scale—** 
+Deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured from source control consistently.
+
+**Run data services anywhere—** 
+Get automated patching, upgrades, security and scale on-demand across on-premises, edge and multi-cloud environments for your data estate.
+
+## What are the benefits of Azure Arc for customers?
+
+### Azure Arc-enabled infrastructure
+
+**Reach out, and onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, Bare-Metal) with Azure-Arc enabled servers.
+
+**Use your existing SQL servers with Azure Arc with no migration necesary**—with inventory, governance, security, and proactive SQL database assessments.
+
+**Connect, manage, and operate any Kubernetes cluster(s) and applications running anywhere,** and deploy applications with GitOps.
+
+**Ensure compliance with your organization's security baseline with Azure Policy** and enable cluster health monitoring with Azure Monitor for Containers.
+
+**Organize, inventory and unify server management experience** with simplified management of hybrid machines with Azure VM extensions for non-Azure Windows and Linux VMs.
+
+**Apply unified governance and security baselines across disparate environments**, cross-platform compliance, and centralized agent management.
+
+**Apply RBAC (role-based access control) at-scale** with Central IT and at workload level owner level.
+
+**Deploy familiar Azure governance, security, inventory tracking and patch management tools** on auto-enrolled Azure Arc-enabled servers.
+
+### Azure Arc-enabled data services
+
+**Bring Azure data services to any infrastructure—** across on-premises, edge and multi-cloud using Kubernetes on any hardware.
+
+**Remain current with fully automated updates, upgrades and policy-controlled deployments,** evergreen SQL and hyperscale deployment option of Azure Database for PostgreSQL.
+
+**Optimize performance of data workloads, and dynamically scale up/scale out, without application downtime with cloud elasticicy on-premises.**
+
+**Gain unified management and consistent visibility over on-premises and native Azure data workloads** using familiar tools (Azure Portal, Azure Data Studio and Azure CLI).
+
+**Protect your on-premises data workloads using Azure security and governance toolsets** (Azure Security Center, Azure Policy, and Azure RBAC)
+
+**Increase cost-efficiencies across your hybrid infrastructure** with a modern cloud billing model.
 
 ## inventory analysis guidance
 
