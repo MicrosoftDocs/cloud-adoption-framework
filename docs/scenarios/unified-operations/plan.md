@@ -59,13 +59,13 @@ The Azure Stack product family opens up standard cloud form factors and extends 
 
 **Azure Stack Edge** is purpose-built (enterprise datacenter or rugged environment) hardware-as-a-service. It is optimized for edge compute, machine learning, and IoT scenarios to run your workloads at the edge for faster data insights, and manages your hardware appliance and workloads through the Azure portal. It allows you to run machine learning models with hardware-accelerated machine learning capabilities (with on-board FPGAs and GPUs)—leverages edge computing to process data close to the source (with VMs, Azure services, Kubernetes clusters, and containers)—and acts as a cloud storage gateway, transferring data to Azure over the network, retaining local access to blobs and files.
 
-## Azure Arc's single pane of glass 
+## Azure Arc's single pane of glass
 
-Azure Arc opens up more traditional form factors because its unified operations approach offers you a **consistent Azure framework across hybrid, multi-cloud, and edge environments, reaching outside Azure and projecting your existing resources into Azure Resource Manager as first-class citizens.** Azure Arc is a multi-cloud and on-premises management platform that with a unified operations approach, a single control plane to manage all of these form factors across all on premises, multi-cloud, and edge facilities.
+Azure Arc opens up more traditional form factors because its unified operations approach offers you a **consistent Azure framework across hybrid, multi-cloud, and edge environments, reaching outside Azure and projecting your existing resources into Azure Resource Manager as first-class citizens.** Azure Arc is a multi-cloud and on-premises management platform at the core of unified operations—a single control plane to manage all of these form factors across all on premises, multi-cloud, and edge facilities.
 
 ## What can you do with Azure Arc?
 
-**Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure , placing you in control** of resources across on-premises, multi-cloud, and edge environments, providing one reference for your management, data services, governance, security, and identity. 
+**Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure , placing you in control** of resources across on-premises, multi-cloud, and edge environments, providing one reference for your management, data services, governance, security, and identity.
 
 - **Azure Arc-enabled infrastructure connects to and operates hybrid resources as native Azure resources**—giving you greater visibility, compliance, and consistency across distributed resources, unified governance (reduced risk and cost across workloads), consistent tooling, and cloud-native practices.
 
@@ -75,13 +75,13 @@ Azure Arc opens up more traditional form factors because its unified operations 
 
 Azure Arc simplifies complex and distributed environments across on-premises, edge and multi-cloud, enables deployment of Azure services anywhere, and extends Azure management to any infrastructure.
 
-**Organize and govern across environments—** 
+**Organize and govern across environments—**
 Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge and multi-cloud environments under control by centrally organizing and governing from a single place.
 
-**Manage Kubernetes apps at scale—** 
+**Manage Kubernetes apps at scale—**
 Deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured from source control consistently.
 
-**Run data services anywhere—** 
+**Run data services anywhere—**
 Get automated patching, upgrades, security and scale on-demand across on-premises, edge and multi-cloud environments for your data estate.
 
 ## What are the benefits of Azure Arc for customers?
