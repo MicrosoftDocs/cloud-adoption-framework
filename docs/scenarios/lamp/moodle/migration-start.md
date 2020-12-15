@@ -17,7 +17,7 @@ Before you begin this process, make sure to complete all the steps in these arti
 - [How to prepare for a Moodle migration](migration-pre.md)
 - [Moodle migration architecture and templates](migration-arch.md)
 
-After the Azure Resource Manager (ARM) template deployment finishes, sign in to the [Azure portal](https://portal.azure.com/) and locate the resource group you created as part of the deployment process. Review the list of newly-created infrastructure resources. The created resources look similar to the following image, depending on the ARM template used for deployment.
+After the Azure Resource Manager (ARM) template deployment finishes, sign in to the [Azure portal](https://portal.azure.com/) and go to the resource group you created as part of the deployment process. Review the list of newly created infrastructure resources. The created resources look similar to the following image, depending on the ARM template you used for deployment.
 
 ![Screenshot showing infrastructure resources created in the Moodle migration resource group.](images/resource-creation-overview.png)
 
