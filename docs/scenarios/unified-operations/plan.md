@@ -3,7 +3,7 @@ title: "Plan for unified operations"
 description: Describe the scenario's impact on planning
 author: mpvenables
 ms.author: brblanch
-ms.date: 11/30/2020
+ms.date: 12/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
