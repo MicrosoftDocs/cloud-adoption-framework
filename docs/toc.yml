@@ -86,11 +86,12 @@ items:
           href: scenarios/unified-operations/govern.md
         - name: Manage
           href: scenarios/unified-operations/manage.md
+
         - name: Well-architected alignment-Not MVP
           items:
           - name: TBD
             href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-        - name: Hybrid and Multicloud Architectures
+        - name: Architectures
           items:
           - name: Overview
             href: https://docs.microsoft.com/azure/architecture/browse/hybrid_index?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -136,7 +137,7 @@ items:
             items:
             - name: TBD
               href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-        - name: Hybrid and Multicloud products
+        - name: Azure products
           items:
           - name: TBD
             href: ?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -160,6 +161,74 @@ items:
             href: scenarios/unified-operations/eslz-security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: scenarios/unified-operations/eslz-platform-automation-and-devops.md
+
+      - name: Unified operations
+        items:
+        - name: Overview
+          href: manage/unified-operations/index.md
+        - name: Onboard
+          items:
+          - name: Azure
+            items:
+            - name: Azure Linux with ARM Templates
+              href: manage/unified-operations/server/best-practices/azure_arm_template_linux.md
+            - name: Azure Windows with ARM Templates
+              href: manage/unified-operations/server/best-practices/azure_arm_template_win.md
+          - name: On-prem - Local datacenter
+            items:
+            - name: Linux with shell script
+              href: manage/unified-operations/server/best-practices/onboard_server_linux.md
+            - name: Windows with PowerShell
+              href: manage/unified-operations/server/best-practices/onboard_server_win.md
+            - name: Ubuntu with Vagrant
+              href: manage/unified-operations/server/best-practices/local_vagrant_ubuntu.md
+            - name: Windows with Vagrant
+              href: manage/unified-operations/server/best-practices/local_vagrant_windows.md
+          - name: VMware
+            items:
+            - name: Create a VM template for Ubuntu
+              href: manage/unified-operations/server/best-practices/vmware_ubuntu_template.md
+            - name: Create a VM template for Windows
+              href: manage/unified-operations/server/best-practices/vmware_winsrv2k19_template.md
+            - name: Linux with VMware PowerCLI
+              href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux.md
+            - name: Windows with VMware PowerCLI
+              href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_win.md
+            - name: Ubuntu with Terraform
+              href: manage/unified-operations/server/best-practices/vmware_terraform_ubuntu.md
+            - name: Windows with Terraform
+              href: manage/unified-operations/server/best-practices/vmware_terraform_winsrv.md
+          - name: AWS - Amazon Web Services
+            items:
+            - name: AWS Ubuntu with Terraform
+              href: manage/unified-operations/server/best-practices/aws_terraform_ubuntu.md
+            - name: AWS Linux with Terraform
+              href: manage/unified-operations/server/best-practices/aws_terraform_al2.md
+            - name: AWS EC2 onboard with Ansible
+              href: manage/unified-operations/server/best-practices/aws_scale_ansible.md
+          - name: GCP - Google Cloud Provider
+            items:
+            - name: GCP Ubuntu with Terraform
+              href: manage/unified-operations/server/best-practices/gcp_terraform_ubuntu.md
+            - name: GCP Windows with Terraform
+              href: manage/unified-operations/server/best-practices/gcp_terraform_windows.md
+        - name: Operate
+          items:
+          - name: Inventory and Tag assets
+            href: manage/unified-operations/server/best-practices/arc_inventory_tagging.md
+          - name: Patch and Update Management
+            href: manage/unified-operations/server/best-practices/arc_updateManagement.md
+          - name: Apply Policies
+            href: manage/unified-operations/server/best-practices/arc_policies_mma.md
+          - name: Collect and Detect security data
+            href: manage/unified-operations/server/best-practices/arc_securitycenter.md
+          - name: Investigate and respond to security threats
+            href: manage/unified-operations/server/best-practices/arc_azuresentinel.md
+          - name: Manage VMs with Microsoft Monitoring Agent (MMA)
+            href: manage/unified-operations/server/best-practices/arc_vm_extension_mma_arm.md
+          - name: Scale configuration of MMA
+            href: manage/unified-operations/server/best-practices/arc_vm_extension_customscript_arm.md
+
 
   - name: Strategy
     items:
@@ -1520,78 +1589,6 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-
-      - name: Unified operations
-        items:
-        - name: Overview
-          href: manage/unified-operations/index.md
-        - name: Onboard
-          items:
-          - name: Azure
-            items:
-            - name: Azure Linux with ARM Templates
-              href: manage/unified-operations/server/best-practices/azure_arm_template_linux.md
-            - name: Azure Windows with ARM Templates
-              href: manage/unified-operations/server/best-practices/azure_arm_template_win.md
-          - name: On-prem - Local datacenter
-            items:
-            - name: Linux with shell script
-              href: manage/unified-operations/server/best-practices/onboard_server_linux.md
-            - name: Windows with PowerShell
-              href: manage/unified-operations/server/best-practices/onboard_server_win.md
-            - name: Ubuntu with Vagrant
-              href: manage/unified-operations/server/best-practices/local_vagrant_ubuntu.md
-            - name: Windows with Vagrant
-              href: manage/unified-operations/server/best-practices/local_vagrant_windows.md
-          - name: VMware
-            items:
-            - name: Create a VM template for Ubuntu
-              href: manage/unified-operations/server/best-practices/vmware_ubuntu_template.md
-            - name: Create a VM template for Windows
-              href: manage/unified-operations/server/best-practices/vmware_winsrv2k19_template.md
-            - name: Linux with VMware PowerCLI
-              href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux.md
-            - name: Windows with VMware PowerCLI
-              href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_win.md
-            - name: Ubuntu with Terraform
-              href: manage/unified-operations/server/best-practices/vmware_terraform_ubuntu.md
-            - name: Windows with Terraform
-              href: manage/unified-operations/server/best-practices/vmware_terraform_winsrv.md
-          - name: AWS - Amazon Web Services
-            items:
-            - name: AWS Ubuntu with Terraform
-              href: manage/unified-operations/server/best-practices/aws_terraform_ubuntu.md
-            - name: AWS Linux with Terraform
-              href: manage/unified-operations/server/best-practices/aws_terraform_al2.md
-            - name: AWS EC2 onboard with Ansible
-              href: manage/unified-operations/server/best-practices/aws_scale_ansible.md
-          - name: GCP - Google Cloud Provider
-            items:
-            - name: GCP Ubuntu with Terraform
-              href: manage/unified-operations/server/best-practices/gcp_terraform_ubuntu.md
-            - name: GCP Windows with Terraform
-              href: manage/unified-operations/server/best-practices/gcp_terraform_windows.md
-
-        - name: Operate
-          items:
-          - name: Inventory and Tag assets
-            href: manage/unified-operations/server/best-practices/arc_inventory_tagging.md
-          - name: Patch and Update Management
-            href: manage/unified-operations/server/best-practices/arc_updateManagement.md
-          - name: Apply Policies
-            href: manage/unified-operations/server/best-practices/arc_policies_mma.md
-          - name: Collect and Detect security data
-            href: manage/unified-operations/server/best-practices/arc_securitycenter.md
-          - name: Investigate and respond to security threats
-            href: manage/unified-operations/server/best-practices/arc_azuresentinel.md
-          - name: Manage VMs with Microsoft Monitoring Agent (MMA)
-            href: manage/unified-operations/server/best-practices/arc_vm_extension_mma_arm.md
-          - name: Scale configuration of MMA
-            href: manage/unified-operations/server/best-practices/arc_vm_extension_customscript_arm.md
-
-
-
-
 
 
       - name: Monitoring
