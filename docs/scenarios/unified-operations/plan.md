@@ -51,7 +51,7 @@ Because on-premises assets are added to the enterprise control plane for unified
 
 Standard migration assumes that every asset in the workload is a VM or PaaS service in terms of either Rehost or Rearchitect. As mentioned, *standard migration efforts* assume a uni-directional, "migrate everything to the cloud" approach—lifting and shifting (IaaS VMs) and rearchitecting (PaaS services).
 
-## A unified operations approach using Azure Stack and Azure Arc
+## Using Azure Stack and Azure Arc in unified operations
 
 A unified operations approach that considers hybrid and multi-cloud environments opens up more form factors for distributing cloud innovation by using Azure services and server management practices across other multi-cloud environments and the edge.
 
