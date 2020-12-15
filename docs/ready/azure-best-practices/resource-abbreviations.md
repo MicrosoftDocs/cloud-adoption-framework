@@ -154,6 +154,7 @@ This list provides recommended abbreviations for various Azure resource types to
 |--|--|
 | Automation account | `aa-` |
 | Azure Monitor action group | `ag-` |
+| Azure Purview instance | `pview-` |
 | Blueprint | `bp-` |
 | Blueprint assignment | `bpa-` |
 | Key vault | `kv-` |
