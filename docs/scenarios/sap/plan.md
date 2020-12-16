@@ -1,7 +1,7 @@
 ---
 title: "Plan for SAP"
 description: Plan for SAP on Azure
-author: BrianBlanchard
+author: deepakonics
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
@@ -36,11 +36,12 @@ However, there are a few considerations that must be included in those processes
   - Can foundational assets be retired in favor of cloud-native Azure Landing Zone options?
   - For each workload, will you retire the workload? Would it make sense to rehost the workload to IaaS? Should you modernize that workload? Is this workload impactful enough to consider rearchitecting or rebuilding the workload to take advantage of cloud-native hosting?
 - **Prioritization & sequencing:** Prioritize and sequence the platform and workloads to establish a timeline and plan.
-- **Hybrid considerations:** During the execution of the plan, will you release in migration waves? Will you need hybrid connectivity for production traffic during miration waves?
+- **Hybrid considerations:** During the execution of the plan, will you release in migration waves? Will you need hybrid connectivity for production traffic during miration waves?Using a hybrid cloud not only allows companies to scale computing resources, it also eliminates the need to make massive capital expenditures to handle short-term spikes in demand as well as when the business needs to free up local resources for more sensitive data or applications. Sometmes customers move their SAP non-production systems first to Azure and then after weeks and months follow with the production systems. 
+
 - **Platform rationalization:** The most important consideration, is related to rationalization of the SAP platform itself. To rationalize your SAP platform assets, consider how your will migrate the platform itself. The migration approach will shape the inventory of assets that will persist in the cloud, along with the work to get there. The following are a few options to consider:
-  - Rehost using Azure Migrate or SAP Homogeneous System Copy approaches to migrate all assets to Azure.
-  - Replatform to operating systems supported in Azure using an SAP Heterogeneous System Copy approach to deploy similar VMs with new operating systems & then migrate the data and applications.
-  - Rearchitect to a new SAP HANA platform that has been purpose built in the cloud.
+-Lift and shift of existing SAP product/OS/DBMS platform with either Azure Migrate or homogeneous system copy. 
+-Heterogeneous Platform copy of SAP combined with a move to Azure. This is the case where either OS requires/ DBMS gets changed. This include a change with a NetWeaver product to HANA as DBMS 
+-Greenfield Implementation of new SAP workload on Azure
 
 Once these considerations are integrated into your digital estate evaluation, you will be able to refine your business justification. You'll also be ready to build out your SAP cloud adoption plan.
 
