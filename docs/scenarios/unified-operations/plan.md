@@ -124,6 +124,8 @@ Planning efforts for unified operations and management assume that most assets f
 
 **Increase cost-efficiencies across your hybrid infrastructure** with a modern cloud billing model.
 
+# [ADD PAGEBREAK HERE]
+
 ## inventory analysis guidance
 
 If unified operations is a core part of your strategy, you should start by lighting up Azure Arc for all resources before starting you Azure Migrate integration.
