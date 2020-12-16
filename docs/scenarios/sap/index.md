@@ -1,7 +1,7 @@
 ---
 title: "Introduction to the SAP adoption scenario"
 description: Describe the scenario
-author: deepakonics
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
