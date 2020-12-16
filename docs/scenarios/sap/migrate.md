@@ -1,7 +1,7 @@
 ---
 title: "Migrate SAP to Azure"
 description: Process for migrating SAP to Azure
-author: BrianBlanchard
+author: deepakonics
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.subservice: migrate
 
 # Migrate SAP to Azure
 
-SAP is a powerful platform with specific technical requirements. Given the complexity and strict requirements for security and compliance, this platform can seldom be moved in a standardized migration factory. Azure Migrate and Migration Hub are the de facto toolchains for migrating most platforms and workloads. However, SAP will require a different set of tools and processes, for the replication and deployment of SAP assets. Often times, the SAP migration is completed in parallel to most standard migrations in your migration factory.
+SAP is a powerful platform with specific technical requirements. Given the complexity and strict requirements for security and compliance, this platform can seldom be moved in a standardized migration factory. Azure Migrate and Migration Hub are the de facto toolchains for migrating most platforms and workloads. However, SAP workloads will require a different set of tools and processes, for the replication and deployment of SAP assets. Often times, the SAP migration is completed in parallel to most standard migrations in your migration factory.
 
 Once deployment of the core platform is complete, dependent workloads will resume migration through standard migrations processes and tooling.
 
 ## SAP process flow
 
-When migrating SAP, there are a few steps to consider. Some of which deviate from standard migration process tasks.
+When migrating SAP workloads, there are a few steps to consider. Some of which deviate from standard migration process tasks.
 
 > [!NOTE]
 > Before beginning the migration of your SAP platform, validate that you have [establishd a compatible Azure Landing Zone for the SAP platform](./ready.md)
@@ -57,14 +57,14 @@ For examples of various architectures and sizing considerations, see the [SAP on
 
 ## Platform migration
 
-The SAP data points will aid in choosing the appropriate approach to migration: Classical Migration or SAP Database Migration Option (DMO):
+The database management systems (DBSM) needs to be changed. Or the internal format of the same DBMS system needs to be changed to the little endian format supported in the Intel world. E.g. migrating from IBM p-Series to Azure.The SAP workloads data points will aid in choosing the appropriate approach to migration: Classical Migration or SAP Database Migration Option (DMO):
 
 **Classical Migration:** SAP’s Software Provisioning Manager (SWPM) is used as the Software Logistics (SL) tool and is exclusively for database migrations. Classical Migration uses a heterogenous system copy approach and is sometimes referred to as two-step migration. This approach is commonly used when the follow data points are observed in the migration plan:
 
 - The operating systems (OS) and database management systems (DBSM) are compatible with Azure.
 - There is no other requirement to upgrade/replatform the OS or DBMS systems.
 
-**SAP Database Migration Option (DMO):** DMO facilitates both an SAP upgrade and a database migration to the SAP HANA database using one tool. DMO process is often referred to as a one-step migration. You will see how the Software Update Manager (SUM) tool creates a shadow repository for an existing database while a target database is created in parallel; eventually the shadow repository is copied and the SAP database connection is switched to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
+**SAP Database Migration Option (DMO):** DMO facilitates both an SAP workload upgrade and a database migration to the SAP HANA database using one tool. DMO process is often referred to as a one-step migration. You will see how the Software Update Manager (SUM) tool creates a shadow repository for an existing database while a target database is created in parallel; eventually the shadow repository is copied and the SAP database connection is switched to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
 
 - Existing OS is not supported in Azure, requiring an upgrade/replatform.
 - There is a plan to upgrade to S/4HANA during migration.
@@ -82,3 +82,4 @@ The following list of articles will take you to guidance found at specific point
 
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)
+- Learn more about list of SAP software, OS, DBMS etc supportability on Azure at https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fvirtual-machines%2Fworkloads%2Fsap%2Fsap-supported-product-on-azure&data=04%7C01%7CMatt.Henry%40microsoft.com%7C4ce8b33f2ee84415ea0408d89fe31fe9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637435145125894468%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=McP%2BHvJMuObO%2FJx6e6EEH99kcqjj9WtMPCczA5UKckA%3D&reserved=0 
