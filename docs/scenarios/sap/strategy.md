@@ -1,7 +1,7 @@
 ---
 title: "Strategy for SAP adoption"
 description: Describe the scenario's impact on strategy
-author: deepakonics
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
