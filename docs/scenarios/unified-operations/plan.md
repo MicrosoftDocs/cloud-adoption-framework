@@ -124,6 +124,7 @@ Planning efforts for unified operations and management assume that most assets f
 
 **Increase cost-efficiencies across your hybrid infrastructure** with a modern cloud billing model.
 
+
 # [ADD PAGEBREAK HERE]
 
 ## inventory analysis guidance
