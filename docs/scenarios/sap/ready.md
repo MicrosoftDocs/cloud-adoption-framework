@@ -1,7 +1,7 @@
 ---
 title: "Azure Landing Zone review for SAP"
 description: Prepare your Azure environment for SAP with Azure Landing Zones
-author: deepakonics
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
 ms.topic: conceptual
@@ -11,9 +11,9 @@ ms.subservice: ready
 
 # Azure Landing Zone review for SAP
 
-SAP workloads typically supports mission critical business functions and sensitive data. Before deploying SAP to the cloud, your landing zones should meet any governance, security, and operations requirements for secure, mission critical applications.
+The SAP platform typically supports mission critical business functions, sensitive data, and workloads vital to business operations. Before deploying your SAP platform and workloads to the cloud, your landing zones should meet any governance, security, and operations requirements for secure, mission critical applications.
 
-If you have followed a central operations model and built your landing zones using the "start small & expand approach to landing zones", you must complete the Govern and Manage methodologies of the cloud adoption framework before deploying SAP workload on Azure. However, if you are just getting started in your cloud journey, SAP workload is an indicator that you may want to instead consider starting with the "enterprise-scale approach to landing zones". See the article series on [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) to get started with either approach.
+If you have followed a central operations model and built your landing zones using the "start small & expand approach to landing zones", you must complete the Govern and Manage methodologies of the cloud adoption framework before deploying a production SAP platform on Azure. Inclusion of an SAP platform in your adoption plan is an indicator that you may have a higher degree of operations, compliance, and security requirements for your cloud environment. If you are just getting started in your cloud journey, instead consider starting with the "enterprise-scale approach to landing zones". See the article series on [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) to get started with either approach.
 
 ## SAP Azure Landing Zone evaluation
 
@@ -24,7 +24,7 @@ Azure Landing Zones which will host SAP products should meet all of the followin
 - Network connectivity should allow for sufficient transmission of data between the on-premise data center and the Azure environment, based on the rationalization and plan for your SAP platform assets and all workload assets.
 - Given the mission criticality of the SAP platform, you should consider redundancy in network connectivity between Azure and your existing data centers.
 - Management groups hierarchies are important to the long term governance of SAP environments in Azure. You should have a minimum of two SAP management groups to allow for the easy application of distinct controls for production and non-production environments. 
-- Subscription organization is another important aspect of environmental segmentation for SAP workload in the cloud. Consider separating out the core platform into a dedicated subsription(s) to isolate your SAP platform from dependant workloads.
+- Subscription organization is another important aspect of environmental segmentation for your core SAP platform and all dependent workloads in the cloud. Consider separating out the core platform into a dedicated subsription(s) to isolate your SAP platform from dependant workloads.
 
 If the landing zone provided by the cloud platform team doesn't address the basic requirements, work with the team to solidify the environment before beginning your cloud adoption efforts.
 
