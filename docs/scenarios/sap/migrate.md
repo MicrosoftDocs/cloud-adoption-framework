@@ -82,4 +82,4 @@ The following list of articles will take you to guidance found at specific point
 
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)
-- Learn more about list of SAP software, OS, DBMS etc supportability on Azure at https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fvirtual-machines%2Fworkloads%2Fsap%2Fsap-supported-product-on-azure&data=04%7C01%7CMatt.Henry%40microsoft.com%7C4ce8b33f2ee84415ea0408d89fe31fe9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637435145125894468%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=McP%2BHvJMuObO%2FJx6e6EEH99kcqjj9WtMPCczA5UKckA%3D&reserved=0 
+- Learn more about list of SAP software, OS, DBMS etc supportability on Azure at [What SAP software is supported for Azure deployments](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-supported-product-on-azure) 
