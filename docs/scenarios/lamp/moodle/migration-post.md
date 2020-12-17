@@ -1,13 +1,12 @@
 ---
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
-author: UmakanthOS
+author: BrianBlanchard
 ms.author: brblanch 
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
 ---
 
 # How to follow up after a Moodle migration
@@ -26,7 +25,7 @@ After migrating Moodle, you need to take care of some post-migration tasks to co
 
 ## Controller virtual machine scale set
 
-Take the following steps to finish configuring your virtual machine scale set.
+Take the following steps to finish configuring your virtual machine scale set. You will need to SSH to your virtual machine scale set instance by using the private IP address, as described in [Access the virtual machine scale set](azure-infra-config.md#access-the-virtual-machine-scale-set).
 
 ### Update log paths
 
@@ -49,7 +48,7 @@ Follow these steps to update the log file locations:
 
 ### Restart servers
 
-Enter these commands to restart the `nginx` and `php-fpm` servers:
+Enter these commands to restart the nginx and php-fpm servers:
 
 ```bash
 sudo systemctl restart nginx
@@ -107,9 +106,9 @@ Take these steps to complete the controller virtual machine configuration.
       /moodle/certs/nginx.key;
       ```
 
-   1. Press CTRL+O to save your changes and CTRL+X to close the file.
+    1. Press CTRL+O to save your changes and CTRL+X to close the file.
 
-### Update the local HTML copy
+### Update local HTML copy
 
 The local copy of the Moodle HTML site content, `/moodle/html/moodle`, is created in the virtual machine scale set in this folder: `/var/www/html/moodle`. The local copy is updated only when the time stamp changes. Enter this command in the controller virtual machine to update the time stamp:
 
@@ -134,6 +133,7 @@ sudo systemctl restart php<php version>-fpm
 Follow these steps at the hosting-provider level to map the DNS name to the Azure Load Balancer IP:
 
 1. Enter the following command in the controller virtual machine to turn off maintenance mode on the Moodle website:
+
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php --disable
