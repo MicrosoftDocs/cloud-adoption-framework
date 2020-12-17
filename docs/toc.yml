@@ -71,7 +71,12 @@ items:
       - name: Hybrid and Multicloud
         items:
         - name: Overview
-          href: scenarios/unified-operations/index.md
+          items:
+          - name: Intro to hybrid and multicloud
+            href: scenarios/unified-operations/index.md
+          - name: Intro to unified operations
+            href: manage/unified-operations/index.md
+
         - name: Strategy
           href: scenarios/unified-operations/strategy.md
         - name: Plan
@@ -139,8 +144,6 @@ items:
               href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
         - name: Best practices
           items:
-          - name: Overview
-            href: manage/unified-operations/index.md
           - name: Onboard
             items:
             - name: Azure
