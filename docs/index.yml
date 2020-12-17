@@ -140,10 +140,10 @@ productDirectory:
     - title: Manage
       imageSrc: ./_images/caf-manage.png
       links:
-        - url: ./manage/azure-management-guide/index.md
-          text: Management baseline
         - url: ./manage/considerations/business-alignment.md
           text: Business commitments
+        - url: ./manage/azure-management-guide/index.md
+          text: Management baseline
         - url: ./manage/best-practices.md
           text: Expand the baseline
         - url: ./manage/design-principles.md
