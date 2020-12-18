@@ -1,9 +1,8 @@
 ---
 title: "Enterprise-Scale security, governance, and compliance for <Insert narrative Name>"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of <Insert Scenario Name>
-author: BrianBlanchard
-ms.author: AdamWhitlatch
-ms.author: RichardTimmering
+author: AdamWhitlatch
+ms.author: dawhitla
 ms.date: 12/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
