@@ -1,6 +1,6 @@
 ---
-title: "Azure Landing Zone review for unified operations"
-description: Describe the scenario's impact on Azure Landing Zone design
+title: "Ready methodology for Hybrid and Multicloud"
+description: Prepare your environment for hybrid and multicloud with Azure Landing Zones
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -9,36 +9,76 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Landing Zone review for unified operations
+# Ready: Prepare your environment for hybrid and multicloud
 
-If I'm going to do hybrid & multicloud adoption, I need some stuff in my landing zone... AKA Arc
-This is where we capture day 0, onboarding chart & best practice steps...
+The Ready methodology of the cloud adoption framework guides customers' through environmental readiness to prepare for adoption of the cloud. Included in the Ready methodology are technical accelerators referred to as Azure Landing Zones, which automate configuration of your Azure environment in alignment with the best practices in Cloud Adoption Framework. But to prepare for a hybrid and multicloud, their are a number of minor environmental configurations that may be slightly different. This article outlines the key considerations and changes that must be made to **prepare your Azure environment to serve as ONE of your cloud platforms**.
 
-What do I add or change to any of the Azure Landing Zones...
-- Identity 
-- Network
-- Resource Organization
-- Governance (Arc)
-- Operations (Arc)
-- BCDR
+## Evaluate your cloud mix
 
-How does this change as your cloud mix changes (100% Cloud, 50% Cloud, 0% Cloud)
-How does this change with multi-cloud mix changes (100% Azure, 50% Azure, 0% Azure)
-Same mix on workload level for WAF
-Custom locations...
+Hybrid and multicloud are not binary decisions, they are more of a spectrum of decisions as seen in the chart below. Before configuring your Azure environment (or any other cloud environment), its important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes for illustration:
 
-**Out of Scope: ESLZ for Hybrid & Multicloud (Q3-Q4 target) - Ask for Jeff Mitchell**
+![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/unified-operations/cloud-mix.png)
 
+The image above illustrates three of the most common cloud mixes we see with customers. Each blue dot represents a workload, each orange circle a business process supported by a distinct environment. Each of these cloud mixes requires a very different Azure environment configuration.
 
-The P0 is Resource Organization... Plus Monitoring/visibility from operate...
+- **Hybrid first:** Most workloads stay on-prem, often in a mixture of traditional, hybrid, and portable asset hosting models. A small number of specific workloads are deployed to the edge, Azure, or other cloud providers.
+- **Azure first:** Most workloads have been moved to Azure. A small number of workloads stay on-prem. Strategic decisions have led to a small number of workloads living on the edge or in multicloud environments.
+- **Multicloud first:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a small number of workloads living in Azure or on the edge.
 
-## unified operations evaluation
+Each month, we see a steady flow of customers moving from a _hybrid first_ mix to an _Azure first_ mix, as their cloud strategy matures. But we also support a number of customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
 
-What should the customer be looking for when evaluating an Azure Landing Zone for compatibility?
+The most important things to consider when preparing any of your cloud environments for hybrid and multicloud, are the following:
 
-## unified operations Azure Landing Zone acceleration
+- What mixture of hybrid, edge, and multicloud do you support today?
+- What mixture best aligns with your strategy going forward?
+- Do you want to operate each platform independently or through a unified operations approach?
 
-Reference any articles, reference architectures, or best practices that would accelerate deployment of an Azure Landing Zone that passed the evaluation criteria.
+The answers to these questions will depend on your hybrid and multicloud strategy for your apps and data. With an understanding of your cloud mix, you can begin to consider the best configuration for your environments.
+
+## Analyze your cloud mix
+
+If you're unsure about your current cloud mix, the tools in Azure's control plane can help. Azure Arc, a built-in aspect of Azure Resource Manager, provides visibility into your cloud mix. This toolset is often the first step towards taking control of your cloud mix. As a complimentary tool, you can use Azure Arc for discovery across all of your cloud platforms.
+
+To start evaluating your cloud mix across multiple cloud providers, complete a simple inventory and tagging exercise, in a few simple steps:
+
+- Add a tag for "hosting platform" to all hybrid, multicloud, and edge assets
+- Onboard & tag resources from AWS, GCP, etc...
+- Query your resources to see where they are all hosted.
+
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc_inventory_tagging.md)
+
+The following links will help you onboard and tag assets across each of your cloud providers:
+
+- Onboard Azure assets: [linux VMs](/manage/unified-operations/server/best-practices/azure_arm_template_linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure_arm_template_win.md)
+- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/server/best-practices/onboard_server_linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard_server_win.md)
+- Onboard VMware assets: [linux VMs](../../manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware_scaled_powercli_win.md)
+- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws_terraform_al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws_terraform_ubuntu.md)
+- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp_terraform_ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp_terraform_windows.md)
+
+## Configure your initial Azure Environment
+
+For each of the cloud mixes above, you will need an Azure environment to support, govern, and manage your cloud resources.
+The Cloud Adoption Framework's Ready methodology helps prepare your environment using a few simple steps:
+
+- Consider each of the [Azure Landing Zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
+- Compare your requirements to the [Azure Landing Zone implementation options](../../ready/landing-zone/implementation-options.md), to find & implement the most suitable template to start your configuration.
+
+## Modify your environment to reflect your cloud mix
+
+Once your Azure environment is established, you can begin to modify your Azure environment to support the most appropriate cloud mix. The following are modifications that should be considered:
+
+- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance. **TODO Add link back to Ready guidance on identity provider options & decision guides**
+- **Public network connectivity:** Best practice suggests that all ingress and egress traffic should route through one cloud platform when possible. But, your requirements or cloud mix may require more of a peer model. This is especially common, if your cloud mix is used to reach redundancy and reliability requirements. How will your configure connectivity between each cloud platform and the public internet? **TODO Add link back to Ready guidance on network connectivity options & decision guides**
+- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case. **TODO Add link back to CAF guidance on BCDR options & decision guides**
+- **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform? **TODO Add link back to Ready guidance on network connectivity options & decision guides**
+
+### The most important consideration
+
+**Will you operate each cloud independently or through a unified central operations approach?**
+
+Independent operations can double or triple your total cost of ownership. For some customers, TCO cost increases can be multiplied by over 10X. To minimize costs & demands on your staff, best practice dictates a unified operations approach for all cloud mixes for your hybrid and multicloud strategy.
+
+To learn more about unification of your cloud operations, see the articles on [Unified Operations](./unified-operations.md), [Governance](./govern.md) and [Operations management](./manage.md) for hybrid and multicloud solutions.
 
 ## Next step: Assess for unified operations
 

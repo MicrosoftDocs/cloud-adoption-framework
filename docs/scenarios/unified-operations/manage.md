@@ -25,7 +25,7 @@ To get started with an operations baseline that spans multiple cloud providers, 
 - Tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_inventory_tagging?branch=pr-en-us-884)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc_inventory_tagging.md)
 **TODO Point to relative link**
 
 Once you complete the basic exercise your can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds, is to establish a consistent plan for patch and update management. Follow this guide on [hybrid and multicloud update management](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_updatemanagement?branch=pr-en-us-884) to deploy tools that can control patching across cloud providers.
