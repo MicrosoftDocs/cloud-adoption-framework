@@ -75,7 +75,7 @@ items:
           - name: Intro to hybrid and multicloud
             href: scenarios/unified-operations/index.md
           - name: Intro to unified operations
-            href: manage/unified-operations/index.md
+            href: scenarios/unified-operations/unified-operations.md
 
         - name: Strategy
           href: scenarios/unified-operations/strategy.md
