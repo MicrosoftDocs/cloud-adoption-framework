@@ -66,7 +66,7 @@ Identity is perhaps the most important design area to evaluate in the partner so
 
 **Question for the partner:** Which of the following identity management options does the partner solution support?
 
-- **Azure AD:** The suggested best practice is to use Azure AD and role-based access control to manage identity and access in Azure.
+- **Azure AD:** The suggested best practice is to use Azure AD and Azure role-based access control to manage identity and access in Azure.
 - **Active Directory:** If required, does the partner solution provide an option to deploy Active Directory as an infrastructure as a service solution?
 - **Third-party identity provider:** If your company uses a third-party identity solution, determine whether and how the partner's Azure landing zone integrates with the third-party solution.
 

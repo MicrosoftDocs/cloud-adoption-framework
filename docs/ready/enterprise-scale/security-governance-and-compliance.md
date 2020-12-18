@@ -78,7 +78,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 ## Plan for governance
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement role-based access control (RBAC) that controls what actions authorized users can perform.
+Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement Azure role-based access control (Azure RBAC) that controls what actions authorized users can perform.
 
 **Design considerations:**
 
@@ -98,7 +98,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Identify required Azure tags and use the append policy mode to enforce usage.
 
-- Map regulatory and compliance requirements to Azure Policy definitions and Azure AD RBAC assignments.
+- Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
 
 - Establish Azure Policy definitions at the top-level root management group so that they can be assigned at inherited scopes.
 

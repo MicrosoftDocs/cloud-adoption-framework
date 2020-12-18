@@ -33,7 +33,7 @@ During the Ready phase, technical staff are called upon to create a migration la
 - [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure): Create a virtual machine by using the Azure portal.
 - [Azure networking](/learn/modules/intro-to-azure-networking): Learn some of the Azure networking basics and how Azure networking helps improve resiliency and reduce latency.
 - [Azure compute options](/learn/modules/intro-to-azure-compute): Review the Azure compute services.
-- [Secure resources with role-based access control (RBAC)](/learn/modules/secure-azure-resources-with-rbac): Use RBAC to secure resources.
+- [Secure resources with Azure role-based access control (Azure RBAC)](/learn/modules/secure-azure-resources-with-rbac): Use Azure RBAC to secure resources.
 - [Data storage options](/learn/modules/intro-to-data-in-azure): Benefits of Azure data storage.
 
 During the Ready phase, architects are called upon to architect solutions that span all Azure environments. The following skill-building resources can prepare architects for these tasks:
