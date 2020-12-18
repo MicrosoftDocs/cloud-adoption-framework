@@ -1,13 +1,13 @@
 ---
 title: Implementing Governance
-description: This is all a Phil’ism. 
-author: janet
+description: Drive cloud governance and allow a controlled and measured implementation that is non-disruptive, regardless of where you are in your cloud adoption journey. 
+author: phduf
 ms.author: janet
 ms.date: 12/08/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: think-tank
 ---
 
 # Implementing Governance
