@@ -13,6 +13,27 @@ ms.subservice: ready
 
 Windows Virtual Desktop (WVD) is a managed service aiming to provide a Microsoft control plane for your VDI environment. Identity and access management for Windows Virtual Desktop control plane uses Azure role-based access controls with certain conditions outlined in this article.
 
+
+## **RBAC Design**
+
+Role Based Access Controls (RBAC) can help you provide separation of duties among engineering and operational staff. As part of your landing zone design you should who will be added to each role and create security groups for each to simplify adding and removing users from each role.  
+
+Windows virtual desktop has custom Azure roles designed for each functional area. Configuration details can be found inside the Microsoft [Windows virtual Desktop Doc Site](https://docs.microsoft.com/en-us/azure/virtual-desktop/rbac)
+Common Roles include
+- Desktop Virtualization Contributor: The Desktop Virtualization Contributor role lets you manage all aspects of the deployment. However, it doesn't grant you access to compute resources.
+- Desktop Virtualization Reader: The Desktop Virtualization Reader role lets you view everything in the deployment but doesn't let you make any changes.
+- Host Pool Contributor: The Host Pool Contributor role lets you manage all aspects of host pools, including access to resources. You'll need an extra contributor role, Virtual Machine Contributor, to create virtual machines.
+- Host Pool Reader: The Host Pool Reader role lets you view everything in the host pool, but won't allow you to make any changes.
+- Application Group Contributor: The Application Group Contributor role lets you manage all aspects of app groups. If you want to publish app groups to users or user groups, you'll need the User Access Administrator role.
+- Application Group Reader: The Application Group Reader role lets you view everything in the app group and will not allow you to make any changes.
+- Workspace Contributor: The Workspace Contributor role lets you manage all aspects of workspaces. To get information on applications added to the app groups, you'll also need to be assigned the Application Group Reader role.
+- Workspace Reader: The Workspace Reader role lets you view everything in the workspace, but won't allow you to make any changes.
+- User Session Operator: The User Session Operator role lets you send messages, disconnect sessions, and use the "logoff" function to sign sessions out of the session host. However, this role doesn't let you perform session host management like removing session host, changing drain mode, and so on.
+- Session Host Operator: The Session Host Contributor role lets you view and remove session hosts, as well as change drain mode. They can't add session hosts using the Azure portal because they don't have write permission for host pool objects.
+
+Other Azure [RBAC Roles](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) can also be created and defined as part of the CAF Deployment
+
+
 ## Design considerations
 
 - Windows Virtual Desktop users must be sourced form the same Active Directory Domain Services that is synchronized to Azure AD.
@@ -38,3 +59,5 @@ Windows Virtual Desktop (WVD) is a managed service aiming to provide a Microsoft
 - For users, assign the [Desktop Virtualization User](https://docs.microsoft.com/azure/virtual-desktop/delegated-access-virtual-desktop) built-in role to Security Groups to grant access to Windows Virtual Desktop app groups.
 - Create [Conditional Access Policies for Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/set-up-mfa). Conditional Access Polices can enforce multi-factor authentication based on conditions such as risky sign-ins to increase an organizations security posture.
 - Configure Active Directory Federation Services (AD FS) to enable single sign-on for users on the corporate network.
+
+
