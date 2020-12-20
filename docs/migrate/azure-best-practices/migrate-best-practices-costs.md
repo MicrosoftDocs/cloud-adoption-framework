@@ -190,7 +190,7 @@ To do this, you can use Azure Cost Management + Billing APIs. Then, after aggreg
 
 - Read the [Azure Consumption APIs overview](/azure/billing/billing-consumption-api-overview).
 - Learn how to [connect to Azure Consumption Insights in Power BI Desktop](/power-bi/desktop-connect-azure-consumption-insights).
-- Learn how to [manage access to billing information for Azure by using role-based access control (RBAC)](/azure/billing/billing-manage-access).
+- Learn how to [manage access to billing information for Azure by using Azure role-based access control (Azure RBAC)](/azure/billing/billing-manage-access).
 
 ## After migration
 

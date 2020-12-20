@@ -162,7 +162,7 @@ Although a migration to the cloud presents numerous challenges, it also provides
 
 - Define standards and methods for enabling monitoring across the hybrid and cloud resources, a monitoring baseline for each resource, alert thresholds, and so on.
 
-- Configure role-based access control (RBAC) so you grant users and groups only the access required to monitor data from the resources they manage.
+- Configure Azure role-based access control (Azure RBAC) so you grant users and groups only the access required to monitor data from the resources they manage.
 
 - Include automation and self-service to enable each team to create, enable, and tune their monitoring and alerting configurations as needed.
 
