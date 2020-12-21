@@ -26,7 +26,7 @@ As these factors increase in importance, the benefits of ensuring consistent dep
 
 In Azure, [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-Resource groups act as containers for resources with a common lifecycle as well as shared management constraints such as policy or role-based access control (RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
+Resource groups act as containers for resources with a common lifecycle as well as shared management constraints such as policy or Azure role-based access control (Azure RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
 1. Are the contents of the resource group developed together?
 1. Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
