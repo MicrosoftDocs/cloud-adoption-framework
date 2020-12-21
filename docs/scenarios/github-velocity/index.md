@@ -1,8 +1,8 @@
 ---
 title: How GitHub Accelerates Cloud Adoption
-description: Use the Cloud Adoption Framework best practices to migrate or deploy Windows Virtual Desktop instances to Azure.
-author: BrianBlanchard
-ms.author: brblanch
+description: By taking advantage of GitHub’s connectedness to the Open Source Community, companies can find thousands of examples of ready-to-deploy cloud solutions that have been iterated on, enhanced and made available by other companies and organizations that have successfully adopted Azure services. 
+author: JanetCThomas
+ms.author: janet
 ms.date: 12/21/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
