@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Create business alignment in cloud management
@@ -24,7 +25,7 @@ Fortunately, the process of developing a cloud adoption strategy and cloud adopt
 - **[Commitment](./commitment.md):** Developing true partnerships, by creating and documenting agreements with the business.
 
 > [!NOTE]
-> Underlying these terms are classic IT terms such as SLA, RTO, and RPO. Mapping specific business and IT terms is covered in more detail in the [Commitment](./commitment.md) article.
+> Underlying these terms are classic IT terms such as SLA, RTO, and RPO. For more information on mapping specific business and IT terms, see [Business commitment in cloud management](./commitment.md).
 
 ## Operations management workbook
 

@@ -7,6 +7,7 @@ ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Cloud innovation in the Cloud Adoption Framework

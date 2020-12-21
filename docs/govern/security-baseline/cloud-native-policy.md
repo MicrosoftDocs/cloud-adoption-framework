@@ -7,12 +7,12 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Cloud-native Security Baseline policy
 
-The [Security Baseline discipline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on general security topics including protection of the network, digital assets, and data. As outlined in the [policy review guide](../policy-compliance/cloud-policy-review.md), the Cloud Adoption Framework includes three levels of sample policy: cloud-native, enterprise, and cloud-design-principle-compliant for each of the disciplines. This article discusses the cloud-native sample policy for the Security Baseline discipline.
+The [Security Baseline discipline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on general security topics including protection of the network, digital assets, and data. This article discusses a cloud-native sample policy for the Security Baseline discipline.
 
 > [!NOTE]
 > Microsoft is in no position to dictate corporate or IT policy. This article will help you prepare for an internal policy review. It is assumed that this sample policy will be extended, validated, and tested against your corporate policy before attempting to use it. Any use of this sample policy as-is is discouraged.
@@ -35,7 +35,7 @@ Identity is becoming the new boundary control plane for security, taking over th
 
 A sample cloud-native policy for identity across cloud and on-premises directories, could include requirements like the following:
 
-- Authorized access to resources with role-based access control (RBAC), multi-factor authentication, and single sign-on (SSO).
+- Authorized access to resources with Azure role-based access control (Azure RBAC), multi-factor authentication, and single sign-on (SSO).
 - Quick mitigation of user identities suspected of compromise.
 - Just-in-time (JIT), just-enough access granted on a task-by-task basis to limit exposure of overprivileged admin credentials.
 - Extended user identity and access to policies across multiple environments through Azure Active Directory.
