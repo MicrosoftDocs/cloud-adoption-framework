@@ -1,13 +1,16 @@
 ---
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
-author: BrianBlanchard
-ms.author: brblanch 
+author: UmakanthOS
+ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: think-tank
 ---
+
+<!--docutune:casing SCP WinSCP SCORM -->
 
 # How to follow up after a Moodle migration
 
@@ -20,7 +23,7 @@ After migrating Moodle, you need to take care of some post-migration tasks to co
 - Updating certificates.
 - Updating certificate locations.
 - Updating the HTML local copy.
-- Restarting the PHP and nginx servers.
+- Restarting the PHP and NGINX servers.
 - Mapping the DNS name to the Azure Load Balancer IP address.
 
 ## Controller virtual machine scale set
@@ -44,11 +47,11 @@ Follow these steps to update the log file locations:
 
 2. Find `access_log` and `error_log`, and update the log paths.
 
-3. Press CTRL+O to save the changes and CTRL+X to close the file.
+3. Press Ctrl+O to save the changes and Ctrl+X to close the file.
 
 ### Restart servers
 
-Enter these commands to restart the nginx and php-fpm servers:
+Enter these commands to restart the `nginx` and `php-fpm` servers:
 
 ```bash
 sudo systemctl restart nginx
@@ -63,7 +66,7 @@ Take these steps to complete the controller virtual machine configuration.
 
 1. Sign in to the controller virtual machine. You can find the certificates for your Moodle application in the `/moodle/certs` folder.
 
-1. Copy the `.crt` and `.key` files to `/moodle/certs/`. Change the file names to `nginx.crt` and `nginx.key`, respectively, so that the configured nginx servers recognize them. If your local environment supports the SCP utility or a tool like WinSCP, you can use these tools to copy these files to the controller virtual machine. Otherwise, use these commands:
+1. Copy the `.crt` and `.key` files to `/moodle/certs/`. Change the file names to `nginx.crt` and `nginx.key`, respectively, so that the configured NGINX servers recognize them. If your local environment supports the SCP utility or a tool like WinSCP, you can use these tools to copy these files to the controller virtual machine. Otherwise, use these commands:
 
    ```bash
    cd /<path to certs location>
@@ -106,7 +109,7 @@ Take these steps to complete the controller virtual machine configuration.
       /moodle/certs/nginx.key;
       ```
 
-    1. Press CTRL+O to save your changes and CTRL+X to close the file.
+   1. Press Ctrl+O to save your changes and Ctrl+X to close the file.
 
 ### Update local HTML copy
 
@@ -133,7 +136,6 @@ sudo systemctl restart php<php version>-fpm
 Follow these steps at the hosting-provider level to map the DNS name to the Azure Load Balancer IP:
 
 1. Enter the following command in the controller virtual machine to turn off maintenance mode on the Moodle website:
-
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php --disable
@@ -184,7 +186,7 @@ For errors like *database connection failed* or *could not connect to the databa
 
 There are several possible causes for this error: *500: Internal Server Error*. Start by checking your web server error log, which should contain a detailed explanation. Here are some possibilities:
 
-- There's a syntax error in your `.htaccess` or `httpd.conf` file. The correct syntax for directives differs depending on which file you're using. Use the following command to test for configuration errors in your nginx files:
+- There's a syntax error in your `.htaccess` or `httpd.conf` file. The correct syntax for directives differs depending on which file you're using. Use the following command to test for configuration errors in your NGINX files:
 
   ```bash
   `nginx -t`
@@ -238,9 +240,9 @@ memory_limit 0
 
 Sometimes you can't sign in, or you see one of these messages:
 
-- *Your session has timed out. Please log in again.*
+- `Your session has timed out. Please log in again.`
 
-- *A server error that affects your login session was detected. Please log in again or restart your browser.*
+- `A server error that affects your login session was detected. Please log in again or restart your browser.`
 
 There might be a problem with your authentication method, especially if you use an external method like LDAP to authenticate users. Try to sign in to another manual account, such as your main admin account. If you can't sign in, check your authentication. If you can sign in to the other account, here are possible reasons and solutions for the Moodle sign-in problem:
 
@@ -250,7 +252,7 @@ There might be a problem with your authentication method, especially if you use 
 
 ### Fatal errors
 
-The Moodle and moodledata permissions might be incorrect if you see this error: *Fatal error: $CFG->dataroot is not writable. The admin has to fix directory permissions! Exiting.*
+The Moodle and moodledata permissions might be incorrect if you see this error: `fatal error: $cfg->dataroot is not writable. The admin has to fix directory permissions! Exiting.`
 
 Check that these permissions are `www-data:www-data` only. If the permissions are at a different level, use this command to change the group and ownership permissions:
 
