@@ -1,9 +1,9 @@
 ---
 title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistenty operations management across hybrid, multicloud, and edge deployments.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 12/22/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Unified operations for hybrid, multicloud, and edge
 
-Hybrid, multicloud, and edge deployment approaches often lead to steep increases in operating costs. The first overhead increases tend to emerge in the form of duplicated cloud platform utilities (network, identity, governance, security, and operations tooling). Longer term, the more negative business impacts can emerge in the form of challenges staffing core functions or teams with the skills needed to manage these diverse environments. Hybrid and multicloud strategies have lead many decisions makers to falsely conclude that the cloud is more expensive than on-prem technology options.
+Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. Review [how to approach a fiscal conversation in your organization](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes), and understand primary cost options like capital expenses and operating expenses. The first  increases in overhead costs can emerge in the form of duplicated cloud platform utilities (network, identity, governance, security, and operations tooling). Longer term, the more negative business impacts can emerge in the form of challenges staffing core functions or teams with the skills needed to manage these diverse environments. Review [how to set up a skills readiness plan](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes) and adapt existing roles, skills, and processes for the cloud. Hybrid and multicloud strategies have lead many decisions makers to falsely conclude that the cloud is more expensive than on-prem technology options.
 
 Fortunately, there is a surprisingly simple approach to overcoming these risks, while modernizing and optimizing overall operations. **"Unified Operations"** is the concept or approach which reduces short-term duplication and the long-term strain on your technology staff. This article describes the provider-neutral approach of using unified operations to extend your control plane. Subsequent articles will outline the Azure-specific approach to delivering [governance](./govern.md) and [operations management](./manage.md) across your portfolio through unified operations.
 
