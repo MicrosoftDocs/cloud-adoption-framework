@@ -31,7 +31,7 @@ This table shows that the data engineer and data scientist’s access levels dec
 
 ## Factors that influence machine learning workspaces
 
-Multiple factors can influence how you set up your machine learning workspaces, and they can help you to determine the best structure and controls for each type:
+Multiple factors can influence how you set up your machine learning workspaces, and they can help you to determine the best structure and controls for each type of workspace:
 
 ![A diagram of how to set up Azure Machine Learning workspaces.](media/set-up-workspaces.png)
 
@@ -40,7 +40,7 @@ Multiple factors can influence how you set up your machine learning workspaces, 
    - Custom role: data scientist
    - Git integration for version control and continuous integration/continuous development (CI/CD)
    
-1. **Public, not restricted:**
+1. **Public, unrestricted:**
    - Development, test, and production workspace
    - Role: contributor
    - Git Integration for version Control and CI/CD
@@ -51,7 +51,7 @@ Multiple factors can influence how you set up your machine learning workspaces, 
    - Custom role: data scientist
    - Git integration for version control and CI/CD
    
-1. **Private, not restricted:**
+1. **Private, unrestricted:**
    - Development, test, and production workspace
    - Private link enabled
    - Role: contributor
