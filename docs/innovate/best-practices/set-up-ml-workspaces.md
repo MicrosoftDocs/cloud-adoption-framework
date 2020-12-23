@@ -15,7 +15,7 @@ ms.subservice: innovate
 
 Development, testing, and production environments support machine learning operations processes.
 
-![A diagram showing machine learning environments and the role-based access control.](media/ml-environments-and-rbac.png)
+![A diagram showing machine learning environments and role-based access control.](media/ml-environments-and-rbac.png)
 
 **In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
