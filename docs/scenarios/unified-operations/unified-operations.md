@@ -3,7 +3,7 @@ title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistenty operations management across hybrid, multicloud, and edge deployments.
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/22/2020
+ms.date: 12/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -11,7 +11,15 @@ ms.subservice: strategy
 
 # Unified operations for hybrid, multicloud, and edge
 
-Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. Review [how to approach a fiscal conversation in your organization](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes), and understand primary cost options like capital expenses and operating expenses. The first  increases in overhead costs can emerge in the form of duplicated cloud platform utilities (network, identity, governance, security, and operations tooling). Longer term, the more negative business impacts can emerge in the form of challenges staffing core functions or teams with the skills needed to manage these diverse environments. Review [how to set up a skills readiness plan](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes) and adapt existing roles, skills, and processes for the cloud. Hybrid and multicloud strategies have lead many decisions makers to falsely conclude that the cloud is more expensive than on-prem technology options.
+Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes) is necessary to understand what might affect primary cost options, such as capital expenses and operating costs.
+
+In any hybrid and multicloud strategy, the first increase in overhead costs can manifest in the form of duplicated cloud platform utilities: network, identity, governance, security, and operations tooling. In the longer term, more negative business impacts could emerge in the form of challenges like staffing core functions or teams with the skills needed to manage these diverse environments.
+
+When [setting up a skills readiness plan](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes), organizations should move toward adapting and building existing roles and skills for the cloud. Support the skills readiness plan with cross-team organizational processes to align your organization with agile practices, and required cloud functions that support developing a long-term cloud operating model.
+
+Develop and evolve a [mature team](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/organization-structures#best-practice-minimum-viable-product-mvp), starting from a Minimum viable product (MVP) that balances innovation and risk, towards a cross-team, collaborative [CCoE model](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-center-of-excellence) and IT partner--accelerating cloud innovation while increasing business agility with agile, cloud-first, hybrid, and multicloud solutions, delegating responsibilities, and executing on modern technical abilities.
+
+Hybrid and multicloud strategies have lead many decisions makers to falsely conclude that the cloud is more expensive than on-premises technology options. Recent studies per Forrester suggest that a hybrid and multi-cloud strategy can provide very significant three-year ROI, avoided on-premises costs, and high energy efficiencies.
 
 Fortunately, there is a surprisingly simple approach to overcoming these risks, while modernizing and optimizing overall operations. **"Unified Operations"** is the concept or approach which reduces short-term duplication and the long-term strain on your technology staff. This article describes the provider-neutral approach of using unified operations to extend your control plane. Subsequent articles will outline the Azure-specific approach to delivering [governance](./govern.md) and [operations management](./manage.md) across your portfolio through unified operations.
 
