@@ -22,6 +22,7 @@ WVD is a service free of charge, Microsoft does not offer a financially backed [
 
 Windows Virtual Desktop offers Business Continuity and Disaster Recovery (BCDR) to preserve customer metadata during outages. When an outage occurs in a region, the service infrastructure components will fail over to the secondary location and continue functioning as normal.
 To keep your organization's data safe, you may need to adopt a BCDR strategy for resources that will be deployed in your subscription as part of the WVD data plane (Host Pools, Storage, etc.).
+
 A sound BCDR strategy keeps your critical apps and workload up and running during planned and unplanned service or Azure outages.
 
 Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://docs.microsoft.com/azure/virtual-desktop/disaster-recovery)
@@ -42,7 +43,9 @@ To keep the service available to your users during an outage, you'll need to do 
       - This is a complex configuration, should be used only if necessary and justified by requirements.  If *active-active* is chosen it gives protection against storage outages without the need to re-log the user and also enables continuous testing of the DR location.  It is not considered either a performance or cost optimization.  
       - Load balancing of incoming user connection cannot take into account proximity: all hosts will be equal and users may directed to a remote, not optimal, WVD Host VM.
       - This configuration is limited to Pooled VMs.
-  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
+  - With *active-active*, a single Host Pool can have VMs from multiple regions (geo-paired and proximity recommended). In this case usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one. This is a complex configuration, should be used only if necessary and justified by requirements.  If *active-active* is chosen it gives protection against storage outages without the need to re-log the user and also enables continuous testing of the DR location.  It is not considered either a performance or cost optimization.  This configuration is also limited to Pooled VMs.
+
+- With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
     - Azure Site Recovery is supported for both Personal (dedicated) and Pooled (shared) Host Pools, and will permit to maintain a single Host Pool.  However it is recommended only for Personal VMs.
     - Create a new Host Pool in the failover region is also possible, while keeping all resources in your failover location turned off. For this method, you’d need to set up new App Groups and Workspaces in the failover region.  This is recommended for Pooled VMs
 
@@ -102,6 +105,7 @@ A suitable replication strategy should be put in place for user data residing in
 - A disaster recovery virtual network, as part of Hub & Spoke or virtual WAN architecture, need to be available in a secondary region, recommended in the same geography.
 - Active Directory authentication must be available also in the secondary disaster recovery region, directly with Domain Controllers deployed in the DR Virtual Network (recommended) or indirectly with connectivity to on-premises domain.
 - Applications, and other resources that users need to access once connected to WVD Host Pool, need to be available also in the secondary DR location.
+
 - Azure Site Recovery (ASR) can replicate also Virtual Network configuration for WVD Host VMs.
 
 ## Design recommendations
