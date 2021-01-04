@@ -73,7 +73,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 
 ### Design Considerations for Compute
 
-![AzureComputeSKUOptions](./media/BCDR_Compute_Options.jpg)
+![AzureComputeSKUOptions](./media/BCDR_Compute_Options2.jpg)
 
 - Consider using D-Series SKU for SAP application servers, D-Series provide 1:4 for CPU: Memory mapping, for memory intensive workloads consider E-series.
 - Consider using latest Generation of SKU's where possible eg: V3 or V4.
