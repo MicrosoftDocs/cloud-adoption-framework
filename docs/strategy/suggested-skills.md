@@ -7,6 +7,7 @@ ms.date: 05/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Skills readiness path during the Plan phase of a migration journey
@@ -57,7 +58,7 @@ During the Ready phase, technical staff creates a migration landing zone capable
 - [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure). Create a virtual machine by using the Azure portal.
 - [Azure networking](/learn/modules/intro-to-azure-networking). Learn the basics of Azure networking and how Azure networking helps you improve resiliency and reduce latency.
 - [Azure compute options](/learn/modules/intro-to-azure-compute). Learn about the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac). Use RBAC to secure resources.
+- [Secure resources with Azure RBAC](/learn/modules/secure-azure-resources-with-rbac). Use Azure RBAC to secure resources.
 - [Data storage options](/learn/modules/intro-to-data-in-azure). Learn about the benefits of Azure data storage.
 
 ## Organizational skills
@@ -85,7 +86,7 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 Here is an example of a tailored learning path that aligns to the Strategy methodology of the Cloud Adoption Framework.
 
-[Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
+[Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure Cloud Services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
 
 ## Learn more
 

@@ -7,6 +7,7 @@ ms.date: 10/28/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # What business outcomes are associated with transformation journeys?

@@ -2,11 +2,12 @@
 title: Cloud monitoring guide
 description: Learn about Azure Monitor, System Center Operations Manager, and the recommended strategy for monitoring each of the cloud deployment models.
 author: MGoedtel
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 10/05/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
 # Cloud monitoring guide: Introduction
@@ -31,7 +32,7 @@ The goal of this guide is to provide a detailed reference to help enterprise IT 
 
 This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
 
-If you're unfamiliar with Azure Monitor and System Center Operations Manager, and you want to get a better understanding of what makes them unique and how they compare to each other, review the [Overview of our monitoring platforms](./platform-overview.md).
+If you're unfamiliar with Azure Monitor and System Center Operations Manager, and you want to get a better understanding of what makes them unique and how they compare to each other, review the [overview of our monitoring platforms](./platform-overview.md).
 
 ## Audience
 

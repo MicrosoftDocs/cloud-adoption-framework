@@ -3,10 +3,11 @@ title: Function of cloud data security
 description: Understand the function of cloud data security.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Function of cloud data security
@@ -19,7 +20,7 @@ Data security strategies are being shaped primarily by:
 
 - **Data sprawl:** Sensitive data is being generated and stored on a nearly limitless variety of devices and cloud services where people creatively collaborate.
 - **New model:** The cloud enables new models of "phone home for key" to supplement and replace classic data loss protection (DLP) models that "catch it on the way out the door"
-- **Regulations** like general data protection regulation (GDPR) are requiring organizations to closely track private data and how applications are using it.
+- **Regulations** like General Data Protection Regulation (GDPR) are requiring organizations to closely track private data and how applications are using it.
 
 ## Team composition and key relationships
 

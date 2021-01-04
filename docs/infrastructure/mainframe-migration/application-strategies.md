@@ -1,15 +1,16 @@
 ---
-title: Mainframe app migration strategies
+title: Mainframe application migration strategies
 description: Learn strategies like rehosting, retiring, rebuilding, or replacing applications to migrate from mainframe environments to Azure.
 author: njray
-ms.author: v-nanra
+ms.author: brblanch
 ms.date: 12/26/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
-<!-- docutune:casing GDGs -->
+<!-- docutune:casing GDGs "GT Software" "NTT Data" -->
 <!-- cSpell:ignore Attunity Codit DRDA ISAM ISQL LPARS VSAM ODBC JDBC GDGs REXX dbextents Raincode Tmax -->
 
 # Mainframe application migration
@@ -26,19 +27,19 @@ Application migration typically involves one or more of the following strategies
 
 - **Rebuild:** Some organizations choose to completely rewrite programs using modern techniques. Given the added cost and complexity of this approach, it's not as common as a lift and shift approach. Often after this type of migration, it makes sense to begin replacing modules and code using code transformation engines.
 
-- **Replace:** This approach replaces mainframe functionality with equivalent features in the cloud. Software as a service (SaaS) is one option, which is using a solution created specifically for an enterprise concern, such as finance, human resources, manufacturing, or enterprise resource planning. In addition, many industry-specific apps are now available to solve problems that custom mainframe solutions used to previously solve.
+- **Replace:** This approach replaces mainframe functionality with equivalent features in the cloud. Software as a service (SaaS) is one option, which is using a solution created specifically for an enterprise concern, such as finance, human resources, manufacturing, or enterprise resource planning. In addition, many industry-specific applications are now available to solve problems that custom mainframe solutions used to previously solve.
 
 You should consider starting by planning those workloads that you want to initially migrate, and then determine those requirements for moving associated applications, legacy code bases, and databases.
 
 ## Mainframe emulation in Azure
 
-Azure cloud services can emulate traditional mainframe environments, enabling you to reuse existing mainframe code and applications. Common server components that you can emulate include online transaction processing (OLTP), batch, and data ingestion systems.
+Azure services can emulate traditional mainframe environments, enabling you to reuse existing mainframe code and applications. Common server components that you can emulate include online transaction processing (OLTP), batch, and data ingestion systems.
 
 ### OLTP systems
 
-Many mainframes have OLTP systems that process thousands or millions of updates for huge numbers of users. These applications often use transaction processing and screen-form handling software, such as customer information control system (CICS), information management systems (IMS), and terminal interface processor (TIP).
+Many mainframes have OLTP systems that process thousands or millions of updates for huge numbers of users. These applications often use transaction processing and screen-form handling software, such as Customer Information Control System (CICS), Information Management System (IMS), and Terminal Interface Processor (TIP).
 
-When moving OLTP applications to Azure, emulators for mainframe transaction processing (TP) monitors are available to run as infrastructure as a service (IaaS) using virtual machines (VMs) on Azure. The screen handling and form functionality can also be implemented by web servers. This approach can be combined with database APIs, such as ActiveX data objects (ADO), open database connectivity (ODBC), and Java database connectivity (JDBC) for data access and transactions.
+When moving OLTP applications to Azure, emulators for mainframe transaction processing (TP) monitors are available to run as infrastructure as a service (IaaS) using virtual machines (VMs) on Azure. The screen handling and form functionality can also be implemented by web servers. This approach can be combined with database APIs, such as ActiveX Data Objects (ADO), Open Database Connectivity (ODBC), and Java Database Connectivity (JDBC) for data access and transactions.
 
 ### Time-constrained batch updates
 
@@ -56,7 +57,7 @@ In addition to emulation environments, Azure provides platform as a service (Paa
 
 The lift and shift approach is the no-code option for quickly migrating existing applications to Azure. Each application is migrated as is, which provides the benefits of the cloud without the risks or costs of making code changes. Using an emulator for mainframe transaction processing (TP) monitors on Azure supports this approach.
 
-TP monitors are available from various vendors and run on virtual machines, an infrastructure as a service (IaaS) option on Azure. The following before and after diagrams show a migration of an online application backed by IBM DB2, a relational database management system (DBMS), on an IBM z/OS mainframe. DB2 for z/OS uses virtual storage access method (VSAM) files to store the data and Indexed Sequential Access Method (ISAM) for flat files. This architecture also uses CICS for transaction monitoring.
+TP monitors are available from various vendors and run on virtual machines, an infrastructure as a service (IaaS) option on Azure. The following before and after diagrams show a migration of an online application backed by IBM DB2, a relational database management system (DBMS), on an IBM z/OS mainframe. DB2 for z/OS uses Virtual Storage Access Method (VSAM) files to store the data and Indexed Sequential Access Method (ISAM) for flat files. This architecture also uses CICS for transaction monitoring.
 
 !["Lift and shift" migration of a mainframe environment to Azure using emulation software](../../_images/mainframe-migration/mainframe-vs-azure.png)
 
@@ -64,9 +65,9 @@ On Azure, emulation environments are used to run the TP manager and the batch jo
 
 The screen handling and form entry functionality is commonly implemented using web servers, which can be combined with database APIs, such as ADO, ODBC, and JDBC for data access and transactions. The exact line-up of Azure IaaS components to use depends on the operating system you prefer. For example:
 
-- Windows–based VMs: Internet Information Server (IIS) along with ASP.NET for the screen handling and business logic. Use ADO.NET for data access and transactions.
+- **Windows–based VMs:** Internet Information Server (IIS) along with ASP.NET for the screen handling and business logic. Use ADO.NET for data access and transactions.
 
-- Linux–based VMs: The Java-based application servers that are available, such as Apache Tomcat for screen handling and Java-based business functionality. Use JDBC for data access and transactions.
+- **Linux–based VMs:** The Java-based application servers that are available, such as Apache Tomcat for screen handling and Java-based business functionality. Use JDBC for data access and transactions.
 
 ## Migrate batch workloads to Azure
 
@@ -94,11 +95,11 @@ Use:
 
 - Striping with multiple disks for more IOPS per storage size.
 
-- Partitioning for storage to spread IO over multiple Azure storage devices.
+- Partitioning for storage to spread I/O over multiple Azure Storage devices.
 
 ### Networking
 
-- Use [Azure Accelerated Networking](/azure/virtual-network/create-vm-accelerated-networking-powershell) to minimize latency.
+- Use [Azure accelerated networking](/azure/virtual-network/create-vm-accelerated-networking-powershell) to minimize latency.
 
 ### Monitoring
 
@@ -108,16 +109,16 @@ Use:
 
 The cloud's distributed architectures rely on a different set of development tools that provide the advantage of modern practices and programming languages. To ease this transition, you can use a development environment with other tools that are designed to emulate IBM z/OS environments. The following list shows options from Microsoft and other vendors:
 
-| Component        | Azure Options                                                                                                                                  |
+| Component        | Azure options                                                                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| z/OS             | Windows, Linux, or UNIX                                                                                                                      |
+| z/OS             | Windows, Linux, or Unix                                                                                                                      |
 | CICS             | Azure services offered by Micro Focus, Oracle, GT Software (Fujitsu), TmaxSoft, Raincode, and NTT Data, or rewrite using Kubernetes |
 | IMS              | Azure services offered by Micro Focus and Oracle                                                                                  |
 | Assembler        | Azure services from Raincode and TmaxSoft; or COBOL, C, or Java, or map to operating system functions               |
 | JCL              | JCL, PowerShell, or other scripting tools                                                                                                   |
 | COBOL            | COBOL, C, or Java                                                                                                                            |
 | Natural          | Natural, COBOL, C, or Java                                                                                                                  |
-| FORTRAN and PL/I | FORTRAN, PL/I, COBOL, C, or Java                                                                                                           |
+| Fortran and PL/I | Fortran, PL/I, COBOL, C, or Java                                                                                                           |
 | REXX and PL/I    | REXX, PowerShell, or other scripting tools                                                                                                  |
 
 ## Migrate databases and data
@@ -126,11 +127,11 @@ Application migration usually involves rehosting the data tier. You can migrate 
 
 For example, you can migrate if the mainframe data tier uses:
 
-- IBM DB2 or an IMS database, use Azure SQL database, SQL Server, DB2 LUW, or Oracle Database on Azure.
+- IBM DB2 or an IMS database, use Azure SQL Database, SQL Server, DB2 LUW, or Oracle Database on Azure.
 
-- VSAM and other flat files, use Indexed Sequential Access Method (ISAM) flat files for Azure SQL, SQL Server, DB2 LUW, or Oracle.
+- VSAM and other flat files, use Indexed Sequential Access Method (ISAM) flat files for Azure SQL Database, SQL Server, DB2 LUW, or Oracle.
 
-- Generation Date Groups (GDGs), migrate to files on Azure that use a naming convention and filename extensions that provide similar functionality to GDGs.
+- Generation date groups (GDGs), migrate to files on Azure that use a naming convention and filename extensions that provide similar functionality to GDGs.
 
 The IBM data tier includes several key components that you must also migrate. For example, when you migrate a database, you also migrate a collection of data contained in pools, each containing dbextents, which are z/OS VSAM data sets. Your migration must include the directory that identifies data locations in the storage pools. Also, your migration plan must consider the database log, which contains a record of operations performed on the database. A database can have one, two (dual or alternate), or four (dual and alternate) logs.
 
@@ -146,9 +147,9 @@ Database migration also includes these components:
 
 ## Optimize scale and throughput for Azure
 
-Generally speaking, mainframes scale up, while the cloud scales out. To optimize scale and throughput of mainframe-style applications running on Azure, it is important that you understand at how mainframes can separate and isolate applications. A z/OS mainframe uses a feature called Logical Partitions (LPARS) to isolate and manage the resources for a specific application on a single instance.
+Generally speaking, mainframes scale up, while the cloud scales out. To optimize scale and throughput of mainframe-style applications running on Azure, it is important that you understand at how mainframes can separate and isolate applications. A z/OS mainframe uses a feature called logical partitions (LPARs) to isolate and manage the resources for a specific application on a single instance.
 
-For example, a mainframe might use one logical partition (LPAR) for a CICS region with associated COBOL programs, and a separate LPAR for DB2. Additional LPARs are often used for the development, testing, and staging environments.
+For example, a mainframe might use one LPAR for a CICS region with associated COBOL programs, and a separate LPAR for DB2. Additional LPARs are often used for the development, testing, and staging environments.
 
 On Azure, it's more common to use separate VMs to serve this purpose. Azure architectures typically deploy VMs for the application tier, a separate set of VMs for the data tier, another set for development, and so on. Each tier of processing can be optimized using the most suitable type of VMs and features for that environment.
 
@@ -164,15 +165,13 @@ Moving solutions from a mainframe to Azure may involve a _staged_ migration, whe
 
 A common scenario is to move an application to Azure while keeping the data used by the application on the mainframe. Specific software is used to enable the applications on Azure to access data from the mainframe. Fortunately, a wide range of solutions provide integration between Azure and existing mainframe environments, support for hybrid scenarios, and migration over time. Microsoft partners, independent software vendors, and system integrators can help you on your journey.
 
-One option is [Microsoft Host Integration Server](/host-integration-server), a solution that provides the distributed relational database architecture (DRDA) required for applications in Azure to access data in DB2 that remains on the mainframe. Other options for mainframe-to-Azure integration include solutions from IBM, Attunity, Codit, other vendors, and open source options.
+One option is [Microsoft Host Integration Server](/host-integration-server), a solution that provides the distributed relational database architecture (DRDA) required for applications in Azure to access data in DB2 that remains on the mainframe. Other options for mainframe-to-Azure integration include solutions from IBM, Attunity, Codit, other vendors, and open-source options.
 
 ## Partner solutions
 
 If you are considering a mainframe migration, the partner ecosystem is available to assist you.
 
 Azure provides a proven, highly available, and scalable infrastructure for systems that currently run on mainframes. Some workloads can be migrated with relative ease. Other workloads that depend on legacy system software, such as CICS and IMS, can be rehosted using partner solutions and migrated to Azure over time. Regardless of the choice you make, Microsoft and our partners are available to assist you in optimizing for Azure while maintaining mainframe system software functionality.
-
-<!-- docutune:casing "IBM DB2 pureScale" -->
 
 ## Learn more
 

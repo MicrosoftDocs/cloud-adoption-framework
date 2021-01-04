@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Workload operations in cloud management
@@ -14,8 +15,6 @@ ms.subservice: operate
 Some workloads are critical to the success of the business. For those workloads, a management baseline is insufficient to meet the required business commitments to cloud management. Platform operations might not even be sufficient to meet business commitments. This highly important subset of workloads requires a specialized focus on the way the workload functions and how it is supported.
 
 In return, the investment in workload operations can lead to improved performance, decreased risk of business interruption, and faster recovery when system failures occur. This article discusses an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
-
-<!-- docutune:disable Pareto -->
 
 ## When to invest in workload operations
 
@@ -93,7 +92,7 @@ To help improve overall operations, the [Microsoft Azure Well-Architected Framew
 
 ## Next steps
 
-With a full understanding of the manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
+With a full understanding of the Manage methodology within the Cloud Adoption Framework, you are now armed to implement cloud management principles. Learn how to make this methodology actionable within your operations environment.
 
 > [!div class="nextstepaction"]
 > [Apply this methodology](../index.md)

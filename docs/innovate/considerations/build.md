@@ -7,6 +7,7 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Oxford English Dictionary" -->
@@ -15,7 +16,7 @@ ms.subservice: innovate
 
 "Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you're forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption.
 
-Continuing with the analogy, innovation comes from a more extended family. *Customer empathy is the proud parent of innovation.* creating a solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy, a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
+Continuing with the analogy, innovation comes from a more extended family. _Customer empathy is the proud parent of innovation._ Creating a solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy, a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
 
 Why is empathy so important? From the first release of a minimum viable product (MVP) to the general availability of a market-grade solution, customer empathy helps us understand and share in the experience of the customer. Empathy helps us build a better solution. More importantly, it better positions us to invent solutions that will encourage adoption. In a digital economy, those who can most readily empathize with customer needs can build a brighter future that redefines and leads the market.
 

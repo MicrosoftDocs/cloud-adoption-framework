@@ -7,6 +7,7 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 <!-- TODO: Refactor terms: "design area", "well-architected" -->
@@ -16,7 +17,7 @@ ms.subservice: ready
 Each Azure landing zone implementation option provides a deployment approach and defined design principles. Before choosing an implementation option, use this article to gain an understanding of the design areas listed in the following table.
 
 > [!NOTE]
-> These design areas describe what you should consider prior to deploying a landing zone. Use it as a simple reference. See the [landing zone implementation options](./implementation-options.md) for design principles and actionable steps for deployment.  
+> These design areas describe what you should consider prior to deploying a landing zone. Use it as a simple reference. See the [landing zone implementation options](./implementation-options.md) for design principles and actionable steps for deployment.
 
 ## Design areas
 

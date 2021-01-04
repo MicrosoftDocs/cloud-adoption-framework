@@ -2,11 +2,12 @@
 title: Cloud monitoring strategy
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 06/18/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->
@@ -61,7 +62,7 @@ As the business determines what services to move, you need to invest your resour
 
 ## Monitoring informs strategy
 
-Consider where early monitoring capability *informs strategy*. Many decisions depend on early monitoring data in order to build a capability roadmap that guides limited resources and adds confidence. Strategies also need real-world input from monitoring of service enablement.
+Consider where early monitoring capability _informs strategy_. Many decisions depend on early monitoring data in order to build a capability roadmap that guides limited resources and adds confidence. Strategies also need real-world input from monitoring of service enablement.
 
 Consider the role monitoring plays in strategies to incrementally protect and secure the digital estate:
 
@@ -135,15 +136,15 @@ Consider a single policy in your governance plan for event significance, through
 
 ## Formulate initiatives
 
-As a monitoring expert or systems administrator, you've discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won't know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - *that which is needed to begin the journey*. Here are two example initiatives that help declare forward motion:
+As a monitoring expert or systems administrator, you've discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won't know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability: _that which is needed to begin the journey_. Here are two example initiatives that help declare forward motion:
 
-- Initiative 1: *to reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability using Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.*
+- **Initiative 1:** To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability using Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.
 
-- Initiative 2: *to decide on how we use our license plans for identity, access, and overall information protection, we will help the security and privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption, and retention policies.*
+- **Initiative 2:** To decide on how we use our license plans for identity, access, and overall information protection, we will help the security and privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption, and retention policies.
 
 ### Consider scale
 
-Consider scale in your strategy and who will be defining and standardizing *monitoring as code*. Your organization should plan to build standardized solutions using a combination of tools such as:
+Consider scale in your strategy and who will be defining and standardizing _monitoring as code_. Your organization should plan to build standardized solutions using a combination of tools such as:
 
 - Azure Resource Manager templates.
 - Azure Policy monitoring initiative definitions and policies.
@@ -256,7 +257,7 @@ Include in your strategy and operating model how you communicate monitoring plan
 
 ## Establish minimum governance
 
-As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
+As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a _tenant_ service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
 
 Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set `Reader` role access for monitoring consumers as early as possible and then start controlling who are granted the `Contributor` role.
 
