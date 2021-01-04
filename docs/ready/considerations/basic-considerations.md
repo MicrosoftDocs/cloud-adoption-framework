@@ -4,9 +4,10 @@ description: Use the Cloud Adoption Framework for Azure to learn how a landing z
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/09/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Landing zone considerations
@@ -42,6 +43,6 @@ The following articles can help you make governance-related decisions about your
 
 - **Cost requirements.** Based on an organization's motivation for cloud adoption and operational commitments made about its environment, various cost management configurations might need to be changed for the landing zone.
 - **Monitoring decisions.** Depending on the operational requirements for a landing zone, various monitoring tools can be deployed. The monitoring decisions article can help you determine the most appropriate tools to deploy.
-- **Role-based access control.** Azure [role-based access control (RBAC)](../considerations/roles.md) offers fine-grained, group-based access management for resources that are organized around user roles.
+- **Azure role-based access control.** [Azure role-based access control (Azure RBAC)](../considerations/roles.md) offers fine-grained, group-based access management for resources that are organized around user roles.
 - **Policy decisions.** [Azure Blueprints samples](/azure/governance/blueprints/samples) provide premade compliance blueprints, each with predefined policy initiatives. Policy decisions help inform a selection of the best blueprint or policy initiative based on your requirements and constraints.
 - **Create [hybrid cloud consistency](./hybrid-consistency.md).** Create hybrid cloud solutions that give your organization the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.

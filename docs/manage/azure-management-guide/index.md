@@ -7,13 +7,13 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 ::: zone target="docs"
 
-# Azure management guide: Before you start
+# Azure Management Guide: Before you start
 
 ::: zone-end
 

@@ -7,8 +7,10 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
+<!-- docutune:casing "Update Management" -->
 <!-- cSpell:ignore FIPS SIEM majeure NSGs -->
 
 # Best practices to secure and manage workloads migrated to Azure
@@ -46,7 +48,7 @@ In addition to assessments and recommendations, Azure Security Center provides o
 - **Just-in-time (JIT) access.** Reduce your network attack surface with just-in-time, controlled access to management ports on Azure VMs.
   - Having VM RDP port 3389 open on the internet exposes VMs to continual activity from bad actors. Azure IP addresses are well-known, and hackers continually probe them for attacks on open 3389 ports.
   - Just-in-time uses network security groups (NSGs) and incoming rules that limit the amount of time that a specific port is open.
-  - With just-in-time access enabled, Security Center checks that a user has role-based access control (RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
+  - With just-in-time access enabled, Security Center checks that a user has Azure role-based access control (Azure RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
 - **Adaptive application controls.** Keep software and malware off VMs by controlling which applications run on them, by using dynamic allow lists.
   - Adaptive application controls allow you to approve applications, and prevent rogue users or administrators from installing unapproved or vetting software applications on your VMs.
     - You can block or alert attempts to run malicious applications, avoid unwanted or malicious applications, and ensure compliance with your organization's application security policy.
@@ -80,7 +82,7 @@ Encryption is an important part of Azure security practices. Ensuring that encry
 
 Unlike IaaS, in which you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider. You can focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how you might enable encryption for Azure SQL Database.
 
-- **Always Encrypted:** Use the Always Encrypted Wizard in SQL Server Management Studio to protect data at rest.
+- **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
   - You create an Always Encrypted key to encrypt individual column data.
   - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
   - Most likely, to use this feature, you'll need to make application changes.
@@ -94,14 +96,14 @@ Unlike IaaS, in which you manage your own VMs and infrastructure, in a PaaS mode
 - Enable [Azure Disk Encryption for Windows VMs](/azure/virtual-machines/windows/disk-encryption-overview).
 - Learn about [Azure Storage encryption for data at rest](/azure/storage/common/storage-service-encryption).
 - Read the [Always Encrypted overview](/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
-- Read about [transparent data encryption for SQL Database and Azure synapse](/azure/sql-database/transparent-data-encryption-azure-sql).
-- Learn about [Azure SQL transparent data encryption with customer-managed key](/azure/sql-database/transparent-data-encryption-byok-azure-sql).
+- Read about [transparent data encryption for SQL Database and Azure Synapse](/azure/sql-database/transparent-data-encryption-azure-sql).
+- Learn about [Azure SQL Database transparent data encryption with customer-managed key](/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
 ## Best practice: Protect VMs with antimalware
 
 In particular, older Azure-migrated VMs might not have the appropriate level of antimalware installed. Azure provides a free endpoint solution that helps protect VMs from viruses, spyware, and other malware.
 
-- Microsoft Antimalware for Azure Cloud Services and Virtual Machines generates alerts when known malicious or unwanted software tries to install itself.
+- Microsoft Antimalware for Azure Cloud Services and virtual machines generates alerts when known malicious or unwanted software tries to install itself.
 - It's a single agent solution that runs in the background, without human intervention.
 - In Azure Security Center, you can easily identify VMs that don't have endpoint protection running, and install Microsoft antimalware as needed.
 
@@ -145,11 +147,11 @@ Azure provides the following solutions:
 
 ## Best practice: Review subscriptions and resource permissions
 
-As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including role-based access control (RBAC) to authorize permissions to access Azure resources.
+As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including Azure role-based access control (Azure RBAC) to authorize permissions to access Azure resources.
 
-- RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
-- RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
-- RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
+- Azure RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
+- Azure RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
+- Azure RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
 Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
@@ -159,8 +161,8 @@ Ensure that admins with Azure access can access only resources that you want to 
 
 **Learn more:**
 
-- [About](/azure/role-based-access-control/overview) RBAC.
-- [Learn](/azure/role-based-access-control/role-assignments-portal) to manage access by using RBAC and the Azure portal.
+- Learn about [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
+- Learn to manage access via [Azure RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 - Learn about [custom roles](/azure/role-based-access-control/custom-roles).
 
 ## Best practice: Review audit and security logs
@@ -210,7 +212,6 @@ Ensure that your resource groups have meaningful names that admins and support t
 If you're synchronizing your on-premises Active Directory to Azure AD by using Azure AD Connect, consider matching the names of security groups on-premises to the names of resource groups in Azure.
 
   ![Screenshot of resource group naming.](./media/migrate-best-practices-security-management/naming.png)
-  
   _Figure 5: Resource group naming._
 
 **Learn more:**
@@ -222,7 +223,6 @@ If you're synchronizing your on-premises Active Directory to Azure AD by using A
 The last thing you need is for a resource group to disappear because it was deleted accidentally. We recommend that you implement delete locks, so that this doesn't happen.
 
   ![Screenshot of delete locks.](./media/migrate-best-practices-security-management/locks.png)
-
   _Figure 6: Delete locks._
 
 **Learn more:**
@@ -234,7 +234,7 @@ The last thing you need is for a resource group to disappear because it was dele
 A subscription owner has access to all the resource groups and resources in your subscription.
 
 - Add people sparingly to this valuable assignment. Understanding the ramifications of these types of permissions is important in keeping your environment secure and stable.
-- Make sure you place resources in appropriate resources groups:
+- Make sure you place resources in appropriate resource groups:
   - Match resources with a similar lifecycle together. Ideally, you shouldn't need to move a resource when you need to delete an entire resource group.
   - Resources that support a function or workload should be placed together for simplified management.
 
@@ -319,7 +319,7 @@ Azure Policy evaluates your resources, scanning for those not compliant with you
 
 ## Best practice: Implement a BCDR strategy
 
-Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a *force majeure* clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strikes. Your ability to do this can make or break your company's future.
+Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a _force majeure_ clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strikes. Your ability to do this can make or break your company's future.
 
 Broadly, your BCDR strategy must consider:
 
@@ -344,13 +344,13 @@ For workloads running on Azure IaaS VMs, consider these backup solutions:
 
 #### Azure Backup
 
-Azure Backup creates data recovery points that are stored in Azure Storage. Azure Backup can back up Azure VM disks, and Azure Files (preview). Azure Files provide file shares in the cloud, accessible via Server Message Block.
+Azure Backup creates data recovery points that are stored in Azure Storage. Azure Backup can back up Azure VM disks, and Azure Files (preview). Azure Files provide file shares in the cloud, accessible via Server Message Block (SMB).
 
 You can use Azure Backup to back up VMs in the following ways:
 
-- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes app-aware data snapshots, and no agent is installed on the VM.
-- **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups, as well as granular backup and restore options. Backup is up to three times a day, at the file and folder levels. It isn't app-aware, and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up by using this method.
-- **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
+- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes application-aware data snapshots, and no agent is installed on the VM.
+- **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups, as well as granular backup and restore options. Backup is up to three times a day, at the file and folder levels. It isn't application-aware, and Linux isn't supported. Install the Microsoft Azure recovery services (MARS) agent on each VM that you want to back up by using this method.
+- **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is application-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
 
 For security, Azure Backup encrypts data in-flight by using AES-256. It sends it over HTTPS to Azure. Backed-up data-at-rest in Azure is encrypted by using [Azure Storage encryption](/azure/storage/common/storage-service-encryption).
 
@@ -373,7 +373,7 @@ You can copy an entire blob, or use an incremental snapshot copy to copy only de
 - Learn about [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction).
 - Learn how to [create a blob snapshot](/azure/storage/blobs/storage-blob-snapshots).
 - [Review a sample scenario](https://azure.microsoft.com/blog/microsoft-azure-block-blob-storage-backup) for Blob storage backup.
-- [Read about](/azure/storage/blobs/storage-blob-soft-delete) soft delete.
+- Read about [soft delete for blobs](/azure/storage/blobs/storage-blob-soft-delete).
 - [Disaster recovery and forced failover (preview) in Azure Storage](/azure/storage/common/storage-disaster-recovery-guidance)
 
 #### Third-party backup
@@ -426,7 +426,7 @@ You might have moved your workloads to Azure for its immense scaling capabilitie
 
 These two cases have different resolutions, but for both you need insight into what's happening with usage and performance monitoring.
 
-- Azure Monitor can help surface these metrics, and provide response with alerts, autoscaling, event hubs, and logic apps.
+- Azure Monitor can help surface these metrics, and provide response with alerts, autoscaling, Event Hubs, and Logic Apps.
 - You can also integrate your third-party SIEM application to monitor the Azure logs for auditing and performance events.
 
   ![Screenshot of Azure Monitor.](./media/migrate-best-practices-security-management/monitor.png)
@@ -443,7 +443,7 @@ These two cases have different resolutions, but for both you need insight into w
 
 Azure resources generate a fair number of logging metrics and telemetry data. By default, most resource types don't have diagnostic logging enabled. By enabling diagnostic logging across your resources, you can query logging data, and build alerts and playbooks based on it.
 
-When you enable diagnostic logging, each resource will have a specific set of categories. You select one or more logging categories, and a location for the log data. Logs can be sent to a storage account, event hub, or to Azure Monitor logs.
+When you enable diagnostic logging, each resource will have a specific set of categories. You select one or more logging categories, and a location for the log data. Logs can be sent to a storage account, event hub, or to Azure Monitor Logs.
 
 ![Screenshot of diagnostic logging.](./media/migrate-best-practices-security-management/diagnostics.png)
 _Figure 14: Diagnostic logging._
@@ -451,7 +451,7 @@ _Figure 14: Diagnostic logging._
 **Learn more:**
 
 - Learn about [collecting and consuming log data](/azure/azure-monitor/platform/platform-logs-overview).
-- [Learn what's supported](/azure/azure-monitor/platform/diagnostic-logs-schema) for diagnostic logging.
+- Learn what's supported for [diagnostic logging](/azure/azure-monitor/platform/diagnostic-logs-schema).
 
 ## Best practice: Set up alerts and playbooks
 
@@ -504,9 +504,9 @@ At some point, you will need to collaborate with your support staff or Microsoft
 
 Keeping Azure VMs updated with the latest operating system and software updates is a massive chore. The ability to surface all VMs, figure out which updates they need, and automatically push those updates is extremely valuable.
 
-- You can use update management in Azure Automation to manage operating system updates. This applies to machines that run Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
-- Use update management to quickly assess the status of available updates on all agent computers, and manage update installation.
-- You can enable update management for VMs directly from an Azure Automation account. You can also update a single VM from the VM page in the Azure portal.
+- You can use Update Management in Azure Automation to manage operating system updates. This applies to machines that run Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
+- Use Update Management to quickly assess the status of available updates on all agent computers, and manage update installation.
+- You can enable Update Management for VMs directly from an Azure Automation account. You can also update a single VM from the VM page in the Azure portal.
 - In addition, you can register Azure VMs with System Center Configuration Manager. You can then migrate the Configuration Manager workload to Azure, and do reporting and software updates from a single web interface.
 
   ![Diagram of VM updates.](./media/migrate-best-practices-security-management/updates.png)
@@ -514,8 +514,8 @@ Keeping Azure VMs updated with the latest operating system and software updates 
 
 **Learn more:**
 
-- Learn about [update management in Azure](/azure/automation/automation-update-management).
-- Learn how to [integrate Configuration Manager with update management](/azure/automation/oms-solution-updatemgmt-sccmintegration).
+- Learn about [Update Management in Azure](/azure/automation/update-management/overview).
+- Learn how to [integrate Configuration Manager with Update Management](/azure/automation/oms-solution-updatemgmt-sccmintegration).
 - [Frequently asked questions](/sccm/core/understand/configuration-manager-on-azure) about Configuration Manager in Azure.
 
 ## Implement a change management process

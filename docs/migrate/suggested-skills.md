@@ -7,6 +7,7 @@ ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Skills readiness for cloud migration
@@ -27,12 +28,12 @@ The following tools can aid the team in execution of assess activities:
 - [Build a business justification](../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
 - [Rationalize the digital estate](../digital-estate/rationalize.md): Rationalize assets in the digital estate.
 - [Application portfolio assessment](/learn/modules/app-and-infra-migration-and-modernization/): Criteria for making decisions regarding migration or innovation options within the application portfolio.
-- [Assessing and planning Microsoft Azure migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning-update): A Pluralsight course to aid in assessing on-premises workloads.
+- [Assessing and Planning Microsoft Azure Migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning-update): A Pluralsight course to aid in assessing on-premises workloads.
 
 During assess processes, architects will design solutions for each workload. The following skilling resources help prepare architects for these tasks:
 
-- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture: Getting started](https://www.pluralsight.com/courses/azure-architecture-getting-started): A Pluralsight course to give architects a foundational knowledge in Azure architecture.
+- [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Microsoft Azure Architecture: Getting Started](https://www.pluralsight.com/courses/azure-architecture-getting-started): A Pluralsight course to give architects a foundational knowledge in Azure architecture.
 - [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/microsoft-azure-migrations-designing): A Pluralsight course to help architects design a migration solution.
 
 ## Migrate skilling resources
@@ -40,7 +41,7 @@ During assess processes, architects will design solutions for each workload. The
 The following tutorial can prepare the team for migration activities:
 
 - [Migrate to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Migrate to migrate VMs to Azure.
-- [Rehosting workloads to Azure](https://www.pluralsight.com/courses/microsoft-azure-workloads-rehosting): A Pluralsight course that teaches viewers how to rehost workloads to Azure.
+- [Rehosting Workloads to Azure](https://www.pluralsight.com/courses/microsoft-azure-workloads-rehosting): A Pluralsight course that teaches viewers how to rehost workloads to Azure.
 - [Migrating physical and virtual servers to Azure](https://www.pluralsight.com/courses/microsoft-azure-migrating-physical-virtual-servers): A Pluralsight course for migrating servers to Azure.
 - [Import and export data to Azure](https://www.pluralsight.com/courses/microsoft-azure-import-export-data): A Pluralsight course on the movement of data to and from Azure.
 

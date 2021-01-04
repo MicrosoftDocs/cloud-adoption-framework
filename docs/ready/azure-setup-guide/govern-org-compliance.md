@@ -2,14 +2,16 @@
 title: Governance, security, and compliance in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
-ms.author: kfollis
+ms.author: brblanch
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
+
+<!-- docutune:casing "Blueprints: Blueprint definitions" "Blueprints: Get started" -->
 
 # Governance, security, and compliance in Azure
 
@@ -36,7 +38,7 @@ To create a blueprint:
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. Enter the **Blueprint name**, then select the appropriate **Definition location**.
-1. Select **Next : Artifacts >>**, Then review the artifacts included in the blueprint.
+1. Select **Next : Artifacts**, then review the artifacts included in the blueprint.
 1. Select **Save Draft**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
@@ -49,7 +51,7 @@ To create a blueprint:
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. Enter the **Blueprint name**, then select the appropriate **Definition location**.
-1. Select **Next : Artifacts >>**, Then review the artifacts included in the blueprint.
+1. Select **Next : Artifacts**, then review the artifacts included in the blueprint.
 1. Select **Save Draft**.
 
 ::: zone-end
@@ -62,7 +64,7 @@ To publish a blueprint artifacts to your subscription:
 
 1. Go to **Blueprints: Blueprint definitions**.
 1. Select the blueprint you created in the previous steps.
-1. Review the blueprint definition , then select **Publish blueprint**.
+1. Review the blueprint definition, then select **Publish blueprint**.
 1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints]" submitText="Blueprint definitions" :::

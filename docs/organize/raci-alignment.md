@@ -7,7 +7,7 @@ ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Align responsibilities across teams

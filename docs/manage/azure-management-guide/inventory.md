@@ -7,8 +7,8 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 # Inventory and visibility in Azure
@@ -26,8 +26,8 @@ For any enterprise-grade environment, the following table outlines the suggested
 | Monitor health of Azure services | Azure Service Health | Health, performance, and diagnostics for services running in Azure |
 | Log centralization | Log Analytics | Central logging for all visibility purposes |
 | Monitoring centralization | Azure Monitor | Central monitoring of operational data and trends |
-| Virtual machine inventory and change tracking | Azure Change Tracking and Inventory | Inventory VMs and monitor changes for guest OS level |
-| Subscription Monitoring | Azure Activity Log | Monitoring change at the subscription level |
+| Virtual machine inventory and change tracking | Change Tracking and Inventory | Inventory VMs and monitor changes for guest OS level |
+| Subscription monitoring | Azure activity log | Monitoring change at the subscription level |
 | Guest OS monitoring | Azure Monitor for VMs | Monitoring changes and performance of VMs |
 | Network monitoring | Azure Network Watcher | Monitoring network changes and performance |
 | DNS monitoring | DNS Analytics | Security, performance, and operations of DNS |
@@ -174,11 +174,11 @@ There are two approaches to onboarding:
 
 Each article guides you through a series of steps to onboard these solutions:
 
-- Update Management
-- Change Tracking and Inventory
-- Azure Activity Log
+- Update Management solution
+- Change Tracking and Inventory solution
+- Azure activity log
 - Azure Log Analytics Agent Health
-- Antimalware Assessment
+- Antimalware assessment
 - Azure Monitor for VMs
 - Azure Security Center
 

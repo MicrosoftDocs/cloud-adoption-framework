@@ -7,6 +7,7 @@ ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Review rationalization decisions
@@ -37,7 +38,7 @@ If the answer to either question is "yes," the team should consider including th
 
 ## Migration indicators
 
-Migration is a faster and cheaper way of adopting the cloud. But it doesn't take advantage of opportunities to innovate. Before you invest in innovation, answer the following questions. They can help you determine if a migration model is more applicable for a workload.
+Migration is a faster and cheaper way of adopting the cloud. But it doesn't take advantage of opportunities to innovate. Before you invest in innovation, answer the following questions. They can help you determine whether a migration model is more applicable for a workload.
 
 - Is the source code supporting this application stable? Do you expect it to remain stable and unchanged during the time frame of this release cycle?
 - Does this workload support production business processes today? Will it do so throughout the course of this release cycle?

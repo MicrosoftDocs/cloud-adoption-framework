@@ -1,13 +1,13 @@
 ---
 title: "Software Defined Networking: Hub and spoke"
 description: Use the Cloud Adoption Framework for Azure to learn how hub and spoke networking organizes your network infrastructure into multiple connected virtual networks.
-author: rotycenh
+author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Software Defined Networking: Hub and spoke
@@ -48,4 +48,4 @@ Hub and spoke architectures are commonly implemented with virtual networks deplo
 For reference architectures showing how to implement hub and spoke networks on Azure, see:
 
 - [Implement a hub and spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
-- [Implement a hub and spoke network topology with shared services in Azure](/azure/architecture/reference-architectures/hybrid-networking/shared-services)
+- [Implement a hub and spoke network topology with shared services in Azure](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology)

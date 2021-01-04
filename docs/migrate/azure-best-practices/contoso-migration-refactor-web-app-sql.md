@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc smarthotel SHWEB SHWCF -->
@@ -21,11 +22,11 @@ The SmartHotel360 application that we use in this example is provided as open so
 
 The Contoso IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Address business growth**. Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
-- **Increase efficiency**. Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility**. To enable their success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
-- **Scale**. As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
-- **Reduce costs**. Contoso wants to minimize licensing costs.
+- **Address business growth.** Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
+- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
+- **Increase agility.** To enable their success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
+- **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
+- **Reduce costs.** Contoso wants to minimize licensing costs.
 
 ## Migration goals
 
@@ -67,7 +68,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | The SmartHotel360 application code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of their investment in Software Assurance by using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](https://aka.ms/lifecycle). <br><br> Contoso can configure the web tier of the application with multiple instances, so that the web tier is no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Database supports the technical requirements. Contoso assessed the on-premises database by using Data Migration Assistant and found that it's compatible. <br><br> Azure SQL Database has built-in fault tolerance that Contoso doesn't have to set up. This ensures that the data tier is no longer a single point of failover. <br><br> If Contoso uses Azure Database Migration Service to migrate their database, it will have the infrastructure ready for migrating databases at scale. |
+| **Pros** | The SmartHotel360 application code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of their investment in Software Assurance by using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](/lifecycle/). <br><br> Contoso can configure the web tier of the application with multiple instances, so that the web tier is no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Database supports the technical requirements. Contoso assessed the on-premises database by using Data Migration Assistant and found that it's compatible. <br><br> Azure SQL Database has built-in fault tolerance that Contoso doesn't have to set up. This ensures that the data tier is no longer a single point of failover. <br><br> If Contoso uses Azure Database Migration Service to migrate their database, it will have the infrastructure ready for migrating databases at scale. |
 | **Cons** | Azure App Service supports only one application deployment for each web app. This means that two web apps must be provisioned, one for the website and one for the WCF service. |
 
 ## Proposed architecture
@@ -116,14 +117,13 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure learning path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process.
-The admins perform these actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure learning path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. The admins perform these actions:
 
 - They use the Azure [App Service Migration Assessment](https://appmigration.microsoft.com/assessment/) tool to evaluate any dependencies between their web apps and to determine if there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 
 - They download the Azure App Service Migration Assistant and sign in to their Azure account.
 
-- They choose a subscription, a resource group, and the website’s domain name.
+- They choose a subscription, a resource group, and the website's domain name.
 
 ## Step 2: Provision a database in Azure SQL Database
 
@@ -337,7 +337,7 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 ### Backups
 
 - The Contoso team reviews the backup requirements for the Azure SQL Database. [Learn more](/azure/sql-database/sql-database-automated-backups).
-- They also learn about managing SQL Database backups and restores. [Learn more](/azure/sql-database/sql-database-automated-backups) about automatic backups.
+- They also learn about managing SQL Database backups and restores. Learn more about [automatic backups](/azure/sql-database/sql-database-automated-backups).
 - They consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/sql-database/sql-database-geo-replication-overview).
 - For resilience, they consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`). The team could configure Traffic Manager to ensure failover during regional outages.
 
