@@ -81,7 +81,7 @@ For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. Y
 - Consider using [E-series](https://docs.microsoft.com/azure/virtual-machines/ev3-esv3-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-Series](https://docs.microsoft.com/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for AnyDB.  M & E series SKUs are memory optimized provide better CPU:Memory ratio.
 - Consider design principle of scale-up first then scale-out. However, from cost perspective in some scenarios scale-out deployments could be cheaper compared to scale-up setup.
 - Consider Scale-out for SAP application server over scale-up.
-- Consider using E-series SKU for production non-prod cost-conscious deployments.
+- Consider using E-series SKU for smaller production and non-prod cost-conscious deployments.
 - For AnyDB production deployment consider IOPS and throughput limits of VM SKUs.
 
 ### Design Recommendations for Compute
