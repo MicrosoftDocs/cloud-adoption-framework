@@ -84,9 +84,7 @@ items:
         - name: Ready
           href: scenarios/unified-operations/ready.md
         - name: Migrate
-          href: scenarios/unified-operations/migrate-deploy.md
-        - name: Innovate-Not MVP
-          href: scenarios/unified-operations/innovate.md
+          href: scenarios/unified-operations/migrate.md
         - name: Govern
           href: scenarios/unified-operations/govern.md
         - name: Manage

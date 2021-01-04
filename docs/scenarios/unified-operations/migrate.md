@@ -29,7 +29,5 @@ Are there specific criteria for workloads in that portfolio that would require t
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Release unified operations to production](./migrate-release.md)
-- [Innovate with unified operations](./innovate.md)
 - [Govern unified operations](./govern.md)
 - [Manage unified operations](./manage.md)
