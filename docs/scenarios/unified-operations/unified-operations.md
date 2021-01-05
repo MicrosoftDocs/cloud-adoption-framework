@@ -3,7 +3,7 @@ title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistenty operations management across hybrid, multicloud, and edge deployments.
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/31/2020
+ms.date: 01/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -42,74 +42,149 @@ Whether located in a public or private cloud, your primary cloud platform is whe
 
 ## Unified operations
 
-The concept of executing unified operations is straightforward. Implement an extension (or gateway) to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. Manage operations across all your assets—whether hosted in disparate on-premises, multi-cloud, and edge resource environments.
+The concept behind unified operations is simple. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. Manage and govern your operations consistently—across disparate on-premises, multi-cloud, and edge resource environments.
 
-One cloud management experience that manages operations of distributed assets at scale (porting consistent management, app development, and cloud services to any infrastructure, anywhere) brings cloud innovation to resource environments across your entire IT estate. A gateway with cloud controls for consistent management and operations enables an integral hybrid and multi-cloud strategy that can advance your organization's future innovation, agility, and business growth, on-premises, multi-cloud, and edge.
+One cloud management experience that manages operations of distributed assets at scale (porting consistent management, app development, and cloud services to any infrastructure, anywhere) brings cloud innovation to all resource environments across your entire IT estate. Enabling consistent management and governance for organizations, a gateway with cloud controls extending Azure management and Azure data services to on-premises, multi-cloud and edge enables an integral hybrid and multi-cloud strategy that can increase your future innovation, agility, and business growth, anywhere.
 
 ![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/unified-operations/primary-cloud-provider-extended.png)
 
 > [!WARNING]
 > Implementation of unified operations can be relatively straightforward. But, if your cloud platform isn't able to manage unified operations, it will require additional capital expenditures, with costly development to create extensions or gateways to other clouds. Existing primary cloud platforms with these limitations is the main reason why customers create duplicated or fractured operations and processes.
 >
-> **An inconsistent approach to implementing unified operations can multiply cost inefficiencies for your organization**—with increased operating costs (duplicated cloud platform utilities, operations tooling), and negative business impacts (staffing teams supported with necessary cloud skilling).
+> An inconsistent approach to implementing unified operations can multiply cost inefficiencies for your organization—with increased operating costs (from having duplicated cloud platform utilities, operations tooling), and negative business impacts (staffing teams without necessary cloud skilling).
 >
 
-If your current primary cloud provider doesn't offer capabilities for unified operations, consider modernizing your operations and processes using a modern cloud provider.
+If your current primary cloud provider doesn't offer the required capabilities for unified operations, consider optimizing your operations and processes using a modern cloud provider.
 
 ## Unified operations decomposed
 
-The following image illustrates the individual components of unified operations and how they interact with each other. Each section that follows will provide a detailed narrative for each component.
+This image displays the individual components required for unified operations, and shows how they interact with each other. The following sections provide a detailed outline for each unified operations component.
 
 ![Infographic showing the components required to deliver unified operations (outlined in the remainder of this article)](../../_images/unified-operations/unified-operations.png)
 
 ## Customer processes
 
-The primary objective of unified operations is to create as much process consistency as possible. No provider will be able to achieve 100% feature parity across all hybrid, multicloud, and edge deployments. But the provider should be able to deliver common enough feature sets that your processes can remain consistent.
+The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/) and [operations management](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/) processes remain consistent.
 
 ![Customer Processes that unified operations can support](../../_images/unified-operations/unified-operations-customer-processes.png)
 
-Customers most commonly require the ability to deliver consistency in their governance and operations management processes. To meet long term requirements, your unified operations solution will need to be able to scale to meet the following common processes:
+ Most commonly, customers require the ability to deliver consistency within their defined governance and operations management processes. To meet long-term requirements, your unified operations solution will need to be able to scale to meet the common processes (as specified below).
 
-- Common governance processes or tasks:
-    - Cost Management: View, optimize, or manage costs
-    - Security Baseline: Audit, apply, or automate requirements from security
-    - Resource Consistency: On-board, organize, and configure resources and services
-    - Identity Baseline: Authentication and authorization of users
-    - Deployment Acceleration: Templates, automation, and pipelines that drive consistency
-- Common operations management processes or tasks:
-    - Inventory & Visibility: Account for all assets and ensure reporting for each
-    - Optimized Operations: Track, patch, and optimize supported resources
-    - Protection & Recovery: Backup, business continuity and disaster recovery practices
-    - Platform Operations: Specialized operations for common technology platforms like SQL, WVD, SAP, etc...
-    - Workload Operations: Specialized operations for high priority workloads with greater operations requirements
+### Common **governance** processes (tasks):
+- Cost Management: view, manage, or optimize costs and **identify and provide mitigation guidance for cloud-related IT spend risk**.
+- Security Baseline: audit, apply, or automate requirements from recommended security controls and **identify and provide mitigation guidance for security-related business risks**.
+- Resource Consistency: onboard, organize, and configure resources and services to **identify and provide risk mitigation guidance for potential business risks**.
+- Identity Baseline: enforce authentication and authorization across user identity and access to **identify and provide risk-mitigation guidance for potential identity-related business risks**.
+- Deployment Acceleration: drive consistency, using templates, automation, and pipelines (for deployments, configuration alignment, and reusable assets) and **establishing policies to ensure compliant, consistent, and repeatable resource deployment and configuration**.
 
-Your primary cloud platform should be able to provide appropriate tooling to facilitate or automate processes to accomplish these goals. Your unified operations solution should then allow you to extend these processes into hybrid, multicloud, and edge deployments.
+### Common **operations management** processes (tasks):
+- Inventory and visibility: account for, and ensure reporting for all assets, and **collect and monitor your inventory's run state in enterprise-grade environments**.
+- Optimized operations: track, patch, and optimize supported resources and **minimize business interruption risks from configuration drift or vulnerabilities from inconsistent patch management**.
+- Protection and recovery: backup, business continuity, and disaster recovery best practices and **reduce the duration and impact of unpreventable outages**.
+- [Platform operations](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-management-guide/platform-specialization?tabs=SystemsDesign%2CAutomatedRemediation%2CServiceCatalog%2CContinuousImprovement): specialized operations for common technology platforms such as SQL, WVD, and SAP (for medium to high criticality workloads).
+- [Workload operations](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-management-guide/workload-specialization): specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
+
+Platform and workload operations both execute an equivalent *iterative process* to **improve system design, automate remediation, scale changes with a service catalog, and continuously improve system design, automation, and scale**.
+
+Your primary cloud platform should be able to provide the required technical capabilities and tooling to automate processes, and reach the goals above for your governance and operations management. Your unified operations solution should enable you to extend these processes across all hybrid, multicloud, and edge deployments.
 
 ## Primary Cloud Controls
 
-To facilitate or automate the customer processes typically required in the cloud, your primary cloud platform should include a number of important features:
+Your primary cloud platform should include a number of important features to facilitate or automate the customer processes typically required in the cloud:
 
 ![Common cloud controls - outlined in the bullets below](../../_images/unified-operations/unified-operations-cloud-controls.png)
 
-- Basic features: You will need each of these basic features to deliver a cloud adoption plan at scale.
-    - Search, Index, Group, and Tag all deployed assets for basic visibility
-    - Template, Automate, and Extend tooling for consistent deployment
-    - Create Access and Security boundaries to protect deployed assets
-- Enhanced features: You will likely need most, if not all, of the following enhanced features.
-    - Performance & Inventory reporting
-    - Security & Compliance auditing and automation
-    - Tracking and reporting on Applications & Dependencies
-- Automated controls: Additional tools that can automate your environment to modernize operations and optimize operational costs
-    - Environment & In-Guest Policy
-    - Configuration & Updates
-    - Protection and recovery
+### Basic features: 
+(All of these basic features are required in order to deliver a cloud adoption plan at scale):
+- **Search, index, group, and tag** all deployed assets, extending basic visibility and management.
+- **Templatize, automate, and extend tooling** for consistent deployment
+- **Create access and security boundaries** to protect deployed assets
 
-These features are likely already included in the control sets you use to operate your primary cloud provider today. There are likely a host additional features and automated processes available in that set of controls. But the features above are the ones that we see lead to fractured or duplicated operations. These are the features that should be available across hybrid, multicloud, and edge in your unified operations solution.
+### Enhanced features:
+(You will likely need most, if not all, of the following enhanced features):
+- **Performance and inventory reporting**
+- **Security and compliance auditing and automation**
+- **Tracking and reporting on applications and dependencies**
+> **Automated controls**:
+>
+> **Automate your environment** with tools to modernize your operations and optimize operational costs:
+>
+> - Environment and in-guest policy
+> - Configuration and updates
+> - Protection and recovery
+
+These features are likely already included in the control sets you are currently using to operate your primary cloud provider. (There are likely many additional features and automated processes available in that set of controls). These are the primary control functionalities that should be available across hybrid, multicloud, and edge in your unified operations solution. 
+
+It's because they are implemented as primary controls that the features above are the ones that we commonly see lead to fractured or duplicated operations. As mentioned before, an inconsistent approach to implementing unified operations from increased operating costs (e.g., duplicated cloud platform utilities, operations tooling) can multiply cost inefficiencies for your organization, and incur significant capital expenditures in the early phase of the cloud adoption journey.
+>
 
 ### Hybrid, multicloud, and edge extension/gateway
 
 To extend your primary cloud controls, you need to configure an extension or gateway. That extension will allow your controls to see and interact with resources that have been deployed outside of the cloud platform (**creating one control plane**). In Microsoft's cloud platforms, Azure Arc is that extension. Azure Arc extends the cloud controls used to govern Azure, so that you can apply the same control and processes to services running on-prem, in a competing public cloud, or on the edge.
 **Add additional description of extending ARM (Azure Resource Manager), (as the operating system of Azure) and reaching outside Azure to project those resources inside Azure and represent them as first-class citizens.**
+
+## Get started with Azure Arc
+**Outline proposed for Azure Arc zero to hero implementation scenarios. Needs input from Lior** 
+
+### [Azure Arc Jumpstart Scenarios](https://github.com/microsoft/azure_arc)
+
+- [Azure Arc enabled servers](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart)
+- [Azure Arc enabled SQL Server](https://github.com/microsoft/azure_arc/tree/main/azure_arc_sqlsrv_jumpstart)
+- [Azure Arc enabled Kubernetes](https://github.com/microsoft/azure_arc/tree/main/azure_arc_k8s_jumpstart)
+- [Azure Arc enabled data services](https://github.com/microsoft/azure_arc/tree/main/azure_arc_data_jumpstart)
+
+### Unified Operations Use Cases
+
+Once you have server resources projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the servers as native Azure resources. The following scenarios show examples of using Azure management tools such as resource tags, Azure Policy, Log Analytics, and more with Azure Arc enabled servers.
+
+- Inventory Tagging
+- Monitoring Agent Extension
+- Custom Script Extension
+- Azure Policy
+- Key Vault Integration
+- Security Center
+- Azure Sentinel
+- Update Management
+
+### Reference architectures for TBD sections
+
+#### Apps:
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/ai-at-the-edge
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-functions-hybrid
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-stack-robo
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-containers
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/deploy-ai-ml-azure-stack-edge
+
+#### Data
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-stack-hci-dr
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/backup-archive-on-premises-applications
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-file-services
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-file-share
+
+#### Management
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/arc-hybrid-kubernetes 
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-arc-hybrid-config
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-arc-sql-server 
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-update-mgmt 
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-automation-hybrid 
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-stack-backup 
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/build-high-availability-into-your-bcdr-strategy 
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-stack-vm-dr 
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/disaster-recovery-smb-azure-site-recovery 
+
+#### Security
+- https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-security-monitoring
+
+### MS Learn Content 
+- [Manage hybrid infrastructure with Azure Arc](https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+- [Manage hybrid workloads with Azure Arc](https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/)
+- [Introduction to Azure hybrid cloud services](https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/)
+- [Design a hybrid network architecture on Azure](https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/)
+- [Implement hybrid network infrastructure](https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/)
+- [Azure Stack HCI foundations](https://docs.microsoft.com/en-us/learn/paths/azure-stack-hci-foundations/)
+
 
 ## Next Steps
 
