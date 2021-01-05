@@ -3,7 +3,7 @@ title: "Strategy for unified operations adoption"
 description: Describe the scenario's impact on strategy
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/03/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -113,12 +113,12 @@ Create a shared application and infrastructure lifecycle within teams, tradition
 
 Select additional Arc–enabled services and Azure development and operational tools that are developer tooling-agnostic. Access unified dashboard with a consistent view across your environments—with GitHub, Azure Monitor, Security Center, Azure Update integration, and more. Leverage common templates to automate configuration, and deploy infrastructure as code to make safe and repeatable production deployments. Manage end-to-end identity and access across all users and resources with Azure Active Directory (Azure AD) enterprise identity service and Azure Resource Manager.
 
-## Next step: Plan for unified operations
+## Next step: Plan for hybrid and multicloud
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you become successful in the cloud adoption scenario.
 
-- [Plan for unified operations](./plan.md)
+- [Plan for hybrid and multicloud](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Hybrid and multicloud migration](./migrate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Govern hybrid and multicloud environments](./govern.md)
+- [Manage hybrid and multicloud environments](./manage.md)

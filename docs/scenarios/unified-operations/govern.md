@@ -3,7 +3,7 @@ title: "Govern hybrid and multicloud deployments"
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -41,8 +41,8 @@ Security baseline is among the most common ways a customer will expand their gov
 - [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
 
-## Next step: Manage hybrid and multicloud environment
+## Next step: Manage hybrid and multicloud environments
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Manage hybrid and multicloud environment](./manage.md)
+- [Manage hybrid and multicloud environments](./manage.md)

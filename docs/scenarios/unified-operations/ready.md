@@ -3,7 +3,7 @@ title: "Ready methodology for Hybrid and Multicloud"
 description: Prepare your environment for hybrid and multicloud with Azure Landing Zones
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -85,5 +85,5 @@ To learn more about unification of your cloud operations, see the articles on [U
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Hybrid and multicloud migration](./migrate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Govern hybrid and multicloud environments](./govern.md)
+- [Manage hybrid and multicloud environments](./manage.md)

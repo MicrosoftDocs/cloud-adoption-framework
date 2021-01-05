@@ -3,7 +3,7 @@ title: "Plan for unified operations"
 description: Describe the scenario's impact on planning
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/16/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -150,5 +150,5 @@ The following list of articles will take you to guidance found at specific point
 
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Hybrid and multicloud migration](./migrate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Govern hybrid and multicloud environments](./govern.md)
+- [Manage hybrid and multicloud environments](./manage.md)
