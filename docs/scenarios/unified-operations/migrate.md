@@ -11,7 +11,11 @@ ms.subservice: migrate
 
 # Hybrid and multicloud migration
 
-In the [Migrate methodology](../../migrate/index.md), all migration is viewed as a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations. Typically, migration efforts have been seen as a one-way street; assets move up to cloud (or to a new cloud) & stay there. In a hybrid and multicloud environment, migration efforts are more like a multi-lane highway; assets move between multiple public and private clouds based on shifting business or technical requirements. This shift in migration strategy has little impact on the migration process, but can directly impact all of the work that comes before and after migration.
+In the [Migrate methodology](../../migrate/index.md), migration to the cloud is already consider to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
+
+![Shift from uni-direction cloud migration, to bi-directional hybrid and multicloud migration described in next paragraph.](../../_images/unified-operations/primary-cloud-provider.png)
+
+Typically, migration efforts have been seen as a one-way street; assets move up to cloud (or to a new cloud) & stay there. In a hybrid and multicloud environment, migration efforts are more like a multi-lane highway; assets move between multiple public and private clouds based on shifting business or technical requirements. This shift in migration strategy has little impact on the migration process, but can directly impact all of the work that comes before and after migration.
 
 ## Impact on migration-specific processes
 

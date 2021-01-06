@@ -109,6 +109,7 @@ items:
           items:
           - name: Overview
             href: https://docs.microsoft.com/azure/architecture/browse/hybrid_index?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
           - name: Networking
             items:
             - name: Connecting an on-premises network to Azure
@@ -207,9 +208,6 @@ items:
               href: https://docs.microsoft.com/azure/architecture/hybrid/deploy-ai-ml-azure-stack-edge?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: On-premises data gateway for Azure Logic Apps
               href: https://docs.microsoft.com/azure/architecture/hybrid/gateway-logic-apps?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
-
-
 
         - name: Best practices
           items:
