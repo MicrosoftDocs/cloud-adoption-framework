@@ -30,18 +30,21 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 
 - For WVD Host Pool, both *active-active* and *active-passive* can be viable BCDR approaches, depending on the requirements.
   - With *active-active*, a single Host Pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) would be required to actively replicate the user Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one.
-    - This is a complex configuration. If *active-active* is chosen it gives protection against storage outages without the need to re-log the user and enables continuous testing of the DR location. It is not considered either a performance or cost optimization.  
+    - This is a complex configuration. If active-active is chosen, it gives protection against storage outages without the need to relog the user and enables continuous testing of the DR location. It is not considered either a performance or cost optimization.  
     - Load balancing of incoming user connection cannot take into account proximity: all hosts will be equal, and users may be directed to a remote, not optimal, WVD Host Pool VM.
     - This configuration is limited to Pooled Host Pool type.
 
-  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) (ASR) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
-    - ASR is supported for both *Personal* (dedicated) and *Pooled* (shared) Host Pool types, and will permit to maintain a single Host Pool entity.
-    - Creating a new Host Pool in the failover region is also possible, while keeping all those resources  turned off. For this method, you would need to set up new Application Groups in the failover region and assign users to them. You can then use an ASR “*Recovery Plan*” to turn on host pools and create an orchestrated process.
+  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) (Azure Site Recovery) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
+    - Azure Site Recovery is supported for both *Personal* (dedicated) and *Pooled* (shared) Host Pool types, and will permit to maintain a single Host Pool entity.
+    - Creating a new Host Pool in the failover region is also possible, while keeping all those resources  turned off. For this method, you would need to set up new Application Groups in the failover region and assign users to them. You can then use an Azure Site Recovery “*Recovery Plan*” to turn on host pools and create an orchestrated process.
 
 - Host Pool VM Resiliency
   - Different [options](https://docs.microsoft.com/azure/virtual-machines/availability) for VM resiliency are available when creating a new WVD Host Pool. It is important to select the right one based on requirements at creation time since cannot be changed later.
 
   - Default resiliency option for WVD Host Pool deployment is Availability Set: it will only ensure VM resiliency at the single Azure datacenter level, with formal 99.95% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9).
+  
+     > [!NOTE]
+     > The maximum number of VMs inside an Availability Set is 200, as documented in [this article]("https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager")
 
   - With [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) instead, VM in the Host pool will be allocated across different datacenters, still inside the same region, with higher resiliency and higher formal 99.99% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9).
 
@@ -55,7 +58,7 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 
 - Location of storage used for FSLogix containers is critical to ensure the lowest latency from the Host Pool VM.
 
-- In a BCDR situation it is possible to reduce the time taken to backup, restore and replicate data, with the separation of user profile and the Office container disks. FSLogix offers the possibility to allocate on separate storage locations. In normal usage the Office disk can consume many GB more than the profile. Backup, replication and restore of the profile disk will be far quicker without the inclusion of the cache data. The Office disk is not required to be made resilient as this can be re-downloaded and the data it contains is already present, in full, inside Office 365 on-line services. 
+- In a BCDR situation, it is possible to reduce the time taken to backup, restore and replicate data, with the separation of user Profile and the Office container disks. FSLogix offers the possibility to allocate them in separate storage locations. In normal usage the Office disk can consume many GB more than the profile. Backup, replication, and restore of the profile disk will be far quicker without the inclusion of the cache data. The Office disk is not required to be made resilient as this can be re-downloaded and the data it contains is already present, in full, inside Office 365 on-line services.
 
   > [!NOTE]
   > The FSLogix Cloud Cache feature is 'write back' by design to increase performance characteristics to high latency targets, thus using asynchronous replication.
@@ -72,7 +75,7 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 
   1. **Profile Pattern #1**: Native Azure storage replication mechanisms, for example Azure Files Standard [GRS replication](https://docs.microsoft.com/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region), Azure NetApp Files [Cross Region Replication](https://docs.microsoft.com/azure/azure-netapp-files/cross-region-replication-introduction), or Azure [Files Sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-deployment-guide) for VM-based file servers
 
-  2. **Profile Pattern #2**: FSLogix [Cloud Cache](https://docs.microsoft.com/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) is built-in automatic mechanism to replicate containers between different (up to 4) storage accounts.
+  2. **Profile Pattern #2**: FSLogix [Cloud Cache](https://docs.microsoft.com/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) is built in automatic mechanism to replicate containers between different (up to 4) storage accounts.
 
   3. **Profile Pattern #3**: Only set up geo disaster recovery for application data and not for user data/profile containers: store important application data in separate storages, like OneDrive or other external storage with its own built-in DR mechanism.
 
@@ -92,7 +95,7 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 ### Infrastructure & Application Dependencies
 
 - If users of the WVD infrastructure need on-premises resource access, high availability of network infrastructure required to connect is also critical and should be considered.
-- Resiliency of authentication infrastructure need to be assessed and evaluated.
+- Resiliency of authentication infrastructure needs to be assessed and evaluated.
 - BCDR aspects for dependent applications and other resources need to be considered to ensure availability in the secondary DR location.
 
 ## Design recommendations
@@ -101,16 +104,16 @@ The following are best practices for your design:
 
 - For WVD Host Pool compute deployment model BCDR, use *active-passive* option if will satisfy your requirements for Recovery Point Objective (RPO) and Recovery Time Objective (RTO).
 
-- ASR is recommended for Personal (*dedicated*) Host Pools. Target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
-  - ASR is also supported for Pooled (*shared*) Host Pools. This option can be evaluated and compared to the deployment of an additional Host Pool in the secondary DR region.
+- Azure Site Recovery is recommended for Personal (*dedicated*) Host Pools. Target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
+  - Azure Site Recovery is also supported for Pooled (*shared*) Host Pools. This option can be evaluated and compared to the deployment of another Host Pool in the secondary DR region.
 
 - When maximum resiliency of the Host Pool is required in a single region, Availability Zones should be used.
   - Customers need to verify Availability Zones feature availability in the specific region, and availability of specific VM SKU inside all the zones.
 
 - We recommend storing FSLogix user Profile and Office Containers on Azure Files or Azure NetApp Files for most customer scenarios.
-  - It is *not* recommended to split user Profile Containers and Office Containers.
+  - It is recommended to split user Profile and Office Containers.
   - Recommended options for container storage types are (in order): Azure Files Premium, Azure NetApp Files Standard and Azure NetApp Files Premium, depending on the resources and latency required by the specific workload.
-  - For optimal performance FSLogix containers should be located on storage as close as possible to the VM which the user is logged onto, preferably in the same datacenter.
+  - For optimal performance, FSLogix containers should be located on storage as close as possible to the VM which the user is logged on to, preferably in the same datacenter.
   
 - Azure storage built-in replication mechanisms should be used for BCDR when possible for less critical environment:
   - Use Zone Replicated Storage (ZRS) or Geo replicated storage (GRS) for Azure Files is recommended.
@@ -127,9 +130,11 @@ The following are best practices for your design:
 
 - Use Azure Shared Image Gallery to replicate golden images to different regions.
   - Storage used for image creation should be Zone Replicated Storage (ZRS), and at least two copies per region should be maintained.
+
 - Use Azure Backup to protect critical user data from data loss, or logical corruption, when Azure File Share Standard or Premium tiers are used.
   - Use Snapshots and Policies when Azure NetApp Files service is used.
   - Even if supported, using Azure Backup to save VM state in the Host Pool is not recommended since should be stateless.
+
 - Carefully review your resiliency and BCDR plans for dependent resources (networking, authentication, applications, and other internal services either in Azure or on-premises).
   - Network infrastructure, as part of Hub & Spoke or virtual WAN architecture, must be available also in the secondary region.
   - Hybrid connectivity must be highly available in both the primary and secondary regions.
