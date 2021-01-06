@@ -27,6 +27,8 @@ While the direct impact on migration processes is minor, awareness of those devi
     - It is important to understand the reason behind the hybrid and multicloud decision to evaluate compatibility of the various workloads:
         - Azure Stack HCI compatibility is important if you are modernizing your data center to allow for cloud native solutions on-prem.
         - Kubernetes compatibility is important if you are maintaining portability through container-based infrastructure.
+        - Azure Edge compatibility may be important to extend workloads & reduce latency at the point of interaction.
+        - Regulatory, compliance, or business requirements may dictate that some assets or data remain on-prem. To monitor those parts that are migrated, you may need to add additional monitoring tools.
 - **Deploy workloads:** Deployment of the waves of workloads is largely unchanged.
     - When deploying workloads, it is more important than ever to have a clear inventory of all dependent assets and network paths to ensure that those assets reside in the correct cloud.
     - When migrating from multicloud providers, Azure Migrate will still facilitate your migration. But the best practices change a bit when migrated to Azure from other public clouds.
