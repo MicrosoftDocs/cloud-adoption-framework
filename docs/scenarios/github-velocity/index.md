@@ -87,12 +87,13 @@ The right mix of individuals, teams, and resources can ensure a project’s succ
 
 Bigger projects may also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation.
 
-Innersource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations in this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across your organization can help rally the expertise necessary to solve a given problem faster.
+InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations in this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across your organization can help to rally the expertise necessary to solve problems faster.
 
-Within an enterprise, “contributors” are developers across your company, while “maintainers” are a project’s leaders and key decision makers.
+Within an enterprise, contributors are developers across your company, and maintainers are a project’s leaders and key decision-makers.
 
-- **Maintainers**: Developers, product managers, and other key decision makers within your company who are responsible for driving a project’s vision and for managing day-to-day contributions.
-- **Contributors**: Developers, data scientists, product managers, marketers, and other roles within your company that help drive software forward. Contributors are not necessarily part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
+- **Maintainers**: Developers, product managers, and other key decision-makers within your company who are responsible for driving a project’s vision and for managing day-to-day contributions.
+
+- **Contributors**: Developers, data scientists, product managers, marketers, and other roles within your company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
 See the [introduction to InnerSource](https://resources.github.com/whitepapers/introduction-to-innersource/) white paper to learn more.
 
@@ -115,25 +116,25 @@ GitHub Actions can be used to combine Infrastructure as Code concepts as well as
 
 ### GitHub’s shift-left security features
 
-Starting with the first steps of development, DevSecOps adheres to security best practices. By using a shift-left strategy, DevSecOps redirects the security focus. Instead of pointing toward auditing at the end, it shifts to development in the beginning. Besides producing robust code, this fail fast approach helps to resolve problems early on, when they're easy to fix.
+Starting with the first steps of development, DevSecOps adheres to security best practices. By using a shift-left strategy, DevSecOps redirects the security focus. Instead of pointing toward auditing at the end, it shifts to development in the beginning. Besides producing robust code, this fail-fast approach helps to resolve problems early on when they're easy to fix.
 
 With many security capabilities, GitHub offers tools that support every part of a DevSecOps workflow:
 
-- Browser-based IDEs with built-in security extensions.
-- Agents that continuously monitor security advisories and replace vulnerable and out-of-date dependencies.
-- Search capabilities that scan source code for vulnerabilities.
-- Action-based workflows that automate every step of development, testing, and deployment.
-- Spaces that provide a way to privately discuss and resolve security threats and then publish the information.
-- Combined with the monitoring and evaluation power of Azure, these features provide a superb service for building secure cloud solutions.
+- Browser-based IDEs with built-in security extensions
+- Agents that continuously monitor security advisories and replace vulnerable and out-of-date dependencies
+- Search capabilities that scan source code for vulnerabilities
+- Action-based workflows that automate every step of development, testing, and deployment
+- Spaces that provide a way to privately discuss and resolve security threats and then publish the information
+- Combined with the monitoring and evaluation power of Azure, these features provide a superb service for building secure cloud solutions
 
 ### Example
 
 GitHub DevSecOps installations cover many security scenarios. Possibilities include the following cases:
 
-- Developers who want to take advantage of pre-configured environments that offer security capabilities.
-- Administrators who rely on having up-to-date, prioritized security reports at their fingertips, along with details on affected code and suggested fixes.
-- Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code.
-- Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available.
+- Developers who want to take advantage of pre-configured environments that offer security capabilities
+- Administrators who rely on having up-to-date, prioritized security reports at their fingertips, along with details on affected code and suggested fixes
+- Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code
+- Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available
 
 For further reading, see:
 
@@ -143,7 +144,7 @@ For further reading, see:
 
 ## Next Steps
 
-- Choose your implementation team (typically a developer manager and a few developers defined as admins) and deploy GitHub.
+- Choose your implementation team (typically a developer manager and a few developers defined as admins), and deploy GitHub.
 - Learn common and advanced Git workflows to enhance how you use GitHub.
 
 Note: Links below will redirect you to GitHub Docs.
