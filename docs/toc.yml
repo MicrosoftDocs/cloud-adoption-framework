@@ -10,30 +10,26 @@ items:
     items:
     - name: Overview
       href: scenarios/aks/index.md
-    - name: strategy
+    - name: Strategy
       href: scenarios/aks/strategy.md
-    - name: Planning
+    - name: Plan
       href: scenarios/aks/plan.md
-    - name: Azure landing zone review
+    - name: Ready - Azure Landing Zones
       href: scenarios/aks/ready.md
     - name: Innovate
       href: scenarios/aks/innovate.md
-    - name: Migrate - Assess workloads
-      href: scenarios/aks/migrate-assess.md
-    - name: Migrate - Deploy workloads
+    - name: Migrate
       href: scenarios/aks/migrate-deploy.md
-    - name: Migrate - Release workloads
-      href: scenarios/aks/migrate-release.md
-    - name: Enterprise-Scale landing zone
+    - name: Govern
+      href: scenarios/aks/govern.md
+    - name: Manage
+      href: scenarios/aks/manage.md
+    - name: Enterprise-Scale Construction Set
       items:
       - name: Overview
         href: scenarios/aks/enterprise-scale-landing-zone.md
-      - name: Enterprise enrollment and Azure AD Tenant
-        href: scenarios/aks/eslz-enterprise-enrollment-and-azure-ad-tenants.md
       - name: Identity and Access Management
         href: scenarios/aks/eslz-identity-and-access-management.md
-      - name: Management group and subscription organization
-        href: scenarios/aks/eslz-management-group-and-subscription-organization.md
       - name: Network topology and connectivity
         href: scenarios/aks/eslz-network-topology-and-connectivity.md
       - name: Management and Monitoring
