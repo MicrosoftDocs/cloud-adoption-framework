@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Choose the landing zone for your organization
 
-There are different approaches to implementing a landing zone or landing zones in the Cloud Adoption Framework (CAF). The right approach for your organization has the necessary services to support your business applications without extra overhead to manage. Starting with an implementation that doesn't meet your needs can waste your time and effort.
+There are different approaches to implementing landing zones in the Cloud Adoption Framework (CAF). The right approach for your organization has the necessary services to support your business applications without extra overhead to manage. Starting with an implementation that doesn't meet your needs can waste your time and effort.
 
 Microsoft offers two implementation options for landing zones:
 
@@ -213,7 +213,7 @@ The following table summarizes considerations for the different options.
 Which operating model better describes your organization?
 
 - Centralized operations. In this small environment, centralized teams for ITOps, IT security, or other roles manage production and workloads.
-- Enterprise operations. Usually a larger environment with stable, steady state, which is managed centrally.
+- Enterprise operations. Usually a larger environment, enterprise operations have stable, steady state, which is managed centrally.
 
 Centralized operations favor a start small and expand approach. Enterprise operations might be better addressed with enterprise scale.
 
@@ -258,9 +258,9 @@ If possible, identify low-risk workloads to implement first. This technique help
 
 Deploying your landing zone or landing zones raises several considerations for choosing an implementation:
 
-- Best practices from cloud provider
-- All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging
-- Automation capabilities, such as Infrastructure as Code and Azure DevOps
+- Best practices from cloud provider.
+- All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging.
+- Automation capabilities, such as Infrastructure as Code and Azure DevOps.
 
 Both implementation offer best practices. Start small and expand lets you add best practices using CAF methodologies to apply security, governance, and compliance.
 
