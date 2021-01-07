@@ -5,92 +5,104 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
- 
-  - name: AKS adoption scenario
-    items:
-    - name: Overview
-      href: scenarios/aks/index.md
-    - name: Strategy
-      href: scenarios/aks/strategy.md
-    - name: Plan
-      href: scenarios/aks/plan.md
-    - name: Ready - Azure Landing Zones
-      href: scenarios/aks/ready.md
-    - name: Innovate
-      href: scenarios/aks/innovate.md
-    - name: Migrate
-      href: scenarios/aks/migrate-deploy.md
-    - name: Govern
-      href: scenarios/aks/govern.md
-    - name: Manage
-      href: scenarios/aks/manage.md
-    - name: Enterprise-Scale Construction Set
-      items:
-      - name: Overview
-        href: scenarios/aks/enterprise-scale-landing-zone.md
-      - name: Identity and Access Management
-        href: scenarios/aks/eslz-identity-and-access-management.md
-      - name: Network topology and connectivity
-        href: scenarios/aks/eslz-network-topology-and-connectivity.md
-      - name: Management and Monitoring
-        href: scenarios/aks/eslz-management-and-monitoring.md
-      - name: Business continuity and disaster recovery
-        href: scenarios/aks/eslz-business-continuity-and-disaster-recovery.md
-      - name: Security governance and compliance
-        href: scenarios/aks/eslz-security-governance-and-compliance.md
-      - name: Platform automation and DevOps
-        href: scenarios/aks/eslz-platform-automation-and-devops.md
 
   - name: About the Framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  - name: Get started
+  - name: Adoption Journeys
     items:
-    - name: Overview
-      href: get-started/index.md
-
-    - name: Foundational alignment
+    - name: Get Started
       items:
-      - name: Document foundational alignment decisions
-        href: get-started/cloud-concepts.md
-      - name: How does Azure work?
-        href: get-started/what-is-azure.md
-      - name: Azure fundamental concepts
-        href: ready/considerations/fundamental-concepts.md
-      - name: Portfolio hierarchy
-        href: reference/fundamental-concepts/hosting-hierarchy.md
-      - name: Azure hierarchy support
-        href: reference/fundamental-concepts/hierarchy-azure-tools.md
+      - name: Overview
+        href: get-started/index.md
 
-    - name: Accelerate migration
-      href: get-started/migrate.md
-    - name: Build new products and services
-      href: get-started/innovate.md
-    - name: Unblock environment design and configuration
-      href: get-started/design-and-configuration.md
-    - name: Enable customer success
-      href: get-started/enable.md
-    - name: Deliver operational excellence
-      href: get-started/operational-excellence.md
-    - name: Manage cloud costs
-      href: get-started/manage-costs.md
-    - name: Secure the enterprise environment
-      href: get-started/security.md
-    - name: Improve reliability
-      href: get-started/reliability.md
-    - name: Ensure consistent performance
-      href: get-started/performance.md
-    - name: Align your organization
-      href: get-started/org-alignment.md
-    - name: Build a cloud strategy team
-      href: get-started/team/cloud-strategy.md
-    - name: Build a cloud adoption team
-      href: get-started/team/cloud-adoption.md
-    - name: Build a cloud governance team
-      href: get-started/team/cloud-governance.md
-    - name: Build a cloud operations team
-      href: get-started/team/cloud-operations.md
+      - name: Foundational alignment
+        items:
+        - name: Document foundational alignment decisions
+          href: get-started/cloud-concepts.md
+        - name: How does Azure work?
+          href: get-started/what-is-azure.md
+        - name: Azure fundamental concepts
+          href: ready/considerations/fundamental-concepts.md
+        - name: Portfolio hierarchy
+          href: reference/fundamental-concepts/hosting-hierarchy.md
+        - name: Azure hierarchy support
+          href: reference/fundamental-concepts/hierarchy-azure-tools.md
+
+      - name: Accelerate adoption
+        items:
+        - name: Accelerate migration
+          href: get-started/migrate.md
+        - name: Build new products and services
+          href: get-started/innovate.md
+        - name: Unblock environment design and configuration
+          href: get-started/design-and-configuration.md
+
+    - name: Improve controls
+      items:
+      - name: Enable customer success
+        href: get-started/enable.md
+      - name: Deliver operational excellence
+        href: get-started/operational-excellence.md
+      - name: Manage cloud costs
+        href: get-started/manage-costs.md
+      - name: Secure the enterprise environment
+        href: get-started/security.md
+      - name: Improve reliability
+        href: get-started/reliability.md
+      - name: Ensure consistent performance
+        href: get-started/performance.md
+
+    - name: Establish teams
+      items:
+      - name: Align your organization
+        href: get-started/org-alignment.md
+      - name: Build a cloud strategy team
+        href: get-started/team/cloud-strategy.md
+      - name: Build a cloud adoption team
+        href: get-started/team/cloud-adoption.md
+      - name: Build a cloud governance team
+        href: get-started/team/cloud-governance.md
+      - name: Build a cloud operations team
+        href: get-started/team/cloud-operations.md
+
+    - name: Adoption Scenarios
+      items: 
+      - name: AKS adoption scenario
+        items:
+        - name: Overview
+          href: scenarios/aks/index.md
+        - name: Strategy
+          href: scenarios/aks/strategy.md
+        - name: Plan
+          href: scenarios/aks/plan.md
+        - name: Ready - Azure Landing Zones
+          href: scenarios/aks/ready.md
+        - name: Innovate
+          href: scenarios/aks/innovate.md
+        - name: Migrate
+          href: scenarios/aks/migrate-deploy.md
+        - name: Govern
+          href: scenarios/aks/govern.md
+        - name: Manage
+          href: scenarios/aks/manage.md
+        - name: Enterprise-Scale Construction Set
+          items:
+          - name: Overview
+            href: scenarios/aks/enterprise-scale-landing-zone.md
+          - name: Identity and Access Management
+            href: scenarios/aks/eslz-identity-and-access-management.md
+          - name: Network topology and connectivity
+            href: scenarios/aks/eslz-network-topology-and-connectivity.md
+          - name: Management and Monitoring
+            href: scenarios/aks/eslz-management-and-monitoring.md
+          - name: Business continuity and disaster recovery
+            href: scenarios/aks/eslz-business-continuity-and-disaster-recovery.md
+          - name: Security governance and compliance
+            href: scenarios/aks/eslz-security-governance-and-compliance.md
+          - name: Platform automation and DevOps
+            href: scenarios/aks/eslz-platform-automation-and-devops.md
 
   - name: Strategy
     items:
