@@ -3,7 +3,7 @@ title: "Ready methodology for Hybrid and Multicloud"
 description: Prepare your environment for hybrid and multicloud with Azure Landing Zones
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -80,15 +80,10 @@ Independent operations can double or triple your total cost of ownership. For so
 
 To learn more about unification of your cloud operations, see the articles on [Unified Operations](./unified-operations.md), [Governance](./govern.md) and [Operations management](./manage.md) for hybrid and multicloud solutions.
 
-## Next step: Assess for unified operations
+## Next step: Prepare for hybrid and multicloud migration
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for unified operations](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for unified operations migration](./migrate-assess.md)
-- [Migrate unified operations](./migrate-deploy.md)
-- [Release unified operations to production](./migrate-release.md)
-- [Innovate with unified operations](./innovate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Hybrid and multicloud migration](./migrate.md)
+- [Govern hybrid and multicloud environments](./govern.md)
+- [Manage hybrid and multicloud environments](./manage.md)

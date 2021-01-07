@@ -3,7 +3,7 @@ title: "Manage hybrid and multicloud operations"
 description: Implement effective controls to provide operations management across hybrid and multicloud deployments, leveraging Azure's enterprise control plane.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -58,9 +58,6 @@ Once the unified operations migration is complete, the cloud adoption team can b
 - [Strategy for unified operations](./strategy.md)
 - [Plan for unified operations](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for unified operations migration](./migrate-assess.md)
-- [Migrate unified operations](./migrate-deploy.md)
-- [Release unified operations to production](./migrate-release.md)
-- [Innovate with unified operations](./innovate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Hybrid and multicloud migration](./migrate.md)
+- [Govern hybrid and multicloud environments](./govern.md)
+- [Manage hybrid and multicloud environments](./manage.md)

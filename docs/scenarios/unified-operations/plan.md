@@ -3,7 +3,7 @@ title: "Plan for unified operations"
 description: Describe the scenario's impact on planning
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/16/2020
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -148,11 +148,7 @@ Are there specific skills or extra training this team should take before getting
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for unified operations](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for unified operations migration](./migrate-assess.md)
-- [Migrate unified operations](./migrate-deploy.md)
-- [Release unified operations to production](./migrate-release.md)
-- [Innovate with unified operations](./innovate.md)
-- [Govern unified operations](./govern.md)
-- [Manage unified operations](./manage.md)
+- [Hybrid and multicloud migration](./migrate.md)
+- [Govern hybrid and multicloud environments](./govern.md)
+- [Manage hybrid and multicloud environments](./manage.md)
