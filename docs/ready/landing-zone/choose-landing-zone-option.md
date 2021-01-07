@@ -248,7 +248,7 @@ Consider the following issues around compliance for your organization:
 
 Your organization might need to have a particular workload or application that needs to be compliant in a short amount of time. This requirement may affect your choice.
 
-The start small and expand approach uses an iterative approach to compliance. Use Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see [Govern methodology for the cloud](../../govern/methodology) and [IT management and operations in the cloud](../../manage/considerations/index).
+The start small and expand approach uses an iterative approach to compliance. Use Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see [Govern methodology for the cloud](/../../govern/methodology) and [IT management and operations in the cloud](/../../manage/considerations/index).
 
 The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals.
 
@@ -266,7 +266,7 @@ Both implementation offer best practices. Start small and expand lets you add be
 
 Enterprise scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
-For more information about best practices, see [Best practices for Azure readiness](../azure-best-practices/index).
+For more information about best practices, see [Best practices for Azure readiness](/../azure-best-practices/index).
 
 Both methodologies offer automation capabilities.
 
