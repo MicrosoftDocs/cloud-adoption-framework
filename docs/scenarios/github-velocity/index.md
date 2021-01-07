@@ -116,7 +116,7 @@ GitHub Actions can be used to combine Infrastructure as Code concepts as well as
 
 ### GitHub’s shift-left security features
 
-Starting with the first steps of development, DevSecOps adheres to security best practices. By using a shift-left strategy, DevSecOps redirects the security focus. Instead of pointing toward auditing at the end, it shifts to development in the beginning. Besides producing robust code, this fail-fast approach helps to resolve problems early on when they're easy to fix.
+Starting with the first steps of development, DevSecOps adheres to security best practices. By using a shift-left strategy, DevSecOps redirects the security focus. Instead of pointing toward auditing at the end, it shifts to development in the beginning. Besides producing robust code, this fail-fast approach helps to resolve problems early when they're easy to fix.
 
 With many security capabilities, GitHub offers tools that support every part of a DevSecOps workflow:
 
