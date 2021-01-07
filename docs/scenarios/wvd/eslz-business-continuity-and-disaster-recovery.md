@@ -30,23 +30,24 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 
 - For WVD Host Pool, both *active-active* and *active-passive* can be viable BCDR approaches, depending on the requirements.
   - With *active-active*, a single Host Pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) would be required to actively replicate the user Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one.
-    - This is a complex configuration. If active-active is chosen, it gives protection against storage outages without the need to relog the user and enables continuous testing of the DR location. It is not considered either a performance or cost optimization.  
+    - This is a complex configuration. If active-active is chosen, it gives protection against storage outages without the need to re-log the user and enables continuous testing of the DR location. It is not considered either a performance or cost optimization.  
     - Load balancing of incoming user connection cannot take into account proximity: all hosts will be equal, and users may be directed to a remote, not optimal, WVD Host Pool VM.
-    - This configuration is limited to Pooled Host Pool type.
+    - This configuration is limited to *Pooled* (shared) Host Pool type. For *Personal* (dedicated) type, once a desktop is assigned to a user on a certain Session Host VM, it sticks and will not change, even if not available.
 
   - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) (Azure Site Recovery) or a secondary Host Pool (hot stand-by) in the DR region options can be used.
     - Azure Site Recovery is supported for both *Personal* (dedicated) and *Pooled* (shared) Host Pool types, and will permit to maintain a single Host Pool entity.
     - Creating a new Host Pool in the failover region is also possible, while keeping all those resources  turned off. For this method, you would need to set up new Application Groups in the failover region and assign users to them. You can then use an Azure Site Recovery “*Recovery Plan*” to turn on host pools and create an orchestrated process.
 
 - Host Pool VM Resiliency
-  - Different [options](https://docs.microsoft.com/azure/virtual-machines/availability) for VM resiliency are available when creating a new WVD Host Pool. It is important to select the right one based on requirements at creation time since cannot be changed later.
+  
+    Different [options](https://docs.microsoft.com/azure/virtual-machines/availability) for VM resiliency are available when creating a new WVD Host Pool. It is important to select the right one based on requirements at creation time since cannot be changed later.
 
-  - Default resiliency option for WVD Host Pool deployment is Availability Set: it will only ensure VM resiliency at the single Azure datacenter level, with formal 99.95% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9).
+  - Default resiliency option for WVD Host Pool deployment is Availability Set: it will only ensure Host Pool resiliency at the single Azure datacenter level, with formal 99.95% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9).
   
      > [!NOTE]
      > The maximum number of VMs inside an Availability Set is 200, as documented in [this article](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager)
 
-  - With [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) instead, VM in the Host pool will be allocated across different datacenters, still inside the same region, with higher resiliency and higher formal 99.99% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9).
+  - With [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) instead, VMs in the Host pool will be allocated across different datacenters, still inside the same region, with higher resiliency and higher formal 99.99% high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9). Capacity planning should take into account enough additional compute capacity to ensure WVD will continue to operate even if a single zone will be lost.
 
      > [!NOTE]
      > ARM template must be used at the moment to specify zones; this option is not yet available in the Azure Portal.
@@ -102,7 +103,7 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 
 The following are best practices for your design:
 
-- For WVD Host Pool compute deployment model BCDR, use *active-passive* option if will satisfy your requirements for Recovery Point Objective (RPO) and Recovery Time Objective (RTO).
+- For WVD Host Pool compute deployment model BCDR, use *active-passive* option if it will satisfy your requirements for Recovery Point Objective (RPO) and Recovery Time Objective (RTO).
 
 - Azure Site Recovery is recommended for Personal (*dedicated*) Host Pools. Target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
   - Azure Site Recovery is also supported for Pooled (*shared*) Host Pools. This option can be evaluated and compared to the deployment of another Host Pool in the secondary DR region.
@@ -118,6 +119,9 @@ The following are best practices for your design:
 - Azure storage built-in replication mechanisms should be used for BCDR when possible for less critical environment:
   - Use Zone Replicated Storage (ZRS) or Geo replicated storage (GRS) for Azure Files is recommended.
   - LRS with local only resiliency can be used if no zone/region protection is required.
+  
+> [!NOTE]
+> With Azure File Share Premium tier, or Azure File Share Standard tier with Large File Support enabled, GRS is not available.
 
 - Cloud Cache should be used only when:
   - User Profile or Office containers data availability required high-availability SLA is critical and need to be resilient to region failure.
