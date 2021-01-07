@@ -298,6 +298,16 @@ items:
             href: https://docs.microsoft.com/en-us/azure-sphere?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Windows for IoT
             href: https://docs.microsoft.com/en-us/windows/iot-core/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Virtual WAN
+            href: https://docs.microsoft.com/en-us/azure/virtual-wan/
+          - name: Express Route
+            href: https://docs.microsoft.com/en-us/azure/expressroute/
+          - name: Express Route
+            href: https://docs.microsoft.com/en-us/azure/expressroute/
+          - name: VPN Gateway
+            href: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+          - name: Azure Firewall
+            href: https://docs.microsoft.com/en-us/azure/firewall/overview
         - name: Learn modules
           items:
           - name: Manage hybrid infrastructure with Azure Arc
