@@ -104,7 +104,6 @@ items:
             href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-reliability?branch=pr-en-us-2237
           - name: Security
             href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-security?branch=pr-en-us-2237
-
         - name: Architectures
           items:
           - name: Overview
@@ -217,8 +216,6 @@ items:
               href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-hci-dr?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Azure Stack for remote offices and branches
               href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-robo?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
-
         - name: Best practices
           items:
           - name: Onboard
@@ -283,11 +280,38 @@ items:
               href: manage/unified-operations/server/best-practices/arc_vm_extension_mma_arm.md
             - name: Scale configuration of MMA
               href: manage/unified-operations/server/best-practices/arc_vm_extension_customscript_arm.md
-        - name: Azure products
+        - name: Featured Azure products
           items:
-          - name: TBD
-            href: ?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
+          - name: All hybrid and multicloud products
+            href: https://docs.microsoft.com/hybrid/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Azure Arc
+            href: https://docs.microsoft.com/en-us/azure/azure-arc/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Azure Stack Hub
+            href: https://docs.microsoft.com/en-us/azure-stack#azure-stack-hub?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Azure Modular Data Center
+            href: https://docs.microsoft.com/en-us/azure-stack#azure-stack-hub?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Azure Stack HCI
+            href: https://docs.microsoft.com/en-us/azure-stack#azure-stack-hci?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Azure IoT Edge
+            href: https://docs.microsoft.com/en-us/azure/iot-edge/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Azure Sphere
+            href: https://docs.microsoft.com/en-us/azure-sphere?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Windows for IoT
+            href: https://docs.microsoft.com/en-us/windows/iot-core/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        - name: Learn modules
+          items:
+          - name: Manage hybrid infrastructure with Azure Arc
+            href: https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/
+          - name: Manage hybrid workloads with Azure Arc
+            href: https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/)
+          - name: Introduction to Azure hybrid cloud services
+            href: https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/)
+          - name: Design a hybrid network architecture on Azure
+            href: https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/)
+          - name: Implement hybrid network infrastructure
+            href: https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/)
+          - name: Azure Stack HCI foundations
+            href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/)
 
   - name: Strategy
     items:
