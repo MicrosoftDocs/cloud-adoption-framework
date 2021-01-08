@@ -57,9 +57,7 @@ Since data drift, seasonality, or newer architecture tuned for better performanc
 
 To prepare for retraining a model:
 
-1. **Monitor data drift from the input data collected.** Setting up a monitoring process requires extraction of timestamp from the production data. This is required to compare the production data and the baseline data (the training data used to build the model).
-
-The preferred way to monitor data drift is through Azure Monitor Application Insights. This feature provides an [alert](/azure/machine-learning/how-to-monitor-datasets#metrics-alerts-and-events) that can trigger actions like email, SMS text, push, or Azure Functions. You need to [enable](/azure/machine-learning/how-to-enable-app-insights#configure-logging-with-azure-machine-learning-studio) Application Insights to log data.
+1. **Monitor data drift from the input data collected.** Setting up a monitoring process requires extraction of timestamp from the production data. This is required to compare the production data and the baseline data (the training data used to build the model). The preferred way to monitor data drift is through Azure Monitor Application Insights. This feature provides an [alert](/azure/machine-learning/how-to-monitor-datasets#metrics-alerts-and-events) that can trigger actions like email, SMS text, push, or Azure Functions. You need to [enable](/azure/machine-learning/how-to-enable-app-insights#configure-logging-with-azure-machine-learning-studio) Application Insights to log data.
 
 1. **Analyze the collected data.** Make sure to [collect data from models in production](/azure/machine-learning/how-to-enable-data-collection), and include the results in the model scoring script. Collect all features used for model scoring, as this ensures that all necessary features are present and can be used as training data.
 
