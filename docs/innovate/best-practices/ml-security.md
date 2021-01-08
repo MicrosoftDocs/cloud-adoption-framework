@@ -1,6 +1,6 @@
 ---
 title: Machine learning security
-description: Machine learning presents unique security considerations for businesses, and a number of security principles should be considered when designing and assessing machine learning architectures.
+description: Machine learning presents unique security considerations for businesses, and companies should consider several security principles when designing and assessing machine learning architectures.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/08/2021
@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Machine learning security
 
-Machine learning presents unique security considerations for businesses, and companies should consider a number of security principles when designing and assessing machine learning architectures.
+Machine learning presents unique security considerations for businesses, and companies should consider several security principles when designing and assessing machine learning architectures.
 
 - **Resilience:** Machine learning systems should identify abnormal behavior and prevent manipulation or coercion.
 
