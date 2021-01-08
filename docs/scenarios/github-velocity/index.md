@@ -1,5 +1,5 @@
 ---
-title: How GitHub Accelerates Cloud Adoption
+title: How GitHub accelerates cloud adoption
 description: Companies can take advantage of GitHub’s connectedness to the open-source community and find thousands of reiterated, enhanced, and ready-to-deploy cloud solution examples from organizations that have successfully adopted Azure services. 
 author: JanetCThomas
 ms.author: janet
@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-# How GitHub Accelerates Cloud Adoption
+# How GitHub accelerates cloud adoption
 
 ## Overview
 
@@ -55,17 +55,22 @@ The following architecture diagram highlights the security checks that run in va
 - [GitHub](https://docs.github.com/en/github) provides a code-hosting platform that developers can use for collaborating on open- and inner-source projects.
 
 - [Codespaces](https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Visual Studio Code, this tool provides a complete development solution in the cloud.
+
 - [GitHub Security](https://github.com/features/security) works to eliminate threats in a number of ways. Agents and services identify vulnerabilities in repositories and in dependent packages. They also upgrade dependencies to up-to-date, secure versions.
 
 - [GitHub Actions](https://docs.github.com/en/actions/getting-started-with-github-actions/about-github-actions) are custom workflows that provide CI/CD capabilities directly in repositories. Computers called runners host these CI/CD jobs.
+
 - [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) is a multi-tenant, cloud-based identity service that controls access to Azure and other cloud apps like Microsoft 365 and GitHub.
+
 - [App Service](https://azure.microsoft.com/services/app-service/) provides a framework for building, deploying, and scaling web apps. This platform offers built-in infrastructure maintenance, security patching, and scaling.
+
 - [Azure Policy](/azure/governance/policy/overview) helps teams manage and prevent IT issues through policy definitions that can enforce rules for cloud resources. For instance, if your project is about to deploy a virtual machine with an unrecognized SKU, Azure Policy alerts you to the problem and stops the deployment.
+
 - [Azure Security Center](/azure/security-center/security-center-intro) provides unified security management and advanced threat protection across hybrid cloud workloads.
 
 - [Azure Monitor](/azure/azure-monitor/overview) collects and analyzes app telemetry such as performance metrics and activity logs. When this service identifies irregular conditions, it alerts apps and personnel.
 
-## Inner Sourcing
+## InnerSource
 
 ### InnerSource overview
 
@@ -85,7 +90,7 @@ The right mix of individuals, teams, and resources can ensure a project’s succ
 
 - **Community members:** People who use the project. They might be active in conversations or express their opinion on the project’s direction.
 
-Bigger projects may also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation.
+Bigger projects might also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation.
 
 InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations in this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across your organization can help to rally the expertise necessary to solve problems faster.
 
