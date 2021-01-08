@@ -28,11 +28,11 @@ Companies can take advantage of GitHub’s connectedness to the open-source comm
 
 GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to InnerSource, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
 
-Securing the entire software supply chain, from the open-source packages to the intellectual property that's written daily, should be of utmost importance to every company. This requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub Advanced Security and GitHub Actions offer this type flexibility.
+From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub Advanced Security and GitHub Actions offer this type flexibility.
 
 ## Take advantage of open-source assets
 
-Highly effective organizations recognize open-source software (OSS) as essential and not optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
+Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
 
 While OSS could be interpreted as the packages, libraries, scripts, and dependencies incorporated into applications, there are thousands of open-source assets in the form of infrastructure as code (IaC), documentation, guidance, and blueprints for well-defined Azure architectures. These blueprints have been contributed to the OSS community by Microsoft, partners, vendors, customers, and individuals, and they're readily available in GitHub. They can be easily be modified, reused, and deployed to a specific Azure environment.
 
@@ -40,82 +40,82 @@ While OSS could be interpreted as the packages, libraries, scripts, and dependen
 
 Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/azure/devops/learn/what-is-continuous-delivery).
 
-IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. Inconsistencies between environments lead to issues during deployments. With snowflakes, infrastructure administration and maintenance involves manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
+IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments, and inconsistencies between environments lead to issues during deployments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. With snowflakes, infrastructure administration and maintenance involves manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
 
-With IaC, teams make changes to the environment description and version the configuration model, which is typically in well-documented code formats such as JSON; see [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) for more information. Developers can simplify their workflows by hosting IaC code in the same GitHub repo as their application source code and adopt the same continuous integration (CI)/CD practices for IaC powered by [GitHub Actions](https://github.com/features/actions).
+With IaC, teams make changes to the environment description and version the configuration model, which is typically in well-documented code formats like JSON; see [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) for more information. Developers can simplify their workflows by hosting IaC code in the same GitHub repo as their application source code and adopt the same continuous integration (CI)/CD practices for IaC powered by [GitHub Actions](https://github.com/features/actions).
 
-See the [AzOps](https://github.com/Azure/azops) GitHub Action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you’re new to the concept of Resource Manager templates or IaC, you can also browse the [azure-quickstart-templates repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find a template you wish to deploy, and select the ![Deploy to Azure](./media/deploy-to-azure.png) button to see how it works.
+See the [AzOps](https://github.com/Azure/azops) GitHub Action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you’re new to Resource Manager templates or IaC, you can also browse the [azure-quickstart-templates repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find the template that you wish to deploy, and select the **Deploy to Azure** button to test how it works.
 
-![The **Deploy to Azure** button.](./media/deploy-to-azure.png)
+![Screenshit of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
 
-### The components of Cloud pattern components and best practices
+### Cloud pattern components and best practices
 
-The following architecture diagram highlights the security checks that run in various GitHub and Azure components of a GitHub DevSecOps environment:
+The following architecture diagram highlights the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment:
 
-![An architecture diagram highlighting the security checks that run in various GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
+![An architecture diagram highlighting the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
 
 - [GitHub](https://docs.github.com/en/github) provides a code-hosting platform that developers can use for collaborating on open- and inner-source projects.
 
-- [Codespaces](https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Visual Studio Code, this tool provides a complete development solution in the cloud.
+- [Codespaces](https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
 
-- [GitHub Security](https://github.com/features/security) works to eliminate threats in a number of ways. Agents and services identify vulnerabilities in repositories and in dependent packages. They also upgrade dependencies to up-to-date, secure versions.
+- [GitHub Security](https://github.com/features/security) works to eliminate threats in a number of ways. Agents and services identify vulnerabilities in repositories and dependent packages. They also upgrade dependencies to current and secure versions.
 
-- [GitHub Actions](https://docs.github.com/en/actions/getting-started-with-github-actions/about-github-actions) are custom workflows that provide CI/CD capabilities directly in repositories. Computers called runners host these CI/CD jobs.
+- [GitHub Actions](https://docs.github.com/en/actions/getting-started-with-github-actions/about-github-actions) are custom workflows that provide CI/CD capabilities directly in repositories. Computers named runners host these CI/CD jobs.
 
-- [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) is a multi-tenant, cloud-based identity service that controls access to Azure and other cloud apps like Microsoft 365 and GitHub.
+- [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) is a multitenant, cloud-based identity service that controls access to Azure and other cloud apps like Microsoft 365 and GitHub.
 
-- [App Service](https://azure.microsoft.com/services/app-service/) provides a framework for building, deploying, and scaling web apps. This platform offers built-in infrastructure maintenance, security patching, and scaling.
+- [Azure App Service](https://azure.microsoft.com/services/app-service/) provides a framework for building, deploying, and scaling web apps. This platform offers built-in infrastructure maintenance, security patching, and scaling.
 
-- [Azure Policy](/azure/governance/policy/overview) helps teams manage and prevent IT issues through policy definitions that can enforce rules for cloud resources. For instance, if your project is about to deploy a virtual machine with an unrecognized SKU, Azure Policy alerts you to the problem and stops the deployment.
+- [Azure Policy](/azure/governance/policy/overview) helps teams manage and prevent IT issues through policy definitions that can enforce rules for cloud resources. For instance, if a project is about to deploy a virtual machine with an unrecognized SKU, Azure Policy sends alerts about the problem and stops the deployment.
 
 - [Azure Security Center](/azure/security-center/security-center-intro) provides unified security management and advanced threat protection across hybrid cloud workloads.
 
-- [Azure Monitor](/azure/azure-monitor/overview) collects and analyzes app telemetry such as performance metrics and activity logs. When this service identifies irregular conditions, it alerts apps and personnel.
+- [Azure Monitor](/azure/azure-monitor/overview) collects and analyzes performance metrics, activity logs, and other app telemetry. This service alerts apps and personnel when it identifies irregular conditions.
 
 ## InnerSource
 
 ### InnerSource overview
 
-Many companies use the term *InnerSource* to describe how their engineering teams work together on code. InnerSource is a development methodology where engineers build proprietary software using best practices from large-scale open-source projects like Kubernetes or Microsoft Visual Studio Code.
+Many companies use the term *InnerSource* to describe how their engineering teams work together on code. InnerSource is a development methodology where engineers build proprietary software with best practices from large-scale open-source projects like Kubernetes or Visual Studio Code.
 
-Large-scale open-source projects require coordination and teamwork across thousands of contributors. The most successful ones are driven by a vision for their future and daily user needs: speed, reliability, and functionality. The scale at which these operate can teach a few lessons and help your to build better software faster with InnerSource.
+Large-scale open-source projects require coordination and teamwork across thousands of contributors. The most successful ones are driven by a vision for their future and daily user needs: speed, reliability, and functionality. The scale at which these operate can teach a few lessons and can help companies to build better software faster with InnerSource.
 
 With GitHub’s pull requests and issues, collaboration and code review are built into the development process. Internal and outsourced teams can share work, discuss changes, and get feedback all in one place. This helps organizations share expertise internally and avoid reinventing field-tested solutions developed for other projects.
 
-### The Anatomy of an InnerSource project
+### The anatomy of an InnerSource project
 
-The right mix of individuals, teams, and resources can ensure a project’s success. Many open-source projects follow a similar organizational structure—one you may want to consider when setting up cross-functional teams to manage your company’s InnerSource projects. A typical open-source project has the following types of people:
+The right mix of individuals, teams, and resources can ensure a project’s success. Many open-source projects follow a similar organizational structure that can help organizations to set up cross-functional teams to manage InnerSource projects. A typical open-source project has the following types of people:
 
-- **Maintainers:** Contributors who are responsible for driving the vision and managing the organizational aspects of the project. They might not be the original owners or authors of the code.
+- **Maintainers:** These contributors are responsible for driving the vision and managing the organizational aspects of the project. They might not be the original owners or authors of the code.
 
-- **Contributors:** Everyone who has contributed something back to the project.
+- **Contributors:** These people are everyone who has contributed something to the project.
 
-- **Community members:** People who use the project. They might be active in conversations or express their opinion on the project’s direction.
+- **Community members:** These are people who use the project. They might be active in conversations or express their opinion on the project’s direction.
 
-Bigger projects could also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation. InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across your organization can help to rally the expertise necessary to solve problems faster.
+Bigger projects could also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation. InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across an organization can help to rally the expertise necessary to solve problems faster.
 
-Within an enterprise, contributors are developers across your company, and maintainers are a project’s leaders and key decision-makers.
+Within an enterprise, contributors are developers across the company, and maintainers are a project’s leaders and key decision-makers.
 
-- **Maintainers**: Developers, product managers, and other key decision-makers within your company who are responsible for driving a project’s vision and for managing day-to-day contributions.
+- **Maintainers**: Developers, product managers, and other key decision-makers within a company responsible for driving a project’s vision and for managing day-to-day contributions.
 
-- **Contributors**: Developers, data scientists, product managers, marketers, and other roles within your company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
+- **Contributors**: Developers, data scientists, product managers, marketers, and other roles within a company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
 See the [introduction to InnerSource](https://resources.github.com/whitepapers/introduction-to-innersource/) white paper to learn more.
 
 ## Automation
 
-GitHub Actions enables you to create custom workflows directly in your GitHub repository. You can discover, create, and share actions to perform any job you’d like, including CI/CD, and combine actions in a completely customized workflow. You can create CI workflows that build and test projects written in different programming languages. Here are several examples:
+GitHub Actions supports users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Here are several examples:
 
 - [GitHub Actions for JavaScript and TypeScript](https://help.github.com/en/actions/language-and-framework-guides/github-actions-for-javascript-and-typescript)
 - [GitHub Actions for Python](https://help.github.com/en/actions/language-and-framework-guides/github-actions-for-python)
 - [GitHub Actions for Java](https://help.github.com/en/actions/language-and-framework-guides/github-actions-for-java)
 - [GitHub Actions for Docker](https://help.github.com/en/actions/language-and-framework-guides/github-actions-for-docker)
 
-GitHub Actions can be used to combine Infrastructure as Code concepts as well as CI/CD practices to automate the entire end-to-end deployment lifecycle including provisioning or updating the target environment in a repeatable manner to packaging and deploying the application itself.
+GitHub Actions can be used to combine IaC concepts and CI/CD practices to automate the entire end-to-end deployment lifecycle, including provisioning or updating the target environment in a repeatable manner and packaging and deploying the application itself.
 
 ### Example
 
-[GitHub Actions for Azure](https://github.com/Azure/actions) are specifically built to make it easy to automate your deployment processes to target Azure services such as Azure App Service, Azure Kubernetes Service, Azure Functions and more. The [Azure starter action workflows repository](https://github.com/Azure/actions-workflow-samples) includes end-to-end workflows to build and deploy Web apps of any language, any ecosystem to Azure and you can visit the [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions) to see all of the Actions that are available.
+[GitHub Actions for Azure](https://github.com/Azure/actions) are built to simplify how you automate your deployment processes to target Azure services such as Azure App Service, Azure Kubernetes Service, Azure Functions, and more. The [Azure starter action workflows repository](https://github.com/Azure/actions-workflow-samples) includes end-to-end workflows to build and deploy web apps of any language and any ecosystem to Azure. Visit [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions) to see all of the Actions that are available.
 
 ## Security
 
@@ -152,7 +152,7 @@ For further reading, see:
 - Choose your implementation team (typically a developer manager and a few developers defined as admins), and deploy GitHub.
 - Learn common and advanced Git workflows to enhance how you use GitHub.
 
-Note: Links below will redirect you to GitHub Docs.
+The links below will direct you to GitHub Docs.
 
 - [GitHub @ Microsoft Learning](/learn/browse/?products=github)
 - [GitHub Learning Lab](https://lab.github.com/)
