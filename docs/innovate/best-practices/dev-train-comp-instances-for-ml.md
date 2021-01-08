@@ -3,7 +3,7 @@ title: Determine development, training, and compute instances for your machine l
 description: When determining development, training, and compute instances for your machine learning model, consider the algorithm that you're using, the data type, data sizes, and if you'll perform distributed training. 
 author: SudhandKumar
 ms.author: kumarsud
-ms.date: 12/14/2020
+ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate

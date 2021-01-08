@@ -3,7 +3,7 @@ title: The machine learning operations process
 description: Understand the machine learning operations process.
 author: DonnaForlin
 ms.author: doforlin
-ms.date: 12/14/2020
+ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
