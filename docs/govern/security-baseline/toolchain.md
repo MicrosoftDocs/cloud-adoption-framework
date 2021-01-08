@@ -1,5 +1,5 @@
 ---
-title: "Security Baseline tools in Azure"
+title: Security Baseline tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Security Baseline discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Security Baseline tools in Azure

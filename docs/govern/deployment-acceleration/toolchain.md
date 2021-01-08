@@ -1,5 +1,5 @@
 ---
-title: "Deployment Acceleration tools in Azure"
+title: Deployment Acceleration tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Deployment Acceleration discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Deployment Acceleration tools in Azure
@@ -18,7 +18,7 @@ Cloud custodians, cloud guardians, and cloud architects with an interest in gove
 
 The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 
-|  | [Azure Policy](/azure/governance/policy/overview) | [Azure management groups](/azure/governance/management-groups) | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Blueprints](/azure/governance/blueprints/overview) | [Azure resource graph](/azure/governance/resource-graph/overview) | [Azure Cost Management](/azure/cost-management) |
+|  | [Azure Policy](/azure/governance/policy/overview) | [Azure management groups](/azure/governance/management-groups) | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Blueprints](/azure/governance/blueprints/overview) | [Azure Resource Graph](/azure/governance/resource-graph/overview) | [Azure Cost Management + Billing](/azure/cost-management) |
 |---------|---------|---------|---------|---------|---------|---------|
 | **Implement corporate policies**     | Yes | No  | No  | No | No | No |
 | **Apply policies across subscriptions**     | Required | Yes  | No  | No | No | No |

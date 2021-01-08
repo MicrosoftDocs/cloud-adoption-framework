@@ -1,15 +1,16 @@
 ---
-title: "Cluster and application security"
+title: Cluster and application security
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
-ms.author: asabbour
+ms.author: brblanch
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore asabbour sabbour kured -->
+<!-- cSpell:ignore kured -->
 
 # Cluster and application security
 
@@ -22,17 +23,14 @@ As you get started, the checklist and resources below will help you plan for clu
 > [!div class="checklist"]
 >
 > - Have you reviewed the security and threat model of Kubernetes clusters?
-> - Is your cluster enabled for role-based access control?
-
-<!-- markdownlint-disable MD033 -->
-
+> - Is your cluster enabled for Kubernetes role-based access control?
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
-> | **Familiarize yourself with the security essentials whitepaper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. | [The definitive guide to securing Kubernetes (whitepaper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original)     |
+> | **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. | [The definitive guide to securing Kubernetes (white paper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original)     |
 > | **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. | [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image)     |
-> | **Setup cluster role-based access control (RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads. | [Understand role-based access control (RBAC) in Kubernetes (video)](https://www.youtube.com/watch?v=G3R24JSlGjY&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=12) <br> [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration) <br> [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)   |
+> | **Setup cluster Kubernetes role-based access control (Kubernetes RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads. | [Understand Kubernetes role-based access control (Kubernetes RBAC) (video)](https://www.youtube.com/watch?v=G3R24JSlGjY&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=12) <br> [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration) <br> [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)   |
 
 ## Deploy to production and apply best practices
 
@@ -43,14 +41,11 @@ As you prepare the application for production, you should implement a minimum se
 > - Have you configured network security rules for ingress, egress, and intra-pod communication?
 > - Is your cluster configured to automatically apply node security updates?
 > - Are you running a security scanning solution for your cluster and container workloads?
-
-<!-- markdownlint-disable MD033 -->
-
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
-> | **Control access to clusters using group membership.** Configure Kubernetes role-based access control (RBAC) to limit access to cluster resources based on user identity or group membership. | [Control access to clusters using RBAC and Azure AD groups](/azure/aks/azure-ad-rbac)    |
+> | **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. | [Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac)    |
 > | **Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes. | [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?v=KmhM33j5WYk&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=10) |
 > | **Secure intra-pod network traffic with network policies.** Apply the principle of least privilege to control network traffic flow between pods in the cluster. | [Secure intra-pod traffic with network policies](/azure/aks/use-network-policies) |
 > | **Restrict access to the API server using authorized IPs.** Improve cluster security and minimize attack surface by limiting access to the API server to a limited set of IP address ranges. | [Secure access to the API server](/azure/aks/api-server-authorized-ip-ranges) |
@@ -66,9 +61,6 @@ Now that the application is in production, how can you optimize your workflow an
 > [!div class="checklist"]
 >
 > - Can you enforce governance and cluster policies at scale?
-
-<!-- markdownlint-disable MD033 -->
-
 > [!div class="tdCol2BreakAll"]
 >
 > | Checklist  | Resources |

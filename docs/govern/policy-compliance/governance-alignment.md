@@ -7,6 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
+ms.custom: internal
 ---
 
 # Align your cloud governance design guide with corporate policy
@@ -18,8 +19,6 @@ A cloud governance design guide should establish the architecture choices and de
 Although your risk analysis and policy statements may, to some degree, be cloud platform agnostic, your design guide should provide platform-specific implementation details that your IT and dev teams can use when creating and deploying cloud-based workloads. Focus on the architecture, tools, and features of your chosen platform when making design decision and providing guidance.
 
 While cloud design guides should take into account some of the technical details associated with each infrastructure component, they're not meant to be extensive technical documents or specifications. Make sure your guides address your policy statements and clearly state design decisions in a format easy for staff to understand and reference.
-
-<!-- markdownlint-enable MD033 -->
 
 ## Use the actionable governance guides
 

@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency policy compliance processes"
+title: Resource Consistency policy compliance processes
 description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support an Resource Consistency discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource Consistency policy compliance processes

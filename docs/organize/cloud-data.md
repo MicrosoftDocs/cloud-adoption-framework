@@ -3,10 +3,11 @@ title: Understand cloud data functions
 description: Understand cloud data functions, including the source of the functionality, the scope, and the deliverable.
 author: v-hanki
 ms.author: janet
+ms.date: 07/14/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 07/14/2020
+ms.custom: think-tank
 ---
 
 # Cloud data functions
@@ -52,7 +53,7 @@ Using Azure Synapse Analytics, data scientists can build proofs of concept in mi
 
 ## Business analysts
 
-These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized apps can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.  
+These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized applications can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.
 
 Using Azure Synapse Analytics, business analysts can securely access datasets and use Power BI to build dashboards. They can also securely share data within and outside their organization through Azure Data Share.
 

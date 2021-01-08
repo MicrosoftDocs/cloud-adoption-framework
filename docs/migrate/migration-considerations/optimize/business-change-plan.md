@@ -7,11 +7,11 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore Eason -->
-
-<!-- docsTest:ignore "Eason Matrix" -->
+<!-- docutune:casing "Eason Matrix" -->
 
 # Business change plan
 
@@ -64,8 +64,8 @@ After business change is documented and planned, [business testing](./business-t
 
 ## References
 
-<!-- docsTest:disable -->
+<!-- docutune:disable -->
 
 - Eason, K. (1988) _Information Technology and Organizational Change_, New York: Taylor and Francis.
 
-<!-- docsTest:enable -->
+<!-- docutune:enable -->

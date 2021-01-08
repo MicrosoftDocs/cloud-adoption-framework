@@ -2,16 +2,14 @@
 title: Perimeter networks
 description: Use the Cloud Adoption Framework for Azure to learn how to set up Azure effectively for your organization.
 author: tracsman
-ms.author: jonor
+manager: rossort
+ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-manager: rossort
-ms.custom: virtual-network
+ms.custom: think-tank, virtual-network
 ---
-
-<!-- cSpell:ignore tracsman jonor rossort NVAs WAFs -->
 
 # Perimeter networks
 
@@ -33,9 +31,9 @@ Perimeter networks make use of the following Azure features and services:
 > Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
 >
 > - [Implement a perimeter network between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
-> - [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
+> - [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
-Usually, your Central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
+Usually, your central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
 
 ![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
 _Figure 1: Example of a hub and spoke network topology._
@@ -88,7 +86,7 @@ Azure Front Door provides your application with unified regional/stamp maintenan
 
 [Azure Application Gateway][appgw] is a dedicated virtual appliance that provides a managed application delivery controller. It offers various Layer 7 load-balancing capabilities for your application.
 
-<!-- docsTest:ignore "application gateway" TODO -->
+<!-- docutune:casing "the application gateway" "single application gateway" -->
 
 Azure Application Gateway allows you to optimize web farm productivity by offloading CPU-intensive SSL termination to the application gateway. It also provides other Layer 7 routing capabilities, including round-robin distribution of incoming traffic, cookie-based session affinity, URL path-based routing, and the ability to host multiple websites behind a single application gateway.
 

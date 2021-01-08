@@ -7,11 +7,11 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
-<!-- cSpell:ignore siterecovery -->
+<!-- docutune:ignore "provide advanced threat protection" -->
 
 # Protect and recover in Azure
 
@@ -41,9 +41,13 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 With Azure Backup, you can back up, protect, and recover your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or offsite backup solution with a cloud-based solution. This new solution is reliable, secure, and cost competitive. Azure Backup can also help protect and recover on-premises assets through one consistent solution.
 
+For data present in Azure, Azure Backup offer varied levels of protection. For example, when backing up key cloud infrastructure pieces such as Azure Virtual Machines and Azure Files, it offers [Azure Virtual Machines backup](/azure/backup/backup-azure-vms-introduction) and [Azure Files backup](/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual Machines, it offers dedicated database backup solutions for [MS SQL](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) with far lower RPO.
+
+To get a glimpse of how easy it is to enable backup with Azure Backup, look at the section below to enable backup for Azure Virtual Machines.
+
 ### Enable backup for an Azure VM
 
-1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to backup.
 1. On the **Operations** pane, select **Backup**.
 1. Create or select an existing Azure Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
@@ -59,7 +63,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ::: zone target="docs"
 
-[Overview](/azure/backup/backup-overview)
+For more details about Azure Backup, see [Overview of Azure Backup](/azure/backup/backup-overview).
 
 ## Azure Site Recovery
 

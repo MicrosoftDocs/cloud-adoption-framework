@@ -2,16 +2,17 @@
 title: Azure enterprise scaffold
 description: Azure enterprise scaffold is now the Microsoft Cloud Adoption Framework for Azure. Learn to address the need for governance and balance it with the need for agility.
 author: rdendtler
-ms.author: rodend
+ms.author: brblanch
 ms.date: 09/22/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
-ROBOTS: NOINDEX
+ms.custom: think-tank
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 
-<!-- docsTest:disable -->
-<!-- cSpell:ignore rodend subscope ITSM Hashi -->
+<!-- docutune:disable -->
+<!-- cSpell:ignore subscope ITSM Hashi -->
 
 # Azure enterprise scaffold: Prescriptive subscription governance
 
@@ -42,7 +43,7 @@ The enterprise scaffold can serve as the foundation of each new subscription wit
 
 > [!NOTE]
 > Microsoft has released into preview a new capability called [Azure Blueprints](/azure/governance/blueprints/overview) that will enable you to package, manage, and deploy common images, templates, policies, and scripts across subscriptions and management groups. This capability is the bridge between the scaffold's purpose as reference model and deploying that model to your organization.
->
+
 The following image shows the components of the scaffold. The foundation relies on a solid plan for the management hierarchy and subscriptions. The pillars consist of Resource Manager policies and strong naming standards. The rest of the scaffold are core Azure capabilities and features that enable and connect a secure and manageable environment.
 
 ![Enterprise scaffold](../_images/reference/scaffold-v2.png)
@@ -168,9 +169,9 @@ To secure access to your resources you will first configure your identity provid
 
 ![Diagram of AD architecture](../_images/reference/ad-architecture.png)
 
-When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an enrollment. This proliferation of subscriptions is no longer needed. With role-based access control (RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
+When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an enrollment. This proliferation of subscriptions is no longer needed. With Azure role-based access control (Azure RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
 
-When implementing role-based access, the following are highly recommended:
+When implementing Azure role-based access control, the following are highly recommended:
 
 - Control the Administrator/Co-Administrator of a subscription as these roles have extensive permissions. You only need to add the Subscription Owner as a Co-administrator if they need to managed Azure Classic deployments.
 - Use management groups to assign [roles](/azure/azure-resource-manager/management-groups-overview#management-group-access) across multiple subscriptions and reduce the burden of managing them at the subscription level.
@@ -213,7 +214,7 @@ AzSK is a rich set of tools, scripts, and information that are an important part
 
 ### Azure Update Management
 
-One of the key tasks you can do to keep your environment safe is ensure that your servers are patched with the latest updates. While there are many tools to accomplish this, Azure provides the [Azure Update Management](/azure/automation/automation-update-management) solution to address the identification and rollout of critical OS patches. It uses Azure Automation, covered in the [Automate](#automate) section later in this guide.
+One of the key tasks you can do to keep your environment safe is ensure that your servers are patched with the latest updates. While there are many tools to accomplish this, Azure provides the [Azure Update Management](/azure/automation/update-management/overview) solution to address the identification and rollout of critical OS patches. It uses Azure Automation, covered in the [Automate](#automate) section later in this guide.
 
 ## Monitor and alerts
 
@@ -225,7 +226,7 @@ Collecting and analyzing telemetry that provides line of sight into the activiti
 
 This information can be viewed and acted on at multiple levels and are continually being improved. Azure provides **shared**, **core**, and **deep** monitoring capabilities of Azure resources through the services outlined in the diagram below.
 
-![Monitoring](../_images/reference/monitoring.png)
+![Diagram that depicts Deep Application Monitoring, Deep Infrastructure Monitoring, Core Monitoring, and Shared Capabilities.](../_images/reference/monitoring.png)
 
 ### Shared capabilities
 
@@ -315,7 +316,7 @@ As highlighted in the Automate section, your goal as an organization should be t
 
 Article such as [Best practices for using Azure Resource Manager templates](/archive/blogs/mvpawardprogram/azure-resource-manager) provide an excellent discussion of best practices and lessons learned for applying a DevOps approach to Azure Resource Manager templates with the [Azure DevOps](/azure/devops/user-guide/?view=vsts) toolchain. Take the time and effort to develop a core set of templates specific to your organization's requirements, and to develop continuous delivery pipelines with DevOps toolchains (such as Azure DevOps, Jenkins, Bamboo, TeamCity, and Concourse), especially for your production and QA environments. There is a large library of [Azure quickstart templates](https://github.com/azure/azure-quickstart-templates) on GitHub that you can use as a starting point for templates, and you can quickly create cloud-based delivery pipelines with Azure DevOps.
 
-As a best practice for production subscriptions or resource groups, your goal should be using RBAC security to disallow interactive users by default and using automated continuous delivery pipelines based on service principals to provision all resources and deliver all application code. No admin or developer should touch the Azure portal to interactively configure resources. This level of DevOps takes a concerted effort and uses all the concepts of the Azure scaffold, providing a consistent and more secure environment that will meet your organization's need to scale.
+As a best practice for production subscriptions or resource groups, your goal should be using Azure RBAC security to disallow interactive users by default and using automated continuous delivery pipelines based on service principals to provision all resources and deliver all application code. No admin or developer should touch the Azure portal to interactively configure resources. This level of DevOps takes a concerted effort and uses all the concepts of the Azure scaffold, providing a consistent and more secure environment that will meet your organization's need to scale.
 
 > [!TIP]
 > When designing and developing complex Azure Resource Manager templates, use [linked templates](/azure/azure-resource-manager/resource-group-linked-templates) to organize and refactor complex resource relationships from monolithic JSON files. This will enable you to manage resources individually and make your templates more readable, testable, and reusable.
@@ -339,7 +340,7 @@ The final component of the Azure scaffold reference model is core to how your or
 > - Enable effective microsegmentation within a larger subnet, reducing sprawl and increasing flexibility.
 
 <!-- TODO: Refactor VDC content below. -->
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- docutune:ignore "Azure Virtual Datacenter" -->
 
 ### Azure Virtual Datacenter
 

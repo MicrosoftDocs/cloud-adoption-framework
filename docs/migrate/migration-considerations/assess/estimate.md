@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Estimate cloud costs
@@ -31,7 +32,7 @@ For those wanting to replicate the legacy capital expense approach to accounting
 
 ## Next steps
 
-After estimating costs, migration can begin. However, it would be wise to review [partnership and support options](./partnership-options.md) before beginning any migration.
+After estimating costs, migration can begin. However, it would be wise to review partnership and support options before beginning any migration.
 
 > [!div class="nextstepaction"]
-> [Understanding partnership options](./partnership-options.md)
+> [Understand partnership and support options](./partnership-options.md)

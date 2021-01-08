@@ -1,5 +1,5 @@
 ---
-title: "Cost Management policy compliance processes"
+title: Cost Management policy compliance processes
 description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support a Cost Management discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Cost Management policy compliance processes

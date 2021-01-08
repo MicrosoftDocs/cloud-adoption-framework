@@ -1,5 +1,5 @@
 ---
-title: "Resource consistency decision guide"
+title: Resource consistency decision guide
 description: Understand the importance of your cloud estate's resource consistency and the factors that drive requirements for resource consistency.
 author: doodlemania2
 ms.author: dermar
@@ -7,7 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource consistency decision guide
@@ -26,7 +26,7 @@ As these factors increase in importance, the benefits of ensuring consistent dep
 
 In Azure, [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-Resource groups act as containers for resources with a common lifecycle as well as shared management constraints such as policy or role-based access control (RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
+Resource groups act as containers for resources with a common lifecycle as well as shared management constraints such as policy or Azure role-based access control (Azure RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
 1. Are the contents of the resource group developed together?
 1. Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
@@ -53,7 +53,7 @@ To ensure that governance policies are applied when resources are created, part 
 
 By combining resource groups and standardized Resource Manager templates, you can enforce standards for what settings are required in a deployment and what [Azure Policy](/azure/governance/policy/overview) rules are applied to each resource group or resource.
 
-For example, you may have a requirement that all virtual machines deployed within your subscription connect to a common subnet managed by your Central IT team. You can create a standard template for deploying workload VMs to create a separate resource group for the workload and deploy the required VMs there. This resource group would have a policy rule to only allow network interfaces within the resource group to be joined to the shared subnet.
+For example, you may have a requirement that all virtual machines deployed within your subscription connect to a common subnet managed by your central IT team. You can create a standard template for deploying workload VMs to create a separate resource group for the workload and deploy the required VMs there. This resource group would have a policy rule to only allow network interfaces within the resource group to be joined to the shared subnet.
 
 For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](../policy-enforcement/index.md).
 

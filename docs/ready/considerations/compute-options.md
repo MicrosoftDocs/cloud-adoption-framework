@@ -7,6 +7,7 @@ ms.date: 05/15/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Review your compute options
@@ -33,9 +34,9 @@ Answer the following questions about your workloads to help you make decisions b
 - **If you're migrating existing workloads, can they take advantage of modern cloud technologies?** Migrating on-premises workloads requires analysis. Can you easily optimize existing applications and services to take advantage of modern cloud technologies, or will a lift-and-shift approach work better for your workloads?
 - **Can your applications or services take advantage of containers?** If your applications are good candidates for containerized hosting, you can take advantage of the resource efficiency, scalability, and orchestration capabilities provided by [container services in Azure](https://azure.microsoft.com/product-categories/containers). Both [Azure managed disks](/azure/virtual-machines/windows/managed-disks-overview) and [Azure Files](/azure/storage/files/storage-files-introduction) can be used for persistent storage in containerized applications.
 - **Are your applications web- or API-based, and do they use PHP, ASP.NET, Node.js, or similar technologies?** Web apps can be deployed to managed [Azure App Service](/azure/app-service/overview) instances, so you don't have to maintain virtual machines for hosting purposes.
-- **Will you require full control over the OS and hosting environment of your workload?** If you need to control the hosting environment, including OS, disks, locally running software, and other configurations, you can use [Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines) to host your applications and services. In addition to choosing your virtual machine sizes and performance tiers, your decisions regarding virtual disk storage will affect performance and SLAs related to your infrastructure-as-a-service workloads. For more information, see the [Azure disk storage](/azure/virtual-machines/windows/managed-disks-overview) documentation.
+- **Will you require full control over the OS and hosting environment of your workload?** If you need to control the hosting environment, including OS, disks, locally running software, and other configurations, you can use [Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines) to host your applications and services. In addition to choosing your virtual machine sizes and performance tiers, your decisions regarding virtual disk storage will affect performance and SLAs related to your infrastructure as a service workloads. For more information, see the [Azure disk storage](/azure/virtual-machines/windows/managed-disks-overview) documentation.
 - **Will your workload involve high-performance computing (HPC) capabilities?** [Azure Batch](/azure/batch/batch-technical-overview) provides job scheduling and autoscaling of compute resources as a platform service, so it's easy to run large-scale parallel and HPC applications in the cloud.
-- **Will your applications use a microservices architecture?** Applications that use a microservices-based architecture can take advantage of several optimized compute technologies. Self-contained, event-driven workloads can use [Azure Functions](/azure/azure-functions/functions-overview) to build scalable, serverless applications that don't need an infrastructure. For applications that require more control over the environment where microservices run, you can use container services like [Azure container instances](/azure/container-instances/container-instances-overview), [Azure Kubernetes Service](/azure/aks/intro-kubernetes), and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview).
+- **Will your applications use a microservices architecture?** Applications that use a microservices-based architecture can take advantage of several optimized compute technologies. Self-contained, event-driven workloads can use [Azure Functions](/azure/azure-functions/functions-overview) to build scalable, serverless applications that don't need an infrastructure. For applications that require more control over the environment where microservices run, you can use container services like [Azure Container Instances](/azure/container-instances/container-instances-overview), [Azure Kubernetes Service](/azure/aks/intro-kubernetes), and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview).
 
 > [!NOTE]
 > Most Azure compute services are used in combination with Azure Storage. Consult the [storage decisions guidance](./storage-options.md) for related storage decisions.
@@ -49,12 +50,12 @@ The following table illustrates a few common use scenarios and the recommended c
 | I need to provision Linux and Windows virtual machines in seconds with the configurations of my choice. | [Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines) |
 | I need to achieve high availability by autoscaling to create thousands of VMs in minutes. | [Virtual machine scale sets](https://azure.microsoft.com/services/virtual-machine-scale-sets) |
 | I want to simplify the deployment, management, and operations of Kubernetes. | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service) |
-| I need to accelerate app development by using an event-driven serverless architecture. | [Azure Functions](https://azure.microsoft.com/services/functions) |
+| I need to accelerate application development by using an event-driven serverless architecture. | [Azure Functions](https://azure.microsoft.com/services/functions) |
 | I need to develop microservices and orchestrate containers on Windows and Linux. | [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric) |
-| I want to quickly create cloud apps for web and mobile by using a fully managed platform. | [Azure App Service](https://azure.microsoft.com/services/app-service) |
-| I want to containerize apps and easily run containers by using a single command. | [Azure container instances](https://azure.microsoft.com/services/container-instances) |
+| I want to quickly create cloud applications for web and mobile by using a fully managed platform. | [Azure App Service](https://azure.microsoft.com/services/app-service) |
+| I want to containerize applications and easily run containers by using a single command. | [Azure Container Instances](https://azure.microsoft.com/services/container-instances) |
 | I need cloud-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of virtual machines. | [Azure Batch](https://azure.microsoft.com/services/batch) |
-| I need to create highly available, scalable cloud applications and APIs that can help me focus on apps instead of hardware. | [Azure cloud services](https://azure.microsoft.com/services/cloud-services) |
+| I need to create highly available, scalable cloud applications and APIs that can help me focus on applications instead of hardware. | [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services) |
 
 ## Regional availability
 

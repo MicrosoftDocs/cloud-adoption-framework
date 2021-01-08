@@ -7,10 +7,8 @@ ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
-
-<!-- cSpell:ignore MPLS -->
 
 # Standard enterprise governance guide: Multicloud improvement
 
@@ -58,7 +56,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of governance practices
 
-This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these design changes will fulfill the new corporate policy statements.
+This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management + Billing. Together, these design changes will fulfill the new corporate policy statements.
 
 1. Connect the networks. This step is executed by the networking and IT security teams, and supported by the cloud governance team. Adding a connection from the MPLS/leased-line provider to the new cloud will integrate networks. Adding routing tables and firewall configurations will control access and traffic between the environments.
 2. Consolidate identity providers. Depending on the workloads being hosted in the secondary cloud, there are a variety of options to identity provider consolidation. The following are a few examples:
@@ -67,9 +65,9 @@ This section of the article will change the governance MVP design to include new
 3. Add assets to Azure Site Recovery.
     1. Azure Site Recovery was designed from the beginning as a hybrid or multicloud tool.
     2. VMs in the secondary cloud might be able to be protected by the same Azure Site Recovery processes used to protect on-premises assets.
-4. Add assets to Azure Cost Management.
-    1. Azure Cost Management was designed from the beginning as a multicloud tool.
-    2. Virtual machines in the secondary cloud may be compatible with Azure Cost Management for some cloud providers. Additional costs may apply.
+4. Add assets to Azure Cost Management + Billing.
+    1. Azure Cost Management + Billing was designed from the beginning as a multicloud tool.
+    2. Virtual machines in the secondary cloud may be compatible with Azure Cost Management + Billing for some cloud providers. Additional costs may apply.
 5. Add assets to Azure Monitor.
     1. Azure Monitor was designed as a hybrid cloud tool from inception.
     2. Virtual machines in the secondary cloud may be compatible with Azure Monitor agents, allowing them to be included in Azure Monitor for operational monitoring.

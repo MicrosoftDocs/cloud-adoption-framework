@@ -7,8 +7,8 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 # Prepare for customer feedback
@@ -20,7 +20,7 @@ Building an innovative new solution isn't about giving users what they want or t
 - **Quantitative (testing feedback):** This feedback measures the actions we hope to see.
 - **Qualitative (customer feedback):** This feedback tells us what those metrics mean in the customer's voice.
 
-Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops) can help you get started with your repo.
+Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open-source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops) can help you get started with your repo.
 
 Each of the following tools in Azure integrates with (or is compatible with) projects hosted in GitHub:
 
@@ -33,9 +33,9 @@ Application Insights is a monitoring tool that provides near-real-time quantitat
 To view quantitative data on your applications:
 
 1. Go to **Application Insights**.
-   - If your application doesn't appear in the list, select **Add** and follow the prompts to start configuring Application Insights.
+   - If your application doesn't appear in the list, select **add** and follow the prompts to start configuring Application Insights.
    - If the desired application is in the list, select it.
-1. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
+1. The **overview** pane includes some statistics on the application. Select **application dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
 
 ::: zone target="chromeless"
 
@@ -61,7 +61,7 @@ To view the data about your applications, go to the [Azure portal](https://porta
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
-The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator's dilemma_: how to set the pace of change without stumbling over ongoing business activity.
+The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the *innovator's dilemma*: how to set the pace of change without stumbling over ongoing business activity.
 
 Enterprises are using APIs externally to change how they interact with their customers and partners. Internally, they're using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics, and cloud. Applications and services can be linked rapidly and cost-effectively to create an extended value proposition.
 
@@ -73,13 +73,13 @@ To record quantitative data on your APIs:
 
 1. Go to **API Management services**.
 2. Select the desired API from the list.
-3. Select **Diagnostic settings** in the **Monitoring** section.
+3. Select **diagnostic settings** in the **monitoring** section.
 
 To view quantitative data on your APIs:
 
 1. Go to **API Management services**.
 2. Select the desired API from the list.
-3. Select **Application** in the **Monitoring** section.
+3. Select **application** in the **monitoring** section.
 
 ::: zone target="chromeless"
 
@@ -109,7 +109,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
+Azure board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 ::: zone-end
 
@@ -121,9 +121,9 @@ Azure Board and Azure Pipelines require a portal that's separate from GitHub and
 
 To create a DevOps project:
 
-1. Go to **Azure DevOps Projects**.
-2. Select **Create DevOps project**.
-3. Select **Runtime, Framework, and Service**.
+1. Go to **Azure DevOps projects**.
+2. Select **create DevOps project**.
+3. Select **runtime, framework, and service**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
@@ -146,9 +146,9 @@ Acting on feedback might not always mean adding the feature requested by the cus
 
 To view current deployments in your pipeline:
 
-1. Go to **App Services**.
+1. Go to **app services**.
 2. Select the desired application from the list.
-3. Select **Deployment Center** in the **Deployment** section of the **App Services** pane.
+3. Select **Deployment Center** in the **deployment** section of the **app services** pane.
 
 ::: zone target="chromeless"
 

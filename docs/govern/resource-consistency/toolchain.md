@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency tools in Azure"
+title: Resource Consistency tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Resource Consistency discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,14 +7,14 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource Consistency tools in Azure
 
 [Resource consistency](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. Within the Five Disciplines of Cloud Governance, the Resource Consistency discipline involves monitoring of application, workload, and asset performance. It also involves the tasks required to meet scale demands, remediate performance SLA violations, and proactively avoid performance SLA violations through automated remediation.
 
-<!-- docsTest:ignore "conditional access to resources" -->
+<!-- docutune:casing "conditional access to resources" -->
 
 The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 
@@ -27,7 +27,7 @@ The following is a list of Azure tools that can help mature the policies and pro
 | Define resource groups                       | Yes | Yes | Yes | No  | No  | No | No |
 | Manage workload and account owners           | Yes | Yes | Yes | No  | No  | No | No |
 | Manage conditional access to resources       | Yes | Yes | Yes | No  | No  | No | No |
-| Configure RBAC users                         | Yes | No  | No  | No  | Yes | No | No |
+| Configure Azure RBAC users                   | Yes | No  | No  | No  | Yes | No | No |
 | Assign roles and permissions to resources | Yes | Yes | Yes | No  | Yes | No | No |
 | Define dependencies between resources        | No  | Yes | Yes | No  | No  | No | No |
 | Apply access control                         | Yes | Yes | Yes | No  | Yes | No | No |

@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Build consensus on the business value of innovation
@@ -38,7 +39,7 @@ If one or two of the answers are directionally aligned, recognize that your hard
 
 If either team fails to answer all four questions in 30 minutes, then alignment and the considerations in the following sections are likely to have a significant impact on this effort and others. Pay careful attention to each of the following sections.
 
-<!-- docsTest:ignore "Strategy, Plan, Ready, and Adopt" -->
+<!-- docutune:casing "Strategy, Plan, Ready, and Adopt" -->
 
 ## Address the big picture first
 

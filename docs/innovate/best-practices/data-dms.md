@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Collect data through the migration and modernization of existing data sources
@@ -41,8 +42,8 @@ With an offline migration, application downtime starts when the migration starts
 
 We suggest that you decide your acceptable business downtime and test an offline migration. You do so to check if the restoration time meets the acceptable downtime. If the restoration time is unacceptable, do an online migration.
 
-| Source  | Target  | Tool  | Migration type | Guidance |
-|---|---|---|---|---|
+| Source | Target | Tool | Migration type | Guidance |
+|--|--|--|--|--|
 | SQL Server | Azure SQL Database | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-sql-server-to-azure-sql) |
 | SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-sql-server-azure-sql-online) |
 | SQL Server | Azure SQL Managed Instance | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-sql-server-to-managed-instance) |

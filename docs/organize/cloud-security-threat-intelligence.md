@@ -3,10 +3,11 @@ title: Function of cloud threat intelligence
 description: Understand the function of cloud threat intelligence.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Function of cloud threat intelligence
@@ -17,7 +18,7 @@ Security threat intelligence provides context and actionable insights on active 
 
 Threat intelligence teams are emerging and evolving to meet the needs of the security operations center (SOC) and others managing security risk for the organization.
 
-These teams should focus on on a strategy that includes:
+These teams should focus on a strategy that includes:
 
 - **Strategic threat intelligence** tailored to executive audiences increases awareness of cybersecurity risk, funding requirements, and supports sound risk decision making by organizational leadership.
 - **Incremental program growth** to provide quick wins with direct incident support and evolving into a threat intelligence platform to track and inform stakeholders.

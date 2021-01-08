@@ -2,13 +2,13 @@
 title: "Azure innovation: Before you start"
 description: Prepare your environment for cloud innovation with Azure features that help you engage customers, build solutions, and drive adoption.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC
 ---
 
 # Azure innovation guide overview

@@ -2,20 +2,18 @@
 title: "Assess each workload and refine plans"
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 # Assess workloads and refine plans
 
 The resources in this guide help you assess each workload, challenge assumptions about each workload's suitability for migration, and finalize architectural decisions about migration options.
-
-<!-- markdownlint-disable MD025 -->
 
 ## [Tools](#tab/Tools)
 
@@ -87,7 +85,7 @@ To use dependency visualization, download and install agents on each on-premises
 
 ## [Challenge assumptions](#tab/Challenge-Assumptions)
 
-In an ideal migration, every asset (infrastructure, app, or data) would be compatible with a cloud platform and ready for migration or modernization. In reality, not every workload should be migrated to the cloud. Not every asset is compatible with cloud platforms. Before migrating a workload to the cloud, assess each workload and all dependent assets (infrastructure, apps, and data).
+In an ideal migration, every asset (infrastructure, app, or data) would be compatible with a cloud platform and ready for migration or modernization. In practice, not every workload should be migrated to the cloud. Not every asset is compatible with cloud platforms. Before migrating a workload to the cloud, assess each workload and all dependent assets (infrastructure, apps, and data).
 
 The [Plan methodology of the Cloud Adoption Framework](../../plan/index.md) advises readers to use [incremental rationalization](../../digital-estate/rationalize.md#incremental-rationalization) and [power of ten](../../digital-estate/rationalize.md#release-planning) approaches to assess and plan for the migration. That guidance also includes a detailed best practice for [using Azure Migrate to assess your digital estate](../../plan/contoso-migration-assessment.md).
 

@@ -2,13 +2,13 @@
 title: "Azure innovation: Interact via devices"
 description: Learn how Azure provides a framework for building immersive and effective business solutions through connected and perceptive edge devices.
 author: umarmohamedusman
-ms.author: umarm
+ms.author: brblanch
 ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 <!-- cSpell:ignore umarmohamedusman umarm Moovit -->
@@ -29,11 +29,7 @@ Azure customers employ a continually expanding set of connected systems and devi
 > - [Azure SQL Edge](/azure/azure-sql-edge/overview)
 > - [IoT plug and play](/azure/iot-pnp/overview-iot-plug-and-play)
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Global scale IoT service](#tab/IoTHub)
-
-<!-- markdownlint-enable MD025 -->
 
 Architect solutions that exercise bidirectional communication with IoT devices at billions scale. Use out-of-box, device-to-cloud telemetry data to understand the state of your devices and define message routes to other Azure services just through configuration. By taking advantage of cloud-to-device messages, you can reliably send commands and notifications to your connected devices and track message delivery with acknowledgment receipts. And you'll automatically resend device messages as needed to accommodate intermittent connectivity.
 
@@ -87,8 +83,6 @@ To create an Azure IoT Hub Device Provisioning Service:
 
 ::: zone-end
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Azure Digital Twins](#tab/DigitalTwins)
 
 Build reusable, highly scalable, spatially aware experiences that link streaming data across the physical and digital world. Enhance your customer engagement using comprehensive models of physical environments. Generate spatial intelligence graphs to model the relationships and interactions between people, places, and devices. Query data from a physical space rather than disparate sensors.
@@ -112,7 +106,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, then select **Digital Twins**.
+2. Search for **digital twins**, then select **digital twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing digital twins, select this button:
 
@@ -124,11 +118,9 @@ To create Azure Digital Twins:
 
 ::: zone-end
 
-<!-- markdownlint-disable MD025 -->
-
 ## [Location intelligence](#tab/AzureMaps)
 
-In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
+In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence, powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
 **Azure Maps Data Service (preview):** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 

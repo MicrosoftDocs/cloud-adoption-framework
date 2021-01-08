@@ -1,5 +1,5 @@
 ---
-title: "Improve your initial cloud governance foundation"
+title: Improve your initial cloud governance foundation
 description: Use the Cloud Adoption Framework for Azure to learn how to incrementally improve your initial cloud governance foundation.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/13/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Improve your initial cloud governance foundation

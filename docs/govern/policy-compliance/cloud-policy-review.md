@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Conduct a cloud policy review
@@ -40,7 +40,7 @@ Cloud policy reviews align existing IT governance and IT security policies with 
 For each of these disciplines, the review process follows these steps:
 
 1. Review existing on-premises policies related to the specific discipline, looking for two key data points: legacy dependencies and identified business risks.
-2. Evaluate each business risk by asking a simple question: "does the business risk still exist in a cloud model?"
+2. Evaluate each business risk by asking a simple question: does the business risk still exist in a cloud model?
 3. If the risk still exists, rewrite the policy by documenting the necessary business mitigation, not the technical solution.
 4. Review the updated policy with the cloud adoption teams to understand potential technical solutions to the required mitigation.
 

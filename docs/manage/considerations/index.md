@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # IT management and operations in the cloud
@@ -23,13 +24,11 @@ When the business builds out new technology solutions, it has a clear need that 
 
 The historical IT operating model was sufficient for over 20 years. But that model is now outdated and is less desirable than cloud-first alternatives. When IT management teams move to the cloud, they have an opportunity to rethink this model and drive greater value for the business. This article series outlines a modernized model of IT management.
 
-<!-- cSpell:ignore caf -->
-
 ![Manage methodology of the Cloud Adoption Framework](../../_images/manage/caf-manage.png)
 
 ## Next steps
 
-For a deeper understanding of the new cloud management model, start with [Understand business alignment](./business-alignment.md).
+For a deeper understanding of the new cloud management model, start by [understanding business alignment](./business-alignment.md).
 
 > [!div class="nextstepaction"]
 > [Understand business alignment](./business-alignment.md)

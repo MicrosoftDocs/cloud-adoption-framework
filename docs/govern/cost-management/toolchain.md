@@ -1,5 +1,5 @@
 ---
-title: "Cost Management tools in Azure"
+title: Cost Management tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Cost Management discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Cost Management tools in Azure
@@ -16,9 +16,7 @@ The [Cost Management discipline](./index.md) is one of the [Five Disciplines of 
 
 The following is a list of Azure native tools that can help mature the policies and processes that support this discipline.
 
-<!-- TODO: Content packs are deprecated. -->
-
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview)  | [Power BI desktop connector](/power-bi/connect-data/desktop-connect-azure-cost-management) | [Azure Policy](/azure/governance/policy/overview) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview)  | [Power BI Desktop connector](/power-bi/connect-data/desktop-connect-azure-cost-management) | [Azure Policy](/azure/governance/policy/overview) |
 |---------|---------|---------|---------|---------|
 | Budget control     | No         | Yes         | No         | Yes         |
 | Monitor spending on single resource    | Yes         | Yes         | Yes         | No         |

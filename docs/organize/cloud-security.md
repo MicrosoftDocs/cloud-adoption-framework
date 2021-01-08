@@ -2,14 +2,13 @@
 title: Cloud security functions
 description: An overview of organizational functions required to manage information security risk in an enterprise
 author: MarkSimos
-ms.author: mas
+ms.author: brblanch
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: think-tank
 ---
-
-<!-- cSpell:ignore MarkSimos -->
 
 # Cloud security functions
 
@@ -26,14 +25,14 @@ The following diagram and documentation represent an ideal view of the functions
 Each of the following articles provide information about each function. Each article provides a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
 
 - [Policy and standards](./cloud-security-policy-standards.md)
-- [Security operations center (SOC)](./cloud-security-operations-center.md)
+- [Security operations](./cloud-security-operations-center.md)
 - [Security architecture](./cloud-security-architecture.md)
 - [Security compliance management](./cloud-security-compliance-management.md)
 - [People security](./cloud-security-people.md)
 - [Application security and DevSecOps](./cloud-security-application-security-devsecops.md)
 - [Data security](./cloud-security-data-security.md)
 - [Infrastructure and endpoint security](./cloud-security-infrastructure-endpoint.md)
-- [Identity and keys](./cloud-security-identity-keys.md)
+- [Identity and key management](./cloud-security-identity-keys.md)
 - [Threat intelligence](./cloud-security-threat-intelligence.md)
 - [Posture management](./cloud-security-posture-management.md)
 - [Incident preparation](./cloud-security-incident-preparation.md)

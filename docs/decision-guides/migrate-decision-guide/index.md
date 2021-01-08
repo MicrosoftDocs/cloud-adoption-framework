@@ -1,5 +1,5 @@
 ---
-title: "Migration tools decision guide"
+title: Migration tools decision guide
 description: Use this decision tree as high-level guidance for selecting the best tools to use based on your migration decisions.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
+ms.custom: internal
 ---
 
 # Migration tools decision guide

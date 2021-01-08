@@ -7,9 +7,8 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
-
-<!-- cSpell:ignore CISO -->
 
 # What is required to promote a migrated resource to production?
 

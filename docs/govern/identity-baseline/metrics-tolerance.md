@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Identity baseline metrics, indicators, and risk tolerance
@@ -28,7 +28,7 @@ The following are examples of useful metrics that you should gather to help eval
 - **Cloud-deployed organizational units.** Number of Active Directory organizational units (OUs) deployed to the cloud.
 - **Extent of federation.** Number of identity management systems federated with your organization's systems.
 - **Elevated users.** Number of user accounts with elevated access to resources or management tools.
-- **Use of role-based access control.** Number of subscriptions, resource groups, or individual resources not managed through role-based access control (RBAC) via groups.
+- **Use of Azure role-based access control.** Number of subscriptions, resource groups, or individual resources not managed through Azure role-based access control (Azure RBAC) via groups.
 - **Authentication claims.** Number of successful and failed user authentication attempts.
 - **Authorization claims.** Number of successful and failed attempts by users to access resources.
 - **Compromised accounts.** Number of user accounts that have been compromised.
@@ -47,7 +47,7 @@ Once you have a baseline, establish minimum benchmarks representing an unaccepta
 - **Cloud-hosted directory services trigger.** A company hosting *x* Active Directory server virtual machines (VMs) hosted in the cloud, or having *x* organizational units (OUs) managed on these cloud-based servers, can benefit from investment in the Identity Baseline discipline to optimize integration with any on-premises or other external identity services.
 - **Federation trigger.** A company implementing identity federation with *x* external identity management systems can benefit from investing in the Identity Baseline discipline to ensure consistent organizational policy across federation members.
 - **Elevated access trigger.** A company with more than *x%* of users with elevated permissions to management tools and resources should consider investing in the Identity Baseline discipline to minimize the risk of inadvertent overprovisioning of access to users.
-- **RBAC trigger.** A company with less than *x%* of resources using role-based access control methods should consider investing in the Identity Baseline discipline to identify optimized ways to assign user access to resources.
+- **Azure RBAC trigger.** A company with less than *x%* of resources using Azure role-based access control methods should consider investing in the Identity Baseline discipline to identify optimized ways to assign user access to resources.
 - **Authentication failure trigger.** A company where authentication failures represent more than *x%* of attempts should invest in the Identity Baseline discipline to ensure that authentication methods are not under external attack, and that users can authenticate properly.
 - **Authorization failure trigger.** A company where access attempts are rejected more than *x%* of the time should invest in the Identity Baseline discipline to improve the application and updating of access controls, and identify potentially malicious access attempts.
 - **Compromised account trigger.** A company with more than 1 compromised account should invest in the Identity Baseline discipline to improve the strength and security of authentication mechanisms and improve mechanisms to remediate risks related to compromised accounts.

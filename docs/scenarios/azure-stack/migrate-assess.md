@@ -1,5 +1,5 @@
 ---
-title: "Assess workloads for Azure Stack Hub migration"
+title: Assess workloads for Azure Stack Hub migration
 description: Assess workloads for Azure Stack Hub migration.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,13 +7,14 @@ ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Assess workloads for Azure Stack Hub migration
 
 This article assumes that you've decided to [integrate Azure Stack into your cloud strategy](./index.md), you've developed a [plan for Azure Stack Hub migration](./plan.md), and [your environment is ready for migration](./ready.md).
 
-During the rationalization of your organization's digital estate in the plan methodology, each workload was discovered and inventoried, and initial decisions were made based on quantitative data. Before you deploy each workload, it's important to validate the data and the decisions with qualitative data.
+During the rationalization of your organization's digital estate in the Plan methodology, each workload was discovered and inventoried, and initial decisions were made based on quantitative data. Before you deploy each workload, it's important to validate the data and the decisions with qualitative data.
 
 ## Placement
 

@@ -1,16 +1,14 @@
 ---
-title: "Identity decision guide"
+title: Identity decision guide
 description: Learn how identity and access management (IAM) services enable you to manage access control in the cloud.
-author: rotycenh
+author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
-
-<!-- cSpell:ignore Kerberos NTLM SAML -->
 
 # Identity decision guide
 
@@ -96,7 +94,7 @@ For more information about identity services in Azure, see:
 
 - **[Azure AD](/azure/active-directory/fundamentals/active-directory-whatis).** Azure AD provides cloud-based identity services. It allows you to manage access to your Azure resources and control identity management, device registration, user provisioning, application access control, and data protection.
 - **[Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity).** The Azure AD Connect tool allows you to connect Azure AD instances with your existing identity management solutions, allowing synchronization of your existing directory in the cloud.
-- **[Role-based access control (RBAC)](/azure/role-based-access-control/overview).** Azure AD provides RBAC to efficiently and securely manage access to resources in the management plane. Jobs and responsibilities are organized into roles, and users are assigned to these roles. RBAC allows you to control who has access to a resource along with which actions a user can perform on that resource.
+- **[Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).** Azure RBAC efficiently and securely manages access to resources in the management plane. Jobs and responsibilities are organized into roles, and users are assigned to these roles. Azure RBAC allows you to control who has access to a resource along with which actions a user can perform on that resource.
 - **[Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure).** PIM lowers the exposure time of resource access privileges and increases your visibility into their use through reports and alerts. It limits users to taking on their privileges "just in time" (JIT), or by assigning privileges for a shorter duration, after which privileges are revoked automatically.
 - **[Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).** This reference architecture provides an example of directory synchronization between on-premises Active Directory domains and Azure AD.
 - **[Extend Active Directory Domain Services (AD DS) to Azure](/azure/architecture/reference-architectures/identity/adds-extend-domain).** This reference architecture provides an example of deploying AD DS servers to extend domain services to cloud-based resources.

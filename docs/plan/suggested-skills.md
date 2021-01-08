@@ -7,6 +7,7 @@ ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Get started on a skills readiness path
@@ -36,9 +37,10 @@ Each of the previous learning paths shares opportunities across multiple media t
 ## Microsoft Learn
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
-Here are a couple examples of tailored learning paths on Microsoft Learn which align to the Plan methodology of the Cloud Adoption Framework:
 
-<!-- docsTest:ignore "on premises" -->
+Examples of tailored learning paths on Microsoft Learn that align to the Plan methodology of the Cloud Adoption Framework include:
+
+<!-- docutune:ignore "on premises" -->
 
 [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices): DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either in the cloud or on premises.
 

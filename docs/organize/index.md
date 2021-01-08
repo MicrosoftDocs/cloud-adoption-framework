@@ -7,7 +7,7 @@ ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Manage organizational alignment
@@ -16,22 +16,22 @@ Cloud adoption can't happen without well-organized people. Successful cloud adop
 
 The following exercises will help guide the process of creating a landing zone to support cloud adoption.
 
-|  |  |
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> ![1](../_images/icons/1.png) | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model. |
-| <br> ![2](../_images/icons/2.png) | <br> [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud. |
-| <br> ![3](../_images/icons/3.png) | <br> [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions. |
-| <br> ![4](../_images/icons/4.png) | <br> [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model. |
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud. |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model. |
 
 ## Structure type
 
-The following organizational structures do not necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile, matrix organization, these structures may be best represented as virtual teams (or v-teams). There is no limitation suggesting that these organizational structures couldn't be represented in an org chart, but it is not necessary in order to produce an effective operating model.
+The following organizational structures do not necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile, matrix organization, these structures may be best represented as virtual teams. There is no limitation suggesting that these organizational structures couldn't be represented in an org chart, but it is not necessary in order to produce an effective operating model.
 
 The first step of managing organizational alignment is to determine how the following organizational structures will be fulfilled:
 
 - **Org chart alignment:** Management hierarchies, manager responsibilities, and staff alignment will align to organizational structures.
-- **Virtual teams (v-teams):** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functions.
-- **Mixed model:** More commonly, a mixture of org chart and v-team alignment will be required to deliver on transformation goals.
+- **Virtual teams:** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functions.
+- **Mixed model:** More commonly, a mixture of org chart and virtual team alignment will be required to deliver on transformation goals.
 
 ## Understand required cloud functions
 
@@ -45,6 +45,7 @@ The following is a list of functions that are required to succeed at cloud adopt
 - [Cloud center of excellence](./cloud-center-of-excellence.md): Improve quality, speed, and resiliency of adoption.
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](./cloud-automation.md): Accelerate adoption and innovation.
+- [Cloud data](./cloud-data.md): Manage data and enable analytics solutions.
 - [Cloud security](./cloud-security.md): Manage information security risk.
 
 To some degree, each of these functions are delivered in every cloud adoption effort, either explicitly or in accordance with a defined team structure.

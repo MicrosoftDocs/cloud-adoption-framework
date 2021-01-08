@@ -7,12 +7,12 @@ ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.custom: operating-model
+ms.custom: internal, operating-model
 ---
 
 # Compare common cloud operating models
 
-Operating models are unique and specific to the business they support, based on their current requirements and constraints. But, this uniqueness shouldn't suggest that operating models are *snowflakes*. There are a few common patterns of customer operating models. This article outlines the four most common patterns.
+Operating models are unique and specific to the business they support, based on their current requirements and constraints. But, this uniqueness shouldn't suggest that operating models are _snowflakes_. There are a few common patterns of customer operating models. This article outlines the four most common patterns.
 
 ## Operating model comparison
 
@@ -49,11 +49,11 @@ While many teams and individuals will be responsible for supporting different fu
 
 ||Decentralized ops |Centralized ops  |Enterprise ops          |Distributed ops|
 |---------              |---------      |---------    |---------          |---------|
-|Business alignment|[Workload team](../organize/cloud-adoption.md)|[Central cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
-|[Cloud operations](../organize/cloud-operations.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
-|[Cloud governance](../organize/cloud-governance.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|[Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md)|
-|[Cloud security](../organize/cloud-security.md)|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [Define a security strategy](../strategy/define-security-strategy.md)|
-|[Cloud automation and DevOps](../organize/cloud-automation.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|**Business alignment**|[Workload team](../organize/cloud-adoption.md)|[Central cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
+|**[Cloud operations](../organize/cloud-operations.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|**[Cloud governance](../organize/cloud-governance.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|[Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md)|
+|**[Cloud security](../organize/cloud-security.md)**|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [Define a security strategy](../strategy/define-security-strategy.md)|
+|**[Cloud automation and DevOps](../organize/cloud-automation.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
 
 ### Accelerate operating model implementation in Azure
 

@@ -1,5 +1,5 @@
 ---
-title: "Rationalize the digital estate"
+title: Rationalize the digital estate
 description: Use cloud rationalization to evaluate your digital assets and determine the best approach to hosting them in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Rationalize the digital estate

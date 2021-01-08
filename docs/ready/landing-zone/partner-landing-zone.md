@@ -7,17 +7,16 @@ ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
-
-<!-- cSpell:ignore ISVs MSPs -->
 
 # Evaluate a Microsoft partner's Azure landing zone
 
-The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each team that supports adoption through standardized approaches. In reality, you can't assume that a self-service approach is sufficient for all adoption activities.
+The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each team that supports adoption through standardized approaches. In practice, you can't assume that a self-service approach is sufficient for all adoption activities.
 
 Successful cloud adoption programs typically involve at least one level of third-party support. Many cloud adoption efforts require support from a systems integrator (SI) or consulting partner who provides services that accelerate cloud adoption. Managed service providers (MSPs) provide enduring value by supporting landing zones and cloud adoption, but they also provide post-adoption operations management support. Additionally, successful cloud adoption efforts tend to engage one or more independent software vendors (ISV) who provide software-based services that accelerate cloud adoption. The rich partner ecosystems of SIs, ISVs, MSPs, and other forms of Microsoft partners have aligned their offerings to specific methodologies found in the Cloud Adoption Framework. When a partner is aligned to the Ready methodology of this framework, they will likely offer their own Azure landing zone implementation option.
 
-This article provides a set of questions that help create an understanding of the scope of the partner's Azure landing zone offering.
+This article provides a set of questions that help create an understanding of the scope of the partner's Azure landing zone implementation options.
 
 > [!IMPORTANT]
 > Partner offers and Azure landing zone implementation options are defined by the partner, based on their extensive experience helping customers adopt the cloud.
@@ -67,7 +66,7 @@ Identity is perhaps the most important design area to evaluate in the partner so
 
 **Question for the partner:** Which of the following identity management options does the partner solution support?
 
-- **Azure AD:** The suggested best practice is to use Azure AD and role-based access control to manage identity and access in Azure.
+- **Azure AD:** The suggested best practice is to use Azure AD and Azure role-based access control to manage identity and access in Azure.
 - **Active Directory:** If required, does the partner solution provide an option to deploy Active Directory as an infrastructure as a service solution?
 - **Third-party identity provider:** If your company uses a third-party identity solution, determine whether and how the partner's Azure landing zone integrates with the third-party solution.
 
@@ -89,7 +88,7 @@ Sound governance and operational management of the cloud starts with best practi
 **Question for the partner:** Does the partner's landing zone design include considerations for the following resource organization practices?
 
 - **Naming standards:** What [naming standards](../azure-best-practices/naming-and-tagging.md) will this offering follow and is that standard automatically enforced through policy?
-- **Tagging standards:** Does the landing zone configuration follow and enforce a specific [standards for tagging assets](../azure-best-practices/naming-and-tagging.md#metadata-tags)?
+- **Tagging standards:** Does the landing zone configuration follow and enforce specific [standards for tagging assets](../azure-best-practices/resource-tagging.md)?
 - **Subscription design:** What [subscription design strategies](../../decision-guides/subscriptions/index.md) are supported by the partner offer?
 - **Management group design:** Does the partner offer follow a defined pattern for the [Azure management group hierarchy](../azure-best-practices/organize-subscriptions.md) to organize subscriptions?
 - **Resource group alignment:** How are resource groups used to group assets deployed to the cloud? In the partner offer, are resource groups used to group assets into workloads, deployment packages, or other organization standards?

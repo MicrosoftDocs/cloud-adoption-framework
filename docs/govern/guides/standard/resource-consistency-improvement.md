@@ -7,7 +7,7 @@ ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Standard enterprise governance guide: Improve the Resource Consistency discipline
@@ -41,41 +41,41 @@ The changes to current and future state expose new risks that will require new p
 This business risk can be expanded into several technical risks:
 
 1. External intrusion or denial of service attacks might cause a business interruption.
-2. Mission-critical assets may not be properly discovered, and therefore might not be properly operated.
-3. Undiscovered or mislabeled assets might not be supported by existing operational management processes.
-4. The configuration of deployed assets may not meet performance expectations.
-5. Logging might not be properly recorded and centralized to allow for remediation of performance issues.
-6. Recovery policies may fail or take longer than expected.
-7. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-8. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-9. Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
-10. Deployed operating systems or applications might fail to meet hardening requirements.
-11. With so many teams working in the cloud, there is a risk of inconsistency.
+1. Mission-critical assets may not be properly discovered, and therefore might not be properly operated.
+1. Undiscovered or mislabeled assets might not be supported by existing operational management processes.
+1. The configuration of deployed assets may not meet performance expectations.
+1. Logging might not be properly recorded and centralized to allow for remediation of performance issues.
+1. Recovery policies may fail or take longer than expected.
+1. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+1. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+1. Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
+1. Deployed operating systems or applications might fail to meet hardening requirements.
+1. With so many teams working in the cloud, there is a risk of inconsistency.
 
 ## Incremental improvement of the policy statements
 
 The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but adopting these policies may be easier than it appears.
 
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the cloud governance team and the application owner before deployment to the cloud.
-2. Subnets containing mission-critical applications must be protected by a firewall solution capable of detecting intrusions and responding to attacks.
-3. Governance tooling must audit and enforce network configuration requirements defined by the security management team.
-4. Governance tooling must validate that all assets related to mission-critical applications or protected data are included in monitoring for resource depletion and optimization.
-5. Governance tooling must validate that the appropriate level of logging data is being collected for all mission-critical applications or protected data.
-6. Governance process must validate that backup, recovery, and SLA adherence are properly implemented for mission-critical applications and protected data.
-7. Governance tooling must limit virtual machine deployments to approved images only.
-8. Governance tooling must enforce that automatic updates are prevented on all deployed assets that support mission-critical applications. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
-9. Governance tooling must validate tagging related to cost, criticality, SLA, application, and data classification. All values must align to predefined values managed by the governance team.
-10. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
-11. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to security management tooling used in the cloud.
-12. Before release into production, all mission-critical applications and protected data must be added to the designated operational monitoring solution. Assets that cannot be discovered by the chosen IT operations tooling, cannot be released for production use. Any changes required to make the assets discoverable must be made to the relevant deployment processes to ensure assets will be discoverable in future deployments.
-13. When discovered, operational management teams will size assets, to ensure that assets meet performance requirements.
-14. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
-15. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
-16. Governance review processes must validate that deployed assets are properly configured in alignment with SLA and recovery requirements.
+1. Subnets containing mission-critical applications must be protected by a firewall solution capable of detecting intrusions and responding to attacks.
+1. Governance tooling must audit and enforce network configuration requirements defined by the security management team.
+1. Governance tooling must validate that all assets related to mission-critical applications or protected data are included in monitoring for resource depletion and optimization.
+1. Governance tooling must validate that the appropriate level of logging data is being collected for all mission-critical applications or protected data.
+1. Governance process must validate that backup, recovery, and SLA adherence are properly implemented for mission-critical applications and protected data.
+1. Governance tooling must limit virtual machine deployments to approved images only.
+1. Governance tooling must enforce that automatic updates are prevented on all deployed assets that support mission-critical applications. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
+1. Governance tooling must validate tagging related to cost, criticality, SLA, application, and data classification. All values must align to predefined values managed by the governance team.
+1. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
+1. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to security management tooling used in the cloud.
+1. Before release into production, all mission-critical applications and protected data must be added to the designated operational monitoring solution. Assets that cannot be discovered by the chosen IT operations tooling, cannot be released for production use. Any changes required to make the assets discoverable must be made to the relevant deployment processes to ensure assets will be discoverable in future deployments.
+1. When discovered, operational management teams will size assets, to ensure that assets meet performance requirements.
+1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
+1. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
+1. Governance review processes must validate that deployed assets are properly configured in alignment with SLA and recovery requirements.
 
 ## Incremental improvement of governance practices
 
-This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
+This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management + Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
 1. The cloud operations team will define operational monitoring tooling and automated remediation tooling. The cloud governance team will support those discovery processes. In this use case, the cloud operations team chose Azure Monitor as the primary tool for monitoring mission-critical applications.
 2. Create a repository in Azure DevOps to store and version all relevant Resource Manager templates and scripted configurations.

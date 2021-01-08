@@ -2,12 +2,12 @@
 title: "Collect monitoring data in the cloud"
 description: Learn to observe the health and availability of your cloud solution to collect the right monitoring data.
 author: MGoedtel
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
+ms.custom: think-tank
 ---
 
 # Cloud monitoring guide: Collect the right data
