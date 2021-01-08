@@ -46,6 +46,8 @@ With IaC, teams make changes to the environment description and version the conf
 
 See the [AzOps](https://github.com/Azure/azops) GitHub Action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you’re new to the concept of Resource Manager templates or IaC, you can also browse the [azure-quickstart-templates repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find a template you wish to deploy, and select the ![Deploy to Azure](./media/deploy-to-azure.png) button to see how it works.
 
+![The **Deploy to Azure** button.](./media/deploy-to-azure.png)
+
 ### The components of Cloud pattern components and best practices
 
 The following architecture diagram highlights the security checks that run in various GitHub and Azure components of a GitHub DevSecOps environment:
@@ -90,9 +92,7 @@ The right mix of individuals, teams, and resources can ensure a project’s succ
 
 - **Community members:** People who use the project. They might be active in conversations or express their opinion on the project’s direction.
 
-Bigger projects might also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation.
-
-InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations in this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across your organization can help to rally the expertise necessary to solve problems faster.
+Bigger projects could also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation. InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across your organization can help to rally the expertise necessary to solve problems faster.
 
 Within an enterprise, contributors are developers across your company, and maintainers are a project’s leaders and key decision-makers.
 
