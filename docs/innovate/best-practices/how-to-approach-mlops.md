@@ -3,7 +3,7 @@ title: How to approach machine learning operations
 description: Understand the principles and best practices of machine learning operations, and determine how to best adapt them for your organization.
 author: Mufajjul
 ms.author: almufajj
-ms.date: 12/14/2020
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -87,4 +87,4 @@ Integrating machine learning operations with your business can create the follow
 
 - The [Microsoft AI Business School](https://docs.microsoft.com/learn/topics/ai-business-school) is a resource that outlines AI, including how to approach implementation holistically, understand dependencies beyond the technology, and drive lasting business impact.
 
-- Read further about [the machine learning operations process](../best-practices/mlops-process.md) to explore this process in more detail.
+- Read further about [the machine learning operations process](../best-practices/mlops-process.md) to explore this in more detail.

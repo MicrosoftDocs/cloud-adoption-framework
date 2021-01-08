@@ -75,4 +75,3 @@ Multiple factors can influence how you set up your machine learning workspaces, 
 
 - [Use the Azure portal and Jupyter Notebooks](/azure/machine-learning/tutorial-1st-experiment-sdk-setup) during the development lifecycle to set up your Azure Machine Learning development environment and train your model.
 
-azure/machine-learning/tutorial-1st-experiment-sdk-setup
