@@ -35,7 +35,7 @@ Follow these steps to set up the Azure CLI in your on-premises environment:
 
 Skip this step if you already have an Azure subscription.
 
-If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in Azure.
+If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in the Azure portal.
 
 - To use the Azure portal to create a subscription, open [Subscriptions](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
 
@@ -47,13 +47,13 @@ If you don't have an Azure subscription, you can [create one for free](https://a
   az account set --subscription '<subscription name>'
   ```
 
-  For example, enter:
+ An example command is:
 
   `az account set --subscription 'ComputePM LibrarySub'`
 
 ## Create a resource group
 
-Once the subscription is set up, create a resource group in Azure. You can either use the Azure portal or the CLI to create the group.
+Once you set up your Azure subscription, create a resource group in Azure. You can either use the Azure portal **or** the Azure CLI to create a resource group.
 
 - To use the Azure portal, follow these steps:
 
@@ -81,7 +81,7 @@ Once the subscription is set up, create a resource group in Azure. You can eithe
 
 Next, create a storage account within the resource group that you just created. You'll use this storage account to back up your on-premises Moodle data.
 
-You can either use the Azure portal or the Azure CLI to create the storage account.
+You can either use the Azure portal **or** the Azure CLI to create a storage account.
 
 - To use the Azure portal, follow these steps:
 
@@ -89,14 +89,14 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
 
   1. Enter the following information:
 
-     - Your subscription name
+     - Your Azure subscription name
      - The name of the resource group that you just created
      - A storage account name
      - Your region
    
-  1. For **Account kind**, enter **BlobStorage**.
+  1. For **Account kind**, select **BlobStorage** from the drop-down list.
   
-  1. For **Replication**, enter **Read-access geo-redundant storage (RA-GRS)**.
+  1. For **Replication**, select **Read-access geo-redundant storage (RA-GRS)** from the drop-down list.
 
   1. Select **Review + create**.
 
@@ -108,7 +108,7 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
   az storage account create -n <storage account name> -g <resource group name> --sku <storage account SKU> --kind <storage account type> -l <region>
   ```
 
-  For example, enter:
+  An example command is:
 
   `az storage account create -n onpremisesstorage -g manual_migration --sku Standard_LRS --kind BlobStorage -l eastus`
 
@@ -118,7 +118,7 @@ You can either use the Azure portal or the Azure CLI to create the storage accou
 
 Before backing up your on-premises Moodle data, turn on **Maintenance mode** on your Moodle website by following these steps:
 
-1. On an on-premises virtual machine, enter this command:
+1. From the Moodle instance in your on-premises environment, enter this command:
 
    ```bash
    sudo /usr/bin/php admin/cli/maintenance.php --enable
@@ -130,7 +130,7 @@ Before backing up your on-premises Moodle data, turn on **Maintenance mode** on 
    sudo /usr/bin/php admin/cli/maintenance.php
    ```
 
-When backing up on-premises Moodle and moodledata files, configurations, and databases, back up to a single directory. The following diagram summarizes this idea:
+When backing up on-premises Moodle and moodledata files, configurations, and databases, the recommendation is to back up these resources to a single directory. The following diagram summarizes this idea:
 
 ![Diagram showing the structure of the Moodle backup storage directory.](./images/directory-structure.png)
 
@@ -254,7 +254,7 @@ Create a container in the storage account. You can either use the Azure CLI or t
   az storage container create --account-name <storage account name> --name <container name> --auth-mode login
   ```
 
-  For example, enter:
+  An example command is:
 
   `az storage container create --account-name onpremisesstorage --name migration --auth-mode login`
 
@@ -278,7 +278,7 @@ Enter this command to copy your archive file to the container that you created i
 sudo azcopy copy /home/azureadmin/storage.tar.gz 'https://<storage account name>.blob.core.windows.net/<container name>/<SAS token>'
 ```
 
-For example, enter:
+An example command is:
 
 `azcopy copy /home/azureadmin/storage.tar.gz 'https://onpremisesstorage.blob.core.windows.net/migration/?sv=2019-12-12&ss='`
 

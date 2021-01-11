@@ -21,12 +21,6 @@ A virtual machine scale set instance is assigned a private IP address. You can o
 
 Follow these steps to access the virtual machine scale set:
 
-1. Enable your gateway to connect the virtual machine scale set instance to a private IP address.
-
-1. Follow [How to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to use the gateway to access the virtual machine scale set instance.
-
-1. Set your virtual machine scale set to password-enabled.
-
 1. Determine the private IP address that Azure uses for your virtual machine scale set instance:
 
    1. Sign in to the [Azure portal](https://ms.portal.azure.com/#home), and locate the resource group that deployment created.

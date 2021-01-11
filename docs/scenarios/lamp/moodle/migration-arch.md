@@ -11,16 +11,16 @@ ms.subservice: plan
 
 # Moodle migration architecture and templates
 
-Moodle migration includes the following tasks:
+A Moodle migration to Azure includes the following tasks:
 
 1. Deploy Azure infrastructure with Azure Resource Manager (ARM) templates.
 1. [Download and install AzCopy](migration-start.md#download-and-install-azcopy-on-the-controller-vm).
-1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-archive-to-the-controller-vm) instance in the Azure Resource Manager deployment.
+1. [Copy the Moodle backup archive to the controller virtual machine](migration-start.md#copy-the-moodle-archive-to-the-controller-vm) instance in the Azure Resource Manager deployment.
 1. [Migrate the Moodle application and configuration](migration-start.md#import-the-moodle-database-to-azure).
 1. [Set up the Moodle controller instance and worker nodes](azure-infra-config.md).
 1. [Configure PHP and the web server](azure-infra-config.md).
 
-This article describes Moodle Azure infrastructure options, and how to deploy the Azure resources you want by using your choice of ARM templates.
+This article describes Moodle Azure infrastructure options, and how to deploy Azure resources by using an ARM template that offers your choice of Azure functionality.
 
 ## Azure infrastructure
 
@@ -38,15 +38,15 @@ A predefined deployment template uses one of four predefined Moodle sizes: minim
   
   [![Button that launches the minimal Moodle deployment ARM template.](images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json)
 
-- *Small-to-mid deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Redis cache.
+- *Small-to-mid deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Redis Cache.
   
   [![Button that launches the small-to-mid Moodle deployment ARM template.](images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
 
-- *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL  with 16 vCores, and Redis cache without other options like Elasticsearch.
+- *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL  with 16 vCores, and Azure Redis Cache without other options like Elasticsearch.
   
   [![Button that launches the large, high-availability Moodle deployment ARM template.](images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-large-ha.json)
 
-- *Maximal* deployment uses Azure Files, MySQL with the highest SKU, Redis cache, Elasticsearch on three VMs, and large storage sizes for both data disks and databases.
+- *Maximal* deployment uses Azure Files, MySQL with the highest SKU, Azure Redis Cache, Elasticsearch on three VMs, and large storage sizes for both data disks and databases.
   
   [![Button that launches the maximal Moodle deployment ARM template.](images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json)
 

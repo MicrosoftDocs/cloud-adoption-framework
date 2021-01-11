@@ -7,6 +7,7 @@ ms.date: 05/20/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Organize and manage multiple Azure subscriptions

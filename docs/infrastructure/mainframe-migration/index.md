@@ -2,11 +2,12 @@
 title: "Mainframe migration overview"
 description: Migrate mainframe workloads, applications, and databases to Azure, for a proven, highly available, scalable infrastructure without many of the drawbacks of mainframes.
 author: njray
-ms.author: v-nanra
+ms.author: brblanch
 ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- docutune:casing "BMC Control-M" ASSGN DLBL EXTENT LIBDEF EXEC TWS-OPC CA-SAR IMS/TM IMS/DC "IMS/Data Communications" "Micro Focus Server Enterprise Edition" VSE -->

@@ -7,6 +7,7 @@ ms.date: 05/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Ensure the environment is prepared for the cloud adoption plan

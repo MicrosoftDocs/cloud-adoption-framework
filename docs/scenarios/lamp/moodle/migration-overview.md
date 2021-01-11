@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Overview of Moodle manual migration
 
-[Moodle](https://moodle.org/) is a free, open-source learning management system written in PHP. This guide explains how to migrate the Moodle application from an on-premises environment to Azure. The guide provides steps for two different approaches that use either the Azure portal or the Azure command-line interface (Azure CLI).
+[Moodle](https://moodle.org/) is a free, open-source learning management system written in PHP. This guide explains how to migrate a Moodle deployment from an on-premises environment to Azure. The guide provides steps for two different approaches that use either the Azure portal or the Azure command-line interface (Azure CLI).
 
 ## Prerequisites
 

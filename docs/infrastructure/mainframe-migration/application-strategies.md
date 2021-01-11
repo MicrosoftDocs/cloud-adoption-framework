@@ -2,11 +2,12 @@
 title: Mainframe application migration strategies
 description: Learn strategies like rehosting, retiring, rebuilding, or replacing applications to migrate from mainframe environments to Azure.
 author: njray
-ms.author: v-nanra
+ms.author: brblanch
 ms.date: 12/26/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- docutune:casing GDGs "GT Software" "NTT Data" -->

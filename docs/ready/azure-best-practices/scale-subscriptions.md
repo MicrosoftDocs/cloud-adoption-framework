@@ -7,6 +7,7 @@ ms.date: 05/20/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Create additional subscriptions to scale your Azure environment
@@ -23,7 +24,7 @@ Other considerations might necessitate additional subscriptions. Keep the follow
 
 **Subscription limits:** Subscriptions have defined limits for some resource types. For example, the number of virtual networks in a subscription is limited. When a subscription approaches these limits, you'll need to create another subscription and put additional resources there. For more information, see [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#general-limits).
 
-**Classic model resources:** If you've been using Azure for a long time, you may have resources that were created using the classic deployment model. Azure policies, role-based access control, resource grouping, and tags cannot be applied to classic model resources. You should move these resources into subscriptions that contain only classic model resources.
+**Classic model resources:** If you've been using Azure for a long time, you may have resources that were created using the classic deployment model. Azure policies, Azure role-based access control, resource grouping, and tags cannot be applied to classic model resources. You should move these resources into subscriptions that contain only classic model resources.
 
 **Costs:** There might be some additional costs for data ingress and egress between subscriptions.
 
@@ -48,7 +49,7 @@ As your subscription model grows, you might decide that some resources belong in
 
 - Identify who is responsible for creating new subscriptions.
 - Decide which resource types are available in a subscription by default.
-- Decide what all standard subscriptions should look like. Considerations include RBAC access, policies, tags, and infrastructure resources.
+- Decide what all standard subscriptions should look like. Considerations include Azure RBAC access, policies, tags, and infrastructure resources.
 - If possible, [programmatically create new subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription-preview) via a service principal. You must [grant permission to the service principal](/azure/azure-resource-manager/grant-access-to-create-subscription) to create subscriptions. Define a security group that can request new subscriptions via an automated workflow.
 - If you're an Enterprise Agreement (EA) customer, ask Azure support to block creation of non-EA subscriptions for your organization.
 

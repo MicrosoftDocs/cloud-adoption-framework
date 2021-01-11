@@ -2,13 +2,13 @@
 title: "Optimize and promote"
 description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 <!-- markdownlint-disable DOCSMD001 -->
