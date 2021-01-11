@@ -1,9 +1,9 @@
 ---
 title: "Introduction to the Hybrid and Multicloud scenario"
 description: Describe the scenario
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 02/01/2020
+ms.date: 01/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
