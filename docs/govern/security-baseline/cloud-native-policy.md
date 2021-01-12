@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Cloud-native Security Baseline policy
@@ -35,7 +35,7 @@ Identity is becoming the new boundary control plane for security, taking over th
 
 A sample cloud-native policy for identity across cloud and on-premises directories, could include requirements like the following:
 
-- Authorized access to resources with role-based access control (RBAC), multi-factor authentication, and single sign-on (SSO).
+- Authorized access to resources with Azure role-based access control (Azure RBAC), multi-factor authentication, and single sign-on (SSO).
 - Quick mitigation of user identities suspected of compromise.
 - Just-in-time (JIT), just-enough access granted on a task-by-task basis to limit exposure of overprivileged admin credentials.
 - Extended user identity and access to policies across multiple environments through Azure Active Directory.

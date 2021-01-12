@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Standard enterprise governance guide: Improve the Security Baseline discipline
@@ -110,7 +110,7 @@ The governance MVP design will change to include new Azure policies and an imple
   - Audit and enforce the criticality of data and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.
   - Audit and enforce the use of approved images only.
 - Update Azure policies for all subscriptions that contain protected data classifications:
-  - Audit and enforce the use of standard Azure RBAC roles only.
+  - Audit and enforce the use of standard Azure roles only.
   - Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
   - Audit and enforce the application of an NSG to all NICs and subnets. The networking and IT security teams will define the NSG.
   - Audit and enforce the use of approved network subnet and virtual network per network interface.

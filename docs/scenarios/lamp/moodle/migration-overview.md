@@ -1,12 +1,13 @@
 ---
 title: Overview of Moodle manual migration
 description: Review the prerequisites and overall steps for manually migrating Moodle from an on-premises environment to Azure.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: think-tank
 ---
 
 # Overview of Moodle manual migration
@@ -19,14 +20,14 @@ Before starting migration, you need the following prerequisites:
 
 - On-premises software updated and patched to the following versions:
   - Ubuntu 18.04 LTS
-  - Nginx 1.14
+  - NGINX 1.14
   - MySQL 5.6, 5.7, or 8.0 database server. This guide uses Azure Database for MySQL.
   - PHP 7.2, 7.3, or 7.4
   - Moodle 3.8 or 3
 - Your Moodle website set to **Maintenance mode**.
 - Access to the on-premises infrastructure, to [back up the Moodle deployment and configurations](migration-pre.md#back-up-on-premises-data), including database configurations.
 - [Azure CLI](migration-pre.md#install-the-azure-cli) and [AzCopy](migration-pre.md#download-and-install-azcopy) installed on-premises.
-- An [Azure subscription](migration-pre.md#create-a-subscription) and [Azure Blob Storage Account](migration-pre.md#create-a-storage-account) created.
+- An [Azure subscription](migration-pre.md#create-a-subscription) and [Azure Blob Storage account](migration-pre.md#create-a-storage-account) created.
 
 ## Moodle migration process
 
@@ -40,4 +41,4 @@ The Moodle migration steps to Azure break down into the following three stages:
 
 ## Next steps
 
-Continue to [how to prepare for a Moodle migration](./migration-pre.md).
+Continue to [How to prepare for a Moodle migration](./migration-pre.md).

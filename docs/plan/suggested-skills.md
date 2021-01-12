@@ -7,6 +7,7 @@ ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Get started on a skills readiness path
@@ -31,7 +32,7 @@ The Cloud Adoption Framework guides readers through the full adoption lifecycle.
   - **Manage:** Gain the skills needed to manage a cloud environment.
   - **[Monitor](../manage/monitor/suggested-skills.md):** Gain the skills needed to monitor a cloud environment.
 
-Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
+Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition. As you evolve your learning paths take a view at how your employees and learners will want to get certification. The following resource will help map out the certification paths from understanding the portfolio available to the overview of the certification, the suggested steps and recommended training needed to certify. [Azure Certification Deck](https://aka.ms/azuretraincertdeck). 
 
 ## Microsoft Learn
 

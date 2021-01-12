@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- docutune:casing Hanu Scalr ARO POC Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
@@ -310,7 +311,7 @@ Contoso can deploy an Azure Automation account with preconfigured runbooks and s
 
 ### Partner optimization tools
 
-Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://www.scalr.com/cost-optimization).
+Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://scalr.com/pricing/).
 
 ## Step 4: Secure and manage
 

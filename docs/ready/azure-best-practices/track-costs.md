@@ -7,6 +7,7 @@ ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Track costs across business units, environments, or projects

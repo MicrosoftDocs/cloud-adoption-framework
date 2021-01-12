@@ -7,6 +7,7 @@ ms.date: 05/15/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore HDFS databox Avere HANA ACLs NetApp Isilon DFSR Cloudera -->
@@ -99,7 +100,7 @@ After you identify the Azure tools that best match your requirements, use the de
 |---|---|
 | [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) | Azure Blob storage is Microsoft's object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a specific data model or definition, such as text or binary data. <br><br> Blob storage is designed for: <li> Serving images or documents directly to a browser. <li> Storing files for distributed access. <li> Streaming video and audio. <li> Writing to log files. <li> Storing data for backup and restore, disaster recovery, and archiving. <li> Storing data for analysis by an on-premises or Azure-hosted service. |
 | [Azure Data Lake Storage gen 2](/azure/storage/blobs/data-lake-storage-introduction) | Blob storage supports Azure Data Lake Storage Gen2, Microsoft's enterprise big data analytics solution for the cloud. Azure Data Lake Storage Gen2 offers a hierarchical file system as well as the advantages of Blob storage, including low-cost, tiered storage; high availability; strong consistency; and disaster recovery capabilities. |
-| [Azure disk storage](/azure/virtual-machines/windows/managed-disks-overview) | Azure disk storage offers persistent, high-performance block storage to power Azure Virtual Machines. Azure disks are highly durable, secure, and offer the industry's only single-instance SLA for VMs that use [premium or ultra SSDs](/azure/virtual-machines/windows/disks-types). Azure disks provide high availability with availability sets and Availability Zones that map to your Azure Virtual Machines fault domains. In addition, Azure disks are managed as a top-level resource in Azure. Azure Resource Manager capabilities like role-based access control (RBAC), policy, and tagging by default are provided. |
+| [Azure disk storage](/azure/virtual-machines/windows/managed-disks-overview) | Azure disk storage offers persistent, high-performance block storage to power Azure Virtual Machines. Azure disks are highly durable, secure, and offer the industry's only single-instance SLA for VMs that use [premium or ultra SSDs](/azure/virtual-machines/windows/disks-types). Azure disks provide high availability with availability sets and Availability Zones that map to your Azure Virtual Machines fault domains. In addition, Azure disks are managed as a top-level resource in Azure. Azure Resource Manager capabilities like Azure role-based access control (Azure RBAC), policy, and tagging by default are provided. |
 | [Azure Files](/azure/storage/files/storage-files-planning) | Azure Files provides fully managed, native SMB file shares, without the need to run a VM. You can mount an Azure Files share as a network drive to any Azure VM or on-premises machine. |
 | [Azure File Sync](/azure/storage/files/storage-sync-files-planning) | Azure File Sync can be used to centralize your organization's file shares in Azure Files, while keeping the flexibility, performance, and compatibility of an on-premises file server. Azure File Sync transforms Windows Server into a quick cache of your Azure file share. |
 | [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) | The Azure NetApp Files service is an enterprise-class, high-performance, metered file storage service. Azure NetApp Files supports any workload type and is highly available by default. You can select service and performance levels and set up snapshots through the service. |
@@ -119,7 +120,7 @@ For help with planning the right solution for Azure disks, see [Backup and disas
 
 To help you protect your data in the cloud, Azure Storage offers several best practices for data security and encryption for data at rest and in transit. You can:
 
-- Secure the storage account by using RBAC and Azure AD.
+- Secure the storage account by using Azure RBAC and Azure AD.
 - Secure data in transit between an application and Azure by using client-side encryption, HTTPS, or SMB 3.0.
 - Set data to be automatically encrypted when it's written to Azure Storage by using Azure Storage encryption.
 - Grant delegated access to the data objects in Azure Storage by using shared access signatures.
