@@ -237,7 +237,7 @@ Enterprise scale provides long-term self-sufficiency and operational excellence 
 
 If you start small and expand, there are ways to get to self-sufficiency, adoption velocity, and operational excellence. Use the governance or the management methodologies inside the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design [Cloud Adoption Framework enterprise-scale design guidelines](/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines) to iteratively improve your design.
 
-To learn more about operational excellence, see [Deliver operational excellence during digital transformation](/../../get-started/operational-excellence.md).
+To learn more about operational excellence, see [Deliver operational excellence during digital transformation](/azure/cloud-adoption-framework/get-started/operational-excellence).
 
 ## Compliance considerations
 
@@ -248,7 +248,7 @@ Consider the following issues around compliance for your organization:
 
 Your organization might need to have a particular workload or application that needs to be compliant in a short amount of time. This requirement may affect your choice.
 
-The start small and expand approach uses an iterative approach to compliance. Use Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see [Govern methodology for the cloud](/../../govern/methodology.md) and [IT management and operations in the cloud](/../../manage/considerations/).
+The start small and expand approach uses an iterative approach to compliance. Use Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see [Govern methodology for the cloud](/azure/cloud-adoption-framework/govern/methodology) and [IT management and operations in the cloud](/azure/cloud-adoption-framework/manage/considerations/).
 
 The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals.
 
@@ -266,7 +266,7 @@ Both implementation offer best practices. Start small and expand lets you add be
 
 Enterprise scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
-For more information about best practices, see [Best practices for Azure readiness](/../azure-best-practices/).
+For more information about best practices, see [Best practices for Azure readiness](/azure/cloud-adoption-framework/ready/azure-best-practices/).
 
 Both methodologies offer automation capabilities.
 
