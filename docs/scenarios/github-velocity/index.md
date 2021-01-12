@@ -1,13 +1,13 @@
 ---
 title: How GitHub accelerates cloud adoption
 description: Companies can take advantage of GitHub’s connectedness to the open-source community and find thousands of reiterated, enhanced, and ready-to-deploy cloud solution examples from organizations that have successfully adopted Azure services. 
-author: JanetCThomas
+author: nkpatterson
 ms.author: janet
 ms.date: 1/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # How GitHub accelerates cloud adoption
