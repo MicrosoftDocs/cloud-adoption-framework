@@ -1,12 +1,13 @@
 ---
 title: How to prepare for a Moodle migration
 description: Learn how to prepare for a Moodle migration. See how to back up Moodle files and create resources that are needed for migration.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: think-tank
 ---
 
 # How to prepare for a Moodle migration
