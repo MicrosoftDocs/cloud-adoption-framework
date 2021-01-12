@@ -1,12 +1,13 @@
 ---
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch 
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: think-tank
 ---
 
 # How to follow up after a Moodle migration
@@ -25,7 +26,7 @@ After migrating Moodle, you need to take care of some post-migration tasks to co
 
 ## Controller virtual machine scale set
 
-Take the following steps to finish configuring your virtual machine scale set.
+Take the following steps to finish configuring your virtual machine scale set. You will need to SSH to your virtual machine scale set instance by using the private IP address, as described in [Access the virtual machine scale set](azure-infra-config.md#access-the-virtual-machine-scale-set).
 
 ### Update log paths
 
@@ -108,7 +109,7 @@ Take these steps to complete the controller virtual machine configuration.
 
     1. Press CTRL+O to save your changes and CTRL+X to close the file.
 
-### Update the local HTML copy
+### Update local HTML copy
 
 The local copy of the Moodle HTML site content, `/moodle/html/moodle`, is created in the virtual machine scale set in this folder: `/var/www/html/moodle`. The local copy is updated only when the time stamp changes. Enter this command in the controller virtual machine to update the time stamp:
 
@@ -286,6 +287,6 @@ When Moodle is in maintenance mode and you try to leave that mode, sometimes you
 
 ## Next steps
 
-- [Azure Database for MySQL documentation](https://docs.microsoft.com/azure/mysql/)
-- [What are virtual machine scale sets?](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview)
-- [Storage account overview](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
+- [Azure Database for MySQL documentation](/azure/mysql/)
+- [What are virtual machine scale sets?](/azure/virtual-machine-scale-sets/overview)
+- [Storage account overview](/azure/storage/common/storage-account-overview)

@@ -1,12 +1,13 @@
 ---
 title: How to set up Moodle worker nodes
 description: Learn how to configure a virtual machine scale set for Moodle. See how to access the scale set from the controller by using a private IP address.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: think-tank
 ---
 
 # How to set up Moodle worker nodes
@@ -20,12 +21,6 @@ A virtual machine scale set instance is assigned a private IP address. You can o
 ### Access the virtual machine scale set
 
 Follow these steps to access the virtual machine scale set:
-
-1. Enable your gateway to connect the virtual machine scale set instance to a private IP address.
-
-1. Follow [How to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to use the gateway to access the virtual machine scale set instance.
-
-1. Set your virtual machine scale set to password-enabled.
 
 1. Determine the private IP address that Azure uses for your virtual machine scale set instance:
 

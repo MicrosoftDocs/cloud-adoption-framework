@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Update Management" -->
@@ -47,7 +48,7 @@ In addition to assessments and recommendations, Azure Security Center provides o
 - **Just-in-time (JIT) access.** Reduce your network attack surface with just-in-time, controlled access to management ports on Azure VMs.
   - Having VM RDP port 3389 open on the internet exposes VMs to continual activity from bad actors. Azure IP addresses are well-known, and hackers continually probe them for attacks on open 3389 ports.
   - Just-in-time uses network security groups (NSGs) and incoming rules that limit the amount of time that a specific port is open.
-  - With just-in-time access enabled, Security Center checks that a user has role-based access control (RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
+  - With just-in-time access enabled, Security Center checks that a user has Azure role-based access control (Azure RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
 - **Adaptive application controls.** Keep software and malware off VMs by controlling which applications run on them, by using dynamic allow lists.
   - Adaptive application controls allow you to approve applications, and prevent rogue users or administrators from installing unapproved or vetting software applications on your VMs.
     - You can block or alert attempts to run malicious applications, avoid unwanted or malicious applications, and ensure compliance with your organization's application security policy.
@@ -146,11 +147,11 @@ Azure provides the following solutions:
 
 ## Best practice: Review subscriptions and resource permissions
 
-As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including role-based access control (RBAC) to authorize permissions to access Azure resources.
+As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including Azure role-based access control (Azure RBAC) to authorize permissions to access Azure resources.
 
-- RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
-- RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
-- RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
+- Azure RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
+- Azure RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
+- Azure RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
 Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
@@ -160,8 +161,8 @@ Ensure that admins with Azure access can access only resources that you want to 
 
 **Learn more:**
 
-- Learn about [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview).
-- Learn to manage access via [RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+- Learn about [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
+- Learn to manage access via [Azure RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 - Learn about [custom roles](/azure/role-based-access-control/custom-roles).
 
 ## Best practice: Review audit and security logs

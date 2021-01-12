@@ -2,11 +2,12 @@
 title: "Skills readiness for cloud monitoring"
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 08/26/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore kusto ITIL -->
@@ -19,7 +20,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Fundamentals
 
-- Introduction to [Azure Resource Manager](/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
+- Introduction to [Azure Resource Manager](/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, Azure role-based access control (Azure RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
 
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy diagnostic settings, audit guest configuration settings, and more.
 
@@ -28,7 +29,7 @@ Developing the necessary skills can be accelerated with the following learning p
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
 
-- Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [implement resource management security in Azure](/learn/paths/implement-resource-mgmt-security).
+- Learn how to secure resources using policy, Azure role-based access control, and other Azure services by viewing [implement resource management security in Azure](/learn/paths/implement-resource-mgmt-security).
 
 - [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
 
