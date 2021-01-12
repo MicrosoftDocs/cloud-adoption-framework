@@ -87,19 +87,19 @@ Turn your knowledge of Azure into official recognition with [Azure certification
 
 ## Azure DevOps and project management
 
-The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern service management practices, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
+The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern practices to manage services, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
 
-As part of migrating to a cloud monitoring platform, the IT team responsible for managing monitoring in the enterprise needs to include agile training and participation in DevOps activities. This also includes following the _Dev_ in DevOps by taking requirements and turning into organized agile requirements, in order to deliver minimally viable monitoring solutions that are refined iteratively and in line with business needs. For source control to manage the iterative monitoring solution packages and any other related collateral, connect your Azure DevOps Server project with a GitHub Enterprise Server repository. This provides a link between GitHub commits and pull requests to work items. You can use GitHub Enterprise for development in support of continuous monitoring integration and deployment, while using Azure Boards to plan and track your work.
+As part of migrating to a cloud monitoring platform, the IT team responsible for managing monitoring in the enterprise needs to include agile training and participation in DevOps activities. This also includes following the _Dev_ in DevOps by taking requirements and turning into organized agile requirements, in order to deliver minimally viable monitoring solutions that are refined iteratively and in line with business needs. For source control to manage the iterative monitoring solution packages and any other related collateral, connect your Azure DevOps Server project with a GitHub Enterprise Server repository. This provides a link from commits and pull requests in GitHub to work items. You can use GitHub Enterprise for development in support of continuous monitoring integration and deployment, while using Azure Boards to plan and track your work.
 
 To learn more, review the following:
 
 - [Get started with Azure DevOps](/learn/modules/get-started-with-devops).
 
-- [Learn about DevOps dojo white belt foundation](/learn/paths/devops-dojo-white-belt-foundation)
+- [Learn about DevOps Dojo white belt foundation](/learn/paths/devops-dojo-white-belt-foundation).
 
-- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices)
+- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices).
 
-- [Automate your deployments with Azure DevOps](/learn/paths/automate-deployments-azure-devops)
+- [Automate your deployments with Azure DevOps](/learn/paths/automate-deployments-azure-devops).
 
 ## Other considerations
 
