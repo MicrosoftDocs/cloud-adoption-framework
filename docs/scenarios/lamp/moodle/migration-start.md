@@ -100,11 +100,9 @@ Before you start the import process, it's recommended to back up the default or 
 
 ### Import Moodle files to Azure
 
-Once extracted, you can find the `storage` directory under `home/azureadmin`. This `storage` directory contains `moodle`
--moodledata`, and configuration directories, and a database backup file. You copy each of these files and directories to the target locations in the following steps:
+Once extracted, you can find the `storage` directory under `home/azureadmin`. This `storage` directory contains `moodle`, `moodledata`, and `configuration` directories, and a database backup file. You copy each of these files and directories to the target locations in the following steps:
 
-1. Copy the `moodle` and `moodledata` directories to a shared location
--/moodle`.
+1. Copy the `moodle` and `moodledata` directories to a shared location under `/moodle`.
 
    ```bash
    cp -rf /home/azureadmin/storage/moodle /moodle/html/
