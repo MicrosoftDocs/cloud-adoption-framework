@@ -43,7 +43,7 @@ During the readiness phase, architects are called upon to architect solutions th
 
 ## Deeper skills exploration
 
-Beyond these initial options for developing skills, there are a variety of learning options available.
+Various learning options beyond these initial options are available for developing skills.
 
 ### Typical mappings of cloud IT roles
 

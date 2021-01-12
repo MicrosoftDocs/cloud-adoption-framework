@@ -74,7 +74,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Deeper skills exploration
 
-Beyond these initial options for developing skills, there are a variety of learning options available.
+Various learning options beyond these initial options are available for developing skills.
 
 ### Typical mappings of cloud IT roles
 
