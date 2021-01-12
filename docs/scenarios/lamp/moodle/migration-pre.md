@@ -38,7 +38,7 @@ Skip this step if you already have an Azure subscription.
 
 If you don't have an Azure subscription, you can [create one for free](https://azure.microsoft.com/free/). You can also either set up a [pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/), or you can create a subscription in the Azure portal.
 
-- To use the Azure portal to create a subscription, open [Subscriptions](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
+- To use the Azure portal to create a subscription, open [**Subscriptions**](https://ms.portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade), select **Add**, and enter the required information.
 
   ![Screenshot of the Subscriptions page in the Azure portal.](./images/azure-subscriptions-page.png)
 
@@ -54,14 +54,14 @@ If you don't have an Azure subscription, you can [create one for free](https://a
 
 ## Create a resource group
 
-Once you set up your Azure subscription, create a resource group in Azure. You can either use the Azure portal **or** the Azure CLI to create a resource group.
+Once you set up your Azure subscription, create a resource group in Azure using either the Azure portal or the Azure CLI.
 
 - To use the Azure portal, follow these steps:
 
-  1. Open [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceGroups), and select **Add**.
-  
+  1. Open [**Resource Groups**](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceGroups), and select **Add**.
+
   1. Enter your subscription name, a resource group name, and a region. See [Data residency in Azure](https://azure.microsoft.com/global-infrastructure/data-residency/) for a list of available regions. Make a note of the name of the resource group that you enter so that you can use that name in later steps.
-  
+
   1. Select **Review + create**.
 
   ![Screenshot of the Create a resource group page in the Azure portal, with subscription, resource group, and region boxes and a Review + create button.](./images/resource-group.png)
@@ -82,11 +82,11 @@ Once you set up your Azure subscription, create a resource group in Azure. You c
 
 Next, create a storage account within the resource group that you just created. You'll use this storage account to back up your on-premises Moodle data.
 
-You can either use the Azure portal **or** the Azure CLI to create a storage account.
+You can use either the Azure portal or the Azure CLI to create a storage account.
 
 - To use the Azure portal, follow these steps:
 
-  1. Open [Create storage account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount).
+  1. Go to [**Create storage account**](https://ms.portal.azure.com/#create/Microsoft.StorageAccount).
 
   1. Enter the following information:
 
@@ -94,9 +94,9 @@ You can either use the Azure portal **or** the Azure CLI to create a storage acc
      - The name of the resource group that you just created
      - A storage account name
      - Your region
-   
+
   1. For **Account kind**, select **BlobStorage** from the drop-down list.
-  
+
   1. For **Replication**, select **Read-access geo-redundant storage (RA-GRS)** from the drop-down list.
 
   1. Select **Review + create**.
@@ -131,7 +131,7 @@ Before backing up your on-premises Moodle data, turn on **Maintenance mode** on 
    sudo /usr/bin/php admin/cli/maintenance.php
    ```
 
-When backing up on-premises Moodle and moodledata files, configurations, and databases, the recommendation is to back up these resources to a single directory. The following diagram summarizes this idea:
+You should back up on-premises Moodle and moodledata files, configurations, and databases to a single directory. The following diagram summarizes this recommendation:
 
 ![Diagram showing the structure of the Moodle backup storage directory.](./images/directory-structure.png)
 
@@ -167,7 +167,7 @@ To back up configuration files, follow these steps:
    mkdir configuration
    ```
 
-2. Enter these commands to copy the PHP and nginx configuration files:
+2. Enter these commands to copy the PHP and NGINX configuration files:
 
    ```bash
    cp -R /etc/php /home/azureadmin/storage/configuration/
