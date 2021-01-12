@@ -42,13 +42,13 @@ Throughout the cloud adoption lifecycle, the various teams may require support t
 
 Few corporations have the diversity of skills required to support strategy, planning, readiness, adoption, governance, and management. Partners and other support models are often necessary to fill in the gaps in the team's skills and responsibilities.
 
-Various partnership options can help develop needed skills, augment staffing requirement, or completely offload specific processes.
+Various partnership options can help develop needed skills, augment staffing requirement, or completely offload-specific processes.
 
 ## Partnership options
 
 You are not alone in your cloud journey. There are several options to support your team throughout your cloud adoption journey.
 
-- **Azure solution providers (partners):** Get connected with Azure expert managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
+- **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
 - **Azure Migration Program (AMP):** The AMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
 
@@ -58,7 +58,7 @@ Microsoft certified solution providers specialize in providing modern customer s
 
 **[Find a Cloud Solution Provider (CSP)](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
 
-Azure expert managed services providers (MSP) have undergone a third-party audit to validate a higher tier of capability, demonstrated through certified staff headcounts, customer references, annual consumption of Azure at scale, and other criteria.
+Azure expert-managed services providers (MSP) have undergone a third-party audit to validate a higher tier of capability, demonstrated through certified staff headcounts, customer references, annual consumption of Azure at scale, and other criteria.
 
 **[Find a managed service partner](https://www.microsoft.com/solution-providers/search?cacheid=16a3b49b-fef2-449d-bdf0-628008114cca).** An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
 
@@ -90,7 +90,7 @@ If you have questions or need help, [create a support request](https://portal.az
 
 ## Shortlist of partner options
 
-During strategy development, its hard to define specific partnership needs. During development of the cloud adoption plan and skilling plan, those needs will come into focus.
+During strategy development, it's hard to define specific partnership needs. During development of the cloud adoption plan and skilling plan, those needs will come into focus.
 
 But, based on the culture and maturity of your team, it may be possible to decide on a partnership option that is more aligned with your expected needs.
 
