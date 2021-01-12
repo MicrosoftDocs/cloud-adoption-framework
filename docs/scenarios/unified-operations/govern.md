@@ -1,5 +1,5 @@
 ---
-title: "Govern hybrid and multicloud deployments"
+title: "Govern your portfolio of hybrid and multicloud workloads"
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-# Govern hybrid and multicloud deployments
+# Govern your portfolio of hybrid and multicloud workloads
 
 The cloud has fundamental changed IT governance. Human intense, manual review and change controls processes can now be replaced with automated guardrails and enforcement tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected & often times automated. The key to this new found freedom is the infrastructure as code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 

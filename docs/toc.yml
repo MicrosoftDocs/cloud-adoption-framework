@@ -77,17 +77,17 @@ items:
           - name: Intro to unified operations
             href: scenarios/unified-operations/unified-operations.md
 
-        - name: Strategy
+        - name: Build an initial strategy
           href: scenarios/unified-operations/strategy.md
-        - name: Plan
+        - name: Define your plan
           href: scenarios/unified-operations/plan.md
-        - name: Ready
+        - name: Prepare your environments
           href: scenarios/unified-operations/ready.md
-        - name: Migrate
+        - name: Migrate to the cloud
           href: scenarios/unified-operations/migrate.md
-        - name: Govern
+        - name: Govern your portfolio
           href: scenarios/unified-operations/govern.md
-        - name: Manage
+        - name: Manage your portfolio
           href: scenarios/unified-operations/manage.md
 
         - name: Well-Architected hybrid workloads (Release TBD)

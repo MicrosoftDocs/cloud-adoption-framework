@@ -1,9 +1,9 @@
 ---
-title: "Introduction to the Hybrid and Multicloud scenario"
+title: "Introduction to Hybrid and Multicloud"
 description: Describe the scenario
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/01/2020
+ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -12,10 +12,6 @@ ms.subservice: overview
 # Hybrid and Multicloud
 
 This series of articles in the Cloud Adoption Framework outline the scenario of Hybrid and Multicloud to guide your holistic cloud adoption journey.
-
-## Executive Summary
-
-Michael to fill in information outlining why this scenario is important. "orientation towards market reality" "This is a good business decision"
 
 ## Hybrid and Multicloud definitions
 
