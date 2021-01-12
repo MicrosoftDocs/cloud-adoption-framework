@@ -123,6 +123,8 @@ items:
         href: strategy/monitoring-strategy.md
       - name: Responsible AI
         href: strategy/responsible-ai.md
+      - name: Accelerate cloud adoption with GitHub
+        href: scenarios/github-velocity/index.md 
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
