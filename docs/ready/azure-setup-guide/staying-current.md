@@ -2,13 +2,13 @@
 title: Stay current with Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to stay current and manage change in today's cloud cadence.
 author: jelledruyts
-ms.author: andym
+ms.author: brblanch
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-new, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC, setup
 ---
 
 <!-- docutune:casing AzAdvertizer "Azure Info Hub" "Azure Charts" "Azure Weekly" -->
@@ -34,7 +34,7 @@ For deeper content that helps you stay current with Azure topics, review these r
 
 - [Azure Friday](https://channel9.msdn.com/shows/Azure-Friday): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights. Subscribe via the [Azure Friday RSS feed](https://channel9.msdn.com/Shows/Azure-Friday/feed).
 - [Azure Charts](https://azurecharts.com): This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes. \*
-- [AzAdvertizer](https://www.azadvertizer.net): Release and change tracking on Azure governance capabilities such as Azure Policy, policy initiatives, policy aliases and role-based access control (RBAC). \*
+- [AzAdvertizer](https://www.azadvertizer.net): Release and change tracking on Azure governance capabilities such as Azure Policy, policy initiatives, policy aliases and Azure role-based access control (Azure RBAC). \*
 - [Azure Weekly](https://azureweekly.info)*
   - This newsletter provided by [endjin.com](https://endjin.com) includes a summary of the week's top news about Microsoft Azure. It also includes interesting historical content. Subscribe via the [Azure Weekly email](https://azureweekly.info). \*
 

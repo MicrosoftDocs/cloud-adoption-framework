@@ -2,11 +2,12 @@
 title: Azure enterprise scaffold is now the Cloud Adoption Framework for Azure
 description: The Azure enterprise scaffold has been integrated into the Microsoft Cloud Adoption Framework for Azure.
 author: rdendtler
-ms.author: rodend
+ms.author: brblanch
 ms.date: 09/22/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
+ms.custom: think-tank
 ROBOTS: NOINDEX,NOFOLLOW
 ---
 

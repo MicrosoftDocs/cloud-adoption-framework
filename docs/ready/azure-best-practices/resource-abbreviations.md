@@ -7,7 +7,7 @@ ms.date: 12/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness, fasttrack-edit, internal
+ms.custom: internal, readiness, fasttrack-edit
 ---
 
 # Recommended abbreviations for Azure resource types
@@ -154,11 +154,13 @@ This list provides recommended abbreviations for various Azure resource types to
 |--|--|
 | Automation account | `aa-` |
 | Azure Monitor action group | `ag-` |
+| Azure Purview instance | `pview-` |
 | Blueprint | `bp-` |
 | Blueprint assignment | `bpa-` |
 | Key vault | `kv-` |
 | Log Analytics workspace | `log-` |
 | Application Insights | `appi-` |
+| Azure Purview | `pvw-` |
 
 ## Migration
 

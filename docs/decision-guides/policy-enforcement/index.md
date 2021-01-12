@@ -7,7 +7,7 @@ ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Policy enforcement decision guide
@@ -31,7 +31,7 @@ For single subscription and simple cloud deployments, many corporate policies ca
 - [Deployment templates](../resource-consistency/index.md) can provision resources with standardized structure and configuration.
 - [Tagging and naming standards](../resource-tagging/index.md) can help organize operations and support accounting and business requirements.
 - Traffic management and networking restrictions can be implemented through [Software Defined Networking](../software-defined-network/index.md).
-- [Role-based access control](../identity/index.md) can secure and isolate your cloud resources.
+- [Azure role-based access control](../identity/index.md) can secure and isolate your cloud resources.
 
 Start your cloud policy enforcement planning by examining how the application of the standard patterns discussed throughout these guides can help meet your organizational requirements.
 

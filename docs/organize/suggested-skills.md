@@ -7,7 +7,7 @@ ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Build technical skills
@@ -35,7 +35,7 @@ During the readiness phase, technical staff have to create a migration landing z
 - [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure): Use the Azure portal to create a virtual machine.
 - [Azure network services](/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 - [Azure compute options](/learn/modules/intro-to-azure-compute): Review the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
+- [Secure resources with Azure RBAC](/learn/modules/secure-azure-resources-with-rbac): Use Azure role-based access control (Azure RBAC) to secure resources.
 - [Azure Storage options](/learn/modules/intro-to-data-in-azure): Learn about the benefits of Azure data storage.
 
 During the readiness phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
@@ -50,11 +50,7 @@ The following information describes resources for additional learning.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and its partners offer options to help all audiences develop their skills for using Azure services.
-
-- [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
-
-We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+Microsoft and its partners offer options to help all audiences develop their skills for using Azure services. We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ### Microsoft Learn
 

@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Governance design for a simple workload
@@ -65,7 +65,7 @@ Since the **account owner** is currently the only user with permission to add th
 ![The Azure account owner adds the **workload owner** to the subscription](../../_images/govern/design/governance-1-5.png)
 *Figure 5: The Azure account owner adds the workload owner to the subscription.*
 
-The Azure **account owner** grants permissions to the **workload owner** by assigning a [role-based access control (RBAC)](/azure/role-based-access-control) role. The RBAC role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
+The Azure **account owner** grants permissions to the **workload owner** by assigning an [Azure role](/azure/role-based-access-control). The Azure role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
 
 Notice that in this example, the **account owner** has assigned the [built-in **owner** role](/azure/role-based-access-control/built-in-roles#owner):
 

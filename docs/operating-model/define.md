@@ -7,7 +7,7 @@ ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.custom: operating-model
+ms.custom: internal, operating-model
 ---
 
 # Define your cloud operating model

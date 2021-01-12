@@ -7,7 +7,7 @@ ms.date: 12/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness, fasttrack-edit, internal
+ms.custom: internal, readiness, fasttrack-edit
 ---
 
 # Define your tagging strategy

@@ -7,6 +7,7 @@ ms.date: 05/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Skills readiness path during the planning phase of a migration journey
@@ -57,7 +58,7 @@ During the readiness phase, technical staff creates a migration landing zone cap
 - [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure). Create a virtual machine by using the Azure portal.
 - [Azure networking](/learn/modules/intro-to-azure-networking). Learn the basics of Azure networking and how Azure networking helps you improve resiliency and reduce latency.
 - [Azure compute options](/learn/modules/intro-to-azure-compute). Learn about the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac). Use RBAC to secure resources.
+- [Secure resources with Azure RBAC](/learn/modules/secure-azure-resources-with-rbac). Use Azure RBAC to secure resources.
 - [Data storage options](/learn/modules/intro-to-data-in-azure). Learn about the benefits of Azure data storage.
 
 ## Organizational skills

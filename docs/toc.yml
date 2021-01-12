@@ -123,6 +123,8 @@ items:
         href: strategy/monitoring-strategy.md
       - name: Responsible AI
         href: strategy/responsible-ai.md
+      - name: Accelerate cloud adoption with GitHub
+        href: scenarios/github-velocity/index.md 
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
@@ -274,7 +276,7 @@ items:
             href: ready/considerations/storage-options.md
           - name: Review data options
             href: ready/considerations/data-options.md
-          - name: Role-based access control
+          - name: Azure role-based access control
             href: ready/considerations/roles.md
           - name: Create hybrid cloud consistency
             href: ready/considerations/hybrid-consistency.md
@@ -446,8 +448,6 @@ items:
               href: scenarios/lamp/moodle/migration-arch.md
             - name: Moodle migration resources
               href: scenarios/lamp/moodle/migration-resources.md
-            - name: Virtual network gateway connection
-              href: scenarios/lamp/moodle/vpn-gateway.md
             - name: Migration steps
               href: scenarios/lamp/moodle/migration-start.md
             - name: Set up Moodle worker nodes
@@ -474,7 +474,7 @@ items:
             href: migrate/azure-best-practices/contoso-migration-rebuild.md
           - name: Refactor TFS to Azure DevOps Services
             href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
-            
+
         - name: Java apps
           items:
           - name: Migration overview
@@ -719,6 +719,11 @@ items:
           - name: Exadata
             href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
 
+        - name: Multitenant migration
+          items:
+          - name: Azure Lighthouse for scale migration
+            href: https://docs.microsoft.com/azure/lighthouse/how-to/migration-at-scale?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
         - name: Mainframes
           items:
           - name: Overview
@@ -896,7 +901,7 @@ items:
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
             href: innovate/ai/knowledge-mining.md  
-            
+
       - name: Best practices
         items:
         - name: Overview and Azure toolchain
