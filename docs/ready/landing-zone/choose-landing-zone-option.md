@@ -75,7 +75,7 @@ The following table summarizes considerations for the different options.
         Provides long-term self-sufficiency?
     :::column-end:::
     :::column:::
-        Requires CAF Govern and Manage methodologies to achieve long-term self-sufficiency.
+        Requires Cloud Adoption Framework Govern and Manage methodologies to achieve long-term self-sufficiency.
     :::column-end:::
     :::column:::
         Yes. Enterprise-scale architecture -> 1:N landing zones approach and architecture prepare your organization for long-term self-sufficiency. Provides reserved instances to get started.
@@ -106,7 +106,7 @@ The following table summarizes considerations for the different options.
         Requires Cloud Adoption Framework Govern and Manage methodologies to achieve operational excellence.
     :::column-end:::
     :::column:::
-        Yes. Enables autonomy for platform and application teams with a policy driven governance and management.
+        Yes. Enables autonomy for platform and application teams with a policy-driven governance and management.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -173,10 +173,10 @@ The following table summarizes considerations for the different options.
         Automation capabilities like infrastructure as code (IaC) and Azure DevOps?
     :::column-end:::
     :::column:::
-        Yes: Azure Resource Manager (ARM), Policy, and Blueprint. Can create your own continuous integration/continuous development pipeline.
+        Yes: Azure Resource Manager, Azure Policy, and Azure Blueprints. Can create your own continuous integration/continuous development pipeline.
     :::column-end:::
     :::column:::
-        Yes: ARM, Policy, GitHub/AzureDevOps. CI/CD pipeline option are included.
+        Yes: Azure Resource Manager, Azure Policy, and GitHub/AzureDevOps. CI/CD pipeline option are included.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -210,7 +210,7 @@ The following table summarizes considerations for the different options.
 
 ## Initial considerations
 
-Which operating model better describes your organization?
+Which operating model better describes your organization? Be aware of not just how your organization looks now but what you expect and want it to be in three months to a year or further.
 
 - Centralized operations: In this small environment, centralized teams for IT operations, security, and other roles manage production and workloads.
 
@@ -218,11 +218,9 @@ Which operating model better describes your organization?
 
 Centralized operations favor a start-small-and-expand approach. Enterprise operations might be better addressed with enterprise scale.
 
-Be aware of not just how your organization looks now but what you expect and want it to be in three months to a year or further.
+Do you need a baseline architecture or environment? The start-small-and-expand approach offers a simple starting point where you can build your own solution. The enterprise-scale approach provides an environment for the entire Azure tenant, which includes cloud-native operations.
 
 For more information about operations types, see [Compare common cloud operating models](/azure/cloud-adoption-framework/operating-model/compare).
-
-Do you need a baseline architecture or environment? The start-small-and-expand approach offers a simple starting point where you can build your own solution. The enterprise-scale approach provides an environment for the entire Azure tenant, which includes cloud-native operations.
 
 ## Adoption plan considerations
 
@@ -263,7 +261,7 @@ Deploying your landing zone or landing zones raises several considerations for c
 
 - Automation capabilities like IaC and Azure DevOps.
 
-Both implementation offer best practices. Start small and expand lets you add best practices using CAF methodologies to apply security, governance, and compliance.
+Both implementation offer best practices. Start small and expand lets you add best practices using Cloud Adoption Framework methodologies to apply security, governance, and compliance.
 
 Enterprise scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
@@ -271,10 +269,10 @@ For more information about best practices, see [best practices for Azure readine
 
 Both methodologies offer automation capabilities.
 
-- Start small and expand: Azure Resource Manager templates, Azure Policy and Blueprint. Can create your own CI/CD pipeline.
-- Enterprise scale: Resource Management templates, Policy, GitHub/AzureDevOps, CI/CD pipeline option included.
+- Start small and expand: ARM templates, Azure Policy, and Azure Blueprints. Can create your own CI/CD pipeline.
+- Enterprise scale: ARM templates, Azure Policy, GitHub/AzureDevOps, and CI/CD pipeline option included.
 
-Start small and expand uses Azure Blueprints, Azure Policy, and Resource Management templates. Enterprise scale offers several different deployments.
+Start small and expand uses ARM templates, Azure Policy, and Azure Blueprints. Enterprise scale offers several different deployments.
 
 Whether you implement start small and expand or enterprise scale, you can use templates and a portal-based experience. You can include IaC later in the process. Explore this [IaC overview](/dotnet/architecture/cloud-native/infrastructure-as-code) for more information.
 
