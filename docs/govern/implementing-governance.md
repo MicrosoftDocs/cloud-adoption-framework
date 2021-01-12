@@ -140,6 +140,7 @@ In this stage the controls of the service outlined in the service guidance are i
 ### Deploy Policy Control
 
 Finally, all controls are interpreted into Azure policy.
+
 | Process | Description |
 |--|--|
 | <br> ![Infographic of Deploy Policy Control](../_images/govern/deploy-policy-control.png) | Controls need to be passed to engineers to coded up and scheduled into releases.  |
