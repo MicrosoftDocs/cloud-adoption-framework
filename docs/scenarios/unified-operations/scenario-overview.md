@@ -37,7 +37,7 @@ This scenario is designed to guide the end-2-end customer journey, throughout th
 
 **Influence changes to individual workloads (Central IT):** As hybrid and multicloud controls improve, the central IT teams will encounter requirements that depend on knowledge of the architecture behind individual workloads. Use the Well-architected guidance to help workload owners understand potential improvements to their workloads that will improve hybrid and multicloud operations.
 
-**Optimize individual workloads (Workload teams):** Workload owners should start with the well-architected guidance to understand the best ways to integrate hybrid and multicloud strategies into their workloads. If the team is also supported by central IT, this guidance will provide insights into best practices and architectures that the Central IT team can add to accelerate your workload development.
+**Optimize individual workloads (Workload teams):** Workload owners should start with the well-architected guidance to understand the best ways to integrate hybrid and multicloud strategies into their workloads. If the team is also supported by central IT or a CCoE team, this guidance will provide insights into best practices and architectures that the Central IT team is typically accountable to deliver to accelerate your workload development.
 
 **Processes to onboard individual assets:** Leverage the best practices section to execute a series of processes to onboard all of your hybrid assets.
 
