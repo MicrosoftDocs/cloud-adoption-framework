@@ -11,7 +11,7 @@ ms.subservice: operate
 
 ## Connect Azure Arc enabled servers to Azure Security Center
 
-The following README will guide you on how to onboard an Azure Arc enabled server on to [Azure Security Center (ASC)](https://docs.microsoft.com/en-us/azure/security-center/), so you can start collecting security-related configurations as well as event logs to recommend actions and improve your overall Azure security posture.
+The following README will guide you on how to onboard an Azure Arc enabled server on to [Azure Security Center (ASC)](https://docs.microsoft.com/azure/security-center/), so you can start collecting security-related configurations as well as event logs to recommend actions and improve your overall Azure security posture.
 
 In this guide, you will enable and configure Azure Security Center Standard tier on your Azure subscription, which will provide you with advanced threat protection (ATP) and detection capabilities. To complete this process you will:
 
@@ -48,7 +48,7 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
     ![Screenshot of Azure Portal showing Azure Arc enabled server detail](./02.png)
 
-* [Install or update Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
+* [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
 * Create Azure service principal (SP)
 
@@ -77,7 +77,7 @@ In this guide, you will enable and configure Azure Security Center Standard tier
     }
     ```
 
-  > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest).**
+  > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
 
 ## Onboarding Azure Security Center
 

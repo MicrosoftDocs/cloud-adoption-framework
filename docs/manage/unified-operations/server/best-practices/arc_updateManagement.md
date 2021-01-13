@@ -11,7 +11,7 @@ ms.subservice: operate
 
 ## Enable Update Management on Azure Arc enabled servers
 
-The scenario will show you how to onboard Azure Arc enabled servers to [Update Management](https://docs.microsoft.com/en-us/azure/automation/update-management/overview), so that you can manage operating system updates for your Azure Arc enabled servers running Windows or Linux.
+The scenario will show you how to onboard Azure Arc enabled servers to [Update Management](https://docs.microsoft.com/azure/automation/update-management/overview), so that you can manage operating system updates for your Azure Arc enabled servers running Windows or Linux.
 
 In this guide, you will create and configure an Azure Automation account and Log Analytics workspace to support Update Management for Azure Arc enabled servers by doing the following:
 
@@ -44,7 +44,7 @@ In this guide, you will create and configure an Azure Automation account and Log
 
     ![Screenshot showing Azure Portal with Azure Arc enabled server](./02.png)
 
-* [Install or update Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.14 or later. Use ```az --version``` to check your current installed version.
+* [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.14 or later. Use ```az --version``` to check your current installed version.
 
 ## Configuring Update Management
 
@@ -127,7 +127,7 @@ Now that we have configured the Update Management solution, we can deploy update
 * From the Automation Account Update Management blade, you should be able to see your scheduled Update deployment from the Deployment Schedules tab.
     ![Screenshot showing scheduled update](./24.png)
 
-The Update Management solution will now update your Azure Arc enabled servers in the deployment window based on the schedule you defined. There is a lot more you can do with [Update Management](https://docs.microsoft.com/en-us/azure/automation/update-management/overview) that is outside the scope of this scenario. Review the [documentation](https://docs.microsoft.com/en-us/azure/automation/update-management/overview) for more information.
+The Update Management solution will now update your Azure Arc enabled servers in the deployment window based on the schedule you defined. There is a lot more you can do with [Update Management](https://docs.microsoft.com/azure/automation/update-management/overview) that is outside the scope of this scenario. Review the [documentation](https://docs.microsoft.com/azure/automation/update-management/overview) for more information.
 
 ## Clean up environment
 
