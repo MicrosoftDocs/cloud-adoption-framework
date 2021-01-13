@@ -1,8 +1,8 @@
 ---
 title: Moodle migration resources
-description: Learn about the resources that a Moodle migration creates within Azure. Examples include an Azure Virtual Network, a network security group, and a subnet.
+description: Learn about the resources that a Moodle migration creates in Azure, such as an Azure virtual network, a network security group, and a subnet.
 author: UmakanthOS
-ms.author: brblanch 
+ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -18,31 +18,31 @@ When you use an Azure Resource Manager (ARM) template to migrate Moodle, the dep
 
 The network template deployment creates the following resources:
 
-- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual Network is a logical isolation of the Azure cloud that's dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. The virtual network that the network template creates includes the virtual network name, API version, location, DNS server name, and AddressSpace. The AddressSpace contains a range of IP addresses that subnets can use.
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview): A representation of your own network in the cloud. Virtual network is a logical isolation of the Azure cloud that's dedicated to your subscription. When you create a virtual network, your services and virtual machines within it can communicate directly and securely in the cloud. The virtual network that the network template creates includes the virtual network name, API version, location, DNS server name, and address space. The address space contains a range of IP addresses that subnets can use.
 
 - [Network security group (NSG)](/azure/virtual-network/network-security-groups-overview): A networking filter, or firewall, that contains a list of security rules. These rules allow or deny network traffic to resources connected to a virtual network.
 
-- [Network interface](/azure/virtual-network/virtual-network-network-interface): An interface that an Azure Virtual Machine can use to communicate with the Internet, Azure, and on-premises resources.
+- [Network interface](/azure/virtual-network/virtual-network-network-interface): An interface that an Azure virtual machine can use to communicate with the internet, Azure, and on-premises resources.
 
 - [Subnet](/azure/virtual-network/virtual-network-manage-subnet): A smaller network inside a large network. Subnets are also known as subnetworks. By default, an IP address in a subnet can communicate with any other IP address inside the virtual network.
 
-- [Public IP address](/azure/virtual-network/public-ip-addresses#:~:text=Public%20IP%20addresses%20enable%20Azure,IP%20assigned%20can%20communicate%20outbound): An IP address that an Azure resource uses to communicate with the Internet. The address is dedicated to the Azure resource.
+- [Public IP address](/azure/virtual-network/public-ip-addresses#:~:text=public%20ip%20addresses%20enable%20azure,IP%20assigned%20can%20communicate%20outbound): An IP address that an Azure resource uses to communicate with the internet. The address is dedicated to the Azure resource.
 
-- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=An%20Azure%20load%20balancer%20is,traffic%20to%20an%20operational%20VM): A load balancer that efficiently distributes network or application traffic across multiple servers in a server farm. Load Balancer ensures high availability and reliability by only sending requests to servers that are online.
+- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=an%20azure%20load%20balancer%20is,traffic%20to%20an%20operational%20vm): A load balancer that efficiently distributes network or application traffic across multiple servers in a server farm. Load balancer ensures high availability and reliability by only sending requests to servers that are online.
 
-- [Azure Application Gateway](/azure/application-gateway/overview): An alternative to Load Balancer. All four predefined ARM templates deploy Load Balancer. If you use a fully configurable deployment instead of an ARM template, you can choose Application Gateway instead of Load Balancer. Application Gateway is a web traffic Load Balancer that you can use to manage traffic to your web applications. Application Gateway can make routing decisions based on the additional attributes of an HTTP request, such as a URI path or host header.
+- [Azure Application Gateway](/azure/application-gateway/overview): An alternative to Load Balancer. All four predefined ARM templates deploy Load Balancer. If you use a fully configurable deployment instead of an ARM template, you can choose Application Gateway instead of Load Balancer. Application Gateway is a web-traffic load balancer that you can use to manage traffic to your web applications. Application Gateway can make routing decisions based on the additional attributes of an HTTP request, such as a URI path or host header.
 
-- [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview): An in-memory data store based on the open-source software Redis. Redis improves the performance and scalability of an application that heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory. This data can be written to and read from quickly.
+- [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview): An in-memory data store based on the open-source software redis. Redis improves the performance and scalability of an application that heavily stores back-end data. It can process large volumes of application requests by keeping frequently accessed data in the server memory. This data can be written to and read from quickly.
 
 ## Storage template
 
-The storage account template deployment creates an Azure storage account of type FileStorage. The account has premium performance, locally redundant storage (LRS) replication, and 1 terabyte (TB) of storage. The predefined template is configured so that a storage account with Azure Files creates file shares.
+The storage account template deployment creates an Azure Storage account of type FileStorage. The account has premium performance, locally redundant storage (LRS) replication, and 1 terabyte (TB) of storage. The predefined template is configured so that a storage account with Azure Files creates file shares.
 
-An [Azure storage account](/azure/storage/common/storage-account-overview) contains Azure Storage data objects, such as blobs, files, queues, tables, and disks. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. The following types of Azure storage accounts are available: general-purpose v1, general-purpose v2, BlockBlobStorage, FileStorage, and Blob storage. The replication type can be geo-redundant or LRS and zone-redundant storage. The performance types are standard and premium, and an individual storage account can store up to 500 TB of data, like any other Azure service.
+An [Azure Storage account](/azure/storage/common/storage-account-overview) contains Azure Storage data objects, such as blobs, files, queues, tables, and disks. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. The following types of Azure storage accounts are available: General-Purpose v1, General-Purpose v2, BlockBlobStorage, FileStorage, and Blob Storage. The replication type can be geo-redundant or LRS and zone-redundant storage. The performance types are standard and premium, and an individual storage account can store up to 500 TB of data, like any other Azure service.
 
 ARM templates support the following storage account types:
 
-- [Network file system (NFS)](/windows-server/storage/nfs/nfs-overview): An account type that a remote host can use to mount file systems over a network. The remote host can interact with those file systems as though they're mounted locally. With this design, system administrators can consolidate resources into centralized servers in the network.
+- [Network File System (NFS)](/windows-server/storage/nfs/nfs-overview): An account type that a remote host can use to mount file systems over a network. The remote host can interact with those file systems as though they're mounted locally. With this design, system administrators can consolidate resources into centralized servers in the network.
 
 - [GlusterFS](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs): An open-source distributed file system that can scale out in building-block fashion to store multiple petabytes of data.
 

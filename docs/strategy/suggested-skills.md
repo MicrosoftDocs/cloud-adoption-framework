@@ -1,6 +1,6 @@
 ---
-title: Skills readiness path during the Plan phase of a migration journey
-description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the Plan phase of migration.
+title: Skills readiness path during the planning phase of a migration journey
+description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the planning phase of migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2019
@@ -10,9 +10,9 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-# Skills readiness path during the Plan phase of a migration journey
+# Skills readiness path during the planning phase of a migration journey
 
-During the Plan phase of a migration journey, the objective is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
+The objective during the planning phase of a migration journey is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
 
 - Establishing the vision.
 - Building the business justification.
@@ -40,7 +40,7 @@ Justifying the investment to adopt the cloud can require deeper analysis and an 
 You can refine your business case by aligning the desired business case with current and future digital estate inventory. These articles can guide the development of a digital estate rationalization:
 
 - [Incremental rationalization](../digital-estate/rationalize.md): An agile approach to rationalization that properly aligns late-bound technical decisions.
-- The [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
+- [The five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
 ## Create a migration backlog (technical plan)
 
@@ -48,7 +48,7 @@ Convert the business case and rationalized digital estate into an actionable mig
 
 ## Business planning skills
 
-During the Ready phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
+During the readiness phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
 
 - [Create an Azure account](/learn/modules/create-an-azure-account). The first step to using Azure is to create an account. Your account holds the Azure services you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](/learn/modules/tour-azure-portal). Tour the Azure portal features and services, and customize the portal.
@@ -70,7 +70,7 @@ Depending on the motivations and desired business outcomes of a cloud adoption e
 
 ## Deeper skills exploration
 
-Beyond these initial options for developing skills, a variety of learning options is available.
+Various learning options beyond these initial options are available for developing skills.
 
 ### Typical mappings of cloud IT roles
 

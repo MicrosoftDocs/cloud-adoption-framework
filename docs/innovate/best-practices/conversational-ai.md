@@ -34,7 +34,7 @@ Azure Bot Service and Bot Framework offer an integrated set of tools and service
 
 Having a thorough understanding of the goals, processes, and user needs is important to the process of creating a successful bot. Before you write code, review the bot [design guidelines](/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0) for best practices, and identify the needs for your bot. You can create a simple bot or include more sophisticated capabilities such as speech, natural language understanding, and question answering.
 
-While you design your bot in the Plan phase, consider these aspects:
+While you design your bot during the planning phase, consider these aspects:
 
 - Define bot personas:
   - What should your bot look like?
