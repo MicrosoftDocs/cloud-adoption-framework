@@ -40,9 +40,9 @@ In this guide, you will create and configure an Azure Automation account and Log
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, as can be seen in the screenshots below, we will be using an Amazon Web Services (AWS) EC2 instance that has been already connected to Azure Arc and is visible as a resource in Azure.
 
-    ![Screenshot showing an EC2 in an Amazon Web Services cloud console.](./aws-ec2-instance.png)
+    ![Screenshot showing an EC2 in an Amazon Web Services cloud console.](./img/update-management/aws-ec2-instance.png)
 
-    ![Screenshot showing an Azure-Arc-enabled server in the Azure portal.](./arc-enabled-server.png)
+    ![Screenshot showing an Azure-Arc-enabled server in the Azure portal.](./img/update-management/arc-enabled-server.png)
 
 * [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.14 or later. Use ```az --version``` to check your current installed version.
 
