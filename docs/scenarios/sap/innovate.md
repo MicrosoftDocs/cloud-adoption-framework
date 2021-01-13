@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Innovate with SAP and Azure
 
-SAP serves as the foundation for innovation for many companies. Natively, SAP allows for rapid expansion and customization of business processes & customer experiences. When teamed with the innovation capabilities of Azure, innovation can go even further.
+The SAP platform and the various workloads that run on SAP serve as the foundation for innovation for many companies. Natively, the SAP platform allows for rapid expansion and customization of business processes & customer experiences. When teamed with the innovation capabilities of Azure, innovation can go even further.
 
 ## Democratize data
 
