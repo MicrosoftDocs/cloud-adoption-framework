@@ -19,7 +19,9 @@ Microsoft offers two implementation options for landing zones:
 - Start small and expand
 - Enterprise scale
 
-You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/partner-landing-zone).
+## First and third party options
+
+All landing zone options are available in first party implementations from Microsoft. Most of them are also available as third party implementations from CAF approved Microsoft partners or software vendors like Terraform. First use the table and sections below to determine if you need to "Start small and expand" or "Start with enterprise-scale". Then select the most relevant [first or third party Azure Landing  Zone implementation options](./implementation-options.md).
 
 ## Overview of landing zone options
 
@@ -44,7 +46,7 @@ The following table summarizes considerations for the different options.
         **Initial considerations**
     :::column-end:::
     :::column:::
-        Operating model alignment?
+        Operating model alignment
     :::column-end:::
     :::column:::
         Centralized operations
@@ -58,13 +60,13 @@ The following table summarizes considerations for the different options.
         
     :::column-end:::
     :::column:::
-        Provides a baseline architecture/environment?
+        Provides a baseline architecture/environment
     :::column-end:::
     :::column:::
-        Offers a simple starting point to build your own solution with minimal subscriptions, which you scale only as needed.
+        Sufficent baseline environment to serve as a simple starting point to build your own solution with minimal subscriptions, which you scale only as needed.
     :::column-end:::
     :::column:::
-        Yes, for the entire Azure tenant regardless of your scale-point, which includes cloud-native operations.
+        Sufficient architecture and environment for the entire Azure tenant regardless of your scale-point, which includes cloud-native operations and multiple subscriptions.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -72,7 +74,7 @@ The following table summarizes considerations for the different options.
         **Adoption plan considerations**
     :::column-end:::
     :::column:::
-        Provides long-term self-sufficiency?
+        Provides long-term self-sufficiency
     :::column-end:::
     :::column:::
         Requires CAF Govern and Manage methodologies to achieve long-term self-sufficiency.
@@ -86,7 +88,7 @@ The following table summarizes considerations for the different options.
         
     :::column-end:::
     :::column:::
-        Enables adoption velocity across the organization?
+        Enables adoption velocity across the organization
     :::column-end:::
     :::column:::
         Quickly enable low risk adoption. Build towards security, governance, and compliance.
@@ -100,7 +102,7 @@ The following table summarizes considerations for the different options.
         
     :::column-end:::
     :::column:::
-        Achieves operational excellence?
+        Achieves operational excellence
     :::column-end:::
     :::column:::
         Requires CAF Govern and Manage methodologies to achieve operational excellence.
@@ -114,7 +116,7 @@ The following table summarizes considerations for the different options.
         **Compliance considerations**
     :::column-end:::
     :::column:::
-        Path to reach security, governance, and compliance?
+        Path to reach security, governance, and compliance
     :::column-end:::
     :::column:::
         Iterative approach. Requires Govern and Manage methodologies to support sensitive data or mission critical workloads.
@@ -128,7 +130,7 @@ The following table summarizes considerations for the different options.
         
     :::column-end:::
     :::column:::
-        Risks while building out security, governance, and compliance?
+        Risks while building out security, governance, and compliance
     :::column-end:::
     :::column:::
         There is a risk of extensive refactoring or even redeployment to deliver on those needs.
@@ -142,7 +144,7 @@ The following table summarizes considerations for the different options.
         **Deployment considerations**
     :::column-end:::
     :::column:::
-        Best-practices from cloud provider?
+        Best-practices from cloud provider
     :::column-end:::
     :::column:::
         Yes. More best practices added using CAF methodologies to apply security, governance, and compliance.
@@ -156,7 +158,7 @@ The following table summarizes considerations for the different options.
         
     :::column-end:::
     :::column:::
-        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging?
+        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging
     :::column-end:::
     :::column:::
         Partial. Some resources are deployed. Additional offerings aligned to CAF methodologies required to apply best practices to support security, governance, and compliance.
@@ -170,7 +172,7 @@ The following table summarizes considerations for the different options.
         
     :::column-end:::
     :::column:::
-        Automation capabilities, such as Infrastructure as Code and Azure DevOps?
+        Automation capabilities, such as Infrastructure as Code and Azure DevOps
     :::column-end:::
     :::column:::
         Yes: ARM, Policy, Blueprint. Can create your own CI/CD pipeline.
