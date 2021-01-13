@@ -146,4 +146,4 @@ Complete the following steps to clean up your environment.
     az group delete --name <Name of your resource group>
     ```
 
-    ![Screenshot showing the 'az group delete' command.](./.png)
+    ![Screenshot showing the 'az group delete' command.](./az-group-delete.png)
