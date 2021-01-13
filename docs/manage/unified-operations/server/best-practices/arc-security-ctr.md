@@ -44,9 +44,9 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, as can be seen in the screenshots below, we will be using a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure.
 
-    ![Screenshot of an Azure-Arc-enabled server in the Azure portal.](./arc-overview.png)
+    ![Screenshot of an Azure-Arc-enabled server in the Azure portal.](./img/arc-security-ctr/arc-overview.png)
 
-    ![Screenshot of details from an Azure-Arc-enabled server in the Azure portal.](./arc-status.png)
+    ![Screenshot of details from an Azure-Arc-enabled server in the Azure portal.](./img/arc-security-ctr/arc-status.png)
 
 * [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
@@ -83,7 +83,7 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 * Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
-    ![Screenshot showing an ARM template.](./arm-template.png)
+    ![Screenshot showing an ARM template.](./img/arc-security-ctr/arm-template.png)
 
 * To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/securitycenter/arm) and run the below command:
 
@@ -120,28 +120,28 @@ Now that you have successfully onboard Azure Security Center, you will get recom
 
 * In the "Compute & apps" section under "VM and Servers", Azure Security Center will provide you with an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure Classic VMs, servers and **Azure Arc Machines**.
 
-    ![Screenshot showing **Compute & apps** in the Azure Security Center.](./compute-apps.png)
+    ![Screenshot showing **Compute & apps** in the Azure Security Center.](./img/arc-security-ctr/compute-apps.png)
 
 * On the Azure-Arc-enabled servers, Azure Security Center will provide a recommendation to install the Log Analytics agent. In addition, each recommendation will include:
   * A short description of what is being recommended.
   * A Secure Score impact, in this case, with a status of *High*.
   * The remediation steps to carry out in order to implement the recommendation. For specific recommendations, like this one, you will also get a **Quick Fix** that enables you to quickly remediate a recommendation on multiple resources.
 
-    ![Screenshot showing an Azure Security Center recommendation for Azure-Arc-enabled server.](./rec-quick-fix.png)
+    ![Screenshot showing an Azure Security Center recommendation for Azure-Arc-enabled server.](./img/arc-security-ctr/rec-quick-fix.png)
 
-    ![Screenshot showing an Azure Security Center recommendation to install Log Analytics.](./rec-remediate.png)
+    ![Screenshot showing an Azure Security Center recommendation to install Log Analytics.](./img/arc-security-ctr/rec-remediate.png)
 
 * This remediation **Quick Fix** is using an ARM template to deploy the Microsoft Monitoring Agent extension on the Azure Arc machine.
 
-    ![Screenshot showing an Azure Security Center **Quick Fix** ARM template.](./quick-fix-template.png)
+    ![Screenshot showing an Azure Security Center **Quick Fix** ARM template.](./img/arc-security-ctr/quick-fix-template.png)
 
 * You can trigger the remediation with the ARM template from the Azure Security Center dashboard, by selecting the Log Analytics Workspace used for Azure Security Center and clicking on "Remediate 1 resource".
 
-    ![Screenshot showing how a remediation step is triggered in Azure Security Center.](./remediation-trigger.png)
+    ![Screenshot showing how a remediation step is triggered in Azure Security Center.](./img/arc-security-ctr/remediation-trigger.png)
 
 * After you apply the recommendation on the Azure-Arc-enabled server the resource will be now marked as healthy.
 
-    ![Screenshot showing a healthy Azure-Arc-enabled server.](./healthy-server.png)
+    ![Screenshot showing a healthy Azure-Arc-enabled server.](./img/arc-security-ctr/healthy-server.png)
 
 ## Clean up environment
 

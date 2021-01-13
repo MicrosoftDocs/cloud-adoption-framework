@@ -60,11 +60,11 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
     --tags "Project=jumpstart_azure_arc_servers"
     ```
 
-    ![Screenshot showing the 'az group create' command.](./az-group-create.png)
+    ![Screenshot showing the 'az group create' command.](./img/update-management/az-group-create.png)
 
 * Next, edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/updateManagement/law-template.parameters.json), providing a name for your Log Analytics workspace, a location, and a name for your Azure Automation account. You also need to supply the name of your Azure-Arc-enabled server, and the name of the resource group that contains the Arc enabled server as shown in the example below:
 
-    ![Screenshot showing an ARM template.](./arm-template.png)
+    ![Screenshot showing an ARM template.](./img/update-management/arm-template.png)
 
 * To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/updateManagement) and run the below command:
 
@@ -74,29 +74,29 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
         --parameters law-template.parameters.json
     ```
 
-   ![Screenshot showing the 'az deployment group' command.](./az-deployment-group.png)
+   ![Screenshot showing the 'az deployment group' command.](./img/update-management/az-deployment-group.png)
 
 * When the deployment is complete, you should be able to see the resource group with your Log Analytics workspace, automation account and Update Management solution from the Azure portal. Drilling into the Log Analytics workspace Solutions tab should show the Update Management solution.
 
-    ![Screenshot showing a Log Analytics workspace in the Azure portal.](./log-analytics-workspace.png)
+    ![Screenshot showing a Log Analytics workspace in the Azure portal.](./img/update-management/log-analytics-workspace.png)
 
 ## Confirm that the Update Management solution is deployed on your Azure-Arc-enabled server
 
 * Click on the Solutions tab of the Log Analytics workspace and then click the Updates solution from the list to check the progress of the Update Management assessment.
 
-    ![Screenshot showing Solutions tab of a Log Analytics workspace.](./solutions-tab.png)
+    ![Screenshot showing Solutions tab of a Log Analytics workspace.](./img/update-management/solutions-tab.png)
 
 * It may take several hours for Update Management to collect enough data to show an assessment for your VM. In the screen below we can see the assessment is being performed.
 
-    ![Screenshot showing the Overview tab and Updates view within a Log Analytics workspace.](./overview-tab.png)
+    ![Screenshot showing the Overview tab and Updates view within a Log Analytics workspace.](./img/update-management/overview-tab.png)
 
 * When the assessment is complete, you will see an option to "View summary" on the Update Management tab.
 
-    ![Screenshot showing an Updates view summary within a Log Analytics workspace.](./updates-summary.png)
+    ![Screenshot showing an Updates view summary within a Log Analytics workspace.](./img/update-management/updates-summary.png)
 
 * Click View Summary and then click again to drill into the Update Management assessment. In the below example we can see there are updates missing on our Azure-Arc-enabled server.
 
-    ![Screenshot showing updates missing from an Azure-Arc-enabled server.](./updates-missing.png)
+    ![Screenshot showing updates missing from an Azure-Arc-enabled server.](./img/update-management/updates-missing.png)
 
 ## Schedule an update
 
@@ -104,28 +104,28 @@ Now that we have configured the Update Management solution, we can deploy update
 
 * Navigate to the Automation Account we created previously and click on the Update Management tab as shown in the screenshot below. You should see your Azure-Arc-enabled server listed.
 
-    ![Screenshot showing an Azure Automation account.](./azure-automation-account.png)
+    ![Screenshot showing an Azure Automation account.](./img/update-management/azure-automation-account.png)
 
 * From the above screen, click "Schedule update deployment". On the next screen, select the Operating System that your Azure-Arc-enabled server is using, and then select "Machines to update" as shown below.
 
-    ![Screenshot showing scheduling an update with Update Deployment.](./schedule-an-update.png)
+    ![Screenshot showing scheduling an update with Update Deployment.](./img/update-management/schedule-an-update.png)
 
 * From the "Type" dropdown, select "Machines" and then select your server and click Ok.
 
-    ![Screenshot showing a type and server for a scheduled update with Update Deployment.](./type-update.png)
+    ![Screenshot showing a type and server for a scheduled update with Update Deployment.](./img/update-management/type-update.png)
 
 * Click Schedule Settings and then provide a desired schedule.
 
-    ![Screenshot showing the field to configure Schedule settings within Update Deployment.](./config-schedule-settings.png)
+    ![Screenshot showing the field to configure Schedule settings within Update Deployment.](./img/update-management/config-schedule-settings.png)
 
-    ![Screenshot showing the fields for Schedule settings within Update Deployment.](./schedule-settings.png)
+    ![Screenshot showing the fields for Schedule settings within Update Deployment.](./img/update-management/schedule-settings.png)
 
 * Finally, provide a name for your Update deployment and then click Create.
 
-    ![Screenshot showing naming an update within Update Deployment.](./naming-update.png)
+    ![Screenshot showing naming an update within Update Deployment.](./img/update-management/naming-update.png)
 
 * From the Automation Account Update Management tab, you should be able to see your scheduled Update deployment from the Deployment Schedules tab.
-    ![Screenshot showing a scheduled update within Update management.](./scheduled-update.png)
+    ![Screenshot showing a scheduled update within Update management.](./img/update-management/scheduled-update.png)
 
 The Update Management solution will now update your Azure-Arc-enabled servers in the deployment window based on the schedule you defined. There is a lot more you can do with [Update Management](https://docs.microsoft.com/azure/automation/update-management/overview) that is outside the scope of this scenario. Review the [documentation](https://docs.microsoft.com/azure/automation/update-management/overview) for more information.
 
@@ -146,4 +146,4 @@ Complete the following steps to clean up your environment.
     az group delete --name <Name of your resource group>
     ```
 
-    ![Screenshot showing the 'az group delete' command.](./az-group-delete.png)
+    ![Screenshot showing the 'az group delete' command.](./img/update-management/az-group-delete.png)
