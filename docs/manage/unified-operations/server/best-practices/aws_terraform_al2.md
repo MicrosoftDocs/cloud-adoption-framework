@@ -11,7 +11,7 @@ ms.subservice: operate
 
 ## Deploy an AWS Amazon Linux 2 EC2 instance and connect it to Azure Arc using a Terraform plan
 
-The following README will guide you on how to use the provided [Terraform](https://www.terraform.io/) plan to deploy an AWS Amazon Linux 2 EC2 instance and connect it as an Azure Arc enabled server resource.
+The following README will guide you on how to use the provided [Terraform](https://www.terraform.io/) plan to deploy an AWS Amazon Linux 2 EC2 instance and connect it as an Azure-Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -119,15 +119,15 @@ Before executing the Terraform plan, you must export the environment variables w
 
 ## Deployment
 
-* Run the ```terraform apply --auto-approve``` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
+* Run the ```terraform apply --auto-approve``` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure-Arc-enabled server inside a new resource group.
 
 * Open the Azure portal and navigate to the resource group "Arc-Servers-Demo". The virtual machine created in AWS will be visible as a resource.
 
-    ![Screenshot showing Azure Portal and Azure Arc enabled server](./10.png)
+    ![Screenshot showing Azure portal and Azure-Arc-enabled server](./10.png)
 
 ## Semi-Automated Deployment (Optional)
 
-As you may have noticed, the last step of the run is to register the VM as a new Azure Arc enabled server resource.
+As you may have noticed, the last step of the run is to register the VM as a new Azure-Arc-enabled server resource.
     ![Screenshot showing azcmagent connect script](./11.png)
 
 If you want to demo/control the actual registration process, do the following:
@@ -156,7 +156,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![Screenshot showing azcmagent connect being run](./16.png)
 
-* When complete, your VM will be registered with Azure Arc and visible in the resource group inside Azure Portal.
+* When complete, your VM will be registered with Azure Arc and visible in the resource group inside Azure portal.
 
 ## Delete the deployment
 

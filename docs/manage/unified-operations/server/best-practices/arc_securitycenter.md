@@ -1,17 +1,17 @@
 ---
-title: ""
+title: Connect Azure-Arc-enabled servers to Azure Security Center
 description: Learn to configure unified operations for XYZ.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-## Connect Azure Arc enabled servers to Azure Security Center
+# Connect Azure-Arc-enabled servers to Azure Security Center
 
-The following README will guide you on how to onboard an Azure Arc enabled server on to [Azure Security Center (ASC)](https://docs.microsoft.com/azure/security-center/), so you can start collecting security-related configurations as well as event logs to recommend actions and improve your overall Azure security posture.
+The following README will guide you on how to onboard an Azure-Arc-enabled server on to [Azure Security Center (Azure Security Center)](https://docs.microsoft.com/azure/security-center/), so you can start collecting security-related configurations as well as event logs to recommend actions and improve your overall Azure security posture.
 
 In this guide, you will enable and configure Azure Security Center Standard tier on your Azure subscription, which will provide you with advanced threat protection (ATP) and detection capabilities. To complete this process you will:
 
@@ -21,7 +21,7 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 * Review Azure Security Center's recommendations.
 
-* Apply recommended configurations on Azure Arc enabled servers using the ***Quick Fix*** remediations.
+* Apply recommended configurations on Azure-Arc-enabled servers using the **Quick Fix** remediations.
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
@@ -44,9 +44,9 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, as can be seen in the screenshots below, we will be using a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure.
 
-    ![Screenshot of Azure Portal showing Azure Arc enabled server](./01.png)
+    ![Screenshot of an Azure-Arc-enabled server in the Azure portal.](./arc-overview.png)
 
-    ![Screenshot of Azure Portal showing Azure Arc enabled server detail](./02.png)
+    ![Screenshot of details from an Azure-Arc-enabled server in the Azure portal.](./arc-status.png)
 
 * [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
@@ -81,9 +81,9 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 ## Onboarding Azure Security Center
 
-* Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by ASC or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
+* Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
-    ![Screenshot showing Azure ARM template](./03.png)
+    ![Screenshot showing an ARM template.](./arm-template.png)
 
 * To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/securitycenter/arm) and run the below command:
 
@@ -106,42 +106,42 @@ In this guide, you will enable and configure Azure Security Center Standard tier
     az security pricing create -n VirtualMachines --tier 'standard'
     ```
 
-* Now you need to assign the default Security Center policy initiative. ASC makes its security recommendations based on policies. There is an specific initiative that groups Security Center policies with the definition ID '1f3afdf9-d0c9-4c3d-847f-89da613e70a8'. The command below will assign the ASC initiative to your subscription:
+* Now you need to assign the default Security Center policy initiative. Azure Security Center makes its security recommendations based on policies. There is an specific initiative that groups Security Center policies with the definition ID '1f3afdf9-d0c9-4c3d-847f-89da613e70a8'. The command below will assign the Azure Security Center initiative to your subscription:
 
     ```console
-    az policy assignment create --name 'ASC Default <Your subscription ID>' \
+    az policy assignment create --name 'Azure Security Center Default <Your subscription ID>' \
     --scope '/subscriptions/<Your subscription ID>' \
     --policy-set-definition '1f3afdf9-d0c9-4c3d-847f-89da613e70a8'
     ```
 
 ## Azure Arc and Azure Security Center Integration
 
-Now that you have successfully onboard ASC, you will get recommendations to help you protect your resources, including your Azure Arc enabled servers. ASC will then periodically analyze the security state of your Azure resources to identify potential security vulnerabilities.
+Now that you have successfully onboard Azure Security Center, you will get recommendations to help you protect your resources, including your Azure-Arc-enabled servers. Azure Security Center will then periodically analyze the security state of your Azure resources to identify potential security vulnerabilities.
 
-* In the "Compute & apps" section under "VM and Servers", ASC will provide you with an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure Classic VMs, servers and **Azure Arc Machines**.
+* In the "Compute & apps" section under "VM and Servers", Azure Security Center will provide you with an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure Classic VMs, servers and **Azure Arc Machines**.
 
-    ![Screenshot showing Azure Security Center compute and apps](./04.png)
+    ![Screenshot showing **Compute & apps** in the Azure Security Center.](./compute-apps.png)
 
-* On the Azure Arc enabled servers, ASC will provide a recommendation to install the Log Analytics agent. In addition, each recommendation will include:
+* On the Azure-Arc-enabled servers, Azure Security Center will provide a recommendation to install the Log Analytics agent. In addition, each recommendation will include:
   * A short description of what is being recommended.
   * A Secure Score impact, in this case, with a status of *High*.
-  * The remediation steps to carry out in order to implement the recommendation. For specific recommendations, like this one, you will also get a ***Quick Fix*** that enables you to quickly remediate a recommendation on multiple resources.
+  * The remediation steps to carry out in order to implement the recommendation. For specific recommendations, like this one, you will also get a **Quick Fix** that enables you to quickly remediate a recommendation on multiple resources.
 
-    ![Screenshot showing ASC recommendation on Azure Arc enabled server](./05.png)
+    ![Screenshot showing an Azure Security Center recommendation for Azure-Arc-enabled server.](./rec-quick-fix.png)
 
-    ![Screenshot showing ASC recommendation to install Log Analytics](./06.png)
+    ![Screenshot showing an Azure Security Center recommendation to install Log Analytics.](./rec-remediate.png)
 
-* This remediation ***Quick Fix*** is using an ARM template to deploy the Microsoft Monitoring Agent extension on the Azure Arc machine.
+* This remediation **Quick Fix** is using an ARM template to deploy the Microsoft Monitoring Agent extension on the Azure Arc machine.
 
-    ![Screenshot showing ASC Quick Fix ARM template](./07.png)
+    ![Screenshot showing an Azure Security Center **Quick Fix** ARM template.](./quick-fix-template.png)
 
-* You can trigger the remediation with the ARM template from the Azure Security Center dashboard, by selecting the Log Analytics Workspace used for ASC and clicking on "Remediate 1 resource".
+* You can trigger the remediation with the ARM template from the Azure Security Center dashboard, by selecting the Log Analytics Workspace used for Azure Security Center and clicking on "Remediate 1 resource".
 
-    ![Screenshot showing triggering of remediation step of ASC](./08.png)
+    ![Screenshot showing how a remediation step is triggered in Azure Security Center.](./remediation-trigger.png)
 
-* After you apply the recommendation on the Azure Arc enabled server the resource will be now marked as healthy.
+* After you apply the recommendation on the Azure-Arc-enabled server the resource will be now marked as healthy.
 
-    ![Screenshot showing healthy Azure Arc enabled server](./09.png)
+    ![Screenshot showing a healthy Azure-Arc-enabled server.](./healthy-server.png)
 
 ## Clean up environment
 

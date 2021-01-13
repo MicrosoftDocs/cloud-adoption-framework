@@ -52,7 +52,7 @@ The following README will guide you on how to connect an Linux server to Azure A
 
 * Create a new Azure resource group where you want your server(s) to show up.
 
-    ![Screenshot showing Azure Portal with empty resource group](./01.png)
+    ![Screenshot showing Azure portal with empty resource group](./01.png)
 
 * Download the [az_connect_linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_linux.sh) shell script.
 
@@ -74,16 +74,16 @@ Upon completion, you will have your Linux server, connected as a new Azure Arc r
 
 ![Screenshot showing az_connect_linux script being run](./04.png)
 
-![Screenshot showing Azure Portal with Azure Arc enabled resource](./05.png)
+![Screenshot showing Azure portal with Azure-Arc-enabled resource](./05.png)
 
-![Screenshot showing Azure Portal with Azure Arc enabled resource detail](./06.png)
+![Screenshot showing Azure portal with Azure-Arc-enabled resource detail](./06.png)
 
 ## Delete the deployment
 
-The most straightforward way is to delete the server via the Azure Portal, just select server and delete it.
+The most straightforward way is to delete the server via the Azure portal, just select server and delete it.
 
-![Screenshot showing delete resource function in Azure Portal](./07.png)
+![Screenshot showing delete resource function in Azure portal](./07.png)
 
 If you want to nuke the entire environment, just delete the Azure resource group.
 
-![Screenshot showing delete resource group function in Azure Portal](./08.png)
+![Screenshot showing delete resource group function in Azure portal](./08.png)
