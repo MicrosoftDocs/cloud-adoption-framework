@@ -1,15 +1,15 @@
 ---
-title: ""
+title: Connect an existing Windows server to Azure Arc
 description: Learn to configure unified operations for XYZ.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-## Connect an existing Windows server to Azure Arc
+# Connect an existing Windows server to Azure Arc
 
 The following README will guide you on how to connect an Windows machine to Azure Arc using a simple PowerShell script.
 
@@ -52,36 +52,36 @@ The following README will guide you on how to connect an Windows machine to Azur
 
 * Create a new Azure resource group where you want your machine(s) to show up.
 
-    ![Screenshot showing Azure portal with empty resource group](./01.png)
+    ![Screenshot showing the Azure portal with an empty resource group.](./img/onboard-server-win/onboard-server-win/win-resource-group.png)
 
 * Download the [az_connect_win](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
 
 * Change the environment variables according to your environment and copy the script to the designated machine.
 
-    ![Screenshot showing PowerShell script](./02.png)
+    ![A screenshot of the the environment variables to be changed.](./img/onboard-server-win/win-variables.png)
 
 ## Deployment
 
 On the designated machine, Open PowerShell ISE **as Administrator** and run the script. Note the script is using *$env:ProgramFiles* as the agent installation path so make sure **you are not using PowerShell ISE (x86)**.
 
-![Screenshot showing PowerShell script](./03.png)
+![A screenshot of the 'azcmagent' connect command.](./img/onboard-server-win/azcmagent.png)
 
-![Screenshot showing PowerShell script](./04.png)
+![A screenshot of the 'az_connect' Windows script.](./img/onboard-server-win/az-connect-win-2.png)
 
 Upon completion, you will have your Windows server, connected as a new Azure Arc resource inside your resource group.
 
-![Screenshot showing PowerShell script being run](./05.png)
+![A screenshot of the the 'az_connect' Windows script running.](./img/onboard-server-win/az-connect-win.png)
 
-![Screenshot showing Azure portal with Azure-Arc-enabled server resource](./06.png)
+![[A screenshot of an Azure-arc-enabled resource in the Azure portal.](./img/onboard-server-win/win-resource.png)
 
-![Screenshot showing Azure portal with Azure-Arc-enabled server resource detail](./07.png)
+![A screenshot of details from an Azure-arc-enabled resource in the Azure portal.](./img/onboard-server-win/win-resource-detail.png)
 
 ## Delete the deployment
 
 The most straightforward way is to delete the server via the Azure portal, just select server and delete it.
 
-![Screenshot showing delete resource function in Azure portal](./08.png)
+![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-win/windows-delete-resource.png)
 
 If you want to delete the entire environment, just delete the Azure resource group.
 
-![Screenshot showing delete resource group function in Azure portal](./09.png)
+![A screenshot of Delete option to delete a resource group in the Azure portal.](./img/onboard-server-win/windows-delete-resource-group.png)
