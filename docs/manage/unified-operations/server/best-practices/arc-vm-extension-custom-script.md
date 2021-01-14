@@ -36,9 +36,9 @@ You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Sh
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below you can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
 
-    ![Screenshot of a resource group from an Azure-Arc-enabled server.](./img/vm-extension-custom-script/resource-group.png)
+    ![Screenshot of a resource group from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/resource-group.png)
 
-    ![Screenshot of a connected status from an Azure-Arc-enabled server.](./img/vm-extension-custom-script/connected-status.png)
+    ![Screenshot of a connected status from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/connected-status.png)
 
 * [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
@@ -79,17 +79,17 @@ You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Sh
 
 * Edit the extensions parameters file for [*Windows*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or for [*Linux*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
 
-   ![Screenshot of an ARM template parameters file.](./img/vm-extension-custom-script/parameters-file.png)
+   ![Screenshot of an ARM template parameters file.](./img/arc-vm-extension-custom-script/parameters-file.png)
 
 * To match your environment configuration, you will need to provide the following information:
 
   * The VM name as it is registered in Azure Arc.
 
-    ![Screenshot of a machine name from an Azure-Arc-enabled server.](./img/vm-extension-custom-script/machine-name.png)
+    ![Screenshot of a machine name from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/machine-name.png)
 
   * The location of the resource group where you registered the Azure-Arc-enabled server.
 
-    ![Screenshot of an Azure region.](./img/vm-extension-custom-script/azure-region.png)
+    ![Screenshot of an Azure region.](./img/arc-vm-extension-custom-script/azure-region.png)
 
   * A public Uri for the script that you would like to run on the servers, in this case use the URL for the script in raw format.
     * For Windows: [Public Uri](https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1)
@@ -119,21 +119,21 @@ You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Sh
 
 * Once the template deployment has completed it's run, you should see an output as follows:
 
-    ![Screenshot of an output from an ARM template.](./img/vm-extension-custom-script/output.png)
+    ![Screenshot of an output from an ARM template.](./img/arc-vm-extension-custom-script/output.png)
 
 * To verify a successful deployment on the Azure-Arc-enabled server, in the Azure portal, by clicking on "Extensions" settings. You should see the Custom Script extension installed.
 
-    ![Screenshot of a custom script extension.](./img/vm-extension-custom-script/custom-script-extension.png)
+    ![Screenshot of a custom script extension.](./img/arc-vm-extension-custom-script/custom-script-extension.png)
 
 * Another way to verify successful custom script execution is by connecting to the VMs and verifying that the operating system has been configured.
 
   * For the Linux VM, use SSH to connect the VM and check out the message of the day which was customized by the script:
 
-    ![Screenshot of an updated daily message.](./img/vm-extension-custom-script/daily-message.png)
+    ![Screenshot of an updated daily message.](./img/arc-vm-extension-custom-script/daily-message.png)
 
   * For the Windows VM, use RDP to connect the VM and verify that the additional software has been installed: Microsoft Edge, 7zip and Visual Studio Code.
 
-    ![Screenshot additional software installed.](./img/vm-extension-custom-script/additional-software.png)
+    ![Screenshot additional software installed.](./img/arc-vm-extension-custom-script/additional-software.png)
 
 ## Clean up environment
 
