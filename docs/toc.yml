@@ -310,18 +310,38 @@ items:
             href: https://docs.microsoft.com/en-us/azure/firewall/overview
         - name: Learn modules
           items:
-          - name: Manage hybrid infrastructure with Azure Arc
-            href: https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/
-          - name: Manage hybrid workloads with Azure Arc
-            href: https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/)
-          - name: Introduction to Azure hybrid cloud services
-            href: https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/)
-          - name: Design a hybrid network architecture on Azure
-            href: https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/)
-          - name: Implement hybrid network infrastructure
-            href: https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/)
-          - name: Azure Stack HCI foundations
-            href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/)
+          - name: Azure Arc
+            items:
+            - name: Intro to Azure Arc
+              href: https://docs.microsoft.com/learn/modules/intro-to-azure-arc/
+            - name: Arc for servers
+              href: https://docs.microsoft.com/learn/modules/intro-to-arc-for-servers/
+            - name: Arc for kubernetes
+              href: https://docs.microsoft.com/learn/modules/intro-to-arc-enabled-kubernetes/
+            - name: Arc for hybrid infrastructure
+              href: https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/
+            - name: Arc for hybrid workloads
+              href: https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/
+          - name: Hybrid cloud
+            items:
+            - name: Introduction to Azure hybrid cloud services
+              href: https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/
+            - name: Design a hybrid network architecture on Azure
+              href: https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/
+            - name: Implement hybrid network infrastructure
+              href: https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/
+          - name: Azure Stack
+            items:
+            - name: Intro to Azure Stack
+              href: https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-stack/
+            - name: Azure Stack HCI foundations
+              href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/
+            - name: Azure Stack HCI deployment
+              href: https://docs.microsoft.com/en-us/learn/modules/azure-stack-hci-plan-deploy/
+            - name: Azure Stack HCI technologies
+              href: https://docs.microsoft.com/en-us/learn/modules/azure-stack-hci-technologies/
+            - name: Azure Stack HCI - Arc integration
+              href: https://docs.microsoft.com/en-us/learn/modules/stack-hci-arc-integration/
 
   - name: Strategy
     items:
