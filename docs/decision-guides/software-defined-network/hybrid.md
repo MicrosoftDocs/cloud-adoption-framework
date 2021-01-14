@@ -1,13 +1,13 @@
 ---
 title: "Software Defined Networking: Hybrid network"
 description: Use the Cloud Adoption Framework for Azure to learn how hybrid networks can connect cloud virtual networks to on-premises resources.
-author: rotycenh
+author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Software Defined Networking: Hybrid network

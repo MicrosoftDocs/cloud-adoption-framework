@@ -3,10 +3,11 @@ title: Cloud SOC functions
 description: Understand cloud security operations center (SOC) functions.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 <!-- docutune:casing CDOC "Cyber Defense Operations Center" -->

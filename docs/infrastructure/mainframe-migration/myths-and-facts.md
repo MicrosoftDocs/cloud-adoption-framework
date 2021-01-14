@@ -2,11 +2,12 @@
 title: Mainframe migration myths and facts
 description: Learn to distinguish the myths from the reality about mainframes, and evaluate the mainframe workloads that are most suitable for Azure.
 author: njray
-ms.author: v-nanra
+ms.author: brblanch
 ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore chargebacks IPLs -->

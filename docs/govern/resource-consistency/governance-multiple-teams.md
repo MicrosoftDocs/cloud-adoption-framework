@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 <!-- TODO: Rationalize name formats. -->
@@ -32,7 +32,7 @@ The requirements are:
   - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the resource group scope.
   - Management access for the shared infrastructure resources, limited to the shared infrastructure owners.
   - Management access for each workload restricted to the workload owner in production, and increasing levels of control as development proceeds through the various deployment environments (development, test, staging, and production).
-  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](/azure/role-based-access-control/built-in-roles) available in Azure's role-based access control (RBAC). If the enterprise absolutely requires custom RBAC roles, additional processes would be needed to synchronize custom roles across the three environments.
+  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](/azure/role-based-access-control/built-in-roles) available in Azure role-based access control (Azure RBAC). If the enterprise absolutely requires custom roles, additional processes would be needed to synchronize custom roles across the three environments.
 - Cost tracking by workload owner name, environment, or both.
 
 ## Identity management
@@ -67,11 +67,11 @@ The first two accounts, **app1 workload owner** and **app2 workload owner**, are
 
 ## Resource access permissions model of least privilege
 
-Now that your identity management system and user accounts have been created, you have to decide how to apply role-based access control (RBAC) roles to each account to support a permissions model of least privilege.
+Now that your identity management system and user accounts have been created, you have to decide how to apply Azure roles to each account to support a permissions model of least privilege.
 
 There's another requirement stating the resources associated with each workload be isolated from one another such that no one workload owner has management access to any other workload they do not own. There's also a requirement to implement this model using only built-in roles for Azure role-based access control.
 
-Each RBAC role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in Owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
+Each Azure role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in Owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
 
 Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in Owner role at the subscription scope, each workload owner would have management access to all workloads.
 
@@ -270,4 +270,4 @@ Now that you've implemented your governance model, you can deploy your shared in
 
 ## Related resources
 
-[Built-in roles for Azure resources](/azure/role-based-access-control/built-in-roles)
+[Azure built-in roles](/azure/role-based-access-control/built-in-roles)
