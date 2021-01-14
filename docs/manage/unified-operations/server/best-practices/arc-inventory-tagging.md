@@ -48,7 +48,7 @@ We will be using Resource Graph Explorer during this exercise to query and view 
 
 * Enter "Resource Graph Explorer" in the top search bar in the Azure portal and select it.
 
-    ![Screenshot showing Resource Graph Explorer in the Azure portal.](.img/inventory-tagging/resource-graph-explorer.png)
+    ![Screenshot showing Resource Graph Explorer in the Azure portal.](./img/inventory-tagging/resource-graph-explorer.png)
 
 * In the query window, enter the following query and then click "Run Query":
 
