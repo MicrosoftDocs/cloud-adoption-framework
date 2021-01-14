@@ -17,11 +17,11 @@ Customers frequently experience a number of common cloud adoption antipatterns w
 
 In numerous companies we find that they nowadays announce a cloud-first or cloud-only strategy, while not defining a clear picture on what they want to achieve with the newly announced strategy. Without specifying concrete KPIs and motivations within strategy development cloud projects will most certainly not be successful, as the success of the project cannot be measured.
 
-## Example of a missing motivation
+### Example of a missing motivation
 
 Contoso finds that their closest competitor is launching a cloud-only strategy defining that they want to have all their systems in the cloud within a year to accelerate their business. As Contoso does not want to be left behind, they now urge into strategic discussions on how to be able to adopt the cloud fast without defining concrete success criteria like cost reduction or better performing systems. As their first system is migrated to the cloud, they miss the possibility to check if the cloud strategy is successful, because they did not define what they wanted to achieve in the first place.
 
-## Preferred outcome: defined motivations
+### Preferred outcome: defined motivations
 
 When discussing the motivation why adopting the cloud, define concrete KPIs that need to be accomplished to be able to communicate if the strategy is successful and should be followed for more projects. To find out more about motivations, see [Why are we moving to the cloud?](../strategy/motivations.md).
 

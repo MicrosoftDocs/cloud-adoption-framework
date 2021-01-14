@@ -1,6 +1,6 @@
 ---
 title: "Cloud readiness Antipatterns"
-description: - Cloud readiness antipatterns include, assuming services ready for production, that there's built in resilliency, and that IT is ready for the cloud.
+description: Cloud readiness antipatterns include, assuming services ready for production, that there's built in resiliency, and that IT is ready for the cloud.
 author: lpassig
 ms.author: brblanch
 ms.date: 01/15/2021
@@ -9,7 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-
 # Cloud readiness Antipatterns
 
 Customers frequently experience a number of common cloud adoption antipatterns while in the readiness phase of cloud adoption. Review the following antipatterns to avoid unexpected downtime, inability to recover or keep services available,  
