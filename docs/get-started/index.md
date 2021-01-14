@@ -7,6 +7,7 @@ ms.date: 08/27/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Get started with the Cloud Adoption Framework

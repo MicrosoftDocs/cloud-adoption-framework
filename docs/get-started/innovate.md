@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Get started: Accelerate new product and service innovation in the cloud

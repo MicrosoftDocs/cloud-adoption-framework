@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Operational compliance in cloud management
@@ -29,7 +30,7 @@ The most effective step that a cloud management team can take toward operational
 
 ### Environment consistency
 
-Establishing consistent environments, or landing zones, is the next most important step toward operational compliance. When landing zones are consistent and enforced through automated tools, it is significantly less complex to diagnose and resolve operational issues. For deeper guidance on environment consistency, see the [Ready phase](../../ready/index.md) of the cloud adoption lifecycle. The exercises in that phase help build a repeatable process for defining and maturing a consistent, code-first approach to the development of cloud-based environments.
+Establishing consistent environments, or landing zones, is the next most important step toward operational compliance. When landing zones are consistent and enforced through automated tools, it's significantly less complex to diagnose and resolve operational issues. For deeper guidance on environment consistency, see the [readiness phase](../../ready/index.md) of the cloud adoption lifecycle. The exercises in this phase help build a repeatable process for defining and maturing a consistent, code-first approach to developing cloud-based environments.
 
 ### Resource configuration consistency
 

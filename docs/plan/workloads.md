@@ -7,6 +7,7 @@ ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Define and prioritize workloads for a cloud adoption plan

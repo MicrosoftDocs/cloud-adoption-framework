@@ -7,6 +7,7 @@ ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Phase 1: Prerequisite planning for Azure server management services
@@ -65,7 +66,7 @@ Small and midsize environments have a single subscription and several hundred re
 
 You can create a workspace and an Azure Automation account, as one pair, in each resource group. Then, deploy the pair in the corresponding geography to the virtual machines.
 
-Alternatively, if your data-compliance policies don't dictate that resources reside in specific regions, you can create one pair to manage all the virtual machines. We also recommend that you place the workspace and Automation account pairs in separate resource groups to provide more granular role-based access control (RBAC).
+Alternatively, if your data-compliance policies don't dictate that resources reside in specific regions, you can create one pair to manage all the virtual machines. We also recommend that you place the workspace and Automation account pairs in separate resource groups to provide more granular Azure role-based access control (Azure RBAC).
 
 The example in the following diagram has one subscription with two resource groups, each located in a different geography:
 

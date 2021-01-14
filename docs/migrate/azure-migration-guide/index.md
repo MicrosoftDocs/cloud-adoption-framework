@@ -2,13 +2,13 @@
 title: "Introduction to the Azure migration guide"
 description: Use the Cloud Adoption Framework for Azure to learn how to effectively migrate your organization's services to Azure.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 # Azure migration guide overview
