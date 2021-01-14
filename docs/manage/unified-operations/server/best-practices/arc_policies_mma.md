@@ -1,21 +1,21 @@
 ---
-title: ""
+title: Use Azure Policy to deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers 
 description: Learn to configure unified operations for XYZ.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-## Deploy Monitoring Agent Extension to Azure Arc Linux and Windows servers using Azure Policy
+# Use Azure Policy to deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers
 
-The following README will guide you on how to use Azure Arc enabled servers to assign Azure Policies to VMs outside of Azure, whether they are on-premises or other clouds. With this feature you can now use Azure Policy to audit settings in the operating system of an Azure Arc enabled server, if a setting is not compliant you can also trigger a remediation task.
+The following README will guide you on how to use Azure-Arc-enabled servers to assign Azure Policies to VMs outside of Azure, whether they are on-premises or other clouds. With this feature you can now use Azure Policy to audit settings in the operating system of an Azure-Arc-enabled server, if a setting is not compliant you can also trigger a remediation task.
 
 In this case, you will assign a policy to audit if the Azure Arc connected machine has the (Microsoft Monitoring Agent) MMA agent installed, if not, you will use the extensions feature to automatically deploy it to the VM, an enrollment experience that levels to Azure VMs. This approach can be used to make sure all your servers are onboard to services such as Azure Monitor, Azure Security Center, Azure Sentinel, etc.
 
-You can use the Azure Portal, an ARM template or PowerShell script to assign policies to Azure subscriptions or resource groups. In this guide, you will use an ARM template to assign built-in policies.
+You can use the Azure portal, an ARM template or PowerShell script to assign policies to Azure subscriptions or resource groups. In this guide, you will use an ARM template to assign built-in policies.
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
@@ -28,7 +28,7 @@ You can use the Azure Portal, an ARM template or PowerShell script to assign pol
 * **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/)**
 * **[Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
 
-Please review the [Azure Monitor supported OS documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you will use for this guide are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
+Please review the [Azure Monitor supported OS documentation](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you will use for this guide are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
 
 ## Prerequisites
 
@@ -40,11 +40,11 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below we can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
 
-    ![Screenshot Azure Arc enabled server on resource group](./01.png)
+    ![Screenshot of a resource group for an Azure-Arc-enabled server.](./resource-group.png)
 
-    ![Screenshot Azure Arc enabled server connected status](./02.png)
+    ![Screenshot of a connected status for an Azure-Arc-enabled server.](./connected-status.png)
 
-* [Install or update Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
+* [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
 * Create Azure service principal (SP)
 
@@ -73,11 +73,11 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
     }
     ```
 
-  > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest).**
+  > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
 
 * You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/log_analytics-template.parameters.json), provide a name and location for your workspace.
 
-    ![Screenshot ARM template parameters file](./03.png)
+    ![Screenshot an ARM template parameters file.](./parameter-file-1.png)
 
   To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/policies/arm) and run the below command:
 
@@ -91,7 +91,7 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
 * Now that you have all the prerequisites set, you can assign policies to our Arc connected machines. Edit the [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/policy.json) to provide your subscription ID as well as the Log Analytics workspace.
 
-    ![Screenshot ARM template parameter file](./04.png)
+    ![Screenshot of another ARM template parameter file.](./parameter-file-2.png)
 
   To start the deployment, use the below command:
 
@@ -107,21 +107,21 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
 * Once the initiative is assigned, it takes around 30 minutes for the assignment to be applied to the defined scope. After those 30 minutes, Azure Policy will start the evaluation cycle against the Azure Arc connected machine and recognize it as "Non-compliant" (since it still does not have the Log Analytics Agent configuration deployed). To check this, go to the Azure Arc connected Machine under the Policies section.
 
-  ![Screenshot Azure Policy non-compliant](./05.png)
+  ![Screenshot an non-compliant Azure Policy.](./non-comp-policy.png)
 
 * Now, you will assign a remediation task to the non-compliant resource to put into a compliant state.
 
-  ![Screenshot Azure Policy remediation task](./06.png)
+  ![Screenshot of creating an Azure Policy remediation task.](./create-remediation-task.png)
 
 * Under 'Policy to remediate' choose '[Preview] Deploy Log Analytics Agent to Linux Azure Arc machines' and select 'Remediate'. This remediation task is instructing Azure Policy to run the deployIfNotExists effect and use the Azure Arc extension management capabilities to deploy the Log Analytics agent on the VM
 
-  ![Screenshot Azure Policy remediation task](./07.png)
+  ![Screenshot of an Azure Policy remediation action within a remediation task.](./remediation-action.png)
 
 * Once you have assigned remediation task, the policy will be evaluated again and show that the server on GCP is compliant and that the Microsoft Monitoring Agent extension is installed on the Azure Arc machine.
 
-  ![Screenshot remediation task configuration](./08.png)
+  ![Screenshot of a remediation task configuration.](./task-config.png)
 
-  ![Screenshot Azure Policy compliant status](./09.png)
+  ![Screenshot of a compliant Azure Policy status.](./compliant-status.png)
 
 ## Clean up environment
 

@@ -10,7 +10,7 @@ ms.subservice: operate
 ---
 ## Scaled onboarding of VMware vSphere Windows Server VMs to Azure Arc using VMware PowerCLI
 
-The following README will guide you on how to use the provided [VMware PowerCLI](https://code.vmware.com/web/dp/tool/vmware-powercli/) script so you can perform an automated scaled deployment of the "Azure Arc Connected Machine Agent" in multiple VMware vSphere virtual machines and as a result, onboarding these VMs as an Azure Arc enabled servers.
+The following README will guide you on how to use the provided [VMware PowerCLI](https://code.vmware.com/web/dp/tool/vmware-powercli/) script so you can perform an automated scaled deployment of the "Azure Arc Connected Machine Agent" in multiple VMware vSphere virtual machines and as a result, onboarding these VMs as an Azure-Arc-enabled servers.
 
 This guide assumes you already have an exiting inventory of VMware Virtual Machines and will leverage the PowerCLI PowerShell module to automate the onboarding process of the VMs to Azure Arc.
 
@@ -22,7 +22,7 @@ This guide assumes you already have an exiting inventory of VMware Virtual Machi
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
 
   ```console
   az --version
@@ -74,7 +74,7 @@ This guide assumes you already have an exiting inventory of VMware Virtual Machi
     }
     ```
 
-    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest)**
+    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest)**
 
 ## Automation Flow
 
@@ -114,10 +114,10 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
     ![scale_deploy PowerShell script](./07.png)
 
-* Upon completion, the VM will have the "Azure Arc Connected Machine Agent" installed as well as the Azure resource group populated with the new Azure Arc enabled servers.
+* Upon completion, the VM will have the "Azure Arc Connected Machine Agent" installed as well as the Azure resource group populated with the new Azure-Arc-enabled servers.
 
     ![Azure Arc Connected Machine Agent installed](./08.png)
 
-    ![New Azure Arc enabled servers in an Azure resource group](./09.png)
+    ![New Azure-Arc-enabled servers in an Azure resource group](./09.png)
 
-    ![New Azure Arc enabled servers in an Azure resource group](./10.png)
+    ![New Azure-Arc-enabled servers in an Azure resource group](./10.png)

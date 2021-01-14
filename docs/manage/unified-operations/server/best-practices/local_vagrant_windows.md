@@ -11,7 +11,7 @@ ms.subservice: operate
 
 ## Deploy a local Windows server hosted with Vagrant and connect it to Azure Arc
 
-The following README will guide you on how to deploy a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc enabled server resource.
+The following README will guide you on how to deploy a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure-Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ The following README will guide you on how to deploy a local **Windows 10** virt
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
 
   ```console
   az --version
@@ -68,7 +68,7 @@ The following README will guide you on how to deploy a local **Windows 10** virt
     }
     ```
 
-    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest)**
+    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest)**
 
 * The Vagrantfile executes a script on the VM OS to install all the needed artifacts as well to inject environment variables. Edit the [*scripts/vars.ps1*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/vars.ps1) PowerShell script to match the Azure service principal you've just created.
 
@@ -94,15 +94,15 @@ Once the download is complete, the actual provisioning will start. As you can se
 
 ![Screenshot of completed vagrant up](./02.png)
 
-Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc enabled server inside a new resource group.
+Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure-Arc-enabled server inside a new resource group.
 
-![Screenshot of the Azure portal showing Azure Arc enabled server](./03.png)
+![Screenshot of the Azure portal showing Azure-Arc-enabled server](./03.png)
 
-![Screenshot of the Azure portal showing Azure Arc enabled server detail](./04.png)
+![Screenshot of the Azure portal showing Azure-Arc-enabled server detail](./04.png)
 
 ## Semi-Automated Deployment (Optional)
 
-As you may noticed, the last step of the run is to register the VM as a new Azure Arc enabled server resource.
+As you may noticed, the last step of the run is to register the VM as a new Azure-Arc-enabled server resource.
 
 ![Screenshot of vagrant up being completed](./05.png)
 

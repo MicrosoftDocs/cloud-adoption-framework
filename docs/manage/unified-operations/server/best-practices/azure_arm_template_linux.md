@@ -11,13 +11,13 @@ ms.subservice: operate
 
 ## Deploy an Ubuntu Azure Virtual Machine and connect it to Azure Arc using ARM Template
 
-The following README will guide you on how to automatically onboard a Azure Ubuntu VM on to Azure Arc using [Azure ARM Template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview). The provided ARM template is responsible of creating the Azure resources as well as executing the Azure Arc onboard script on the VM.
+The following README will guide you on how to automatically onboard a Azure Ubuntu VM on to Azure Arc using an [ARM template](https://docs.microsoft.com/azure/azure-resource-manager/templates/overview). The provided ARM template is responsible of creating the Azure resources as well as executing the Azure Arc onboard script on the VM.
 
-Azure VMs are leveraging the [Azure Instance Metadata Service (IMDS)](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc enabled server, a "conflict" is created which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used and instead, the Azure Arc server will still "act" as a native Azure VM.
+Azure VMs are leveraging the [Azure Instance Metadata Service (IMDS)](https://docs.microsoft.com/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure-Arc-enabled server, a "conflict" is created which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used and instead, the Azure Arc server will still "act" as a native Azure VM.
 
 However, **for demo purposes only**, the below guide will allow you to use and onboard Azure VMs to Azure Arc and by doing so, you will be able to simulate a server which is deployed outside of Azure (i.e "on-premises" or in other cloud platforms)
 
-> **Note: It is not expected for an Azure VM to be projected as an Azure Arc enabled server. The below scenario is unsupported and should ONLY be used for demo and testing purposes.**
+> **Note: It is not expected for an Azure VM to be projected as an Azure-Arc-enabled server. The below scenario is unsupported and should ONLY be used for demo and testing purposes.**
 
 ## Prerequisites
 
@@ -27,13 +27,13 @@ However, **for demo purposes only**, the below guide will allow you to use and o
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
 
   ```console
   az --version
   ```
 
-* In case you don't already have one, you can [Create a free Azure account](https://azure.microsoft.com/en-us/free/).
+* In case you don't already have one, you can [Create a free Azure account](https://azure.microsoft.com/free/).
 
 * Create Azure service principal (SP).
 
@@ -62,7 +62,7 @@ However, **for demo purposes only**, the below guide will allow you to use and o
     }
     ```
 
-    > **Note: it is optional, but highly recommended, to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest).**
+    > **Note: it is optional, but highly recommended, to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
 
 ## Automation Flow
 
@@ -72,7 +72,7 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 2. The ARM template includes an Azure VM custom script extension which will deploy the the [*install_arc_agent.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/scripts/install_arc_agent.sh) Shell script.
 
-3. In order to allow the Azure VM to successfully be projected as an Azure Arc enabled server, the script will:
+3. In order to allow the Azure VM to successfully be projected as an Azure-Arc-enabled server, the script will:
 
     1. Set local OS environment variables.
 
@@ -144,11 +144,11 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
 
     ![Screenshot script output](./06.png)
 
-* Upon successful run, a new Azure Arc enabled server will be added to the resource group.
+* Upon successful run, a new Azure-Arc-enabled server will be added to the resource group.
 
     ![Screenshot Azure Arc resource on the Azure portal](./07.png)
 
-    ![Screenshot details of Azure Arc enabled server on Azure portal](./08.png)
+    ![Screenshot details of Azure-Arc-enabled server on Azure portal](./08.png)
 
 ## Cleanup
 
