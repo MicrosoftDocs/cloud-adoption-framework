@@ -130,8 +130,8 @@ items:
       - name: Skills relevant to strategy
         href: strategy/suggested-skills.md
       
-      - name: Strategy Antipatterns
-        href: antipatterns/strategy-antipatterns.md
+    - name: Strategy Antipatterns
+      href: antipatterns/strategy-antipatterns.md
 
 
 
@@ -390,8 +390,8 @@ items:
       - name: Skills relevant to ready and landing zones
         href: ready/suggested-skills.md
 
-      - name: Ready Antipatterns
-        href: antipatterns/ready-antipatterns.md
+    - name: Ready Antipatterns
+      href: antipatterns/ready-antipatterns.md
 
   - name: Adopt
     items:
