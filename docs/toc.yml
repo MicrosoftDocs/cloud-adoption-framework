@@ -66,11 +66,7 @@ items:
         href: get-started/team/cloud-operations.md
 
     - name: Antipatterns to avoid
-      items:
-      - name: Full list of Antipatterns
-        href: antipatterns/index.md
-      - name: Top 10 Antipatterns (Maybe update quarterly?)
-        href: antipatterns/index.md
+      href: antipatterns/antipatterns-to-avoid.md
 
   - name: Strategy
     items:
@@ -134,9 +130,7 @@ items:
         href: strategy/suggested-skills.md
       
     - name: Strategy Antipatterns
-      items:
-      - name: Article for each strategy antipattern
-        href: antipatterns/*.md
+      href: antipatterns/strategy-antipatterns.md
 
 
   - name: Plan
@@ -193,9 +187,7 @@ items:
         href: plan/data-warehouse-migration.md
 
     - name: Plan Antipatterns
-      items:
-      - name: Article for each Plan antipattern
-        href: antipatterns/*.md
+      href: antipatterns/plan-antipatterns.md
 
   - name: Ready
     items:
@@ -391,9 +383,7 @@ items:
         href: ready/suggested-skills.md
 
     - name: Ready Antipatterns
-      items:
-      - name: Article for each Ready antipattern
-        href: antipatterns/*.md
+      href: antipatterns/ready-antipatterns.md
 
   - name: Adopt
     items:
