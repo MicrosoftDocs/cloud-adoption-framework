@@ -13,7 +13,7 @@ ms.custom: think-tank
 
 Customers frequently experience a number of common cloud adoption antipatterns while in the readiness phase of cloud adoption. Review the following antipatterns to avoid unexpected downtime, inability to recover or keep services available,  
 
-## Assuming released services are always supposed to be used in production
+## Antipattern: Assuming released services are always supposed to be used in production
 
 Since cloud computing is evolving rapidly, new services are often released in a preview state. These preview services usually do not provide e.g., an uptime SLA. Additionally, newly available services might have not reached the same maturity as already available service in the cloud. Customers tend to assume that all services that are made available in the cloud can be used already in production environments.
 
@@ -25,7 +25,7 @@ Trey Research Inc. uses a preview cloud service in production, since they think 
 
 When deciding on new services that are in preview status, keep in mind to only use preview services within Proof of Concept (PoC) scenarios but not in production environments as they do not have a specified SLA. The IT also needs to find the right balance when they are approving the usage of cloud services. The [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist) can help to approve the usage of cloud services quicker based on an already established framework.
 
-## Assuming increased resiliency and availability by default
+## Antipattern: Assuming increased resiliency and availability by default
 
 Increased resiliency (recovering from failures) and availability (running in a healthy state without significant downtime) can be one of the major advantages of cloud computing compared to on-premises. That leads to the perception that resiliency and high availability are on by default and do not have in mind that these factors can lead to additional costs and implicate in some cases additional technical effort.
 
@@ -39,7 +39,7 @@ Use [reference designs](https://docs.microsoft.com/azure/architecture/reference-
 
 Companies need to identify the right balance between [high resiliency and availability](https://docs.microsoft.com/azure/architecture/framework/resiliency/overview) and cost concerns. Meaning increased resiliency and availability most likely lead to increased costs (single instance cost with no SLA or 99,9% uptime SLA vs. two VMs running the same workload leading to 99,95% to 99,99% uptime SLA). Therefore, the process of requirement engineering is essential when designing a cloud-based solution. [SLA Estimator](https://github.com/mspnp/samples/tree/master/Reliability/SLAEstimator) can help calculate the end-to-end SLA of your application.
 
-## Becoming a Cloud Provider yourself
+## Antipattern: Becoming a Cloud Provider yourself
 
 Some companies introduce programs within their IT with the goal in mind, that the internal IT should become a cloud provider. In this initiative the IT becomes responsible to provide not only reference architectures but also infrastructure/platform as a service to business units. However, since this type of work is usually not the core business of the IT department, the "-as a service" offerings often lack pattern and practices to run or provide these services in a resilient, efficient, and secure way.
 
@@ -61,8 +61,5 @@ When it comes to IT tooling, such as: code repositories, continuous integration 
 
 ## Next steps
 
-- [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist)
-- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/)
 - [Overview of the reliability pillar](https://docs.microsoft.com/azure/architecture/framework/resiliency/overview)
-- [SLA Estimator](https://github.com/mspnp/samples/tree/master/Reliability/SLAEstimator)
 - [First Adoption Project](/azure/cloud-adoption-framework/strategy/first-adoption-project)

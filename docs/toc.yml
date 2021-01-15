@@ -798,9 +798,8 @@ items:
           href: migrate/azure-best-practices/governance-or-compliance.md
 
       - name: Migrate Antipatterns
-        items:
-        - name: Article for each Migrate antipattern
-          href: antipatterns/*.md
+        href: antipatterns/migrate-antipatterns.md
+
           
       - name: Process improvements
         items:
@@ -1424,10 +1423,8 @@ items:
         - name: Azure tools for deployment acceleration
           href: govern/deployment-acceleration/toolchain.md
 
-      - name: Govern Antipatterns
-        items:
-        - name: Article for each Govern antipattern
-          href: antipatterns/*.md
+    - name: Govern Antipatterns
+      href: antipatterns/govern-antipatterns.md
           
   - name: Manage
     items:
@@ -1541,9 +1538,7 @@ items:
       href: manage/design-principles.md
 
     - name: Manage Antipatterns
-      items:
-      - name: Article for each Govern antipattern
-        href: antipatterns/*.md
+      href: antipatterns/manage-antipatterns.md
 
   - name: Organize
     items:
@@ -1609,9 +1604,12 @@ items:
 
     - name: Organize Antipatterns
       items:
+      - name: Organizational antipatterns
+        href: antipatterns/organize-antipatterns.md
       - name: IT fiefdoms and IT silos
         href: organize/fiefdoms-silos.md
-          
+
+
   - name: Resources
     items:
     - name: Tools and templates

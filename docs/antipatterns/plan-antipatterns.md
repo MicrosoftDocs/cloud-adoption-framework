@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Customers frequently experience a number of common cloud adoption antipatterns while in the planning phase of cloud adoption. Misalignment on the operating model(s) can result in reduced time to market, misunderstandings, and increased pressure on the IT department.Companies can use the wrong service model when it is purely based on the assumption that Platform as a Service (PaaS) leads to more cost savings. Change of architecture can lead to major replacement projects, that are not only very complex to manage and execute but also cost intensive.
 
-## The wrong cloud operating model
+## Antipattern: The wrong cloud operating model
 
 Based on their strategic priority and scope of the portfolio, that needs to be managed, companies can define different cloud operating models with different types of accountability, landing zones and focus. The misalignment on the operating model(s) can however result in reduced time to market, misunderstandings, and increased pressure on the IT department.
 
@@ -26,7 +26,7 @@ AdventureWorks introduced an operation model in which the IT department has the 
 
 Companies should [review and compare their current cloud operating model](../operating-model/compare.md) to explore different options and to be able to define one or more cloud operating models that suit them. The article mentioned above outlines the four most common cloud operations patterns. As soon as the operating model is decided roles will change. Therefore, it is necessary to [build a skill readiness plan](../plan/adapt-roles-skills-processes.md) upon new roles that are given due to the operating model change when moving to the cloud.
 
-## The wrong "as a Service" model
+## Antipattern: The wrong "as a Service" model
 
 Companies can use the wrong service model when it is purely based on the assumption that Platform as a Service (PaaS) leads to more cost savings when comparing it to Infrastructure as a Service (IaaS). This phenomenon can mostly be seen in cost-conscious companies that have "cost savings" as one of their main cloud adoption motivations. These companies tend to forget, that with the adoption of PaaS, processes need to be changed as well, especially when certain responsibilities are moved towards the cloud provider. This can lead to unforeseen cost increases and delays because the usage of PaaS can introduce more fundamental changes when looking at: Coordination efforts, engineering practices and delivery pipelines.
 
@@ -40,7 +40,7 @@ To reduce the coordination effort when adopting cloud in several cases it is a c
 
 Additionally, the effort of skilling and coordination needed to adapt the processes and practices are more manageable compared to the introduction. Especially in datacenter transformation scenarios, it's recommended to adopt IaaS fist and gradually modernize and adopt PaaS later, while the workload is already in the cloud. Using this strategy, the experiences gathered in the migration project can be used to reduce the effort of skilling and process changes when modernizing.
 
-## Replacing over modernizing
+## Antipattern: Replacing over modernizing
 
 Applications based on PaaS and SaaS are relatively easy to maintain and do not require big management efforts. Therefore, a lot of companies want to replace or redesign an old complex architecture landscapes with SaaS and cloud native concepts in mind, when adopting the cloud.  This change of architecture however, usually leads to major replacement projects, that are not only very complex to manage and execute but also cost intensive. Additionally, there are other substantial risks as processes and the operating model needs to be changed.
 

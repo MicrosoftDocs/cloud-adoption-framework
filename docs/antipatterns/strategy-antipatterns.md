@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 Customers frequently experience a number of common cloud adoption antipatterns while in the strategy phase of cloud adoption. These patterns can make it hard to align your IT and business strategy, and make it hard measure the success of your cloud project.
 
-## Missing motivation
+## Antipattern: Missing motivation
 
 In numerous companies we find that they nowadays announce a cloud-first or cloud-only strategy, while not defining a clear picture on what they want to achieve with the newly announced strategy. Without specifying concrete KPIs and motivations within strategy development cloud projects will most certainly not be successful, as the success of the project cannot be measured.
 
@@ -25,7 +25,7 @@ Contoso finds that their closest competitor is launching a cloud-only strategy d
 
 When discussing the motivation why adopting the cloud, define concrete KPIs that need to be accomplished to be able to communicate if the strategy is successful and should be followed for more projects. To find out more about motivations, see [Why are we moving to the cloud?](../strategy/motivations.md).
 
-## Misalignment of motivation
+## Antipattern: Misalignment of motivation
 
 One of the major reasons why cloud adoptions journeys fail, is the misalignment within the company when it comes to motivation or cloud adoption triggers. While the business sees major benefits by adopting the cloud, adoption triggers are often not communicated and aligned with the IT even though these motivations do not only influence the business strategy of a company but also the IT strategy. If there is no alignment and the motivation is not documented, a cloud journey most probably fails.
 
