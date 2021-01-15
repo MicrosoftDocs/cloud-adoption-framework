@@ -1,7 +1,7 @@
 ---
 title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistently operations management across hybrid, multicloud, and edge deployments.
-author: mpvenables
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.subservice: strategy
 
 # Unified operations - hybrid, multicloud, and edge
 
-Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes) is necessary to understand what might affect primary cost options, such as capital expenses and operating costs.
+Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](../../strategy/business-outcomes/fiscal-outcomes.md) is necessary to understand what might affect primary cost options, such as capital expenses and operating costs.
 
 In any hybrid and multicloud strategy, the first increase in overhead costs can manifest in the form of duplicated cloud platform utilities: network, identity, governance, security, and operations tooling. In the longer term, more negative business impacts could emerge in the form of challenges like staffing core functions or teams with the skills needed to manage diverse environments.
 
-When [setting up a skills readiness plan](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes), organizations should move toward adapting and building existing roles and skills for the cloud. Support the skills readiness plan with cross-team organizational processes to align your organization with agile practices, and required cloud functions that support developing a long-term cloud operating model.
+When [setting up a skills readiness plan](../../plan/adapt-roles-skills-processes.md), organizations should move toward adapting and building existing roles and skills for the cloud. Support the skills readiness plan with cross-team organizational processes to align your organization with agile practices, and required cloud functions that support developing a long-term cloud operating model.
 
-Develop and evolve a [mature team](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/organization-structures#best-practice-minimum-viable-product-mvp), starting from a Minimum viable product (MVP) that balances innovation and risk, and move towards a cross-team [CCoE model](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-center-of-excellence)—with central IT as collaborative  partner. Accelerate cloud innovation, while increasing business agility with agile, cloud-first hybrid and multicloud solutions. Delegate responsibilities, and execute on modern technical abilities.
+Develop and evolve a [mature team](../../organize/organization-structures.md#best-practice-minimum-viable-product-mvp), starting from a Minimum viable product (MVP) that balances innovation and risk, and move towards a cross-team [CCoE model](../../organize/cloud-center-of-excellence.md)—with central IT as collaborative  partner. Accelerate cloud innovation, while increasing business agility with agile, cloud-first hybrid and multicloud solutions. Delegate responsibilities, and execute on modern technical abilities.
 
 Hybrid and multicloud strategies have lead many decisions makers to falsely conclude that the cloud is more expensive than on-premises technology options. A recent Forrester Consulting study commissioned by Microsoft found that a hybrid and multi-cloud strategy can provide very significant [three-year return on investment, and substantial avoided on-premises infrastructure and staff costs](https://azure.microsoft.com/resources/forrester-tei-microsoft-azure-iaas/) for organizations. A second study by Accenture and WSP Environment & Energy concluded that cloud solutions add [significantly increased energy efficiencies for large deployments](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), with organizations reducing energy use and carbon emissions by more than 30 percent against business applications installed on-premise. (For small deployments, energy use and emissions can be reduced by more than 90 percent with a shared cloud service).
 
@@ -64,7 +64,7 @@ This image displays the individual components required for unified operations, a
 
 ## Customer processes
 
-The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/) and [operations management](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/) processes remain consistent.
+The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](../../govern/) and [operations management](../../manage/) processes remain consistent.
 
 ![Customer Processes that unified operations can support](../../_images/unified-operations/unified-operations-customer-processes.png)
 
@@ -83,8 +83,8 @@ The primary objective of unified operations is creating as much process consiste
 - Inventory and visibility: account for, and ensure reporting for all assets, and **collect and monitor your inventory's run state in enterprise-grade environments**.
 - Optimized operations: track, patch, and optimize supported resources and **minimize business interruption risks from configuration drift or vulnerabilities from inconsistent patch management**.
 - Protection and recovery: backup, business continuity, and disaster recovery best practices and **reduce the duration and impact of unpreventable outages**.
-- [Platform operations](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-management-guide/platform-specialization?tabs=SystemsDesign%2CAutomatedRemediation%2CServiceCatalog%2CContinuousImprovement): specialized operations for common technology platforms such as SQL, WVD, and SAP (for medium to high criticality workloads).
-- [Workload operations](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-management-guide/workload-specialization): specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
+- [Platform operations](../../manage/azure-management-guide/platform-specialization.md?tabs=SystemsDesign%2CAutomatedRemediation%2CServiceCatalog%2CContinuousImprovement): specialized operations for common technology platforms such as SQL, WVD, and SAP (for medium to high criticality workloads).
+- [Workload operations](../../manage/azure-management-guide/workload-specialization.md): specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
 
 Platform and workload operations both execute an equivalent *iterative process* to **improve system design, automate remediation, scale changes with a service catalog, and continuously improve system design, automation, and scale**.
 

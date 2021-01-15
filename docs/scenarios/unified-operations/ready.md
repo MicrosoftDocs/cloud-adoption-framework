@@ -45,15 +45,15 @@ To start evaluating your cloud mix across multiple cloud providers, complete a s
 - Onboard & tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc_inventory_tagging.md)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/arc_inventory_tagging.md)
 
 The following links will help you onboard and tag assets across each of your cloud providers:
 
-- Onboard Azure assets: [linux VMs](/manage/unified-operations/server/best-practices/azure_arm_template_linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure_arm_template_win.md)
-- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/server/best-practices/onboard_server_linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard_server_win.md)
-- Onboard VMware assets: [linux VMs](../../manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware_scaled_powercli_win.md)
-- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws_terraform_al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws_terraform_ubuntu.md)
-- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp_terraform_ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp_terraform_windows.md)
+- Onboard Azure assets: [linux VMs](../manage/unified-operations/azure_arm_template_linux.md) and [Windows VMs](../../manage/unified-operations/azure_arm_template_win.md)
+- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/onboard_server_linux.md) and [Windows VMs](../../manage/unified-operations/onboard_server_win.md)
+- Onboard VMware assets: [linux VMs](../../manage/unified-operations/vmware_scaled_powercli_linux.md) and [Windows VMs](../../manage/unified-operations/vmware_scaled_powercli_win.md)
+- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/aws_terraform_al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/aws_terraform_ubuntu.md)
+- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/gcp_terraform_ubuntu.md) and [Windows VMs](../../manage/unified-operations/gcp_terraform_windows.md)
 
 ## Configure your initial Azure Environment
 
@@ -67,10 +67,9 @@ The Cloud Adoption Framework's Ready methodology helps prepare your environment 
 
 Once your Azure environment is established, you can begin to modify your Azure environment to support the most appropriate cloud mix. The following are modifications that should be considered:
 
-- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance. **TODO Add link back to Ready guidance on identity provider options & decision guides**
-- **Public network connectivity:** Best practice suggests that all ingress and egress traffic should route through one cloud platform when possible. But, your requirements or cloud mix may require more of a peer model. This is especially common, if your cloud mix is used to reach redundancy and reliability requirements. How will your configure connectivity between each cloud platform and the public internet? **TODO Add link back to Ready guidance on network connectivity options & decision guides**
-- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case. **TODO Add link back to CAF guidance on BCDR options & decision guides**
-- **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform? **TODO Add link back to Ready guidance on network connectivity options & decision guides**
+- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance. 
+- **Public network connectivity:** Best practice suggests that all ingress and egress traffic should route through one cloud platform when possible. But, your requirements or cloud mix may require more of a peer model. This is especially common, if your cloud mix is used to reach redundancy and reliability requirements. How will your configure connectivity between each cloud platform and the public internet?
+- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case. - **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform?
 
 ### The most important consideration
 

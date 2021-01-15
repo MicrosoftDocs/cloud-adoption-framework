@@ -3,7 +3,7 @@ title: "Introduction to Hybrid and Multicloud"
 description: Introduction to Hybrid and Multicloud
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview

@@ -1,7 +1,7 @@
 ---
 title: "Strategy for unified operations adoption"
 description: Describe the scenario's impact on strategy
-author: mpvenables
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 ## Executive summary
 
-Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and also want business outcomes related to the innovations of cloud services—where you might consider a hybrid and multi-cloud scenario to be beneficial to your organization.
+Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](../../strategy/cloud-migration-business-case.md). There are sound [motivations](../../strategy/motivations.md) to retain part of your digital estate on-premises, and also want business outcomes related to the innovations of cloud services—where you might consider a hybrid and multi-cloud scenario to be beneficial to your organization.
 
 In moving to a hybrid and multi-cloud scenario, customers might be concerned about maintaining governance, management, and compliance— managing identity and security—migrating data—integrating disparate development environments—managing data management tools—and porting applications across scattered resources and environments.
 
@@ -43,11 +43,11 @@ How does deploying one control plane transform your cloud adoption and migration
 
 Hybrid and multi-cloud is the most common reality across current enterprise environments. For most customers, moving to a hybrid and multi-cloud scenario is simply embracing market reality, and, as previously mentioned, remains a sound business decision. The next decision for your organization is committing to a distributed computing paradigm that will increase the speed of both your cloud adoption and migration efforts. Beginning cross-team initiatives to increase your cloud readiness with innovative cloud practices and technologies is the first step towards deploying one control plane that uniformly protects and monitors resources, standardizes governance and security, and manages all operations. Consider a hybrid and multi-cloud environment to manage your overall digital estate if you are planning to be hybrid by design for the next 12 months or longer.
 
-Work with your [cloud strategy team](<https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/get-started/team/cloud-strategy>), to build the necessary skilling and processes to prepare for the move to greater accountability, developer empowerment, and Azure-services anywhere with a unified control plane across hybrid, multi-cloud, and edge.
+Work with your [cloud strategy team](../../get-started/team/cloud-strategy.md), to build the necessary skilling and processes to prepare for the move to greater accountability, developer empowerment, and Azure-services anywhere with a unified control plane across hybrid, multi-cloud, and edge.
 
 ## Unified operations motivations
 
-There are various [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: critical business events, migration, or innovation.
+There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: critical business events, migration, or innovation.
 
 Customers may have a digital estate bound by specific regulatory requirements and data localization laws that constrain in what geographical location it must reside. A particular industry might require low-latency and high connectivity for efficient operational capacity, such as financial services, also a common requirement for other industries like media, healthcare, education, and government, for example.
 
@@ -55,7 +55,7 @@ A multi-national organization, for example, might have globally distributed, leg
 
 ## Unified operations outcomes
 
-When customers execute on their cloud strategy and choose a hybrid and multi-cloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/>).
+When customers execute on their cloud strategy and choose a hybrid and multi-cloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/).
 
 Organizations might require **improved visibility and control over their IT estate**. They want the ability to see all their resources in a single location, and be able to query through them to gain insights.
   
@@ -69,7 +69,7 @@ Finally, companies might benefit from the outcome of **increased flexibility whe
 
 ## What is the business justification for hybrid and multi-cloud?
 
-There may be diverse [business justifications](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>) to support your organization's choice of a hybrid and multi-cloud approach for cloud transformation. Moving to a hybrid and multi-cloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multi-cloud environments can benefit from one control plane over a multi-cloud environment—enabling the consistency of uniform development, unified dev-ops and management, common identity and security, extending existing applications and infrastructure across private cloud, public cloud, and edge computing resources.
+There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multi-cloud approach for cloud transformation. Moving to a hybrid and multi-cloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multi-cloud environments can benefit from one control plane over a multi-cloud environment—enabling the consistency of uniform development, unified dev-ops and management, common identity and security, extending existing applications and infrastructure across private cloud, public cloud, and edge computing resources.
 
 ## What are the overall benefits of a multi-cloud control plane?
 

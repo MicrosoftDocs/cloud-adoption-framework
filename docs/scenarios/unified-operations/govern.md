@@ -23,12 +23,9 @@ Good governance starts with sound resource consistency practices. Organizing res
 - Tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [Inventory and tag your hybrid and multicloud resources](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_inventory_tagging?branch=pr-en-us-884)
-**TODO Point to relative link**
+To get started, [Inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/arc_inventory_tagging.md)
 
-Once you establish your tagging standards and onboarded some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the best practices on [Managing Arc enabled servers with Azure Policy](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_policies_mma?branch=pr-en-us-884).
-
-Continue building on this governance MVP, using the remaining sections of this article or the [best practices on unified operations](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/?branch=pr-en-us-884).
+Once you establish your tagging standards and onboard some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the best practices on [Managing Arc enabled servers with Azure Policy](../../manage/unified-operations/arc_policies_mma.md).
 
 ## Governance disciplines
 
@@ -36,8 +33,8 @@ With a basic understanding of unified operations and Azure Arc, you can begin ex
 
 Security baseline is among the most common ways a customer will expand their governance disciplines in a unified operations scenario. THe following best practices will help preserve your security baseline across all environments:
 
-- [Collect and detect security data across clouds with Azure Security Center](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_securitycenter?branch=pr-en-us-884)
-- [Investigate and respond to security threats with Azure Sentinel](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_azuresentinel?branch=pr-en-us-884)
+- [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/arc_securitycenter.md)
+- [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/arc_azuresentinel.md)
 - [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
 
