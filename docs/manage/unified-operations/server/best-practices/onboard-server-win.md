@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Connect an existing Windows server to Azure Arc
 
-The following README will guide you through how to connect an Windows machine to Azure Arc using a simple PowerShell script.
+The following README will guide you through how to connect a Windows machine to Azure Arc using a simple PowerShell script.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ The following README will guide you through how to connect an Windows machine to
 
 * Create a new Azure resource group where you want your machine(s) to show up.
 
-    ![A screenshot of the Azure portal with an empty resource group.](./img/onboard-server-win/win-resource-group.png)
+    ![A screenshot of an empty resource group in the Azure portal.](./img/onboard-server-win/win-resource-group.png)
 
 * Download the [az_connect_win](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
 
