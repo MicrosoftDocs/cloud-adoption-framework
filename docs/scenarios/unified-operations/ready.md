@@ -17,7 +17,7 @@ The Ready methodology of the cloud adoption framework guides customers' through 
 
 Hybrid and multicloud are not binary decisions, they are more of a spectrum of decisions as seen in the chart below. Before configuring your Azure environment (or any other cloud environment), its important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes for illustration:
 
-![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/unified-operations/cloud-mix.png)
+![3 illustrations showing how different customers distribute workloads across cloud providers.](../../-images/unified-operations/cloud-mix.png)
 
 The image above illustrates three of the most common cloud mixes we see with customers. Each blue dot represents a workload, each orange circle a business process supported by a distinct environment. Each of these cloud mixes requires a very different Azure environment configuration.
 
@@ -25,7 +25,7 @@ The image above illustrates three of the most common cloud mixes we see with cus
 - **Azure first:** Most workloads have been moved to Azure. A small number of workloads stay on-prem. Strategic decisions have led to a small number of workloads living on the edge or in multicloud environments.
 - **Multicloud first:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a small number of workloads living in Azure or on the edge.
 
-Each month, we see a steady flow of customers moving from a _hybrid first_ mix to an _Azure first_ mix, as their cloud strategy matures. But we also support a number of customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
+Each month, we see a steady flow of customers moving from a -hybrid first- mix to an -Azure first- mix, as their cloud strategy matures. But we also support a number of customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
 
 The most important things to consider when preparing any of your cloud environments for hybrid and multicloud, are the following:
 
@@ -45,15 +45,15 @@ To start evaluating your cloud mix across multiple cloud providers, complete a s
 - Onboard & tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/arc_inventory_tagging.md)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 
 The following links will help you onboard and tag assets across each of your cloud providers:
 
-- Onboard Azure assets: [linux VMs](../manage/unified-operations/azure_arm_template_linux.md) and [Windows VMs](../../manage/unified-operations/azure_arm_template_win.md)
-- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/onboard_server_linux.md) and [Windows VMs](../../manage/unified-operations/onboard_server_win.md)
-- Onboard VMware assets: [linux VMs](../../manage/unified-operations/vmware_scaled_powercli_linux.md) and [Windows VMs](../../manage/unified-operations/vmware_scaled_powercli_win.md)
-- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/aws_terraform_al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/aws_terraform_ubuntu.md)
-- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/gcp_terraform_ubuntu.md) and [Windows VMs](../../manage/unified-operations/gcp_terraform_windows.md)
+- Onboard Azure assets: [linux VMs](../manage/unified-operations/server/best-practices/azure-arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-win.md)
+- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
+- Onboard VMware assets: [linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
+- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
+- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-windows.md)
 
 ## Configure your initial Azure Environment
 

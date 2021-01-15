@@ -25,7 +25,7 @@ However, **for demo purposes only**, the below guide will allow you to use and o
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
@@ -71,7 +71,7 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 1. User is editing the ARM template parameters file (one time edit). These parameters values are being used throughout the deployment.
 
-2. The ARM template incl. an Azure VM custom script extension which will deploy the the [*install_arc_agent.ps1*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/windows/arm_template/scripts/install_arc_agent.ps1) PowerShell script.
+2. The ARM template incl. an Azure VM custom script extension which will deploy the the [*install-arc-agent.ps1*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/windows/arm-template/scripts/install-arc-agent.ps1) PowerShell script.
 
 3. In order to allow the Azure VM to successfully be projected as an Azure-Arc-enabled server, the script will:
 
@@ -97,16 +97,16 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
 
 * Before deploying the ARM template, login to Azure using Azure CLI with the ```az login``` command.
 
-* The deployment is using the ARM template parameters file. Before initiating the deployment, edit the [*azuredeploy.parameters.json*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/windows/arm_template/azuredeploy.parameters.json) file located in your local cloned repository folder. An example parameters file is located [here](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/windows/arm_template/azuredeploy.parameters.example.json).
+* The deployment is using the ARM template parameters file. Before initiating the deployment, edit the [*azuredeploy.parameters.json*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/windows/arm-template/azuredeploy.parameters.json) file located in your local cloned repository folder. An example parameters file is located [here](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/windows/arm-template/azuredeploy.parameters.example.json).
 
-* To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azure/windows/arm_template) and run the below command:
+* To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/azure/windows/arm-template) and run the below command:
 
     ```console
-    az group create --name <Name of the Azure resource group> --location <Azure Region> --tags "Project=jumpstart_azure_arc_servers"
+    az group create --name <Name of the Azure resource group> --location <Azure Region> --tags "Project=jumpstart-azure-arc-servers"
     az deployment group create \
     --resource-group <Name of the Azure resource group> \
     --name <The name of this deployment> \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/windows/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/azure/windows/arm-template/azuredeploy.json \
     --parameters <The *azuredeploy.parameters.json* parameters file location>
     ```
 
@@ -115,11 +115,11 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
     For example:
 
     ```console
-    az group create --name Arc-Servers-Win-Demo --location "East US" --tags "Project=jumpstart_azure_arc_servers"
+    az group create --name Arc-Servers-Win-Demo --location "East US" --tags "Project=jumpstart-azure-arc-servers"
     az deployment group create \
     --resource-group Arc-Servers-Win-Demo \
     --name arcwinsrvdemo \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/windows/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/azure/windows/arm-template/azuredeploy.json \
     --parameters azuredeploy.parameters.json
     ```
 

@@ -19,21 +19,21 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
-* **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/)**
-* **[GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-* **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-* **[AWS Amazon Linux 2 EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_al2/)**
-* **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/)**
-* **[VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-* **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/)**
-* **[Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/)**
+* **[GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)**
+* **[VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/)**
+* **[Vagrant Windows box](./local-vagrant-windows/)**
 
 ## Prerequisites
 
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below you can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
@@ -74,12 +74,12 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
     > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
 
 * In order to demonstrate the custom script extension, we will use the below Linux and Windows scripts.
-  * [*Linux*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_linux.sh): The script will modify the message of the day (MOTD) on the operating system.
-  * [*Windows*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolaty](https://chocolatey.org/) packages on the VM.
+  * [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh): The script will modify the message of the day (MOTD) on the operating system.
+  * [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolaty](https://chocolatey.org/) packages on the VM.
 
 ## Azure-Arc-enabled servers Custom Script Extension Deployment
 
-* Edit the extensions parameters file for [*Windows*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or for [*Linux*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
+* Edit the extensions parameters file for [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or for [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
 
    ![Screenshot of an ARM template parameters file.](./img/arc-vm-extension-custom-script/parameters-file.png)
 
@@ -94,24 +94,24 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
     ![Screenshot of an Azure region.](./img/arc-vm-extension-custom-script/azure-region.png)
 
   * A public Uri for the script that you would like to run on the servers, in this case use the URL for the script in raw format.
-    * For Windows: [Public Uri](https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1)
-    * For Linux: [Public Uri](https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/scripts/custom_script_linux.sh)
+    * For Windows: [Public Uri](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1)
+    * For Linux: [Public Uri](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh)
 
   * To run either script, use the below commands:
 
     * Windows:
 
          ```powershell
-         powershell -ExecutionPolicy Unrestricted -File custom_script_windows.ps1
+         powershell -ExecutionPolicy Unrestricted -File custom-script-windows.ps1
          ```
 
     * Linux:
 
          ```bash
-         ./custom_script_linux.sh
+         ./custom-script-linux.sh
          ```
 
-* To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/extensions/arm) and run the below command with the templates that match your operating system:
+* To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/extensions/arm) and run the below command with the templates that match your operating system:
 
     ```bash
     az deployment group create --resource-group <Name of the Azure resource group> \
@@ -143,7 +143,7 @@ Complete the following steps to clean up your environment.
 
 Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
-* **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/) / [GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-* **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-* **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/) / [VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-* **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/) / [Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/) / [GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/) / [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/) / [Vagrant Windows box](./local-vagrant-windows/)**

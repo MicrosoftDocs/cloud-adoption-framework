@@ -95,7 +95,7 @@ Before converting the VM to a template, few actions needs to be taken.
 
 * Change PowerShell Execution Policy to "bypass" by running the ```Set-ExecutionPolicy -ExecutionPolicy Bypass``` command in PowerShell (can be later tuned on via Group Policy or a PowerShell script).
 
-* Allow WinRM communication to the OS buy running the [*allow_winrm*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/scripts/allow_winrm.ps1) PowerShell script.
+* Allow WinRM communication to the OS buy running the [*allow-winrm*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/vmware/winsrv/terraform/scripts/allow-winrm.ps1) PowerShell script.
 
 * None of the below are mandatory but should be considered for a Windows Template:
 

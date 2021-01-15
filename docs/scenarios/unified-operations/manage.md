@@ -25,19 +25,19 @@ To get started with an operations baseline that spans multiple cloud providers, 
 - Tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/arc_inventory_tagging.md)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 
-Once you complete the basic exercise your can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds, is to establish a consistent plan for patch and update management. Follow this guide on [hybrid and multicloud update management](../../manage/unified-operations/arc_updatemanagement.md) to deploy tools that can control patching across cloud providers.
+Once you complete the basic exercise your can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds, is to establish a consistent plan for patch and update management. Follow this guide on [hybrid and multicloud update management](../../manage/unified-operations/server/best-practices/arc-updatemanagement.md) to deploy tools that can control patching across cloud providers.
 
 ## Enhanced baseline
 
 Enhance your operations baseline by onboarding a continuously broader range of assets and cloud providers. The follow list provides a few examples of the type of assets you can add to your expanded operations baseline.
 
-- Onboard Azure assets: [linux VMs](../../manage/unified-operations/azure_arm_template_linux.md) and [Windows VMs](../../manage/unified-operations/azure_arm_template_win.md)
-- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/onboard_server_linux.md) and [Windows VMs](../../manage/unified-operations/onboard_server_win.md)
-- Onboard VMware assets: [linux VMs](../../manage/unified-operations/vmware_scaled_powercli_linux.md) and [Windows VMs](../../manage/unified-operations/vmware_scaled_powercli_win.md)
-- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/aws_terraform_al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/aws_terraform_ubuntu.md)
-- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/gcp_terraform_ubuntu.md) and [Windows VMs](../../manage/unified-operations/gcp_terraform_windows.md)
+- Onboard Azure assets: [linux VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-win.md)
+- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
+- Onboard VMware assets: [linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
+- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
+- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-windows.md)
 
 ## Operations management disciplines
 
@@ -45,8 +45,8 @@ In addition to tagging and onboarding assets, you can also deliver a number of o
 
 Once example of a mature operations management discipline, is the use of Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
-- [Manage VMs with MMA](../../manage/unified-operations/arc_vm_extension_mma_arm.md)
-- [Scale configuration of MMA](../../manage/unified-operations/arc_vm_extension_customscript_arm.md)
+- [Manage VMs with MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md)
+- [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md)
 
 ## Next step: Your next migration iteration
 

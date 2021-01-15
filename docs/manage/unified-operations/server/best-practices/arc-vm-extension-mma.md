@@ -20,14 +20,14 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
-* **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/)**
-* **[GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-* **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-* **[AWS Amazon Linux 2 EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_al2/)**
-* **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/)**
-* **[VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-* **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/)**
-* **[Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/)**
+* **[GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)**
+* **[VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/)**
+* **[Vagrant Windows box](./local-vagrant-windows/)**
 
 Please review the [Azure Monitor supported OS documentation](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you will use for this exercise are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
 
@@ -36,7 +36,7 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below you can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
@@ -76,7 +76,7 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
     > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
 
-* You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/log_analytics-template.parameters.json) and provide a name and location for your workspace.
+* You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/log-analytics-template.parameters.json) and provide a name and location for your workspace.
 
     ![Screenshot ARM template parameters file.](./img/arc-vm-extension-mma/parameters-file-1.png)
 
@@ -84,13 +84,13 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
   ```console
   az deployment group create --resource-group <Name of the Azure resource group> \
-  --template-file <The *log_analytics-template.json* template file location> \
-  --parameters <The *log_analytics-template.parameters.json* template file location>
+  --template-file <The *log-analytics-template.json* template file location> \
+  --parameters <The *log-analytics-template.parameters.json* template file location>
   ```
 
 ## Azure-Arc-enabled servers Microsoft Monitoring Agent Extension Deployment
 
-* Edit the [*extensions parameters file*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template.parameters.json)
+* Edit the [*extensions parameters file*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template.parameters.json)
 
     ![Screenshot ARM template parameters file](./img/arc-vm-extension-mma/parameters-file-2.png)
 
@@ -110,7 +110,7 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
     ![Screenshot of a workspace configuration.](./img/arc-vm-extension-mma/mma-workspace-config.png)
 
-* Choose the ARM template that matches your operating system, for [*Windows*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template-windows.json) and [*Linux*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
+* Choose the ARM template that matches your operating system, for [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template-windows.json) and [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
 
     ```console
     az deployment group create --resource-group <Name of the Azure resource group> \
@@ -134,10 +134,10 @@ Complete the following steps to clean up your environment.
 
 Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
-* **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/) / [GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-* **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-* **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/) / [VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-* **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/) / [Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/) / [GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/) / [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/) / [Vagrant Windows box](./local-vagrant-windows/)**
 
 * Remove the Log Analytics workspace by executing the following command in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
 

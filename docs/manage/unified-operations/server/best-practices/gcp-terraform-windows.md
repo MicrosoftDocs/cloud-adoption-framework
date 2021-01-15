@@ -18,7 +18,7 @@ The following README will guide you on how to use the provided [Terraform](https
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
@@ -82,7 +82,7 @@ The following README will guide you on how to use the provided [Terraform](https
 
     ![Screenshot of GCP console showing enabling Compute Engine API](./04.png)
 
-* Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select "New Service Account" from the dropdown, give it a name, select Project then Owner as the role, JSON as the key type, and click Create. This downloads a JSON file with all the credentials that will be needed for Terraform to manage the resources. Copy the downloaded JSON file to the *azure_arc_servers_jumpstart/gcp/windows/terraform* directory.
+* Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select "New Service Account" from the dropdown, give it a name, select Project then Owner as the role, JSON as the key type, and click Create. This downloads a JSON file with all the credentials that will be needed for Terraform to manage the resources. Copy the downloaded JSON file to the *azure-arc-servers-jumpstart/gcp/windows/terraform* directory.
 
     ![Screenshot of GCP cloud console showing creation of service account](./05.png)
 
@@ -92,18 +92,18 @@ Before executing the Terraform plan, you must set and then export the environmen
 
 * Retrieve your Azure subscription ID and tenant ID using the ```az account list``` command.
 
-* The Terraform plan creates resources in both Microsoft Azure and Google Cloud. It then executes a script on a Google Cloud virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your Google Cloud and Azure environments. Edit [*scripts/vars.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
+* The Terraform plan creates resources in both Microsoft Azure and Google Cloud. It then executes a script on a Google Cloud virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your Google Cloud and Azure environments. Edit [*scripts/vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/windows/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-  * TF_VAR_subscription_id=Your Azure subscription ID
-  * TF_VAR_client_id=Your Azure service principal app id
-  * TF_VAR_client_secret=Your Azure service principal password
-  * TF_VAR_tenant_id=Your Azure tenant ID
-  * TF_VAR_gcp_project_id=GCP project id
-  * TF_VAR_gcp_credentials_filename=GCP credentials json filename
+  * TF-VAR-subscription-id=Your Azure subscription ID
+  * TF-VAR-client-id=Your Azure service principal app id
+  * TF-VAR-client-secret=Your Azure service principal password
+  * TF-VAR-tenant-id=Your Azure tenant ID
+  * TF-VAR-gcp-project-id=GCP project id
+  * TF-VAR-gcp-credentials-filename=GCP credentials json filename
 
-* From CLI, navigate to the [*azure_arc_servers_jumpstart/gcp/windows/terraform*](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/gcp/windows/terraform) directory of the cloned repo.
+* From CLI, navigate to the [*azure-arc-servers-jumpstart/gcp/windows/terraform*](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/gcp/windows/terraform) directory of the cloned repo.
 
-* Export the environment variables you edited by running [*scripts/vars.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
+* Export the environment variables you edited by running [*scripts/vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/windows/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 
     ```console
     source ./scripts/vars.sh
@@ -128,7 +128,7 @@ The Terraform plan automatically installs the Azure Arc agent and connects the V
 
 If you want to demo/control the actual registration process, do the following:
 
-* Before running the ```terraform apply``` command, open [*main.tf*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/main.tf) and comment out the ```windows-startup-script-ps1 = local_file.install_arc_agent_ps1.content``` line and save the file.
+* Before running the ```terraform apply``` command, open [*main.tf*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/windows/terraform/main.tf) and comment out the ```windows-startup-script-ps1 = local-file.install-arc-agent-ps1.content``` line and save the file.
 
     ![Screenshot showing main.tf being commented to disable automatic onboarding of Azure Arc agent](./13.png)
 
@@ -148,7 +148,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![Screenshot showing how to RDP into GCP instance](./18.png)
 
-* Once logged in, open PowerShell ISE **as Administrator**. Make sure you are running the x64 version of PowerShell ISE and not x86. Once open, select File->New to create an empty .ps1 file. Then paste in the entire contents of *./scripts/install_arc_agent.ps1]*. Click the play button to execute the script. When complete, you should see the output showing successful onboarding of the machine.
+* Once logged in, open PowerShell ISE **as Administrator**. Make sure you are running the x64 version of PowerShell ISE and not x86. Once open, select File->New to create an empty .ps1 file. Then paste in the entire contents of *./scripts/install-arc-agent.ps1]*. Click the play button to execute the script. When complete, you should see the output showing successful onboarding of the machine.
 
     ![Screenshot showing Powershell ISE with Azure Arc agent connection script](./19.png)
 

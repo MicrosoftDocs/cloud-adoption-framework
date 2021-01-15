@@ -223,63 +223,63 @@ items:
             - name: Azure
               items:
               - name: Azure Linux with ARM Templates
-                href: manage/unified-operations/server/best-practices/azure_arm_template_linux.md
+                href: manage/unified-operations/server/best-practices/azure-arm-template-linux.md
               - name: Azure Windows with ARM Templates
-                href: manage/unified-operations/server/best-practices/azure_arm_template_win.md
+                href: manage/unified-operations/server/best-practices/azure-arm-template-win.md
             - name: On-prem - Local datacenter
               items:
               - name: Linux with shell script
-                href: manage/unified-operations/server/best-practices/onboard_server_linux.md
+                href: manage/unified-operations/server/best-practices/onboard-server-linux.md
               - name: Windows with PowerShell
-                href: manage/unified-operations/server/best-practices/onboard_server_win.md
+                href: manage/unified-operations/server/best-practices/onboard-server-win.md
               - name: Ubuntu with Vagrant
-                href: manage/unified-operations/server/best-practices/local_vagrant_ubuntu.md
+                href: manage/unified-operations/server/best-practices/local-vagrant-ubuntu.md
               - name: Windows with Vagrant
-                href: manage/unified-operations/server/best-practices/local_vagrant_windows.md
+                href: manage/unified-operations/server/best-practices/local-vagrant-windows.md
             - name: VMware
               items:
               - name: Create a VM template for Ubuntu
-                href: manage/unified-operations/server/best-practices/vmware_ubuntu_template.md
+                href: manage/unified-operations/server/best-practices/vmware-ubuntu-template.md
               - name: Create a VM template for Windows
-                href: manage/unified-operations/server/best-practices/vmware_winsrv2k19_template.md
+                href: manage/unified-operations/server/best-practices/vmware-winsrv2k19-template.md
               - name: Linux with VMware PowerCLI
-                href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux.md
+                href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md
               - name: Windows with VMware PowerCLI
-                href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_win.md
+                href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md
               - name: Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/vmware_terraform_ubuntu.md
+                href: manage/unified-operations/server/best-practices/vmware-terraform-ubuntu.md
               - name: Windows with Terraform
-                href: manage/unified-operations/server/best-practices/vmware_terraform_winsrv.md
+                href: manage/unified-operations/server/best-practices/vmware-terraform-winsrv.md
             - name: AWS - Amazon Web Services
               items:
               - name: AWS Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/aws_terraform_ubuntu.md
+                href: manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md
               - name: AWS Linux with Terraform
-                href: manage/unified-operations/server/best-practices/aws_terraform_al2.md
+                href: manage/unified-operations/server/best-practices/aws-terraform-al2.md
               - name: AWS EC2 onboard with Ansible
-                href: manage/unified-operations/server/best-practices/aws_scale_ansible.md
+                href: manage/unified-operations/server/best-practices/aws-scale-ansible.md
             - name: GCP - Google Cloud Provider
               items:
               - name: GCP Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/gcp_terraform_ubuntu.md
+                href: manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md
               - name: GCP Windows with Terraform
-                href: manage/unified-operations/server/best-practices/gcp_terraform_windows.md
+                href: manage/unified-operations/server/best-practices/gcp-terraform-windows.md
           - name: Operate
             items:
             - name: Inventory and Tag assets
-              href: manage/unified-operations/server/best-practices/arc_inventory_tagging.md
+              href: manage/unified-operations/server/best-practices/arc-inventory-tagging.md
             - name: Patch and Update Management
-              href: manage/unified-operations/server/best-practices/arc_updateManagement.md
+              href: manage/unified-operations/server/best-practices/arc-updateManagement.md
             - name: Apply Policies
-              href: manage/unified-operations/server/best-practices/arc_policies_mma.md
+              href: manage/unified-operations/server/best-practices/arc-policies-mma.md
             - name: Collect and Detect security data
-              href: manage/unified-operations/server/best-practices/arc_securitycenter.md
+              href: manage/unified-operations/server/best-practices/arc-securitycenter.md
             - name: Investigate and respond to security threats
-              href: manage/unified-operations/server/best-practices/arc_azuresentinel.md
+              href: manage/unified-operations/server/best-practices/arc-azuresentinel.md
             - name: Manage VMs with Microsoft Monitoring Agent (MMA)
-              href: manage/unified-operations/server/best-practices/arc_vm_extension_mma_arm.md
+              href: manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md
             - name: Scale configuration of MMA
-              href: manage/unified-operations/server/best-practices/arc_vm_extension_customscript_arm.md
+              href: manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md
         - name: Featured Azure products
           items:
           - name: All hybrid and multicloud products

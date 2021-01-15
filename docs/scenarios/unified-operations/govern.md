@@ -23,9 +23,9 @@ Good governance starts with sound resource consistency practices. Organizing res
 - Tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [Inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/arc_inventory_tagging.md)
+To get started, [Inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 
-Once you establish your tagging standards and onboard some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the best practices on [Managing Arc enabled servers with Azure Policy](../../manage/unified-operations/arc_policies_mma.md).
+Once you establish your tagging standards and onboard some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the best practices on [Managing Arc enabled servers with Azure Policy](../../manage/unified-operations/server/best-practices/arc-policies-mma.md).
 
 ## Governance disciplines
 
@@ -33,8 +33,8 @@ With a basic understanding of unified operations and Azure Arc, you can begin ex
 
 Security baseline is among the most common ways a customer will expand their governance disciplines in a unified operations scenario. THe following best practices will help preserve your security baseline across all environments:
 
-- [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/arc_securitycenter.md)
-- [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/arc_azuresentinel.md)
+- [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/server/best-practices/arc-securitycenter.md)
+- [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/server/best-practices/arc-azuresentinel.md)
 - [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
 
