@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: manage
+ms.subservice: operate
 ms.custom: think-tank
 ---
 
@@ -53,7 +53,7 @@ The following README will guide you on how to connect an Windows machine to Azur
 
 * Create a new Azure resource group where you want your machine(s) to show up.
 
-    ![Screenshot showing the Azure portal with an empty resource group.](./img/onboard-server-win/onboard-server-win/win-resource-group.png)
+    ![A screenshot of the Azure portal with an empty resource group.](./img/onboard-server-win/win-resource-group.png)
 
 * Download the [az_connect_win](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
 
@@ -81,8 +81,8 @@ Upon completion, you will have your Windows server, connected as a new Azure Arc
 
 The most straightforward way is to delete the server via the Azure portal, just select server and delete it.
 
-![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-win/windows-delete-resource.png)
+![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-win/win-delete-resource.png)
 
 If you want to delete the entire environment, just delete the Azure resource group.
 
-![A screenshot of Delete option to delete a resource group in the Azure portal.](./img/onboard-server-win/windows-delete-resource-group.png)
+![A screenshot of Delete option to delete a resource group in the Azure portal.](./img/onboard-server-win/win-delete-resource-group.png)

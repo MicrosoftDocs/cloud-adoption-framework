@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: manage
+ms.subservice: operate
 ms.custom: think-tank
 ---
 
@@ -125,34 +125,34 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
 
 * Once Azure resources has been provisioned, you will be able to see it in Azure portal.
 
-    ![A screenshot of an output from an ARM template.](./img/arm-template/linux/template-linux-output.png)
+    ![A screenshot of an output from an ARM template.](./img/arm-template-linux/template-linux-output.png)
 
-    ![A screenshot resources in the resource group.](./img/arm-template/linux/template-linux-resources.png)
+    ![A screenshot resources in the resource group.](./img/arm-template-linux/template-linux-resources.png)
 
 ## Linux Login & Post Deployment
 
 * Now that the Linux VM is created, it is time to login to it. Using its public IP, SSH to the VM.
 
-    ![A screenshot of an Azure VM public IP address.](./img/arm-template/linux/template-linux-ip.png)
+    ![A screenshot of an Azure VM public IP address.](./img/arm-template-linux/template-linux-ip.png)
 
 * At first login, as mentioned in the "Automation Flow" section, a logon script will get executed. This script was created as part of the automated deployment process.
 
 * Let the script to run its course and **do not close** the SSH session, this will be done for you once completed.
 
-    ![A screenshot of one type of script output.](./img/arm-template/linux/template-linux-script-1.png)
+    ![A screenshot of one type of script output.](./img/arm-template-linux/template-linux-script-1.png)
 
-    ![A screenshot of another type of script output.](./img/arm-template/linux/template-linux-script-2.png)
+    ![A screenshot of another type of script output.](./img/arm-template-linux/template-linux-script-2.png)
 
-    ![A screenshot of a third type of script output.](./img/arm-template/linux/template-linux-script-3.png)
+    ![A screenshot of a third type of script output.](./img/arm-template-linux/template-linux-script-3.png)
 
 * Upon successful run, a new Azure-Arc-enabled server will be added to the resource group.
 
-    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arm-template/linux/template/template-linux-resource-gp.png)
+    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arm-template-linux/template/template-linux-resource-gp.png)
 
-    ![A screenshot of details from an Azure-Arc-enabled server.](./img/arm-template/linux/template-linux-server-details.png)
+    ![A screenshot of details from an Azure-Arc-enabled server.](./img/arm-template-linux/template-linux-server-details.png)
 
 ## Cleanup
 
 To delete the entire deployment, simply delete the resource group from the Azure portal.
 
-![A screenshot of how to delete resource group](./img/arm-template/linux/template-linux-delete.png)
+![A screenshot of how to delete resource group](./img/arm-template-linux/template-linux-delete.png)

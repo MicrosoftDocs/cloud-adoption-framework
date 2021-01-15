@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: manage
+ms.subservice: operate
 ms.custom: think-tank
 ---
 
@@ -49,7 +49,7 @@ We will be using Resource Graph Explorer during this exercise to query and view 
 
 * Enter "Resource Graph Explorer" in the top search bar in the Azure portal and select it.
 
-    ![Screenshot showing Resource Graph Explorer in the Azure portal.](./img/inventory-tagging/resource-graph-explorer.png)
+    ![A screenshot of the Resource Graph Explorer in the Azure portal.](./img/inventory-tagging/resource-graph-explorer.png)
 
 * In the query window, enter the following query and then click "Run Query":
 
@@ -60,9 +60,9 @@ We will be using Resource Graph Explorer during this exercise to query and view 
 
 * If you have correctly created Azure-Arc-enabled servers, they should be listed in the Results pane of Resource Graph Explorer. You can also view the Azure-Arc-enabled serves from the Azure portal.
 
-    ![Screenshot showing a Resource Graph Explorer query.](./img/inventory-tagging/run-query.png)
+    ![A screenshot of a Resource Graph Explorer query.](./img/inventory-tagging/run-query.png)
 
-    ![Screenshot showing the details of an Azure-Arc-enabled server in the Azure portal.](./img/inventory-tagging/arc-server.png)
+    ![A screenshot of the details of an Azure-Arc-enabled server in the Azure portal.](./img/inventory-tagging/arc-server.png)
 
 ## Create a basic Azure tag taxonomy
 
@@ -76,7 +76,7 @@ We will be using Resource Graph Explorer during this exercise to query and view 
     az tag add-value --name "Hosting Platform" --value "On-premises"
     ```
 
-    ![Screenshot showing an output of the 'az tag create' command.](./img/inventory-tagging/az-tag-create.png)
+    ![A screenshot of an output of the 'az tag create' command.](./img/inventory-tagging/az-tag-create.png)
 
 ## Tag Arc resources
 
@@ -96,7 +96,7 @@ Now that we have created a basic taxonomy structure, we will apply tags to our A
     az resource tag --ids $awsMachineResourceId --tags "Hosting Platform"="AWS"
     ```
 
-    ![Screenshot showing one output of the 'az resource tag' command.](./img/inventory-tagging/az-resource-tag-1.png)
+    ![A screenshot of one output of the 'az resource tag' command.](./img/inventory-tagging/az-resource-tag-1.png)
 
 ### Tag Arc-connected GCP Ubuntu server
 
@@ -112,7 +112,7 @@ Now that we have created a basic taxonomy structure, we will apply tags to our A
     az resource tag --resource-group $gcpResourceGroup --ids $gcpMachineResourceId --tags "Hosting Platform"="GCP"
     ```
 
-    ![Screenshot showing another output of the 'az resource tag' command.](./img/inventory-tagging/az-resource-tag-2.png)
+    ![A screenshot of another output of the 'az resource tag' command.](./img/inventory-tagging/az-resource-tag-2.png)
 
 ## Query resources by tag using Resource Graph Explorer
 
@@ -127,17 +127,17 @@ Now that we have applied tags to our resources that are hosted in multiple cloud
     | project name, location, resourceGroup, tags
     ```
 
-    ![Screenshot showing the details of a Resource Graph Explorer query.](./img/inventory-tagging/run-query-details.png)
+    ![A screenshot of the details of a Resource Graph Explorer query.](./img/inventory-tagging/run-query-details.png)
 
 * Click "Run Query" and then select the Formatted Results toggle. If done correctly, you should see all Azure-Arc-enabled servers and their assigned "Hosting Platform" tag values.
 
-    ![Screenshot showing the results of Resource Graph Explorer query.](./img/inventory-tagging/run-query-results.png)
+    ![A screenshot of the results of Resource Graph Explorer query.](./img/inventory-tagging/run-query-results.png)
 
 * We can also view the tags on the projected servers from Azure portal.
 
-    ![Screenshot showing one set of tags on an Azure-Arc-enabled server.](./img/inventory-tagging/tags-1.png)
+    ![A screenshot of one set of tags on an Azure-Arc-enabled server.](./img/inventory-tagging/tags-1.png)
 
-    ![Screenshot showing another set of tags on an Azure-Arc-enabled server.](./img/inventory-tagging/tags-2.png)
+    ![A screenshot of another set of tags on an Azure-Arc-enabled server.](./img/inventory-tagging/tags-2.png)
 
 ## Clean up environment
 
