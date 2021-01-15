@@ -1,7 +1,7 @@
 ---
 title: "Ready methodology for Hybrid and Multicloud"
 description: Prepare your environment for hybrid and multicloud with Azure Landing Zones
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Ready: Prepare your environment for hybrid and multicloud
 
-The Ready methodology of the cloud adoption framework guides customers' through environmental readiness to prepare for adoption of the cloud. Included in the Ready methodology are technical accelerators referred to as Azure Landing Zones, which automate configuration of your Azure environment in alignment with the best practices in Cloud Adoption Framework. But to prepare for a hybrid and multicloud, their are a number of minor environmental configurations that may be slightly different. This article outlines the key considerations and changes that must be made to **prepare your Azure environment to serve as ONE of your cloud platforms**.
+The Ready methodology of the cloud adoption framework guides customers through environmental readiness to prepare for adoption of the cloud. Included in the Ready methodology are technical accelerators referred to as Azure Landing Zones, which automate configuration of your Azure environment in alignment with the best practices in Cloud Adoption Framework. But to prepare for a hybrid and multicloud, their are a number of minor environmental configurations that may be slightly different. This article outlines the key considerations and changes that must be made to **prepare your Azure environment to serve as ONE of your cloud platforms**.
 
 ## Evaluate your cloud mix
 
