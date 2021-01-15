@@ -1,12 +1,13 @@
 ---
 title: Apply inventory tagging to Azure-Arc-enabled servers
-description: Learn to configure unified operations for XYZ.
+description: Apply inventory tagging to Azure-Arc-enabled servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Apply inventory tagging to Azure-Arc-enabled servers

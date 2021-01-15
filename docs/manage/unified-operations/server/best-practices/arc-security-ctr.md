@@ -1,17 +1,18 @@
 ---
 title: Connect Azure-Arc-enabled servers to Azure Security Center
-description: Learn to configure unified operations for XYZ.
+description: Connect Azure-Arc-enabled servers to Azure Security Center.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Connect Azure-Arc-enabled servers to Azure Security Center
 
-The following README will guide you on how to onboard an Azure-Arc-enabled server on to [Azure Security Center (Azure Security Center)](https://docs.microsoft.com/azure/security-center/), so you can start collecting security-related configurations as well as event logs to recommend actions and improve your overall Azure security posture.
+The following README will guide you on how to onboard an Azure-Arc-enabled server to [Azure Security Center (Azure Security Center)](https://docs.microsoft.com/azure/security-center/), so you can start collecting security-related configurations as well as event logs to recommend actions and improve your overall Azure security posture.
 
 In this guide, you will enable and configure Azure Security Center Standard tier on your Azure subscription, which will provide you with advanced threat protection (ATP) and detection capabilities. To complete this process you will:
 
@@ -81,7 +82,7 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 ## Onboarding Azure Security Center
 
-* Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
+* Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing theAzure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
     ![Screenshot showing an ARM template.](./img/arc-security-ctr/arm-template.png)
 

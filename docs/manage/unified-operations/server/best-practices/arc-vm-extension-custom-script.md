@@ -1,19 +1,21 @@
 ---
 title: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
-description: Learn to configure unified operations for XYZ.
+description: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
+
 ---
 
 # Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
 
-The following README will guide you on how to execute custom scripts on Azure-Arc-enabled servers by using Virtual Machine extensions. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
+The following README will guide you on how to execute custom scripts to Azure-Arc-enabled servers by using Virtual Machine extensions. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
 
-You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Shell script, or Azure policies to manage the extension deployment to Azure-Arc-enabled servers. In this guide, we will use an ARM template to deploy the custom script extension. This extension downloads and executes scripts on virtual machines and it is useful for post deployment configuration, software installation, or any other configuration or management tasks.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell or Linux Shell script, or Azure policies to manage the extension deployment to Azure-Arc-enabled servers. In this guide, we will use an ARM template to deploy the custom script extension. This extension downloads and executes scripts on virtual machines and it is useful for post deployment configuration, software installation, or any other configuration or management tasks.
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 

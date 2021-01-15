@@ -1,21 +1,22 @@
 ---
 title: Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
-description: Learn to configure unified operations for XYZ.
+description: Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
 
-The following README will guide you on how to manage extensions on Azure-Arc-enabled servers. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
+The following README will guide you on how to manage extensions to Azure-Arc-enabled servers. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
 
 Azure-Arc-enabled servers, enables you to deploy Azure VM extensions to non-Azure Windows and Linux VMs, giving you a hybrid or multi-cloud management experience that levels to Azure VMs.
 
-You can use the Azure portal, Azure CLI, an ARM template, PowerShell script or Azure policies to manage the extension deployment to Azure-Arc-enabled servers, both Linux and Windows. In this guide, you will use an ARM template deploy the Microsoft Monitoring Agent (MMA) to your servers so they are onboard on Azure services that leverage this agent: Azure Monitor, Azure Security Center, Azure Sentinel, etc.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure-Arc-enabled servers, both Linux and Windows. In this guide, you will use an ARM template deploy the Microsoft Monitoring Agent (MMA) to your servers so they are onboard on Azure services that leverage this agent: Azure Monitor, Azure Security Center, Azure Sentinel, etc.
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 

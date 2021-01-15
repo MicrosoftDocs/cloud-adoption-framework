@@ -1,12 +1,13 @@
 ---
 title: Connect Azure-Arc-enabled servers to Azure Sentinel
-description: Learn to configure unified operations for XYZ.
+description: Connect Azure-Arc-enabled servers to Azure Sentinel.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Connect Azure-Arc-enabled servers to Azure Sentinel
@@ -81,7 +82,7 @@ In this guide, you will enable and configure Azure Sentinel on your Azure subscr
 
 Azure Sentinel uses the Log Analytics agent to collect Windows and Linux server's log files and forwards them to Azure Sentinel, the data collected is stored in a Log Analytics workspace. Since you cannot use the default workspace created by Azure Security Center (Azure Security Center), a custom one is required and you could have raw events and alerts for Azure Security Center within the same custom workspace as Sentinel.
 
-* You will need to create a dedicated Log Analytics workspace and enable the Azure Sentinel solution on the top of it. For that you can use this [ARM template](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.json) that will create a new Log Analytics Workspace and define the Azure Sentinel solution and enable it for the workspace. To automate the deployment edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace:
+* You will need to create a dedicated Log Analytics workspace and enable the Azure Sentinel solution on the top of it. For that you can use this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.json) that will create a new Log Analytics Workspace and define the Azure Sentinel solution and enable it for the workspace. To automate the deployment edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace:
 
     ![Screenshot showing an ARM template.](./img/arc-azure-sentinel/sentinel-3.png)
 

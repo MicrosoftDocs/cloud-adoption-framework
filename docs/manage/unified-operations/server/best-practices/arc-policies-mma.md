@@ -1,12 +1,13 @@
 ---
 title: Manage Azure policies and deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers 
-description: Learn to configure unified operations for XYZ.
+description: Manage Azure policies and deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Manage Azure policies and deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers
@@ -15,7 +16,7 @@ The following README will guide you on how to use Azure-Arc-enabled servers to a
 
 In this case, you will assign a policy to audit if the Azure Arc connected machine has the (Microsoft Monitoring Agent) MMA agent installed, if not, you will use the extensions feature to automatically deploy it to the VM, an enrollment experience that levels to Azure VMs. This approach can be used to make sure all your servers are onboard to services such as Azure Monitor, Azure Security Center, Azure Sentinel, etc.
 
-You can use the Azure portal, an ARM template or PowerShell script to assign policies to Azure subscriptions or resource groups. In this guide, you will use an ARM template to assign built-in policies.
+You can use the Azure portal, an Azure Resource Manager template (ARM template) or PowerShell script to assign policies to Azure subscriptions or resource groups. In this guide, you will use an ARM template to assign built-in policies.
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 

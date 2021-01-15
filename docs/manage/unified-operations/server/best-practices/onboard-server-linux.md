@@ -1,12 +1,13 @@
 ---
 title: Connect an existing Linux server to Azure Arc
-description: Learn to configure unified operations for XYZ.
+description: Connect an existing Linux server to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Connect an existing Linux server to Azure Arc
