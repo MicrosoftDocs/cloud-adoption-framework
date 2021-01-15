@@ -22,7 +22,7 @@ items:
       href: scenarios/wvd/migrate-deploy.md
     - name: Release
       href: scenarios/wvd/migrate-release.md
-    - name: Enterprise-Scale landing zone
+    - name: Enterprise-Scale Construction Set
       items:
       - name: Overview
         href: scenarios/wvd/enterprise-scale-landing-zone.md
