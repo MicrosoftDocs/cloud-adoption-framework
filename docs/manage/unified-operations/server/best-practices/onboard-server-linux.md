@@ -87,4 +87,4 @@ The most straightforward way is to delete the server via the Azure portal, just 
 
 If you want to nuke the entire environment, just delete the Azure resource group.
 
-![[A screenshot of Delete option to delete a resource group in the Azure portal.](./img/onboard-server-linux/linux-delete-resource-group.png)
+![[A screenshot of the Delete option to delete a resource group in the Azure portal.](./img/onboard-server-linux/linux-delete-resource-group.png)
