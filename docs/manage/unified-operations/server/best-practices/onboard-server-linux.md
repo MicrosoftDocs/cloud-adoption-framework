@@ -59,7 +59,7 @@ The following README will guide you on how to connect an Linux server to Azure A
 
 * Change the environment variables according to your environment.
 
-    ![A screenshot of the the environment variables to be changed.](./img/onboard-server-linux/linux-variables.png)
+    ![A screenshot of the environment variables to be changed.](./img/onboard-server-linux/linux-variables.png)
 
 * Copy the script to the designated server using your preferred tool of choice (or copy/paste the script to a new file inside the server). Below example shows copy the script from MacOS to the server using SCP.
 
@@ -73,7 +73,7 @@ Run the script using the ```. ./az_connect_linux.sh``` command.
 
 Upon completion, you will have your Linux server, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the the 'az_connect' Linux script running.](./img/onboard-server-linux/az-connect-linux.png)
+![A screenshot of the 'az_connect' Linux script running.](./img/onboard-server-linux/az-connect-linux.png)
 
 ![A screenshot of an Azure-arc-enabled resource in the Azure portal.](./img/onboard-server-linux/linux-resource.png)
 

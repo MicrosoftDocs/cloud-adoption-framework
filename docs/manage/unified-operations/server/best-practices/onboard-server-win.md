@@ -59,7 +59,7 @@ The following README will guide you through how to connect a Windows machine to 
 
 * Change the environment variables according to your environment and copy the script to the designated machine.
 
-    ![A screenshot of the the environment variables to be changed.](./img/onboard-server-win/win-variables.png)
+    ![A screenshot of the environment variables to be changed.](./img/onboard-server-win/win-variables.png)
 
 ## Deployment
 
@@ -71,7 +71,7 @@ On the designated machine, Open PowerShell ISE **as Administrator** and run the 
 
 Upon completion, you will have your Windows server, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the the 'az_connect' Windows script running.](./img/onboard-server-win/az-connect-win.png)
+![A screenshot of the 'az_connect' Windows script running.](./img/onboard-server-win/az-connect-win.png)
 
 ![[A screenshot of an Azure-arc-enabled resource in the Azure portal.](./img/onboard-server-win/win-resource.png)
 
