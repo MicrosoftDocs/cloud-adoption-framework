@@ -1,19 +1,21 @@
 ---
-title: ""
-description: Learn to configure unified operations for XYZ.
+title: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
+description: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
+
 ---
 
-## Deploy Custom Script Extension on Azure Arc Linux and Windows servers using Extension Management
+# Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
 
-The following README will guide you on how to execute custom scripts on Azure-Arc-enabled servers by using Virtual Machine extensions. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
+The following README will guide you on how to execute custom scripts to Azure-Arc-enabled servers by using Virtual Machine extensions. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
 
-You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Shell script, or Azure policies to manage the extension deployment to Azure-Arc-enabled servers. In this guide, we will use an ARM template to deploy the custom script extension. This extension downloads and executes scripts on virtual machines and it is useful for post deployment configuration, software installation, or any other configuration or management tasks.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell or Linux Shell script, or Azure policies to manage the extension deployment to Azure-Arc-enabled servers. In this guide, we will use an ARM template to deploy the custom script extension. This extension downloads and executes scripts on virtual machines and it is useful for post deployment configuration, software installation, or any other configuration or management tasks.
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
@@ -36,9 +38,9 @@ You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Sh
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below you can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
 
-    ![Screenshot Azure-Arc-enabled server on resource group](./01.png)
+    ![Screenshot of a resource group from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/resource-group.png)
 
-    ![Screenshot Azure-Arc-enabled server on connected status](./02.png)
+    ![Screenshot of a connected status from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/connected-status.png)
 
 * [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
@@ -79,17 +81,17 @@ You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Sh
 
 * Edit the extensions parameters file for [*Windows*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or for [*Linux*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
 
-   ![Screenshot parameters file](./03.png)
+   ![Screenshot of an ARM template parameters file.](./img/arc-vm-extension-custom-script/parameters-file.png)
 
 * To match your environment configuration, you will need to provide the following information:
 
   * The VM name as it is registered in Azure Arc.
 
-    ![Screenshot Azure-Arc-enabled server machine name](./04.png)
+    ![Screenshot of a machine name from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/machine-name.png)
 
   * The location of the resource group where you registered the Azure-Arc-enabled server.
 
-    ![Screenshot Azure region](./05.png)
+    ![Screenshot of an Azure region.](./img/arc-vm-extension-custom-script/azure-region.png)
 
   * A public Uri for the script that you would like to run on the servers, in this case use the URL for the script in raw format.
     * For Windows: [Public Uri](https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1)
@@ -119,21 +121,21 @@ You can use the Azure portal, Azure CLI, an ARM template, PowerShell or Linux Sh
 
 * Once the template deployment has completed it's run, you should see an output as follows:
 
-    ![Screenshot ARM template output](./06.png)
+    ![Screenshot of an output from an ARM template.](./img/arc-vm-extension-custom-script/output.png)
 
 * To verify a successful deployment on the Azure-Arc-enabled server, in the Azure portal, by clicking on "Extensions" settings. You should see the Custom Script extension installed.
 
-    ![Screenshot custom script extension](./07.png)
+    ![Screenshot of a custom script extension.](./img/arc-vm-extension-custom-script/custom-script-extension.png)
 
 * Another way to verify successful custom script execution is by connecting to the VMs and verifying that the operating system has been configured.
 
   * For the Linux VM, use SSH to connect the VM and check out the message of the day which was customized by the script:
 
-    ![Screenshot message of the day changed](./08.png)
+    ![Screenshot of an updated daily message.](./img/arc-vm-extension-custom-script/daily-message.png)
 
   * For the Windows VM, use RDP to connect the VM and verify that the additional software has been installed: Microsoft Edge, 7zip and Visual Studio Code.
 
-    ![Screenshot additional software installed](./09.png)
+    ![Screenshot additional software installed.](./img/arc-vm-extension-custom-script/additional-software.png)
 
 ## Clean up environment
 

@@ -1,12 +1,13 @@
 ---
 title: Apply inventory tagging to Azure-Arc-enabled servers
-description: Learn to configure unified operations for XYZ.
+description: Apply inventory tagging to Azure-Arc-enabled servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/18/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
+ms.custom: think-tank
 ---
 
 # Apply inventory tagging to Azure-Arc-enabled servers
@@ -48,7 +49,7 @@ We will be using Resource Graph Explorer during this exercise to query and view 
 
 * Enter "Resource Graph Explorer" in the top search bar in the Azure portal and select it.
 
-    ![Screenshot showing Resource Graph Explorer in the Azure portal.](.img/inventory-tagging/resource-graph-explorer.png)
+    ![Screenshot showing Resource Graph Explorer in the Azure portal.](./img/inventory-tagging/resource-graph-explorer.png)
 
 * In the query window, enter the following query and then click "Run Query":
 
