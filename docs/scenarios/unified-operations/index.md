@@ -9,24 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Hybrid and Multicloud
+# Introduction to Hybrid and Multicloud
 
-This series of articles in the Cloud Adoption Framework outline the scenario of Hybrid and Multicloud to guide your holistic cloud adoption journey.
-
-## Executive Summary
-
-Michael to fill in information outlining why this scenario is important. "orientation towards market reality" "This is a good business decision"
+Microsoft Azure provides all of the products and features required to operate your technology solutions in the cloud. But we understand that there are legitimate business reasons that may necessitate the use of multiple private and/or public clouds. As a first step in the hybrid and multicloud journey, this article outlines Microsoft's view of these important terms.
 
 ## Hybrid and Multicloud definitions
 
 A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
+
 The hybrid cloud is evolving to include edge workloads as well. Edge computing brings the computing power of the cloud to IoT devices—closer to where the data resides. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
 
-Unified operations is an enterprise control plane that provides operations management control across hybrid solutions.For customers running workloads in multiple locations, whether their datacenter, other clouds, or at the edge, there is a common need to get control over resources at the organizaional, team, and personal levels. By bringing all your resources into a single system, you can organize and inventory through a variety of Azure scopes, such as Management Groups, Subscriptions, and Resource Groups. Unifying operations under a single control plane, like Azure Arc, allows customers to: 
-- Extend cloud pratices on premise 
-- Easily implement Azure security anywhere 
-- Integrate DevOps and management capabilities 
-- Streamline governance and configuration on Kubernetes apps, data, and infrastructure anywhere 
+Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider—including private and public clouds—in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
 
 ## Hybrid and Multicloud narrative
 
@@ -36,23 +29,37 @@ A hybrid cloud platform gives organizations many advantages—such as greater fl
 
 This not only allows companies to scale computing resources— it also eliminates the need to make massive capital expenditures to handle short-term spikes in demand, as well as when the business needs to free up local resources for more sensitive data or applications. Companies will pay only for resources they temporarily use instead of having to purchase, program, and maintain additional resources and equipment that could remain idle over long periods of time.
 
-However, as companies spread resources across on-premises, multiple clouds, and the edge, we often hear customers have three common needs: 
+However, as companies spread resources across on-premises, multiple clouds, and the edge, we often hear customers have three common needs:
+
 1. They need to have visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass. 
-2. From an IT point of view, while organizations understand the need for implementing a governance standard, they find it hard to integrate on-premises policies and updates with their cloud infrastructure. 
+2. From an IT point of view, while organizations understand the need for implementing a governance standard, they find it hard to integrate on-premises policies and updates with their cloud infrastructure.
 3. Since there are often different app development teams in the organization, there exists a wide range of skills across on-premises and cloud. Customers are looking for consistent inter-operability between the two so they can unify development practices.
 
 Now, let’s also consider the deployment of cloud native services. Some customers operate in highly regulated industries (e.g. government infrastructure, healthcare, financial services) where both internal and customer data are deemed critical and must remain within the boundaries of on-premises datacenters. There could also be a need for latency requirements where the data processing needs to happen close to the source of data while minimizing disruptions that may arise from internet connectivity issues. Another common scenario is that customers don’t want the management overhead of maintaining these services on-premises and would like to flip to a cloud billing model.
 
-## Next step: Integrate Hybrid and Multicloud into your cloud adoption journey
+## Hybrid and Multicloud motivations
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+As a true enterprise-grade cloud provider, Azure is able to support your business objectives across public, hybrid, and multicloud environments. This article series will discuss different best practices that can help facilitate a variety of cloud mixes ranging from 100% Azure environments to environments that have little (or no) Azure infrastructure in place.
 
-- [Strategy for Hybrid and Multicloud](./strategy.md)
-- [Plan for Hybrid and Multicloud](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Hybrid and Multicloud migration assessment](./migrate-assess.md)
-- [Hybrid and Multicloud migration](./migrate-deploy.md)
-- [Release Hybrid and Multicloud architectures to production](./migrate-release.md)
-- [Innovate with Hybrid and Multicloud](./innovate.md)
-- [Govern](./govern.md)
-- [Manage](./manage.md)
+If every customer hosted 100% of their technology needs in Azure, our stock value would obviously increase. Fortunately, our customers are more important than our financial statements. We recognize that there are many valid reasons for customers to choose to distribute their digital estate across hybrid and multicloud environments. The following are a few common business drivers:
+
+- Minimize or avoid single cloud provider lock-in
+- Business units, subsidiaries or acquired companies have already adopted different cloud platforms
+- Different cloud providers may have regulatory and data sovereignty requirements in different countries
+- Improve business continuity and disaster recovery by duplicating workloads across two cloud providers
+- Maximize performance by running applications close to user locations, which my require hybrid or multicloud adoption
+- Enable easy migration for some data platforms or industry-specific applications by adopting multicloud
+
+## Primary: Hybrid and multicloud concerns
+
+Some of the motivations listed above can be easily accomplished with a sound hybrid and multicloud adoption strategy.
+
+Others require significant effort pre- & post-deployment to realize those benefits. Cloud provider lock-in, for instance, is possible. But to avoid lock-in, organizations are required to limit their vision for cloud adoption. Many of the most beneficial products and features in a cloud provider are not portable to other cloud providers. To achieve portability and minimize lock-in, organizations are often required to limit cloud adoption to basic Infrastructure-as-a-Service (IaaS) or invest heavily in the use of cloud native technologies like Containers or Kubernetes.
+
+Another commonly realized concern associated with hybrid and multicloud adoption comes after the workloads are released and in production. When organizations attempt to provide operations management support to workloads in new environments, they often have to quickly rethink their practices. Existing operations management platforms were not build for these types of environments. Nor were most organizations' existing operations management policies and processes. To account for deviations in the cloud environments, companies often end up with distinct operations tooling and operations practices, this multiples the cost of operations by the number of cloud environments supported.
+
+## Next step: Minimize hybrid and multicloud concerns with unified operations
+
+Before starting your hybrid and multicloud journey, it is important to understand the concept of unified operations. Consistent operations practices across all of your cloud environments with a common control plane, aids in addressing many of the concerns regarding and hybrid and multicloud.
+
+Before proceeding with hybrid and multicloud adoption at scale, determine if you will duplicate operations for each cloud provider, or if you will need to implement a [unified operations approach to cloud management](./unified-operations.md).

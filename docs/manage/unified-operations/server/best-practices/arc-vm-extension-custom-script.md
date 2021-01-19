@@ -1,0 +1,149 @@
+---
+title: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
+description: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers.
+author: likamrat
+ms.author: brblanch
+ms.date: 01/15/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: manage
+ms.custom: think-tank
+
+---
+
+# Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
+
+The following README will guide you on how to execute custom scripts to Azure-Arc-enabled servers by using Virtual Machine extensions. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
+
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell or Linux Shell script, or Azure policies to manage the extension deployment to Azure-Arc-enabled servers. In this guide, we will use an ARM template to deploy the custom script extension. This extension downloads and executes scripts on virtual machines and it is useful for post deployment configuration, software installation, or any other configuration or management tasks.
+
+> **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
+
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/)**
+* **[GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)**
+* **[VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/)**
+* **[Vagrant Windows box](./local-vagrant-windows/)**
+
+## Prerequisites
+
+* Clone the Azure Arc Jumpstart repository
+
+    ```console
+    git clone https://github.com/microsoft/azure-arc.git
+    ```
+
+* As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below you can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
+
+    ![Screenshot of a resource group from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/resource-group.png)
+
+    ![Screenshot of a connected status from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/connected-status.png)
+
+* [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
+
+* Create Azure Service Principal (SP)
+
+    To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the "contributor" role is required. To create it, login to your Azure account run the below command (this can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
+
+    ```console
+    az login
+    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+    ```
+
+    For example:
+
+    ```console
+    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor
+    ```
+
+    Output should look like this:
+
+    ```json
+    {
+    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "displayName": "AzureArcServers",
+    "name": "http://AzureArcServers",
+    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    }
+    ```
+
+    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
+
+* In order to demonstrate the custom script extension, we will use the below Linux and Windows scripts.
+  * [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh): The script will modify the message of the day (MOTD) on the operating system.
+  * [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolaty](https://chocolatey.org/) packages on the VM.
+
+## Azure-Arc-enabled servers Custom Script Extension Deployment
+
+* Edit the extensions parameters file for [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or for [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
+
+   ![Screenshot of an ARM template parameters file.](./img/arc-vm-extension-custom-script/parameters-file.png)
+
+* To match your environment configuration, you will need to provide the following information:
+
+  * The VM name as it is registered in Azure Arc.
+
+    ![Screenshot of a machine name from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/machine-name.png)
+
+  * The location of the resource group where you registered the Azure-Arc-enabled server.
+
+    ![Screenshot of an Azure region.](./img/arc-vm-extension-custom-script/azure-region.png)
+
+  * A public Uri for the script that you would like to run on the servers, in this case use the URL for the script in raw format.
+    * For Windows: [Public Uri](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1)
+    * For Linux: [Public Uri](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh)
+
+  * To run either script, use the below commands:
+
+    * Windows:
+
+         ```powershell
+         powershell -ExecutionPolicy Unrestricted -File custom-script-windows.ps1
+         ```
+
+    * Linux:
+
+         ```bash
+         ./custom-script-linux.sh
+         ```
+
+* To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/extensions/arm) and run the below command with the templates that match your operating system:
+
+    ```bash
+    az deployment group create --resource-group <Name of the Azure resource group> \
+    --template-file <The *customscript-template.json* template file location for Linux or Windows> \
+    --parameters <The *customscript-template.parameters.json* template file location>
+    ```
+
+* Once the template deployment has completed it's run, you should see an output as follows:
+
+    ![Screenshot of an output from an ARM template.](./img/arc-vm-extension-custom-script/output.png)
+
+* To verify a successful deployment on the Azure-Arc-enabled server, in the Azure portal, by clicking on "Extensions" settings. You should see the Custom Script extension installed.
+
+    ![Screenshot of a custom script extension.](./img/arc-vm-extension-custom-script/custom-script-extension.png)
+
+* Another way to verify successful custom script execution is by connecting to the VMs and verifying that the operating system has been configured.
+
+  * For the Linux VM, use SSH to connect the VM and check out the message of the day which was customized by the script:
+
+    ![Screenshot of an updated daily message.](./img/arc-vm-extension-custom-script/daily-message.png)
+
+  * For the Windows VM, use RDP to connect the VM and verify that the additional software has been installed: Microsoft Edge, 7zip and Visual Studio Code.
+
+    ![Screenshot additional software installed.](./img/arc-vm-extension-custom-script/additional-software.png)
+
+## Clean up environment
+
+Complete the following steps to clean up your environment.
+
+Remove the virtual machines from each environment by following the teardown instructions from each guide.
+
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/) / [GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/) / [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/) / [Vagrant Windows box](./local-vagrant-windows/)**

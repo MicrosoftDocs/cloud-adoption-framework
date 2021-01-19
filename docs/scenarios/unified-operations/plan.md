@@ -1,7 +1,7 @@
 ---
 title: "Plan for unified operations"
 description: Describe the scenario's impact on planning
-author: mpvenables
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual

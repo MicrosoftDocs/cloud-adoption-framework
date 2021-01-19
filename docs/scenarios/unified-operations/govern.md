@@ -1,5 +1,5 @@
 ---
-title: "Govern hybrid and multicloud deployments"
+title: "Govern your portfolio of hybrid and multicloud workloads"
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-# Govern hybrid and multicloud deployments
+# Govern your portfolio of hybrid and multicloud workloads
 
 The cloud has fundamental changed IT governance. Human intense, manual review and change controls processes can now be replaced with automated guardrails and enforcement tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected & often times automated. The key to this new found freedom is the infrastructure as code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 
@@ -23,12 +23,9 @@ Good governance starts with sound resource consistency practices. Organizing res
 - Tag resources from AWS, GCP, etc...
 - Query your resources to see where they are all hosted.
 
-To get started, [Inventory and tag your hybrid and multicloud resources](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_inventory_tagging?branch=pr-en-us-884)
-**TODO Point to relative link**
+To get started, [Inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 
-Once you establish your tagging standards and onboarded some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the best practices on [Managing Arc enabled servers with Azure Policy](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_policies_mma?branch=pr-en-us-884).
-
-Continue building on this governance MVP, using the remaining sections of this article or the [best practices on unified operations](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/?branch=pr-en-us-884).
+Once you establish your tagging standards and onboard some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the best practices on [Managing Arc enabled servers with Azure Policy](../../manage/unified-operations/server/best-practices/arc-policies-mma.md).
 
 ## Governance disciplines
 
@@ -36,8 +33,8 @@ With a basic understanding of unified operations and Azure Arc, you can begin ex
 
 Security baseline is among the most common ways a customer will expand their governance disciplines in a unified operations scenario. THe following best practices will help preserve your security baseline across all environments:
 
-- [Collect and detect security data across clouds with Azure Security Center](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_securitycenter?branch=pr-en-us-884)
-- [Investigate and respond to security threats with Azure Sentinel](https://review.docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc_azuresentinel?branch=pr-en-us-884)
+- [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/server/best-practices/arc-securitycenter.md)
+- [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/server/best-practices/arc-azuresentinel.md)
 - [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
 

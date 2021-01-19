@@ -77,33 +77,33 @@ items:
           - name: Intro to unified operations
             href: scenarios/unified-operations/unified-operations.md
 
-        - name: Strategy
+        - name: Build an initial strategy
           href: scenarios/unified-operations/strategy.md
-        - name: Plan
+        - name: Define your plan
           href: scenarios/unified-operations/plan.md
-        - name: Ready
+        - name: Prepare your environments
           href: scenarios/unified-operations/ready.md
-        - name: Migrate
+        - name: Migrate to the cloud
           href: scenarios/unified-operations/migrate.md
-        - name: Govern
+        - name: Govern your portfolio
           href: scenarios/unified-operations/govern.md
-        - name: Manage
+        - name: Manage your portfolio
           href: scenarios/unified-operations/manage.md
 
         - name: Well-Architected hybrid workloads (Release TBD)
           items:
           - name: Overview
-            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-overview?branch=pr-en-us-2237
+            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-overview?branch=pr-en-us-2237?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
           - name: Cost Optimization
-            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-cost?branch=pr-en-us-2237
+            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-cost?branch=pr-en-us-2237?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
           - name: Operational excellence
-            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-opex?branch=pr-en-us-2237
+            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-opex?branch=pr-en-us-2237?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
           - name: Performance Efficiency (coming soon)
-            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-performance?branch=pr-en-us-2237
+            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-performance-efficiency?branch=pr-en-us-2237?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
           - name: Reliability  (coming soon)
-            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-reliability?branch=pr-en-us-2237
+            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-reliability?branch=pr-en-us-2237?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
           - name: Security
-            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-security?branch=pr-en-us-2237
+            href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
         - name: Architectures
           items:
           - name: Overview
@@ -223,63 +223,63 @@ items:
             - name: Azure
               items:
               - name: Azure Linux with ARM Templates
-                href: manage/unified-operations/server/best-practices/azure_arm_template_linux.md
+                href: manage/unified-operations/server/best-practices/azure-arm-template-linux.md
               - name: Azure Windows with ARM Templates
-                href: manage/unified-operations/server/best-practices/azure_arm_template_win.md
+                href: manage/unified-operations/server/best-practices/azure-arm-template-win.md
             - name: On-prem - Local datacenter
               items:
               - name: Linux with shell script
-                href: manage/unified-operations/server/best-practices/onboard_server_linux.md
+                href: manage/unified-operations/server/best-practices/onboard-server-linux.md
               - name: Windows with PowerShell
-                href: manage/unified-operations/server/best-practices/onboard_server_win.md
+                href: manage/unified-operations/server/best-practices/onboard-server-win.md
               - name: Ubuntu with Vagrant
-                href: manage/unified-operations/server/best-practices/local_vagrant_ubuntu.md
+                href: manage/unified-operations/server/best-practices/local-vagrant-ubuntu.md
               - name: Windows with Vagrant
-                href: manage/unified-operations/server/best-practices/local_vagrant_windows.md
+                href: manage/unified-operations/server/best-practices/local-vagrant-windows.md
             - name: VMware
               items:
               - name: Create a VM template for Ubuntu
-                href: manage/unified-operations/server/best-practices/vmware_ubuntu_template.md
+                href: manage/unified-operations/server/best-practices/vmware-ubuntu-template.md
               - name: Create a VM template for Windows
-                href: manage/unified-operations/server/best-practices/vmware_winsrv2k19_template.md
+                href: manage/unified-operations/server/best-practices/vmware-winsrv2k19-template.md
               - name: Linux with VMware PowerCLI
-                href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_linux.md
+                href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md
               - name: Windows with VMware PowerCLI
-                href: manage/unified-operations/server/best-practices/vmware_scaled_powercli_win.md
+                href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md
               - name: Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/vmware_terraform_ubuntu.md
+                href: manage/unified-operations/server/best-practices/vmware-terraform-ubuntu.md
               - name: Windows with Terraform
-                href: manage/unified-operations/server/best-practices/vmware_terraform_winsrv.md
+                href: manage/unified-operations/server/best-practices/vmware-terraform-winsrv.md
             - name: AWS - Amazon Web Services
               items:
               - name: AWS Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/aws_terraform_ubuntu.md
+                href: manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md
               - name: AWS Linux with Terraform
-                href: manage/unified-operations/server/best-practices/aws_terraform_al2.md
+                href: manage/unified-operations/server/best-practices/aws-terraform-al2.md
               - name: AWS EC2 onboard with Ansible
-                href: manage/unified-operations/server/best-practices/aws_scale_ansible.md
+                href: manage/unified-operations/server/best-practices/aws-scale-ansible.md
             - name: GCP - Google Cloud Provider
               items:
               - name: GCP Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/gcp_terraform_ubuntu.md
+                href: manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md
               - name: GCP Windows with Terraform
-                href: manage/unified-operations/server/best-practices/gcp_terraform_windows.md
+                href: manage/unified-operations/server/best-practices/gcp-terraform-windows.md
           - name: Operate
             items:
             - name: Inventory and Tag assets
-              href: manage/unified-operations/server/best-practices/arc_inventory_tagging.md
+              href: manage/unified-operations/server/best-practices/arc-inventory-tagging.md
             - name: Patch and Update Management
-              href: manage/unified-operations/server/best-practices/arc_updateManagement.md
+              href: manage/unified-operations/server/best-practices/arc-updateManagement.md
             - name: Apply Policies
-              href: manage/unified-operations/server/best-practices/arc_policies_mma.md
+              href: manage/unified-operations/server/best-practices/arc-policies-mma.md
             - name: Collect and Detect security data
-              href: manage/unified-operations/server/best-practices/arc_securitycenter.md
+              href: manage/unified-operations/server/best-practices/arc-securitycenter.md
             - name: Investigate and respond to security threats
-              href: manage/unified-operations/server/best-practices/arc_azuresentinel.md
+              href: manage/unified-operations/server/best-practices/arc-azuresentinel.md
             - name: Manage VMs with Microsoft Monitoring Agent (MMA)
-              href: manage/unified-operations/server/best-practices/arc_vm_extension_mma_arm.md
+              href: manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md
             - name: Scale configuration of MMA
-              href: manage/unified-operations/server/best-practices/arc_vm_extension_customscript_arm.md
+              href: manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md
         - name: Featured Azure products
           items:
           - name: All hybrid and multicloud products
@@ -298,20 +298,50 @@ items:
             href: https://docs.microsoft.com/en-us/azure-sphere?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Windows for IoT
             href: https://docs.microsoft.com/en-us/windows/iot-core/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Virtual WAN
+            href: https://docs.microsoft.com/en-us/azure/virtual-wan/
+          - name: Express Route
+            href: https://docs.microsoft.com/en-us/azure/expressroute/
+          - name: Express Route
+            href: https://docs.microsoft.com/en-us/azure/expressroute/
+          - name: VPN Gateway
+            href: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+          - name: Azure Firewall
+            href: https://docs.microsoft.com/en-us/azure/firewall/overview
         - name: Learn modules
           items:
-          - name: Manage hybrid infrastructure with Azure Arc
-            href: https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/
-          - name: Manage hybrid workloads with Azure Arc
-            href: https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/)
-          - name: Introduction to Azure hybrid cloud services
-            href: https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/)
-          - name: Design a hybrid network architecture on Azure
-            href: https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/)
-          - name: Implement hybrid network infrastructure
-            href: https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/)
-          - name: Azure Stack HCI foundations
-            href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/)
+          - name: Hybrid cloud
+            items:
+            - name: Introduction to Azure hybrid cloud services
+              href: https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/
+            - name: Design a hybrid network architecture on Azure
+              href: https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/
+            - name: Implement hybrid network infrastructure
+              href: https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/
+          - name: Azure Arc
+            items:
+            - name: Intro to Azure Arc
+              href: https://docs.microsoft.com/learn/modules/intro-to-azure-arc/
+            - name: Arc for servers
+              href: https://docs.microsoft.com/learn/modules/intro-to-arc-for-servers/
+            - name: Arc for kubernetes
+              href: https://docs.microsoft.com/learn/modules/intro-to-arc-enabled-kubernetes/
+            - name: Arc for hybrid infrastructure
+              href: https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/
+            - name: Arc for hybrid workloads
+              href: https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/
+          - name: Azure Stack
+            items:
+            - name: Intro to Azure Stack
+              href: https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-stack/
+            - name: Azure Stack HCI foundations
+              href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/
+            - name: Azure Stack HCI deployment
+              href: https://docs.microsoft.com/en-us/learn/modules/azure-stack-hci-plan-deploy/
+            - name: Azure Stack HCI technologies
+              href: https://docs.microsoft.com/en-us/learn/modules/azure-stack-hci-technologies/
+            - name: Azure Stack HCI - Arc integration
+              href: https://docs.microsoft.com/en-us/learn/modules/stack-hci-arc-integration/
 
   - name: Strategy
     items:

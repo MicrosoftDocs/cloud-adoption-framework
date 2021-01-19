@@ -1,7 +1,7 @@
 ---
 title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistently operations management across hybrid, multicloud, and edge deployments.
-author: mpvenables
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/12/2021
 ms.topic: conceptual
@@ -64,7 +64,7 @@ This image displays the individual components required for unified operations, a
 
 ## Customer processes
 
-The primary objective of unified operations is to create as much process consistency as possible, across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common to all deployments, so that your [governance](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/) and [operations management](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/) processes remain consistent.
+The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](../../govern/) and [operations management](../../manage/) processes remain consistent.
 
 ![Customer Processes that unified operations can support](../../_images/unified-operations/unified-operations-customer-processes.png)
 
@@ -80,11 +80,11 @@ The primary objective of unified operations is to create as much process consist
 
 ### Common operations management processes (tasks)
 
-- Inventory and visibility—account for, and ensure reporting for all assets, and **collect and monitor your inventory's run state in enterprise-grade environments**.
-- Optimized operations—track, patch, and optimize supported resources and **minimize business interruption risks from configuration drift or vulnerabilities from inconsistent patch management**.
-- Protection and recovery—backup, business continuity, and disaster recovery best practices and **reduce the duration and impact of unpreventable outages**.
-- [Platform operations](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-management-guide/platform-specialization?tabs=SystemsDesign%2CAutomatedRemediation%2CServiceCatalog%2CContinuousImprovement)—specialized operations for common technology platforms such as SQL, WVD, and SAP **for medium to high criticality workloads**.
-- [Workload operations](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-management-guide/workload-specialization)—specialized operations **for high priority/mission-critical workloads** with greater operations requirements.
+- Inventory and visibility: account for, and ensure reporting for all assets, and **collect and monitor your inventory's run state in enterprise-grade environments**.
+- Optimized operations: track, patch, and optimize supported resources and **minimize business interruption risks from configuration drift or vulnerabilities from inconsistent patch management**.
+- Protection and recovery: backup, business continuity, and disaster recovery best practices and **reduce the duration and impact of unpreventable outages**.
+- [Platform operations](../../manage/azure-management-guide/platform-specialization.md?tabs=SystemsDesign%2CAutomatedRemediation%2CServiceCatalog%2CContinuousImprovement): specialized operations for common technology platforms such as SQL, WVD, and SAP (for medium to high criticality workloads).
+- [Workload operations](../../manage/azure-management-guide/workload-specialization.md): specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
 
 Platform and workload operations both execute an equivalent *iterative process* to **improve system design, automate remediation, scale changes with a service catalog, and continuously improve system design, automation, and scale**.
 
