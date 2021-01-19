@@ -3,7 +3,7 @@
 
 items:
   - name: Hybrid and Multicloud scenario - Microsoft Cloud Adoption Framework for Azure
-    href: index.yml
+    href: scenarios/unified-operations/scenario-overview.yml
     pdf_name: Hybrid and Multicloud scenario - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
