@@ -3,27 +3,27 @@
 
 items:
   - name: Hybrid and Multicloud scenario - Microsoft Cloud Adoption Framework for Azure
-    href: scenarios/unified-operations/scenario-overview.yml
+    href: scenario-overview.yml
     pdf_name: Hybrid and Multicloud scenario - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
     - name: Intro to hybrid and multicloud
-      href: scenarios/unified-operations/index.md
+      href: index.md
     - name: Intro to unified operations
-      href: scenarios/unified-operations/unified-operations.md
+      href: unified-operations.md
 
   - name: Build an initial strategy
-    href: scenarios/unified-operations/strategy.md
+    href: strategy.md
   - name: Define your plan
-    href: scenarios/unified-operations/plan.md
+    href: plan.md
   - name: Prepare your environments
-    href: scenarios/unified-operations/ready.md
+    href: ready.md
   - name: Migrate to the cloud
-    href: scenarios/unified-operations/migrate.md
+    href: migrate.md
   - name: Govern your portfolio
-    href: scenarios/unified-operations/govern.md
+    href: govern.md
   - name: Manage your portfolio
-    href: scenarios/unified-operations/manage.md
+    href: manage.md
 
   - name: Well-Architected hybrid workloads (Release TBD)
     items:
@@ -158,63 +158,63 @@ items:
       - name: Azure
         items:
         - name: Azure Linux with ARM Templates
-          href: manage/unified-operations/server/best-practices/azure-arm-template-linux.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/azure-arm-template-linux.md
         - name: Azure Windows with ARM Templates
-          href: manage/unified-operations/server/best-practices/azure-arm-template-win.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/azure-arm-template-win.md
       - name: On-prem - Local datacenter
         items:
         - name: Linux with shell script
-          href: manage/unified-operations/server/best-practices/onboard-server-linux.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/onboard-server-linux.md
         - name: Windows with PowerShell
-          href: manage/unified-operations/server/best-practices/onboard-server-win.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/onboard-server-win.md
         - name: Ubuntu with Vagrant
-          href: manage/unified-operations/server/best-practices/local-vagrant-ubuntu.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/local-vagrant-ubuntu.md
         - name: Windows with Vagrant
-          href: manage/unified-operations/server/best-practices/local-vagrant-windows.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/local-vagrant-windows.md
       - name: VMware
         items:
         - name: Create a VM template for Ubuntu
-          href: manage/unified-operations/server/best-practices/vmware-ubuntu-template.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware-ubuntu-template.md
         - name: Create a VM template for Windows
-          href: manage/unified-operations/server/best-practices/vmware-winsrv2k19-template.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware-winsrv2k19-template.md
         - name: Linux with VMware PowerCLI
-          href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md
         - name: Windows with VMware PowerCLI
-          href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md
         - name: Ubuntu with Terraform
-          href: manage/unified-operations/server/best-practices/vmware-terraform-ubuntu.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware-terraform-ubuntu.md
         - name: Windows with Terraform
-          href: manage/unified-operations/server/best-practices/vmware-terraform-winsrv.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/vmware-terraform-winsrv.md
       - name: AWS - Amazon Web Services
         items:
         - name: AWS Ubuntu with Terraform
-          href: manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md
         - name: AWS Linux with Terraform
-          href: manage/unified-operations/server/best-practices/aws-terraform-al2.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/aws-terraform-al2.md
         - name: AWS EC2 onboard with Ansible
-          href: manage/unified-operations/server/best-practices/aws-scale-ansible.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/aws-scale-ansible.md
       - name: GCP - Google Cloud Provider
         items:
         - name: GCP Ubuntu with Terraform
-          href: manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md
         - name: GCP Windows with Terraform
-          href: manage/unified-operations/server/best-practices/gcp-terraform-windows.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/gcp-terraform-windows.md
     - name: Operate
       items:
       - name: Inventory and Tag assets
-        href: manage/unified-operations/server/best-practices/arc-inventory-tagging.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-inventory-tagging.md
       - name: Patch and Update Management
-        href: manage/unified-operations/server/best-practices/arc-updateManagement.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-updateManagement.md
       - name: Apply Policies
-        href: manage/unified-operations/server/best-practices/arc-policies-mma.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-policies-mma.md
       - name: Collect and Detect security data
-        href: manage/unified-operations/server/best-practices/arc-securitycenter.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-securitycenter.md
       - name: Investigate and respond to security threats
-        href: manage/unified-operations/server/best-practices/arc-azuresentinel.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-azuresentinel.md
       - name: Manage VMs with Microsoft Monitoring Agent (MMA)
-        href: manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md
       - name: Scale configuration of MMA
-        href: manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md
   - name: Featured Azure products
     items:
     - name: All hybrid and multicloud products
