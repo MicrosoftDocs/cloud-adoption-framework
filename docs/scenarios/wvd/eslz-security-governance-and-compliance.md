@@ -15,7 +15,7 @@ ms.subservice: ready
 
   
 
-Enterprise-Scale in this instance refers to organizations with approximately 500-2000 WVD users.
+Enterprise-Scale in this instance refers to organizations with approximately 500-2000 WVD hosts per subscription.
 
   
 
@@ -27,7 +27,7 @@ Like any IT service it is important to build the environment to scale, build in 
 
   
 
-In most cases Windows Virtual Desktop will be deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/overview). Microsoft reccomends reviewing the Cloud Adoption Framework (CAF) to ensure your environment has the right foundation for security, compliance, governance, and cost management.
+In this cases Windows Virtual Desktop will be deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework Enterprise Scale landing zone](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/overview). Microsoft reccomends reviewing the Cloud Adoption Framework (CAF) to ensure your environment has the right foundation for security, compliance, governance, and cost management.
 
   
 
