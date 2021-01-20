@@ -1196,10 +1196,6 @@ items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
 
-      - name: Innovation Antipatterns
-        items:
-        - name: Article for each innovation antipattern
-          href: antipatterns/*.md
 
       - name: Process improvements
         items:

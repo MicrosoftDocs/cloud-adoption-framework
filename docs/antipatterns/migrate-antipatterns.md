@@ -58,7 +58,20 @@ The CIO of Contoso has defined to always use a microservice architecture when bu
 
 Rather than fixate on a specific architecture style, companies should make an architectural decision based on an assessment and due diligence of the use case or an architecture. Limiting the choices of architectures that can be used, is counterproductive since freedom of choice in the cloud, is one of the major benefits of the cloud. Choosing an architecture just because it's in fashion is an easy to avoid antipattern. Find more on [architecture styles](https://docs.microsoft.com/azure/architecture/guide) and [Cloud Design Patterns](/azure/architecture/patterns).
 
+## Antipattern: Use of a single subscription
+
+Some companies decide that they'll use only **one** subscription to host all of their workload. This usually occurs when executing a rapid migration, that requires speed over everything else. However, this leads to a poorly governed and designed landscape, that most of the time needs a redesign afterwards since companies quickly run into subscription limits.  
+
+### Example of a single subscription antipattern
+
+Contoso Hotels was part of Contoso Ltd., but Contoso decided to carve-out the hotel branch of their business. This requires all IT assets of Contoso Hotels to be moved or migrated to a new place. Contoso Hotels decided to go for a cloud-first approach and migrate all IT assets to the cloud. However, due to time constraints they decided to migrate everything into one subscription. Leading up to a huge virtual network, where there are only very limited possibilities to establish a proper separation of duties and security model. Three months after the carve-out has been completed Contoso Hotels determines that their assets are less secure and governed than before and that they are running into subscription limits.
+
+### Preferred outcome: proper segmentation
+
+Companies should plan for separation of duties and different environment before migrating into Azure. Subscription limits can be reached rather quickly when different stages are mixed into one subscription. Additionally, the implementation of governance and compliance is harder to achieve, when there is [no proper segmentation](../ready/enterprise-scale/management-group-and-subscription-organization.md) strategy in place.
+
 ## Next steps
 
 - [Cloud Migration Guide](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/azure-migration-guide/)
 - [Migration best practices](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/azure-best-practices/)
+- [Management group and subscription organization](../ready/enterprise-scale/management-group-and-subscription-organization.md)
