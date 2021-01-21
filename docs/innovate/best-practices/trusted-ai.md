@@ -2,16 +2,17 @@
 title: Responsible and trusted AI
 description: Understand the six guiding Microsoft principles for responsible AI-accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 01/08/2021
+ms.author: msteller
+ms.date: 01/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 # Responsible and trusted AI
 
-Microsoft outlines key six principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into more mainstream products and services. They are guided by two perspectives: ethical and explainable.
+Microsoft outlines six key principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into more mainstream products and services. They are guided by two perspectives: ethical and explainable.
 
 ![A diagram of responsible AI principles.](media/responsible-ai-principles.png)
 
