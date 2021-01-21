@@ -29,9 +29,9 @@ This scenario is designed to guide the end-2-end customer journey, throughout th
 - Feature Azure Products: Learn more about the products that support your hybrid and multicloud strategy in Azure.
 - Learn Modules: Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions.
 
-## Common customer journeys
+## Common customer challenges and supporting guidance
 
-**Prepare for centralized operations of hybrid and multicloud:** Leverage the cloud adoption framework articles to establish the processes and approaches required to support an entire portfolio of workloads across hybrid and multicloud environments.
+**Prepare for centralized operations of hybrid and multicloud:** Review the seven cloud adoption framework articles in the TOC to the right to establish the processes and approaches required to support an entire portfolio of workloads across hybrid and multicloud environments.
 
 **Monitor assets across an existing hybrid and multicloud portfolio:** Focus on the Unified Operations, Govern, and Manage articles to integrate unified operations into your existing operations processes. Leverage the Ready article to deploy those improvements across all of your cloud environments.
 
