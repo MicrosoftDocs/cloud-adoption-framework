@@ -1,5 +1,5 @@
 ---
-title: "Ready methodology for Hybrid and Multicloud"
+title: "Ready methodology for hybrid and multicloud strategy"
 description: Prepare your environment for hybrid and multicloud with Azure Landing Zones
 author: mpvenables
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Ready: Prepare your environment for hybrid and multicloud
+# Ready: prepare your environment for hybrid and multicloud
 
 The Ready methodology of the cloud adoption framework guides customers through environmental readiness to prepare for adoption of the cloud. Included in the Ready methodology are technical accelerators referred to as Azure Landing Zones, which automate configuration of your Azure environment in alignment with the best practices in Cloud Adoption Framework. But to prepare for a hybrid and multicloud, their are a number of minor environmental configurations that may be slightly different. This article outlines the key considerations and changes that must be made to **prepare your Azure environment to serve as ONE of your cloud platforms**.
 
@@ -55,7 +55,7 @@ The following links will help you onboard and tag assets across each of your clo
 - Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
 - Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-windows.md)
 
-## Configure your initial Azure Environment
+## Configure your initial Azure environment
 
 For each of the cloud mixes above, you will need an Azure environment to support, govern, and manage your cloud resources.
 The Cloud Adoption Framework's Ready methodology helps prepare your environment using a few simple steps:

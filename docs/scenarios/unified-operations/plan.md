@@ -1,5 +1,5 @@
 ---
-title: "Plan for unified operations"
+title: "Plan methodology for hybrid and multicloud strategy"
 description: Describe the scenario's impact on planning
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,21 +9,23 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Executive summary
+# Plan for hybrid and multicloud strategy
+
+## Executive summary
 
 Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift-and-shift scenarios, configurations of PaaS services, or cloud-native workloads. Planning efforts that center on unified operations include assets beyond VMs and PaaS services in migration efforts, widening the availability of form factors to stretch innovation benefits beyond the private cloud to any location. Azure Arc and Azure Stack drive digital transformation efforts under unified operations and management across private cloud, public cloud and the edge.
 
-Azure Stack is a hardware solution that enables you to run an Azure environment on-premises, and on the edge. Because Azure Stack uses an integrated system with cloud service on-premises (Azure Stack Hub), or runs edge-computing workloads with a cloud-managed appliance (Azure Stack Edge), retaining assets on-premises is no longer a barrier to extending cloud benefits on premises, or the edge. Such unified operations and management enables consistent operations management and governance across environments. This eliminates the need to resolve dependencies, that are no longer locked to platform-restrictive configurations or policies. 
+Azure Stack is a hardware solution that enables you to run an Azure environment on-premises, and on the edge. Because Azure Stack uses an integrated system with cloud service on-premises (Azure Stack Hub), or runs edge-computing workloads with a cloud-managed appliance (Azure Stack Edge), retaining assets on-premises is no longer a barrier to extending cloud benefits on premises, or the edge. Such unified operations and management enables consistent operations management and governance across environments. This eliminates the need to resolve dependencies, that are no longer locked to platform-restrictive configurations or policies.
 
-Azure Arc is a software solution, a single enterprise control plane that manages all your digital assets across environments by projecting your on-premises and other cloud resources into Azure, extending simplified management, faster app development, and consistent Azure services to any infrastructure, anywhere.
+Azure Arc is a software solution— one enterprise control plane that manages all your digital assets across environments by projecting your on-premises and other cloud resources into Azure, extending simplified management, faster app development, and consistent Azure services to any infrastructure, anywhere.
 
-A unified operations approach that integrates uniform visibility of on-premises assets with Azure Arc facilitates Azure-consistent migrations, reaching out and projecting resources into Azure as first-class citizens. Azure Arc implements cloud operations management across on-premises, multi-cloud and edge, and enables Azure services anywhere, so migration efforts can standardize management and governance for your entire digital estate, right from Azure. Implementing a unified operations approach changes how you might consider asset inventory and rationalizing your estate, deploying your cloud adoption plan, your readiness plan (with expanded platform options), your specific DevOps plan to manage deployment pipelines, and specific skilling for a hybrid and multicloud migration effort.
+A hybrid and multicloud strategy that follows a unified operations approach, integrates uniform visibility of on-premises assets with Azure Arc, and can facilitate Azure-consistent migration efforts, extending to and projecting resources into Azure as first-class citizens. Azure Arc implements unified cloud operations management across on-premises, multi-cloud and edge, and enables Azure services anywhere, so migration efforts can standardize management and governance for your entire digital estate, right from Azure. Implementing a unified operations approach changes how you might consider asset inventory and rationalizing your estate, deploying your cloud adoption plan, your readiness plan (with expanded platform options), your specific DevOps plan to manage deployment pipelines, and specific skilling for a hybrid and multicloud strategy.
 
-Hybrid, multicloud, and edge deployment strategies with unified operations in mind can **accelerate cloud adoption and migration efforts for your organization,** deploying a consistent operational and management framework for organizations to move forward and adopt modern cloud technologies, optimizing cloud operations management and governance processes across on-prem-designated as well as migration-candidate workloads.
+Hybrid, multicloud, and edge deployment strategies with a unified operations approach in mind can **accelerate cloud adoption and migration efforts for your organization,** deploying a consistent operational and management framework for organizations to move forward and adopt modern cloud technologies, optimizing cloud operations management and governance processes across on-prem-designated as well as migration-candidate workloads.
 
 Developing necessary cloud skilling, and building cloud processes that support the overall migration readiness effort across the organization helps to accelerate the overall cloud adoption and migration effort. Planning for unified operations accelerates innovation across resources with an operational framework for simplified management, faster app development, and consistent Azure services across sprawling on prem, multi-cloud, and edge environments, and can strengthen your organization's overall cloud adoption and migration effort.
 
-## Plan for unified operations
+## Planning for hybrid and multicloud strategy
 
 In most cloud adoption scenarios, we assume an intention to Rehost (IaaS VMs), Rearchitect (PaaS services), or Rebuild (cloud-native) workloads with Azure as a target platform, with a uni-directional migration to Azure, using these standard rationalizations to identify assets for possible migration.  
 
@@ -45,7 +47,7 @@ The biggest change in planning unified operations with expanded deployment optio
 
 In many cases, we start by assuming that every asset fits a **Retain** pattern, proactively adding each asset to the enterprise control plane for unified cloud operations and management efforts. Adopting a consistent cloud dashboard **can speeds up cloud adoption and migration efforts for your organization** by deploying consistent cloud practices and technologies across assets designated for on-premises workloads, and cloud-ready skills and processes to support workloads with migration-designated assets.
 
-## Unified operations digital estate
+## Hybrid and multicloud digital estate
 
 The current assumption in today's enterprise landscape is that most organizations will adopt the cloud. A complete enterprise migration could take days or even years, depending on what assets are included as migration candidates in the digital estate. Consider an enterprise environment with thousands of VMs and hundreds of applications, where the human effort required can easily exceed 1,500 FTE hours and nine months of planning. With standard (uni-directional) migration efforts, the assumption is that you will look for standard opportunities for Rehost/Rearchitect (assets that surface as standard migration candidates when rationalizing your digital estate).
 
@@ -55,7 +57,7 @@ Because on-premises assets are added to the enterprise control plane for unified
 
 Standard migration assumes that every asset in the workload is a VM or PaaS service in terms of either Rehost or Rearchitect. As mentioned, *standard migration efforts* assume a uni-directional, "migrate everything to the cloud" approach—lifting and shifting (IaaS VMs) and rearchitecting (PaaS services).
 
-## Using Azure Stack and Azure Arc in unified operations
+## Using Azure Stack and Azure Arc in hybrid and multicloud strategy
 
 A unified operations approach that considers hybrid and multicloud environments opens up more form factors for distributing cloud innovation by using Azure services and server management practices across other multi-cloud environments and the edge.
 
@@ -67,7 +69,7 @@ Azure Stack's family of hardware-as-a-service, integrated systems, and hyperconv
 
 **Azure Stack Edge** is purpose-built (enterprise datacenter or rugged environment) hardware-as-a-service. It is optimized for edge compute, machine learning, and IoT scenarios to run your workloads at the edge for faster data insights, and manages your hardware appliance and workloads through the Azure portal. It allows you to run machine learning models with hardware-accelerated machine learning capabilities (with on-board FPGAs and GPUs)—leverages edge computing to process data close to the source (with VMs, Azure services, Kubernetes clusters, and containers)—and acts as a cloud storage gateway, transferring data to Azure over the network, while retaining local access to blobs and files.
 
-## Azure Arc's dashboard for unified operations
+## Azure Arc's dashboard for hybrid and multicloud strategy
 
 Azure Arc is a multi-cloud and on-premises management platform at the core of unified operations that enables standardized visibility, operations, and compliance across scattered resources in on-premises, multi-cloud, and edge environments. Adopting a single enterprise control plane **can accelerate cloud adoption and migration,** and enables a consistent framework for organizations to adopt modern cloud technologies and processes for on-prem-designated and migration-candidate workloads. Supporting the development of necessary cloud skilling, and building cloud processes to support overall migration readiness initiatives across the organization increases the consistency and speed of cloud adoption and migration efforts. Deploying a single enterprise dashboard with visibility across sprawling resources in on-premises, multi-cloud, and edge environments can accelerate cloud adoption and migration efforts for organizations, with simplified management, faster app development, and consistent Azure services that run on any infrastructure, anywhere.
 
@@ -137,12 +139,12 @@ If unified operations is a core part of your strategy, you should start by light
 Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient?
 <https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/inventory>
 
-## Unified operations adoption plan
+## Hybrid and multicloud adoption plan
 
 Do you have a specific devops backlog the customer should use? Or is the standard adoption plan template still sufficient?
 <https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template>
 
-## Unified operations readiness plan
+## Hybrid and multicloud readiness plan
 
 Are there specific skills or extra training this team should take before getting started?
 
