@@ -1,6 +1,6 @@
 ---
 title: "Enterprise-Scale enterprise enrollment and Azure AD tenants for <Insert narrative Name>"
-description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of <Insert Scenario Name>
+description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of AKS
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020

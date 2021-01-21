@@ -1,35 +1,34 @@
 ---
-title: "Migrate workloads for <Insert Scenario Name>"
+title: "Migrate workloads for Kubernetes and containers"
 description: Describe the scenario's impact on migration deployment
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 02/15/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Migrate <Insert Scenario Name>
+# Migrate Kubernetes and containers
 
 Describe how your scenario changes the deployment process during migration in a standard migration factory
 
-## <Insert Scenario Name> process details
+## Kubernetes and containers process details
 
 Are there data points outside of a standard Azure Migrate assessment that you need to prepare for migration?
 
-## <Insert Scenario Name> process flow
+## Kubernetes and containers process flow
 
 Are there Azure migrate partners that can help get the data? What about other 3rd parties?
 
-## <Insert Scenario Name> workload specific activities
+## Kubernetes and containers workload specific activities
 
 Are there specific criteria for workloads in that portfolio that would require the customer to run a well-architected review for any workloads?
 
-## Next step: Release <Insert Scenario Name>
+## Next step: Release Kubernetes and containers
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Release <Insert Scenario Name> to production](./migrate-release.md)
-- [Innovate with <Insert Scenario Name>](./innovate.md)
-- [Govern <Insert Scenario Name>](./govern.md)
-- [Manage <Insert Scenario Name>](./manage.md)
+- [Innovate with Kubernetes and containers](./innovate.md)
+- [Govern Kubernetes and containers](./govern.md)
+- [Manage Kubernetes and containers](./manage.md)

@@ -82,7 +82,7 @@ items:
         - name: Innovate
           href: scenarios/aks/innovate.md
         - name: Migrate
-          href: scenarios/aks/migrate-deploy.md
+          href: scenarios/aks/migrate.md
         - name: Govern
           href: scenarios/aks/govern.md
         - name: Manage

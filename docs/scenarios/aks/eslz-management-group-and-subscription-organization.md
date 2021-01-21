@@ -1,6 +1,6 @@
 ---
 title: "Enterprise-Scale management group and subscription organization for AKS"
-description: Describe how this enterprise-scale scenario can improve management group and subscription organization of <Insert Scenario Name>
+description: Describe how this enterprise-scale scenario can improve management group and subscription organization of AKS
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020

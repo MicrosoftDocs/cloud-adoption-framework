@@ -1,6 +1,6 @@
 ---
 title: "Enterprise-Scale business continuity and disaster recovery for <Insert narrative Name>"
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of <Insert Scenario Name>
+description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of AKS
 author: JeffMitchell
 ms.author: jemitche
 ms.date: 09/1/2020

@@ -1,6 +1,6 @@
 ---
 title: "Enterprise-Scale support for <Insert narrative Name>"
-description: Describe how enterprise-scale can accelerate adoption of <Insert Scenario Name>
+description: Describe how enterprise-scale can accelerate adoption of AKS
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
