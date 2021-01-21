@@ -31,7 +31,7 @@ This not only allows companies to scale computing resources— it also eliminate
 
 However, as companies spread resources across on-premises, multiple clouds, and the edge, we often hear customers have three common needs:
 
-1. They need to have visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass. 
+1. They need to have visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass.
 2. From an IT point of view, while organizations understand the need for implementing a governance standard, they find it hard to integrate on-premises policies and updates with their cloud infrastructure.
 3. Since there are often different app development teams in the organization, there exists a wide range of skills across on-premises and cloud. Customers are looking for consistent inter-operability between the two so they can unify development practices.
 
