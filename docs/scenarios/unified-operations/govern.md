@@ -11,7 +11,7 @@ ms.subservice: govern
 
 # Govern your portfolio of hybrid and multicloud workloads
 
-The cloud has fundamental changed IT governance. Human intense, manual review and change controls processes can now be replaced with automated guardrails and enforcement tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected & often times automated. The key to this new found freedom is the infrastructure as code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
+The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and enforcement tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected & often times automated. The key to this new found freedom is the infrastructure as code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 
 In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. Combining Azure Arc with existing governance tools like Azure Policy, Azure Blueprint, and others, extends many of your governance guardrails to virtually any cloud resource (Private or public clouds alike). [Unified operations](./unified-operations.md) is the best practice concept to extend your governance controls using native Azure tools for governance.
 
@@ -31,10 +31,10 @@ Once you establish your tagging standards and onboard some of your assets, you c
 
 With a basic understanding of unified operations and Azure Arc, you can begin extending your disciplines of cloud governance to deployments hosted outside of your Azure environments.
 
-Security baseline is among the most common ways a customer will expand their governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
+Security baseline is among the most common ways a customer can expand their governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
 
-- [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/server/best-practices/arc-securitycenter.md)
-- [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/server/best-practices/arc-azuresentinel.md)
+- [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/server/best-practices/arc-security-ctr.md)
+- [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/server/best-practices/arc-azure-sentinel.md)
 - [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
 
