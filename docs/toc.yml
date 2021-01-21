@@ -10,23 +10,25 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  - name: Get started
+  - name: Adoption Journeys
     items:
-    - name: Overview
-      href: get-started/index.md
-
-    - name: Foundational alignment
+    - name: Get Started
       items:
-      - name: Document foundational alignment decisions
-        href: get-started/cloud-concepts.md
-      - name: How does Azure work?
-        href: get-started/what-is-azure.md
-      - name: Azure fundamental concepts
-        href: ready/considerations/fundamental-concepts.md
-      - name: Portfolio hierarchy
-        href: reference/fundamental-concepts/hosting-hierarchy.md
-      - name: Azure hierarchy support
-        href: reference/fundamental-concepts/hierarchy-azure-tools.md
+      - name: Overview
+        href: get-started/index.md
+
+      - name: Foundational alignment
+        items:
+        - name: Document foundational alignment decisions
+          href: get-started/cloud-concepts.md
+        - name: How does Azure work?
+          href: get-started/what-is-azure.md
+        - name: Azure fundamental concepts
+          href: ready/considerations/fundamental-concepts.md
+        - name: Portfolio hierarchy
+          href: reference/fundamental-concepts/hosting-hierarchy.md
+        - name: Azure hierarchy support
+          href: reference/fundamental-concepts/hierarchy-azure-tools.md
 
     - name: Accelerate adoption
       items:
@@ -64,6 +66,11 @@ items:
         href: get-started/team/cloud-governance.md
       - name: Build a cloud operations team
         href: get-started/team/cloud-operations.md
+
+    - name: Adoption Scenarios
+      items: 
+      - name: Data governance and management
+        href: scenarios/data-management/index.md
 
   - name: Strategy
     items:
