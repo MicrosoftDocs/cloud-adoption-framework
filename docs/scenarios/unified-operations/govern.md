@@ -34,7 +34,7 @@ With a basic understanding of unified operations and Azure Arc, you can begin ex
 Security baseline is among the most common ways a customer will expand their governance disciplines in a unified operations scenario. THe following best practices will help preserve your security baseline across all environments:
 
 - [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/server/best-practices/arc-securitycenter.md)
-- [Investigate and respond to security threats with Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/tutorial-investigate-cases)
+- [Investigate and respond to security threats with Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
 - [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
 
