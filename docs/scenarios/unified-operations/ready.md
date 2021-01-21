@@ -17,7 +17,7 @@ The Ready methodology of the cloud adoption framework guides customers' through 
 
 Hybrid and multicloud are not binary decisions, they are more of a spectrum of decisions as seen in the chart below. Before configuring your Azure environment (or any other cloud environment), its important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes for illustration:
 
-![3 illustrations showing how different customers distribute workloads across cloud providers.](../../-images/unified-operations/cloud-mix.png)
+![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/unified-operations/cloud-mix.png)
 
 The image above illustrates three of the most common cloud mixes we see with customers. Each blue dot represents a workload, each orange circle a business process supported by a distinct environment. Each of these cloud mixes requires a very different Azure environment configuration.
 
