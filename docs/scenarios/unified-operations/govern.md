@@ -31,7 +31,7 @@ Once you establish your tagging standards and onboard some of your assets, you c
 
 With a basic understanding of unified operations and Azure Arc, you can begin extending your disciplines of cloud governance to deployments hosted outside of your Azure environments.
 
-Security baseline is among the most common ways a customer can expand their governance disciplines in a unified operations scenario. THe following best practices will help preserve your security baseline across all environments:
+Security baseline is among the most common ways a customer can expand their governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
 
 - [Collect and detect security data across clouds with Azure Security Center](../../manage/unified-operations/server/best-practices/arc-security-ctr.md)
 - [Investigate and respond to security threats with Azure Sentinel](../../manage/unified-operations/server/best-practices/arc-azure-sentinel.md)
