@@ -20,11 +20,12 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ## January 2021
 
-We've added new information about how you can use GitHub to accelerate cloud adoption.
+To help you accelerate adoption and innovation, we've added new information about using GitHub and updated best practices for machine learning.
 
 | Article | Description |
 |--|--|
 | [How&nbsp;GitHub&nbsp;accelerates&nbsp;cloud&nbsp;adoption](../scenarios/github-velocity/index.md) | This article outlines the benefits of using GitHub to accelerate cloud adoption by taking advantage of open-source assets, collaborative development environments, automation and security features. |
+| New [Machine Learning](../innovate/best-practices/machine-learning.md) best practice guidance | We've updated and expanded the best practice guidance for Machine Learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and  [the MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
 
 ## December 2020
 
