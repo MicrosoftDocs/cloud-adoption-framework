@@ -18,6 +18,14 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
+## January 2021
+
+We've added new information about how you can use GitHub to accelerate cloud adoption.
+
+| Article | Description |
+|--|--|
+| [How&nbsp;GitHub&nbsp;accelerates&nbsp;cloud&nbsp;adoption](../scenarios/github-velocity/index.md) | This article outlines the benefits of using GitHub to accelerate cloud adoption by taking advantage of open-source assets, collaborative development environments, automation and security features. |
+
 ## December 2020
 
 We've revised the naming and tagging strategy guidance, as well as adding guidance for Moodle migration scenarios.
