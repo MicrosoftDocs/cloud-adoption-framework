@@ -1155,20 +1155,15 @@ items:
               href: innovate\best-practices\mlops-process.md
             - name: Machine learning security
               href: innovate\best-practices\ml-security.md
-            - name: Machine learning inference during deployment
+            - name: Machine learning inference and deployment
               href: innovate\best-practices\ml-deployment-inference.md
-            - name: Determine development, training, and compute instances for your machine learning model
+            - name: Determine compute instances for your model
               href: innovate\best-practices\dev-train-comp-instances-for-ml.md
             - name: Set up machine learning workspaces
               href: innovate\best-practices\set-up-ml-workspaces.md
             - name: Responsible and trusted AI
               href: innovate\best-practices\trusted-ai.md
-            - name: Azure Machine Learning workflow
-              href: /azure/machine-learning/concept-azure-machine-learning-architecture?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Analyze data with Azure Machine Learning
-              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Deploy predictions
-              href: /azure/machine-learning/how-to-deploy-and-where?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
           - name: AI apps and agents
             items:
             - name: What are AI apps
