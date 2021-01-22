@@ -17,7 +17,7 @@ In a hybrid, multicloud, and edge strategy, the advantages of cloud governance c
 
 ## Deploy a unified operations MVP for governance
 
-Good governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and management groups allows for ease of governance application. Expand your cloud governance practices with a few simple steps:
+Good governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and management groups allows for ease of application governance. Expand your cloud governance practices with a few simple steps:
 
 - Add a tag for "hosting platform" to all hybrid, multicloud, and edge assets
 - Tag resources from AWS, GCP, etc...
