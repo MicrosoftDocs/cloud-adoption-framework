@@ -19,7 +19,7 @@ Typically, migration efforts have been seen as a one-way street; assets move up 
 
 ## Impact on migration-specific processes
 
-While the direct impact on migration processes is minor, awareness of those deviations can increase your organization's likelihood of success. The act of migrating workloads consists of three high level processes, which are repeated in waves or sprints until the migration is complete. The following introduces how each of those processes changes:
+While the direct impact on migration processes is minor, awareness of those deviations can increase your organization's likelihood of success. The act of migrating workloads consists of three high level processes, which are repeated in waves or sprints until the migration is complete. The following introduces how each of those processes change:
 
 - **Assess workloads:** There are a few considerations that will shape how you assess workloads prior to migration. 
 - **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But, you may want to leverage more of the Azure Migrate ecosystem to accelerate specific types of migrations.
