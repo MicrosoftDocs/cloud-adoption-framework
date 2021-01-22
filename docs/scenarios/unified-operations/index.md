@@ -47,7 +47,7 @@ If every customer hosted 100% of their technology needs in Azure, our stock valu
 - Business units, subsidiaries or acquired companies have already adopted different cloud platforms
 - Different cloud providers may have regulatory and data sovereignty requirements in different countries
 - Improve business continuity and disaster recovery by duplicating workloads across two cloud providers
-- Maximize performance by running applications close to user locations, which my require hybrid or multicloud adoption
+- Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud
 
 ## Primary: Hybrid and multicloud concerns
