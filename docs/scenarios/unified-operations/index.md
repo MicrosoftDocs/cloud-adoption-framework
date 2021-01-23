@@ -9,19 +9,19 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Introduction to Hybrid and Multicloud
+# Introduction to hybrid and multicloud
 
-Microsoft Azure provides all of the products and features required to operate your technology solutions in the cloud. But we understand that there are legitimate business reasons that may necessitate the use of multiple private and/or public clouds. As a first step in the hybrid and multicloud journey, this article outlines Microsoft's view of these important terms.
+Microsoft Azure provides all of the products and features required to help you to build and operate your technology solutions in the cloud. We also understand that there are sound business reasons that may drive the necessity of using multiple private and/or public clouds. As a first step in your hybrid and multicloud journey, this article outlines and expands on Microsoft's unique perspective on important cloud computing terms.
 
-## Hybrid and Multicloud definitions
+## Defining hybrid and multicloud
 
-A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
+A hybrid cloud is a type of cloud computing that combines a private cloud (on-premises infrastructure), with a public cloud (computing services offered by third-party providers over the public Internet). Hybrid clouds allow data and apps to consistently move between the two cloud environments. Many organizations choose a hybrid cloud strategy because of business requirements, such as meeting regulatory and data sovereignty requirements, maximizing  on-premises technology investments, or addressing latency issues.
 
-The hybrid cloud is evolving to include edge workloads as well. Edge computing brings the computing power of the cloud to IoT devices—closer to where the data resides. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
+The hybrid cloud is evolving to include edge workloads as well. Edge computing brings the computing power of the cloud to IoT devices—closer to where the data resides on apps, connected devices, and mobile consumer services. Reducing latency by moving workloads to the edge, devices spend less time communicating with the cloud, and can operate reliably in extended offline periods. Expanded compute, storage, and service availability provides experience-driven resources closer to your customers.
 
-Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider—including private and public clouds—in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
+Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider (including private and public clouds), in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
 
-## Hybrid and Multicloud narrative
+## Hybrid and multicloud narrative
 
 This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single CAF methodology, but instead looks at the overall adoption journey.
 
@@ -37,7 +37,7 @@ However, as companies spread resources across on-premises, multiple clouds, and 
 
 Now, let’s also consider the deployment of cloud native services. Some customers operate in highly regulated industries (e.g. government infrastructure, healthcare, financial services) where both internal and customer data are deemed critical and must remain within the boundaries of on-premises datacenters. There could also be a need for latency requirements where the data processing needs to happen close to the source of data while minimizing disruptions that may arise from internet connectivity issues. Another common scenario is that customers don’t want the management overhead of maintaining these services on-premises and would like to flip to a cloud billing model.
 
-## Hybrid and Multicloud motivations
+## Hybrid and multicloud motivations
 
 As a true enterprise-grade cloud provider, Azure is able to support your business objectives across public, hybrid, and multicloud environments. This article series will discuss different best practices that can help facilitate a variety of cloud mixes ranging from 100% Azure environments to environments that have little (or no) Azure infrastructure in place.
 
