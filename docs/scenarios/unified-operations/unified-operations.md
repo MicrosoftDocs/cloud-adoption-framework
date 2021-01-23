@@ -64,7 +64,7 @@ This image displays the individual components required for unified operations, a
 
 ## Customer processes
 
-The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](../../govern/) and [operations management](../../manage/) processes remain consistent.
+The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](./govern.md) and [operations management](./manage.md) processes remain consistent.
 
 ![Customer Processes that unified operations can support](../../_images/unified-operations/unified-operations-customer-processes.png)
 
