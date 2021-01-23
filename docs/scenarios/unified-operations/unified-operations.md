@@ -9,12 +9,12 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Unified operations
+# Introduction to unified operations
 
-One pane of glass—across hybrid, multicloud, and edge
+One cloud dashboard—across hybrid, multicloud, and edge
 
-Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes) is necessary to understand what might affect primary cost options, such as capital expenses and operating costs.
-=======
+Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes) is necessary to understand what might affect primary cost options, such as capital expenses and operating costs
+
 In any hybrid and multicloud strategy, the first increase in overhead costs can manifest in the form of duplicated cloud platform utilities: Network, identity, governance, security, and operations tooling. In the longer term, more negative business impacts could emerge in the form of challenges like staffing core functions or teams with the skills needed to manage diverse environments.
 
 In hybrid and multicloud strategies, the first increase in overhead costs might be duplicated cloud platform utilities: network, identity, governance, security, and operations tooling. In the longer term, negative business impacts could emerge—challenges like staffing core functions or teams with the skills needed to manage diverse environments.
@@ -22,7 +22,7 @@ In hybrid and multicloud strategies, the first increase in overhead costs might 
 Hybrid and multicloud strategies have lead many decisions makers to incorrectly conclude that the cloud is more expensive than on-premises technologies. A recent Forrester Consulting study commissioned by Microsoft found that a hybrid and multicloud strategy can provide very significant [three-year return on investment, and substantial avoided on-premises infrastructure and staff costs](https://azure.microsoft.com/resources/forrester-tei-microsoft-azure-iaas/) for organizations. An Accenture and WSP Environment & Energy study further concluded that cloud solutions add significantly increased energy efficiencies for large deployments, with [organizations reducing energy use and carbon emissions by more than 30 percent against business applications installed on-premises]((https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf)), and for small deployments, reaching 90+ percent reductions with a shared cloud service.
 
 Organizations can modernize and optimize overall operations using a simple approach to overcoming risks, overhead cost increases, or challenges related to staffing core functions. "**Unified Operations**" is the approach to hybrid, multicloud, and edge cloud strategies that reduces short-term duplication and long-term strain on your technology staff. This article describes the provider-neutral approach of using unified operations to extend a single enterprise control plane across distributed assets in hybrid, multicloud, and edge environments.
-=======
+
 Hybrid and multicloud strategies have lead many decision makers to falsely conclude that the cloud is more expensive than on-premises technology options. A recent Forrester Consulting study commissioned by Microsoft found that a hybrid and multi-cloud strategy can provide very significant [three-year return on investment, and substantial avoided on-premises infrastructure and staff costs](https://azure.microsoft.com/resources/forrester-tei-microsoft-azure-iaas/) for organizations. A second study by Accenture and WSP Environment & Energy concluded that cloud solutions add [significantly increased energy efficiencies for large deployments](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), with organizations reducing energy use and carbon emissions by more than 30 percent compared to business applications installed on-premises. (For small deployments, energy use and emissions can be reduced by more than 90 percent with a shared cloud service).
 
 More articles will follow, outlining the Azure approach to unified operations: delivering [governance](./govern.md) and [operations management](./manage.md) across heterogeneous hybrid, multicloud, and edge environments. The overall goal in an Azure-specific approach to unified operations would be to inventory, organize, and govern IT assets anywhere, on any infrastructure. This centralized enterprise control plane would provide a consistent cloud operations management experience across on-premises, multicloud, and edge environments.
@@ -42,14 +42,14 @@ Whether located in a public or private cloud, your primary cloud platform is whe
 > You probably already have a primary cloud platform. Unfortunately, many cloud platforms were designed and built before operations required hybrid, multicloud, or edge deployment options. This has often led customers to replicate processes, using different cloud controls to manage cloud services across each cloud platform. If your cloud strategy calls for hybrid, multicloud, or edge deployment options **and** your primary cloud platform doesn't support them, consider a platform that can deploy the requisite functionalities for unified operations.
 >
 
-## Unified operations
+## Defining unified operations
 
 The concept behind how unified operations works is simple. Implement an extension, or gateway, in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. Manage and govern your operations consistently—across heterogeneous on-premises, multicloud, and edge environments.
 
 In implementing unified operations, a single enterprise control plane extends across your organization's distributed assets, bringing consistent management, app development, and cloud services to any infrastructure, anywhere, at scale. Enabling consistent management and governance for organizations, a gateway with such cloud controls extends consistent operations management and data services across disparate on-premises, multicloud and edge environments.
 
 Unified operations' focus on cross-platform standardization, interoperability, and compliance enables consistent visibility, uniform governance, and operations management for your organization. **Remove traditional technology silos by extending consistent operations management and governance processes** for on-premises, cloud-native, and distributed edge assets across your entire IT data estate. A successful unified operations effort can unlock fresh hybrid and multicloud scenarios, accelerating cloud adoption and migration efforts for your organization.
-=======
+
 One cloud management experience that manages operations of distributed assets at scale (porting consistent management, app development, and cloud services to any infrastructure, anywhere) brings cloud innovation to all resource environments across your entire IT estate. The addition of a gateway for cloud controls that extends Azure management and Azure data services to on-premises, multi-cloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multi-cloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere.
 
 ![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/unified-operations/primary-cloud-provider-extended.png)
@@ -129,7 +129,7 @@ Your primary cloud platform should include a number of important features to fac
 These features are likely already included in the control sets you are currently using to operate your primary cloud provider. There are likely many additional features and automated processes available in that set of controls. These are the primary control functionalities that should be available across hybrid, multicloud, and edge in your unified operations solution.
 
 When implemented inconsistently as primary controls, these features commonly lead to fractured or duplicated operations. As mentioned before, an inconsistent approach to implementing unified operations from increased operating costs (e.g., duplicated cloud platform utilities, operations tooling) can multiply cost inefficiencies for your organization, and incur significant capital expenditures during the early phase of the cloud adoption journey.
-=======
+
 It's because they are implemented as primary controls that the features above are the ones that we commonly see lead to fractured or duplicated operations. As mentioned before, an inconsistent approach to implementing unified operations from increased operating costs (for example, duplicated cloud platform utilities, operations tooling) can multiply cost inefficiencies for your organization, and incur significant capital expenditures in the early phase of the cloud adoption journey.
 
 ### Hybrid, multicloud, and edge gateway and enterprise control plane
@@ -140,7 +140,7 @@ To extend your primary cloud controls, you will need to configure an extension, 
  Azure Arc is that extension, on the Microsoft cloud platform. Azure Arc extends the cloud controls used to govern Azure, so that you can apply the same control and processes to services running on-premises, whether on resources in a competing public cloud, or on the edge. This is the unified operations approach—that extends cloud controls for consistent governance and operations management processes, across your on-premises, multicloud, and edge environments.
 
 Unified operations extends the reach of ARM (Azure Resource Manager), the "operating system" of Azure. ARM stretches outside Azure to scattered resources deployed outside of Azure, bringing them inside Azure, and representing them as first-class citizens, whether resources on-premises, or assets in your multicloud strategy. The unified operations approach extends Azure's reach, bringing Azure services and management to any kind of infrastructure, anywhere.
-=======
+
 Unified operations extends the reach of ARM (Azure Resource Manager), the "operating system" of Azure. ARM reaches outside Azure, to project those scattered resources inside Azure and represent them as first-class citizens. By bringing Azure services and management to any kind of infrastructure, the unified operations approach extends Azure's reach, and enables new hybrid and multi-cloud solutions.
 
 Using a unified operations approach allows you to organize, govern, and secure any environment anywhere, with centralized visibility, operations, and compliance. Build cloud apps, anywhere, at scale, with standardized application services, from deployment to monitoring. Deploy Azure services anywhere—deploy faster, consistently, and at scale with always-up-to-date Azure Arc-enabled services.
