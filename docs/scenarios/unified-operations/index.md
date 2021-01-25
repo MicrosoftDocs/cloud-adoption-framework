@@ -17,7 +17,7 @@ Microsoft Azure provides all of the products and features required to operate yo
 
 A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
 
-The hybrid cloud is evolving to include edge workloads as well. Edge computing brings the computing power of the cloud to IoT devices—closer to where the data resides. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
+The hybrid cloud is evolving to include edge workloads as well. Cloud-managed Edge computing devices bring the computing power of the public cloud to the private cloud—closer to where the IoT devices reside. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
 
 Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider—including private and public clouds—in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
 
