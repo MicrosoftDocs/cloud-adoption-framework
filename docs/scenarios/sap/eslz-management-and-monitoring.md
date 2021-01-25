@@ -32,3 +32,5 @@ Leverage [Azure Backup Services](https://docs.microsoft.com/en-us/azure/virtual-
 Create monitoring platform using [Azure telemetry](https://github.com/microsoft/SAPTELEMETRY) tools to provide business processes insight.
 
 Network Watcher [Connection monitor](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor) for SAP database and application server latency monitoring  (Metric) or by leveraging [Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
+
+Threat Protection for SAP with Azure Sentinel
