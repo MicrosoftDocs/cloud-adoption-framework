@@ -1,8 +1,8 @@
 ---
 title: "Enterprise-Scale management and monitoring for Windows Virtual Desktop"
 description: Describe how this enterprise-scale scenario can improve management and monitoring of Windows Virtual Desktop
-author: JamesJones
-ms.author: jamjones
+author: BrianBlanchard
+ms.author: brblanch
 ms.date: 01/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
