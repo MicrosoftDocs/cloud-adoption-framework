@@ -69,7 +69,8 @@ Once your Azure environment is established, you can begin to modify your Azure e
 
 - **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance. 
 - **Public network connectivity:** Best practice suggests that all ingress and egress traffic should route through one cloud platform when possible. But, your requirements or cloud mix may require more of a peer model. This is especially common, if your cloud mix is used to reach redundancy and reliability requirements. How will your configure connectivity between each cloud platform and the public internet?
-- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case. - **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform?
+- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case. 
+- **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform?
 
 ### The most important consideration
 
