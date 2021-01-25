@@ -51,7 +51,7 @@ We recognize that there are many valid reasons for customers to choose to distri
 - Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud
 
-## Primary: Hybrid and Multicloud concerns
+## Hybrid and Multicloud concerns
 
 Some of the motivations listed above can be easily accomplished with a sound hybrid and multicloud adoption strategy.
 
