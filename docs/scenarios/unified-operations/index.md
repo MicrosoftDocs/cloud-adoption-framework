@@ -23,7 +23,7 @@ Multicloud computing refers to the use of multiple cloud computing services from
 
 ## Hybrid and Multicloud narrative
 
-This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single CAF methodology, but instead looks at the overall adoption journey.
+This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single Cloud Adoption Framework (CAF) methodology, but instead looks at the overall adoption journey.
 
 A hybrid cloud platform gives organizations many advantages—such as greater flexibility, more deployment options, security, compliance, and getting more value from their existing infrastructure. When computing and processing demand fluctuates, hybrid cloud computing gives businesses the ability to seamlessly scale up their on-premises infrastructure to the public cloud to handle any overflow—without giving third-party datacenters access to the entirety of their data. Organizations gain the flexibility and innovation the public cloud provides by running certain workloads in the cloud while keeping highly sensitive data in their own datacenter to meet client needs or regulatory requirements.
 
@@ -48,7 +48,7 @@ If every customer hosted 100% of their technology needs in Azure, our stock valu
 - Business units, subsidiaries or acquired companies have already adopted different cloud platforms
 - Different cloud providers may have regulatory and data sovereignty requirements in different countries
 - Improve business continuity and disaster recovery by duplicating workloads across two cloud providers
-- Maximize performance by running applications close to user locations, which my require hybrid or multicloud adoption
+- Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud
 
 ## Primary: Hybrid and multicloud concerns
