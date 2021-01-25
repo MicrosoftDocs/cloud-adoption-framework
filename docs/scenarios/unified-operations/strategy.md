@@ -9,83 +9,103 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of hybrid and multi-cloud operations
+# Strategic impact of hybrid and multicloud operations
 
 ## Executive summary
 
-Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud." To minimize common mistakes, [dispel myths about moving to the cloud](../../strategy/cloud-migration-business-case.md). There are sound [motivations](../../strategy/motivations.md) to retain part of your digital estate on-premises, and also want business outcomes related to the innovations of cloud services—where you might consider a hybrid and multi-cloud scenario to be beneficial to your organization.
+Few organizations jump straight into a cloud-native portfolio. Many customers continue to believe cloud myths that slow innovation efforts, such as "everything should go into the cloud”. But, there are sound [motivations](../../strategy/motivations.md) to retain some of your digital estate on-premises, whilst leveraging the rapid innovations of cloud services to facilitate [business outcomes](../../strategy/cloud-migration-business-case.md).
 
-In moving to a hybrid and multi-cloud scenario, customers might be concerned about maintaining governance, management, and compliance— managing identity and security—migrating data—integrating disparate development environments—managing data management tools—and porting applications across scattered resources and environments.
+In moving to a hybrid and multi-cloud scenario, customers might be concerned about:
 
-Deploying a single control plane can accelerate cloud adoption and migration. Organizations can prepare cloud readiness with skilling and process improvements that assume unified operations—bringing innovative cloud practices and technologies to on-premises, and preparing other workloads for migration to the cloud. One pane of glass that consistently operates and manages on-premises and cloud environments with one cloud management solution provides greater visibility into resources, team accountability, developer empowerment, while accelerating innovation from Azure to any location.
+* Maintaining governance
+* Management
+* Compliance
+* Managing identity and security
+* Migrating data
+* Integrating disparate development environments
+* Managing data management tools
+* Porting applications across scattered resources and environments
+
+Deploying a single control plane can accelerate cloud adoption and migration. Organizations can prepare cloud readiness with skilling and process improvements that assume unified operations—bringing innovative cloud practices and technologies to on-premises, and preparing other workloads for migration to the cloud. A single pane of glass that consistently operates and manages on-premises and cloud environments with one cloud management solution provides greater visibility into resources, team accountability, developer empowerment, while accelerating innovation from Azure to any location.
 
 ## Speed up cloud adoption and migration with one control plane
 
-Initiating cloud readiness and skilling initiatives will accelerate both your cloud adoption and migration efforts. Move towards cloud-readiness and implement innovative cloud practices in workloads staying on-premises, and adopt cloud technologies to prepare other workloads that are moving to the cloud. Work with your cloud strategy team, and build the necessary cloud skills and processes to prepare for your migration effort to a hybrid and multi-cloud environment.
+Initiating cloud readiness and skilling initiatives will accelerate both your cloud adoption and migration efforts. Move towards cloud-readiness and implement innovative cloud practices in workloads staying on-premises, and adopt cloud technologies to prepare other workloads that are moving to the cloud. Work with your cloud strategy team, and build the necessary cloud skills and processes to prepare for your migration effort to a hybrid, multicloud and edge environment.
 
-Azure Arc extends Azure management and services with one control plane across hybrid, multi-cloud and edge environments, enabling a consistent state across resource environments and infrastructure.
+Azure Arc extends Azure management and services with one control plane across hybrid, multicloud, and edge environments, enabling a consistent state across resource, environments and infrastructure.
 
 How does deploying one control plane transform your cloud adoption and migration efforts?
 
-**Promote greater accountability for enterprise IT teams,** extending a uniform control plane from Azure Arc by centralizing visibility, operations, and compliance. across resources and locations.
+* **Promote greater accountability for enterprise IT teams,** extending a uniform control plane from Azure Arc by centralizing visibility, operations, and compliance. across resources and locations.
+* **Organize, govern, and secure across on-prem, multi-cloud, and edge** on Windows, LInux, SQL Server, and Kubernetes.
+* **Empower developer teams across the enterprise with the ability to build cloud apps anywhere, at scale,** coding and shipping applications to Kubernetes clusters anywhere, all from Azure.
+* **Consistently speed up development, at scale**, with templatized deployment, configuration, and security, and reduce errors with policy-driven deployment and operations.
+* **Bring innovative Azure-Arc enabled services to any location,** deploy faster, consistently, and achieve elastic scale based on capacity.
+* **Leverage unified operations, management, and security** to ensure consistency across data workloads.
+* **Practice frictionless development** supporting both disconnected and connected use cases.
 
-**Organize, govern, and secure across on-prem, multi-cloud, and edge** on Windows, LInux, SQL Server, and Kubernetes.
+Hybrid and multicloud is the most common reality across current enterprise environments. For most customers, moving to a hybrid and multicloud scenario is simply embracing market reality, and, as previously mentioned, remains a sound business decision. The next decision for your organization is committing to a distributed computing paradigm that will increase the speed of both your cloud adoption and migration efforts. Beginning cross-team initiatives to increase your cloud readiness with innovative cloud practices and technologies is the first step towards deploying one control plane that uniformly protects and monitors resources, standardizes governance and security, and manages all operations. Consider a hybrid and multicloud environment to manage your overall digital estate if you are planning to be hybrid by design for the next 12 months or longer.
 
-**Empower developer teams across the enterprise with the ability to build cloud apps anywhere, at scale,** coding and shipping applications to Kubernetes clusters anywhere, all from Azure.
-
-**Consistently speed up development, at scale**, with templatized deployment, configuration, and security, and reduce errors with policy-driven deployment and operations.
-
-**Bring innovative Azure-Arc enabled services to any location,** deploy faster, consistently, and achieve elastic scale based on capacity.
-
-**Leverage unified operations, management, and security** to ensure consistency across data workloads.
-
-**Practice frictionless development** supporting both disconnected and connected use cases.
-
-Hybrid and multi-cloud is the most common reality across current enterprise environments. For most customers, moving to a hybrid and multi-cloud scenario is simply embracing market reality, and, as previously mentioned, remains a sound business decision. The next decision for your organization is committing to a distributed computing paradigm that will increase the speed of both your cloud adoption and migration efforts. Beginning cross-team initiatives to increase your cloud readiness with innovative cloud practices and technologies is the first step towards deploying one control plane that uniformly protects and monitors resources, standardizes governance and security, and manages all operations. Consider a hybrid and multi-cloud environment to manage your overall digital estate if you are planning to be hybrid by design for the next 12 months or longer.
-
-Work with your [cloud strategy team](../../get-started/team/cloud-strategy.md), to build the necessary skilling and processes to prepare for the move to greater accountability, developer empowerment, and Azure-services anywhere with a unified control plane across hybrid, multi-cloud, and edge.
+Work with your [cloud strategy team](../../get-started/team/cloud-strategy.md), to build the necessary skilling and processes to prepare for the move to greater accountability, developer empowerment, and Azure-services anywhere, with a unified control plane across hybrid, multi-cloud, and edge.
 
 ## Unified operations motivations
 
-There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: critical business events, migration, or innovation.
+There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: Critical business events, migration, or innovation.
 
-Customers may have a digital estate bound by specific regulatory requirements and data localization laws that constrain in what geographical location it must reside. A particular industry might require low-latency and high connectivity for efficient operational capacity, such as financial services, also a common requirement for other industries like media, healthcare, education, and government, for example.
+Motivations may include: 
 
-A multi-national organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that is simply not compatible with a company-wide migration effort. Or there may be corporations with even larger cloud estates that are sprawled across several cloud environments, and visibility and control of operations is challenging.
+* Customers with a digital estate bound by specific regulatory requirements and data localization laws that constrain in what geographical location it must reside. 
+* A particular industry requiring low-latency and high connectivity for efficient operational capacity, for example financial services, media, healthcare, education, and government.
+* A multi-national organization with globally distributed, legacy datacenters and an aging infrastructure that is simply not compatible with a company-wide migration effort.
+* Corporations with very large cloud estates that are distributed across several cloud environments, where visibility and control of operations is challenging.
 
 ## Unified operations outcomes
 
-When customers execute on their cloud strategy and choose a hybrid and multi-cloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/).
+When customers execute on their cloud strategy and choose a hybrid and multicloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/).
 
-Organizations might require **improved visibility and control over their IT estate**. They want the ability to see all their resources in a single location, and be able to query through them to gain insights.
-  
-Another outcome companies may target is **cloud-based management**—the ability (across platforms) to modernize operations with the same cloud management services on resources in locations that are outside of Azure.
-  
-**Governance** is an important outcome for companies wishing to ensure consistent configurations across all resources from one central location.
-  
-**DevOps and cloud native app deployment flexibility** would provide organizations the agility of deploying app infrastructure through templates and app configurations through GitOps.
-  
-Finally, companies might benefit from the outcome of **increased flexibility when adopting PaaS**, the ability to run PaaS services on their infrastructure of choice.
+Outcomes include: 
 
-## What is the business justification for hybrid and multi-cloud?
+* **Improved visibility and control over their IT estate**. They want the ability to see all their resources in a single location, and be able to query through them to gain insights.
+* **Cloud-based management**—the ability (across platforms) to modernize operations with the same cloud management services on resources in locations that are outside of Azure.
+* **Governance** is an important outcome for companies wishing to ensure consistent configurations across all resources from one central location.
+* **DevOps and cloud native app deployment flexibility** would provide organizations the agility of deploying app infrastructure through templates and app configurations through GitOps.
+* **Increased flexibility when adopting PaaS**, the ability to run PaaS services on their infrastructure of choice.
 
-There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multi-cloud approach for cloud transformation. Moving to a hybrid and multi-cloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multi-cloud environments can benefit from one control plane over a multi-cloud environment—enabling the consistency of uniform development, unified dev-ops and management, common identity and security, extending existing applications and infrastructure across private cloud, public cloud, and edge computing resources.
+## What is the business justification for hybrid and multicloud?
 
-## What are the overall benefits of a multi-cloud control plane?
+There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multi-cloud approach for cloud transformation. Moving to a hybrid and multi-cloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multi-cloud environments can benefit from one control plane over a multi-cloud environment enabling:
+
+* Consistency of uniform development
+* Unified dev-ops and management
+* Ccommon identity and security
+* Extending existing applications and infrastructure across private and public cloud
+* Edge computing resources
+
+## What are the overall benefits of a multicloud control plane?
 
 ### Uniform governance and compliance
 
-Azure Arc enables you to have a single pane of glass view of all your resources, including Windows, Linux, SQL Servers, and Kubernetes containers to track and capture an accurate inventory of IT assets. Reduce risk in your organization by establishing a unified governance framework—applying a standard set of policies for all workloads. As server/app owners, view the compliance status of servers and take necessary remediation steps from the Azure portal, removing some management overhead from central IT departments for tracking and ensuring adherence to compliance standards.
+Azure Arc provides:
+
+* A single pane of glass view of all your resources, including Windows, Linux, SQL Servers, and Kubernetes containers, to track and capture an accurate inventory of IT assets. 
+* Reduces risk in your organization by establishing a unified governance framework—applying a standard set of policies for all workloads. 
+* For server/app owners; it helps view the compliance status of servers and take necessary remediation steps from the Azure portal, removing some management overhead from central IT departments for tracking and ensuring adherence to compliance standards.
 
 ### Consistent deployments, change control, and DevOps everywhere
 
-Azure Arc enables you to adopt cloud practices on-premises. Deploy applications using a consistent approach with familiar tools and practices across your Kubernetes clusters, on any infrastructure. Standardize change control with declarative configuration management systems like GitOps. Easily adopt DevOps techniques like infrastructure as Code (IaC), and empower developers with self-service access to a rich selection of tools.
+Azure Arc enables you to:
+
+* Adopt cloud practices on-premises
+* Deploy applications using a consistent approach with familiar tools and practices across your Kubernetes clusters, on any infrastructure
+* Standardize change control with declarative configuration management systems like GitOps
+* Easily adopt DevOps techniques like infrastructure as Code (IaC)
+* Empower developers with self-service access to a rich selection of tools
 
 ### Deploy and manage Azure data services anywhere
 
 Azure Arc-enabled data services provide you with the flexibility to deploy fully managed Azure services anywhere, on-premises or public cloud. Leverage cloud benefits everywhere: scalability, fast deployment, and always up-to-date cloud innovation, while adhering to regulatory requirements. Deploy and manage data services within on-premises environments or in customer regions and reduce latency. Access the latest Azure features and capabilities for on-premises data workloads. Join our public preview—deploy evergreen SQL (SQL Managed Instance) and PostgreSQL Hyperscale on any infrastructure, and benefit from automatic updates, patches, and upgrades with no application downtime.
 
-## What are the benefits of a multi-cloud control plane for IT departments?
+## What are the benefits of a multicloud control plane for IT departments?
 
 For IT administrators, Azure Arc brings consistency and a unified dashboard with a consistent view into thousands of servers in customer environments. Use existing tools on-premises to seamlessly interact with resources, without interfering with existing management tools.
 
@@ -99,7 +119,7 @@ Easily adopt DevOps techniques like infrastructure as Code (IaC). Empower develo
 
 ### Easily implement Azure security anywhere
 
-Access Azure Security Center's unified infrastructure security management system, and strengthen your security posture with advanced threat protection across hybrid workloads in cloud—in Azure, multi-cloud, or on-premises. Centrally access and manage all resources with Azure role-based access control (Azure RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
+Access Azure Security Center's unified infrastructure security management system, and strengthen your security posture with advanced threat protection across hybrid workloads in cloud—in Azure, multicloud, or on-premises. Centrally access and manage all resources with Azure role-based access control (Azure RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
 
 ### Governance and configuration of resources anywhere
 
@@ -107,7 +127,7 @@ Standardize activities by creating, applying, and enforcing policies to Kubernet
 
 ### Unified tools and experiences across platforms
 
-Create a shared application and infrastructure lifecycle within teams, traditionally siloed by location, skill, and job description. Simplify work with a unified, consistent view of resources across datacenters, edge locations and multi-cloud through the Azure Portal and Azure API Management. Connect and gain access to Windows and Linux virtual machines (VMs), physical servers, any Kubernetes distribution within the Kubernetes ecosystem, and bring Azure data services to on-premises, multicloud, and edge environments with Azure Arc–enabled data services. Establish clear roles and responsibilities for team members, with clear separation of concerns without losing visibility and access.
+Create a shared application and infrastructure lifecycle within teams, traditionally siloed by location, skill, and job description. Simplify work with a unified, consistent view of resources across datacenters, edge locations and multicloud through the Azure Portal and Azure API Management. Connect and gain access to Windows and Linux virtual machines (VMs), physical servers, any Kubernetes distribution within the Kubernetes ecosystem, and bring Azure data services to on-premises, multicloud, and edge environments with Azure Arc–enabled data services. Establish clear roles and responsibilities for team members, with clear separation of concerns without losing visibility and access.
 
 ### Integrated DevOps and management capabilities
 

@@ -23,17 +23,18 @@ Multicloud computing refers to the use of multiple cloud computing services from
 
 ## Hybrid and Multicloud narrative
 
-This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single CAF methodology, but instead looks at the overall adoption journey.
+This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single Cloud Adoption Framework (CAF) methodology, but instead looks at the overall adoption journey.
 
 A hybrid cloud platform gives organizations many advantages—such as greater flexibility, more deployment options, security, compliance, and getting more value from their existing infrastructure. When computing and processing demand fluctuates, hybrid cloud computing gives businesses the ability to seamlessly scale up their on-premises infrastructure to the public cloud to handle any overflow—without giving third-party datacenters access to the entirety of their data. Organizations gain the flexibility and innovation the public cloud provides by running certain workloads in the cloud while keeping highly sensitive data in their own datacenter to meet client needs or regulatory requirements.
 
 This not only allows companies to scale computing resources— it also eliminates the need to make massive capital expenditures to handle short-term spikes in demand, as well as when the business needs to free up local resources for more sensitive data or applications. Companies will pay only for resources they temporarily use instead of having to purchase, program, and maintain additional resources and equipment that could remain idle over long periods of time.
 
-However, as companies spread resources across on-premises, multiple clouds, and the edge, we often hear customers have three common needs:
+However, as companies spread resources across on-premises, multiple clouds, and the edge, we often hear customers have four common needs:
 
 1. They need to have visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass. 
 2. From an IT point of view, while organizations understand the need for implementing a governance standard, they find it hard to integrate on-premises policies and updates with their cloud infrastructure.
 3. Since there are often different app development teams in the organization, there exists a wide range of skills across on-premises and cloud. Customers are looking for consistent inter-operability between the two so they can unify development practices.
+4. They also want to manage their security posture, without changing too much on their current operations. Cloud and multicloud compounds this challenge which can decrease trust and increase apprehension.
 
 Now, let’s also consider the deployment of cloud native services. Some customers operate in highly regulated industries (e.g. government infrastructure, healthcare, financial services) where both internal and customer data are deemed critical and must remain within the boundaries of on-premises datacenters. There could also be a need for latency requirements where the data processing needs to happen close to the source of data while minimizing disruptions that may arise from internet connectivity issues. Another common scenario is that customers don’t want the management overhead of maintaining these services on-premises and would like to flip to a cloud billing model.
 
@@ -41,7 +42,7 @@ Now, let’s also consider the deployment of cloud native services. Some custome
 
 As a true enterprise-grade cloud provider, Azure is able to support your business objectives across public, hybrid, and multicloud environments. This article series will discuss different best practices that can help facilitate a variety of cloud mixes ranging from 100% Azure environments to environments that have little (or no) Azure infrastructure in place.
 
-If every customer hosted 100% of their technology needs in Azure, our stock value would obviously increase. Fortunately, our customers are more important than our financial statements. We recognize that there are many valid reasons for customers to choose to distribute their digital estate across hybrid and multicloud environments. The following are a few common business drivers:
+We recognize that there are many valid reasons for customers to choose to distribute their digital estate across hybrid and multicloud environments. The following are a few common business drivers:
 
 - Minimize or avoid single cloud provider lock-in
 - Business units, subsidiaries or acquired companies have already adopted different cloud platforms
