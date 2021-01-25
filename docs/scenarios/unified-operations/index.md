@@ -42,7 +42,7 @@ Now, let’s also consider the deployment of cloud native services. Some custome
 
 As a true enterprise-grade cloud provider, Azure is able to support your business objectives across public, hybrid, and multicloud environments. This article series will discuss different best practices that can help facilitate a variety of cloud mixes ranging from 100% Azure environments to environments that have little (or no) Azure infrastructure in place.
 
-If every customer hosted 100% of their technology needs in Azure, our stock value would obviously increase. Fortunately, our customers are more important than our financial statements. We recognize that there are many valid reasons for customers to choose to distribute their digital estate across hybrid and multicloud environments. The following are a few common business drivers:
+We recognize that there are many valid reasons for customers to choose to distribute their digital estate across hybrid and multicloud environments. The following are a few common business drivers:
 
 - Minimize or avoid single cloud provider lock-in
 - Business units, subsidiaries or acquired companies have already adopted different cloud platforms
