@@ -33,10 +33,10 @@ Once you complete the basic exercise your can begin operating your hybrid and mu
 
 Enhance your operations baseline by onboarding a continuously broader range of assets and cloud providers. The follow list provides a few examples of the type of assets you can add to your expanded operations baseline.
 
-- Onboard Azure assets: [linux VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-win.md)
-- Onboard assets in your local data center: [linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
-- Onboard VMware assets: [linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
-- Onboard AWS assets: [linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
+- Onboard Azure assets: [Linux VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-win.md)
+- Onboard assets in your local data center: [Linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
+- Onboard VMware assets: [Linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
+- Onboard AWS assets: [Linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
 - Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-windows.md)
 
 ## Operations management disciplines
