@@ -71,6 +71,8 @@ Azure Arc is a multicloud and on-premises management platform at the core of uni
 
 ## What can you do with Azure Arc?
 
+![Azure Arc can manage and operate all your resources as native Azure resources with a single pane of glass.](../../_images/unified-operations/what-can-azure-arc-do.png)
+
 **Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure, placing you in control** of resources across on-premises, multicloud, and edge environments, providing a single dashboard for your management, data services, governance, security, and identity. Azure Arc's unified operations approach offers you a **consistent visibility framework across distributed environments, reaching outside Azure and projecting your existing resources into Azure Resource Manager as first-class citizens.**
 
 - **Connect to and operate hybrid resources as native Azure resources with Azure Arc-enabled infrastructure.**
