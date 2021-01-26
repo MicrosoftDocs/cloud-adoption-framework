@@ -98,7 +98,7 @@ Your primary cloud platform should include a number of important features to fac
 
 ### Basic features
 
-(All of these basic features are required in order to deliver a cloud adoption plan at scale):
+All of these basic features are required in order to deliver a cloud adoption plan at scale:
 
 - **Search, index, group, and tag** all deployed assets, extending basic visibility and management.
 - **Templatize, automate, and extend tooling** for consistent deployment
@@ -106,24 +106,24 @@ Your primary cloud platform should include a number of important features to fac
 
 ### Enhanced features
 
-(You will likely need most, if not all, of the following enhanced features):
+You will likely need most, if not all, of the following enhanced features to operate a hybrid and multicloud environment at scale:
 
 - **Performance and inventory reporting**
 - **Security and compliance auditing and automation**
 - **Tracking and reporting on applications and dependencies**
 
-> **Automated controls**:
->
-> **Automate your environment** with tools to modernize your operations and optimize operational costs:
->
-> - Environment and in-guest policy
-> - Configuration and updates
-> - Protection and recovery
+### Automated controls
+
+Automate your environment with tools to modernize your operations and optimize operational costs:
+
+- **Environment and in-guest policy**
+- **Configuration and updates**
+- **Protection and recovery**
 
 These features are likely already included in the control sets you are currently using to operate your primary cloud provider. (There are likely many additional features and automated processes available in that set of controls). These are the primary control functionalities that should be available across hybrid, multicloud, and edge in your unified operations solution.
 
 It's because they are implemented as primary controls that the features above are the ones that we commonly see lead to fractured or duplicated operations. As mentioned before, an inconsistent approach to implementing unified operations from increased operating costs (for example, duplicated cloud platform utilities, operations tooling) can multiply cost inefficiencies for your organization, and incur significant capital expenditures in the early phase of the cloud adoption journey.
->
+
 
 ### Hybrid, multicloud, and edge extension (gateway)
 
