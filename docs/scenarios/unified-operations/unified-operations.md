@@ -1,7 +1,7 @@
 ---
 title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistently operations management across hybrid, multicloud, and edge deployments.
-author: BrianBlanchard;deepakus
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Unified operations - hybrid, multicloud, and edge
 
-Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs if not desgined and architecuted as per best practices. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](../../strategy/business-outcomes/fiscal-outcomes.md) is necessary to understand what might affect primary cost options, such as capital expenses and the operating costs.
+Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs, especially if there are no plans to unify operations of each cloud platform. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](../../strategy/business-outcomes/fiscal-outcomes.md) is necessary to understand what might affect primary cost options, such as capital expenses and the operating costs.
 
 In any hybrid and multicloud strategy, the first increase in overhead costs can manifest in the form of duplicated cloud platform utilities: network, identity, governance, security, and operations tooling. In the longer term, more negative business impacts could emerge in the form of challenges like staffing core functions or teams with the skills needed to manage diverse environments.
 
