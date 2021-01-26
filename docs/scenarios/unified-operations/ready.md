@@ -76,7 +76,7 @@ Once your Azure environment is established, you can begin to modify your Azure e
 
 **Will you operate each cloud independently or through a unified central operations approach?**
 
-Independent operations can double or triple your total cost of ownership. For some customers, TCO cost increases can be multiplied by over 10X. To minimize costs & demands on your staff, best practice dictates a unified operations approach for all cloud mixes for your hybrid and multicloud strategy.
+Independent operations can double or triple your total cost of ownership. For some customers, Total Cost of Ownership (TCO) cost increases can be multiplied by over 10X. To minimize costs & demands on your staff, best practice dictates a unified operations approach for all cloud mixes for your hybrid and multicloud strategy.
 
 To learn more about unification of your cloud operations, see the articles on [Unified Operations](./unified-operations.md), [Governance](./govern.md) and [Operations management](./manage.md) for hybrid and multicloud solutions.
 
