@@ -15,11 +15,11 @@ Microsoft Azure provides all of the products and features required to operate yo
 
 ## Hybrid and Multicloud definitions
 
-A hybrid cloud—sometimes called a cloud hybrid—is a computing environment that combines an on-premises datacenter (also called a private cloud) with a public cloud, allowing data and applications to be shared between them. Some people define hybrid cloud to include “multicloud” configurations where an organization uses more than one public cloud in addition to their on-premises datacenter. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
+A hybrid cloud is a computing environment that combines an on-premises datacenter (often also called a private cloud) with a public cloud. Integrating the two environments allows data and applications to be shared between them. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
 
 The hybrid cloud is evolving to include edge workloads as well. Cloud-managed Edge computing devices bring the computing power of the public cloud to the private cloud—closer to where the IoT devices reside. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods. No matter which definition of hybrid cloud you use, the benefits are the same: When computing and processing demand increases beyond an on-premises datacenter’s capabilities, businesses can use the cloud to instantly scale capacity up or down to handle excess capacity. It also allows them to avoid the time and cost of purchasing, installing, and maintaining new servers that they may not always need.
 
-Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider—including private and public clouds—in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
+Multicloud computing refers to the use of multiple public cloud computing services from more than one cloud provider in a heterogeneous environment. Multicloud is distinct from hybrid, in that this computing model doesn't necessarily include an on-premise datacenter.
 
 ## Hybrid and Multicloud narrative
 
