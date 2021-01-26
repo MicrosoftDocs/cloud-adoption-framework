@@ -77,7 +77,7 @@ There may be diverse [business justifications](../../strategy/cloud-migration-bu
 
 * Consistency of uniform development
 * Unified dev-ops and management
-* Ccommon identity and security
+* Common identity and security
 * Extending existing applications and infrastructure across private and public cloud
 * Edge computing resources
 
