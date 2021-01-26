@@ -30,15 +30,15 @@ items:
     - name: Overview
       href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-overview?branch=pr-en-us-2237&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
     - name: Cost Optimization
-      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-cost?branch=pr-en-us-2237&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-cost?branch=pr-en-us-2312&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
     - name: Operational excellence
-      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-opex?branch=pr-en-us-2237&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-opex?branch=pr-en-us-2312&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
     - name: Performance Efficiency
-      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-performance-efficiency?branch=pr-en-us-2237&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-performance-efficiency?branch=pr-en-us-2312&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
     - name: Reliability
-      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-reliability?branch=pr-en-us-2237&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-reliability?branch=pr-en-us-2312&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
     - name: Security
-      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&branch=pr-en-us-2237
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-security?branch=pr-en-us-2312&bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
   - name: Architectures
     items:
     - name: Overview
