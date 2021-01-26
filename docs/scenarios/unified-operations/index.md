@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Hybrid and Multicloud"
 description: Introduction to Hybrid and Multicloud
-author: BrianBlanchard
+author: BrianBlanchard;deepakonics 
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -15,9 +15,9 @@ Microsoft Azure provides all of the products and features required to operate yo
 
 ## Hybrid and Multicloud definitions
 
-A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
+A hybrid cloud—sometimes called a cloud hybrid—is a computing environment that combines an on-premises datacenter (also called a private cloud) with a public cloud, allowing data and applications to be shared between them. Some people define hybrid cloud to include “multicloud” configurations where an organization uses more than one public cloud in addition to their on-premises datacenter. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
 
-The hybrid cloud is evolving to include edge workloads as well. Cloud-managed Edge computing devices bring the computing power of the public cloud to the private cloud—closer to where the IoT devices reside. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
+The hybrid cloud is evolving to include edge workloads as well. Cloud-managed Edge computing devices bring the computing power of the public cloud to the private cloud—closer to where the IoT devices reside. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods. No matter which definition of hybrid cloud you use, the benefits are the same: When computing and processing demand increases beyond an on-premises datacenter’s capabilities, businesses can use the cloud to instantly scale capacity up or down to handle excess capacity. It also allows them to avoid the time and cost of purchasing, installing, and maintaining new servers that they may not always need.
 
 Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider—including private and public clouds—in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
 
@@ -25,7 +25,7 @@ Multicloud computing refers to the use of multiple cloud computing services from
 
 This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single Cloud Adoption Framework (CAF) methodology, but instead looks at the overall adoption journey.
 
-A hybrid cloud platform gives organizations many advantages—such as greater flexibility, more deployment options, security, compliance, and getting more value from their existing infrastructure. When computing and processing demand fluctuates, hybrid cloud computing gives businesses the ability to seamlessly scale up their on-premises infrastructure to the public cloud to handle any overflow—without giving third-party datacenters access to the entirety of their data. Organizations gain the flexibility and innovation the public cloud provides by running certain workloads in the cloud while keeping highly sensitive data in their own datacenter to meet client needs or regulatory requirements.
+A hybrid cloud platform gives organizations many advantages—such as greater flexibility, more deployment options, security, compliance, and getting more value from their existing infrastructure. When computing and processing demand fluctuates, hybrid cloud computing gives businesses the ability to seamlessly scale up their on-premises infrastructure to the public cloud to handle any overflow—without giving third-party datacenters access to the entirety of their data. Organizations gain the flexibility and innovation the public cloud provides by running certain workloads in the cloud while keeping highly sensitive data in their own datacenter to meet client's specific needs or regulatory requirements.
 
 This not only allows companies to scale computing resources— it also eliminates the need to make massive capital expenditures to handle short-term spikes in demand, as well as when the business needs to free up local resources for more sensitive data or applications. Companies will pay only for resources they temporarily use instead of having to purchase, program, and maintain additional resources and equipment that could remain idle over long periods of time.
 
