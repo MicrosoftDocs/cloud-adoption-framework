@@ -41,7 +41,7 @@ Consider the deployment of cloud-native services in a hybrid and multicloud envi
 
 As a true enterprise-grade cloud provider, Azure supports your business objectives across public, hybrid, and multicloud environments. This series will discuss different best practices that can help facilitate a variety of cloud mixes ranging from 100% Azure environments to environments that have little, or no, Azure infrastructure in place.
 
-You, our customers, are more important than our financial statements. We recognize that there are many valid reasons for you to choose to distribute your digital estate across hybrid and multicloud environments. 
+You, our customers, are more important than our financial statements. We recognize that there are many valid reasons for you to choose to distribute your digital estate across hybrid and multicloud environments.
 
 Here are a few of the common business drivers we encountered:
 
