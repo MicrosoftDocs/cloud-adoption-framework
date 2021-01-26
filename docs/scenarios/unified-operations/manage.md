@@ -17,7 +17,7 @@ This article outlines how you can apply the concept of unified operations and im
 
 ## Extending your operations baseline
 
-Azure Arc reduces the complexity and cost of extending your operations baseline. Deploying Azure Arc across your data center, hybrid cloud, and multicloud environments will extend the built-in features of Azure that are included in Azure Resource Manager.
+[Azure Arc](https://docs.microsoft.comazure/azure-arc/overview) reduces the complexity and cost of extending your operations baseline. Deploying Azure Arc across your data center, hybrid cloud, and multicloud environments will extend the built-in features of Azure that are included in Azure Resource Manager.
 
 To get started with an operations baseline that spans multiple cloud providers, complete a simple inventory and tagging exercise. This simple exercise will begin to extend your operations baselines in a few simple steps:
 
