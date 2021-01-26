@@ -22,7 +22,7 @@ Typically, migration efforts have been seen as a one-way street; assets move up 
 While the direct impact on migration processes is minor, awareness of those deviations can increase your organization's likelihood of success. The act of migrating workloads consists of three high level processes, which are repeated in waves or sprints until the migration is complete. The following introduces how each of those processes change:
 
 - **Assess workloads:** There are a few considerations that will shape how you assess workloads prior to migration. 
-- **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But, you may want to leverage more of the Azure Migrate ecosystem to accelerate specific types of migrations.
+- **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But, you may want to leverage more of the [Azure Migrate](https://docs.microsoft.com/azure/migrate) ecosystem to accelerate specific types of migrations.
 - **Release workloads:** Once workloads have been deployed, the biggest shift will be seen in testing cycles prior to release to production traffic.
 
 See below for additional guidance on assessing, deploying, or releasing workloads within your migration processes. But first review the next section on the bigger changes to upstream and downstream processes that will impact your migration.
@@ -60,7 +60,7 @@ The following articles will help mature the most impactful processes required fo
 
 When migrating to the cloud, it is always important to have a clear inventory of all dependent assets and network paths to ensure that those assets are deployed in the correct cloud. A clear inventory or digital estate assessment is even more important in hybrid environments before migrating workloads. See the prior section of assessing workloads before trying to migrate workloads to a hybrid and multicloud environment.
 
-Azure migrate is the de facto solution for migrating your workloads from your private cloud to Azure. The best practices for migrating to Azure from other public clouds does change a bit. Likewise, you may need to add a few additional tools when migrating to Azure Stack HCI. See below for tutorials:
+Azure Migrate is the de facto solution for migrating your workloads from your private cloud to Azure. The best practices for migrating to Azure from other public clouds does change a bit. Likewise, you may need to add a few additional tools when migrating to Azure Stack HCI. See below for tutorials:
 
 - **[Migrate from AWS to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-aws-virtual-machines)**
 - **[Migrate from GCP to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-gcp-virtual-machines)**
