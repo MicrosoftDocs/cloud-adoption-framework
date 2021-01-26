@@ -54,8 +54,6 @@ One cloud management experience that manages operations of distributed assets at
 > An inconsistent approach to implementing unified operations can multiply cost inefficiencies for your organization with increased operating costs (from having duplicated cloud platform utilities, operations tooling), and negative business impacts (staffing teams without necessary cloud skilling).
 >
 
-If your current primary cloud provider doesn't offer the required capabilities for unified operations, consider optimizing your operations and processes using a modern cloud provider.
-
 ## Unified operations decomposed
 
 This image displays the individual components required for unified operations, and shows how they interact with each other. The following sections provide a detailed outline for each unified operations component.
