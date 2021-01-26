@@ -1,6 +1,6 @@
 ---
 title: "Govern Antipatterns"
-description: When adopting the cloud, a company needs to have a good understanding of their responsibilities, the cloud providers responsibilities. and cloud governance and security standards.
+description: When adopting the cloud, a company needs to have a good understanding of their responsibilities, the cloud providers responsibilities, and cloud governance and security standards.
 author: sarahwendel
 ms.author: brblanch
 ms.date: 01/15/2021
@@ -12,8 +12,7 @@ ms.custom: think-tank
 
 # Govern Antipatterns
 
-Customers frequently experience a number of common cloud adoption antipatterns while in the govern phase of cloud adoption.
-When adopting the cloud, you need to have an understanding of shared responsibilities, and build your security strategy on existing frameworks rather than creating your own.
+Customers frequently experience a number of common cloud adoption antipatterns while in the govern phase of cloud adoption. As a best practice, take the time to understand shared responsibilities, and build your security strategy on existing frameworks rather than creating your own.
 
 ## Antipattern: Misalignment on shared responsibility
 
