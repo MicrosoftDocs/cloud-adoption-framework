@@ -51,7 +51,7 @@ In many cases, we start by assuming that every asset fits a **Retain** pattern, 
 
 The current assumption in today's enterprise landscape is that most organizations will adopt the cloud. A complete enterprise migration could take days or even years, depending on what assets are included as migration candidates in the digital estate. Consider an enterprise environment with thousands of VMs and hundreds of applications, where the human effort required can easily exceed 1,500 FTE hours and nine months of planning. With standard (uni-directional) migration efforts, the assumption is that you will look for standard opportunities for Rehost/Rearchitect (assets that surface as standard migration candidates when rationalizing your digital estate).
 
-In moving to a hybrid and multi-cloud scenario, where we assume unified operations for all resources in the digital estate, certain rationalization decisions will surface.
+In moving to a hybrid and multicloud scenario, where we assume unified operations for all resources in the digital estate, certain rationalization decisions will surface.
 
 Because on-premises assets are added to the enterprise control plane for unified operations and management, we commonly see the following rationalizations: workloads recommended to remain on-premises (for example, limited by regulatory or compliance reasons)—new application development for the enterprise that needs to be supported by workloads that haven't been migrated, or can't be migrated—and the business requirement to build new on-premises applications that have speed of light, connectivity, or regulatory requirements.
 
@@ -71,11 +71,13 @@ Azure Stack's family of hardware-as-a-service, integrated systems, and hyperconv
 
 ## Azure Arc's dashboard for hybrid and multicloud strategy
 
-Azure Arc is a multi-cloud and on-premises management platform at the core of unified operations that enables standardized visibility, operations, and compliance across scattered resources in on-premises, multi-cloud, and edge environments. Adopting a single enterprise control plane **can accelerate cloud adoption and migration,** and enables a consistent framework for organizations to adopt modern cloud technologies and processes for on-prem-designated and migration-candidate workloads. Supporting the development of necessary cloud skilling, and building cloud processes to support overall migration readiness initiatives across the organization increases the consistency and speed of cloud adoption and migration efforts. Deploying a single enterprise dashboard with visibility across sprawling resources in on-premises, multi-cloud, and edge environments can accelerate cloud adoption and migration efforts for organizations, with simplified management, faster app development, and consistent Azure services that run on any infrastructure, anywhere.
+Azure Arc is a multicloud and on-premises management platform at the core of unified operations that enables standardized visibility, operations, and compliance across scattered resources in on-premises, multicloud, and edge environments. Adopting a single enterprise control plane **accelerates cloud adoption and migration,** and enables a consistent framework for organizations to adopt modern cloud technologies and processes for on-prem-designated and migration-candidate workloads. Supporting the development of necessary cloud skilling, and building cloud processes to support overall migration readiness initiatives across the organization increases the consistency and speed of cloud adoption and migration efforts. Deploying a single enterprise dashboard with visibility across sprawling resources across on-premises, multicloud, and edge environments accelerates cloud innovation for organizations, with simplified management, faster app development, and consistent Azure services.
 
 ## What can you do with Azure Arc?
 
-**Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure, placing you in control** of resources across on-premises, multi-cloud, and edge environments, providing a single dashboard for your management, data services, governance, security, and identity. Azure Arc's unified operations approach offers you a **consistent visibility framework across distributed and heterogeneous environments, reaching outside Azure, and projecting scattered resources into Azure Resource Manager as first-class citizens.**
+![Azure Arc can manage and operate all your resources as native Azure resources with a single pane of glass.](../../_images/unified-operations/what-can-azure-arc-do.png)
+
+**Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure, placing you in control** of resources across on-premises, multicloud, and edge environments, providing a single dashboard for your management, data services, governance, security, and identity. Azure Arc's unified operations approach offers you a **consistent visibility framework across distributed environments, reaching outside Azure and projecting your existing resources into Azure Resource Manager as first-class citizens.**
 
 - **Connect to and operate hybrid resources as native Azure resources with Azure Arc-enabled infrastructure.**
 
@@ -118,7 +120,7 @@ Planning efforts for unified operations and management assume that most assets f
 
 ### Azure Arc-enabled data services
 
-**Bring Azure data services to any infrastructure** across on-premises, edge and multi-cloud using Kubernetes on any hardware.
+**Bring Azure data services to any infrastructure—** across on-premises, edge and multicloud using Kubernetes on any hardware.
 
 **Remain current with fully automated updates, upgrades and policy-controlled deployments** like evergreen SQL and hyperscale deployment option of Azure Database for PostgreSQL.
 

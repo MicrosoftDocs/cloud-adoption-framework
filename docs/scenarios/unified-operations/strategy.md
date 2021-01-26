@@ -1,7 +1,7 @@
 ---
-title: "Strategy for unified operations adoption"
+title: "Strategy for adopting unified operations"
 description: Describe the scenario's impact on strategy
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of hybrid and multi-cloud operations
+# Strategic impact of hybrid and multicloud operations
 
 ## Executive summary
 
@@ -47,7 +47,7 @@ Work with your [cloud strategy team](<https://docs.microsoft.com/azure/cloud-ado
 
 ## Unified operations motivations
 
-There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: critical business events, migration, or innovation.
+There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: Critical business events, migration, or innovation.
 
 Customers may have a digital estate that is bound by specific regulatory requirements, and data localization laws that constrain in which geographic location it must reside. A particular industry might require low latency and high connectivity for efficient operational capacity, such as financial services. Low-latency and high-connectivity are common requirements for other industries such as media, healthcare, education, and government.
 
@@ -55,7 +55,15 @@ A multi-national organization, for example, might have globally distributed, leg
 
 ## Unified operations outcomes
 
-When customers execute on their cloud strategy and choose a hybrid and multi-cloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/).
+When customers execute on their cloud strategy and choose a hybrid and multicloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/).
+
+Outcomes include: 
+
+* **Improved visibility and control over their IT estate**. They want the ability to see all their resources in a single location, and be able to query through them to gain insights.
+* **Cloud-based management**—the ability (across platforms) to modernize operations with the same cloud management services on resources in locations that are outside of Azure.
+* **Governance** is an important outcome for companies wishing to ensure consistent configurations across all resources from one central location.
+* **DevOps and cloud native app deployment flexibility** would provide organizations the agility of deploying app infrastructure through templates and app configurations through GitOps.
+* **Increased flexibility when adopting PaaS**, the ability to run PaaS services on their infrastructure of choice.
 
 Organizations might require **improved visibility and control over their IT estate**. They want the ability to see all their resources in a single location, and be able to query through them to gain insights.
   
@@ -67,15 +75,23 @@ Another outcome companies may desire is **cloud-based management**—the ability
   
 Finally, companies might benefit from **increased flexibility when adopting PaaS**, with the ability to run PaaS services on their infrastructures of choice.
 
-## What is the business justification for hybrid and multi-cloud?
+There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multi-cloud approach for cloud transformation. Moving to a hybrid and multi-cloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multi-cloud environments can benefit from one control plane over a multi-cloud environment enabling:
 
-There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multi-cloud approach for cloud transformation. Moving to a hybrid and multi-cloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multi-cloud environments can benefit from one control plane over a multi-cloud environment—enabling the consistency of uniform development, unified dev-ops and management, common identity and security, extending existing applications and infrastructure across private cloud, public cloud, and edge computing resources.
+* Consistency of uniform development
+* Unified dev-ops and management
+* Ccommon identity and security
+* Extending existing applications and infrastructure across private and public cloud
+* Edge computing resources
 
 ## What are the overall benefits of a multicloud control plane?
 
 ### Uniform governance and compliance
 
-Azure Arc enables you to have a single pane of glass view of all your resources, including Windows, Linux, SQL Servers, and Kubernetes containers to track and capture an accurate inventory of IT assets. Reduce risk in your organization by establishing a unified governance framework—applying a standard set of policies for all workloads. As server/app owners, view the compliance status of servers and take necessary remediation steps from the Azure portal, removing some management overhead from central IT departments for tracking and ensuring adherence to compliance standards.
+Azure Arc provides:
+
+* A single pane of glass view of all your resources, including Windows, Linux, SQL Servers, and Kubernetes containers, to track and capture an accurate inventory of IT assets. 
+* Reduces risk in your organization by establishing a unified governance framework—applying a standard set of policies for all workloads. 
+* For server/app owners; it helps view the compliance status of servers and take necessary remediation steps from the Azure portal, removing some management overhead from central IT departments for tracking and ensuring adherence to compliance standards.
 
 ### Consistent deployments, change control, and DevOps everywhere
 
