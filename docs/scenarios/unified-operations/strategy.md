@@ -37,7 +37,7 @@ Azure Arc extends Azure management and services with one control plane across hy
 How does deploying one control plane transform your cloud adoption and migration efforts?
 
 * **Promote greater accountability for enterprise IT teams,** extending a uniform control plane from Azure Arc by centralizing visibility, operations, and compliance. across resources and locations.
-* **Organize, govern, and secure across on-prem, multi-cloud, and edge** on Windows, LInux, SQL Server, and Kubernetes.
+* **Organize, govern, and secure across on-prem, multi-cloud, and edge** on Windows, Linux, SQL Server, and Kubernetes.
 * **Empower developer teams across the enterprise with the ability to build cloud apps anywhere, at scale,** coding and shipping applications to Kubernetes clusters anywhere, all from Azure.
 * **Consistently speed up development, at scale**, with templatized deployment, configuration, and security, and reduce errors with policy-driven deployment and operations.
 * **Bring innovative Azure-Arc enabled services to any location,** deploy faster, consistently, and achieve elastic scale based on capacity.
@@ -77,7 +77,7 @@ There may be diverse [business justifications](../../strategy/cloud-migration-bu
 
 * Consistency of uniform development
 * Unified dev-ops and management
-* Ccommon identity and security
+* Common identity and security
 * Extending existing applications and infrastructure across private and public cloud
 * Edge computing resources
 

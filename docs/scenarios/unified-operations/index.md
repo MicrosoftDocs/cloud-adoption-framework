@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Hybrid and Multicloud"
 description: Introduction to Hybrid and Multicloud
-author: BrianBlanchard
+author: BrianBlanchard 
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -15,17 +15,17 @@ Microsoft Azure provides all of the products and features required to operate yo
 
 ## Hybrid and Multicloud definitions
 
-A hybrid cloud is a type of cloud computing that combines on-premises infrastructure—or a private cloud—with a public cloud. Hybrid clouds allow data and apps to move between the two environments. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
+A hybrid cloud is a computing environment that combines an on-premises datacenter (often also called a private cloud) with a public cloud. Integrating the two environments allows data and applications to be shared between them. Many organizations choose a hybrid cloud approach due to business imperatives such as meeting regulatory and data sovereignty requirements, taking full advantage of on-premises technology investment, or addressing low latency issues.
 
-The hybrid cloud is evolving to include edge workloads as well. Cloud-managed Edge computing devices bring the computing power of the public cloud to the private cloud—closer to where the IoT devices reside. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods.
+The hybrid cloud is evolving to include edge workloads as well. Cloud-managed Edge computing devices bring the computing power of the public cloud to the private cloud—closer to where the IoT devices reside. By moving workloads to the edge, devices spend less time communicating with the cloud, reducing latency, and they are even able to operate reliably in extended offline periods. No matter which definition of hybrid cloud you use, the benefits are the same: When computing and processing demand increases beyond an on-premises datacenter’s capabilities, businesses can use the cloud to instantly scale capacity up or down to handle excess capacity. It also allows them to avoid the time and cost of purchasing, installing, and maintaining new servers that they may not always need.
 
-Multicloud computing refers to the use of multiple cloud computing services from more than one cloud provider—including private and public clouds—in a heterogeneous environment. A multicloud strategy provides greater flexibility and mitigates risk. Choose services from different cloud providers best suited for a specific task, or take advantage of services offered by a particular cloud provider in a specific location.
+Multicloud computing refers to the use of multiple public cloud computing services from more than one cloud provider in a heterogeneous environment. Multicloud is distinct from hybrid, in that this computing model doesn't necessarily include an on-premise datacenter.
 
 ## Hybrid and Multicloud narrative
 
 This scenario follows a common narrative & helps the reader understand what they will have to do differently to be successful. This is not limited to a single Cloud Adoption Framework (CAF) methodology, but instead looks at the overall adoption journey.
 
-A hybrid cloud platform gives organizations many advantages—such as greater flexibility, more deployment options, security, compliance, and getting more value from their existing infrastructure. When computing and processing demand fluctuates, hybrid cloud computing gives businesses the ability to seamlessly scale up their on-premises infrastructure to the public cloud to handle any overflow—without giving third-party datacenters access to the entirety of their data. Organizations gain the flexibility and innovation the public cloud provides by running certain workloads in the cloud while keeping highly sensitive data in their own datacenter to meet client needs or regulatory requirements.
+A hybrid cloud platform gives organizations many advantages—such as greater flexibility, more deployment options, security, compliance, and getting more value from their existing infrastructure. When computing and processing demand fluctuates, hybrid cloud computing gives businesses the ability to seamlessly scale up their on-premises infrastructure to the public cloud to handle any overflow—without giving third-party datacenters access to the entirety of their data. Organizations gain the flexibility and innovation the public cloud provides by running certain workloads in the cloud while keeping highly sensitive data in their own datacenter to meet client's specific needs or regulatory requirements.
 
 This not only allows companies to scale computing resources— it also eliminates the need to make massive capital expenditures to handle short-term spikes in demand, as well as when the business needs to free up local resources for more sensitive data or applications. Companies will pay only for resources they temporarily use instead of having to purchase, program, and maintain additional resources and equipment that could remain idle over long periods of time.
 
@@ -57,10 +57,10 @@ Some of the motivations listed above can be easily accomplished with a sound hyb
 
 Others require significant effort pre- & post-deployment to realize those benefits. Cloud provider lock-in, for instance, is possible. But to avoid lock-in, organizations are required to limit their vision for cloud adoption. Many of the most beneficial products and features in a cloud provider are not portable to other cloud providers. To achieve portability and minimize lock-in, organizations are often required to limit cloud adoption to basic Infrastructure-as-a-Service (IaaS) or invest heavily in the use of cloud native technologies like Containers or Kubernetes.
 
-Another commonly realized concern associated with hybrid and multicloud adoption comes after the workloads are released and are in production. When organizations attempt to provide operations management support to workloads in new environments, they often have to quickly rethink their practices. Existing operations management platforms were not build for these types of environments. Nor were most organizations' existing operations management policies and processes. To account for deviations in the cloud environments, companies often end up with distinct operations tooling and operations practices, this multiplies the cost of operations by the number of cloud environments supported.
+Another commonly realized concern associated with hybrid and multicloud adoption comes after the workloads are released and are in production. When organizations attempt to provide operations management support to workloads in new environments, they often have to quickly rethink their practices. Existing operations management platforms were not built for these types of environments, nor were most organizations' existing operations management policies and processes. To account for deviations in the cloud environments, companies often end up with distinct operations tooling and operations practices, this multiplies the cost of operations by the number of cloud environments supported.
 
 ## Next step: Minimize Hybrid and Multicloud concerns with unified operations
 
-Before starting your hybrid and multicloud journey, it is important to understand the concept of unified operations. Consistent operations practices across all of your cloud environments with a common control plane, aids in addressing many of the concerns regarding and hybrid and multicloud.
+Before starting your hybrid and multicloud journey, it is important to understand the concept of unified operations. Consistent operations practices across all your cloud environments with a common control plane, aids in addressing many of the concerns regarding and hybrid and multicloud.
 
 Before proceeding with hybrid and multicloud adoption at scale, determine if you will duplicate operations for each cloud provider, or if you will need to implement a [unified operations approach to cloud management](./unified-operations.md).
