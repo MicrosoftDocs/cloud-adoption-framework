@@ -1,7 +1,7 @@
 ---
 title: "Manage SAP in Azure"
 description: Operations management considerations when managing SAP on Azure
-author: BrianBlanchard;deepakonics
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
@@ -15,7 +15,7 @@ Your long term operations management strategy has a big impact on your SAP migra
 
 ## SAP business alignment
 
-Generally, the SAP Platform and dependent workloads are viewed as Mission-Critical technology assets. There will likely be investments above and beyond your operations baseline to support both the SAP Platform and each of the dependent workloads. Most organizations require a mixture of platform operations (SAP Basis Operations) and workload operations (outlined below). However, during business alignment, strive to separate operations needs of the environment, the workloads, and your core SAP platform to evaluate the right level of investments required at each level.This is in alignment to the Modern Cloud Service Management. 
+Generally, the SAP Platform and dependent workloads are viewed as Mission-Critical technology assets. There will likely be investments above and beyond your operations baseline to support both the SAP Platform and each of the dependent workloads. Most organizations require a mixture of platform operations (SAP Basis Operations) and workload operations (outlined below). However, during business alignment, strive to separate operations needs of the environment, the workloads, and your core SAP platform to evaluate the right level of investments required at each level. This is in alignment to the Modern Cloud Service Management. 
 
 Considerations during business alignment:
 
