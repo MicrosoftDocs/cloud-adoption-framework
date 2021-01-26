@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Hybrid and Multicloud"
 description: Introduction to Hybrid and Multicloud
-author: BrianBlanchard;deepakonics 
+author: BrianBlanchard 
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
