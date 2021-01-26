@@ -14,6 +14,7 @@ ms.subservice: overview
 Microsoft Azure provides all of the products and features required to help you to build and operate your technology solutions in the cloud. We also understand that there are sound business reasons that may drive the necessity of using multiple private and/or public clouds. As a first step in your hybrid and multicloud journey, this article outlines and expands on Microsoft's unique perspective on important cloud computing terms.
 
 ## Defining hybrid and multicloud
+
 Reducing latency by moving workloads to the edge, devices spend less time communicating with the cloud, and can operate reliably in extended offline periods. Expanded compute, storage, and service availability provides experience-driven resources closer to your customers.
 A hybrid cloud is a type of cloud computing that combines a private cloud (on-premises infrastructure), with a public cloud (computing services offered by third-party providers over the public Internet). Hybrid clouds allow data and apps to consistently move between the two cloud environments. Many organizations choose a hybrid cloud strategy because of business requirements, such as meeting regulatory and data sovereignty requirements, maximizing  on-premises technology investments, or addressing latency issues.
 
@@ -31,8 +32,8 @@ This allows you to scale computing resources, while modernizing and protecting [
 
 Companies are spreading resources across on-premises, multiple clouds, and the edge. Customers have three common needs that we often hear about:
 
-1. Visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass. 
-2. Difficulty integrating on-premises policies and updates with cloud infrastructure. Organizations understand the need for implementing a governance standard, 
+1. Visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass.
+2. Difficulty integrating on-premises policies and updates with cloud infrastructure. Organizations understand the need for implementing a governance standard,
 3. Wide range of skills across on-premises and cloud, because there are often different app development teams in the organization. Customers are looking for consistent inter-operability between the two so they can unify development practices.
 4. Desire to manage security posture, without heavily modifying current operations. Cloud and multicloud compounds this challenge which can decrease trust and increase apprehension.
 
