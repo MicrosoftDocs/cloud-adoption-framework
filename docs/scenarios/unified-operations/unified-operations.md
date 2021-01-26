@@ -1,7 +1,7 @@
 ---
 title: "Unified operations for hybrid, multicloud, and edge"
 description: Implement effective controls for consistently operations management across hybrid, multicloud, and edge deployments.
-author: BrianBlanchard
+author: BrianBlanchard;deepakus
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.subservice: strategy
 
 # Unified operations - hybrid, multicloud, and edge
 
-Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](../../strategy/business-outcomes/fiscal-outcomes.md) is necessary to understand what might affect primary cost options, such as capital expenses and operating costs.
+Hybrid, multicloud, and edge deployment approaches can often lead to steep increases in operating costs if not desgined and architecuted as per best practices. When mapping your cloud transformation journey to business outcomes, [having a fiscal conversation within your organization](../../strategy/business-outcomes/fiscal-outcomes.md) is necessary to understand what might affect primary cost options, such as capital expenses and the operating costs.
 
 In any hybrid and multicloud strategy, the first increase in overhead costs can manifest in the form of duplicated cloud platform utilities: network, identity, governance, security, and operations tooling. In the longer term, more negative business impacts could emerge in the form of challenges like staffing core functions or teams with the skills needed to manage diverse environments.
 
 When [setting up a skills readiness plan](../../plan/adapt-roles-skills-processes.md), organizations should move toward adapting and building existing roles and skills for the cloud. Support the skills readiness plan with cross-team organizational processes to align your organization with agile practices, and required cloud functions that support developing a long-term cloud operating model.
 
-Develop and evolve a [mature team](../../organize/organization-structures.md#best-practice-minimum-viable-product-mvp), starting from a Minimum Viable Product (MVP) that balances innovation and risk, and move towards a cross-team [CCoE model](../../organize/cloud-center-of-excellence.md)—with central IT as collaborative  partner. Accelerate cloud innovation, while increasing business agility with agile, cloud-first hybrid and multicloud solutions. Delegate responsibilities, and execute on modern technical abilities.
+Develop and evolve a [mature team](../../organize/organization-structures.md#best-practice-minimum-viable-product-mvp), starting from a Minimum Viable Product (MVP) that balances innovation and risk, and move towards a cross-team [CCoE model](../../organize/cloud-center-of-excellence.md)—with central IT as collaborative  partner. Accelerate cloud innovation, while increasing business agility with agile, cloud-first hybrid and multicloud solutions. Delegate responsibilities, and execute on modern technical abilities. With organization needs towards building more solutions towards multi cloud / hybrid cloud , sometimes the IT staff members might feel anxious about their roles and positions as they realize a different set of skills is needed to support cloud solutions. Agile employees who explore and learn new cloud technologies don't need to have that fear. They can lead the adoption of cloud services by helping the organization understand and embrace the associated changes.
 
 Hybrid and multicloud strategies have lead many decision makers to falsely conclude that the cloud is more expensive than on-premises technology options. A recent Forrester Consulting study commissioned by Microsoft found that a hybrid and multicloud strategy can provide very significant [three-year return on investment, and substantial avoided on-premises infrastructure and staff costs](https://azure.microsoft.com/resources/forrester-tei-microsoft-azure-iaas/) for organizations. A second study by Accenture and WSP Environment & Energy concluded that cloud solutions add [significantly increased energy efficiencies for large deployments](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), with organizations reducing energy use and carbon emissions by more than 30 percent compared to business applications installed on-premises. (For small deployments, energy use and emissions can be reduced by more than 90 percent with a shared cloud service).
 
