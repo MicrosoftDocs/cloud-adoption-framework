@@ -46,7 +46,7 @@ In implementing unified operations, a single enterprise control plane extends ac
 
 Unified operations' focus on cross-platform standardization, interoperability, and compliance enables consistent visibility, uniform governance, and operations management for your organization. **Remove traditional technology silos by extending consistent operations management and governance processes** for on-premises, cloud-native, and distributed edge assets across your entire IT data estate. A successful unified operations effort can unlock fresh hybrid and multicloud scenarios, accelerating cloud adoption and migration efforts for your organization.
 
-One cloud management experience that manages operations of distributed assets at scale (porting consistent management, app development, and cloud services to any infrastructure, anywhere) brings cloud innovation to all resource environments across your entire IT estate. The addition of a gateway for cloud controls that extends Azure management and Azure data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere.
+The concept behind unified operations is simple. A single cloud management and operations experience across your portfolio of distributed assets at scale (bringing consistent governance, management, app development, and cloud services to any infrastructure, anywhere) enables an integrated hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth. The addition of a gateway for cloud controls that extend management and data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. 
 
 ![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/unified-operations/primary-cloud-provider-extended.png)
 
@@ -108,19 +108,19 @@ Your primary cloud platform should include a number of important features to fac
 
 ### Enhanced features
 
-(You will likely need most, if not all, of the following enhanced features):
+You will likely need most, if not all, of the following enhanced features to operate a hybrid and multicloud environment at scale:
 
 - **Performance and inventory reporting**
 - **Security and compliance auditing and automation**
 - **Tracking and reporting on applications and dependencies**
 
-> **Automated controls**:
->
-> **Automate your environment** with tools to modernize your operations and optimize operational costs:
->
-> - Environment and in-guest policy
-> - Configuration and updates
-> - Protection and recovery
+### Automated controls
+
+Automate your environment with tools to modernize your operations and optimize operational costs:
+
+- **Environment and in-guest policy**
+- **Configuration and updates**
+- **Protection and recovery**
 
 These features are likely already included in the control sets you are currently using to operate your primary cloud provider. There are likely many additional features and automated processes available in that set of controls. These are the primary control functionalities that should be available across hybrid, multicloud, and edge in your unified operations solution.
 
@@ -135,13 +135,15 @@ To extend your primary cloud controls, you will need to configure an extension, 
 
 Azure Arc is that extension, on the Microsoft cloud platform. Azure Arc extends the cloud controls used to govern Azure, so that you can apply the same control and processes to services running on-premises, whether on resources in a competing public cloud, or on the edge. This is the unified operations approach—extending cloud controls for consistent governance and operations management processes, across your on-premises, multicloud, and edge environments.
 
+To extend your primary cloud controls, you need to configure an extension, or gateway. This kind of extension will allow your controls to see and interact with resources that have been deployed outside of the cloud platform (**in fact, creating one control plane and greater visibility across disparate, heterogeneous environments**). In Microsoft's cloud platforms, Azure Arc is that extension. Azure Arc extends the same controls and processes used to govern the Azure cloud to other public and private clouds and the edge. It is these cloud controls that enable a unified operations approach to consistent governance and operations management processes across heterogeneous on-premises, multicloud, and edge environments.
+
 Unified operations extends the reach of ARM (Azure Resource Manager), the "operating system" of Azure. ARM reaches outside Azure, to project those scattered resources inside Azure and represent them as first-class citizens. By bringing Azure services and management to any kind of infrastructure, the unified operations approach extends Azure's reach, and enables new hybrid and multicloud solutions.
 
 Using a unified operations approach allows you to organize, govern, and secure any environment anywhere, with centralized visibility, operations, and compliance. Build cloud apps, anywhere, at scale, with standardized application services, from deployment to monitoring. Deploy Azure services anywhere—deploy faster, consistently, and at scale with always-up-to-date Azure Arc-enabled services.
 
-Building, operating, and managing across traditional, cloud-native and distributed edge applications with consistent controls and processes for governance and operations management extends cloud innovations to scattered assets. New hybrid and multicloud scenarios can be unlocked from simplified management, faster app development, and consistent Azure services that are extended to all resource environments, on any infrastructure, across your entire IT estate.
+Building, operating, and managing across all of your resource environments with the same control and processes for governance and operations management brings cloud innovation to disparate environments. New hybrid and multicloud scenarios unlock from simplified management, faster app development, and consistent Azure services extended to any infrastructure—enabling consistent development across traditional, cloud-native, and distributed edge applications.
 
-A central Azure control plane that focuses on standardization, interoperability, and compliance enables consistent visibility and uniform governance and operations management across hybrid and multicloud infrastructures, which can increase productivity, reduce risk, and accelerate cloud adoption and migration practices and technologies for organizations.
+A central Azure control plane that focuses on standardization, interoperability, and compliance enables consistent visibility, uniform governance, and operations management across hybrid infrastructure. It can increase productivity, reduce risk, and accelerates cloud adoption and migration practices and technology for organizations.
 
 ## Next steps
 
