@@ -8,9 +8,9 @@ items:
   - name: Overview
     items:
     - name: Intro to data management
-      href: index.md
+      href: intro-data-management.md
     - name: Intro to data governance
-      href: unified-operations.md
+      href: intro-data-governance.md
 
   - name: Build an initial strategy
     href: strategy.md
