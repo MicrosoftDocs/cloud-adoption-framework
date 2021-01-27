@@ -395,7 +395,7 @@ This section provides different connectivity approaches to integrate an Azure en
   
 - There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet Peering.
 
-- While you can use [Express Route Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, please note that this may incur in additionnal bandwidth costs that can be calculated by using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/). This is particulary important when you migration large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
+- While you can use [Express Route Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, please note that this may incur in additional bandwidth costs that can be calculated by using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/). This is particularly important when you migration large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
 
 - In an Azure regions that support [Availability Zones (AZ)](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small impact on latency. Design you application to balance availability and performances requirements.
 
@@ -412,13 +412,13 @@ This section provides different connectivity approaches to integrate an Azure en
 
 ![Diagram that shows Azure to OCI - Hub and Spoke.](./media/azure-oci-hub-and-spoke.png)
 
-- We do not recommend to enable FastPath on the ExpressRoute connections to interconnect Azure with OCI when using a traditional hub and spoke network topology or a VWAN topology in Azure, as FastPath currently does not support VNet peering (among other restrictions).
+- Enable FastPath on the ExpressRoute connections to interconnect Azure with OCI. Traffic will bypass the Express Route gateway, helping improve the latency. Nevertheless, only VMs seating inside the hub will benefit from this optimization. FastPath doesn't yet support traffic targeting VMs in a peered vNet or Express Route gateway in a virtual Wan hub.
 
-- If you application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute Gateway and FastPath enabled.
+- If your application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute Gateway and FastPath enabled.
 
 ![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
 
-- When deploying your Azure resources across Availability Zones (AZs), perform latency tests from Azure VMs located in different AZs to OCI resources to understand which of the three AZs provides the lowest latency to the OCI resources.
+- When deploying your Azure resources across Availability Zones (AZs), perform latency tests from Azure VMs located in different AZs to OCI resources to understand which of the three AZs provides the lowest latency to the OCI resources. Be aware zone numering may change across subscriptions.
 
 - To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:   
 
