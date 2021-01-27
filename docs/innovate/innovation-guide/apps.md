@@ -1,17 +1,20 @@
 ---
-title: "Azure innovation: Engage via applications"
-description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native applications.
+title: "Build Apps and Engage using App Services"
+description: Build cloud-native apps and easily modernize your existing web and API apps. Learn about Azure App Service, Azure Devops, and Visual Studio App Center.
 author: billyclaymyersmsft
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: think-tank, fasttrack-edit, AQC
+ms.custom: think-tank, fasttrack-edit, AQC, seo-caf-innovate
+keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
 
 # Engage customers through applications
+
+Build cloud-native apps to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. Cloud-native apps are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
 
 Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .NET, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
 
@@ -97,7 +100,7 @@ During your innovation journey, you'll eventually find yourself on the path to D
 
 ### Visual Studio App Center
 
-As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](/appcenter).
+As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your cloud-native applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](/appcenter).
 
 Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](/appcenter/push).
 
