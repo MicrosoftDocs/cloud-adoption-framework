@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Ready: prepare your environment for hybrid and multicloud
 
-The Ready methodology of the cloud adoption framework guides customers through environmental readiness to prepare for adoption of the cloud. Included in the Ready methodology are technical accelerators referred to as Azure Landing Zones, which automate configuration of your Azure environment in alignment with the best practices in Cloud Adoption Framework. But to prepare for a hybrid and multicloud, their are a number of minor environmental configurations that may be slightly different. This article outlines the key considerations and changes that must be made to **prepare your Azure environment to serve as ONE of your cloud platforms**.
+The [Ready methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/) of the Microsoft Azure Cloud Adoption Framework guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure Landing Zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practices guidance in the Cloud Adoption Framework. When preparing for a hybrid and multicloud deployment, there are a number of environment configurations that may be slightly different. This article outlines key considerations and changes that are necessary to **prepare your Azure environment to serve as one of your cloud platforms**.
 
 ## Evaluate your cloud mix
 
-Hybrid and multicloud are not binary decisions, they are more of a spectrum of decisions as seen in the chart below. Before configuring your Azure environment (or any other cloud environment), its important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes for illustration:
+Choosing hybrid and multicloud environment is not a binary decision, but closer to a range of decisions (as seen in the chart below). Before configuring your Azure environment (or any other cloud environment), it is important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes for illustration:
 
 ![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/unified-operations/cloud-mix.png)
 
@@ -67,9 +67,9 @@ The Cloud Adoption Framework's Ready methodology helps prepare your environment 
 
 Once your Azure environment is established, you can begin to modify your Azure environment to support the most appropriate cloud mix. The following are modifications that should be considered:
 
-- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance. 
+- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance.
 - **Public network connectivity:** Best practice suggests that all ingress and egress traffic should route through one cloud platform when possible. But, your requirements or cloud mix may require more of a peer model. This is especially common, if your cloud mix is used to reach redundancy and reliability requirements. How will your configure connectivity between each cloud platform and the public internet?
-- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case. 
+- **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case.
 - **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform?
 
 ### The most important consideration
