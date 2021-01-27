@@ -1,17 +1,17 @@
 ---
-title: ""
+title:  Use Ansible to dynamically scale onboarding AWS EC2 instances to Azure Arc 
 description: Learn to configure unified operations for XYZ.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-## Dynamic scaled onboarding of AWS EC2 instances to Azure Arc using Ansible
+# Use Ansible to dynamically scale onboarding AWS EC2 instances to Azure Arc
 
-The following README will guide you on how to automatically perform scaled onboarding of AWS EC2 instances to Azure Arc by using [Ansible](https://www.ansible.com/).
+The following README will guide you on how to automatically perform scaled onboarding of AWS EC2 instances to Azure Arc with [Ansible](https://www.ansible.com/).
 
 This guide assumes that you have a basic understanding of Ansible. A basic Ansible playbook and configuration is provided that uses the [amazon.aws.aws_ec2](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html) plugin for dynamic loading of EC2 server inventory.
 
@@ -135,7 +135,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 * Run the ```terraform init``` command which will download the required Terraform providers.
 
-    ![Screenshot of terraform init being run](./01.png)
+    ![A screenshot of terraform init being run.](./01.png)
 
 ### Deploy server infrastructure
 
@@ -143,13 +143,13 @@ Before executing the Terraform plan, you must export the environment variables w
 
 * Open the AWS console and verify you can see the created servers.
 
-    ![Screenshot of AWS console showing EC2 instances](./02.png)
+    ![A screenshot of an AWS console showing EC2 instances.](./02.png)
 
 ### Run the Ansible playbook to onboard the AWS EC2 instances as Azure-Arc-enabled servers
 
 * When the Terraform plan completes, it will display the public IP of the Ansible control server in an output variable named *ansible_ip*. SSH into the Ansible server by running the ```ssh centos@XX.XX.XX.XX``` where XX.XX.XX.XX is substituted for your Ansible server's IP address.
 
-    ![Screenshot of SSH into Ansible control server](./03.png)
+    ![Screenshot of SSH into Ansible control server.](./03.png)
 
 * Change directory to the *ansible* directory by running ```cd ansible```. This folder contains the sample Ansible configuration and the playbook we will use to onboard the servers to Azure Arc.
 
