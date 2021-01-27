@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-## Deploy a local Ubuntu server hosted with Vagrant and connect it Azure Arc
+# Deploy a local Ubuntu server hosted with Vagrant and connect it Azure Arc
 
 The following README will guide you on how to deploy a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure-Arc-enabled server resource.
 
