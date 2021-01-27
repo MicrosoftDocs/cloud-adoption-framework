@@ -52,7 +52,7 @@ We recognize that there are many valid reasons for customers to choose to distri
 - Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud strategies
 
-## Hybrid and Multicloud concerns
+## Hybrid and multicloud concerns
 
 Some of the motivations listed above can become business transformations with a sound hybrid and multicloud adoption strategy.
 
@@ -60,7 +60,7 @@ Others require significant effort pre and post deployment efforts to realize tho
 
 After workloads are released and are in production, another common concern associated with hybrid and multicloud adoption surfacees. When organizations attempt to provide operations management support to workloads in new environments, they often have to quickly rethink their practices. Existing operations management platforms (including existing operations management policies and processes), were not built for these types of environments. To account for deviations in cloud environments, companies often end up with disparate operations tooling and operations practices, which multiplies the cost of operations by the number of cloud environments supported.
 
-## Next step: Minimize Hybrid and Multicloud concerns with unified operations
+## Next step: minimize hybrid and multicloud concerns with unified operations
 
 Understand the concept of unified operations before starting your hybrid and multicloud journey—consistent operations practices across all of your cloud environments with a common control plane can help to address many concerns regarding hybrid and multicloud strategies.
 
