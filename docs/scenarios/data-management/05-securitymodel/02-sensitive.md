@@ -148,5 +148,6 @@ As mentioned, for a policy engine to succeed it is important that there is an in
 
 As Domains and Data Products create read data sources, they would be registered in the Data Catalogue which would help identify sensitive data. The policy engine should import this definition and deny any access to this data until the domain has setup it's access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
 
+>[!div class="step-by-step"]s
 >[Previous](01-securitymodel.md)
 >[Next](03-secprovisioning.md)

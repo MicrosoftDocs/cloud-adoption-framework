@@ -53,5 +53,6 @@ SLT, BODS, and Attunity are used to extract the data from SAP transactional syst
 
 Azure Data Factory alone is used to extract data from SAP BW leveraging the existing framework.
 
+>[!div class="step-by-step"]
 >[Previous](01-overview.md)
 >[Next](03-dataonboarding.md)

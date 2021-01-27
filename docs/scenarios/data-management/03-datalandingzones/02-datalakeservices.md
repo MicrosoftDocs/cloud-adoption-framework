@@ -122,6 +122,7 @@ The Enterprise Analytics and AI solution pattern prescribes that you should impl
 ## Key Considerations
 
 When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed.
+
 |Consideration | Raw data |Enriched data |Curated data| Workspace data|
 |-- | ----- | -- | -- | -- |
 |Write Data| Domains | Domains | Data Products | Data Scientists and BI analysts|
