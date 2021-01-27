@@ -44,7 +44,9 @@ The concept behind how unified operations works is simple. Implement an extensio
 
 In implementing unified operations, a single enterprise control plane extends across your organization's distributed assets, bringing consistent management, app development, and cloud services to any infrastructure, anywhere, at scale. Enabling consistent management and governance for organizations, a gateway with such cloud controls extends consistent operations management and data services across disparate on-premises, multicloud and edge environments.
 
-Unified operations' focus on cross-platform standardization, interoperability, and compliance enables consistent visibility, uniform governance, and operations management for your organization. **Remove traditional technology silos by extending consistent operations management and governance processes** for on-premises, cloud-native, and distributed edge assets across your entire IT data estate. A successful unified operations effort can unlock fresh hybrid and multicloud scenarios, accelerating cloud adoption and migration efforts for your organization.
+When identifying your Primary Cloud Platform, it is important to ensure that cloud has the necessary tool sets to manage all of the clouds in your portfolio. Many cloud platforms were designed and built before operations required hybrid, multicloud, or edge deployment options. Insufficient capabilities in current operation tools could require operations teams to replicate processes—using different cloud controls to manage cloud services across each cloud platform. If your cloud strategy calls for hybrid, multicloud, or edge deployment options **and** your primary cloud platform doesn't support them, you should consider a platform that can deploy the requisite functionalities for unified operations.
+
+## Unified operations
 
 The concept behind unified operations is simple. A single cloud management and operations experience across your portfolio of distributed assets at scale (bringing consistent governance, management, app development, and cloud services to any infrastructure, anywhere) enables an integrated hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth. The addition of a gateway for cloud controls that extend management and data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. 
 
@@ -124,8 +126,6 @@ Automate your environment with tools to modernize your operations and optimize o
 
 These features are likely already included in the control sets you are currently using to operate your primary cloud provider. There are likely many additional features and automated processes available in that set of controls. These are the primary control functionalities that should be available across hybrid, multicloud, and edge in your unified operations solution.
 
-When implemented inconsistently as primary controls, these features commonly lead to fractured or duplicated operations. As mentioned before, an inconsistent approach to implementing unified operations from increased operating costs (e.g., duplicated cloud platform utilities, operations tooling) can multiply cost inefficiencies for your organization, and incur significant capital expenditures during the early phase of the cloud adoption journey.
-
 It's because they are implemented as primary controls that the features above are the ones that we commonly see lead to fractured or duplicated operations. As mentioned before, an inconsistent approach to implementing unified operations from increased operating costs (for example, duplicated cloud platform utilities, operations tooling) can multiply cost inefficiencies for your organization, and incur significant capital expenditures in the early phase of the cloud adoption journey.
 
 ### Hybrid, multicloud gateway and enterprise control plane
@@ -141,9 +141,9 @@ Unified operations extends the reach of ARM (Azure Resource Manager), the "opera
 
 Using a unified operations approach allows you to organize, govern, and secure any environment anywhere, with centralized visibility, operations, and compliance. Build cloud apps, anywhere, at scale, with standardized application services, from deployment to monitoring. Deploy Azure services anywhere—deploy faster, consistently, and at scale with always-up-to-date Azure Arc-enabled services.
 
-Building, operating, and managing across all of your resource environments with the same control and processes for governance and operations management brings cloud innovation to disparate environments. New hybrid and multicloud scenarios unlock from simplified management, faster app development, and consistent Azure services extended to any infrastructure—enabling consistent development across traditional, cloud-native, and distributed edge applications.
+Building, operating, and managing across traditional, cloud-native and distributed edge applications with consistent controls and processes for governance and operations management extends cloud innovations to scattered assets. New hybrid and multicloud scenarios can be unlocked from simplified management, faster app development, and consistent Azure services that are extended to all resource environments, on any infrastructure, across your entire IT estate.
 
-A central Azure control plane that focuses on standardization, interoperability, and compliance enables consistent visibility, uniform governance, and operations management across hybrid infrastructure. It can increase productivity, reduce risk, and accelerates cloud adoption and migration practices and technology for organizations.
+A central Azure control plane that focuses on standardization, interoperability, and compliance enables consistent visibility and uniform governance and operations management across hybrid and multicloud infrastructures, which can increase productivity, reduce risk, and accelerate cloud adoption and migration practices and technologies for organizations.
 
 ## Next steps
 
