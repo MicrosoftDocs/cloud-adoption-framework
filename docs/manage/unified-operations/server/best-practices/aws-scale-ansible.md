@@ -153,7 +153,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 * Change directory to the *ansible* directory by running ```cd ansible```. This folder contains the sample Ansible configuration and the playbook we will use to onboard the servers to Azure Arc.
 
-    ![Screenshot of Ansible config folder in shell](./04.png)
+    ![A screenshot of the Ansible config folder in shell.](./04.png)
 
 * The aws_ec2 Ansible plugin requires AWS credentials to dynamically read your AWS server inventory. We will export these as environment variables. Run the commands below, replacing the values for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY with AWS credentials you created earlier.
 
