@@ -1,18 +1,21 @@
 ---
-title: Innovation tools to engage via applications
-description: Find out about Azure tools to accelerate development of applications that align to the Innovate methodology of the Cloud Adoption Framework.
+title: Build apps and engage using App Services 
+description: Build cloud-native apps and easily modernize your existing web and API apps. Learn about Azure App Service, Azure Devops, and Visual Studio App Center.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: internal
+keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
 
 # Tools to engage via applications in Azure
 
-As described in [Engage via applications](../considerations/apps.md), applications can be an important aspect of an MVP solution. Applications are often required for testing a hypothesis. This article helps you learn the tools Azure provides to accelerate development of those applications.
+Build cloud-native apps to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. Cloud-native apps are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
+
+As described in [Engage via applications](../considerations/apps.md), applications can be an important aspect of a minimal viable product (MVP) solution. Applications are often required for testing a hypothesis. This article helps you learn the tools Azure provides to accelerate development of those applications.
 
 ![Cloud Adoption Framework approach to engaging via applications](../../_images/innovate/engage-via-apps.png)
 

@@ -1,22 +1,23 @@
 ---
 title: What is machine learning?
-description: What is machine learning?
+description: What is machine learning? Get started with Azure machine learning, MLOPS and machine learning deployment tools.
 author: v-hanki
 ms.author: janet
-ms.date: 07/14/2020
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, seo-caf-innovate
+keywords: what is machine learning, azure machine learning, machine learning tools, mlops, automated machine learning
 ---
 
 <!-- cSpell:ignore scikit RLlib Jupyter MLflow Kubeflow -->
 
 # What is machine learning?
 
-Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. By using machine learning, computers learn without being explicitly programmed.
+Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. By using machine learning, computers learn without being explicitly programmed. Machine learning tools use artificial intelligence (AI) systems which provide the ability to identify patterns and create associations from experience with the data.
 
-Forecasts or predictions from machine learning can make applications and devices smarter. For example, when you shop online, machine learning helps recommend other products you might want based on what you've bought. Or when your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud. And when your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.
+Automated machine learning forecasts or predictions can make applications and devices smarter. For example, when you shop online, machine learning helps recommend other products you might want based on what you've bought. Or when your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud. And when your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.
 
 ## Machine learning tools to fit each task
 

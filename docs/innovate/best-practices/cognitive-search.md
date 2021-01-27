@@ -1,13 +1,14 @@
 ---
 title: What is Azure Cognitive Search?
-description: Formerly known as Azure Search, Azure Cognitive Search helps you to apply AI processes during indexing.
+description: Formerly Azure Search, Azure Cognitive Search is the cognitive search engine that helps you apply AI processes while indexing. Learn more about Azure Cognitive Services.
 author: v-hanki
 ms.author: janet
-ms.date: 07/14/2020
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, seo-caf-innovate
+keywords: cognitive search, azure cognitive services, cognitive search engine, what is cognitive, azure search
 ---
 
 <!-- cSpell:ignore Lucene -->
@@ -17,9 +18,11 @@ ms.custom: think-tank
 
 # What is Azure Cognitive Search?
 
-Formerly known as Azure Search, Azure Cognitive Search is a managed cloud solution that gives developers APIs and tools for adding a rich search experience over private, heterogeneous content in web, mobile, and enterprise applications. Your code or a tool invokes data ingestion (indexing) to create and load an index. Optionally, you can add cognitive skills to apply AI processes during indexing. Doing so can add new information and structures that are useful for search and other scenarios.
+Formerly known as Azure Search, Azure Cognitive Search is a managed cloud solution that gives developers APIs and tools for adding a rich search experience over private, heterogeneous content in web, mobile, and enterprise applications. Your code or a tool invokes data ingestion (indexing) to create and load an index. Optionally, you can add cognitive skills to apply AI processes during indexing. Using Azure Cognitive Services can add new information and structures that are useful for search and other scenarios.
 
 On the other side of your service, your application code issues query requests and handles responses. The search experience is defined in your client by using functionality from Azure Cognitive Search, with query execution over a persisted index that you create, own, and store in your service.
+
+Cognitive search is important functionality in applications. The ability to rapidly find relevant data is essential to the end-user experience and results. Cognitive search engine uses AI functionality that helps applications work in a more human-like manner and make associations that go beyond mere keyword matching. Azure Cognitive Services can help your end users find what they need to know, faster.
 
 ![Diagram that shows Azure Cognitive Search.](../../_images/ai-cognitive-search.png)
 
