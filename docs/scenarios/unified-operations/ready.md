@@ -15,6 +15,8 @@ The [Ready methodology](https://docs.microsoft.com/azure/cloud-adoption-framewor
 
 ## Evaluate your cloud mix
 
+THIS IS TEST TEXT
+
 Choosing hybrid and multicloud environment is not a binary decision, but closer to a range of decisions (as seen in the chart below). Before configuring your Azure environment (or any other cloud environment), it is important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes for illustration:
 
 ![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/unified-operations/cloud-mix.png)
