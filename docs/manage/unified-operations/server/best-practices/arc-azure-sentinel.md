@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 The following README will guide you on how to onboard Azure-Arc-enabled servers on to [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/), so you can start collecting security-related events and start correlating them with other data sources.
 
-In this guide, you will enable and configure Azure Sentinel on your Azure subscription. To complete this process you will:
+In this guide, you will enable and configure Azure Sentinel on your Azure subscription. To complete this process, you will:
 
 * Setup a Log Analytics Workspace where logs and events will be aggregated for analysis and correlation.
 
@@ -104,11 +104,11 @@ Once you have deployed Azure Sentinel on your Log Analytics workspace, you will 
 
 There are connectors for Microsoft services, third party solutions from the Security products ecosystem. You can also use Common Event Format (CEF), Syslog, or REST-API to connect your data sources with Azure Sentinel.
 
-For servers and VMs, you can install the Microsoft Monitoring Agent (MMA) agent or the Sentinel agent which collects the logs and forwards them to Azure Sentinel. You can deploy the agent in multiple ways by leveraging Azure Arc:
+For servers and VMs, you can install the Microsoft Monitoring Agent (MMA) agent or the Sentinel agent, which collects the logs and forwards them to Azure Sentinel. You can deploy the agent in multiple ways by using Azure Arc:
 
 * Using **[Extension Management](./arc-vm-extension-mma-arm.md)**
 
-This feature in Azure-Arc-enabled servers allows you to deploy the MMA agent VM extensions to a non-Azure Windows and/or Linux VMs. You can use the Azure portal, Azure CLI, an ARM template as well as PowerShell script to manage extension deployment to Azure-Arc-enabled servers.
+This feature in Azure-Arc-enabled servers allows you to deploy the MMA agent VM extensions to a non-Azure Windows and/or Linux VMs. You can use the Azure portal, Azure CLI, an ARM template and PowerShell script to manage extension deployment to Azure-Arc-enabled servers.
 
 * Setting up **[Azure Policies](./arc-policies-mma.md)**
 
