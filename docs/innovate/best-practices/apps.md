@@ -1,14 +1,13 @@
 ---
-title: Build apps and engage using App Services 
-description: Build cloud-native apps and easily modernize your existing web and API apps. Learn about Azure App Service, Azure Devops, and Visual Studio App Center.
+title: Innovation tools to engage via applications 
+description: Find out about Azure tools to accelerate development of applications that align to the Innovate methodology of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/26/2021
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: internal
-keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
 
 # Tools to engage via applications in Azure

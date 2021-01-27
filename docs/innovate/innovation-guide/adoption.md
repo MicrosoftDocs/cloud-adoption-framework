@@ -23,7 +23,7 @@ Building an innovative new solution isn't about giving users what they want or t
 
 Quantitative data is number-based using a quantifiable measurement process. Quantitative feedback gives numeric insights into data which is useful in gathering a large number of answers from customers quickly. Examples of quantitative feedback would be multiple-choice questions and numerical user engagement data. Qualitative feedback is more in depth to get a wider variety of answers and insights into customer thoughts or opinions. Examples of qualitative feedback would be a customer survey with open-ended questions. Both methods of customer feedback provide valuable insights to improve your company’s products and services.  
 
-Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open-source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops) can help you get started with your repo.
+Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open-source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](/azure/devops/pipelines/repos/github?tabs=yaml&view=azure-devops&preserve-view=true) can help you get started with your repo.
 
 Each of the following tools in Azure integrates with (or is compatible with) projects hosted in GitHub:
 
@@ -138,8 +138,8 @@ To create a DevOps project:
 
 These articles will help you centralize and manage feedback by using Azure Boards together with GitHub:
 
-- [Get started with Azure Boards](/azure/devops/boards/get-started/?view=azure-devops)
-- [Azure Boards and GitHub](/azure/devops/boards/github?view=azure-devops)
+- [Get started with Azure Boards](/azure/devops/boards/get-started/?view=azure-devops&preserve-view=true)
+- [Azure Boards and GitHub](/azure/devops/boards/github?view=azure-devops&preserve-view=true)
 
 ## [Close the loop with pipelines](#tab/pipelines)
 
@@ -173,5 +173,5 @@ To view your applications in App Service, go to the [Azure portal](https://porta
 
 Start building out your deployment pipelines:
 
-- [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline?tabs=tfs-2018-2&view=azure-devops)
-- [`GitHub Release` tasks](/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
+- [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline?tabs=tfs-2018-2&view=azure-devops&preserve-view=true)
+- [`GitHub Release` tasks](/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops&preserve-view=true)
