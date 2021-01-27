@@ -86,11 +86,11 @@ items:
   - name: Enterprise Scale Analytics and AI Solution Pattern
     items:
      - name: Enterprise Scale Analytics and AI Overview
-       href: ./01-overview/01-overview.md)
+       href: ./01-overview/01-overview.md
      - name: Enterprise Scale Teams
        href: ./01-overview/02-esa-ai-teams.md
      - name: Data Landing Zone Division and Consumption
-       href: ./01-overview/03-nodedivision.md
+       href: ./01-overview/03-dlzdivision.md
      - name: Cost Management and Policies
        href: ./01-overview/04-policy.md
      - name: Enterprise Scale Analytics and AI Networking
@@ -119,7 +119,7 @@ items:
   - name: Data Ingestion Pattern
     items:
       - name: Ingestion
-        href: ./04-dataops/01-overview.md
+        href: ./04-ingestion/01-overview.md
       - name: SAP Ingestion
         href: ./04-ingestion/02-sapingestion.md
       - name: Automated Ingestion Framework
@@ -132,7 +132,7 @@ items:
       - name: Data Privacy
         href: ./05-securitymodel/02-sensitive.md
       - name:  Security Provisioning
-        href: ./05-securitymodel/03-secprovisioning.md)
+        href: ./05-securitymodel/03-secprovisioning.md
 
   - name: Dev and Data Ops
     items:
