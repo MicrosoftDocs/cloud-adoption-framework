@@ -149,7 +149,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 * When the Terraform plan completes, it will display the public IP of the Ansible control server in an output variable named *ansible_ip*. SSH into the Ansible server by running the ```ssh centos@XX.XX.XX.XX``` where XX.XX.XX.XX is substituted for your Ansible server's IP address.
 
-    ![Screenshot of SSH into Ansible control server.](./03.png)
+    ![A screenshot of SSH into Ansible control server.](./03.png)
 
 * Change directory to the *ansible* directory by running ```cd ansible```. This folder contains the sample Ansible configuration and the playbook we will use to onboard the servers to Azure Arc.
 
