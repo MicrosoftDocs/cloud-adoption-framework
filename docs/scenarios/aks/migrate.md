@@ -1,6 +1,6 @@
 ---
 title: "Migrate workloads for Kubernetes and containers"
-description: Describe the scenario's impact on migration deployment
+description: Reduce cloud platform dependency and potentially reduce infrastructure footprint by migrating multiple web applications to a container solution
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/15/2010
@@ -11,7 +11,9 @@ ms.subservice: migrate
 
 # Migrate Kubernetes and containers
 
-Describe how your scenario changes the deployment process during migration in a standard migration factory
+Technology portfolios usually include a mix of innovative and stable state solutions. Most container conversations focus on innovation and building cloud-native applications. But containers can be equally valid in migration efforts.
+
+There is a clear and growing trend of migrating existing workloads from on-premise datacenters to a Kubernetes cluster in Azure. This approach has the potential of reducing the post-migration infrastructure footprint. More importantly, migrating to containers allows for greater portability in the portfolio, allowing workloads to be more easily moved between public and private cloud. This trend is most commonly experience when orgnizations have a large collection of web applications.
 
 ## Kubernetes and containers process details
 

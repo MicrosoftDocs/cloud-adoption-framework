@@ -103,6 +103,58 @@ items:
             href: scenarios/aks/eslz-security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: scenarios/aks/eslz-platform-automation-and-devops.md
+        - name: Best Practices
+          items:
+          
+          - name: Inventory & visibility
+            items:
+            - name: Overview
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable monitoring overview 
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-onboard.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable for new AKS cluster
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-enable-new-cluster.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable for existing AKS cluster
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-enable-existing-clusters.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable for Arc enabled cluster
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-enable-arc-enabled-clusters.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable for hybrid cluster
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-hybrid-setup.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable for Azure Red Hat OpenShift v3
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-azure-redhat-setup.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Enable for Azure Red Hat OpenShift v4
+              href: https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-azure-redhat4-setup.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+
+          - name: Operational compliance
+            items:
+            - name: Upgrade the AKS Cluster
+              href: https://docs.microsoft.com/azure/aks/upgrade-cluster?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Upgrade the Node image
+              href: https://docs.microsoft.com/azure/aks/node-image-upgrade?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Process Node OS updates
+              href: https://docs.microsoft.com/azure/aks/node-updates-kured?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+          - name: Protect & Recover
+            items:
+            - name: Multi-tenancy and cluster isolation
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-cluster-isolation.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Container image management
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-container-image-management.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Storage and backup
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-storage.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Business continuity (BC) and disaster recovery (DR)
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+          - name: Common operations tasks
+            items:
+            - name: Basic scheduler features
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Advanced scheduler features
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-advanced-scheduler.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Authentication and authorization
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-identity.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Cluster security
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-cluster-security.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+            - name: Networking
+              href: https://docs.microsoft.com/azure/aks/operator-best-practices-network.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
 
   - name: Strategy
     items:
