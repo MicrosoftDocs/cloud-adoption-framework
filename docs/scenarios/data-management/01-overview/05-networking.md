@@ -1,28 +1,17 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI Networking
+description: Enterprise Scale Analytics and AI Architecture Networking.
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
-#  Enterprise Scale Analytics and AI Networking
+# Enterprise Scale Analytics and AI Networking
 
-This section outlines the networking patterns to assist with cross-cloud integration, restrict data-exfiltration, remote workers, on-premise and Software-as-a-Service solutions. It builds upon the Cloud Adoption Framework for [Network topology and connectivity](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
+This section outlines the networking patterns to assist with cross-cloud integration, restrict data-exfiltration, remote workers, on-premise and Software-as-a-Service solutions. It builds upon the Cloud Adoption Framework for [Network topology and connectivity](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
 
 ## Private Endpoints
 
@@ -30,15 +19,17 @@ The Enterprise Scale Analytics and AI Framework uses [Private Link](https://docs
 
 For the current list of supported products see [Private Link Resources](https://docs.microsoft.com/azure/private-link/private-endpoint-overview#private-link-resource).
 
->[!CAUTION] By design, Enterprise Scale Analytics and AI Networking uses Private Endpoints where available for connectivity to PaaS services.
+>[!CAUTION]
+>By design, Enterprise Scale Analytics and AI Networking uses Private Endpoints where available for connectivity to PaaS services.
 
 ### Azure DNS Resolver Implementation for Private Endpoints
 
-DNS resolution for private endpoints should be handled through central Private Azure DNS zones that are provisioned alongside the hub VNet. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through FQDNs (Fully Qualified Domain Name). The lifecycle of the DNS records will follow the lifecycle of the private endpoints and will be automatically removed when the private endpoint is deleted.
+DNS resolution for private endpoints should be handled through central Private Azure DNS zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through FQDNs (Fully Qualified Domain Name). The lifecycle of the DNS records will follow the lifecycle of the private endpoints and will be automatically removed when the private endpoint is deleted.
 
 The first challenge when trying to resolve Private Endpoints from On-premises networks, when leveraging Azure Private DNS Zones, is how to retrieve the Private Endpoint IP via 168.63.129.16 (this IP is not reachable from on-premises networks).
 
-As of July 2020, you should use a custom DNS forwarder deployed in the Azure hub VNet (Azure Virtual Network) and have On-premises DNS Servers forward requests to them for each private endpoint.
+>[!NOTE]
+>As of July 2020, you should use a custom DNS forwarder deployed in the Azure VNet (Azure Virtual Network) and have On-premises DNS Servers forward requests to them for each private endpoint.
 
 It is important that On-Premises DNS Servers are configured correctly to forward the appropriate requests to the Custom DNS server in Azure and there are multiple ways to do that.
 
@@ -46,7 +37,6 @@ It is important that On-Premises DNS Servers are configured correctly to forward
 * If you do not have a Custom DNS VM in Azure, you can deploy the Azure Virtual Machine Scale Set that includes Nginx already configured to forward DNS requests to Azure provided DNS IP **168.63.129.16**. Refer to [Deploy VMSS of a NGINX DNS Proxy into an existing Virtual Network](https://github.com/Microsoft/PL-DNS-Proxy).
 
 ![Example of DNS Setup](../images/dns_setup.png)
-
 
 When Custom DNS servers are pointing to other DNS Servers as forwarders, similar name resolution challenges are going to be faced when dealing with On-premises DNS Servers to resolve Private Endpoints records stored in Azure Private DNS Zones. Most of those challenges can be easily resolved by having your On-Premises DNS Server to use conditional forwarder for original PaaS name (i.e. blob.core.windows.net).
 
@@ -63,24 +53,26 @@ IPv6 usage has the following limitations:
 * IPv6-only Virtual Machines or Virtual Machines Scale Sets are not supported, each NIC must include at least one IPv4 IP configuration.
 * Forward DNS for IPv6 is supported for Azure public DNS today but Reverse DNS is not yet supported.
 
->[!WARNING] As of July 2020, we do not recommend using dual stack within the Enterprise Scale Analytics and AI Framework and will update our guidance should this change.
+>[!WARNING]
+>As of July 2020, we do not recommend using dual stack within the Enterprise Scale Analytics and AI Framework and will update our guidance should this change.
 
 ## Data Management Subscription Networking
 
 The Data Management Subscription Subscription will connect to the Azure Networking Management Subscription, via VNet Peering, which will connect to on-premises, via ExpressRoute circuit, and third-party clouds.
 
-Data Management Subscription services which support Private Link such as Azure Purview will be injected into the Enterprise Hub VNet.
+Data Management Subscription services which support Private Link such as Azure Purview will be injected into the Data Management Subscription VNet.
 
 ![High Level Overview of Networking for Enterprise Scale Analytics and AI](../images/networking_overview.png)
 Figure 1: High Level Overview of Networking for Enterprise Scale Analytics and AI
 
 ## Data Management Subscription to Data Landing Zone
 
-For every new Data Landing Zone, you should create a VNet peering from the Data Management Subscription to the Node.
+For every new Data Landing Zone, you should create a VNet peering from the Data Management Subscription to the Data Landing Zone.
 
 You can connect virtual networks to each other with virtual network peering. These virtual networks can be in the same region or different regions (also known as Global VNet peering). Once virtual networks are peered, resources in both virtual networks can communicate with each other, with the same latency and bandwidth as if the resources were in the same virtual network.
 
->[!IMPORTANT] Data Management Subscription will connect to Analytics and AI Landing Zone(s) via Virtual Network Peering
+>[!IMPORTANT]
+>Data Management Subscription will connect to Analytics and AI Landing Zone(s) via Virtual Network Peering
 
 ## Data Landing Zones to Data Landing Zones
 
@@ -92,7 +84,8 @@ To enable connectivity to a Data Management Subscription from and/or to 3rd Part
 
 Site-to-Site VPN can provide better continuity for your workloads in hybrid cloud setup with Azure.
 
->[!IMPORTANT] For 3rd Party Clouds we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and Amazon Web Services Connectivity Subscription.
+>[!IMPORTANT]
+>For 3rd Party Clouds we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and Amazon Web Services Connectivity Subscription.
 
 >[!div class="step-by-step"]
 >[Previous](04-policy.md)

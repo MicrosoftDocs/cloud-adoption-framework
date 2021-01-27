@@ -1,28 +1,17 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
 title: Enterprise Scale Analytics and AI Domains
 description: Enterprise Scale Analytics and AI Domains
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Domains
 
-The role of a Domain was previously explained under [Enterprise Scale Analytics and AI Teams](../01-overview/02-esa-ai-teams.md#Domain-ops-per-Domain) and that Domains helped understand [Data Landing Zone Division and Consumption](../01-overview/03-nodedivision.md).
+The role of a Domain was previously explained under [Enterprise Scale Analytics and AI Teams](../01-overview/02-esa-ai-teams.md#domain-ops-per-domain) and that Domains helped understand [Data Landing Zone Division and Consumption](../01-overview/03-dlzdivision.md).
 
 This section explains the infrastructure which is deployed for each Domain inside a Data Landing Zone.
 
@@ -44,7 +33,8 @@ Event Hubs, IoT Hubs, Stream Insight and Machine Learning are optional services.
 
 This leads to a Resource Group per Domain.
 
->[!NOTE] As a Domain is responsible for data ingestion and enrichment only, our pre-scribed view is to deploy Azure Data Factory instead of Azure Synapse Analytics workspace. Our adopted policy is to reduce the surface area to required features. Azure Synapse Analytics is more suited to our data product layer.
+>[!NOTE]
+>As a Domain is responsible for data ingestion and enrichment only, our pre-scribed view is to deploy Azure Data Factory instead of Azure Synapse Analytics workspace. Our adopted policy is to reduce the surface area to required features. Azure Synapse Analytics is more suited to our data product layer.
 
 ## Azure Key Vault
 
@@ -52,7 +42,8 @@ Enterprise Scale Analytics and AI will make use of Azure Key Vault functionality
 
 Each Data Landing Zone will have an Azure Key Vault per Domain. This functionality will ensure that encryption key, secret and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications and Domains.
 
->[!IMPORTANT] Domain specific key vaults should follow the least privilege model and avoid secret sharing across environments as well as transaction scale limits.
+>[!IMPORTANT]
+>Domain specific key vaults should follow the least privilege model and avoid secret sharing across environments as well as transaction scale limits.
 
 ## Azure Data Factory
 
@@ -105,7 +96,8 @@ Figure 3, shows the subprocess of adding a Domain to the Data Landing Zone Azure
 1. Assign the Domain Azure AD Groups access to the Cluster Policies.
 1. Assign appropriate workspace permissions to Domain Azure AD Groups.
 
->[!NOTE] The Domain Engineering Azure AD Group allow Read/Write and Domain User Azure AD Group should allow Read-Only. All of this is via Azure AD Passthrough.
+>[!NOTE]
+>The Domain Engineering Azure AD Group allow Read/Write and Domain User Azure AD Group should allow Read-Only. All of this is via Azure AD Passthrough.
 
 #### Azure Databricks Sensitive
 
@@ -116,7 +108,8 @@ Figure 3, shows the subprocess of adding a Domain to the Data Landing Zone Azure
 1. Assign the Domain Azure AD Groups access to the Cluster Policies.
 1. Assign appropriate workspace permissions to Domain Azure AD Groups.
 
->[!NOTE] The Domain Engineering Azure AD Group and Domain Sensitive Azure AD Group should be setup so only the Sensitive AD Group can see the sensitive data. This should be achieved by a Policy Engine or some of the methods described in [Sensitive Data](../05-securitymodel/02-sensitive.md#sensitive-data).
+>[!NOTE]
+>The Domain Engineering Azure AD Group and Domain Sensitive Azure AD Group should be setup so only the Sensitive AD Group can see the sensitive data. This should be achieved by a Policy Engine or some of the methods described in [Sensitive Data](../05-securitymodel/02-sensitive.md#sensitive-data).
 
 >[!div class="step-by-step"]
 >[Previous](04-synapse.md)

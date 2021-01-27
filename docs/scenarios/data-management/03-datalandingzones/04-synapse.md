@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
 title: Enterprise Scale Analytics and AI Azure Synapse Pattern
 description: Enterprise Scale Analytics and AI Azure Synapse Pattern
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Azure Synapse Analytics Integration
@@ -34,7 +23,8 @@ SQL Pools, formally SQL DW, can be used as the data store for both enriched and 
 
 SQL On-Demand is a serverless query service that will be used by the data scientists and engineers to run queries against files in the storage account.
 
->[!TIP] Reasons for setting up additional Azure Synapse Analytics are that the Domain needs to provide access to there golden source with row and column level security and use Azure Synapse Pools to achieve this. Data Products teams might require there own Azure Synapse Analytics for creating there Data Products and a separate instance of Azure Synapse Analytics allow only the product teams scoped development access.
+>[!TIP]
+>Reasons for setting up additional Azure Synapse Analytics are that the Domain needs to provide access to there golden source with row and column level security and use Azure Synapse Pools to achieve this. Data Products teams might require there own Azure Synapse Analytics for creating there Data Products and a separate instance of Azure Synapse Analytics allow only the product teams scoped development access.
 
 ## Azure Synapse Analytics Setup
 
@@ -46,13 +36,13 @@ For premium big data processing and data science capabilities, we recommend Azur
 
 ### Azure Synapse Networking
 
-A Data Landing Zone will create workspaces with a [Azure Synapse Analytics Managed Virtual Network](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-vnet?view=sql-server-ver15). Communication, with Synapse, will be through the three endpoints it exposes. SQL Pool, SQL On-Demand, and the Development Endpoint.
+A Data Landing Zone will create workspaces with a [Azure Synapse Analytics Managed Virtual Network](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication, with Synapse, will be through the three endpoints it exposes. SQL Pool, SQL On-Demand, and the Development Endpoint.
 
-At the network level, the Enterprise Scale Analytics and AI will use [Synapse Managed private endpoints](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints?view=sql-server-ver15) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
+At the network level, the Enterprise Scale Analytics and AI will use [Synapse Managed private endpoints](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
 
 ### Azure Synapse Data Access Control
 
-[Azure AD pass-through in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/active-directory-authentication?view=sql-server-ver15#azure-ad-pass-through-in-azure-synapse-analytics) should use Access Control Lists to manage the access to the files in the data lake.
+[Azure AD pass-through in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) should use Access Control Lists to manage the access to the files in the data lake.
 
 At the database level, in addition to the database roles, we recommend Row Level and Column Security (RLS) to restrict the data access on the tables in Synapse SQL Pool using security policy.
 
@@ -60,7 +50,8 @@ For example, RLS is a great way to ensure a specific Domain or Data Product user
 
 By combining RLS with column level security (CLS) to restrict access to columns with sensitive data. Both RLS and CLS apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time the data access is attempted from any tier.
 
->[!TIP] We highly recommend that Features such as Azure Defender for SQL, Data Classification, Data Encryption, Dynamic Data Masking are available for SQL Pool to support the data protection and limit sensitive data exposure.
+>[!TIP]
+>We highly recommend that Features such as Azure Defender for SQL, Data Classification, Data Encryption, Dynamic Data Masking are available for SQL Pool to support the data protection and limit sensitive data exposure.
 
 >[!div class="step-by-step"]
 >[Previous](03-databricks.md)

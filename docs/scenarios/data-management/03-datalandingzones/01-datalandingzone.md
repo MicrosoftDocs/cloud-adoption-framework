@@ -1,28 +1,17 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
 title: Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 description: Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 
-Data Landing Zones (spokes) connected to the Data Hub by VNet Peering and are considered a Data Landing Zone in relation to the [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/).
+Data Landing Zones (spokes) connected to the Data Management Subscription by VNet Peering and are considered a Data Landing Zone in relation to the [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/).
 
 Before provisioning a Data Landing Zone you must have your DevOps CI/CD operating model in place, a Data Management Subscription and you should have considered the number of initial Data Landing Zones you want to deploy.
 
@@ -35,8 +24,6 @@ A Data Landing Zone has several layers to enable agility to service the Domains 
 ## Data Landing Zone Provisioning
 
 Every new Data Landing Zone will consist of single Network, Security, Ingest and Processing, an empty Ingest Storage Service, Data Lake Services, Shared Synapse, Shared Databricks and Metadata Services Resource Groups.
-
-See [Dev and Data Ops Models](../dataops/devopdataopsoverview.md#enterprise-scale-analytics-and-ai-devops-models) for full explanation.
 
 ## Standard Data Landing Zone Services
 
@@ -56,7 +43,7 @@ Three [Azure Data Lake Storage Gen V2 (ADLS)](https://docs.microsoft.com/azure/s
 
 Third parties publishers, which push data, require the ability to land their data into the platform so Domains can pull it into their Data Lakes. The Upload Ingest Storage Resource Group enables provisioning of blob stores for third parties. As the provision of Azure Storage Blobs is on a need's basis, an empty storage service resource group will be deployed per Data Landing Zone.
 
-![Upload Ingest Storage Service](../images/nodeingeststorage.png)
+![Upload Ingest Storage Service](../images/dlzingeststorage.png)
 
 Figure 3: Upload Ingest Storage Service
 
@@ -64,7 +51,8 @@ These storage blobs are requested by the Domain Ops Teams and approved by the Da
 
 Once the data has been pulled from the storage blobs, into RAW, the data should be removed from the Storage Blob.
 
->[!IMPORTANT] Deploy an empty storage services resource group per Data Landing Zone.
+>[!IMPORTANT]
+>Deploy an empty storage services resource group per Data Landing Zone.
 
 ### Ingestion and Processing Resource Group
 
@@ -82,9 +70,11 @@ As data sources are registered and integrated into respective data lakes using a
 
 If you have an ingestion framework engine then we would recommend making Azure Data Factory as the primary orchestration engine, for getting data into RAW and to ENRICHED.
 
->[!IMPORTANT] Ingestion and Processing is discussed at length under [Data Ingestion](../04-ingestion/01-overview.md).
+>[!IMPORTANT]
+>Ingestion and Processing is discussed at length under [Data Ingestion](../04-ingestion/01-overview.md).
 
-#### Azure Databricks 
+#### Azure Databricks
+
 Azure Databricks should always deployed as this would be used by the Domains for ingestion, transformation and loading of data see [Azure Databricks](#shared-azure-databricks) section for details of workspace deployments.
 
 The Azure Databricks workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. This is referred to as **Azure Databricks Engineering Workspace**. The Databricks workspace is locked down to only allow deployment of notebooks or jars from the Domains Azure DevOps Repo via a Domains Service Principal.
@@ -99,11 +89,11 @@ IOT Hubs and Event Hubs could be used by your ingestion framework engine for Rea
 
 Across the Data Landing Zone there is the requirement for a number of shared metadata services which provide functionality to other shared services. These will be deployed into a single resource group.
 
-![Data Landing Zone Metadata Services](../images/nodesharedservices.png)
+![Data Landing Zone Metadata Services](../images/dlzsharedservices.png)
 
 Figure 2: Data Landing Zone Metadata Services
 
-If you have decided to develop your own ingestion framework engine based on upon some of the recommendation in the, Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Hub, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the RAW to ENRICHED in the Data Landing Zone Data Lakes.
+If you have decided to develop your own ingestion framework engine based on upon some of the recommendation in the, Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Subscription, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the RAW to ENRICHED in the Data Landing Zone Data Lakes.
 
 A Self hosted integration runtime will be deployed into the for use with Azure Purview to scan for data inside the Data Landing Zone. Although the DevOps CI/CD process will handle the registration of these runtimes into Azure Purview we would recommend understanding [Create and manage a self-hosted integration runtime](https://docs.microsoft.com/azure/purview/manage-integration-runtimes).
 
@@ -129,7 +119,7 @@ For every Data Landing Zone deployed, two shared Azure Databricks workspaces wil
 1. An Azure Databricks workspace is provisioned for all Data Scientists and Data Ops which will connect to the Azure Data Lake using AAD Passthrough. This is referred to as **Azure Databricks Analytics and Data Science Workspace**.
 2. An Azure Databricks workspace provisioned for use with Sensitive and/or Secret Data Azure Data Lake using AAD Passthrough, Table Access Control and Conditional Access. This is referred to as **Azure Databricks Sensitive Workspace**.
 
-The Enterprise Scale Analytics and AI takes into account the following best practices for integrating Azure Databricks into the solution pattern: -
+The Enterprise Scale Analytics and AI takes into account the following best practices for integrating Azure Databricks into the solution pattern:
 
 * [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 * [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
@@ -165,7 +155,8 @@ This resource group could host 3rd party Virtual Machines for services such as:
 * Spotfire
 * Tableau
 
->[!TIP] Licensing costs might mean that is it more economical to deploy 3rd party products such Spotfire and Tableau into the Data Management Subscription and for the products to reach across into the Data Landing Zone(s) to pull data back.
+>[!TIP]
+>Licensing costs might mean that is it more economical to deploy 3rd party products such Spotfire and Tableau into the Data Management Subscription and for the products to reach across into the Data Landing Zone(s) to pull data back.
 
 >[!div class="step-by-step"]
 >[Previous](../02-datamanagement/01-overview.md)

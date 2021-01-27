@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI Overview
+description: Enterprise Scale Analytics and AI Architecture Overview represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 # Enterprise Scale Analytics and AI
 
@@ -70,9 +59,9 @@ The Enterprise Scale Analytics and AI solution pattern advocates using Azure-nat
 
 The below diagram gives the overview of an Enterprise Scale Analytics and AI platform with a central Data Management Subscription and spokes (known as Data Landing Zone).
 
-![Enterprise Scale Hub and Data Landing Zone](../images/enterprisescalehubandnode.png)
+![Enterprise Scale Data Management and Data Landing Zone](../images/enterprisescaledanddlz.png)
 
-Figure 2: Enterprise Scale Hub and Data Landing Zones
+Figure 2: Enterprise Scale Management and Data Landing Zones
 
 The Enterprise Scale Analytics and AI advocates consistent governance using a common architecture that defines baseline capabilities and policies. Thus, all Data Landing Zones adhere to the same controls, and auditing. Crucially however, teams operating within respective Data Landing Zone have the freedom to create data pipelines, ingest sources, and create Data Products which may be reports/dashboards, and ad-hoc spark/SQL analysis. Furthermore, Data Landing Zone capabilities can be augmented by adding services on top of the baseline capability set out in the blueprint. Thus, a team could for instance add a 3rd party graph engine to address some niche business requirement.
 
@@ -94,7 +83,7 @@ Enterprise Scale Analytics considers seven critical design areas that help trans
 ## Data Management Subscription
 
 * The Data Management Subscription hosts centralized services such as data cataloguing, monitoring, audits etc.
-* The Data Landing Zone are automatically peered to the Data Management Subscription to allow the data catalogue to crawl across the Data Landing Zones for data discovery and governance. The Data Hub is deployed is peered to the Connectivity Management Subscription.
+* The Data Landing Zone are automatically peered to the Data Management Subscription to allow the data catalogue to crawl across the Data Landing Zones for data discovery and governance. The Data Management Subscription is deployed is peered to the Connectivity Management Subscription.
 * This environment is highly controlled and subject to stringent audits.
 * All data classification types will be stored in a central Data Catalogue. Depending on meta-data different policies, access patterns will be enforced. This can serve as a backend repository for data market front ends.
 
@@ -111,7 +100,7 @@ The Data Management Subscription is discussed in detail in [Data Management Subs
   * Reporting with niche requirements, i.e., compliance, tax reporting, HR etc.
   * Specialized capabilities that address gaps in the baseline blueprint
 
-The Data Landing Zone is discussed in detail in [Data Landing Zone Overview](../03-aailandingzones/01-aailandingzone.md)
+The Data Landing Zone is discussed in detail in [Data Landing Zone Overview](../03-datalandingzones/01-datalandingzone.md)
 
 ![Integration into Cloud Adoption Framework](../images/enterprisescaleintegration.png)
 

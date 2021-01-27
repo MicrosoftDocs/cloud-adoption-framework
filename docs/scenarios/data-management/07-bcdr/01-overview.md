@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI 
+title: Enterprise Scale Analytics and AI Business Continuity and Disaster Recovery
 description: Enterprise Scale Analytics and AI Architecture Business Continuity and Disaster Recovery.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Resiliency
@@ -32,7 +21,7 @@ Data Lake Storage Gen2 already handles 3x replication under the hood to guard ag
 
 If one of the Data Landing Zones requires geo-redundancy, with Data Lake Storage Gen2, it is recommended to geo-replicate your data via GRS or RA-GRS that satisfies your HA/DR requirements. Additionally, you should consider ways for the application using Data Lake Storage Gen2 to automatically fail over to the secondary region through monitoring triggers or length of failed attempts, or at least send a notification to admins for manual intervention. Keep in mind that there is trade-off of failing over versus waiting for a service to come back online.
 
-Each entity must decide on the Recovery Point Objective for their Data Domain(s) and defined a replication strategy for their use cases.
+Each Data Landing Zone must decide on the Recovery Point Objective for their Data Domain(s) and defined a replication strategy for their use cases.
 
 ## Azure Synapse Analytics
 
@@ -58,8 +47,8 @@ As Data Domains and Data Product are likely to have Azure DevOps repositories li
 
 Azure Key Vault automatically provides features to help you maintain availability and prevent data loss. Back up secrets ([Azure Key Vault Backup](https://docs.microsoft.com/azure/key-vault/general/backup)) only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate.
 
-Key Vault maintains availability in disaster scenarios and will automatically fail over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](./disaster-recovery-guidance.md).
+Key Vault maintains availability in disaster scenarios and will automatically fail over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance).
 
 >[!div class="step-by-step"]
->[Previous](../07-dataops/03-teamfunctions.md)
->[Next](../99-appendix/01-esaaipolicy.md)
+>[Previous](../06-dataops/03-teamfunctions.md)
+>[Next](../99-appendix/01-glossary.md)

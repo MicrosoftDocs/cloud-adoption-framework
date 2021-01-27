@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
 title: Enterprise Scale Analytics and AI Teams Data Lake Services
 description: Enterprise Scale Analytics and AI Architecture Data Lake Services
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Data Lake Services
@@ -38,7 +27,8 @@ The containers within these lakes should be aligned to **Domains**, **Sub-Domain
 
 The service should be enabled with the 'hierarchical name space' to allow the efficient file management. [The hierarchical name space feature](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace) allows the collection of objects/files within an account to be organized into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
 
->[!IMPORTANT] The Azure Blob Storage Account must have 'hierarchical name space' enabled to allow the efficient file management.
+>[!IMPORTANT]
+>The Azure Blob Storage Account must have 'hierarchical name space' enabled to allow the efficient file management.
 
 Azure Data Lake Storage is providing: -
 
@@ -51,15 +41,17 @@ Each **Domain** should have two containers on each Data Lake for which they shou
 
 The two containers, per **Domain**, should be divided into classification (internal and sensitive) with Data Lake access to be controlled by RBAC and ACLs.
 
->[!IMPORTANT] Access to the data is restricted by use a combination of ACLs and AAD-groups enable groups what can and cannot be accessed by other groups. **Domain teams** should approve/reject access to their data-assets.
+>[!IMPORTANT]
+>Access to the data is restricted by use a combination of ACLs and AAD-groups enable groups what can and cannot be accessed by other groups. **Domain teams** should approve/reject access to their data-assets.
 
 ## Data Lakes Connectivity
 
 Each of the data lakes should use Private Endpoints which are injected into the VNet of the Data Landing Zone. To allow cross-land-zone data access, we propose connecting Data Landing Zones through VNet peering. This solution is not only optimal from a cost, but also from an access control perspective.
 
-See [Private Endpoints](#private-endpoints) and [Data Landing Zone to Data Landing Zone](#_Data_Node_to).
+See [Private Endpoints](../01-overview/05-networking.md#private-endpoints) and [Data Management Subscription to Data Landing Zone](../01-overview/05-networking.md#data-management-subscription-to-data-landing-zone)
 
->[!IMPORTANT] Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones, i.e. private links, are controlled by the platform ops team.
+>[!IMPORTANT]
+>Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones, i.e. private links, are controlled by the platform ops team.
 
 ## Data Lake Layers
 
@@ -77,19 +69,22 @@ For streaming use cases the data in the raw zone should sometimes also stored as
 
 Depending on the retention policies of your enterprise, this data is either stored as is for the period required by the retention policy or it can be deleted when you think the data is of no more use e.g. this could be raw sales data that is ingested from on-prem systems.
 
->[!TIP] Enterprises need to think about scenarios where they might need to rebuild a analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream Read Data Stores.
+>[!TIP]
+>Enterprises need to think about scenarios where they might need to rebuild a analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream Read Data Stores.
 
 ### Enriched Data (Data Lake Two)
 
 Enriched Data is is the version where raw data (as is or aggregated) has a defined schema and, the data is cleansed, and is available to analytics engines to extract high value data. it will follow the same hierarchial directory structure as the raw layer and resides in either the internal or sensitive container for **Domain** on Data Lake Two.
 
->[!NOTE] This layer of data can be consider the golden layer and shouldn't have had any other transformations applied apart from aligning data types.
+>[!NOTE]
+>This layer of data can be consider the golden layer and shouldn't have had any other transformations applied apart from aligning data types.
 
 ### Curated Data (Data Lake Two)
 
 Data is been taken from the golden layer, in Enriched Data, and transformed into high value information **Data Products** that is served to the consumers of the data (BI analysts and the data scientists). This data has structure and can be served to the consumers either as is (e.g. data science notebooks) or through another read data store such as Azure Database for SQL.
 
->[!TIP] In the case where a decision is made to land the data into another read data store such as Azure Database for SQL, as a high speed serving layer, we would recommend having a copy of the data residing in the curated data. Although users of the **data product** will be guided to the main read data store (Azure Database for SQL), it will allow them to do further data exploration in a wider set of tools if the data is also available in the data lake.
+>[!TIP]
+>In the case where a decision is made to land the data into another read data store such as Azure Database for SQL, as a high speed serving layer, we would recommend having a copy of the data residing in the curated data. Although users of the **data product** will be guided to the main read data store (Azure Database for SQL), it will allow them to do further data exploration in a wider set of tools if the data is also available in the data lake.
 
 Data assets in this layer should be highly governed and well documented e.g. high-quality sales data (that is data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns) for a **Domain** that is used for predictive analytics on determining the sales projections for the next fiscal year.
 
@@ -107,16 +102,16 @@ Sometimes these datasets mature and the enterprise should consider how they prom
 
 Azure storage offers different access tiers, which allow you to store blob object data in the most cost-effective manner. The available access tiers include:
 
-- **Hot** - Optimized for storing data that is accessed frequently.
-- **Cool** - Optimized for storing data that is infrequently accessed and stored for at least 30 days.
-- **Archive** - Optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements (on the order of hours).
+* **Hot** - Optimized for storing data that is accessed frequently.
+* **Cool** - Optimized for storing data that is infrequently accessed and stored for at least 30 days.
+* **Archive** - Optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements (on the order of hours).
 
 The following considerations apply to the different access tiers:
 
-- Only the hot and cool access tiers can be set at the account level. The archive access tier isn't available at the account level.
-- Hot, cool, and archive tiers can be set at the blob level during upload or after upload.
-- Data in the cool access tier can tolerate slightly lower availability, but still requires high durability, retrieval latency, and throughput characteristics similar to hot data. For cool data, a slightly lower availability service-level agreement (SLA) and higher access costs compared to hot data are acceptable trade-offs for lower storage costs.
-- Archive storage stores data offline and offers the lowest storage costs but also the highest data rehydrate and access costs.
+* Only the hot and cool access tiers can be set at the account level. The archive access tier isn't available at the account level.
+* Hot, cool, and archive tiers can be set at the blob level during upload or after upload.
+* Data in the cool access tier can tolerate slightly lower availability, but still requires high durability, retrieval latency, and throughput characteristics similar to hot data. For cool data, a slightly lower availability service-level agreement (SLA) and higher access costs compared to hot data are acceptable trade-offs for lower storage costs.
+* Archive storage stores data offline and offers the lowest storage costs but also the highest data rehydrate and access costs.
 
 Data stored in the cloud grows at an exponential pace. To manage costs for your expanding storage needs, it's helpful to organize your data based on attributes like frequency-of-access and planned retention period to optimize costs. Data stored in the cloud can be different based on how it's generated, processed, and accessed over its lifetime. Some data is actively accessed and modified throughout its lifetime. Some data is accessed frequently early in its lifetime, with access dropping drastically as the data ages. Some data remains idle in the cloud and is rarely, if ever, accessed after it's stored.
 
@@ -134,7 +129,8 @@ When landing data into a data lake, it is important to pre-plan the structure of
 |Data Lifecycle Management |Once enriched data is generated, can be moved to a cooler tier of storage to manage costs.| Older data can be moved to a cooler tier. |Older data can be moved to a cooler tier.| While the end consumers have control of this workspace, ensure that there are processes and policies to clean up data that is not necessary |
 |Folder Structure and Hierarchy| Folder structure to mirror Domain followed by source. | Folder structure to mirror Domain followed by sub-Domain | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
 
->[!WARNING] As some products do not support mounting the root of a data lake container; each data lake container in Raw, Curated and Enriched, and Workspace should have a a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL).  See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+>[!WARNING]
+>As some products do not support mounting the root of a data lake container; each data lake container in Raw, Curated and Enriched, and Workspace should have a a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL).  See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Industry Specific Data Models and Common Data Model with Data Lake
 
@@ -142,7 +138,8 @@ An industry data model enables organizations to more holistically capture and de
 
 With the Common Data Model (CDM), organizations can use a data format that provides semantic consistency across applications and deployments. With the evolution of the Common Data Model metadata system, the model brings the same structural consistency and semantic meaning to the data stored in Microsoft Azure Data Lake Storage Gen2 with hierarchical namespaces and folders that contain schematized data in standard Common Data Model format. The standardized metadata and self-describing data in an Azure data lake facilitates metadata discovery and interoperability between data producers and data consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning. When combined, these elements provide compelling centralized data, structured data, fine-grained access control, and semantic consistency for apps and initiatives across the enterprise. See [Use the Common Data Model to optimize Azure Data Lake Storage Gen2](https://docs.microsoft.com/common-data-model/data-lake).
 
->[!NOTE] Industry Specific Data Models and Common Data Models would pre-dominantly be created in the curated data lake layer by product teams for downstream consumption. The folder structure should still sit under a data product folder.
+>[!NOTE]
+>Industry Specific Data Models and Common Data Models would pre-dominantly be created in the curated data lake layer by product teams for downstream consumption. The folder structure should still sit under a data product folder.
 
 ## Monitoring
 
@@ -172,8 +169,9 @@ All other failed anonymous requests are not logged.
 
 In a Data Landing Zone all the monitoring is sent to the management subscription for analysis.
 
->[!IMPORTANT] Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
+>[!IMPORTANT]
+>Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
 
 >[!div class="step-by-step"]
->[Previous](01-aailandingzone.md)
+>[Previous](01-datalandingzone.md)
 >[Next](03-databricks.md)

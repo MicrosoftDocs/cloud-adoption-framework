@@ -2,22 +2,14 @@
 # This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
 
 # Mandatory fields.
-title: Enterprise Scale Analytics and AI Databricks Pattern
-description: Enterprise Scale Analytics and AI Databricks Pattern
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI Data Products
+description: Enterprise Scale Analytics and AI Data Products
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 # Data Products
 
@@ -47,13 +39,14 @@ They would be considered an incremental deployment to the Data Landing Zone.
 
 Data Products should be automatically registered with the Azure Purview to allow scanning of data.
 
->[!IMPORTANT] To drive consistency we recommend configuring an Azure Policy per Data Domain Product
+>[!IMPORTANT]
+>To drive consistency we recommend configuring an Azure Policy per Data Domain Product
 
 ## Creating a Data Product
 
 Figure 1, illustrates how a Data Product is created. It shows how a Data Landing Zone hosts multiple data Domain's and that a Domain logical boundary is driven by data ownership and knowledge. A Data Product is created by ingesting data from Domains either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Domain.
 
-![Creating a Data Product](../images/dataproductcrossnode.png)
+![Creating a Data Product](../images/dataproductcrossdlz.png)
 
 Figure 1: Creating a Data Product
 
@@ -71,11 +64,13 @@ For a production grade deployment, it is advised to use three workspaces (cf. Fi
 
  Deploy three Azure Machine Learning workspaces per project and use Azure Data Factory for orchestrating workflows and triggering registered machine learning pipelines.
 
->[!IMPORTANT]  Deploy three Azure Machine Learning workspaces per project and use Azure Data Factory for orchestrating workflows and triggering registered machine learning pipelines.\
+>[!IMPORTANT]
+>Deploy three Azure Machine Learning workspaces per project and use Azure Data Factory for orchestrating workflows and triggering registered machine learning pipelines.\
 \
 Azure Machine Learning clusters should be used for production grade model training and Azure Kubernetes Service should be used for production grade deployments.
 
->[!TIP] Azure Machine Learning should be used for data science projects since it covers the end-to-end workflow with various sub-services and features and, in addition, allows to fully automate the process.
+>[!TIP]
+>Azure Machine Learning should be used for data science projects since it covers the end-to-end workflow with various sub-services and features and, in addition, allows to fully automate the process.
 
 ## Reporting and Visualization
 
@@ -83,7 +78,8 @@ For every Data Landing Zone an empty Visualization Resource Group would be creat
 
 ![Visualization Resource Group](../images/visualizationrg.png)
 
->[!NOTE] Licensing costs might mean that is it more economical to deploy 3rd party products such Spotfire and Tableau into the Data Hub and for the products to reach across into the Data Landing Zone to pull data back.
+>[!NOTE]
+>Licensing costs might mean that is it more economical to deploy 3rd party products such Spotfire and Tableau into the Data Management Subscription and for the products to reach across into the Data Landing Zone to pull data back.
 
 Whilst an initial Reporting and Visualization Resource Group would be deployed for a new Data Landing Zone, Data Products might require their own Reporting and Visualization Resource Group due to security boundary or a requirement to cross charge the Domain for usage. However, it is important to remember that using Azure Active Directory Passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
 

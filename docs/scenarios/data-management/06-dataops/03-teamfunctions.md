@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
 title: Enterprise Scale Analytics and AI Team Functions
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+description: Enterprise Scale Analytics and AI Architecture Team Functions.
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 # Teams and Functions
 
@@ -107,7 +96,7 @@ As the responsible team for the Data Landing Zone it is advisable that the team 
 
 Data Landing Zone Ops team is responsible for business as usual tasks such as gathering feedback and enhancement requests. These requests are prioritized and shared with the Data Platform Ops via a regular cadence.
 
-The team monitor the node for incidents and health events. They will engage other Ops teams during severe incidents to mitigate, restore backusp, failover, and scale  services.
+The team monitor the Data Landing Zone for incidents and health events. They will engage other Ops teams during severe incidents to mitigate, restore backusp, failover, and scale  services.
 
 ## Domain Ops
 
@@ -156,7 +145,8 @@ Domain Ops can use a data access heatmap to identify traffic and hotspots which 
 
 The heatmaps help prioritize support investment and manage storage costs whilst highlighting low traction data assets. In the case of low traction dataset, Domain Ops would contact the owners to evaluate archiving options.
 
->[!NOTE] Some Data Catalogue solutions provide heatmaps as part of there integrated solution. However, it is possible to use other reporting tools such as PowerBI to 
+>[!NOTE]
+>Some Data Catalogue solutions provide heatmaps as part of there integrated solution. However, it is possible to use other reporting tools such as PowerBI to.
 
 ### Domain Ops Feedback and Enhancement Loop
 
@@ -241,7 +231,8 @@ Analysts represents a large group including business analysts, power users, and 
 
 Self-service enablement is a key principle, in line with this analysts can access analytics and data without having to secure formal IT budget and resources.
 
->[!TIP] Enterprises should view insights created by Analysts as the next set of potential Data Products which could be certified for use by others in the business.
+>[!TIP]
+>Enterprises should view insights created by Analysts as the next set of potential Data Products which could be certified for use by others in the business.
 
 ### Find and Request Data
 
@@ -258,17 +249,18 @@ Analysts can use the discovered dataset to build reports using tools such as Pow
 
 The Enterprise Scale Analytics and AI solution pattern has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process ad-hoc queries.
 
-In both cases Analyst can run queries against data assets across nodes subject to their permissions. The results from ad-hoc queries can be stored in Azure Data Lake workspace for re-use.
+In both cases Analyst can run queries against data assets across Data Landing Zone(s) subject to their permissions. The results from ad-hoc queries can be stored in Azure Data Lake workspace for re-use.
 
 ### User Feedback
 
-Analyst can be an untapped source of improvements and enterprises are highly encouraged to create user feedback groups for each Data Landing Zone. 
+Analyst can be an untapped source of improvements and enterprises are highly encouraged to create user feedback groups for each Data Landing Zone.
 
 Alongside encouraging participation in these user groups, analysts should log feedback for data assets to Domain Ops, Data Catalogue issues within the data catalogue or within IT Service Management solution. Lastly, Data process issues can be raise with data product teams or the T Service Management solution.
 
->[!NOTE] IT Service Management should be considered as a central location to raise feedback and issues. Whilst directly logging feedback to the individual teams might seem a quicker solution it doesn't give the enterprise a full view of challenges in the platform. \
+>[!NOTE]
+>IT Service Management should be considered as a central location to raise feedback and issues. Whilst directly logging feedback to the individual teams might seem a quicker solution it doesn't give the enterprise a full view of challenges in the platform. \
 \
-An IT Service Management with correct routing to the Domain Ops, Data Product Teams will assist with one view across the enterprise.
+>An IT Service Management with correct routing to the Domain Ops, Data Product Teams will assist with one view across the enterprise.
 
 ## RACI Chart
 

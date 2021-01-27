@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI Data Ops Overview
+description: Enterprise Scale Analytics and AI Data Ops Overview.
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Dev and Data Ops
@@ -57,7 +46,8 @@ Source Control ensures that code and configuration is persisted and that changes
 
 Branches are used to isolate changes or feature developments without affecting other work that is done in parallel. The use of branches should be emphasized to develop features, fix bugs and safely experiment with new ideas. Changes made to one branch can be merged back into the default branch by using pull requests. These allow a controlled review process. The main branch should be secured to ensure code reviews via pull requests.
 
->[!IMPORTANT] For all of the repositories in Enterprise Scale Analytics and AI we recommend:-
+>[!IMPORTANT]
+>For all of the repositories in Enterprise Scale Analytics and AI we recommend:-
 >
 > - The main branch of a repository should be secured in order to enforce the use of branches and ensure controlled review processes via pull requests.
 > - Azure DevOps or GitHub based repositories should be used for source control to track changes to source code and to allow simultaneous code development by multiple team members.
@@ -113,9 +103,10 @@ In ARM templates, the core provisioning is in the resources section, and the con
 
 ```
 
->[!IMPORTANT] Every layer of the Enterprise Scale Analytics and AI solution pattern (Data Management Subscription, Data Landing Zones, data Domains or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
+>[!IMPORTANT]
+>Every layer of the Enterprise Scale Analytics and AI solution pattern (Data Management Subscription, Data Landing Zones, data Domains or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
 \
-This concept allows to always have a clear representation of the state inside a specific scope in Azure in a Git repository.
+>This concept allows to always have a clear representation of the state inside a specific scope in Azure in a Git repository.
 
 ## Workflow and Automation
 
@@ -125,9 +116,10 @@ In order to scale quickly within an organization and simplify the deployment pro
 
 Deployments to test and production should only be manageable through a CI/CD pipeline and a service connection with elevated rights to enforce common best practices (e.g. ARM templates).
 
->[!CAUTION] Domain and Data Product teams should only have read access to have read access to test and production environments. Deployments to these environments should only be executable through CI/CD pipelines and service connections with elevated rights. \
+>[!CAUTION]
+>Domain and Data Product teams should only have read access to have read access to test and production environments. Deployments to these environments should only be executable through CI/CD pipelines and service connections with elevated rights. \
 \
-However, Domain and Data Product teams should have write access to the development environment to speed up time to production.
+>However, Domain and Data Product teams should have write access to the development environment to speed up time to production.
 
 >[!div class="step-by-step"]
 >[Previous](../05-securitymodel/02-sensitive.md)

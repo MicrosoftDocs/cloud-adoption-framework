@@ -1,24 +1,14 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
+title: Enterprise Scale Analytics and AI Data Handling
+description: Enterprise Scale Analytics and AI Architecture Data Handling.
+author: mboswell
+ms.author: mboswell # Microsoft employees only
 ms.date: 12/8/2020
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
+
 # Data Privacy
 
 The Enterprise Scale Analytic and AI solution pattern addresses PII (Personally Identifiable information), at multiple layers, whilst leaving it to the business to decide upon the best pattern which suits its requirements. Personally Identifiable information (PII), is any data that can be used used to identify a individuals such as names, driver's license number, SSNs, bank account numbers, passport numbers, email addresses and more. Many regulations from GDPR to HIPPA require strict protection of user privacy.
@@ -34,7 +24,8 @@ For every domain which is on-boarded we create two data lake containers for each
 
 In this pattern, it would enable any compute product which supported Azure AD Passthrough, to connect to the data lake, authenticate with the user logged in and if the user was part of the data asset Azure AD Group access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering.
 
->[!Note] Compute products can be classified as Azure Databricks and/or Synapse Analytics Spark and SQL On-Demand enabled with Azure AD Pass-through.
+>[!NOTE]
+>Compute products can be classified as Azure Databricks and/or Synapse Analytics Spark and SQL On-Demand enabled with Azure AD Pass-through.
 
 ## Sensitive Data
 
@@ -65,9 +56,9 @@ The first level of restrictions would be to implement support dynamic data maski
 
 The second level is to [Column-Level Security](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](https://docs.microsoft.com/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
 
-An additional security layer, on top of Transparent Data Encryption would be to [Encrypt the Column of Data](https://docs.microsoft.com/sql/relational-databases/security/encryption/encrypt-a-column-of-data?view=sql-server-ver15) and decrypt upon read.
+An additional security layer, on top of Transparent Data Encryption would be to [Encrypt the Column of Data](https://docs.microsoft.com/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
 
-The tables could be made available to Azure Databricks via the [Apache Spark connector: SQL Server & Azure SQL](https://docs.microsoft.com//sql/connect/spark/connector?view=sql-server-ver15).
+The tables could be made available to Azure Databricks via the [Apache Spark connector: SQL Server & Azure SQL](https://docs.microsoft.com//sql/connect/spark/connector).
 
 #### Option Two - Azure Databricks
 
@@ -117,7 +108,7 @@ where region='EU'
 
 You would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the **Azure Databricks Sensitive Workspace** and apply the following permissions:
 
-* Grant DA-AMERICA-HRMANAGER-R and DA-AMERICA-HRGENERAL-R Azure AD Groups access to the vhr_us view. 
+* Grant DA-AMERICA-HRMANAGER-R and DA-AMERICA-HRGENERAL-R Azure AD Groups access to the vhr_us view.
 * Grant DA-EUROPE-HRMANAGER-R and DA-EUROPE-HRGENERAL-R Azure AD Groups access to the vhr_eu view.
 
 As the columns are encrypted and cannot be decrypted in the non-sensitive workspace, the non-sensitive workspaces could still make use of Azure AD Passthrough and allow users to explore the lake based upon there permissions.
@@ -126,7 +117,8 @@ Where table access is used teams, requiring access, would be added to the Azure 
 
 As new datasets are deployed, part of the DevOps process the Domain would need to run scripts to setup the table permissions, in the **Azure Databricks Sensitive Workspace**, and add the correct Azure AD Groups to those permissions.
 
->[!NOTE] Azure Databricks table access control cannot be mixed with Azure AD Passthrough. Therefore, you could decide to only have one Azure Databricks workspace, and use table access control, as you want to have access to all your data and not only your sensitive data from the **Azure Databricks Sensitive Workspace**.
+>[!NOTE]
+>Azure Databricks table access control cannot be mixed with Azure AD Passthrough. Therefore, you could decide to only have one Azure Databricks workspace, and use table access control, as you want to have access to all your data and not only your sensitive data from the **Azure Databricks Sensitive Workspace**.
 
 #### Option 3 - Policy Engine
 

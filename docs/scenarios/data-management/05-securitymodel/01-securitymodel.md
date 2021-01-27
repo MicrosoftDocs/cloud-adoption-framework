@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI Security Model
+description: Enterprise Scale Analytics and AI Architecture Security Model
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Enterprise Scale Analytics and AI Security Overview
@@ -30,30 +19,33 @@ Data-at-Rest (DaR) encryption refers to the encryption of data as it persists in
 
 There are multiple services that support DaR encryption, including Storage Accounts and SQL Databases. Additionally, each service may apply DaR encryption at different layers in the stack. Each specific service referenced in this document that has a specific DaR encryption requirement will be addressed in the relevant section. However, there are common concepts and models to be addressed that influence the design decisions of services throughout the Azure stack.
 
->[!IMPORTANT] All services which support Encryption at Rest should have it enabled by default.
+>[!IMPORTANT]
+>All services which support Encryption at Rest should have it enabled by default.
 
 ## Networking
 
 The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](../01-overview/05-networking.md).
 
 ## Azure Defender
+
 Azure Defender provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, your network, and more.
 
 When you enable Azure Defender from the **Pricing and settings** area of Azure Security Center, the following Defender plans are all enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
-- [Azure Defender for servers](defender-for-servers-introduction.md)
-- [Azure Defender for App Service](defender-for-app-service-introduction.md)
-- [Azure Defender for Storage](defender-for-storage-introduction.md)
-- [Azure Defender for SQL](defender-for-sql-introduction.md)
-- [Azure Defender for Kubernetes](defender-for-kubernetes-introduction.md)
-- [Azure Defender for container registries](defender-for-container-registries-introduction.md)
-- [Azure Defender for Key Vault](defender-for-key-vault-introduction.md)
-- [Azure Defender for Resource Manager](defender-for-resource-manager-introduction.md)
-- [Azure Defender for DNS](defender-for-dns-introduction.md)
+- [Azure Defender for servers](https://docs.microsoft.com/azure/security-center/defender-for-servers-introduction)
+- [Azure Defender for App Service](https://docs.microsoft.com/azure/security-center/defender-for-app-service-introduction)
+- [Azure Defender for Storage](https://docs.microsoft.com/azure/security-center/defender-for-storage-introduction)
+- [Azure Defender for SQL](https://docs.microsoft.com/azure/security-center/defender-for-sql-introduction)
+- [Azure Defender for Kubernetes](https://docs.microsoft.com/azure/security-center/defender-for-kubernetes-introduction)
+- [Azure Defender for container registries](https://docs.microsoft.com/azure/security-center/defender-for-container-registries-introduction)
+- [Azure Defender for Key Vault](https://docs.microsoft.com/azure/security-center/defender-for-key-vault-introduction)
+- [Azure Defender for Resource Manager](https://docs.microsoft.com/azure/security-center/defender-for-resource-manager-introduction)
+- [Azure Defender for DNS](https://docs.microsoft.com/azure/security-center/defender-for-dns-introduction)
 
 Each of these plans is explained separately in the Security Center documentation.
 
->[!IMPORTANT] Where this Azure Defender is available for the PaaS Services then we would recommend enabling this feature by default especially for the Azure Data Lake storage. See [Introduction to Azure Defender](https://docs.microsoft.com/en-gb/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](https://docs.microsoft.com/en-us/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
+>[!IMPORTANT]
+>Where this Azure Defender is available for the PaaS Services then we would recommend enabling this feature by default especially for the Azure Data Lake storage. See [Introduction to Azure Defender](https://docs.microsoft.com/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](https://docs.microsoft.com/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
 
 ## Advanced Threat Protection
 
@@ -71,7 +63,8 @@ Azure Data Lake Storage Gen2 supports access control models that combine both Az
 
 In addition to managing access using Azure Active Directory identities using RBAC and ACLs, Azure Data Lake Storage Gen2 also supports using SAS tokens and shared keys for managing access to data in your storage account.
 
->[!IMPORTANT] We recommend [Prevent Shared Key authorization for an Azure Storage account (preview)](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent) for the Data Landing Zone Data Lakes.
+>[!IMPORTANT]
+>We recommend [Prevent Shared Key authorization for an Azure Storage account (preview)](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent) for the Data Landing Zone Data Lakes.
 
 **RBAC** lets you assign roles to security principals (user, group, service principal or managed identity in Azure Active Directory) and these roles are associated with sets of permissions to the data in your file system. RBAC can help manage roles related to control plane operations (such as adding other users and assigning roles, manage encryption settings, firewall rules, etc.) or for data plane operations (such as creating file systems, reading and writing data etc).
 
@@ -94,9 +87,10 @@ Both access ACLs and default ACLs have the same structure.
 
 The table above gives an overview of how ACLs and RBAC can be used to manage permissions to the data in your Azure Data Lake Storage Gen2 accounts. At a high level, use RBAC to manage coarse grained permissions that apply to storage accounts or file systems and use ACLs to manage fine grained permissions that apply to files and directories.
 
->[!CAUTION] For every subdomain dataset two Azure AD Security Groups should be created; one for Read and Write, the other for Read-only.\
+>[!CAUTION]
+>For every subdomain dataset two Azure AD Security Groups should be created; one for Read and Write, the other for Read-only.\
 \
-If the dataset is non-sensitive then Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE then we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Considerations for securing sensitive data](02-sensitive.md#considerations-for-securing-sensitive-data) for further details on our sensitive data security pattern.
+If the dataset is non-sensitive then Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE then we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](02-sensitive.md) for further details on our sensitive data security pattern.
 
 Resist the opportunity to directly assign individual users or service principals. Using an Azure AD Security Group structure will allow you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Azure AD security group.
 
@@ -124,7 +118,9 @@ Other polygot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed
 
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
->[!NOTE] Storing data inside a Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store and [protecting sensitive data](02-sensitive.md#considerations-for-securing-sensitive-data).
+>[!NOTE]
+>Storing data inside a Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](02-sensitive.md#sensitive-data).
 
+>[!div class="step-by-step"]
 >[Previous](../04-ingestion/01-overview.md)
 >[Next](02-sensitive.md)

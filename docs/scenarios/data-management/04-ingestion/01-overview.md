@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture Data ingress, transformation and egest.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI Ingest Overview
+description: Enterprise Scale Analytics and AI Ingest Overview
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
 # Data Ingestion
@@ -25,7 +14,7 @@ ms.subservice: enterprise-scale-analytics
 In the Enterprise Scale Analytics and AI solution pattern, Domain and Data Product will ingress, transform and egest data.
 
 >[!IMPORTANT]
-Domains will copy data from source to raw and then to enriched with conformed data types. Domains do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together such as Weather and Location data then the domain could be asked to create this in the enriched layer. \
+>Domains will copy data from source to raw and then to enriched with conformed data types. Domains do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together such as Weather and Location data then the domain could be asked to create this in the enriched layer. \
 \
 >Data Products Teams can apply transformations and create there datasets in the curated layer of the Data Lake as well as the [Polygot Storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they have chosen to use.
 
@@ -43,7 +32,8 @@ Azure provides several services for ingesting and egesting data to various nativ
 
 - [Azure Data Share](https://docs.microsoft.com/azure/data-share/) enables organizations to securely share data with multiple external customers and partners. Once a data share account is created and datasets added, customers/partners can be invited to the data share. Data providers are always in control of the data that they have shared. Azure Data Share makes it simple to manage and monitor what data was shared, when and by whom.
 
->[!IMPORTANT] Every Data Landing Zone has an [Ingestion and Processing Resource Group](../03-datalandingzones/01-datalandingzone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine then the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Data Lifecycle](03-dataonboarding.md#data-lifecycle) for potential automation patterns.
+>[!IMPORTANT]
+>Every Data Landing Zone has an [Ingestion and Processing Resource Group](../03-datalandingzones/01-datalandingzone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine then the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](03-dataonboarding.md#automated-ingestion-framework) for potential automation patterns.
 
 ## Azure Data Factory Ingest Considerations
 
@@ -53,7 +43,8 @@ Each Domain will have their own Azure Data Factory which will be used by Domain 
 
 All Azure Data Factory will predominately use the [Self-hosted Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime), for their Data Landing Zone, within the Data Management Subscription. However, it will be possible to additional integration runtime to ingest On-Premises, third party clouds and third party SaaS datasources.
 
->[!TIP] By deploying a [Self-hosted Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime) in the Data Management Data Landing Zone we can whitelist the IP range of to talk to on-premise or 3rd party cloud sources.
+>[!TIP]
+>By deploying a [Self-hosted Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime) in the Data Management Data Landing Zone you can approve the IP range of to talk to on-premise or 3rd party cloud sources.
 
 ## Azure Databricks Ingest Considerations
 
@@ -91,7 +82,7 @@ Both Event Hubs and IoT Hub are scalable event processing services that can inge
 
 From that point data can either be exported out to a data-lake target location at regular intervals (batch) and processed in near-real-time via spark streaming (Azure Data Bricks), Azure Data Explorer, Azure Stream Analytics or Time Series Insights.
 
-The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Zone should send its aggregated to both the Data Lake RAW layer, in one of the Data Landing Zones, and/or to an event hub related to the Domain in the Data Landing Zone.
+The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Zone should send its aggregated to both the Data Lake RAW layer, in one of the Data Landing Zones, and/or to an Event Hub related to the Domain in the Data Landing Zone.
 
 ## Ingestion Monitoring
 
@@ -129,5 +120,6 @@ Table 7: Data Sources Mapping to Service
 
 Subject to destination Azure Data Migration service can replicate from on-prem/3rd party DB (SQL Server, Postgres, MySQL, Oracle) to Azure based DB.
 
+>[!div class="step-by-step"]
 >[Previous](../03-datalandingzones/06-dataproducts.md)
 >[Next](02-sapingestion.md)

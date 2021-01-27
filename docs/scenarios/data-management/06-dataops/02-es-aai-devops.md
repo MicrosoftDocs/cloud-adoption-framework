@@ -1,23 +1,12 @@
 ---
-# This basic template provides core metadata fields for Markdown articles on docs.microsoft.com.
-
-# Mandatory fields.
-title: Enterprise Scale Analytics and AI
-description: Enterprise Scale Analytics and AI Architecture represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized monolithic data lake this architecture is using a harmonized data mesh.
-author:
-ms.author: # Microsoft employees only
-ms.date: 12/8/2020
+title: Enterprise Scale Analytics and AI DevOps Models
+description: Enterprise Scale Analytics and AI Architecture DevOps Models.
+author: mboswell
+ms.author: mboswell # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: enterprise-scale-analytics
-# Use ms.service for services or ms.prod for on-prem products. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.reviewer: MSFT-alias-of-reviewer
-# manager: MSFT-alias-of-manager-or-PM-counterpart
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 # Enterprise Scale Analytics and AI DevOps Models
 
@@ -50,7 +39,8 @@ Users interaction, to Automation interaction, should focus on using User Interfa
 
 Automation to Runtime interaction is done via Azure DevOps Pipelines and scripted ARM Templates.
 
->[!IMPORTANT] The Enterprise Scale Analytics and AI solution pattern uses [Azure policies](https://docs.microsoft.com/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the Data Landing Zone Ops teams are compliant.
+>[!IMPORTANT]
+>The Enterprise Scale Analytics and AI solution pattern uses [Azure policies](https://docs.microsoft.com/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the Data Landing Zone Ops teams are compliant.
 
 Enterprise Scale Analytics and AI uses Policies to enforce:
 
@@ -74,9 +64,10 @@ Figure 1, illustrates how their automation principle are implemented for a Data 
 
 ## Data Management Subscription Deployment Process
 
- The Data Platform Ops team are responsible for deploying a Data Management Subscription before any Data Landing Zones are created. The Data Hub should have its own repository which is maintained by the Data Platform team.  
+ The Data Platform Ops team are responsible for deploying a Data Management Subscription before any Data Landing Zones are created. The Data Management Subscription should have its own repository which is maintained by the Data Platform team.  
 
->[!CAUTION] A Data Management Subscription must be created before any Data Landing Zones are deployed.
+>[!CAUTION]
+>A Data Management Subscription must be created before any Data Landing Zones are deployed.
 
 ## Data Landing Zone Deployment Process
 
@@ -109,9 +100,10 @@ Best practices for repositories should be adopted in order to enforce the use of
 - Limiting the number of actions and persons in the team, who can trigger build and release pipelines
 - etc.
 
->[!TIP] Because code repositories are forked, ARM templates can be updated via 'pulls changes' whenever changes occur in the master templates and changes are to be replicated to all Data Landing Zone instances. This requires coordinated activities amongst the teams.
+>[!TIP]
+>Because code repositories are forked, ARM templates can be updated via 'pulls changes' whenever changes occur in the master templates and changes are to be replicated to all Data Landing Zone instances. This requires coordinated activities amongst the teams.
 
-![Data Landing Zone Automation Process](../images/nodeautoprocess.png)
+![Data Landing Zone Automation Process](../images/dlzautoprocess.png)
 
 Figure 3: Data Landing Zone Automation Process
 
