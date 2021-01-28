@@ -18,7 +18,7 @@ Development, testing, and production environments support machine learning opera
 
 ![A diagram showing machine learning environments and role-based access control.](media/ml-environments-and-rbac.png)
 
-**In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers.  It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters, building models, etc.  However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
+**In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers. It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters or building models. However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
 **In a test environment:** Various tests are performed on the model's environment, and it's recommended to use either champion/challenger or A/B testing for the model. The test environment should mimic the deployment environment; it's recommended to run tests such as load, model response time, and others. Data scientists and engineers have limited access to this environment, primarily read-only access and some configuration rights. A DevOps engineer hand has full access to the environment. It is recommended to automate as many tests as possible. Once all the tests are completed, stakeholder approval is required for deployment in the production environment.
 
@@ -28,7 +28,7 @@ Role-based access control for all environments is shown in the following diagram
 
 ![A diagram of role-based access control for all environments.](media/rbac-all-environments.png)
 
-This table shows that the data engineer and data scientist’s access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
+This table shows that the data engineer and data scientist's access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
 
 ## Factors that influence machine learning workspaces
 
@@ -38,28 +38,28 @@ Multiple factors can influence how you set up your machine learning workspaces, 
 
 1. **Public, restricted:**
    - Development, test, and production workspace
-   - Custom role: data scientist
+   - Custom role: Data scientist
    - Git integration for version control and continuous integration/continuous development (CI/CD)
-   
+
 1. **Public, unrestricted:**
    - Development, test, and production workspace
-   - Role: contributor
-   - Git Integration for version Control and CI/CD
-   
+   - Role: Contributor
+   - Git integration for version control and CI/CD
+
 1. **Private, restricted:**
    - Development, test, and production workspace
-   - Private link enabled
-   - Custom role: data scientist
+   - Private Link enabled
+   - Custom role: Data scientist
    - Git integration for version control and CI/CD
-   
+
 1. **Private, unrestricted:**
    - Development, test, and production workspace
-   - Private link enabled
-   - Role: contributor
+   - Private Link enabled
+   - Role: Contributor
    - Git integration for version control and CI/CD
-   
+
 1. **All workspaces:**
-   - One Azure Machine Learning Studio workspace per project
+   - One Azure Machine Learning studio workspace per project
    - One compute instance per data scientist
    - One compute cluster per virtual machine size shared with data scientists for development
    - One compute cluster per production pipeline
@@ -70,9 +70,8 @@ Multiple factors can influence how you set up your machine learning workspaces, 
 
 ## Next steps
 
-- Explore [Create and manage a workspace in Azure Machine Learning](/azure/machine-learning/how-to-manage-workspace) to understand this process in more detail.
+- Review [create and manage a workspace in Azure Machine Learning](/azure/machine-learning/how-to-manage-workspace) to understand this process in more detail.
 
 - [Use the Python SDK](/azure/machine-learning/tutorial-1st-experiment-sdk-setup-local) to create a workspace in your development environment.
 
-- [Use the Azure portal and Jupyter Notebooks](/azure/machine-learning/tutorial-1st-experiment-sdk-setup) during the development lifecycle to set up your Azure Machine Learning development environment and train your model.
-
+- [Use the Azure portal and Jupyter notebooks](/azure/machine-learning/tutorial-1st-experiment-sdk-setup) during the development lifecycle to set up your Azure Machine Learning development environment and train your model.

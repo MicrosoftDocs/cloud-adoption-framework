@@ -22,7 +22,11 @@ The main components of how a machine learning system develops are outlined below
 
 ![A diagram showing the components of a machine learning system in production.](media/ml-system-in-production.png)
 
-*Sculley et al. 2015. Hidden technical debt in machine learning systems. Proceedings of the 28th International Conference on Neural Information Processing Systems-Volume 2 (NIPS 2015).*
+<!-- docutune:disable -->
+
+_Sculley et al. 2015. Hidden technical debt in machine learning systems. Proceedings of the 28th International Conference on Neural Information Processing Systems, Volume 2 (NIPS 2015).*
+
+<!-- docutune:enable -->
 
 ## Machine learning operations vs. development operations
 
@@ -32,7 +36,7 @@ While development operations (DevOps) influence machine learning operations, the
 
 - **Model tracking:** Model artifacts are often stored in a model registry that should identify storage, versioning, and tagging capabilities. These registries need to identify the source code, its parameters, and the corresponding data used to train the model, all of which indicate where a model was created.
 
-- **Digital audit trail**: When working with code and data, all changes need to be tracked.
+- **Digital audit trail:** When working with code and data, all changes need to be tracked.
 
 - **Generalization:** Models are different than code for reuse, as models must be tuned based on the input data or scenario. You might need to fine-tune the model for the new data to use it for a new scenario.
 
@@ -80,12 +84,12 @@ Integrating machine learning operations with your business can create the follow
 
 - Model versioning and data realization allow the enterprise to generate iterated and versioned models to adjust to the nuances of the data or the particular use case. This provides flexibility and agility in responding to business challenges and changes.
 
-- When organizations monitoring and manage their models, this helps them to quickly respond to significant changes in the data or the scenario. For example, an implemented model might experience extreme data drift because of an external factor or a change in the underlying data. This would make the previous models unusable and require the current model to be retrained as soon as possible. Machine learning  models to be tracked for accuracy and performance. It alerts stakeholders when changes impact model reliability and performance, which leads to quick retraining and deployment.
+- When organizations monitoring and manage their models, this helps them to quickly respond to significant changes in the data or the scenario. For example, an implemented model might experience extreme data drift because of an external factor or a change in the underlying data. This would make the previous models unusable and require the current model to be retrained as soon as possible. Machine learning models to be tracked for accuracy and performance. It alerts stakeholders when changes impact model reliability and performance, which leads to quick retraining and deployment.
 
 - Applied machine learning operations processes support business outcomes by allowing rapid auditing, compliance, governance, and access control throughout the development lifecycle. The visibility of model generation, data usage, and regulatory compliance is clear as changes take place in the business.
 
 ## Next steps
 
-- The [Microsoft AI Business School](https://docs.microsoft.com/learn/topics/ai-business-school) is a resource that outlines AI, including how to approach implementation holistically, understand dependencies beyond the technology, and drive lasting business impact.
+- The [Microsoft AI Business School](/learn/topics/ai-business-school) is a resource that outlines AI, including how to approach implementation holistically, understand dependencies beyond the technology, and drive lasting business impact.
 
 - Read further about [the machine learning operations process](../best-practices/mlops-process.md) to explore this in more detail.
