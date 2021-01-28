@@ -23,16 +23,16 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 1. Onboarding Azure-Arc-enabled servers on Sentinel using the extension management feature and Azure Policies.
 
 > [!IMPORTANT]
-> The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
+> The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
 
-[GCP Ubuntu instance](./gcp-terraform-ubuntu/)
-[GCP Windows instance](./gcp-terraform-windows/)
-[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)
-[AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)
-[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)
-[VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)
-[Vagrant Ubuntu box](./local-vagrant-ubuntu/)
-[Vagrant Windows box](./local-vagrant-windows/)
+- [GCP Ubuntu instance](./gcp-terraform-ubuntu/)
+- [GCP Windows instance](./gcp-terraform-windows/)
+- [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)
+- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)
+- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)
+- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)
+- [Vagrant Ubuntu box](./local-vagrant-ubuntu/)
+- [Vagrant Windows box](./local-vagrant-windows/)
 
 ## Prerequisites
 
