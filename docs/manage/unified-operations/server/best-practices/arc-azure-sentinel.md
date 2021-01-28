@@ -25,14 +25,14 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
 
-- [GCP Ubuntu instance](./gcp-terraform-ubuntu/)
-- [GCP Windows instance](./gcp-terraform-windows/)
-- [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)
-- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)
-- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)
-- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)
-- [Vagrant Ubuntu box](./local-vagrant-ubuntu/)
-- [Vagrant Windows box](./local-vagrant-windows/)
+- [GCP Ubuntu instance](./gcp-terraform-ubuntu.md)
+- [GCP Windows instance](./gcp-terraform-windows.md)
+- [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
+- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2.md)
+- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md)
+- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+- [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
+- [Vagrant Windows box](./local-vagrant-windows.md)
 
 ## Prerequisites
 
@@ -122,10 +122,10 @@ Complete the following steps to clean up your environment.
 
 1. Remove the virtual machines from each environment using the teardown instructions from each of the following guides.
 
-   - [GCP Ubuntu instance](./gcp-terraform-ubuntu/) / [GCP Windows instance](./gcp-terraform-windows/)
-   - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)
-   - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/) / [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)
-   - [Vagrant Ubuntu box](./local-vagrant-ubuntu/) / [Vagrant Windows box](./local-vagrant-windows/)
+   - [GCP Ubuntu instance](./gcp-terraform-ubuntu.md) and [GCP Windows instance](./gcp-terraform-windows.md)
+   - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
+   - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+   - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md) and [Vagrant Windows box](./local-vagrant-windows.md)
 
 2. Remove the Log Analytics workspace by running the following script in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
 

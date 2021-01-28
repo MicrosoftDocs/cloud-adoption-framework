@@ -21,14 +21,14 @@ The following procedures use [Resource Graph Explorer](https://docs.microsoft.co
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
 
-- [GCP Ubuntu instance](./gcp_terraform_ubuntu/)
-- [GCP Windows instance](./gcp_terraform_windows/)
-- [AWS Ubuntu EC2 instance](./aws_terraform_ubuntu/)
-- [AWS Amazon Linux 2 EC2 instance](./aws_terraform_al2/)
-- [VMware vSphere Ubuntu VM](./vmware_terraform_ubuntu/)
-- [VMware vSphere Windows Server VM](./vmware_terraform_winsrv/)
-- [Vagrant Ubuntu box](./local_vagrant_ubuntu/)
-- [Vagrant Windows box](./local_vagrant_windows/)**
+- [GCP Ubuntu instance](./gcp-terraform-ubuntu.md)
+- [GCP Windows instance](./gcp_terraform_windows.md)
+- [AWS Ubuntu EC2 instance](./aws_terraform_ubuntu.md)
+- [AWS Amazon Linux 2 EC2 instance](./aws_terraform_al2.md)
+- [VMware vSphere Ubuntu VM](./vmware_terraform_ubuntu.md)
+- [VMware vSphere Windows Server VM](./vmware_terraform_winsrv.md)
+- [Vagrant Ubuntu box](./local_vagrant_ubuntu.md)
+- [Vagrant Windows box](./local_vagrant_windows.md)
 
 ## Prerequisites
 
@@ -88,7 +88,7 @@ After you've created a basic taxonomy structure, apply tags to the Azure-Arc-ena
 In AZ CLI, run the following commands to apply the "Hosting Platform : AWS" tag to your AWS Azure-Arc-enabled servers.
 
 > [!NOTE]
-> If you connected your AWS EC2 instances using a method other than the one described in [this tutorial](./aws_terraform_ubuntu/), then you  need to adjust the values for `awsResourceGroup` and `awsMachineName` to match values specific to your environment.
+> If you connected your AWS EC2 instances using a method other than the one described in [this tutorial](./aws_terraform_ubuntu.md), then you  need to adjust the values for `awsResourceGroup` and `awsMachineName` to match values specific to your environment.
 
 ```console
 export awsResourceGroup="arc-aws-demo"
@@ -105,7 +105,7 @@ az resource tag --ids $awsMachineResourceId --tags "Hosting Platform"="AWS"
 In AZ CLI, run the following commands to apply the "Hosting Platform : GCP" tag to your GCP Azure-Arc-enabled servers.
 
 > [!NOTE]
-> If you connected your GCP instances using a method other than the one described in [this tutorial](./gcp_terraform_ubuntu/), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.
+> If you connected your GCP instances using a method other than the one described in [this tutorial](./gcp_terraform_ubuntu.md), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.
 
 ```console
 export gcpResourceGroup="arc-gcp-demo"
@@ -148,10 +148,10 @@ Complete the following steps to clean up your environment.
 
 1. Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
-   - [GCP Ubuntu instance](./gcp_terraform_ubuntu/) / [GCP Windows instance](./gcp_terraform_windows/)
-   - [AWS Ubuntu EC2 instance](./aws_terraform_ubuntu/)
-   - [VMware vSphere Ubuntu VM](./vmware_terraform_ubuntu/) / [VMware vSphere Windows Server VM](./vmware_terraform_winsrv/)
-   - [Vagrant Ubuntu box](./local_vagrant_ubuntu/) / [Vagrant Windows box](./local_vagrant_windows/)**
+   - [GCP Ubuntu instance](./gcp_terraform_ubuntu.md) and [GCP Windows instance](./gcp_terraform_windows.md)
+   - [AWS Ubuntu EC2 instance](./aws_terraform_ubuntu.md)
+   - [VMware vSphere Ubuntu VM](./vmware_terraform_ubuntu.md) and [VMware vSphere Windows Server VM](./vmware_terraform_winsrv.md)
+   - [Vagrant Ubuntu box](./local_vagrant_ubuntu.md) and [Vagrant Windows box](./local_vagrant_windows.md)
 
 1. Remove tags created as part of this guide by executing the following script in AZ CLI.
 
