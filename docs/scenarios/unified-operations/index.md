@@ -30,6 +30,8 @@ A hybrid cloud platform gives your organization many advantages—greater flexib
 
 This allows you to scale computing resources, while modernizing and protecting [mission-critical applications and data](https://azure.microsoft.com/solutions/business-critical-applications/). Eliminate the need to make massive capital expenditures to meet short-term spikes in demand, or being forced to free up local resources for more sensitive data. With cloud billing models, your organization will only pay for resources you temporarily use, instead of having to purchase, program, and maintain additional resources and equipment that could remain idle for long periods.
 
+Another capital expenditure that could be eliminated is in off-site Disaster Recovery and Backup infrastructure investments. Public cloud for BCDR strategies is a compelling option for those on-premises workloads and associated data that are not restricted in some form from residing in a public cloud. By utilising public cloud for BCDR customers take advantage of the major investments in privacy & security, scale on demand and ease and speed of recovery.
+
 Companies are spreading resources across on-premises, multiple clouds, and the edge. Customers have three common needs that we often hear about:
 
 1. Visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass.
