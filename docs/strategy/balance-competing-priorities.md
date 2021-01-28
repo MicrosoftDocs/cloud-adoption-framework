@@ -7,6 +7,7 @@ ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Balance competing priorities
@@ -29,7 +30,7 @@ Following proven agile principles of delayed technical decisions is the favored 
 
 At times, ambiguity can be scarier (or more dangerous) than false assumptions. While this framework leans towards learning and addressing ambiguity during execution, there are a many situations that require the team to lean towards analysis-based or assumption-based approaches. The following sections will attempt to illustrate at least one "expanded scope example" in each section to illustrate times when a second deeper iteration would be valuable.
 
-## Balance during the Strategy phase
+## Balance during the strategizing phase
 
 The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **depth of justification** versus **time to business impact**.
 
@@ -42,9 +43,9 @@ The core objective of the Strategy methodology is to develop alignment between s
 
 **Expanded scope example:** If the initial business analysis indicates a high risk of negatively affecting the business, then stakeholders may need to slow down and more cautiously evaluate a deeper analysis during business justification.
 
-## Balance during the Plan phase
+## Balance during the planning phase
 
-Similar to the Strategy phase priorities, during the Plan phase there is a need to balance the depth of initial planning versus delayed technical decisions.
+Similar to the priorities during the strategizing phase, there's a need during the planning phase to balance the depth of initial planning versus delayed technical decisions.
 
 **Competing priorities:**
 
@@ -55,7 +56,7 @@ Similar to the Strategy phase priorities, during the Plan phase there is a need 
 
 **Expanded scope example:** At times, delivery of a cloud adoption plan may be responding to a time-sensitive or high-impact business event. When success requires the movement of a high-number of assets in a fixed period of time, the steps above are often followed with a deeper planning effort. The key to success in these scenarios, is to plan enough to get going and then plan for the full engagement. This approach reduces the likelihood of planning blocking business outcomes.
 
-## Balance during the Ready phase
+## Balance during the readiness phase
 
 When adoption teams are preparing for their first steps into the cloud, there are often competing priorities between time to adoption and long-term operations. The team may struggle with being well suited to deliver on the task at hand versus being well managed. This struggle is necessary in traditional IT environments, where the act of developing a platform requires physical assets and acquisition cycles. However, when the entire IT platform is defined in code, traditional development tactics (like refactoring) reduce the need to be well managed from the beginning.
 
@@ -70,20 +71,20 @@ When adoption teams are preparing for their first steps into the cloud, there ar
 
 **Expanded scope example:** For teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 assets (applications, infrastructure, or data assets) in the cloud**, a more robust view of landing zones is suggested. In these situations, the Govern and Manage methodologies should be considered during initial landing zone conversations. However, this deeper consideration often adds weeks or months to a cloud adoption plan. To minimize impact on business outcomes, the adoption team should pilot actual workloads in the cloud in parallel to the creation of a more mature landing zone and central architecture solution.
 
-## Balance during the Migrate phase
+## Balance during the migration phase
 
-During migration efforts, it is common for adoption teams to assume that workloads will be rehosted in the cloud in their current as-is configuration. This directly competes with a forward-looking view to rearchitect every workload to better take advantage of cloud capabilities. However, the two are not mutually exclusive and can be complimentary when managed through a common process.
+During migration efforts, it's common for adoption teams to assume that workloads will be rehosted in the cloud in their current as-is configuration. This directly competes with a forward-looking view to rearchitect every workload to better take advantage of cloud capabilities. However, the two are not mutually exclusive and can be complimentary when managed through a common process.
 
 **Competing priorities:**
 
 - **Rehost:** Customers often equate migration to a _lift and shift_ motion of replicating all assets to the cloud in their current state configuration. This results in little drift within the IT portfolio. This approach is also the fastest way to retire assets in an existing datacenter.
 - **Rearchitect:** Modernizing the architecture of each workload maximizes the value of the cloud across cost, performance, and operations. However, this approach is much slower and often requires access to each applications' source code.
 
-**Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this option is an initial business assumption and not a technical decision. In the Migrate methodology, the cloud adoption team would then challenge this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group or workloads creating a migration factory. During the Assess phase, the adoption team evaluates technical fit and architecture of each workload. That assessment effort seldom results in a pure lift and shift approach, because many of the components in the architecture tend to be selected for refactoring and modernization.
+**Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this option is an initial business assumption and not a technical decision. In the Migrate methodology, the cloud adoption team would then challenge this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group or workloads creating a migration factory. During the assessment phase, the adoption team evaluates technical fit and architecture of each workload. That assessment effort seldom results in a pure lift-and-shift approach because many of the components in the architecture tend to be selected for refactoring and modernization.
 
-**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) to refine workload requirements during the assessment.
+**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the assessment phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) to refine workload requirements during the assessment.
 
-## Balance during the Innovate phase
+## Balance during the innovation phase
 
 True customer-facing innovation creates common conflicting priorities between the need to deliver on a planned feature set and a customer empathy development process.
 
@@ -96,7 +97,7 @@ True customer-facing innovation creates common conflicting priorities between th
 
 **Expanded scope example:** At times, an innovation may be dependent on mission-critical or high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, adoption teams should use Microsoft Azure Well-Architected Review and Microsoft Azure Well-Architected Framework to evaluate advanced architectural design early in the process.
 
-## Balance during the Govern phase
+## Balance during the governance phase
 
 The practice of cloud governance is a constant balance between two competing priorities: speed and agility versus a well-governed environment. The cloud governance team focuses on evaluating and minimizing risks to the business through uniform controls and minimizing change. The adoption team focuses on driving business outcomes, which require new risks and inherently creates change.
 
@@ -109,7 +110,7 @@ The practice of cloud governance is a constant balance between two competing pri
 
 **Expanded scope example:** When the business risk is high, especially early in adoption, the cloud governance team may be required to accelerate the expansion of governance implementations. The same guidance and exercises can be used to add this higher level of governance, but timing may have to be accelerated. In some scenarios, an advanced state of governance may even be required during the deployment of the first landing zones.
 
-## Balance during the Manage phase
+## Balance during the management phase
 
 The IT business model regarding operations management has been continuously evolving over the last decade. As hardware maintenance moves further from IT's core value proposition, the view on operations management has shifted as well. As IT increases a focus on delivering business value, operations management teams are conflicted with balancing no-ops/low-ops versus broad investments.
 
@@ -122,7 +123,7 @@ The IT business model regarding operations management has been continuously evol
 
 **Expanded scope example:** In most environments, a small percentage of workloads whose business value justifies deep investments in operations from IT. In those scenarios, the IT team might want to use Microsoft Azure Well-Architected Review and Microsoft Azure Well-Architected Framework to guide deeper operations.
 
-## Balance during the Organize phase
+## Balance during the organization phase
 
 The competing priorities throughout this article are reflective of IT's drive to deliver on business demands for speed and agility. This same shift is showing up in changes to org charts (or virtual team structures) to empower greater support for business outcomes. As IT leaders reflect on team structures, two competing priorities are commonly addressed: centralized control versus delegated control.
 

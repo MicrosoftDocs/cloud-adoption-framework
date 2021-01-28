@@ -2,11 +2,12 @@
 title: Application development and deployment
 description: Learn about using Kubernetes in the Cloud Adoption Framework for application development and architecture.
 author: sabbour
-ms.author: asabbour
+ms.author: brblanch
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore autoscaler Istio Linkerd -->

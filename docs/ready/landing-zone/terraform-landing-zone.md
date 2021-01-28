@@ -2,11 +2,12 @@
 title: Use Terraform to build your landing zones
 description: Learn to use Terraform by HashiCorp to build your landing zones.
 author: arnaudlh
-ms.author: arnaul
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->

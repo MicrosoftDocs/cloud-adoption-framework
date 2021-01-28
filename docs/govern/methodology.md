@@ -7,7 +7,7 @@ ms.date: 07/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Govern methodology for the cloud

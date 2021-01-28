@@ -7,6 +7,7 @@ ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore NTFS Logix -->
@@ -59,7 +60,7 @@ You can use [Azure NetApp Files to host user profiles](/azure/virtual-desktop/cr
 
 You can also use [Azure Files to host user profiles](/azure/virtual-desktop/create-file-share). Doing so will require a few extra steps in the scope, including:
 
-- **Per Azure Files instance:** Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign role-based access control access for an Active Directory user group, apply new technology file system permissions, and get the storage account access key.
+- **Per Azure Files instance:** Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign Azure role-based access control access for an Active Directory user group, apply new technology file system permissions, and get the storage account access key.
 - **Per host/persona:** Configure FSLogix on session host virtual machines.
 - **Per user:** Assign users to the host session.
 

@@ -1,8 +1,8 @@
 ---
 title: Measure business outcomes with AppDynamics
 description: Use AppDynamics to understand how an application's performance and user experience impact business outcomes.
-author: BrianBlanchard
-ms.author: wayneme
+author: wayneme75
+ms.author: brblanch
 ms.date: 09/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,13 +1,13 @@
 ---
 title: Software Defined Networking decision guide
 description: Use the Cloud Adoption Framework for Azure to learn how Software Defined Networking provides centrally-managed virtualized networking through software.
-author: rotycenh
+author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Software Defined Networking decision guide
