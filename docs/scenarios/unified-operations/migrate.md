@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Hybrid and multicloud migration
 
-In the [Migrate methodology](../../migrate/index.md), migration to the cloud is already consider to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
+In the [Migrate methodology](../../migrate/index.md), migration to the cloud is already considered to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
 
 ![Shift from uni-direction cloud migration, to bi-directional hybrid and multicloud migration described in next paragraph.](../../_images/unified-operations/primary-cloud-provider.png)
 
@@ -50,7 +50,7 @@ Where hybrid and multicloud migrations encounter assessment challenges are in th
 
 The following articles will help mature the most impactful processes required for this type of migration:
 
-- **[Responsibilities](../..//migrate/migration-considerations/assess/index.md)**
+- **[Responsibilities](../..//migrate/migration-considerations/assess/index.md#accountability-during-assessment)**
 - **[Workload classification](../../migrate/migration-considerations/assess/classify.md)**
 - **[Cloud compatibility](../../migrate/migration-considerations/assess/evaluate.md)**
 - **[Agile change management](../../migrate/migration-considerations/assess/release-iteration-backlog.md)**
@@ -68,7 +68,7 @@ Azure Migrate is the de facto solution for migrating your workloads from your pr
 
 ## Release migrated workloads for hybrid and multicloud
 
-The importance of testing, benchmarking/sizing, and promotion plans can't be overstated during a migration to the cloud. Hybrid and multicloud workloads have greater dependencies on decentralized assets and the networks connecting them. They are more prone to latency, connectivity, and routing issues which could appear to be cloud platform performance issues. Testing and debugging of hybrid and multicloud workloads will need a greater time allocation than workloads deployed to a single cloud provider.
+The importance of testing, benchmarking/sizing, and promotion plans can't be overstated when migrating to the cloud. Hybrid and multicloud workloads have greater dependencies on decentralized assets and the networks connecting them. They are more prone to latency, connectivity, and routing issues which could appear to be cloud platform performance issues. Testing and debugging of hybrid and multicloud workloads will need a greater time allocation than workloads deployed to a single cloud provider for the added layers in identity and networking.
 
 The following are a few considerations that should be included in your testing plan when migrating to a hybrid and multicloud environment:
 
