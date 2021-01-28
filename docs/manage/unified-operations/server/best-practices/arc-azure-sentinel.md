@@ -1,6 +1,6 @@
 ---
 title: Connect Azure-Arc-enabled servers to Azure Sentinel
-description: Connect Azure-Arc-enabled servers to Azure Sentinel.
+description: This article provides guidance on how to onboard Azure-Arc-enabled servers to Azure Sentinel.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/15/2020
