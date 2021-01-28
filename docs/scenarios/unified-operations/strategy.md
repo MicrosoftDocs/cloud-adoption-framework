@@ -55,7 +55,7 @@ A multi-national organization, for example, might have globally distributed, leg
 
 ## Unified operations outcomes
 
-When customers execute on their cloud strategy and choose hybrid and multicloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/).
+When customers execute on their cloud strategy and choose hybrid and multicloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/index.md).
 
 Outcomes include:
 
