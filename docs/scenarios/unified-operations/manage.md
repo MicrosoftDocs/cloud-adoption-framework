@@ -46,7 +46,7 @@ In addition to tagging and onboarding assets, you can also deliver a number of o
 One example of a mature operations management discipline is to use Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
 - [Manage VMs with MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-mma.md)
-- [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-customscript.md)
+- [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-custom-script.md)
 
 ## Next step: Your next migration iteration
 
