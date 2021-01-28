@@ -82,7 +82,27 @@ The three Azure Databricks Workspaces are deployed as part of a new Data Landing
 
 Figure 1: Azure Databricks Deployment into a Data Landing Zone
 
---TO DO Explain Process
+1. At the start of the provisioning process it will check to see if the Hive Metastore exists in the Data Management Subscription
+   * If it fails to find the Hive Metastore, it will quite and raise an error.
+1. Upon successfully finding the Hive Metastore, the process of creating a workspace is initiated.
+1. After the workspace has been created, the process should check for a Log Analytics workspace in the Management Subscription of Enterprise Scale.
+   * If it fails to find the Log Analytics workspace, it will quite and raise an error.
+1. For each workspace it will an Azure AD Application and configure SCIM.
+
+For the **Azure Databricks Engineering Workspace**:
+
+1. It will configure the workspace with the service principle access.
+1. Deploy Data Engineering Policies which have been defined by the Data Platform Ops.
+1. If Data Landing Zone Ops have requested Databricks Pools or Clusters these can be integrated into the deployment process.
+1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
+
+For **Azure Databricks Analytics and Data Science** and **Azure Databricks Sensitive**:
+
+1. Deploy Data Analytic Policies which have been defined by the Data Platform Ops.
+1. Data Landing Zone Ops have requested Databricks Pools or Clustered these can be integrated into the deployment process.
+1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
+
+Figure 1, serves as an example of what you could decide to have as your Azure Databricks onboarding process.
 
 >[!NOTE]
 >During the creation of a new Domain we will alter the configuration of all three Azure Databricks Workspaces within a Data Landing Zone. Please see  [Domain & Data Product Deployment Process](../06-dataops/02-es-aai-devops.md#domain--data-product-deployment-process)  for how this is implemented with Azure Databricks shared Workspaces.
