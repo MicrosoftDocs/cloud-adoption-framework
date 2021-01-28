@@ -11,6 +11,8 @@ items:
       href: index.md
     - name: Intro to unified operations
       href: unified-operations.md
+    - name: Azure products
+      href: toolchain.md
 
   - name: Build an initial strategy
     href: strategy.md
@@ -105,30 +107,30 @@ items:
     - name: Networking
       items:
       - name: Connecting an on-premises network to Azure
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Connect over Express Route
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/expressroute?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Connect over VPN gateway
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/vpn?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: ExpressRoute with VPN failover
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Standalone server connection with Azure Network Adapter
-        href: https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-network-adapter?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-network-adapter?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Hybrid Domain Name System solution
-        href: https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-dns-infra?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-dns-infra?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
     - name: Identity
       items:
       - name: Hybrid Active Directory (AD) options
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Integrate AD and Azure AD 
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/azure-ad?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/azure-ad?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Extend AD with AD Federation Services (AD FS)
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/adfs?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adfs?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Extend AD with AD Domain Services (AD DS)
-        href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/adds-forest?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-forest?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Azure Stack Hub identity integration
-        href: https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/hybrid-identity?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/hybrid-identity?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
     - name: Security
       items:
@@ -220,29 +222,27 @@ items:
     - name: All hybrid and multicloud products
       href: https://docs.microsoft.com/hybrid/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Azure Arc
-      href: https://docs.microsoft.com/en-us/azure/azure-arc/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-    - name: Azure Stack Hub
-      href: https://docs.microsoft.com/en-us/azure-stack#azure-stack-hub?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-    - name: Azure Modular Data Center
-      href: https://docs.microsoft.com/en-us/azure-stack#azure-stack-hub?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: https://docs.microsoft.com/azure/azure-arc/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Azure Stack HCI
-      href: https://docs.microsoft.com/en-us/azure-stack#azure-stack-hci?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: https://docs.microsoft.com/azure-stack/hci/overview#azure-stack-hub?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    - name: Azure Modular Data Center
+      href: https://docs.microsoft.com/azure-stack#azure-stack-hub?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    - name: Azure Stack HCI
+      href: https://docs.microsoft.com/azure-stack#azure-stack-hci?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Azure IoT Edge
-      href: https://docs.microsoft.com/en-us/azure/iot-edge/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: https://docs.microsoft.com/azure/iot-edge/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Azure Sphere
-      href: https://docs.microsoft.com/en-us/azure-sphere?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: https://docs.microsoft.com/azure-sphere?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Windows for IoT
-      href: https://docs.microsoft.com/en-us/windows/iot-core/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: https://docs.microsoft.com/windows/iot-core/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Virtual WAN
-      href: https://docs.microsoft.com/en-us/azure/virtual-wan/
+      href: https://docs.microsoft.com/azure/virtual-wan/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Express Route
-      href: https://docs.microsoft.com/en-us/azure/expressroute/
-    - name: Express Route
-      href: https://docs.microsoft.com/en-us/azure/expressroute/
+      href: https://docs.microsoft.com/azure/expressroute/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: VPN Gateway
-      href: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways
+      href: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
     - name: Azure Firewall
-      href: https://docs.microsoft.com/en-us/azure/firewall/overview
+      href: https://docs.microsoft.com/azure/firewall/overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
   - name: Learn modules
     items:
     - name: Hybrid cloud
@@ -268,12 +268,12 @@ items:
     - name: Azure Stack
       items:
       - name: Intro to Azure Stack
-        href: https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-stack/
+        href: https://docs.microsoft.com/learn/modules/intro-to-azure-stack/
       - name: Azure Stack HCI foundations
         href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/
       - name: Azure Stack HCI deployment
-        href: https://docs.microsoft.com/en-us/learn/modules/azure-stack-hci-plan-deploy/
+        href: https://docs.microsoft.com/learn/modules/azure-stack-hci-plan-deploy/
       - name: Azure Stack HCI technologies
-        href: https://docs.microsoft.com/en-us/learn/modules/azure-stack-hci-technologies/
+        href: https://docs.microsoft.com/learn/modules/azure-stack-hci-technologies/
       - name: Azure Stack HCI - Arc integration
-        href: https://docs.microsoft.com/en-us/learn/modules/stack-hci-arc-integration/
+        href: https://docs.microsoft.com/learn/modules/stack-hci-arc-integration/
