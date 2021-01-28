@@ -105,6 +105,31 @@ items:
             href: scenarios/aks/eslz-platform-automation-and-devops.md
         - name: Best Practices
           items:
+
+          - name: Migration
+            items:          
+            - name: Migrate to AKS
+              href: https://docs.microsoft.com/azure/aks/aks-migration?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              maintainContext: true
+            - name: Spring Boot
+              href: https://docs.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-kubernetes-service
+              maintainContext: true
+            - name: Tomcat
+              href: https://docs.microsoft.com/azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service
+              maintainContext: true
+            - name: Wildfly
+              href: https://docs.microsoft.com/azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service
+              maintainContext: true
+            - name: WebLogic
+              href: https://docs.microsoft.com/azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service
+              maintainContext: true
+            - name: WebSphere
+              href: https://docs.microsoft.com/azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service
+              maintainContext: true
+            - name: JBoss EAP
+              href: https://docs.microsoft.com/azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service
+              maintainContext: true
+
           - name: Governance
             items:
             - name: Overview
@@ -116,23 +141,23 @@ items:
             - name: AKS Engine
               href: https://github.com/Azure/aks-engine/blob/master/docs/README.md
             - name: Secure pods 
-              href: https://docs.microsoft.com/en-us/azure/aks/use-pod-security-on-azure-policy?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/use-pod-security-on-azure-policy?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: Secure traffic between pods 
-              href: https://docs.microsoft.com/en-us/azure/aks/use-network-policies?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/use-network-policies?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: Authorized IP access for AKS API 
-              href: https://docs.microsoft.com/en-us/azure/aks/api-server-authorized-ip-ranges?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/api-server-authorized-ip-ranges?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: RBAC and AAD integration 
-              href: https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: AAD integration 
-              href: https://docs.microsoft.com/en-us/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: Managed identities in Kubernetes 
-              href: https://docs.microsoft.com/en-us/azure/aks/use-managed-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/use-managed-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: Create an Azure AD Service Principle 
-              href: https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/kubernetes-service-principal?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: Access other Azure resources with AAD Kubernetes integration 
-              href: https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
             - name: Azure RBAC for AKS configuration file access 
-              href: https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: https://docs.microsoft.com/azure/aks/control-kubeconfig-access?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
 
           - name: Inventory & visibility
             items:

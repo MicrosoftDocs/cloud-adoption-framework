@@ -13,21 +13,38 @@ ms.subservice: migrate
 
 Technology portfolios usually include a mix of innovative and stable state solutions. Most container conversations focus on innovation and building cloud-native applications. But containers can be equally valid in migration efforts.
 
-There is a clear and growing trend of migrating existing workloads from on-premise datacenters to a Kubernetes cluster in Azure. This approach has the potential of reducing the post-migration infrastructure footprint. More importantly, migrating to containers allows for greater portability in the portfolio, allowing workloads to be more easily moved between public and private cloud. This trend is most commonly experience when orgnizations have a large collection of web applications.
+There is a clear and growing trend of migrating existing workloads from on-premise datacenters to a Kubernetes cluster in Azure. This approach has the potential of reducing the post-migration infrastructure footprint. More importantly, migrating to containers allows for greater portability in the portfolio, allowing workloads to be more easily moved between public and private cloud. This trend is most commonly experience when organizations have a large collection of web applications.
 
-## Kubernetes and containers process details
+## One Migrate approach
 
-Are there data points outside of a standard Azure Migrate assessment that you need to prepare for migration?
+As a part of [Microsoft's One Migrate approach](../index.md), containers can be migrated to Azure Kubernetes Service (AKS) to accelerate containers in the cloud. Typically migration to Azure uses Azure Migrate and the ecosystem of partner tools to assess workloads, migrate workloads, and release workloads to the cloud. This 3 step process can be applied to AKS migration, but you may need a few additional tools to help with the migration steps.
 
-## Kubernetes and containers process flow
+## Assess containers and workloads
 
-Are there Azure migrate partners that can help get the data? What about other 3rd parties?
+Currently, AKS migration can support the following scenarios:
 
-## Kubernetes and containers workload specific activities
+- Migrating an AKS Cluster backed by [Availability Sets](https://docs.microsoft.com/azure/virtual-machines/windows/tutorial-availability-sets.md) to [Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview.md)
+- Migrating an AKS cluster to use a [Standard SKU load balancer](https://docs.microsoft.com/azure/aks/load-balancer-standard.md)
+- Migrating from [Azure Container Service (ACS) - retiring January 31, 2020](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/) to AKS
+- Migrating from [AKS engine](https://docs.microsoft.com/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-1908) to AKS
+- Migrating from non-Azure based Kubernetes clusters to AKS
+- Moving existing resources to a different region
 
-Are there specific criteria for workloads in that portfolio that would require the customer to run a well-architected review for any workloads?
+When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it may not be within the supported range and require upgrading versions to be supported by AKS. See [AKS supported Kubernetes versions](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions.md) for more information.
 
-## Next step: Release Kubernetes and containers
+If you're migrating to a newer version of Kubernetes, review [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-versions).
+
+## Migrate containers and workloads
+
+Currently, you will need to use one of several open-source tools to complete the replication of your container and workloads to Azure:
+
+- [Velero](https://velero.io/) (Requires Kubernetes 1.7+)
+- [Azure Kube CLI extension](https://github.com/yaron2/azure-kube-cli)
+- [ReShifter](https://github.com/mhausenblas/reshifter)
+
+See the following best practice to [migrate a container to AKS](https://docs.microsoft.com/azure/aks/aks-migration#aks-with-standard-load-balancer-and-virtual-machine-scale-sets).
+
+## Next step: Innovate with Kubernetes and containers
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
