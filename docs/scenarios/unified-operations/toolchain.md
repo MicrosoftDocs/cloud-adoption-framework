@@ -17,6 +17,8 @@ Beyond this initial introductory article, see the [Azure hybrid hub](https://doc
 
 ![Overview of the Azure hybrid and multicloud products listed below](../../_images/unified-operations/hybrid-hero-slide.png)
 
+This article series will aid in integrating the following tools into relevant processes from initial business strategy to workload optimization and long into your operations management cycles.
+
 ## Manage hybrid and multicloud environments with unified operations tools
 
 - [Azure Arc](https://docs.microsoft.com/azure/azure-arc/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) This cloud-based service extends the Azure Resource Manager-based management model to non-Azure resources including virtual machines (VMs), Kubernetes clusters, and containerized databases.
