@@ -105,11 +105,6 @@ items:
             href: scenarios/aks/eslz-platform-automation-and-devops.md
         - name: Best Practices
           items:
-            - name: 
-              href: ?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
-          
-
-
           - name: Governance
             items:
             - name: Overview
