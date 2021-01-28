@@ -11,7 +11,7 @@ ms.subservice: operate
 
 # Manage your portfolio across hybrid and multicloud operations
 
-Hybrid and multicloud leads to natural shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how your implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
+Hybrid and multicloud leads to natural shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
 
 This article outlines how you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 
@@ -43,14 +43,14 @@ Enhance your operations baseline by onboarding a continuously broader range of a
 
 In addition to tagging and onboarding assets, you can also deliver a number of operations management disciplines using hybrid and multicloud tools.
 
-Once example of a mature operations management discipline, is the use of Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
+One example of a mature operations management discipline, is the use of Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
 - [Manage VMs with MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md)
 - [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md)
 
 ## Next step: Your next migration iteration
 
-Once the unified operations migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are additional platforms to be migrated, this article series can be used again to guide your next unified operations migration or deployment.
+Once the unified operations migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are additional platforms to be migrated, the following articles can be used to help guide your next unified operations migration or deployment.
 
 - [Strategy for unified operations](./strategy.md)
 - [Plan for unified operations](./plan.md)
