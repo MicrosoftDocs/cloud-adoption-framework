@@ -37,7 +37,7 @@ This article series will aid in integrating the following tools into relevant pr
 
 ## Connect your hybrid and multicloud environments
 
-- [Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
-- [Express Route](https://docs.microsoft.com/azure/expressroute/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
-- [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
-- [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
+- [Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) Connect to a secure, global branching solution.
+- [Express Route](https://docs.microsoft.com/azure/expressroute/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) Establish a fast, private connection to Microsoft cloud services
+- [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) Send encrypted traffic to Azure
+- [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) Fully stateful firewall as a service with built-in high availability and unrestricted cloud scalability.
