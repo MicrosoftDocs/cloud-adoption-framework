@@ -108,7 +108,7 @@ There are connectors for Microsoft services, and third-party solutions from the 
 
 For servers and VMs, you can install the Microsoft Monitoring Agent (MMA) agent or the Sentinel agent that collects the logs and forwards them to Azure Sentinel. You can deploy the agent in multiple ways by using Azure Arc:
 
-- Using [Extension Management](./arc-vm-extension-mma-arm.md)
+- Using [Extension Management](./arc-vm-extension-mma.md)
 
    This feature in Azure-Arc-enabled servers allows you to deploy the MMA agent VM extensions to a non-Azure Windows or Linux VMs. You can use the Azure portal, Azure CLI, an ARM template, and PowerShell script to manage extension deployment to Azure-Arc-enabled servers.
 
