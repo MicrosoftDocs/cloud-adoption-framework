@@ -44,9 +44,9 @@ Explainability helps data scientists, auditors, and business decision makers to 
 
 Microsoft has developed [InterpretML](http://interpret.ml/), an open-source toolkit that helps to achieve model explainability and supports glass-box and black-box models.
 
-- Glass-box models are interpretable because of their structure. For these models, use explainable boosting machine, which is the state of the algorithm based on a decision tree or linear models, provides lossless explanations, and is editable by domain experts.
+- Glass-box models are interpretable because of their structure. For these models, use Explainable Boosting Machine, which is the state of the algorithm based on a decision tree or linear models, provides lossless explanations, and is editable by domain experts.
 
-- Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like LIME or SHapley Additive exPlanations interpret these models by analyzing the relationship between the input and output.
+- Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like LIME or SHapley Additive exPlanations (SHAP) interpret these models by analyzing the relationship between the input and output.
 
 - [Fairlearn](https://fairlearn.github.io/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. Use explainers to understand what mainly influences the model and domain experts to validate these influences.
 
