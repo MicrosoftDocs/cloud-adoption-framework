@@ -7,6 +7,7 @@ ms.date: 05/15/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Review your compute options
@@ -19,8 +20,16 @@ As part of your landing zone evaluation and preparation, you need to identify al
 
 For each application or service you'll deploy to your landing zone environment, use the following decision tree as a starting point to help you determine your compute services requirements:
 
-![Azure compute services decision tree](../../_images/ready/compute-decision-tree.png)
+![Diagram of an Azure compute services decision tree.](../../_images/ready/compute-decision-tree.png)
+
 _Figure 1: An Azure compute services decision tree._
+
+Definitions:
+
+- "Lift and shift" is a strategy for migrating a workload to the cloud without redesigning the application or making code changes. Also called rehosting. For more information, see Azure migration center.
+- "Cloud-optimized" is a strategy for migrating to the cloud by refactoring an application to take advantage of cloud-native features and capabilities.
+
+The output from this flowchart is a starting point for consideration. Next, perform a more detailed evaluation of the service to see if it meets your needs.
 
 > [!NOTE]
 > Learn more about how to assess compute options for each of your applications or services in the [Azure application architecture guide](/azure/architecture/guide/technology-choices/compute-decision-tree).

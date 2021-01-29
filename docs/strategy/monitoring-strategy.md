@@ -2,11 +2,12 @@
 title: Cloud monitoring strategy
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 06/18/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->
@@ -17,7 +18,7 @@ As you undergo your digital transformation to the cloud, it's important that you
 
 ## Where to start?
 
-To ease your journey to the cloud, use the [Strategy phase](./index.md) and the [Plan phase](../plan/index.md) of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. Include monitoring in the strategy and plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
+To ease your journey to the cloud, use the [strategizing](./index.md) and the [planning](../plan/index.md) phase of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. Include monitoring during strategizing and planning phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
 
 The following are important areas that strongly influence a sound monitoring strategy:
 
@@ -203,7 +204,7 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 - **Learn and improve:** Providers and consumers participating in learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (such as new, modified, or retired) and continues to match the actual service warranty.
 
-To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier in the Plan phase. If you're using System Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
+To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier during the planning phase. If you're using System Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 | Type | Monitoring objective | Example objective |
 |-----|---------------------|------------------|

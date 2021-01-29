@@ -7,6 +7,7 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Innovation in the digital economy

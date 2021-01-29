@@ -6,8 +6,5 @@
     "enabled": true,
     "import": [
         ".\\docs\\cspell.json"
-    ],
-    "words": [
-        "cli"
     ]
 }

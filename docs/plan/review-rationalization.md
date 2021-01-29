@@ -7,6 +7,7 @@ ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: internal
 ---
 
 # Review rationalization decisions
@@ -14,7 +15,7 @@ ms.subservice: plan
 During initial strategy and planning stages, we suggest you apply an [incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization) approach to the digital estate. But this approach embeds some assumptions into the resulting decisions. We advise the cloud strategy team and the cloud adoption teams to review those decisions in light of expanded-workload documentation. This review is also a good time to involve business stakeholders and the executive sponsor in future state decisions.
 
 > [!IMPORTANT]
-> Further validation of the rationalization decisions will occur during the Assess phase of migration. This validation focuses on business review of the rationalization to align resources appropriately.
+> Further validation of the rationalization decisions will occur during the assessment phase of migration. This validation focuses on business review of the rationalization to align resources appropriately.
 
 To validate rationalization decisions, use the following questions to facilitate a conversation with the business. The questions are grouped by the likely rationalization alignment.
 

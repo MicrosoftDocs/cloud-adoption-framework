@@ -2,13 +2,13 @@
 title: "The virtual datacenter: A network perspective"
 description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
-ms.author: jonor
+manager: rossort
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
-manager: rossort
-ms.custom: virtual-network
+ms.custom: think-tank, virtual-network
 ---
 
 <!-- docutune:disable TODO -->
@@ -66,13 +66,13 @@ Identity and directory services are key capabilities of both on-premises and clo
 
 Any large enterprise needs to define an identity management process that describes the management of individual identities, their authentication, authorization, roles, and privileges within or across their VDC. The goals of this process should be to increase security and productivity while reducing cost, downtime, and repetitive manual tasks.
 
-Enterprise organizations may require a demanding mix of services for different lines of business, and employees often have different roles when involved with different projects. The VDC requires good cooperation between different teams, each with specific role definitions, to get systems running with good governance. The matrix of responsibilities, access, and rights can be complex. Identity management in the VDC is implemented through [Azure Active Directory (Azure AD)][azure-ad] and role-based access control (RBAC).
+Enterprise organizations may require a demanding mix of services for different lines of business, and employees often have different roles when involved with different projects. The VDC requires good cooperation between different teams, each with specific role definitions, to get systems running with good governance. The matrix of responsibilities, access, and rights can be complex. Identity management in the VDC is implemented through [Azure Active Directory (Azure AD)][azure-ad] and Azure role-based access control (Azure RBAC).
 
 A directory service is a shared information infrastructure that locates, manages, administers, and organizes everyday items and network resources. These resources can include volumes, folders, files, printers, users, groups, devices, and other objects. Each resource on the network is considered an object by the directory server. Information about a resource is stored as a collection of attributes associated with that resource or object.
 
 All Microsoft online business services rely on Azure Active Directory (Azure AD) for sign-on and other identity needs. Azure Active Directory is a comprehensive, highly available identity and access management cloud solution that combines core directory services, advanced identity governance, and application access management. Azure AD can integrate with on-premises Active Directory to enable single sign-on for all cloud-based and locally hosted on-premises applications. The user attributes of on-premises Active Directory can be automatically synchronized to Azure AD.
 
-A single global administrator isn't required to assign all permissions in a VDC implementation. Instead, each specific department, group of users, or services in the Directory Service can have the permissions required to manage their own resources within a VDC implementation. Structuring permissions requires balancing. Too many permissions can impede performance efficiency, and too few or loose permissions can increase security risks. Azure role-based access control (RBAC) helps to address this problem, by offering fine-grained access management for resources in a VDC implementation.
+A single global administrator isn't required to assign all permissions in a VDC implementation. Instead, each specific department, group of users, or services in the Directory Service can have the permissions required to manage their own resources within a VDC implementation. Structuring permissions requires balancing. Too many permissions can impede performance efficiency, and too few or loose permissions can increase security risks. Azure role-based access control (Azure RBAC) helps to address this problem, by offering fine-grained access management for resources in a VDC implementation.
 
 ### Security infrastructure
 
@@ -185,7 +185,7 @@ Each role group should have a unique prefix on their names. This prefix makes it
 Many organizations use a variation of the following groups to provide a major breakdown of roles:
 
 - The central IT team named **Corp** has the ownership rights to control infrastructure components. Examples are networking and security. The group needs to have the role of contributor on the subscription, control of the hub, and network contributor rights in the spokes. Large organizations frequently split up these management responsibilities between multiple teams. Examples are a network operations **CorpNetOps** group with exclusive focus on networking and a security operations **CorpSecOps** group responsible for the firewall and security policy. In this specific case, two different groups need to be created for assignment of these custom roles.
-- The dev/test group named **AppDevOps** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor's roles. For more information, see [Built-in roles for Azure resources][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
+- The dev/test group named **AppDevOps** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor's roles. For more information, see [Azure built-in roles][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
 - The operation and maintenance group called **CorpInfraOps** or **AppInfraOps** has the responsibility of managing workloads in production. This group needs to be a subscription contributor on workloads in any production subscriptions. Some organizations might also evaluate if they need an additional escalation support team group with the role of subscription contributor in production and the central hub subscription. The additional group fixes potential configuration issues in the production environment.
 
 The VDC is designed so that groups created for the central IT team, managing the hub, have corresponding groups at the workload level. In addition to managing hub resources only, the central IT team can control external access and top-level permissions on the subscription. Workload groups can also control resources and permissions of their virtual network independently from the central IT team.
@@ -225,7 +225,7 @@ Infrastructure components have the following functionality:
 - [Network security groups][NSG]. A network security group is a list of security rules that act as traffic filtering on IP sources, IP destinations, protocols, IP source ports, and IP destination ports (also called a Layer 4 five-tuple). The network security group can be applied to a subnet, a Virtual NIC associated with an Azure VM, or both. The network security groups are essential to implement a correct flow control in the hub and in the spokes. The level of security afforded by the network security group is a function of which ports you open, and for what purpose. Customers should apply additional per-VM filters with host-based firewalls such as iptables or the Windows Firewall.
 - [DNS][DNS]. DNS provides name resolution for resources in a virtual datacenter. Azure provides DNS services for both [public][DNS] and [private][PrivateDNS] name resolution. Private zones provide name resolution both within a virtual network and across virtual networks. You can have private zones not only span across virtual networks in the same region, but also across regions and subscriptions. For public resolution, Azure DNS provides a hosting service for DNS domains, providing name resolution using Microsoft Azure infrastructure. By hosting your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services.
 - [Management group][MgmtGrp], [subscription](../ready/azure-best-practices/scale-subscriptions.md), and [resource group][RGMgmt] management. A subscription defines a natural boundary to create multiple groups of resources in Azure. This separation can be for function, role segregation, or billing. Resources in a subscription are assembled together in logical containers known as resource groups. The resource group represents a logical group to organize the resources in a virtual datacenter. If your organization has many subscriptions, you may need a way to efficiently manage access, policies, and compliance for those subscriptions. Azure management groups provide a level of scope above subscriptions. You organize subscriptions into containers known as management groups and apply your governance conditions to the management groups. All subscriptions within a management group automatically inherit the conditions applied to the management group. To see these three features in a hierarchy view, see [Organizing your resources](../ready/azure-setup-guide/organize-resources.md) in the Cloud Adoption Framework.
-- [Role-based access control (RBAC)][RBAC]. RBAC can map organizational roles and rights to access specific Azure resources, allowing you to restrict users to only a certain subset of actions. If you're synchronizing Azure Active Directory with an on-premises Active Directory, you can use the same Active Directory groups in Azure that you use on-premises. With RBAC, you can grant access by assigning the appropriate role to users, groups, and applications within the relevant scope. The scope of a role assignment can be an Azure subscription, a resource group, or a single resource. RBAC allows inheritance of permissions. A role assigned at a parent scope also grants access to the children contained within it. Using RBAC, you can segregate duties and grant only the amount of access to users that they need to perform their jobs. For example, one employee can manage virtual machines in a subscription, while another can manage SQL Server databases in the same subscription.
+- [Azure role-based access control (Azure RBAC)][RBAC]. Azure RBAC can map organizational roles and rights to access specific Azure resources, allowing you to restrict users to only a certain subset of actions. If you're synchronizing Azure Active Directory with an on-premises Active Directory, you can use the same Active Directory groups in Azure that you use on-premises. With Azure RBAC, you can grant access by assigning the appropriate role to users, groups, and applications within the relevant scope. The scope of a role assignment can be an Azure subscription, a resource group, or a single resource. Azure RBAC allows inheritance of permissions. A role assigned at a parent scope also grants access to the children contained within it. Using Azure RBAC, you can segregate duties and grant only the amount of access to users that they need to perform their jobs. For example, one employee can manage virtual machines in a subscription, while another can manage SQL Server databases in the same subscription.
 
 #### Component Type: Perimeter Networks
 
@@ -281,7 +281,7 @@ Azure Load Balancer can probe the health of the various server instances as well
 
 Azure Front Door also provides a web application firewall (WAF), which protects web applications from common vulnerabilities and exploits.
 
-[Azure Application Gateway][AppGW] is a dedicated virtual appliance providing a managed application delivery controller. It offers various Layer 7 load-balancing capabilities for your application. It allows you to optimize web farm performance by offloading CPU-intensive SSL termination to the application gateway. It also provides other Layer 7 routing capabilities, such as round-robin distribution of incoming traffic, cookie-based session affinity, URL-path-based routing, and the ability to host multiple websites behind a single application gateway. A web application firewall (WAF) is also provided as part of the application gateway WAF SKU. This SKU provides protection to web applications from common web vulnerabilities and exploits. Application Gateway can be configured as internet facing gateway, internal only gateway, or a combination of both.
+[Azure Application Gateway][AppGW] is a dedicated virtual appliance providing a managed application delivery controller. It offers various Layer 7 load-balancing capabilities for your application. It allows you to optimize web farm performance by offloading CPU-intensive SSL termination to the application gateway. It also provides other Layer 7 routing capabilities, such as round-robin distribution of incoming traffic, cookie-based session affinity, URL-path-based routing, and the ability to host multiple websites behind a single application gateway. A web application firewall (WAF) is also provided as part of the application gateway WAF SKU. This SKU provides protection to web applications from common web vulnerabilities and exploits. Application Gateway can be configured as internet-facing gateway, internal-only gateway, or a combination of both.
 
 [Public IPs][PIP]. With some Azure features, you can associate service endpoints to a public IP address so that your resource is accessible from the internet. This endpoint uses NAT to route traffic to the internal address and port on the virtual network in Azure. This path is the primary way for external traffic to pass into the virtual network. You can configure public IP addresses to determine which traffic is passed in and how and where it's translated onto the virtual network.
 
@@ -447,8 +447,8 @@ Learn more about the Azure capabilities discussed in this document.
         **Identity** <br>
         [Azure Active Directory][azure-ad] <br>
         [Multi-Factor Authentication][multi-factor-authentication] <br>
-        [Role-Based Access Control][RBAC] <br>
-        [Default Azure AD Roles][Roles]
+        [Azure role-based access control][RBAC] <br>
+        [Azure built-in roles][Roles]
     :::column-end:::
     :::column:::
         **Monitoring** <br>
@@ -491,8 +491,8 @@ Learn more about the Azure capabilities discussed in this document.
 ## Next steps
 
 - Learn more about [virtual network peering][virtual-network-peering], the core technology of hub and spoke topologies.
-- Implement [Azure Active Directory][azure-ad] to use [role-based access control][RBAC].
-- Develop a subscription and resource management model using role-based access control that fits the structure, requirements, and policies of your organization. The most important activity is planning. Analyze how reorganizations, mergers, new product lines, and other considerations will affect your initial models to ensure you can scale to meet future needs and growth.
+- Implement [Azure Active Directory][azure-ad] to use [Azure role-based access control][RBAC].
+- Develop a subscription and resource management model using Azure role-based access control that fits the structure, requirements, and policies of your organization. The most important activity is planning. Analyze how reorganizations, mergers, new product lines, and other considerations will affect your initial models to ensure you can scale to meet future needs and growth.
 
 <!-- images -->
 

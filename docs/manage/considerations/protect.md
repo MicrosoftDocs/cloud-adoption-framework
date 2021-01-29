@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Protect and recover in cloud management

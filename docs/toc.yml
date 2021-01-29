@@ -1,5 +1,5 @@
 # docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
+#cSpell:ignore devtest mariadb authn devguide azurevm dotnetcore moodle veeam powerapps sqldatabase newsfeed wideworldimportersdw fazure fcloud ftoc
 
 items:
   - name: Cloud Adoption Framework for Azure
@@ -123,6 +123,8 @@ items:
         href: strategy/monitoring-strategy.md
       - name: Responsible AI
         href: strategy/responsible-ai.md
+      - name: Accelerate cloud adoption with GitHub
+        href: scenarios/github-velocity/index.md 
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
@@ -274,7 +276,7 @@ items:
             href: ready/considerations/storage-options.md
           - name: Review data options
             href: ready/considerations/data-options.md
-          - name: Role-based access control
+          - name: Azure role-based access control
             href: ready/considerations/roles.md
           - name: Create hybrid cloud consistency
             href: ready/considerations/hybrid-consistency.md
@@ -323,6 +325,12 @@ items:
           href: ready/azure-best-practices/organize-subscriptions.md
         - name: Naming and tagging
           href: ready/azure-best-practices/naming-and-tagging.md
+        - name: Define your naming convention
+          href: ready/azure-best-practices/resource-naming.md
+        - name: Abbreviations for resource types
+          href: ready/azure-best-practices/resource-abbreviations.md
+        - name: Define your tagging strategy
+          href: ready/azure-best-practices/resource-tagging.md
         - name: Move resources
           href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Networking
@@ -433,18 +441,18 @@ items:
           - name: Moodle migration
             items:
             - name: Overview
-              href: scenarios/lamp/moodle/index.md
-            - name: Prerequisites
+              href: scenarios/lamp/moodle/migration-overview.md
+            - name: Prepare for Moodle migration
               href: scenarios/lamp/moodle/migration-pre.md
             - name: Architecture and template
               href: scenarios/lamp/moodle/migration-arch.md
-            - name: Resource description
+            - name: Moodle migration resources
               href: scenarios/lamp/moodle/migration-resources.md
             - name: Migration steps
               href: scenarios/lamp/moodle/migration-start.md
-            - name: Azure infrastructure configuration
+            - name: Set up Moodle worker nodes
               href: scenarios/lamp/moodle/azure-infra-config.md
-            - name: Post-migration
+            - name: Follow up Moodle migration
               href: scenarios/lamp/moodle/migration-post.md
 
         - name: Dev/test workloads 
@@ -466,7 +474,7 @@ items:
             href: migrate/azure-best-practices/contoso-migration-rebuild.md
           - name: Refactor TFS to Azure DevOps Services
             href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
-            
+
         - name: Java apps
           items:
           - name: Migration overview
@@ -711,6 +719,11 @@ items:
           - name: Exadata
             href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
 
+        - name: Multitenant migration
+          items:
+          - name: Azure Lighthouse for scale migration
+            href: /azure/lighthouse/how-to/migration-at-scale?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
         - name: Mainframes
           items:
           - name: Overview
@@ -888,7 +901,7 @@ items:
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
             href: innovate/ai/knowledge-mining.md  
-            
+
       - name: Best practices
         items:
         - name: Overview and Azure toolchain
@@ -910,7 +923,7 @@ items:
           - name: Govern data
             items:
             - name: Classify data
-              href: govern/policy-compliance/data-classification.md
+              href: innovate/best-practices/data-classification.md
             - name: Secure data
               href: /azure/architecture/data-guide/scenarios/securing-data-solutions?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Annotate data with Data Catalog

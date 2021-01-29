@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Migration environment planning checklist: Validate environmental readiness prior to migration
