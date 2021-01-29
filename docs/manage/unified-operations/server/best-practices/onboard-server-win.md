@@ -24,7 +24,7 @@ The following README will guide you through how to connect a Windows machine to 
 
 * Create Azure service principal (SP)
 
-    To connect a server to Azure Arc, an Azure service principal assigned with the "Contributor" role is required. To create it, login to your Azure account run the below command (this can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
+    To connect a server to Azure Arc, an Azure service principal assigned with the "Contributor" role is required. To create it, login to your Azure account and run the below command (this can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
 
     ```console
     az login
@@ -79,10 +79,10 @@ Upon completion, you will have your Windows server, connected as a new Azure Arc
 
 ## Delete the deployment
 
-The most straightforward way is to delete the server via the Azure portal, just select server and delete it.
+T0 delete the server, select the server and delete it from the Azure portal. 
 
 ![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-win/win-delete-resource.png)
 
-If you want to delete the entire environment, just delete the Azure resource group.
+To delete the entire deployment, delete the Azure resource group from the Azure portal.
 
 ![A screenshot of Delete option to delete a resource group in the Azure portal.](./img/onboard-server-win/win-delete-resource-group.png)
