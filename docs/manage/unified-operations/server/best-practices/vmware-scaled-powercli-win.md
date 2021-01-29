@@ -92,11 +92,11 @@ Below you can find the automation flow for this scenario:
 
 To demonstrate the before & after for this scenario, the below screenshots shows a dedicated, empty Azure Resources Group, a vCenter VM folder with candidate VMs and the "Apps & features" view in Windows showing no agent is installed.
 
-![An empty Azure resource group.](./01.png)
+![An empty Azure resource group.](./cli-win-empty.png)
 
-![Vanilla VMware vSphere VM with no Azure Arc agent](./02.png)
+![A screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./cli-win-vanilla-1.png)
 
-![Vanilla VMware vSphere VM with no Azure Arc agent](./03.png)
+![A screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./cli-win-vanilla-2.png)
 
 ## Deployment
 
@@ -106,20 +106,20 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
 * Use the Azure service principal ID and password created in the prerequisites section
 
-![Export environment variables](./04.png)
+![Export environment variables](./cli-win-export-variables.png)
 
 * From the [*azure-arc-servers-jumpstart\vmware\scaled-deploy\powercli\windows*](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/vmware/scaled-deployment/powercli/windows) folder, open PowerShell session as an Administrator and run the [*scale-deploy.ps1*](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/vmware/scaled-deployment/powercli/windows/scale-deploy.ps1) script.
 
-    ![scale-deploy PowerShell script](./05.png)
+    ![scale-deploy PowerShell script](./scale-deploy-1.png)
 
-    ![scale-deploy PowerShell script](./06.png)
+    ![scale-deploy PowerShell script](.scale-deploy-2.png)
 
-    ![scale-deploy PowerShell script](./07.png)
+    ![scale-deploy PowerShell script](./scale-deploy-3.png)
 
 * Upon completion, the VM will have the "Azure Arc Connected Machine Agent" installed as well as the Azure resource group populated with the new Azure-Arc-enabled servers.
 
-    ![Azure Arc Connected Machine Agent installed](./08.png)
+    ![Azure Arc Connected Machine Agent installed](./cli-win-agent.png)
 
-    ![New Azure-Arc-enabled servers in an Azure resource group](./09.png)
+    ![A screenshot of new Azure-Arc-enabled servers in an Azure resource group.](./cli-win-servers-1.png)
 
-    ![New Azure-Arc-enabled servers in an Azure resource group](./10.png)
+    ![Another screenshot of new Azure-Arc-enabled servers in an Azure resource group.](./cli-win-servers-2.png)
