@@ -16,16 +16,16 @@ This article describes the steps to migrate the on-premises Moodle archive to Az
 
 Before you begin this process, make sure to complete all the steps in these articles:
 
-- [How to prepare for a Moodle migration](migration-pre.md)
-- [Moodle migration architecture and templates](migration-arch.md)
+- [How to prepare for a Moodle migration](./migration-pre.md)
+- [Moodle migration architecture and templates](./migration-arch.md)
 
 After the Azure Resource Manager (ARM) template deployment finishes, sign in to the [Azure portal](https://portal.azure.com/) and go to the resource group you created as part of the deployment process. Review the list of newly created infrastructure resources. The created resources look similar to the following image, depending on the ARM template you used for deployment.
 
-![Screenshot showing infrastructure resources created in the Moodle migration resource group.](images/resource-creation-overview.png)
+![Screenshot showing infrastructure resources created in the Moodle migration resource group.](./images/resource-creation-overview.png)
 
 ## Copy the Moodle archive
 
-The first step in the migration process is to copy the Moodle backup archive from Azure Blob Storage to the controller virtual machine (VM) for the Moodle deployment. This is the same archive you created in [Create an archive](migration-pre.md#create-an-archive).
+The first step in the migration process is to copy the Moodle backup archive from Azure Blob Storage to the controller virtual machine (VM) for the Moodle deployment. This is the same archive you created in [Create an archive](./migration-pre.md#create-an-archive).
 
 ### Sign in to the controller virtual machine
 
@@ -35,13 +35,13 @@ The first step in the migration process is to copy the Moodle backup archive fro
 
 1. In the left navigation, expand **SSH**.
 
-   ![Screenshot of the PuTTY Configuration page.](images/putty-configuration.png)
+   ![Screenshot of the PuTTY Configuration page.](./images/putty-configuration.png)
 
 1. Select **Auth**, and find the SSH key file you used to deploy the Azure infrastructure with the ARM template.
 
 1. Select **Open**. For user name, enter **azureadmin**, as it's hard-coded in the template.
 
-   ![Screenshot of the PuTTY Configuration page showing SSH authentication settings.](images/putty-ssh-key.png)
+   ![Screenshot of the PuTTY Configuration page showing SSH authentication settings.](./images/putty-ssh-key.png)
 
 For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
 
@@ -129,11 +129,11 @@ Or, in the Azure portal, select the Azure Database for MySQL server from your de
 
 You can add allowed IP addresses and configure firewall rules here. Select **Save** after you've created the rules.
 
-![Screenshot of the Connection security pane for the Azure Database for MySQL server.](images/database-connection-security.png)
+![Screenshot of the Connection security pane for the Azure Database for MySQL server.](./images/database-connection-security.png)
 
 You can now connect to the MySQL server by using the [`mysql`](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) command-line tool or [MySQL Workbench](https://dev.mysql.com/doc/workbench/en/).
 
-![Screenshot of the MySQL Workbench Setup New Connection screen.](images/database-connection.png)
+![Screenshot of the MySQL Workbench Setup New Connection screen.](./images/database-connection.png)
 
 To get connection information, go to your MySQL server's **Overview** page in the Azure portal. Use the copy icons next to each field to copy the **Server name** and **Server admin login name**.
 
@@ -338,4 +338,4 @@ cp /etc/php/$_PHPVER/fpm/pool.d/www.conf /moodle/config/php
 
 ## Next steps
 
-Continue to [Set up the Moodle controller instance and worker nodes](azure-infra-config.md) for the next steps in the Moodle migration process.
+Continue to [Set up the Moodle controller instance and worker nodes](./azure-infra-config.md) for the next steps in the Moodle migration process.

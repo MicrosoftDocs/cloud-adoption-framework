@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Microsoft outlines six key principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into more mainstream products and services. They are guided by two perspectives: ethical and explainable.
 
-![A diagram of responsible AI principles.](media/responsible-ai-principles.png)
+![A diagram of responsible AI principles.](./media/responsible-ai-principles.png)
 
 ## Ethical
 
@@ -101,7 +101,7 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 ## A persona-centric, trusted AI framework
 
-![A diagram of a persona-centric, trusted AI framework.](media/ai-framework.png)
+![A diagram of a persona-centric, trusted AI framework.](./media/ai-framework.png)
 
 ### AI designer
 

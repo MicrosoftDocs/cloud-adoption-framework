@@ -16,7 +16,7 @@ ms.custom: think-tank
 
 Development, testing, and production environments support machine learning operations processes.
 
-![A diagram showing machine learning environments and role-based access control.](media/ml-environments-and-rbac.png)
+![A diagram showing machine learning environments and role-based access control.](./media/ml-environments-and-rbac.png)
 
 **In a development environment:** Machine learning pipelines should support the data science and engineering activities carried out by data scientists and data engineers. It is recommended that they have full access to all the permissions related to carrying out experiments, such as provisioning training clusters or building models. However, they should not have permission for activities such as delete or create workspaces, add, or remove workspace users.
 
@@ -26,7 +26,7 @@ Development, testing, and production environments support machine learning opera
 
 Role-based access control for all environments is shown in the following diagram:
 
-![A diagram of role-based access control for all environments.](media/rbac-all-environments.png)
+![A diagram of role-based access control for all environments.](./media/rbac-all-environments.png)
 
 This table shows that the data engineer and data scientist's access levels decrease within higher environments while the DevOps engineer's access increases. This is because a machine learning operations engineer builds the pipeline, glues things together, and deploys models in production. This level of granularity is recommended for each role.
 
@@ -34,7 +34,7 @@ This table shows that the data engineer and data scientist's access levels decre
 
 Multiple factors can influence how you set up your machine learning workspaces, and they can help you to determine the best structure and controls for each type of workspace:
 
-![A diagram of how to set up Azure Machine Learning workspaces.](media/set-up-workspaces.png)
+![A diagram of how to set up Azure Machine Learning workspaces.](./media/set-up-workspaces.png)
 
 - **Public, restricted:**
   - Development, test, and production workspace
