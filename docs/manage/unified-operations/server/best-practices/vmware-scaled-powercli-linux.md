@@ -96,7 +96,7 @@ Below you can find the automation flow for this scenario:
 
 To demonstrate the before & after for this scenario, the below screenshots shows a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the */var/opt/* directory showing no agent is installed.
 
-![An empty Azure resource group](./01.png)
+![An empty Azure resource group.](./01.png)
 
 ![Vanilla VMware vSphere VM with no Azure Arc agent](./02.png)
 
