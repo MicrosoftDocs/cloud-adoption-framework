@@ -3,7 +3,7 @@ title: Connect Azure-Arc-enabled servers to Azure Security Center
 description: Connect Azure-Arc-enabled servers to Azure Security Center.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -26,21 +26,21 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
-* **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/)**
-* **[GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-* **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-* **[AWS Amazon Linux 2 EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_al2/)**
-* **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/)**
-* **[VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-* **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/)**
-* **[Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/)**
+* **[GCP Windows instance](./gcp-terraform-windows/)**
+* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+* **[AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)**
+* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)**
+* **[VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/)**
+* **[Vagrant Windows box](./local-vagrant-windows/)**
 
 ## Prerequisites
 
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, as can be seen in the screenshots below, we will be using a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure.
@@ -82,16 +82,16 @@ In this guide, you will enable and configure Azure Security Center Standard tier
 
 ## Onboarding Azure Security Center
 
-* Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing theAzure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
+* Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing theAzure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/securitycenter/arm/log-analytics-template.parameters.json), provide a name and location for your workspace:
 
     ![A screenshot of an ARM template.](./img/arc-security-ctr/arm-template.png)
 
-* To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/securitycenter/arm) and run the below command:
+* To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/securitycenter/arm) and run the below command:
 
   ```console
     az deployment group create --resource-group <Name of the Azure resource group> \
-    --template-file <The *log_analytics-template.json* template file location> \
-    --parameters <The *log_analytics-template.parameters.json* template file location>
+    --template-file <The *log-analytics-template.json* template file location> \
+    --parameters <The *log-analytics-template.parameters.json* template file location>
   ```
 
 * If you are going for an user-defined workspace, you should instruct Security Center to use it instead of the default one, use the below command:
@@ -150,10 +150,10 @@ Complete the following steps to clean up your environment.
 
 * Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
-  * **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/) / [GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-  * **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-  * **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/) / [VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-  * **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/) / [Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+  * **[GCP Ubuntu instance](./gcp-terraform-ubuntu/) / [GCP Windows instance](./gcp-terraform-windows/)**
+  * **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
+  * **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/) / [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
+  * **[Vagrant Ubuntu box](./local-vagrant-ubuntu/) / [Vagrant Windows box](./local-vagrant-windows/)**
 
 * Remove the Log Analytics workspace by executing the following script in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
 

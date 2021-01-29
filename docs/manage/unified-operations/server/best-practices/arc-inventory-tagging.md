@@ -3,7 +3,7 @@ title: Apply inventory tagging to Azure-Arc-enabled servers
 description: Apply inventory tagging to Azure-Arc-enabled servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -20,14 +20,14 @@ In this guide, we will use [Resource Graph Explorer](https://docs.microsoft.com/
 
 > **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
 
-* **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/)**
-* **[GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-* **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-* **[AWS Amazon Linux 2 EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_al2/)**
-* **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/)**
-* **[VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-* **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/)**
-* **[Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+- [GCP Ubuntu instance](./gcp-terraform-ubuntu.md)
+- [GCP Windows instance](./gcp-terraform-windows.md)
+- [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
+- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2.md)
+- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md)
+- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+- [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
+- [Vagrant Windows box](./local-vagrant-windows.md)
 
 ## Prerequisites
 
@@ -86,7 +86,7 @@ Now that we have created a basic taxonomy structure, we will apply tags to our A
 
 * In AZ CLI, run the following commands to apply the "Hosting Platform : AWS" tag to your AWS Azure-Arc-enabled servers.
 
-    > **Note: If you connected your AWS EC2 instances using a method other than the one described in [this tutorial](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/), then you will need to adjust the values for `awsResourceGroup` and `awsMachineName` to match values specific to your environment.**
+    > **Note: If you connected your AWS EC2 instances using a method other than the one described in [this tutorial](./aws-terraform-ubuntu.md), then you will need to adjust the values for `awsResourceGroup` and `awsMachineName` to match values specific to your environment.**
 
     ```console
     export awsResourceGroup="arc-aws-demo"
@@ -102,7 +102,7 @@ Now that we have created a basic taxonomy structure, we will apply tags to our A
 
 * In AZ CLI, run the following commands to apply the "Hosting Platform : GCP" tag to your GCP Azure-Arc-enabled servers.
 
-    > **Note: If you connected your GCP instances using a method other than the one described in [this tutorial](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.**
+    > **Note: If you connected your GCP instances using a method other than the one described in [this tutorial](./gcp-terraform-ubuntu.md), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.**
 
     ```console
     export gcpResourceGroup="arc-gcp-demo"
@@ -145,10 +145,10 @@ Complete the following steps to clean up your environment.
 
 * Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
-  * **[GCP Ubuntu instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_ubuntu/) / [GCP Windows instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/gcp/gcp_terraform_windows/)**
-  * **[AWS Ubuntu EC2 instance](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/aws/aws_terraform_ubuntu/)**
-  * **[VMware vSphere Ubuntu VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_ubuntu/) / [VMware vSphere Windows Server VM](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vmware/vmware_terraform_winsrv/)**
-  * **[Vagrant Ubuntu box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_ubuntu/) / [Vagrant Windows box](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/vagrant/local_vagrant_windows/)**
+ - [GCP Ubuntu instance](./gcp-terraform-ubuntu.md) and [GCP Windows instance](./gcp-terraform-windows.md)
+ - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
+ - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+ - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md) and [Vagrant Windows box](./local-vagrant-windows.md)
 
 * Remove tags created as part of this guide by executing the following script in AZ CLI.
 

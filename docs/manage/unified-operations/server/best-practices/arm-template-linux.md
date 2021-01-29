@@ -3,7 +3,7 @@ title: Use an Azure Resource Manager template to deploy and connect an Ubuntu vi
 description: Use an Azure Resource Manager template to deploy and connect an Ubuntu virtual machine to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -25,7 +25,7 @@ However, **for demo purposes only**, the below guide will allow you to use and o
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
@@ -71,13 +71,13 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 1. User is editing the ARM template parameters file (1-time edit). These parameters values are being used throughout the deployment.
 
-2. The ARM template includes an Azure VM custom script extension which will deploy the the [*install_arc_agent.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/scripts/install_arc_agent.sh) Shell script.
+2. The ARM template includes an Azure VM custom script extension which will deploy the the [*install-arc-agent.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/scripts/install-arc-agent.sh) Shell script.
 
 3. In order to allow the Azure VM to successfully be projected as an Azure-Arc-enabled server, the script will:
 
     1. Set local OS environment variables.
 
-    2. Generate a ~/.bash_profile file that will be initialized at user's first login to configure the environment. This script will:
+    2. Generate a ~/.bash-profile file that will be initialized at user's first login to configure the environment. This script will:
 
         * Stop and disable the "Linux Azure Guest Agent" service.
 
@@ -85,11 +85,11 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
         * Install the Azure Arc connected machine agent.
 
-        * Remove the ~/.bash_profile file so it will not run after first login.
+        * Remove the ~/.bash-profile file so it will not run after first login.
 
-4. User SSH to Linux VM which will start the *~/.bash_profile* script execution and will onboard the VM to Azure Arc
+4. User SSH to Linux VM which will start the *~/.bash-profile* script execution and will onboard the VM to Azure Arc
 
-    > **Note: The [*install_arc_agent.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/scripts/install_arc_agent.sh) shell script will enable the OS firewall and set up new rules for incoming and outgoing connections. By default all incoming and outgoing traffic will be allowed, except blocking Azure IMDS outbound traffic to the *169.254.169.254* remote address.**
+    > **Note: The [*install-arc-agent.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/scripts/install-arc-agent.sh) shell script will enable the OS firewall and set up new rules for incoming and outgoing connections. By default all incoming and outgoing traffic will be allowed, except blocking Azure IMDS outbound traffic to the *169.254.169.254* remote address.**
 
 ## Deployment
 
@@ -97,16 +97,16 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
 
 * Before deploying the ARM template, login to Azure using AZ CLI with the ```az login``` command.
 
-* The deployment is using the ARM template parameters file. Before initiating the deployment, edit the [*azuredeploy.parameters.json*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.parameters.json) file located in your local cloned repository folder. An example parameters file is located [here](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.parameters.example.json).
+* The deployment is using the ARM template parameters file. Before initiating the deployment, edit the [*azuredeploy.parameters.json*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/azuredeploy.parameters.json) file located in your local cloned repository folder. An example parameters file is located [here](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/azuredeploy.parameters.example.json).
 
-* To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azure/linux/arm_template) and run the below command:
+* To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/azure/linux/arm-template) and run the below command:
 
     ```console
-    az group create --name <Name of the Azure resource group> --location <Azure region> --tags "Project=jumpstart_azure_arc_servers"
+    az group create --name <Name of the Azure resource group> --location <Azure region> --tags "Project=jumpstart-azure-arc-servers"
     az deployment group create \
     --resource-group <Name of the Azure resource group> \
     --name <The name of this deployment> \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/azure/linux/arm-template/azuredeploy.json \
     --parameters <The *azuredeploy.parameters.json* parameters file location>
     ```
 
@@ -115,11 +115,11 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
     For example:
 
     ```console
-    az group create --name Arc-Servers-Linux-Demo --location "westeurope" --tags "Project=jumpstart_azure_arc_servers"
+    az group create --name Arc-Servers-Linux-Demo --location "westeurope" --tags "Project=jumpstart-azure-arc-servers"
     az deployment group create \
     --resource-group Arc-Servers-Linux-Demo \
     --name arclinuxdemo \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/azure/linux/arm-template/azuredeploy.json \
     --parameters azuredeploy.parameters.json
     ```
 
@@ -147,7 +147,7 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
 
 * Upon successful run, a new Azure-Arc-enabled server will be added to the resource group.
 
-    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arm-template-linux/template/template-linux-resource-gp.png)
+    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arm-template-linux/template-linux-resource-gp.png)
 
     ![A screenshot of details from an Azure-Arc-enabled server.](./img/arm-template-linux/template-linux-server-details.png)
 

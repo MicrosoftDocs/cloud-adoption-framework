@@ -1,24 +1,25 @@
 ---
-title: ""
-description: Learn to configure unified operations for XYZ.
+title: Use a Terraform plan to deploy a Google Cloud Platform Ubuntu instance and connect it to Azure Arc
+description: Use a Terraform plan to deploy a Google Cloud Platform Ubuntu instance and connect it to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
-## Deploy a GCP Ubuntu instance and connect it to Azure Arc using a Terraform plan
+# Use a Terraform plan to deploy a Google Cloud Platform Ubuntu instance and connect it to Azure Arc
 
-The following README will guide you on how to use the provided [Terraform](https://www.terraform.io/) plan to deploy an Ubuntu Server GCP virtual machine and connect it as an Azure-Arc-enabled server resource.
+The following README will guide you on how to use the provided [Terraform](https://www.terraform.io/) plan to deploy Google Cloud Platform (GCP) instance and connect it as an Azure-Arc-enabled server resource.
 
 ## Prerequisites
 
 * Clone the Azure Arc Jumpstart repository
 
     ```console
-    git clone https://github.com/microsoft/azure_arc.git
+    git clone https://github.com/microsoft/azure-arc.git
     ```
 
 * [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
@@ -29,7 +30,7 @@ The following README will guide you on how to use the provided [Terraform](https
 
 * [Generate SSH Key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) (or use existing ssh key)
 
-* [Create free Google Cloud account]((https://cloud.google.com/free))
+* [Create free Google Cloud account](https://cloud.google.com/free)
 
 * [Install Terraform >=0.12](https://learn.hashicorp.com/terraform/getting-started/install.html)
 
@@ -66,21 +67,21 @@ The following README will guide you on how to use the provided [Terraform](https
 
 * Browse to <https://console.developers.google.com> and login with your Google Cloud account. Once logged in, [create a new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) named "Azure Arc Demo". After creating it, be sure to copy down the project id as it is usually different then the project name.
 
-    ![Screenshot of GCP Cloud console create project screen](./01.png)
+    ![First screenshot of the 'New Project' screen in the GCP console.](./img/gcp-ubuntu/ubuntu-new-project-1.png)
 
-    ![Screenshot of GCP cloud new project screen](./02.png)
+    ![Second screenshot of the 'New Project' screen in the GCP console.](./img/gcp-ubuntu/ubuntu-new-project-2.png)
 
 * Once the new project is created and selected in the dropdown at the top of the page, you must enable Compute Engine API access for the project. Click on "+Enable APIs and Services" and search for "Compute Engine". Then click Enable to enable API access.
 
-    ![Screenshot of GCP console showing enabling Compute Engine API](./03.png)
+    ![First screenshot of 'Compute Engine API' in the GCP console.](./img/gcp-ubuntu/ubuntu-comp-eng-api-1.png)
 
-    ![Screenshot of GCP console showing enabling Compute Engine API](./04.png)
+    ![Second screenshot of 'Compute Engine API' in the GCP console.](./img/gcp-ubuntu/ubuntu-comp-eng-api-2.png)
 
-* Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select "New Service Account" from the dropdown, give it a name, select Project then Owner as the role, JSON as the key type, and click Create. This downloads a JSON file with all the credentials that will be needed for Terraform to manage the resources. Copy the downloaded JSON file to the [*azure_arc_servers_jumpstart/gcp/ubuntu/terraform*](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform) directory.
+* Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select "New Service Account" from the dropdown, give it a name, select Project then Owner as the role, JSON as the key type, and click Create. This downloads a JSON file with all the credentials that will be needed for Terraform to manage the resources. Copy the downloaded JSON file to the [*azure-arc-servers-jumpstart/gcp/ubuntu/terraform*](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform) directory.
 
-    ![Screenshot of GCP cloud console showing creation of service account](./05.png)
+    ![A screenshot of how to create a service account in the GCP console.](./img/gcp-ubuntu/ubuntu-svc-account.png)
 
-* Finally, make sure your SSH keys are available in *~/.ssh* and named *id_rsa.pub* and *id_rsa*. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [*main.tf*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/main.tf) to use a key with a different path.
+* Finally, make sure your SSH keys are available in *~/.ssh* and named *id-rsa.pub* and *id-rsa*. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [*main.tf*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform/main.tf) to use a key with a different path.
 
 ## Deployment
 
@@ -88,18 +89,18 @@ Before executing the Terraform plan, you must export the environment variables w
 
 * Retrieve your Azure subscription ID and tenant ID using the ```az account list``` command.
 
-* The Terraform plan creates resources in both Microsoft Azure and Google Cloud. It then executes a script on a Google Cloud virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your Google Cloud and Azure environments. Edit [*scripts/vars.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
+* The Terraform plan creates resources in both Microsoft Azure and Google Cloud. It then executes a script on a Google Cloud virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your Google Cloud and Azure environments. Edit [*scripts/vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-  * TF_VAR_subscription_id=Your Azure subscription ID
-  * TF_VAR_client_id=Your Azure service principal app id
-  * TF_VAR_client_secret=Your Azure service principal password
-  * TF_VAR_tenant_id=Your Azure tenant ID
-  * TF_VAR_gcp_project_id=GCP project id
-  * TF_VAR_gcp_credentials_filename=GCP credentials json filename
+  * TF-VAR-subscription-id=Your Azure subscription ID
+  * TF-VAR-client-id=Your Azure service principal app id
+  * TF-VAR-client-secret=Your Azure service principal password
+  * TF-VAR-tenant-id=Your Azure tenant ID
+  * TF-VAR-gcp-project-id=GCP project id
+  * TF-VAR-gcp-credentials-filename=GCP credentials json filename
 
-* From CLI, navigate to the *azure_arc_servers_jumpstart/gcp/ubuntu/terraform* directory of the cloned repo.
+* From CLI, navigate to the *azure-arc-servers-jumpstart/gcp/ubuntu/terraform* directory of the cloned repo.
 
-* Export the environment variables you edited by running [*scripts/vars.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the GCP virtual machine as part of the Terraform deployment.
+* Export the environment variables you edited by running [*scripts/vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the GCP virtual machine as part of the Terraform deployment.
 
     ```console
     source ./scripts/vars.sh
@@ -107,44 +108,44 @@ Before executing the Terraform plan, you must export the environment variables w
 
 * Run the ```terraform init``` command which will download the Terraform AzureRM provider.
 
-    ![Screenshot showing terraform init being run](./08.png)
+    ![A screenshot of the 'terraform init' command.](./img/gcp-ubuntu/ubuntu-terraform-init.png)
 
 * Next, run the ```terraform apply --auto-approve``` command and wait for the plan to finish. Upon completion, you will have a GCP Ubuntu VM deployed and connected as a new Azure-Arc-enabled server inside a new resource group.
 
 * Open the Azure portal and navigate to the resource group "Arc-GCP-Demo". The virtual machine created in GCP will be visible as a resource.
 
-    ![Screenshot of Azure portal showing Azure-Arc-enabled server](./18.png)
+    ![A screenshot of an Azure-Arc-enabled server in the Azure portal.](./img/gcp-ubuntu/ubuntu-server.png)
 
 ## Semi-Automated Deployment (Optional)
 
 As you may have noticed, the last step of the run is to register the VM as a new Azure-Arc-enabled server resource.
-    ![Screenshot showing azcmagent connect script](./10.png)
+    ![A screenshot of the 'azcmagent connect' command.](./img/gcp-ubuntu/ubuntu-azcmagent-connect.png)
 
 If you want to demo/control the actual registration process, do the following:
 
-* In the [*install_arc_agent.sh.tmpl*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/install_arc_agent.sh.tmpl) script template, comment out the "Run connect command" section and save the file.
+* In the [*install-arc-agent.sh.tmpl*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform/scripts/install-arc-agent.sh.tmpl) script template, comment out the "Run connect command" section and save the file.
 
-    ![Screenshot showing azcmagent connect commented out](./11.png)
+    ![A screenshot showing 'main.tf' being commented out to disable automatic onboarding of an Azure Arc agent.](./img/gcp-ubuntu/ubuntu-main-tf.png)
 
 * Get the public IP of the GCP VM by running ```terraform output```
 
-    ![Screenshot showing terraform output](./12.png)
+    ![A screenshot of a terraform output.](./img/gcp-ubuntu/ubuntu-terraform.png)
 
 * SSH the VM using the ```ssh arcadmin@x.x.x.x``` where x.x.x.x is the host ip.
 
-    ![Screenshot showing SSH into GCP server](./13.png)
+    ![A screenshot of an SSH key connecting to a GCP server.](./img/gcp-ubuntu/ubuntu-ssh.png)
 
-* Export all the environment variables in [*vars.sh*](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh)
+* Export all the environment variables in [*vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform/scripts/vars.sh)
 
-    ![Screenshot showing export of environment variables from vars.sh](./14.png)
+    ![A screenshot of environment variables exporting with 'vars.sh'.](./img/gcp-ubuntu/ubuntu-export-variables.png)
 
 * Run the following command:
 
     ```console
-    azcmagent connect --service-principal-id $TF_VAR_client_id --service-principal-secret $TF_VAR_client_secret --resource-group "Arc-GCP-Demo" --tenant-id $TF_VAR_tenant_id --location "westus2" --subscription-id $TF_VAR_subscription_id
+    azcmagent connect --service-principal-id $TF-VAR-client-id --service-principal-secret $TF-VAR-client-secret --resource-group "Arc-GCP-Demo" --tenant-id $TF-VAR-tenant-id --location "westus2" --subscription-id $TF-VAR-subscription-id
     ```
 
-    ![Screenshot of azcmagent connect being run](./15.png)
+    ![A screenshot of the 'azcmagent connect' command.](./img/gcp-ubuntu/ubuntu-azcmagent.png)
 
 * When complete, your VM will be registered with Azure Arc and visible in the resource group inside Azure portal.
 
@@ -152,8 +153,8 @@ If you want to demo/control the actual registration process, do the following:
 
 To delete all the resources you created as part of this demo use the ```terraform destroy --auto-approve``` command as shown below.
 
-![Screenshot of terraform destroy being run](./17.png)
+![A screenshot of the 'terraform destroy' command.](./img/gcp-ubuntu/ubuntu-terraform-destroy.png)
 
 Alternatively, you can delete the GCP VM directly from [GCP Console](https://console.cloud.google.com/compute/instances).
 
-![Screenshot of deleting VM from GCP cloud console](./16.png)
+![A screenshot showing how to delete a virtual machine from the GCP console.](./img/gcp-ubuntu/ubuntu-delete-vm.png)
