@@ -11,7 +11,7 @@ ms.subservice: operate
 
 # Manage your portfolio across hybrid and multicloud operations
 
-Hybrid and multicloud leads to natural shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how your implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
+Hybrid and multicloud leads to natural shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
 
 The following outlines how you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 
@@ -50,7 +50,7 @@ One example of a mature operations management discipline is to use Microsoft Mon
 
 ## Next step: Your next migration iteration
 
-Once the unified operations migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are additional platforms to be migrated, this article series can be used again to guide your next unified operations migration or deployment.
+Once the unified operations migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are additional platforms to be migrated, the following articles can be used to help guide your next unified operations migration or deployment.
 
 - [Strategy for unified operations](./strategy.md)
 - [Plan for unified operations](./plan.md)
