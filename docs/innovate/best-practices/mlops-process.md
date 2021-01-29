@@ -16,11 +16,11 @@ ms.custom: think-tank
 
 The development process should produce the following outcomes:
 
-1. Training is automated, and models are validated, which includes testing functionality and performance (for example, using accuracy metrics).
+- Training is automated, and models are validated, which includes testing functionality and performance (for example, using accuracy metrics).
 
-1. Deployment to the infrastructure used for inferencing (including monitoring) is automated.
+- Deployment to the infrastructure used for inferencing (including monitoring) is automated.
 
-1. Mechanisms create an end-to-end data audit trail. Automatic model retraining occurs when data drifts over time, which is relevant to large-scale, machine-learning-infused systems.
+- Mechanisms create an end-to-end data audit trail. Automatic model retraining occurs when data drifts over time, which is relevant to large-scale, machine-learning-infused systems.
 
 The following diagram depicts the deployment lifecycle of a machine learning system:
 
