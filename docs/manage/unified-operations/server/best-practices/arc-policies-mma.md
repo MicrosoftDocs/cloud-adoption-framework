@@ -1,6 +1,6 @@
 ---
 title: Manage Azure policies and deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers 
-description: Manage Azure policies and deploy the Azure Monitoring agent extension to Azure Arc Linux and Windows servers.
+description: Learn how to use Azure-Arc-enabled servers to assign Azure Policies to VMs outside of Azure, whether they are on-premises or on other clouds.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/15/2020
@@ -126,7 +126,7 @@ The flag *policy-set-definition* points to the initiative "Enable Azure Monitor"
 
 ![A screenshot of a compliant Azure Policy status.](./img/arc-policies-mma/compliant-status.png)
 
-## Clean up environment
+## Clean up your environment
 
 Complete the following steps to clean up your environment.
 
