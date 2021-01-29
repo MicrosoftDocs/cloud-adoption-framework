@@ -107,7 +107,7 @@ Planning efforts for unified operations and management assume that most assets f
 
 ### Azure Arc-enabled infrastructure
 
-**Reach out, and onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, bare-metal) with Azure-Arc enabled servers.
+**Reach out, onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, bare-metal) with Azure-Arc enabled servers.
 
 **Use your existing SQL servers with Azure Arc with no migration necessary** and include inventory, governance, security, and proactive SQL database assessments.
 

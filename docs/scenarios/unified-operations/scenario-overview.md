@@ -22,7 +22,7 @@ This scenario focuses on enabling two targeted outcomes:
 
 This scenario is designed to guide the end-2-end customer journey, throughout the cloud adoption lifecycle. Delivery of the full journey requires a few key components, or guidance sets:
 
-- Cloud Adoption Framework: These articles walk through the smallest set of considerations and implementations of each CAF Methodology. Use these articles to prepare decision makers, central IT, and the Cloud Center of Excellence for adoption of hybrid and multicloud workloads across your portfolio.
+- Cloud Adoption Framework: These articles walk through the smallest set of considerations and implementations of each methodology in the Cloud Adoption Framework. Use these articles to prepare decision makers, central IT, and the Cloud Center of Excellence for adoption of hybrid and multicloud workloads across your portfolio.
 - Well-Architected Framework: These articles outline the considerations that each workload owner should make when their workloads need to be deployed across hybrid and multicloud environments.
 - Reference architectures: These reference solutions aid in accelerating deployment for a number of common hybrid and multicloud scenarios.
 - Best Practices: These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products.
