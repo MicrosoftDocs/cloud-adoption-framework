@@ -62,7 +62,7 @@ The push model is provided through the SDK or REST APIs used for sending updated
 
 ### Step 4: Search
 
-After populating an index, you can [issue search queries](/azure/search/search-query-overview) to your service endpoint by using simple HTTP requests with [REST APIs](/rest/api/searchservice/search-documents) or the [.NET SDK](/dotnet/api/microsoft.azure.search.idocumentsoperations). Step through [creating your first search application](/azure/search/tutorial-csharp-create-first-app) to build and then extend a web page that collects user input and handles results. You can also use [Postman for interactive REST](/azure/search/search-get-started-postman) calls or the built-in [Search explorer](/azure/search/search-explorer) in the Azure portal to query an existing index.
+After populating an index, you can [issue search queries](/azure/search/search-query-overview) to your service endpoint by using simple HTTP requests with [REST APIs](/rest/api/searchservice/search-documents) or the [.NET SDK](/en-us/dotnet/api/microsoft.azure.search.idocumentsoperations). Step through [creating your first search application](/azure/search/tutorial-csharp-create-first-app) to build and then extend a web page that collects user input and handles results. You can also use [Postman for interactive REST](/en-us/azure/search/search-get-started-rest) calls or the built-in [Search explorer](/azure/search/search-explorer) in the Azure portal to query an existing index.
 
 ## Next steps
 
