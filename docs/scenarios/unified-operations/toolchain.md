@@ -11,13 +11,17 @@ ms.subservice: overview
 
 # Introduction to hybrid and multicloud products on Azure
 
-For several years, Azure has focused on supporting the hybrid needs of customers, so you will see hybrid integration across many Azure products. As customers have grown more sophisticated in their adoption of multiple clouds, a number of Azure products have broadened that perspective to support the on-premises, multicloud, edge, and unified operations needs of customers. This article won't introduce all of the Azure products with hybrid and multicloud capabilities, but it will introduce a few of the core products that can unlock this capability across your cloud portfolio.
+During these challenging times, businesses are shifting priorities to enable remote work, taking advantage of cloud innovation, and maximizing existing on-premises investments. Relying on an effective multi-cloud, multi-edge hybrid approach is even more important than it has ever been. Azure has been hybrid by design since the beginning, focused on supporting the hybrid needs of customers, and for the last several years, has centered efforts around hybrid integration across Azure products.
 
-Beyond this initial introductory article, see the [Azure hybrid and multicloud hub](https://docs.microsoft.com/hybrid/) for a deeper look at what you can do with Azure's hybrid and multicloud products.
+As customers have grown more sophisticated in their adoption of multiple clouds, a number of Azure products have broadened that perspective to support the on-premises, multicloud, edge, and unified operations requirements of customers. Hybrid integration means that customers can consistently build and deploy apps and databases, operate seamlessly, and deliver integrated cloud security across heterogeneous environments.
+
+This article won't introduce all of the Azure products with hybrid and multicloud capabilities, but introduces a few of the core products that can unlock this capability across your cloud portfolio.
+
+See the [Azure hybrid and multicloud hub](https://docs.microsoft.com/hybrid/) for a deeper look at what you can do with Azure's hybrid and multicloud products.
 
 ![Overview of the Azure hybrid and multicloud products listed below](../../_images/unified-operations/hybrid-hero-slide.png)
 
-This article series will aid in integrating the following tools into relevant processes from initial business strategy to workload optimization and long into your operations management cycles.
+This article series will help to integrate these tools into relevant processes—from initial business strategy to workload optimization, and long into your operations management cycles.
 
 ## Manage hybrid and multicloud environments with unified operations tools
 
