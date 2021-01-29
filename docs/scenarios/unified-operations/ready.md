@@ -24,7 +24,6 @@ The image above illustrates three of the most common cloud mixes we are seeing w
 - **Hybrid first:** Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A small number of specific workloads are deployed to the edge, Azure, or to other cloud providers.
 - **Azure first:** Most workloads have been moved to Azure. A small number of workloads stay on-premises. Strategic decisions have led to a small number of workloads living on the edge, or in multicloud environments.
 - **Multicloud first:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a small number of workloads living in Azure or on the edge.
-
 Each month, we see a steady flow of customers moving from a _hybrid first_ mix to an _Azure first_ mix as their cloud strategy matures. But, we also support a number of customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
 
 The most important things to consider when preparing any of your cloud environments for hybrid and multicloud, are the following:

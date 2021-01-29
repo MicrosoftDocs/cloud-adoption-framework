@@ -1,6 +1,6 @@
 ---
-title: Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
-description: Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers.
+title: Deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
+description: Learn how to manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/15/2020
@@ -12,44 +12,45 @@ ms.custom: think-tank
 
 # Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
 
-The following README will guide you on how to manage extensions to Azure-Arc-enabled servers. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
+This article provides guidance on how to manage extensions to Azure-Arc-enabled servers. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
 
 Azure-Arc-enabled servers, enables you to deploy Azure VM extensions to non-Azure Windows and Linux VMs, giving you a hybrid or multi-cloud management experience that levels to Azure VMs.
 
-You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure-Arc-enabled servers, both Linux and Windows. In this guide, you will use an ARM template deploy the Microsoft Monitoring Agent (MMA) to your servers so they are onboard on Azure services that leverage this agent: Azure Monitor, Azure Security Center, Azure Sentinel, etc.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure-Arc-enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Microsoft Monitoring Agent (MMA) to your servers. This onboards them in Azure services that leverage this agent: Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
 
-> **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc but If you haven't, this repository offers you a way to do so in an automated fashion:**
+> [!IMPORTANT]
+> The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
 
-* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/)**
-* **[GCP Windows instance](./gcp-terraform-windows/)**
-* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
-* **[AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2/)**
-* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/)**
-* **[VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
-* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/)**
-* **[Vagrant Windows box](./local-vagrant-windows/)**
+- [GCP Ubuntu instance](./gcp-terraform-ubuntu.md)
+- [GCP Windows instance](./gcp-terraform-windows.md)
+- [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
+- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2.md)
+- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md)
+- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+- [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
+- [Vagrant Windows box](./local-vagrant-windows.md)
 
 Please review the [Azure Monitor supported OS documentation](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you will use for this exercise are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
 
 ## Prerequisites
 
-* Clone the Azure Arc Jumpstart repository
+1. Clone the Azure Arc Jumpstart repository.
 
     ```console
     git clone https://github.com/microsoft/azure-arc.git
     ```
 
-* As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below you can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
+2. As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, we use a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure. As shown in the following screenshots:
 
     ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arc-vm-extension-mma/mma-resource-group.png)
 
     ![A screenshot of a connected status from an Azure-Arc-enabled server.](./img/arc-vm-extension-mma/mma-connected-status.png)
 
-* [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
+3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
 
-* Create Azure Service Principal (SP)
+4. Create Azure Service Principal (SP)
 
-    To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the "contributor" role is required. To create it, login to your Azure account run the below command (this can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
+    To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the "contributor" role is required. To create it, log in to your Azure account, and run the following command. Alternatively, this can also be done in [Azure Cloud Shell](https://shell.azure.com/).
 
     ```console
     az login
@@ -74,43 +75,43 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
     }
     ```
 
-    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
+    > [!NOTE]
+    > It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).
 
-* You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/log-analytics-template.parameters.json) and provide a name and location for your workspace.
+5. You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/log-analytics-template.parameters.json), and providing a name and location for your workspace.
 
-    ![A screenshot of ARM template parameters file.](./img/arc-vm-extension-mma/parameters-file-1.png)
+    ![A screenshot of ARM template parameters for name and location.](./img/arc-vm-extension-mma/parameters-file-1.png)
 
-  To deploy the ARM template, navigate to the "deployment folder" ***../extensions/arm*** and run the below command:
+6. To deploy the ARM template, navigate to the "deployment folder" ***../extensions/arm*** and run the below command:
 
-  ```console
-  az deployment group create --resource-group <Name of the Azure resource group> \
-  --template-file <The *log-analytics-template.json* template file location> \
-  --parameters <The *log-analytics-template.parameters.json* template file location>
-  ```
+      ```console
+      az deployment group create --resource-group <Name of the Azure resource group> \
+      --template-file <The *log-analytics-template.json* template file location> \
+      --parameters <The *log-analytics-template.parameters.json* template file location>
+      ```
 
 ## Azure-Arc-enabled servers Microsoft Monitoring Agent Extension Deployment
 
-* Edit the [*extensions parameters file*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template.parameters.json)
+1. Edit the [*extensions parameters file*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template.parameters.json)
 
-    ![A screenshot of ARM template parameters file.](./img/arc-vm-extension-mma/parameters-file-2.png)
+    ![A screenshot of ARM extensions parameters file.](./img/arc-vm-extension-mma/parameters-file-2.png)
 
-* To match your configuration you will need to provide:
-
-  * The VM name as it is registered in Azure Arc.
+    To match your configuration you will need to provide:
+    - The VM name as it is registered in Azure Arc.
 
     ![A screenshot of a machine name from an Azure-Arc-enabled server.](./img/arc-vm-extension-mma/mma-machine-name.png)
 
-  * The location of the resource group where you registered the Azure-Arc-enabled server.
+    - The location of the resource group where you registered the Azure-Arc-enabled server.
 
     ![A screenshot of an Azure region.](./img/arc-vm-extension-mma/mma-azure-region.png)
 
-  * Information of the Log Analytics workspace you previously created: workspace ID and key. These parameters will be used to configure the MMA agent. You can get this information by going to your Log Analytics workspace and under "Settings" select "Agents management".
+    - Information about the Log Analytics workspace you previously created: workspace ID and key. These parameters will be used to configure the MMA agent. You can get this information by going to your Log Analytics workspace and under "Settings" select "Agents management".
 
     ![A screenshot of Agents management within an Azure-Arc-enabled server.](./img/arc-vm-extension-mma/agents-management.png)
 
     ![A screenshot of a workspace configuration.](./img/arc-vm-extension-mma/mma-workspace-config.png)
 
-* Choose the ARM template that matches your operating system, for [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template-windows.json) and [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
+2. Choose the ARM template that matches your operating system, for [*Windows*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template-windows.json) and [*Linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
 
     ```console
     az deployment group create --resource-group <Name of the Azure resource group> \
@@ -118,28 +119,28 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
     --parameters <The *mma-template.parameters.json* template file location>
     ```
 
-* Once the template has completed its run, you should see an output as follows:
+3. After the template has completed its run, you should see an output similar to the following:
 
     ![A screenshot of an output from an ARM template.](./img/arc-vm-extension-mma/mma-output.png)
 
-* You will have the Microsoft Monitoring agent deployed on your Windows or Linux system and reporting to the Log Analytics workspace that you have selected. You can verify by going back to the "Agents management" section of your workspace and choosing either Windows or Linux, you should see now an additional connected VM.
+4. You will have the Microsoft Monitoring agent deployed on your Windows or Linux system and reporting to the Log Analytics workspace that you have selected. You can verify by going back to the "Agents management" section of your workspace and choosing either Windows or Linux. You should see an additional connected VM.
 
     ![A screenshot of connected agents for Windows servers.](./img/arc-vm-extension-mma/windows-agents.png)
 
     ![A screenshot connected agents for Linux servers.](./img/arc-vm-extension-mma/linux-agents.png)
 
-## Clean up environment
+## Clean up your environment
 
 Complete the following steps to clean up your environment.
 
-Remove the virtual machines from each environment by following the teardown instructions from each guide.
+1. Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
-* **[GCP Ubuntu instance](./gcp-terraform-ubuntu/) / [GCP Windows instance](./gcp-terraform-windows/)**
-* **[AWS Ubuntu EC2 instance](./aws-terraform-ubuntu/)**
-* **[VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu/) / [VMware vSphere Windows Server VM](./vmware-terraform-winsrv/)**
-* **[Vagrant Ubuntu box](./local-vagrant-ubuntu/) / [Vagrant Windows box](./local-vagrant-windows/)**
+    - [GCP Ubuntu instance](./gcp-terraform-ubuntu.md) and [GCP Windows instance](./gcp-terraform-windows.md)
+    - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
+    - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+    - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md) and [Vagrant Windows box](./local-vagrant-windows.md)
 
-* Remove the Log Analytics workspace by executing the following command in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
+2. Remove the Log Analytics workspace by executing the following command in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
 
     ```console
     az monitor log-analytics workspace delete --resource-group <Name of the Azure resource group> --workspace-name <Log Analytics Workspace Name> --yes

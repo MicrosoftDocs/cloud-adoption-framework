@@ -50,7 +50,7 @@ One example of a mature operations management discipline is to use Microsoft Mon
 
 ## Next step: Your next migration iteration
 
-Once the unified operations migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are additional platforms to be migrated, this article series can be used again to guide your next unified operations migration or deployment.
+Once the unified operations migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are additional platforms to be migrated, the following articles can be used to help guide your next unified operations migration or deployment.
 
 - [Strategy for unified operations](./strategy.md)
 - [Plan for unified operations](./plan.md)
