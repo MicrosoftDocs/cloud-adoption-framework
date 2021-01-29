@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Introduction to hybrid and multicloud products on Azure
 
-**DEL**During these challenging times, businesses are shifting priorities to enable remote work, taking advantage of cloud innovation, and maximizing existing on-premises investments.**DEL** Relying on an effective multi-cloud, multi-edge hybrid approach is even more important than it has ever been. Azure has been hybrid by design since the beginning, focused on supporting the hybrid needs of customers, and for the last several years, has centered efforts around hybrid integration across Azure products.
+Relying on an effective multi-cloud, multi-edge hybrid approach is even more important than it has ever been. Azure has been hybrid by design since the beginning, focused on supporting the hybrid needs of customers, and for the last several years, has centered efforts around hybrid integration across Azure products.
 
 As customers have grown more sophisticated in their adoption of multiple clouds, a number of Azure products have broadened that perspective to support the on-premises, multicloud, edge, and unified operations requirements of customers. Hybrid integration means that customers can consistently build and deploy apps and databases, operate seamlessly, and deliver integrated cloud security across heterogeneous environments, with unified governance and management.
 
