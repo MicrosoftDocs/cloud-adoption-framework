@@ -21,7 +21,7 @@ Before considering a hybrid and multi-cloud scenario, customers may have several
 * Migrating data
 * Integrating disparate development environments
 * Managing data management tools
-* Transferring data across scattered resource environments.
+* Transferring data across scattered resource environments
 
 Deploying a single enterprise control plane can accelerate cloud adoption and migration. Organizations can develop cloud readiness with cloud skilling efforts and process improvements that assume unified operations—bringing innovative cloud practices and technologies to on-premises environments, while preparing other workloads for migration to the cloud. One cloud operations management dashboard can help you to manage and govern your operations consistently—across on-premises, multi-cloud, and edge environments. You gain greater visibility (into assets scattered across environments), cross-team accountability, and faster, consistent, and at-scale deployments for developers.
 
