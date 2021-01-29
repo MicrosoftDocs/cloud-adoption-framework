@@ -16,11 +16,9 @@ This article provides guidance on how to onboard Azure-Arc-enabled servers to [A
 
 The following procedures will enable and configure Azure Sentinel on your Azure subscription. This process includes:
 
-1. Setting up a Log Analytics Workspace where logs and events are aggregated for analysis and correlation.
-
-1. Enabling Azure Sentinel on the workspace.
-
-1. Onboarding Azure-Arc-enabled servers on Sentinel using the extension management feature and Azure Policies.
+- Setting up a Log Analytics Workspace where logs and events are aggregated for analysis and correlation.
+- Enabling Azure Sentinel on the workspace.
+- Onboarding Azure-Arc-enabled servers on Sentinel using the extension management feature and Azure Policies.
 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
@@ -36,7 +34,7 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
 ## Prerequisites
 
-1. Clone the Azure Arc Jumpstart repository
+1. Clone the Azure Arc Jumpstart repository.
 
     ```console
     git clone https://github.com/microsoft/azure_arc
