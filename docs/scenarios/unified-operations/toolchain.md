@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Azure Hybrid and Multicloud products"
 description: Introduce the azure products that help enable hybrid and multicloud solutions
-author: brianblanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 01/11/2021
 ms.topic: conceptual
