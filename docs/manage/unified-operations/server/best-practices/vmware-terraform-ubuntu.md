@@ -107,11 +107,11 @@ Before executing the Terraform plan, you must set the environment variables whic
 
     ![A screenshot of 'terraform apply' completed.](./img/vmware-terraform-ubuntu/terraform-apply.png)
 
-     ![A screenshot of a new VMware vSphere Ubuntu server virtual machine.](./img/vmware-terraform-ubuntu/new-vm.png)
+    ![A screenshot of a new VMware vSphere Ubuntu server virtual machine.](./img/vmware-terraform-ubuntu/new-vm.png)
 
-    ![![A screenshot of an Azure-Arc-enabled server in an Azure resource group.](.img/vmware-terraform-ubuntu/server-1.png)
+    ![A screenshot of an Azure-Arc-enabled server in an Azure resource group.](./img/vmware-terraform-ubuntu/server-1.png)
 
-    ![Another screenshot of an Azure-Arc-enabled server in an Azure resource group.](.img/vmware-terraform-ubuntu/server-2.png)
+    ![Another screenshot of an Azure-Arc-enabled server in an Azure resource group.](./img/vmware-terraform-ubuntu/server-2.png)
 
 ## Delete the deployment
 

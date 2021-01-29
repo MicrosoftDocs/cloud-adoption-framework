@@ -119,7 +119,7 @@ Before executing the Terraform plan, you must export the environment variables w
 ## Semi-Automated Deployment (Optional)
 
 As you may have noticed, the last step of the run is to register the VM as a new Azure-Arc-enabled server resource.
-    ![A screenshot of the 'azcmagent connect' command.](./img/gcp-ubuntu/ubuntu-azcmagent-connect.png)
+    ![A screenshot of running the 'azcmagent connect' command.](./img/gcp-ubuntu/ubuntu-azcmagent-connect.png)
 
 If you want to demo/control the actual registration process, do the following:
 
@@ -145,7 +145,7 @@ If you want to demo/control the actual registration process, do the following:
     azcmagent connect --service-principal-id $TF-VAR-client-id --service-principal-secret $TF-VAR-client-secret --resource-group "Arc-GCP-Demo" --tenant-id $TF-VAR-tenant-id --location "westus2" --subscription-id $TF-VAR-subscription-id
     ```
 
-    ![A screenshot of the 'azcmagent connect' command.](./img/gcp-ubuntu/ubuntu-azcmagent.png)
+    ![A screenshot of the 'azcmagent connect' command completing successfully.](./img/gcp-ubuntu/ubuntu-azcmagent.png)
 
 * When complete, your VM will be registered with Azure Arc and visible in the resource group inside Azure portal.
 

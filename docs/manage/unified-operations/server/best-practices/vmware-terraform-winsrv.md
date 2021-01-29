@@ -99,7 +99,7 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 * In addition to the *TF-VAR* environment variables you've just exported, edit the Terraform variables in the [*terraform.tfvars*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/vmware/winsrv/terraform/terraform.tfvars) to match your VMware vSphere environment.
 
-    ![A screenshot of TF-VAR environment variables](./img/vmware-terraform-winsrv/variables.png)
+    ![A screenshot of TF-VAR environment variables](./img/vmware-terraform-winsrv/winsrv-variables.png)
 
 * Run the ```terraform init``` command which will download the Terraform AzureRM, Local and vSphere providers.
 
@@ -111,9 +111,9 @@ Before executing the Terraform plan, you must set the environment variables whic
 
     ![A screenshot of a new VMware vSphere Windows Server virtual machine.](./img/vmware-terraform-winsrv/new-vm.png)
 
-    ![A screenshot of an Azure-Arc-enabled server in an Azure resource group.](.img/vmware-terraform-winsrv/server-1.png)
+    ![A screenshot of an Azure-Arc-enabled server in an Azure resource group.](./img/vmware-terraform-winsrv/server-1.png)
 
-    ![Another screenshot of an Azure-Arc-enabled server in an Azure resource group.](.img/vmware-terraform-winsrv/server-2.png)
+    ![Another screenshot of an Azure-Arc-enabled server in an Azure resource group.](./img/vmware-terraform-winsrv/server-2.png)
 
 ## Delete the deployment
 
@@ -125,4 +125,4 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 * If you want to nuke the entire environment use the ```terraform destroy --auto-approve``` command as shown below.
 
-    ![A screenshot of the 'terraform destroy' command.](./img/vmware-terraform-winsrv/08-terraform-destroy.png)
+    ![A screenshot of the 'terraform destroy' command.](./img/vmware-terraform-winsrv/terraform-destroy.png)
