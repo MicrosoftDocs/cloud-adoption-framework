@@ -3,7 +3,7 @@ title: Deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
 description: Learn how to manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate

@@ -3,7 +3,7 @@ title: Use virtual machine extensions and an Azure Resource Manager template to 
 description: Learn how to execute custom scripts to Azure-Arc-enabled servers by using Virtual Machine extensions that provide post-deployment configuration and automation tasks.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate

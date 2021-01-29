@@ -3,7 +3,7 @@ title: Manage Azure policies and deploy the Azure Monitoring agent extension to 
 description: Learn how to use Azure-Arc-enabled servers to assign Azure Policies to VMs outside of Azure, whether they are on-premises or on other clouds.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
