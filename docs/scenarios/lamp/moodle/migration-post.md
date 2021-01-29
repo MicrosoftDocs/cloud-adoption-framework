@@ -28,7 +28,7 @@ After migrating Moodle, you need to take care of some post-migration tasks to co
 
 ## Controller virtual machine scale set
 
-Take the following steps to finish configuring your virtual machine scale set. You will need to SSH to your virtual machine scale set instance by using the private IP address, as described in [Access the virtual machine scale set](azure-infra-config.md#access-the-virtual-machine-scale-set).
+Take the following steps to finish configuring your virtual machine scale set. You will need to SSH to your virtual machine scale set instance by using the private IP address, as described in [Access the virtual machine scale set](./azure-infra-config.md#access-the-virtual-machine-scale-set).
 
 ### Update log paths
 

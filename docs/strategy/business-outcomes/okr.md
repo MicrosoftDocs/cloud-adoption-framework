@@ -48,7 +48,7 @@ To do this, focus on what happens in a month, a quarter, and other short-term in
 
 OKRs help to create alignment and accountability within organizations.
 
-![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/OKR.jpg)
+![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/okr.jpg)
 
 _Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster._
 
