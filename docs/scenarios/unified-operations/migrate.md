@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Hybrid and multicloud migration
 
-In the [Migrate methodology](../../migrate/index.md), migration to the cloud is already consider to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
+In the [Migrate methodology](../../migrate/index.md), migration to the cloud is already considered to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
 
 ![Shift from uni-direction cloud migration, to bi-directional hybrid and multicloud migration described in next paragraph.](../../_images/unified-operations/primary-cloud-provider.png)
 
@@ -21,7 +21,7 @@ Typically, migration efforts have been seen as a one-way street; assets move up 
 
 While the direct impact on migration processes is minor, awareness of those deviations can increase your organization's likelihood of success. The act of migrating workloads consists of three high level processes, which are repeated in waves or sprints until the migration is complete. The following introduces how each of those processes change:
 
-- **Assess workloads:** There are a few considerations that will shape how you assess workloads prior to migration. 
+- **Assess workloads:** There are a few considerations that will shape how you assess workloads prior to migration.
 - **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But, you may want to leverage more of the [Azure Migrate](https://docs.microsoft.com/azure/migrate) ecosystem to accelerate specific types of migrations.
 - **Release workloads:** Once workloads have been deployed, the biggest shift will be seen in testing cycles prior to release to production traffic.
 
@@ -43,10 +43,10 @@ Where hybrid and multicloud migrations encounter assessment challenges are in th
 - When evaluating workload it is always important to consider compatibility with Azure and your Azure Landing Zones. During workload evaluation, you will also need to consider compatibility with any hybrid networking, hybrid identity, hybrid security, or hybrid management/governance constraints established in other hybrid or multicloud environments.
 - A more thorough emphasis must also be placed on dependencies, since a larger percentage of assets may be hosted in other clouds.
 - It is important to understand the reason behind the hybrid and multicloud decision to evaluate compatibility of the various workloads with any supporting tools:
-    - Azure Stack HCI compatibility is important if you are modernizing your data center to allow for cloud native solutions on-prem.
-    - Kubernetes compatibility is important if you are maintaining portability through container-based infrastructure.
-    - Azure Edge compatibility may be important to extend workloads & reduce latency at the point of interaction.
-    - Regulatory, compliance, or business requirements may dictate that some assets or data remain on-prem. To monitor those parts that are migrated, you may need to add additional monitoring tools.
+  - Azure Stack HCI compatibility is important if you are modernizing your data center to allow for cloud native solutions on-prem.
+  - Kubernetes compatibility is important if you are maintaining portability through container-based infrastructure.
+  - Azure Edge compatibility may be important to extend workloads & reduce latency at the point of interaction.
+  - Regulatory, compliance, or business requirements may dictate that some assets or data remain on-prem. To monitor those parts that are migrated, you may need to add additional monitoring tools.
 
 The following articles will help mature the most impactful processes required for this type of migration:
 
