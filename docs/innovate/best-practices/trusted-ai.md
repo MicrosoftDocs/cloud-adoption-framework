@@ -143,4 +143,4 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 ## Next steps
 
-Explore [human AI guidelines](/en-us/ai/guidelines-human-ai-interaction/) to learn more about responsible AI.
+Explore [human AI guidelines](/ai/guidelines-human-ai-interaction/) to learn more about responsible AI.
