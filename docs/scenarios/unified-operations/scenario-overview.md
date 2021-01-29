@@ -22,18 +22,18 @@ This scenario focuses on enabling two targeted outcomes:
 
 This scenario is designed to guide the end-2-end customer journey, throughout the cloud adoption lifecycle. Delivery of the full journey requires a few key components, or guidance sets:
 
-- Cloud Adoption Framework: These articles walk through the smallest set of considerations and implementations of each CAF Methodology. Use these articles to prepare decision makers, central IT, and the Cloud Center of Excellence for adoption of hybrid and multicloud workloads across your portfolio.
+- Cloud Adoption Framework: These articles walk through the smallest set of considerations and implementations of each methodology in the Cloud Adoption Framework. Use these articles to prepare decision makers, central IT, and the Cloud Center of Excellence for adoption of hybrid and multicloud workloads across your portfolio.
 - Well-Architected Framework: These articles outline the considerations that each workload owner should make when their workloads need to be deployed across hybrid and multicloud environments.
 - Reference architectures: These reference solutions aid in accelerating deployment for a number of common hybrid and multicloud scenarios.
 - Best Practices: These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products.
 - Feature Azure Products: Learn more about the products that support your hybrid and multicloud strategy in Azure.
 - Learn Modules: Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions.
 
-## Common customer journeys
+## Common customer challenges and supporting guidance
 
-**Prepare for centralized operations of hybrid and multicloud:** Leverage the cloud adoption framework articles to establish the processes and approaches required to support an entire portfolio of workloads across hybrid and multicloud environments.
+**Prepare for centralized operations of hybrid and multicloud:** Review the seven cloud adoption framework articles in the TOC to the right to establish the processes and approaches required to support an entire portfolio of workloads across hybrid and multicloud environments.
 
-**Improve controls across an existing hybrid and multicloud portfolio:** Focus on the Unified Operations, Govern, and Manage articles to integrate unified operations into your existing operations processes. Leverage the Ready article to deploy those improvements across all of your cloud environments.
+**Monitor assets across an existing hybrid and multicloud portfolio:** Focus on the Unified Operations, Govern, and Manage articles to integrate unified operations into your existing operations processes. Leverage the Ready article to deploy those improvements across all of your cloud environments.
 
 **Influence changes to individual workloads (Central IT):** As hybrid and multicloud controls improve, the central IT teams will encounter requirements that depend on knowledge of the architecture behind individual workloads. Use the Well-architected guidance to help workload owners understand potential improvements to their workloads that will improve hybrid and multicloud operations.
 
