@@ -25,7 +25,7 @@ The image above illustrates three of the most common cloud mixes we see with cus
 - **Azure first:** Most workloads have been moved to Azure. A small number of workloads stay on-prem. Strategic decisions have led to a small number of workloads living on the edge or in multicloud environments.
 - **Multicloud first:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a small number of workloads living in Azure or on the edge.
 
-Each month, we see a steady flow of customers moving from a _hybrid first_ mix to an _Azure first_ mix, as their cloud strategy matures. But we also support a number of customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
+Each month, we see a steady flow of customers moving from a "hybrid first" mix to an "Azure first" mix, as their cloud strategy matures. But we also support a number of customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
 
 The most important things to consider when preparing any of your cloud environments for hybrid and multicloud, are the following:
 
@@ -49,7 +49,7 @@ To get started, [inventory and tag your hybrid and multicloud resources](../../m
 
 The following links will help you onboard and tag assets across each of your cloud providers:
 
-- Onboard Azure assets: [Linux VMs](../manage/unified-operations/server/best-practices/azure-arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-win.md)
+- Onboard Azure assets: [Linux VMs](../../manage/unified-operations/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/arm-template-win.md)
 - Onboard assets in your local data center: [Linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
 - Onboard VMware assets: [Linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
 - Onboard AWS assets: [Linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
@@ -67,7 +67,7 @@ The Cloud Adoption Framework's Ready methodology helps prepare your environment 
 
 Once your Azure environment is established, you can begin to modify your Azure environment to support the most appropriate cloud mix. The following are modifications that should be considered:
 
-- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance.
+- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you may need to integrate your identity provider with Azure Active Directory. See the following for additional guidance. <!–– Add link -->
 - **Public network connectivity:** Best practice suggests that all ingress and egress traffic should route through one cloud platform when possible. But, your requirements or cloud mix may require more of a peer model. This is especially common, if your cloud mix is used to reach redundancy and reliability requirements. How will your configure connectivity between each cloud platform and the public internet?
 - **Backup and Recovery:** It is very common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. This often results in one of the cloud providers serving as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case.
 - **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you may require connectivity between each cloud platform. How will your configure connectivity between each cloud platform?

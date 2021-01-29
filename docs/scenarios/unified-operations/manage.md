@@ -13,7 +13,7 @@ ms.subservice: operate
 
 Hybrid and multicloud leads to natural shifts in how you operate the cloud. The Manage methodology in the cloud adoption framework outlines a path for implementing an operations baseline and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
 
-This article outlines how you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
+The following outlines how you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 
 ## Extending your operations baseline
 
@@ -27,13 +27,13 @@ To get started with an operations baseline that spans multiple cloud providers, 
 
 To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 
-Once you complete the basic exercise your can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds, is to establish a consistent plan for patch and update management. Follow this guide on [hybrid and multicloud update management](../../manage/unified-operations/server/best-practices/arc-updatemanagement.md) to deploy tools that can control patching across cloud providers.
+Once you complete the basic exercise your can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds, is to establish a consistent plan for patch and update management. Follow the [hybrid and multicloud update management](../../manage/unified-operations/server/best-practices/arc-update-management.md) guide to deploy tools that can control patching across cloud providers.
 
 ## Enhanced baseline
 
 Enhance your operations baseline by onboarding a continuously broader range of assets and cloud providers. The follow list provides a few examples of the type of assets you can add to your expanded operations baseline.
 
-- Onboard Azure assets: [Linux VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/azure-arm-template-win.md)
+- Onboard Azure assets: [Linux VMs](../../manage/unified-operations/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/arm-template-win.md)
 - Onboard assets in your local data center: [Linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
 - Onboard VMware assets: [Linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
 - Onboard AWS assets: [Linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
@@ -43,10 +43,10 @@ Enhance your operations baseline by onboarding a continuously broader range of a
 
 In addition to tagging and onboarding assets, you can also deliver a number of operations management disciplines using hybrid and multicloud tools.
 
-One example of a mature operations management discipline, is the use of Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
+One example of a mature operations management discipline is to use Microsoft Monitoring Agents to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
-- [Manage VMs with MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-mma-arm.md)
-- [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-customscript-arm.md)
+- [Manage VMs with MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-mma.md)
+- [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-custom-script.md)
 
 ## Next step: Your next migration iteration
 
