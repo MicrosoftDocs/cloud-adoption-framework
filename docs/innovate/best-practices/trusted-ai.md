@@ -42,7 +42,7 @@ Explainability helps data scientists, auditors, and business decision makers to 
 
 ### Explainability tools
 
-Microsoft has developed [InterpretML](http://interpret.ml/), an open-source toolkit that helps to achieve model explainability and supports glass-box and black-box models.
+Microsoft has developed [InterpretML](https://interpret.ml/), an open-source toolkit that helps to achieve model explainability and supports glass-box and black-box models.
 
 - Glass-box models are interpretable because of their structure. For these models, use Explainable Boosting Machine, which is the state of the algorithm based on a decision tree or linear models, provides lossless explanations, and is editable by domain experts.
 
@@ -143,4 +143,4 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 ## Next steps
 
-Explore [human AI guidelines](/ai/guidelines-human-ai-interaction.md) to learn more about responsible AI.
+Explore [human AI guidelines](/ai/guidelines-human-ai-interaction/) to learn more about responsible AI.

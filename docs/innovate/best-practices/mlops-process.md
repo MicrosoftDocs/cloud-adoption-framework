@@ -50,7 +50,7 @@ Since data drift, seasonality, or newer architecture tuned for better performanc
 
 - **Ownership:** An owner should be assigned to the model performance monitoring process to actively manage its performance.
 
-- **Release pipelines:** Set up a release pipeline in [Azure DevOps](https://github.com/MicrosoftDocs/azure-devops-docs-pr) first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers and signs off on a deployment process.
+- **Release pipelines:** Set up a release pipeline in [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) first, and set the trigger to the model registry. When a new model is registered in the registry, the release pipeline triggers and signs off on a deployment process.
 
 ## Prerequisites for retraining models
 
