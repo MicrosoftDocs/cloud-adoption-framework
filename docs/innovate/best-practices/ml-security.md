@@ -35,11 +35,11 @@ Default AKS clusters have a control plane with a public IP address. If you need 
 
 For securing the default AKS inference cluster inside your virtual network, specify three IP addresses:
 
-1. CIDR notation specifies an **AKS address range**. It must not overlap with any other subnet range.
+- CIDR notation specifies an **AKS address range**. It must not overlap with any other subnet range.
 
-1. An **AKS DNS service IP address** is assigned for the DNS service within AKS. It must be within the AKS address range.
+- An **AKS DNS service IP address** is assigned for the DNS service within AKS. It must be within the AKS address range.
 
-1. A **Docker bridge address** is assigned to the Docker bridge, which executes your scoring script as a container. This address must not be within your subnet IP or AKS address range.
+- A **Docker bridge address** is assigned to the Docker bridge, which executes your scoring script as a container. This address must not be within your subnet IP or AKS address range.
 
 You can configure AKS to use an internal and private load balancer with a private AKS cluster. Only private IPs are allowed for this scenario, and you can use a Python SDK or Azure command-line extension but not Azure Machine Learning studio for this task. When using a private load balancer, you have to grant the Network Contributor role to the AKS cluster resource group that contains the virtual network.
 
