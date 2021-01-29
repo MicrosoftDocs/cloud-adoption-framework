@@ -15,7 +15,13 @@ ms.subservice: strategy
 
 Few organizations jump straight into a cloud-native portfolio. To avoid possibly slowing cloud adoption and migration efforts across your organization, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and desire business outcomes tied to to the innovations of cloud services where you might consider a hybrid and multi-cloud scenario to be beneficial to your organization.
 
-Before considering a hybrid and multi-cloud scenario, customers may have several valid concerns: maintaining governance, management, and compliance—managing identity and security—migrating data—integrating disparate development environments—managing data management tools—and transferring data across scattered resource environments.
+Before considering a hybrid and multi-cloud scenario, customers may have several valid concerns: 
+* Maintaining governance, management, and compliance
+* Managing identity and security
+* Migrating data
+* Integrating disparate development environments
+* Managing data management tools
+* Transferring data across scattered resource environments.
 
 Deploying a single enterprise control plane can accelerate cloud adoption and migration. Organizations can develop cloud readiness with cloud skilling efforts and process improvements that assume unified operations—bringing innovative cloud practices and technologies to on-premises environments, while preparing other workloads for migration to the cloud. One cloud operations management dashboard can help you to manage and govern your operations consistently—across on-premises, multi-cloud, and edge environments. You gain greater visibility (into assets scattered across environments), cross-team accountability, and faster, consistent, and at-scale deployments for developers.
 
