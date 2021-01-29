@@ -27,23 +27,23 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
   az --version
   ```
 
-* Vagrant relies on an underlying hypervisor. For the purpose of this guide, we will be using "Oracle VM VirtualBox".
+* Vagrant relies on an underlying hypervisor. For this guide, we will be using "Oracle VM VirtualBox".
 
   * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-    * If you are an OSX user, simply run ```brew cask install virtualbox```
+    * If you are an OSX user, run ```brew cask install virtualbox```
     * If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
     * If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux-Downloads)
 
   * Install [Vagrant](https://www.vagrantup.com/docs/installation/)
 
-    * If you are an OSX user, simply run ```brew cask install vagrant```
+    * If you are an OSX user, run ```brew cask install vagrant```
     * If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
     * If you are a Linux user, look [here](https://www.vagrantup.com/downloads.html)
 
 * Create Azure service principal (SP)
 
-    To connect the Vagrant virtual machine to Azure Arc, an Azure service principal assigned with the "Contributor" role is required. To create it, login to your Azure account run the below command (this can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
+    To connect the Vagrant virtual machine to Azure Arc, an Azure service principal assigned with the "Contributor" role is required. To create it, login to your Azure account and run the below command (this step can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
 
     ```console
     az login
@@ -70,7 +70,7 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
 
     > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest)**
 
-* The Vagrantfile executes a script on the VM OS to install all the needed artifacts as well to inject environment variables. Edit the [*scripts/vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you've just created.
+* The Vagrantfile executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [*scripts/vars.sh*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you created.
 
   * subscriptionId=Your Azure subscription ID
   * appId=Your Azure service principal name
@@ -90,11 +90,11 @@ After editing the ***scripts/vars.sh*** script to match your environment, from t
 
 ![Screenshot of vagrant up being run](./01.png)
 
-Once the download is complete, the actual provisioning will start. As you can see in the screenshot below, the process takes no longer than 3 minutes.
+Once the download is complete, the actual provisioning will start. As shown in the screenshot below, the process takes no longer than 3 minutes.
 
 ![Screenshot of completed vagrant up](./02.png)
 
-Upon completion, you will have a local Ubuntu VM deployed, connected as a new Azure-Arc-enabled server inside a new resource group.
+Upon completion, you will have a local Ubuntu VM deployed, connected as a new Azure-Arc-enabled server, inside a new resource group.
 
 ![Screenshot of Azure portal showing Azure-Arc-enabled server](./03.png)
 
@@ -102,11 +102,11 @@ Upon completion, you will have a local Ubuntu VM deployed, connected as a new Az
 
 ## Semi-Automated Deployment (Optional)
 
-As you may noticed, the last step of the run is to register the VM as a new Azure-Arc-enabled server resource.
+The last step is to register the VM as a new Azure-Arc-enabled server resource.
 
 ![Screenshot of vagrant up being run](./05.png)
 
-In a case you want to demo/control the actual registration process, to the following:
+If you want to demo/control the actual registration process, complete the following steps:
 
 * In the [*install-arc-agent*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/install-arc-agent.sh) shell script, comment out the "Run connect command" section and save the file. You can also comment out or change the creation of the resource group.
 
@@ -114,16 +114,16 @@ In a case you want to demo/control the actual registration process, to the follo
 
     ![Screenshot of the az group create command](./07.png)
 
-* SSH the VM using the ```vagrant ssh``` command.
+* SSH to the VM using the ```vagrant ssh``` command.
 
     ![Screenshot of of SSH to the Vagrant machine](./08.png)
 
-* Run the same *azcmagent connect* command you've just commented out using your environment variables.
+* Run the same *azcmagent connect* command you commented out using your environment variables.
 
     ![Screenshot of the azcmagent connect](./09.png)
 
 ## Delete the deployment
 
-To delete the entire deployment, run the ```vagrant destroy -f``` command. The Vagrantfile includes a *before: destroy* Vagrant trigger which will run a script to delete the Azure resource group before destroying the actual VM. That way, you will be starting fresh next time.
+To delete the entire deployment, run the ```vagrant destroy -f``` command. The Vagrantfile includes a *before: destroy* Vagrant trigger, which will run a script to delete the Azure resource group before destroying the actual VM. 
 
 ![Screenshot of vagrant destroy being run](./10.png)
