@@ -80,7 +80,7 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
 5. You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/log-analytics-template.parameters.json), and providing a name and location for your workspace.
 
-    ![A screenshot of ARM template parameters file.](./img/arc-vm-extension-mma/parameters-file-1.png)
+    ![A screenshot of ARM template parameters for name and location.](./img/arc-vm-extension-mma/parameters-file-1.png)
 
 6. To deploy the ARM template, navigate to the "deployment folder" ***../extensions/arm*** and run the below command:
 
@@ -94,7 +94,7 @@ Please review the [Azure Monitor supported OS documentation](https://docs.micros
 
 1. Edit the [*extensions parameters file*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/mma-template.parameters.json)
 
-    ![A screenshot of ARM template parameters file.](./img/arc-vm-extension-mma/parameters-file-2.png)
+    ![A screenshot of ARM extensions parameters file.](./img/arc-vm-extension-mma/parameters-file-2.png)
 
     To match your configuration you will need to provide:
     - The VM name as it is registered in Azure Arc.
