@@ -24,7 +24,7 @@ The development process should produce the following outcomes:
 
 The following diagram depicts the deployment lifecycle of a machine learning system:
 
-![A diagram of the machine learning lifecycle.](media/ml-lifecycle.png)
+![A diagram of the machine learning lifecycle.](./media/ml-lifecycle.png)
 
 Once developed, a machine learning model is trained, validated, deployed, and monitored. From an organizational perspective and on the managerial and technical level, it's important to define who owns and implements this process. In larger enterprises, a data scientist might own the model training and validation steps, and a machine learning engineer might tend to the remaining steps. In smaller companies, a data scientist might own all steps.
 
@@ -38,7 +38,7 @@ This step uses established metrics like an accuracy metric to automatically vali
 
 ### Deploy the model
 
-Deploy the model as an API service for web applications in the deployment step. This approach enables the model to be scaled and updated independently of the applications. Alternatively, the model can be used to perform batch scoring where it's used once or periodically to calculate predictions on new data points. This is useful when large amounts of data need to be processed asynchronously. More details on deployment models can be found on the [machine learning inference during deployment](ml-deployment-inference.md) page.
+Deploy the model as an API service for web applications in the deployment step. This approach enables the model to be scaled and updated independently of the applications. Alternatively, the model can be used to perform batch scoring where it's used once or periodically to calculate predictions on new data points. This is useful when large amounts of data need to be processed asynchronously. More details on deployment models can be found on the [machine learning inference during deployment](./ml-deployment-inference.md) page.
 
 ### Monitor the model
 
@@ -83,7 +83,7 @@ The goals, tasks, and documentation artifacts for each stage of the TDSP lifecyc
 
 Per the TDSP lifecycle, the key roles in the AI project are data engineer, data scientist, and machine learning operations engineer. These roles are critical to your project's success and must work together toward accurate, repeatable, scalable, and production-ready solutions.
 
-![A diagram showing the machine learning operations process.](media/mlops-process.png)
+[![A diagram showing the machine learning operations process.](./media/mlops-process.png)](./media/mlops-process.png#lightbox)
 
 - **Data engineer:** This role ingests, validates, and cleans the data. Once the data is refined, it's cataloged and made available for data scientists to use. At this stage, it's important to explore and analyze duplicate data, remove outliers, and identify missing data. These activities should be defined in the pipeline steps and are executed as the train pipeline is preprocessed. Unique and specific names should be assigned to core and generated features.
 

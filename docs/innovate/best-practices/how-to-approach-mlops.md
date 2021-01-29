@@ -12,15 +12,13 @@ ms.custom: think-tank
 
 # How to approach machine learning operations
 
-## An overview of machine learning operations
-
 Machine learning operations consist of principles and best practices about how to organize and standardize machine model development, deployment, and maintenance in a scalable way.
 
-![A diagram showing an overview of machine learning operations.](media/mlops-overview.png)
+![A diagram showing an overview of machine learning operations.](./media/mlops-overview.png)
 
 The main components of how a machine learning system develops are outlined below:
 
-![A diagram showing the components of a machine learning system in production.](media/ml-system-in-production.png)
+![A diagram showing the components of a machine learning system in production.](./media/ml-system-in-production.png)
 
 <!-- docutune:disable -->
 
