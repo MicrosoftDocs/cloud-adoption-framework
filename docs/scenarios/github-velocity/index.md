@@ -147,9 +147,9 @@ For further reading, see:
 - Choose your implementation team (typically a developer manager and a few developers defined as admins), and deploy GitHub.
 - Learn common and advanced Git workflows to enhance how you use GitHub.
 
-The following links will direct you to GitHub docs.
+The following links provide more information about GitHub.
 
-- [GitHub @ Microsoft learning](/learn/browse/?products=github)
-- [GitHub learning lab](https://lab.github.com/)
-- [GitHub docs](https://docs.github.com/en)
+- [GitHub modules in Microsoft Learn](/learn/browse/?products=github)
+- [GitHub Learning Lab](https://lab.github.com/)
+- [GitHub Docs](https://docs.github.com/en)
 - [Tips for getting started with GitHub DevSecOps](https://resources.github.com/whitepapers/Architects-guide-to-DevOps/)
