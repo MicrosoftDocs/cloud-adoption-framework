@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 ## Overview
 
-Innovation is the new currency in today's competitive landscape. Ridesharing, streaming content, self-driving cars, and other services have fundamentally changed people's daily rhythms while turning markets upside down and showing how the competitive landscape has moved from physical assets to digital experiences.
+Innovation is the new currency in today's competitive landscape. Ride sharing, streaming content, self-driving cars, and other services have fundamentally changed people's daily rhythms while turning markets upside down and showing how the competitive landscape has moved from physical assets to digital experiences.
 
 These types of superior digital experience are leading a disruption where well-established businesses face stiff competition from companies that can innovate and deliver value to their customers faster. To compete and avoid disruption, businesses need to build a culture of innovation and use the best and most fitting tools and cloud services.
 
@@ -28,19 +28,19 @@ Companies can take advantage of GitHub's connectedness to the open-source commun
 
 GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to *innersource*, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
 
-From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type flexibility.
+From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type flexibility.
 
 ## Take advantage of open-source assets
 
 Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
 
-While OSS could be interpreted as the packages, libraries, scripts, and dependencies incorporated into applications, there are thousands of open-source assets in the form of infrastructure as code (IaC), documentation, guidance, and blueprints for well-defined Azure architectures. These blueprints have been contributed to the OSS community by Microsoft, partners, vendors, customers, and individuals, and they're readily available in GitHub. They can be easily be modified, reused, and deployed to a specific Azure environment.
+While OSS could be interpreted as the packages, libraries, scripts, and dependencies incorporated into applications, there are thousands of open-source assets in the form of infrastructure as code (IaC), documentation, guidance, and blueprints for well-defined Azure architectures. These blueprints have been contributed to the OSS community by Microsoft, partners, vendors, customers, and individuals, and they're readily available in GitHub. They can be easily modified, reused, and deployed to a specific Azure environment.
 
 ### Infrastructure as code
 
 Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/azure/devops/learn/what-is-continuous-delivery).
 
-IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments, and inconsistencies between environments lead to issues during deployments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. With snowflakes, infrastructure administration and maintenance involves manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
+IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments, and inconsistencies between environments lead to issues during deployments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. With snowflakes, infrastructure administration and maintenance requires manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
 
 With IaC, teams make changes to the environment description and version the configuration model, which is typically in well-documented code formats like JSON; see [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) for more information. Developers can simplify their workflows by hosting IaC code in the same GitHub repo as their application source code and adopt the same continuous integration (CI) /CD practices for IaC powered by [GitHub Actions](https://github.com/features/actions).
 
@@ -58,7 +58,7 @@ The following architecture diagram highlights the security checks that run in th
 
 - [Codespaces](https://docs.github.com/github/developing-online-with-codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
 
-- [GitHub security](https://github.com/features/security) works to eliminate threats in a number of ways. Agents and services identify vulnerabilities in repositories and dependent packages. They also upgrade dependencies to current and secure versions.
+- [GitHub security](https://github.com/features/security) works to eliminate threats in multiple ways. Agents and services identify vulnerabilities in repositories and dependent packages. They also upgrade dependencies to current and secure versions.
 
 - [GitHub Actions](https://docs.github.com/actions/learn-github-actions) are custom workflows that provide CI/CD capabilities directly in repositories. Computers named runners host these CI/CD jobs.
 
@@ -78,7 +78,7 @@ The following architecture diagram highlights the security checks that run in th
 
 Many companies use the term *innersource* to describe how their engineering teams work together on code. Innersource is a development methodology where engineers build proprietary software with best practices from large-scale open-source projects like Kubernetes or Visual Studio Code.
 
-Large-scale open-source projects require coordination and teamwork across thousands of contributors. The most successful ones are driven by a vision for their future and daily user needs: speed, reliability, and functionality. The scale at which these operate can teach a few lessons and can help companies to build better software faster with innersource.
+Large-scale open-source projects require coordination and teamwork across thousands of contributors. The most successful projects are driven by a vision for their future and daily user needs: speed, reliability, and functionality. The scale at which these projects operate provides some lessons and can help companies build better software more quickly with innersource.
 
 With GitHub's pull requests and issues, collaboration and code review are built into the development process. Internal and outsourced teams can share work, discuss changes, and get feedback all in one place. This helps organizations share expertise internally and avoid reinventing field-tested solutions developed for other projects.
 
