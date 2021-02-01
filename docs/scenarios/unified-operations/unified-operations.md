@@ -40,7 +40,7 @@ Whether located in a public or private cloud, your primary cloud platform is whe
 
 ## Defining unified operations
 
-The concept behind how unified operations works is simple. Implement an extension, or gateway, in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. Manage and govern your operations consistently—across heterogeneous on-premises, multicloud, and edge environments.
+The concept behind how unified operations works is simple: implement an extension, or gateway, in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. Manage and govern your operations consistently—across heterogeneous on-premises, multicloud, and edge environments.
 
 In implementing unified operations, a single enterprise control plane extends across your organization's distributed assets, bringing consistent management, app development, and cloud services to any infrastructure, anywhere, at scale. Enabling consistent management and governance for organizations, a gateway with such cloud controls extends consistent operations management and data services across disparate on-premises, multicloud and edge environments.
 
@@ -48,7 +48,7 @@ When identifying your Primary Cloud Platform, it is important to ensure that clo
 
 ## Unified operations
 
-The concept behind unified operations is simple. A single cloud management and operations experience across your portfolio of distributed assets at scale (bringing consistent governance, management, app development, and cloud services to any infrastructure, anywhere) enables an integrated hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth. The addition of a gateway for cloud controls that extend management and data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. 
+A single cloud management and operations experience across your portfolio of distributed assets at scale (bringing consistent governance, management, app development, and cloud services to any infrastructure, anywhere) enables an integrated hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth. The addition of a gateway for cloud controls that extend management and data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments. 
 
 ![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/unified-operations/primary-cloud-provider-extended.png)
 
@@ -102,7 +102,7 @@ Your primary cloud platform should include a number of important features to fac
 
 ### Basic features
 
-(All of these basic features are required in order to deliver a cloud adoption plan, at scale):
+All of these basic features are required in order to deliver a cloud adoption plan, at scale:
 
 - **Search, index, group, and tag** all deployed assets, extending basic visibility and management.
 - **Templatize, automate, and extend tooling** for consistent deployments.
