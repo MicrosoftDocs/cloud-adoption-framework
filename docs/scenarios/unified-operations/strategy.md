@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 ## Executive summary
 
-Few organizations jump straight into a cloud-native portfolio. To avoid possibly slowing cloud adoption and migration efforts across your organization, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and desire business outcomes tied to to the innovations of cloud services where you might consider a hybrid and multi-cloud scenario to be beneficial to your organization.
+Few organizations jump straight into a cloud-native portfolio. To avoid possibly slowing cloud adoption and migration efforts across your organization, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and desire business outcomes tied to to the innovations of cloud services where you might consider a hybrid and multicloud scenario to be beneficial to your organization.
 
 Before considering a hybrid and multi-cloud scenario, customers may have several valid concerns: 
 * Maintaining governance, management, and compliance
@@ -27,7 +27,7 @@ Deploying a single enterprise control plane can accelerate cloud adoption and mi
 
 ## Accelerate cloud adoption and migration efforts with one enterprise control plane
 
-Starting comprehensive cloud readiness and skilling initiatives can accelerate cloud adoption and migration efforts across your organization. Assess and advance cloud readiness, implementing innovative cloud practices in your workloads that will remain on-premises, and adopt cloud technologies to prepare other workloads that you might move to the cloud. Work with your cloud strategy team, and build the necessary cloud skilling and processes to prepare for your migration effort to a hybrid and multi-cloud environment.
+Starting comprehensive cloud readiness and skilling initiatives can accelerate cloud adoption and migration efforts across your organization. Assess and advance cloud readiness, implementing innovative cloud practices in your workloads that will remain on-premises, and adopt cloud technologies to prepare other workloads that you might move to the cloud. Work with your cloud strategy team, and build the necessary cloud skilling and processes to prepare for your migration effort to a hybrid and multicloud environment.
 
 How can one enterprise control plane transform your organization's cloud adoption and migration effort?
 
@@ -47,13 +47,13 @@ Azure Arc extends one enterprise control plane with Azure management and service
 
 **Practice frictionless development,** supporting both disconnected and connected use cases.
 
-Hybrid and multi-cloud environments are the most common realities found across today's enterprise IT landscape. For most customers, moving to a hybrid and multi-cloud scenario simply means embracing market realities and being motivated by a sound business strategy. The next decision for your organization is committing to a distributed cloud computing model that can increase the speed of your cloud adoption and migration efforts. Initiating a cross-team effort to increase your cloud readiness with innovative cloud practices and technologies is the first step towards implementing one enterprise control plane. Consistently protect and monitor resources, standardize governance and security, and manage your operational processes on-premises, multicloud, and edge. Consider a hybrid and multicloud environment to manage your overall digital estate if you are planning a hybrid strategy by design for the next 12 months or longer.
+Hybrid and multicloud environments is the most common reality found across today's enterprise IT landscape. For most customers, moving to a hybrid and multicloud scenario simply embracing market reality, and motivated by a sound business strategy. The next decision for your organization would be committing to a distributed cloud computing model that can increase the speed of your cloud adoption and migration efforts. Initiating a cross-team effort to increase your cloud readiness with innovative cloud practices and technologies is the first step towards implementing one enterprise control plane. Consistently protect and monitor resources, standardize governance and security, and manage your operational processes on premises, multicloud, and edge. Consider a hybrid and multicloud environment to manage your overall digital estate if you are planning a hybrid strategy by design for the next 12 months or longer.
 
 Work with your [cloud strategy team](<https://docs.microsoft.com/azure/cloud-adoption-framework/get-started/team/cloud-strategy>), to build the necessary skilling and processes to prepare the move to an enterprise control plane across hybrid, multicloud, and edge that encourages greater accountability within IT teams, empowers developer teams, and extends Azure-services to any infrastructure, anywhere.
 
 ## Unified operations motivations
 
-There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multi-cloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: Critical business events, migration, or innovation.
+There are various [motivations](../../strategy/motivations.md) that might steer customers to adopt a hybrid and multicloud approach. Adopting the right cloud strategy depends on documenting what classification the majority of these motivations are associated with: Critical business events, migration, or innovation.
 
 Customers may have a digital estate that is bound by specific regulatory requirements, and data localization laws that constrain in which geographic location it must reside. A particular industry might require low latency and high connectivity for efficient operational capacity, such as financial services. Low-latency and high-connectivity are common requirements for other industries such as media, healthcare, education, and government.
 
@@ -63,15 +63,17 @@ A multi-national organization, for example, might have globally distributed, leg
 
 When customers execute on their cloud strategy and choose hybrid and multicloud scenario, they expect to see business outcomes supported by specific efforts that drive crucial business results, [outcomes grounded in cross-team consensus](../../strategy/business-outcomes/index.md).
 
-Outcomes include:
+Organizations might require **improved visibility and control over their IT estate**. They want the ability to see all their resources in a single location, and be able to query through them to gain insights.
+  
+Another outcome companies may desire is **cloud-based management**—the ability (across platforms) to modernize operations with the same cloud management services, on resources in locations that are outside of Azure.
+  
+**Governance** is an important outcome for companies wishing to ensure consistent configurations across all resources, from one central location.
+  
+**DevOps and flexible, cloud-native app deployments** would provide organizations the agility of deploying app infrastructure through templates, and app configurations through GitOps.
+  
+Finally, companies might benefit from **increased flexibility when adopting PaaS**, with the ability to run PaaS services on their infrastructures of choice.
 
-* **Improved visibility and control over an IT estate** - The ability to see all resources in a single location, and be able to query through them to gain insights.
-* **Cloud-based management** — The ability (across platforms) to modernize operations using the same cloud management services on resources in locations that are outside of Azure.
-* **Governance**  - An important outcome for companies wishing to ensure consistent configurations across all resources from one central location.
-* **DevOps and cloud native app deployment flexibility** - Provides organizations the agility to deploy app infrastructure through templates and app configurations through GitOps.
-* **Increased flexibility when adopting PaaS** - The ability to run PaaS services on any infrastructure of choice.
-
-There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multicloud approach for cloud transformation. Moving to a hybrid and multicloud control plane is multi-faceted, perhaps driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multicloud environments can benefit from one control plane, enabling:
+There may be diverse [business justifications](../../strategy/cloud-migration-business-case.md) to support your organization's choice of a hybrid and multicloud approach for cloud transformation. Moving to a hybrid and multicloud control plane is multi-faceted. It may be driven by data residency restrictions, keeping legacy applications on-premises, or avoiding the replication of underutilized provisioned environments in the cloud. Organizations seeking to enable higher visibility and control in hybrid and multicloud environments can benefit from one control plane over a multicloud environment enabling:
 
 * Consistency of uniform development
 * Unified DevOps and management
@@ -111,7 +113,7 @@ Easily adopt DevOps techniques like Infrastructure as Code (IaC). Empower develo
 
 ### Easily implement Azure security anywhere
 
-Access Azure Security Center's system of unified infrastructure security management, and strengthen your security posture with advanced threat protection across hybrid workloads in the cloud—whether in Azure, multi-cloud, or on-premises. Centrally access and manage all resources with Azure role-based access control (Azure RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
+Access Azure Security Center's system of unified infrastructure security management, and strengthen your security posture with advanced threat protection across hybrid workloads in the cloud—whether in Azure, multicloud, or on-premises. Centrally access and manage all resources with Azure role-based access control (Azure RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
 
 ### Governance and configuration of resources anywhere
 
