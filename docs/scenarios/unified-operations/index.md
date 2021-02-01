@@ -31,7 +31,7 @@ This allows you to scale computing resources, while modernizing and protecting [
 
 Another capital expenditure that could be eliminated is in off-site Disaster Recovery and Backup infrastructure investments. Public cloud for BCDR strategies is a compelling option for those on-premises workloads and associated data that are not restricted in some form from residing in a public cloud. By utilising public cloud for BCDR customers take advantage of the major investments in privacy & security, scale on demand and ease and speed of recovery.
 
-Companies are spreading resources across on-premises, multiple clouds, and the edge. Customers have three common needs that we often hear about:
+Companies are spreading resources across on-premises, multiple clouds, and the edge. Customers have four common needs that we often hear about:
 
 1. Visibility into the health of all their existing as well as future infrastructure and applications in a single pane of glass.
 2. Difficulty integrating on-premises policies and updates with cloud infrastructure. Organizations understand the need for implementing a governance standard,
