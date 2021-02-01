@@ -144,8 +144,8 @@ Following are a few example payloads to register data sources using the Purview 
 }
 ```
 
-> [!NOTE]
-> The `<collection-name>` is an existing collection which exists in the Purview account.
+>[!NOTE]
+>The `<collection-name>` is an existing collection which exists in the Purview account.
 
 ### Creating a Scan
 

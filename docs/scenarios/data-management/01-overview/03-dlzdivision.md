@@ -31,7 +31,7 @@ Figure 1: Contoso Business Units
 
 Using the concepts of a [Domain-driven design (DDD)](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice) which advocates modeling based on the reality of business as relevant to your use cases. We can apply the this to designing our Data Landing Zones using **data** Domain-driven design. We focus firstly on the Domains residing with the business unit and then followed by the Sub-Domain.
 
-> [!NOTE]
+>[!NOTE]
 Domain separation allows you to separate data, processing and task into logical grouping called Domains.
 
 Looking at the previous list of Contoso business units, we should see if there are cases where:-
