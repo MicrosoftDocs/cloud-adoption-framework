@@ -11,9 +11,20 @@ ms.subservice: strategy
 
 # Plan for hybrid and multicloud
 
-Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift-and-shift scenarios, configurations of PaaS services, or cloud-native workloads. Planning efforts that center on unified operations include assets beyond VMs and PaaS services in migration efforts, widening the availability of form factors to stretch innovation benefits beyond the private cloud to any location. [Azure Arc](https://docs.microsoft.com/azure/azure-arc/overview) and [Azure Stack](https://azure.microsoft.com/overview/azure-stack) drive digital transformation efforts under unified operations and management across private cloud, public cloud and the edge.
+Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift-and-shift scenarios, modernization to PaaS services, or new innovation using cloud-native workloads. When planning for hybrid and multicloud, additional rationalization options should be considered to address the management of assets across all hybrid and multicloud platforms.
+
+Most notably, hybrid and multicloud adoption efforts must develop a plan for the following expanded rationalization options:
+
+- Working with assets that will **remain** in the on-premise data center, unchanged
+- Modernize to PaaS services that will **remain** in the data center
+- **Re-platform** assets to other cloud platforms
+- **Rehost portability** allowing workloads to move smoothly between hybrid and multicloud platforms
+
+These minor changes will impact the work required to reach your hybrid and multicloud strategy. This article outlines a number of impacts to the plans currently defined in the [Cloud Adoption Framework's Plan methodology](../../plan/index.md).
 
 ## Azure tools to consider in your plan
+
+Hybrid & multicloud planning efforts include assets beyond VMs and PaaS services in migration efforts, widening the availability of form factors to stretch innovation benefits beyond the private cloud to any location. [Azure Arc](https://docs.microsoft.com/azure/azure-arc/overview) and [Azure Stack](https://azure.microsoft.com/overview/azure-stack) drive digital transformation efforts under unified operations and management across private cloud, public cloud and the edge.
 
 Azure Stack is a hardware solution that enables you to run an Azure environment on-premises, and on the edge. Because Azure Stack uses an integrated system with cloud service on-premises ([Azure Stack Hub](https://azure.microsoft.com/products/azure-stack/hub)), or runs edge-computing workloads with a cloud-managed appliance ([Azure Stack Edge](https://azure.microsoft.com/products/azure-stack/edge), retaining assets on-premises is no longer a barrier to extending cloud benefits on premises, or the edge. Such unified operations and management enables consistent operations management and governance across environments. This eliminates the need to resolve dependencies, that are no longer locked to platform-restrictive configurations or policies.
 
@@ -31,7 +42,7 @@ In most cloud adoption scenarios, we assume an intention to Rehost (IaaS VMs), R
 
 When considering a hybrid and multicloud migration, the rationalization criteria change, and migration goals that were uni-directional now fit into a more distributed services model for cloud environments. With a hybrid and multicloud effort, cloud rationalization no longer assumes a one-way migration effort that maintains "migrate everything to the cloud."
 
-In a hybrid and multicloud migration scenario, we assume a distributed, multi-platform cloud services model that is no longer limited to one on-premises environment and a single public cloud to an expansive on-premises, multicloud, and edge model of cloud computing. Rationalization decisions now consider whether to—**Retain** workloads or assets on-premises, **Replatform** workloads to multiple cloud platforms, and have **Custom locations (Rehost portability)** reverse rehosting IaaS/PaaS workloads into on-premises hosting environments.
+In a hybrid and multicloud migration scenario, we assume a distributed, multi-platform cloud services model that is no longer limited to one on-premises environment and a single public cloud to an expansive on-premises, multicloud, and edge model of cloud computing. Rationalization decisions now consider whether to—**Retain** workloads or assets on-premises, **Replatform** workloads to multiple cloud platforms, and have **Rehost portability** allowing workloads to move smoothly into any hosting environments.
 
 Most migration planning efforts focus on single-direction migrations with an objective of simply getting things migrated to the cloud. In that model, Retain, Replatform, and Reverse rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the approach that assumed the migration of assets from on-premises environments to a single public cloud solution like Azure.
 
