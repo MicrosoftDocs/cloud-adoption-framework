@@ -68,4 +68,4 @@ The scale set template deployment creates a [virtual machine scale set](/azure/v
 
 ## Next steps
 
-Continue to [Moodle manual migration steps](migration-start.md) for the next steps in the Moodle migration process.
+Continue to [Moodle manual migration steps](./migration-start.md) for the next steps in the Moodle migration process.
