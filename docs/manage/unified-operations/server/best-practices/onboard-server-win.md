@@ -3,7 +3,7 @@ title: Connect an existing Windows server to Azure Arc
 description: Connect an existing Windows server to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -65,7 +65,7 @@ The following README will guide you through how to connect a Windows machine to 
 
 On the designated machine, Open PowerShell ISE **as Administrator** and run the script. Note the script is using *$env:ProgramFiles* as the agent installation path so make sure **you are not using PowerShell ISE (x86)**.
 
-![A screenshot of the 'azcmagent' connect command.](./img/onboard-server-win/azcmagent.png)
+![A screenshot of the 'azcmagent connect' command.](./img/onboard-server-win/azcmagent.png)
 
 ![A screenshot of the 'az-connect' Windows script.](./img/onboard-server-win/az-connect-win-2.png)
 

@@ -1,15 +1,16 @@
 ---
-title: ""
-description: Learn to configure unified operations for XYZ.
+title: Use a terraform plan to deploy a VMware Windows virtual machine and connect it to Azure Arc
+description: Use a terraform plan to deploy a VMware Windows virtual machine and connect it to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
-## Deploy a VMware Windows VM and connect it to Azure Arc using Terraform
+# Use a terraform plan to deploy a VMware Windows virtual machine and connect it to Azure Arc
 
 The following README will guide you on how to use the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server, VMware vSphere virtual machine and connect it as an Azure-Arc-enabled server resource.
 
@@ -62,7 +63,7 @@ The following README will guide you on how to use the provided [Terraform](https
 
 ### Preparing a Window Server VMware vSphere VM Template
 
-Before using the below guide to deploy a Windows Server VM and connect it to Azure Arc, a VMware vSphere Template is required. [The following README](./vmware-terraform-winsrv/vmware-winsrv2k19-template/) will instruct you how to easily create such a template using VMware vSphere 6.5 and above.
+Before using the below guide to deploy a Windows Server VM and connect it to Azure Arc, a VMware vSphere Template is required. [The following README](./vmware-winsrv2k19-template.md) will instruct you how to easily create such a template using VMware vSphere 6.5 and above.
 
 **The Terraform plan leveraged the *remote-exec* provisioner which uses the WinRM protocol to copy and execute the required Azure Arc script. To allow WinRM connectivity to the VM, run the [*allow-winrm*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/vmware/winsrv/terraform/scripts/allow-winrm.ps1) PowerShell script on your VM before converting it to template.**
 
@@ -98,30 +99,30 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 * In addition to the *TF-VAR* environment variables you've just exported, edit the Terraform variables in the [*terraform.tfvars*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/vmware/winsrv/terraform/terraform.tfvars) to match your VMware vSphere environment.
 
-    ![TF-VAR environment variables](./01.png)
+    ![A screenshot of TF-VAR environment variables](./img/vmware-terraform-winsrv/winsrv-variables.png)
 
 * Run the ```terraform init``` command which will download the Terraform AzureRM, Local and vSphere providers.
 
-    ![terraform init](./02.png)
+    ![A screenshot of the 'terraform init' command.](./img/vmware-terraform-winsrv/terraform-init.png)
 
 * Run the ```terraform apply --auto-approve``` command and wait for the plan to finish.Once the Terraform deployment is completed, a new Windows Server VM will be up & running and will be projected as an Azure Arc server resource in a newly created Azure resource group.
 
-    ![terraform apply completed](./03.png)
+    ![A screenshot of 'terraform apply' completed.](./img/vmware-terraform-winsrv/terraform-apply.png)
 
-    ![New VMware vSphere Windows Server VM](./04.png)
+    ![A screenshot of a new VMware vSphere Windows Server virtual machine.](./img/vmware-terraform-winsrv/new-vm.png)
 
-    ![Azure-Arc-enabled server in an Azure resource group](./05.png)
+    ![A screenshot of an Azure-Arc-enabled server in an Azure resource group.](./img/vmware-terraform-winsrv/server-1.png)
 
-    ![Azure-Arc-enabled server in an Azure resource group](./06.png)
+    ![Another screenshot of an Azure-Arc-enabled server in an Azure resource group.](./img/vmware-terraform-winsrv/server-2.png)
 
 ## Delete the deployment
 
 * The most straightforward way is to delete the Azure Arc resource via the Azure portal, just select the resource and delete it. In addition, delete the VMware vSphere VM.
 
-    ![Delete Azure-Arc-enabled server](./07.png)
+    ![A screenshot of an Azure-Arc-enabled server being deleted.](./img/vmware-terraform-winsrv/delete-server.png)
 
 * If you delete the instance manually, then you should also delete *install-arc-agent.ps1*  which is created by the Terraform plan.
 
 * If you want to nuke the entire environment use the ```terraform destroy --auto-approve``` command as shown below.
 
-    ![terraform destroy](./08.png)
+    ![A screenshot of the 'terraform destroy' command.](./img/vmware-terraform-winsrv/terraform-destroy.png)
