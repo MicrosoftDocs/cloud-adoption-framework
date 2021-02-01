@@ -11,8 +11,6 @@ ms.subservice: strategy
 
 # Strategic impact of hybrid and multicloud operations
 
-## Executive summary
-
 Few organizations jump straight into a cloud-native portfolio. To avoid possibly slowing cloud adoption and migration efforts across your organization, [dispel myths about moving to the cloud](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case>). There are sound [motivations](<https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations>) to retain part of your digital estate on-premises, and desire business outcomes tied to to the innovations of cloud services where you might consider a hybrid and multicloud scenario to be beneficial to your organization.
 
 Before considering a hybrid and multi-cloud scenario, customers may have several valid concerns: 
