@@ -1,7 +1,7 @@
 ---
 title: "Plan methodology for hybrid and multicloud strategy"
 description: Describe the scenario's impact on planning
-author: mpvenables
+author: brianblanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual

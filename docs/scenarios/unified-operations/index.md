@@ -1,7 +1,7 @@
 ---
 title: "Introduction to the Hybrid and Multicloud scenario"
 description: Describe the scenario
-author: mpvenables
+author: brianblanchard
 ms.author: brblanch
 ms.date: 01/11/2021
 ms.topic: conceptual

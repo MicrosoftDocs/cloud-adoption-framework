@@ -1,7 +1,7 @@
 ---
 title: "Manage your portfolio across hybrid and multicloud operations"
 description: Implement effective controls to provide operations management across hybrid and multicloud deployments, leveraging Azure's enterprise control plane.
-author: mpvenables
+author: brianblanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
