@@ -1,16 +1,16 @@
 ---
-title: Deploy a local Windows server hosted by Vagrant, and connect it to Azure Arc
-description: Deploy a local Windows server hosted by Vagrant, and connect it to Azure Arc.
+title: Deploy a local Windows server hosted by Vagrant and connect it to Azure Arc
+description: Deploy a local Windows server hosted by Vagrant and connect it to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: think-tank
 ---
 
-# Deploy a local Windows server hosted by Vagrant, and connect it to Azure Arc
+# Deploy a local Windows server hosted by Vagrant and connect it to Azure Arc
 
 The following README will guide you on how to deploy a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure-Arc-enabled server resource.
 
@@ -117,7 +117,7 @@ In a case you want to demo/control the actual registration process, to the follo
 
 * RDP the VM using the ```vagrant rdp``` command. Use *vagrant/vagrant* as the username/password.
 
-    ![A screenshot of accessing a Vagrant server with the Remote Desktop Protocol.](./img/local-vagrant-windows/vagrant-win-rdp.png)
+    ![A screenshot of accessing a Vagrant server with the Microsoft Remote Desktop Protocol.](./img/local-vagrant-windows/vagrant-win-rdp.png)
 
 * Open PowerShell ISE **as Administrator** and edit the *C:\runtime\vars.ps1* with your environment variables.
 
