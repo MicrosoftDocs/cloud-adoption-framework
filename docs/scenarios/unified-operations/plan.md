@@ -123,6 +123,8 @@ Planning efforts for unified operations and management assume that most assets f
 
 **Deploy familiar Azure governance, security, inventory tracking and patch management tools** on auto-enrolled Azure Arc-enabled servers.
 
+**Monitor your full telemetry** across your cloud-native and on-premises resources in a single place with Azure Monitor.
+
 ### Azure Arc-enabled data services
 
 **Bring Azure data services to any infrastructure—** across on-premises, edge and multicloud using Kubernetes on any hardware.
