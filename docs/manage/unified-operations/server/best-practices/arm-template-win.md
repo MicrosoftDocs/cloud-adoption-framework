@@ -3,7 +3,7 @@ title: Use an Azure Resource Manager template to deploy and connect an Azure Vir
 description: Use an Azure Resource Manager template to deploy and connect an Azure Virtual Machine to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
