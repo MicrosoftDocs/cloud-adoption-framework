@@ -11,11 +11,11 @@ ms.subservice: govern
 
 # Govern your portfolio of hybrid and multicloud workloads
 
-The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and enforcement tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected, and often automated. The key to this new found freedom is the Infrastructure as Code (IaC) foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
+The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and compliance tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected and are often automated. The key to this new found freedom is the infrastructure as code (IaaC) foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 
 In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. Combining Azure Arc with existing governance tools like Azure Policy, Azure Blueprint, and others, extends many of your governance guardrails to virtually any cloud resource (private or public clouds alike). The concept of [unified operations](./unified-operations.md) is the best practice to extend your governance controls using native Azure tools.
 
-## Deploy a unified operations MVP for governance
+## Deploy an unified operations MVP for governance
 
 Well-defined governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and management groups allows for ease of governance. Expand your cloud governance practices with a few simple steps:
 
