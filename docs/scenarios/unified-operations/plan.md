@@ -15,27 +15,27 @@ ms.subservice: strategy
 
 Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift-and-shift scenarios, configurations of PaaS services, or cloud-native workloads. Planning efforts that center on unified operations include assets beyond VMs and PaaS services in migration efforts, widening the availability of form factors to stretch innovation benefits beyond the private cloud to any location. Azure Arc and Azure Stack drive digital transformation efforts under unified operations and management across private cloud, public cloud and the edge.
 
-Azure Stack is a hardware solution that enables you to run an Azure environment on-premises, and on the edge. Because Azure Stack uses an integrated system with cloud service on-premises (Azure Stack Hub), or runs edge-computing workloads with a cloud-managed appliance (Azure Stack Edge), retaining assets on-premises is no longer a barrier to extending cloud benefits on premises, or the edge. Such unified operations and management enables consistent operations management and governance across environments. This eliminates the need to resolve dependencies, that are no longer locked to platform-restrictive configurations or policies.
+Azure Stack is a hardware solution that enables you to run an Azure environment on-premises, and on the edge. Because Azure Stack uses an integrated system with cloud service on-premises (Azure Stack Hub), or runs edge-computing workloads with a cloud-managed appliance (Azure Stack Edge), retaining assets on-premises is no longer a barrier to extending cloud benefits on premises, or the edge. Such unified operations and management enables consistent governance across environments. This eliminates the need to resolve dependencies so that you are no longer locked to platform-restrictive configurations or policies.
 
-Azure Arc is a software solution— one enterprise control plane that manages all your digital assets across environments by projecting your on-premises and other cloud resources into Azure, extending simplified management, faster app development, and consistent Azure services to any infrastructure, anywhere.
+Azure Arc is a software solution providing one enterprise control plane that manages all your digital assets across environments by projecting your on-premises and other cloud resources into Azure, extending simplified management, faster app development, and consistent Azure services to any infrastructure, anywhere.
 
-A hybrid and multicloud strategy that follows a unified operations approach, integrates uniform visibility of on-premises assets with Azure Arc, and can facilitate Azure-consistent migration efforts, extending to and projecting resources into Azure as first-class citizens. Azure Arc implements unified cloud operations management across on-premises, multi-cloud and edge, and enables Azure services anywhere, so migration efforts can standardize management and governance for your entire digital estate, right from Azure. Implementing a unified operations approach changes how you might consider asset inventory and rationalizing your estate, deploying your cloud adoption plan, your readiness plan (with expanded platform options), your specific DevOps plan to manage deployment pipelines, and specific skilling for a hybrid and multicloud strategy.
+A hybrid and multicloud strategy should follow a unified operations approach, facilitate Azure-consistent migration efforts, and integrate uniform visibility of on-premises assets with Azure Arc to extend and project resources into Azure as first-class citizens. Azure Arc implements unified cloud operations management across on-premises, multi-cloud and edge, and enables Azure services anywhere, so migration efforts can standardize management and governance for your entire digital estate, right from Azure. Implementing a unified operations approach changes how you might consider asset inventory and rationalizing your estate, deploying your cloud adoption plan, your readiness plan (with expanded platform options), your specific DevOps plan to manage deployment pipelines, and specific skilling for a hybrid and multicloud strategy.
 
-Hybrid, multicloud, and edge deployment strategies with a unified operations approach in mind can **accelerate cloud adoption and migration efforts for your organization,** deploying a consistent operational and management framework for organizations to move forward and adopt modern cloud technologies, optimizing cloud operations management and governance processes across on-prem-designated as well as migration-candidate workloads.
+Hybrid, multicloud, and edge deployment strategies with a unified operations approach in mind can **accelerate cloud adoption and migration efforts for your organization,** deploying a consistent operational and management framework for organizations to move forward and adopt modern cloud technologies. This optimizes cloud operations management and governance processes across on-prem-designated as well as migration-candidate workloads.
 
-Developing necessary cloud skilling, and building cloud processes that support the overall migration readiness effort across the organization helps to accelerate the overall cloud adoption and migration effort. Planning for unified operations accelerates innovation across resources with an operational framework for simplified management, faster app development, and consistent Azure services across sprawling on prem, multi-cloud, and edge environments, and can strengthen your organization's overall cloud adoption and migration effort.
+Developing necessary cloud skilling, and building cloud processes that support the overall migration readiness effort across the organization helps to accelerate the overall cloud adoption and migration effort. Planning for unified operations accelerates innovation across resources with an operational framework for simplified management, faster app development, and consistent Azure services across sprawling on-premises, multicloud, and edge environments, and strengthens your organization's cloud adoption and knowledge.
 
 ## Planning for hybrid and multicloud strategy
 
 In most cloud adoption scenarios, we assume an intention to Rehost (IaaS VMs), Rearchitect (PaaS services), or Rebuild (cloud-native) workloads with Azure as a target platform, with a uni-directional migration to Azure, using these standard rationalizations to identify assets for possible migration.  
 
-When considering a hybrid and multi-cloud migration, the rationalization criteria change, and migration goals that were uni-directional now fit into a more distributed services model for cloud environments. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration effort that maintains "migrate everything to the cloud."
+When considering a hybrid and multicloud migration, the rationalization criteria change, and migration goals that were uni-directional now fit into a more distributed services model for cloud environments. With a hybrid and multi-cloud effort, cloud rationalization no longer assumes a one-way migration effort that maintains "migrate everything to the cloud."
 
-In a hybrid and multi-cloud migration scenario, we assume a distributed, multi-platform cloud services model that is no longer limited to one on-premises environment and a single public cloud to an expansive on-premises, multi-cloud, and edge model of cloud computing. Rationalization decisions now consider whether to—**Retain** workloads or assets on-premises, **Replatform** workloads to multiple cloud platforms, and have **Custom locations (Rehost portability)** reverse rehosting IaaS/PaaS workloads into on-premises hosting environments.
+In a hybrid and multicloud migration scenario, we assume a distributed, multi-platform cloud services model that is an expansive on-premises, multicloud, and edge model of cloud computing no longer limited to one on-premises environment and a single public cloud. Rationalization decisions now consider whether to—**Retain** workloads or assets on-premises, **Replatform** workloads to multiple cloud platforms, and have **Custom locations (Rehost portability)** for reverse rehosting IaaS/PaaS workloads into on-premises hosting environments.
 
 Most migration planning efforts focus on single-direction migrations with an objective of simply getting things migrated to the cloud. In that model, Retain, Replatform, and Reverse rehosting were viewed as anti-patterns that should be minimized. Because the migration effort was focused on a one-way migration effort, these options did not fit the approach that assumed the migration of assets from on-premises environments to a single public cloud solution like Azure.
 
- The expansion of available deployment options remains the biggest change in planning for unified operations. In planning for a truly hybrid, multicloud and edge model, you open up options for deploying workloads to on-premises and public cloud environments, and the risk for dependencies is eliminated for workloads across your planned deployments. In an expanded (on-premises, multicloud, and edge) deployment model, you no longer need to minimize dependencies on retained (hybrid/on-premises) workloads or replatformed (multicloud) workloads. And, since custom locations are now viable with a single enterprise control plane (given rehost portability), IaaS/PasS workloads can be reverse rehosted on-premises.
+The expansion of available deployment options remains the biggest change in planning for unified operations. In planning for a truly hybrid, multicloud and edge model, you open up options for deploying workloads to on-premises and public cloud environments, and the risk of dependencies is eliminated for workloads across your planned deployments. In an expanded (on-premises, multicloud, and edge) deployment model, you no longer need to minimize dependencies on retained (hybrid/on-premises) workloads or replatformed (multicloud) workloads. And, since custom locations are now viable with a single enterprise control plane (given rehost portability), IaaS/PasS workloads can be reverse rehosted on-premises.
 
 ### One control plane, expanded deployment options
 
@@ -98,25 +98,32 @@ Get automated patching, upgrades, security and scale on-demand across on-premise
 
 ## What are the benefits of Azure Arc for customers?
 
-Planning efforts for unified operations and management assume that most assets fit a **Retain** pattern, adding each to the enterprise control plane, and expanding available form factors. Integral, cross-platform visibility across environments not only **speeds up cloud adoption and migration efforts,** extending consistent cloud practices and technologies across on-premises and migration-candidate workloads, but also **controls sprawling IT assets** with unified operations and management across on-premises and public cloud—**maintains regulatory and data sovereignty compliance** with standardized data governance, security, and cost management polices—and **ensures uniform deployments and configuration** with consistent workload deployments, configured at scale.
+Planning efforts for unified operations and management assume that most assets fit a **Retain** pattern, adding each to the enterprise control plane, and expanding available form factors. Integral, cross-platform visibility across environments:
+
+- **speeds up cloud adoption and migration efforts,** extending consistent cloud practices and technologies across on-premises and migration-candidate workloads
+- **controls sprawling IT assets** with unified operations and management across on-premises and public cloud
+- **maintains regulatory and data sovereignty compliance** with standardized data governance, security, and cost management polices
+- **ensures uniform deployments and configuration** with consistent workload deployments, configured at scale
 
 ### Azure Arc-enabled infrastructure
 
-**Reach out, and onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, bare-metal) with Azure-Arc enabled servers.
+**Reach out, onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, bare-metal) with Azure-Arc enabled servers.
 
-**Use your existing SQL servers with Azure Arc with no migration necessary,**with inventory, governance, security, and proactive SQL database assessments.
+**Use your existing SQL servers with Azure Arc with no migration necessary** and include inventory, governance, security, and proactive SQL database assessments.
 
 **Connect, manage, and operate any Kubernetes cluster(s) and applications running anywhere**, and deploy applications with GitOps.
 
-**Ensure compliance with your organization's security baseline with Azure Policy**, and enable cluster health monitoring with Azure Monitor for Containers.
+**Ensure compliance with your organization's security baseline with Azure Policy** and enable cluster health monitoring with Azure Monitor for Containers.
 
 **Organize, inventory and unify server management experience** with simplified management of hybrid machines with Azure VM extensions for non-Azure Windows, and Linux VMs.
 
 **Apply unified governance and security baselines across disparate environments**, cross-platform compliance, and centralized agent management.
 
-**Apply RBAC (role-based access control) at-scale**, with Central IT and at workload-level owner level.
+**Apply RBAC (role-based access control) at-scale** with Central IT and at workload-level owner level.
 
 **Deploy familiar Azure governance, security, inventory tracking and patch management tools** on auto-enrolled Azure Arc-enabled servers.
+
+**Monitor your full telemetry** across your cloud-native and on-premises resources in a single place with Azure Monitor.
 
 ### Azure Arc-enabled data services
 
@@ -124,15 +131,13 @@ Planning efforts for unified operations and management assume that most assets f
 
 **Remain current with fully automated updates, upgrades and policy-controlled deployments** like evergreen SQL and hyperscale deployment option of Azure Database for PostgreSQL.
 
-**Optimize performance of data workloads, and dynamically scale up/scale out, without application downtime with cloud elasticity on-premises.**
+**Optimize performance of data workloads, and dynamically scale up/scale out** without application downtime and with cloud elasticity on-premises.
 
 **Gain unified management and consistent visibility over on-premises and native Azure data workloads** using familiar tools (Azure Portal, Azure Data Studio, and Azure CLI).
 
-**Protect your on-premises data workloads using Azure security and governance toolsets** (Azure Security Center, Azure Policy, and Azure RBAC)
+**Protect your on-premises data workloads using Azure security and governance toolsets** such as Azure Security Center, Azure Policy, and Azure RBAC.
 
 **Increase cost-efficiencies across your hybrid infrastructure** with a modern cloud billing model.
-
-## [ADD PAGEBREAK HERE]
 
 ## Inventory analysis guidance
 
