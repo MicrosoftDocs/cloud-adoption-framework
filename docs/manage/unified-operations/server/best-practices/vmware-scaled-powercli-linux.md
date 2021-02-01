@@ -1,15 +1,16 @@
 ---
-title: ""
-description: Learn to configure unified operations for XYZ.
+title: Use VMware PowerCLI to scale onboarding VMware vSphere Linux virtual machines to Azure Arc
+description: Use VMware PowerCLI to scale onboarding VMware vSphere Linux virtual machines to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
-## Scaled onboarding of VMware vSphere Linux VMs to Azure Arc using VMware PowerCLI
+# Use VMware PowerCLI to scale onboarding VMware vSphere Linux virtual machines to Azure Arc 
 
 The following README will guide you on how to use the provided [VMware PowerCLI](https://code.vmware.com/web/dp/tool/vmware-powercli/) script so you can perform an automated scaled deployment of the "Azure Arc Connected Machine Agent" in multiple VMware vSphere virtual machines and as a result, onboarding these VMs as an Azure-Arc-enabled servers.
 
@@ -95,11 +96,11 @@ Below you can find the automation flow for this scenario:
 
 To demonstrate the before & after for this scenario, the below screenshots shows a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the */var/opt/* directory showing no agent is installed.
 
-![An empty Azure resource group](./01.png)
+![Screenshot of an An empty Azure resource group.](./img/vmware-scale-powercli-linux/cli-linux-empty.png)
 
-![Vanilla VMware vSphere VM with no Azure Arc agent](./02.png)
+![A screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./img/vmware-scale-powercli-linux/cli-linux-vanilla-1.png)
 
-![Vanilla VMware vSphere VM with no Azure Arc agent](./03.png)
+![Another screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./img/vmware-scale-powercli-linux/cli-linux-vanilla-2.png)
 
 ## Deployment
 
@@ -109,20 +110,20 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
 * Use the Azure service principal ID and password created in the prerequisites section
 
-    ![Export environment variables](./04.png)
+    ![A screenshot of exporting environment variables.](./img/vmware-scale-powercli-linux/cli-linux-export-variables.png)
 
 * From the [*azure-arc-servers-jumpstart\vmware\scaled-deploy\powercli\linux*](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/vmware/scaled-deployment/powercli/linux/) folder, open PowerShell session as an Administrator and run the *scale-deploy.ps1* script.
 
-    ![scale-deploy PowerShell script](./05.png)
+    ![A screenshot of how to scale-deploy with a PowerShell script.](./img/vmware-scale-powercli-linux/scale-deploy-1.png)
 
-    ![scale-deploy PowerShell script](./06.png)
+    ![A second screenshot of how to scale-deploy with a PowerShell script.](./img/vmware-scale-powercli-linux/scale-deploy-2.png)
 
-    ![scale-deploy PowerShell script](./07.png)
+    ![A third screenshot of how to scale-deploy with a PowerShell script.](./img/vmware-scale-powercli-linux/scale-deploy-3.png)
 
 * Upon completion, the VM will have the "Azure Arc Connected Machine Agent" installed as well as the Azure resource group populated with the new Azure-Arc-enabled servers.
 
-    ![Azure Arc Connected Machine Agent installed](./08.png)
+    ![A screenshot of a machine with an Azure Arc Agent installed.](./img/vmware-scale-powercli-linux/cli-linux-agent.png)
 
-    ![New Azure-Arc-enabled servers in an Azure resource group](./09.png)
+    ![A screenshot of new Azure-Arc-enabled servers in an Azure resource group.](./img/vmware-scale-powercli-linux/cli-linux-servers-1.png)
 
-    ![New Azure-Arc-enabled servers in an Azure resource group](./10.png)
+    ![Another screenshot of new Azure-Arc-enabled servers in an Azure resource group.](./img/vmware-scale-powercli-linux/cli-linux-servers-2.png)

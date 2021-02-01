@@ -1,15 +1,16 @@
 ---
-title: ""
-description: Learn to configure unified operations for XYZ.
+title: Create a VMware vSphere template for Windows Server 2019
+description: Create a VMware vSphere template for Windows Server 2019.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/01/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank
 ---
 
-## Create a VMware vSphere template for Windows Server 2019
+# Create a VMware vSphere template for Windows Server 2019
 
 The following README will guide you on how to create a Windows Server 2019 VMware vSphere virtual machine template.
 
@@ -29,43 +30,43 @@ The following README will guide you on how to create a Windows Server 2019 VMwar
 
 * Deploy new virtual machine
 
-    ![Create new VMware vSphere VM](./01.png)
+    ![A screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-1.png)
 
-    ![Create new VMware vSphere VM](./02.png)
+    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-2.png)
 
-    ![Create new VMware vSphere VM](./03.png)
+    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-3.png)
 
-    ![Create new VMware vSphere VM](./04.png)
+    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-4.png)
 
-    ![Create new VMware vSphere VM](./05.png)
+    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-5.png)
 
-    ![Create new VMware vSphere VM](./06.png)
+    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-6.png)
 
 * Make sure to select *Microsoft Windows Server 2016 or later (64-bit)* as the Guest OS.
 
-    ![Windows Server Guest OS](./07.png)
+    ![A screenshot of Windows Server guest OS.](./img/vmware-winsrv2k19-template/winsrv-template-guest-os.png)
 
 * Point to the Windows Server ISO file location.
 
-    ![Create new VMware vSphere VM](./08.png)
+    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-7.png)
 
-    ![Create new VMware vSphere VM](./09.png)
+    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-winsrv2k19-template/winsrv-template-newvm-8.png)
 
 * Power-on the VM and start the Windows Server installation.
 
-    ![Power-on the VM](./10.png)
+    ![First screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-1.png)
 
-    ![Windows Server installation](./11.png)
+    ![Second screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-2.png)
 
-    ![Windows Server installation](./12.png)
+    ![Third screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-3.png)
 
-    ![Windows Server installation](./13.png)
+    ![Fourth screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-4.png)
 
-    ![Windows Server installation](./14.png)
+    ![Fifth screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-5.png)
 
-    ![Windows Server installation](./15.png)
+    ![Sixth screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-6.png)
 
-    ![Windows Server installation](./16.png)
+    ![Seventh screenshot of a Windows Server installation.](./img/vmware-winsrv2k19-template/winsrv-template-installation-7.png)
 
 ### Post-installation
 
@@ -73,23 +74,23 @@ Before converting the VM to a template, few actions needs to be taken.
 
 * Install VMware Tools & Restart
 
-    ![Install VMware Tools](./17.png)
+    ![First screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-1.png)
 
-    ![Install VMware Tools](./18.png)
+    ![Second screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-2.png)
 
-    ![Install VMware Tools](./19.png)
+    ![Third screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-3.png)
 
-    ![Install VMware Tools](./20.png)
+    ![Fourth screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-4.png)
 
-    ![Install VMware Tools](./21.png)
+    ![Fifth screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-5.png)
 
-    ![Install VMware Tools](./22.png)
+    ![Sixth screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-6.png)
 
-    ![Install VMware Tools](./23.png)
+    ![Seventh screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-7.png)
 
-    ![Install VMware Tools](./24.png)
+    ![Eighth screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-8.png)
 
-    ![Install VMware Tools](./25.png)
+    ![Ninth screenshot of a WMware Tools installation.](./img/vmware-winsrv2k19-template/winsrv-template-tools-9.png)
 
 * Perform Windows Updates
 
@@ -115,6 +116,6 @@ Before converting the VM to a template, few actions needs to be taken.
 
 Reduce the VM CPU count & memory resources to the minimum and convert the VM to template, switch the CD/DVD drive to client device as well disconnect it and convert the VM to template.
 
-![Reduce the VM CPU count & Memory](./26.png)
+![A screenshot of how to reduce a virtual machine's CPU count and memory.](./img/vmware-winsrv2k19-template/winsrv-template-reduce.png)
 
-![Convert the VM to template](./27.png)
+![A screenshot of how to convert a virtual machine to a template.](./img/vmware-winsrv2k19-template/winsrv-template-convert.png)
