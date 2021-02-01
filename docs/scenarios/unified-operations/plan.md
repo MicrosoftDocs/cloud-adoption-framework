@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Plan for hybrid and multicloud strategy
-
-## Executive summary
+# Plan for hybrid and multicloud
 
 Most cloud adoption scenarios assume common rationalization of workload assets that are rehosted, rearchitected, or rebuilt to fit IaaS lift-and-shift scenarios, configurations of PaaS services, or cloud-native workloads. Planning efforts that center on unified operations include assets beyond VMs and PaaS services in migration efforts, widening the availability of form factors to stretch innovation benefits beyond the private cloud to any location. [Azure Arc](https://docs.microsoft.com/azure/azure-arc/overview) and [Azure Stack](https://azure.microsoft.com/overview/azure-stack) drive digital transformation efforts under unified operations and management across private cloud, public cloud and the edge.
+
+## Azure tools to consider in your plan
 
 Azure Stack is a hardware solution that enables you to run an Azure environment on-premises, and on the edge. Because Azure Stack uses an integrated system with cloud service on-premises ([Azure Stack Hub](https://azure.microsoft.com/products/azure-stack/hub)), or runs edge-computing workloads with a cloud-managed appliance ([Azure Stack Edge](https://azure.microsoft.com/products/azure-stack/edge), retaining assets on-premises is no longer a barrier to extending cloud benefits on premises, or the edge. Such unified operations and management enables consistent operations management and governance across environments. This eliminates the need to resolve dependencies, that are no longer locked to platform-restrictive configurations or policies.
 
