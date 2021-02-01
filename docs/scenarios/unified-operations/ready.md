@@ -11,7 +11,16 @@ ms.subservice: ready
 
 # Ready: prepare your environment for hybrid and multicloud
 
-The [Ready methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/) of the Microsoft Azure Cloud Adoption Framework guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure Landing Zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practices guidance in the Cloud Adoption Framework. When preparing for a hybrid and multicloud deployment, there are a number of environment configurations that may be slightly different. This article outlines key considerations and changes that are necessary to **prepare your Azure environment to serve as one of your cloud platforms**.
+The [Ready methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/) of the Microsoft Azure Cloud Adoption Framework guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure Landing Zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practices guidance in the Cloud Adoption Framework. When preparing for a hybrid and multicloud deployment, there are a number of environment configurations that may be slightly different. 
+
+This article outlines key considerations and changes that are necessary to prepare your environments for the following:
+
+- Expand connectivity boundaries to connect across hybrid and multicloud platforms
+- Improve support for cloud native services like containers, Kubernetes, and hyper-converged infrastructure solutions to reduce hybrid and multicloud adoption friction
+- Establish proper cloud native tools to support the use of Azure as **one** of your cloud platforms
+- Implement unified operations tooling across all cloud environments to allow for unified operations
+
+This article will guide you through the considerations required to achieve each of those environmental goals.
 
 ## Evaluate your cloud mix
 
