@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Hybrid and multicloud migration
 
-In the [Migrate methodology](../../migrate/index.md), a cloud migration is considered a hybrid or multicloud process. Most of the guidance in this methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from the Migrate methodology relates to long-term objectives of migrations.
+In the [Migrate methodology](../../migrate/index.md), migration to the cloud is already considered to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when migrating to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
 
 ![Shift from unidirectional cloud migration to bidirectional hybrid and multicloud migration described in next paragraph.](../../_images/unified-operations/primary-cloud-provider.png)
 
