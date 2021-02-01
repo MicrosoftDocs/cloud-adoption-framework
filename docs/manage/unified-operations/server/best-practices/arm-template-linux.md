@@ -3,7 +3,7 @@ title: Use an Azure Resource Manager template to deploy and connect an Ubuntu vi
 description: Use an Azure Resource Manager template to deploy and connect an Ubuntu virtual machine to Azure Arc.
 author: likamrat
 ms.author: brblanch
-ms.date: 01/15/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -147,7 +147,7 @@ As mentioned, this deployment will leverage ARM templates. You will deploy a sin
 
 * Upon successful run, a new Azure-Arc-enabled server will be added to the resource group.
 
-    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arm-template-linux/template/template-linux-resource-gp.png)
+    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arm-template-linux/template-linux-resource-gp.png)
 
     ![A screenshot of details from an Azure-Arc-enabled server.](./img/arm-template-linux/template-linux-server-details.png)
 
