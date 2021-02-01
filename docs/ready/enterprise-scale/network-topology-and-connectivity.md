@@ -387,15 +387,15 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - Using ExpressRoute and FastConnect, customers can connect a virtual network in Azure with a virtual cloud network in OCI, provided that the private IP address space does not overlap. Once this connectivity is established, resources in the Azure virtual network can communicate with resources in the OCI virtual cloud network as if they were both in the same network.
 
-- Azure ExpressRoute [FastPath](/azure/expressroute/about-fastpath) is designed to improve the data path performance between two networks (on-premises and Azure), and for this scenario, between OCI and Azure. When enabled, FastPath sends network traffic directly to virtual machines in the virtual network, bypassing the Express Route gateway.
+- Azure ExpressRoute [FastPath](/azure/expressroute/about-fastpath) is designed to improve the data path performance between two networks (on-premises and Azure), and for this scenario, between OCI and Azure. When enabled, FastPath sends network traffic directly to virtual machines in the virtual network, bypassing the ExpressRoute gateway.
 
   - FastPath is available on all ExpressRoute circuits.
 
-  - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must be the Ultra Performance or ErGw3AZ SKUs Express Route Gateway for route management. The virtual network gateway must be either Ultra Performance or ErGw3AZ.
+  - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must be the Ultra Performance or ErGw3AZ SKUs ExpressRoute Gateway for route management. The virtual network gateway must be either Ultra Performance or ErGw3AZ.
   
 - There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet Peering.
 
-- While you can use [Express Route Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, please note that this may incur in additional bandwidth costs that can be calculated by using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/). This is particularly important when you migration large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
+- While you can use [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, please note that this may incur in additional bandwidth costs that can be calculated by using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/). This is particularly important when you migrate large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
 
 - In an Azure regions that support [Availability Zones (AZ)](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small impact on latency. Design you application to balance availability and performances requirements.
 
@@ -408,27 +408,33 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - Create the ExpressRoute circuit(s) that will be used to interconnect Azure with OCI in the **connectivity** subscription.
 
-- You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as depicted in the picture below. 
+- You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as depicted in the following figure. 
 
-![Diagram that shows Azure to OCI - Hub and Spoke.](./media/azure-oci-hub-and-spoke.png)
+  ![Diagram that shows Azure to OCI - Hub and Spoke.](./media/azure-oci-hub-and-spoke.png)
 
-- Enable FastPath on the ExpressRoute connections to interconnect Azure with OCI. Traffic will bypass the Express Route gateway, helping improve the latency. Nevertheless, only VMs seating inside the hub will benefit from this optimization. FastPath doesn't yet support traffic targeting VMs in a peered vNet or Express Route gateway in a virtual Wan hub.
+  _Figure 8: Interconnectivity between Azure and OCI via ExpressRoute._
 
 - If your application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute Gateway and FastPath enabled.
 
-![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
+  ![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
 
-- When deploying your Azure resources across Availability Zones (AZs), perform latency tests from Azure VMs located in different AZs to OCI resources to understand which of the three AZs provides the lowest latency to the OCI resources. Be aware zone numering may change across subscriptions.
+  _Figure 9: Interconnectivity between Azure and OCI with a single VNet._
+
+- When deploying your Azure resources across Availability Zones (AZs), perform latency tests from Azure VMs located in different AZs to OCI resources to understand which of the three AZs provides the lowest latency to the OCI resources.
 
 - To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:   
 
-  - From Azure: Deploy a jumpbox in a spoke VNet. This would provide you access to the Virtual Cloud Network in OCI as depicted in the picture below:
+   - From Azure: Deploy a jumpbox in a spoke VNet. This would provide you access to the Virtual Cloud Network in OCI as depicted in the picture below:
     
-![Diagram that shows Azure to OCI - Jumpbox one vNet.](./media/azure-oci-jumpbox-one-vnet.png)
+  ![Diagram that shows Azure to OCI - Jumpbox one vNet.](./media/azure-oci-jumpbox-one-vnet.png)
 
-  - From on-premises: Use ExpressRoute Global Reach to bind existing ExpressRoute circuit (that connects on-premises to Azure) to OCI ExpressRoute circuit (that interconnects Azure to OCI). In this way, the Microsoft Enterprise Edge Router (MSEE) becomes the central routing point between both ExpressRoute circuits.
+  _Figure 10: Managing OCI resources from Azure via a jumpbox._
 
-![Diagram that shows Azure to OCI - via Global Reach.](./media/azure-oci-gr-hub-and-spoke.png)
+   - From on-premises: Use ExpressRoute Global Reach to bind existing ExpressRoute circuit (that connects on-premises to Azure) to OCI ExpressRoute circuit (that interconnects Azure to OCI). In this way, the Microsoft Enterprise Edge Router (MSEE) becomes the central routing point between both ExpressRoute circuits.
+
+  ![Diagram that shows Azure to OCI - via Global Reach.](./media/azure-oci-gr-hub-and-spoke.png)
+
+  _Figure 11: Managing OCI resources from on-premises via ExpressRoute Global Reach._
 
 ## Plan for inbound and outbound internet connectivity
 
@@ -557,7 +563,7 @@ This section explores key recommendations to achieve network encryption between 
 
 ![Diagram that illustrates encryption flows.](./media/enc-flows.png)
 
-_Figure 8: Encryption flows._
+_Figure 12: Encryption flows._
 
 - When you're establishing VPN connections from on-premises to Azure by using VPN gateways, traffic is encrypted at a protocol level through IPsec tunnels. The preceding diagram shows this encryption in flow `A`.
 
