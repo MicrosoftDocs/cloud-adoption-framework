@@ -45,7 +45,7 @@ Other tips for planning are:
 - The virtual network address space shouldn't overlap with on-premises network ranges.
 - Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly.
 - If networks overlap, you'll need to redesign the network.
-- If you absolutely can't redesign the network, network address translation (NAT) can help. But should be avoid or limited as much as possible.
+- If you absolutely can't redesign the network, network address translation (NAT) can help but should be avoided or limited as much as possible.
 
 **Learn more:**
 
@@ -416,7 +416,7 @@ _Figure 10: Service endpoints._
 Public IP addresses in Azure can be associated with VMs, load balancers, application gateways, and VPN gateways.
 
 - Public IP addresses allow internet resources to communicate inbound to Azure resources, and Azure resources to communicate outbound to the internet.
-- Public IP addresses are created with a basic or Standard SKU, which have several differences. Standard SKUs can be assigned to any service, but are most usually configured on VMs, load balancers, and application gateways.
+- Public IP addresses are created with a basic or Standard SKU, between which are several differences. Standard SKUs can be assigned to any service but are usually configured on VMs, load balancers, and application gateways.
 - It's important to note that a basic public IP address doesn't have an NSG automatically configured. You need to configure your own, and assign rules to control access. Standard SKU IP addresses have an NSG, and rules assigned by default.
 - As a best practice, VMs shouldn't be configured with a public IP address.
   - If you need a port opened, it should only be for web services, such as port 80 or 443.
@@ -511,7 +511,7 @@ In the hub, you normally manage the perimeter network (with access to the intern
 
 | Firewall type | Details |
 | --- | --- |
-| WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits. WAFs are designed to detect attacks against web applications (HTTP/HTTPS). Compared with traditional firewall technology, wafs have a set of specific features that protect internal web servers from threats. |
+| WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits. WAFs are designed to detect attacks against web applications (HTTP/HTTPS). Compared with traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats. |
 | Azure Firewall | Like NVA firewall farms, Azure Firewall uses a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. Azure Firewall also helps control access to on-premises networks. Azure Firewall has built-in scalability. |
 | NVA firewalls | Like Azure Firewall, NVA firewall farms have a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. NVA firewalls also help control access to on-premises networks. NVA firewalls can be manually scaled behind a load balancer. <br><br> Though an NVA firewall has less specialized software than a WAF, it has broader application scope to filter and inspect any type of traffic in egress and ingress. |
 
