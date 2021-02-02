@@ -35,6 +35,7 @@ The following is a longer list of common antipatterns. Each outlines the most co
 | Adopt | Migrate, modernize or innovate without any guardrails defined | [View](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-any-guardrails-defined) |
 | Adopt | Migrate, modernize or innovate without a prior assessment or an architectural design session | [View](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-a-prior-assessment-or-an-architectural-design-session) |
 | Adopt | Forced architecture | [View](./migrate-antipatterns.md#antipattern-forced-architecture) |
+| Adopt | Use of a single subscription | [View](./migrate-antipatterns.md#antipattern-use-of-a-single-subscription) |
 | Manage | Focusing on tooling rather than business outcomes | [View](./manage-antipatterns.md#antipattern-focusing-on-tooling-rather-than-business-outcomes) |
 | Govern | Misalignment on shared responsibility | [View](./govern-antipatterns.md#antipattern-misalignment-on-shared-responsibility) |
 | Govern | Take out of the box security as a given | [View](./govern-antipatterns.md#antipattern-take-out-of-the-box-security-as-a-given) |
