@@ -7,7 +7,7 @@ ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: think-tank
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
