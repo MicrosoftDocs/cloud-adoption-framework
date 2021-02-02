@@ -40,7 +40,7 @@ Legacy Teradata environments typically evolve over time to encompass multiple su
 
 - Proves the viability of migrating to Azure Synapse by quickly delivering the benefits of the new environment.
 - Allows in-house technical staff to gain experience with new processes and tools so that they can use them to migrate other areas.
-- Creates a template based on the current tools and processes to use in additional migration from the source Teradata environment.
+- Creates a template based on the current tools and processes to use in additional migrations from the source Teradata environment.
 
 A good candidate for an initial migration from a Teradata environment is one that implements a Power BI/analytics workload rather than an OLTP workload. The workload should have a data model that can be migrated with minimal modifications, such as a star or snowflake schema.
 
