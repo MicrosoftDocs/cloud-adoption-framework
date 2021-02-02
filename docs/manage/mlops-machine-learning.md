@@ -1,5 +1,5 @@
 ---
-title: MLOps with Azure Machine Learning
+title: Machine learning operations with Azure Machine Learning
 description: Learn about machine learning operations (MLOps) principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
 author: v-hanki
 ms.author: janet

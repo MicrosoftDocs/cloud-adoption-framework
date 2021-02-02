@@ -85,7 +85,7 @@ Unlike IaaS, in which you manage your own VMs and infrastructure, in a platform 
 - **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
   - You create an Always Encrypted key to encrypt individual column data.
   - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
-  - Most likely, to use this feature, you'll need to make application changes.
+  - Most likely, you'll need to make application changes to use this feature.
 - **Transparent data encryption (TDE):** Protect the Azure SQL Database with real-time encryption and decryption of the database, associated backups, and transaction log files at rest.
   - TDE allows encryption activities to take place without changes at the application layer.
   - TDE can use encryption keys provided by Microsoft, or you can bring your own key.
@@ -96,8 +96,8 @@ Unlike IaaS, in which you manage your own VMs and infrastructure, in a platform 
 - Enable [Azure Disk Encryption for Windows VMs](/azure/virtual-machines/windows/disk-encryption-overview).
 - Learn about [Azure Storage encryption for data at rest](/azure/storage/common/storage-service-encryption).
 - Read the [Always Encrypted overview](/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
-- Read about [transparent data encryption for SQL Database and Azure Synapse](/azure/sql-database/transparent-data-encryption-azure-sql).
-- Learn about [Azure SQL Database transparent data encryption with customer-managed key](/azure/sql-database/transparent-data-encryption-byok-azure-sql).
+- Read about [TDE for SQL Database and Azure Synapse](/azure/sql-database/transparent-data-encryption-azure-sql).
+- Learn about [Azure SQL Database TDE with customer-managed key](/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
 ## Best practice: Protect VMs with antimalware
 
@@ -152,8 +152,8 @@ Azure provides the following solutions:
 As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including Azure role-based access control (Azure RBAC) to authorize permissions to access Azure resources.
 
 - Azure RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
-- Azure RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
-- Azure RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
+- Azure RBAC can assign roles to security principals (for example, owner, contributor, and reader) and role definitions (a collection of permissions) that define the operations that the roles can perform.
+- Azure RBAC can also set scopes that set the boundary for a role. The scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
 Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
@@ -204,7 +204,7 @@ In the following sections, we'll recommend some best practices for Azure managem
 - Review sample Azure architectures to learn from as you build your post-migration deployments.
 - If you have multiple subscriptions, you can gather them into management groups, and apply governance settings to those groups.
 - Apply compliance policies to your Azure resources.
-- Put together a BCDR strategy to keep data safe, your environment resilient, and resources up and running when outages occur.
+- Put together a business continuity and disaster recovery (BCDR) strategy to keep data safe, your environment resilient, and resources up and running when outages occur.
 - Group VMs into availability groups for resilience and high availability. Use managed disks for ease of VM disk and storage management.
 - Enable diagnostic logging for Azure resources, build alerts and playbooks for proactive troubleshooting, and use the Azure dashboard for a unified view of your deployment health and status.
 - Understand your Azure support plan and how to implement it, get best practices for keeping VMs up-to-date, and put processes in place for change management.
@@ -325,7 +325,7 @@ Azure Policy evaluates your resources, scanning for those not compliant with you
 
 ## Best practice: Implement a BCDR strategy
 
-Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a _force majeure_ clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run and recover where necessary and when disaster strikes. Your ability to do this can make or break your company's future.
+Planning for BCDR is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a _force majeure_ clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run and recover where necessary and when disaster strikes. Your ability to do this can make or break your company's future.
 
 Broadly, your BCDR strategy must consider:
 
@@ -520,7 +520,7 @@ Keeping Azure VMs updated with the latest operating system and software updates 
 - You can use Update Management in Azure Automation to manage operating system updates. This applies to machines that run Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
 - Use Update Management to quickly assess the status of available updates on all agent computers, and manage update installation.
 - You can enable Update Management for VMs directly from an Azure Automation account. You can also update a single VM from the VM page in the Azure portal.
-- In addition, you can register Azure VMs with System Center Configuration Manager. You can then migrate the Configuration Manager workload to Azure, and do reporting and software updates from a single web interface.
+- In addition, you can register Azure VMs with System Center Configuration Manager. You can then migrate the Configuration Manager workload to Azure and do reporting and software updates from a single web interface.
 
   ![Diagram of VM updates.](./media/migrate-best-practices-security-management/updates.png)
 
