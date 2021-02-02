@@ -4,9 +4,10 @@ description: Learn about the process for refactoring landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: internal
 ---
 
 # Refactor landing zones
@@ -31,7 +32,7 @@ It took years and significant effort to reach the current state of security, gov
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 _Figure 2: Acting too soon is a common blocker._
 
-In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload and then their first ten or so workloads before they're ready to release one of them to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red *x* in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
+In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload and then their first ten or so workloads before they're ready to release one of them to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red _X_ in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
 
 ### Blocker: Acting too late
 
@@ -47,7 +48,7 @@ Similar to acting too soon, in this image, the customer waits too long to reach 
 To avoid these common blockers, we suggest an iterative approach based on well-structured cloud adoption plan, which maximizes learning opportunities and minimizes time to business success. Refactoring and parallel efforts are critical to this approach.
 
 > [!WARNING]
-> Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud** are highly unlikely to be successful using a refactoring approach. The learning curve is too high and the timeline too tight to allow for organic approaches to skills attainment. A more complete starting point requiring less customization will be a better path to achieve your objectives. Your implementation partners will likely be able to guide you through a better approach.
+> Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (applications, infrastructure, or data assets) in the cloud** are highly unlikely to be successful using a refactoring approach. The learning curve is too high and the timeline too tight to allow for organic approaches to skills attainment. A more complete starting point requiring less customization will be a better path to achieve your objectives. Your implementation partners will likely be able to guide you through a better approach.
 
 The remainder of this article will focus on some key constraints that can empower a refactoring approach, while minimizing risk.
 
@@ -98,12 +99,12 @@ For this example, the above set of agreed upon conditions will allow the adoptio
 
 ## Meeting long-term requirements while refactoring
 
-The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, review [Expand your landing zone](../considerations/index.md)) for guidance to help make decisions and refactor to meet the evolving requirements of various teams.
+The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, see [Expand your landing zone](../considerations/index.md)) for guidance to help make decisions and refactor to meet the evolving requirements of various teams.
 
 ![Parallel landing zone iteration](../../_images/ready/refactor-methodologies.png)
 _Figure 5: Deeper methodologies assisting a parallel landing zone iteration._
 
-Each subsection of [Expand your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
+Each subsection of [expand your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
 
 ## Next steps
 

@@ -7,9 +7,8 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
-
-<!-- cSpell:ignore Exadata SSMA -->
 
 # Azure Synapse Analytics solutions and migration for an Oracle data warehouse
 

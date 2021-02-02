@@ -7,6 +7,7 @@ ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
+ms.custom: internal
 ---
 
 # Build a cost-conscious organization
@@ -24,7 +25,7 @@ _Figure 1: Outline of the cost-conscious organization._
   - The right reporting scope.
   - Proper resource organization (management groups, resource groups, subscriptions).
   - Clear tagging strategies.
-  - Proper access controls (RBAC).
+  - Proper access controls (Azure RBAC).
 
 - **Accountability:** Accountability is as important as visibility. Accountability starts with clear budgets for adoption efforts. Budgets should be well established, clearly communicated, and based on realistic expectations. Accountability requires an iterative process and a growth mindset to drive the right level of accountability.
 

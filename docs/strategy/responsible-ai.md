@@ -7,6 +7,7 @@ ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank
 ---
 
 <!-- docutune:ignore InterpretML FairLearn -->

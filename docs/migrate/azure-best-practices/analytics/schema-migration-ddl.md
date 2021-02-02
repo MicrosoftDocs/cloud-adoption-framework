@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore DDLs Attunity "Attunity Replicate" "Attunity Visibility" Inmon Denodo Teradata Netezza Wherescape DMVs multinode equi Datometry -->
@@ -122,8 +123,6 @@ Some older database systems include support for data types that aren't directly 
 Here's an alphabetical list of supported data types:
 
 <!-- TODO: Review format of this list. Are the arguments necessary for this list? -->
-
-<!-- docutune:disable -->
 
 - `bigint`
 - `binary [ (n) ]`

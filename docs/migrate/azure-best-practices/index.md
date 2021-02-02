@@ -1,14 +1,13 @@
 ---
 title: Azure cloud migration best practices checklist
 description: Explore the Azure cloud migration checklist to learn how to implement the Azure tools used to align with cloud migration best practices.
-keywords: azure cloud migration best practices, azure migration checklist, cloud migration checklist, cloud migration best practices
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: seo-azure-migrate
+ms.custom: internal, seo-azure-migrate
 ---
 
 # Azure cloud migration best practices checklist

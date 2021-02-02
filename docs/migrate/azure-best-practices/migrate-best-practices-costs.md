@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- docutune:casing ARO -->
@@ -61,9 +62,9 @@ You can use several tools to forecast your monthly bill for migrated workloads.
 
 **Learn more:**
 
-- [Use](https://azure.microsoft.com/pricing/calculator) the Azure pricing calculator.
+- Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
 - Read the [Azure Migrate overview](/azure/migrate/migrate-services-overview).
-- [Read about](/azure/migrate/concepts-assessment-calculation) Azure Migrate assessments.
+- Read about [Azure Migrate assessments](/azure/migrate/concepts-assessment-calculation).
 - Learn more about [Azure Database Migration Service](/azure/dms/dms-overview).
 
 ## Best practice: Right-size VMs
@@ -192,7 +193,7 @@ To do this, you can use Azure Cost Management + Billing APIs. Then, after aggreg
 
 - Read the [Azure Consumption APIs overview](/azure/billing/billing-consumption-api-overview).
 - Learn how to [connect to Azure Consumption Insights in Power BI Desktop](/power-bi/desktop-connect-azure-consumption-insights).
-- Learn how to [manage access to billing information for Azure by using role-based access control (RBAC)](/azure/billing/billing-manage-access).
+- Learn how to [manage access to billing information for Azure by using Azure role-based access control (Azure RBAC)](/azure/billing/billing-manage-access).
 
 ## After migration
 

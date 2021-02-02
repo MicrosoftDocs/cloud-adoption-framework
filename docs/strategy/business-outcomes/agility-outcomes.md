@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Examples of agility outcomes
@@ -27,7 +28,7 @@ During cloud-enabled innovation efforts, time to market is a key measure of IT's
 
 - **Example 1:** The European division of a US-based company needs to comply with GDPR regulations by protecting customer data in a database that supports UK operations. Their existing version of SQL Server doesn't support the necessary row-level security. An in-place upgrade would be too disruptive. Using Azure SQL Database to replicate and upgrade the database, the customer adds the necessary compliance measure in a matter of weeks.
 
-- **Example 2:** A logistics company has discovered an untapped segment of the market, but it needs a new version of their flagship application to capture this market share. Their larger competitor has made the same discovery. Through the execution of a cloud-enabled application innovation effort, the company embraces customer obsession and a DevOps-driven development approach to beat their slower, legacy competitor by *x* months. This jump on market entrance secured the customer base.
+- **Example 2:** A logistics company has discovered an untapped segment of the market, but it needs a new version of their flagship application to capture this market share. Their larger competitor has made the same discovery. Through the execution of a cloud-enabled application innovation effort, the company embraces customer obsession and a DevOps-driven development approach to beat their slower, legacy competitor by _x_ months. This jump on market entrance secured the customer base.
 
 <!-- docutune:ignore "Jamey Shiels" "Vice President of Digital Experience" "Aurora Health Care" -->
 

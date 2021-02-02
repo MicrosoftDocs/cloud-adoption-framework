@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore untrust CIDR RRAS CONTOSODC SYSVOL ITIL NSGs ASGs -->
@@ -76,7 +77,7 @@ Here are the details:
 
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Because Contoso has an EA, there's no limit on the number of Azure subscriptions it can create. An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
 
-As a first step, Contoso has defined a structure known as an _enterprise scaffold_ for its enrollment. Contoso used the [Azure enterprise scaffold guidance](/azure/cloud-adoption-framework/reference/azure-scaffold) to help understand and design a scaffold.
+As a first step, Contoso has defined a structure known as an _enterprise scaffold_ for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold.md) to help understand and design a scaffold.
 
 For now, Contoso has decided to use a functional approach to manage subscriptions:
 
@@ -138,7 +139,7 @@ Contoso is using the Azure AD Free edition that's included with an Azure subscri
 
 ### Add the domain name
 
-To use the standard domain name, Contoso admins need to add it as a custom domain name to Azure AD. This option allows them to assign familiar user names. For example, a user can sign in with the email address `billg@contoso.com` instead of `billg@contosomigration.microsoft.com`.
+To use the standard domain name, Contoso admins need to add it as a custom domain name to Azure AD. This option allows them to assign familiar user names. For example, a user can sign in with the email address `billg@contoso.com` instead of `billg@contosomigration.onmicrosoft.com`.
 
 To set up a custom domain name, the admins add it to the directory, add a DNS entry, and then verify the name in Azure AD.
 
@@ -200,7 +201,7 @@ For management purposes, they create an additional group that will be added to a
 
 ### Synchronize Active Directory
 
-Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory instance with Azure AD. With this model, users and organizations can take advantage of a single identity to access on-premises applications and cloud services, such as Microsoft 365, or thousands of other sites on the internet. Admins can use the groups in Active Directory to implement [role-based access control (RBAC)](/azure/role-based-access-control/role-assignments-portal) in Azure.
+Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory instance with Azure AD. With this model, users and organizations can take advantage of a single identity to access on-premises applications and cloud services, such as Microsoft 365, or thousands of other sites on the internet. Admins can use the groups in Active Directory to implement [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal).
 
 To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/active-directory/hybrid/whatis-hybrid-identity). When you install and configure the tool on a domain controller, it synchronizes the on-premises Active Directory identities to Azure AD.
 
@@ -248,9 +249,9 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/activ
 
       _Figure 13: Group membership._
 
-### Set up RBAC
+### Set up Azure RBAC
 
-Azure [RBAC](/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. By using RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate RBAC role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
+[Azure RBAC](/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. By using Azure RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate Azure role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
 
 Contoso admins then assign roles to the Active Directory groups that they synchronized from on-premises.
 
@@ -434,6 +435,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
   - `VNET-DEV-EUS2`. This virtual network will provide the dev/test team with a fully functional network for dev projects. It will act as a production pilot area, and will rely on the production infrastructure to function.
 
   - `VNET-PROD-EUS2`. Azure IaaS production components will be located in this network.
+
   Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring network address translation (NAT).
 
 - **Subnets:** There will be a subnet in each network for each application tier. Each subnet in the production network will have a matching subnet in the development virtual network. The production network has a subnet for domain controllers.
@@ -519,7 +521,7 @@ _Figure 21: A hub-and-spoke model in a paired region._
 | `IB-TrustZone` | `10.250.1.0/24` | 251 |
 | `OB-UntrustZone` | `10.250.2.0/24` | 251 |
 | `OB-TrustZone` | `10.250.3.0/24` | 251 |
-| `GatewaySubnet` | `10.250.2.0/24` | 251 |
+| `GatewaySubnet` | `10.250.10.0/24` | 251 |
 
 #### Subnets in the `Central US` production network (`VNET-PROD-CUS`)
 
@@ -703,7 +705,7 @@ As it configures identity and access control, Contoso has already begun to put s
 
 The Azure Policy service evaluates your resources by scanning for those not compliant with policy definitions. For example, you might have a policy that only allows certain types of VMs or requires resources to have a specific tag.
 
-Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. [Learn](/azure/governance/policy/tutorials/create-and-manage) about creating and managing policies.
+Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. Learn how to [create and manage policies](/azure/governance/policy/tutorials/create-and-manage).
 
 Contoso wants to begin two policies. It wants a policy to ensure that resources can be deployed in the `East US 2` and `Central US` regions only. It also wants a policy to limit VM SKUs to approved SKUs only. The intention is to ensure that expensive VM SKUs aren't used.
 
@@ -739,7 +741,6 @@ _Figure 40: A policy SKU._
 Policies go into effect immediately, and Contoso can check resources for compliance. In the Azure portal, select the **Compliance** link. The compliance dashboard appears. You can drill down for more details.
 
 ![Screenshot that shows the compliance dashboard.](./media/contoso-migration-infrastructure/policy-compliance.png)
-
 
 _Figure 41: Policy compliance._
 

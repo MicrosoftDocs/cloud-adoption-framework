@@ -7,24 +7,25 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
-<!-- docutune:casing ARO "standard HDD" -->
+<!-- docutune:casing ARO -->
 
 # Best practices for costing and sizing resources hosted in Azure
 
 While delivering the disciplines of governance, cost management is a recurring theme at the enterprise level. By optimizing and managing costs, you can ensure the long-term success of your Azure environment. It's critical that all teams (such as finance, management, and application development teams) understand associated costs and review them on a recurring basis.
 
-> [!IMPORTANT]
-> The best practices and opinions described in this article are based on platform and service features in Azure that were available at the time of writing. Features and capabilities change over time. Not all recommendations will apply to your deployment, so choose what works best for your situation.
-
 ## Best practices by team and accountability
 
 Cost management across the enterprise is a cloud governance and cloud operation function. All cost management decisions result in a change to the assets which support a workload. When those changes impact the architecture of a workload, additional considerations are required to minimize the impact on end users and business functions. The cloud adoption team who configured or developed that workload are likely to hold accountability for completing those types of changes.
 
-- **Tagging is critical to all governance.** Ensure all workloads and resources follow [proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](/azure/governance/policy/tutorials/govern-tags).
-- **Identify right size opportunities.** Review your current resource utilization and performance requirements across the environment.
-- **Resize:** Modify each resource to use the smallest instance or SKU that can support the performance requirements of each resource.
+Collective the centralized and decentralized teams should collaborate to ensure the following high level behaviors are implemented across your portfolio:
+
+- **Tagging is critical to all governance.** Ensure all workloads and resources follow [proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](/azure/governance/policy/tutorials/govern-tags). This will help your centralized governance teams make wise cost management decisions.
+- **Licensing alignment:** Proper allocation of Azure Hybrid Benefit and Azure Reserved VM Instances will significantly reduce your per unit cost for assets across your portfolio. These types of licensing decisions are generally established and maintained by central procurement functions. However, decentralized workload teams may want to be consulted on purchase and allocation of the licenses to minimize the cost of their individual workloads.
+- **Identify right size opportunities.** Review your current resource utilization and performance requirements across the environment. Modify each resource to use the smallest instance or SKU that can support the performance requirements of each resource.
+- **Shut down and deprovision unused resources:** Unused assets add cost in a cloud environment. Identify and terminate any resources that are adding to costs, but are not adding to business value.
 - **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization.
 
 ## Operational cost management best practices
@@ -32,6 +33,7 @@ Cost management across the enterprise is a cloud governance and cloud operation 
 The following best practices are typically completed by a member of the cloud governance or cloud operations team, in accordance with patching and other scheduled maintenance processes. These best practices map to actionable guidance later in this article.
 
 - **Tagging is critical to all governance:** Ensure all workloads and resources follow [proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](/azure/governance/policy/tutorials/govern-tags).
+- **Licensing alignment:** The most immediate cost impact on a large portfolio of workloads will come from a well-planned license acquisition strategy. Purchase and allocation of Azure Hybrid Benefit, Azure Reserved VM Instances, Spot VMs and other buying strategies will rapidly reduce costs across your entire cloud portfolio. 
 - **Identify right size opportunities:** Review your current resource utilization and performance requirements across the environment to identify resources which have remained underutilized for a period of time (generally more than 90 days).
 - **Right-size provisioned SKUs:** Modify underutilized resource to use the smallest instance or SKU that can support the performance requirements of each resource.
 - **Auto-shutdown for VMs:** When a VM isn't in constant use, consider automated shutdown. The VM won't be deleted or decommissioned, but it will stop consuming compute and memory costs until it's turned back on.
@@ -224,7 +226,7 @@ To do this, you can use Azure Cost Management + Billing APIs. Then, after aggreg
 
 - Read the [Azure Consumption APIs overview](/azure/billing/billing-consumption-api-overview).
 - Learn about [connecting to Azure Consumption Insights in Power BI Desktop](/power-bi/desktop-connect-azure-consumption-insights).
-- Learn to [manage access to billing information for Azure using role-based access control (RBAC)](/azure/billing/billing-manage-access).
+- Learn to [manage access to billing information for Azure using Azure role-based access control (Azure RBAC)](/azure/billing/billing-manage-access).
 
 ## Best practice: Monitor resource utilization
 
