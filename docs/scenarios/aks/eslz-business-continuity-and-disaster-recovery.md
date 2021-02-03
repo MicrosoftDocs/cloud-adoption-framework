@@ -3,7 +3,7 @@ title: "Enterprise-Scale business continuity and disaster recovery for <Insert n
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of AKS
 author: JeffMitchell
 ms.author: jemitche
-ms.date: 09/1/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

@@ -3,7 +3,7 @@ title: "AKS Enterprise-scale scalability"
 description: AKS Guidelines for Enterprise-scale scalability
 author: xstabel
 ms.author: ctalaver
-ms.date: 09/11/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

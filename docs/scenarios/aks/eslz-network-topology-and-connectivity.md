@@ -3,7 +3,7 @@ title: "Enterprise-Scale network topology and connectivity for AKS"
 description: Describe how this enterprise-scale scenario can improve network topology and connectivity of AKS
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

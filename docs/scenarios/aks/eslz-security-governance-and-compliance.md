@@ -3,7 +3,7 @@ title: "Enterprise-Scale security, governance, and compliance for AKS"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of AKS
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

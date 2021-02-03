@@ -3,7 +3,7 @@ title: "AKS Enterprise-scale storage"
 description: AKS Guidelines for Enterprise-scale storage
 author: gbowerman
 ms.author: brblanch
-ms.date: 08/31/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

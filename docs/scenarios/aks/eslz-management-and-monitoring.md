@@ -3,7 +3,7 @@ title: "Enterprise-Scale management and monitoring for AKS"
 description: Describe how this enterprise-scale scenario can improve management and monitoring of AKS
 author: BrianBlanchard
 ms.author: pidebrui
-ms.date: 10/12/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

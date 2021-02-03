@@ -3,7 +3,7 @@ title: "Enterprise-scale identity and access management for Azure Kubernetes Ser
 description: Describe how this enterprise-scale scenario can improve identity and access management of Azure Kubernetes Service
 author: TomGeske
 ms.author: thomasge
-ms.date: 10/12/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

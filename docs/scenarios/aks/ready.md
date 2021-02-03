@@ -3,7 +3,7 @@ title: "Azure Landing Zone review for Kubernetes and containers"
 description: Describe the scenario's impact on Azure Landing Zone design
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/15/2010
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

@@ -3,7 +3,7 @@ title: "Migrate workloads for Kubernetes and containers"
 description: Reduce cloud platform dependency and potentially reduce infrastructure footprint by migrating multiple web applications to a container solution
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/15/2010
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
