@@ -49,8 +49,8 @@ The following are best practices for your design:
 - ANF Should be on a separate subnet, one  subnet per VNET is allowed
 - Use of same subs ID across the same landscape (multiple subs may be supported in future)
 - For backups of SAP application server VMs: Use Azure Backup 
-- For 2TiB HANA DB size or less, use Azure backup. *As of now, Az backup only support up to 2TiB. Az backup does not support HSR yet. Please see restrictions at <Add link>) 
-For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. You will need to use utilities like AZCOPY to copy the backup files to blob.
+- For SAP HANA DB smaller or equal to 2TiB in size, use Azure backup. *As of now, Az backup only support up to 2TiB. Az backup does not support HSR yet. Please see restrictions [here.](https://docs.microsoft.com/en-us/azure/backup/sap-hana-backup-support-matrix) 
+- For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. You will need to use utilities like AZCOPY to copy the backup files to blob.
 - Setup an express route connectivity between customer site (on-prem) to primary and secondary (DR) regions of Azure 
 - You can also setup VPN connection between customer site (on-prem) to primary and secondary (DR) regions of Azure
 - SLES: Either use SBD device (Up to 3 SBD devices in different FD’s) or use Azure fence agent (No additional VM’s required). In case if you are going to use Fence agents then ensure to refer the doc: https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker 

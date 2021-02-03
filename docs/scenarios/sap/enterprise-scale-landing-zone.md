@@ -16,18 +16,25 @@ Enterprise scale Construction Sets provide specific architectural approach and r
 ## Should I start with SAP on Azure Construction Set?
 Not all customers adopt SAP on Azure in the same way, so the Cloud Adoption Framework for Azure enterprise-scale SAP on Azure Construction set architecture varies between customers. The technical considerations and design recommendations of the SAP on Azure Construction Set might lead to different trade-offs based on your organization's scenario. Some variation is expected, but if you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale. The SAP on Azure Construction Set is modular by design so customers can customized environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
 
-- Design guidelines: Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are 6 critical design areas:
+## Design guidelines
+
+Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are 6 critical design areas:
         - [Identity and Access Management](./eslz-identity-and-access-management.md)
         - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
         - [Management and monitoring](./eslz-management-and-monitoring.md)
         - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
         - [Security, governance and compliance](./eslz-security-governance-and-compliance.md)
         - [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
-- Architecture: Conceptual reference architecture that demonstrates design areas and best practices. example below
+
+## Architecture
+
+Conceptual reference architecture that demonstrates design areas and best practices. example below
 
 ![Responsibility Zones](media\Overview_Architecture.png)
 
-- Example Reference Implementation: SAP Deployment Automation Framework is a collection of processes and a flexible workflow to automate the deployment of SAP on Azure. 
+## Implementation
+
+SAP Deployment Automation Framework is a collection of processes and a flexible workflow to automate the deployment of SAP on Azure. 
 
 This Github repository contains code that can be used to automatically deploy SAP landscapes in the Azure Cloud.
 
