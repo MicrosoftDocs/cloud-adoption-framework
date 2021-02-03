@@ -13,7 +13,9 @@ ms.subservice: ready
 This article examines key design considerations and recommendations surrounding networking and connectivity for SAP Deployments and within, to and from Microsoft Azure.
 
 ## Plan for IP Addressing
-It's vital that your organization plans for IP addressing in Azure to ensure that IP address space doesn't overlap across on-premises locations and Azure regions, but also, to ensure that the right address space within the VNet, as well as proper planning for subnet configuration is planned in advance.
+It's vital that your organization plans for IP addressing in Azure to ensure that IP address space doesn't overlap across on-premises locations and Azure regions, but also, to ensure that the right address space within the VNet, as well as proper planning for subnet configuration is planned in advance. Considerations for Enterprise scale networking have been made in the SAP on Azure Construction Set, review the below architecture.
+
+ ![Sap on Azure Construction Set](media/ntc_arch.jpg)
 
 ### Design considerations for SAP Implementations:
 Dedicated and Delegated Subnets: You can dedicate and delegate subnets to certain services to create instances of a service within the subnet. Azure enables you to create multiple delegated subnets in a VNet., However you can have only a single delegated subnet in a VNet for Azure Netapp files. Any attempts to create a new volume will fail if you use more than one delegated subnet for Azure NetApp Files.
