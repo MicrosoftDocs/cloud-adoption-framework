@@ -1,6 +1,6 @@
 ---
-title: Develop a cloud adoption strategy
-description: Use the Cloud Adoption Framework for Azure to understand how the cloud can help advance your business strategy.
+title: Using cloud economics to develop a cloud adoption strategy
+description: Use cloud economics and the Cloud Adoption Framework to understand how the cloud can advance your business strategy.
 author: mpvenables
 ms.author: brblanch
 ms.date: 05/04/2019
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Develop a cloud adoption strategy
+# Develop a cloud adoption strategy with cloud economics
 
-The cloud can unlock sound technology benefits for your organization. To maximize any return on investment in cloud technologies, it's important to choose the short-term and long-term cloud solutions that your organization needs for successful business transformation. It's crucial to anchor your cloud strategy with directed financial and technical best practices. Unlocking financial agility, business efficiencies, and technical capabilities with your investment in the cloud can help your enterprise execute multiple business strategies. Using cloud-based approaches, you can improve business agility, reduce costs, accelerate time to market, and enable expansion into new markets. Begin by documenting your business strategy in a way that's both understandable to cloud technicians and acceptable to your business stakeholders.
+Grounded in a sound cloud economics strategy, your organization's cloud adoption efforts can unlock measurable technology benefits. To maximize any return on investment in cloud technologies, it's important to choose the short-term and long-term cloud solutions that your organization needs for successful business transformation. It's crucial to anchor your cloud strategy with directed financial and technical best practices. Unlocking financial agility, business efficiencies, and technical capabilities with your investment in the cloud can help your enterprise execute multiple business strategies. Using cloud-based approaches, you can improve business agility, reduce costs, accelerate time to market, and enable expansion into new markets. Begin by documenting your business strategy in a way that's both understandable to cloud technicians and acceptable to your business stakeholders.
 
 The following steps can help you document your business strategy efficiently. This approach helps you drive adoption efforts that capture targeted business value in a cross-functional model. Then, you can map your cloud adoption strategy to specific cloud capabilities and business strategies to reach your desired state of transformation.
 
