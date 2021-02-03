@@ -23,7 +23,7 @@ Your organization's journey might identify clear benefits to using the cloud as 
 
 ## Azure Stack Hub in your strategy
 
-Azure Stack Hub provides an alternative approach to the migration of existing applications that run on either physical servers or existing virtualization platforms. By moving these workloads to the Azure Stack Hub IaaS environment, teams can benefit from smoother operations, self-service deployments, standardized hardware configurations, and Azure consistency. Using Azure Stack Hub for modernization or innovation support enables your teams to prepare your applications and workloads to take full advantage of the cloud.
+Azure Stack Hub provides an alternative approach to the migration of existing applications that run on either physical servers or existing virtualization platforms. By moving these workloads to an Azure Stack Hub IaaS environment, teams can benefit from smoother operations, self-service deployments, standardized hardware configurations, and Azure consistency. Using Azure Stack Hub for modernization or innovation support enables your teams to prepare your applications and workloads to take full advantage of the cloud.
 
 By following a consistent practice for cloud adoption across Azure and Azure Stack Hub, you can apply the same governance and operations models to assets in the public cloud or your own datacenter. Azure Stack Hub uses the same Azure Resource Manager model as Azure, enabling that single-pane of glass view for your solutions.
 
@@ -33,7 +33,7 @@ There are some differences between Azure and Azure Stack Hub. Some are very visi
 
 - Azure offers near limitless capacity. Azure Stack Hub is built on physical hardware in your datacenter, which leads to capacity limitations.
 - API versions and authentication mechanisms might be slightly different between Azure and Azure Stack Hub.
-- Azure Stack Hub differs in _who_ operates the cloud, which affects the level of workload operations.
+- Azure Stack Hub differs in *who* operates the cloud, which affects the level of workload operations.
 - Consider which part of the Azure Stack Hub service the Azure Stack Hub operator runs on, because that determines whether the customer calls a service PaaS or software as a service (SaaS).
 
 Other differences will be called out in other Azure Stack Hub articles at various points in the cloud adoption lifecycle.

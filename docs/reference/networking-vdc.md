@@ -11,8 +11,8 @@ manager: rossort
 ms.custom: virtual-network
 ---
 
-<!-- docsTest:disable TODO -->
-<!-- cSpell:ignore tracsman jonor rossort NVAs iptables WAFs DDOS ITSM LLAP anycast vwan -->
+<!-- docutune:disable TODO -->
+<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
 
@@ -412,8 +412,6 @@ A virtual datacenter approach to datacenter migration creates a scalable archite
 
 Learn more about the Azure capabilities discussed in this document.
 
-<!-- markdownlint-disable MD033 -->
-
 :::row:::
     :::column:::
         **Network features** <br>
@@ -488,8 +486,6 @@ Learn more about the Azure capabilities discussed in this document.
         [Azure Machine Learning][machine-learning]
     :::column-end:::
 :::row-end:::
-
-<!-- markdownlint-enable MD033 -->
 
 ## Next steps
 

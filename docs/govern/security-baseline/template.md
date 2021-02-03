@@ -1,5 +1,5 @@
 ---
-title: "Security Baseline discipline template"
+title: Security Baseline discipline template
 description: Use this template as a starting point for documenting and communicating policy statements that govern security related issues in the cloud.
 author: BrianBlanchard
 ms.author: brblanch

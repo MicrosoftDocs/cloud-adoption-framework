@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency discipline improvement"
+title: Resource Consistency discipline improvement
 description: Use the Cloud Adoption Framework for Azure to understand tasks necessary to develop and mature the Resource Consistency discipline in each phase of adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -16,9 +16,9 @@ The Resource Consistency discipline focuses on ways of establishing policies rel
 
 This article outlines some potential tasks your company can engage in to better develop and mature the Resource Consistency discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
-![Four phases of adoption](../../_images/govern/adoption-phases.png)
+![Phases of an incremental approach to cloud governance](../../_images/govern/adoption-phases.png)
 
-_Figure 1: Adoption phases of the incremental approach to cloud governance._
+*Figure 1: Phases of an incremental approach to cloud governance.*
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Resource Consistency discipline.
 
@@ -84,7 +84,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 **Potential activities:**
 
 - Complete and test monitoring and reporting data with your chosen on-premises, cloud gateway, or hybrid solution.
-- Determine if changes need to be made to SLA or management policy for resources.
+- Determine whether changes need to be made to SLA or management policy for resources.
 - Improve operations tasks by implementing query capabilities to efficiently find resource across your cloud estate.
 - Align resources to changing business needs and governance requirements.
 - Ensure that your virtual machines, virtual networks, and storage accounts reflect actual resource access needs during each release, and adjust as necessary.
@@ -112,12 +112,12 @@ Once the transformation is complete, governance and operations must live on for 
 
 - Adjust plans quarterly to reflect changes to actual resources.
 - Automatically apply and enforce governance requirements during future deployments.
-- Evaluate underused resources and determine if they're worth continuing.
+- Evaluate underused resources and determine whether they're worth continuing.
 - Detect misalignments and anomalies between planned and actual resource usage.
 - Assist the cloud adoption teams and the cloud strategy team in understanding and resolving these anomalies.
-- Determine if changes need to be made to your Resource Consistency discipline for billing and SLAs.
+- Determine whether changes need to be made to your Resource Consistency discipline for billing and SLAs.
 - Evaluate logging and monitoring tools to determine whether your on-premises, cloud gateway, or hybrid solution needs adjusting.
-- For business units and geographically distributed groups, determine if your organization should consider using additional cloud management features such as [Azure management groups](/azure/governance/management-groups) to better apply centralized policy and meet SLA requirements.
+- For business units and geographically distributed groups, determine whether your organization should consider using additional cloud management features such as [Azure management groups](/azure/governance/management-groups) to better apply centralized policy and meet SLA requirements.
 
 ## Next steps
 

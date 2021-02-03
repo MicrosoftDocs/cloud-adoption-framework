@@ -1,5 +1,5 @@
 ---
-title: "Align efforts to learning metrics"
+title: Align efforts to learning metrics
 description: Understand how to align efforts to measure and communicate the impact a transformation will have on the business.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,7 +29,7 @@ Always align with the CFO or finance office before making financial statements. 
 
 Cloud-enabled application innovation focuses largely on the customer experience and the customer's willingness to consume products and services provided by the company. It takes time for increments of change to affect consumer or customer buying behaviors. But application innovation cycles tend to be much shorter than they are in the other forms of transformation. The traditional advice is that you should start with an understanding of the specific behaviors that you want to influence and use those behaviors as the learning metrics. For example, in an e-commerce application, total purchases or add-on purchases could be the target behavior. For a video company, time watching video streams could be the target.
 
-The challenge with customer behavior metrics is that they can easily be influenced by outside variables. So it's often important to include related statistics with the learning metrics. These related statistics can include release cadence, bugs resolved per release, code coverage of unit tests, number of page views, page throughput, page load time, and other app performance metrics. Each can show different activities and changes to the code base and the customer experience to correlate with higher-level customer behavior patterns.
+Customer behavior metrics can easily be influenced by outside variables, so it's often important to include related statistics with the learning metrics. These related statistics can include release cadence, bugs resolved per release, code coverage of unit tests, number of page views, page throughput, page load time, and other application performance metrics. Each can show different activities and changes to the code base and the customer experience to correlate with higher-level customer behavior patterns.
 
 ## Data innovation
 

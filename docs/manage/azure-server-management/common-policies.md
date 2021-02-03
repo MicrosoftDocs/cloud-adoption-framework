@@ -66,7 +66,7 @@ Azure offers a wide range of VM sizes to support various workloads. To control y
 
 ### Deploy antimalware
 
-You can use this policy to deploy a Microsoft _IaaSAntimalware_ extension with a default configuration to VMs that aren't protected by antimalware.
+You can use this policy to deploy a Microsoft Antimalware extension with a default configuration to VMs that aren't protected by antimalware.
 
 The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 

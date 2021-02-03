@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 05/15/2020
 ---
 
-<!--docsTest:ignore TVM -->
+<!--docsTest:casing TVM -->
 
 # Function of cloud security posture management
 

@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes in the Cloud Adoption Framework"
+title: Kubernetes in the Cloud Adoption Framework
 description: Learn about Kubernetes in the Cloud Adoption Framework.
 author: sabbour
 ms.author: asabbour
@@ -8,8 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
-
-<!-- cSpell:ignore asabbour sabbour -->
 
 # Kubernetes in the Cloud Adoption Framework
 
