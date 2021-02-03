@@ -59,9 +59,9 @@ As you consider and evaluate public cloud services, it’s critical to understan
 
    ![Azure Security Center](media\SGC_ASC.jpg)
 
-   Please find Azure Security Center Dashboard view below for reference:-
+   Please find Azure Security Center Dashboard view below for reference:
 
-   ![Azure Security Center Dashboard](media\sgc_asc_view.jpg)
+   ![Azure Security Center Dashboard](media\sgc_ascview.jpg)
 
 - Operating System Hardening – [Azure Update Manager](/azure/automation/update-management/update-mgmt-overview). Security is a shared responsibility between Microsoft and you as a customer where your customer specific security controls need to be applied to the operating system, database, and the SAP application layer. For example, you need to ensure the operating system is hardened to eradicate vulnerabilities which could lead to attacks on the SAP database. To build end to end orchestration, you can configure to send notifications to your Devops/ Git Repo as work items or issues.
 
