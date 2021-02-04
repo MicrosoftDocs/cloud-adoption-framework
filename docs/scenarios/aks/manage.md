@@ -100,6 +100,6 @@ Once the modern containers migration is complete, the cloud adoption team can be
 - [Plan for modern containers](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](./innovate.md)
+- [Innovate using modern container solutions](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks-start-here?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 - [Govern modern container solutions](./govern.md)
 - [Manage modern container solutions](./manage.md)

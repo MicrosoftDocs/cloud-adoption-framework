@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Kubernetes and container cloud adoption
+# Introduction to the modern containers adoption scenario
 
 As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series consolidates the various technical and non-technical considerations required to prepare for Kubernetes and container integration into your cloud strategy.
 
@@ -50,6 +50,6 @@ The following list of articles will take you to guidance found at specific point
 - [Plan for modern containers](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](./innovate.md)
+- [Innovate using modern container solutions](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks-start-here?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 - [Govern modern container solutions](./govern.md)
 - [Manage modern container solutions](./manage.md)

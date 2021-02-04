@@ -21,12 +21,12 @@ With Azure Landing Zones, you could start with a small implementation and expand
 
 **Enterprise-scale options:** The enterprise-scale construction set for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. Included in the construction set documentation is a series of best practices that can be used to evaluate production readiness of any AKS environment, even if you chose a start-small landing zone implementation. See the following articles to evaluate your AKS environment:
 
-      - [Identity and Access Management](scenarios/aks/eslz-identity-and-access-management.md)
-      - [Network topology and connectivity](scenarios/aks/eslz-network-topology-and-connectivity.md)
-      - [Management and Monitoring](scenarios/aks/eslz-management-and-monitoring.md)
-      - [Business continuity and disaster recovery](scenarios/aks/eslz-business-continuity-and-disaster-recovery.md)
-      - [Security governance and compliance](scenarios/aks/eslz-security-governance-and-compliance.md)
-      - [Platform automation and DevOps](scenarios/aks/eslz-platform-automation-and-devops.md)
+- [Identity and Access Management](scenarios/aks/eslz-identity-and-access-management.md)
+- [Network topology and connectivity](scenarios/aks/eslz-network-topology-and-connectivity.md)
+- [Management and Monitoring](scenarios/aks/eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](scenarios/aks/eslz-business-continuity-and-disaster-recovery.md)
+- [Security governance and compliance](scenarios/aks/eslz-security-governance-and-compliance.md)
+- [Platform automation and DevOps](scenarios/aks/eslz-platform-automation-and-devops.md)
 
 ## Environmental considerations for non-orchestrated container solutions
 
@@ -45,6 +45,6 @@ Review the concepts and how-to guides in each of the product documentation links
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](./innovate.md)
+- [Innovate using modern container solutions](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks-start-here?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 - [Govern modern container solutions](./govern.md)
 - [Manage modern container solutions](./manage.md)

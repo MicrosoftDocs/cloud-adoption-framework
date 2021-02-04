@@ -15,7 +15,7 @@ The [cloud adoption framework provides a governance methodology](../../govern/in
 
 ## Initial governance foundation
 
-Governance starts with an [initial governance foundation often referred to as a governance MVP](../../govern/initial-foundation). That foundation deploys the basic Azure products required to deliver governance across your cloud environment. 
+Governance starts with an [initial governance foundation often referred to as a governance MVP](../../govern/initial-foundation.md). That foundation deploys the basic Azure products required to deliver governance across your cloud environment.
 
 The initial governance foundation focuses on the following aspects of governance:
 

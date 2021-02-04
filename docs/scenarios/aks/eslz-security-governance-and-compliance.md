@@ -51,7 +51,7 @@ Within this workshop, we will implement just a subset of the security controls a
 
 Based on the Contoso Financials scenario, we will be implement the following to meet requirements from security:
 * Log All Cloud API requests for Audit Reporting purposes
-* Enable AKS Cluster IP Whitelisting 
+* Enable AKS Cluster IP Approved Listing 
 * AKS Clusters can only be created in certain regions
 
 In the next sections, we will talk through implementing each of these controls.
@@ -66,9 +66,9 @@ This is a sample screenshot of what it looks like when completed:
 
 ![Activity Log Capture](./media/SCG_ActivityLogCapture.png)
 
-## Enable Azure Security Monitoring (AKS Cluster IP Whitelisting Enabled)
+## Enable Azure Security Monitoring (AKS Cluster IP Approved Listing Enabled)
 
-Before we create anything, we should look to the Cloud Provider for security monitoring best practices and recommendations. Within Azure specifically, we can enable Azure Security Center (ASC) to gain visibility into such recommendations. By leveraging ASC, we can determine whether or not an AKS Cluster has IP Whitelisting (Authorized IP Ranges) enabled.
+Before we create anything, we should look to the Cloud Provider for security monitoring best practices and recommendations. Within Azure specifically, we can enable Azure Security Center (ASC) to gain visibility into such recommendations. By leveraging ASC, we can determine whether or not an AKS Cluster has IP Approved Listing (Authorized IP Ranges) enabled.
 
 Note: not all security controls that an organization wants or requires will be implemented by the Cloud Provider. The key is to leverage what is provided to avoid reinventing the wheel, while creating custom controls only when they are unavilable. 
 
@@ -87,7 +87,7 @@ The ability to restrict resource creation to a specific region is just one of ma
 * [Azure Policy Samples](https://docs.microsoft.com/azure/governance/policy/samples/)
 * [Azure Policy Security Samples](https://docs.microsoft.com/azure/security-center/security-center-policy-definitions)
 
-Reminder: not everything can be done with Azure Policy. The key is to leverage what is provided to avoid reinventing the wheel, while creating custom controls only when they are unavilable. 
+Reminder: not everything can be done with Azure Policy. The key is to leverage what is provided to avoid reinventing the wheel, while creating custom controls only when they are unavailable. 
 
 Click [here](https://docs.microsoft.com/azure/governance/policy/samples/allowed-locations) for guidance on how to implement allowed region locations via Azure Policy.
 
@@ -95,7 +95,7 @@ These are sample screenshots of the flow you will go through:
 
 ![Azure Policy Definitions](./media/SCG_PolicyDefinitions.png)
 
-![Assign Policy Definition to Resource](./media/SCG_img/AssignPolicy.png)
+![Assign Policy Definition to Resource](./media/SCG_AssignPolicy.png)
 
 ![Assign Policy Basics](./media/SCG_AssignPolicyBasics.png)
 
@@ -172,7 +172,7 @@ Now if you select  __Savings__ on the left side you can dig down into cost-savin
 ![kubecost-savings](./media/SCG_savings.png)
 
 Take some time to navigate around the different views and features KubeCost provides.
-=======
+
 AKS has several interfaces to other Azure services like Azure AD, Azure Storage, Azure Networking etc. that require special attention during the planning phase. And it also adds additional complexity that requires you to consider applying the same security, governance and compliance mechanisms and controls that are in place for the rest of your infrastructure landscape.
 
 ## Design considerations
