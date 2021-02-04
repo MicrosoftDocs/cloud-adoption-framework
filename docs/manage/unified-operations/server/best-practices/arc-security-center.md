@@ -47,7 +47,7 @@ In the following procedures, you enable and configure Azure Security Center Stan
 
     ![A screenshot of details from an Azure-Arc-enabled server in the Azure portal.](./img/arc-security-ctr/arc-status.png)
 
-3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
+3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
 4. Create Azure service principal (SP)
 
@@ -77,7 +77,7 @@ In the following procedures, you enable and configure Azure Security Center Stan
     ```
 
 > [!NOTE]
-> It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).
+> It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp).
 
 ## Onboard Azure Security Center
 

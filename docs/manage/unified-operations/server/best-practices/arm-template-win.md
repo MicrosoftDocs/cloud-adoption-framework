@@ -28,7 +28,7 @@ However, **for demo purposes only**, the below guide will allow you to use and o
     git clone https://github.com/microsoft/azure-arc.git
     ```
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli). Use the below command to check your current installed version.
 
   ```console
   az --version
@@ -63,7 +63,7 @@ However, **for demo purposes only**, the below guide will allow you to use and o
     }
     ```
 
-    > **Note: It is optional, but highly recommended, to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).**
+    > **Note: It is optional, but highly recommended, to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp).**
 
 ## Automation Flow
 

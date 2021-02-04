@@ -45,7 +45,7 @@ In the following procedures you create and configure an Azure Automation account
 
     ![A screenshot of an Azure-Arc-enabled server in the Azure portal.](./img/arc-update-management/arc-enabled-server.png)
 
-3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.14 or later. Use ```az --version``` to check your current installed version.
+3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Azure CLI should be running version 2.14 or later. Use ```az --version``` to check your current installed version.
 
 ## Configure Update Management
 

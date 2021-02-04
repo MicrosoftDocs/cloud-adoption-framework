@@ -46,7 +46,7 @@ git clone https://github.com/microsoft/azure_arc
 
 ![A screenshot of a connected status for an Azure-Arc-enabled server.](./img/arc-policies-mma/connected-status.png)
 
-3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
+3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
 
 4. Create Azure service principal (SP)
 
@@ -76,7 +76,7 @@ Output should look like this:
 ```
 
 > [!NOTE]
->It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).
+>It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp).
 
 You'll also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/policies/arm/log-analytics-template.parameters.json) and providing a name and location for your workspace.
 
