@@ -10,8 +10,8 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
-<!-- docutune:casing NetworkMonitoring AdAssessment AdReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
+<!-- cSpell:ignore -->
+<!-- docutune:casing -->
 
 # Terraform module for Cloud Adoption Framework enterprise-scale
 
