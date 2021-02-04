@@ -16,7 +16,7 @@ This article provides guidance on how to use Azure-Arc-enabled servers to provid
 
 Azure-Arc-enabled servers enable you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud providers. This is similar to how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags. The ability to easily organize and manage server inventory using Azure as a management engine greatly reduces administrative complexity and provides a consistent strategy for hybrid and multi-cloud environments.
 
-The following procedures use [Resource Graph Explorer](https://docs.microsoft.com/azure/governance/resource-graph/first-query-portal) and [AZ CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) to demonstrate how to tag and query server inventory across multiple clouds from a single pane of glass in Azure.
+The following procedures use [Resource Graph Explorer](https://docs.microsoft.com/azure/governance/resource-graph/first-query-portal) and [AZ CLI](https://docs.microsoft.com/cli/azure/install-azure-cli) to demonstrate how to tag and query server inventory across multiple clouds from a single pane of glass in Azure.
 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
@@ -38,7 +38,7 @@ The following procedures use [Resource Graph Explorer](https://docs.microsoft.co
 git clone https://github.com/microsoft/azure_arc
 ```
 
-2. [Install or update Azure CLI to version 2.7 or later](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the following command to check the current installed version.
+2. [Install or update Azure CLI to version 2.7 or later](https://docs.microsoft.com/cli/azure/install-azure-cli). Use the following command to check the current installed version.
 
 ```console
 az --version

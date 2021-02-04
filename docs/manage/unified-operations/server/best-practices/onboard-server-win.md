@@ -16,7 +16,7 @@ The following README will guide you through how to connect a Windows machine to 
 
 ## Prerequisites
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli). Use the below command to check your current installed version.
 
   ```console
   az --version
@@ -49,7 +49,7 @@ The following README will guide you through how to connect a Windows machine to 
     }
     ```
 
-    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest)**
+    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp)**
 
 * Create a new Azure resource group where you want your machine(s) to show up.
 

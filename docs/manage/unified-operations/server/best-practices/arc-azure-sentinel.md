@@ -46,7 +46,7 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
     ![A screenshot showing the details of an Azure Arc Server in the Azure portal.](./img/arc-azure-sentinel/sentinel-2.png)
 
-1. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
+1. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
 
 1. Create Azure service principal (SP).
 
@@ -76,7 +76,7 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
     ```
 
 > [!NOTE]
-> It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).
+> It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp).
 
 ## Onboard Azure Sentinel
 

@@ -22,7 +22,7 @@ The following README will guide you on how to use the provided [Terraform](https
     git clone https://github.com/microsoft/azure-arc.git
     ```
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli). Use the below command to check your current installed version.
 
   ```console
   az --version
@@ -59,7 +59,7 @@ The following README will guide you on how to use the provided [Terraform](https
     }
     ```
 
-    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest)**
+    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp)**
 
 ### Preparing an Ubuntu Server VMware vSphere VM Template
 

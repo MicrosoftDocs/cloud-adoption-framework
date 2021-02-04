@@ -28,7 +28,7 @@ This guide can be used even if you do not already have an existing Ansible test 
     git clone https://github.com/microsoft/azure-arc.git
     ```
 
-* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Use the below command to check your current installed version.
+* [Install or update Azure CLI to version 2.7 and above](https://docs.microsoft.com/cli/azure/install-azure-cli). Use the below command to check your current installed version.
 
   ```console
   az --version
@@ -67,7 +67,7 @@ This guide can be used even if you do not already have an existing Ansible test 
     }
     ```
 
-    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest)**
+    > **Note: It is optional but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp)**
 
 ## Create an AWS identity
 

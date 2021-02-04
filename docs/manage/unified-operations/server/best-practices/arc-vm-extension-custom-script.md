@@ -42,7 +42,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 
     ![A screenshot of a connected status from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/connected-status.png)
 
-3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
+3. [Install or update Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use ```az --version``` to check your current installed version.
 
 4. Create Azure Service Principal (SP).
 
@@ -72,7 +72,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
     ```
 
 > [!NOTE]
-> It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp?view=azure-cli-latest).
+> It is optional, but highly recommended to scope the SP to a specific [Azure subscription and resource group](https://docs.microsoft.com/cli/azure/ad/sp).
 
 To demonstrate the custom script extension, use the below Linux and Windows scripts.
 
