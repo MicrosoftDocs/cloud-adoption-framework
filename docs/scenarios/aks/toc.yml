@@ -221,7 +221,7 @@ items:
     items:
     - name: Container product decision tree
       href: https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-    - name: Azure Kubernetes Service (AKS?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    - name: Azure Kubernetes Service (AKS)
       items:
       - name: Overview
         href: https://docs.microsoft.com/azure/aks/intro-kubernetes?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
