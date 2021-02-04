@@ -1,7 +1,7 @@
 ---
-title: Terraform Module for Cloud Adoption Framework Enterprise-scale
-description: Learn how to use the Terraform Module for Cloud Adoption Framework Enterprise-scale.
-author: KevinRowlandson
+title: Terraform module for Cloud Adoption Framework enterprise-scale
+description: Learn how to use the Terraform module for Cloud Adoption Framework enterprise-scale.
+author: krowlandson
 ms.author: brblanch
 ms.date: 02/03/2021
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.custom: think-tank
 <!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 <!-- docutune:casing NetworkMonitoring AdAssessment AdReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
-# Terraform Module for Cloud Adoption Framework Enterprise-scale
+# Terraform module for Cloud Adoption Framework enterprise-scale
 
 Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp.
 
