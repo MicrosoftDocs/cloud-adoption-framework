@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # enterprise-scale support for AKS construction set
   
-enterprise-scale construction sets provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones for mission critical technology platforms and any supported workloads. This construction set enables the creation of a landing zone environment that can support the AKS platform at enterprise-scale, while adhering to the architecture and best practices of the Cloud Adoption Framework enterprise-scale landing zone.
+Enterprise-scale construction sets provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones for mission critical technology platforms and any supported workloads. This construction set enables the creation of a landing zone environment that can support the AKS platform at enterprise-scale, while adhering to the architecture and best practices of the Cloud Adoption Framework enterprise-scale landing zone.
 
 ## Prerequisite
 

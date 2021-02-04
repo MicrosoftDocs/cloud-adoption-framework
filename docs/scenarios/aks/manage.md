@@ -1,5 +1,5 @@
 ---
-title: "Manage Kubernetes and containers"
+title: "Manage modern container solutions"
 description: Describe the scenario's impact on operations management
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Manage containers and Kubernetes clusters
+# Manage modern container solutions clusters
 
 The [cloud adoption framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense, along with best practices for establishing an operations management baseline & other specialized layers of operations. That guidance will likely still apply for organizations that have a mixture of Iaas, PaaS, and containerized workloads. This article outlines what you need to integrate into you existing operations to prepare for the management of containers and more specifically the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
 
@@ -94,12 +94,12 @@ Workload operations can build on your existing operations baseline & platform-sp
 
 ## Next step: Your next migration iteration
 
-Once the Kubernetes and containers migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next Kubernetes and containers migration or deployment.
+Once the modern containers migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next modern containers migration or deployment.
 
-- [Strategy for Kubernetes and containers](./strategy.md)
-- [Plan for Kubernetes and containers](./plan.md)
+- [Strategy for modern containers](./strategy.md)
+- [Plan for modern containers](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate Kubernetes and containers](./migrate.md)
-- [Innovate with Kubernetes and containers](./innovate.md)
-- [Govern Kubernetes and containers](./govern.md)
-- [Manage Kubernetes and containers](./manage.md)
+- [Migrate workloads to modern containers](./migrate.md)
+- [Innovate using modern container solutions](./innovate.md)
+- [Govern modern container solutions](./govern.md)
+- [Manage modern container solutions](./manage.md)

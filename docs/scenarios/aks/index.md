@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the Kubernetes and containers adoption scenario"
+title: "Introduction to the modern containers adoption scenario"
 description: Describe the scenario
 author: BrianBlanchard
 ms.author: brblanch
@@ -42,14 +42,14 @@ This scenario is designed to guide the end-2-end customer journey, throughout th
 
 **Implement specific Azure products:** Accelerate and improve container and Kubernetes capabilities using a variety of Azure products outlined in the featured products section.
 
-## Next step: Integrate Kubernetes and containers into your cloud adoption journey
+## Next step: Integrate modern containers into your cloud adoption journey
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for Kubernetes and containers](./strategy.md)
-- [Plan for Kubernetes and containers](./plan.md)
+- [Strategy for modern containers](./strategy.md)
+- [Plan for modern containers](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate Kubernetes and containers](./migrate.md)
-- [Innovate with Kubernetes and containers](./innovate.md)
-- [Govern Kubernetes and containers](./govern.md)
-- [Manage Kubernetes and containers](./manage.md)
+- [Migrate workloads to modern containers](./migrate.md)
+- [Innovate using modern container solutions](./innovate.md)
+- [Govern modern container solutions](./govern.md)
+- [Manage modern container solutions](./manage.md)

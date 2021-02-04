@@ -1,5 +1,5 @@
 ---
-title: "Migrate workloads for Kubernetes and containers"
+title: "Migrate workloads for modern containers"
 description: Reduce cloud platform dependency and potentially reduce infrastructure footprint by migrating multiple web applications to a container solution
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Migrate Kubernetes and containers
+# Migrate workloads to modern containers
 
-Technology portfolios usually include a mix of innovative and stable state solutions. Most container conversations focus on innovation and building cloud-native applications. But containers can be equally valid in migration efforts.
+Most modern container options require a rearchitecture or redeployment of the application. But the orchestration capabilities of Azure Kubernetes Service (AKS) allows for AKS solutions to be integrated into standard migration processes.
 
 There is a clear and growing trend of migrating existing workloads from on-premise datacenters to a Kubernetes cluster in Azure. This approach has the potential of reducing the post-migration infrastructure footprint. More importantly, migrating to containers allows for greater portability in the portfolio, allowing workloads to be more easily moved between public and private cloud. This trend is most commonly experience when organizations have a large collection of web applications.
 
 ## One Migrate approach
 
-As a part of [Microsoft's One Migrate approach](../index.md), containers can be migrated to Azure Kubernetes Service (AKS) to accelerate containers in the cloud. Typically migration to Azure uses Azure Migrate and the ecosystem of partner tools to assess workloads, migrate workloads, and release workloads to the cloud. This 3 step process can be applied to AKS migration, but you may need a few additional tools to help with the migration steps.
+As a part of the [Cloud Adoption Framework's One Migrate scenario](../index.md), containers can be migrated to Azure Kubernetes Service (AKS) to accelerate containers in the cloud. Typically migration to Azure uses Azure Migrate and the ecosystem of partner tools to assess workloads, migrate workloads, and release workloads to the cloud. This 3 step process can be applied to AKS migration, but you may need a few additional tools to help with the migration steps.
 
 ## Assess containers and workloads
 
@@ -44,10 +44,10 @@ Currently, you will need to use one of several open-source tools to complete the
 
 See the following best practice to [migrate a container to AKS](https://docs.microsoft.com/azure/aks/aks-migration#aks-with-standard-load-balancer-and-virtual-machine-scale-sets).
 
-## Next step: Innovate with Kubernetes and containers
+## Next step: Innovate using modern container solutions
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Innovate with Kubernetes and containers](./innovate.md)
-- [Govern Kubernetes and containers](./govern.md)
-- [Manage Kubernetes and containers](./manage.md)
+- [Innovate using modern container solutions](./innovate.md)
+- [Govern modern container solutions](./govern.md)
+- [Manage modern container solutions](./manage.md)

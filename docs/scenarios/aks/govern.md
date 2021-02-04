@@ -1,6 +1,6 @@
 ---
-title: "Govern containers and Kubernetes"
-description: Extend governance practices to containers and Kubernetes instances
+title: "Govern modern container solutions"
+description: Extend governance practices to modern containers instances
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-# Govern containers and Kubernetes
+# Govern modern container solutions
 
 The [cloud adoption framework provides a governance methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend that standard governance approach to govern Kubernetes clusters that are deployed to Azure or other public/private clouds.
 
@@ -25,7 +25,7 @@ The initial governance foundation focuses on the following aspects of governance
 - Organization of resources using resource groups, subscriptions, and management groups
 - Azure Policy and Azure Blueprint to enforce governance policies
 
-Each of these features of the initial governance foundation can be used to govern containers or Kubernetes instances. But first, you will need to add a few key components to that initial foundation to apply [Azure Policy to your containers](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). Once enabled, you can use Azure Policy & your initial governance foundation to govern the following types of containers:
+Each of these features of the initial governance foundation can be used to govern modern container solutions instances. But first, you will need to add a few key components to that initial foundation to apply [Azure Policy to your containers](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). Once enabled, you can use Azure Policy & your initial governance foundation to govern the following types of containers:
 
 - [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 - [Azure Arc enabled Kubernetes](https://docs.microsoft.com/azure/azure-arc/kubernetes/overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
@@ -39,23 +39,23 @@ The initial governance foundation can then be used to expand on various discipli
 
 The following best practices can help add to your initial security baseline, to account for security of your AKS clusters:
 
-- [Secure pods](https://docs.microsoft.com/en-us/azure/aks/use-pod-security-on-azure-policy?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Secure traffic between pods](https://docs.microsoft.com/en-us/azure/aks/use-network-policies?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Authorized IP access for AKS API](https://docs.microsoft.com/en-us/azure/aks/api-server-authorized-ip-ranges?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Secure pods](https://docs.microsoft.com/azure/aks/use-pod-security-on-azure-policy?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Secure traffic between pods](https://docs.microsoft.com/azure/aks/use-network-policies?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Authorized IP access for AKS API](https://docs.microsoft.com/azure/aks/api-server-authorized-ip-ranges?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 
 ### Identity
 
 There are also a number of best practices you can apply to your identity baseline to ensure consistent identity and access management across your kubernetes clusters:
 
-- [RBAC and AAD integration](https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [AAD integration](https://docs.microsoft.com/en-us/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Managed identities in Kubernetes](https://docs.microsoft.com/en-us/azure/aks/use-managed-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Create an Azure AD Service Principle](https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Access other Azure resources with AAD Kubernetes integration](https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Azure RBAC for AKS configuration file access](https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [RBAC and AAD integration](https://docs.microsoft.com/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [AAD integration](https://docs.microsoft.com/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Managed identities in Kubernetes](https://docs.microsoft.com/azure/aks/use-managed-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Create an Azure AD Service Principle](https://docs.microsoft.com/azure/aks/kubernetes-service-principal?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Access other Azure resources with AAD Kubernetes integration](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Azure RBAC for AKS configuration file access](https://docs.microsoft.com/azure/aks/control-kubeconfig-access?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 
-## Next step: Manage Kubernetes and containers
+## Next step: Manage modern container solutions
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Manage Kubernetes and containers](./manage.md)
+- [Manage modern container solutions](./manage.md)
