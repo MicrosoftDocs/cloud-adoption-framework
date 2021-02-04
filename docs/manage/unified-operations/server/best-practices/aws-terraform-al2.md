@@ -1,5 +1,5 @@
 ---
-title: Use a terraform plan to deploy an Amazon Web Services Amazon Elastic Compute Cloud Linux 2 instance and connect it to Azure Arc 
+title: Use a terraform plan to deploy an Amazon Web Services Amazon Elastic Compute Cloud Linux 2 instance and connect it to Azure Arc
 description: Use a terraform plan to deploy an Amazon Web Services Amazon Elastic Compute Cloud Linux 2 instance and connect it to Azure Arc.
 author: likamrat
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: think-tank
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Use a terraform plan to deploy an Amazon Web Services Amazon Elastic Compute Cloud Linux 2 instance and connect it to Azure Arc
