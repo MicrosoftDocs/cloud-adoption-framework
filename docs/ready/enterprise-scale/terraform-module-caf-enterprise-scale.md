@@ -46,9 +46,10 @@ The components deployed and their purpose include the following:
 
 | Component | Responsibility |
 |---|---|
-| Management groups | Core Management Groups provide the resource hierarchy foundations of the enterprise scale reference architecture.<ul><li>Optional Management Groups for demo landing zones (SAP, Corp and Online)</li><li>Optional Management Groups for custom landing zones (define your own)</li></ul> |
-| Azure Policy | Azure Policy to provide governance and security across the platform: <ul><li>Custom Policy Definitions and Policy Set Definitions to cover common governance patterns not covered by the built-in policies.</li><li>Create and assign policies at any scope within the Management Group hierarchy to ensure compliance is enforced through inheritance.</li><li>Expand with your own custom definitions to meet your specific governance and security requirements.</li></ul> |
-| Access control (IAM) settings | Create and assign Roles in the resource hierarchy to ensure compliance with RBAC policies.<ul><li>Create custom Role Definitions to ensure principle of least privilege</li><li>Create Role Assignments at the right scope to ensure platform and application teams have the right permissions.</li></ul> |
+| Management groups | Core Management Groups provide the resource hierarchy foundations of the enterprise scale reference architecture:<ul><li>Optional Management Groups for demo landing zones (SAP, Corp and Online)</li><li>Optional Management Groups for custom landing zones (define your own)</li></ul> |
+| Azure Policy | Azure Policy to provide governance and security across the platform: <ul><li>Custom Policy Definitions and Policy Set Definitions to cover common governance patterns not covered by the built-in policies.</li><li>Create and assign policies at any scope within the Management Group hierarchy to ensure compliance is enforced through inheritance</li><li>Expand with your own custom definitions to meet your specific governance and security requirements:</li></ul> |
+| Access control (IAM) settings | Create and assign Roles in the resource hierarchy to ensure compliance with RBAC policies:<ul><li>Create custom Role Definitions to ensure principle of least privilege</li><li>Create Role Assignments at the right scope to ensure platform and application teams have the right permissions</li></ul> |
+| Subscriptions | Subscriptions are assigned to Management Groups:<ul><li>Enables policy and RBAC inheritance</li><li>Ensures compliance with platform security and governance requirements</li></ul> |
 
 ## Customize and deploy
 
