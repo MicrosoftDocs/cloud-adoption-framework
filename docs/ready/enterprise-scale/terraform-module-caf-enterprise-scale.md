@@ -60,7 +60,7 @@ The only dependencies for this module are as follows:
 - AzureRM Provider 2.31.1 and later
 
 > [!NOTE]
-> There are known issues with some combinations of Terraform and AzureRM Provider versions. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can be resolved by re-running your deployment. We generally advise you to pin to a specific version of both the Terraform and AzureRM Provider, and test thoroughly before upgrading. As each new version of the `Terraform Module for Cloud Adoption Framework Enterprise-scale` is released, we will baseline support at the latest versions corresponding with that release.
+> There are known issues with some combinations of Terraform and AzureRM Provider versions. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can be resolved by re-running your deployment. We generally advise you to pin to a specific version of both the Terraform and AzureRM Provider, and test thoroughly before upgrading. As each new version of the module is released, we plan to rebase support to ensure compatibility with the latest Terraform and AzureRM Provider versions.
 
 ### Simple Example
 
@@ -75,7 +75,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.29.0"
+      version = ">= 2.46.0"
     }
   }
 }
