@@ -80,7 +80,7 @@ The following table looks at some of these implementation options from a slightl
 
 To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.
 
-<!-- The following section is used to store references to external images and links to reduce maintenance overhead-->
+<!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
 
  [//]: # (*******************************)
  [//]: # (EXTERNAL IMAGE REFERENCES BELOW)
