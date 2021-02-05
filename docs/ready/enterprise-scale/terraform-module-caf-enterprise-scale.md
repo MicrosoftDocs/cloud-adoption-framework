@@ -60,7 +60,7 @@ The only dependencies for this module are as follows:
 - Terraform version 0.13.x and later
 - AzureRM Provider 2.31.1 and later
 
-> [!NOTE]
+> [!IMPORTANT]
 > There are known issues with some combinations of Terraform and AzureRM Provider versions. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can be resolved by re-running your deployment. We generally advise you to pin to a specific version of both the Terraform and AzureRM Provider, and test thoroughly before upgrading. As each new version of the module is released, we plan to rebase support to ensure compatibility with the latest Terraform and AzureRM Provider versions.
 
 ### Simple Example
@@ -72,6 +72,7 @@ As such, a simple starting configuration should look like the following:
 ```hcl
 # We strongly recommend using the required_providers block to set the
 # Azure Provider source and version being used.
+
 terraform {
   required_providers {
     azurerm = {
@@ -81,18 +82,19 @@ terraform {
   }
 }
 
-# Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
 }
 
-# Use the azurerm_client_config data resource to dynamically extract the
-# current Tenant ID from your connection settings.
+# You can use the azurerm_client_config data resource to dynamically
+# extract the current Tenant ID from your connection settings.
+
 data "azurerm_client_config" "current" {
 }
 
 # Call the caf-enterprise-scale module directly from the Terraform Registry
 # pinning to the latest version
+
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
   version = "0.0.8"
@@ -105,9 +107,8 @@ module "enterprise_scale" {
 
 This example code will deploy the default enterprise scale resources and provides a great starting point for building out your resource hierarchy in line with the recommended design guidelines for [Management Group and Subscription organization](./management-group-and-subscription-organization.md).
 
-> [!Note]
-> If you are new to Terraform, please refer to this tutorial on HashiCorp Learn covering installation and use of Terraform:<br>
-> https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started
+> [!TIP]
+> If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started) covering installation and use of Terraform.
 
 ## Next steps
 
