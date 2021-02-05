@@ -34,7 +34,7 @@ The following implementation options for enterprise scale provide a proven path 
 
 All enterprise scale implementation options are based on a common set of [design principles](../enterprise-scale/design-principles.md), allowing you to build your environment at scale and with confidence.
 
-| Implementation option | Description | |
+| Implementation option | Description | Deploy |
 |---|---|---|---|
 | [CAF enterprise-scale landing zone (foundations)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with shared services to support the full IT portfolio. Use this option when you need to operate in a cloud-native operating model using Internet connectivity to connect to your services, or plan to add hybrid connectivity later when needed. | [![DTA-Button-WingTip]][DTA-WingTip] |
 | [CAF enterprise-scale landing zone (hybrid connectivity with hub and spoke)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with shared services to support the full IT portfolio. Use this option when you need to implement hybrid connectivity using a "hub and spoke" network topology to allow optimal flexibility and scale in Azure. Includes full coverage of the foundations solution. | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
@@ -47,7 +47,7 @@ All enterprise scale implementation options are based on a common set of [design
 
 The following implementation options for start small and expand provide a proven path for organizations who want to focus on getting started in Azure and iterate your design as needed. Each option follows a unique set of design principles, allowing you to pick the one which best fits your requirements and preferred approach.
 
-| Implementation option | Description | | |
+| Implementation option | Description | Design | Deploy |
 |---|---|---|---|
 | [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. | [Design principles](./migrate-landing-zone.md#design-principles) | [Deployment instructions](./migrate-landing-zone.md) |
 | [CAF Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. | [Design principles](./foundation-blueprint.md#design-principles) | [Deployment instructions](./foundation-blueprint.md) |
@@ -65,7 +65,7 @@ You can also search our full list of [Cloud Adoption Framework partners][CAF-Rea
 
 The following table looks at some of these implementation options from a slightly different perspective to guide more technical decision processes.
 
-| Implementation option | Hub | Spoke | Deployment technology | |
+| Implementation option | Hub | Spoke | Deployment technology | Deploy |
 |---|---|---|---|---|
 | [CAF enterprise-scale landing zone (foundations)](../enterprise-scale/index.md) | Excluded | Excluded | Azure Resource Manager templates, Azure Portal, Azure Policy and GitHub | [![DTA-Button-WingTip]][DTA-WingTip] |
 | [CAF enterprise-scale landing zone (hybrid connectivity with hub and spoke)](../enterprise-scale/index.md) | Included (Hub with VNet Peering) | Included | Azure Resource Manager templates, Azure Portal, Azure Policy and GitHub | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
