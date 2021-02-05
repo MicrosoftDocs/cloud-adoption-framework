@@ -141,6 +141,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Abbreviation |
 |---|---|
 | App Configuration store | `appcs-` |
+| Azure Static Web Apps | `stap-` |
 
 ## Integration
 
