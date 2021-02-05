@@ -30,7 +30,7 @@ For any enterprise-grade environment, the following table outlines the suggested
 | Subscription monitoring | [Azure Activity log](/azure/azure-monitor/platform/activity-log) | Monitoring change at the subscription level |
 | Guest OS monitoring | [Azure Monitor for VMs](/azure/azure-monitor/insights/vminsights-overview) | Monitoring changes and performance of VMs |
 | Network monitoring | [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) | Monitoring network changes and performance |
-| DNS monitoring | DNS Analytics (/azure/azure-monitor/insights/dns-analytics) | Security, performance, and operations of DNS |
+| DNS monitoring | [DNS Analytics](/azure/azure-monitor/insights/dns-analytics) | Security, performance, and operations of DNS |
 
 ::: zone target="docs"
 
