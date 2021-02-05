@@ -17,25 +17,25 @@ ms.custom: think-tank
 
 Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp.
 
-This section shows how to use the [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) to deploy the recommended resource hierarchy and governance model for managing governance and security capabilities across multiple Azure subscriptions at scale.
+This section shows how to use the official [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) to accelerate your journey to managing Azure landing zones at scale using Terraform.
 
 ## Purpose of enterprise scale landing zones
 
-The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) provides a simplified method to implement the enterprise scale foundations using Terraform, covering:
+The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) provides a simplified method to deploy the [Management Group and Subscription organization](./management-group-and-subscription-organization.md) hierarchy from the enterprise scale [reference architecture](./architecture.md#high-level-architecture), enabling:
 
-1. Managing the deployment of a resource hierarchy using Management Groups.
-1. Configuring _Azure Policy_ and _Access Control (IAM)_ to build a scalable governance model across multiple Subscriptions. 
-1. Ensuring Subscriptions are placed in the correct Management Group to inherit mandatory governance models.
+1. Managed resource hierarchy to organize Subscriptions using Management Groups.
+1. A scalable security and governance model using _Azure Policy_ and _Access Control (IAM)_, with an extensive library of custom definitions ready to assign.
+1. Enforced security and governance settings across Subscriptions through Management Group inheritance.
 
-By packaging these resources into a Terraform module, it becomes easier to build and enforce consistency across you Azure platform resources.
+By packaging these capabilities into a single Terraform module, it becomes easier to build and enforce consistency across the Azure platform when operating at scale.
 
 ## Use standard modules
 
-Reuse of components is a fundamental principle of Infrastructure-as-Code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. This module is published to the official [Terraform registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) and is official verified by HashiCorp so you can be confident of its origins.
+Reuse of components is a fundamental principle of Infrastructure-as-Code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. This module is published to the official [Terraform Registry](https://registry.terraform.io/modules/Azure/) and is verified by HashiCorp.
 
 ## Architecture diagram
 
-The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) deploys the following enterprise scale components in your Azure tenant:
+The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) deploys the following components from the enterprise scale [reference architecture](./architecture.md#high-level-architecture):
 
 ![Overview of resources deployed by the Terraform Module for Cloud Adoption Framework Enterprise-scale](media/terraform-caf-enterprise-scale-overview.png)
 _Figure 1: Overview of resources deployed by the Terraform Module for Cloud Adoption Framework Enterprise-scale._
@@ -47,7 +47,7 @@ The components deployed and their purpose include the following:
 | Component | Responsibility |
 |---|---|
 | Management groups | Core Management Groups provide the resource hierarchy foundations of the enterprise scale reference architecture:<ul><li>Optional Management Groups for demo landing zones (SAP, Corp and Online)</li><li>Optional Management Groups for custom landing zones (define your own)</li></ul> |
-| Azure Policy | Azure Policy to provide governance and security across the platform: <ul><li>Custom Policy Definitions and Policy Set Definitions to cover common governance patterns not covered by the built-in policies.</li><li>Create and assign policies at any scope within the Management Group hierarchy to ensure compliance is enforced through inheritance</li><li>Expand with your own custom definitions to meet your specific governance and security requirements:</li></ul> |
+| Azure Policy | Azure Policy to provide security and governance across the platform: <ul><li>Custom Policy Definitions and Policy Set Definitions to cover common governance patterns not covered by the built-in policies.</li><li>Create and assign policies at any scope within the Management Group hierarchy to ensure compliance is enforced through inheritance</li><li>Expand with your own custom definitions to meet your specific security and governance requirements:</li></ul> |
 | Access control (IAM) settings | Create and assign Roles in the resource hierarchy to ensure compliance with RBAC policies:<ul><li>Create custom Role Definitions to ensure principle of least privilege</li><li>Create Role Assignments at the right scope to ensure platform and application teams have the right permissions</li></ul> |
 | Subscriptions | Subscriptions are assigned to Management Groups:<ul><li>Enables policy and RBAC inheritance</li><li>Ensures compliance with platform security and governance requirements</li></ul> |
 
@@ -57,17 +57,18 @@ To simplify getting started with this module, it has been published to the Terra
 
 The only dependencies for this module are as follows:
 
-- Terraform version 0.13.x and later
-- AzureRM Provider 2.31.1 and later
+- Terraform (recommended version 0.13.2 and later)
+- AzureRM Provider (recommended version 2.34.0 and later)
 
 > [!IMPORTANT]
-> There are known issues with some combinations of Terraform and AzureRM Provider versions. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can be resolved by re-running your deployment. We generally advise you to pin to a specific version of both the Terraform and AzureRM Provider, and test thoroughly before upgrading. As each new version of the module is released, we plan to rebase support to ensure compatibility with the latest Terraform and AzureRM Provider versions.
+> There are known issues with some Terraform and AzureRM Provider version combinations. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment. We generally recommend pinning to specific versions, and testing thoroughly before upgrading. As each new version of the module is released, the project team plan to rebase the module to ensure compatibility with the latest Terraform and AzureRM Provider versions.
 
 ### Simple Example
 
-Although the module only requires a value set for the mandatory  `root_parent_id` variable to get started, we recommend specifying a value for `root_id`. This is to prevent the need to initiate a full redeployment if you decide to change this value later.
+The following is a simple starting configuration for your `main.tf` root module:
 
-As such, a simple starting configuration should look like the following:
+> [!TIP]
+> Although the module has only one mandatory variable `root_parent_id`, we also recommend setting `root_id`. Changing the `root_id` value will initiate a full redeployment of all resources managed by the module, including downstream dependencies.
 
 ```hcl
 # We strongly recommend using the required_providers block to set the
@@ -77,7 +78,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.46.0"
+      version = ">= 2.46.1"
     }
   }
 }
@@ -105,7 +106,7 @@ module "enterprise_scale" {
 }
 ```
 
-This example code will deploy the default enterprise scale resources and provides a great starting point for building out your resource hierarchy in line with the recommended design guidelines for [Management Group and Subscription organization](./management-group-and-subscription-organization.md).
+This example code will deploy the minimum recommended [Management Group and Subscription organization](./management-group-and-subscription-organization.md) from the enterprise scale reference architecture. You can then start to customize your deployment once you've got this up and running.
 
 > [!TIP]
 > If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started) covering installation and use of Terraform.
