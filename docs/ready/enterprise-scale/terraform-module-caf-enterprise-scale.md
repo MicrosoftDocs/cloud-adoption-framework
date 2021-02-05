@@ -21,11 +21,11 @@ This section shows how to use the official [Terraform Module for Cloud Adoption 
 
 ## Purpose of enterprise scale landing zones
 
-The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) provides a simplified method to deploy the [Management Group and Subscription organization](./management-group-and-subscription-organization.md) hierarchy from the enterprise scale [reference architecture](./architecture.md#high-level-architecture), enabling:
+The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) provides a simplified approach for deploying the [Management Group and Subscription organization](./management-group-and-subscription-organization.md) hierarchy from the enterprise scale [reference architecture](./architecture.md#high-level-architecture) using Terraform, enabling:
 
-1. Managed resource hierarchy to organize Subscriptions using Management Groups.
+1. Managed resource hierarchy for _Subscription_ organization using _Management Groups_.
 1. A scalable security and governance model using _Azure Policy_ and _Access Control (IAM)_, with an extensive library of custom definitions ready to assign.
-1. Enforced security and governance settings across Subscriptions through Management Group inheritance.
+1. Enforced security and governance settings across _Subscriptions_ through _Management Group_ inheritance.
 
 By packaging these capabilities into a single Terraform module, it becomes easier to build and enforce consistency across the Azure platform when operating at scale.
 
@@ -53,12 +53,12 @@ The components deployed and their purpose include the following:
 
 ## Customize and deploy
 
-To simplify getting started with this module, it has been published to the Terraform Registry. This allows you to consume it directly from the registry as a re-usable module and can benefit from updates as they get released.
+To simplify getting started with this module, it has been published to the [Terraform Registry](https://registry.terraform.io/modules/Azure/). This allows you to consume it directly from the registry as a re-usable module and can benefit from updates as they get released.
 
 The only dependencies for this module are as follows:
 
-- Terraform (recommended version 0.13.2 and later)
-- AzureRM Provider (recommended version 2.34.0 and later)
+- Terraform (_recommended version 0.13.2 and later_)
+- AzureRM Provider (_recommended version 2.34.0 and later_)
 
 > [!IMPORTANT]
 > There are known issues with some Terraform and AzureRM Provider version combinations. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment. We generally recommend pinning to specific versions, and testing thoroughly before upgrading. As each new version of the module is released, the project team plan to rebase the module to ensure compatibility with the latest Terraform and AzureRM Provider versions.
@@ -109,7 +109,7 @@ module "enterprise_scale" {
 This example code will deploy the minimum recommended [Management Group and Subscription organization](./management-group-and-subscription-organization.md) from the enterprise scale reference architecture. You can then start to customize your deployment once you've got this up and running.
 
 > [!TIP]
-> If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started) covering installation and use of Terraform.
+> If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started), covering installation and use of Terraform, and the [AzureRM Provider Guides](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) for information on how to configure the provider and authenticate with Azure.
 
 ## Next steps
 
