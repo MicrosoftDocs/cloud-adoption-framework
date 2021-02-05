@@ -86,4 +86,4 @@ Here is an example of a tailored learning path that aligns to the Strategy metho
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
