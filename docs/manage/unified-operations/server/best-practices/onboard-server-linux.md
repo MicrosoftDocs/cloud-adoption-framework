@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Connect an existing Linux server to Azure Arc
 
-The following README will guide you on how to connect an Linux server to Azure Arc using a simple shell script.
+The following README will guide you on how to connect a Linux server to Azure Arc using a simple shell script.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ The following README will guide you on how to connect an Linux server to Azure A
 
 * Create Azure service principal (SP)
 
-    To connect a server to Azure Arc, an Azure service principal assigned with the "Contributor" role is required. To create it, login to your Azure account run the below command (this can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
+    To connect a server to Azure Arc, an Azure service principal assigned with the "Contributor" role is required. To create it, login to your Azure account and run the below command (this step can also be done in [Azure Cloud Shell](https://shell.azure.com/)).
 
     ```console
     az login
@@ -61,7 +61,7 @@ The following README will guide you on how to connect an Linux server to Azure A
 
     ![A screenshot of the environment variables to be changed.](./img/onboard-server-linux/linux-variables.png)
 
-* Copy the script to the designated server using your preferred tool of choice (or copy/paste the script to a new file inside the server). Below example shows copy the script from MacOS to the server using SCP.
+* Copy the script to the designated server using your preferred tool of choice (or copy/paste the script to a new file inside the server). The example below shows how to copy the script from MacOS to the server using SCP.
 
     ![A screenshot of the 'scp' script.](./img/onboard-server-linux/linux-scp.png)
 
@@ -71,7 +71,7 @@ Run the script using the ```. ./az-connect-linux.sh``` command.
 
 > **Note: The extra dot is due to the script has an *export* function and needs to have the vars exported in the same shell session as the rest of the commands.**
 
-Upon completion, you will have your Linux server, connected as a new Azure Arc resource inside your resource group.
+Upon successful completion, you will have your Linux server, connected as a new Azure Arc resource inside your resource group.
 
 ![A screenshot of the 'az_connect' Linux script running.](./img/onboard-server-linux/az-connect-linux.png)
 
@@ -81,10 +81,10 @@ Upon completion, you will have your Linux server, connected as a new Azure Arc r
 
 ## Delete the deployment
 
-The most straightforward way is to delete the server via the Azure portal, just select server and delete it.
+To delete the server, select the server and delete it from the Azure portal.
 
 ![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-linux/linux-delete-resource.png)
 
-If you want to nuke the entire environment, just delete the Azure resource group.
+To delete the entire deployment, delete the Azure resource group from the Azure portal.
 
 ![[A screenshot of the Delete option to delete a resource group in the Azure portal.](./img/onboard-server-linux/linux-delete-resource-group.png)
