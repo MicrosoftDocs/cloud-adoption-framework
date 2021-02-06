@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for <Insert narrative Name>"
+title: "Enterprise-Scale network topology and connectivity for SAP on Azure"
 description: Describe how this enterprise-scale scenario can improve network topology and connectivity of SAP
 author: BrianBlanchard
 ms.author: brblanch

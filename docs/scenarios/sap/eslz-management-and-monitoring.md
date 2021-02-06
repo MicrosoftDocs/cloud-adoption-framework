@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management and monitoring for <Insert narrative Name>"
+title: "Enterprise-Scale management and monitoring for SAP on Azure"
 description: Describe how this enterprise-scale scenario can improve management and monitoring of SAP
 author: BrianBlanchard
 ms.author: brblanch
