@@ -60,4 +60,6 @@ All of this can be found at the [AKS construction set](https://github.com/Azure/
 
 ## Next steps
 
-Review the AKS constructionsSet critical design areas to make complete considerations and recommendations for your AKS construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
+Review the AKS construction set critical design areas to make complete considerations and recommendations for your AKS construction set architecture. Start with [Identity and Access Management](./eslz-identity-and-access-management.md).
+
+If you're not yet ready to dive into the AKS construction set for landing zones, review the [AKS Baseline Architecture](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks) to acquaint yourself with the fundamentals involved in a enterprise deployment of AKS.

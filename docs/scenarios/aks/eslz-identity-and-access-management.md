@@ -79,3 +79,9 @@ The various workloads in your cluster may need to communicate with other Azure r
   - Making managed identities available to pods in a cluster requires coordination between the cluster operator, user-managed identity owner, and workload team. Ensure this process is documented and understood by all involved.
 - Ensure workload secrets, including TLS certificates, are accessed out of Azure Key Vault via [Secret Store CSI driver for Key Vault](https://docs.microsoft.com/azure/key-vault/general/key-vault-integrate-kubernetes), which should perform the authorization to Key Vault as the managed identity of the pod needing the secret.
 - Create all pod managed identities in the region that the cluster is in.
+
+## Next steps
+
+Advance to considerations for [Network topology and connectivity for the AKS Enterprise-Scale scenario](./eslz-network-topology-and-connectivity.md).
+
+If you're not yet ready to dive into the rest of this AKS construction set for landing zones, review the [AKS Baseline Architecture](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks) to acquaint yourself with the fundamentals involved in a enterprise deployment of AKS.
