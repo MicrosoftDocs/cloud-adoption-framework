@@ -17,7 +17,7 @@ There are different approaches to implementing landing zones in the Cloud Adopti
 Microsoft offers two implementation options for landing zones:
 
 - Start small and expand
-- Enterprise scale
+- Enterprise-scale
 
 You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/partner-landing-zone).
 
@@ -27,16 +27,16 @@ The following table summarizes considerations for each landing zone implementati
 
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         **Start small and expand**
     :::column-end:::
     :::column:::
-        **Enterprise scale**
+        **Enterprise-scale**
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -44,7 +44,7 @@ The following table summarizes considerations for each landing zone implementati
         **Initial considerations**
     :::column-end:::
     :::column:::
-        [Operating model alignment](https://docs.microsoft.com/azure/cloud-adoption-framework/operating-model/compare#operating-model-comparison)
+        [Operating model alignment](/azure/cloud-adoption-framework/operating-model/compare#operating-model-comparison)
     :::column-end:::
     :::column:::
         Centralized operations
@@ -55,7 +55,7 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         Baseline reference architecture
@@ -83,7 +83,7 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         Enables adoption velocity across the organization
@@ -97,7 +97,7 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         Achieves operational excellence
@@ -106,7 +106,7 @@ The following table summarizes considerations for each landing zone implementati
         Requires Cloud Adoption Framework Govern and Manage methodologies to achieve operational excellence.
     :::column-end:::
     :::column:::
-        Enables operational excellence with autonomy for platform and application teams built on policy-driven governance and management . 
+        Enables operational excellence with autonomy for platform and application teams built on policy-driven governance and management.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -120,12 +120,12 @@ The following table summarizes considerations for each landing zone implementati
         Iterative approach. Requires Govern and Manage methodologies to support sensitive data or mission critical workloads.
     :::column-end:::
     :::column:::
-        Enterprise-scale architecture includes designs for governance, security segmentation, and separation of duty. This approach empowers teams to act within appropriate landing zones.
+        Enterprise-scale architecture includes designs for governance, security segmentation, and separation of duties. This approach empowers teams to act within appropriate landing zones.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         Associated risks while building out security, governance, and compliance
@@ -153,7 +153,7 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging
@@ -162,12 +162,12 @@ The following table summarizes considerations for each landing zone implementati
         Partial. Some resources are deployed. Additional offerings aligned to Cloud Adoption Framework methodologies required to apply best practices to support security, governance, and compliance.
     :::column-end:::
     :::column:::
-        Enterprise scale Architecture is the target technical state recommendation for your Azure environment that aligns with the Azure platform roadmap.
+        Enterprise-scale architecture is the target technical state recommendation for your Azure environment that aligns with the Azure platform roadmap.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         Automation capabilities like infrastructure as code (IaC) and Azure DevOps
@@ -176,7 +176,7 @@ The following table summarizes considerations for each landing zone implementati
         Azure Resource Manager, Azure Policy, and Azure Blueprints can be used to create your own continuous integration/continuous development pipeline.
     :::column-end:::
     :::column:::
-        Azure Resource Manager, Azure Policy, and GitHub/AzureDevOps. CI/CD pipeline options are included in the reference implementation guidance.
+        Azure Resource Manager, Azure Policy, and GitHub/Azure DevOps. CI/CD pipeline options are included in the reference implementation guidance.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -195,7 +195,7 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-        
+
     :::column-end:::
     :::column:::
         Timeline to achieve security, governance, and compliance requirements for all workloads:
@@ -204,7 +204,7 @@ The following table summarizes considerations for each landing zone implementati
         Four to six months
     :::column-end:::
     :::column:::
-       Six to eight weeks 
+       Six to eight weeks
     :::column-end:::
 :::row-end:::
 
@@ -216,7 +216,7 @@ Which operating model better describes your organization? Be aware of not just h
 
 - Enterprise operations: In this typically larger or industry specialized environments, enterprise operations have a stable, steady state that's managed centrally.
 
-Centralized operations favor a start-small-and-expand approach. Enterprise operations might be better addressed with enterprise scale.
+Centralized operations favor a start-small-and-expand approach. Enterprise operations might be better addressed with enterprise-scale.
 
 Do you need a baseline architecture or environment? The start-small-and-expand approach offers a simple starting point where you can build your own solution. The enterprise-scale approach provides an environment for the entire Azure tenant, which includes cloud-native operations.
 
@@ -230,7 +230,7 @@ The following considerations are key to your adoption plan for either type:
 - Adoption velocity across the organization
 - Operational excellence
 
-Enterprise scale provides long-term self-sufficiency and operational excellence immediately. Enterprise scale also helps accelerate, compliance adoption across your organization. The enterprise scale approach builds out a foundation for you. Enterprise scale includes the guard rails around security, identity, and network. The approach includes CI/CD Pipeline options for DevOps and automation.
+Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps accelerate, compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
 
 If you start small and expand, there are ways to get to self-sufficiency, adoption velocity, and operational excellence. Use the Govern or Manage methodologies inside the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines), to iteratively improve your design.
 
@@ -247,7 +247,7 @@ Your organization might need to have a particular workload or application that n
 
 Start small and expand is an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see the [Govern methodology for the cloud](/azure/cloud-adoption-framework/govern/methodology) and [IT management and operations in the cloud](/azure/cloud-adoption-framework/manage/considerations/).
 
-The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [Service enablement framework](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
+The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
 
 If possible, identify low-risk workloads to implement first. This technique helps you build infrastructure and skills over time. You can add the Govern and Manage methodologies as you understand how the cloud works.
 
@@ -263,27 +263,27 @@ Deploying your landing zone or landing zones raises several considerations for c
 
 Both implementation offer best practices. Start small and expand lets you add best practices using Cloud Adoption Framework methodologies to apply security, governance, and compliance.
 
-Enterprise scale comes with all critical services configured. Start small and expand comes with some resources deployed.
+Enterprise-scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
-For more information about best practices, see [best practices for Azure readiness](/azure/cloud-adoption-framework/ready/azure-best-practices/).
+For more information, see [Best practices for Azure readiness](/azure/cloud-adoption-framework/ready/azure-best-practices/).
 
 Both methodologies offer automation capabilities.
 
 - Start small and expand: ARM templates, Azure Policy, and Azure Blueprints. Can create your own CI/CD pipeline.
-- Enterprise scale: ARM templates, Azure Policy, GitHub/AzureDevOps, and CI/CD pipeline options are included in the reference implementation guidance.
+- Enterprise-scale: ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included in the reference implementation guidance.
 
 Start small and expand uses ARM templates, Azure Policy, and Azure Blueprints.
 
-- [CAF Foundation blueprint](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/foundation-blueprint)
-- [CAF Migration blueprint](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/migrate-landing-zone)
+- [CAF Foundation blueprint](/azure/cloud-adoption-framework/ready/landing-zone/foundation-blueprint)
+- [CAF Migration landing zone blueprint](/azure/cloud-adoption-framework/ready/landing-zone/migrate-landing-zone)
 
-Enterprise scale uses ARM Templates, Azure Policy, and offers three reference implementation and different deployments.
+Enterprise-scale uses ARM templates, Azure Policy, and offers three reference implementation and different deployments.
 
 - [Enterprise-scale foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)
 - [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)
 - [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md)
 
-Whether you implement start small and expand or enterprise scale, you can use templates and a portal-based experience. You can include IaC later in the process. Explore this [IaC overview](/dotnet/architecture/cloud-native/infrastructure-as-code) for more information.
+Whether you implement start small and expand or enterprise-scale, you can use templates and a portal-based experience. You can include IaC later in the process. Explore this [IaC overview](/dotnet/architecture/cloud-native/infrastructure-as-code) for more information.
 
 ## Timeline considerations
 
