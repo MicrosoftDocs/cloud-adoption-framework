@@ -35,13 +35,13 @@ In some instances this can cause a contention with customers security policies a
 
 This article describes how application teams can deploy Azure PaaS services in their subscriptions which are only accessible over private endpoints.
 
-In addition, this article will describe how application teams can ensure that their services are automatically integrated with Azure Private DNS Zones. This removes the need for manual creation or deletion of records in DNS.
+This article will also describe how application teams can ensure that services are automatically integrated with Azure Private DNS Zones. This removes the need for manual creation or deletion of records in DNS.
 
 ## Private Link and DNS integration in hub and spoke network architectures
 
 Azure Private DNS Zones are typically hosted centrally in the same Azure subscription where the hub VNet is deployed. This central hosting practice is driven by [cross-premises DNS name resolution][link-4] and other needs for central DNS resolution such as Active Directory. In most cases, only networking/identity admins have permissions to manage DNS records in these zones.
 
-While application teams do have permissions to create Azure resource in their own subscriptions, they do not have any permissions in the central networking connectivity subscription, which includes managing DNS records in the Azure Private DNS Zones. This access limitation means they do not have the possibility to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
+Application teams do have permissions to create Azure resource in their own subscriptionn. They do not have any permissions in the central networking connectivity subscription, which includes managing DNS records in the Azure Private DNS Zones. This access limitation means they do not have the possibility to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution and where name resolution for private link resources is done via Azure Private DNS Zones:
 
@@ -55,7 +55,7 @@ From the previous diagram, it is important to highlight that:
 There are two conditions that must be true to allow application teams the freedom to create any Azure PaaS resources they want in their subscription:
 
 - Central networking and/or central platform team must ensure that application teams can only deploy and access Azure PaaS services via private endpoints.
-- Central networking and/or central platform teams must ensure that whenever application teams create private endpoints, the corresponding record is automatically created in centralized Azure Private DNS Zone that matches the service created.
+- Central networking and/or central platform teams must ensure that whenever private endpoints are created, the corresponding records are automatically created in centralized Azure Private DNS Zone that matches the service created.
   - DNS record needs to follow the lifecycle of the private endpoint and automatically remove the DNS record when the private endpoint is deleted.
 
 The following sections describe how application teams can enable these conditions by using [Azure policy][link-10]. We will use Azure Storage as the Azure service that application teams need to deploy in our example below, but the same principle can be applied to most Azure services that [support][link-2] private link.
