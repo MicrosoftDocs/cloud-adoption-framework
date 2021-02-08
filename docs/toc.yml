@@ -217,6 +217,8 @@ items:
         href: ready/landing-zone/index.md
       - name: Design areas
         href: ready/landing-zone/design-areas.md
+      - name: Choose a landing zone option
+        href: ready/landing-zone/choose-landing-zone-option.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
       - name: Start with enterprise scale
