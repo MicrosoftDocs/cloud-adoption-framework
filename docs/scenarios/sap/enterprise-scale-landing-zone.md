@@ -19,18 +19,19 @@ Not all customers adopt SAP on Azure in the same way, so the Cloud Adoption Fram
 ## Design guidelines
 
 Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are 6 critical design areas:
-        - [Identity and Access Management](./eslz-identity-and-access-management.md)
-        - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
-        - [Management and monitoring](./eslz-management-and-monitoring.md)
-        - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
-        - [Security, governance and compliance](./eslz-security-governance-and-compliance.md)
-        - [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
+
+- [Identity and Access Management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Management and monitoring](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Security, governance and compliance](./eslz-security-governance-and-compliance.md)
+- [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
 
 ## Architecture
 
 Conceptual reference architecture that demonstrates design areas and best practices. example below
 
-![Responsibility Zones](media\Overview_Architecture.png)
+![SAP Construction Set](media\Overview_Architecture.png)
 
 ## Implementation
 
@@ -45,7 +46,7 @@ Ansible playbooks which run different roles to configure and VMs and install SAP
 Github repo
 [Automated SAP Deployments in Azure Cloud](https://github.com/Azure/sap-hana/tree/beta/v2.3) 
 
-![Responsibility Zones](media\Overview_Automation.png)
+![SAP Reference Implementation](media\Overview_Automation.png)
 
 ## Next steps
 Review the SAP on Azure Construction Set critical design areas to make complete considerations and recommendations for your SAP on Azure Construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
