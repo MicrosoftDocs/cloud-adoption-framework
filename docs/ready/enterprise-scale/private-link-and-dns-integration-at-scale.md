@@ -1,3 +1,16 @@
+---
+title: Private Link and DNS integration at scale
+description: Private Link and DNs integration at scale
+author: XXXXXX
+ms.author: XXXXXX
+ms.date: 02/08/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: think-tank
+---
+
+
 # Private Link and DNS integration at scale
 
 > This article describes how to integrate Azure Private Link for PaaS services with Azure Private DNS Zones in hub and spoke network architectures.
