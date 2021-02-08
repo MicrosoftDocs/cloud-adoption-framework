@@ -17,22 +17,23 @@ ms.custom: think-tank
 
 ## Introduction
 
-Many customers build their network infrastructure in Azure using the hub and spoke network architecture, where: 
-- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the hub virtual network (VNet) 
-- Spoke VNets consume those shared services via VNet peering. 
+Many customers build their network infrastructure in Azure using the hub and spoke network architecture, where:
 
-In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (a spoke) connected to the hub VNet. In this, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN. 
+- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the hub virtual network (VNet)
+- Spoke VNets consume those shared services via VNet peering.
+
+In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (a spoke) connected to the hub VNet. In this, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN.
 
 Internet-outbound connectivity is provided via central Network Virtual Appliance (NVA), for example, Azure Firewall.
 
-Many application teams build their solutions using a combination or Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic will stay private within the Azure network and would be fully routable from on-premises. 
+Many application teams build their solutions using a combination or Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic will stay private within the Azure network and would be fully routable from on-premises.
 
 However, some Azure PaaS services (such as Storage or Cosmos DB) cannot be deployed in customer’s VNets and are accessible over their public endpoint.
 In some instances this can cause a contention with customers security policies as corporate traffic might not allow the deployment or accessing of corporate resources (such as a SQL database) over public endpoints.
 
 [Azure Private Link][link-1] allows access to a [list][link-2] of Azure services over private endpoints, but it requires that those private endpoint records are registered in a corresponding [Private DNS Zone][link-3].
 
-This article describes how application teams can deploy Azure PaaS services in their subscriptions which are only accessible over private endpoints. 
+This article describes how application teams can deploy Azure PaaS services in their subscriptions which are only accessible over private endpoints.
 
 In addition, this article will describe how application teams can ensure that their services are automatically integrated with Azure Private DNS Zones. This removes the need for manual creation or deletion of records in DNS.
 
@@ -308,16 +309,16 @@ At this point, application teams can use the storage account via a private endpo
 
 If application owner deletes the private endpoint, the corresponding records in the Private DNS Zone will automatically be removed.
 
-[link-1]: https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
-[link-2]: https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#availability
-[link-3]: https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
-[link-4]: https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns
-[link-5]: https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-custom-policy-definition
-[link-6]: https://docs.microsoft.com/en-us/azure/templates/microsoft.network/2020-05-01/privateendpoints/privatednszonegroups
-[link-7]: https://docs.microsoft.com/en-us/azure/governance/policy/assign-policy-portal
-[link-8]: https://docs.microsoft.com/en-us/azure/dns/dns-protect-private-zones-recordsets
-[link-9]: https://docs.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources
-[link-10]: https://docs.microsoft.com/en-us/azure/governance/policy/overview
+[link-1]: https://docs.microsoft.com/azure/private-link/private-link-overview
+[link-2]: https://docs.microsoft.com/azure/private-link/private-link-overview#availability
+[link-3]: https://docs.microsoft.com/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
+[link-4]: https://docs.microsoft.com/azure/private-link/private-endpoint-dns
+[link-5]: https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition
+[link-6]: https://docs.microsoft.com/azure/templates/microsoft.network/2020-05-01/privateendpoints/privatednszonegroups
+[link-7]: https://docs.microsoft.com/azure/governance/policy/assign-policy-portal
+[link-8]: https://docs.microsoft.com/azure/dns/dns-protect-private-zones-recordsets
+[link-9]: https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources
+[link-10]: https://docs.microsoft.com/azure/governance/policy/overview
 [image-1]: https://lytill.blob.core.windows.net/images/image001.png
 [image-2]: https://lytill.blob.core.windows.net/images/image002.jpg
 [image-3]: https://lytill.blob.core.windows.net/images/image003.jpg
