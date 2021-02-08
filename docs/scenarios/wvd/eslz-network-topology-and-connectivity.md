@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for <Insert narrative Name>"
+title: "Enterprise-Scale network topology and connectivity for Windows Virtual Desktop"
 description: Describe how this enterprise-scale scenario can improve network topology and connectivity of <Insert Scenario Name>
 author: BrianBlanchard
 ms.author: brblanch
