@@ -47,12 +47,10 @@ The following best practices can help add to your initial security baseline, to 
 
 There are also a number of best practices you can apply to your identity baseline to ensure consistent identity and access management across your kubernetes clusters:
 
-- [RBAC and AAD integration](https://docs.microsoft.com/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [AAD integration](https://docs.microsoft.com/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Azure AD integration](https://docs.microsoft.com/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [RBAC and Azure AD integration](https://docs.microsoft.com/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 - [Managed identities in Kubernetes](https://docs.microsoft.com/azure/aks/use-managed-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Create an Azure AD Service Principle](https://docs.microsoft.com/azure/aks/kubernetes-service-principal?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Access other Azure resources with AAD Kubernetes integration](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
-- [Azure RBAC for AKS configuration file access](https://docs.microsoft.com/azure/aks/control-kubeconfig-access?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
+- [Access other Azure resources with Azure AD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 
 ## Next step: Manage modern container solutions
 

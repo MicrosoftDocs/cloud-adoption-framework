@@ -26,10 +26,10 @@ Consider the following factors:
 
 ## Design recommendations
 
-The following are proven practices for your design:
-
-- If Stateful workloads are considered, prepare the dynamic storage Azure Disks or Azure Files
-- If multi-pod need to write-read in same storage. Support Azure Files or third party as ANF - Azure NetApp Files
-- In most cases, it is recommended to use Premium storage - SSD-based Storage
-- Use Node pools for different workloads requiring different storage and performance characteristics
-- Create Storage classes
+- **Avoid stateful workloads in your cluster.** Prefer to store state external to the cluster in an out-of-cluster service such as Azure SQL Database, Cosmos DB, or Storage.
+- If stateful workloads are required, prepare the dynamic storage Azure Disks or Azure Files
+- If multiple pods need read-write against the same storage, use Azure Files or for more advanced workloads, Azure NetApp Files.
+- Performance testing is critical if you take a dependency on any in-cluster storage mechanism, including zonal considerations.
+- Functionality testing is critical if you take a dependency on any in-cluster storage mechanism. This includes (pod and node) scale operations, and zone considerations.
+- Use ephemeral OS disks for your node pools where possible.
+- Use node pools for different workloads requiring different storage and performance characteristics

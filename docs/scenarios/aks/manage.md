@@ -20,18 +20,18 @@ Containers abstract away dependencies on several layers of infrastructure, leadi
 To establish proper operations management practices, you must understand how containers will be used in your cloud adoption plans & what benefits you want to realize from this shift to containerized workloads.
 
 - Will you manage multiple technology solutions (containers, IaaS, and PaaS) in your cloud platform?
-- Will centralized teams support operations and management of the container or AKS platform? Does that  accountability shift to the individual workload teams?
-- Will centralized teams support operations and management of the workloads running in each container or pod? Does that accountability shift to the individual workload teams?
+- Will centralized teams support operations and management of the container or AKS platform? Does that accountability shift to the individual workload teams?
+- Will centralized teams support operations and management of the workloads running in each pod? Does that accountability shift to the individual workload teams?
 - Are you using containers for mission-critical workloads?
 - Are you only using containers for less-critical or utility workloads to reduce costs?
 - How important is the performance and reliability of your individual workloads?
-- Are the applications in your containers state-less? or do you need to persist state to protect and recover the workloads in the containers?
+- Are the applications in your containers state-less or do you need to persist state to protect and recover the workloads in the containers?
 
-These basic questions will shape how to best integrate containers & AKS into you operations management strategy.
+These basic questions will shape how to best integrate containers and AKS into you operations management strategy.
 
 ## Operations baseline
 
-Implementation of a operations baseline will provide centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't already have an operations baseline for your non-container assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md) to get started with basic operations.
+Implementation of an operations baseline will provide centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't already have an operations baseline for your non-container assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md) to get started with basic operations.
 
 Your operations baseline should include tools and configurations to provide visibility, monitoring, operational compliance, optimization, and protection/recovery.
 
@@ -43,11 +43,11 @@ If the majority of your portfolio in the cloud is hosted in containers, you may 
 
 ## Platform operations
 
-Unless this is your organizations first or only deployment to the cloud, you should have some form of operations baseline. This section will identify a few additional tools you may want to include to better manage container or AKS deployment.
+Unless this is your organization's first or only deployment to the cloud, you should have some form of operations baseline. This section will identify a few additional tools you may want to include to better manage container or AKS deployments.
 
 ### Inventory and visibility
 
-Monitoring containers and AKS clusters uses the tools, dashboards, and alerts included in your operations baseline. But you may need to add a bit of additional configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for Containers](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). See the [overview of Azure Monitor for container operators](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
+Monitoring containers and AKS clusters uses the tools, dashboards, and alerts included in your operations baseline. But you may need to add a bit of additional configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for containers](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). See the [overview of Azure Monitor for container operators](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-enable-new-cluster?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
 
 Once you've configured Azure monitor to collect data on your containers, you'll be able to monitor the following as part of your centralized management processes:
 
@@ -61,7 +61,7 @@ Once you've configured Azure monitor to collect data on your containers, you'll 
 This data will also support workload operations teams by providing more detailed information on each workload running on the containerized platform:
 
 - Review the resource utilization of workloads running on the host that are unrelated to the standard processes that support the pod.
-- Integrate with [Prometheus](https://prometheus.io/docs/introduction/overview/) to view application and workload metrics it collects from nodes and Kubernetes.
+- Integrate with [Prometheus](https://prometheus.io/docs/introduction/overview/) to view application and workload metrics it collects from nodes and pods.
 - Monitor container workloads deployed to AKS Engine on-premises and AKS Engine on Azure Stack.
 - Monitor container workloads deployed to Azure Red Hat OpenShift.
 - Monitor container workloads deployed to Azure Arc enabled Kubernetes (preview).
@@ -82,7 +82,7 @@ In a cluster environment in Azure, these tasks are performed at multiple levels:
 
 To recover from an incident, you will need basic backup and recovery capabilities in your operations baseline. But the right option for recovery will depend on your storage decisions. The [operators best practice on storage](https://docs.microsoft.com/azure/aks/operator-best-practices-storage?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) will help find the right storage approach. One critical decision in that article concerns the management of state for the applications in your container:
 
-- If all of the applications in a container are state-less, the standard Azure Backup approach in the operations baseline may give you enough protection to backup your containers & recover in case of failure. But those backups should be tested regularly to ensure adequate protection. For higher SLAs, you may also want to consider [multi-region BCDR best practices](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region.md?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) to provide additional protection.
+- For higher SLAs, you may also want to consider [multi-region BCDR best practices](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) to provide additional protection.
 - If you can't separate state from any of the applications, you will require additional configuration for backup and recovery. The [operators guide](https://docs.microsoft.com/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) also provides information on additional backup options. Use of tools like [Velero](https://github.com/heptio/velero) to support all containers or AKS clusters is an example of platform specific operations, that extend your operations baseline.
 - If your portfolio of applications inconsistently applies state, it is advised that the central operations team not attempt to maintain both solutions. Instead, standardize on the desired-state toolchain for all containers, but shift the responsibility for alternative recovery solutions to workload operations teams. This approach allows design freedom for the developers, keeps central costs lower, & provides a cost reduction incentive for workload teams to conform to the standard.
 

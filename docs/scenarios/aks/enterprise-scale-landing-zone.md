@@ -15,20 +15,20 @@ Enterprise-scale construction sets provide a specific architectural approach and
 
 ## Prerequisite
 
-The AKS Construction Set assume that enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review the enterprise-scale [overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the AKS construction set.
+The AKS construction set assume that enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the AKS construction set.
 
 ## Objective
 
-Not all customers adopt AKS in the same way, so the AKS construction set architecture varies between customers. The technical considerations and design recommendations of the AKS Construction Set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale, in spite of minor variation.
+Not all customers adopt AKS in the same way or for the same reasons, so the AKS construction set architecture will vary between customers. The technical considerations and design recommendations of the AKS construction set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale, in spite of minor variation.
 
 ## Process
 
-The AKS Construction Set is modular by design so customers can customized environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
+The AKS construction set is modular by design so customers can customize it. The construction set approach to landing zones includes three sets of assets to support cloud teams:
 
 - Design guidelines to aid in evaluating critical decisions
 - Architecture to illustrate the end-state of the landing zone architecture
-- Implementation to provide a deployable reference capable of creating the environment for your AKS deployment. 
-  - This implementation also includes a Microsoft approved AKS reference implementation to test AKS deployment in the deployed environment.
+- Implementation to provide a deployable reference capable of creating the environment for your AKS deployment
+  - This implementation also includes a reference implementation built ontop of the [AKS Baseline Architecture](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks) to experience an AKS deployment in the deployed landing zone.
 
 ## Design guidelines
 
@@ -52,11 +52,12 @@ Conceptual reference architecture that demonstrates design areas and best practi
 AKS construction set is an open-source collection of Terraform templates to automate the deployment of an environment capable of hosting a enterprise-scale Kubernetes cluster in Azure, using Azure Kubernetes Service (AKS).
 
 The templates are split into:
-Terraform modules which deploy the infrastructure components (such as VMs, network, storage) in Azure.
-Ansible playbooks which run different roles to configure and VMs and install AKS HANA and required applications on the already deployed infrastructure.
 
-Github repo: [AKS construction set](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline)
+- Terraform modules which deploy the infrastructure components (such as network and cluster) in Azure.
+- Bootstrapping the cluster with a GitOps operator.
+
+All of this can be found at the [AKS construction set](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline) in GitHub.
 
 ## Next steps
 
-Review the AKS construction Set critical design areas to make complete considerations and recommendations for your AKS Construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
+Review the AKS constructionsSet critical design areas to make complete considerations and recommendations for your AKS construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)

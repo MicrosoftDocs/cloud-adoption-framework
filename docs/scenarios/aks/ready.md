@@ -19,7 +19,7 @@ With Azure Landing Zones, you could start with a small implementation and expand
 
 If you haven't already chosen an Azure Landing Zone implementation approach, review the [Azure Landing Zones](../../ready/landing-zone/index.md) article series. Then review how that landing zone option can best be aligned to a modern container scenario.
 
-**Start-small options:** Container orchestration via Azure Kubernetes Service (AKS) does require some environmental configuration. The [baseline architecture for an Azure Kubernetes Service (AKS) cluster for Azure Landing Zones](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) considerations regarding networking, compute, identity, security, BCDR, and operations.
+**Start-small options:** Container orchestration via Azure Kubernetes Service (AKS) does require some environmental configuration. The [baseline architecture for an Azure Kubernetes Service (AKS) cluster for Azure Landing Zones](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) lists considerations regarding networking, compute, identity, security, BCDR, and operations.
 
 **Enterprise-scale options:** The enterprise-scale construction set for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. Included in the construction set documentation is a series of best practices that can be used to evaluate production readiness of any AKS environment, even if you chose a start-small landing zone implementation. See the following articles to evaluate your AKS environment:
 
@@ -40,7 +40,6 @@ Review the concepts and how-to guides in each of the product documentation links
 - [Batch](/azure/batch/batch-technical-overview)
 - [Container Instances](/azure/container-instances/container-instances-overview)
 - [Functions](/azure/azure-functions/functions-overview)
-- [Service Fabric](/azure/service-fabric/service-fabric-overview)
 
 ## Next step: Migrate workload to modern containers
 

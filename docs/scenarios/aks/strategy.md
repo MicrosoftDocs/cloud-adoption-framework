@@ -11,17 +11,17 @@ ms.subservice: strategy
 
 # Strategic impact of modern containers
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. 
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
 This article will help expose a number of considerations regarding modern containers that may have an impact on your strategy.
 
 ## Modern container motivations
 
-Organizations most commonly choose containers when innovation is a high priority. But management of cloud-native applications is also a very common driver. When migrating workloads, container may also be a sound option, if workload portability and environmental consistency are important to the success of the migration project.
+Organizations most commonly choose containers when innovation is a high priority. But management of cloud-native applications is also a very common driver. When migrating workloads, containerization may also be a sound option, if workload portability and environmental consistency are important to the success of the migration project.
 
 Kubernetes then provides a layer of orchestration to make it easier for the organizations to capitalize on the benefits of containers and improve overall operations of containerized environments and workloads.
 
-In Azure, the Azure Kubernetes Service (AKS) provides the end to end container and container orchestration as a service.
+In Azure, the Azure Kubernetes Service (AKS) provides end to end container orchestration as a service.
 
 ## Modern container outcomes
 
