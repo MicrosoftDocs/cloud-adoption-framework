@@ -1,6 +1,6 @@
 ---
-title: Network topology and connectivity
-description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
+title: Plan for application delivery
+description: Examine key design considerations and recommendations surrounding the delivery of applications in a secure way.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/08/2021

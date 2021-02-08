@@ -1,6 +1,6 @@
 ---
-title: Network topology and connectivity
-description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
+title: Plan for landing zone network segmentation
+description: Examine key design considerations and recommendations surrounding network segmentation with Azure Landing Zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/08/2021

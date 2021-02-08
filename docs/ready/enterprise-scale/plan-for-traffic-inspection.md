@@ -1,6 +1,6 @@
 ---
-title: Network topology and connectivity
-description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
+title: Plan for traffic inspection
+description: Examine key design considerations and recommendations surrounding mirroring or tapping traffic within an Azure Virtual Network.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/08/2021

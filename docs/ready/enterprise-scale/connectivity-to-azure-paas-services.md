@@ -1,6 +1,6 @@
 ---
-title: Network topology and connectivity
-description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
+title: Connectivity to Azure PaaS Services
+description: Examine key design considerations and recommendations surrounding connectivity to Azure Platform as a Service technologies.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/08/2021
