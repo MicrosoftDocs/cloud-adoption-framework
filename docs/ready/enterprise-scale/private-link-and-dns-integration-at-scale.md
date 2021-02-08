@@ -303,7 +303,7 @@ Once the platform team has deployed the platform infrastructure components (Azur
 
 11. If central networking team goes to the **privatelink.blob.core.windows.net** private DNS Zone, they will confirm that the DNS record has been created for the private endpoint we created, and both, the name and IP address match to the values within the private endpoint.
 
-    ![image-4][image-14]
+    ![image-14][image-14]
 
 At this point, application teams can use the storage account via a private endpoint from any VNet in the hub & spoke network environment and from on-premises, as DNS record has been automatically recorded in the Private DNS Zone.
 
