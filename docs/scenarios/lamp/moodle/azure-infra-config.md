@@ -7,7 +7,7 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # How to set up Moodle worker nodes
@@ -21,12 +21,6 @@ A virtual machine scale set instance is assigned a private IP address. You can o
 ### Access the virtual machine scale set
 
 Follow these steps to access the virtual machine scale set:
-
-1. Enable your gateway to connect the virtual machine scale set instance to a private IP address.
-
-1. Follow [How to create a virtual network gateway and connect through a private IP](./vpn-gateway.md) to use the gateway to access the virtual machine scale set instance.
-
-1. Set your virtual machine scale set to password-enabled.
 
 1. Determine the private IP address that Azure uses for your virtual machine scale set instance:
 
@@ -97,7 +91,26 @@ Take these steps to install missing extensions:
    php -m
    ```
 
-1. Use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
+1. Use an Azure Resource Manager template to install the following PHP extensions:
+
+    - `fpm`
+    - `cli`
+    - `curl`
+    - `zip`
+    - `pear`
+    - `mbstring`
+    - `dev`
+    - `mcrypt`
+    - `soap`
+    - `json`
+    - `redis`
+    - `bcmath`
+    - `gd`
+    - `mysql`
+    - `xmlrpc`
+    - `intl`
+    - `xml`
+    - `bz2`
 
 1. If the on-premises Moodle application has any additional PHP extensions that aren't in the controller virtual machine, install them manually with this command:
 

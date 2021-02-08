@@ -27,7 +27,7 @@ You'll learn how to:
 > [!div class="checklist"]
 >
 > - **[Organize resources](./organize-resources.md):** Set up a management hierarchy to consistently apply access control, policy, and compliance to groups of resources and use tagging to track related resources.
-> - **[Manage access](./manage-access.md):** Use role-based access control to make sure that users have only the permissions they really need.
+> - **[Manage access](./manage-access.md):** Use Azure role-based access control to make sure that users have only the permissions they really need.
 > - **[Manage costs and billing](./manage-costs.md):** Identify your subscription type, understand how billing works, and learn how to control costs.
 > - **[Plan for governance, security, and compliance](./govern-org-compliance.md):** Enforce and automate policies and security settings that help you follow applicable legal requirements.
 > - **[Use monitoring and reporting](./monitoring-reporting.md):** Get visibility across resources to find and fix problems, optimize performance, and gain insight into customer behavior.

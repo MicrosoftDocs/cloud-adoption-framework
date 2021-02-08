@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Migration backlog review
 
-The actionable output of the Plan phase is a migration backlog, which influences all of the prerequisites discussed so far. Development of the migration backlog should be completed as a first prerequisite. This article serves as a milestone to complete prerequisite activities. The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
+The actionable output during the planning phase is a migration backlog, which influences all of the prerequisites discussed so far. Development of the migration backlog should be completed as a first prerequisite. This article serves as a milestone to complete prerequisite activities. The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
 
 ## Business outcomes and metrics
 

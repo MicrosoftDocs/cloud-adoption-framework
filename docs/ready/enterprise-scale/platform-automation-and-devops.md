@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 # Platform automation and DevOps
 
-![Diagram of platform automation and DevOps.](./media/DevOps.png)
+![Diagram of platform automation and DevOps.](./media/devops.png)
 
 _Figure 1: Platform automation and DevOps._
 
@@ -54,7 +54,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 - **SecOps** (security operations)
 
-  - Role-based access control (RBAC) (holistic).
+  - Azure role-based access control (Azure RBAC) (holistic).
 
   - Key management (for central services, simple mail-transfer protocol, and domain controller).
 
@@ -72,7 +72,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Application management and monitoring.
 
-  - RBAC (application resources).
+  - Azure RBAC (application resources).
 
   - Security monitoring and audit (application resources).
 
@@ -84,11 +84,11 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Provide a central application DevOps function to support applications that don't have existing DevOps capabilities or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
-  - Use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
+  - Use a policy-driven approach with clear Azure RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of Azure RBAC and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
   - To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
-  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and RBAC assignments. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
+  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
   - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources. Existing teams that already rely on a DevOps pipeline for application delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of how resources are deployed in Azure.
 
@@ -112,7 +112,7 @@ The following list presents a recommended distribution of responsibilities betwe
 
   - Key management (application keys).
 
-  - RBAC (application resources).
+  - Azure RBAC (application resources).
 
   - Security monitoring and audit (application resources).
 
@@ -132,7 +132,7 @@ The following list presents a recommended distribution of responsibilities betwe
 
   - Platform management and monitoring (holistic).
 
-  - RBAC (holistic).
+  - Azure RBAC (holistic).
 
   - Key management (central services).
 

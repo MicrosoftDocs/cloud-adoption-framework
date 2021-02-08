@@ -31,10 +31,10 @@ Common scenarios for machine learning solutions include:
 
 ## Checklist
 
-- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
+- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter Notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
 
   - [Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml)
-  - [Create your first machine learning experiment with a Jupyter notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
+  - [Create your first machine learning experiment with a Jupyter Notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
   - [Visual drag-and-drop experiments](/azure/machine-learning/tutorial-designer-automobile-price-train-score)
   - [Use the AutoML UI](/azure/machine-learning/tutorial-first-experiment-automated-ml)
   - [Configure your dev environment](/azure/machine-learning/how-to-configure-environment)

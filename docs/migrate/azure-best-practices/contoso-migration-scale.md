@@ -173,7 +173,7 @@ In addition to Database Migration Service, Contoso has some scripts that it uses
 
 There are several other partner tools that can help Contoso in assessing the on-premises environment for migration to Azure. Learn more about [Azure migration partners](https://azure.microsoft.com/migration/partners).
 
-## Phase 2: Migrate
+## Step 2: Migrate
 
 With the assessment complete, Contoso needs to identify tools to move its applications, data, and infrastructure to Azure.
 
@@ -311,11 +311,11 @@ Contoso can deploy an Azure Automation account with preconfigured runbooks and s
 
 ### Partner optimization tools
 
-Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://www.scalr.com/cost-optimization).
+Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://scalr.com/pricing/).
 
-## Phase 4: Secure and manage
+## Step 4: Secure and manage
 
-In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal.
+Contoso uses Azure security and management resources during this step to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal.
 
 Contoso begins using these services during migration. With Azure hybrid support, Contoso continues using many of them for a consistent experience across the hybrid cloud.
 

@@ -42,7 +42,7 @@ As outlined in the [Azure landing zone implementation options](./implementation-
 **Question for the partner:** Which of the following approaches are supported by the partner's Azure landing zone solution?
 
 - **Start small and expand:** Begin with a lightweight template. The landing zone solution is matured over time as your desired cloud operating model becomes clearer.
-- **Start with enterprise scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
+- **Start with enterprise-scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
 - **Other:** The partner has a modified approach and should be able to describe the approach.
 
 ## Design principles
@@ -66,7 +66,7 @@ Identity is perhaps the most important design area to evaluate in the partner so
 
 **Question for the partner:** Which of the following identity management options does the partner solution support?
 
-- **Azure AD:** The suggested best practice is to use Azure AD and role-based access control to manage identity and access in Azure.
+- **Azure AD:** The suggested best practice is to use Azure AD and Azure role-based access control to manage identity and access in Azure.
 - **Active Directory:** If required, does the partner solution provide an option to deploy Active Directory as an infrastructure as a service solution?
 - **Third-party identity provider:** If your company uses a third-party identity solution, determine whether and how the partner's Azure landing zone integrates with the third-party solution.
 
