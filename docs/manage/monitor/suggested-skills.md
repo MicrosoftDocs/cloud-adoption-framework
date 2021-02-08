@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness for cloud monitoring"
+title: Skills readiness for cloud monitoring
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
 ms.author: brblanch
@@ -83,7 +83,8 @@ Microsoft and partners offer various options for all audiences to develop skills
 
 - [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A free resource for mapping your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-- Turn your knowledge of Azure into official recognition with [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
+
 ## Azure DevOps and project management
 
 The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern practices to manage services, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
