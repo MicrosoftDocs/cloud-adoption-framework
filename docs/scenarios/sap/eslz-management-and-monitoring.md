@@ -23,13 +23,16 @@ Consider Inter-VM latency monitoring for latency-sensitive application
 
 ### Design Recommendations
 
-Leverage SAP Solution Manager and [Azure Monitor for SAP Solutions](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, HA SuSE Cluster and SQL Systems.
+Leverage SAP Solution Manager and [Azure Monitor for SAP Solutions](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, HA SuSE Cluster and SQL Systems.
+
 
 Deploy VM Extension for SAP,  VM Extension uses a Managed Identity assigned to the VM to access monitoring and configuration data of the VM. This check makes sure that all performance metrics that appear inside your SAP application are provided by the underlying [Azure Extension for SAP](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/deployment-guide). 
 
 Protect your HANA Database with [Azure Backup Services](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-hana-backup-guide). Use [azacsnap](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azacsnap-introduction) to take application consistent snapshots if ANF is deployed for HANA database. Consider central VM for scheduling azacsnap as compare to scheduling it on individual VMs.
 
+
 Create a monitoring platform using [Azure telemetry](https://github.com/microsoft/SAPTELEMETRY) tools to provide business processes insight.
+
 
 Network Watcher [Connection monitor](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor) for SAP database and application server latency monitoring  (Metric) or by leveraging [Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
 
@@ -42,3 +45,4 @@ Perform [Quality Check for SAP HANA](https://github.com/Azure/SAP-on-Azure-Scrip
 Perform [Azure Availability Zone Latency test](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/AvZone-Latency-Test) before zonal deployment for choosing low latency zones for SAP on Azure deployment for any given subscription. 
 
 Threat Protection for SAP with Azure Sentinel
+

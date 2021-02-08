@@ -13,7 +13,9 @@ ms.subservice: ready
 This article examines key design considerations and recommendations surrounding networking and connectivity for SAP Deployments and within, to and from Microsoft Azure.
 
 ## Plan for IP Addressing
-It's vital that your organization plans for IP addressing in Azure to ensure that IP address space doesn't overlap across on-premises locations and Azure regions, but also, to ensure that the right address space within the VNet, as well as proper planning for subnet configuration is planned in advance.
+It's vital that your organization plans for IP addressing in Azure to ensure that IP address space doesn't overlap across on-premises locations and Azure regions, but also, to ensure that the right address space within the VNet, as well as proper planning for subnet configuration is planned in advance. Considerations for Enterprise scale networking have been made in the SAP on Azure Construction Set, review the below architecture.
+
+ ![Sap on Azure Construction Set](media/ntc_arch.jpg)
 
 ### Design considerations for SAP Implementations:
 Dedicated and Delegated Subnets: You can dedicate and delegate subnets to certain services to create instances of a service within the subnet. Azure enables you to create multiple delegated subnets in a VNet., However you can have only a single delegated subnet in a VNet for Azure Netapp files. Any attempts to create a new volume will fail if you use more than one delegated subnet for Azure NetApp Files.
@@ -62,7 +64,7 @@ This section describes recommended connectivity models for inbound and outbound 
 Azure-native network security services such as Azure Firewall, Azure Web Application Firewall (WAF) on Azure Application Gateway, and Azure Front Door Service are fully managed services. So, you don't incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
 
 ### Design Recommendations for SAP Implementations:
-- For SAP deployments use of Azure Front Door services provide a good experience for WAF and Internet facing application. Use Azure Front Door Service with WAF policies to deliver and help protect global HTTP/S apps that span Azure regions. This can be very good option for enterprise customers having global footprints. For more information on Azure front door refer: https://docs.microsoft.com/en-us/azure/frontdoor/front-door-overview
+- For SAP deployments use of Azure Front Door services provide a good experience for WAF and Internet facing application. Use Azure Front Door Service with WAF policies to deliver and help protect global HTTP/S apps that span Azure regions. This can be very good option for enterprise customers having global footprints. For more information on Azure front door refer: https://docs.microsoft.com/azure/frontdoor/front-door-overview
 - When you're using Azure Front Door Service and Azure Application Gateway to help protect HTTP/S apps, use WAF policies in Azure Front Door Service. Lock down Azure Application Gateway to receive traffic only from Azure Front Door Service.
 - When using Azure Application Gateway as a reverse proxy for SAP web apps, AAG + WAF have limitations as shown in the picture (comparison between AAG, SAP Web Dispatcher and 3rd Party such as Netscaler). AAG does not have intelligence of SAP appliations like WD or Netscaler. Extensive testing necessary if replacing WD with AAG. Verify latest status and possibly list all supported and not supported (or tested/not tested) scenarios. 
 - When the traffic is exposed to the internet its recommended to use a Web Application Firewall (WAF) to scan your traffic or on top of your load balancer or resources which has in built firewall capabilities like Azure application Application gateway Gateway or third party solutions.
@@ -74,7 +76,7 @@ This section explores key recommendations to achieve network encryption between 
 ### Design considerations for SAP Implementations:
 - When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
 - For SAP deployments it’s not necessary to encrypt the traffic over ExpressRoute. SAP traffic is usually heavy in bandwidth consumption and sensitive to performance. Encryption and decryption might have inverse effects on performance. Traffic is encrypted over the internet via IPsec tunnels by default.
-- However, it is on customer’s requirement if the SAP traffic needs to be encrypted or not. Refer the following article for network encryption options in Enterprise-Scale Landing Zones: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity#define-network-encryption-requirements
+- However, it is on customer’s requirement if the SAP traffic needs to be encrypted or not. Refer the following article for network encryption options in Enterprise-Scale Landing Zones: https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity#define-network-encryption-requirements
 
 ## Segregation of Systems:
 In a typical SAP scenario, we have different types of landscapes like Dev, test, quality, pre-production, production etc. Due to security and compliance reasons customers usually like to segregate these systems in logical/physical constructs. This segregation can be done on various level like subscription or resource group level. The idea is to maintain all the systems having the same lifecycle in the one common resource group. One should also keep in my mind the security and policy structure while grouping the resources in the SAP landscape.
