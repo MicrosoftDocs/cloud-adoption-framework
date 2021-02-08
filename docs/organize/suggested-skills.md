@@ -25,7 +25,7 @@ Depending on the motivations and business outcomes that are associated with a cl
 
 ## Environmental (technical) readiness learning paths
 
-During the Ready phase, technical staff have to create a migration landing zone to host, operate, and govern workloads that they migrate to the cloud. Use the following paths to accelerate development of the necessary skills:
+During the readiness phase, technical staff have to create a migration landing zone to host, operate, and govern workloads that they migrate to the cloud. Use the following paths to accelerate development of the necessary skills:
 
 - [Create an Azure account](/learn/modules/create-an-azure-account): The first step to using Azure is to create an account. Your account holds the Azure services that you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
@@ -38,7 +38,7 @@ During the Ready phase, technical staff have to create a migration landing zone 
 - [Secure resources with Azure RBAC](/learn/modules/secure-azure-resources-with-rbac): Use Azure role-based access control (Azure RBAC) to secure resources.
 - [Azure Storage options](/learn/modules/intro-to-data-in-azure): Learn about the benefits of Azure data storage.
 
-During the Ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
+During the readiness phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
 - [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.

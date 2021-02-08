@@ -137,7 +137,7 @@ With the database information now loaded into Azure Migrate, Contoso has identif
 When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
 
 > [!NOTE]
-> As part of the Assess phase, Contoso discovered various open source databases. Separately, they followed [Migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
+> Contoso discovered various open source databases during the assessment phase. Separately, they followed [Migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
 
 <!-- docutune:casing "custom .NET" -->
 
@@ -208,6 +208,6 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ## Conclusion
 
-In this article, Contoso assessed, planned and migrated their Microsoft SQL Server workloads to Azure.
-
-An Azure DevOps project has been developed for you to leverage in your SQL Migration journey. The project aligns to the Cloud Adoption Framework. The project will step you through the key decisions required, [click here](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) to go to the Azure DevOps project.
+In this article, Contoso assessed, planned, and migrated their Microsoft SQL Server workloads to Azure.
+ 
+An Azure DevOps project has been developed for you to study in your SQL Migration journey, and it aligns with the Cloud Adoption Framework. This project will guide you through the key decisions required. [Select this link](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) to navigate to the Azure DevOps project.

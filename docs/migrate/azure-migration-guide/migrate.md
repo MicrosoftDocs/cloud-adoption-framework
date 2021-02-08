@@ -13,7 +13,7 @@ ms.custom: think-tank, fasttrack-new, AQC
 
 # Deploy workloads and assets (infrastructure, apps, and data)
 
-In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. You'll explore native tools, third-party tools, and project management tools.
+In this phase of the journey, you use the output of the assessment phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state. You'll explore native tools, third-party tools, and project management tools.
 
 ## [Native migration tools](#tab/Tools)
 
