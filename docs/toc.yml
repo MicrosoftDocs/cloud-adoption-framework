@@ -26,12 +26,8 @@ items:
       items:
       - name: Overview
         href: scenarios/wvd/enterprise-scale-landing-zone.md
-      - name: Enterprise enrollment and Azure AD Tenant
-        href: scenarios/wvd/eslz-enterprise-enrollment-and-azure-ad-tenants.md
       - name: Identity and Access Management
         href: scenarios/wvd/eslz-identity-and-access-management.md
-      - name: Management group and subscription organization
-        href: scenarios/wvd/eslz-management-group-and-subscription-organization.md
       - name: Network topology and connectivity
         href: scenarios/wvd/eslz-network-topology-and-connectivity.md
       - name: Management and Monitoring

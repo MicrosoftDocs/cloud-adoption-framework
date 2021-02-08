@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for <Insert narrative Name>"
+title: "Enterprise-Scale security, governance, and compliance for Windows Virtual Desktop"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of <Insert Scenario Name>
 author: AdamWhitlatch
 ms.author: dawhitla

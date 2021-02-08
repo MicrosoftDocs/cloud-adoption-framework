@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for WVD"
-description: Use the Cloud Adoption Framework for Azure to learn how to identify the networking capabilities that your WVD landing zone needs to support Azure WVD workloads.
+title: "Enterprise-Scale network topology and connectivity for Windows Virtual Desktop"
+description: Use the Cloud Adoption Framework for Azure to learn how to identify the networking capabilities that your WVD landing zone needs to support Azure Windows Virtual Desktop workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/25/2021
