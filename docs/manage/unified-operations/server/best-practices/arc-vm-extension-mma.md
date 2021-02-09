@@ -82,7 +82,7 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
     ![A screenshot of ARM template parameters for name and location.](./img/arc-vm-extension-mma/parameters-file-1.png)
 
-6. To deploy the ARM template, navigate to the deployment folder `../extensions/arm` and run the following command:
+6. To deploy the ARM template, navigate to the `../extensions/arm` deployment folder and run the following command:
 
       ```console
       az deployment group create --resource-group <Name of the Azure resource group> \

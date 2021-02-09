@@ -125,7 +125,7 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
 
     ![A screenshot of an output from an ARM template.](./img/arc-vm-extension-custom-script/output.png)
 
-6. Verify a successful deployment on the Azure Arc enabled server, in the Azure portal, by clicking on **Extensions** settings. You should see the custom script extension installed.
+6. Verify a successful deployment on the Azure Arc enabled server, in the Azure portal, by selecting **Extensions** settings. You should see the custom script extension installed.
 
     ![A screenshot of a custom script extension.](./img/arc-vm-extension-custom-script/custom-script-extension.png)
 

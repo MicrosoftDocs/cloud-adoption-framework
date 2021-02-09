@@ -87,7 +87,7 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
 
     ![A screenshot of Solutions tab of a Log Analytics workspace.](./img/arc-update-management/solutions-tab.png)
 
-It may take several hours for Update Management to collect enough data to show an assessment for your VM. In the following screen, you can see that the assessment is being performed.
+It may take several hours for Update Management to collect enough data to show an assessment for your VM. On the next page, you can see that the assessment is being performed.
 
 ![A screenshot of the Overview tab and Updates view within a Log Analytics workspace.](./img/arc-update-management/overview-tab.png)
 
@@ -103,29 +103,29 @@ When the assessment is complete, you'll see a **View Summary** option on the Upd
 
 Now that we have configured the Update Management solution, you can deploy updates on a set schedule for our Azure Arc enabled server.
 
-1. Navigate to the Automation account we created previously, and click on the Update Management tab as shown in the following screenshot. You should see your Azure Arc enabled server listed.
+1. Navigate to the Automation account we created previously, and select the Update Management tab as shown in the following screenshot. You should see your Azure Arc enabled server listed.
 
     ![A screenshot of an Azure Automation account.](./img/arc-update-management/azure-automation-account.png)
 
-2. From the above screen, click **Schedule update deployment**. On the next screen, select the operating system that your Azure Arc enabled server is using, and then select **Machines to update** as shown in the following screenshot.
+1. Select **Schedule update deployment**. On the next page, select the operating system that your Azure Arc enabled server is using, and then select **Machines to update** as shown in the following screenshot.
 
     ![A screenshot of scheduling an update with Update Deployment.](./img/arc-update-management/schedule-an-update.png)
 
-3. From the **Type** dropdown, select **Machines**, and then select your server and click **Ok**.
+1. From the **Type** dropdown, select **Machines**, and then select your server and select **OK**.
 
     ![A screenshot of the type and server selected for a scheduled update with Update Deployment.](./img/arc-update-management/type-update.png)
 
-4. Click **Schedule Settings** and then provide a desired schedule.
+1. Click **Schedule Settings** and then provide a desired schedule.
 
     ![A screenshot of the field to configure Schedule settings within Update Deployment.](./img/arc-update-management/config-schedule-settings.png)
 
     ![A screenshot of the fields for Schedule settings within Update Deployment.](./img/arc-update-management/schedule-settings.png)
 
-5. Finally, provide a name for your deployment, and then select **Create**.
+1. Finally, provide a name for your deployment, and then select **Create**.
 
     ![A screenshot of naming an update within Update Deployment.](./img/arc-update-management/naming-update.png)
 
-6. From the Automation account Update Management tab, you should be able to see your scheduled update deployment from the deployment schedules tab.
+1. From the Automation account Update Management tab, you should be able to see your scheduled update deployment from the **Deployment Schedules** tab.
 
     ![A screenshot of a scheduled update within Update management.](./img/arc-update-management/scheduled-update.png)
 
@@ -142,7 +142,7 @@ Complete the following steps to clean up your environment.
     - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
     - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md) and [Vagrant Windows box](./local-vagrant-windows.md)
 
-2. Delete the resource group.
+1. Delete the resource group.
 
     ```console
     az group delete --name <Name of your resource group>

@@ -138,7 +138,7 @@ The following remediation **Quick Fix** is using an ARM template to deploy the M
 
   ![A screenshot of an Azure Security Center **Quick Fix** ARM template.](./img/arc-security-ctr/quick-fix-template.png)
 
-You can trigger the remediation with the ARM template from the Azure Security Center dashboard, by selecting the Log Analytics workspace used for Azure Security Center and clicking on **Remediate 1 resource**.
+You can trigger the remediation with the ARM template from the Azure Security Center dashboard, by selecting the Log Analytics workspace used for Azure Security Center and then choosing **Remediate 1 resource**.
 
   ![A screenshot of how to trigger a remediation step in Azure Security Center.](./img/arc-security-ctr/remediation-trigger.png)
 

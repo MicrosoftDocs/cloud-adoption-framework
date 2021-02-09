@@ -77,7 +77,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
 - Sign in to the [AWS management console](https://console.aws.amazon.com)
 
-- After signing in, click the **Services** dropdown in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
+- After signing in, select the **Services** dropdown in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
 
     ![A screenshot of an AWS cloud console.](./img/aws-scale-ansible/ansible-aws-console.png)
 
@@ -91,11 +91,11 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![Second screenshot of a new user being created in an AWS cloud console.](./img/aws-scale-ansible/ansible-new-user-2.png)
 
-- On the next **Set Permissions** screen, select **Attach existing policies directly** then check the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
+- On the next page, **Set Permissions**, select **Attach existing policies directly** then check the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
 
     ![Third screenshot of a new user being created in an AWS cloud console.](./img/aws-scale-ansible/ansible-new-user-3.png)
 
-- On the tags screen, assign a tag with a key of `azure-arc-demo` and click **Next** to proceed to the **Review** page.
+- On the **Tags** page, assign a tag with a key of `azure-arc-demo` and select **Next** to proceed to the **Review** page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-scale-ansible/ansible-tags.png)
 
@@ -103,7 +103,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![Fourth screenshot of a new user in an AWS cloud console.](./img/aws-scale-ansible/ansible-new-user-4.png)
 
-- After the user is created, you will see the user's access key ID and secret access key. Copy these values down before selecting **Close**. In the following screen, you can see an example of what this should look like. Once you have these keys, you will be able to use them with Terraform to create AWS resources.
+- After the user is created, you will see the user's access key ID and secret access key. Copy these values down before selecting **Close**. On the next page, you can see an example of what this should look like. Once you have these keys, you will be able to use them with Terraform to create AWS resources.
 
     ![A screenshot of creating a user successfully in an AWS cloud console.](./img/aws-scale-ansible/ansible-new-user-5.png)
 
@@ -180,7 +180,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
     ![A screenshot of an Ansible playbook running.](./img/aws-scale-ansible/ansible-playbook.png)
 
-- Open Azure portal and navigate to the `Arc-AWS-Demo` resource group. You should see the Azure Arc enabled servers listed.
+- Open Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
     ![A screenshot of the Azure portal onboarding Azure Arc enabled servers.](./img/aws-scale-ansible/onboarding-servers.png)
 
