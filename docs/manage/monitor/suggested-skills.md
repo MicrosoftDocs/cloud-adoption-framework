@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness for cloud monitoring"
+title: Skills readiness for cloud monitoring
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
 ms.author: brblanch
@@ -79,11 +79,11 @@ Various learning options beyond these initial options are available for developi
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and partners offer a variety of options for all audiences to develop their skills with Azure services:
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
+- [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-Turn your knowledge of Azure into official recognition with [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
 ## Azure DevOps and project management
 
@@ -111,4 +111,4 @@ Review the following to understand the updates made to the most popular ITSM fra
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.
