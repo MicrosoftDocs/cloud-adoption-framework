@@ -342,7 +342,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 1. Other considerations:
 
-   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log in to the VM until the update finishes.
+   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to sign in to the VM until the update finishes.
    - After migration, they can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**

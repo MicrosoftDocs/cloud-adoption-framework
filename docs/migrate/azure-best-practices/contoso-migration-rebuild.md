@@ -154,13 +154,13 @@ The Contoso admins provision AKS and Azure Container Registry as follows:
 
     _Figure 5: The terminal in Visual Studio Code._
 
-5. In the PowerShell integrated terminal, they sign into Azure using the `Connect-AzureRmAccount` command. For more information, see [Get started with PowerShell](/powershell/azure/get-started-azureps).
+5. In the PowerShell integrated terminal, they sign in to Azure using the `Connect-AzureRmAccount` command. For more information, see [Get started with PowerShell](/powershell/azure/get-started-azureps).
 
     ![Screenshot of the sign-in window for the PowerShell integrated terminal.](./media/contoso-migration-rebuild/aks4.png)
 
     _Figure 6: The PowerShell integrated terminal._
 
-6. They authenticate the Azure CLI by running the `az login` command and following the instructions to authenticate using their web browser. Learn more about [logging in with the Azure CLI](/cli/azure/authenticate-azure-cli?view=azure-cli-latest).
+6. They authenticate the Azure CLI by running the `az login` command and following the instructions to authenticate using their web browser. Learn more about [signing in with the Azure CLI](/cli/azure/authenticate-azure-cli?view=azure-cli-latest).
 
     ![Screenshot showing the authentication window for the Azure CLI.](./media/contoso-migration-rebuild/aks5.png)
 

@@ -143,7 +143,7 @@ Contoso needs to migrate the VMs to a virtual network where the Azure VMs will r
 
     1. From Azure Migrate, download the .OVA image and import it into VMware.
 
-       ![Screenshot of the screen to download the .OVA file.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)
+       ![Screenshot of downloading the .OVA file.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)
 
        _Figure 3: Download the .OVA file._
 
@@ -198,7 +198,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 3. Install the [Azure Windows agent](/azure/virtual-machines/extensions/agent-windows) and the [Azure Linux agent](/azure/virtual-machines/extensions/agent-linux).
 
-For Windows, there shouldn't be Windows updates pending on the VM when you're triggering a migration. If there are, the admins won't be able to log in to the VM until the updates finish. After migration, the admins can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+For Windows, there shouldn't be Windows updates pending on the VM when you're triggering a migration. If there are, the admins won't be able to sign in to the VM until the updates finish. After migration, the admins can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 

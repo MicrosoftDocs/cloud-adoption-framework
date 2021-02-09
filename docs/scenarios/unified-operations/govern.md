@@ -1,5 +1,5 @@
 ---
-title: "Govern your portfolio of hybrid and multicloud workloads"
+title: Govern your portfolio of hybrid and multicloud workloads
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments
 author: brianblanchard
 ms.author: brblanch
@@ -7,25 +7,26 @@ ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
+ms.custom: e2e-hybrid
 ---
 
 # Govern your portfolio of hybrid and multicloud workloads
 
-The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and compliance tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected and are often automated. The key to this new found freedom is the infrastructure as code (IaaC) foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
+The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and compliance tools. Cloud adoption and workload teams are able to innovate with confidence, knowing that compliance and governance requirements are detected and are often automated. The key to this newfound freedom is the infrastructure-as-code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 
-In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. Combining [Azure Arc](https://docs.microsoft.com/azure/azure-arc/overview) with existing governance tools like [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [Azure Blueprint](https://docs.microsoft.com/azure/governance/blueprints/overview), and others, extends many of your governance guardrails to virtually any cloud resource (Private or public clouds alike). [Unified operations](./unified-operations.md) is the best practice concept to extend your governance controls using native Azure tools.
+In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. Combining [Azure Arc](/azure/azure-arc/overview) with [Azure Policy](/azure/governance/policy/overview), [Azure Blueprints](/azure/governance/blueprints/overview), and other governance tools extends many of your governance guardrails to virtually any cloud resource (private or public clouds alike). [Unified operations](./unified-operations.md) is the best practice concept to extend your governance controls using native Azure tools.
 
 ## Deploy an unified operations MVP for governance
 
-Well defined governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and [management groups allows for ease of governance](https://docs.microsoft.com/azure/governance/management-groups/overview). Expand your cloud governance practices with a few simple steps:
+Well defined governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and [management groups allows for ease of governance](/azure/governance/management-groups/overview). Expand your cloud governance practices with a few simple steps:
 
-- Add a tag for "hosting platform" to all hybrid, multicloud, and edge assets
-- Tag resources from AWS, GCP, etc...
+- Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets
+- Tag resources from AWS, GCP, and so on.
 - Query your resources to see where they are all hosted.
 
-To get started, [Inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 
-Once you establish your tagging standards and onboard some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the recommended practices on [Managing Arc-enabled servers with Azure Policy](../../manage/unified-operations/server/best-practices/arc-policies-mma.md).
+Once you establish your tagging standards and onboard some of your assets, you can begin governing those resources using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the recommended practices on [managing Azure Arc enabled servers with Azure Policy](../../manage/unified-operations/server/best-practices/arc-policies-mma.md).
 
 ## Governance disciplines
 
@@ -33,10 +34,10 @@ With a basic understanding of unified operations and Azure Arc, you can begin ex
 
 Security baselines are among the most common ways a customer can expand their governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
 
-- [Collect and detect security data across clouds with Azure Security Center](https://docs.microsoft.com/azure/security-center/quickstart-onboard-machines)
-- [Investigate and respond to security threats with Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
-- [Connect AWS accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-aws)
-- [Connect GCP accounts to Azure Defender](https://docs.microsoft.com/azure/security-center/quickstart-onboard-gcp)
+- [Collect and detect security data across clouds with Azure Security Center](/azure/security-center/quickstart-onboard-machines)
+- [Investigate and respond to security threats with Azure Sentinel](/azure/sentinel/tutorial-investigate-cases)
+- [Connect AWS accounts to Azure Defender](/azure/security-center/quickstart-onboard-aws)
+- [Connect GCP accounts to Azure Defender](/azure/security-center/quickstart-onboard-gcp)
 
 ## Next step: Manage hybrid and multicloud environments
 

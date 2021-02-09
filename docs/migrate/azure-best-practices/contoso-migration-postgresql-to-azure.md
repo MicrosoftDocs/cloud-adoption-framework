@@ -138,7 +138,7 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
 1. Select a pricing tier.
 1. Select **Review + create**.
 
-    ![Screenshot of the Create Migration Service screen.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_create.png)
+    ![Screenshot of the **Create Migration Service** page.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_create.png)
     _Figure 3: Review and create._
 
 1. Select **Create**.

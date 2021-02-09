@@ -51,7 +51,8 @@ The following README will guide you through how to connect a Windows machine to 
 
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
-- Create a new Azure resource group where you want your machine(s) to show up.
+
+- Create a new Azure resource group for your machines.
 
     ![A screenshot of an empty resource group in the Azure portal.](./img/onboard-server-win/win-resource-group.png)
 

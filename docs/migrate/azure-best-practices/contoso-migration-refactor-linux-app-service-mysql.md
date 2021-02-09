@@ -196,9 +196,7 @@ In brief, Contoso does the following:
 
 - They ensure that all migration prerequisites are met:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.  
-  - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:  
-
-    "Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see `https://go.microsoft.com/fwlink/?linkid=873009`."
+  - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:  `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.` For more information, see `https://go.microsoft.com/fwlink/?linkid=873009`."
 
   - The user must have the `ReplicationAdmin` role.  
   - Migrate the database schemas without foreign keys and triggers.  
@@ -285,9 +283,9 @@ In brief, Contoso does the following:
 
     ![Screenshot of the connection string pasted in a Notepad file.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench9.png)
 
-11. They can verify the server name and login on the **Overview** pane in the MySQL instance in the Azure portal.
+11. They can verify the server name and sign-in via the **Overview** pane for the MySQL instance in the Azure portal.
 
-    ![Screenshot of the resource group pane, displaying the server name and server admin login name.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench10.png)
+    ![Screenshot of the resource group pane, displaying the server name and server admin account name.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench10.png)
 
 ## Step 5: Set up GitHub
 

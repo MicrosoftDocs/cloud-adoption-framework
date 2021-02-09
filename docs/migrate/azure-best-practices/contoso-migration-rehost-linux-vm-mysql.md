@@ -123,11 +123,11 @@ To set up the components, Contoso admins follow these steps:
 
        1. Set up the prerequisites.
 
-          ![Screenshot that shows the Set up prerequisites screen.](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
+          ![Screenshot of the **Set up prerequisites** page.](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
 
        1. Point the tool to the Azure subscription.
 
-          ![Screenshot that shows configuring the subscription](./media/contoso-migration-rehost-vm/migration-register-azure.png)
+          ![Screenshot of configuring the subscription.](./media/contoso-migration-rehost-vm/migration-register-azure.png)
 
        1. Set the VMware vCenter credentials.
 
@@ -341,7 +341,7 @@ Contoso admins migrate the database by using backup and restore with MySQL tools
 
 1. Export the database as `osticket` to a local self-contained file.
 
-    ![Screenshot that shows the Data Export screen.](./media/contoso-migration-rehost-linux-vm-mysql/workbench2.png)
+    ![Screenshot of the **Data Export** page.](./media/contoso-migration-rehost-linux-vm-mysql/workbench2.png)
 
 1. After the database is backed up locally, create a connection to the Azure Database for MySQL instance.
 

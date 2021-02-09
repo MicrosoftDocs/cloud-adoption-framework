@@ -51,7 +51,8 @@ The following README will guide you on how to connect a Linux server to Azure Ar
 
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
-- Create a new Azure resource group where you want your server(s) to show up.
+
+- Create a new Azure resource group for your servers.
 
     ![A screenshot of the Azure portal with an empty resource group.](./img/onboard-server-linux/linux-resource-group.png)
 
