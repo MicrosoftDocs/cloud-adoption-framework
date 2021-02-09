@@ -32,7 +32,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - In Azure regions that support [Availability Zones (AZ)](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small impact on latency. Design your application to balance availability and performances requirements.
 
-- Interconnectivity between Azure and OCI is only available on [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
+- Interconnectivity between Azure and OCI is only available in [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
 - For more in-depth documentation about interconnectivity between Azure and OCI, refer to [Oracle Application solutions integrating Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or refer to the [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
 
