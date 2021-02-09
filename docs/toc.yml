@@ -268,7 +268,9 @@ items:
             - name: Define network encryption requirements
               href: ready/enterprise-scale/define-network-encryption-requirements.md
             - name: Plan for traffic inspection
-              href: ready/enterprise-scale/plan-for-traffic-inspection.md                  
+              href: ready/enterprise-scale/plan-for-traffic-inspection.md  
+            - name: Connectivity to other cloud providers 
+              href: ready/enterprise-scale/connectivity-to-other-cloud-providers.md                
           - name: Management and monitoring
             href: ready/enterprise-scale/management-and-monitoring.md
           - name: Business continuity and disaster recovery
