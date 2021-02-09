@@ -80,7 +80,7 @@ The following README will guide you on how to use the provided [Terraform](https
 
     ![Second screenshot of **Compute Engine API** in the GCP console.](./img/gcp-ubuntu/ubuntu-comp-eng-api-2.png)
 
-- Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select **New Service Account** from the dropdown, give it a name, select project then owner as the role, JSON as the key type, and select **Create**. This downloads a JSON file with all the credentials that will be needed for Terraform to manage the resources. Copy the downloaded JSON file to the [`Azure Arc servers-jumpstart/gcp/ubuntu/terraform`](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform) directory.
+- Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select **New Service Account** from the dropdown, give it a name, select project then owner as the role, JSON as the key type, and select **Create**. This downloads a JSON file with all the credentials that will be needed for Terraform to manage the resources. Copy the downloaded JSON file to the [`azure-arc-servers-jumpstart/gcp/ubuntu/terraform`](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform) directory.
 
     ![A screenshot of how to create a service account in the GCP console.](./img/gcp-ubuntu/ubuntu-svc-account.png)
 
@@ -101,7 +101,7 @@ Before executing the Terraform plan, you must export the environment variables w
   - `TF-VAR-gcp-project-id = GCP project ID
   - `TF-VAR-gcp-credentials-filename` = GCP credentials JSON filename
 
-- From CLI, navigate to the `Azure Arc servers-jumpstart/gcp/ubuntu/terraform` directory of the cloned repo.
+- From CLI, navigate to the `azure-arc-servers-jumpstart/gcp/ubuntu/terraform` directory of the cloned repo.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the GCP virtual machine as part of the Terraform deployment.
 
@@ -115,7 +115,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Next, run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have a GCP Ubuntu VM deployed and connected as a new Azure Arc enabled server inside a new resource group.
 
-- Open the Azure portal and navigate to the `Azure Arc gcp-demo` resource group. The virtual machine created in GCP will be visible as a resource.
+- Open the Azure portal and navigate to the `arc-gcp-demo` resource group. The virtual machine created in GCP will be visible as a resource.
 
     ![A screenshot of an Azure Arc enabled server in the Azure portal.](./img/gcp-ubuntu/ubuntu-server.png)
 

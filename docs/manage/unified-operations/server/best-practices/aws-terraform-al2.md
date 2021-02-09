@@ -78,7 +78,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![Third screenshot of how to create a new user in an AWS cloud console.](./img/aws-terraform-al2/al2-new-user-3.png)
 
-- On the **Tags** page, assign a tag with a key of `Azure Arc demo`, then select **Next** to proceed to the review page.
+- On the **Tags** page, assign a tag with a key of `azure-arc-demo`, then select **Next** to proceed to the review page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-terraform-al2/al2-tags.png)
 
@@ -105,7 +105,7 @@ Before executing the Terraform plan, you must export the environment variables w
   - `AWS-ACCESS-KEY-ID` = AWS access key
   - `AWS-SECRET-ACCESS-KEY` = AWS secret key
 
-- From the Azure CLI, navigate to the `Azure Arc servers-jumpstart/aws/al2/terraform` directory of the cloned repo.
+- From the Azure CLI, navigate to the `azure-arc-servers-jumpstart/aws/al2/terraform` directory of the cloned repo.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the AWS virtual machine as part of the Terraform deployment.
 
@@ -123,7 +123,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
 
-- Open the Azure portal and navigate to the `Azure Arc servers-demo` resource group. The virtual machine created in AWS will be visible as a resource.
+- Open the Azure portal and navigate to the `arc-servers-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
     ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./img/aws-terraform-al2/al2-server.png)
 
@@ -151,7 +151,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![A screenshot of environment variables exporting with ''.](./img/aws-terraform-al2/al2-export-variables.png)
 
-- Run the following command
+- Run the following command:
 
     ```console
     azcmagent connect --service-principal-id $TF-VAR-client-id --service-principal-secret $TF-VAR-client-secret --resource-group "Arc-Servers-Demo" --tenant-id $TF-VAR-tenant-id --location "westus2" --subscription-id $TF-VAR-subscription-id

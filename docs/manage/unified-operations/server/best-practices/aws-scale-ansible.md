@@ -95,7 +95,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![Third screenshot of a new user being created in an AWS cloud console.](./img/aws-scale-ansible/ansible-new-user-3.png)
 
-- On the **Tags** page, assign a tag with a key of `Azure Arc demo` and select **Next** to proceed to the **Review** page.
+- On the **Tags** page, assign a tag with a key of `azure-arc-demo` and select **Next** to proceed to the **Review** page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-scale-ansible/ansible-tags.png)
 
@@ -127,7 +127,7 @@ Before executing the Terraform plan, you must export the environment variables w
   - `AWS-ACCESS-KEY-ID` = AWS access key
   - `AWS-SECRET-ACCESS-KEY` = AWS secret key
 
-- From your shell, navigate to the `Azure Arc servers-jumpstart/aws/scaled-deployment/ansible/terraform`) directory of the cloned repository.
+- From your shell, navigate to the `azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform`) directory of the cloned repository.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 
@@ -143,7 +143,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 ### Deploy server infrastructure
 
-- From the `Azure Arc servers-jumpstart/aws/scaled-deployment/ansible/terraform` directory, run `terraform apply --auto-approve` and wait for the plan to finish. Upon successful completion, you will have four Windows Server 2019 servers, four Ubuntu servers, and one CentOS 7 Ansible control server.
+- From the `azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform` directory, run `terraform apply --auto-approve` and wait for the plan to finish. Upon successful completion, you will have four Windows Server 2019 servers, four Ubuntu servers, and one CentOS 7 Ansible control server.
 
 - Open the AWS console and verify that you can see the created servers.
 
@@ -180,7 +180,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
     ![A screenshot of an Ansible playbook running.](./img/aws-scale-ansible/ansible-playbook.png)
 
-- Open Azure portal and navigate to the `Azure Arc aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+- Open the Azure portal and navigate to the arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
     ![A screenshot of the Azure portal onboarding Azure Arc enabled servers.](./img/aws-scale-ansible/onboarding-servers.png)
 
@@ -215,6 +215,6 @@ As earlier, if the playbook run is successful, you should see an output that sim
 
 ![A screenshot of an Ansible playbook running.](./img/aws-scale-ansible/ansible-playbook.png)
 
-As earlier, open Azure portal and navigate to the `Azure Arc aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+As earlier, open Azure portal and navigate to the arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
 ![A screenshot of the Azure portal showing Azure Arc enabled servers.](./img/aws-scale-ansible/onboarding-servers.png)

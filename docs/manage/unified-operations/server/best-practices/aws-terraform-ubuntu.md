@@ -88,7 +88,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![Third screenshot of creating a new user in an AWS cloud console.](./img/aws-ubuntu/aws-ubuntu-new-user-3.png)
 
-- On the **Tags** page, assign a tag with a key of `Azure Arc demo` and select **Next** to proceed to the **Review** page.
+- On the **Tags** page, assign a tag with a key of `azure-arc-demo` and select **Next** to proceed to the **Review** page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-ubuntu/aws-ubuntu-tags.png)
 
@@ -108,14 +108,14 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your AWS and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-  - Tf-VAR-subscription-ID=your Azure subscription ID
-  - Tf-VAR-client-ID=your Azure service principal application ID
-  - Tf-VAR-client-secret=your Azure service principal password
-  - Tf-VAR-tenant-ID=your Azure tenant ID
-  - AWS-ACCESS-key-ID=AWS access key
-  - AWS-SECRET-access-key=AWS secret key
+  - `TF-VAR-subscription-id` = Your Azure subscription ID
+  - `TF-VAR-client-id` = Your Azure service principal app id
+  - `TF-VAR-client-secret` = Your Azure service principal password
+  - `TF-VAR-tenant-id` = Your Azure tenant ID
+  - `AWS-ACCESS-KEY-ID` = AWS access key
+  - `AWS-SECRET-ACCESS-KEY` = AWS secret key
 
-- From the Azure CLI, navigate to the `Azure Arc servers-jumpstart/aws/ubuntu/terraform` directory of the cloned repo.
+- From the Azure CLI, navigate to the `azure-arc-servers-jumpstart/aws/ubuntu/terraform` directory of the cloned repo.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the AWS virtual machine as part of the Terraform deployment.
 
@@ -133,7 +133,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
 
-- Open the Azure portal and navigate to the `Azure Arc aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
+- Open the Azure portal and navigate to the arc-aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
     ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./img/aws-ubuntu/aws-ubuntu-server.png)
 
