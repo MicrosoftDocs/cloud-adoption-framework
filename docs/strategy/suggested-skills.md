@@ -76,7 +76,7 @@ Various learning options beyond these initial options are available for developi
 
 Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A free resource for mapping your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
+- [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
 - Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
