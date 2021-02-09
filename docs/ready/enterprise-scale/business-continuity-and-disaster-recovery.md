@@ -32,7 +32,7 @@ Consider the following factors:
 
   - The impact of Availability Zones on update domains compared to availability sets and the percentage of workloads that can be under maintenance simultaneously.
 
-  - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.
+  - Support for specific virtual machine (VM) sizes with Availability Zones.
 
   - Using Availability Zones is required if Microsoft Azure ultra disk storage is used.
 
