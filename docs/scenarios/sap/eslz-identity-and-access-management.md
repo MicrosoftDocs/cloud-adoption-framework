@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for SAP Enterprise-Scale scenario
+# Identity and access management for SAP on Azure Construction Set
 
 This section examines design considerations and recommendations related to IAM in an SAP Deployment on Microsoft Azure.
 

@@ -3,7 +3,7 @@ title: "Enterprise-Scale business continuity and disaster recovery for an SAP en
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of SAP
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -86,7 +86,7 @@ The following are best practices for your design:
 
 ### Design Recommendations for Compute
 
-- Use E-series SKU for SAP Java application servers. E-series has better memory compared to a D-series SKU with same IO and throughput limits. Java application servers are memory intensive and E-series will provide a better CPU: Memory mapping.It is recommended to use [Gen2 VM SKU’s](https://docs.microsoft.com/en-us/azure/virtual-machines/generation-2) where possible.
+- Use E-series SKU for SAP Java application servers. E-series has better memory compared to a D-series SKU with same IO and throughput limits. Java application servers are memory intensive and E-series will provide a better CPU: Memory mapping.It is recommended to use [Gen2 VM SKU’s](https://docs.microsoft.com/azure/virtual-machines/generation-2) where possible.
 - Use E-series SKU for SAP AnyDB deployment compared to D-series. Bigger the cache better the performance of database. E-series SKUs have the following advantages over D-series:
   - 1:8 Memory mapping
   - Constrained core options available to save DB license costs without a compromise on IO and throughput limits.
@@ -118,7 +118,7 @@ The following are best practices for your design:
   - Ultra SSD
   - Azure Netapp Files (supported for HANA only)
 - In a cost-conscious deployment consider deploying Pre-Production or test systems on standard SDD and convert to Premium for the period of test cycles as required. Eg: E20 disk is half the cost of a P20.
-- In cost-conscious deployments consider [disk bursting](https://docs.microsoft.com/azure/virtual-machines/linux/disk-bursting#disk-level-bursting) feature for non-production workloads or [document](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) in case of HANA deployment.
+- In cost-conscious deployments consider [disk bursting](https://docs.microsoft.com/azure/virtual-machines/linux/disk-bursting#disk-level-bursting) feature for non-production workloads or [document](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) in case of HANA deployment.
 - Every Azure premium disk comes with IOPS and throughout limit, consider striping disk instead of using single large disk for a cost-conscious deployment. Further details about stripe sizes can be found [here](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage).
 - Consider using [Azure Disk encryption](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss) for data disk on SAP application servers.
 - Consider using [Azure Storage Service encryption](https://docs.microsoft.com/azure/storage/common/encryption-customer-managed-keys?toc=/azure/storage/blobs/toc.json) with customer managed keys(CMK) for database disks.
