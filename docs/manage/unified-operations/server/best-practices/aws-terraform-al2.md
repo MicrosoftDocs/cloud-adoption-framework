@@ -159,7 +159,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![Another screenshot of the 'azcmagent connect' command.](./img/aws-terraform-al2/al2-azcmagent-2.png)
 
-- When complete, your VM will be registered with Azure Arc and visible in the resource group inside Azure portal.
+- When complete, your VM will be registered with Azure Arc and visible in the resource group via the Azure portal.
 
 ## Delete the deployment
 
