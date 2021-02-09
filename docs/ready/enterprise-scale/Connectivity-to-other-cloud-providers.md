@@ -1,5 +1,5 @@
 ---
-title: Connectivity to other Cloud providers
+title: Connectivity to other cloud providers
 description: Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
 author: alexandreweiss
 ms.author: doalle
@@ -9,7 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-# Connectivity to other Cloud Providers
+# Connectivity to other cloud providers
+Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture into other cloud providers.
 
 ## Oracle Cloud Infrastructure (OCI)
 
