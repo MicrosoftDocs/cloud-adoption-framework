@@ -21,7 +21,7 @@ Building on the previous connectivity sections, this section explores recommende
 
 - Azure PaaS services are typically accessed over public endpoints. However, the Azure platform provides capabilities to secure such endpoints or even make them entirely private:
 
-  - Virtual network injection provides dedicated private deployments for supported services. But management plane traffic flows through public IP addresses.
+  - Virtual network injection provides dedicated private deployments for supported services. Management plane traffic still flows through public IP addresses.
 
   - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard Tier.
 
