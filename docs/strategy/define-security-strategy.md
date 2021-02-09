@@ -170,7 +170,7 @@ This section describes the key relationships that frequently change on the journ
 
 - **Between security leadership and team members:** Security leadership should take these insights from business leadership back to their teams to guide their investment priorities.
 
-  By setting a tone of cooperation with business leaders and their teams rather than a classic 'arms length' relationship, security leaders can avoid an adversarial dynamic that impedes both security and productivity goals.
+  By setting a tone of cooperation with business leaders and their teams rather than a classic "arms-length" relationship, security leaders can avoid an adversarial dynamic that impedes both security and productivity goals.
 
   Security leaders should strive to provide clarity to their team on how to manage their daily decisions on productivity and security tradeoffs as this may be new to many on their teams.
 
