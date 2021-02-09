@@ -72,7 +72,7 @@ The following table looks at some of these implementation options from a slightl
 | [CAF enterprise-scale landing zone (hybrid connectivity with Virtual WAN)](../enterprise-scale/index.md) | Included (Virtual WAN Hub) | Included | Azure Resource Manager templates, Azure Portal, Azure Policy and GitHub | [![DTA-Button-Contoso]][DTA-Contoso] |
 | [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Refactor required | Included | Azure Resource Manager templates, Azure Portal, and Azure Blueprints | [Deployment instructions](./migrate-landing-zone.md) |
 | [CAF Terraform reference deployment](./terraform-landing-zone.md)  | Included in virtual datacenter module | Included | Terraform, and [rover][AZTFMOD-Rover] (custom DevOps toolset) | [Deployment instructions](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
-| [Terraform module for CAF enterprise-scale](../enterprise-scale/terraform-es-landing-zone.md)  | Excluded | Excluded | Terraform | [Deployment instructions][ESTF-Registry] |
+| [Terraform module for CAF enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md)  | Excluded | Excluded | Terraform | [Deployment instructions][ESTF-Registry] |
 
 <!-- Table missing CAF Foundation blueprint -->
 
