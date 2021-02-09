@@ -19,7 +19,7 @@ This article examines key design considerations and recommendations surrounding 
 
 ## Plan for IP addressing
 
-It's vital that your organization plans for IP addressing in Azure to ensure that IP address space doesn't overlap across on-premises locations and Azure regions.
+It's vital that your organization plans for IP addressing in Azure to ensure that the IP address space doesn't overlap across on-premises locations and Azure regions.
 
 ## Configure DNS and name resolution for on-premises and Azure resources
 

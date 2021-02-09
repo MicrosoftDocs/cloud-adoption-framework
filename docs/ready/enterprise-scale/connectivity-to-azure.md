@@ -56,5 +56,3 @@ This section expands on the network topology to consider recommended models for 
 - Proactively monitor ExpressRoute circuits by using Network Performance Monitor.
 
 - Don't explicitly use ExpressRoute circuits from a single peering location. This creates a single point of failure and makes your organization susceptible to peering location outages.
-
-- Don't use the same ExpressRoute circuit to connect multiple environments that require isolation or dedicated bandwidth, to avoid noisy-neighbor risks.
