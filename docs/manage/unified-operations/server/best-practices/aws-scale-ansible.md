@@ -139,7 +139,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform init` command which will download the required Terraform providers.
 
-    ![A screenshot of the 'terraform init' command.](./img/aws-scale-ansible/terraform-init.png)
+    ![A screenshot of the `terraform init` command.](./img/aws-scale-ansible/terraform-init.png)
 
 ### Deploy server infrastructure
 

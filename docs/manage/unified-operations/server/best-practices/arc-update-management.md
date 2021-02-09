@@ -61,7 +61,7 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
     --tags "Project=jumpstart-azure-arc-servers"
     ```
 
-    ![A screenshot of the 'az group create' command.](./img/arc-update-management/az-group-create.png)
+    ![A screenshot of the `az group create` command.](./img/arc-update-management/az-group-create.png)
 
 3. Edit the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/updateManagement/law-template.parameters.json), providing a name for your Log Analytics workspace, a location, and a name for your Azure Automation account. You also need to supply the name of your Azure Arc enabled server, and the name of the resource group that contains the Azure Arc enabled server as shown in the following example:
 
@@ -75,7 +75,7 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
         --parameters law-template.parameters.json
     ```
 
-   ![A screenshot of the 'az deployment group' command.](./img/arc-update-management/az-deployment-group.png)
+   ![A screenshot of the `az deployment group` command.](./img/arc-update-management/az-deployment-group.png)
 
 5. When the deployment is complete, you should see the resource group with your Log Analytics workspace, Automation account and Update Management solution from the Azure portal. If you drill in to the Log Analytics workspace **Solutions** tab, you should see the **Update Management** solution.
 
@@ -87,13 +87,13 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
 
     ![A screenshot of Solutions tab of a Log Analytics workspace.](./img/arc-update-management/solutions-tab.png)
 
-It may take several hours for Update Management to collect enough data to show an assessment for your VM. On the next page, you can see that the assessment is being performed.
+   It may take several hours for Update Management to collect enough data to show an assessment for your VM. On the next page, you can see that the assessment is being performed.
 
-![A screenshot of the Overview tab and Updates view within a Log Analytics workspace.](./img/arc-update-management/overview-tab.png)
+   ![A screenshot of the Overview tab and Updates view within a Log Analytics workspace.](./img/arc-update-management/overview-tab.png)
 
-When the assessment is complete, you'll see a **View Summary** option on the Update Management tab.
+   When the assessment is complete, you'll see a **View Summary** option on the Update Management tab.
 
-![A screenshot of an Updates view summary within a Log Analytics workspace.](./img/arc-update-management/updates-summary.png)
+   ![A screenshot of an Updates view summary within a Log Analytics workspace.](./img/arc-update-management/updates-summary.png)
 
 2. Select **View Summary**, and then select again to drill into the Update Management assessment. In the following example we can see there are updates missing on our Azure Arc enabled server.
 
@@ -148,4 +148,4 @@ Complete the following steps to clean up your environment.
     az group delete --name <Name of your resource group>
     ```
 
-    ![A screenshot of the 'az group delete' command.](./img/arc-update-management/az-group-delete.png)
+    ![A screenshot of the `az group delete` command.](./img/arc-update-management/az-group-delete.png)

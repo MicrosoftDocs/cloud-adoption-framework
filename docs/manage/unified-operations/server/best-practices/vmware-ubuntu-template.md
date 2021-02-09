@@ -1,6 +1,6 @@
 ---
-title: Create a VMware vSphere template for Ubuntu Server 18.04
-description: Create a VMware vSphere template for Ubuntu Server 18.04.
+title: Create a VMware vSphere template for Ubuntu server 18.04
+description: Create a VMware vSphere template for Ubuntu server 18.04.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/29/2021
@@ -10,25 +10,26 @@ ms.subservice: operate
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Create a VMware vSphere template for Ubuntu Server 18.04
+# Create a VMware vSphere template for Ubuntu server 18.04
 
 The following README will guide you on how to create an Ubuntu Server 18.04 VMware vSphere virtual machine template.
 
 ## Prerequisites
 
-> **Note: This guide assumes that you have some VMware vSphere familiarity. It is also does not designed to go over either VMware and/or Ubuntu best-practices.**
+> [!NOTE]
+> This guide assumes that you have some VMware vSphere familiarity. It is also not designed to review either VMware or Ubuntu best practices.
 
-* [Download the latest Ubuntu Server 18.04 ISO file](https://releases.ubuntu.com/18.04/)
+- [Download the latest Ubuntu server 18.04 ISO file](https://releases.ubuntu.com/18.04/)
 
-* VMware vSphere 6.5 and above
+- VMware vSphere 6.5 and above
 
-* Although it can be used locally, for faster deployment, it is recommended to upload the file to a vSphere datastore or to vCenter Content Library.
+- Although it can be used locally, for faster deployment, upload the file to a vSphere datastore or to vCenter content library.
 
-## Creating Ubuntu 18.04 VM Template
+## Creating Ubuntu 18.04 VM template
 
-### Deploying & Installing Ubuntu
+### Deploying and installing Ubuntu
 
-* Deploy new virtual machine
+- Deploy new virtual machine
 
     ![A screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-1.png)
 
@@ -42,20 +43,20 @@ The following README will guide you on how to create an Ubuntu Server 18.04 VMwa
 
     ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-6.png)
 
-* Make sure to select *Ubuntu Linux (64-bit)* as the Guest OS.
+- Make sure to select **Ubuntu Linux (64-bit)** as the guest OS.
 
     ![A screenshot of Ubuntu Linux (64-bit) guest OS.](./img/vmware-ubuntu-template/ubuntu-template-guest-os.png)
 
-* Point to the Ubuntu Server ISO file location.
+- Point to the Ubuntu server ISO file location.
 
     ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-7.png)
 
     ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-8.png)
 
-* Power-on the VM and start the Ubuntu installation. No specific instructions here but:
+- Power on the VM and start the Ubuntu installation. No specific instructions here but:
 
-  * (Optional) Consider using static IP
-  * Install OpenSSH server
+  - (Optional:) Consider using static IP
+  - Install OpenSSH server
 
     ![First screenshot of an Ubuntu installation](./img/vmware-ubuntu-template/ubuntu-template-installation-1.png)
 
@@ -103,14 +104,14 @@ The following README will guide you on how to create an Ubuntu Server 18.04 VMwa
 
 Before converting the VM to a template, few actions are needed.
 
-* It's better to have your OS packages up-to-date
+- It's better to have your OS packages up-to-date
 
     ```console
     sudo apt-get update
     sudo apt-get upgrade -y
     ```
 
-* Prevent cloudconfig from preserving the original hostname and reset the hostname
+- Prevent cloudconfig from preserving the original hostname and reset the hostname
 
     ```console
     sudo sed -i 's/preserve_hostname: false/preserve_hostname: true/g' /etc/cloud/cloud.cfg
@@ -118,22 +119,22 @@ Before converting the VM to a template, few actions are needed.
     sudo hostnamectl set-hostname localhost
     ```
 
-* Remove the current network configuration
+- Remove the current network configuration
 
     ```console
     sudo rm /etc/netplan/50-cloud-init.yaml
     ```
 
-* Clean shell history and shutdown the VM
+- Clean shell history and shutdown the VM
 
     ```console
     cat /dev/null > ~/.bash_history && history -c
     sudo shutdown now
     ```
 
-### Convert to Template
+### Convert to template
 
-Reduce the VM CPU count & memory resources to the minimum and convert the VM to template, switch the CD/DVD drive to client device as well disconnect it and convert the VM to template.
+Reduce the VM CPU count and memory resources to the minimum and convert the VM to template, switch the CD/DVD drive to client device as well disconnect it and convert the VM to template.
 
 ![A screenshot of how to reduce a virtual machine's CPU count and memory.](./img/vmware-ubuntu-template/ubuntu-template-reduce.png)
 

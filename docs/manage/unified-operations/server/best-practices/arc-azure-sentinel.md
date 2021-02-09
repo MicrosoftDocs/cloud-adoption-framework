@@ -96,7 +96,7 @@ Azure Sentinel uses the Log Analytics agent to collect log files for Windows and
 
 For example:
 
-   ![A screenshot of the 'az deployment group create' command.](./img/arc-azure-sentinel/sentinel-4.png)
+   ![A screenshot of the `az deployment group create` command.](./img/arc-azure-sentinel/sentinel-4.png)
 
 ## Onboard Azure Arc enabled VMs on Azure Sentinel
 

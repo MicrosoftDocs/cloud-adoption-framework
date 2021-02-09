@@ -117,7 +117,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform init` command which will download the Terraform AzureRM provider.
 
-    ![A screenshot of the 'terraform init' command.](./img/aws-terraform-al2/al2-terraform-init.png)
+    ![A screenshot of the `terraform init` command.](./img/aws-terraform-al2/al2-terraform-init.png)
 
 ## Deployment
 
@@ -131,13 +131,13 @@ Before executing the Terraform plan, you must export the environment variables w
 
 As you may have noticed, the last step of the run is to register the VM as a new Azure Arc enabled server resource.
 
-    ![A screenshot of the 'azcmagent connect' command.](./img/aws-terraform-al2/al2-azcmagent.png)
+  ![A screenshot of the `azcmagent connect` command.](./img/aws-terraform-al2/al2-azcmagent.png)
 
 If you want to demo/control the actual registration process, do the following:
 
 - In the [`install_arc_agent.sh.tmpl`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/install-arc-agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
 
-    ![A screenshot of the 'azcmagent connect' command commented out.](./img/aws-terraform-al2/al2-azcmagent-commented.png)
+    ![A screenshot of the `azcmagent connect` command commented out.](./img/aws-terraform-al2/al2-azcmagent-commented.png)
 
 - Get the public IP of the AWS VM by running `terraform output`.
 
@@ -157,14 +157,14 @@ If you want to demo/control the actual registration process, do the following:
     azcmagent connect --service-principal-id $TF-VAR-client-id --service-principal-secret $TF-VAR-client-secret --resource-group "Arc-Servers-Demo" --tenant-id $TF-VAR-tenant-id --location "westus2" --subscription-id $TF-VAR-subscription-id
     ```
 
-    ![Another screenshot of the 'azcmagent connect' command.](./img/aws-terraform-al2/al2-azcmagent-2.png)
+    ![Another screenshot of the `azcmagent connect` command.](./img/aws-terraform-al2/al2-azcmagent-2.png)
 
 - When complete, your VM will be registered with Azure Arc and visible in the resource group via the Azure portal.
 
 ## Delete the deployment
 
 To delete all the resources you created as part of this demo use the `terraform destroy --auto-approve` command as shown below.
-    ![A screenshot of the 'terraform destroy' command.](./img/aws-terraform-al2/al2-terraform-destroy.png)
+    ![A screenshot of the `terraform destroy` command.](./img/aws-terraform-al2/al2-terraform-destroy.png)
 
 Alternatively, you can delete the AWS EC2 instance directly by terminating it from the [AWS console](https://console.aws.amazon.com/ec2/v2/home).
     ![A screenshot of how to terminate an instance in the AWS console.](./img/aws-terraform-al2/al2-terminate.png)

@@ -34,15 +34,15 @@ The following procedures use [Resource Graph Explorer](/azure/governance/resourc
 
 1. Clone the Azure Arc Jumpstart repository.
 
-```console
-git clone https://github.com/microsoft/azure_arc
-```
+   ```console
+   git clone https://github.com/microsoft/azure_arc
+   ```
 
 2. [Install or update Azure CLI to version 2.7 or later](/cli/azure/install-azure-cli). Use the following command to check the current installed version.
 
-```console
-az --version
-```
+   ```console
+   az --version
+   ```
 
 ## Verify that your Azure Arc connected servers are ready for tagging
 
@@ -77,7 +77,7 @@ az tag add-value --name "Hosting Platform" --value "GCP"
 az tag add-value --name "Hosting Platform" --value "On-premises"
 ```
 
-![A screenshot of an output of the 'az tag create' command.](./img/inventory-tagging/az-tag-create.png)
+![A screenshot of an output of the `az tag create` command.](./img/inventory-tagging/az-tag-create.png)
 
 ## Tag your Azure Arc resources
 
@@ -98,7 +98,7 @@ export awsMachineResourceId="$(echo $awsMachineResourceId | tr -d "\"" | tr -d '
 az resource tag --ids $awsMachineResourceId --tags "Hosting Platform"="AWS"
 ```
 
-![A screenshot of one output of the 'az resource tag' command.](./img/inventory-tagging/az-resource-tag-1.png)
+![A screenshot of one output of the `az resource tag` command.](./img/inventory-tagging/az-resource-tag-1.png)
 
 ### Tag Azure Arc connected GCP Ubuntu server
 
@@ -115,7 +115,7 @@ export gcpMachineResourceId="$(echo $gcpMachineResourceId | tr -d "\"" | tr -d '
 az resource tag --resource-group $gcpResourceGroup --ids $gcpMachineResourceId --tags "Hosting Platform"="GCP"
 ```
 
-![A screenshot of another output of the 'az resource tag' command.](./img/inventory-tagging/az-resource-tag-2.png)
+![A screenshot of another output of the `az resource tag` command.](./img/inventory-tagging/az-resource-tag-2.png)
 
 ## Query resources by tag using Resource Graph Explorer
 

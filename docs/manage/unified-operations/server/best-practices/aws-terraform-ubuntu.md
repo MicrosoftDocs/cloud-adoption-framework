@@ -127,7 +127,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform init` command which will download the Terraform AzureRM provider.
 
-    ![A screenshot of the 'terraform init' command.](./img/aws-ubuntu/aws-ubuntu-terraform-init.png)
+    ![A screenshot of the `terraform init` command.](./img/aws-ubuntu/aws-ubuntu-terraform-init.png)
 
 ## Deployment
 
@@ -142,7 +142,8 @@ Before executing the Terraform plan, you must export the environment variables w
 ## Semi-automated deployment (optional)
 
 As you may have noticed, the last step of the run is to register the VM as a new Azure Arc enabled server resource.
-    ![A screenshot of the 'azcmagent connect' command.](./img/aws-ubuntu/aws-ubuntu-azcmagent-1.png)
+
+  ![A screenshot of the `azcmagent connect` command.](./img/aws-ubuntu/aws-ubuntu-azcmagent-1.png)
 
 If you want to demo/control the actual registration process, do the following:
 
@@ -168,7 +169,7 @@ If you want to demo/control the actual registration process, do the following:
     azcmagent connect --service-principal-id $TF-VAR-client-id --service-principal-secret $TF-VAR-client-secret --resource-group "arc-aws-demo" --tenant-id $TF-VAR-tenant-id --location "westus2" --subscription-id $TF-VAR-subscription-id
     ```
 
-    ![Another screenshot of the 'azcmagent connect' command.](./img/aws-ubuntu/aws-ubuntu-azcmagent-2.png)
+    ![Another screenshot of the `azcmagent connect` command.](./img/aws-ubuntu/aws-ubuntu-azcmagent-2.png)
 
 - When complete, your VM will be registered with Azure Arc and visible in the resource group via the Azure portal.
 
@@ -176,7 +177,7 @@ If you want to demo/control the actual registration process, do the following:
 
 To delete all the resources you created as part of this demo use the `terraform destroy --auto-approve` command as shown below.
 
-  ![A screenshot of the 'terraform destroy' command.](./img/aws-ubuntu/aws-ubuntu-terraform-destroy.png)
+  ![A screenshot of the `terraform destroy` command.](./img/aws-ubuntu/aws-ubuntu-terraform-destroy.png)
 
 Alternatively, you can delete the AWS EC2 instance directly by terminating it from the [AWS console](https://console.aws.amazon.com/ec2/v2/home). Note that it will take a few minutes for the instance to actually be removed.
 

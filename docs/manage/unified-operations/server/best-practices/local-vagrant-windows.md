@@ -94,7 +94,7 @@ After editing the **scripts/vars.ps1** script to match your environment, from th
 
 Once the download is complete, the actual provisioning will start. As shown in the following screenshot, the process takes can take somewhere between 7 to 10 minutes.
 
-![A screenshot of a completed 'vagrant up' command.](./img/local-vagrant-windows/vagrant-win-complete.png)
+![A screenshot of a completed `vagrant up` command.](./img/local-vagrant-windows/vagrant-win-complete.png)
 
 Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc enabled server inside a new resource group.
 
@@ -106,7 +106,7 @@ Upon completion, you will have a local Windows 10 VM deployed, connected as a ne
 
 The last step of the run is to register the VM as a new Azure Arc enabled server resource.
 
-![Another screenshot of a completed 'vagrant up' command.](./img/local-vagrant-windows/vagrant-win-complete-2.png)
+![Another screenshot of a completed `vagrant up` command.](./img/local-vagrant-windows/vagrant-win-complete-2.png)
 
 If you want to demo/control the actual registration process, do the following:
 

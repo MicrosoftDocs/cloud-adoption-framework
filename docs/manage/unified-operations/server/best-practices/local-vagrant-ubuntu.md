@@ -71,7 +71,7 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
 
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
-    
+
 - The Vagrant file executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you created.
 
   - `subscriptionId` = your Azure subscription ID
@@ -90,12 +90,11 @@ Like any Vagrant deployment, a [`Vagrantfile`](https://github.com/microsoft/azur
 
 After editing the `scripts/vars.sh` script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. Since this is the first time creating the VM, the first run will be **much slower** than the ones to follow, because the deployment is downloading the Ubuntu box for the first time.
 
-
-![A screenshot of the 'vagrant up' command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up.png)
+![A screenshot of the `vagrant up` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up.png)
 
 Once the download is complete, the provisioning begins. As shown in the following screenshot, the process takes no longer than three minutes.
 
-![A screenshot of a completed 'vagrant up' command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-complete.png)
+![A screenshot of a completed `vagrant up` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-complete.png)
 
 Upon completion, you will have a local Ubuntu VM deployed, connected as a new Azure Arc enabled server, inside a new resource group.
 
@@ -107,15 +106,15 @@ Upon completion, you will have a local Ubuntu VM deployed, connected as a new Az
 
 The last step is to register the VM as a new Azure Arc enabled server resource.
 
-![Another screenshot of the 'vagrant up' command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-2.png)
+![Another screenshot of the `vagrant up` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-2.png)
 
 If you want to demo/control the actual registration process, complete the following steps:
 
 - In the [`install_arc_agent`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/install-arc-agent.sh) shell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
-    ![A screenshot of the 'azcmagent connect' command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent.png)
+    ![A screenshot of the `azcmagent connect` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent.png)
 
-    ![A screenshot of the 'az group create' command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azgroup-create.png)
+    ![A screenshot of the `az group create` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azgroup-create.png)
 
 - SSH to the VM using the `vagrant ssh` command.
 
