@@ -81,7 +81,7 @@ The [Azure Stack family portfolio](https://azure.microsoft.com/resources/azure-s
 
 **[Azure Stack Hub](https://azure.microsoft.com/products/azure-stack/hub)** extends full stack Azure services to on-premises, enabling you to run applications in on-premises environments and deliver Azure services in your datacenter. It unlocks new hybrid cloud use cases for both customer-facing and internal line-of-business applications: edge and disconnected solutions, cloud applications with varied regulatory requirements, and cloud application models on-premises using Azure services, containers, serverless, and microservice architectures.
 
-**[Azure Stack HCI](https://azure.microsoft.com/products/azure-stack/hci)** is a hyperconverged cluster that uses validated hardware to run virtualized Windows and Linux workloads on-premises and easily connect to Azure for cloud-based backup, recovery, and monitoring. Its software-defined infrastructure enables high-performance hyperconverged compute, storage, and networking, based on Hyper-V and storage spaces direct. Delivered as an Azure service with built-in hybrid capabilities, the Azure Stack HCI (virtualization host) is backed by Microsoft-validated hardware components.
+**[Azure Stack HCI](https://azure.microsoft.com/products/azure-stack/hci)** is a hyperconverged cluster that uses validated hardware to run virtualized Windows and Linux workloads on-premises and easily connect to Azure for cloud-based backup, recovery, and monitoring. Its software-defined infrastructure enables high-performance hyperconverged compute, storage, and networking, based on Hyper-V and Storage Spaces Direct. Delivered as an Azure service with built-in hybrid capabilities, the Azure Stack HCI (virtualization host) is backed by Microsoft-validated hardware components.
 
 **[Azure Stack Edge](https://azure.microsoft.com/products/azure-stack/edge)** is purpose-built enterprise datacenter or rugged environment hardware-as-a-service. It is optimized for edge compute, machine learning, and IoT scenarios to run your workloads at the edge for faster data insights, and manages your hardware appliance and workloads through the Azure portal. It allows you to run machine learning models with hardware-accelerated machine learning capabilities (with onboard FPGAs and GPUs), uses edge computing to process data close to the source (with VMs, Azure services, Kubernetes clusters, and containers), and acts as a cloud storage gateway, transferring data to Azure over the network, while retaining local access to blobs and files.
 
@@ -97,17 +97,17 @@ Azure Arc is a multicloud and on-premises management platform at the core of uni
 
 - **Connect to and operate hybrid resources as native Azure resources with Azure Arc enabled infrastructure.**
 
-- **Deploy Azure Arc enabled services-run Azure services outside Azure, while operating from Azure.**
+- **Deploy Azure Arc enabled services: run Azure services outside Azure, while operating from Azure.**
 
 ## What are the use cases for Azure Arc?
 
 Azure Arc simplifies complex and distributed environments across on-premises, edge and multicloud, enables deployment of Azure services anywhere, and extends Azure management to any infrastructure.
 
-**Organize and govern across environments-** get databases, Kubernetes clusters, and servers sprawling across on-premises, edge and multicloud environments under control by centrally organizing and governing from a single place.
+**Organize and govern across environments:** Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge and multicloud environments under control by centrally organizing and governing from a single place.
 
-**Manage Kubernetes applications at scale-** deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured consistently from source control.
+**Manage Kubernetes applications at scale:** Deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured consistently from source control.
 
-**Run data services anywhere-** get automated patching, upgrades, security and scale on-demand across on-premises, edge and multicloud environments for your data estate.
+**Run data services anywhere:** Get automated patching, upgrades, security and scale on-demand across on-premises, edge and multicloud environments for your data estate.
 
 ## What are the benefits of Azure Arc for customers?
 
@@ -132,7 +132,7 @@ Planning efforts for unified operations and management assume that most assets f
 
 ### Azure Arc enabled data services
 
-- **Bring Azure data services to any infrastructure** -across on-premises, edge and multicloud using Kubernetes on any hardware.
+- **Bring Azure data services to any infrastructure**, across on-premises, edge and multicloud using Kubernetes on any hardware.
 - **Remain current with fully automated updates, upgrades and policy-controlled deployments** like evergreen SQL and hyperscale deployment option of [Azure Database for PostgreSQL](/azure/postgresql).
 - **Optimize performance of data workloads, and dynamically scale up/scale out, without application downtime with cloud elasticity on-premises.**
 - **Gain unified management and consistent visibility over on-premises and native Azure data workloads** using familiar tools (Azure portal, Azure data studio, and Azure CLI).
