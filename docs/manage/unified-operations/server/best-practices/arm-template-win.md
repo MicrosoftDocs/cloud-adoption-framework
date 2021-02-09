@@ -73,25 +73,25 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 1. A user edits the ARM template parameters file (one time edit). These parameter values are being used throughout the deployment.
 
-2. The ARM template includes an Azure VM custom script extension, which deploys the [`install-azure-arc-agent.ps1`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/windows/arm-template/scripts/install-arc-agent.ps1) PowerShell script.
+2. The ARM template includes an Azure VM custom script extension, which deploys the [`install_arc_agent.ps1`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/windows/arm-template/scripts/install-arc-agent.ps1) PowerShell script.
 
 3. In order to allow the Azure VM to successfully be projected as an Azure Arc enabled server, the script will:
 
     1. Set local OS environment variables.
 
-    2. Generate a local OS sign-in script named *LogonScript.ps1*. This script will:
+    2. Generate a local OS sign-in script named **. This script will:
 
-        - Create the *LogonScript.log* file.
+        - Create the ** file.
 
         - Stop and disable the Windows Azure guest agent service.
 
-        - Create a new Windows Firewall rule to block Azure IMDS outbound traffic to the *169.254.169.254* remote address.
+        - Create a new Windows Firewall rule to block Azure IMDS outbound traffic to the `169.254.169.254` remote address.
 
         - Unregister the sign-in script Windows scheduled task so it won't run after first sign-in.
 
     3. Disable and prevent Windows Server Manager from running on startup.
 
-4. A user connects via RDP to the Windows VM, which starts running *LogonScript.ps1* and onboards the VM to Azure Arc.
+4. A user connects via RDP to the Windows VM, which starts running ** and onboards the VM to Azure Arc.
 
 ## Deployment
 

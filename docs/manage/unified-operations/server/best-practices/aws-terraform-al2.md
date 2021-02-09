@@ -78,7 +78,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![Third screenshot of how to create a new user in an AWS cloud console.](./img/aws-terraform-al2/al2-new-user-3.png)
 
-- On the **Tags** page, assign a tag with a key of `azure-arc-demo`, then select **Next** to proceed to the review page.
+- On the **Tags** page, assign a tag with a key of `Azure Arc demo`, then select **Next** to proceed to the review page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-terraform-al2/al2-tags.png)
 
@@ -98,14 +98,14 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your AWS and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-  - `TF-VAR-subscription-id`= Your Azure subscription ID
-  - `TF-VAR-client-id`= Your Azure service principal app id
-  - `TF-VAR-client-secret` = Your Azure service principal password
-  - `TF-VAR-tenant-id`= Your Azure tenant ID
+  - `TF-VAR-subscription-id`= your Azure subscription ID
+  - `TF-VAR-client-id`= your Azure service principal application ID
+  - `TF-VAR-client-secret` = your Azure service principal password
+  - `TF-VAR-tenant-id`= your Azure tenant ID
   - `AWS-ACCESS-KEY-ID` = AWS access key
   - `AWS-SECRET-ACCESS-KEY` = AWS secret key
 
-- From the Azure CLI, navigate to the `azure-arc-servers-jumpstart/aws/al2/terraform` directory of the cloned repo.
+- From the Azure CLI, navigate to the `Azure Arc servers-jumpstart/aws/al2/terraform` directory of the cloned repo.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the AWS virtual machine as part of the Terraform deployment.
 
@@ -123,7 +123,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
 
-- Open the Azure portal and navigate to the `arc-servers-demo` resource group. The virtual machine created in AWS will be visible as a resource.
+- Open the Azure portal and navigate to the `Azure Arc servers-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
     ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./img/aws-terraform-al2/al2-server.png)
 
@@ -135,7 +135,7 @@ As you may have noticed, the last step of the run is to register the VM as a new
 
 If you want to demo/control the actual registration process, do the following:
 
-- In the [`install-azure-arc-agent.sh.tmpl`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/install-arc-agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
+- In the [`install_arc_agent.sh.tmpl`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/install-arc-agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
 
     ![A screenshot of the 'azcmagent connect' command commented out.](./img/aws-terraform-al2/al2-azcmagent-commented.png)
 
@@ -149,7 +149,7 @@ If you want to demo/control the actual registration process, do the following:
 
 - Export all the environment variables in [`vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/AL2/terraform/scripts/vars.sh)
 
-    ![A screenshot of environment variables exporting with 'vars.sh'.](./img/aws-terraform-al2/al2-export-variables.png)
+    ![A screenshot of environment variables exporting with ''.](./img/aws-terraform-al2/al2-export-variables.png)
 
 - Run the following command
 

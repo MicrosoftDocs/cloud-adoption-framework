@@ -73,13 +73,13 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 1. A user edits the ARM template parameters file (one-time edit). These parameter values are being used throughout the deployment.
 
-2. The ARM template includes an Azure VM custom script extension, which will deploy the [`install-azure-arc-agent.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/scripts/install-arc-agent.sh) shell script.
+2. The ARM template includes an Azure VM custom script extension, which will deploy the [`install_arc_agent.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/scripts/install-arc-agent.sh) shell script.
 
 3. In order to allow the Azure VM to successfully be projected as an Azure Arc enabled server, the script will:
 
     1. Set local OS environment variables.
 
-    2. Generate a ~/.bash-profile file that will be initialized at user's first sign-in to configure the environment. This script will:
+    2. Generate a `~/.bash-profile` file that will be initialized at user's first sign-in to configure the environment. This script will:
 
         - Stop and disable the Linux Azure guest agent service.
 
@@ -92,7 +92,7 @@ For you to get familiar with the automation and deployment flow, below is an exp
 4. A user will SSH to the Linux VM, which will start the `~/.bash-profile` script execution and will onboard the VM to Azure Arc.
 
     > [!NOTE]
-    >  The [`install-azure-arc-agent.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/scripts/install-arc-agent.sh) shell script enables the OS firewall and sets up new rules for incoming and outgoing connections. By default, all incoming and outgoing traffic will be allowed, except blocking Azure IMDS outbound traffic to the `169.254.169.254` remote address.
+    >  The [`install_arc_agent.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azure/linux/arm-template/scripts/install-arc-agent.sh) shell script enables the OS firewall and sets up new rules for incoming and outgoing connections. By default, all incoming and outgoing traffic will be allowed, except blocking Azure IMDS outbound traffic to the `169.254.169.254` remote address.
 
 ## Deployment
 

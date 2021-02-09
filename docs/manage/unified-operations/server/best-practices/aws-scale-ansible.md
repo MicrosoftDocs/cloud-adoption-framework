@@ -39,7 +39,7 @@ This guide can be used even if you do not already have an existing Ansible test 
 
 - [Create a free AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-- [Install Terraform >= v0.13](https://learn.hashicorp.com/terraform/getting-started/install.html)
+- [Install Terraform >= V0.13](https://learn.hashicorp.com/terraform/getting-started/install.html)
 
 - Create an Azure service principal.
 
@@ -95,7 +95,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![Third screenshot of a new user being created in an AWS cloud console.](./img/aws-scale-ansible/ansible-new-user-3.png)
 
-- On the **Tags** page, assign a tag with a key of `azure-arc-demo` and select **Next** to proceed to the **Review** page.
+- On the **Tags** page, assign a tag with a key of `Azure Arc demo` and select **Next** to proceed to the **Review** page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-scale-ansible/ansible-tags.png)
 
@@ -110,7 +110,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 ## Option 1: Create a sample AWS server inventory and Ansible control server using Terraform and onboard the servers to Azure Arc
 
 > [!NOTE]
-> If you already have an existing AWS server inventory and Ansible server, skip to Option 2.
+> If you already have an existing AWS server inventory and Ansible server, skip to option 2.
 
 ### Configure Terraform
 
@@ -120,14 +120,14 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install Ansible and all necessary artifacts. This Terraform plan requires certain information about your AWS and Azure environments which it accesses using environment variables. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-  - `TF-VAR-subscription-id` = Your Azure subscription ID
-  - `TF-VAR-client-id` = Your Azure service principal app id
-  - `TF-VAR-client-secret` = Your Azure service principal password
-  - `TF-VAR-tenant-id` = Your Azure tenant ID
+  - `TF-VAR-subscription-id` = your Azure subscription ID
+  - `TF-VAR-client-id` = your Azure service principal application ID
+  - `TF-VAR-client-secret` = your Azure service principal password
+  - `TF-VAR-tenant-id` = your Azure tenant ID
   - `AWS-ACCESS-KEY-ID` = AWS access key
   - `AWS-SECRET-ACCESS-KEY` = AWS secret key
 
-- From your shell, navigate to the `azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform`) directory of the cloned repository.
+- From your shell, navigate to the `Azure Arc servers-jumpstart/aws/scaled-deployment/ansible/terraform`) directory of the cloned repository.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 
@@ -143,7 +143,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 ### Deploy server infrastructure
 
-- From the `azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform` directory, run `terraform apply --auto-approve` and wait for the plan to finish. Upon successful completion, you will have four Windows Server 2019 servers, four Ubuntu servers, and one CentOS 7 Ansible control server.
+- From the `Azure Arc servers-jumpstart/aws/scaled-deployment/ansible/terraform` directory, run `terraform apply --auto-approve` and wait for the plan to finish. Upon successful completion, you will have four Windows Server 2019 servers, four Ubuntu servers, and one CentOS 7 Ansible control server.
 
 - Open the AWS console and verify that you can see the created servers.
 
@@ -157,7 +157,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Change directory to the `ansible` directory by running `cd ansible`. This folder contains the sample Ansible configuration and the playbook we will use to onboard the servers to Azure Arc.
 
-    ![A screenshot of a shell script listing the 'ansible.cfg' file.](./img/aws-scale-ansible/ansible-cfg.png)
+    ![A screenshot of a shell script listing the '' file.](./img/aws-scale-ansible/ansible-cfg.png)
 
 - The `aw-ec2` Ansible plugin requires AWS credentials to dynamically read your AWS server inventory. We will export these as environment variables. Run the following commands, replacing the values for `AWS-ACCESS-KEY-ID` and `AWS-SECRET-ACCESS-KEY` with the AWS credentials you created earlier.
 
@@ -180,7 +180,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
     ![A screenshot of an Ansible playbook running.](./img/aws-scale-ansible/ansible-playbook.png)
 
-- Open Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+- Open Azure portal and navigate to the `Azure Arc aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
     ![A screenshot of the Azure portal onboarding Azure Arc enabled servers.](./img/aws-scale-ansible/onboarding-servers.png)
 
@@ -193,7 +193,7 @@ To delete all the resources you created as part of this demo, use the `terraform
 ## Option 2: Onboarding an existing AWS server inventory to Azure Arc using your own Ansible control server
 
 > [!NOTE]
-> If you do not have an existing AWS server inventory and Ansible server, navigate back to Option 1.
+> If you do not have an existing AWS server inventory and Ansible server, navigate back to option 1.
 
 ### Review provided Ansible configuration and playbook
 
@@ -215,6 +215,6 @@ As earlier, if the playbook run is successful, you should see an output that sim
 
 ![A screenshot of an Ansible playbook running.](./img/aws-scale-ansible/ansible-playbook.png)
 
-As earlier, open Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+As earlier, open Azure portal and navigate to the `Azure Arc aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
 ![A screenshot of the Azure portal showing Azure Arc enabled servers.](./img/aws-scale-ansible/onboarding-servers.png)

@@ -88,7 +88,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![Third screenshot of creating a new user in an AWS cloud console.](./img/aws-ubuntu/aws-ubuntu-new-user-3.png)
 
-- On the **Tags** page, assign a tag with a key of `azure-arc-demo` and select **Next** to proceed to the **Review** page.
+- On the **Tags** page, assign a tag with a key of `Azure Arc demo` and select **Next** to proceed to the **Review** page.
 
     ![A screenshot of tags in an AWS cloud console.](./img/aws-ubuntu/aws-ubuntu-tags.png)
 
@@ -115,7 +115,7 @@ Before executing the Terraform plan, you must export the environment variables w
   - AWS-ACCESS-key-ID=AWS access key
   - AWS-SECRET-access-key=AWS secret key
 
-- From the Azure CLI, navigate to the `azure-arc-servers-jumpstart/aws/ubuntu/terraform` directory of the cloned repo.
+- From the Azure CLI, navigate to the `Azure Arc servers-jumpstart/aws/ubuntu/terraform` directory of the cloned repo.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly. Note that this script will also be automatically executed remotely on the AWS virtual machine as part of the Terraform deployment.
 
@@ -133,7 +133,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
 
-- Open the Azure portal and navigate to the `arc-aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
+- Open the Azure portal and navigate to the `Azure Arc aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
     ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./img/aws-ubuntu/aws-ubuntu-server.png)
 
@@ -146,9 +146,9 @@ As you may have noticed, the last step of the run is to register the VM as a new
 
 If you want to demo/control the actual registration process, do the following:
 
-- In the [`install-azure-arc-agent.sh.tmpl`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/ubuntu/terraform/scripts/install-arc-agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
+- In the [`install_arc_agent.sh.tmpl`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/ubuntu/terraform/scripts/install-arc-agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
 
-    ![A screenshot showing 'main.tf' being commented out to disable automatic onboarding of an Azure Arc agent.](./img/aws-ubuntu/aws-ubuntu-main-tf.png)
+    ![A screenshot showing '' being commented out to disable automatic onboarding of an Azure Arc agent.](./img/aws-ubuntu/aws-ubuntu-main-tf.png)
 
 - Get the public IP of the AWS VM by running `terraform output`.
 
@@ -160,7 +160,7 @@ If you want to demo/control the actual registration process, do the following:
 
 - Export all the environment variables in [`vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/ubuntu/terraform/scripts/vars.sh).
 
-    ![A screenshot of environment variables exporting with 'vars.sh'.](./img/aws-ubuntu/aws-ubuntu-export-variables.png)
+    ![A screenshot of environment variables exporting with ''.](./img/aws-ubuntu/aws-ubuntu-export-variables.png)
 
 - Run the following command:
 
@@ -182,4 +182,4 @@ Alternatively, you can delete the AWS EC2 instance directly by terminating it fr
 
   ![A screenshot of how to terminate an instance in the AWS console.](./img/aws-ubuntu/aws-ubuntu-terminate.png)
 
-If you delete the instance manually, then you should also delete `*./scripts/install-azure-arc-agent.sh` which is created by the Terraform plan.
+If you delete the instance manually, then you should also delete `*./scripts/install_arc_agent.sh` which is created by the Terraform plan.
