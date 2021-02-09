@@ -97,8 +97,8 @@ Before executing the Terraform plan, you must export the environment variables w
   - `TF-VAR-subscription-id`= your Azure subscription ID
   - `TF-VAR-client-id` = your Azure service principal application ID
   - `TF-VAR-client-secret` = your Azure service principal password
-  - `tf-VAR-tenant-ID=your Azure tenant ID
-  - `TF-VAR-gcp-project-id = GCP project ID
+  - `TF-VAR-tenant-id` = your Azure tenant ID
+  - `TF-VAR-gcp-project-id` = GCP project ID
   - `TF-VAR-gcp-credentials-filename` = GCP credentials JSON filename
 
 - From CLI, navigate to the `azure-arc-servers-jumpstart/gcp/ubuntu/terraform` directory of the cloned repo.
@@ -134,7 +134,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![A screenshot of a terraform output.](./img/gcp-ubuntu/ubuntu-terraform.png)
 
-- SSH the VM using the `ssh arcadmin@` where `xx.xx.xx.xx` is the host IP.
+- SSH the VM using the `ssh arcadmin@xx.xx.xx.xx` where `xx.xx.xx.xx` is the host IP.
 
     ![A screenshot of an SSH key connecting to a GCP server.](./img/gcp-ubuntu/ubuntu-ssh.png)
 

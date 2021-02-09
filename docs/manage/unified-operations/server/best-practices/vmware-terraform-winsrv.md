@@ -62,7 +62,7 @@ The following README will guide you on how to use the provided [Terraform](https
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-### Preparing a window server VMware vSphere VM template
+### Prepare a Windows Server VMware vSphere VM template
 
 Before using the below guide to deploy a Windows Server VM and connect it to Azure Arc, a VMware vSphere template is required. [The following README](./vmware-winsrv2k19-template.md) will instruct you how to easily create such a template using VMware vSphere 6.5 and above.
 

@@ -150,7 +150,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![A screenshot showing how to RDP into a GCP instance.](./img/gcp-windows/gcp-rdp.png)
 
-- Once logged in, open PowerShell ISE **as Administrator**. Make sure you are running the x64 version of PowerShell ISE and not the x86 version. Once opened, select **file > New** to create an empty `.ps1` file. Then paste in the entire contents of `./scripts/install_arc_agent.ps1`. Click the play button to execute the script. When complete, you should see the output showing successful onboarding of the machine.
+- Once logged in, open PowerShell ISE **as Administrator**. Make sure you are running the x64 version of PowerShell ISE and not the x86 version. Once opened, select **File > New** to create an empty `.ps1` file. Then paste in the entire contents of `./scripts/install_arc_agent.ps1`. Click the play button to execute the script. When complete, you should see the output showing successful onboarding of the machine.
 
     ![Screenshot showing the Windows Powershell Integrated Scripting Environment with an Azure Arc agent connection script.](./img/gcp-windows/ise-script.png)
 

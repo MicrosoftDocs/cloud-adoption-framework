@@ -83,7 +83,7 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
 
 ## Deployment
 
-Like any Vagrant deployment, a [`Vagrantfile`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes.html) is needed. At a high-level, the deployment will:
+Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes.html) is needed. At a high-level, the deployment will:
 
 1. Download the Ubuntu 16.04 image file [Vagrant box](https://app.vagrantup.com/ubuntu/boxes/xenial64)
 2. Execute the installation script

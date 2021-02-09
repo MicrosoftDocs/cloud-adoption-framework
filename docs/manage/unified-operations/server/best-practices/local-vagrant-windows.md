@@ -10,7 +10,7 @@ ms.subservice: operate
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Deploy a local Windows Server hosted by Vagrant and connect it to Azure Arc
+# Deploy a local Windows Server instance hosted by Vagrant and connect it to Azure Arc
 
 The following README provides guidance for deploying a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc enabled server resource.
 
@@ -83,7 +83,7 @@ The following README provides guidance for deploying a local **Windows 10** virt
 
 ## Deployment
 
-Like any Vagrant deployment, a [`Vagrantfile`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes.html) is needed. At a high-level, the deployment will:
+Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes.html) is needed. At a high-level, the deployment will:
 
 1. Download the Windows 10 image file [Vagrant box](https://app.vagrantup.com/StefanScherer/boxes/windows-10)
 2. Execute the Azure Arc installation script
