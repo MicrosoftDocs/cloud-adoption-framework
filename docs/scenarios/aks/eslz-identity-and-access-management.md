@@ -54,16 +54,16 @@ Kubernetes exposes its own management plane, served by an internal Kubernetes RB
 
 ### Design recommendations for operator access
 
-- Use Kubernetes RBAC, backed by Azure AD group membership for [least privilege](https://docs.microsoft.com/azure/aks/azure-ad-rbac) and minimize granting administrator privileges to protect configuration and secrets access.
+- Use Kubernetes RBAC, backed by Azure AD group membership for [least privilege](/azure/aks/azure-ad-rbac) and minimize granting administrator privileges to protect configuration and secrets access.
   - Use [AKS-managed Azure AD Integration](https://aka.ms/aks/managed-aad) to leverage Azure AD for authentication and operator & developer access.
   - Define required RBAC roles and role bindings in Kubernetes
-    - Use [Kubernetes roles and role bindings](https://docs.microsoft.com/azure/aks/concepts-identity#kubernetes-role-based-access-control-rbac) to Azure AD groups for SRE, SecOps, and developer access.
+    - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-rbac) to Azure AD groups for SRE, SecOps, and developer access.
     - SRE full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and identity and access management in [enterprise-scale](../../ready/enterprise-scale/identity-and-access-management.md)
 - Enable the "Role-Based Access Control (RBAC) should be used on Kubernetes Services" Azure Policy in Audit mode.
 
 ## Workload identities
 
-The various workloads in your cluster may need to communicate with other Azure resources, such as Azure SQL Database, Azure Storage, Azure Key Vault, etc. Many services in Azure that typically host workloads that would need to perform similar actions offer managed identity support to those workloads. In AKS, that support is granted via an add-on that runs from within the cluster called [Azure AD Pod-Managed Identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity). Using pod-managed identities helps reduce the number of secrets needed to operate your workload, in the form of connection strings or SAS/access tokens or service principal secrets. See [Integrate Azure Active Directory for the workload](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks#integrate-azure-active-directory-for-the-workload)
+The various workloads in your cluster may need to communicate with other Azure resources, such as Azure SQL Database, Azure Storage, Azure Key Vault, etc. Many services in Azure that typically host workloads that would need to perform similar actions offer managed identity support to those workloads. In AKS, that support is granted via an add-on that runs from within the cluster called [Azure AD Pod-Managed Identity](/azure/aks/use-azure-ad-pod-identity). Using pod-managed identities helps reduce the number of secrets needed to operate your workload, in the form of connection strings or SAS/access tokens or service principal secrets. See [Integrate Azure Active Directory for the workload](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks#integrate-azure-active-directory-for-the-workload)
 
 **TODO: Is there an enterprise-scale tie in here? Otherwise, this isn't new material in any way. What makes THIS guidance special for enterprise-scale deployments?**
 
@@ -77,7 +77,7 @@ The various workloads in your cluster may need to communicate with other Azure r
 - If your workloads access anything external to the cluster that can use Azure AD identities in place of connection strings, API tokens, or similar, do configure and use Azure AD pod-managed identities to allow pods to retrieve access tokens for those services.
   - As these identities are user-managed identities, manage them with appropriate lifecycle care.
   - Making managed identities available to pods in a cluster requires coordination between the cluster operator, user-managed identity owner, and workload team. Ensure this process is documented and understood by all involved.
-- Ensure workload secrets, including TLS certificates, are accessed out of Azure Key Vault via [Secret Store CSI driver for Key Vault](https://docs.microsoft.com/azure/key-vault/general/key-vault-integrate-kubernetes), which should perform the authorization to Key Vault as the managed identity of the pod needing the secret.
+- Ensure workload secrets, including TLS certificates, are accessed out of Azure Key Vault via [Secret Store CSI driver for Key Vault](/azure/key-vault/general/key-vault-integrate-kubernetes), which should perform the authorization to Key Vault as the managed identity of the pod needing the secret.
 - Create all pod managed identities in the region that the cluster is in.
 
 ## Next steps
