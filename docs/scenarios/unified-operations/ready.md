@@ -49,9 +49,9 @@ If you're unsure about your current cloud mix, the tools in Azure's control plan
 
 To start evaluating your cloud mix across multiple cloud providers, complete a simple inventory and tagging exercise, in a few simple steps:
 
-- **Add a tag for **hosting platform**** to all hybrid, multicloud, and edge assets.
-- **Onboard and tag resources** from AWS, GCP, or other cloud providers.
-- **Query your resources** to see where they are all hosted.
+- Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
+- Onboard and tag resources from AWS, GCP, or other cloud providers.
+- Query your resources to see where they are hosted.
 
 To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
 

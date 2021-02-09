@@ -67,7 +67,7 @@ Use Resource Graph Explorer to query and view resources in Azure.
 
 ## Create a basic Azure tag taxonomy
 
-Open Azure CLI and run the following commands to create a basic taxonomy structure that will allow you to easily query and report on where our server resources are hosted (I.e., Azure versus AWS versus GCP versus On-premises). For more guidance on building out a tag taxonomy please review the [resource naming and tagging decision guide](../../../../decision-guides/resource-tagging/index.md).
+Open Azure CLI and run the following commands to create a basic taxonomy structure that lets you easily query and report on where your server resources are hosted (whether in Azure, AWS, GCP , or on-premises). For more guidance on building out a tag taxonomy please review the [resource naming and tagging decision guide](../../../../decision-guides/resource-tagging/index.md).
 
 ```console
 az tag create --name "Hosting Platform"
@@ -85,7 +85,7 @@ After you've created a basic taxonomy structure, apply tags to the Azure Arc ena
 
 ### Tag the Azure Arc connected AWS Ubuntu EC2 instance
 
-In Azure CLI, run the following commands to apply the `Hosting Platform : AWS`  tag to your AWS Azure Arc enabled servers.
+In CLI, run the following commands to apply the `Hosting Platform : AWS`  tag to your AWS Azure Arc enabled servers.
 
 > [!NOTE]
 > If you connected your AWS EC2 instances using a method other than the one described in the [Azure tutorial](./aws-terraform-ubuntu.md), then you need to adjust the values for `awsResourceGroup` and `awsMachineName` to match values specific to your environment.
@@ -102,7 +102,7 @@ az resource tag --ids $awsMachineResourceId --tags "Hosting Platform"="AWS"
 
 ### Tag Azure Arc connected GCP Ubuntu server
 
-In Azure CLI, run the following commands to apply the `Hosting Platform : GCP`  tag to your GCP Azure Arc enabled servers.
+In CLI, run the following commands to apply the `Hosting Platform : GCP`  tag to your GCP Azure Arc enabled servers.
 
 > [!NOTE]
 > If you connected your GCP instances using a method other than the one described in the related [Azure Arc Terraform tutorial](./gcp-terraform-ubuntu.md), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.

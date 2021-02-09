@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use Ansible to scale onboarding Amazon Web Services Amazon Elastic Compute Cloud instances to Azure Arc
 
-The following README file will guide you how to use [Ansible](https://www.ansible.com/) to scale onboarding Amazon Web Services (AWS) Amazon Elastic Compute Cloud (Amazon EC2) instances to Azure Arc.
+The following README will guide you how to use [Ansible](https://www.ansible.com/) to scale onboarding Amazon Web Services (AWS) Amazon Elastic Compute Cloud (Amazon EC2) instances to Azure Arc.
 
 This guide assumes that you have a basic understanding of Ansible. A basic Ansible playbook and configuration is provided that uses the [`amazon.aws.aws-ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws-ec2-inventory.html) plugin for dynamic loading of EC2 server inventory.
 
