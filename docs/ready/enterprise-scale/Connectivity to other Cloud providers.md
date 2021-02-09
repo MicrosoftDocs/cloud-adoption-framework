@@ -17,7 +17,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
 **Design considerations:**
 
-- Using ExpressRoute and FastConnect, customers can connect a virtual network in Azure with a virtual cloud network in OCI, provided that the private IP address space does not overlap. Once this connectivity is established, resources in the Azure virtual network can communicate with resources in the OCI virtual cloud network as if they were both in the same network.
+- Using ExpressRoute and FastConnect, customers can connect a virtual network in Azure with a virtual cloud network in OCI, if the private IP address space does not overlap. Once this connectivity is established, resources in the Azure virtual network can communicate with resources in the OCI virtual cloud network as if they were both in the same network.
 
 - Azure ExpressRoute [FastPath](/azure/expressroute/about-fastpath) is designed to improve the data path performance between two networks (on-premises and Azure), and for this scenario, between OCI and Azure. When enabled, FastPath sends network traffic directly to virtual machines in the virtual network, bypassing the ExpressRoute gateway.
 
@@ -27,13 +27,13 @@ This section provides different connectivity approaches to integrate an Azure en
   
 - There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet Peering.
 
-- While you can use [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, please note that this may incur in additional bandwidth costs that can be calculated by using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/). This is particularly important when you migrate large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
+- While you can use [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, this may incur additional bandwidth costs that can be calculated by using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/). This is a particularly important consideration when you migrate large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
 
 - In an Azure regions that support [Availability Zones (AZ)](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small impact on latency. Design you application to balance availability and performances requirements.
 
 - Interconnectivity between Azure and OCI is only available on [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
-- For more in-depth documentation about interconnectivity between Azure and OCI, please refer to [Oracle Application solutions intergrating Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or refer to the [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
+- For more in-depth documentation about interconnectivity between Azure and OCI, refer to [Oracle Application solutions intergrating Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or refer to the [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
 
 
 **Design recommendations:**
@@ -56,7 +56,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:   
 
-   - From Azure: Deploy a jumpbox in a spoke VNet. This would provide you access to the Virtual Cloud Network in OCI as depicted in the picture below:
+   - From Azure: Deploy a jumpbox in a spoke VNet. The jumpbox provides access to the Virtual Cloud Network in OCI as depicted in the picture below:
     
   ![Diagram that shows Azure to OCI - Jumpbox one vNet.](./media/azure-oci-jumpbox-one-vnet.png)
 
