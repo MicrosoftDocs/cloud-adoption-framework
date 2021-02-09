@@ -63,7 +63,7 @@ Use Resource Graph Explorer to query and view resources in Azure.
 
     ![A screenshot of a Resource Graph Explorer query.](./img/inventory-tagging/run-query.png)
 
-    ![A screenshot of the details of an Azure-Arc-enabled server in the Azure portal.](./img/inventory-tagging/arc-server.png)
+    ![A screenshot of the details of an Azure Arc enabled server in the Azure portal.](./img/inventory-tagging/arc-server.png)
 
 ## Create a basic Azure tag taxonomy
 
@@ -138,9 +138,9 @@ After you apply tags to the resources that are hosted in multiple clouds, use Re
 
    We can also view the tags on the projected servers from Azure portal.
 
-   ![A screenshot of one set of tags on an Azure-Arc-enabled server.](./img/inventory-tagging/tags-1.png)
+   ![A screenshot of one set of tags on an Azure Arc enabled server.](./img/inventory-tagging/tags-1.png)
 
-   ![A screenshot of another set of tags on an Azure-Arc-enabled server.](./img/inventory-tagging/tags-2.png)
+   ![A screenshot of another set of tags on an Azure Arc enabled server.](./img/inventory-tagging/tags-2.png)
 
 ## Clean up your environment
 

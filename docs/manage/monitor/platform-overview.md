@@ -99,7 +99,7 @@ Because these monitoring settings are isolated from each other and work from the
 
 #### Data sources
 
-Azure Monitor collects data from a variety of sources, including Azure infrastructure and platform resources, agents on Windows and Linux computers, and monitoring data collected in Azure storage. Any REST client can write log data to Azure Monitor by using an API, and you can define custom metrics for your web applications. Some metric data can be routed to different locations, depending on its usage. For example, you might use the data for "fast-as-possible" alerting or for long-term trend analysis searches in conjunction with other log data.
+Azure Monitor collects data from a variety of sources, including Azure infrastructure and platform resources, agents on Windows and Linux computers, and monitoring data collected in Azure storage. Any REST client can write log data to Azure Monitor by using an API, and you can define custom metrics for your web applications. Some metric data can be routed to different locations, depending on its usage. For example, you might use the data for "as-fast-as-possible" alerting or for long-term trend analysis searches in conjunction with other log data.
 
 #### Monitoring solutions and insights
 

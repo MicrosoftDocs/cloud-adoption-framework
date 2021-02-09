@@ -370,7 +370,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
     ![Screenshot highlighting the "Enable continuous integration" check box.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline20.png)
 
-1. They select **Save & Queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
+1. They select **Save & queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
 
     ![Screenshot of the "Save & queue" button.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline21.png)
 

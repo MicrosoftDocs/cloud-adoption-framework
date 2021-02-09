@@ -42,15 +42,15 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the following screenshots a Google Cloud Platform (GCP) server has been connected with Azure Arc and is visible as a resource in Azure.
 
-   ![A screenshot of a resource group for an Azure-Arc-enabled server.](./img/arc-policies-mma/resource-group.png)
+   ![A screenshot of a resource group for an Azure Arc enabled server.](./img/arc-policies-mma/resource-group.png)
 
-   ![A screenshot of a connected status for an Azure-Arc-enabled server.](./img/arc-policies-mma/connected-status.png)
+   ![A screenshot of a connected status for an Azure Arc enabled server.](./img/arc-policies-mma/connected-status.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
 4. Create an Azure service principal.
 
-   To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the Contributor role is required. To create it, login to your Azure account run the following command. Alternatively, this can also be done in [Azure Cloud Shell](https://shell.azure.com/).
+   To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
    ```console
    az login
@@ -76,7 +76,7 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
    ```
 
    > [!NOTE]
-   > It is highly recommended to scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
+   > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
 You'll also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/policies/arm/log-analytics-template.parameters.json) and providing a name and location for your workspace.
 
@@ -86,8 +86,8 @@ To deploy the ARM template, navigate to the [deployment folder](https://github.c
 
 ```console
 az deployment group create --resource-group <Name of the Azure resource group> \
---template-file <The *log-analytics-template.json* template file location> \
---parameters <The *log-analytics-template.parameters.json* template file location>
+--template-file <The `log-analytics-template.json` template file location> \
+--parameters <The `log-analytics-template.parameters.json` template file location>
 ```
 
 ## Assign policies to Azure Arc connected machines

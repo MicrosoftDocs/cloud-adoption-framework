@@ -38,15 +38,15 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the following screenshots there is a GCP server has been connected with Azure Arc and it is visible as a resource in Azure.
 
-    ![A screenshot of a resource group from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/resource-group.png)
+    ![A screenshot of a resource group from an Azure Arc enabled server.](./img/arc-vm-extension-custom-script/resource-group.png)
 
-    ![A screenshot of a connected status from an Azure-Arc-enabled server.](./img/arc-vm-extension-custom-script/connected-status.png)
+    ![A screenshot of a connected status from an Azure Arc enabled server.](./img/arc-vm-extension-custom-script/connected-status.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
 4. Create an Azure service principal.
 
-    To connect a VM or bare-metal server to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, login to your Azure account and run the following command. This command can also be run in [Azure Cloud Shell](https://shell.azure.com/).
+    To connect a VM or bare-metal server to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
     ```console
     az login
@@ -72,12 +72,12 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
     ```
 
 > [!NOTE]
-> It is optional, but highly recommended to scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
+> We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
 To demonstrate the custom script extension, use the below Linux and Windows scripts.
 
 - [Linux](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh): The script will modify the message of the day on the operating system.
-- [Windows](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1): The script will install Windows terminal, Microsoft edge, 7zip and Visual Studio Code [Chocolatey](https://chocolatey.org/) packages on the VM.
+- [Windows](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolatey](https://chocolatey.org/) packages on the VM.
 
 ## Azure Arc enabled servers custom script extension deployment
 
@@ -99,7 +99,7 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
       - For Windows: [public URI](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1)
       - For Linux: [public URI](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh)
 
-3. To run either script, use the below commands:
+3. To run either script, use the following commands:
 
     - Windows:
 
@@ -117,8 +117,8 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
 
     ```bash
     az deployment group create --resource-group <Name of the Azure resource group> \
-    --template-file <The *customscript-template.json* template file location for Linux or Windows> \
-    --parameters <The *customscript-template.parameters.json* template file location>
+    --template-file <The `customscript-template.json` template file location for Linux or Windows> \
+    --parameters <The `customscript-template.parameters.json` template file location>
     ```
 
 5. After the template deployment has completed it's run, you should see an output as follows:

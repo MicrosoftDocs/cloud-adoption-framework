@@ -43,7 +43,7 @@ In the following procedures you create and configure an Azure Automation account
 
     ![A screenshot of an EC2 in an Amazon Web Services cloud console.](./img/arc-update-management/aws-ec2-instance.png)
 
-    ![A screenshot of an Azure-Arc-enabled server in the Azure portal.](./img/arc-update-management/arc-enabled-server.png)
+    ![A screenshot of an Azure Arc enabled server in the Azure portal.](./img/arc-update-management/arc-enabled-server.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.14 or later. Use `az --version` to check your current installed version.
 
@@ -53,7 +53,7 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
 
 1. Create a Log Analytics workspace using this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/updateManagement/law-template.json). This creates a new Log Analytics workspace, defines the Update Management solution, and enables it for the workspace.
 
-2. Create a new resource group for the Log Analytics workspace by running the below command, replacing the values in brackets with your own.
+2. Create a new resource group for the Log Analytics workspace by running the following command, replacing the values in brackets with your own.
 
     ```console
     az group create --name <Name for your resource group> \
@@ -91,13 +91,13 @@ It may take several hours for Update Management to collect enough data to show a
 
 ![A screenshot of the Overview tab and Updates view within a Log Analytics workspace.](./img/arc-update-management/overview-tab.png)
 
-When the assessment is complete, you'll see a **View Summary" option on the Update Management tab.
+When the assessment is complete, you'll see a **View Summary** option on the Update Management tab.
 
 ![A screenshot of an Updates view summary within a Log Analytics workspace.](./img/arc-update-management/updates-summary.png)
 
 2. Select **View Summary**, and then select again to drill into the Update Management assessment. In the following example we can see there are updates missing on our Azure Arc enabled server.
 
-    ![A screenshot of updates missing from an Azure-Arc-enabled server.](./img/arc-update-management/updates-missing.png)
+    ![A screenshot of updates missing from an Azure Arc enabled server.](./img/arc-update-management/updates-missing.png)
 
 ## Schedule an update
 

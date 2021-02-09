@@ -42,15 +42,15 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
 1. As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, we use a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure. As shown in the following screenshots:
 
-    ![A screenshot of an overview of an Azure-Arc-enabled server in the Azure portal.](./img/arc-azure-sentinel/sentinel-1.png)
+    ![A screenshot of an overview of an Azure Arc enabled server in the Azure portal.](./img/arc-azure-sentinel/sentinel-1.png)
 
     ![A screenshot showing the details of an Azure Arc Server in the Azure portal.](./img/arc-azure-sentinel/sentinel-2.png)
 
 1. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
-1. Create Azure service principal (service principal).
+1. Create an Azure service principal.
 
-    To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the Contributor role is required. To create it, log in to your Azure account and run the following command. Alternatively, this can also be done in [Azure Cloud Shell](https://shell.azure.com/).
+    To connect a VM or bare-metal server to Azure Arc, Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. Alternatively, this can also be done in [Azure Cloud Shell](https://shell.azure.com/).
 
     ```console
     az login
@@ -76,7 +76,7 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
     ```
 
 > [!NOTE]
-> It is optional, but highly recommended to scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
+> We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
 ## Onboard Azure Sentinel
 
@@ -90,8 +90,8 @@ Azure Sentinel uses the Log Analytics agent to collect log files for Windows and
 
   ```console
   az deployment group create --resource-group <Name of the Azure resource group> \
-  --template-file <The *sentinel-template.json* template file location> \
-  --parameters <The *sentinel-template.parameters.json* template file location>
+  --template-file <The `sentinel-template.json` template file location> \
+  --parameters <The `sentinel-template.parameters.json` template file location>
   ```
 
 For example:
