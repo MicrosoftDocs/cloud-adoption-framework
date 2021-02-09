@@ -208,7 +208,7 @@ The assessment takes 5 to 10 minutes and measures your organization's capability
 
 **Deliverables:**
 
-- Use the [AI Maturity Model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
+- Use the [AI Maturity Model tool](https://www.gartner.com/en/documents/3982174/artificial-intelligence-maturity-model) to assess your organization's AI maturity to create AI-based systems.
 
 **Guidance to support deliverable completion:**
 
