@@ -106,7 +106,7 @@ productDirectory:
       links:
         - url: ./migrate/azure-migration-guide/index.md
           text: Azure migration guide
-        - url: ./migrate/azure-best-practices/contoso-migration-overview.md
+        - url: ./scenarios/index.md
           text: Migration scenarios
         - url: ./migrate/azure-best-practices/index.md
           text: Best practices for cloud migration
