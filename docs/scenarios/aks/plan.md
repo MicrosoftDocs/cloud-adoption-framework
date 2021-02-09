@@ -53,15 +53,17 @@ These considerations will create clarity regarding the actions needed to complet
 
 ## Modern container adoption plan
 
-The standard [Cloud Adoption Plan template](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
+The standard [Cloud Adoption Plan template](../../plan/template.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
 
 ## Modern container readiness plan
 
 In addition to the typical cloud adoption skilling plan, the cloud adoption teams may need to develop skills related to container and Kubernetes before executing your plan:
 
-[Learn the basics of Kubernetes](https://aka.ms/LearnAKS)
-[Learn about containers](https://azure.microsoft.com/overview/containers/)
-[Get familiar with Kubernetes best practices](https://aka.ms/aks/bestpractices)
+- [Learn the basics of Kubernetes](https://aka.ms/LearnAKS)
+- [Learn about containers](https://azure.microsoft.com/overview/containers/)
+- [Get familiar with Kubernetes best practices](https://aka.ms/aks/bestpractices)
+
+Ensure time is allocated for workload teams to document and dry-run migration plans. The existing application or external system (both dependencies and systems that depend on this workload) may need to be modified with added flexibility to support the migration effort. This is true for both pre-production and production environments.
 
 ## Next step: Review your environment or Azure Landing Zone
 

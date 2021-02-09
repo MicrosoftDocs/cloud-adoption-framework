@@ -19,30 +19,32 @@ There is a clear and growing trend of migrating existing workloads from on-premi
 
 As a part of the [Cloud Adoption Framework's One Migrate scenario](../index.md), containers can be migrated to Azure Kubernetes Service (AKS) to accelerate containers in the cloud. Typically migration to Azure uses Azure Migrate and the ecosystem of partner tools to assess workloads, migrate workloads, and release workloads to the cloud. This 3 step process can be applied to AKS migration, but you may need a few additional tools to help with the migration steps.
 
-## Assess containers and workloads
+### Assess workloads
 
-Currently, AKS migration can support the following scenarios:
+You'll need an inventory of workloads and their current containerization status. Workloads cannot be migrated until they have been validated as functional and performant while operating within a container. Work with application owners to allocate time to perform containerization, validate results, and build image building pipelines for the work. Take note of unique dependencies such as Windows-specific requirements (e.g. gMSA), local file system usage, cache implementation details, singleton implementations, and dependencies such as databases.
 
-- Migrating an AKS Cluster backed by [Availability Sets](https://docs.microsoft.com/azure/virtual-machines/windows/tutorial-availability-sets.md) to [Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview.md)
-- Migrating an AKS cluster to use a [Standard SKU load balancer](https://docs.microsoft.com/azure/aks/load-balancer-standard.md)
-- Migrating from [Azure Container Service (ACS) - retired on January 31, 2020](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/) to AKS
-- Migrating from [AKS engine](https://docs.microsoft.com/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) to AKS
-- Migrating from non-Azure based Kubernetes clusters to AKS
-- Moving existing resources to a different region
+While a centralized team can lead the containerization efforts across an org, consider that more of a project management function and technical requirements gathering and oversight process, application owners will need to be highly involved in this process.
 
-When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it may not be within the supported range and require upgrading versions to be supported by AKS. See [AKS supported Kubernetes versions](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions.md) for more information.
+### Migrate containers and workloads
 
-If you're migrating to a newer version of Kubernetes, review [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-versions).
+Migration to AKS involves new deployment pipelines and SRE access plans. Before any migration happens, ensure all teams involved understand their role, workload health assignments, and access patterns for deployments and SRE activities. Also insure migration has been validated end-to-end in pre-production and environments, including performing production-level load testing and SRE drills.
 
-## Migrate containers and workloads
+As with any migration, decide what maintenance window is agreeable and be clear to all interested stakeholders how the migration is proceeding. Track and dashboard the migration where appropriate. If a down-time migration cannot be negotiated, then allow for extra planning, cost, and complications around a no down-time migration. If it is found that a down-time migration is required when one was not expected, communicate that change to your stakeholders. Perform impact analysis on that change to ensure risks are documented and agreed upon.
 
-Currently, you will need to use one of several open-source tools to complete the replication of your container and workloads to Azure:
+All migrations (even downtime migrations), may need to modify the existing application with added flexibility to support the migration. Ensure app teams are fully involved in the planning of workload migrations as early as possible. For example additional DNS, connection string, and settings switching capabilities may need to be deployed in the current workload before the migration can be completed.
 
-- [Velero](https://velero.io/) (Requires Kubernetes 1.7+)
+### Migrate from existing Kubernetes platforms
+
+If you're coming from an existing kubernetes platform (AKS Engine, ACS, or another Kubernetes implementation), you might consider leveraging some open source tooling to help with the migration. In these cases you've already got a workload that functions in Kubernetes, and rehosting in AKS is usually much simpler. Validate all capabilities exist in AKS before performing any migration.
+
+- [Velero](https://velero.io)
 - [Azure Kube CLI extension](https://github.com/yaron2/azure-kube-cli)
 - [ReShifter](https://github.com/mhausenblas/reshifter)
+- Migrating from [AKS engine](https://docs.microsoft.com/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) to AKS
+- Migrating from [Azure Container Service (ACS)](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/) to AKS
+- Moving existing resources to a different region
 
-See the following best practice to [migrate a container to AKS](https://docs.microsoft.com/azure/aks/aks-migration#aks-with-standard-load-balancer-and-virtual-machine-scale-sets).
+When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it may not be within the supported range and require upgrading versions to be supported by AKS. See [AKS supported Kubernetes versions](/azure/aks/supported-kubernetes-versions) for more information. Where possible, always try to migrate to the same version of Kubernetes. That means either do an inplace upgrade in the existing system or plan a post-migration upgrade -- based on your priorities.
 
 ## Next step: Innovate using modern container solutions
 
