@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-## Connectivity to other Cloud Providers
+# Connectivity to other Cloud Providers
 
-### Oracle Cloud Infrastructure (OCI)
+## Oracle Cloud Infrastructure (OCI)
 
 This section provides different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
 
