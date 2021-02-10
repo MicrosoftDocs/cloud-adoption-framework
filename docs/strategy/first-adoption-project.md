@@ -7,6 +7,7 @@ ms.date: 5/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # First cloud adoption project
@@ -41,7 +42,7 @@ Your team's first adoption project is likely to result in a production deploymen
 
 To support the preceding criteria, this list provides an example of a first project for each motivation category:
 
-- **Critical business events:** When a critical business event is the primary motivation, implementation of a tool like [Azure Site Recovery](../migrate/azure-migration-guide/secure-and-manage.md#replicate-an-azure-vm-to-another-region-with-site-recovery-service) might be a good first project. During migration, you would use a tool like [Azure Migrate](../migrate/azure-migration-guide/migrate.md#azure-migrate) to quickly migrate datacenter assets. But during the first project, you could first use Azure Site Recovery as a disaster recovery tool. Reducing dependencies on disaster recovery assets within the datacenter before pragmatically planning the migration.
+- **Critical business events:** When a critical business event is the primary motivation, implementation of a tool like [Azure Site Recovery](../migrate/azure-migration-guide/migrate.md) might be a good first project. During migration, you would use a tool like [Azure Migrate](../migrate/azure-migration-guide/migrate.md#azure-migrate) to quickly migrate datacenter assets. But during the first project, you could first use Azure Site Recovery as a disaster recovery tool. Reducing dependencies on disaster recovery assets within the datacenter before pragmatically planning the migration.
 
 - **Migration motivations:** When migration is the primary motivation, it's wise to start with the migration of a noncritical workload. The [Azure setup guide](../ready/azure-setup-guide/index.md) and the [Azure migration guide](../migrate/azure-migration-guide/index.md) can provide guidance for the migration of your first workload.
 
@@ -57,7 +58,7 @@ Additional examples of first adoption projects include:
 - **End of support (EOS):** Migrating assets that have reached the end of support is another quick win that builds technical skills. It could also provide some cost avoidance from expensive support contracts or licensing costs.
 - **Virtual desktop interface (VDI):** Creating virtual desktops for remote employees can provide a quick win. In some cases, this first adoption project could also reduce dependence on expensive private networks in favor of commodity public internet connectivity.
 - **Dev/test:** Remove dev/test from on-premises environments to give developers control, agility, and self-service capacity.
-- **Simple apps (less than five):** Modernize and migrate a simple app to quickly gain developer and operations experience.
+- **Simple applications (less than five):** Modernize and migrate a simple application to quickly gain developer and operations experience.
 - **Performance labs:** When you need high-scale performance in a lab setting, use the cloud to quickly and cost-effectively provision those labs for a short time.
 - **Data platform:** Creating a data lake with scalable compute for analytics, reporting, or machine learning workloads, and migrating to managed databases using dump/restore methods or data migration services.
 

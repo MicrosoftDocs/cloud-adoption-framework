@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource access management in Azure
@@ -77,12 +77,12 @@ In Azure AD, users are segmented into tenants. A *tenant* is a logical construct
 
 Each client request to manage a resource in a particular subscription requires that the user has an account in the associated Azure AD tenant.
 
-The next control is a check that the user has sufficient permission to make the request. Permissions are assigned to users using [role-based access control (RBAC)](/azure/role-based-access-control).
+The next control is a check that the user has sufficient permission to make the request. Permissions are assigned to users using [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control).
 
-![Users assigned to RBAC roles](../../_images/govern/design/governance-1-18.png)
-*Figure 10: Each user in the tenant is assigned one or more RBAC roles.*
+![Users assigned to Azure roles](../../_images/govern/design/governance-1-18.png)
+*Figure 10: Each user in the tenant is assigned one or more Azure roles.*
 
-An RBAC role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in `owner` role](/azure/role-based-access-control/built-in-roles#owner) allows a user to perform any action on a resource.
+An Azure role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in `owner` role](/azure/role-based-access-control/built-in-roles#owner) allows a user to perform any action on a resource.
 
 The next control is a check that the request is allowed under the settings specified for [Azure resource policy](/azure/governance/policy). Azure resource policies specify the operations allowed for a specific resource. For example, an Azure resource policy can specify that users are only allowed to deploy a specific type of virtual machine.
 

@@ -7,6 +7,7 @@ ms.date: 5/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Motivations: Why are we moving to the cloud?
@@ -37,7 +38,7 @@ To ensure wiser decision-making, all participants in the migration process shoul
 
 ## Motivation-driven strategies and business outcomes
 
-This section highlights the *migration* and *innovation* motivations and their corresponding strategies.
+This section highlights the _migration_ and _innovation_ motivations and their corresponding strategies.
 
 ### Migration
 

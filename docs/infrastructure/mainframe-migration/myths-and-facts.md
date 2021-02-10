@@ -2,11 +2,12 @@
 title: Mainframe migration myths and facts
 description: Learn to distinguish the myths from the reality about mainframes, and evaluate the mainframe workloads that are most suitable for Azure.
 author: njray
-ms.author: v-nanra
+ms.author: brblanch
 ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore chargebacks IPLs -->
@@ -25,7 +26,7 @@ Mainframes also remain as vulnerable to disasters as any other servers do, and r
 
 ## Myth: Mainframes have limitless scalability
 
-A mainframe's scalability depends on the capacity of its system software, such as the customer information control system (CICS), and the capacity of new instances of mainframe engines and storage. Some large companies that use mainframes have customized their CICS for performance, and have otherwise outgrown the capability of the largest available mainframes.
+A mainframe's scalability depends on the capacity of its system software, such as the Customer Information Control System (CICS), and the capacity of new instances of mainframe engines and storage. Some large companies that use mainframes have customized their CICS for performance, and have otherwise outgrown the capability of the largest available mainframes.
 
 ## Myth: Intel-based servers are not as powerful as mainframes
 

@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Apply design principles and advanced operations
@@ -57,7 +58,7 @@ The natural alignment of roles in a CCoE is outlined as follows:
 - Cloud management delivers the management baseline centrally and helps support the use of the service catalog.
 - But the business unit (in the form of a business DevOps team or cloud adoption team) holds responsibility for day-to-day operations of the workload, pipeline, or performance.
 
-As for aligning areas of management, central IT team and CCoE models can generally deliver on Platform Specialization, with minimal cultural change. Delivering on workload specialization might be more complex for central IT teams.
+As for aligning areas of management, central IT team and CCoE models can generally deliver on platform specialization, with minimal cultural change. Delivering on workload specialization might be more complex for central IT teams.
 
 ## Management specialization processes
 
@@ -72,7 +73,7 @@ Within each specialization, the following four-step process is delivered in a di
 
 Improving system design is the most effective approach to improving operations of any common platform. System design improvements can help increase stability and decrease business interruptions. Design of individual systems is out of scope for the environment view taken throughout the Cloud Adoption Framework.
 
-As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload.The framework focuses on improvement across five pillars of architecture excellence:
+As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload. The framework focuses on improvement across five pillars of architecture excellence:
 
 - **Cost optimization:** Manage costs to maximize the value delivered.
 - **Operational excellence:** Follow operational processes that keep a system running in production.

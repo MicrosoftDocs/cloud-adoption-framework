@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource Consistency tools in Azure
@@ -27,7 +27,7 @@ The following is a list of Azure tools that can help mature the policies and pro
 | Define resource groups                       | Yes | Yes | Yes | No  | No  | No | No |
 | Manage workload and account owners           | Yes | Yes | Yes | No  | No  | No | No |
 | Manage conditional access to resources       | Yes | Yes | Yes | No  | No  | No | No |
-| Configure RBAC users                         | Yes | No  | No  | No  | Yes | No | No |
+| Configure Azure RBAC users                   | Yes | No  | No  | No  | Yes | No | No |
 | Assign roles and permissions to resources | Yes | Yes | Yes | No  | Yes | No | No |
 | Define dependencies between resources        | No  | Yes | Yes | No  | No  | No | No |
 | Apply access control                         | Yes | Yes | Yes | No  | Yes | No | No |
