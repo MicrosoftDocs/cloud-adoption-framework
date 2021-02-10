@@ -39,4 +39,4 @@ _Figure 1: Virtual WAN network topology._
 
 ![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
 
-_Figure 4: A traditional Azure network topology._
+_Figure 2: A traditional Azure network topology._
