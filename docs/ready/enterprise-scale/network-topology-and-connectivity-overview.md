@@ -15,7 +15,7 @@ ms.custom: think-tank
 
 # Network topology and connectivity
 
-This series of articles examines key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
+This series of articles examines key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure.
 
 ## Plan for IP addressing
 
