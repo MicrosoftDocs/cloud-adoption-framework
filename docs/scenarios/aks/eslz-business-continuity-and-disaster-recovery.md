@@ -55,19 +55,37 @@ Consider the following factors:
 
 ## Design recommendations
 
-- Isolate your workload(s) from the system services by placing them in a separate node pool. This way, Kubernetes services run on dedicated _system_ nodes and don’t compete with your workload. Use of tags, labels, and taints is recommended to identify the node pool to schedule your workload.
-- Three nodes are recommended for the _system_ node pool. For the user node pool, start with no less than two nodes. If you need higher availability, provision more nodes.
+The following are best practices for your design:
+
+- Three nodes are recommended for the system node pool. For the user node pool, start with no less than two nodes. If you need higher availability, provision more nodes.
+
+- Isolate your application from the system services by placing it in a separate node pool. This way, Kubernetes services run on dedicated nodes and don’t compete with your workload. Use of tags, labels, and taints is recommended to identify the node pool to schedule your workload.
+
+
 - Regular upkeep of your cluster such as timely updates is crucial for reliability. Be mindful of [supported window of Kubernetes versions on AKS](https://docs.microsoft.comazure/aks/supported-kubernetes-versions) and plan your updates in advance. Also, monitoring the health of the pods through probes is recommended.
-- Where possible, don't [store service state inside the container.](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers) Instead, use an Azure platform as a service (PaaS) offering that supports multi-region replication.
+
+
+- Where possible, don't [store service state inside the container.](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers) Instead, use an Azure platform as a service (PaaS) that supports multiregion replication.
+
 - Ensure pod resources. It’s highly recommended that deployments specify pod resource requirements. The scheduler can then appropriately schedule the pod. Reliability will significantly deprecate if pods cannot be scheduled.
+
 - Configure multiple replicas in the deployment to handle disruptions such as hardware failures. For planned events such as updates and upgrades, a disruption budget can ensure the required number of pod replicas exist to handle expected application load.
-- Define Pod limits, test and establish a baseline. Start with equal values for requests and limits. Then, gradually tune those values until you have established a threshold that can cause instability in the cluster. Limits can be specified in your deployment manifests.
 
-  The built-in features provide an easy solution to the complex task of handling failures and disruptions in workload architecture, This configurations help simplifying both design and deployment automation. An organization that has defined a standard for the SLA, RTO, and RPO on an application can utilize built in services to kubernetes and Azure to achieve these business objectives.
+- [Your applications might use Azure Storage for their data.](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region#create-a-storage-migration-plan) Because your applications are spread across multiple AKS clusters in different regions, you need to keep the storage synchronized. Here are two common ways to replicate storage:
 
-- Set [pod disruption budgets](https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets). This setting determines how many replicas in a deployment can come down during an update or upgrade event.
+  - Infrastructure-based asynchronous replication
+  - Application-based asynchronous replication
 
-- [Enforce resource quotas](https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas) on the workload namespaces. The resource quota on a namespace will ensure pod requests and limits are properly set on a deployment.
+- Estimate Pod limits, test and establish a baseline. Start with equal values for requests and limits. Then, gradually tune those values until you have established a threshold that can cause instability in the cluster. Pod Limits can be specified in your deployment manifests.
+
+  The built-in features provide an easy solution to the complex task of handling failures and disruptions in workload architecture, Thes configurations help simplifying both design and deployment automation. An organization that has defined a standard for the SLA, RTO, and RPO on an application can utillize built in services to kubernetes and Azure to achieve these business objectives. 
+
+- Set [pod disruption budgets.](https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets) This setting determines how many replicas in a deployment can come down during an update or upgrade event. For more information, see Pod disruption budgets.
+
+- [Enforce resource quotas](https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas) on the workload namespaces. The resource quota on a namespace will ensure pod requests and limits are properly set on a deployment. For more information, see Enforce resource quotas.
+  -Setting resources quotas at the cluster level can cause problem when deploying third-party workloads that do not have proper requests and limits.
+  
+- Regularly run the latest version of [kube-advisor open source tool to detect issues in your cluster.](https://docs.microsoft.com/azure/aks/operator-best-practices-scheduler#regularly-check-for-cluster-issues-with-kube-advisor)
 
 - [Store your container images in Azure Container Registry](https://docs.microsoft.com/azure/aks/operator-best-practices-multi-region#enable-geo-replication-for-container-images) and geo-replicate the registry to each AKS region.
 
