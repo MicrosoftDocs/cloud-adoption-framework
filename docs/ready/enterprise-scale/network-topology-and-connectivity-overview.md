@@ -44,6 +44,7 @@ A traditional hub-and-spoke network topology helps you build customized secure l
 ## Virtual WAN network topology (Microsoft-managed)
 
 ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
+
 _Figure 1: Virtual WAN network topology._
 
 ## Traditional Azure networking topology
