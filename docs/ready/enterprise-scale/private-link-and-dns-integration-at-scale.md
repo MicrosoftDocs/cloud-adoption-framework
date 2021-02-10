@@ -19,8 +19,8 @@ ms.custom: think-tank
 
 Many customers build their network infrastructure in Azure using the hub and spoke network architecture, where:
 
-- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the hub virtual network (VNet)
-- Spoke VNets consume those shared services via VNet peering.
+- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the **hub** virtual network (VNet)
+- **Spoke** VNets consume those shared services via VNet peering.
 
 In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (a spoke) connected to the hub VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN.
 
