@@ -22,16 +22,16 @@ Many customers build their network infrastructure in Azure using the hub and spo
 - Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the **hub** virtual network (VNet)
 - **Spoke** VNets consume those shared services via VNet peering.
 
-In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (a spoke) connected to the hub VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN.
+In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (*a spoke*) connected to the *hub* VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN.
 
 Internet-outbound connectivity is provided via central Network Virtual Appliance (NVA), for example, Azure Firewall.
 
-Many application teams build their solutions using a combination or Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic will stay private within the Azure network and would be fully routable from on-premises.
+Many application teams build their solutions using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic will stay private within the Azure network and would be fully routable from on-premises.
 
 However, some Azure PaaS services (such as Storage or Cosmos DB) cannot be deployed in customer’s VNets and are accessible over their public endpoint.
 In some instances, this can cause a contention with customers security policies as corporate traffic might not allow the deployment or accessing of corporate resources (such as a SQL database) over public endpoints.
 
-[Azure Private Link][link-1] allows access to a [list][link-2] of Azure services over private endpoints, but it requires that those private endpoint records are registered in a corresponding [Private DNS Zone][link-3].
+[Azure Private Link][link-1] allows access to a [list of Azure services][link-2] over private endpoints, but it requires that those private endpoint records are registered in a corresponding [Private DNS Zone][link-3].
 
 This article describes how application teams can deploy Azure PaaS services in their subscriptions which are only accessible over private endpoints.
 
@@ -52,7 +52,7 @@ From the previous diagram, it is important to highlight that:
 - On-premises DNS servers have conditional forwarders configured for each private endpoint [public DNS zone forwarder][link-3] pointing to the DNS forwarders (10.100.2.4 and 10.100.2.5) hosted in the HUB VNet.
 - All Azure VNets have the DNS forwarders (10.100.2.4 and 10.100.2.5) configured as the primary and secondary DNS servers.
 
-There are two conditions that must be true to allow application teams the freedom to create any Azure PaaS resources they want in their subscription:
+There are two conditions that must be true to allow application teams the freedom to create any required Azure PaaS resources in their subscription:
 
 - Central networking and/or central platform team must ensure that application teams can only deploy and access Azure PaaS services via private endpoints.
 - Central networking and/or central platform teams must ensure that whenever private endpoints are created, the corresponding records are automatically created in centralized Azure Private DNS Zone that matches the service created.
@@ -84,7 +84,7 @@ In addition to the Private DNS zones, we also need to [create a set of custom Az
 
    ![image-5][image-5]
 
-   The exact policy rule may differ between PaaS services. For Storage account specifically, we look at the **networkAcls.defaultAction** property that depicts whether requests from Public Network are allowed or not. In our case, we will set a condition to deny the creation of the **Microsoft.Storage/storageAccounts** resource type if the property **networkAcls.defaultAction** is not ‘Deny’. This policy definition is listed below:
+   The exact policy rule may differ between PaaS services. For Storage account specifically, we look at the **networkAcls.defaultAction** property that defines whether requests from Public Network are allowed or not. In our case, we will set a condition to deny the creation of the **Microsoft.Storage/storageAccounts** resource type if the property **networkAcls.defaultAction** is not ‘Deny’. This policy definition is listed below:
 
    ```json
    {
@@ -147,7 +147,7 @@ In addition to the Private DNS zones, we also need to [create a set of custom Az
 
 3. **DeployIfNotExists** policy to automatically create the required DNS record in the central Private DNS zone
 
-   This policy will be triggered if a private endpoint resource is created with a service-specific **groupId**. The **groupId** is the id of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a [privateDNSZoneGroup][link-6] within the private endpoint, which is used to associate the private endpoint with our Azure Private DNS zone. For our example, the **groupId** for Storage Blobs are “blob” (**groupId** for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that **groupId** in the Private Endpoint created, it will deploy a [privateDnsZoneGroup][link-6] within the private endpoint, and it will be linked to the Private DNS Zone resource ID that is specified as parameter. For our example, the Private DNS Zone resource id would be like:
+   This policy will be triggered if a private endpoint resource is created with a service-specific **groupId**. The **groupId** is the id of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a [privateDNSZoneGroup][link-6] within the private endpoint, which is used to associate the private endpoint with our Azure Private DNS zone. For our example, the **groupId** for Storage Blobs are “blob” (**groupId** for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that **groupId** in the Private Endpoint created, it will deploy a [privateDnsZoneGroup][link-6] within the private endpoint, and it will be linked to the Private DNS Zone resource ID that is specified as parameter. For our example, the Private DNS Zone resource id would be:
 
    _/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net_
 
@@ -265,7 +265,7 @@ Once the platform team finishes this configuration, Azure subscriptions from app
 
 ## App Owner experience
 
-Once the platform team has deployed the platform infrastructure components (Azure Private DNS Zones and Azure Policies) described in the previous section, when an application owner tries to deploy an Azure PaaS service in his/her Azure subscription, application owner will have the following experience, which will be the same if they do activities via the Azure Portal or via other clients such as PowerShell or CLI, as their subscriptions are being governed by Azure policies.
+Once the platform team has deployed the platform infrastructure components (Azure Private DNS Zones and Azure Policies) described in the previous section, when an application owner tries to deploy an Azure PaaS service into the Azure subscription, the application owner will have the following experience, which will be the same if they do activities via the Azure Portal or via other clients such as PowerShell or CLI, as their subscriptions are being governed by Azure policies.
 
 1. Create a storage account through the Azure portal. In the basic tab, provide a name and your desired settings and click on Next.
 
@@ -275,7 +275,7 @@ Once the platform team has deployed the platform infrastructure components (Azur
 
    ![image-8][image-8]
 
-3. It is possible to create the private endpoint on this screen or can be done after the storage account has been created. For this exercise, we will create the private endpoint after the storage account has been created. Click on **Review + create** and complete the creation of the storage account.
+3. It is possible to create the private endpoint on this screen or it can be done after the storage account has been created. For this exercise, we will create the private endpoint after the storage account has been created. Click on **Review + create** and complete the creation of the storage account.
 
 4. Once the storage account is created, create a private endpoint through the Azure portal
 
@@ -301,13 +301,13 @@ Once the platform team has deployed the platform infrastructure components (Azur
 
     ![image-13][image-13]
 
-11. If central networking team goes to the **privatelink.blob.core.windows.net** private DNS Zone, they will confirm that the DNS record has been created for the private endpoint we created, and both, the name and IP address match to the values within the private endpoint.
+11. If the central networking team goes to the **privatelink.blob.core.windows.net** private DNS Zone, they will confirm that the DNS record has been created for the private endpoint we created, and both the name and IP address match to the values within the private endpoint.
 
     ![image-14][image-14]
 
-At this point, application teams can use the storage account via a private endpoint from any VNet in the hub & spoke network environment and from on-premises, as DNS record has been automatically recorded in the Private DNS Zone.
+At this point, application teams can use the storage account via a private endpoint from any VNet in the hub & spoke network environment and from on-premises, as the DNS record has been automatically recorded in the Private DNS Zone.
 
-If application owner deletes the private endpoint, the corresponding records in the Private DNS Zone will automatically be removed.
+If an application owner deletes the private endpoint, the corresponding records in the Private DNS Zone will automatically be removed.
 
 [link-1]: https://docs.microsoft.com/azure/private-link/private-link-overview
 [link-2]: https://docs.microsoft.com/azure/private-link/private-link-overview#availability
