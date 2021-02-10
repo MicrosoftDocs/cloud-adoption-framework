@@ -1522,6 +1522,30 @@ items:
     - name: Advanced management and system design
       href: manage/design-principles.md
 
+
+  - name: Secure
+    items:
+    - name: Overview
+      href: security/index.md
+    - name: Methodology
+      items:
+      - name: Risk Insights
+        href: security/risk-insights.md
+      - name: Security Integration
+        href: security/security-integration.md
+      - name: Operational Resiliency
+        href: security/operational-resiliency.md
+      - name: Access Control
+        href: security/access-control.md
+      - name: Security Operations 
+        href: security/security-operations.md
+      - name: Asset Protection
+        href: security/asset-protection.md
+      - name: Security Governance
+        href: security/security-governance.md
+      - name: Innovation Security
+        href: security/innovation-security.md
+      
   - name: Organize
     items:
     - name: Managing organization alignment
