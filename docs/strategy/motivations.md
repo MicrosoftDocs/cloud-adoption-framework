@@ -45,13 +45,13 @@ The *migration* motivations listed near the top of the motivations table are the
 
 Some motivations align well with a migrate strategy. The motives at the top of this list will likely have significantly less business impact than those toward the bottom of the list.
 
-- Cost savings.
+- Increasing [cost savings](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reduction in vendor or technical complexity.
 - Optimization of internal operations.
-- Increasing business agility.
+- Increasing [business agility](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
 - Preparing for new technical capabilities.
 - Scaling to meet market demands.
-- Scaling to meet geographic demands.
+- Scaling to [meet geographic demands](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
 
 ### Innovation
 
@@ -61,10 +61,10 @@ The following list includes motivations that cause an IT organization to focus m
 
 - Increasing business agility.
 - Preparing for new technical capabilities.
-- Building new technical capabilities.
+- Building [new technical capabilities](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
 - Scaling to meet market demands.
 - Scaling to meet geographic demands.
-- Improving customer experiences and engagements.
+- [Improving customer experiences](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database) and engagements.
 - Transforming products or services.
 
 ## Next steps
