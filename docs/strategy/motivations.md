@@ -35,36 +35,36 @@ When innovation is the highest priority, strategy and planning require additiona
 
 To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and effect wiser decisions through consistent, strategic methodologies.
 
-## Motivation-driven strategies
+## Motivation-driven strategies and business outcomes
 
 This section highlights the *migration* and *innovation* motivations and their corresponding strategies.
 
 ### Migration
 
-The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The framework refers to the strategy for executing a cloud migration by using the term [migrate](../get-started/migrate.md).
+The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the _strategy for executing a cloud migration_.
 
-Some motivations align well with a migrate strategy. The motives at the top of this list will likely have significantly less business impact than those toward the bottom of the list.
+Some motivations align well with a migrate strategy. Motivations at the top of this list will likely have significantly less business impact than those toward the bottom. See below for linked examples of **migration motivation-driven strategies** that helped to produce successful business outcomes.
 
-- Increasing [cost savings](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
-- Reduction in vendor or technical complexity.
-- Optimization of internal operations.
-- Increasing [business agility](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
+- [Increasing cost savings](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
+- Reducing vendor or technical complexity.
+- Optimizing internal operations.
+- [Increasing business agility](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
 - Preparing for new technical capabilities.
-- Scaling to meet market demands.
-- Scaling to [meet geographic demands](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
+- Scaling to market demand.
+- [Scaling to geographic demand](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
 
 ### Innovation
 
-Data is the new commodity. Modern applications are the supply chain that drives that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The motivations that appear lower in the *innovation* list align to a technology strategy referred to in this framework as the [Innovate methodology](../get-started/innovate.md).
+Data is the new commodity—and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) in the Cloud Adoption Framework includes _motivations aligned to a technology strategy_ that appear lower in the *Innovation* column (in the Motivation list above).  
 
-The following list includes motivations that cause an IT organization to focus more on an innovate strategy than a migrate strategy.
+The motivations listed below focus an IT organization more on an innovate strategy than a migrate strategy. See below for linked examples of **innovation motivation-driven strategies** that helped to produce successful business outcomes.
 
 - Increasing business agility.
 - Preparing for new technical capabilities.
-- Building [new technical capabilities](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
-- Scaling to meet market demands.
-- Scaling to meet geographic demands.
-- [Improving customer experiences](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database) and engagements.
+- [Building new technical capabilities](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
+- Scaling to market demand.
+- Scaling to geographic demand.
+- [Improving customer experience](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database) and engagement.
 - Transforming products or services.
 
 ## Next steps
