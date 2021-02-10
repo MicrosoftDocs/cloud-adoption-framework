@@ -10,4 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Placeholder - Remember to update the title, description, and authors
+# Secure Methodology - Building security into your cloud adoption journey
+
+
+![CAF Secure Methodology](../_images/security/secure-methodology.png)
