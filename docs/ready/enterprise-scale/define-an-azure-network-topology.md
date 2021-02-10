@@ -28,3 +28,15 @@ A traditional hub-and-spoke network topology helps you build customized secure l
 - Your organization intends to deploy resources across one or several Azure regions and while some traffic across Azure regions is expected (for example, traffic between two virtual networks across two different Azure regions), a full mesh network across all Azure regions is not required.
 - You have a low number of remote or branch locations per region. That is, you need fewer than 30 IP security (IPsec) site-to-site tunnels.
 - You require full control and granularity for manually configuring your Azure network routing policy.
+
+## Virtual WAN network topology (Microsoft-managed)
+
+![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
+
+_Figure 1: Virtual WAN network topology._
+
+## Traditional Azure networking topology
+
+![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
+
+_Figure 4: A traditional Azure network topology._
