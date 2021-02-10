@@ -16,6 +16,7 @@ ms.custom: think-tank
 # Virtual WAN network topology (Microsoft-managed)
 
 ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
+
 _Figure 1: Virtual WAN network topology._
 
 **Design considerations:**
@@ -25,7 +26,8 @@ _Figure 1: Virtual WAN network topology._
 - Virtual WAN simplifies end-to-end network connectivity in Azure, and to Azure from on-premises, by creating a [hub-and-spoke network architecture](/azure/virtual-wan/virtual-wan-global-transit-network-architecture). The architecture can easily scale to support multiple Azure regions and on-premises locations (any-to-any connectivity) as shown in the figure below:
 
   ![Diagram that illustrates a global transit network with Virtual WAN.](./media/global-transit.png)
-  _Figure 2: Global transit network with Virtual WAN._
+ 
+ _Figure 2: Global transit network with Virtual WAN._
 
 - Virtual WAN any-to-any transitive connectivity supports the following paths (within the same region and across regions):
 
@@ -69,7 +71,8 @@ _Figure 1: Virtual WAN network topology._
   The following figure shows a sample global enterprise deployment with datacenters spread across Europe and the United States. The deployment also has many branch offices within both regions. The environment is globally connected via Azure Virtual WAN and [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach).
 
   ![Diagram of a sample network topology.](./media/global-reach-topology.png)
-  _Figure 3: Sample network topology._
+ 
+ _Figure 3: Sample network topology._
 
 - Use a Virtual WAN hub per Azure region to connect multiple landing zones together across Azure regions via a common global Azure Virtual WAN.
 
