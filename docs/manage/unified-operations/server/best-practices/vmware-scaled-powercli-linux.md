@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use VMware PowerCLI to scale onboarding VMware vSphere Linux virtual machines to Azure Arc
 
-The following README provides guidance for using the provided [VMware PowerCLI](https://code.vmware.com/web/dp/tool/vmware-powercli/) script so you can perform an automated scaled deployment of the Azure Arc connected machine agent in multiple VMware vSphere virtual machines and as a result, onboarding these VMs as an Azure Arc enabled servers.
+This article provides guidance for using the provided [VMware PowerCLI](https://code.vmware.com/web/dp/tool/vmware-powercli/) script so you can perform an automated scaled deployment of the Azure Arc connected machine agent in multiple VMware vSphere virtual machines and as a result, onboarding these VMs as an Azure Arc enabled servers.
 
 This guide assumes you already have an exiting inventory of VMware virtual machines and will use the PowerCLI PowerShell module to automate the onboarding process of the VMs to Azure Arc.
 

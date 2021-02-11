@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc
 
-The following README will guide you on how to use the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server GCP instance and connect it as an Azure Arc enabled server resource.
+This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server GCP instance and connect it as an Azure Arc enabled server resource.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ The following README will guide you on how to use the provided [Terraform](https
 
     ![Third screenshot showing how to enable billing on a GCP account.](./img/gcp-windows/billing-3.png)
 
-    **Disclaimer:** To prevent unexpected charges, follow the "delete the deployment" section at the end of this README file.
+    **Disclaimer:** To prevent unexpected charges, follow the "delete the deployment" section at the end of this article.
 
 - Create an Azure service principal.
 

@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Connect an existing Windows Server instance to Azure Arc
 
-The following README will guide you through how to connect a Windows machine to Azure Arc using a simple PowerShell script.
+This article provides guidance for connecting a Windows machine to Azure Arc using a simple PowerShell script.
 
 ## Prerequisites
 

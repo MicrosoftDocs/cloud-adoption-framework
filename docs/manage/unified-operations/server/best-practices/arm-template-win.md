@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use an Azure Resource Manager template to deploy and connect an Azure virtual machine to Azure Arc
 
-The following README will guide you on how to use an [Azure Resource Manager template (ARM template)](/azure/azure-resource-manager/templates/overview) to automatically onboard an Azure virtual machine (Azure VM) running Windows to Azure Arc. The provided ARM template is responsible for creating the Azure resources and executing the Azure Arc onboard script on the VM.
+This article provides guidance for using an [Azure Resource Manager template (ARM template)](/azure/azure-resource-manager/templates/overview) to automatically onboard an Azure virtual machine (Azure VM) running Windows to Azure Arc. The provided ARM template is responsible for creating the Azure resources and executing the Azure Arc onboard script on the VM.
 
 Azure VMs are using the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc enabled server, a *conflict* is created, which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used. Instead, the Azure Arc server will still "act" as a native Azure VM.
 

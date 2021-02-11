@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Deploy a local Ubuntu server hosted with Vagrant and connect it to Azure Arc
 
-The following README will guide you on how to deploy a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc enabled server resource.
+This article provides guidance for deploying a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc enabled server resource.
 
 ## Prerequisites
 

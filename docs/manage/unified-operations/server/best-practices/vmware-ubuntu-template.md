@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Create a VMware vSphere template for Ubuntu server 18.04
 
-The following README will guide you on how to create an Ubuntu Server 18.04 VMware vSphere virtual machine template.
+This article provides guidance for creating an Ubuntu Server 18.04 VMware vSphere virtual machine template.
 
 ## Prerequisites
 

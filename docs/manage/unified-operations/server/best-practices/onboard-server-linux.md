@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Connect an existing Linux server to Azure Arc
 
-The following README will guide you on how to connect a Linux server to Azure Arc using a simple shell script.
+This article provides guidance for connecting a Linux server to Azure Arc using a simple shell script.
 
 ## Prerequisites
 
