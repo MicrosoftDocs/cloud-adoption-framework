@@ -1280,6 +1280,8 @@ items:
           href: govern/policy-compliance/governance-alignment.md
         - name: Establish policy adherence processes
           href: govern/policy-compliance/processes.md
+        - name: Implement governance
+          href: govern/implementing-governance.md
         - name: Regulatory compliance
           href: govern/policy-compliance/regulatory-compliance.md
         - name: Cloud security readiness
