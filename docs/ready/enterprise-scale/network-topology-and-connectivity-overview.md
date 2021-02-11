@@ -59,4 +59,4 @@ In many industries, organizations require that traffic in Azure is mirrored to a
 
 ## Connectivity to other Cloud provider
 
-This section provides different connectivity approaches to integrate an Azure Enterprise Scale Landing Zone architecture to other Cloud providers.
+[This section provides different connectivity approaches to integrate an Azure Enterprise Scale Landing Zone architecture to other Cloud providers.](./ready/azure-best-practices/connectivity-to-other-cloud-providers.md)
