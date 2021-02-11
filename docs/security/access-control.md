@@ -1,8 +1,8 @@
 ---
-title: Security title
+title: Access Control
 description: Security description
-author: JanetCThomas
-ms.author: brblanch
+author: DominicAllen
+ms.author: doalle
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
