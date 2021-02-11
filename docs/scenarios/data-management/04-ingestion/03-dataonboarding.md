@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Automated Ingestion Framework
 description: Enterprise Scale Analytics and AI Architecture Automated Ingestion Framework
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -95,18 +95,18 @@ To register new data sources, use the following API call:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 ````
 
-#### URI Parameters
+#### Data Source URI Parameters
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
 |accountName     |  True       | string        | Name of the Purview account.         |
 |dataSourceName     | True        | string         | Name of the data source         |
 
-#### Sample Request Payloads
+#### Sample Data Source Request Payloads
 
 Following are a few example payloads to register data sources using the Purview Rest API.
 
-##### Azure Data Lake Storage Gen2
+##### Register Azure Data Lake Storage Gen2 Data Source
 
 ```JSON
 {
@@ -125,7 +125,7 @@ Following are a few example payloads to register data sources using the Purview 
 }
 ```
 
-##### Azure SQL Database
+##### Register Azure SQL Database Data Source
 
 ```JSON
 {
@@ -157,8 +157,7 @@ To set up a scan on data sources, use the following API call:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/
 ````
 
-#### URI Parameters
-
+#### Scan URI Parameters
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
@@ -166,11 +165,11 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/sc
 |dataSourceName     | True        | string         | Name of the data source         |
 |newScanName     | True        | string         | Name of the new scan         |
 
-#### Sample Request Payloads
+#### Sample Scan Request Payloads
 
 Following are a few example payloads set up scans for data sources using the Purview Rest API.
 
-#### Azure Data Lake Storage Gen2
+#### Scan Azure Data Lake Storage Gen2
 
 ```JSON
 {
@@ -184,7 +183,7 @@ Following are a few example payloads set up scans for data sources using the Pur
 }
 ```
 
-##### Azure SQL Database
+##### Scan Azure SQL Database
 
 ```JSON
 {
@@ -207,6 +206,9 @@ Run the scan on data sources using the following API call:
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
 ```
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2004-ingestion%20%E2%9E%9F%2003-dataonboarding.md)
+
 >[Previous](02-sapingestion.md)
 >[Next](../05-securitymodel/01-securitymodel.md)

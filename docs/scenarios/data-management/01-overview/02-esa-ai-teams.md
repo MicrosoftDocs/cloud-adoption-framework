@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Teams
 description: Enterprise Scale Analytics and AI Architecture Persona and Teams structure
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -63,7 +63,7 @@ The Data Landing Zone Group consists of three teams.
 
 ### Data Platform Ops
 
-* The Data Platform Ops Group define common blueprints for Data Landing Zone and Domain services.
+* The Data Platform Ops Group define common policies for Data Landing Zone and Domain services.
 * They provisioning and operative Data Management services such as data catalogue and shared integration runtimes.
 * The instantiate Data Landing Zone scaffolding such as Data Lakes and Meta Data Management configuration before passing over to the Data Landing Zone Ops.
 * Provide support and concierge to stakeholders.
@@ -97,6 +97,9 @@ For further details on all how the groups align inside the Data Management Sub a
 
 [Data Landing Zone Division and Consumption](03-dlzdivision.md)
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2002-esa-ai-teams.md)
+
 >[Previous](01-overview.md)
 >[Next](03-dlzdivision.md)

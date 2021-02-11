@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Security Provisioning
 description: Enterprise Scale Analytics and AI Architecture Security Provisioning.
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -42,7 +42,7 @@ As the figure 1 above illustrates:
    - RW for Read Write and R for read only
 
 1. Using Azure Active Directory entitlement management, we create Access Packages in the Data Landing Zone Access Packages Catalogue. These Access Packages can contain multiple DASGs. In the above figure, the Finance Analysis Package gives access to Finance and LOB A, for example. The Finance Writers Package gives access to Schema F and LOB A.
-1. Users request access to to use these packages via Self-Service by browsing access-package catalogue or uses direct link (from docs or the data catalogue) to request access.
+1. Users request access to use these packages via Self-Service by browsing access-package catalogue or uses direct link (from docs or the data catalogue) to request access.
 1. Subject to policy and account an approver is notified and reviews request via access management portal.
 1. If approved the user will be notified and given access to the dataset.
 1. If the enterprise wants to grant permissions to user based on there metadata (i.e. division, title, location)then [Creating or update a dynamic group in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-create-rule) could be used and this DYnamic Group could be added as an approved group to the access package.
@@ -81,6 +81,9 @@ Figure 2 brings all this together on how different personas would work together 
 - Video: [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be).
 - [Common scenarios in Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-scenarios).
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2005-securitymodel%20%E2%9E%9F%2003-secprovisioning.md)
+
 >[Previous](02-sensitive.md)
 >[Next](../06-dataops/01-overview.md)

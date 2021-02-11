@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Databricks Pattern
 description: Enterprise Scale Analytics and AI Databricks Pattern
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -107,6 +107,21 @@ Figure 1, serves as an example of what you could decide to have as your Azure Da
 >[!NOTE]
 >During the creation of a new Domain we will alter the configuration of all three Azure Databricks Workspaces within a Data Landing Zone. Please see  [Domain & Data Product Deployment Process](../06-dataops/02-es-aai-devops.md#domain--data-product-deployment-process)  for how this is implemented with Azure Databricks shared Workspaces.
 
+### External Hive Metastore
+
+In a deployment of a Azure Databricks workspace:
+
+* Hive metastore settings are changed by a global init script.  This script is managed by the new
+[Global Init Scripts](https://docs.databricks.com/clusters/init-scripts.html#global-init-scripts) API.
+As of January, 2021, the new global init scripts API is in public preview.  However, Microsoft's official
+position is that public preview features in Azure Databricks are ready for production environments and
+are supported by the Support Team.  For more details, see:
+[Azure Databricks Preview Releases](https://docs.microsoft.com/en-us/azure/databricks/release-notes/release-types)
+
+* This solution uses [Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/) to store the
+Hive metastore.  This database was chosen because it is more cost effective and because MySQL is highly compatible
+with Hive.
+
 ## Further Reading
 
 The Enterprise Scale Analytics and AI takes into account the following best practices for integrating Azure Databricks into the solution pattern: -
@@ -114,6 +129,9 @@ The Enterprise Scale Analytics and AI takes into account the following best prac
 * [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 * [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzones%20%E2%9E%9F%2003-databricks.md)
+
 >[Previous](02-datalakeservices.md)
 >[Next](04-synapse.md)

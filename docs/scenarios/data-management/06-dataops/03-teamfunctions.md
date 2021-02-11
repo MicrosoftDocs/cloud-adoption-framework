@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Team Functions
 description: Enterprise Scale Analytics and AI Architecture Team Functions.
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -28,7 +28,7 @@ At the start of rolling out Enterprise Scale Analytics and AI they are likely to
 
 The Data Platform Ops group which is encompassed within the Platform Group Team.
 
-Data Platform Ops provides a host of services such as central monitoring, cataloguing services, as well as providing reusable blueprints for Data Landing Zones and Data Products.
+Data Platform Ops provides a host of services such as central monitoring, cataloguing services, as well as providing reusable policies for Data Landing Zones and Data Products.
 
 Data Platform Ops own the Data Management Subscription and have further responsibility which are detailed in the following sections.
 
@@ -279,6 +279,9 @@ Alongside encouraging participation in these user groups, analysts should log fe
 |Domain Ops||Informed|Informed|Responsible|Consulted|
 |Data Products Team||Informed|Informed|Informed|Responsible|
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2006-dataops%20%E2%9E%9F%2003-teamfunctions.md)
+
 >[Previous](02-es-aai-devops.md)
 >[Next](../07-bcdr/01-overview.md)

@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Data Ops Overview
 description: Enterprise Scale Analytics and AI Data Ops Overview.
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -15,7 +15,7 @@ The Enterprise Scale Analytics and AI architecture was designed with the followi
 
 1. Self Service Enablement: Enable project teams to work on their own in order to allow agile development methods.
 2. Governance: Enforce guardrails on the whole Azure platform, in order to ensure that project teams are only allowed to see, change and execute what they are supposed to.
-3. Streamlined Deployments: Ensure that common blueprints are available and can be used across the organization to scale quickly and to enable teams, which are not as experienced with some of core designs and artifacts.
+3. Streamlined Deployments: Ensure that common policies are available and can be used across the organization to scale quickly and to enable teams, which are not as experienced with some of core designs and artifacts.
 
 The deployment process and Data Ops working model is an essential part and enabler for some of these core principles. In order to fulfill these concepts, the prescribes the following design guidelines, which will be covered in more detail in the following sections:
 
@@ -121,6 +121,9 @@ Deployments to test and production should only be manageable through a CI/CD pip
 \
 >However, Domain and Data Product teams should have write access to the development environment to speed up time to production.
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2006-dataops%20%E2%9E%9F%2001-overview.md)
+
 >[Previous](../05-securitymodel/02-sensitive.md)
 >[Next](02-es-aai-devops.md)

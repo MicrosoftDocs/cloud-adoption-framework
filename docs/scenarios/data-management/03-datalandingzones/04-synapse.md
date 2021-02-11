@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Azure Synapse Pattern
 description: Enterprise Scale Analytics and AI Azure Synapse Pattern
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -53,6 +53,9 @@ By combining RLS with column level security (CLS) to restrict access to columns 
 >[!TIP]
 >We highly recommend that Features such as Azure Defender for SQL, Data Classification, Data Encryption, Dynamic Data Masking are available for SQL Pool to support the data protection and limit sensitive data exposure.
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzones%20%E2%9E%9F%2003-synapse.md)
+
 >[Previous](03-databricks.md)
 >[Next](05-domains.md)

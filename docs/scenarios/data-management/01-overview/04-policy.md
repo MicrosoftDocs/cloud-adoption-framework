@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Cost Management and Policies
 description: Enterprise Scale Analytics and AI Architecture Cost Management and Policies 
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -80,8 +80,10 @@ Azure cost management should be used at the first level of aggregation and shoul
 |Azure Storage |Microsoft.Storage/storageAccounts/objectReplicationPolicies (deployIfNotExists) |Automatically define a default object replication policy.|
 |Azure Storage |Microsoft.Storage/storageAccounts/routingPreference.routingChoice (deny) |Enforce routing through Azure backbone and not through the internet.|
 |Azure KeyVault| Microsoft.KeyVault/vaults (append) Enforce soft delete and purge protection for all Key Vaults.|
-|||
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2004-policy.md)
+
 >[Previous](03-dlzdivision.md)
 >[Next](05-networking.md)

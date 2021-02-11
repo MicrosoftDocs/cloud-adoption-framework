@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI DevOps Models
 description: Enterprise Scale Analytics and AI Architecture DevOps Models.
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -123,13 +123,16 @@ Figure 4 : Domain and Product Deployment Automation
 
 Figure 4 illustrates the process to onboard a new Domain or data product.
 
-- Step 1: the user makes a request for a new Data Domain or Data Product
-- Step 2: the workflow process sends a request to the Data Platform Ops for Approve/Decline.
-- Step 3: the workflow calls the SNOW CE API to create required CE/RGs. This includes the creation of ADO service connection and Team allocated to the ADO project.
-- Step 4: the workflow Forks the repository to the destination ADO project.
-- Step 5: the workflow creates an ARM Parameter file and Pipelines.
-- Step 6-7: the workflow then calls a 1st Pipeline to create the networking requirements and a 2nd ADO Pipeline to deploy the Data Domain/Products services
-- On completion the user is notified
+1. The user makes a request for a new Data Domain or Data Product
+1. The workflow process sends a request to the Data Platform Ops for Approve/Decline.
+1. The workflow calls the SNOW CE API to create required CE/RGs. This includes the creation of ADO service connection and Team allocated to the ADO project.
+1. The workflow Forks the repository to the destination ADO project.
+1. The workflow creates an ARM Parameter file and Pipelines.
+1. The workflow then calls a 1st Pipeline to create the networking requirements and a 2nd ADO Pipeline to deploy the Data Domain/Products services
+1. On completion the user is notified
+
+>[!TIP]
+>If you are new to DataOps the Architecture Center has a hands-on lab for [DataOps for the modern data warehouse](https://docs.microsoft.com/azure/architecture/example-scenario/data-warehouse/dataops-mdw). In this scenario it describes how a fictional city planning office could use this solution. The solution provides an end-to-end data pipeline that follows the MDW architectural pattern, along with corresponding DevOps and DataOps processes, to assess parking use and make more informed business decisions.
 
 ## Summary
 
@@ -181,6 +184,9 @@ The Enterprise Scale Analytic and AI solution has create the following core **st
 These templates should not only contain ARM templates and the respective parameter files, but also CI/CD pipeline definitions for deploying the resources.
 Because of new requirements and new services on Azure, these templates will evolve over time. Therefore the `main` branch of these repositories should be secured to ensure that it is always error free and ready for consumption and deployment. A development subscription should be used to test changes to the configuration of the templates, before merging feature enhancements back into the `main` branch.
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2006-dataops%20%E2%9E%9F%2002-es-aai-devops.md)
+
 >[Previous](01-overview.md)
 >[Next](03-teamfunctions.md)

@@ -3,7 +3,7 @@ title: Enterprise Scale Analytics and AI Teams Data Lake Services
 description: Enterprise Scale Analytics and AI Architecture Data Lake Services
 author: mboswell
 ms.author: mboswell # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -43,15 +43,6 @@ The two containers, per **Domain**, should be divided into classification (inter
 
 >[!IMPORTANT]
 >Access to the data is restricted by use a combination of ACLs and AAD-groups enable groups what can and cannot be accessed by other groups. **Domain teams** should approve/reject access to their data-assets.
-
-## Data Lakes Connectivity
-
-Each of the data lakes should use Private Endpoints which are injected into the VNet of the Data Landing Zone. To allow cross-land-zone data access, we propose connecting Data Landing Zones through VNet peering. This solution is not only optimal from a cost, but also from an access control perspective.
-
-See [Private Endpoints](../01-overview/05-networking.md#private-endpoints) and [Data Management Subscription to Data Landing Zone](../01-overview/05-networking.md#data-management-subscription-to-data-landing-zone)
-
->[!IMPORTANT]
->Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones, i.e. private links, are controlled by the platform ops team.
 
 ## Data Lake Layers
 
@@ -122,7 +113,6 @@ The Enterprise Analytics and AI solution pattern prescribes that you should impl
 ## Key Considerations
 
 When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed.
-
 |Consideration | Raw data |Enriched data |Curated data| Workspace data|
 |-- | ----- | -- | -- | -- |
 |Write Data| Domains | Domains | Data Products | Data Scientists and BI analysts|
@@ -141,6 +131,39 @@ With the Common Data Model (CDM), organizations can use a data format that provi
 
 >[!NOTE]
 >Industry Specific Data Models and Common Data Models would pre-dominantly be created in the curated data lake layer by product teams for downstream consumption. The folder structure should still sit under a data product folder.
+
+## Data Lakes Connectivity
+
+Each of the data lakes should use Private Endpoints which are injected into the VNet of the Data Landing Zone. To allow cross-land-zone data access, we propose connecting Data Landing Zones through VNet peering. This solution is not only optimal from a cost, but also from an access control perspective.
+
+See [Private Endpoints](../01-overview/05-networking.md#private-endpoints) and [Data Management Subscription to Data Landing Zone](../01-overview/05-networking.md#data-management-subscription-to-data-landing-zone)
+
+>[!IMPORTANT]
+>Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones, i.e. private links, are controlled by the platform ops team.
+
+## Soft delete for containers (preview)
+
+Soft delete for containers (preview) protects your data from being accidentally or maliciously deleted. When container soft delete is enabled for a storage account, any deleted container and their contents are retained in Azure Storage for the period that you specify. During the retention period, you can restore previously deleted containers. Restoring a container restores any blobs within that container when it was deleted.
+
+For end to end protection for your blob data, Microsoft recommends enabling the following data protection features:
+
+* Container soft delete, to restore a container that has been deleted. To learn how to enable container soft delete, see [Enable and manage soft delete for containers](https://docs.microsoft.com/azure/storage/blobs/soft-delete-container-enable).
+* Blob soft delete, to restore a blob or version that has been deleted. To learn how to enable blob soft delete, see [Enable and manage soft delete for blobs](https://docs.microsoft.com/azure/storage/blobs/soft-delete-blob-enable).
+
+> [!WARNING]
+> Deleting a storage account cannot be undone. Container soft delete does not protect against the deletion of a storage account, but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources).
+
+## Store business-critical blob data with immutable storage (preview)
+
+Immutable storage for Azure Blob storage enables users to store business-critical data objects in a WORM (Write Once, Read Many) state. This state makes the data non-erasable and non-modifiable for a user-specified interval. For the duration of the retention interval, blobs can be created and read, but cannot be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
+
+For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blob-immutability-policies-manage).
+
+Immutable storage helps healthcare organization, financial institutions, and related industries&mdash;particularly broker-dealer organizations&mdash;to store data securely. Immutable storage can also be leveraged in any scenario to protect critical data against modification or deletion.
+
+For further information see [How Immutable storage for Azure Blob storage works](https://docs.microsoft.comazure/storage/blobs/storage-blob-immutable-storage#about-immutable-blob-storage)
+
+It is recommended that immutable storage is assessed for us in the RAW Layer of the Data Lake.
 
 ## Monitoring
 
@@ -173,6 +196,9 @@ In a Data Landing Zone all the monitoring is sent to the management subscription
 >[!IMPORTANT]
 >Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
 
->[!div class="step-by-step"]
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzone%20%E2%9E%9F%2002-datalakeservices.md)
+
 >[Previous](01-datalandingzone.md)
 >[Next](03-databricks.md)
