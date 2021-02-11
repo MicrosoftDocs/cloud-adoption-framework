@@ -110,11 +110,11 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
 - Retrieve your Azure subscription ID and tenant ID using the `az account list` command
 
-- Use the Azure service principal ID and password created in the prerequisites section
+- Use the Azure service principal ID and password created in the prerequisites section:
 
     ![A screenshot of exporting environment variables.](./media/vmware-scale-powercli-linux/cli-linux-export-variables.png)
 
-- From the [`azure_arc_servers_jumpstart\vmware\scaled-deploy\powercli\linux`](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/linux) folder, open a PowerShell session as an administrator and run the `scale-deploy.ps1` script.
+- From the `azure_arc_servers_jumpstart\vmware\scaled-deploy\powercli\linux` folder, open a PowerShell session as an administrator and run the `scale-deploy.ps1` script.
 
     ![A screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-linux-scale-deploy-1.png)
 

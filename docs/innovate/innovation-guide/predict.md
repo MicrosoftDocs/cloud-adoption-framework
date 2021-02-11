@@ -7,8 +7,8 @@ ms.date: 06/26/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: fasttrack-edit, AQC
 ---
 
 <!-- cSpell:ignore ONNX -->

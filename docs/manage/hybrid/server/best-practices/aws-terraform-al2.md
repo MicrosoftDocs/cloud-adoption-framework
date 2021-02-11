@@ -28,7 +28,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
 - [Create free AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-- [Install Terraform >= 0.12](https://learn.hashicorp.com/terraform/getting-started/install.html)
+- [Install Terraform >= 0.12](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
 - Create an Azure service principal.
 

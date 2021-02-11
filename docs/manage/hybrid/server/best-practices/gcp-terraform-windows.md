@@ -84,7 +84,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
     ![Second screenshot of **Compute Engine API** in the GCP console.](./media/gcp-windows/comp-eng-api-2.png)
 
-- Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select **New Service Account** from the dropdown, give it a name, select project then owner as the role, JSON as the key type, and select **Create**. This downloads a JSON file with all the credentials needed for Terraform to manage the resources. Copy the downloaded JSON file to the `azure-arc-servers-jumpstart/gcp/windows/terraform` directory.
+- Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select **New Service Account** from the dropdown, give it a name, select project then owner as the role, JSON as the key type, and select **Create**. This downloads a JSON file with all the credentials needed for Terraform to manage the resources. Copy the downloaded JSON file to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory.
 
     ![A screenshot of how to create a service account in the GCP console.](./media/gcp-windows/svc-account.png)
 
@@ -103,7 +103,7 @@ Before executing the Terraform plan, you must set and then export the environmen
   - `TF-VAR-gcp-project-id` = GCP project ID
   - `TF-VAR-gcp-credentials-filename` = GCP credentials JSON filename
 
-- From CLI, navigate to the [`azure_arc_servers_jumpstart/gcp/windows/terraform`](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/gcp/windows/terraform) directory of the cloned repo.
+- From CLI, navigate to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory of the cloned repo.
 
 - Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 

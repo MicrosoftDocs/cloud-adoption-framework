@@ -7,8 +7,8 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: fasttrack-edit, AQC
 ---
 
 # Prepare for customer feedback
@@ -135,8 +135,8 @@ To create a DevOps project:
 
 These articles will help you centralize and manage feedback by using Azure Boards together with GitHub:
 
-- [Get started with Azure Boards](/azure/devops/boards/get-started/?view=azure-devops)
-- [Azure Boards and GitHub](/azure/devops/boards/github?view=azure-devops)
+- [Get started with Azure Boards](/azure/devops/boards/get-started/)
+- [Azure Boards and GitHub](/azure/devops/boards/github/)
 
 ## [Close the loop with pipelines](#tab/pipelines)
 
