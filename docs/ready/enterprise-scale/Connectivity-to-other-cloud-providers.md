@@ -10,6 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 # Connectivity to other cloud providers
+
 Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture into other cloud providers.
 
 ## Oracle Cloud Infrastructure (OCI)
@@ -36,12 +37,11 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - For more in-depth documentation about interconnectivity between Azure and OCI, refer to [Oracle Application solutions integrating Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or refer to the [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
 
-
 **Design recommendations:**
 
 - Create the ExpressRoute circuit(s) that will be used to interconnect Azure with OCI in the **connectivity** subscription.
 
-- You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as depicted in the following figure. 
+- You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as depicted in the following figure.
 
   ![Diagram that shows Azure to OCI - Hub and Spoke.](./media/azure-oci-hub-and-spoke.png)
 
@@ -55,7 +55,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - When deploying your Azure resources across Availability Zones (AZs), perform latency tests from Azure VMs located in different AZs to OCI resources to understand which of the three AZs provides the lowest latency to the OCI resources.
 
-- To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:   
+- To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:
 
    - From Azure: Deploy a jumpbox in a spoke VNet. The jumpbox provides access to the Virtual Cloud Network in OCI as depicted in the picture below:
     
