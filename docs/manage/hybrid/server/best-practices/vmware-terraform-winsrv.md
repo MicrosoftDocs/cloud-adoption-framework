@@ -101,7 +101,7 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 - In addition to the *TF-VAR* environment variables you've just exported, edit the Terraform variables in the [`terraform.tfvars`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/terraform.tfvars) to match your VMware vSphere environment.
 
-    ![A screenshot of TF-VAR environment variables](./media/vmware-terraform-winsrv/winsrv-variables.png)
+    ![A screenshot of TF-VAR environment variables](./media/vmware-terraform-winsrv/windows-variables.png)
 
 - Run the `terraform init` command which will download the Terraform AzureRM, local and vSphere providers.
 
