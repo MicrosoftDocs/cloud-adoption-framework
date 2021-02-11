@@ -1,5 +1,5 @@
 ---
-title: Network topology and connectivity
+title: Network topology and connectivity overview
 description: Examine key design considerations and best practice surrounding networking and connectivity to, from, and within Microsoft Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -13,7 +13,7 @@ ms.custom: think-tank
 <!-- docutune:casing "Azure VPN Gateway" L7 -->
 <!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
 
-# Network topology and connectivity
+# Network topology and connectivity overview
 
 This series of articles examines key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure.
 
