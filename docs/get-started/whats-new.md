@@ -22,7 +22,7 @@ This framework is built collaboratively with customers, partners, and internal M
 
 This release is the largest release of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework. 
 
-### Adoption journeys (CAF-Lite lenses)
+### Adoption journeys
 
 Most notable in this release is the addition of Adoption Journeys, which provide a short, consumable overlay or lenses that sites on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance of CAF, WAF, AAC, Docs, and Learn to the adoption of specific technology platforms. The table below routes to the overview page for each of the new journeys:
 
