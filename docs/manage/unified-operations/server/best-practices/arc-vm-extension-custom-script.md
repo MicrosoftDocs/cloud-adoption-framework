@@ -33,7 +33,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 1. Clone the Azure Arc Jumpstart repository.
 
     ```console
-    git clone https://github.com/microsoft/azure-arc.git
+    git clone https://github.com/microsoft/azure_arc.git
     ```
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the following screenshots there is a GCP server has been connected with Azure Arc and it is visible as a resource in Azure.
@@ -76,12 +76,12 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 
 To demonstrate the custom script extension, use the below Linux and Windows scripts.
 
-- [Linux](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh): The script will modify the message of the day on the operating system.
-- [Windows](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolatey](https://chocolatey.org/) packages on the VM.
+- [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_linux.sh): The script will modify the message of the day on the operating system.
+- [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolatey](https://chocolatey.org/) packages on the VM.
 
 ## Azure Arc enabled servers custom script extension deployment
 
-1. Edit the extensions parameters file for [Windows](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or [Linux](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
+1. Edit the extensions parameters file for [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
 
    ![A screenshot of an ARM template parameters file.](./img/arc-vm-extension-custom-script/parameters-file.png)
 
@@ -96,8 +96,8 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
     ![A screenshot of an Azure region.](./img/arc-vm-extension-custom-script/azure-region.png)
 
     - A public URI for the script that you would like to run on the servers, in this case use the URL for the script in raw format.
-      - For Windows: [public URI](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-windows.ps1)
-      - For Linux: [public URI](https://raw.githubusercontent.com/microsoft/azure-arc/main/azure-arc-servers-jumpstart/scripts/custom-script-linux.sh)
+      - For Windows: [public URI](https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1)
+      - For Linux: [public URI](https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/scripts/custom_script_linux.sh)
 
 3. To run either script, use the following commands:
 
@@ -113,7 +113,7 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
          ./custom-script-linux.sh
          ```
 
-4. To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/extensions/arm) and run the following command with the templates that match your operating system:
+4. To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/extensions/arm) and run the following command with the templates that match your operating system:
 
     ```bash
     az deployment group create --resource-group <Name of the Azure resource group> \

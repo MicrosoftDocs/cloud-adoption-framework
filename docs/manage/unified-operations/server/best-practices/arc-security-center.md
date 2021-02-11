@@ -81,16 +81,16 @@ In the following procedures, you enable and configure Azure Security Center Stan
 
 ## Onboard Azure Security Center
 
-1. Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/securitycenter/arm/log-analytics-template.parameters.json), provide a name and location for your workspace:
+1. Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
    ![A screenshot of an ARM template.](./img/arc-security-ctr/arm-template.png)
 
-2. To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/securitycenter/arm) and run the following command:
+2. To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/securitycenter/arm) and run the following command:
 
    ```console
    az deployment group create --resource-group <Name of the Azure resource group> \
-   --template-file <The `log-analytics-template.json` template file location> \
-   --parameters <The `log-analytics-template.parameters.json` template file location>
+   --template-file <The `log_analytics-template.json` template file location> \
+   --parameters <The `log_analytics-template.parameters.json` template file location>
    ```
 
 3. If you are going for an user-defined workspace, you should instruct Security Center to use it instead of the default one, use the following command:

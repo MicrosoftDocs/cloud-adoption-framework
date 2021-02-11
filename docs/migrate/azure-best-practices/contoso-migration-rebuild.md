@@ -92,10 +92,10 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 | Service | Description | Cost |
 |---|---|---|
-| [AKS](/sql/dma/dma-overview?view=ssdt-18vs2017) | Simplifies Kubernetes management, deployment, and operations. Provides a fully managed Kubernetes container orchestration service. | AKS is a free service. Pay for only the VMs and the associated storage and networking resources that are consumed. [Learn more](https://azure.microsoft.com/pricing/details/kubernetes-service). |
-| [Azure Functions](https://azure.microsoft.com/services/functions) | Accelerates development with an event-driven, serverless compute experience. Scale on demand. | Pay only for consumed resources. Plan is billed based on per-second resource consumption and executions. [Learn more](https://azure.microsoft.com/pricing/details/functions). |
-| [Azure Container Registry](https://azure.microsoft.com/services/container-registry) | Stores images for all types of container deployments. | Cost is based on features, storage, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/container-registry). |
-| [Azure App Service](https://azure.microsoft.com/services/app-service/containers) | Quickly build, deploy, and scale enterprise-grade web, mobile, and API apps that run on any platform. | App Service plans are billed on a per-second basis. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
+| [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) | Simplifies Kubernetes management, deployment, and operations. Provides a fully managed Kubernetes container orchestration service. | AKS is a free service. Pay for only the VMs and the associated storage and networking resources that are consumed. [Learn more](https://azure.microsoft.com/pricing/details/kubernetes-service/). |
+| [Azure Functions](https://azure.microsoft.com/services/functions/) | Accelerates development with an event-driven, serverless compute experience. Scale on demand. | Pay only for consumed resources. Plan is billed based on per-second resource consumption and executions. [Learn more](https://azure.microsoft.com/pricing/details/functions/). |
+| [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) | Stores images for all types of container deployments. | Cost is based on features, storage, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/container-registry/). |
+| [Azure App Service](https://azure.microsoft.com/services/app-service) | Quickly build, deploy, and scale enterprise-grade web, mobile, and API apps that run on any platform. | App Service plans are billed on a per-second basis. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
 
 ## Prerequisites
 
@@ -103,9 +103,9 @@ Here's what Contoso needs for this scenario:
 
 | Requirements | Details |
 | --- | --- |
-| Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
+| Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads) <li> [The Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install), set to use Windows containers |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [The Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
 
 ## Scenario steps
 
@@ -757,14 +757,14 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 
 ### Security
 
-- Contoso needs to ensure that the new databases are secure. To learn more, see [Overview of Azure SQL Database and SQL Managed Instance security capabilities](/azure/sql-database/sql-database-security-overview).
+- Contoso needs to ensure that the new databases are secure. To learn more, see [Overview of Azure SQL Database and SQL Managed Instance security capabilities](/azure/azure-sql/database/security-overview).
 - The application must be updated to use SSL with certificates. The container instance should be redeployed to answer on 443.
 - Contoso should consider using Azure Key Vault to help protect secrets for their Service Fabric applications. To learn more, see [Manage encrypted secrets in Service Fabric applications](/azure/service-fabric/service-fabric-application-secret-management).
 
 ### Backups and disaster recovery
 
-- Contoso needs to review [backup requirements for Azure SQL Database](/azure/sql-database/sql-database-automated-backups).
-- Contoso should consider implementing [SQL failover groups to provide regional failover for the database](/azure/sql-database/sql-database-auto-failover-group).
+- Contoso needs to review [backup requirements for Azure SQL Database](/azure/azure-sql/database/automated-backups-overview).
+- Contoso should consider implementing [SQL failover groups to provide regional failover for the database](/azure/azure-sql/database/auto-failover-group-overview).
 - Contoso can use [geo-replication for the Azure Container Registry Premium SKU](/azure/container-registry/container-registry-geo-replication).
 - Azure Cosmos DB is backed up automatically. To learn more, see [Online backup and on-demand data restore in Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore).
 
@@ -786,6 +786,6 @@ Here are two examples of tailored learning paths on Microsoft Learn that align w
 
 <!-- docsTest:casing "with the Azure Cognitive Vision Services" "computer vision functionality" -->
 
-- **[Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service):** By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
+- **[Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/):** By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- **[Process and classify images with the Azure Cognitive Vision Services](/learn/paths/classify-images-with-vision-services):** Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure Cognitive Vision Services to detect faces, tag and classify images, and identify objects.
+- **[Process and classify images with the Azure Cognitive Vision Services](/learn/paths/process-classify-images-with-azure-cognitive-vision-services/):** Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure Cognitive Vision Services to detect faces, tag and classify images, and identify objects.

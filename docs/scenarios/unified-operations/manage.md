@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Manage your portfolio across hybrid and multicloud operations
 
-Hybrid and multicloud leads to natural shifts in how you operate the cloud. The [Manage methodology](../manage/index.md) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
+Hybrid and multicloud leads to natural shifts in how you operate the cloud. The [Manage methodology](../../manage/index.md) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments will require a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best practice concept to address those shifting requirements.
 
 The following section outlines how you can apply the concept of unified operations, and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 

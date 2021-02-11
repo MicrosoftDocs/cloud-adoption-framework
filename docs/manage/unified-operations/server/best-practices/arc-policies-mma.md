@@ -78,21 +78,21 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
    > [!NOTE]
    > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-You'll also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/policies/arm/log-analytics-template.parameters.json) and providing a name and location for your workspace.
+You'll also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/log_analytics-template.parameters.json) and providing a name and location for your workspace.
 
 ![A screenshot of an ARM template parameters file.](./img/arc-policies-mma/parameter-file-1.png)
 
-To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/policies/arm) and run the following command:
+To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/policies/arm) and run the following command:
 
 ```console
 az deployment group create --resource-group <Name of the Azure resource group> \
---template-file <The `log-analytics-template.json` template file location> \
---parameters <The `log-analytics-template.parameters.json` template file location>
+--template-file <The `log_analytics-template.json` template file location> \
+--parameters <The `log_analytics-template.parameters.json` template file location>
 ```
 
 ## Assign policies to Azure Arc connected machines
 
-After all the prerequisites are set, you can assign policies to the Azure Arc connected machines. Edit the [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/policies/arm/policy.json) to provide your subscription ID as well as the Log Analytics workspace.
+After all the prerequisites are set, you can assign policies to the Azure Arc connected machines. Edit the [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/policy.json) to provide your subscription ID as well as the Log Analytics workspace.
 
 ![A screenshot of another ARM template parameter file.](./img/arc-policies-mma/parameter-file-2.png)
 

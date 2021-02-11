@@ -19,7 +19,7 @@ The following README provides guidance for deploying a local **Windows 10** virt
 - Clone the Azure Arc Jumpstart repository.
 
     ```console
-    git clone https://github.com/microsoft/azure-arc.git
+    git clone https://github.com/microsoft/azure_arc.git
     ```
 
 - [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
@@ -34,13 +34,13 @@ The following README provides guidance for deploying a local **Windows 10** virt
 
     - If you are an macOS user, run `brew cask install virtualbox`
     - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
-    - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux-Downloads)
+    - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
 
-  - Install [Vagrant](https://www.vagrantup.com/docs/installation/)
+  - Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
     - If you are an macOS user, run `brew cask install vagrant`
     - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
-    - If you are a Linux user, look [here](https://www.vagrantup.com/downloads.html)
+    - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
 
 - Create an Azure service principal.
 
@@ -72,7 +72,7 @@ The following README provides guidance for deploying a local **Windows 10** virt
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-- The vagrantfile executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.ps1`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/windows/scripts/vars.ps1) PowerShell script to match the Azure service principal you just created.
+- The vagrantfile executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/vars.ps1) PowerShell script to match the Azure service principal you just created.
 
   - `subscriptionId` = Your Azure subscription ID
   - `appId` = Your Azure service principal name
@@ -83,9 +83,9 @@ The following README provides guidance for deploying a local **Windows 10** virt
 
 ## Deployment
 
-Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes.html) is needed. At a high-level, the deployment will:
+Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes) is needed. At a high-level, the deployment will:
 
-1. Download the Windows 10 image file [Vagrant box](https://app.vagrantup.com/StefanScherer/boxes/windows-10)
+1. Download the Windows 10 image file [Vagrant box](https://app.vagrantup.com/StefanScherer/boxes/windows_10)
 2. Execute the Azure Arc installation script
 
 After editing the **scripts/vars.ps1** script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. As this is the first time you are creating the VM, the first run will be **much slower** than the ones to follow. This is because the deployment is downloading the Windows 10 box for the first time.
@@ -110,9 +110,9 @@ The last step of the run is to register the VM as a new Azure Arc enabled server
 
 If you want to demo/control the actual registration process, do the following:
 
-- In the [`install_arc_agent`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/windows/scripts/install-arc-agent.ps1) PowerShell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
+- In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/install_arc_agent.ps1) PowerShell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
-    ![A screenshot of the `install-arc-agent` PowerShell script.](./img/local-vagrant-windows/vagrant-win-install-arc-agent.png)
+    ![A screenshot of the `install_arc_agent` PowerShell script.](./img/local-vagrant-windows/vagrant-win-install_arc_agent.png)
 
     ![A screenshot of the `az group create` command.](./img/local-vagrant-windows/vagrant-win-az-group-create.png)
 

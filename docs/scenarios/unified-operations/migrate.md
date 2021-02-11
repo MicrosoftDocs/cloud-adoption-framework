@@ -23,7 +23,7 @@ Typically, migration efforts have been seen as a one-way street; assets move up 
 While their direct impact on migration processes is minor, becoming aware of divergences can increase your organization's likelihood of success. The act of migrating workloads consists of three high-level processes, repeated in waves (or sprints) until the migration is complete. Here is a brief look at how these processes change:
 
 - **Assess workloads:** There are a few considerations that will shape how you assess workloads prior to migration.
-- **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But, you may want to use more of the [Azure Migrate](/azure/migrate) ecosystem to accelerate specific types of migrations.
+- **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But, you may want to use more of the [Azure Migrate](/azure/migrate/) ecosystem to accelerate specific types of migrations.
 - **Release workloads:** Once workloads have been deployed, the biggest shift will be seen in testing cycles prior to release to production traffic.
 
 Additional guidance on assessing, deploying, or releasing workloads within your migration processes will be discussed later on this guide. But first review the next section on the bigger changes to upstream and downstream processes that will impact your migration.

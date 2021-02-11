@@ -26,7 +26,7 @@ This guide can be used even if you do not already have an existing Ansible test 
 - Clone the Azure Arc Jumpstart repository.
 
     ```console
-    git clone https://github.com/microsoft/azure-arc.git
+    git clone https://github.com/microsoft/azure_arc.git
     ```
 
 - [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
@@ -39,7 +39,7 @@ This guide can be used even if you do not already have an existing Ansible test 
 
 - [Create a free AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-- [Install Terraform >= V0.13](https://learn.hashicorp.com/terraform/getting-started/install.html)
+- [Install Terraform >= V0.13](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
 - Create an Azure service principal.
 
@@ -75,7 +75,7 @@ This guide can be used even if you do not already have an existing Ansible test 
 
 In order for Terraform to create resources in AWS, we'll need to create a new AWS IAM role with appropriate permissions and configure Terraform to use it.
 
-- Sign in to the [AWS management console](https://console.aws.amazon.com)
+- Sign in to the [AWS management console](https://console.aws.amazon.com/console/home)
 
 - After signing in, select the **Services** dropdown in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
 
@@ -118,7 +118,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 - Retrieve your Azure subscription ID and tenant ID using the `az account list` command.
 
-- The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install Ansible and all necessary artifacts. This Terraform plan requires certain information about your AWS and Azure environments which it accesses using environment variables. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
+- The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install Ansible and all necessary artifacts. This Terraform plan requires certain information about your AWS and Azure environments which it accesses using environment variables. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
   - `TF-VAR-subscription-id` = your Azure subscription ID
   - `TF-VAR-client-id` = your Azure service principal application ID
@@ -127,15 +127,15 @@ Before executing the Terraform plan, you must export the environment variables w
   - `AWS-ACCESS-KEY-ID` = AWS access key
   - `AWS-SECRET-ACCESS-KEY` = AWS secret key
 
-- From your shell, navigate to the `azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform`) directory of the cloned repository.
+- From your shell, navigate to the `azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform`) directory of the cloned repository.
 
-- Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
+- Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 
     ```console
     source ./scripts/vars.sh
     ```
 
-- Make sure your SSH keys are available in `~/.ssh` and named `id-rsa.pub` and `id-rsa`. If you followed the SSH keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`aws-infrastructure.tf`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/aws-infra.tf) to use a key with a different path.
+- Make sure your SSH keys are available in `~/.ssh` and named `id-rsa.pub` and `id-rsa`. If you followed the SSH keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`aws-infrastructure.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
 
 - Run the `terraform init` command which will download the required Terraform providers.
 
@@ -143,7 +143,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 ### Deploy server infrastructure
 
-- From the `azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform` directory, run `terraform apply --auto-approve` and wait for the plan to finish. Upon successful completion, you will have four Windows Server 2019 servers, four Ubuntu servers, and one CentOS 7 Ansible control server.
+- From the `azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform` directory, run `terraform apply --auto-approve` and wait for the plan to finish. Upon successful completion, you will have four Windows Server 2019 servers, four Ubuntu servers, and one CentOS 7 Ansible control server.
 
 - Open the AWS console and verify that you can see the created servers.
 
@@ -166,7 +166,7 @@ Before executing the Terraform plan, you must export the environment variables w
     export AWS-SECRET-ACCESS-KEY="XXXXXXXXXXXXXXX"
     ```
 
-- Replace the placeholder values for Azure tenant ID and subscription ID in the [`group-vars/all.yml`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/ansible-config/group-vars/all.yml) file with the appropriate values for your environment.
+- Replace the placeholder values for Azure tenant ID and subscription ID in the [`group-vars/all.yml`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/ansible_config/group_vars/all.yml) file with the appropriate values for your environment.
 
     ![A screenshot of variables in a YAML file.](./img/aws-scale-ansible/yml-variables.png)
 
@@ -201,7 +201,7 @@ Navigate to the `ansible-config` directory and review the provided configuration
 
 ![A screenshot showing the details of an `ansible.cfg` file.](./img/aws-scale-ansible/ansible-cfg-details.png)
 
-The file [`inventory-uswest2-aws-ec2.yml`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/aws/scaled-deployment/ansible/terraform/ansible-config/ansible-plugins/inventory-uswest2-aws-ec2.yml) configures the `aws-ec2` plugin to pull inventory from `uswest2` region and group assets by applied tags. Adjust this file as needed to support onboarding your server inventory (e.g., change region, or change groups or filters).
+The file [`inventory-uswest2-aws-ec2.yml`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/ansible_config/ansible_plugins/inventory_uswest2_aws_ec2.yml) configures the `aws-ec2` plugin to pull inventory from `uswest2` region and group assets by applied tags. Adjust this file as needed to support onboarding your server inventory, such as changing the region or adjusting groups or filters.
 
 The files in `./ansible-config/group-vars` should be adjusted to provide the credentials you wish to use to onboard various Ansible host groups.
 

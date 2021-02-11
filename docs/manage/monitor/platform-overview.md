@@ -1,5 +1,5 @@
 ---
-title: "Cloud monitoring platforms overview"
+title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: mgoedtel
 ms.author: magoedte

@@ -56,7 +56,7 @@ Platform specialization consists of a disciplined execution of the following fou
 
 Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is beyond the scope of the environment view that's taken throughout the Cloud Adoption Framework.
 
-As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload. The framework focuses on improvement across five pillars of architecture excellence:
+As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) provides guiding tenets for improving the quality of a platform or a specific workload. The framework focuses on improvement across five pillars of architecture excellence:
 
 - **Cost optimization:** Manage costs to maximize the value delivered.
 - **Operational excellence:** Follow operational processes that keep a system running in production.
@@ -68,7 +68,7 @@ Technical debt and architectural flaws cause most business interruptions. For ex
 
 The following **Automated remediation** tab shows ways to remediate technical debt that can't or shouldn't be addressed.
 
-Learn more about the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) to improve system design.
+Learn more about the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) to improve system design.
 
 As system design improves, return to this article to find new opportunities to improve and scale those improvements across your environment.
 
@@ -106,7 +106,7 @@ The cloud platform team and cloud automation team align to create repeatable sol
 
 To maximize adoption and minimize maintenance overhead of any optimized platform, you should add the platform to an Azure service catalog. You can deploy each application in the catalog for internal consumption via the service catalog or as a marketplace offering for external consumers.
 
-For instructions on publishing to a service catalog, see the article series on [publishing to a service catalog](/azure/managed-applications/publish-service-catalog-app).
+For instructions on publishing to a service catalog, see the article series on [publishing to a service catalog](/azure/azure-resource-manager/managed-applications/publish-service-catalog-app).
 
 ### Deploy applications from the service catalog
 

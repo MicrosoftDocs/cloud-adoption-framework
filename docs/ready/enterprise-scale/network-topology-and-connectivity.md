@@ -518,7 +518,7 @@ _Figure 8: Encryption flows._
   
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
-  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](https://docs.microsoft.com/azure/vpn-gateway/site-to-site-vpn-private-peering)).
+  - Evaluate the capability to [configure a Site-to-Site VPN connection over ExpressRoute private peering (in preview)](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - If traffic between Azure regions must be encrypted, use Global VNet Peering to connect virtual networks across regions.
 

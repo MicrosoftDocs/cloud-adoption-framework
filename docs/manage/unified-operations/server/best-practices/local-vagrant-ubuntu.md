@@ -19,7 +19,7 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
 - Clone the Azure Arc Jumpstart repository.
 
     ```console
-    git clone https://github.com/microsoft/azure-arc.git
+    git clone https://github.com/microsoft/azure_arc.git
     ```
 
 - [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
@@ -34,13 +34,13 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
 
     - If you are a macOS user, run `brew cask install virtualbox`
     - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
-    - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux-Downloads)
+    - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
 
-  - Install [Vagrant](https://www.vagrantup.com/docs/installation/)
+  - Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
     - If you are a macOS user, run `brew cask install vagrant`
     - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
-    - If you are a Linux user, look [here](https://www.vagrantup.com/downloads.html)
+    - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
 
 - Create an Azure service principal.
 
@@ -72,7 +72,7 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-- The Vagrant file executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.sh`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you created.
+- The Vagrant file executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you created.
 
   - `subscriptionId` = your Azure subscription ID
   - `appId` = your Azure service principal name
@@ -83,7 +83,7 @@ The following README will guide you on how to deploy a local **Ubuntu** virtual 
 
 ## Deployment
 
-Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes.html) is needed. At a high-level, the deployment will:
+Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes) is needed. At a high-level, the deployment will:
 
 1. Download the Ubuntu 16.04 image file [Vagrant box](https://app.vagrantup.com/ubuntu/boxes/xenial64)
 2. Execute the installation script
@@ -110,7 +110,7 @@ The last step is to register the VM as a new Azure Arc enabled server resource.
 
 If you want to demo/control the actual registration process, complete the following steps:
 
-- In the [`install_arc_agent`](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/local/vagrant/ubuntu/scripts/install-arc-agent.sh) shell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
+- In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/install_arc_agent.sh) shell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
     ![A screenshot of the `azcmagent connect` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent.png)
 

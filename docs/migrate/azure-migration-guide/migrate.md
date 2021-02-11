@@ -1,5 +1,5 @@
 ---
-title: "Migrate assets"
+title: Migrate assets
 description: Initiate the migration to Azure by identifying the appropriate tools to use, including native tools, third-party tools, and project management tools.
 author: matticusau
 ms.author: mlavery
@@ -7,8 +7,8 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: fasttrack-new, AQC
 ---
 
 # Deploy workloads and assets (infrastructure, apps, and data)
@@ -120,9 +120,9 @@ After a successful migration, you'll need to perform any post-migration tasks. T
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information see: 
+For more information, see:
 
-[Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure)
+[Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure/)
 
 ### Data Migration Assistant
 
@@ -150,7 +150,7 @@ For more information, including detailed usage steps, see:
 
 - [Data Migration Assistant overview](/sql/dma/dma-overview)
 - [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports)
-- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/sql/dma/dma-powerbiassesreport)
+- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/sql/dma/dma-consolidatereports)
 
 ### SQL Server migration assistant
 
@@ -222,7 +222,7 @@ You can choose from a variety of experienced systems integrator partners and too
 
 [Learn more](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
-Visit the [Azure migration center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
+Visit the [Azure migration center](https://azure.microsoft.com/migration/migration-partners/) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
 Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) to see a range of database migration options and step-by-step guidance with native and partners.
 
@@ -230,13 +230,13 @@ Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) 
 
 Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite.
 
-Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](/azure/architecture/cloud-adoption/plan/template). You can then modify the template to reflect the [workloads](/azure/architecture/cloud-adoption/plan/workloads) and [assets](/azure/architecture/cloud-adoption/plan/assets) to be migrated.
+Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](/azure/cloud-adoption-framework/plan/template). You can then modify the template to reflect the [workloads](/azure/cloud-adoption-framework/plan/workloads) and [assets](/azure/cloud-adoption-framework/plan/assets) to be migrated.
 
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
-- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
-- [Microsoft teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
+- [Microsoft Project](https://www.microsoft.com/microsoft-365/project/project-management-software?rtc=1): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
+- [Microsoft Teams](https://www.microsoft.com/microsoft-teams/group-chat-software): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
 - [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These project management tools are not the only tools available. Many other third-party tools are widely used in the project management community.
@@ -245,7 +245,7 @@ These project management tools are not the only tools available. Many other thir
 
 As, you migrate into cloud technologies it presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
-Azure DevOps provides the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [Quickstart: CI/CD with Azure DevOps](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
+Azure DevOps provides the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops/). For guided training, see [Quickstart: CI/CD with Azure DevOps](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
 ### Suggested skills
 
@@ -253,7 +253,7 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills resp
 
 Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
+[Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 ## [Cost management](#tab/ManageCost)
 

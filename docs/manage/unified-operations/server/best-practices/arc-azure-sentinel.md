@@ -82,11 +82,11 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
 Azure Sentinel uses the Log Analytics agent to collect log files for Windows and Linux servers and forwards them to Azure Sentinel. The data collected is stored in a Log Analytics workspace. Since you can't use the default workspace created by Azure Security Center a custom one is required. You could have raw events and alerts for Azure Security Center within the same custom workspace as Azure Sentinel.
 
-1. Create a dedicated Log Analytics workspace and enable the Azure Sentinel solution on the top of it. Use this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azuresentinel/arm/sentinel-template.json) to create a new Log Analytics workspace, define the Azure Sentinel solution, and enable it for the workspace. To automate the deployment you can edit the ARM template [parameters file](https://github.com/microsoft/azure-arc/blob/main/azure-arc-servers-jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace.
+1. Create a dedicated Log Analytics workspace and enable the Azure Sentinel solution on the top of it. Use this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.json) to create a new Log Analytics workspace, define the Azure Sentinel solution, and enable it for the workspace. To automate the deployment you can edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace.
 
     ![A screenshot of an ARM template.](./img/arc-azure-sentinel/sentinel-3.png)
 
-1. Deploy the ARM template. Navigate to the [deployment folder](https://github.com/microsoft/azure-arc/tree/main/azure-arc-servers-jumpstart/azuresentinel/arm) and run the following command.
+1. Deploy the ARM template. Navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azuresentinel/arm) and run the following command.
 
   ```console
   az deployment group create --resource-group <Name of the Azure resource group> \
