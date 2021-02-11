@@ -97,32 +97,32 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 - In addition to the `TF-VAR` environment variables you've just exported, edit the Terraform variables in the [`terraform.tfvars`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/ubuntu/terraform/terraform.tfvars) to match your VMware vSphere environment.
 
-    ![A screenshot of TF-VAR environment variables](./img/vmware-terraform-ubuntu/variables.png)
+    ![A screenshot of TF-VAR environment variables](./media/vmware-terraform-ubuntu/variables.png)
 
 - Run the `terraform init` command which will download the Terraform AzureRM, local, and vSphere providers.
 
-    ![A screenshot of the `terraform init` command.](./img/vmware-terraform-ubuntu/terraform-init.png)
+    ![A screenshot of the `terraform init` command.](./media/vmware-terraform-ubuntu/terraform-init.png)
 
 - Run the `terraform apply --auto-approve` command and wait for the plan to finish.
 
 - Once the Terraform deployment is completed, a new Ubuntu server VM will be up and running and will be projected as an Azure Arc enabled server resource in a newly created Azure resource group.
 
-    ![A screenshot of `terraform apply` completed.](./img/vmware-terraform-ubuntu/terraform-apply.png)
+    ![A screenshot of `terraform apply` completed.](./media/vmware-terraform-ubuntu/terraform-apply.png)
 
-    ![A screenshot of a new VMware vSphere Ubuntu server virtual machine.](./img/vmware-terraform-ubuntu/new-vm.png)
+    ![A screenshot of a new VMware vSphere Ubuntu server virtual machine.](./media/vmware-terraform-ubuntu/new-vm.png)
 
-    ![A screenshot of an Azure Arc enabled server in an Azure resource group.](./img/vmware-terraform-ubuntu/server-1.png)
+    ![A screenshot of an Azure Arc enabled server in an Azure resource group.](./media/vmware-terraform-ubuntu/server-1.png)
 
-    ![Another screenshot of an Azure Arc enabled server in an Azure resource group.](./img/vmware-terraform-ubuntu/server-2.png)
+    ![Another screenshot of an Azure Arc enabled server in an Azure resource group.](./media/vmware-terraform-ubuntu/server-2.png)
 
 ## Delete the deployment
 
 - The most straightforward way is to delete the Azure Arc resource via the Azure portal, just select the resource and delete it. In addition, delete the VMware vSphere VM.
 
-    ![A screenshot of an Azure Arc enabled server being deleted.](./img/vmware-terraform-ubuntu/delete-server.png)
+    ![A screenshot of an Azure Arc enabled server being deleted.](./media/vmware-terraform-ubuntu/delete-server.png)
 
     If you delete the instance manually, then you should also delete *install-azure-arc-agent.sh* which is created by the Terraform plan.
 
 - If you want to nuke the entire environment use the `terraform destroy --auto-approve` command as shown below.
 
-    ![A screenshot of the `terraform destroy` command.](./img/vmware-terraform-ubuntu/terraform-destroy.png)
+    ![A screenshot of the `terraform destroy` command.](./media/vmware-terraform-ubuntu/terraform-destroy.png)

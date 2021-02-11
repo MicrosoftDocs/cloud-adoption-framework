@@ -90,46 +90,46 @@ Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_
 
 After editing the **scripts/vars.ps1** script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. As this is the first time you are creating the VM, the first run will be **much slower** than the ones to follow. This is because the deployment is downloading the Windows 10 box for the first time.
 
-![A screenshot of running the `vagrant up` command.](./img/local-vagrant-windows/vagrant-win-cmd.png)
+![A screenshot of running the `vagrant up` command.](./media/local-vagrant-windows/vagrant-win-cmd.png)
 
 Once the download is complete, the actual provisioning will start. As shown in the following screenshot, the process takes can take somewhere between 7 to 10 minutes.
 
-![A screenshot of a completed `vagrant up` command.](./img/local-vagrant-windows/vagrant-win-complete.png)
+![A screenshot of a completed `vagrant up` command.](./media/local-vagrant-windows/vagrant-win-complete.png)
 
 Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc enabled server inside a new resource group.
 
-![A screenshot of an Azure Arc enabled server in the Azure portal.](./img/local-vagrant-windows/vagrant-win-server.png)
+![A screenshot of an Azure Arc enabled server in the Azure portal.](./media/local-vagrant-windows/vagrant-win-server.png)
 
-![A screenshot of the details from an Azure Arc enabled server in the Azure portal.](./img/local-vagrant-windows/vagrant-win-server-details.png)
+![A screenshot of the details from an Azure Arc enabled server in the Azure portal.](./media/local-vagrant-windows/vagrant-win-server-details.png)
 
 ## Semi-automated deployment (optional)
 
 The last step of the run is to register the VM as a new Azure Arc enabled server resource.
 
-![Another screenshot of a completed `vagrant up` command.](./img/local-vagrant-windows/vagrant-win-complete-2.png)
+![Another screenshot of a completed `vagrant up` command.](./media/local-vagrant-windows/vagrant-win-complete-2.png)
 
 If you want to demo/control the actual registration process, do the following:
 
 - In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/install_arc_agent.ps1) PowerShell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
-    ![A screenshot of the `install_arc_agent` PowerShell script.](./img/local-vagrant-windows/vagrant-win-install_arc_agent.png)
+    ![A screenshot of the `install_arc_agent` PowerShell script.](./media/local-vagrant-windows/vagrant-win-install_arc_agent.png)
 
-    ![A screenshot of the `az group create` command.](./img/local-vagrant-windows/vagrant-win-az-group-create.png)
+    ![A screenshot of the `az group create` command.](./media/local-vagrant-windows/vagrant-win-az-group-create.png)
 
 - RDP the VM using the `vagrant rdp` command. Use `vagrant/vagrant` as the username/password.
 
-    ![A screenshot of accessing a Vagrant server with the Microsoft Remote Desktop Protocol.](./img/local-vagrant-windows/vagrant-win-rdp.png)
+    ![A screenshot of accessing a Vagrant server with the Microsoft Remote Desktop Protocol.](./media/local-vagrant-windows/vagrant-win-rdp.png)
 
 - Open PowerShell ISE **as Administrator** and edit the `C:\runtime\vars.ps1` file with your environment variables.
 
-    ![A screenshot of Windows PowerShell ISE.](./img/local-vagrant-windows/vagrant-win-ise.png)
+    ![A screenshot of Windows PowerShell ISE.](./media/local-vagrant-windows/vagrant-win-ise.png)
 
 - Paste the `Invoke-Expression "C:\runtime\vars.ps1"` command, the `az group create --location $env:location --name $env:resourceGroup --subscription $env:subscriptionId` command and the same `azcmagent connect` command you out and execute the script.
 
-    ![A screenshot of PowerShell ISE running a script.](./img/local-vagrant-windows/vagrant-win-ise-script.png)
+    ![A screenshot of PowerShell ISE running a script.](./media/local-vagrant-windows/vagrant-win-ise-script.png)
 
 ## Delete the deployment
 
 To delete the entire deployment, run the `vagrant destroy -f` command. The vagrantfile includes a `before: destroy` Vagrant trigger which will run the command to delete the Azure resource group before destroying the actual VM.
 
-![A screenshot of the `vagrant destroy` command.](./img/local-vagrant-windows/vagrant-win-vagrant-destroy.png)
+![A screenshot of the `vagrant destroy` command.](./media/local-vagrant-windows/vagrant-win-vagrant-destroy.png)

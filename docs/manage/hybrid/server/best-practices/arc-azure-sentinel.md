@@ -42,9 +42,9 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
 1. As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, we use a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure. As shown in the following screenshots:
 
-    ![A screenshot of an overview of an Azure Arc enabled server in the Azure portal.](./img/arc-azure-sentinel/sentinel-1.png)
+    ![A screenshot of an overview of an Azure Arc enabled server in the Azure portal.](./media/arc-azure-sentinel/sentinel-1.png)
 
-    ![A screenshot showing the details of an Azure Arc Server in the Azure portal.](./img/arc-azure-sentinel/sentinel-2.png)
+    ![A screenshot showing the details of an Azure Arc Server in the Azure portal.](./media/arc-azure-sentinel/sentinel-2.png)
 
 1. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
@@ -84,7 +84,7 @@ Azure Sentinel uses the Log Analytics agent to collect log files for Windows and
 
 1. Create a dedicated Log Analytics workspace and enable the Azure Sentinel solution on the top of it. Use this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.json) to create a new Log Analytics workspace, define the Azure Sentinel solution, and enable it for the workspace. To automate the deployment you can edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace.
 
-    ![A screenshot of an ARM template.](./img/arc-azure-sentinel/sentinel-3.png)
+    ![A screenshot of an ARM template.](./media/arc-azure-sentinel/sentinel-3.png)
 
 1. Deploy the ARM template. Navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azuresentinel/arm) and run the following command.
 
@@ -96,7 +96,7 @@ Azure Sentinel uses the Log Analytics agent to collect log files for Windows and
 
 For example:
 
-   ![A screenshot of the `az deployment group create` command.](./img/arc-azure-sentinel/sentinel-4.png)
+   ![A screenshot of the `az deployment group create` command.](./media/arc-azure-sentinel/sentinel-4.png)
 
 ## Onboard Azure Arc enabled VMs on Azure Sentinel
 

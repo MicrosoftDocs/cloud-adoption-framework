@@ -90,42 +90,42 @@ Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_
 
 After editing the `scripts/vars.sh` script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. Since this is the first time creating the VM, the first run will be **much slower** than the ones to follow, because the deployment is downloading the Ubuntu box for the first time.
 
-![A screenshot of the `vagrant up` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up.png)
+![A screenshot of the `vagrant up` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up.png)
 
 Once the download is complete, the provisioning begins. As shown in the following screenshot, the process takes no longer than three minutes.
 
-![A screenshot of a completed `vagrant up` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-complete.png)
+![A screenshot of a completed `vagrant up` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-complete.png)
 
 Upon completion, you will have a local Ubuntu VM deployed, connected as a new Azure Arc enabled server, inside a new resource group.
 
-![A screenshot of an Azure Arc enabled server in the Azure portal.](./img/local-vagrant-ubuntu/vagrant-ubuntu-server.png)
+![A screenshot of an Azure Arc enabled server in the Azure portal.](./media/local-vagrant-ubuntu/vagrant-ubuntu-server.png)
 
-![A screenshot of details from an Azure Arc enabled server in the Azure portal.](./img/local-vagrant-ubuntu/vagrant-ubuntu-server-details.png)
+![A screenshot of details from an Azure Arc enabled server in the Azure portal.](./media/local-vagrant-ubuntu/vagrant-ubuntu-server-details.png)
 
 ## Semi-automated deployment (optional)
 
 The last step is to register the VM as a new Azure Arc enabled server resource.
 
-![Another screenshot of the `vagrant up` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-2.png)
+![Another screenshot of the `vagrant up` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-up-2.png)
 
 If you want to demo/control the actual registration process, complete the following steps:
 
 - In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/install_arc_agent.sh) shell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
-    ![A screenshot of the `azcmagent connect` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent.png)
+    ![A screenshot of the `azcmagent connect` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent.png)
 
-    ![A screenshot of the `az group create` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azgroup-create.png)
+    ![A screenshot of the `az group create` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-azgroup-create.png)
 
 - SSH to the VM using the `vagrant ssh` command.
 
-    ![A screenshot of an SSH key connecting to the Vagrant machine.](./img/local-vagrant-ubuntu/vagrant-ubuntu-ssh.png)
+    ![A screenshot of an SSH key connecting to the Vagrant machine.](./media/local-vagrant-ubuntu/vagrant-ubuntu-ssh.png)
 
 - Run the same `azcmagent connect` command you commented out using your environment variables.
 
-    ![Another screenshot of the `azcmagent connect` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent-2.png)
+    ![Another screenshot of the `azcmagent connect` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-azcmagent-2.png)
 
 ## Delete the deployment
 
 To delete the entire deployment, run the `vagrant destroy -f` command. The vagrantfile includes a `before: destroy` Vagrant trigger, which will run a script to delete the Azure resource group before destroying the actual VM.
 
-![A screenshot of the `vagrant destroy` command.](./img/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-destroy.png)
+![A screenshot of the `vagrant destroy` command.](./media/local-vagrant-ubuntu/vagrant-ubuntu-vagrant-destroy.png)

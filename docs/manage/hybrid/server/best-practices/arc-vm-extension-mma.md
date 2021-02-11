@@ -42,9 +42,9 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, we use a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure. As shown in the following screenshots:
 
-    ![A screenshot of a resource group from an Azure Arc enabled server.](./img/arc-vm-extension-mma/mma-resource-group.png)
+    ![A screenshot of a resource group from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-resource-group.png)
 
-    ![A screenshot of a connected status from an Azure Arc enabled server.](./img/arc-vm-extension-mma/mma-connected-status.png)
+    ![A screenshot of a connected status from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-connected-status.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
@@ -80,7 +80,7 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 5. You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/log_analytics-template.parameters.json), and providing a name and location for your workspace.
 
-    ![A screenshot of ARM template parameters for name and location.](./img/arc-vm-extension-mma/parameters-file-1.png)
+    ![A screenshot of ARM template parameters for name and location.](./media/arc-vm-extension-mma/parameters-file-1.png)
 
 6. To deploy the ARM template, navigate to the `../extensions/arm` deployment folder and run the following command:
 
@@ -94,22 +94,22 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 1. Edit the [extensions parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template.parameters.json)
 
-    ![A screenshot of ARM extensions parameters file.](./img/arc-vm-extension-mma/parameters-file-2.png)
+    ![A screenshot of ARM extensions parameters file.](./media/arc-vm-extension-mma/parameters-file-2.png)
 
     To match your configuration you will need to provide:
     - The VM name as it is registered in Azure Arc.
 
-    ![A screenshot of a machine name from an Azure Arc enabled server.](./img/arc-vm-extension-mma/mma-machine-name.png)
+    ![A screenshot of a machine name from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-machine-name.png)
 
     - The location of the resource group where you registered the Azure Arc enabled server.
 
-    ![A screenshot of an Azure region.](./img/arc-vm-extension-mma/mma-azure-region.png)
+    ![A screenshot of an Azure region.](./media/arc-vm-extension-mma/mma-azure-region.png)
 
     - Information about the Log Analytics workspace you previously created (workspace ID and key). These parameters are used to configure the MMA agent. You can find this information by going to your Log Analytics workspace and under **Settings**, select **Agents management**.
 
-    ![A screenshot of Agents management within an Azure Arc enabled server.](./img/arc-vm-extension-mma/agents-management.png)
+    ![A screenshot of Agents management within an Azure Arc enabled server.](./media/arc-vm-extension-mma/agents-management.png)
 
-    ![A screenshot of a workspace configuration.](./img/arc-vm-extension-mma/mma-workspace-config.png)
+    ![A screenshot of a workspace configuration.](./media/arc-vm-extension-mma/mma-workspace-config.png)
 
 2. Choose the ARM template that matches your operating system, either [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template-windows.json) or [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
 
@@ -121,13 +121,13 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 3. After the template has completed its run, you should see an output similar to the following:
 
-    ![A screenshot of an output from an ARM template.](./img/arc-vm-extension-mma/mma-output.png)
+    ![A screenshot of an output from an ARM template.](./media/arc-vm-extension-mma/mma-output.png)
 
 4. You will have the Microsoft Monitoring Agent deployed on your Windows or Linux system and reporting to the Log Analytics workspace that you have selected. You can verify by going back to **Agents Management** in your workspace and choosing either **Windows** or **Linux**. You should see an additional connected VM.
 
-    ![A screenshot of connected agents for Windows servers.](./img/arc-vm-extension-mma/windows-agents.png)
+    ![A screenshot of connected agents for Windows servers.](./media/arc-vm-extension-mma/windows-agents.png)
 
-    ![A screenshot connected agents for Linux servers.](./img/arc-vm-extension-mma/linux-agents.png)
+    ![A screenshot connected agents for Linux servers.](./media/arc-vm-extension-mma/linux-agents.png)
 
 ## Clean up your environment
 

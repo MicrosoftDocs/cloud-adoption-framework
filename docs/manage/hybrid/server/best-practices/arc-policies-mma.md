@@ -42,9 +42,9 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the following screenshots a Google Cloud Platform (GCP) server has been connected with Azure Arc and is visible as a resource in Azure.
 
-   ![A screenshot of a resource group for an Azure Arc enabled server.](./img/arc-policies-mma/resource-group.png)
+   ![A screenshot of a resource group for an Azure Arc enabled server.](./media/arc-policies-mma/resource-group.png)
 
-   ![A screenshot of a connected status for an Azure Arc enabled server.](./img/arc-policies-mma/connected-status.png)
+   ![A screenshot of a connected status for an Azure Arc enabled server.](./media/arc-policies-mma/connected-status.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
@@ -80,7 +80,7 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
 You'll also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/log_analytics-template.parameters.json) and providing a name and location for your workspace.
 
-![A screenshot of an ARM template parameters file.](./img/arc-policies-mma/parameter-file-1.png)
+![A screenshot of an ARM template parameters file.](./media/arc-policies-mma/parameter-file-1.png)
 
 To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/policies/arm) and run the following command:
 
@@ -94,7 +94,7 @@ az deployment group create --resource-group <Name of the Azure resource group> \
 
 After all the prerequisites are set, you can assign policies to the Azure Arc connected machines. Edit the [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/policy.json) to provide your subscription ID as well as the Log Analytics workspace.
 
-![A screenshot of another ARM template parameter file.](./img/arc-policies-mma/parameter-file-2.png)
+![A screenshot of another ARM template parameter file.](./media/arc-policies-mma/parameter-file-2.png)
 
 1. To start the deployment, use the following command:
 
@@ -110,21 +110,21 @@ After all the prerequisites are set, you can assign policies to the Azure Arc co
 
 2. After the initiative is assigned, it takes about 30 minutes for the assignment to be applied to the defined scope. Azure Policy then starts the evaluation cycle against the Azure Arc connected machine and recognizes it as non-compliant because it still doesn't have the Log Analytics agent configuration deployed. To check this, go to the Azure Arc connected machine under the policies section.
 
-   ![A screenshot of a non-compliant Azure Policy status.](./img/arc-policies-mma/non-comp-policy.png)
+   ![A screenshot of a non-compliant Azure Policy status.](./media/arc-policies-mma/non-comp-policy.png)
 
 3. Now, assign a remediation task to the non-compliant resource to put into a compliant state.
 
-   ![A screenshot of creating an Azure Policy remediation task.](./img/arc-policies-mma/create-remediation-task.png)
+   ![A screenshot of creating an Azure Policy remediation task.](./media/arc-policies-mma/create-remediation-task.png)
 
 4. Under **Policy to remediate**, choose **\[Preview] Deploy Log Analytics Agent to Linux Azure Arc machines** and select **Remediate**. This remediation task is instructing Azure Policy to run the `DeployIfNotExists` effect and use the Azure Arc extension management capabilities to deploy the Log Analytics agent on the VM.
 
-   ![A screenshot of an Azure Policy remediation action within a remediation task.](./img/arc-policies-mma/remediation-action.png)
+   ![A screenshot of an Azure Policy remediation action within a remediation task.](./media/arc-policies-mma/remediation-action.png)
 
 5. After you have assigned remediation task, the policy will be evaluated again. It should show that the server on GCP is compliant and that the Microsoft Monitoring Agent extension is installed on the Azure Arc machine.
 
-   ![A screenshot of a remediation task configuration.](./img/arc-policies-mma/task-config.png)
+   ![A screenshot of a remediation task configuration.](./media/arc-policies-mma/task-config.png)
 
-   ![A screenshot of a compliant Azure Policy status.](./img/arc-policies-mma/compliant-status.png)
+   ![A screenshot of a compliant Azure Policy status.](./media/arc-policies-mma/compliant-status.png)
 
 ## Clean up your environment
 

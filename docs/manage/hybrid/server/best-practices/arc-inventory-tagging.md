@@ -50,7 +50,7 @@ Use Resource Graph Explorer to query and view resources in Azure.
 
 1. Enter **Resource Graph Explorer** in the top search bar in the Azure portal and select it.
 
-    ![A screenshot of the Resource Graph Explorer in the Azure portal.](./img/inventory-tagging/resource-graph-explorer.png)
+    ![A screenshot of the Resource Graph Explorer in the Azure portal.](./media/inventory-tagging/resource-graph-explorer.png)
 
 1. In the query window, enter the following query, and then select **Run Query**:
 
@@ -61,9 +61,9 @@ Use Resource Graph Explorer to query and view resources in Azure.
 
 1. If you have correctly created Azure Arc enabled servers, they are listed in the results pane of Resource Graph Explorer. You can also view the Azure Arc enabled serves from the Azure portal.
 
-    ![A screenshot of a Resource Graph Explorer query.](./img/inventory-tagging/run-query.png)
+    ![A screenshot of a Resource Graph Explorer query.](./media/inventory-tagging/run-query.png)
 
-    ![A screenshot of the details of an Azure Arc enabled server in the Azure portal.](./img/inventory-tagging/arc-server.png)
+    ![A screenshot of the details of an Azure Arc enabled server in the Azure portal.](./media/inventory-tagging/arc-server.png)
 
 ## Create a basic Azure tag taxonomy
 
@@ -77,7 +77,7 @@ az tag add-value --name "Hosting Platform" --value "GCP"
 az tag add-value --name "Hosting Platform" --value "On-premises"
 ```
 
-![A screenshot of an output of the `az tag create` command.](./img/inventory-tagging/az-tag-create.png)
+![A screenshot of an output of the `az tag create` command.](./media/inventory-tagging/az-tag-create.png)
 
 ## Tag your Azure Arc resources
 
@@ -98,7 +98,7 @@ export awsMachineResourceId="$(echo $awsMachineResourceId | tr -d "\"" | tr -d '
 az resource tag --ids $awsMachineResourceId --tags "Hosting Platform"="AWS"
 ```
 
-![A screenshot of one output of the `az resource tag` command.](./img/inventory-tagging/az-resource-tag-1.png)
+![A screenshot of one output of the `az resource tag` command.](./media/inventory-tagging/az-resource-tag-1.png)
 
 ### Tag Azure Arc connected GCP Ubuntu server
 
@@ -115,7 +115,7 @@ export gcpMachineResourceId="$(echo $gcpMachineResourceId | tr -d "\"" | tr -d '
 az resource tag --resource-group $gcpResourceGroup --ids $gcpMachineResourceId --tags "Hosting Platform"="GCP"
 ```
 
-![A screenshot of another output of the `az resource tag` command.](./img/inventory-tagging/az-resource-tag-2.png)
+![A screenshot of another output of the `az resource tag` command.](./media/inventory-tagging/az-resource-tag-2.png)
 
 ## Query resources by tag using Resource Graph Explorer
 
@@ -130,17 +130,17 @@ After you apply tags to the resources that are hosted in multiple clouds, use Re
    | project name, location, resourceGroup, tags
    ```
 
-   ![A screenshot of the details of a Resource Graph Explorer query.](./img/inventory-tagging/run-query-details.png)
+   ![A screenshot of the details of a Resource Graph Explorer query.](./media/inventory-tagging/run-query-details.png)
 
 2. Click **Run Query** and then select the **Formatted Results** toggle. If done correctly, you should see all Azure Arc enabled servers and their assigned `Hosting Platform` tag values.
 
-   ![A screenshot of the results of Resource Graph Explorer query.](./img/inventory-tagging/run-query-results.png)
+   ![A screenshot of the results of Resource Graph Explorer query.](./media/inventory-tagging/run-query-results.png)
 
    We can also view the tags on the projected servers from Azure portal.
 
-   ![A screenshot of one set of tags on an Azure Arc enabled server.](./img/inventory-tagging/tags-1.png)
+   ![A screenshot of one set of tags on an Azure Arc enabled server.](./media/inventory-tagging/tags-1.png)
 
-   ![A screenshot of another set of tags on an Azure Arc enabled server.](./img/inventory-tagging/tags-2.png)
+   ![A screenshot of another set of tags on an Azure Arc enabled server.](./media/inventory-tagging/tags-2.png)
 
 ## Clean up your environment
 

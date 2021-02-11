@@ -54,36 +54,36 @@ This article provides guidance for connecting a Windows machine to Azure Arc usi
 
 - Create a new Azure resource group for your machines.
 
-    ![A screenshot of an empty resource group in the Azure portal.](./img/onboard-server-win/win-resource-group.png)
+    ![A screenshot of an empty resource group in the Azure portal.](./media/onboard-server-win/win-resource-group.png)
 
 - Download the [`az-connect-win`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
 
 - Change the environment variables according to your environment and copy the script to the designated machine.
 
-    ![A screenshot of the environment variables to be changed.](./img/onboard-server-win/win-variables.png)
+    ![A screenshot of the environment variables to be changed.](./media/onboard-server-win/win-variables.png)
 
 ## Deployment
 
 On the designated machine, open PowerShell ISE **as Administrator** and run the script. Note the script is using `$env:ProgramFiles` as the agent installation path, so **ensure you are not using PowerShell ISE (x86)**.
 
-![A screenshot of the `azcmagent connect` command.](./img/onboard-server-win/azcmagent.png)
+![A screenshot of the `azcmagent connect` command.](./media/onboard-server-win/azcmagent.png)
 
-![A screenshot of the `az-connect` Windows script.](./img/onboard-server-win/az-connect-win-2.png)
+![A screenshot of the `az-connect` Windows script.](./media/onboard-server-win/az-connect-win-2.png)
 
 Upon completion, you will have your Windows Server instance, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the 'az_connect' Windows script running.](./img/onboard-server-win/az-connect-win.png)
+![A screenshot of the 'az_connect' Windows script running.](./media/onboard-server-win/az-connect-win.png)
 
-![[A screenshot of an Azure Arc enabled resource in the Azure portal.](./img/onboard-server-win/win-resource.png)
+![[A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server-win/win-resource.png)
 
-![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./img/onboard-server-win/win-resource-detail.png)
+![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./media/onboard-server-win/win-resource-detail.png)
 
 ## Delete the deployment
 
 T0 delete the server, select the server and delete it from the Azure portal.
 
-![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-win/win-delete-resource.png)
+![A screenshot of Delete option to delete a resource in the Azure portal.](./media/onboard-server-win/win-delete-resource.png)
 
 To delete the entire deployment, delete the Azure resource group from the Azure portal.
 
-![A screenshot of the option to delete a resource group via the Azure portal.](./img/onboard-server-win/win-delete-resource-group.png)
+![A screenshot of the option to delete a resource group via the Azure portal.](./media/onboard-server-win/win-delete-resource-group.png)

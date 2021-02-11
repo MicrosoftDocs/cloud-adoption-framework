@@ -54,17 +54,17 @@ This article provides guidance for connecting a Linux server to Azure Arc using 
 
 - Create a new Azure resource group for your servers.
 
-    ![A screenshot of the Azure portal with an empty resource group.](./img/onboard-server-linux/linux-resource-group.png)
+    ![A screenshot of the Azure portal with an empty resource group.](./media/onboard-server-linux/linux-resource-group.png)
 
 - Download the [`az-connect-linux`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_linux.sh) shell script.
 
 - Change the environment variables according to your environment.
 
-    ![A screenshot of the environment variables to be changed.](./img/onboard-server-linux/linux-variables.png)
+    ![A screenshot of the environment variables to be changed.](./media/onboard-server-linux/linux-variables.png)
 
 - Copy the script to the designated server using your preferred tool of choice (or copy/paste the script to a new file inside the server). The following example shows how to copy the script from macOS to the server using `scp`.
 
-    ![A screenshot of the `scp` script.](./img/onboard-server-linux/linux-scp.png)
+    ![A screenshot of the `scp` script.](./media/onboard-server-linux/linux-scp.png)
 
 ## Deployment
 
@@ -75,18 +75,18 @@ Run the script using the `. ./az-connect-linux.sh` command.
 
 Upon successful completion, you will have your Linux server, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the `az_connect` Linux script running.](./img/onboard-server-linux/az-connect-linux.png)
+![A screenshot of the `az_connect` Linux script running.](./media/onboard-server-linux/az-connect-linux.png)
 
-![A screenshot of an Azure Arc enabled resource in the Azure portal.](./img/onboard-server-linux/linux-resource.png)
+![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server-linux/linux-resource.png)
 
-![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./img/onboard-server-linux/linux-resource-detail.png)
+![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./media/onboard-server-linux/linux-resource-detail.png)
 
 ## Delete the deployment
 
 To delete the server, select the server and delete it from the Azure portal.
 
-![A screenshot of Delete option to delete a resource in the Azure portal.](./img/onboard-server-linux/linux-delete-resource.png)
+![A screenshot of Delete option to delete a resource in the Azure portal.](./media/onboard-server-linux/linux-delete-resource.png)
 
 To delete the entire deployment, delete the Azure resource group from the Azure portal.
 
-![[A screenshot of the option to delete a resource group via the Azure portal.](./img/onboard-server-linux/linux-delete-resource-group.png)
+![[A screenshot of the option to delete a resource group via the Azure portal.](./media/onboard-server-linux/linux-delete-resource-group.png)

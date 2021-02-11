@@ -31,74 +31,74 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 
 - Deploy new virtual machine
 
-    ![A screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-1.png)
+    ![A screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-1.png)
 
-    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-2.png)
+    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-2.png)
 
-    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-3.png)
+    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-3.png)
 
-    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-4.png)
+    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-4.png)
 
-    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-5.png)
+    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-5.png)
 
-    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-6.png)
+    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-6.png)
 
 - Make sure to select **Ubuntu Linux (64-bit)** as the guest OS.
 
-    ![A screenshot of Ubuntu Linux (64-bit) guest OS.](./img/vmware-ubuntu-template/ubuntu-template-guest-os.png)
+    ![A screenshot of Ubuntu Linux (64-bit) guest OS.](./media/vmware-ubuntu-template/ubuntu-template-guest-os.png)
 
 - Point to the Ubuntu server ISO file location.
 
-    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-7.png)
+    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-7.png)
 
-    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./img/vmware-ubuntu-template/ubuntu-template-newvm-8.png)
+    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-ubuntu-template/ubuntu-template-newvm-8.png)
 
 - Power on the VM and start the Ubuntu installation. No specific instructions here but:
 
   - (Optional:) Consider using static IP
   - Install OpenSSH server
 
-    ![First screenshot of an Ubuntu installation](./img/vmware-ubuntu-template/ubuntu-template-installation-1.png)
+    ![First screenshot of an Ubuntu installation](./media/vmware-ubuntu-template/ubuntu-template-installation-1.png)
 
-    ![Second screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-2.png)
+    ![Second screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-2.png)
 
-    ![Third screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-3.png)
+    ![Third screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-3.png)
 
-    ![Fourth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-4.png)
+    ![Fourth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-4.png)
 
-    ![Fifth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-5.png)
+    ![Fifth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-5.png)
 
-    ![Sixth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-6.png)
+    ![Sixth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-6.png)
 
-    ![Seventh screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-7.png)
+    ![Seventh screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-7.png)
 
-    ![Eighth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-8.png)
+    ![Eighth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-8.png)
 
-    ![Ninth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-9.png)
+    ![Ninth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-9.png)
 
-    ![Tenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-10.png)
+    ![Tenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-10.png)
 
-    ![Eleventh screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-11.png)
+    ![Eleventh screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-11.png)
 
-    ![Twelfth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-12.png)
+    ![Twelfth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-12.png)
 
-    ![Thirteenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-13.png)
+    ![Thirteenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-13.png)
 
-    ![Fourteenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-14.png)
+    ![Fourteenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-14.png)
 
-    ![Fifteenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-15.png)
+    ![Fifteenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-15.png)
 
-    ![Sixteenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-16.png)
+    ![Sixteenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-16.png)
 
-    ![Seventeenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-17.png)
+    ![Seventeenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-17.png)
 
-    ![Eighteenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-18.png)
+    ![Eighteenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-18.png)
 
-    ![Nineteenth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-19.png)
+    ![Nineteenth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-19.png)
 
-    ![Twentieth screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-20.png)
+    ![Twentieth screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-20.png)
 
-    ![Twenty-first screenshot of an Ubuntu installation.](./img/vmware-ubuntu-template/ubuntu-template-installation-21.png)
+    ![Twenty-first screenshot of an Ubuntu installation.](./media/vmware-ubuntu-template/ubuntu-template-installation-21.png)
 
 ### Post-installation
 
@@ -136,6 +136,6 @@ Before converting the VM to a template, few actions are needed.
 
 Reduce the VM CPU count and memory resources to the minimum and convert the VM to template, switch the CD/DVD drive to client device as well disconnect it and convert the VM to template.
 
-![A screenshot of how to reduce a virtual machine's CPU count and memory.](./img/vmware-ubuntu-template/ubuntu-template-reduce.png)
+![A screenshot of how to reduce a virtual machine's CPU count and memory.](./media/vmware-ubuntu-template/ubuntu-template-reduce.png)
 
-![A screenshot of how to convert a virtual machine to a template.](./img/vmware-ubuntu-template/ubuntu-template-convert.png)
+![A screenshot of how to convert a virtual machine to a template.](./media/vmware-ubuntu-template/ubuntu-template-convert.png)

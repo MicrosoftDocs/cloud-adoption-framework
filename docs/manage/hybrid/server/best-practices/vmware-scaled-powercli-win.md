@@ -94,11 +94,11 @@ Below you can find the automation flow for this scenario:
 
 To demonstrate the before and after for this scenario, the below screenshots shows a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the **Apps & features** view in Windows showing no agent is installed.
 
-![Screenshot of an empty Azure resource group.](./img/vmware-scale-powercli-win/cli-win-empty.png)
+![Screenshot of an empty Azure resource group.](./media/vmware-scale-powercli-win/cli-win-empty.png)
 
-![A screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./img/vmware-scale-powercli-win/cli-win-vanilla-1.png)
+![A screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./media/vmware-scale-powercli-win/cli-win-vanilla-1.png)
 
-![Another screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./img/vmware-scale-powercli-win/cli-win-vanilla-2.png)
+![Another screenshot of a vanilla VMware vSphere virtual machine without an Azure Arc agent.](./media/vmware-scale-powercli-win/cli-win-vanilla-2.png)
 
 ## Deployment
 
@@ -108,20 +108,20 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
 - Use the Azure service principal ID and password created in the prerequisites section
 
-![A screenshot of exporting environment variables.](./img/vmware-scale-powercli-win/cli-win-export-variables.png)
+![A screenshot of exporting environment variables.](./media/vmware-scale-powercli-win/cli-win-export-variables.png)
 
 - From the [`azure_arc_servers_jumpstart\vmware\scaled-deploy\powercli\windows`](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows) folder, open PowerShell session as an administrator and run the [`scale-deploy.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows/scale_deploy.ps1) script.
 
-    ![[A screenshot of how to scale-deploy with a PowerShell script.](./img/vmware-scale-powercli-win/scale-deploy-1.png)
+    ![[A screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli-win/scale-deploy-1.png)
 
-    ![A second screenshot of how to scale-deploy with a PowerShell script.](./img/vmware-scale-powercli-win/scale-deploy-2.png)
+    ![A second screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli-win/scale-deploy-2.png)
 
-    ![A third screenshot of how to scale-deploy with a PowerShell script.](./img/vmware-scale-powercli-win/scale-deploy-3.png)
+    ![A third screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli-win/scale-deploy-3.png)
 
 - Upon completion, the VM will have the Azure Arc connected machine agent installed as well as the Azure resource group populated with the new Azure Arc enabled servers.
 
-    ![A screenshot of a machine with an Azure Arc Agent installed.](./img/vmware-scale-powercli-win/cli-win-agent.png)
+    ![A screenshot of a machine with an Azure Arc Agent installed.](./media/vmware-scale-powercli-win/cli-win-agent.png)
 
-    ![A screenshot of new Azure Arc enabled servers in an Azure resource group.](./img/vmware-scale-powercli-win/cli-win-servers-1.png)
+    ![A screenshot of new Azure Arc enabled servers in an Azure resource group.](./media/vmware-scale-powercli-win/cli-win-servers-1.png)
 
-    ![Another screenshot of new Azure Arc enabled servers in an Azure resource group.](./img/vmware-scale-powercli-win/cli-win-servers-2.png)
+    ![Another screenshot of new Azure Arc enabled servers in an Azure resource group.](./media/vmware-scale-powercli-win/cli-win-servers-2.png)
