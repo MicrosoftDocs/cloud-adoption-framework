@@ -20,7 +20,7 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ## March 2021
 
-This release is the largest release of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework. 
+This release is the largest release of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework.
 
 ### Adoption journeys (CAF-Lite lenses)
 
@@ -28,9 +28,9 @@ Most notable in this release is the addition of Adoption Journeys, which provide
 
 | Journey | Description |
 |--|--|
-| [Hybrid and Multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey |
-| [Modern containers](../scenarios/AKS/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
-| [SAP on Azure](../scenarios/SAP/index.md) | As part of our One Migrate (Migration Scenarios) commitment, this journey bridges the gaps between the SAP migration process & other mainstream migration processes to deliver on full-scale adoption of SAP on Azure.  |
+| [Hybrid and Multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
+| Modern containers | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
+| SAP on Azure | As part of our One Migrate (Migration Scenarios) commitment, this journey bridges the gaps between the SAP migration process & other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
 
 ### Cloud economics
 
