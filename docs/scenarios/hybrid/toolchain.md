@@ -20,7 +20,7 @@ This article won't introduce all of the Azure products with hybrid and multiclou
 
 See the [Azure hybrid and multicloud hub](/hybrid/) for a deeper look at what you can do with Azure's hybrid and multicloud products.
 
-![Overview of the Azure hybrid and multicloud products listed below](../../_images/unified-operations/hybrid-hero-slide.png)
+![Overview of the Azure hybrid and multicloud products listed below](../../_images/hybrid/hybrid-hero-slide.png)
 
 This article series will help to integrate these tools into relevant processes-from initial business strategy to workload optimization, and long into your operations management cycles.
 

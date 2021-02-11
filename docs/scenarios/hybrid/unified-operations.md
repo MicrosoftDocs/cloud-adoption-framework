@@ -30,7 +30,7 @@ More articles will follow, outlining the Azure approach to unified operations: d
 
 Successful hybrid, multicloud, and edge strategies begin with a primary cloud platform.
 
-![Primary cloud platform with facilities, services, and controls to support your processes.](../../_images/unified-operations/primary-cloud-provider.png)
+![Primary cloud platform with facilities, services, and controls to support your processes.](../../_images/hybrid/primary-cloud-provider.png)
 
 Whether located in a public or private cloud, your primary cloud platform is where your operational processes are hosted, along with a set of defined cloud facilities. In Azure, those facilities are [Azure regions](https://azure.microsoft.com/global-infrastructure/), whereas on-premises, they could be datacenters. These facilities host cloud services necessary to manage core operations, and to support other workloads hosted on the platform. Your primary cloud platform will also include a series of controls-designed to support operations within that cloud.
 
@@ -53,7 +53,7 @@ When identifying your primary cloud platform, it is important to ensure that clo
 
 A single cloud management and operations experience across your portfolio of distributed assets at scale (bringing consistent governance, management, application development, and cloud services to any infrastructure, anywhere) enables an integrated hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth. The addition of a gateway for cloud controls that extend management and data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments.
 
-![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/unified-operations/primary-cloud-provider-extended.png)
+![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/hybrid/primary-cloud-provider-extended.png)
 
 > [!WARNING]
 > Implementation of unified operations can be relatively straightforward. But, if your cloud platform cannot manage the necessary primary unified operations processes, it will require additional capital expenditures, with costly development to create extensions, or gateways to other clouds. The main constraining factor why customers create duplicated or fractured operations and processes is because of existing primary cloud platforms with such limitations.
@@ -67,13 +67,13 @@ If your current primary cloud provider does not offer the required capabilities 
 
 This image displays the individual components required for unified operations, and shows how they interact with each other. The following sections provide a detailed outline for each unified operations component.
 
-![Infographic showing the components required to deliver unified operations (outlined in the remainder of this article)](../../_images/unified-operations/unified-operations.png)
+![Infographic showing the components required to deliver unified operations (outlined in the remainder of this article)](../../_images/hybrid/unified-operations.png)
 
 ## Customer processes
 
 The primary objective of unified operations is creating as much process consistency as possible across deployments. No cloud service provider will be able to reach 100% feature parity across all hybrid, multicloud, and edge deployments. However, the provider should be able to deliver baseline feature sets common across all deployments, so that your [governance](./govern.md) and [operations management](./manage.md) processes remain consistent.
 
-![Customer Processes that unified operations can support](../../_images/unified-operations/unified-operations-customer-processes.png)
+![Customer Processes that unified operations can support](../../_images/hybrid/unified-operations-customer-processes.png)
 
 Most commonly, customers require the ability to deliver consistency within their defined governance and operations management processes. To meet long-term requirements, your unified operations solution will need to be able to scale to meet these common processes, specified below.
 
@@ -101,7 +101,7 @@ Your primary cloud platform should be able to provide the required technical cap
 
 Your primary cloud platform should include a number of important features to facilitate or automate the customer processes typically required in the cloud:
 
-![Common cloud controls, outlined in the following bullets](../../_images/unified-operations/unified-operations-cloud-controls.png)
+![Common cloud controls, outlined in the following bullets](../../_images/hybrid/unified-operations-cloud-controls.png)
 
 ### Basic features
 

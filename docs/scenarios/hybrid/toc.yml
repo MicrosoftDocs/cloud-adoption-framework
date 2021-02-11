@@ -1,0 +1,276 @@
+# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
+#cSpell:ignore devtest mariadb
+
+items:
+  - name: Hybrid and Multicloud - Microsoft Cloud Adoption Framework for Azure
+    href: scenario-overview.md
+    pdf_name: Hybrid and Multicloud - Microsoft Cloud Adoption Framework for Azure
+  - name: Overview
+    items:
+    - name: Intro to hybrid and multicloud
+      href: index.md
+    - name: Intro to unified operations
+      href: unified-operations.md
+    - name: Azure products
+      href: toolchain.md
+
+  - name: Build an initial strategy
+    href: strategy.md
+  - name: Define your plan
+    href: plan.md
+  - name: Prepare your environments
+    href: ready.md
+  - name: Migrate to the cloud
+    href: migrate.md
+  - name: Govern your portfolio
+    href: govern.md
+  - name: Manage your portfolio
+    href: manage.md
+
+  - name: Well-Architected hybrid workloads
+    items:
+    - name: Overview
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-overview?branch=pr-en-us-2237&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=pr-en-us-2237
+    - name: Cost Optimization
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-cost?branch=pr-en-us-2312&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=pr-en-us-2237
+    - name: Operational excellence
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-opex?branch=pr-en-us-2312&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=pr-en-us-2237
+    - name: Performance Efficiency
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-performance-efficiency?branch=pr-en-us-2312&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=pr-en-us-2237
+    - name: Reliability
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-reliability?branch=pr-en-us-2312&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=pr-en-us-2237
+    - name: Security
+      href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-security?branch=pr-en-us-2312&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+  - name: Architectures
+    items:
+    - name: Overview
+      href: https://docs.microsoft.com/azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Apps
+      items:
+      - name: AI at the edge
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/ai-at-the-edge?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: AI at the edge (disconnected)
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Functions in a hybrid environment
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json                                
+      - name: Robo application example on Azure Stack HCI
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Run containers in a hybrid environment
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-containers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: AI ML on Azure Stack Edge
+        href: https://docs.microsoft.com/azure/architecture/hybrid/deploy-ai-ml-azure-stack-edge?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid HPC with HPC Pack
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/hybrid-hpc-in-azure-with-hpc-pack?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid DevOps
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/devops-in-a-hybrid-environment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json        
+
+    - name: Data
+      items:
+      - name: Administer SQL Server anywhere with Azure Arc
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-arc-sql-server?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid big data with HDInsight
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/extend-your-on-premises-big-data-investments-with-hdinsight?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json   
+      - name: Extend on-premises data solutions to Azure
+        href: https://docs.microsoft.com/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid ETL with Azure Data Factory
+        href: https://docs.microsoft.com/azure/architecture/example-scenario/data/hybrid-etl-with-adf?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Deploy AI and machine learning at the edge by using Azure Stack Edge
+        href: https://docs.microsoft.com/azure/architecture/hybrid/deploy-ai-ml-azure-stack-edge?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: On-premises data gateway for Azure Logic Apps
+        href: https://docs.microsoft.com/azure/architecture/hybrid/gateway-logic-apps?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Management
+      items:
+      - name: Manage configurations for Azure Arc enabled servers
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Automation in a hybrid environment
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-automation-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Back up files and applications on Azure Stack Hub
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-backup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Automation Update Management
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-update-mgmt?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid availability and performance monitoring
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-perf-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Manage hybrid Azure workloads using Windows Admin Center
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-server-os-mgmt?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Arc hybrid management and deployment for Kubernetes clusters
+        href: https://docs.microsoft.com/azure/architecture/hybrid/arc-hybrid-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Disaster Recovery for Azure Stack Hub virtual machines
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-vm-dr?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Cross cloud scaling
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/cross-cloud-scaling?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Networking
+      items:
+      - name: Connecting an on-premises network to Azure
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Connect over Express Route
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/expressroute?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Connect over VPN gateway
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: ExpressRoute with VPN failover
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Standalone server connection with Azure Network Adapter
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-network-adapter?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid Domain Name System solution
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-dns-infra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Identity
+      items:
+      - name: Hybrid Active Directory (AD) options
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Integrate AD and Azure AD 
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/azure-ad?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Extend AD with AD Federation Services (AD FS)
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adfs?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Extend AD with AD Domain Services (AD DS)
+        href: https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-forest?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Stack Hub identity integration
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/hybrid-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Security
+      items:
+      - name: Hybrid Security Monitoring using Azure Security Center and Azure Sentinel
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-security-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Hybrid Security Monitoring using Azure Security Center and Azure Sentinel
+        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/devsecops-in-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Environmental readiness
+      items:
+      - name: Hybrid file services
+        href: https://docs.microsoft.com/azure/architecture/hybrid/hybrid-file-services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure enterprise cloud file share
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-files-private?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Using Azure file shares in a hybrid environment
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-file-share?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: FSLogix for the enterprise
+        href: https://docs.microsoft.com/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Stack stretched clusters for DR
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-hci-dr?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Azure Stack for remote offices and branches
+        href: https://docs.microsoft.com/azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+  - name: Best practices
+    items:
+    - name: Onboard
+      items:
+      - name: Azure
+        items:
+        - name: Azure Linux with ARM Templates
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/azure-arm-template-linux.md
+        - name: Azure Windows with ARM Templates
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/azure-arm-template-win.md
+      - name: On-prem - Local datacenter
+        items:
+        - name: Linux with shell script
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux.md
+        - name: Windows with PowerShell
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-win.md
+        - name: Ubuntu with Vagrant
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/local-vagrant-ubuntu.md
+        - name: Windows with Vagrant
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/local-vagrant-windows.md
+      - name: VMware
+        items:
+        - name: Create a VM template for Ubuntu
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-ubuntu-template.md
+        - name: Create a VM template for Windows
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-winsrv2k19-template.md
+        - name: Linux with VMware PowerCLI
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md
+        - name: Windows with VMware PowerCLI
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-scaled-powercli-win.md
+        - name: Ubuntu with Terraform
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-terraform-ubuntu.md
+        - name: Windows with Terraform
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-terraform-winsrv.md
+      - name: AWS - Amazon Web Services
+        items:
+        - name: AWS Ubuntu with Terraform
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-terraform-ubuntu.md
+        - name: AWS Linux with Terraform
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-terraform-al2.md
+        - name: AWS EC2 onboard with Ansible
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-scale-ansible.md
+      - name: GCP - Google Cloud Provider
+        items:
+        - name: GCP Ubuntu with Terraform
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md
+        - name: GCP Windows with Terraform
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/gcp-terraform-windows.md
+    - name: Operate
+      items:
+      - name: Inventory and Tag assets
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging.md
+      - name: Patch and Update Management
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-updateManagement.md
+      - name: Apply Policies
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-policies-mma.md
+      - name: Collect and Detect security data
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-securitycenter.md
+      - name: Investigate and respond to security threats
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-azuresentinel.md
+      - name: Manage VMs with Microsoft Monitoring Agent (MMA)
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-vm-extension-mma-arm.md
+      - name: Scale configuration of MMA
+        href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-vm-extension-customscript-arm.md
+  - name: Featured Azure products
+    items:
+    - name: All hybrid and multicloud products
+      href: https://docs.microsoft.com/hybrid/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure Arc
+      href: https://docs.microsoft.com/azure/azure-arc/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure Stack HCI
+      href: https://docs.microsoft.com/azure-stack/hci/overview#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure Modular Data Center
+      href: https://docs.microsoft.com/azure-stack#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure Stack HCI
+      href: https://docs.microsoft.com/azure-stack#azure-stack-hci?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure IoT Edge
+      href: https://docs.microsoft.com/azure/iot-edge/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure Sphere
+      href: https://docs.microsoft.com/azure-sphere?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Windows for IoT
+      href: https://docs.microsoft.com/windows/iot-core/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Virtual WAN
+      href: https://docs.microsoft.com/azure/virtual-wan/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Express Route
+      href: https://docs.microsoft.com/azure/expressroute/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: VPN Gateway
+      href: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Azure Firewall
+      href: https://docs.microsoft.com/azure/firewall/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+  - name: Learn modules
+    items:
+    - name: Hybrid cloud
+      items:
+      - name: Introduction to Azure hybrid cloud services
+        href: https://docs.microsoft.com/learn/modules/intro-to-azure-hybrid-services/
+      - name: Design a hybrid network architecture on Azure
+        href: https://docs.microsoft.com/learn/modules/design-a-hybrid-network-architecture/
+      - name: Implement hybrid network infrastructure
+        href: https://docs.microsoft.com/learn/modules/implement-hybrid-network-infrastructure/
+    - name: Azure Arc
+      items:
+      - name: Intro to Azure Arc
+        href: https://docs.microsoft.com/learn/modules/intro-to-azure-arc/
+      - name: Arc for servers
+        href: https://docs.microsoft.com/learn/modules/intro-to-arc-for-servers/
+      - name: Arc for kubernetes
+        href: https://docs.microsoft.com/learn/modules/intro-to-arc-enabled-kubernetes/
+      - name: Arc for hybrid infrastructure
+        href: https://docs.microsoft.com/learn/paths/manage-hybrid-infrastructure-with-azure-arc/
+      - name: Arc for hybrid workloads
+        href: https://docs.microsoft.com/learn/modules/manage-hybrid-workloads-azure-arc/
+    - name: Azure Stack
+      items:
+      - name: Intro to Azure Stack
+        href: https://docs.microsoft.com/learn/modules/intro-to-azure-stack/
+      - name: Azure Stack HCI foundations
+        href: https://docs.microsoft.com/learn/paths/azure-stack-hci-foundations/
+      - name: Azure Stack HCI deployment
+        href: https://docs.microsoft.com/learn/modules/azure-stack-hci-plan-deploy/
+      - name: Azure Stack HCI technologies
+        href: https://docs.microsoft.com/learn/modules/azure-stack-hci-technologies/
+      - name: Azure Stack HCI - Arc integration
+        href: https://docs.microsoft.com/learn/modules/stack-hci-arc-integration/

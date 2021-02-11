@@ -26,21 +26,21 @@ To get started with an operations baseline that spans multiple cloud providers, 
 - Tag resources from AWS, GCP, and so on.
 - Query your resources to discover where they are hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/hybrid/server/best-practices/arc-inventory-tagging.md)
 
 <!-- docutune:casing "update management guide" -->
 
-Once you complete the basic inventory and tagging exercise, you can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds is **establishing a consistent plan for patch and update management**. Follow the [hybrid and multicloud update management guide](../../manage/unified-operations/server/best-practices/arc-update-management.md) to deploy tools that can control patching across cloud providers.
+Once you complete the basic inventory and tagging exercise, you can begin operating your hybrid and multicloud environment. The first step most customers take when extending operations across clouds is **establishing a consistent plan for patch and update management**. Follow the [hybrid and multicloud update management guide](../../manage/hybrid/server/best-practices/arc-update-management.md) to deploy tools that can control patching across cloud providers.
 
 ## Enhanced baseline
 
 Enhance your operations baseline by onboarding a continuously broader range of assets and cloud providers. The follow list provides a few examples of the type of assets you can add to your expanded operations baseline.
 
-- Onboard Azure assets: [Linux VMs](../../manage/unified-operations/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/arm-template-win.md)
-- Onboard assets in your local datacenter: [Linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
-- Onboard VMware assets: [Linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
-- Onboard AWS assets: [Linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
-- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-windows.md)
+- Onboard Azure assets: [Linux VMs](../../manage/hybrid/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/arm-template-win.md)
+- Onboard assets in your local datacenter: [Linux VMs](../../manage/hybrid/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/onboard-server-win.md)
+- Onboard VMware assets: [Linux VMs](../../manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/vmware-scaled-powercli-win.md)
+- Onboard AWS assets: [Linux VMs with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-ubuntu.md)
+- Onboard GCP assets: [Ubuntu VMs](../../manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/hybrid/server/best-practices/gcp-terraform-windows.md)
 
 ## Operations management disciplines
 
@@ -48,8 +48,8 @@ In addition to tagging and onboarding assets, you can also deliver a number of o
 
 One example of a mature operations management discipline, is the use of Microsoft Monitoring Agent to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
-- [Manage VMs with MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-mma.md)
-- [Scale configuration of MMA](../../manage/unified-operations/server/best-practices/arc-vm-extension-custom-script.md)
+- [Manage VMs with MMA](../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md)
+- [Scale configuration of MMA](../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md)
 
 ## Next step: Your next migration iteration
 

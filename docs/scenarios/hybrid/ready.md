@@ -27,7 +27,7 @@ This article will guide you through the considerations required to achieve each 
 
 Choosing hybrid and multicloud environment is not a binary decision, but closer to a range of decisions (as seen in the following chart). Before configuring your Azure environment (or any other cloud environment), it is important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Below are a few examples of common cloud mixes:
 
-![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/unified-operations/cloud-mix.png)
+![3 illustrations showing how different customers distribute workloads across cloud providers.](../../_images/hybrid/cloud-mix.png)
 
 The image above illustrates three of the most common cloud mixes we are seeing with customers. Each blue dot represents a workload. Each orange circle represents a business process, supported by a distinct environment. Each of these cloud mixes requires a very different Azure environment configuration.
 
@@ -53,15 +53,15 @@ To start evaluating your cloud mix across multiple cloud providers, complete a s
 - Onboard and tag resources from AWS, GCP, or other cloud providers.
 - Query your resources to see where they are hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/unified-operations/server/best-practices/arc-inventory-tagging.md)
+To get started, [inventory and tag your hybrid and multicloud resources](../../manage/hybrid/server/best-practices/arc-inventory-tagging.md)
 
 The following links will help you onboard and tag assets across each of your cloud providers:
 
-- Onboard Azure assets: [Linux VMs](../../manage/unified-operations/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/arm-template-win.md)
-- Onboard assets in your local datacenter: [Linux VMs](../../manage/unified-operations/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/onboard-server-win.md)
-- Onboard VMware assets: [Linux VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md)
-- Onboard AWS assets: [Linux VMs with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md)
-- Onboard GCP assets: [Ubuntu VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/unified-operations/server/best-practices/gcp-terraform-windows.md)
+- Onboard Azure assets: [Linux VMs](../../manage/hybrid/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/arm-template-win.md)
+- Onboard assets in your local datacenter: [Linux VMs](../../manage/hybrid/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/onboard-server-win.md)
+- Onboard VMware assets: [Linux VMs](../../manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/vmware-scaled-powercli-win.md)
+- Onboard AWS assets: [Linux VMs with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-ubuntu.md)
+- Onboard GCP assets: [Ubuntu VMs](../../manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/hybrid/server/best-practices/gcp-terraform-windows.md)
 
 ## Configure your initial Azure environment
 
