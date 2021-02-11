@@ -7,11 +7,9 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
-
-<!-- cSpell:ignore ITSMC -->
 
 # Enhanced management baseline in Azure
 
@@ -40,16 +38,18 @@ However, you might need a greater commitment to the business beyond the standard
 
 Both workload operations and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads that require such investments, an enhanced management baseline can provide enough of an improvement to the business commitment.
 
+<!-- docutune:casing "IT Service Management" "IT Service Management Connector" ITSMC "Free and Standard" -->
+
 This table outlines a few processes, tools, and potential effects common in customers' enhanced management baselines:
 
 | Discipline  | Process  | Tool | Potential impact | Learn more |
 |---|---|---|---|---|
 | Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](/azure/governance/resource-graph/overview) |
-| Inventory and visibility | IT service management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/platform/itsmc-overview) |
+| Inventory and visibility | IT Service Management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/platform/itsmc-overview) |
 | Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
 | Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
-| Operational compliance | Guest automation |  Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC Overview](/powershell/scripting/dsc/overview/overview) |
+| Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview/overview) |
 | Protect and recover | Breach notification | Azure Security Center | Extend protection to include security-breach recovery triggers. | See the following sections |
 
 ::: zone target="docs"

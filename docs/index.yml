@@ -106,7 +106,7 @@ productDirectory:
       links:
         - url: ./migrate/azure-migration-guide/index.md
           text: Azure migration guide
-        - url: ./migrate/azure-best-practices/contoso-migration-overview.md
+        - url: ./scenarios/index.md
           text: Migration scenarios
         - url: ./migrate/azure-best-practices/index.md
           text: Best practices for cloud migration
@@ -140,10 +140,10 @@ productDirectory:
     - title: Manage
       imageSrc: ./_images/caf-manage.png
       links:
-        - url: ./manage/azure-management-guide/index.md
-          text: Management baseline
         - url: ./manage/considerations/business-alignment.md
           text: Business commitments
+        - url: ./manage/azure-management-guide/index.md
+          text: Management baseline
         - url: ./manage/best-practices.md
           text: Expand the baseline
         - url: ./manage/design-principles.md

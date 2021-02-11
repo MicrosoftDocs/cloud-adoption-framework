@@ -7,6 +7,7 @@ ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Deploy workloads to Azure Stack Hub
@@ -19,7 +20,7 @@ By using Azure Stack, your organization can run its own instance of Azure in its
 
 ## Infrastructure as a service deployment
 
-Regardless of the reason to deploy infrastructure as a service (IaaS), deployment to Azure Stack Hub is similar to any other IaaS deployment. People often think of IaaS only as virtual machines (VMs), but IaaS is more than that. When you deploy a VM in Azure or Azure Stack, the machine comes with a software-defined network, including domain name system, public IPs, firewall rules (also called network security groups), and many other capabilities. The VM deployment also creates disks for your VMs on software-defined storage by using Azure Blob storage.
+Regardless of the reason to deploy infrastructure as a service (IaaS), deployment to Azure Stack Hub is similar to any other IaaS deployment. People often think of IaaS only as virtual machines (VMs), but IaaS is more than that. When you deploy a VM in Azure or Azure Stack, the machine comes with a software-defined network, including Domain Name System, public IPs, firewall rules (also called network security groups), and many other capabilities. The VM deployment also creates disks for your VMs on software-defined storage by using Azure Blob storage.
 
 For deeper guidance on deploying VMs to Azure Stack, see the [Azure Stack compute overview](/azure-stack/user/azure-stack-compute-overview?view=azs-2002).
 

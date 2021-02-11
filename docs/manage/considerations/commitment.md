@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Business commitment in cloud management
@@ -88,7 +89,7 @@ The next data point that's required to make a commitment is a list of soft-cost 
 
 ## Calculate loss avoidance ROI
 
-When it's calculating the relative return on operations management costs, the IT team that's responsible for Cloud Operations should complete the previously mentioned prerequisites and assume a minimum level of management for all workloads.
+When it's calculating the relative return on operations management costs, the IT team that's responsible for cloud operations should complete the previously mentioned prerequisites and assume a minimum level of management for all workloads.
 
 The next commitment to be made is an acceptance by the business of the costs associated with the baseline-managed offering.
 
@@ -109,9 +110,9 @@ The following calculations will walk through formulas to help you better underst
 
 ### Estimate outage (hours per year)
 
-Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives _estimated outage_ (labeled `Est. Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
+Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives _estimated outage_ (labeled `Est.Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
 
-> _Estimated outage = (1 - Composite SLA percentage) &#215; Number of hours in a year_
+> _Estimated outage = (1 - composite SLA percentage) &#215; number of hours in a year_
 
 The workbook uses the default value of _8,760 hours per year_.
 
@@ -119,7 +120,7 @@ The workbook uses the default value of _8,760 hours per year_.
 
 _Standard loss impact_ (labeled `Standard Impact` in the workbook) forecasts the financial impact of any outage, assuming that the _estimated outage_ prediction proves accurate. To calculate this forecast without using the workbook, apply the following formula:
 
-> _Standard impact = Estimated outage @ three 9s of uptime &#215; Time-value impact_
+> _Standard impact = estimated outage @ three 9s of uptime &#215; time-value impact_
 
 This serves as a baseline for cost, should the business stakeholders choose to invest in a higher level of management.
 
@@ -127,7 +128,7 @@ This serves as a baseline for cost, should the business stakeholders choose to i
 
 _Composite-SLA impact_ (labeled `Commitment level impact` in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
 
-> _Composite-SLA impact = Estimated outage &#215; Time-value impact_
+> _Composite-SLA impact = estimated outage &#215; time-value impact_
 
 The value represents the potential losses to be avoided by the changed commitment level and new composite SLA.
 
@@ -139,7 +140,7 @@ _Comparison basis_ evaluates standard impact and composite SLA impact to determi
 
 If the cost of managing a workload exceeds the potential losses, the proposed investment in cloud management might not be fruitful. To compare the _Return on Loss Avoidance_, see the column labeled _Annual ROI****_. To calculate this column on your own, use the following formula:
 
-> _Return on Loss Avoidance = (Comparison basis - (Monthly cost &#215; 12) ) &#247; (Monthly cost &#215; 12) )_
+> _Return on loss avoidance = (comparison basis - (monthly cost &#215; 12) ) &#247; (monthly cost &#215; 12) )_
 
 Unless there are other soft-cost factors to consider, this comparison can quickly suggest whether there should be a deeper investment in cloud operations, resiliency, reliability, or other areas.
 

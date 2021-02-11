@@ -7,6 +7,7 @@ ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Common Azure Policy examples
@@ -58,7 +59,7 @@ To find this policy in the portal, search for "allowed resource types" on the po
 Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq "BuiltIn") -and ($_.Properties.displayName -like "*allowed resource types") }
 ```
 
-After you identify the policy that you want to use, you can modify the PowerShell sample in the [Restrict resource regions](#restrict-resource-regions) section to assign the policy.
+After you identify the policy that you want to use, you can modify the PowerShell sample in the [restrict resource regions](#restrict-resource-regions) section to assign the policy.
 
 ### Restrict VM size
 
@@ -66,7 +67,7 @@ Azure offers a wide range of VM sizes to support various workloads. To control y
 
 ### Deploy antimalware
 
-You can use this policy to deploy a Microsoft Antimalware extension with a default configuration to VMs that aren't protected by antimalware.
+You can use this policy to deploy the Microsoft Antimalware Extension with a default configuration to VMs that aren't protected by antimalware.
 
 The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 

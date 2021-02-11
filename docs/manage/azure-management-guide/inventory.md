@@ -7,8 +7,8 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 # Inventory and visibility in Azure
@@ -23,14 +23,14 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 | Process | Tool | Purpose |
 |---|---|---|
-| Monitor health of Azure services | Azure Service Health | Health, performance, and diagnostics for services running in Azure |
-| Log centralization | Log Analytics | Central logging for all visibility purposes |
-| Monitoring centralization | Azure Monitor | Central monitoring of operational data and trends |
-| Virtual machine inventory and change tracking | Azure Change Tracking and Inventory | Inventory VMs and monitor changes for guest OS level |
-| Subscription Monitoring | Azure Activity Log | Monitoring change at the subscription level |
-| Guest OS monitoring | Azure Monitor for VMs | Monitoring changes and performance of VMs |
-| Network monitoring | Azure Network Watcher | Monitoring network changes and performance |
-| DNS monitoring | DNS Analytics | Security, performance, and operations of DNS |
+| Monitor health of Azure services | [Azure Service Health](/azure/service-health/service-health-overview) | Health, performance, and diagnostics for services running in Azure |
+| Log centralization | [Log Analytics](/azure-monitor/log-query/log-analytics-overview) | Central logging for all visibility purposes |
+| Monitoring centralization | [Azure Monitor](/azure/azure-monitor/overview) | Central monitoring of operational data and trends |
+| Virtual machine inventory and change tracking | [Change Tracking and Inventory](/azure/automation/change-tracking/overview) | Inventory VMs and monitor changes for guest OS level |
+| Subscription monitoring | [Azure Activity log](/azure/azure-monitor/platform/activity-log) | Monitoring change at the subscription level |
+| Guest OS monitoring | [Azure Monitor for VMs](/azure/azure-monitor/insights/vminsights-overview) | Monitoring changes and performance of VMs |
+| Network monitoring | [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) | Monitoring network changes and performance |
+| DNS monitoring | [DNS Analytics](/azure/azure-monitor/insights/dns-analytics) | Security, performance, and operations of DNS |
 
 ::: zone target="docs"
 
@@ -174,11 +174,11 @@ There are two approaches to onboarding:
 
 Each article guides you through a series of steps to onboard these solutions:
 
-- Update Management
-- Change Tracking and Inventory
-- Azure Activity Log
+- Update Management solution
+- Change Tracking and Inventory solution
+- Azure activity log
 - Azure Log Analytics Agent Health
-- Antimalware Assessment
+- Antimalware assessment
 - Azure Monitor for VMs
 - Azure Security Center
 

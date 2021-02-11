@@ -7,6 +7,7 @@ ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore HKEY kusto -->
@@ -15,17 +16,17 @@ ms.subservice: operate
 
 Azure Change Tracking and Inventory provide alerts on the configuration state of your hybrid environment and changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.
 
-By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal, then select **Inventory** > **Edit settings**.
+By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Azure Automation account in the Azure portal, then select **Inventory** > **Edit settings**.
 
 ![Screenshot of the Azure Automation Inventory view in the Azure portal](./media/change-tracking1.png)
 
 For more information about each registry key, see [Registry key change tracking](/azure/automation/automation-change-tracking#registry-key-change-tracking). Select any key to evaluate and then enable it. The setting is applied to all VMs that are enabled in the current workspace.
 
-You can also use the service to track critical file changes. For example, you might want to track the C:\windows\system32\drivers\etc\hosts file because the OS uses it to map host names to IP addresses. Changes to this file could cause connectivity problems or redirect traffic to dangerous websites.
+You can also use the service to track critical file changes. For example, you might want to track the `C:\windows\system32\drivers\etc\hosts` file because the OS uses it to map host names to IP addresses. Changes to this file could cause connectivity problems or redirect traffic to dangerous websites.
 
 To enable file-content tracking for the hosts file, follow the steps in [Enable file content tracking](/azure/automation/change-tracking-file-contents#enable-file-content-tracking).
 
-You can also add an alert for changes to files that you're tracking. For example, say you want to set an alert for changes to the hosts file. Select **Log Analytics** on the command bar or Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
+You can also add an alert for changes to files that you're tracking. For example, you might want to set an alert for changes to the hosts file. To do this, select **Log Analytics** on the command bar or **Log Search** for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
 
   ```kusto
   ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
@@ -33,8 +34,8 @@ You can also add an alert for changes to files that you're tracking. For example
 
 ![Screenshot of the Log Analytics query editor in the Azure portal](./media/change-tracking2.png)
 
-This query searches for changes to the contents of files that have a path that contains the word "hosts." You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
-  
+This query searches for changes to the contents of files that have a path that contains the word "hosts." You can also search for a specific file by changing the path parameter. (For example: `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
+
 After the query returns the results, select **New alert rule** to open the alert-rule editor. You can also get to this editor via Azure Monitor in the Azure portal.
 
 In the alert-rule editor, review the query and change the alert logic if you need to. In this case, we want the alert to be raised if any changes are detected on any machine in the environment.

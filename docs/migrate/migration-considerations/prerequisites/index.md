@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Prerequisites for migration
@@ -39,7 +40,7 @@ Prerequisites are completed when the following are true:
 
 ## Accountability during prerequisites
 
-Two teams are accountable for readiness during the prerequisites phase:
+Two teams are accountable for readiness when completing prerequisites:
 
 - **Cloud strategy team:** This team is responsible for identifying and prioritizing the first two or three workloads to serve as migration candidates.
 - **Cloud adoption team:** This team is responsible for validating readiness of the technical environment and the feasibility of migrating the proposed workloads.
