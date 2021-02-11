@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc OSTICKETWEB OSTICKETMYSQL osTicket contosoosticket trafficmanager InnoDB binlog DBHOST DBUSER CNAME -->
@@ -21,9 +22,9 @@ osTicket, the service desk application that we use in this example, is provided 
 
 The IT leadership team has worked closely with business partners to understand what they want to achieve:
 
-- **Address business growth**. Contoso is growing and moving into new markets. It needs additional customer service agents.
-- **Scale**. The solution should be built so that Contoso can add more customer service agents as the business scales.
-- **Improve resiliency**. In the past, issues with the system affected internal users only. With the new business model, external users will be affected, and Contoso needs the application up and running at all times.
+- **Address business growth.** Contoso is growing and moving into new markets. It needs additional customer service agents.
+- **Scale.** The solution should be built so that Contoso can add more customer service agents as the business scales.
+- **Improve resiliency.** In the past, issues with the system affected internal users only. With the new business model, external users will be affected, and Contoso needs the application up and running at all times.
 
 ## Migration goals
 
@@ -198,12 +199,17 @@ In brief, Contoso does the following:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.  
   - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:  `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
 
-  - The user must have the `ReplicationAdmin` role.  
-  - Migrate the database schemas without foreign keys and triggers.  
-- They create a virtual private network (VPN) that connects via ExpressRoute or VPN to the on-premises network.  
-- They create an Azure Database Migration Service instance with a Premium SKU that's connected to the virtual network.  
-- They ensure that Azure Database Migration Service can access the MySQL database via the virtual network. This entails ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.  
-- They run the Database Migration Service tool and then do the following:  
+  - The user must have the `ReplicationAdmin` role.
+
+  - Migrate the database schemas without foreign keys and triggers.
+
+- They create a virtual private network (VPN) that connects via ExpressRoute or VPN to the on-premises network.
+
+- They create an Azure Database Migration Service instance with a Premium SKU that's connected to the virtual network.
+
+- They ensure that Azure Database Migration Service can access the MySQL database via the virtual network. This entails ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
+
+- They run the Database Migration Service tool and then do the following:
 
   a. Create a migration project that's based on the Premium SKU.
 

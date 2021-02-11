@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: fasttrack-edit, AQC
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 # Prepare for customer feedback

@@ -7,13 +7,13 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 # Workload specialization for cloud management
 
-Workload specialization builds on the concepts outlined in [Platform Specialization](./platform-specialization.md).
+Workload specialization builds on the concepts outlined in [Platform specialization](./platform-specialization.md).
 
 ![Beyond the cloud management baseline](../../_images/manage/beyond-the-baseline.png)
 
@@ -23,7 +23,7 @@ Workload specialization builds on the concepts outlined in [Platform Specializat
 
 ## High-level process
 
-Workload specialization consists of a disciplined execution of the following four processes in an iterative approach. Each process is explained in more detail in [Platform Specialization](./platform-specialization.md).
+Workload specialization consists of a disciplined execution of the following four processes in an iterative approach. Each process is explained in more detail in [Platform specialization](./platform-specialization.md).
 
 - **Improve system design:** Improve the design of a specific workload to effectively minimize interruptions.
 - **Automate remediation:** Some improvements aren't cost effective. In such cases, it might make more sense to automate remediation and reduce the effect of interruptions.
@@ -46,7 +46,7 @@ Greater detail on the specific workload is required to provide clear workload op
 
 | Requirement                          | Tool                 | Purpose                                                                                |
 | ------------------------------------ | -------------------- | -------------------------------------------------------------------------------------- |
-| Application monitoring               | Application Insights | Monitoring and diagnostics for apps                                                    |
+| Application monitoring               | Application Insights | Monitoring and diagnostics for applications                                                    |
 | Performance, availability, and usage | Application Insights | Advanced application monitoring with the application dashboard, composite maps, usage, and tracing |
 
 ### Deploy Application Insights

@@ -8,8 +8,10 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.localizationpriority: high
-ms.custom: fasttrack-edit, AQC
+ms.custom: internal, fasttrack-edit, AQC
 ---
+
+<!-- docutune:casing "SQL Server Health Check" -->
 
 # Platform specialization for cloud management
 

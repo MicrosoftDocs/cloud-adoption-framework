@@ -2,11 +2,12 @@
 title: Application development and deployment
 description: Learn about using Kubernetes in the Cloud Adoption Framework for application development and architecture.
 author: sabbour
-ms.author: asabbour
+ms.author: brblanch
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore autoscaler Istio Linkerd -->
@@ -54,7 +55,7 @@ As you prepare the application for production, you should implement a minimum se
 >
 > | Checklist  | Resources                                                                                                     |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
-> | **Configure readiness and liveness health checks.** Kubernetes uses readiness and liveness checks to know when to your application is ready to receive traffic and when it needs to be restarted. Without defining such checks, Kubernetes will not be able to determine if your application is up and running. | [Liveness and readiness checks](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes) |
+> | **Configure readiness and liveness health checks.** Kubernetes uses readiness and liveness checks to know when to your application is ready to receive traffic and when it needs to be restarted. Without defining such checks, Kubernetes will not be able to determine whether your application is up and running. | [Liveness and readiness checks](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes) |
 > | **Configure logging, application monitoring, and alerting.** Monitoring your containers is critical, especially when you're running a production cluster, at scale, with multiple applications. The recommended logging method for containerized applications is writing to the standard output (stdout) and standard error (stderr) streams. | [Logging in Kubernetes](https://kubernetes.io/docs/concepts/cluster-administration/logging) <br> [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?v=W7aN_z-cyUw&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16) <br> [Azure Monitor for containers](/azure/azure-monitor/insights/container-insights-overview) <br> [Enable and review Kubernetes master node logs in Azure Kubernetes Service (AKS)](/azure/aks/view-master-logs) <br> [View Kubernetes logs, events, and pod metrics in real time](/azure/azure-monitor/insights/container-insights-livedata-overview) |
 > | **Define resource requirements for the application.** A primary way to manage the compute resources within a Kubernetes cluster is using pod requests and limits. These requests and limits tell the Kubernetes scheduler what compute resources a pod should be assigned. | [Define&nbsp;pod&nbsp;resource&nbsp;requests&nbsp;and&nbsp;limits](/azure/aks/developer-best-practices-resource-management) |
 > | **Configure application scaling requirements.** Kubernetes supports horizontal pod autoscaling to adjust the number of pods in a deployment depending on CPU utilization or other select metrics. To use the autoscaler, all containers in your pods must have CPU requests and limits defined. | [Configure horizontal pod autoscaling](/azure/aks/tutorial-kubernetes-scale#autoscale-pods) |

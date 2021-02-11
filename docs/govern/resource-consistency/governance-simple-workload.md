@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Governance design for a simple workload
@@ -65,12 +65,12 @@ Since the **account owner** is currently the only user with permission to add th
 ![The Azure account owner adds the **workload owner** to the subscription](../../_images/govern/design/governance-1-5.png)
 *Figure 5: The Azure account owner adds the workload owner to the subscription.*
 
-The Azure **account owner** grants permissions to the **workload owner** by assigning a [role-based access control (RBAC)](/azure/role-based-access-control) role. The RBAC role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
+The Azure **account owner** grants permissions to the **workload owner** by assigning an [Azure role](/azure/role-based-access-control). The Azure role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
 
 Notice that in this example, the **account owner** has assigned the [built-in **owner** role](/azure/role-based-access-control/built-in-roles#owner):
 
 ![The **workload owner** was assigned the built-in owner role](../../_images/govern/design/governance-1-6.png)
-*Figure 6: The workload owner was assigned the built-in owner role.*
+*Figure 6: The workload owner was assigned the built-in Owner role.*
 
 The built-in **owner** role grants all permissions to the **workload owner** at the subscription scope.
 
@@ -82,16 +82,16 @@ The next level of management scope is the **resource group** level. A resource g
 To illustrate this, let's look at what happens when the **workload owner** creates a resource group:
 
 ![The **workload owner** creates a resource group](../../_images/govern/design/governance-1-7.png)
-*Figure 7: The workload owner creates a resource group and inherits the built-in owner role at the resource group scope.*
+*Figure 7: The workload owner creates a resource group and inherits the built-in Owner role at the resource group scope.*
 
 Again, the built-in **owner** role grants all permissions to the **workload owner** at the resource group scope. As discussed earlier, this role is inherited from the subscription level. If a different role is assigned to this user at this scope, it applies to this scope only.
 
 The lowest level of management scope is at the **resource** level. Operations applied at the resource level apply only to the resource itself. Again, permissions at the resource level are inherited from resource group scope. For example, let's look at what happens if the **workload owner** deploys a [virtual network](/azure/virtual-network/virtual-networks-overview) into the resource group:
 
 ![The **workload owner** creates a resource](../../_images/govern/design/governance-1-8.png)
-*Figure 8: The workload owner creates a resource and inherits the built-in owner role at the resource scope.*
+*Figure 8: The workload owner creates a resource and inherits the built-in Owner role at the resource scope.*
 
-The **workload owner** inherits the owner role at the resource scope, which means the workload owner has all permissions for the virtual network.
+The **workload owner** inherits the Owner role at the resource scope, which means the workload owner has all permissions for the virtual network.
 
 ## Implement the basic resource access management model
 

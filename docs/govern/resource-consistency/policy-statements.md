@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource Consistency sample policy statements
@@ -49,7 +49,9 @@ The following sample policy statements address common business risks related to 
 
 **Policy statement:** Governance tooling must enforce that automatic updates are enabled on all deployed VMs. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
 
-**Potential design options:** For Azure hosted VMs, you can provide consistent update management using the [update management solution in Azure Automation](/azure/automation/update-management/overview).
+<!-- docutune:ignore "consistent update management" -->
+
+**Potential design options:** For Azure hosted VMs, you can provide consistent update management using the [Update Management solution in Azure Automation](/azure/automation/update-management/overview).
 
 ## Deployment compliance
 

@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
@@ -303,3 +304,4 @@ Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-b
 ## Conclusion
 
 In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool.
+You can also take a look at the Azure DevOps projects which have been published in the [DevOps generator](https://aka.ms/adopt/plan/generator). Once in the generator download the [Server Migration Project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration) under the Cloud Adoption Framework navigation. 
