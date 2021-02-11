@@ -108,11 +108,11 @@ After all the prerequisites are set, you can assign policies to the Azure Arc co
 
    The `policy-set-definition` flag points to the initiative `Enable Azure Monitor` definition ID.
 
-2. After the initiative is assigned, it takes about 30 minutes for the assignment to be applied to the defined scope. Azure Policy then starts the evaluation cycle against the Azure Arc connected machine and recognizes it as non-compliant because it still doesn't have the Log Analytics agent configuration deployed. To check this, go to the Azure Arc connected machine under the policies section.
+2. After the initiative is assigned, it takes about 30 minutes for the assignment to be applied to the defined scope. Azure Policy then starts the evaluation cycle against the Azure Arc connected machine and recognizes it as noncompliant because it still doesn't have the Log Analytics agent configuration deployed. To check this, go to the Azure Arc connected machine under the policies section.
 
-   ![A screenshot of a non-compliant Azure Policy status.](./media/arc-policies-mma/non-comp-policy.png)
+   ![A screenshot of a noncompliant Azure Policy status.](./media/arc-policies-mma/noncompliant-policy.png)
 
-3. Now, assign a remediation task to the non-compliant resource to put into a compliant state.
+3. Now, assign a remediation task to the noncompliant resource to put into a compliant state.
 
    ![A screenshot of creating an Azure Policy remediation task.](./media/arc-policies-mma/create-remediation-task.png)
 

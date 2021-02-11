@@ -159,7 +159,7 @@ items:
         - name: Azure Linux with ARM Templates
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/azure-arm-template-linux.md
         - name: Azure Windows with ARM Templates
-          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/azure-arm-template-win.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/azure-arm-template-windows.md
       - name: On-prem - Local datacenter
         items:
         - name: Linux with shell script

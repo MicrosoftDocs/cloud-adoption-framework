@@ -47,10 +47,10 @@ Once subscriptions are moved to a management group with existing RBAC and polici
 
 - Any RBAC that is inherited to the moved subscriptions can take up to 30 minutes before the user tokens in the management group cache are refreshed. To expedite this process, you can refresh the token by signing out and in or request a new token.
 - Any policy where the assignment scope includes the moved subscriptions, will perform audit operations only on the existing resources. More specifically:
-  - Any existing resource in the subscription subject to **deployIfNotExists** policy effect will appear as non-compliant and will not be remediated automatically but requires user interaction to perform the remediation manually.
-  - Any existing resource in the subscription subject to **deny** policy effect will appear as non-compliant and will not be rejected. User must manually mitigate this result as appropriate.
-  - Any existing resource in the subscription subject to **append** and **modify** policy effect will appear as non-compliant and requires user interaction to mitigate.
-  - Any existing resource in the subscription subject to **audit** and **auditIfNotExist** will appear as non-compliant and requires user interaction to mitigate.
+  - Any existing resource in the subscription subject to **deployIfNotExists** policy effect will appear as noncompliant and will not be remediated automatically but requires user interaction to perform the remediation manually.
+  - Any existing resource in the subscription subject to **deny** policy effect will appear as noncompliant and will not be rejected. User must manually mitigate this result as appropriate.
+  - Any existing resource in the subscription subject to **append** and **modify** policy effect will appear as noncompliant and requires user interaction to mitigate.
+  - Any existing resource in the subscription subject to **audit** and **auditIfNotExist** will appear as noncompliant and requires user interaction to mitigate.
 - All new writes to resources in the moved subscription will be subject to the assigned policies at real-time as normal.
 
 ## Resource move
