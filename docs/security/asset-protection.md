@@ -12,6 +12,7 @@ ms.custom: internal
 
 # Asset Protection
 
+This article summarises the areas of consideration when planning to implement protection measures for corporate assets and data.
 
 ## Context
 
