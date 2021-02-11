@@ -1,5 +1,5 @@
 ---
-title: Transitioning existing Azure environments to enterprise-scale 
+title: Transitioning existing Azure environments to enterprise-scale
 description: Onboard existing environments to an enterprise-scale architecture
 author: BrianBlanchard
 ms.author: brblanch
@@ -31,7 +31,7 @@ To understand which move strategy you should use, we will go through examples of
 
 ## Subscription move
 
-The common use cases for moving subscriptions are to organize subscriptions into management groups or when transfering subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer).
+The common use cases for moving subscriptions are to organize subscriptions into management groups or when transferring subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer).
 
 ### Azure RBAC requirements
 
