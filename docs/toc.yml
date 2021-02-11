@@ -73,22 +73,22 @@ items:
         - name: Overview
           items:
           - name: Intro to hybrid and multicloud
-            href: scenarios/unified-operations/index.md
+            href: scenarios/hybrid/index.md
           - name: Intro to unified operations
-            href: scenarios/unified-operations/unified-operations.md
+            href: scenarios/hybrid/unified-operations.md
 
         - name: Build an initial strategy
-          href: scenarios/unified-operations/strategy.md
+          href: scenarios/hybrid/strategy.md
         - name: Define your plan
-          href: scenarios/unified-operations/plan.md
+          href: scenarios/hybrid/plan.md
         - name: Prepare your environments
-          href: scenarios/unified-operations/ready.md
+          href: scenarios/hybrid/ready.md
         - name: Migrate to the cloud
-          href: scenarios/unified-operations/migrate.md
+          href: scenarios/hybrid/migrate.md
         - name: Govern your portfolio
-          href: scenarios/unified-operations/govern.md
+          href: scenarios/hybrid/govern.md
         - name: Manage your portfolio
-          href: scenarios/unified-operations/manage.md
+          href: scenarios/hybrid/manage.md
 
         - name: Well-Architected hybrid workloads (Release TBD)
           items:
@@ -249,63 +249,63 @@ items:
             - name: Azure
               items:
               - name: Azure Linux with ARM Templates
-                href: manage/unified-operations/server/best-practices/azure-arm-template-linux.md
+                href: manage/hybrid/server/best-practices/template-linux.md
               - name: Azure Windows with ARM Templates
-                href: manage/unified-operations/server/best-practices/azure-arm-template-win.md
+                href: manage/hybrid/server/best-practices/template-windows.md
             - name: On-prem - Local datacenter
               items:
               - name: Linux with shell script
-                href: manage/unified-operations/server/best-practices/onboard-server-linux.md
+                href: manage/hybrid/server/best-practices/onboard-server-linux.md
               - name: Windows with PowerShell
-                href: manage/unified-operations/server/best-practices/onboard-server-win.md
+                href: manage/hybrid/server/best-practices/onboard-server-windows.md
               - name: Ubuntu with Vagrant
-                href: manage/unified-operations/server/best-practices/local-vagrant-ubuntu.md
+                href: manage/hybrid/server/best-practices/local-vagrant-ubuntu.md
               - name: Windows with Vagrant
-                href: manage/unified-operations/server/best-practices/local-vagrant-windows.md
+                href: manage/hybrid/server/best-practices/local-vagrant-windows.md
             - name: VMware
               items:
               - name: Create a VM template for Ubuntu
-                href: manage/unified-operations/server/best-practices/vmware-ubuntu-template.md
+                href: manage/hybrid/server/best-practices/vmware-ubuntu-template.md
               - name: Create a VM template for Windows
-                href: manage/unified-operations/server/best-practices/vmware-winsrv2k19-template.md
+                href: manage/hybrid/server/best-practices/vmware-windows-template.md
               - name: Linux with VMware PowerCLI
-                href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-linux.md
+                href: manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md
               - name: Windows with VMware PowerCLI
-                href: manage/unified-operations/server/best-practices/vmware-scaled-powercli-win.md
+                href: manage/hybrid/server/best-practices/vmware-scaled-powercli-windows.md
               - name: Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/vmware-terraform-ubuntu.md
+                href: manage/hybrid/server/best-practices/vmware-terraform-ubuntu.md
               - name: Windows with Terraform
-                href: manage/unified-operations/server/best-practices/vmware-terraform-winsrv.md
+                href: manage/hybrid/server/best-practices/vmware-terraform-windows.md
             - name: AWS - Amazon Web Services
               items:
               - name: AWS Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/aws-terraform-ubuntu.md
+                href: manage/hybrid/server/best-practices/aws-terraform-ubuntu.md
               - name: AWS Linux with Terraform
-                href: manage/unified-operations/server/best-practices/aws-terraform-al2.md
+                href: manage/hybrid/server/best-practices/aws-terraform-al2.md
               - name: AWS EC2 onboard with Ansible
-                href: manage/unified-operations/server/best-practices/aws-scale-ansible.md
+                href: manage/hybrid/server/best-practices/aws-scale-ansible.md
             - name: GCP - Google Cloud Provider
               items:
               - name: GCP Ubuntu with Terraform
-                href: manage/unified-operations/server/best-practices/gcp-terraform-ubuntu.md
+                href: manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md
               - name: GCP Windows with Terraform
-                href: manage/unified-operations/server/best-practices/gcp-terraform-windows.md
+                href: manage/hybrid/server/best-practices/gcp-terraform-windows.md
           - name: Operate
             items:
             - name: Inventory and Tag assets
-              href: manage/unified-operations/server/best-practices/arc-inventory-tagging.md
+              href: manage/hybrid/server/best-practices/arc-inventory-tagging.md
             - name: Patch and Update Management
-              href: manage/unified-operations/server/best-practices/arc-update-management.md
+              href: manage/hybrid/server/best-practices/arc-update-management.md
             - name: Apply Policies
-              href: manage/unified-operations/server/best-practices/arc-policies-mma.md
+              href: manage/hybrid/server/best-practices/arc-policies-mma.md
             - name: Collect and Detect security data
-              href: manage/unified-operations/server/best-practices/arc-security-center.md
+              href: manage/hybrid/server/best-practices/arc-security-center.md
             - name: Investigate and respond to security threats
-              href: manage/unified-operations/server/best-practices/arc-azure-sentinel.md
+              href: manage/hybrid/server/best-practices/arc-azure-sentinel.md
             - name: Manage VMs with Microsoft Monitoring Agent (MMA)
-              href: manage/unified-operations/server/best-practices/arc-vm-extension-mma.md
+              href: manage/hybrid/server/best-practices/arc-vm-extension-mma.md
             - name: Scale configuration of MMA
-              href: manage/unified-operations/server/best-practices/arc-vm-extension-custom-script.md
+              href: manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md
         - name: Featured Azure products
           items:
           - name: All hybrid and multicloud products

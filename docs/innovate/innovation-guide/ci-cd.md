@@ -56,7 +56,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="docs"
 
-**Go to [Azure DevOps documentation](/azure/devops/user-guide/?view=azure-devops)**
+**Go to [Azure DevOps documentation](/azure/devops/get-started/)**
 
 ::: zone-end
 
@@ -93,7 +93,7 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 ### Learn more
 
 - [Open source starts in GitHub](https://azure.microsoft.com/products/github/)
-- [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
+- [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource/)
 - [Microsoft Teams](/MicrosoftTeams/teams-overview)
 
 ## [Innovation characteristics](#tab/Characteristics)
@@ -134,4 +134,4 @@ Game development is one example of an industry that's embracing LiveOps today. M
 
 PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device and platform agnostic and can be easily integrated with social identity providers like Facebook or Steam, store platforms to orchestrate commerce, and device platforms like iOS, Android, Xbox, and PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
-**Go to the [Azure PlayFab documentation](/gaming/playfab)**
+**Go to the [Azure PlayFab documentation](/gaming/playfab/)**

@@ -1,5 +1,5 @@
 ---
-title: 'Azure innovation: Innovate with AI'
+title: "Azure innovation: Innovate with AI"
 description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
