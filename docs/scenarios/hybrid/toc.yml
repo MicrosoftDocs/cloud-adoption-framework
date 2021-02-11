@@ -165,7 +165,7 @@ items:
         - name: Linux with shell script
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux.md
         - name: Windows with PowerShell
-          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-win.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-windows.md
         - name: Ubuntu with Vagrant
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/local-vagrant-ubuntu.md
         - name: Windows with Vagrant
@@ -179,7 +179,7 @@ items:
         - name: Linux with VMware PowerCLI
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md
         - name: Windows with VMware PowerCLI
-          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-scaled-powercli-win.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-scaled-powercli-windows.md
         - name: Ubuntu with Terraform
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/vmware-terraform-ubuntu.md
         - name: Windows with Terraform

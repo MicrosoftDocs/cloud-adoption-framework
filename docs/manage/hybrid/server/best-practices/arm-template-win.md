@@ -128,15 +128,15 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 
 - Once the Azure resources have been provisioned, you can see them in the Azure portal.
 
-    ![A screenshot of an output from an ARM template.](./media/arm-template-windows/template-windows-output.png)
+    ![A screenshot of an output from an ARM template.](./media/arm-template/template-windows-output.png)
 
-    ![A screenshot resources in the resource group.](./media/arm-template-windows/template-windows-resources.png)
+    ![A screenshot resources in the resource group.](./media/arm-template/template-windows-resources.png)
 
 ## Windows sign-in and post-deployment
 
 - Now that the Windows Server VM is created, the next step is connecting it. Using its public IP address, RDP to the VM.
 
-    ![A screenshot of an Azure VM public IP address.](./media/arm-template-windows/template-windows-ip.png)
+    ![A screenshot of an Azure VM public IP address.](./media/arm-template/template-windows-ip.png)
 
 - Upon first sign-in, as mentioned in the [Automation flow](#automation-flow) section, a sign-in script will get executed. This script is created as part of the automated deployment process.
 
@@ -145,22 +145,22 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     > [!NOTE]
     > The script run time is ~1-2 minutes long.
 
-    ![A screenshot of one type of script output.](./media/arm-template-windows/template-windows-script-1.png)
+    ![A screenshot of one type of script output.](./media/arm-template/template-windows-script-1.png)
 
-    ![A screenshot of a second type of script output.](./media/arm-template-windows/template-windows-script-2.png)
+    ![A screenshot of a second type of script output.](./media/arm-template/template-windows-script-2.png)
 
-    ![A screenshot of a third type of script output.](./media/arm-template-windows/template-windows-script-3.png)
+    ![A screenshot of a third type of script output.](./media/arm-template/template-windows-script-3.png)
 
-    ![A screenshot of a fourth type of script output.](./media/arm-template-windows/template-windows-script-4.png)
+    ![A screenshot of a fourth type of script output.](./media/arm-template/template-windows-script-4.png)
 
 - Upon successful completion, a new Azure Arc enabled server will be added to the resource group.
 
-![A screenshot of a resource group from an Azure Arc enabled server.](./media/arm-template-windows/template-windows-resource-gp.png)
+![A screenshot of a resource group from an Azure Arc enabled server.](./media/arm-template/template-windows-resource-gp.png)
 
-![A screenshot of details from an Azure Arc enabled server.](./media/arm-template-windows/template-windows-server-details.png)
+![A screenshot of details from an Azure Arc enabled server.](./media/arm-template/template-windows-server-details.png)
 
 ## Cleanup
 
 To delete the entire deployment, delete the resource group from the Azure portal.
 
-![A screenshot of how to delete the resource group.](./media/arm-template-windows/template-windows-delete.png)
+![A screenshot of how to delete the resource group.](./media/arm-template/template-windows-delete.png)
