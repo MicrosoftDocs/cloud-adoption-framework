@@ -23,3 +23,14 @@ We recognise that larger organisations may wish to also test their Enterprise Sc
 _Figure 1: Management group hierarchy._
 
 ## Summary
+
+
+### Reasons Why Not To Use Seperate Azure AD Tenants:
+
+- Have to purchase duplicate licenses for Azure AD features (PIM/MFA etc.)
+- Users have to have multiple accounts - security risk
+  - Protect with AAD P2 features & PIM from single AAD tenant instead to fix this
+- Doesn't allow testing of RBAC and Policy changes effectively - due to separate tenant so code will be different
+  - Better to use single tenant and split out separate management group structure beneath Tenant - Root Group - e.g "Contoso" = Prod, "Contoso-Canary" = dev/test
+- Single tenant and multiple MG structures allow single view for security and compliance
+- Single tenant keep things simple and reduces risk of shadow IT for Azure
