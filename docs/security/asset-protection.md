@@ -72,3 +72,46 @@ For example, policies can used to:
 - Enforce disk encryption
 - Manage security policies for Azure Security Center
 - Manage policies for log collection for virtual machines in Azure Monitor
+
+#### Endpoint detection and response (EDR)
+
+Technologies such as Windows Defender should be running on all virtual machines to provide anti-malware scanning and File Integrity Monitoring (FIM).
+
+#### Disk encryption
+
+### Securing networks
+
+### Securing applications
+
+#### Microsoft Cloud Application Security (MCAS)
+
+MCAS enables organisations to control which Software-as-a-Service applications can be accessed. This can be an effective tool in stopping the use of unauthorised file-sharing applications that move data outside of the corporate environment. Using these controls can be a strong protection against data leakage.
+
+#### Rights management inside applications
+
+Using the rights managements techniques outlined earlier, data accessed within applications can be controlled in similar ways - even if a user has permissions within the application to extract data it is possible to apply rights to the data so that when it is extracted it is still governed and protected by the business rules applied.
+This can be particularly effective for internet facing services such as files shares.
+
+### Securing identity
+
+#### Multifactor authentication (MFA)
+
+MFA is becoming a commonly used component of safeguarding access into corporate systems. A number of large scale cloud services offer MFA as an additional authentication step in order ask the person attempting to authenticate that they are who they say they are.
+The principles of MFA are 'something you know'  - typically your username and password, and 'something you have' - for example a phone or a cryptokey
+Text messages, phone calls and authentication smartphone apps are commonly used authentication factors.
+
+By using MFA to secure accounts reduces the impact of a user's account details being stolen as the attacker would still need to obtain the 'something you have' item in order to gain access. As a result, using multi-factor authentication is a highly recommended security mechanism to protect access into organisations.
+
+#### Azure Active Directory Premium
+
+### Security Administration
+
+#### Privileged Identity Management (PIM)
+
+#### Just In Time (JIT) Access
+
+Reducing the amount of time that a specific account has elevated privileges can often correlate with the reduction in threat risk for unauthorised access to sensitive infrastructure or data. 
+Using techniques and tools that enable JIT means granting an account only the specific permissions required to complete a task for the amount of time required to complete the task. Those permissions are then removed when the task is complete - or the time expires - whichever occurs first.
+JIT tools also often include request and approval workflows in order to audit the reason for the elevated privileges and who requested it. This provides further governance controls and also information that could be used in a post-breach investigation to ascertain how the breach was possible.
+
+#### Separate administration accounts
