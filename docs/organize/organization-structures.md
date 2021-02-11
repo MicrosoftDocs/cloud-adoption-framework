@@ -7,7 +7,7 @@ ms.date: 05/18/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Mature team structures
@@ -35,7 +35,7 @@ Organizational structures tend to move through the common maturity model that's 
 5. [Operational alignment](#operational-alignment)
 6. [Cloud center of excellence (CCoE)](#cloud-center-of-excellence)
 
-Most companies start with little more than a *cloud adoption team*. But we recommend that you establish an organizational structure that more closely resembles the [MVP best practice](#best-practice-minimum-viable-product-mvp) structure.
+Most companies start with little more than a _cloud adoption team_. But we recommend that you establish an organizational structure that more closely resembles the [MVP best practice](#best-practice-minimum-viable-product-mvp) structure.
 
 ## Cloud adoption team only
 

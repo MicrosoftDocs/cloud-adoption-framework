@@ -2,13 +2,13 @@
 title: Perimeter networks
 description: Use the Cloud Adoption Framework for Azure to learn how to set up Azure effectively for your organization.
 author: tracsman
-ms.author: jonor
+manager: rossort
+ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-manager: rossort
-ms.custom: virtual-network
+ms.custom: think-tank, virtual-network
 ---
 
 # Perimeter networks
@@ -31,9 +31,9 @@ Perimeter networks make use of the following Azure features and services:
 > Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
 >
 > - [Implement a perimeter network between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
-> - [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
+> - [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
-Usually, your Central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
+Usually, your central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
 
 ![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
 _Figure 1: Example of a hub and spoke network topology._

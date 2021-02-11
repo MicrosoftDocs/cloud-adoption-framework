@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore mysqldump -->
@@ -138,7 +139,7 @@ Contoso used the following steps to migrate its databases.
   - Enter an admin username and password.
   - Select **Review + create**.
 
-    ![Screenshot shows the Create MariaDB server screen.](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
+    ![Screenshot of the **Create MariaDB Server** page.](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
     _Figure 5: Review and create._
 
   - Select **Create**.

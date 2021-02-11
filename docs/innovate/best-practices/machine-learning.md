@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore scikit RLlib Jupyter MLflow Kubeflow -->
@@ -51,7 +52,7 @@ For code-free or low-code training and deployment, try:
 
 ## MLOps: Deploy and lifecycle management
 
-Machine Learning operations (MLOps) is based on [DevOps](https://azure.microsoft.com/overview/what-is-devops/) principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
+Machine learning operations (MLOps) is based on [DevOps](https://azure.microsoft.com/overview/what-is-devops/) principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
 
 - Faster experimentation and development of models
 - Faster deployment of models into production
@@ -94,14 +95,14 @@ Learn more about how to implement [Responsible ML](/azure/machine-learning/conce
 
 ## Integration with other services
 
-Azure Machine Learning works with other services on the Azure platform, and also integrates with open source tools such as Git and MLflow.
+Azure Machine Learning works with other services on the Azure platform, and also integrates with open-source tools such as Git and MLflow.
 
 - Compute targets such as Azure Kubernetes Service, Azure Container Instances, Azure Databricks, Azure Data Lake Analytics, and Azure HDInsight. For more information on compute targets, see [What are compute targets?](/azure/machine-learning/concept-compute-target).
 - Azure Event Grid. For more information, see [Consume Azure Machine Learning events](/azure/machine-learning/how-to-use-event-grid).
 - Azure Monitor. For more information, see [Monitoring Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning).
 - Data stores such as Azure Storage accounts, Azure Data Lake Storage, Azure SQL Database, Azure Database for PostgreSQL, and Azure open datasets. For more information, see [Access data in Azure Storage services](/azure/machine-learning/how-to-access-data) and [create datasets with Azure open datasets](/azure/machine-learning/how-to-create-register-datasets#create-datasets-with-azure-open-datasets).
 - Azure Virtual Network. For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-enable-virtual-network).
-- Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops).
+- Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning).
 - Git repository logs. For more information, see [Git integration](/azure/machine-learning/concept-train-model-git-integration).
 - MLflow. For more information, see [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow).
 - Kubeflow. For more information, see [Build end-to-end workflow pipelines](https://www.kubeflow.org/docs/azure/).

@@ -1,5 +1,5 @@
 ---
-title: "Building technical skills"
+title: Building technical skills
 description: Use the Cloud Adoption Framework for Azure to learn how to help your organization develop the necessary skills to structure teams to meet the desired outcomes.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Build technical skills
@@ -25,7 +25,7 @@ Depending on the motivations and business outcomes that are associated with a cl
 
 ## Environmental (technical) readiness learning paths
 
-During the Ready phase, technical staff have to create a migration landing zone to host, operate, and govern workloads that they migrate to the cloud. Use the following paths to accelerate development of the necessary skills:
+During the readiness phase, technical staff have to create a migration landing zone to host, operate, and govern workloads that they migrate to the cloud. Use the following paths to accelerate development of the necessary skills:
 
 - [Create an Azure account](/learn/modules/create-an-azure-account): The first step to using Azure is to create an account. Your account holds the Azure services that you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
@@ -35,12 +35,12 @@ During the Ready phase, technical staff have to create a migration landing zone 
 - [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure): Use the Azure portal to create a virtual machine.
 - [Azure network services](/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 - [Azure compute options](/learn/modules/intro-to-azure-compute): Review the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
+- [Secure resources with Azure RBAC](/learn/modules/secure-azure-resources-with-rbac): Use Azure role-based access control (Azure RBAC) to secure resources.
 - [Azure Storage options](/learn/modules/intro-to-data-in-azure): Learn about the benefits of Azure data storage.
 
-During the Ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
+During the readiness phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
 - [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
@@ -50,11 +50,11 @@ The following information describes resources for additional learning.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and its partners offer options to help all audiences develop their skills for using Azure services.
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
+- [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
 ### Microsoft Learn
 

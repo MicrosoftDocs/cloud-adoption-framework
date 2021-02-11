@@ -7,6 +7,7 @@ ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Cloud innovation in the Cloud Adoption Framework
@@ -40,4 +41,4 @@ Here are a couple of examples of role-specific learning paths on Microsoft Learn
 
 [Create serverless applications](/learn/paths/create-serverless-applications): Azure Functions enable the creation of event-driven, compute-on-demand systems that can be triggered by various external events. Learn to use functions to execute server-side logic and build serverless architectures.
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.

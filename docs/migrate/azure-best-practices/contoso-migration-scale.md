@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- docutune:casing Hanu Scalr ARO POC Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
@@ -157,8 +158,8 @@ Contoso will use Azure Migrate as follows:
 
 - In vCenter, organize VMs into folders. This will make it easy for the admins to focus as they run an assessment against VMs in a specific folder.
 - Assess dependencies between machines. This requires agents to be installed on VMs to be assessed.
-  
-  Contoso will use automated scripts to install the required Windows or Linux agents. By scripting, Contoso can push the installation to VMs within a vCenter folder.
+
+Contoso will use automated scripts to install the required Windows or Linux agents. By scripting, Contoso can push the installation to VMs within a vCenter folder.
 
 #### Database tools
 
@@ -172,7 +173,7 @@ In addition to Database Migration Service, Contoso has some scripts that it uses
 
 There are several other partner tools that can help Contoso in assessing the on-premises environment for migration to Azure. Learn more about [Azure migration partners](https://azure.microsoft.com/migration/partners).
 
-## Phase 2: Migrate
+## Step 2: Migrate
 
 With the assessment complete, Contoso needs to identify tools to move its applications, data, and infrastructure to Azure.
 
@@ -310,11 +311,11 @@ Contoso can deploy an Azure Automation account with preconfigured runbooks and s
 
 ### Partner optimization tools
 
-Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://www.scalr.com/cost-optimization).
+Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://scalr.com/pricing/).
 
-## Phase 4: Secure and manage
+## Step 4: Secure and manage
 
-In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal.
+Contoso uses Azure security and management resources during this step to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal.
 
 Contoso begins using these services during migration. With Azure hybrid support, Contoso continues using many of them for a consistent experience across the hybrid cloud.
 
@@ -324,7 +325,7 @@ Contoso will rely on Azure Security Center for unified security management and A
 
 Security Center provides full visibility into and control over the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
 
-[Learn more](https://azure.microsoft.com/services/security-center) about Security Center.
+Learn more about [Security Center](https://azure.microsoft.com/services/security-center).
 
 ### Monitoring
 

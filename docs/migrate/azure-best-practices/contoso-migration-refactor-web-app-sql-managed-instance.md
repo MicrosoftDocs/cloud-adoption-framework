@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore contoso's contosohost vcenter contosodc smarthotel SQLMI SHWCF SHWEB -->
@@ -21,11 +22,11 @@ The SmartHotel360 application that we use in this example is provided as open so
 
 The Contoso IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Address business growth**. Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
-- **Increase efficiency**. Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility**. Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
-- **Scale**. As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
-- **Reduce costs**. Contoso wants to minimize licensing costs.
+- **Address business growth.** Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
+- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
+- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
+- **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
+- **Reduce costs.** Contoso wants to minimize licensing costs.
 
 ## Migration goals
 
@@ -92,9 +93,9 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure App Service Migration Assistant](/learn/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
-| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in Azure. It uses the same code as the latest version of SQL Server Database Engine, and has the latest features, performance improvements, and security patches. | Using a SQL managed instance that runs in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed). |
-| [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
+| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
+| [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in Azure. It uses the same code as the latest version of SQL Server Database Engine, and has the latest features, performance improvements, and security patches. | Using a SQL managed instance that runs in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/). |
+| [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
 | [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system to deploy changes in dev, test, and production environments. |
 
 ## Prerequisites
@@ -103,7 +104,7 @@ To run this scenario, Contoso must meet the following prerequisites:
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
+| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
 | **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 
 ## Scenario steps
@@ -121,14 +122,13 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Microsoft Learning Path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process.
-In brief, the admins perform the following actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Microsoft Learning Path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. In brief, the admins perform the following actions:
 
-- They use the Azure [App Service Migration Assessment](https://appmigration.microsoft.com/assessment/) tool to evaluate any dependencies between their web apps and to determine if there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
+- They use the Azure [App Service Migration Assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine if there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 
 - They download the Azure App Service Migration Assistant and sign in to their Azure account.
 
-- They choose a subscription, a resource group, and the website’s domain name.
+- They choose a subscription, a resource group, and the website's domain name.
 
 ## Step 2: Set up a SQL managed instance
 
@@ -138,10 +138,10 @@ To set up an Azure SQL managed instance, Contoso needs a subnet that meets the f
 - After the managed instance is created, Contoso should not add resources to the subnet.
 - The subnet can't have a network security group associated with it.
 - The subnet must have a user-defined route table. The only route assigned should be `0.0.0.0/0` next-hop internet.
-- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure a custom DNS for an Azure SQL managed instance](/azure/sql-database/sql-database-managed-instance-custom-dns).
+- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure a custom DNS for an Azure SQL managed instance](/azure/azure-sql/managed-instance/custom-dns-configure).
 - The subnet must not have a service endpoint (storage or SQL) associated with it. Service endpoints should be disabled on the virtual network.
-- The subnet must have a minimum of 16 IP addresses. Learn how to [size the managed instance subnet](/azure/sql-database/sql-database-managed-instance-configure-vnet-subnet).
-- In Contoso's hybrid environment, custom DNS settings are required. Contoso configures DNS settings to use one or more of the company's Azure DNS servers. Learn more about [DNS customization](/azure/sql-database/sql-database-managed-instance-custom-dns).
+- The subnet must have a minimum of 16 IP addresses. Learn how to [size the managed instance subnet](/azure/azure-sql/managed-instance/vnet-existing-add-subnet).
+- In Contoso's hybrid environment, custom DNS settings are required. Contoso configures DNS settings to use one or more of the company's Azure DNS servers. Learn more about [DNS customization](/azure/azure-sql/managed-instance/custom-dns-configure).
 
 ### Set up a virtual network for the managed instance
 
@@ -157,24 +157,28 @@ Contoso admins set up the virtual network as follows:
 
 1. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).  
+    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).
+
     - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
       ![Screenshot of the peered networks.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 1. They set custom DNS settings. The DNS settings point first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the PROD-DC-EUS2 subnet of the production network (VNET-PROD-EUS2) in the East US 2 region.  
-    - `CONTOSODC3` address: `10.245.42.4`  
-    - `CONTOSODC4` address: `10.245.42.5`  
+    - Located in the PROD-DC-EUS2 subnet of the production network (VNET-PROD-EUS2) in the East US 2 region.
+
+    - `CONTOSODC3` address: `10.245.42.4`
+
+    - `CONTOSODC4` address: `10.245.42.5`
+
     - Azure DNS resolver: `168.63.129.16`
 
     ![Screenshot of Network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
 **Need more help?**
 
-- Read the [SQL Managed Instance overview](/azure/sql-database/sql-database-managed-instance).
-- Learn how to [create a virtual network for a SQL managed instance](/azure/sql-database/sql-database-managed-instance-configure-vnet-subnet).
+- Read the [SQL Managed Instance overview](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview).
+- Learn how to [create a virtual network for a SQL managed instance](/azure/azure-sql/managed-instance/vnet-existing-add-subnet).
 - Learn how to [set up peering](/azure/virtual-network/virtual-network-manage-peering).
 - Learn how to [update Azure Active Directory DNS settings](/azure/active-directory-domain-services/tutorial-create-instance).
 
@@ -205,26 +209,27 @@ To set up routing, Contoso admins do the following:
 
 **Need more help?**
 
-Learn how to [set up routes for a managed instance](/azure/sql-database/sql-database-managed-instance-get-started).
+Learn how to [set up routes for a managed instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 ### Create a managed instance
 
 Now, Contoso admins provision a SQL managed instance by doing the following:
 
 1. Because the managed instance serves a business application, the admins deploy the managed instance in the company's primary region (East US 2). They add the managed instance to the ContosoRG resource group.
-1. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
+1. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/).
 
     ![Screenshot of the "SQL Managed Instance" pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
 
     After the managed instance is deployed, two new resources appear in the ContosoRG resource group:
-    - The new SQL managed instance.  
+    - The new SQL managed instance.
+
     - A virtual cluster, in case Contoso has multiple managed instances.
 
       ![Screenshot of new resources in the ContosoRG resource group.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
 
 **Need more help?**
 
-Learn how to [provision a managed instance](/azure/sql-database/sql-database-managed-instance-get-started).
+Learn how to [provision a managed instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 ## Step 3: Migrate via Azure Database Migration Service
 
@@ -370,7 +375,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
     ![Screenshot highlighting the "Enable continuous integration" check box.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline20.png)
 
-1. They select **Save & Queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
+1. They select **Save & queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
 
     ![Screenshot of the "Save & queue" button.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline21.png)
 
@@ -399,14 +404,14 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 
 ### Security
 
-- Contoso helps ensure that their new `SmartHotel-Registration` database is secure. [Learn more](/azure/sql-database/sql-database-security-overview).
+- Contoso helps ensure that their new `SmartHotel-Registration` database is secure. [Learn more](/azure/azure-sql/database/security-overview).
 - In particular, Contoso updates the web apps to use SSL with certificates.
 
 ### Backups
 
-- The Contoso team reviews the backup requirements for the database in Azure SQL Managed Instance. [Learn more](/azure/sql-database/sql-database-automated-backups).
-- They also learn about managing SQL Database backups and restores. [Learn more](/azure/sql-database/sql-database-automated-backups) about automatic backups.
-- They consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/sql-database/sql-database-geo-replication-overview).
+- The Contoso team reviews the backup requirements for the database in Azure SQL Managed Instance. [Learn more](/azure/azure-sql/database/automated-backups-overview).
+- They also learn about managing SQL Database backups and restores. [Learn more](/azure/azure-sql/database/automated-backups-overview) about automatic backups.
+- They consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/azure-sql/database/auto-failover-group-overview).
 - They consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`) for resilience. The team could configure Traffic Manager to ensure failover during regional outages.
 
 ### Licensing and cost optimization
