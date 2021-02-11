@@ -1,6 +1,6 @@
 ---
 title: Asset Protection
-description: Security description
+description: Learn about asset protection best practices in the Cloud Adoption Framework for Azure.
 author: DominicAllen
 ms.author: doalle
 ms.date: 04/04/2021
@@ -10,4 +10,50 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Placeholder - Remember to update the title, description, and authors
+# Asset Protection
+
+
+## Context
+Running infrastructure and services in a public cloud introduces a number of security benefits that are difficult to replicate at equal scale in private data centres, but that doesn't mean that the task of securing an environment is complete.
+Protecting company assets - from virtual machines and networks to applications and identity - is still mission critical in order to provide the best possible security to the functions of the business and company data.
+
+## Securing Data
+
+Organisations should treat the unauthorised access or theft of data amongst the highest impact risks to guard against. 
+The reputational - and often financial - impact of losing control of sensitive data can significant affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organisation.
+A key part of this is to put security measures in place to protect data at rest, and in transit.
+### At rest
+#### Transparent Data Encryption (TDE)
+TDE is a feature of Azure SQL and Azure Synapse Analytics that helps protect data at rest by performing real-time encryption and decryption of the database, backups and logs.  
+		
+#### Disk and storage encryption
+Encrypting disks attached to virtual machines and storage used for applications or services helps protect data stored locally.
+		
+#### RBAC 
+Access should be restricted to data to only those with a verified reason and only for the data sets explicitly required for the approved use.
+Access should be deliberately split between those who can access and those who can modify.
+		
+#### Rights management
+For data held outside of a database - for example on a file server - tools such as Rights Management can help to control the data leakage or misuse. Rights Management applies encryption, identity and authorisation policies to files to apply controls to data as it moved around within - or even outside - the organisation.
+	
+### In transit
+#### VPN for ingress/egress
+Sending or receiving data external to the business should be - wherever possible - via an encrypted network connection.
+One option for this is to establish a Virtual Private Network (VPN) connection which encrypts the network route between two fixed points. 
+This enables smaller sites, such as branch offices to connect into the cloud environment in order to send and receive data securely.
+		
+#### ExpressRoute
+For large scale connections such as into an on-premises data centre, the Azure ExpressRoute solution can provide a secure and performant network connection between two trusted locations. This enables organisations to establish the secure network route for high-volume, high-frequency network traffic required as part of a hybrid landing zone implementation.
+		
+#### HTTPS
+For web services, all pages and connections should be encrypted using HTTPS wherever possible. 
+
+### Securing virtual machines
+#### Policy
+Policies should be used wherever possible in order to mandate the adherence to security requirements. 
+This technique allows central teams to specify certain configurations that should be used in order to ensure that the virtual machine is considered secure. 
+For example, policies can used to: 
+- Prohibit (or audit) Public IP addresses
+- Enforce disk encryption
+- Manage security policies for Azure Security Center
+- Manage policies for log collection for virtual machines in Azure Monitor
