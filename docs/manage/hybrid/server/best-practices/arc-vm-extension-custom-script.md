@@ -24,7 +24,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
 - [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2.md)
 - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md)
-- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+- [VMware vSphere Windows Server VM](./vmware-terraform-windows.md)
 - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
 - [Vagrant Windows box](./local-vagrant-windows.md)
 
@@ -147,5 +147,5 @@ Remove the virtual machines from each environment by following the teardown inst
 
 - [GCP Ubuntu instance](./gcp-terraform-ubuntu.md) and [GCP Windows instance](./gcp-terraform-windows.md)
 - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
-- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+- [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-windows.md)
 - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md) and [Vagrant Windows box](./local-vagrant-windows.md)

@@ -267,7 +267,7 @@ items:
               - name: Create a VM template for Ubuntu
                 href: manage/hybrid/server/best-practices/vmware-ubuntu-template.md
               - name: Create a VM template for Windows
-                href: manage/hybrid/server/best-practices/vmware-winsrv2k19-template.md
+                href: manage/hybrid/server/best-practices/vmware-windows-template.md
               - name: Linux with VMware PowerCLI
                 href: manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md
               - name: Windows with VMware PowerCLI
@@ -275,7 +275,7 @@ items:
               - name: Ubuntu with Terraform
                 href: manage/hybrid/server/best-practices/vmware-terraform-ubuntu.md
               - name: Windows with Terraform
-                href: manage/hybrid/server/best-practices/vmware-terraform-winsrv.md
+                href: manage/hybrid/server/best-practices/vmware-terraform-windows.md
             - name: AWS - Amazon Web Services
               items:
               - name: AWS Ubuntu with Terraform

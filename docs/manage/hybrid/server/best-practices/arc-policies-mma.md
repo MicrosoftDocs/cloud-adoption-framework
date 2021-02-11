@@ -26,7 +26,7 @@ You can use the Azure portal, an Azure Resource Manager template (ARM template) 
 - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
 - [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2.md)
 - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md)
-- [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+- [VMware vSphere Windows Server VM](./vmware-terraform-windows.md)
 - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
 - [Vagrant Windows box](./local-vagrant-windows.md)
 
@@ -134,7 +134,7 @@ Complete the following steps to clean up your environment.
 
    - [GCP Ubuntu instance](./gcp-terraform-ubuntu.md) and [GCP Windows instance](./gcp-terraform-windows.md)
    - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
-   - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-winsrv.md)
+   - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md) and [VMware vSphere Windows Server VM](./vmware-terraform-windows.md)
    - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md) and [Vagrant Windows box](./local-vagrant-windows.md)
 
 2. Remove the Azure Policy assignment by executing the following script in Azure CLI.

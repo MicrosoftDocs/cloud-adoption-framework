@@ -31,43 +31,43 @@ This article provides guidance for creating a Windows Server 2019 VMware vSphere
 
 - Deploy new virtual machine
 
-    ![A screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-1.png)
+    ![A screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-1.png)
 
-    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-2.png)
+    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-2.png)
 
-    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-3.png)
+    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-3.png)
 
-    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-4.png)
+    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-4.png)
 
-    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-5.png)
+    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-5.png)
 
-    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-6.png)
+    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-6.png)
 
 - Make sure to select **Microsoft Windows Server 2016 or later (64-bit)** as the guest OS.
 
-    ![A screenshot of Windows Server guest OS.](./media/vmware-winsrv2k19-template/winsrv-template-guest-os.png)
+    ![A screenshot of Windows Server guest OS.](./media/vmware-template/winsrv-template-guest-os.png)
 
 - Point to the Windows Server ISO file location.
 
-    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-7.png)
+    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-7.png)
 
-    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-winsrv2k19-template/winsrv-template-newvm-8.png)
+    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/winsrv-template-newvm-8.png)
 
 - Power on the VM and start the Windows Server installation.
 
-    ![First screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-1.png)
+    ![First screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-1.png)
 
-    ![Second screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-2.png)
+    ![Second screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-2.png)
 
-    ![Third screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-3.png)
+    ![Third screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-3.png)
 
-    ![Fourth screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-4.png)
+    ![Fourth screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-4.png)
 
-    ![Fifth screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-5.png)
+    ![Fifth screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-5.png)
 
-    ![Sixth screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-6.png)
+    ![Sixth screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-6.png)
 
-    ![Seventh screenshot of a Windows Server installation.](./media/vmware-winsrv2k19-template/winsrv-template-installation-7.png)
+    ![Seventh screenshot of a Windows Server installation.](./media/vmware-template/winsrv-template-installation-7.png)
 
 ### Post-installation
 
@@ -75,23 +75,23 @@ Before converting the VM to a template, few actions needs to be taken.
 
 - Install VMware tools and restart
 
-    ![First screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-1.png)
+    ![First screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-1.png)
 
-    ![Second screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-2.png)
+    ![Second screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-2.png)
 
-    ![Third screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-3.png)
+    ![Third screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-3.png)
 
-    ![Fourth screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-4.png)
+    ![Fourth screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-4.png)
 
-    ![Fifth screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-5.png)
+    ![Fifth screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-5.png)
 
-    ![Sixth screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-6.png)
+    ![Sixth screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-6.png)
 
-    ![Seventh screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-7.png)
+    ![Seventh screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-7.png)
 
-    ![Eighth screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-8.png)
+    ![Eighth screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-8.png)
 
-    ![Ninth screenshot of a WMware Tools installation.](./media/vmware-winsrv2k19-template/winsrv-template-tools-9.png)
+    ![Ninth screenshot of a WMware Tools installation.](./media/vmware-template/winsrv-template-tools-9.png)
 
 - Perform Windows updates
 
@@ -117,6 +117,6 @@ Before converting the VM to a template, few actions needs to be taken.
 
 Reduce the VM CPU count and memory resources to the minimum and convert the VM to template, switch the CD/DVD drive to client device as well disconnect it and convert the VM to template.
 
-![A screenshot of how to reduce a virtual machine's CPU count and memory.](./media/vmware-winsrv2k19-template/winsrv-template-reduce.png)
+![A screenshot of how to reduce a virtual machine's CPU count and memory.](./media/vmware-template/winsrv-template-reduce.png)
 
-![A screenshot of how to convert a virtual machine to a template.](./media/vmware-winsrv2k19-template/winsrv-template-convert.png)
+![A screenshot of how to convert a virtual machine to a template.](./media/vmware-template/winsrv-template-convert.png)
