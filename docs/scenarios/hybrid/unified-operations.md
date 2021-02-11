@@ -90,8 +90,8 @@ Most commonly, customers require the ability to deliver consistency within their
 - **Inventory and Visibility:** Account for, and ensure reporting for all assets, and **collect and monitor your inventory's run state in enterprise-grade environments**.
 - **Optimized Operations:** Track, patch, and optimize supported resources and **minimize business interruption risks from configuration drift or vulnerabilities from inconsistent patch management**.
 - **Protection and Recovery:** Backup, business continuity, and disaster recovery best practices and **reduce the duration and impact of unpreventable outages**.
-- [Platform operations](../../manage/azure-management-guide/platform-specialization.md?tabs=SystemsDesign%2CAutomatedRemediation%2CServiceCatalog%2CContinuousImprovement) - specialized operations for common technology platforms such as SQL, WVD, and SAP (for medium to high criticality workloads).
-- [Workload operations](../../manage/azure-management-guide/workload-specialization.md) - specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
+- [Platform operations](../../manage/azure-management-guide/platform-specialization.md): Specialized operations for common technology platforms such as SQL, WVD, and SAP (for medium to high criticality workloads).
+- [Workload operations](../../manage/azure-management-guide/workload-specialization.md): Specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
 
 Platform and workload operations both execute an equivalent *iterative process* to **improve system design, automate remediation, scale changes with a service catalog, and continuously improve system design, automation, and scale**.
 

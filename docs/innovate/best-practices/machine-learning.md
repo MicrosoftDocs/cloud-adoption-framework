@@ -101,7 +101,7 @@ Azure Machine Learning works with other services on the Azure platform, and also
 - Azure Monitor. For more information, see [Monitoring Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning).
 - Data stores such as Azure Storage accounts, Azure Data Lake Storage, Azure SQL Database, Azure Database for PostgreSQL, and Azure open datasets. For more information, see [Access data in Azure Storage services](/azure/machine-learning/how-to-access-data) and [create datasets with Azure open datasets](/azure/machine-learning/how-to-create-register-datasets#create-datasets-with-azure-open-datasets).
 - Azure Virtual Network. For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-enable-virtual-network).
-- Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops).
+- Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning).
 - Git repository logs. For more information, see [Git integration](/azure/machine-learning/concept-train-model-git-integration).
 - MLflow. For more information, see [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow).
 - Kubeflow. For more information, see [Build end-to-end workflow pipelines](https://www.kubeflow.org/docs/azure/).

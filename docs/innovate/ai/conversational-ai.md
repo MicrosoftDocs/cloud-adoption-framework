@@ -37,7 +37,7 @@ Familiarize yourself with Azure Bot Service and Microsoft Bot Framework.
 
 One of the simplest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes.
 
-- [Create a bot with Q&A abilities quickly with QnA Maker](/azure/bot-service/bot-builder-tutorial-add-qna?tabs=csharp)
+- [Create a bot with Q&A abilities quickly with QnA Maker](/azure/bot-service/bot-builder-tutorial-add-qna)
 - Test out the [QnA Maker service](https://www.qnamaker.ai/)
 
 Download and use Bot Framework SDK and tools for bot development.
