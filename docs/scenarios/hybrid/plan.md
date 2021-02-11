@@ -67,9 +67,9 @@ In moving to a hybrid and multicloud scenario, where we assume unified operation
 
 Because on-premises assets are added to the enterprise control plane for unified operations and management, we commonly see the following rationalizations:
 
-    - Workloads recommended to remain on-premises (for example, limited by regulatory or compliance reasons)
-    - New application development for the enterprise that needs to be supported by workloads that haven't been migrated, or can't be migrated
-    - The business requirement to build new on-premises applications that have speed of light, connectivity, or regulatory requirements
+- Workloads recommended to remain on-premises (for example, limited by regulatory or compliance reasons)
+- New application development for the enterprise that needs to be supported by workloads that haven't been migrated, or can't be migrated
+- The business requirement to build new on-premises applications that have speed of light, connectivity, or regulatory requirements
 
 Standard migration assumes that every asset in the workload is a VM or PaaS service in terms of either rehost or rearchitect. As mentioned, *standard migration efforts* assume a unidirectional, "migrate everything to the cloud" approach, lifting and shifting (IaaS VMs) and rearchitecting (PaaS services).
 

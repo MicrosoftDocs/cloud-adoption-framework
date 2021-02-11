@@ -112,7 +112,7 @@ If you want to demo/control the actual registration process, do the following:
 
 - In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/install_arc_agent.ps1) PowerShell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
-    ![A screenshot of the `install_arc_agent` PowerShell script.](./media/local-vagrant/vagrant-windows-install_arc_agent.png)
+    ![A screenshot of the `install_arc_agent` PowerShell script.](./media/local-vagrant/vagrant-windows-install-arc-agent.png)
 
     ![A screenshot of the `az group create` command.](./media/local-vagrant/vagrant-windows-az-group-create.png)
 

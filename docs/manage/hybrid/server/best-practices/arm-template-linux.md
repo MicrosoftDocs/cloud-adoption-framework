@@ -64,7 +64,7 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
     }
     ```
 
-    > [!NOTE]>
+    > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
 ## Automation flow

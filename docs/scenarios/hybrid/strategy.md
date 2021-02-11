@@ -22,7 +22,7 @@ Hybrid and multicloud is not a strategy. It is a technical approach with depende
 - **Migration motivations:** Looking beyond immediate and critical events, migration and modernization motivations strive for mid-term optimization of technology costs, operational complexity, and business agility. Connectivity between the current environment and the cloud provider allows for one-way migration capabilities. Use of abstraction layers, like containers, Kubernetes, or Azure Kubernetes Service (AKS) streamline the migration process.
 - **Innovation motivations:** When building solutions to drive long-term innovation, hybrid and multicloud may accelerate development efforts. Containers, Kubernetes, and AKS allow developers to build solutions with less dependencies on the features of any one cloud platform. Azure Stack (hci, hub, and edge) allow developers to continue innovating with cloud native solutions, even in the local, on-premises datacenter. Conversely, connectivity across multiple clouds allows developers to maximize the use of cloud native services on their chosen platform, while integrating across those clouds for holistic enterprise environments.
 
-Review a detailed list of [common motivations](../../strategy/motivations) to see which of the above most closely maps to your organization's strategy.
+Review a detailed list of [common motivations](../../strategy/motivations.md) to see which of the above most closely maps to your organization's strategy.
 
 ## Hybrid and multicloud outcomes
 
@@ -78,7 +78,7 @@ Azure Arc extends one enterprise control plane with Azure management and service
 
 Hybrid and multicloud environments is the most common reality found across today's enterprise IT landscape. For most customers, moving to a hybrid and multicloud scenario is simply embracing market reality, and motivated by a sound business strategy. The next decision for your organization would be committing to a distributed cloud computing model that can increase the speed of your cloud adoption and migration efforts. Initiating a cross-team effort to increase your cloud readiness with innovative cloud practices and technologies is the first step towards implementing one enterprise control plane. Consistently protect and monitor resources, standardize governance and security, and manage your operational processes on-premises, multicloud, and edge. Consider a hybrid and multicloud environment to manage your overall digital estate if you are planning a hybrid strategy by design for the next 12 months or longer.
 
-Work with your [cloud strategy team](../../get-started/team/cloud-strategy) to build the necessary skilling and processes to prepare the move to an enterprise control plane across hybrid, multicloud, and edge that encourages greater accountability within IT teams, empowers developer teams, and extends Azure-services to any infrastructure, anywhere.
+Work with your [cloud strategy team](../../get-started/team/cloud-strategy.md) to build the necessary skilling and processes to prepare the move to an enterprise control plane across hybrid, multicloud, and edge that encourages greater accountability within IT teams, empowers developer teams, and extends Azure-services to any infrastructure, anywhere.
 
 ## Unified operations motivations
 
