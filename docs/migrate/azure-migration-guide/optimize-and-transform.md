@@ -2,13 +2,13 @@
 title: "Optimize and promote"
 description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 <!-- markdownlint-disable DOCSMD001 -->
@@ -38,7 +38,7 @@ The following are some common services that you can resize.
 
 ### Resize a virtual machine
 
-Azure Migrate performs a right-sizing analysis as part of its pre-migration Assess phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
+Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated with this tool will likely already be sized based on your pre-migration requirements.
 
 However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing.
 
@@ -80,7 +80,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-### Resize a SQL Database
+### Resize a SQL database
 
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
@@ -97,7 +97,7 @@ Partners can use the Partner Center to review the usage.
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
-Azure Cost Management and Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
+Azure Cost Management + Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 
 1. Select **Cost Management + Billing**.
 1. Select **Advisor recommendations** and the **Costs** tab.

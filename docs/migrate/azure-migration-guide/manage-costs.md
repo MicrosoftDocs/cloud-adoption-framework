@@ -2,13 +2,13 @@
 title: Migration-focused cost control mechanisms
 description: Use the Cloud Adoption Framework for Azure to learn how to set up budgets, payments, and understand invoices for your Azure resources.
 author: bandersmsft
-ms.author: banders
+ms.author: brblanch
 ms.date: 08/08/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC
 ---
 
 # Migration-focused cost control mechanisms
@@ -22,7 +22,7 @@ The tools in this article include:
 > - Azure Migrate
 > - Azure pricing calculator
 > - Azure TCO calculator
-> - Azure Cost Management and Billing
+> - Azure Cost Management + Billing
 > - Azure Advisor
 
 The processes described in this article may also require a partnership with IT managers, finance, or line-of-business application owners.
@@ -82,13 +82,13 @@ The following steps provide cost recommendations for assets (infrastructure, app
 2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions that you want recommendations to be displayed for using the subscription filter dropdown.
 3. To see cost recommendations, select the **Cost** tab.
 
-### Azure Cost Management and Billing
+### Azure Cost Management + Billing
 
-Azure Cost Management and Billing can provide a more holistic view of spending habits, including detailed view of costs and spending trends over time. For large or complex migrations, this view may provide the insights needed to make broad sweeping cost management decisions.
+Azure Cost Management + Billing can provide a more holistic view of spending habits, including detailed view of costs and spending trends over time. For large or complex migrations, this view may provide the insights needed to make broad sweeping cost management decisions.
 
-**Prerequisites:** The remainder of this tab assumes the reader has completed setup of Azure Cost Management and Billing during completion of the Azure setup guide. For more information on configuring Azure Cost Management and Billing, see [Manage costs and billing for Azure resources](../../ready/azure-setup-guide/manage-costs.md) in the Azure setup guide. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
+**Prerequisites:** The remainder of this tab assumes the reader has completed setup of Azure Cost Management + Billing during completion of the Azure setup guide. For more information on configuring Azure Cost Management + Billing, see [Manage costs and billing for Azure resources](../../ready/azure-setup-guide/manage-costs.md) in the Azure setup guide. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
 
-The following steps will load Azure Cost Management and Billing cost analysis data for your subscriptions:
+The following steps will load Azure Cost Management + Billing cost analysis data for your subscriptions:
 
 1. Navigate to **Cost Management + Billing** in the portal. If you do not see **Cost Management + Billing** in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Cost Management + Billing**.
 2. In **Cost Management + Billing**, select **Cost Management** in the left navigation pane to begin analyzing and optimizing cloud costs.
@@ -101,7 +101,7 @@ This analysis will allow you to review total costs, budget (if available), and a
 
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see the [Cost Management discipline](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 - For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](/azure/advisor/advisor-cost-recommendations).
-- For more information about Azure Cost Management and Billing, see [Understand and work with scopes](/azure/cost-management/understand-work-scopes) and [explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis).
+- For more information about Azure Cost Management + Billing, see [Understand and work with scopes](/azure/cost-management/understand-work-scopes) and [explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis).
 
 ## [Tips and tricks to optimize costs](#tab/TipsTricks)
 
@@ -129,7 +129,7 @@ Speak with your Microsoft account representative to understand how you can take 
 
 ### Use Azure Hybrid Benefit
 
-If you already have Windows Server or SQL Server licenses in your on-premises deployments, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) program to save in Azure. With the Windows Server benefit, each license covers the cost of the OS (up to two virtual machines), and you only pay for base compute costs. You can use existing SQL Server licenses to save up to 55 percent on vCore-based SQL Database options. Options include SQL Server in Azure Virtual Machines and SQL Server integration services.
+If you already have Windows Server or SQL Server licenses in your on-premises deployments, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) program to save in Azure. With the Windows Server benefit, each license covers the cost of the OS (up to two virtual machines), and you only pay for base compute costs. You can use existing SQL Server licenses to save up to 55 percent on vCore-based SQL Database options. Options include SQL Server in Azure Virtual Machines and SQL Server Integration Services.
 
 ### Low-priority VMs with batch
 

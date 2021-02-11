@@ -2,14 +2,15 @@
 title: Measure business outcomes with objectives and key results (OKRs)
 description: Use the Cloud Adoption Framework to measure business outcomes using objectives and key results (OKRs).
 author: wayneme75
-ms.author: wayneme
+ms.author: brblanch
 ms.date: 10/21/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank
 ---
 
-<!--docutune:casing WorkBoard -->
+<!-- docutune:casing WorkBoard -->
 
 # Measure business outcomes using objectives and key results (OKRs)
 
@@ -47,7 +48,7 @@ To do this, focus on what happens in a month, a quarter, and other short-term in
 
 OKRs help to create alignment and accountability within organizations.
 
-![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/OKR.jpg)
+![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/okr.jpg)
 
 _Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster._
 

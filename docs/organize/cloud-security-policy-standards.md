@@ -3,10 +3,11 @@ title: Function of cloud security policy and standards
 description: Understand the function of cloud security policy and standards.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Function of cloud security policy and standards

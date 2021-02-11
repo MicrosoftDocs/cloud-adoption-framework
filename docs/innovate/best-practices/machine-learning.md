@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore scikit RLlib Jupyter MLflow Kubeflow -->
@@ -51,7 +52,7 @@ For code-free or low-code training and deployment, try:
 
 ## MLOps: Deploy and lifecycle management
 
-Machine Learning operations (MLOps) is based on [DevOps](https://azure.microsoft.com/overview/what-is-devops/) principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
+Machine learning operations (MLOps) is based on [DevOps](https://azure.microsoft.com/overview/what-is-devops/) principles and practices that increase the efficiency of workflows. For example, continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process, with the goal of:
 
 - Faster experimentation and development of models
 - Faster deployment of models into production
@@ -94,7 +95,7 @@ Learn more about how to implement [Responsible ML](/azure/machine-learning/conce
 
 ## Integration with other services
 
-Azure Machine Learning works with other services on the Azure platform, and also integrates with open source tools such as Git and MLflow.
+Azure Machine Learning works with other services on the Azure platform, and also integrates with open-source tools such as Git and MLflow.
 
 - Compute targets such as Azure Kubernetes Service, Azure Container Instances, Azure Databricks, Azure Data Lake Analytics, and Azure HDInsight. For more information on compute targets, see [What are compute targets?](/azure/machine-learning/concept-compute-target).
 - Azure Event Grid. For more information, see [Consume Azure Machine Learning events](/azure/machine-learning/how-to-use-event-grid).

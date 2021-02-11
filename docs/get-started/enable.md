@@ -7,6 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Enable customer success with a sound operating model and organizational alignment

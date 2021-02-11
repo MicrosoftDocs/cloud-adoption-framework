@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Identity Baseline sample policy statements
@@ -37,15 +37,15 @@ The following sample policy statements address common identity-related business 
 - A least-privilege access model will be applied to any resources involved in mission-critical applications or protected data.
 - Elevated permissions should be an exception, and any such exceptions must be recorded with the cloud governance team. Exceptions will be audited regularly.
 
-**Potential design options:** Consult the [Azure identity management best practices](/azure/security/fundamentals/identity-management-best-practices) to implement a role-based access control (RBAC) strategy that restricts access based on the [need to know](https://wikipedia.org/wiki/Need_to_know) and [least-privilege security](https://wikipedia.org/wiki/Principle_of_least_privilege) principles.
+**Potential design options:** Consult the [Azure identity management best practices](/azure/security/fundamentals/identity-management-best-practices) to implement an Azure role-based access control (Azure RBAC) strategy that restricts access based on the [need to know](https://wikipedia.org/wiki/Need_to_know) and [least-privilege security](https://wikipedia.org/wiki/Principle_of_least_privilege) principles.
 
 ## Lack of shared management accounts between on-premises and the cloud
 
 **Technical risk:** IT management or administrative staff with accounts on your on-premises Active Directory may not have sufficient access to cloud resources might not be able to efficiently resolve operational or security issues.
 
-**Policy statement:** All groups in the on-premises Active Directory infrastructure that have elevated privileges should be mapped to an approved RBAC role.
+**Policy statement:** All groups in the on-premises Active Directory infrastructure that have elevated privileges should be mapped to an approved Azure role.
 
-**Potential design options:** Implement a hybrid identity solution between your cloud-based Azure Active Directory and your on-premises Active Directory, and add the required on-premises groups to the RBAC roles necessary to do their work.
+**Potential design options:** Implement a hybrid identity solution between your cloud-based Azure Active Directory and your on-premises Active Directory, and add the required on-premises groups to the Azure roles necessary to do their work.
 
 ## Weak authentication mechanisms
 

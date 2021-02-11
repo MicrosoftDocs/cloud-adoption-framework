@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 # Knowledge mining
@@ -29,8 +30,9 @@ Key scenarios for knowledge mining include:
 
   - [Knowledge mining solution accelerator](https://github.com/Azure-Samples/azure-search-knowledge-mining)
   - [Knowledge mining workshop](https://github.com/Azure-Samples/azure-search-knowledge-mining/tree/master/workshops)
-  - [Knowledge mining boot camp](https://azure.github.io/LearnAI-KnowledgeMiningBootcamp/)
+  - [Knowledge mining boot camp](https://github.com/MicrosoftLearning/LearnAI-KnowledgeMiningBootcamp)
   - [Knowledge mining e-book](https://azure.microsoft.com/resources/a-developers-guide-to-building-ai-driven-knowledge-mining-solutions/)
+  - [Knowledge mining Azure DevOps project](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine), sign-in, go to Cloud Adoption Framework navigation, select Knowledge Mining. 
 
 - **Use power skills:** [Azure search power skills](https://github.com/Azure-Samples/azure-search-power-skills) provide useful functions deployable as custom skills for Azure Cognitive Search. The skills can be used as [templates](https://github.com/Azure-Samples/azure-search-power-skills/blob/master/Template/HelloWorld/README.md) or starting points for your own custom skills. They also can be deployed and used as is if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
 

@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: fasttrack-new, AQC
+ms.custom: internal, fasttrack-new, AQC
 ---
 
 # Empower adoption
@@ -87,6 +87,8 @@ GitHub, the largest developer community, is at the heart of the open-source comm
 ### Open-source innovation
 
 To innovate, many developers use open-source code. 80 to 90 percent of new application development begins with open-source code. Open source isn't just about code. It's also about interconnected communities and developers around the globe building together. By using an open development model with GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repositories with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office applications, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
+
+<!-- docutune:ignore "Open source starts" "Open source on Azure" -->
 
 ### Learn more
 
