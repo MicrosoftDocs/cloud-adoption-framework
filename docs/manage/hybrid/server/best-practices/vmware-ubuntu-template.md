@@ -31,17 +31,17 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 
 - Deploy new virtual machine
 
-    ![A screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-1.png)
+    ![A screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-1.png)
 
-    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-2.png)
+    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-2.png)
 
-    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-3.png)
+    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-3.png)
 
-    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-4.png)
+    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-4.png)
 
-    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-5.png)
+    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-5.png)
 
-    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-6.png)
+    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-6.png)
 
 - Make sure to select **Ubuntu Linux (64-bit)** as the guest OS.
 
@@ -49,9 +49,9 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 
 - Point to the Ubuntu server ISO file location.
 
-    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-7.png)
+    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-7.png)
 
-    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-newvm-8.png)
+    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/ubuntu-template-new-vm-8.png)
 
 - Power on the VM and start the Ubuntu installation. No specific instructions here but:
 
