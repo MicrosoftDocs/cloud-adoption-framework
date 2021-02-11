@@ -116,11 +116,11 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
 - From the [`azure_arc_servers_jumpstart\vmware\scaled-deploy\powercli\linux`](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/linux) folder, open a PowerShell session as an administrator and run the `scale-deploy.ps1` script.
 
-    ![A screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli-linux/scale-deploy-1.png)
+    ![A screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-linux-scale-deploy-1.png)
 
-    ![A second screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli-linux/scale-deploy-2.png)
+    ![A second screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-linux-scale-deploy-2.png)
 
-    ![A third screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli-linux/scale-deploy-3.png)
+    ![A third screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-linux-scale-deploy-3.png)
 
 - Upon completion, the VM will have the Azure Arc connected machine agent installed as well as the Azure resource group populated with the new Azure Arc enabled servers.
 
