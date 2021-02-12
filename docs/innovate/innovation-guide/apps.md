@@ -1,6 +1,6 @@
 ---
 title: "Build Apps and Engage using App Services"
-description: Build cloud-native apps and easily modernize your existing web and API apps. Learn about Azure App Service, Azure Devops, and Visual Studio App Center.
+description: Build cloud-native apps and easily modernize your existing web and API apps. Learn about Azure App Service, Azure DevOps, and Visual Studio App Center.
 author: billyclaymyersmsft
 ms.author: brblanch
 ms.date: 01/27/2021
