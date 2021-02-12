@@ -18,6 +18,8 @@ During any cloud transformation, the ability to speak in terms of business outco
 
 To learn more about business outcomes and the business outcome template, see [Documenting business outcomes](./business-outcome-template.md), or download the [business outcome template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/business-outcome-template.xlsx).
 
+Get started with successfully building your cloud business case with key financial and technical guidance, and maximize the full benefit of your cloud investment. Learn more about [how cloud economics works](https://azure.microsoft.com/en-us/overview/cloud-economics/).
+
 ## Prepare for conversations with different personas
 
 The following are a few business outcomes that tend to trigger conversations with various personas:
