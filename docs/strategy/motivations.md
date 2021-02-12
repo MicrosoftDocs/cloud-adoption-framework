@@ -44,28 +44,28 @@ This section highlights the _migration_ and _innovation_ motivations and their c
 
 The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the _strategy for executing a cloud migration_.
 
-Some motivations align well with a migrate strategy. Motivations at the top of this list will likely have significantly less business impact than those toward the bottom. See below for linked examples of **migration motivation-driven strategies** that helped to produce successful business outcomes.
+Some motivations align well with a migrate strategy. Motivations at the top of this list will likely have significantly less business impact than those toward the bottom. **Migration motivation-driven strategies** have helped to produce successful business outcomes, like:
 
-- [Increasing cost savings](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
+- Increasing cost savings. Read customer story [here](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reducing vendor or technical complexity.
 - Optimizing internal operations.
-- [Increasing business agility](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
+- Increasing business agility. Read customer story [here](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
 - Preparing for new technical capabilities.
 - Scaling to market demand.
-- [Scaling to geographic demand](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
+- Scaling to geographic demand. Read customer story [here](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
 
 ### Innovation
 
 Data is the new commodity—and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) in the Cloud Adoption Framework includes _motivations aligned to a technology strategy_ that appear lower in the *Innovation* column (in the Motivation list above).  
 
-The motivations listed below focus an IT organization more on an innovate strategy than a migrate strategy. See below for linked examples of **innovation motivation-driven strategies** that helped to produce successful business outcomes.
+The motivations listed below focus an IT organization more on an innovate strategy than a migrate strategy. **Innovation motivation-driven strategies** have helped to produce successful business outcomes.
 
 - Increasing business agility.
 - Preparing for new technical capabilities.
-- [Building new technical capabilities](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
+- Building new technical capabilities. Read customer story [here](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
 - Scaling to market demand.
 - Scaling to geographic demand.
-- [Improving customer experience](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database) and engagement.
+- Improving customer experience and engagement. Read customer story [here](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database).
 - Transforming products or services.
 
 ## Next steps

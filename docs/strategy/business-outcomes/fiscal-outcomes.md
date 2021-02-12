@@ -1,7 +1,7 @@
 ---
 title: Examples of fiscal outcomes
 description: Use the Cloud Adoption Framework for Azure to understand fiscal outcomes in the context of a cloud transformation.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 04/04/2019
 ms.topic: conceptual
@@ -19,6 +19,8 @@ At the top level, fiscal conversations consist of three basic concepts:
 - **Profit:** Although they're rare, some transformations can both increase revenue and decrease costs. This is a profit outcome.
 
 The remainder of this article explains these fiscal outcomes in the context of a cloud transformation.
+
+[TransAlta](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers) increased data insights, benefiting from cost avoidance from an initial large-scale capital cost, and lowered operational cost on a month-by-month basis.
 
 > [!NOTE]
 > The following examples are hypothetical and should not be considered a guarantee of returns when adopting any cloud strategy.

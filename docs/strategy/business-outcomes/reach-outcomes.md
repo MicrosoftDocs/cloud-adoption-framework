@@ -1,7 +1,7 @@
 ---
 title: Examples of global reach outcomes
 description: Use the Cloud Adoption Framework for Azure to understand global reach outcomes in the context of a cloud transformation.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 04/04/2019
 ms.topic: conceptual
@@ -20,6 +20,8 @@ As discussed in [Business outcomes](./index.md), several potential business outc
 Fortune 500 and smaller enterprises have focused on the globalization of services and customers for over three decades, and most business are likely to engage in global commerce as this globalization continues to pull focus. Hosting datacenters around the world can consume more than 80 percent of an annual IT budget, and wide-area networks using private lines to connect those datacenters can cost millions of dollars per year. Therefore, supporting global operations is both challenging and costly.
 
 Cloud solutions move the cost of globalization to the cloud provider. In Azure, customers can quickly deploy resources in the same region as customers or operations, without buying and provisioning a datacenter. Microsoft owns one of the largest wide-area networks in the world, connecting datacenters around the globe. Connectivity and global operating capacity are available to global customers on demand.
+
+[Walgreens Boots Alliance](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration) (WBA) moved on-premises applications and IT resources in a heterogeneous Linux and Windows environment to the cloud, benefiting from improved performance and data centralization—and also helps the company provide better customer service.
 
 ## Global access
 

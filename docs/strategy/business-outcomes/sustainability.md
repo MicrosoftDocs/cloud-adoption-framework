@@ -1,7 +1,7 @@
 ---
 title: Sustainability outcomes and benefits for business
 description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
-author: wayneme75
+author: mpvenables
 ms.author: brblanch
 ms.date: 10/21/2020
 ms.topic: conceptual
@@ -23,6 +23,8 @@ Watch the following video to learn more about sustainability and how cloud migra
 
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
 
+[Bühler Group](https://customers.microsoft.com/en-us/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s _Bühler Insights_ IoT platform, powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
+
 ## The Microsoft sustainability journey
 
 The Microsoft journey started over a decade ago when the company started to apply new business practices and adopt cloud technology. We lowered our carbon emissions by 30 percent in 2009. Since then, Microsoft has made large strides forward by investing in reducing the company's carbon footprint further. Microsoft has focused on these four areas:
@@ -40,7 +42,7 @@ Focusing on sustainability and protecting limited environmental resources is key
 
 AGL, one of Australia's leading integrated energy companies, built a solution on Azure that remotely manages networked solar batteries. Learn about how the company is [growing an innovative energy partnership across Australia](https://customers.microsoft.com/doclink/847171-agl-energy-azure-en-australia) to help local customers give back to the grid.
 
-Bee'ah is a sustainability pioneer in the middle east that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/doclink/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
+Bee'ah is a sustainability pioneer in the Middle East that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/doclink/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
 
 These customer stories demonstrate how prioritizing sustainability and environmental solutions can help organizations to create new business opportunities.
 

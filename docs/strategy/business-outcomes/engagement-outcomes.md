@@ -1,7 +1,7 @@
 ---
 title: Examples of customer engagement outcomes
 description: Learn about examples of customer engagement to understand the needs of customers and the ecosystem around them during their business transformation journey.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 04/04/2019
 ms.topic: conceptual
@@ -25,7 +25,7 @@ During cloud-enabled data innovation efforts, you can assume that customers are 
 
 Customer engagement outcomes are about meeting and exceeding customer expectations. As a baseline for customer engagements, customers assume that products and services perform and are reliable. When they're not, it's easy for an executive to understand the business value of performance and reliability outcomes. For more advanced companies, the speed of integrating learnings and observations from this process is a fundamental business outcome.
 
-The next sections provide examples and outcomes related to customer engagement.
+[Descartes](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database) chose Microsoft Azure as its preferred platform, and successfully migrated its Descartes MacroPoint solution to Azure SQL Database to provide greater flexibility for customers, and focus internal resources on extending product value.
 
 ## Cycle time
 
