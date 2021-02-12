@@ -1,77 +1,70 @@
 ---
-title: "Enterprise-Scale platform automation and devops for SAP on Azure"
-description: Describe how this enterprise-scale scenario can improve platform automation and devops of SAP
+title: "Enterprise-scale platform automation and devops for SAP on Azure"
+description: Understand the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and devops for SAP Enterprise-Scale scenario
+# SAP enterprise-scale platform automation and devops
 
-## Planning for a SAP AppOps approach
-How to approach SID Automation with SAP. 
+This article describes how to approach System Identifier (SID) Automation on SAP by using an AppOps approach.
 
-### Glossary
+## Architecture
 
-Term                                     | Description |
-| :------------------------------------------ | ------------------------------
-| `System`                       | An instance of an SAP application identified by a system ID (SID). Consists of one or more Virtual Machines and their supporting artifacts deployed to Azure to a resource group.
-| `Landscape`                       | A collection of instances of the same SAP Application, for instance a development instance, a quality assurance instance and the production instance. Consists of multiple systems each in their own resource group
-| `Environment`                       | Also known as development tiers, provides a way to partition the SAP Applications in an SAP Landscape, for instance development-, quality assurance- and production environment. The environment deployment will provide shared resources to all the systems in the environment, for example virtual network, key vaults.
-<br>
+A SAP application consists of systems, environments, and landscapes. Platform automation and devops target these components.
 
-The image below illustrates the dependencies between SAP Systems, landscapes and environments. The diagram has 3 SAP Landscapes (ECC, CRM and BW) and each of the landscapes have 3 tiers of the application (development, quality assurance and production)
+The following diagram illustrates the dependencies between SAP systems, environments, and landscapes. Each landscape has three environment tiers: development, quality assurance, and production. Each environment contains one or more systems.
 
-![Architectural dependencies](media\SGC_Architectural_Principles.png)
+![Diagram showing architectural dependencies between SAP systems, environments, and landscapes.](media\SGC_Architectural_Principles.png)
 
-Picture 1: Architectural Dependencies
+### System
 
-#### **System**
+A SAP system is an instance of a SAP application that has the resources the application needs to run, like virtual machines (VMs), disks, load balancers, proximity placement groups, availability sets, subnets, and network security groups. Each system deploys into a separate Azure resource group with a unique SID.
 
-The SAP system will contain the resources which are needed for the SAP application, these include the virtual machines, disks, load balancers, proximity placement groups, availability sets, subnets, network security groups etc. The systems are identified by a System Identifier (SID).
+### Environment
 
-#### **Landscape**
+An environment is also called a development tier, and partitions the SAP application into tiers like development, quality assurance, and production. An environment deployment provides shared resources like virtual networks and key vaults to all the systems in the environment.
 
-The landscape defines an SAP application and all different tiers of if (development, quality assurance, production etc).
+Environments provide the following services to SAP systems:
 
-#### **Environment**
-
-Environments provide a way to partition the systems into different tiers. They provides the following services to the SAP systems:
-
-- Key vaults for credentials management, by default all systems in the same environment share the credentials.
-- Virtual Network
-- Storage accounts for
+- Key vaults for credentials management. By default, all systems in the same environment share the credentials.
+- Virtual network
+- Storage accounts for:
   - Terraform remote storage
-  - SAP Installation media
-  - Boot diagnostics for the Virtual Machines
+  - SAP installation media
+  - Boot diagnostics for the VMs
 
-### Design Considerations
+### Landscape
 
-Identify the number of environments needed:
+A landscape is a collection of systems in different environments in a SAP application. The example diagram shows three SAP landscapes: SAP ERP Central Component (ECC), SAP Customer Relationship Management (CRM), and SAP Business Warehouse (BW).
 
-- Define how environments are partitioned (by subscription, by virtual network, by subnet, etc.)
-- Define SPN strategy for automation, will each environment have unique SPN?
+## Design considerations
 
-Secrets/creds management, by default all systems in an environment will use the same credentials provident by the environment keyvault. Identify if systems exist that need unique credentials.
+- To determine the number of environments you need, define how to partition environments, such as by subscription, virtual network, subnet, or deployment stage.
 
-Decide whether to use Azure marketplace image or custom built image
+- Define service principal name (SPN) strategy for automation. Will each environment have a unique SPN?
 
-Provide a managed SAP automation environment
-Statefiles copies to be backed up, to safegaurd against file corruption
-Store archival copies of the automation tool binaries
-Naming conventions, using default SAP Automation standard is recommended
+- Define secrets or credentials management. Azure Key Vault is the recommended solution for key management and key storage. SAP Automation uses SPN credentials from Azure Key Vault. By default, all systems in an environment use the same credentials from the environment key vault. Determine whether any systems need unique credentials.
 
-### Design Recommendations
+- Decide whether to use an Azure Marketplace image or a custom-built image. Custom-built images have several advantages, like customer-specific OS configuration, security hardening, or compliance tooling. Custom-built images can also potentially streamline image lifecycle management.
 
-Custom built images have several advantages e.g., customer specific OS configuration, security hardening, compliance tooling etc. Additionally, it can potentially streamline the management of image lifecycle
-Azure KeyVault is the recommended solution for key management/key storage. SAP Automation will use SPN credentials from Azure KeyVault  
-Three methods to ocrhestrate automation -               
-    1) Begin by deploying Deployment Infrasturcture as a central Automation Controller VM per SAP env NP and Prod
-    2) Utilise ADO for automation runs, bypasses requirement of deploying controller VM. Can begin from SAP library and SAP IaaS builds.
-    3) Resrouce Provider (RP) based automation, script run calls can be made from Snow portal.
-For instance, Terraform statefiles can be stored on RA-GRS based HOT storage accounts
-Keep copies of Terraform/Ansible binary/library, specific version applicable to code
-SAP Automation publishes a set of naming convention guidelines
+## Design recommendations
+
+- Back up state file copies to safeguard against file corruption. For example, you can store Terraform state files on RA-GRS based HOT storage accounts.
+
+- Store archival copies of automation tool binaries. Keep copies of Terraform/Ansible binary libraries of the specific version applicable to code.
+
+- Use default SAP Automation standard naming conventions. SAP Automation publishes a set of naming convention guidelines.
+
+- Provide a managed SAP Automation environment. Three methods to orchestrate automation are:
+  
+  - Begin by deploying Deployment Infrastructure as a central Automation Controller VM per SAP env NP and Prod.
+    
+  - Use Azure DevOps for automation runs, bypassing a controller VM. You can begin from SAP library and SAP IaaS builds.
+    
+  - Resource Provider (RP)-based automation. You can make script run calls from the Snow portal.
+
