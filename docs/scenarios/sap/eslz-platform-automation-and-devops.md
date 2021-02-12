@@ -15,7 +15,7 @@ This article describes how to approach System Identifier (SID) Automation on SAP
 
 ## Architecture
 
-A SAP application consists of systems, environments, and landscapes. Platform automation and devops target these components.
+An SAP application consists of systems, environments, and landscapes. Platform automation and devops target these components.
 
 The following diagram illustrates the dependencies between SAP systems, environments, and landscapes. The application has three landscapes: SAP ERP Central Component (ECC), SAP Customer Relationship Management (CRM), and SAP Business Warehouse (BW). Each landscape has three environment tiers: development, quality assurance, and production. Each environment contains one or more systems.
 
@@ -23,7 +23,7 @@ The following diagram illustrates the dependencies between SAP systems, environm
 
 ### System
 
-A SAP system is an instance of a SAP application that has the resources the application needs to run, like virtual machines (VMs), disks, load balancers, proximity placement groups, availability sets, subnets, and network security groups. Each system deploys into a separate Azure resource group with a unique SID.
+An SAP system is an instance of an SAP application that has the resources the application needs to run, like virtual machines (VMs), disks, load balancers, proximity placement groups, availability sets, subnets, and network security groups. Each system deploys into a separate Azure resource group with a unique SID.
 
 ### Environment
 
@@ -40,7 +40,7 @@ Environments provide the following services to SAP systems:
 
 ### Landscape
 
-A landscape is a collection of systems in different environments in a SAP application. The example diagram shows three SAP landscapes: SAP ERP Central Component (ECC), SAP Customer Relationship Management (CRM), and SAP Business Warehouse (BW).
+A landscape is a collection of systems in different environments in an SAP application. The example diagram shows three SAP landscapes: SAP ERP Central Component (ECC), SAP Customer Relationship Management (CRM), and SAP Business Warehouse (BW).
 
 ## Design considerations
 
