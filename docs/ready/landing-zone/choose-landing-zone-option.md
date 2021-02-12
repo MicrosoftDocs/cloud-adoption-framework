@@ -19,6 +19,10 @@ Microsoft offers two implementation options for landing zones:
 - Start small and expand
 - Enterprise-scale
 
+Watch the following 15 minute video to learn more about how to choose the Azure landing zone implentation options that best fit your needs.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWwZeg]
+
 You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/partner-landing-zone).
 
 ## Overview of landing zone options
