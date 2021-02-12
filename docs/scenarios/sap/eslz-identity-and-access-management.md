@@ -13,18 +13,18 @@ ms.subservice: ready
 
 This article examines design considerations and recommendations that relate to identity and access management in an SAP deployment on Microsoft Azure.
 
-## Design Considerations
+## Design considerations
 
-- Determine the Azure resource administration boundaries versus the SAP Basis administration boundaries between the Infrastructure team and the SAP Basis team. Consider providing the SAP Basis team with elevated Azure resource administration access in an SAP non-production environment. For example, give them a [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role. You can also give them a partially elevated administration access like partial Virtual Machine Contributor in a production environment. Both options achieve a good balance between segregation of duties and operational efficiency.
+- Determine the Azure resource administration boundaries versus the SAP Basis administration boundaries between the Infrastructure team and the SAP Basis team. Consider providing the SAP Basis team with elevated Azure resource administration access in an SAP non-production environment. For example, give them a [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role. You can also give them partially elevated administration access like partial Virtual Machine Contributor in a production environment. Both options achieve a good balance between separation of duties and operational efficiency.
 
-- Review what Azure administration and management activities you require your teams to do. Consider your SAP on Azure landscape. Figure out the best possible distribution of responsibilities within your organization.
+- Review the Azure administration and management activities you require your teams to do. Consider your SAP on Azure landscape. Figure out the best possible distribution of responsibilities within your organization.
 
 Common Azure admin activities involved in administration and management of SAP on Azure are listed here:
 
 | Azure Resource | Azure Resource Provider | Activities |
 |---|---|---|
 | Virtual Machines | Microsoft.Compute/virtualMachines | Start, stop, restart, deallocate, deploy, redeploy, change, resize, Extensions, Availability Sets, Proximity Placement Groups |
-| Virtual Machines | Microsoft.Compute/disks | Disk reads and writes |
+| Virtual Machines | Microsoft.Compute/disks | Read and write to disk |
 | Storage | Microsoft.Storage | Read, Change on Storage accounts (for example boot diagnostics) |
 | Storage | Microsoft.NetApp | Read, Change on NetApp Capacity Pools and Volumes |
 | Storage | Microsoft.NetApp | ANF snapshots |
@@ -37,18 +37,18 @@ Common Azure admin activities involved in administration and management of SAP o
 - If you're using SAP Cloud Platform services, consider using Principal Propagation to forward an identity from SAP Cloud Platform application to your on-premises SAP landscape. Use SAP Cloud Connector.
 
 - Consider a migration to Azure an opportunity to review and realign identity and access management processes. Review the processes in your SAP landscape and the processes at your enterprise level:
-- Review SAP dormant user lockout policies.
-- Review SAP user password policy and align it with AD/ AAD.
-- Review Leavers, Movers, and Starters (LMS) procedures and align them with AD/ AAD. If you're using SAP HCM, it's likely that the LMS process is driven by SAP HCM.
+  - Review SAP dormant user lockout policies.
+  - Review SAP user password policy and align it with Azure Active Directory (AD).
+  - Review Leavers, Movers, and Starters (LMS) procedures and align them with Azure AD. If you're using SAP Human Capital Management (HCM), it's likely that the LMS process is driven by SAP HCM.
 
-- Consider using automatic user provisioning feature of Azure AD to set up and remove users in SAP SaaS applications.  SAP Analytics Cloud and SAP identity Authentication Service currently support this scenario.
+- Consider using automatic user provisioning feature of Azure AD to set up and remove users in SAP SaaS applications. SAP Analytics Cloud and SAP Identity Authentication Service currently support this scenario.
 
-- NFS communication between Azure NetApp Files and Azure Virtual Machines can be secured with [NFS client encryption using Kerberos](/azure/azure-netapp-files/configure-kerberos-encryption). Azure NetApp Files supports both Active Directory Domain Services (ADDS) and Azure Active Directory Domain Services (AADDS) for AD connections. Consider the [performance impact of Kerberos on NFSv4.1](/azure/azure-netapp-files/configure-kerberos-encryption#kerberos_performance).
+- Network File System (NFS) communication between Azure NetApp Files and Azure Virtual Machines can be secured with [NFS client encryption using Kerberos](/azure/azure-netapp-files/configure-kerberos-encryption). Azure NetApp Files supports both Active Directory Domain Services (ADDS) and Azure Active Directory Domain Services (AADDS) for Azure AD connections. Consider the [performance impact of Kerberos on NFSv4.1](/azure/azure-netapp-files/configure-kerberos-encryption#kerberos_performance).
 
 - Remote Function Call (RFC) connections between SAP systems can be secured with Secure Network Communications (SNC) using appropriate protection level like quality of protection (QoP). SNC protection generates some performance overhead. To protect RFC communication between application servers of the same SAP system, SAP recommends using network security instead of SNC.
 These Azure services support SNC-protected RFC connections to an SAP system: Azure Data Factory, on-premises data gateway (Logic Apps, Power BI), and so on.
 
-## Design Recommendations
+## Design recommendations
 
 - Implement Single Sign-on (SSO) using Azure Active Directory or Active Directory Federation Services (AD FS) so the end users can connect to SAP applications:
   - Implement [SSO to SAP Netweaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like SAP Fiori, WebGUI, and so on, with SAML.
