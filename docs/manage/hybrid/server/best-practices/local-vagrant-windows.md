@@ -72,7 +72,7 @@ The following article provides guidance for deploying a local **Windows 10** vir
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-- The vagrantfile executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/vars.ps1) PowerShell script to match the Azure service principal you just created.
+- The vagrantfile executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/vars.ps1) PowerShell script to match the Azure service principal you created.
 
   - `subscriptionId` = Your Azure subscription ID
   - `appId` = Your Azure service principal name
@@ -83,7 +83,7 @@ The following article provides guidance for deploying a local **Windows 10** vir
 
 ## Deployment
 
-Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes) is needed. At a high-level, the deployment will:
+Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes) is needed. At a high level, the deployment will:
 
 1. Download the Windows 10 image file [Vagrant box](https://app.vagrantup.com/StefanScherer/boxes/windows_10)
 2. Execute the Azure Arc installation script
@@ -130,6 +130,6 @@ If you want to demo/control the actual registration process, do the following:
 
 ## Delete the deployment
 
-To delete the entire deployment, run the `vagrant destroy -f` command. The vagrantfile includes a `before: destroy` Vagrant trigger which will run the command to delete the Azure resource group before destroying the actual VM.
+To delete the entire deployment, run the `vagrant destroy -f` command. The vagrantfile includes a `before: destroy` Vagrant trigger that runs the command to delete the Azure resource group before destroying the actual VM.
 
 ![A screenshot of the `vagrant destroy` command.](./media/local-vagrant/vagrant-windows-vagrant-destroy.png)
