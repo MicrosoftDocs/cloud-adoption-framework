@@ -124,7 +124,7 @@ Azure board and Azure Pipelines require a portal that's separate from GitHub and
 
 To create a DevOps project:
 
-1. Go to **Azure DevOps projects**.
+1. Go to **Azure DevOps Projects**.
 2. Select **create DevOps project**.
 3. Select **runtime, framework, and service**.
 
