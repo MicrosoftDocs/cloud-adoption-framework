@@ -19,7 +19,7 @@ Though the impact and benefits of the cloud have been traditionally measured wit
 
 Watch the following video to learn more about sustainability and how cloud migration opens the door to sustainable solutions that are good for the planet and good for your business.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWx4po]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RWx4po>]
 
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
 
