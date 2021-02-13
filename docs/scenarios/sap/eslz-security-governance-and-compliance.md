@@ -14,13 +14,13 @@ ms.custom: think-tank
 
 SAP is a common technology many organizations use in their most crucial workloads today. When planning SAP architecture, you should pay special attention to ensuring that the architecture is robust and secure. The goal of this article is to document the security, compliance, and governance design criteria for enterprise-scale SAP on Azure. The article discusses design recommendations, best practices, and design considerations that reflect input from the field.
 
-Cloud solutions initially hosted single, relatively isolated applications, which worked well for a few years. As the benefits of cloud solutions became clear, the cloud hosted many large-scale workloads, like SAP on Azure. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of cloud services.
+Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, the cloud hosted many larger-scale workloads, like SAP on Azure. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of cloud services.
 
 The vision for SAP enterprise-scale landing zone (ESLZ) security, compliance, and governance on Azure is to give organizations tools and processes to prevent risk and make effective decisions. The ESLZ defines security, governance, and compliance roles and responsibilities, so everyone knows what is expected from them.
 
 ## Shared responsibility model
 
-As you evaluate public cloud services, it's critical to understand which tasks the cloud provider versus you, the customer, handle under the shared responsibility model. In the shared responsibility model between a cloud provider and its customers, the division of responsibilities depends on your workload's cloud hosting model: software-as-a-service (SaaS), platform-as-a-service (PaaS), or infrastructure-as-a-service (IaaS). As a customer, you are always responsible for your data, endpoints, and account and access management, regardless of cloud deployment model.
+As you evaluate public cloud services, it's critical to understand which tasks the cloud provider versus the customer handle. Under the shared responsibility model, the division of responsibilities between a cloud provider and its customers depends on your workload's cloud hosting model: software-as-a-service (SaaS), platform-as-a-service (PaaS), or infrastructure-as-a-service (IaaS). As a customer, you are always responsible for your data, endpoints, and account and access management, regardless of cloud deployment model.
 
 The following diagram shows the division of tasks between responsibility zones in Microsoft's cloud shared responsibility model:
 
@@ -34,13 +34,17 @@ Security is a shared responsibility between Microsoft and customers. You can upl
 
 For generally-accepted security guidance, refer to the Center for Internet Security (CIS) standards at [Cybersecurity Best Practices](https://www.cisecurity.org/cybersecurity-best-practices/).
 
-### Azure Security Center
+### Enable Azure Security Center
 
-Enterprises that use hub-spoke network topologies often deploy cloud architecture patterns across multiple Azure subscriptions. [Azure Security Center (ASC)](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
+Enterprises that use hub-spoke network topologies often deploy cloud architecture patterns across multiple Azure subscriptions. In the following cloud deployment diagram, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads and subscriptions.
+
+![Diagram showing an enterprise cloud deployment with security issues.](media\security-issues.png)
+
+[Azure Security Center (ASC)](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
 
 Enable ASC Standard for SAP on Azure subscriptions to:
 
-- Strengthen your datacenters' security posture, and provide advanced threat protection on premises and across hybrid workloads in Azure and other clouds.
+- Strengthen your datacenters' security posture, and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
 
 - See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP virtual machines (VMs), disks, and applications.
 
@@ -48,15 +52,11 @@ Enable ASC Standard for SAP on Azure subscriptions to:
 
 When you enable ASC Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
 
-In the following cloud deployment diagram, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads.
-
-![Diagram showing an enterprise cloud deployment with security issues.](media\security-issues.png)
-
 The following screenshot shows the ASC dashboard in the Azure portal:
 
 ![Azure Security Center Dashboard](media\security-center-dashboard.png)
 
-### Azure Sentinel
+### Enable Azure Sentinel
 
 [Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
@@ -64,9 +64,11 @@ The following screenshot shows the ASC dashboard in the Azure portal:
 
 Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Microsoft Active Directory (AD), combined with third-party security products, have enabled this capability for both SAP GUI and web-browser based applications for years. When a user signs in to their workstation and successfully authenticates, AD issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
 
-You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS. Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
+You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS.
 
-### Operating system security
+Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
+
+### Harden operating systems
 
 Make sure you harden the operating system to eradicate vulnerabilities that could lead to attacks on the SAP database.
 
@@ -77,19 +79,19 @@ A few additional checks ensure safe base installation:
 - Restrict physical access to the server.
 - Protect access to the server at the network level.
 
-### Network security
+### Isolate virtual networks
 
 Isolate and restrict access to network services and protocols. For tighter control, you can secure the recommended hub-and-spoke network architecture by using several Azure security mechanisms:
 
-- Isolate the SAP application and database servers from the internet or the on-premises network. Pass all traffic to and from on-premises through the hub virtual network, which is connected to the spoke network by virtual network peering. The peered virtual networks guarantee that the SAP on Azure solution is isolated from the public internet.
+- Isolate the SAP application and database servers from the internet or from the on-premises network by passing all traffic through the hub virtual network, which is connected to the spoke network by virtual network peering. The peered virtual networks guarantee that the SAP on Azure solution is isolated from the public internet.
 
-- You can monitor and filter traffic using Azure Monitor, [Azure Network Security Groups (NSGs)](/azure/virtual-network/security-overview), or application security groups.
+- Monitor and filter traffic using Azure Monitor, [Azure Network Security Groups (NSGs)](/azure/virtual-network/security-overview), or application security groups.
 
-- You can use [Azure Firewall](/azure/firewall/overview) or any of the market-available network virtual appliances (NVAs).
+- Use [Azure Firewall](/azure/firewall/overview) or any of the market-available network virtual appliances (NVAs).
 
 - For more advanced network security measures, implement a [network DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid). For more information, see [Implement a DMZ between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid).
 
-- Configure DMZs and NVAs as isolated from rest of the SAP estate, configure Azure Private Link, and securely manage and control the SAP on Azure resources.
+- Isolate DMZs and NVAs from the rest of the SAP estate, configure Azure Private Link, and securely manage and control the SAP on Azure resources.
 
 The following architectural diagram shows how to administer an Azure virtual network topology with isolation and restriction of network services and protocols through NSGs. Make sure your network security also complies with organizational security policy requirements.
 
@@ -97,11 +99,7 @@ The following architectural diagram shows how to administer an Azure virtual net
 
 For more information about SAP on Azure network security, see [SAP Security Operations On Azure](https://blogs.sap.com/2019/07/21/sap-security-operations-on-azure/).
 
-### Data security
-
-Data can be at rest or in transit.
-
-#### Data at rest
+### Encrypt data at rest
 
 Data at rest is information in persistent storage on physical media, in any digital format. Media can include files on magnetic or optical media, archived data, and data backups. Azure offers a variety of data storage solutions including file, disk, blob, and table storage. Some Azure Storage data encryption at rest occurs by default, with optional customer configuration. For more information, see [Azure Data Encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
 
@@ -111,8 +109,7 @@ Azure Storage encryption is enabled for all Azure Resource Manager and classic S
 
 For SAP database server encryption, use the SAP HANA native encryption technology. If you're using Azure SQL Database, use [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) offered by the DBMS provider to secure your data and log files, and ensure the backups are also encrypted.
 
-
-#### Data in transit
+### Secure data in transit
 
 Data is in transit or in flight when it moves from one location to another, whether internally on premises or within Azure, or externally, like across the internet to the end user. Azure offers several mechanisms to keep data private in transit. All the mechanisms can use protection methods like encryption. These mechanisms include:
 
@@ -122,19 +119,19 @@ Data is in transit or in flight when it moves from one location to another, whet
 
 Encryption using MACsec, an IEEE standard at the data-link layer, is automatically enabled for all Azure traffic between Azure datacenters. This encryption ensures customer data confidentiality and integrity. For more information, see [Azure customer data protection](/azure/security/fundamentals/protection-customer-data).
 
-### Azure Key Vault
+### Manage keys and secrets
 
 To control and manage disk encryption keys and secrets for non-HANA Windows and non-Windows operating systems, use Azure Key Vault. Key Vault has capabilities for provisioning and managing Secure Sockets Layer (SSL)/TLS certificates. You can also protect secrets with Hardware Security Modules (HSMs). SAP HANA isn't supported with Azure Key Vault, so you must use alternate methods like SAP ABAP or SSH keys.
 
-### Application security
+### Secure web and mobile applications
 
 For internet facing applications like Fiori, make sure to distribute load per application requirements while maintaining security levels. For layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Azure Marketplace.
 
 For mobile apps, [Microsoft Enterprise Mobility and Security](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) can integrate SAP internet-facing applications as it helps to protect and secure your organization and empowers your employees to work in new and flexible ways.
 
-### Security monitoring and management
+### Monitor security
 
-[Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) is an Azure-native monitoring product for SAP landscapes running on Azure. The product works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [SAP on Azure Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
+[Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) is an Azure-native monitoring product for SAP landscapes that works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [SAP on Azure Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
 
 ## Security design considerations
 
@@ -177,7 +174,7 @@ Every SAP application has unique requirements, so treat the preceding flow chart
 
 ### Scoping decisions
 
-The in-scope requirements are for the security solution to be cost-effective and scalable.
+The following recommendations are for various security scenarios. The in-scope requirements are for the security solution to be cost-effective and scalable.
 
 |Scope (scenario)|Recommendation|Notes|
 |---|---|---|
@@ -187,55 +184,55 @@ The in-scope requirements are for the security solution to be cost-effective and
 
 ## Compliance and governance design recommendations
 
-The following sections present SAP on Azure compliance and governance design recommendations. Also use the [Azure Advisor Recommendations](/azure/advisor/advisor-overview) for reliability, security, performance, cost, and operational excellence.
+Azure Advisor is free and helps you get a consolidated view across SAP on Azure subscriptions. See the [Azure Advisor Recommendations](/azure/advisor/advisor-overview) for reliability, resiliency, security, performance, cost, and operational excellence design recommendations.
 
-### Azure resource naming and tagging conventions
+### Use Azure resource naming and tagging conventions
 
 To align with the Cloud Adoption Framework [Ready](/azure/cloud-adoption-framework/ready) section, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
 The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
 
-Examples of resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, Application Security Groups, tags, route tables, managed disks, and public IPs. A sample use case could be to tag all Azure development VMs with the tag **Dev**. This eases reporting and billing operations to pull a report for all things **Dev**. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, Application Security Groups, tags, route tables, managed disks, and public IPs. A sample use case could be to tag all Azure development VMs with the tag **Dev**. This eases reporting and billing operations to pull a report for all things **Dev**. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
-### Azure Policy
+### Use Azure Policy
 
 Azure Policy helps enforce organizational standards and assess compliance at scale through its compliance dashboard. Azure Policy provides an aggregated view to evaluate the overall state of the environment, with the ability to drill down to per-resource, per-policy granularity.
 
-Azure Policy also helps bring your resources to compliance through bulk remediation for existing resources and automatic remediation for new resources. Sample Azure Policies are Allowed locations applied to management group, Require a tag and its value on resources, naming policies, or creating a VM using a managed disk.
+Azure Policy also helps bring your resources to compliance through bulk remediation for existing resources and automatic remediation for new resources. Sample Azure Policies are applying allowed locations to management group, requiring a tag and its value on resources, creating a VM using a managed disk, or naming policies.
 
-### SAP on Azure cost management
+### Manage SAP on Azure costs
 
 Cost management is very important. Microsoft offers various ways to optimize costs, like reservations, right sizing, and snoozing. It's important to understand and set alerts for the [Azure cost spending limits](/azure/cost-management-billing/manage/spending-limit). You can extend this monitoring to integrate with the overall Information Technology Service Management (ITSM) solution.
 
-### Automated SAP deployments
+### Automate SAP deployments
 
 Save time and reduce errors by automating SAP deployments. Deploying complex SAP landscapes into a public cloud is not an easy task. SAP basic teams might be very familiar with the traditional tasks of installing and configuring SAP systems on premises. Designing, building, and testing cloud deployments often require additional domain knowledge. For more information, see [SAP enterprise-scale platform automation and devops](eslz-platform-automation-and-devops.md).
 
-### Resource locks for production workloads
+### Lock resources for production workloads
 
 Create required Azure resources at the start of your SAP project. When all additions, moves, and changes are finished, and the SAP on Azure deployment is operational, lock all resources. Only a super administrator can then unlock and permit a resource, such as a VM, to be modified. For more information, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
-### Role-based access control
+### Implement role-based access control
 
 Customize role-based access control (RBAC) roles for SAP on Azure spoke subscriptions to avoid accidental network-related changes. You can allow the SAP on Azure infrastructure team members to deploy VMs into Azure virtual networks and restrict them from changing anything on the Azure Virtual Network peered to the hub subscription. On the other hand, you allow members of the networking team to create and configure virtual networks, but prohibit them from deploying or configuring VMs in virtual networks where SAP applications are running.
 
-### Azure Connector for SAP LaMa
+### Use Azure Connector for SAP LaMa
 
-Optimize Dev, Test, and Sandbox deployments with Azure Connector for SAP LaMa. Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. For example, creating new SAP projects for technical or application releases, or periodically refreshing QA systems from Production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
+Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. For example, creating new SAP projects for technical or application releases, or periodically refreshing QA systems from Production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
 
-SAP LaMa Enterprise Edition can support operational efficiencies in this area by automating several steps involved in the SAP system copy or refresh. [Azure Connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
+SAP LaMa Enterprise Edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure Connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
 
-For VM operations, the Azure Connector for LaMa can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the LaMa interface you can schedule your SAP S/4HANA sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure Connector for LaMa also lets you resize your VM when performance demands arise directly from within LaMa.
+For VM operations, the Azure Connector for LaMa can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the LaMa interface you can schedule your SAP S/4HANA sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure Connector for LaMa also lets you resize your VMs when performance demands arise directly from within LaMa.
 
 ### Scoping decisions
 
-The in-scope requirements are for the compliance and governance solution to be cost-effective and scalable.
+The following recommendations are for various compliance and governance scenarios. The in-scope requirements are for the solution to be cost-effective and scalable.
 
 | Scope (scenario) | Recommendation | Notes |
 |---|---|---|---|
-| Configure a governance model for standard naming convention, and pull reports based on cost center. | Azure Policy and Azure tags | Use Azure Policy and tagging together to meet the requirements. |
+| Configure a governance model for standard naming conventions, and pull reports based on cost center. | Azure Policy and Azure tags | Use Azure Policy and tagging together to meet the requirements. |
 | Avoid accidental deletion of Azure resources. | Azure resource locks | Azure resource locks prevent accidental resource deletion. |
-| Get a consolidated view of opportunity areas for cost optimization, resiliency, security, operational excellence, and performance for SAP on Azure resources | Azure Advisor | Azure Advisor is free and helps get a consolidated view across SAP on Azure subscription cost optimization, resiliency, security, operational excellence, and performance. |
+| Get a consolidated view of opportunity areas for cost optimization, resiliency, security, operational excellence, and performance for SAP on Azure resources | Azure Advisor | Azure Advisor is free and helps get a consolidated view across SAP on Azure subscriptions. |
 
 ## Next steps
 - [Introduction to Azure security](/azure/security/fundamentals/overview)
