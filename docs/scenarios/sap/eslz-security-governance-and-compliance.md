@@ -34,17 +34,9 @@ Security is a shared responsibility between Microsoft and customers. You can upl
 
 For generally-accepted security guidance, refer to the Center for Internet Security (CIS) standards at [Cybersecurity Best Practices](https://www.cisecurity.org/cybersecurity-best-practices/).
 
-In the following cloud deployment diagram, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads.
-
-![Diagram showing an enterprise cloud deployment with security issues.](media\security-issues.png)
-
 ### Azure Security Center
 
 Enterprises that use hub-spoke network topologies often deploy cloud architecture patterns across multiple Azure subscriptions. [Azure Security Center (ASC)](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
-
-The following screenshot shows the ASC dashboard in the Azure portal:
-
-![Azure Security Center Dashboard](media\security-center-dashboard.png)
 
 Enable ASC Standard for SAP on Azure subscriptions to:
 
@@ -52,9 +44,17 @@ Enable ASC Standard for SAP on Azure subscriptions to:
 
 - See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP virtual machines (VMs), disks, and applications.
 
-- Delegate an SAP admin /custom role with [Just in Time access](/azure/security-center/just-in-time-explained). Make sure that the SAP database servers are excluded from any policy that may install endpoint protection.
+- Delegate an SAP admin custom role with [Just in Time access](/azure/security-center/just-in-time-explained).
 
-Make sure to exclude the SAP database servers from any policy that installs endpoint protection.
+When you enable ASC Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
+
+In the following cloud deployment diagram, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads.
+
+![Diagram showing an enterprise cloud deployment with security issues.](media\security-issues.png)
+
+The following screenshot shows the ASC dashboard in the Azure portal:
+
+![Azure Security Center Dashboard](media\security-center-dashboard.png)
 
 ### Azure Sentinel
 
