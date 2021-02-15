@@ -30,7 +30,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
 - [Install Terraform >= 0.12](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-- A VMware vCenter Server user with [permissions to deploy](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm-admin.doc/GUID-8254CD05-CC06-491D-BA56-A773A32A8130.html) a virtual machine from a template in the vSphere web client.
+- A VMware vCenter Server user with [permissions to deploy](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-4D0F8E63-2961-4B71-B365-BBFA24673FDB.html) a virtual machine from a template in the vSphere web client.
 
 - Create an Azure service principal.
 
