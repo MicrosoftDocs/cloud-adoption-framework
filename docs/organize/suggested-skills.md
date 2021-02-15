@@ -1,5 +1,5 @@
 ---
-title: "Building technical skills"
+title: Building technical skills
 description: Use the Cloud Adoption Framework for Azure to learn how to help your organization develop the necessary skills to structure teams to meet the desired outcomes.
 author: BrianBlanchard
 ms.author: brblanch
@@ -50,7 +50,11 @@ The following information describes resources for additional learning.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and its partners offer options to help all audiences develop their skills for using Azure services. We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
+
+- [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
+
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
 ### Microsoft Learn
 
