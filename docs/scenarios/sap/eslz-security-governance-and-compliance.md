@@ -20,7 +20,7 @@ The vision for SAP enterprise-scale landing zone (ESLZ) security, compliance, an
 
 ## Shared responsibility model
 
-As you evaluate public cloud services, it's critical to understand which tasks the cloud provider versus the customer handle. Under the shared responsibility model, the division of responsibilities between a cloud provider and its customers depends on your workload's cloud hosting model: software-as-a-service (SaaS), platform-as-a-service (PaaS), or infrastructure-as-a-service (IaaS). As a customer, you are always responsible for your data, endpoints, and account and access management, regardless of cloud deployment model.
+As you evaluate public cloud services, it's critical to understand which tasks the cloud provider versus the customer handle. Under the shared responsibility model, the division of responsibilities between a cloud provider and its customers depends on your workload's cloud hosting model: software as a service (SaaS), platform as a service (PaaS), or infrastructure as a service (IaaS). As a customer, you are always responsible for your data, endpoints, and account and access management, regardless of cloud deployment model.
 
 The following diagram shows the division of tasks between responsibility zones in Microsoft's cloud shared responsibility model:
 
