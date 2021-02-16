@@ -240,7 +240,7 @@ Microsoft also offers the following project management tools, which can work tog
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://www.microsoft.com/microsoft-365/project/project-management-software): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
 - [Microsoft Teams](https://www.microsoft.com/microsoft-teams/group-chat-software): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
-- [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
+- [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These project management tools are not the only tools available. Many other third-party tools are widely used in the project management community.
 
