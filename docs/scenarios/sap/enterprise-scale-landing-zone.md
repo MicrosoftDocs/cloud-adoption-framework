@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale support for SAP on Azure Construction Set
-description:  Learn about Enterprise-scale Construction Sets that let you build platform workload landing zones.
+title: Enterprise-scale support for SAP on Azure construction set
+description:  Learn about Enterprise-scale construction sets that let you build platform workload landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/15/2021
@@ -9,13 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise-scale support for SAP on Azure Construction Set
+# Enterprise-scale support for SAP on Azure construction set
   
-Enterprise-scale Construction Sets provide an architectural approach and reference implementation. As a result, it's possible to build platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. The SAP on Azure Construction Set is implementations for after a customer has successfully implemented enterprise-scale landing zone. Review the enterprise-scale [overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the SAP on Azure construction set.
+Enterprise-scale construction sets provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework Enterprise scale landing zone. The SAP on Azure construction set is implementations for after a customer has successfully implemented enterprise-scale landing zone. Review the enterprise-scale [overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the SAP on Azure construction set.
 
-## Adopting the SAP on Azure Construction Set
+## Adopting the SAP on Azure construction set
 
-Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framework for Azure enterprise-scale SAP on Azure Construction set architecture varies between customers. The technical considerations and design recommendations of the SAP on Azure Construction Set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The SAP on Azure Construction Set is modular by design. Customers can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
+Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framework for Azure enterprise-scale SAP on Azure construction set architecture varies between customers. The technical considerations and design recommendations of the SAP on Azure construction set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The SAP on Azure construction set is modular by design. Customers can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
 
 - [Design guidelines](#design-guidelines)
 - [Architecture](#architecture)
@@ -23,7 +23,7 @@ Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framewo
 
 ## Design guidelines
 
-Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas:
+You have to make critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. Consider these six critical design areas:
 
 - [Identity and Access Management](eslz-identity-and-access-management.md)
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
@@ -56,4 +56,4 @@ The templates are split into two categories:
 
 ## Next steps
 
-Review the SAP on Azure Construction Set critical design areas to make complete considerations and recommendations for your SAP on Azure Construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
+Review the SAP on Azure construction set critical design areas to make complete considerations and recommendations for your SAP on Azure construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
