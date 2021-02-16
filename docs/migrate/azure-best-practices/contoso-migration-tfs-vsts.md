@@ -125,7 +125,7 @@ They upgrade as follows:
      ![Screenshot of the "Product backlog" pane for verifying the Team Foundation Server installation.](./media/contoso-migration-tfs-vsts/upgrade5.png)
 
 > [!NOTE]
-> Some Team Foundation Server upgrades need to run the Configure Features Wizard after the upgrade finishes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?view=vsts).
+> Some Team Foundation Server upgrades need to run the Configure Features Wizard after the upgrade finishes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?view=vsts&preserve-view=true).
 
 **Need more help?**
 
@@ -474,13 +474,13 @@ With the migration now completed, Contoso admins want to move source code manage
 
 **Need more help?**
 
-For more information, see [Import repositories from TFVC to Git](/azure/devops/repos/git/import-from-TFVC?view=vsts).
+For more information, see [Import repositories from TFVC to Git](/azure/devops/repos/git/import-from-TFVC?view=vsts&preserve-view=true).
 
 ## Clean up after migration
 
 With the migration now complete, the Contoso team needs to do the following:
 
-- Review the [post-import](/azure/devops/articles/migration-post-import?view=vsts) article for information about additional import activities.
+- Review the [post-import](/azure/devops/articles/migration-post-import?view=vsts&preserve-view=true) article for information about additional import activities.
 - Either delete the TFVC repos or place them in read-only mode. The code bases must not be used, but they can be referenced for their history.
 
 ## Post-migration training

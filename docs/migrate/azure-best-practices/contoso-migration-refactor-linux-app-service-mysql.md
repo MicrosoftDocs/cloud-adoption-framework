@@ -82,10 +82,10 @@ Contoso completes the migration process as follows:
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications by using Azure platform as a service (PaaS) for websites. | Pricing is based on the size of the instances and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
-| [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses Domain Name System (DNS) to direct users to Azure or to external websites and services. | Pricing is based on the number of received DNS queries and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
-| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms, with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure Database for MySQL](/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
+| [Azure App Service](https://azure.microsoft.com/services/app-service/) | The service runs and scales applications by using Azure platform as a service (PaaS) for websites. | Pricing is based on the size of the instances and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
+| [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager/) | A load balancer that uses Domain Name System (DNS) to direct users to Azure or to external websites and services. | Pricing is based on the number of received DNS queries and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager/). |
+| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms, with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
+| [Azure Database for MySQL](/azure/mysql/) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql/server/). |
 
 ## Prerequisites
 
@@ -93,7 +93,7 @@ To run this scenario, Contoso must meet the following prerequisites:
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
+| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
 | **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 
 ## Scenario steps
@@ -133,7 +133,7 @@ Contoso admins provision two web apps (one in each region) by using Azure App Se
 **Need more help?**
 
 - Learn about [Azure App Service web apps](/azure/app-service/overview).
-- Learn about [Azure App Service on Linux](/azure/app-service/containers/app-service-linux-intro).
+- Learn about [Azure App Service on Linux](/azure/app-service/overview#app-service-on-linux).
 
 ## Step 2: Set up Traffic Manager
 
@@ -196,11 +196,8 @@ Contoso admins migrate the database via Azure Database Migration Service by foll
 In brief, Contoso does the following:
 
 - They ensure that all migration prerequisites are met:
-  - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.
-
-  - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:
-
-    "Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see `https://go.microsoft.com/fwlink/?linkid=873009`."
+  - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.  
+  - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:  `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
 
   - The user must have the `ReplicationAdmin` role.
 
@@ -292,9 +289,9 @@ In brief, Contoso does the following:
 
     ![Screenshot of the connection string pasted in a Notepad file.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench9.png)
 
-11. They can verify the server name and login on the **Overview** pane in the MySQL instance in the Azure portal.
+11. They can verify the server name and sign-in via the **Overview** pane for the MySQL instance in the Azure portal.
 
-    ![Screenshot of the resource group pane, displaying the server name and server admin login name.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench10.png)
+    ![Screenshot of the resource group pane, displaying the server name and server admin account name.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench10.png)
 
 ## Step 5: Set up GitHub
 
