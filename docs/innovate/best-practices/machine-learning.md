@@ -36,7 +36,7 @@ You can even use [MLflow to track metrics and deploy models](/azure/machine-lear
 
 ## Build machine learning models in Python or R
 
-Start training on your local machine using the Azure Machine Learning [Python SDK](/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) or [R SDK](https://azure.github.io/azureml-sdk-for-r/reference/index.html). Then, you can scale out to the cloud. With many available [compute targets](/azure/machine-learning/how-to-set-up-training-targets), like Azure Machine Learning compute and [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks), and with [advanced hyperparameter tuning services](/azure/machine-learning/how-to-tune-hyperparameters), you can build better models faster by using the power of the cloud. You can also [automate model training and tuning](/azure/machine-learning/tutorial-auto-train-models) using the SDK.
+Start training on your local machine using the Azure Machine Learning [Python SDK](/python/api/overview/azure/ml) or [R SDK](https://azure.github.io/azureml-sdk-for-r/reference/index.html). Then, you can scale out to the cloud. With many available [compute targets](/azure/machine-learning/how-to-set-up-training-targets), like Azure Machine Learning compute and [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks), and with [advanced hyperparameter tuning services](/azure/machine-learning/how-to-tune-hyperparameters), you can build better models faster by using the power of the cloud. You can also [automate model training and tuning](/azure/machine-learning/tutorial-auto-train-models) using the SDK.
 
 ## Build machine learning models with no-code tools
 
@@ -61,7 +61,7 @@ Machine learning operations (MLOps) is based on [DevOps](https://azure.microsoft
 
 When you have the right model, you can easily use it in a web service, on an IoT device, or from Power BI. For more information, see [Deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where).
 
-Then you can manage your deployed models by using the [Azure Machine Learning SDK for Python](/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true), [Azure Machine Learning studio](https://ml.azure.com/), or the [Machine learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli).
+Then you can manage your deployed models by using the [Azure Machine Learning SDK for Python](/python/api/overview/azure/ml/), [Azure Machine Learning studio](https://ml.azure.com/), or the [Machine learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli).
 
 These models can be consumed and return predictions in [Real time](/azure/machine-learning/how-to-consume-web-service) or [asynchronously](/azure/machine-learning/how-to-use-parallel-run-step) on large quantities of data.
 
@@ -103,7 +103,7 @@ Azure Machine Learning works with other services on the Azure platform, and also
 - Azure Monitor. For more information, see [Monitoring Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning).
 - Data stores such as Azure Storage accounts, Azure Data Lake Storage, Azure SQL Database, Azure Database for PostgreSQL, and Azure open datasets. For more information, see [Access data in Azure Storage services](/azure/machine-learning/how-to-access-data) and [create datasets with Azure open datasets](/azure/machine-learning/how-to-create-register-datasets#create-datasets-with-azure-open-datasets).
 - Azure Virtual Network. For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-enable-virtual-network).
-- Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops&preserve-view=true).
+- Azure Pipelines. For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning).
 - Git repository logs. For more information, see [Git integration](/azure/machine-learning/concept-train-model-git-integration).
 - MLflow. For more information, see [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow).
 - Kubeflow. For more information, see [Build end-to-end workflow pipelines](https://www.kubeflow.org/docs/azure/).
