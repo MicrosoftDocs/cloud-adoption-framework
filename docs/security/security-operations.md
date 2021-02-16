@@ -10,6 +10,10 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
+# Security Operations
+
+This article provides areas of consideration for organisations planning to establish a security operation function.
+
 ## Background
 
 With any IT function, detecting and responding to security incidents is a mission-critical objective.
@@ -26,7 +30,7 @@ Risk priorities and responsibilities defined in the strategy should be reflected
 
 Guidance as part of the Cloud Adoption Framework's Strategy methodology outlines how to define the organization security strategy:
 
-[Define a security strategy - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/define-security-strategy)
+[Define a security strategy - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy)
 
 ### Managing a security program
 

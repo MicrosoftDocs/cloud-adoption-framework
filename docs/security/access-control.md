@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## Access Control
+# Access Control
 
 This article summarizes the areas for consideration when planning and implementing good access control practices inside your organization.
 
