@@ -32,16 +32,16 @@ Guidance as part of the Cloud Adoption Framework's Strategy methodology outlines
 
 Delivering security controls inside an organization without business stakeholder engagement runs the risk of being seen as a blocker.
 Work with the business to establish a basis of understanding that security can be an enabler for innovation and growth, as opposed to a group that always says 'no'. Engaging in discussion with the business to agree how the security strategy can be delivered without compromising technical delivery or creativity.
-The resulting set of controls are often referred to as 'guard rails' which are technical boundaries, defined by policy. Enabling flexibility to a point but stops inadvertent increase in security risk or deviation from company policy.
+The resulting set of controls are often referred to as 'guard rails', which are technical boundaries, defined by policy. Enabling flexibility to a point but stops inadvertent increase in security risk or deviation from company policy.
 
 The boundaries defined in the guard rails become the baseline. From this baseline, the security operations team can find and investigate deviations. This may result in a defect or issue being identified that requires resolution or - equally - it could find a use case where the boundary needs reviewing and potentially revising to maintain the balance between business function and security control.
 
 ### Building a modern SOC
 
-In a world of hyper-scale distributed compute, the ability to collate, analyze and respond to events and telemetry at scale is crucially important.
+In a world of hyper-scale distributed compute, the ability to collate, analyze, and respond to events and telemetry at scale is crucially important.
 It is not economically (or practically) viable to scale the number of people in a security operations function in direct correlation to the number of workloads managed. Technology must be used to scale the management to meet the demand.
 In practical terms, scale requires centralization of telemetry. Bring all of the organization's security signals into a consolidated data set.
-This can be filtered, modelled and have business logic applied to it in order to find the events and activities that require intervention - be it automated or human.
+This data can be filtered, modelled, and have business logic applied to it in order to find the events and activities that require intervention - automated or human.
 
 Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools.
 
@@ -50,12 +50,12 @@ Security Information and Event Management (SIEM) tools can help address this goa
 ### Holistic monitoring
 
 Every data point related to an environment helps build a better picture of the activities and anomalies - either by confirming a common behavior or being an antipattern to it.
-As a result, security operations teams should seek to ingest as many relevant data feeds as possible in order to develop the most articulate view of activities as possible. This will prove useful - not only in spotting an anomalous event - but also in triaging the event and determining the full set of activities to determine potential impact and scale.
+As a result, security operations teams should seek to ingest as many relevant data feeds as possible in order to develop the most articulate view of activities as possible. This context will prove useful - not only in spotting an anomalous event - but also in responding to the event and determining potential impact and scale.
 
 ### Proactive testing and recovery
 
 Assume breach. Assume that the environment is already compromised and approach testing as if you were looking for an attacker.
 
-### Recovering and re-securing
+### Recovering and resecuring
 
 Even with the best processes and technologies in place, there will be bugs or incidents that require resolution. The impact of the incident is influenced by how teams respond and rectify the issue - and learn from it to ensure it cannot happen again.
