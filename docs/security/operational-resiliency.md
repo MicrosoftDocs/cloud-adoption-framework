@@ -1,7 +1,13 @@
 ---
 title: Risk Management Insights
-titleSuffix: Integrate security insights into you risk management framework and digital initiatives
-description: Guidance on how to integrate risk management into your security considerations
+description: Integrate security insights into you risk management framework and digital initiatives
+author: NaomiOooo
+ms.author: naomio
+ms.date: 04/04/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: secure
+ms.custom: internal
 
 ---
 
