@@ -29,7 +29,7 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 ## Define an Azure network topology
 
-Network topology is a critical element of the enterprise-scale architecture because it defines how applications can communicate with each other. [This section explores technologies and topology approaches for Azure deployments.](..ready/azure-best-practices/define-an-azure-network-topology.md) It focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
+Network topology is a critical element of the enterprise-scale architecture because it defines how applications can communicate with each other. [This section explores technologies and topology approaches for Azure deployments.](../azure-best-practices/define-an-azure-network-topology.md) It focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
 
 ## Connectivity to Azure
 
