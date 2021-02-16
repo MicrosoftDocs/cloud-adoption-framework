@@ -22,7 +22,7 @@ Protecting company assets - from virtual machines and networks to applications a
 ## Securing Data
 
 Organizations should treat the unauthorized access or theft of data among the highest impact risks to guard against.
-The reputational - and often financial - impact of losing control of sensitive data can significant affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organization.
+The reputational - and often financial - impact of losing control of sensitive data can significantly affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organization.
 Organisations need to put security measures in place to protect data at rest, and in transit.
 
 ### At rest
@@ -50,11 +50,11 @@ For data held outside of a database - for example on a file server - tools such 
 
 Sending or receiving data external to the business should be - wherever possible - via an encrypted network connection.
 One option for this is to establish a Virtual Private Network (VPN) connection, which encrypts the network route between two fixed points.
-VPNs enables smaller sites, such as branch offices to connect into the cloud environment in order to send and receive data securely.
+VPNs enable smaller sites, such as branch offices to connect into the cloud environment in order to send and receive data securely.
 
 #### ExpressRoute
 
-For large scale connections such as into an on-premises data centre, the Azure ExpressRoute solution can provide a secure and performant network connection between two trusted locations. ExpressRoute enables organizations to establish the secure network route for high-volume, high-frequency network traffic required as part of a hybrid landing zone implementation.
+For large-scale connections such as into an on-premises data centre, the Azure ExpressRoute solution can provide a secure and performant network connection between two trusted locations. ExpressRoute enables organizations to establish the secure network route for high-volume, high-frequency network traffic required as part of a hybrid landing zone implementation.
 
 #### HTTPS
 
@@ -66,7 +66,7 @@ For web services, all pages and connections should be encrypted using HTTPS wher
 
 Policies should be used wherever possible in order to mandate the adherence to security requirements.
 This technique allows central teams to specify certain configurations that should be used in order to ensure that the virtual machine is considered secure.
-For example, policies can used to:
+For example, policies can be used to:
 
 - Prohibit (or audit) Public IP addresses
 - Enforce disk encryption
@@ -83,7 +83,7 @@ As mentioned in earlier sections, encrypting disks provides extra layers of secu
 
 ### Securing networks
 
-Network infrastructure connects users and devices to applications and data. As a result, it becomes an valuable target for those looking to gain unauthorized access, given it's ability to enable them to access a broad range of sensitive areas of an organization's environment.
+Network infrastructure connects users and devices to applications and data. As a result, it becomes a valuable target for those looking to gain unauthorized access, given its ability to enable them to access a broad range of sensitive areas of an organization's environment.
 
 There are techniques and technologies that can reduce the risk (or subsequent impact) of a network breach:
 
