@@ -18,14 +18,20 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
-## January 2021
+## February 2021
 
-To help you accelerate adoption and innovation, we've added new information about using GitHub and updated best practices for machine learning. We've also published a new article and video to help you choose the best landing zone.
+We've updated and expanded the business outcomes overview with an introduction to cloud economics, and added a use case pointing to a successful business case to each business outcome category.
 
 | Article | Description |
 |--|--|
+| [Business&nbsp;outcomes&nbsp;overview](../strategy/business-outcomes/index.md) | We've updated the introduction to each category of business outcomes with references to case studies on cloud economics, demonstrating how organizations achieve the related business objective. The refreshed introductions with illustrative case studies include: <br><br> <li> [Fiscal outcomes](../strategy/business-outcomes/fiscal-outcomes.md) <li> [Agility outcomes](../strategy/business-outcomes/agility-outcomes.md) <li> [Global Reach outcomes](../strategy/business-outcomes/reach-outcomes.md) <li> [Customer engagement outcomes](../strategy/business-outcomes/engagement-outcomes.md)<li> [Performance outcomes](../strategy/business-outcomes/performance-outcomes.md) <li> [Sustainability goals](../strategy/business-outcomes/sustainability.md) |
+
+## January 2021
+
+To help you accelerate adoption and innovation, we've added new information about using GitHub and updated best practices for machine learning. We've published a new article and video to help you choose the best landing zone.
+
 | [How&nbsp;GitHub&nbsp;accelerates&nbsp;cloud&nbsp;adoption](../scenarios/github-velocity/index.md) | This article outlines the benefits of using GitHub to accelerate cloud adoption by taking advantage of open-source assets, collaborative development environments, automation and security features. |
-| New [Machine&nbsp;Learning](../innovate/best-practices/machine-learning.md) best practice guidance | We've updated and expanded the best practice guidance for Machine Learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and [the MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
+| [Best practices for machine learning](../innovate/best-practices/machine-learning.md) | We've updated and expanded the best practice guidance for Machine Learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and [the MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
 | [Choose&nbsp;a&nbsp;landing&nbsp;zone&nbsp;option](../ready/landing-zone/choose-landing-zone-option.md) | Microsoft offers two implementation options for landing zones: *Start small and expand* and *Enterprise-scale*. Use this new article to review both options and choose the right approach for your organization. |
 
 ## December 2020
@@ -122,7 +128,7 @@ AI solutions and best practices are now integrated into the Microsoft Cloud Adop
 | Article | Description |
 |--|--|
 | [Responsible AI](../strategy/responsible-ai.md) | Learn about the AI principles you should consider when implementing AI solutions and learn how to establish a responsible AI strategy. |
-| [Azure innovation guide: Innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
+| [Azure innovation guide: innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
 | [AI in the Cloud Adoption Framework](../innovate/ai/index.md) | Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale. |
 | [MLOps with Azure Machine Learning](../manage/mlops-machine-learning.md) | Learn about machine learning operations (MLOps) best practices. |
 | [Innovate with AI](../innovate/best-practices/predict.md) | Learn about AI solutions (machine learning, AI applications and agents, knowledge mining) and best practices that can accelerate digital invention. |
@@ -134,8 +140,8 @@ Proper configuration of the cloud environment is often the first and most common
 | Article | Description |
 |--|--|
 | [Azure landing zones](../ready/landing-zone/index.md) | Azure landing zones create a common set of design areas and implementation options to accelerate environment creation aligned to the cloud adoption plan and cloud operating model. This new article defines Azure landing zones more clearly. |
-| [Azure landing zones: Design areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
-| [Azure landing zones: Implementation options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
+| [Azure landing zones: design areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
+| [Azure landing zones: implementation options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
 
 The existing CAF blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, some customers need a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF enterprise-scale architecture and reference implementations.
 

@@ -1,7 +1,7 @@
 ---
 title: Business outcomes from transformation journeys
 description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 10/28/2020
 ms.topic: conceptual
@@ -17,6 +17,8 @@ The most successful transformation journeys start with a business outcome in min
 During any cloud transformation, the ability to speak in terms of business outcomes supports transparency and cross-functional partnerships. The business outcome framework starts with a simple template to help technically minded individuals document and gain consensus. This template can be used with several business stakeholders to collect a variety of business outcomes, which could each be influenced by a company's transformation journey. Feel free to use this template electronically or, better still, draw it on a whiteboard to engage business leaders and stakeholders in outcome-focused discussions.
 
 To learn more about business outcomes and the business outcome template, see [Documenting business outcomes](./business-outcome-template.md), or download the [business outcome template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/business-outcome-template.xlsx).
+
+Get started with successfully building your cloud business case with key financial and technical guidance, and maximize the full benefit of your cloud investment. Learn more about [how cloud economics works](https://azure.microsoft.com/en-us/overview/cloud-economics/).
 
 ## Prepare for conversations with different personas
 
