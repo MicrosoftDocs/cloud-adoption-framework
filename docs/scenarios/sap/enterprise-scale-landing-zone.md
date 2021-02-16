@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale support for SAP on Azure Construction Set
-description:  Learn about constructing and operationalizing platform workload landing zones.
+description:  Learn about Enterprise-scale Construction Sets that let you build platform workload landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/15/2021
@@ -11,15 +11,15 @@ ms.subservice: ready
 
 # Enterprise-scale support for SAP on Azure Construction Set
   
-Enterprise-scale Construction Sets provide an architectural approach and reference implementation. As a result, it's possible to carry out effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. The SAP on Azure Construction Set is implementations for after a customer has successfully implemented enterprise-scale landing zone. Review the enterprise-scale [overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the SAP on Azure construction set.
+Enterprise-scale Construction Sets provide an architectural approach and reference implementation. As a result, it's possible to build platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. The SAP on Azure Construction Set is implementations for after a customer has successfully implemented enterprise-scale landing zone. Review the enterprise-scale [overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the SAP on Azure construction set.
 
 ## Adopting the SAP on Azure Construction Set
 
-Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framework for Azure enterprise-scale SAP on Azure Construction set architecture varies between customers. The technical considerations and design recommendations of the SAP on Azure Construction Set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The SAP on Azure Construction Set is modular by design. Customers can customized environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
+Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framework for Azure enterprise-scale SAP on Azure Construction set architecture varies between customers. The technical considerations and design recommendations of the SAP on Azure Construction Set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The SAP on Azure Construction Set is modular by design. Customers can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
 
 - [Design guidelines](#design-guidelines)
 - [Architecture](#architecture)
-- [Implementation](3implementation)
+- [Implementation](#implementation)
 
 ## Design guidelines
 
@@ -50,7 +50,7 @@ The templates are split into two categories:
   - Install SAP HANA.
   - Install other required applications.
 
-  All of this is deployed and installed on the infrastructure that the Terraform modules built.
+  Deploy and install the Ansible playbook components on the infrastructure that the Terraform modules built.
 
   ![SAP Reference Implementation](media/Overview_Automation.png)
 
