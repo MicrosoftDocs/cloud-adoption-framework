@@ -17,7 +17,7 @@ ms.custom: think-tank
 
 ![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
 
-_Figure 4: A traditional Azure network topology._
+_Figure 1: A traditional Azure network topology._
 
 **Design considerations:**
 
@@ -69,7 +69,7 @@ _Figure 4: A traditional Azure network topology._
 
   ![Diagram that illustrates a hub-and-spoke network topology.](./media/hub-and-spoke-topology.png)
  
- _Figure 5: Hub-and-spoke network topology._
+ _Figure 2: Hub-and-spoke network topology._
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
 
@@ -83,7 +83,7 @@ The following figure shows this topology.
 
   ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/vnet-multiple-circuits.png)
  
- _Figure 6: Multiple virtual networks connected with multiple ExpressRoute circuits._
+ _Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits._
 
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
 
@@ -107,7 +107,7 @@ The following figure shows this topology.
 
   ![Diagram that illustrates a landing zone connectivity design.](./media/vnet-dual-circuits.png)
   
-_Figure 7: Landing zone connectivity design._
+_Figure 4: Landing zone connectivity design._
 
 - When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, it is recommend to evaluate a global transit network architecture with Virtual WAN.
 

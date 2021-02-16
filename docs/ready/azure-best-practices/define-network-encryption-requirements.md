@@ -35,7 +35,7 @@ This section explores key recommendations to achieve network encryption between 
 
 ![Diagram that illustrates encryption flows.](./media/enc-flows.png)
 
-_Figure 8: Encryption flows._
+_Figure 1: Encryption flows._
 
 - When you're establishing VPN connections from on-premises to Azure by using VPN gateways, traffic is encrypted at a protocol level through IPsec tunnels. The preceding diagram shows this encryption in flow `A`.
 

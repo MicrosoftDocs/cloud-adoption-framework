@@ -45,13 +45,13 @@ This section provides different connectivity approaches to integrate an Azure en
 
   ![Diagram that shows Azure to OCI - Hub and Spoke.](./media/azure-oci-hub-and-spoke.png)
 
-  _Figure 8: Interconnectivity between Azure and OCI via ExpressRoute._
+  _Figure 1: Interconnectivity between Azure and OCI via ExpressRoute._
 
 - If your application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute Gateway and FastPath enabled.
 
   ![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
 
-  _Figure 9: Interconnectivity between Azure and OCI with a single VNet._
+  _Figure 2: Interconnectivity between Azure and OCI with a single VNet._
 
 - When deploying your Azure resources across Availability Zones (AZs), perform latency tests from Azure VMs located in different AZs to OCI resources to understand which of the three AZs provides the lowest latency to the OCI resources.
 
@@ -61,10 +61,10 @@ This section provides different connectivity approaches to integrate an Azure en
     
   ![Diagram that shows Azure to OCI - Jumpbox one vNet.](./media/azure-oci-jumpbox-one-vnet.png)
 
-  _Figure 10: Managing OCI resources from Azure via a jumpbox._
+  _Figure 3: Managing OCI resources from Azure via a jumpbox._
 
    - From on-premises: Use ExpressRoute Global Reach to bind existing ExpressRoute circuit (that connects on-premises to Azure) to OCI ExpressRoute circuit (that interconnects Azure to OCI). In this way, the Microsoft Enterprise Edge Router (MSEE) becomes the central routing point between both ExpressRoute circuits.
 
   ![Diagram that shows Azure to OCI - via Global Reach.](./media/azure-oci-gr-hub-and-spoke.png)
 
-  _Figure 11: Managing OCI resources from on-premises via ExpressRoute Global Reach._
+  _Figure 4: Managing OCI resources from on-premises via ExpressRoute Global Reach._
