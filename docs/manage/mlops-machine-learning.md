@@ -48,7 +48,7 @@ Learn more by reading and exploring the following resources:
 - How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where)
 - Tutorial: [deploy an image classification model in Azure Container Instances](/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
-- [CI/CD of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning?tabs=yaml&view=azure-devops)
+- [CI/CD of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning)
 - Create clients that [consume a deployed model](/azure/machine-learning/how-to-consume-web-service)
 - [Machine learning at scale](/azure/architecture/data-guide/big-data/machine-learning-at-scale)
 - [Azure AI reference architectures and best practices repo](https://github.com/microsoft/AI)

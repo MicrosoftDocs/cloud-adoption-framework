@@ -138,8 +138,8 @@ To create a DevOps project:
 
 These articles will help you centralize and manage feedback by using Azure Boards together with GitHub:
 
-- [Get started with Azure Boards](/azure/devops/boards/get-started)
-- [Azure Boards and GitHub](/azure/devops/boards/github)
+- [Get started with Azure Boards](/azure/devops/boards/get-started/)
+- [Azure Boards and GitHub](/azure/devops/boards/github/)
 
 ## [Close the loop with pipelines](#tab/pipelines)
 

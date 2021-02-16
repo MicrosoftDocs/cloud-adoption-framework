@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 10/30/2020
+ms.date: 03/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -17,6 +17,38 @@ ms.custom: internal
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
+
+## March 2021
+
+This release is the largest release of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework.
+
+### Adoption journeys
+
+Most notable in this release is the addition of Adoption Journeys, which provide a short, consumable overlay or lenses that sites on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance of CAF, WAF, AAC, Docs, and Learn to the adoption of specific technology platforms. The table below routes to the overview page for each of the new journeys:
+
+| Journey | Description |
+|--|--|
+| [Hybrid and Multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
+| Modern containers | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
+| SAP on Azure | As part of our One Migrate (Migration Scenarios) commitment, this journey bridges the gaps between the SAP migration process & other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
+
+### Cloud economics
+
+Building on feedback and lessons learned, this is our first step to [refresh the Strategy methodology](../strategy/index.md) by integrating [Microsoft's Cloud Economics program](https://azure.microsoft.com/overview/cloud-economics/). - TODO: Alex to validate inclusion of 1335 or remove cloud economics.
+
+### Enterprise-scale updates
+
+The critical design area of Network Topology and Connectivity includes a number of new articles making it easier to think through individual components of your network design. Those design also now include guidance on connecting to multicloud providers, like OCI. - TODO: Dom to add links see PR 1326
+
+Release of the new enterprise-scale terraform module to demonstrate MSFT's continued investment in open-source approaches to Azure Landing Zone configuration. - TODO: Dom to add links see PR 1344
+
+### Anti-patterns
+
+Companies commonly miss important steps in their cloud adoption journey. The new anti-patterns guidance calls out common customer pain points, the step that was skipped leading to that pain, and the fastest path to recovery. The anti-patterns are spread throughout each methodology, but a top 10 list can be found in the getting started section of the framework. - TODO: Janet to add links see PR 1146
+
+### Implementing governance
+
+Expansion of CAF Govern methodology to add an approach for implementing governance, including a long-awaited article on managing deny or allow lists. - TODO: Janet to add link see PR 1160
 
 ## January 2021
 
