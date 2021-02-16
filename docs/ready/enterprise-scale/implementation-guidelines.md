@@ -68,7 +68,7 @@ The following sections list the steps to complete this category of activity in t
 
 #### Sandbox governance guidance
 
-As detailed in the [Management group and subscription organization critical design area](./management-group-and-subscription-organization.md), subscriptions placed within the Sandbox Management Group hierarchy should have a less restrictive policy approach. As these subscriptions should be used by users within the business to experiment and innovate with Azure products and services, that may not be yet permitted in your Landing Zones hierarchy, to validate if their ideas/concepts could work; before they move into a formal development environment.
+As detailed in the [Management group and subscription organization critical design area](./management-group-and-subscription-organization.md), subscriptions placed within the Sandbox Management Group hierarchy should have a less restrictive policy approach. As these subscriptions should be used by users within the business to experiment and innovate with Azure products and services, that may not be yet permitted in your landing zones hierarchy, to validate if their ideas/concepts could work; before they move into a formal development environment.
 
 However, these subscriptions in the Sandbox Management Group hierarchy still require some guardrails to ensure they are used properly, such as for innovation, experimenting with new Azure services and features, and ideation validation.
 

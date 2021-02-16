@@ -1,19 +1,22 @@
 ---
 title: What are AI agents?
-description: Learn about AI agents and conversational interfaces. Plan, build, test, publish, connect, and evaluate a bot.
+description: Learn more about AI agents, conversational interfaces, bot frameworks and how to build a bot with AI functionality using Azure Bot Service.
 author: v-hanki
 ms.author: janet
-ms.date: 07/14/2020
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, seo-caf-innovate
+keywords: ai agent, ai agents, bot framework, conversational interface, build a bot, azure bot service
 ---
 
 <!-- docutune:casing "natural language understanding" -->
 <!-- cSpell:ignore Twilio -->
 
 # What are AI agents?
+
+AI agents are code or mechanisms which act to achieve predetermined goals. Examples of AI agents can be found in the code for things like chat bots, smart homes, and the programmatic trading software used in finance. The Azure Bot Service and Bot Framework are examples of platforms that can be used to build these AI agents and integrate them into larger software applications.
 
 Users are engaging more and more with conversational interfaces, which can present a more natural experience where humans express their needs through natural language and quickly complete tasks. For many companies, conversational AI applications are becoming a competitive differentiator. Many organizations are strategically making bots available within the same messaging platforms in which their customers spend time.
 
@@ -26,7 +29,7 @@ Organizations around the world are transforming their businesses with conversati
 
 ## Build a bot
 
-Azure Bot Service and Bot Framework offer an integrated set of tools and services to help with this process. Choose your favorite development environment or command-line tools to create your bot. SDKs exist for C#, JavaScript, TypeScript, and Python. The SDK for Java is under development. We provide tools for various stages of bot development to help you design and build bots.
+Azure Bot Service and Bot Framework offer an integrated set of tools and services to help create the AI agent you need. Choose your favorite development environment or command-line tools to create your bot. SDKs exist for C#, JavaScript, TypeScript, and Python. The SDK for Java is under development. We provide tools for various stages of bot development to help you design and build bots.
 
 ![Diagram that shows tools for various stages of bot development.](../../_images/ai-bot-dev-tools.png)
 
@@ -34,7 +37,7 @@ Azure Bot Service and Bot Framework offer an integrated set of tools and service
 
 Having a thorough understanding of the goals, processes, and user needs is important to the process of creating a successful bot. Before you write code, review the bot [design guidelines](/azure/bot-service/bot-service-design-principles) for best practices, and identify the needs for your bot. You can create a simple bot or include more sophisticated capabilities such as speech, natural language understanding, and question answering.
 
-While you design your bot during the planning phase, consider these aspects:
+While you design your AI agent during the planning phase, consider these aspects:
 
 - Define bot personas:
   - What should your bot look like?
@@ -53,7 +56,7 @@ To learn more about how to design your bot, see [Principles of bot design](/azur
 
 Your bot is a web service that implements a conversational interface and communicates with the Bot Framework Service to send and receive messages and events. The Bot Framework Service is one of the components of Azure Bot Service and Bot Framework. You can create bots in any number of environments and languages. You can start your bot development in the [Azure portal](/azure/bot-service/abs-quickstart) or use [C#, JavaScript, or Python](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart) templates for local development. You also have access to a variety of [samples](https://github.com/microsoft/botbuilder-samples) that showcase many of the capabilities available through the SDK. These samples are great for developers who want a more feature-rich starting point.
 
-As part of the Azure Bot Service and Bot Framework, we offer additional components you can use to extend the functionality of your bot.
+As part of the Azure Bot Service and Bot Framework, we offer additional components you can use to extend the functionality of your bot. With the Azure Bot Service and Bot Framework, you can build a bot with confidence and speed.
 
 | Feature | Description | Link |
 | --- | --- | --- |

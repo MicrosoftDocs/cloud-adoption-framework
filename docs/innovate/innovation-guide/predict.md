@@ -3,26 +3,27 @@ title: "Azure innovation: Innovate with AI"
 description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/26/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: internal, fasttrack-edit, AQC
+ms.custom: internal, fasttrack-edit, AQC, seo-caf-innovate
+keywords: Automate business processes, ai innovation, machine learning, knowledge mining
 ---
 
 <!-- cSpell:ignore ONNX -->
 
 # Innovate with AI
 
-As an innovator, your company has rich information about its business and its customers. Using AI, your company can:
+As an innovator, your company has rich information about its business and its customers. Using AI innovation, your company can:
 
 - Make predictions about customer needs.
 - Automate business processes.
 - Discover information that's latent in unstructured data.
 - Engage with customers in new ways to deliver better experiences.
 
- This article introduces a few approaches to innovating with AI. The following table can help you find the best solution for your implementation needs.
+ This article introduces a few approaches to innovating with AI. Innovations can expand your company’s business insights into your existing data. The following table can help you find the best solution for your implementation needs.
 
 | Solution category | Description                                                                                                                              | Required skills              |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
@@ -140,7 +141,7 @@ Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/
 
 ## Knowledge mining
 
-Use Azure Cognitive Search to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
+Knowledge mining uses artificial intelligence (AI) to drive content understanding over vast amounts of unstructured, semi-structured, and structured information. Use Azure Cognitive Search to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
 
 <!-- docutune:ignore "Azure Search" -->
 
