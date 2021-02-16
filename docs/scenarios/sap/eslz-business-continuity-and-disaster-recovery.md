@@ -59,7 +59,7 @@ In all those cases, the discussion of availability should not be restricted on t
 
 Common technologies that SAP and SAP supported DBMS provider support are automatic failover clusters. In the case of Windows, this is the Windows Failover Cluster Server functionality. In the case of Linux, this is Linux Pacemaker or third party products like SIOS Protection Suite for Linux or Veritas Infoscale. Keep in mind that only a subset of the scenarios you can deploy as high availability configurations in your own datacenter are supported in Azure as well. 
 
-What is supported, what is not supported? Check the articles [SAP workload on Azure virtual machine supported scenarios](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-planning-supported-configurations) and [Supported scenarios for HANA Large Instances](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-supported-scenario) for scenarios that are supported. 
+What is supported, what is not supported? Check the articles [SAP workload on Azure virtual machine supported scenarios](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-planning-supported-configurations) and [Supported scenarios for HANA Large Instances](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-supported-scenario) for scenarios that are supported. 
 
 For the DBMS layer the common architecture pattern is to use synchronous DBMS replication functionality in combination with different storage stacks the two VMs (primary/secondary) are using. Architectures where the primary and secondary VM are using a shared storage for the DBMS data and transaction/redo log is not supported on Azure. The guiding principle is always that there are two independent storage stacks, even if those are based on NFS shares. This is the biggest restriction compared to what is possible on-premise.
 
@@ -77,7 +77,7 @@ Before you deploy your high availability infrastructure, you need, dependent on 
 - The VMs deployed are not spread across different Availability Zones
 - The type of VMs that can be deployed through a single availability set are restricted since the type of host is defined with the first VM that is deployed in the set. As a result, you can't.e.g. have a M-series VM and an E-Series VM combined in one availability set
 
-Advantage of deploying your high availability architecture across different Availability Zones is that your SLA for the VMS might be slightly higher. For details, check [Azure VM SLAs](https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/). However, dependent on the Azure region, you might encounter different network latency conditions in network traffic between VMs. For details on SAP workload deployments across different Azure Availability Zones, read the article [SAP workload configurations with Azure Availability Zones](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
+Advantage of deploying your high availability architecture across different Availability Zones is that your SLA for the VMS might be slightly higher. For details, check [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines/). However, dependent on the Azure region, you might encounter different network latency conditions in network traffic between VMs. For details on SAP workload deployments across different Azure Availability Zones, read the article [SAP workload configurations with Azure Availability Zones](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
 ### Backup and restore
 Though backup and restore are mostly not considered an adequate high availability functionality for production SAP workload, it is a technology that covers various other areas. Besides the fact that most companies using SAP applications are under compliance regulations that require backups being stored for many years, there are other cases where having a backup and being able to restore from it are essential. The assumption is that you are having solid backup and restore practices established for yoru current deployment of SAP applications already. Means you:
@@ -114,7 +114,7 @@ The following are best practices for your design:
 - ANF Should be on a separate subnet, one  subnet per VNET is allowed
 - Use of same subs ID across the same landscape (multiple subs may be supported in future)
 - For backups of SAP application server VMs: Use Azure Backup 
-- For SAP HANA DB smaller or equal to 2TiB in size, use Azure backup. *As of now, Az backup only support up to 2TiB. Az backup does not support HSR yet. Please see restrictions [here.](https://docs.microsoft.com/en-us/azure/backup/sap-hana-backup-support-matrix) 
+- For SAP HANA DB smaller or equal to 2TiB in size, use Azure backup. *As of now, Az backup only support up to 2TiB. Az backup does not support HSR yet. Please see restrictions [here.](https://docs.microsoft.com/azure/backup/sap-hana-backup-support-matrix) 
 - For HANA DB >2TiB, use native HANA DB backup and copy it to blob requirements. You will need to use utilities like AZCOPY to copy the backup files to blob.
 - Setup an express route connectivity between customer site (on-prem) to primary and secondary (DR) regions of Azure 
 - You can also setup VPN connection between customer site (on-prem) to primary and secondary (DR) regions of Azure
@@ -138,7 +138,7 @@ The following are best practices for your design:
 
 ### Design Considerations for Compute
 
-![AzureComputeSKUOptions](./media/BCDR_Compute_Options2.jpg)
+![AzureComputeSKUOptions](./media/BCDR_Compute_Options1.jpg)
 
 - Consider using D-Series SKU for SAP application servers, D-Series provide 1:4 for CPU: Memory mapping, for memory intensive workloads consider E-series.
 - Consider using latest Generation of SKU's where possible eg: V3 or V4.
