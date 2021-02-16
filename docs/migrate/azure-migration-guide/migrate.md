@@ -238,7 +238,7 @@ Azure DevOps is the suggested tool for project management during a cloud migrati
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
 - [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
-- [Microsoft Project](https://www.microsoft.com/microsoft-365/project/project-management-software?rtc=1): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
+- [Microsoft Project](https://www.microsoft.com/microsoft-365/project/project-management-software): Project and portfolio management, resource capacity management, financial management, timesheet, and schedule management.
 - [Microsoft Teams](https://www.microsoft.com/microsoft-teams/group-chat-software): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
 - [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
