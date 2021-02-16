@@ -60,9 +60,9 @@ For large-scale connections such as into an on-premises data centre, the Azure E
 
 For web services, all pages and connections should be encrypted using HTTPS wherever possible.
 
-### Securing virtual machines
+## Securing virtual machines
 
-#### Policy
+### Policy
 
 Policies should be used wherever possible in order to mandate the adherence to security requirements.
 This technique allows central teams to specify certain configurations that should be used in order to ensure that the virtual machine is considered secure.
@@ -73,15 +73,15 @@ For example, policies can be used to:
 - Manage security policies for Azure Security Center
 - Manage policies for log collection for virtual machines in Azure Monitor
 
-#### Endpoint detection and response (EDR)
+### Endpoint detection and response (EDR)
 
 Technologies such as Windows Defender should be running on all virtual machines to provide anti-malware scanning and File Integrity Monitoring (FIM).
 
-#### Disk encryption
+### Disk encryption
 
 As mentioned in earlier sections, encrypting disks provides extra layers of security and protects data at rest.
 
-### Securing networks
+## Securing networks
 
 Network infrastructure connects users and devices to applications and data. As a result, it becomes a valuable target for those looking to gain unauthorized access, given its ability to enable them to access a broad range of sensitive areas of an organization's environment.
 
@@ -93,18 +93,18 @@ There are techniques and technologies that can reduce the risk (or subsequent im
 - Secure connectivity for inbound and outbound traffic
 - Distributed Denial of Service (DDoS) Protection
 
-### Securing applications
+## Securing applications
 
-#### Microsoft Cloud Application Security
+### Microsoft Cloud Application Security
 
 Microsoft Cloud Application Security (MCAS) enables organizations to control which Software-as-a-Service applications can be accessed. MCAS can be an effective tool in stopping the use of unauthorized file-sharing applications that move data outside of the corporate environment. Using these controls can be a strong protection against data leakage.
 
-#### Rights management inside applications
+### Rights management inside applications
 
 Using the rights managements techniques outlined earlier, data accessed within applications can be controlled in similar ways - even if a user has permissions within the application to extract data it is possible to apply rights to the data so that when it is extracted it is still governed and protected by the business rules applied.
 This can be particularly effective for internet facing services such as files shares.
 
-### Securing identity
+## Securing identity
 
 Protecting identity is a key consideration when planning an organization's approach to securing assets. Identity is one the most common routes for attackers to gain unauthorized access to applications and infrastructure.
 
