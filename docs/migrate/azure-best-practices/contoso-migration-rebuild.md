@@ -106,7 +106,7 @@ Here's what Contoso needs for this scenario:
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [The Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [The Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
 
 ## Scenario steps
 
@@ -161,7 +161,7 @@ The Contoso admins provision AKS and Azure Container Registry as follows:
 
     _Figure 6: The PowerShell integrated terminal._
 
-6. They authenticate the Azure CLI by running the `az login` command and following the instructions to authenticate using their web browser. Learn more about [signing in with the Azure CLI](/cli/azure/authenticate-azure-cli?view=azure-cli-latest).
+6. They authenticate the Azure CLI by running the `az login` command and following the instructions to authenticate using their web browser. Learn more about [signing in with the Azure CLI](/cli/azure/authenticate-azure-cli).
 
     ![Screenshot showing the authentication window for the Azure CLI.](./media/contoso-migration-rebuild/aks5.png)
 

@@ -29,7 +29,7 @@ The example script in this section illustrates the use of tagging and querying t
   - Has a `Production` tag applied with a value set to `true`.
 - Applies the update schedule to the queried machines and sets a two-hour update window.
 
-Before you run the example script, you'll need to sign in by using the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet. When you start the script, provide the following information:
+Before you run the example script, you'll need to sign in by using the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet. When you start the script, provide the following information:
 
 - The target subscription ID
 - The target resource group
