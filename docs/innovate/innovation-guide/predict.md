@@ -1,6 +1,6 @@
 ---
-title: 'AI Innovation, Machine Learning, and More'
-description: Learn about Azure solutions to predict customer needs, automate business processes. Use knowledge mining, machine learning, and AI for better customer experiences.
+title: "Azure innovation: Innovate with AI"
+description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/27/2021
