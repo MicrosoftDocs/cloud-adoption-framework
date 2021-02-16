@@ -18,7 +18,7 @@ This article discusses a few motivations behind cloud migration that can help pr
 
 ## Motivations
 
-Business transformations that are supported by cloud adoption can be driven by various motivations. It's likely that several motivations apply at the same time. The goal of the lists in the following table is to help generate ideas about which motivations are relevant. From there, you can prioritize and assess the potential impacts of the motivations. In this article, your cloud adoption team should meet with various executives and business leaders using the list below to understand which of these motivations are affected by the cloud adoption effort.
+Business transformations that are supported by cloud adoption can be driven by various motivations. It's likely that several motivations apply at the same time. The goal of the lists in the following table is to help generate ideas about which motivations are relevant. From there, you can prioritize and assess the potential impacts of the motivations. In this article, your cloud adoption team should meet with various executives and business leaders using the following list to understand which of these motivations are affected by the cloud adoption effort.
 
 | Critical business events | Migration | Innovation |
 |---|---|---|
@@ -38,34 +38,34 @@ To ensure wiser decision-making, all participants in the migration process shoul
 
 ## Motivation-driven strategies and business outcomes
 
-This section highlights the _migration_ and _innovation_ motivations and their corresponding strategies.
+This section highlights the *migration* and *innovation* motivations and their corresponding strategies.
 
 ### Migration
 
-The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the _strategy for executing a cloud migration_.
+The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
 
 Some motivations align well with a migrate strategy. Motivations at the top of this list will likely have significantly less business impact than those toward the bottom. **Migration motivation-driven strategies** have helped to produce successful business outcomes, like:
 
-- Increasing cost savings. Read customer story [here](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
+- Increasing cost savings. Read the [customer story](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reducing vendor or technical complexity.
 - Optimizing internal operations.
-- Increasing business agility. Read customer story [here](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
+- Increasing business agility. Read the [customer story](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
 - Preparing for new technical capabilities.
 - Scaling to market demand.
-- Scaling to geographic demand. Read customer story [here](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
+- Scaling to geographic demand. Read the [customer story](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
 
 ### Innovation
 
-Data is the new commodity—and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) in the Cloud Adoption Framework includes _motivations aligned to a technology strategy_ that appear lower in the *Innovation* column (in the Motivation list above).  
+Data is the new commodity, and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) in the Cloud Adoption Framework includes *motivations aligned to a technology strategy* that appear lower in the *Innovation* column of the motivation list above.
 
 The motivations listed below focus an IT organization more on an innovate strategy than a migrate strategy. **Innovation motivation-driven strategies** have helped to produce successful business outcomes.
 
 - Increasing business agility.
 - Preparing for new technical capabilities.
-- Building new technical capabilities. Read customer story [here](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
+- Building new technical capabilities. Read the [customer story](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
 - Scaling to market demand.
 - Scaling to geographic demand.
-- Improving customer experience and engagement. Read customer story [here](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database).
+- Improving customer experience and engagement. Read the [customer story](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database).
 - Transforming products or services.
 
 ## Next steps

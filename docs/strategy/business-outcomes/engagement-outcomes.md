@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore ExakTime -->
+<!-- docutune:casing ExakTime "Descartes MacroPoint" -->
 
 # Examples of customer engagement outcomes
 
