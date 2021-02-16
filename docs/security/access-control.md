@@ -54,6 +54,37 @@ Manage access to your Azure environment with Azure role-based access control - C
 For identities with elevated levels of access or permissions, time-based approvals should be considered to reduce the risk profile.
 User accounts authenticating against services should use strong passwords and multi-factor authentication.
 
+### Multifactor authentication (MFA)
+
+MFA is becoming a commonly used component of safeguarding access into corporate systems. A number of large scale cloud services offer MFA as an additional authentication step in order ask the person attempting to authenticate that they are who they say they are.
+The principles of MFA are 'something you know'  - typically your username and password, and 'something you have' - for example a phone or a cryptokey
+Text messages, phone calls and authentication smartphone apps are commonly used authentication factors.
+
+By using MFA to secure accounts reduces the impact of a user's account details being stolen as the attacker would still need to obtain the 'something you have' item in order to gain access. As a result, using multi-factor authentication is a highly recommended security mechanism to protect access into organisations.
+
+### Azure Active Directory Premium
+
+When using Azure Active Directory as the identity platform, organisations are able to enable enhancement features aimed at improving security.
+For example:
+
+- Password protection (custom banned passwords)
+- Self-service password reset
+- Privileged Identity Management (PIM)
+
+### Just In Time (JIT) Access
+
+Reducing the amount of time that a specific account has elevated privileges can often correlate with the reduction in threat risk for unauthorised access to sensitive infrastructure or data.
+Using techniques and tools that enable JIT means granting an account only the specific permissions required to complete a task for the amount of time required to complete the task. Those permissions are then removed when the task is complete - or the time expires - whichever occurs first.
+JIT tools also often include request and approval workflows in order to audit the reason for the elevated privileges and who requested it. This provides further governance controls and also information that could be used in a post-breach investigation to ascertain how the breach was possible.
+
+### Separate administrator accounts
+
+Separating user accounts from administrator accounts reduces the impact of account credentials being compromised and being used for lateral movement by an attacker.
+User accounts (and passwords) used for day-to-day system access are often used in web services outside of an organisation's control and are therefore at risk of data breaches or phishing attacks.
+By keeping adminstrator accounts separate and only used inside an organisation, reduces the probability of them being found and exploited by those looking to gain unauthorised access.
+
+A common pattern for naming these accounts is adm-*username* which makes them visually distinguishable from 'standard' user accounts.
+
 ## Endpoints
 
 In an increasingly mobile workforce, the connection points for users into a set of corporate services is likely to be significantly larger than devices connecting from within the corporate network.

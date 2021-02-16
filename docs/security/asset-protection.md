@@ -79,7 +79,19 @@ Technologies such as Windows Defender should be running on all virtual machines 
 
 #### Disk encryption
 
+As mentioned in earlier sections, encrypting disks provides additional layers of security and protects data at rest.
+
 ### Securing networks
+
+Network infrastructure connects users and devices to applications and data. As a result, it becomes an valuable target for those looking to gain unauthorised access, given it's ability to enable them to access a broad range of sensitive areas of an organisation's environment.
+
+There are a number of techniques and technologies that can reduce the risk (or subsequent impact) of a network breach:
+
+- Firewalls
+- Network Access Control
+- Network Security Groups
+- Secure connectivity for inbound and outbound traffic
+- Distributed Denial of Service (DDoS) Protection
 
 ### Securing applications
 
@@ -94,24 +106,6 @@ This can be particularly effective for internet facing services such as files sh
 
 ### Securing identity
 
-#### Multifactor authentication (MFA)
+Protecting identity is a key consideration when planning an organisation's approach to securing assets. Identity is one the most common routes for attackers to gain unauthorised access to applications and infrastructure.
 
-MFA is becoming a commonly used component of safeguarding access into corporate systems. A number of large scale cloud services offer MFA as an additional authentication step in order ask the person attempting to authenticate that they are who they say they are.
-The principles of MFA are 'something you know'  - typically your username and password, and 'something you have' - for example a phone or a cryptokey
-Text messages, phone calls and authentication smartphone apps are commonly used authentication factors.
-
-By using MFA to secure accounts reduces the impact of a user's account details being stolen as the attacker would still need to obtain the 'something you have' item in order to gain access. As a result, using multi-factor authentication is a highly recommended security mechanism to protect access into organisations.
-
-#### Azure Active Directory Premium
-
-### Security Administration
-
-#### Privileged Identity Management (PIM)
-
-#### Just In Time (JIT) Access
-
-Reducing the amount of time that a specific account has elevated privileges can often correlate with the reduction in threat risk for unauthorised access to sensitive infrastructure or data. 
-Using techniques and tools that enable JIT means granting an account only the specific permissions required to complete a task for the amount of time required to complete the task. Those permissions are then removed when the task is complete - or the time expires - whichever occurs first.
-JIT tools also often include request and approval workflows in order to audit the reason for the elevated privileges and who requested it. This provides further governance controls and also information that could be used in a post-breach investigation to ascertain how the breach was possible.
-
-#### Separate administration accounts
+[Guidance is provided here for areas of consideration related to protecting and controlling access.](./security/access-control.md)
