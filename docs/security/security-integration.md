@@ -1,8 +1,13 @@
 ---
 title: Security Integration
-titleSuffix: Integrate security insights and practices into business and IT processes
-description: Recovering from a security event
-
+description: Integrate security insights and practices into business and IT processes
+author: NaomiOooo
+ms.author: naomio
+ms.date: 04/04/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: secure
+ms.custom: internal
 ---
 
 # Security Integration
