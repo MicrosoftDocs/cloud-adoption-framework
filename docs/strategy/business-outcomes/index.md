@@ -18,7 +18,11 @@ During any cloud transformation, the ability to speak in terms of business outco
 
 To learn more about business outcomes and the business outcome template, see [Documenting business outcomes](./business-outcome-template.md), or download the [business outcome template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/business-outcome-template.xlsx).
 
-Get started with successfully building your cloud business case with key financial and technical guidance, and maximize the full benefit of your cloud investment. Learn more about [how cloud economics works](https://azure.microsoft.com/en-us/overview/cloud-economics/).
+## Optimize your cloud investment using cloud economics
+
+What are the fundamentals of cloud economics in Azure? Whether you're running existing workloads or architecting new solutions in Azure—learn best practices guidance to navigate the economics of the cloud for your organization, and optimize your operating costs in Azure based on your specific workloads. Get started with successfully building your cloud business case with key financial and technical guidance, and maximize the full benefit of your cloud investment.
+
+Learn more about [how cloud economics works](https://azure.microsoft.com/en-us/overview/cloud-economics/).
 
 ## Prepare for conversations with different personas
 
