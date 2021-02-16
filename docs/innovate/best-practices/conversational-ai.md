@@ -54,7 +54,7 @@ To learn more about how to design your bot, see [Principles of bot design](/azur
 
 ### Build
 
-Your bot is a web service that implements a conversational interface and communicates with the Bot Framework Service to send and receive messages and events. The Bot Framework Service is one of the components of Azure Bot Service and Bot Framework. You can create bots in any number of environments and languages. You can start your bot development in the [Azure portal](/azure/bot-service/bot-service-quickstart) or use [C#, JavaScript, or Python](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart) templates for local development. You also have access to a variety of [samples](https://github.com/microsoft/botbuilder-samples) that showcase many of the capabilities available through the SDK. These samples are great for developers who want a more feature-rich starting point.
+Your bot is a web service that implements a conversational interface and communicates with the Bot Framework Service to send and receive messages and events. The Bot Framework Service is one of the components of Azure Bot Service and Bot Framework. You can create bots in any number of environments and languages. You can start your bot development in the [Azure portal](/azure/bot-service/abs-quickstart) or use [C#, JavaScript, or Python](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart) templates for local development. You also have access to a variety of [samples](https://github.com/microsoft/botbuilder-samples) that showcase many of the capabilities available through the SDK. These samples are great for developers who want a more feature-rich starting point.
 
 As part of the Azure Bot Service and Bot Framework, we offer additional components you can use to extend the functionality of your bot. With the Azure Bot Service and Bot Framework, you can build a bot with confidence and speed.
 
@@ -73,12 +73,12 @@ As part of the Azure Bot Service and Bot Framework, we offer additional componen
 Bots are complex applications with many different parts that work together. Like any other complex application, this complexity can lead to some interesting bugs or cause your bot to behave differently than expected. Before you publish your bot, test it. We provide several ways to test bots before they're released for use:
 
 - Test your bot locally with the [emulator](/azure/bot-service/bot-service-debug-emulator). The Bot Framework Emulator is a stand-alone application that not only provides a chat interface but also debugging and interrogation tools to help you understand how and why your bot does what it does. The emulator can be run locally alongside your in-development bot application.
-- Test your bot on the [web](/azure/bot-service/bot-service-manage-test-webchat). After your bot is configured through the Azure portal, it can also be reached through a web chat interface. The web chat interface is a great way to grant access to your bot to testers and other people who don't have direct access to the running code.
+- Test your bot on the [web](/azure/bot-service/abs-quickstart). After your bot is configured through the Azure portal, it can also be reached through a web chat interface. The web chat interface is a great way to grant access to your bot to testers and other people who don't have direct access to the running code.
 - [Unit test your bot](/azure/bot-service/unit-test-bots) with the July update of the Bot Framework SDK.
 
 ### Publish
 
-When you're ready to make your bot available on the web, [publish it to Azure](/azure/bot-service/bot-builder-howto-deploy-azure) or to your own web service or datacenter. Having an address on the public internet is the first step to bringing your bot to life on your site or inside chat channels.
+When you're ready to make your bot available on the web, [publish it to Azure](/azure/bot-service/bot-builder-deploy-az-cli) or to your own web service or datacenter. Having an address on the public internet is the first step to bringing your bot to life on your site or inside chat channels.
 
 ### Connect
 
