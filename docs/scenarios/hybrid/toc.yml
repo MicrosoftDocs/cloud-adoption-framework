@@ -2,9 +2,9 @@
 #cSpell:ignore devtest mariadb
 
 items:
-  - name: Hybrid and Multicloud - Microsoft Cloud Adoption Framework for Azure
+  - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
     href: scenario-overview.md
-    pdf_name: Hybrid and Multicloud - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
     - name: Intro to hybrid and multicloud
