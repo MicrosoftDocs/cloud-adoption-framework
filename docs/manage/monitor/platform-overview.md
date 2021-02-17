@@ -80,7 +80,7 @@ Azure Monitor is a software as a service (SaaS) offering, so its supporting infr
 
 #### Agents
 
-Operations Manager collects data directly only from agents that are installed on [Windows computers](/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
+Operations Manager collects data directly only from agents that are installed on [Windows computers](/system-center/scom/plan-planning-agent-deployment#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](/system-center/scom/plan-planning-agent-deployment#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
 
 ![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-opsman-agents-optimized.svg)
 
@@ -88,7 +88,7 @@ The Operations Manager agent can collect from multiple data sources on the local
 
 #### Management packs
 
-Operations Manager performs all monitoring with workflows (rules, monitors, and object discoveries). These workflows are packaged together in a [management pack](/system-center/scom/manage-overview-management-pack?view=sc-om-2019) and deployed to agents. Management packs are available for a variety of products and services, which include predefined rules and monitors. You can also author your own management pack for your own applications and custom scenarios.
+Operations Manager performs all monitoring with workflows (rules, monitors, and object discoveries). These workflows are packaged together in a [management pack](/system-center/scom/manage-overview-management-pack) and deployed to agents. Management packs are available for a variety of products and services, which include predefined rules and monitors. You can also author your own management pack for your own applications and custom scenarios.
 
 #### Monitoring configuration
 
@@ -104,7 +104,7 @@ Because these monitoring settings are isolated from each other and work from the
 
 #### Data sources
 
-Azure Monitor collects data from a variety of sources, including Azure infrastructure and platform resources, agents on Windows and Linux computers, and monitoring data collected in Azure Storage. Any REST client can write log data to Azure Monitor by using an API, and you can define custom metrics for your web applications. Some metric data can be routed to different locations, depending on its usage. For example, you might use the data for "fast-as-possible" alerting or for long-term trend analysis searches in conjunction with other log data.
+Azure Monitor collects data from a variety of sources, including Azure infrastructure and platform resources, agents on Windows and Linux computers, and monitoring data collected in Azure storage. Any REST client can write log data to Azure Monitor by using an API, and you can define custom metrics for your web applications. Some metric data can be routed to different locations, depending on its usage. For example, you might use the data for "as-fast-as-possible" alerting or for long-term trend analysis searches in conjunction with other log data.
 
 #### Monitoring solutions and insights
 

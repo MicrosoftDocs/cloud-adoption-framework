@@ -77,7 +77,7 @@ Here are the details:
 
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Because Contoso has an EA, there's no limit on the number of Azure subscriptions it can create. An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
 
-As a first step, Contoso has defined a structure known as an _enterprise scaffold_ for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold.md) to help understand and design a scaffold.
+As a first step, Contoso has defined a structure known as an *enterprise scaffold* for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold.md) to help understand and design a scaffold.
 
 For now, Contoso has decided to use a functional approach to manage subscriptions:
 
@@ -120,7 +120,7 @@ Giving and controlling user access to Azure resources with identity and access m
 
 Contoso decides to extend its on-premises Active Directory into the cloud, rather than build a new separate system in Azure. Because Contoso isn't using Microsoft 365 yet, it needs to provision an Azure AD instance. If Contoso were using Microsoft 365, it would already have an existing Azure AD tenant and directory, which it could use as its primary Azure AD instance.
 
-Learn more about [Microsoft 365 identity models and Azure Active Directory](/microsoft-365/enterprise/about-microsoft-365-identity?view=o365-worldwide). You can also learn how to [associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
+Learn more about [Microsoft 365 identity models and Azure Active Directory](/microsoft-365/enterprise/about-microsoft-365-identity). You can also learn how to [associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
 
 ### Create an Azure AD directory
 
@@ -147,7 +147,7 @@ To set up a custom domain name, the admins add it to the directory, add a DNS en
 2. To use a DNS entry in Azure, they need to register it with their domain registrar:
 
     - In the **Custom domain names** list, they note the DNS information for the name. It's using an MX record.
-    - They need access to the name server. They log in to the `contoso.com` domain and create a new MX record for the DNS entry provided by Azure AD, by using the details noted.
+    - They need access to the name server. They sign in to the `contoso.com` domain and create a new MX record for the DNS entry provided by Azure AD, by using the details noted.
 
 3. After the DNS records propagate, they select **Verify** to check the custom domain name in the details for the domain.
 
