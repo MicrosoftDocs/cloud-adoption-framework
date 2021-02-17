@@ -7,7 +7,7 @@ ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: seo-azure-migrate
+ms.custom: internal, seo-azure-migrate
 ---
 
 # Cloud migration in the Cloud Adoption Framework
@@ -33,7 +33,7 @@ The Migrate methodology and the steps above build on the following assumptions:
 
 ## Migration effort
 
-The effort required to migrate workloads generally falls into three types of effort (or phases) for each workload: assess workloads, deploy workloads, and release workloads. This section of the Cloud Adoption Framework teaches readers how to maximize the return from each phase required to migrate a workload to production.
+The actions required to migrate workloads generally falls into three efforts (or phases) for each workload: assess workloads, deploy workloads, and release workloads. This section of the Cloud Adoption Framework teaches readers how to maximize the return from each phase required to migrate a workload to production.
 
 In a standard two-week long iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as SAP, may take several two-week iterations to complete all three phases of migration effort for a single workload. Experience and complexity both have a significant impact on timelines and migration velocity.
 

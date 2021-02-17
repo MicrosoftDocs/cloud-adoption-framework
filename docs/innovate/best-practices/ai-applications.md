@@ -1,15 +1,19 @@
 ---
 title: What are AI applications?
-description: Learn how you can integrate AI capabilities and breakthroughs into your applications with Azure Cognitive Services.
+description: What are AI applications? Learn how you can integrate AI applications and capabilities with your apps using Azure Cognitive Services.
 author: v-hanki
 ms.author: janet
-ms.date: 07/14/2020
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank, seo-caf-innovate
+keywords: ai applications, what are ai applications, speech recognition apis, computer vision apis, decision logic apis
 ---
 
 # What are AI applications?
+
+AI applications are things like speech recognition APIs, computer vision APIs, decision logic APIs, and other kinds of intelligent systems that mimic human reason. These are essential functions of many software products in the market today, since AI applications can communicate with end users in a more natural manner and make for a better user experience. Azure can help you and your team save time by being able to roll out AI applications anywhere.
 
 In Azure, you can build intelligent applications faster by using the tools and technologies of your choice and built-in AI.
 
@@ -23,18 +27,18 @@ Azure Cognitive Services can simplify how you integrate AI capabilities and brea
 
 Cognitive Services is made up of APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills or knowledge. Cognitive Services enables developers to easily add cognitive features into their applications. The catalog of services within Cognitive Services can be categorized into five main parts: vision, speech, language, web search, and decision.
 
-### Vision APIs
+### Computer vision APIs
 
 | Service name | Service description |
 | --- | --- |
-| [Computer Vision](/azure/cognitive-services/computer-vision/) | Computer Vision provides you with access to advanced algorithms for processing images and returning information. |
+| [Computer Vision](/azure/cognitive-services/computer-vision/) | Computer Vision APIs provides you with access to advanced algorithms for processing images and returning information. |
 | [Custom Vision](/azure/cognitive-services/custom-vision-service/home) | Custom Vision allows you to build custom image classifiers. |
 | [Face](/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms that detect and recognize facial attributes. |
 | [Form Recognizer](/azure/cognitive-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |
 | [Ink Recognizer](/azure/cognitive-services/ink-recognizer/) (preview) | Ink Recognizer allows you to recognize and analyze digital ink-stroke data, shapes, and handwritten content, and output a document structure with all recognized entities. |
 | [Video Indexer](/azure/cognitive-services/video-indexer/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
 
-### Speech APIs
+### Speech Recognition APIs
 
 | Service name | Service description |
 | --- | --- |
@@ -52,7 +56,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | [Text Analytics](/azure/cognitive-services/text-analytics/) | Text Analytics provides natural language processing over raw text for sentiment analysis, key phrase extraction, and language detection. |
 | [Translator](/azure/cognitive-services/translator/) | Translator provides machine-based text translation in near real time. |
 
-### Decision APIs
+### Decision Logic APIs
 
 | Service name | Service description |
 | --- | --- |
