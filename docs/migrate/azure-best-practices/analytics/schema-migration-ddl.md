@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore DDLs Attunity "Attunity Replicate" "Attunity Visibility" Inmon Denodo DMVs multinode equi Datometry -->
@@ -118,8 +119,6 @@ Here's an alphabetical list of supported data types:
 
 <!-- TODO: Review format of this list. Are the arguments necessary for this list? -->
 
-<!-- docutune:disable -->
-
 - `bigint`
 - `binary [ (n) ]`
 - `bit`
@@ -144,8 +143,6 @@ Here's an alphabetical list of supported data types:
 - `uniqueidentifier`
 - `varbinary [ (n | MAX) ]`
 - `varchar [ (n | MAX) ]`
-
-<!-- docutune:enable -->
 
 The following table lists common data types that are not currently supported, together with the recommended approach for storing them in Azure Synapse Analytics. For specific environments such as Teradata or Netezza, see the associated documents for more detailed information.
 

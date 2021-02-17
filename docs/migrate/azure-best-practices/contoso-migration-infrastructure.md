@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore untrust CIDR RRAS CONTOSODC SYSVOL ITIL NSGs ASGs -->
@@ -76,7 +77,7 @@ Here are the details:
 
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Because Contoso has an EA, there's no limit on the number of Azure subscriptions it can create. An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
 
-As a first step, Contoso has defined a structure known as an _enterprise scaffold_ for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold) to help understand and design a scaffold.
+As a first step, Contoso has defined a structure known as an *enterprise scaffold* for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold.md) to help understand and design a scaffold.
 
 For now, Contoso has decided to use a functional approach to manage subscriptions:
 
@@ -119,7 +120,7 @@ Giving and controlling user access to Azure resources with identity and access m
 
 Contoso decides to extend its on-premises Active Directory into the cloud, rather than build a new separate system in Azure. Because Contoso isn't using Microsoft 365 yet, it needs to provision an Azure AD instance. If Contoso were using Microsoft 365, it would already have an existing Azure AD tenant and directory, which it could use as its primary Azure AD instance.
 
-Learn more about [Microsoft 365 identity models and Azure Active Directory](/microsoft-365/enterprise/about-microsoft-365-identity?view=o365-worldwide). You can also learn how to [associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
+Learn more about [Microsoft 365 identity models and Azure Active Directory](/microsoft-365/enterprise/about-microsoft-365-identity). You can also learn how to [associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
 
 ### Create an Azure AD directory
 
@@ -200,7 +201,7 @@ For management purposes, they create an additional group that will be added to a
 
 ### Synchronize Active Directory
 
-Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory instance with Azure AD. With this model, users and organizations can take advantage of a single identity to access on-premises applications and cloud services, such as Microsoft 365, or thousands of other sites on the internet. Admins can use the groups in Active Directory to implement [role-based access control (RBAC)](/azure/role-based-access-control/role-assignments-portal) in Azure.
+Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory instance with Azure AD. With this model, users and organizations can take advantage of a single identity to access on-premises applications and cloud services, such as Microsoft 365, or thousands of other sites on the internet. Admins can use the groups in Active Directory to implement [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal).
 
 To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/active-directory/hybrid/whatis-hybrid-identity). When you install and configure the tool on a domain controller, it synchronizes the on-premises Active Directory identities to Azure AD.
 
@@ -248,9 +249,9 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/activ
 
       _Figure 13: Group membership._
 
-### Set up RBAC
+### Set up Azure RBAC
 
-Azure [RBAC](/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. By using RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate RBAC role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
+[Azure RBAC](/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. By using Azure RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate Azure role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
 
 Contoso admins then assign roles to the Active Directory groups that they synchronized from on-premises.
 
@@ -434,6 +435,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
   - `VNET-DEV-EUS2`. This virtual network will provide the dev/test team with a fully functional network for dev projects. It will act as a production pilot area, and will rely on the production infrastructure to function.
 
   - `VNET-PROD-EUS2`. Azure IaaS production components will be located in this network.
+
   Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring network address translation (NAT).
 
 - **Subnets:** There will be a subnet in each network for each application tier. Each subnet in the production network will have a matching subnet in the development virtual network. The production network has a subnet for domain controllers.

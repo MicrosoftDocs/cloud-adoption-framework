@@ -2,13 +2,13 @@
 title: "Assess each workload and refine plans"
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 # Assess workloads and refine plans
@@ -27,7 +27,7 @@ Azure Migrate assesses on-premises infrastructure, applications, and data for mi
 - Performs performance-based sizing.
 - Provides cost estimates for running on-premises assets in Azure.
 
-If you're considering a lift and shift approach, or are in the early assessment stages of migration, this service is for you. After completing the assessment, use Azure Migrate to execute the migration.
+If you're considering a lift-and-shift approach or are in the early assessment stages of migration, this service is for you. After completing the assessment, use Azure Migrate to execute the migration.
 
 ![Azure Migrate overview](./media/assess/azure-migrate-overview-1.png)
 

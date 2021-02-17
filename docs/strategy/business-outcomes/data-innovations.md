@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank
 ---
 
 # Data innovations
@@ -71,7 +72,7 @@ Use cases, business cases, and technology advances all support how Azure Synapse
 - Ability to independently scale storage from compute.
 - You can avoid unnecessary, expensive upgrades caused by the staging areas on your data warehouse getting too big, taking up storage capacity, and forcing an upgrade. For example, move the staging area to Azure Data Lake Storage. Then process it with an ETL tool like Azure Data Factory or your existing ETL tool running on Azure at lower cost.
 - Avoid expensive hardware upgrades by processing ETL workloads in Azure, by using Azure Data Lake Storage and Azure Data Factory. This is often a better solution than running on your existing data warehouse DBMS with SQL query processing doing the work. As staging data volumes increase, more storage and compute power underpinning your on-premises data warehouse is consumed by ETL. This in turn affects the performance of query, reporting, and analysis workloads.
-- Avoid building expensive data marts that use storage and databases software licenses on on-premises hardware. You can build them in Azure Synapse Analytics instead. This is especially helpful if your data warehouse is a Data Vault design, which often causes an increased demand for data marts.
+- Avoid building expensive data marts that use storage and databases software licenses on on-premises hardware. You can build them in Azure Synapse Analytics instead. This is especially helpful if your data warehouse is a data vault design, which often causes an increased demand for data marts.
 - Avoid the cost of analyzing and storing high-velocity, high-volume data on on-premises hardware. For example, if you need to analyze real-time, machine generated data like click-stream and streaming IoT data in your data warehouse, you can use Azure Synapse Analytics.
 - You can avoid paying a premium for storing data on expensive warehouse hardware in the datacenter as your data warehouse grows. Azure Synapse Analytics can store your data in cloud storage at a lower cost.
 

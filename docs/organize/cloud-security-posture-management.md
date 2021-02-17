@@ -3,13 +3,14 @@ title: Function of cloud security posture management
 description: Understand the function of cloud security posture management.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
-<!--docsTest:casing TVM -->
+<!-- docsTest:casing TVM -->
 
 # Function of cloud security posture management
 

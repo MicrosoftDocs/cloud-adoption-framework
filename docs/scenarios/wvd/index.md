@@ -7,6 +7,7 @@ ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Migrate or deploy Windows Virtual Desktop instances to Azure

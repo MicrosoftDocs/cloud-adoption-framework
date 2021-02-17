@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
@@ -30,10 +31,10 @@ Common scenarios for machine learning solutions include:
 
 ## Checklist
 
-- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
+- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter Notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
 
   - [Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml)
-  - [Create your first machine learning experiment with a Jupyter notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
+  - [Create your first machine learning experiment with a Jupyter Notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
   - [Visual drag-and-drop experiments](/azure/machine-learning/tutorial-designer-automobile-price-train-score)
   - [Use the AutoML UI](/azure/machine-learning/tutorial-first-experiment-automated-ml)
   - [Configure your dev environment](/azure/machine-learning/how-to-configure-environment)
@@ -44,7 +45,7 @@ Common scenarios for machine learning solutions include:
   - [Classify images with scikit-learn](/azure/machine-learning/tutorial-train-models-with-aml)
   - [Build a Machine Learning pipeline for batch scoring](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 
-- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, MLOps, ONNX Runtime, model interpretability and transparency, and more.
+- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, machine learning operations (MLOps), ONNX Runtime, model interpretability and transparency, and more.
 
   - [What's new with Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
   - [Use AutoML to build models](https://aka.ms/automlvideo)
