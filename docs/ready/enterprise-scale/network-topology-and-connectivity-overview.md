@@ -31,9 +31,21 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 Network topology is a critical element of the enterprise-scale architecture because it defines how applications can communicate with each other. [This section explores technologies and topology approaches for Azure deployments.](../azure-best-practices/define-an-azure-network-topology.md) It focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
 
+## Virtual WAN network topology
+
+[This section explores the option for implementing an Azure Virtual WAN network topology.](../azure-best-practices/virtual-wan-network-topology.md)
+
+## Traditional Azure networking topology
+
+[This section explores the option for implementing a traditional Azure networking topology.](../azure-best-practices/traditional-azure-networking-topology.md)
+
 ## Connectivity to Azure
 
 [This section expands on the network topology to consider recommended models for connecting on-premises locations to Azure.](../azure-best-practices/connectivity-to-azure.md)
+
+## Private Link and DNS integration at scale
+
+[This section describes how to integrate Azure Private Link for PaaS services with Azure Private DNS Zones in hub and spoke network architectures.](../azure-best-practices/private-link-and-dns-integration-at-scale.md)
 
 ## Connectivity to Azure PaaS services
 

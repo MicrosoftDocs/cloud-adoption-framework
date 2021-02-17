@@ -15,6 +15,8 @@ ms.custom: think-tank
 
 # Virtual WAN network topology (Microsoft-managed)
 
+Explore key design considerations and recommendations surrounding Virtual Wide Area Networks (Virtual WAN) in Microsoft Azure.
+
 ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
 
 _Figure 1: Virtual WAN network topology._

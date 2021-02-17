@@ -15,6 +15,8 @@ ms.custom: think-tank
 
 # Traditional Azure networking topology
 
+Explore key design considerations and recommendation surrounding network topologies in Microsoft Azure.
+
 ![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
 
 _Figure 1: A traditional Azure network topology._
@@ -68,7 +70,7 @@ _Figure 1: A traditional Azure network topology._
 - For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via Azure Firewall or third party NVA. The following figure shows this topology. This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
   ![Diagram that illustrates a hub-and-spoke network topology.](./media/hub-and-spoke-topology.png)
- 
+
  _Figure 2: Hub-and-spoke network topology._
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
@@ -82,7 +84,7 @@ _Figure 1: A traditional Azure network topology._
 The following figure shows this topology.
 
   ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/vnet-multiple-circuits.png)
- 
+
  _Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits._
 
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
