@@ -1,6 +1,6 @@
 ---
-title: XXXXX
-description: XXXXX
+title: Plan for inbound and outbound internet connectivity
+description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/02/2020
