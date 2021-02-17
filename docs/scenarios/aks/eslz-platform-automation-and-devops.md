@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # AKS enterprise-scale platform automation and DevOps
 
-As a cloud native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are both open and extensible platform with rich and well-architected APIs, providing opportunity and means to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
+As a cloud native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are both open and extensible platform with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 
 ## Design recommendations
 
@@ -55,16 +55,16 @@ Here are some design considerations for AKS platform automation and DevOps:
 - Consider the various workflows to support in engineering, updating, and deploying your solution in normal and DRP regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
   
   Some example scenarios and pipelines to consider are:
-  - Deploying, patching and upgrading clusters
+  - Deploying, patching, and upgrading clusters
   - Deploying and upgrading applications
   - Deploying and maintaining add-ons
   - Failing over for disaster recovery
   - Blue-green deployments
   - Maintaining canary environments
 
-- Consider using a [service mesh](/azure/aks/servicemesh-about) to add additional security, encryption, and log capabilities to your workloads.
+- Consider using a [service mesh](/azure/aks/servicemesh-about) to add more security, encryption, and log capabilities to your workloads.
  
-- Consider deploying additional resources like subscriptions, tagging, and labels to support your DevOps experience by tracking and tracing deployments and related artifacts.
+- Consider deploying other resources like subscriptions, tagging, and labels to support your DevOps experience by tracking and tracing deployments and related artifacts.
 
 - Consider the impact of the *cattle versus pets* paradigm shift. Expect pods and other aspects of Kubernetes to be ephemeral, and align your automation and pipeline infrastructure accordingly. Don't rely on IP addresses or other resources to be fixed or permanent.
 
