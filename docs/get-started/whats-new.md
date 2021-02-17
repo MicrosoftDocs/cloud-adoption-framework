@@ -34,7 +34,7 @@ Most notable in this release is the addition of Adoption Journeys, which provide
 
 ### Cloud economics
 
-Building on feedback and lessons learned, this is our first step to [refresh the Strategy methodology](../strategy/index.md) by integrating [Microsoft's Cloud Economics program](https://azure.microsoft.com/overview/cloud-economics/). - TODO: Alex to validate inclusion of 1335 or remove cloud economics.
+Building on feedback and lessons learned, this is our first step to [refresh the Strategy methodology](../strategy/index.md) by integrating [Microsoft's Cloud Economics program](https://azure.microsoft.com/overview/cloud-economics/).
 
 ### Enterprise-scale updates
 
