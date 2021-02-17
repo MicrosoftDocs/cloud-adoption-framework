@@ -29,7 +29,7 @@ When Azure was released in 2010, monitoring of cloud services was provided with 
 
 Application Insights was introduced to shift with changes in the industry where proliferation of cloud, mobile, and IoT devices was growing and the introduction of DevOps practices. It grew from application performance monitoring in Operations Manager to a service in Azure, where it delivers rich monitoring of web applications written in a variety of languages. In 2015, the preview of Application Insights for Visual Studio was announced and later, it became known as just Application Insights. It collects details about application performance, requests and exceptions, and traces.
 
-In 2015, Azure operational insights was made generally available. It delivered the Log Analytics analysis service that collected and searched data from machines in Azure, on-premises, or other cloud environments, and connected to System Center Operations Manager. Intelligence packs were offered that delivered a variety of prepackaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management. Later, Azure operational insights became known as Log Analytics.
+In 2015, Azure Operational Insights was made generally available. It delivered the Log Analytics analysis service that collected and searched data from machines in Azure, on-premises, or other cloud environments, and connected to System Center Operations Manager. Intelligence packs were offered that delivered a variety of prepackaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management. Later, Azure Operational Insights became known as Log Analytics.
 
 In 2016, the preview of Azure Monitor was announced at the Microsoft Ignite conference. It provided a common framework to collect platform metrics, resource diagnostics logs, and subscription-level activity log events from any Azure service that started using the framework. Previously, each Azure service had its own monitoring method.
 
@@ -49,7 +49,7 @@ From 2015 until April 2018, Operations Management Suite (OMS) was a bundling of 
 - Application Insights
 - Azure Automation
 - Azure Backup
-- Operational insights (later rebranded as Log Analytics)
+- Operational Insights (later rebranded as Log Analytics)
 - Site Recovery
 
 The functionality of the services that were part of OMS did not change when OMS was discontinued. They were realigned under Azure Monitor.
@@ -130,7 +130,7 @@ Azure Monitor doesn't provide a user-definable method of implementing a service 
 
 - **Azure Monitor for VMs:** Delivers a health-monitoring experience for the guest Azure VMs, similar to that of Operations Manager, when it monitors Windows and Linux virtual machines. It evaluates the health of key operating system components from the perspective of availability and performance to determine the current health state. When it determines that the guest VM is experiencing sustained resource utilization, disk-space capacity, or an issue related to core operating system functionality, it generates an alert to bring this state to your attention.
 
-- **Azure Monitor for containers:** Monitors the performance and health of Azure Kubernetes Service or Azure Container Instances. It collects memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the metrics API. It also collects container logs and inventory data about containers and their images. Predefined health criteria that are based on the collected performance data help you identify whether a resource bottleneck or capacity issue exists. You can also understand the overall performance, or the performance from a specific Kubernetes object type (pod, node, controller, or container).
+- **Azure Monitor for containers:** Monitors the performance and health of Azure Kubernetes Service or Azure Container Instances. It collects memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API. It also collects container logs and inventory data about containers and their images. Predefined health criteria that are based on the collected performance data help you identify whether a resource bottleneck or capacity issue exists. You can also understand the overall performance, or the performance from a specific Kubernetes object type (pod, node, controller, or container).
 
 ## Analyze data
 
@@ -182,11 +182,11 @@ Azure Monitor separates data collection from actions and analysis taken from tha
 
 Operations Manager implements all monitoring logic in a management pack, which you either create yourself or obtain from us or a partner. When you install a management pack, it automatically discovers components of the application or service on different agents, and deploys appropriate rules and monitors. The management pack contains health definitions, alert rules, performance and event collection rules, and views, to provide complete monitoring that supports the infrastructure service or application.
 
-The Operations Manager SDK enables Operations Manager to integrate with third-party monitoring platforms or IT service management (ITSM) software. The SDK is also used by some partner management packs to support monitoring network devices and deliver custom presentation experiences, such as the squared up HTML5 dashboard or integration with Microsoft Office Visio.
+The Operations Manager SDK enables Operations Manager to integrate with third-party monitoring platforms or IT service management (ITSM) software. The SDK is also used by some partner management packs to support monitoring network devices and deliver custom presentation experiences, such as the Squared Up HTML5 dashboard or integration with Microsoft Office Visio.
 
 ### Azure Monitor
 
-Azure Monitor collects metrics and logs from Azure resources, with little to no configuration. Monitoring solutions add logic for monitoring an application or service, but they still work within the standard log queries and views in monitor. Insights, such as Application Insights and Azure Monitor for VMs, use the monitor platform for data collecting and processing. They also provide additional tools to visualize and analyze the data. You can combine data collected by insights with other data, by using core monitor features such as log queries and alerts.
+Azure Monitor collects metrics and logs from Azure resources, with little to no configuration. Monitoring solutions add logic for monitoring an application or service, but they still work within the standard log queries and views in Monitor. Insights, such as Application Insights and Azure Monitor for VMs, use the Monitor platform for data collecting and processing. They also provide additional tools to visualize and analyze the data. You can combine data collected by insights with other data, by using core Monitor features such as log queries and alerts.
 
 Monitor supports several methods to collect monitoring or management data from Azure or external resources. You can then extract and forward data from the metric or log stores to your ITSM or monitoring tools. Or you can perform administrative tasks by using the Azure Monitor REST API.
 
