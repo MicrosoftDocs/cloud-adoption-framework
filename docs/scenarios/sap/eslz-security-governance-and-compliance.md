@@ -3,7 +3,7 @@ title: "Enterprise-scale security, governance, and compliance for SAP on Azure"
 description: Understand the shared responsibility model, and learn about security, compliance, and governance design recommendations and considerations for SAP on Azure.
 author: deepakonics
 ms.author: brblanch
-ms.date: 02/12/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -30,7 +30,7 @@ For more information about the shared responsibility model, see [Shared responsi
 
 ## Security design recommendations
 
-Security is a shared responsibility between Microsoft and customers. You can upload your own VM and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
+Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
 For generally-accepted security guidance, refer to the Center for Internet Security (CIS) standards at [Cybersecurity Best Practices](https://www.cisecurity.org/cybersecurity-best-practices/).
 
@@ -40,19 +40,19 @@ Enterprises that use hub-spoke network topologies often deploy cloud architectur
 
 ![Diagram showing an enterprise cloud deployment with security issues.](media\security-issues.png)
 
-[Azure Security Center (ASC)](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
+[Azure Security Center](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
 
-Enable ASC Standard for SAP on Azure subscriptions to:
+Enable Azure Security Center Standard for SAP on Azure subscriptions to:
 
 - Strengthen your datacenters' security posture, and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
 
-- See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP virtual machines (VMs), disks, and applications.
+- See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP VMs, disks, and applications.
 
 - Delegate an SAP admin custom role with [Just in Time access](/azure/security-center/just-in-time-explained).
 
-When you enable ASC Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
+When you enable Azure Security Center Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
 
-The following screenshot shows the ASC dashboard in the Azure portal:
+The following screenshot shows the Azure Security Center dashboard in the Azure portal:
 
 ![Azure Security Center Dashboard](media\security-center-dashboard.png)
 
@@ -129,11 +129,7 @@ For internet facing applications like Fiori, make sure to distribute load per ap
 
 For mobile apps, [Microsoft Enterprise Mobility and Security](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) can integrate SAP internet-facing applications as it helps to protect and secure your organization and empowers your employees to work in new and flexible ways.
 
-### Monitor security
-
-[Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) is an Azure-native monitoring product for SAP landscapes that works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [SAP on Azure Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
-
-## Security design considerations
+### Securely manage traffic
 
 For internet facing applications, you must make sure to distribute load per application requirements while maintaining security levels. The term load balancing refers to the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
 
@@ -172,19 +168,23 @@ Refer to the following decision tree to make SAP on Azure application load-balan
 
 Every SAP application has unique requirements, so treat the preceding flow chart and recommendation as starting points for a more detailed evaluation. If your SAP application consists of multiple workloads, evaluate each workload separately. A complete solution may incorporate two or more load-balancing solutions.
 
-### Scoping decisions
+### Monitor security
+
+[Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) is an Azure-native monitoring product for SAP landscapes that works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [SAP on Azure Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
+
+### Security scoping decisions
 
 The following recommendations are for various security scenarios. The in-scope requirements are for the security solution to be cost-effective and scalable.
 
 |Scope (scenario)|Recommendation|Notes|
 |---|---|---|
-| See a consolidated view of all-up Azure and on-premises security posture. | Azure Security Center (ASC) Standard | ASC Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
+| See a consolidated view of all-up Azure and on-premises security posture. | Azure Security Center Standard | Azure Security Center Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
 | Encrypt all SAP on Azure databases to meet regulatory requirements. | SAP HANA Native Encryption and SQL TDE | For databases, use the SAP HANA native encryption technology. If you're using SQL Database, enable TDE. |
 | Secure a Fiori application for global users with HTTPS traffic. | Azure Front Door | Front Door is an application delivery network that provides global load balancing and site acceleration service for web applications. |
 
 ## Compliance and governance design recommendations
 
-Azure Advisor is free and helps you get a consolidated view across SAP on Azure subscriptions. See the [Azure Advisor Recommendations](/azure/advisor/advisor-overview) for reliability, resiliency, security, performance, cost, and operational excellence design recommendations.
+[Azure Advisor](/azure/advisor/advisor-overview) is free and helps you get a consolidated view across SAP on Azure subscriptions. Consult the Azure Advisor Recommendations for reliability, resiliency, security, performance, cost, and operational excellence design recommendations.
 
 ### Use Azure resource naming and tagging conventions
 
@@ -218,13 +218,13 @@ Customize role-based access control (RBAC) roles for SAP on Azure spoke subscrip
 
 ### Use Azure Connector for SAP LaMa
 
-Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. For example, creating new SAP projects for technical or application releases, or periodically refreshing QA systems from Production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
+Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. Examples are creating new SAP projects for technical or application releases, or periodically refreshing QA systems from Production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
 
-SAP LaMa Enterprise Edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure Connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
+SAP Landscape Manager (LaMa) Enterprise Edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure Connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
 
 For VM operations, the Azure Connector for LaMa can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the LaMa interface you can schedule your SAP S/4HANA sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure Connector for LaMa also lets you resize your VMs when performance demands arise directly from within LaMa.
 
-### Scoping decisions
+### Compliance and governance scoping decisions
 
 The following recommendations are for various compliance and governance scenarios. The in-scope requirements are for the solution to be cost-effective and scalable.
 
