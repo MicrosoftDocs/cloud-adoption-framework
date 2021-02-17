@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # AKS enterprise-scale platform automation and DevOps
 
-As a cloud native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are both open and extensible platform with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
+As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are open and extensible platforms with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 
 ## Design recommendations
 
@@ -26,21 +26,21 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Separate infrastructure deployment from application deployment. Core infrastructure changes less than applications. Treat each type of deployment as a separate flow and pipeline.
 
-- Deploy using [cloud native](/dotnet/architecture/cloud-native/introduction) concepts. Use [infrastructure as code](/azure/devops/learn/what-is-infrastructure-as-code) to deploy infrastructure including the control plane, and use [Helm](https://helm.sh/) and [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to deploy and maintain Kubernetes native components.
+- Deploy using [cloud-native](/dotnet/architecture/cloud-native/introduction) concepts. Use [Infrastructure as Code](/azure/devops/learn/what-is-infrastructure-as-code) to deploy infrastructure including the control plane, and use [Helm](https://helm.sh/) and [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to deploy and maintain Kubernetes native components.
 
 - Use [GitOps](/azure/azure-arc/kubernetes/use-gitops-connected-cluster) to deploy and maintain applications. GitOps uses the git repository as a single source of truth, avoiding configuration drift and increasing productivity and reliability during rollbacks and related procedures.
 
-- Store secrets and other sensitive artifacts you need to deploy the solution in GitHub secrets, allowing actions and other workflow parts to read them if needed while executing.
+- Store secrets and other sensitive artifacts in GitHub secrets, allowing actions and other workflow parts to read them if needed while executing.
 
 - Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings.
 
-- Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with [Gatekeeper](https://github.com/open-policy-agent/gatekeeper) to validate and enforce the conventions among the other defined policies.
+- Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with [Gatekeeper](https://github.com/open-policy-agent/gatekeeper) to validate and enforce conventions among the other defined policies.
 
 - Embrace [Shift Left](/azure/devops/learn/devops-at-microsoft/shift-left-make-testing-fast-reliable) consistently with:
   - Security, by adding vulnerability scanning tools like container scanning early in the pipeline.
   - Policy, by using policy as code and enforcing policies in a cloud-native manner through admission controllers.
   
-- Treat every failure, error, or outage as an opportunity to automate and improve overall solution quality. Integrate this approach in your Shift Left and [Site Reliability Engineering (SRE)](/azure/site-reliability-engineering/) framework.
+- Treat every failure, error, or outage as an opportunity to automate and improve overall solution quality. Integrate this approach in your Shift Left and [site reliability engineering (SRE)](/azure/site-reliability-engineering/) framework.
 
 ## Design considerations
 
@@ -52,7 +52,7 @@ Here are some design considerations for AKS platform automation and DevOps:
 
 - Consider using prefixes and suffixes with well-defined conventions to uniquely identify every deployed resource. These naming conventions avoid conflicts in deploying solutions next to each other, and improve overall team agility and throughput.
 
-- Consider the various workflows to support in engineering, updating, and deploying your solution in normal and DRP regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
+- Inventory the various workflows to support in engineering, updating, and deploying your solution in normal and DRP regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
   
   Some example scenarios and pipelines to consider are:
   - Deploying, patching, and upgrading clusters
