@@ -42,9 +42,9 @@ Bring the business integration of SAP into your customer's environment with:
 - Mobile experience, extend SAP through the rapid development of mobile apps and PowerApps for mobile experiences.
 - IoT, collect data in near-real time from devices in your business environments.
 
-## Govern SAP
+## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+Learn more to help govern SAP with further guidance found at specific points throughout the cloud adoption journey.
 
 > [!div class="nextstepaction"]
 > [Manage SAP](./manage.md)
