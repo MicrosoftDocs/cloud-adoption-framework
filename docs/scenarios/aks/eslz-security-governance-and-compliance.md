@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-scale AKS security governance and compliance"
+title: "Enterprise-scale Azure Kubernetes Service (AKS) security governance and compliance"
 description: Learn about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,22 +11,22 @@ ms.subservice: ready
 
 # AKS enterprise-scale platform security governance and compliance
 
-This article walks through aspects of AKS security governance to think about before implementing any solution. 
+This article walks through aspects of Azure Kubernetes Service (AKS) security governance to think about before implementing any solution. 
 <!-- this scenario doesn't exist
  To help guide the way, we will be leveraging the [customer scenario](/customer-scenario/README.md) based on Contoso Financials. The scenario describes the customer, along with some background, and wraps up with a list of the requirements that need to be met.
 
 Now that we know the customer scenario and understand what needs to be implemented, let's get started. -->
-Most of the article's content is technology agnostic, because implementation varies among customers. The article focuses on how to implement the solution using Azure and some open source software (OSS) solutions.
+Most of the article's content is technology agnostic, because implementation varies among customers. The article focuses on how to implement the solution using Azure and some open-source software (OSS) solutions.
 
 ## Cloud security control lifecycle
 
-In cloud-native security and governance, the cloud can be very dynamic, whereas most enterprises are used to having relatively stable environments. Traditional environments include detection and prevention controls in a structured organizational model that aligns with traditional IT functions like identity, networking, and machine and virtual machine (VM) OS management. Security and compliance teams face relatively infrequent changes to overall structure and infrastructure, or to required controls and monitoring to achieve security and risk objectives.
+In cloud-native security and governance, the cloud can be dynamic, whereas most enterprises are used to relatively stable environments. Traditional environments include detection and prevention controls in a structured organizational model that aligns with traditional IT functions like identity, networking, and machine and virtual machine (VM) OS management. Security and compliance teams face relatively infrequent changes to overall structure and infrastructure, or to required controls and monitoring to achieve security and risk objectives.
 
 With the adoption of cloud and DevOps models, security must adapt to changes, so it doesn't become an impediment to business and progress. Security adaptations include people processes like creating the right roles and responsibilities, and automation and technical tools like scanning, testing, and Infrastructure as Code. These tools are part of a DevOps pipeline that enables innovation and fast delivery times, while still meeting security requirements.
 
 The temptation is to begin by doing what you do today, but the key takeaway is that if you try to do in the cloud exactly what you do today on premises, you will fail. Cloud adoption is an opportunity to learn, update skills, and increase the organization's security posture. You can position security to be an enabler rather than a blocker, by streamlining security as part of the development to production process. If you use 10-20 year-old tools and processes, you inherit or introduce 10-20 year-old security challenges, problems, and frustrations to the business. Cloud adoption is your chance to start fresh.
 
-Starting fresh begins with an understanding of the cloud:
+Starting fresh begins with an understanding of the cloud.
 
 - What are the available cloud services, controls, and visibility?
 - How do you operate the cloud services and controls?
@@ -36,7 +36,7 @@ Starting fresh begins with an understanding of the cloud:
 
 It's often easiest to start a lifecycle framework from a process perspective, both in establishing security controls, and managing and operationalizing the controls themselves. For establishing security controls, many customers use common frameworks and standards like NIST 800-53, ISO, CIS benchmarks, and HIPAA/HITRUST. These standards can help establish a comprehensive framework, and offer guidance to help establish, document, and audit security controls and processes.
 
-For managing and operationalizing security controls, you can look at a variety of models, including Security Development Lifecycle (SDL) processes that include cloud and DevOps. These approaches and models treat security controls like any other assets in an organization, and include lifecycle management. The following diagram shows an example of an organization's security control lifecycle management:
+For managing and operationalizing security controls, you can look at various models, including Security Development Lifecycle (SDL) processes that include cloud and DevOps. These approaches and models treat security controls like any other assets in an organization, and include lifecycle management. The following diagram shows an example of an organization's security control lifecycle management:
 
 :::image type="content" source="./media/security-control-lifecycle.png" alt-text="Diagram showing Azure security control lifecycle management setup." border="false":::
 
@@ -48,7 +48,7 @@ All Azure security controls start with, and build on top of, the Azure Resource 
 
 ### Security control governance
 
-One of the key benefits of a security control framework is its incorporation of governance and controls auditing. In addition to Azure Policy, this includes [Azure Security Center](/azure/security-center/security-center-intro) and its [secure score](/azure/security-center/security-center-secure-score) and compliance dashboard features. Compliance, at its core, is all about governance observability. The following image shows a sample compliance dashboard:
+One of the key benefits of a security control framework is its incorporation of governance and controls auditing. In addition to Azure Policy, Azure security control governance includes [Azure Security Center](/azure/security-center/security-center-intro) and its [secure score](/azure/security-center/security-center-secure-score) and compliance dashboard features. Compliance, at its core, is all about governance observability. The following image shows a sample compliance dashboard:
 
 :::image type="content" source="./media/enterprise-control-plane-governance.png" alt-text="Diagram showing Azure security control governance." border="false":::
 
@@ -59,87 +59,90 @@ This section walks through setting up the overarching Azure-specific security co
 The following sections walk through implementing controls to meet security requirements for a fictitious Contoso Financials scenario:
 
 - Log all Cloud API requests for audit reporting purposes.
-- Enable Azure Kubernetes Service (AKS) cluster IP Approved Listing.
-- Create AKS clusters only in certain regions.
+- Enable authorized IP ranges to secure access to your API server.
+- Use allowed locations to create AKS clusters only in certain regions.
 
-These controls are just a subset of the security controls and Azure policies that a full Azure deployment includes. Once you understand the process, you can repeat it to implement any additional security controls your organization requires.
+These controls are just a subset of the security controls and Azure policies that a full Azure deployment includes. Once you understand the process, you can repeat it to implement any other security controls your organization requires.
 
 ### Log all Cloud API requests for audit reporting purposes
 
-[Azure Activity Logs](/azure/azure-monitor/platform/activity-logs-overview) capture all Azure Resource Manager interactions, including audit logs. The challenge is that activity logs only have a certain retention lifecycle. You need to export the data out of the Activity Logs into a more persistent storage location, such as Azure Monitor Logs.
+[Azure Activity Logs](/azure/azure-monitor/platform/activity-logs-overview) capture all Azure Resource Manager interactions, including audit logs. The challenge is that activity logs only have a certain retention lifecycle. To retain logs for audit reporting, you must export the data out of the Activity Logs into a more persistent storage location, such as Azure Monitor Logs.
 
-For a tutorial on how to set up activity log collection for an Azure subscription, see [Send to Log Analytics workspace](/azure/azure-monitor/essentials/activity-log#send-to-log-analytics-workspace).
+For a tutorial on how to set up activity log collection for an Azure subscription, see [Send to a Log Analytics workspace](/azure/azure-monitor/essentials/activity-log#send-to-log-analytics-workspace).
 
 The following example screenshot shows an Azure Activity Log capture:
 
-:::image type="content" source="./media/activity-log-capture.png" alt-text="Screenshot showing Activity Log capture.":::
+:::image type="content" source="./media/activity-log-capture.png" alt-text="Screenshot showing an Activity Log capture." border="false":::
 
-### Enable Azure security monitoring to check for AKS cluster IP Approved Listing
+### Enable Azure security monitoring to check for AKS cluster IP approved listing
 
-Before you create anything, look to the cloud provider for security monitoring best practices and recommendations. Not all security controls that an organization requires are implemented by the cloud provider, but the key is to leverage what is provided to avoid reinventing the wheel, and create custom controls only when necessary.
+Before you create anything, look to your cloud provider for security monitoring best practices and recommendations. The cloud provider doesn't implement all security controls that an organization needs, but the key is to use the provided controls to avoid reinventing the wheel, and create custom controls only when necessary.
 
-In Azure, you can enable Azure Security Center to see security monitoring recommendations, and determine whether an AKS cluster has IP Approved Listing (Authorized IP Ranges) enabled.
+In Azure, you can enable Azure Security Center to see security monitoring recommendations. You can also use Azure Security Center to determine whether an AKS cluster has authorized IP ranges enabled.
 
-For an article on how to enable Azure Security Center Standard for an Azure subscription, see [here](/azure/security-center/security-center-get-started).
+To enable Azure Security Center Standard for an Azure subscription, see [Quickstart: Set up Azure Security Center](/azure/security-center/security-center-get-started).
 
-The following screenshot shows what Azure Security Center Standard monitoring looks like:
+The following screenshot shows Azure Security Center Standard monitoring:
 
-![SecurityCenterStandard](./media/SCG_SecurityCenterStandard.png)
+:::image type="content" source="./media/security-center-standard.png" alt-text="Screenshot showing Azure Security Center Standard monitoring.":::
 
 ### Enforce an Azure Policy to create AKS clusters only in certain regions
 
-Also look to the cloud provider for policy enforcement. In Azure, evaluate Azure Policy, which is a key part of the Enterprise Control Plane (ECP). You can't do everything with Azure Policy, but the key is to leverage what is provided to avoid reinventing the wheel, and create custom controls only when necessary.
+Also look to the cloud provider for policy enforcement. In Azure, evaluate Azure Policy, which is a key part of the Enterprise Control Plane (ECP). You can't do everything with Azure Policy, but the key is to use what is provided to avoid reinventing the wheel, and create custom controls only when necessary.
 
-The ability to restrict resource creation to a specific region is just one of many available Azure Policies. For samples of what you can do with Azure Policy, see:
+You can use Azure Policy to implement allowed locations for creating Azure resources, like AKS clusters. For more information and instructions, see [Tutorial: Create and manage policies to enforce compliance](/azure/governance/policy/tutorials/create-and-manage).
 
-- [Azure Policy Samples](/azure/governance/policy/samples/)
-- [Azure Policy Security Samples](/azure/security-center/security-center-policy-definitions)
+The following screenshots show the steps of using Azure Policy to implement allowed region locations.
 
-For guidance on how to implement allowed region locations via Azure Policy, see [here](/azure/governance/policy/samples/allowed-locations).
+1. Select the built-in **Allowed locations** policy in Azure Policy.
+   
+   :::image type="content" source="./media/policy-definitions.png" alt-text="Screenshot showing the built-in Azure policies.":::
+   
+1. View the policy definition and assign the policy.
+   
+   :::image type="content" source="./media/assign-policy.png" alt-text="Screenshot showing the Allowed locations policy definition.":::
+   
+1. Configure the policy.
+   :::image type="content" source="./media/configure-policy.png" alt-text="Screenshot showing the Allowed locations configuration screen.":::
+   
+1. Configure the policy parameters.
+   :::image type="content" source="./media/configure-parameters.png" alt-text="Screenshot showing the Allowed locations parameters screen.":::
+   
+1. View policy assignments.
+   :::image type="content" source="./media/policy-assignments.png" alt-text="Screenshot showing Azure Policy assignments.":::
 
-The following example screenshots show how to use Azure Policy to implement allowed region locations:
+The ability to restrict resource creation to a specific region is just one of many available Azure Policies.
 
-![Azure Policy Definitions](./media/SCG_PolicyDefinitions.png)
-
-![Assign Policy Definition to Resource](./media/SCG_AssignPolicy.png)
-
-![Assign Policy Basics](./media/SCG_AssignPolicyBasics.png)
-
-![Assign Policy Parameters](./media/SCG_AssignPolicyParameters.png)
-
-![Assign Policy Create](./media/SCG_AssignPolicyCreate.png)
-
-![Azure Policy Assignments](./media/SCG_PolicyAssignment.png)
+- For samples of what you can do with Azure Policy, see [Azure Policy Samples](/azure/governance/policy/samples/).
+- For more information about Azure Policy for Azure Security Center, see [Azure Policy built-in definitions for Azure Security Center](/azure/security-center/policy-reference).
 
 ## Cost governance
 
-Cost governance is the continuous process of implementing policies to control costs. In the Kubernetes context, there are several ways organizations can control and optimize their costs. These include native Kubernetes tooling to manage and govern resource usage and consumption, and proactively monitor and optimize the underlying infrastructure.
+Cost governance is the continuous process of implementing policies to control costs. In the Kubernetes context, there are several ways organizations can control and optimize costs. These include native Kubernetes tooling to manage and govern resource usage and consumption and proactively monitor and optimize the underlying infrastructure.
 
-In this section, you use [KubeCost monitor](https://kubecost.com/) to govern your AKS cluster cost. You can scope cost allocation to a deployment, service, label, pod, or namespace, which gives you flexibility in how you charge back or show cluster users.
+In this section, you use [Kubecost monitor](https://kubecost.com/) to govern your AKS cluster cost. You can scope cost allocation to a deployment, service, label, pod, or namespace, which gives you flexibility in how you charge back or show cluster users.
 
-### Install KubeCost
+### Install Kubecost
 
-First, deploy KubeCost to your cluster. You can install directly, or use Helm charts according to the instructions at [here](https://kubecost.com/install?ref=home).
+There are several Kubecost installation options. For more information, see [Installing Kubecost](http://docs.kubecost.com/install).
 
-#### Install KubeCost directly
+To install Kubecost directly, use the following commands:
 
 ```kubectl
-# Create Kubecost Namespace
+# Create the Kubecost namespace
 kubectl create namespace kubecost
-# Install KubeCost into AKS Cluster
+# Install Kubecost into the AKS cluster
 kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-chart/master/kubecost.yaml --namespace kubecost
 ```
 
-#### Install KubeCost by using Helm
-
-Helm 2:
+To install Kubecost by using Helm 2, use the following commands:
 
 ```bash
 helm repo add kubecost https://kubecost.github.io/cost-analyzer/
 helm install kubecost/cost-analyzer --namespace kubecost --name kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
 ```
 
-Helm 3:
+To install Kubecost by using Helm 3, use the following commands:
 
 ```bash
 kubectl create namespace kubecost
@@ -147,66 +150,64 @@ helm repo add kubecost https://kubecost.github.io/cost-analyzer/
 helm install kubecost kubecost/cost-analyzer --namespace kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
 ```
 
-#### Check your deployment
-
-After a few minutes, check to see that KubeCost is up and running:
+After a few minutes, check to make sure that Kubecost is up and running:
 
 ```kubectl
 kubectl get pods -n kubecost
-# Connect to the KubeCost Dashboard (UI)
+# Connect to the Kubecost dashboard UI
 kubectl port-forward -n kubecost svc/kubecost-cost-analyzer 9090:9090
 ```
 
 You can now open your browser and point to `http://127.0.0.1:9090` to open the Kubecost UI. In the Kubecost UI, select your cluster to view cost allocation information.
 
-### Navigate KubeCost
+### Navigate Kubecost
 
-KubeCost breaks down resources into the following categories:
+Kubecost breaks down resources into the following categories:
 
-- Monthly Cluster Cost
-- Namespace Cost
-- Deployment Resource Cost
-- Cost Efficiency
+- Monthly cluster cost
+- Namespace cost
+- Deployment resource cost
+- Cost efficiency
 
-When you select your cluster, you see a dashboard like the following:
+Select your cluster to see the following dashboard:
 
-![kubecost-admin](./media/SCG_cost-admin.png)
+:::image type="content" source="./media/kubecost-dashboard.png" alt-text="Screenshot showing the Kubecost dashboard.":::
 
-Select **Allocation** on the left side to dig down into the namespace cost of your resources. **Allocation** shows the cost for CPU, Memory, Persistent Volumes, and Network. KubeCost gets the data from Azure pricing, but you can also set custom costs for the resources.
+Select **Allocation** on the left side to dig down into the namespace cost of your resources. **Allocation** shows the cost for CPU, memory, persistent volumes, and network. Kubecost gets the data from Azure pricing, but you can also set custom costs for the resources.
 
-![kubecost-allocation](./media/SCG_allocation.png)
+:::image type="content" source="./media/kubecost-allocation.png" alt-text="Screenshot showing the Kubecost Allocation screen.":::
 
 To dig down into cost saving for underutilized resources, select **Savings** on the left side. **Savings** gives you information about underutilized nodes and pods and abandoned resources. **Savings** also identifies resource requests that are overprovisioned within the cluster. The following screenshot shows an example **Savings** overview:
 
-![kubecost-savings](./media/SCG_savings.png)
+:::image type="content" source="./media/kubecost-savings.png" alt-text="Screenshot showing the Kubecost Savings screen.":::
 
-Take some time to navigate around the different views and features that KubeCost provides.
+Take some time to navigate around the different views and features that Kubecost provides.
 
-AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Networking that require special attention during the planning phase. AKS also adds additional complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
+AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Networking that require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
 ## Design recommendations
 
 - Limit access to the [Kubernetes cluster configuration](/azure/aks/control-kubeconfig-access) file by using Azure role-based access control.
 
-- Limit access to [actions that containers can perform](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
+- [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
 
-- Evaluate using the built-in [AppArmor security module](/azure/aks/operator-best-practices-cluster-security#app-armor) to limit actions that containers can perform, like read, write, execute, or system functions like mounting filesystems.
+- Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting filesystems.
 
-- Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing). You can use seccomp at the process level to limit the process calls that containers can perform.
+- Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
 
-- Use [Pod Identities](/azure/aks/operator-best-practices-identity#use-pod-identities) and [Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure#usage) with Azure Key Vault to protect secrets, certificates, and connection strings.
+- Use [Pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault Provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) to protect secrets, certificates, and connection strings.
 
 - Make sure to [rotate certificates](/azure/aks/certificate-rotation) regularly, like every 90 days.
 
 - Use [AKS node image upgrade](/azure/aks/node-image-upgrade) to update AKS cluster node images if possible, or [Kured](/azure/aks/node-updates-kured) to automate node reboots after applying updates.
 
-- Use [Azure Security Center](/azure/security-center/defender-for-kubernetes-introduction) to provide AKS recommendations.
+- View AKS recommendations in [Azure Security Center](/azure/security-center/security-center-intro).
 
-- Monitor and enforce configuration using [Azure Policy for Kubernetes](/azure/aks/use-pod-security-on-azure-policy).
+- Monitor and enforce configuration by using the [Azure Policy Add-on for Kubernetes](/azure/aks/use-pod-security-on-azure-policy).
 
 ## Design considerations
 
 - Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
 
-- Consider using [Azure Defender for Kubernetes](https://docs.microsoft.com/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
+- Consider using [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 
