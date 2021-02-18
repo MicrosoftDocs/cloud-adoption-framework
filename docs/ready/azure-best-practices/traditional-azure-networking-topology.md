@@ -7,7 +7,7 @@ ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Azure VPN Gateway" L7 -->
@@ -19,7 +19,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
 ![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
 
-_Figure 1: A traditional Azure network topology._
+*Figure 1: A traditional Azure network topology.*
 
 **Design considerations:**
 
@@ -67,11 +67,11 @@ _Figure 1: A traditional Azure network topology._
 
   - There's a dependency on centralized NVAs and granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via Azure Firewall or third party NVA. The following figure shows this topology. This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
+- For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via Azure Firewall or other third-party NVA. The following figure shows this topology. This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
   ![Diagram that illustrates a hub-and-spoke network topology.](./media/hub-and-spoke-topology.png)
 
- _Figure 2: Hub-and-spoke network topology._
+ *Figure 2: Hub-and-spoke network topology.*
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
 
@@ -85,7 +85,7 @@ The following figure shows this topology.
 
   ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/vnet-multiple-circuits.png)
 
- _Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits._
+ *Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits.*
 
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
 
@@ -99,7 +99,7 @@ The following figure shows this topology.
 
   - There are no conflicting configurations with Azure networking.
 
-- Don't deploy L7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the app in their respective landing zones.
+- Don't deploy L7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the application in their respective landing zones.
 
 - Use your existing network, MPLS and SD-WAN, for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
@@ -108,11 +108,16 @@ The following figure shows this topology.
 - When you deploy a hub-and-spoke network architecture in two Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing-zone virtual networks across Azure regions. In this scenario, landing zones can transit within a region via NVA in the local-hub virtual network and across regions via ExpressRoute circuit. Traffic must hairpin at the MSEE routers. The following figure shows this design.
 
   ![Diagram that illustrates a landing zone connectivity design.](./media/vnet-dual-circuits.png)
-  
-_Figure 4: Landing zone connectivity design._
+
+*Figure 4: Landing zone connectivity design.*
 
 - When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, it is recommend to evaluate a global transit network architecture with Virtual WAN.
 
 - Use [Azure Monitor for Networks (preview)](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
-- When connecting spoke virtual networks to the central hub virtual network, there are two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that must be considered: maximum number of virtual network peering connections per virtual network, and maximum number of prefixes advertised from Azure to on-premises via ExpressRoute with Private Peering. Ensure that the number of spoke virtual networks connected to the hub virtual network do not exceed any of those limits.
+- When connecting spoke virtual networks to the central hub virtual network, there are two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that must be considered:
+
+  - The maximum number of virtual network peering connections per virtual network.
+  - The maximum number of prefixes advertised from Azure to on-premises via ExpressRoute with private peering.
+
+  Ensure that the number of spoke virtual networks connected to the hub virtual network do not exceed any of those limits.

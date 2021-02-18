@@ -1,13 +1,13 @@
 ---
 title: Plan for landing zone network segmentation
-description: Examine key design considerations and recommendations surrounding network segmentation with Azure Landing Zones.
+description: Examine key design considerations and recommendations surrounding network segmentation with Azure landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Azure VPN Gateway" L7 -->

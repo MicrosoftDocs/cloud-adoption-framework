@@ -7,7 +7,7 @@ ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Azure VPN Gateway" L7 -->
@@ -35,7 +35,7 @@ This section explores key recommendations to achieve network encryption between 
 
 ![Diagram that illustrates encryption flows.](./media/enc-flows.png)
 
-_Figure 1: Encryption flows._
+*Figure 1: Encryption flows.*
 
 - When you're establishing VPN connections from on-premises to Azure by using VPN gateways, traffic is encrypted at a protocol level through IPsec tunnels. The preceding diagram shows this encryption in flow `A`.
 
@@ -47,7 +47,7 @@ _Figure 1: Encryption flows._
 
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
-  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering)).
+  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - If traffic between Azure regions must be encrypted, use global VNet peering to connect virtual networks across regions.
 

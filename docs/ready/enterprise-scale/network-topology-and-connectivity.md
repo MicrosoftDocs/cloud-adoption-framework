@@ -7,7 +7,7 @@ ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 <!-- docutune:casing "Azure VPN Gateway" L7 -->
@@ -45,7 +45,7 @@ Network topology is a critical element of the enterprise-scale architecture beca
 
 ## Private Link and DNS integration at scale
 
-[This section describes how to integrate Azure Private Link for PaaS services with Azure Private DNS Zones in hub and spoke network architectures.](../azure-best-practices/private-link-and-dns-integration-at-scale.md)
+[This section describes how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub and spoke network architectures.](../azure-best-practices/private-link-and-dns-integration-at-scale.md)
 
 ## Connectivity to Azure PaaS services
 
@@ -55,9 +55,9 @@ Building on the previous connectivity sections, [this section explores recommend
 
 [This section describes recommended connectivity models for inbound and outbound connectivity to and from the public internet.](../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md)
 
-## Plan for app delivery
+## Plan for application delivery
 
-[This section explores key recommendations to deliver internal-facing and external-facing apps in a secure, highly scalable, and highly available way.](../azure-best-practices/plan-for-app-delivery.md)
+[This section explores key recommendations to deliver internal-facing and external-facing applications in a secure, highly scalable, and highly available way.](../azure-best-practices/plan-for-app-delivery.md)
 
 ## Plan for landing zone network segmentation
 
@@ -71,6 +71,6 @@ Building on the previous connectivity sections, [this section explores recommend
 
 In many industries, organizations require that traffic in Azure is mirrored to a network packet collector for deep inspection and analysis. This requirement typically focuses on inbound and outbound internet traffic. [This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../azure-best-practices/plan-for-traffic-inspection.md).
 
-## Connectivity to other Cloud provider
+## Connectivity to other cloud providers
 
-[This section provides different connectivity approaches to integrate an Azure Enterprise Scale Landing Zone architecture to other Cloud providers](../azure-best-practices/connectivity-to-other-cloud-providers.md).
+[This section provides different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to other cloud providers](../azure-best-practices/connectivity-to-other-cloud-providers.md).
