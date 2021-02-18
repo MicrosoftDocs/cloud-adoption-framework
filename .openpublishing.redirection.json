@@ -389,6 +389,12 @@
          "source_path": "docs/scenarios/lamp/moodle/vpn-gateway.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/network-topology-and-connectivity.md",
+         "redirect_url": "/docs/ready/enterprise-scale/network-topology-and-connectivity-overview.md",
+         "redirect_document_id": true
       }
+
    ]
 }
