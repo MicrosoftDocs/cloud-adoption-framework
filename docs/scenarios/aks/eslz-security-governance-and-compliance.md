@@ -180,23 +180,25 @@ Select **Allocation** on the left to dig down into the namespace cost of your re
 
 :::image type="content" source="./media/kubecost-allocation.png" alt-text="Screenshot showing the Kubecost Allocation screen.":::
 
-To dig into cost savings for underutilized resources, select **Savings** on the left. **Savings** gives you information about underutilized nodes and pods and abandoned resources. **Savings** also identifies resource requests that are overprovisioned within the cluster. The following screenshot shows an example **Savings** overview:
+Select **Savings** on the left to dig into cost savings for underutilized resources. **Savings** gives you information about underutilized nodes and pods and abandoned resources, and identifies resource requests that are overprovisioned within the cluster. The following screenshot shows an example **Savings** overview:
 
 :::image type="content" source="./media/kubecost-savings.png" alt-text="Screenshot showing the Kubecost Savings screen.":::
 
 Take some time to navigate around the different views and features that Kubecost provides.
 
-AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Networking that require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
-
 ## Design considerations
 
-- Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
+AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Networking that require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
-- Consider using [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
+Here are some other design considerations for AKS security governance and compliance:
+
+- Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
 
 - Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting filesystems.
 
 - Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
+
+- Consider using [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 
 ## Design recommendations
 
