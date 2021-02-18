@@ -108,12 +108,12 @@ items:
         href: strategy/financial-models.md
       - name: Understand cloud accounting
         href: strategy/cloud-accounting.md
-    - name: Best Practices
+    - name: Align your partner strategy
+      href: strategy/partner-alignment.md
+    - name: First cloud adoption project
+      href: strategy/first-adoption-project.md
+    - name: Additional considerations
       items:
-      - name: First cloud adoption project
-        href: strategy/first-adoption-project.md
-      - name: Align your partner strategy
-        href: strategy/partner-alignment.md
       - name: Balance competing priorities
         href: strategy/balance-competing-priorities.md
       - name: Balance the portfolio
@@ -126,14 +126,13 @@ items:
         href: strategy/monitoring-strategy.md
       - name: Responsible AI
         href: strategy/responsible-ai.md
+      - name: Accelerate cloud adoption with GitHub
+        href: scenarios/github-velocity/index.md 
+    - name: Skills relevant to strategy
+      href: strategy/suggested-skills.md
 
-      - name: Skills relevant to strategy
-        href: strategy/suggested-skills.md
-      
-    - name: Strategy Antipatterns
+    - name: Strategy antipatterns
       href: antipatterns/strategy-antipatterns.md
-
-
 
   - name: Plan
     items:
@@ -188,7 +187,7 @@ items:
       - name: Plan a data warehouse migration
         href: plan/data-warehouse-migration.md
 
-    - name: Plan Antipatterns
+    - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
   - name: Ready
@@ -392,7 +391,7 @@ items:
       - name: Skills relevant to ready and landing zones
         href: ready/suggested-skills.md
 
-    - name: Ready Antipatterns
+    - name: Ready antipatterns
       href: antipatterns/ready-antipatterns.md
 
   - name: Adopt
@@ -799,10 +798,9 @@ items:
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
 
-      - name: Migrate Antipatterns
+      - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
 
-          
       - name: Process improvements
         items:
         - name: Overview
@@ -1206,8 +1204,6 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
-
-
       - name: Process improvements
         items:
         - name: Overview
@@ -1430,9 +1426,9 @@ items:
         - name: Azure tools for deployment acceleration
           href: govern/deployment-acceleration/toolchain.md
 
-    - name: Govern Antipatterns
+    - name: Govern antipatterns
       href: antipatterns/govern-antipatterns.md
-          
+
   - name: Manage
     items:
     - name: Overview
@@ -1544,7 +1540,7 @@ items:
     - name: Advanced management and system design
       href: manage/design-principles.md
 
-    - name: Manage Antipatterns
+    - name: Manage antipatterns
       href: antipatterns/manage-antipatterns.md
 
   - name: Organize
@@ -1609,13 +1605,12 @@ items:
     - name: Creating a cost-conscious organization
       href: organize/cost-conscious-organization.md
 
-    - name: Organize Antipatterns
+    - name: Organize antipatterns
       items:
       - name: Organizational antipatterns
         href: antipatterns/organize-antipatterns.md
       - name: IT fiefdoms and IT silos
         href: organize/fiefdoms-silos.md
-
 
   - name: Resources
     items:

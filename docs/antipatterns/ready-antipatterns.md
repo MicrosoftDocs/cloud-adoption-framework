@@ -1,65 +1,98 @@
 ---
-title: "Cloud readiness Antipatterns"
-description: Cloud readiness antipatterns include, assuming services ready for production, that there's built in resiliency, and that IT is ready for the cloud.
+title: Cloud readiness antipatterns
+description: Cloud adoption antipatterns can emerge when companies use preview services, assume built-in resiliency and availability, or assume IT is ready for the cloud.
 author: lpassig
 ms.author: brblanch
-ms.date: 01/15/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-# Cloud readiness Antipatterns
+# Cloud readiness antipatterns
 
-Customers frequently experience a number of common cloud adoption antipatterns while in the readiness phase of cloud adoption. Review the following antipatterns to avoid unexpected downtime, inability to recover or keep services available,  
+Customers often experience antipatterns during the readiness phase of cloud adoption. These antipatterns can lead to unexpected downtime, disaster recovery problems, and availability issues.
 
-## Antipattern: Assuming released services are always supposed to be used in production
+## Antipattern: Assume released services are ready for production
 
-Since cloud computing is evolving rapidly, new services are often released in a preview state. These preview services usually do not provide e.g., an uptime SLA. Additionally, newly available services might have not reached the same maturity as already available service in the cloud. Customers tend to assume that all services that are made available in the cloud can be used already in production environments.
+Since cloud computing is evolving rapidly, companies often release preview versions of new services. Customers tend to assume that they can use any available cloud service in a production environment. But, problems can result, for these reasons:
 
-### Example of using a cloud service in production
+- Preview services usually don't provide uptime service-level agreements (SLAs).
+- New services often aren't as mature as cloud services that are already available.
 
-Trey Research Inc. uses a preview cloud service in production, since they think the service matches their use case. However, they quickly realize that they encounter some problems with the service resulting in unexpected downtime. This leads to the assumption that the cloud is not mature as well as not as resilient as promised. However, they did not perform proper due diligence and did not adhere to reference designs.
+### Example: Use a preview service in production
 
-### Preferred outcome: pre-approved use of cloud services in production
+A research institute uses a preview cloud service in production. The service seems to be a good fit for its use case. But, the institute doesn't perform due diligence on the service. It also doesn't follow its reference architecture's requirements and guidelines.
 
-When deciding on new services that are in preview status, keep in mind to only use preview services within Proof of Concept (PoC) scenarios but not in production environments as they do not have a specified SLA. The IT also needs to find the right balance when they are approving the usage of cloud services. The [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist) can help to approve the usage of cloud services quicker based on an already established framework.
+Problems come up with the preview service that lead to unexpected downtime. The institute begins to think that cloud services in general aren't as mature or resilient as promised.
 
-## Antipattern: Assuming increased resiliency and availability by default
+### Preferred outcome: Use pre-approved cloud services in production
 
-Increased resiliency (recovering from failures) and availability (running in a healthy state without significant downtime) can be one of the major advantages of cloud computing compared to on-premises. That leads to the perception that resiliency and high availability are on by default and do not have in mind that these factors can lead to additional costs and implicate in some cases additional technical effort.
+When evaluating new services that are in preview, only use these services in proof of concept (PoC) scenarios, not in production environments, since these services don't have SLAs. Find the right balance between functionality and maturity when approving cloud services. See [Cloud services due diligence checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist) for an established framework that you can use to quickly evaluate cloud services.
 
-### Example of resiliency and availability antipattern
+## Antipattern: Assume increased resiliency and availability
 
-Trey Research Inc. implement a mission critical application on IaaS services with a single VM and premium storage, as they know of the single VM SLA of 99,9% uptime and want to cut costs. When the VM fails their application is not able to recover which leads to a downtime that was not expected as they thought the cloud offers high availability by default. They weren’t aware that this can differ depending on the service model (PaaS and SaaS) and the technical architecture (load balanced Availability Sets or Availability Zones).
+Cloud computing offers advantages over on-premises computing. Examples include:
 
-### Preferred outcome: minimize failure, balance resiliency, availability and cost concerns
+- Increased resiliency: Recovering after failure.
+- Availability: Running in a healthy state without significant downtime.
 
-Use [reference designs](https://docs.microsoft.com/azure/architecture/reference-architectures) and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) to identify architectural best practices to be able to minimize the scope of failures. These services are mature in nature and people are familiar with them.
+Because most cloud services offer these advantages, many companies assume that all cloud services offer resiliency and high availability by default. In reality, these features are often only available at extra cost and with additional technical effort.
 
-Companies need to identify the right balance between [high resiliency and availability](https://docs.microsoft.com/azure/architecture/framework/resiliency/overview) and cost concerns. Meaning increased resiliency and availability most likely lead to increased costs (single instance cost with no SLA or 99,9% uptime SLA vs. two VMs running the same workload leading to 99,95% to 99,99% uptime SLA). Therefore, the process of requirement engineering is essential when designing a cloud-based solution. [SLA Estimator](https://github.com/mspnp/samples/tree/master/Reliability/SLAEstimator) can help calculate the end-to-end SLA of your application.
+### Example: Assume high availability
 
-## Antipattern: Becoming a Cloud Provider yourself
+A start-up implements a mission-critical application on IaaS services. Its developers have looked into a virtual machine (VM) with an uptime SLA of 99.9%. Since they'd like to cut costs, they use a single VM and premium storage.
 
-Some companies introduce programs within their IT with the goal in mind, that the internal IT should become a cloud provider. In this initiative the IT becomes responsible to provide not only reference architectures but also infrastructure/platform as a service to business units. However, since this type of work is usually not the core business of the IT department, the "-as a service" offerings often lack pattern and practices to run or provide these services in a resilient, efficient, and secure way.
+When the VM fails, their application can't recover. Unexpected downtime results. They'd assumed that the cloud offers high availability by default. They weren't aware that performance guarantees can differ between:
 
-### Example of this antipattern
+- Service models like platform as a service (PaaS) and software as a service (SaaS).
+- Technical architectures like load-balanced availability sets and availability zones.
 
-Contoso's IT department has established a Cloud Center of Excellence (CCoE) which serves as a broker between IT and Business Units. To be compliant in the cloud, they have received the assignment from the managing board to provide end-to-end services. So, they setup an internal cloud procurement portal where business units can order a fully managed Cloud VM as a service. The Business Unit does not get access to the Cloud Portal but only gets access to the ordered server via SSH/RDP.
+### Preferred outcome: Minimize failures while balancing resiliency and costs
 
-However, the CCoE quickly realized, that they can't provide guidance for all services available in the cloud due to the sheer mass of services. Additionally, the introduced end-to-end service for all cloud services within their portal reduces the time to market by a substantial amount, since everything is managed by the IT and not by the Business Unit.
+See trusted, mature resources for information on architectural best practices that can minimize the scope of failures:
 
-### Preferred outcome: IT provides the guardrails
+- [Reference architectures](/azure/architecture/reference-architectures).
+- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
-When adopting/managing the cloud, the IT department should concentrate on IT workloads first, to experience the cloud firsthand. The Cloud Adoption Framework can help companies identifying such a [First Adoption Project](/azure/cloud-adoption-framework/strategy/first-adoption-project).
+Identify the right balance between costs and features like [high resiliency and availability](/azure/architecture/framework/resiliency/overview). Increased resiliency and availability typically lead to increased costs. For instance:
 
-This aligns with a matured [cloud operating model](https://docs.microsoft.com/azure/cloud-adoption-framework/operating-model/compare) “Central IT” where the Central IT is responsible to define the platform guardrails like governance. This opens the opportunity for business units to adopting their first cloud project in a secure and consistent manner by moving within the guardrails defined by the IT.
+- A single VM might have an SLA that guarantees 99.9% uptime.
+- Two VMs running the same workload would provide an SLA of 99.95–99.99% uptime.
 
-Additionally, companies should consider starting (off) with adopting only one major public-cloud provider, since all major platforms differ significantly in setup, management, and usage.
+Engage in the essential process of requirements engineering when designing a cloud-based solution. Use an [SLA estimator](https://github.com/mspnp/samples/tree/master/Reliability/SLAEstimator) to help calculate your application's end-to-end SLA.
 
-When it comes to IT tooling, such as: code repositories, continuous integration and continuous delivery and collaboration systems it is recommended to use Software as a Service (SaaS) solutions as much as possible. Considering cloud workloads, the IT should first rely on patterns that they know and can operate safely and securely at scale.
+## Antipattern: IT becomes a cloud provider
+
+Some companies try to make their internal IT department a cloud provider. IT then becomes responsible for reference architectures. IT also needs to provide IaaS and PaaS to business units. Since this type of work isn't usually part of IT's core business, the resulting service offerings can be lacking in usability, resiliency, efficiency, and security.
+
+### Example: IT provides monolithic managed cloud services
+
+A corporation's IT department establishes a Cloud Center of Excellence (CCoE) that serves as a broker between IT and business units. To ensure the corporation is cloud-compliant, the managing board assigns the CCoE the task of providing monolithic end-to-end services. It sets up an internal cloud procurement portal that business units can use to order a fully managed cloud VM as a service. The business units don't get access to the cloud portal. They only get access through secure shell (SSH) and remote desktop protocol (RDP) to the server that they order.
+
+For several reasons, the CCoE then has trouble providing a monolithic managed service to wrap each service that's available in the cloud:
+
+- The cloud offers a large number of services.
+- Cloud services change frequently.
+- Trying to provide monolithic services increases the time to market substantially, with IT managing the process, not the business units.
+
+### Preferred outcome: IT provides guardrails
+
+When adopting cloud technologies, have the IT department gain firsthand experience with the cloud by starting with IT workloads. Use the [Cloud Adoption Framework](/azure/cloud-adoption-framework) to identify your [first adoption project](../strategy/first-adoption-project.md).
+
+Use a mature [cloud operating model](../operating-model/compare.md) such as [centralized operations](../operating-model/compare.md#centralized-operations) that makes IT responsible for defining platform guardrails like governance. Then business units can adopt cloud projects in a secure and consistent manner, within the guardrails that IT defines.
+
+Consider adopting only one major public cloud provider at the start, since all major platforms differ significantly in setup, management, and usage.
+
+Use software as a service (SaaS) solutions as much as possible for IT tooling, such as:
+
+- Code repositories.
+- Continuous integration and continuous delivery.
+- Collaboration systems.
+
+For cloud workloads, advise IT to use familiar procedures that operate safely and securely at scale.
 
 ## Next steps
 
-- [Overview of the reliability pillar](https://docs.microsoft.com/azure/architecture/framework/resiliency/overview)
-- [First Adoption Project](/azure/cloud-adoption-framework/strategy/first-adoption-project)
+- [Overview of the reliability pillar](/azure/architecture/framework/resiliency/overview)
+- [First adoption project](../strategy/first-adoption-project.md)

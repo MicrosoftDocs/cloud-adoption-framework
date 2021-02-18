@@ -1,50 +1,47 @@
 ---
-title: "Cloud Adoption Antipatterns"
-description: Antipattern overview.
+title: Cloud adoption antipatterns
+description: Learn about antipatterns that block the adoption, innovation, and realization of cloud goals in businesses. View resources on overcoming common antipatterns.
 author: lpassig
 ms.author: brblanch
-ms.date: 1/13/2021
+ms.date: 2/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-# Cloud Adoption Antipatterns
+# Cloud adoption antipatterns
 
-Customers frequently experience a number of common cloud adoption antipatterns. These patterns block adoption, innovation, and realization of business goals.
+Customers often experience cloud adoption *antipatterns*, or common missteps that occur in design, planning, or implementation when migrating to the cloud. These patterns can block innovation and prevent businesses from adopting and realizing goals.
 
-The table below outlines the top 10 antipatterns & the methodology or phase of cloud adoption where these patterns most commonly occur. Each article includes examples and links to overcome these antipatterns.
-
-<!--insert Next steps here -->
-
-The following is a longer list of common antipatterns. Each outlines the most commonly occurring methodologies or phases of adoption when these antipatterns should be addressed. The linked articles provide examples of each antipattern and ways to overcome them.
+The following table lists antipatterns and the methodologies or cloud adoption phases that these patterns commonly occur in. The linked articles provide examples of and solutions for each antipattern.
 
 <br>
 
 | Stage | Antipattern | Reference |
-| ------------- |:-------------:| -----:|
-| Strategy | Missing motivation | [View](./strategy-antipatterns.md#antipattern-missing-motivation) |
-| Strategy | Misalignment of motivation | [View](./strategy-antipatterns.md#antipattern-misalignment-of-motivation) |
-| Plan | Choice of the wrong cloud operating model | [View](./plan-antipatterns.md#antipattern-the-wrong-cloud-operating-model) |
-| Plan | Choice of the wrong "as a Service" model | [View](./plan-antipatterns.md#antipattern-the-wrong-as-a-service-model) |
-| Plan | Replacing over modernizing | [View](./plan-antipatterns.md#antipattern-replacing-over-modernizing) |
-| Ready | Assuming released services are always supposed to be used in production | [View](./ready-antipatterns.md#antipattern-assuming-released-services-are-always-supposed-to-be-used-in-production) |
-| Ready | Assuming increased resiliency and availability by default | [View](./ready-antipatterns.md#antipattern-assuming-increased-resiliency-and-availability-by-default) |
-| Ready | Becoming a Cloud Provider yourself | [View](./ready-antipatterns.md#antipattern-becoming-a-cloud-provider-yourself) |
-| Adopt | Migrate, modernize or innovate without any guardrails defined | [View](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-any-guardrails-defined) |
-| Adopt | Migrate, modernize or innovate without a prior assessment or an architectural design session | [View](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-a-prior-assessment-or-an-architectural-design-session) |
-| Adopt | Forced architecture | [View](./migrate-antipatterns.md#antipattern-forced-architecture) |
-| Adopt | Use of a single subscription | [View](./migrate-antipatterns.md#antipattern-use-of-a-single-subscription) |
-| Manage | Focusing on tooling rather than business outcomes | [View](./manage-antipatterns.md#antipattern-focusing-on-tooling-rather-than-business-outcomes) |
-| Govern | Misalignment on shared responsibility | [View](./govern-antipatterns.md#antipattern-misalignment-on-shared-responsibility) |
-| Govern | Take out of the box security as a given | [View](./govern-antipatterns.md#antipattern-take-out-of-the-box-security-as-a-given) |
-| Govern | Establishing your own compliance or governance framework | [View](./govern-antipatterns.md#antipattern-establishing-your-own-compliance-or-governance-framework) |
-| Organize | Treat the IT department as a cost center | [View](./organize-antipatterns.md#antipattern-treat-the-it-department-as-a-cost-center) |
-| Organize | Investing in developing new platforms without involving the business | [View](./organize-antipatterns.md#antipattern-investing-in-developing-new-platforms-without-involving-the-business) |
-| Organize | Outsourcing of core business function | [View](./organize-antipatterns.md#antipattern-outsourcing-of-core-business-function) |
-| Organize | Concentration on technical decision maker rather than developing cloud engineers | [View](./organize-antipatterns.md#antipattern-concentration-on-technical-decision-maker-rather-than-developing-cloud-engineers) |
+| ------------- |-------------| -----|
+| Strategy | Missing motivation | [Antipattern: Adopt the cloud without establishing goals](./strategy-antipatterns.md#antipattern-adopt-the-cloud-without-establishing-goals) |
+| Strategy | Misaligned motivation | [Antipattern: Fail to communicate motivations](./strategy-antipatterns.md#antipattern-fail-to-communicate-motivations) |
+| Plan | The wrong cloud operating model | [Antipattern: Choose the wrong cloud operating model](./plan-antipatterns.md#antipattern-choose-the-wrong-cloud-operating-model) |
+| Plan | The wrong service model | [Antipattern: Choose the wrong service model](./plan-antipatterns.md#antipattern-choose-the-wrong-service-model) |
+| Plan | Replacing instead of modernizing | [Antipattern: Replace architecture with SaaS solutions](./plan-antipatterns.md#antipattern-replace-architecture-with-saas-solutions) |
+| Ready | Using preview services in production | [Antipattern: Assume released services are ready for production](./ready-antipatterns.md#antipattern-assume-released-services-are-ready-for-production) |
+| Ready | Assuming increased resiliency and availability | [Antipattern: Assume increased resiliency and availability](./ready-antipatterns.md#antipattern-assume-increased-resiliency-and-availability) |
+| Ready | Becoming a cloud provider | [Antipattern: IT becomes a cloud provider](./ready-antipatterns.md#antipattern-it-becomes-a-cloud-provider) |
+| Adopt | Migrating, modernizing, or innovating without guardrails | [Antipattern: Migrate, modernize, or innovate without guardrails](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-guardrails) |
+| Adopt | Migrating, modernizing, or innovating without assessments | [Antipattern: Migrate, modernize, or innovate without an assessment](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-an-assessment) |
+| Adopt | Forced architecture | [Antipattern: Dictate an architecture](./migrate-antipatterns.md#antipattern-dictate-an-architecture) |
+| Adopt | Using a single subscription | [Antipattern: Use a single subscription](./migrate-antipatterns.md#antipattern-use-a-single-subscription) |
+| Manage | Focusing on tooling instead of business outcomes | [Antipattern: Focus on tooling, not business outcomes](./manage-antipatterns.md#antipattern-focus-on-tooling-not-business-outcomes) |
+| Govern | Misaligned shared responsibilities | [Antipattern: Misunderstand shared responsibilities](./govern-antipatterns.md#antipattern-misunderstand-shared-responsibilities) |
+| Govern | Assuming out-of-the-box solutions provide security | [Antipattern: Assume out-of-the-box solutions provide security](./govern-antipatterns.md#antipattern-assume-out-of-the-box-solutions-provide-security) |
+| Govern | Establishing a custom compliance or governance framework | [Antipattern: Use a custom compliance or governance framework](./govern-antipatterns.md#antipattern-use-a-custom-compliance-or-governance-framework) |
+| Organize | Treating IT as a cost center | [Antipattern: Treat IT as a cost center](./organize-antipatterns.md#antipattern-treat-it-as-a-cost-center) |
+| Organize | Developing new platforms without involving the business | [Antipattern: Invest in new technology without involving the business](./organize-antipatterns.md#antipattern-invest-in-new-technology-without-involving-the-business) |
+| Organize | Outsourcing core business functions | [Antipattern: Outsource core business functions](./organize-antipatterns.md#antipattern-outsource-core-business-functions) |
+| Organize | Hiring technical decision makers instead of developing cloud engineers | [Antipattern: Hire TDMs instead of developing cloud engineers](./organize-antipatterns.md#antipattern-hire-tdms-instead-of-developing-cloud-engineers) |
 
 ## Next Steps
 
-<!--insert Next steps here -->
+- [Cloud strategy antipatterns](./strategy-antipatterns.md)
+- [Cloud adoption plan antipatterns](./plan-antipatterns.md)

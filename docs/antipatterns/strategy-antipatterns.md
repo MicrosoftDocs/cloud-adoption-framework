@@ -1,9 +1,9 @@
 ---
-title: "Cloud strategy antipatterns"
-description: Cloud projects can fail when concrete KPIs and motivations are not specified, and there is misalignment within the company.
+title: Cloud strategy antipatterns
+description: "Misalignment within a company can cause cloud projects to fail, especially when cloud adoption KPIs and motivations aren't clearly specified and communicated."
 author: mahia127
 ms.author: brblanch
-ms.date: 01/15/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -11,31 +11,33 @@ ms.subservice: strategy
 
 # Cloud strategy antipatterns
 
-Customers frequently experience a number of common cloud adoption antipatterns while in the strategy phase of cloud adoption. These patterns can make it hard to align your IT and business strategy, and make it hard measure the success of your cloud project.
+Customers often experience antipatterns during the strategy phase of cloud adoption. These patterns can make it hard to align IT and business strategies. They also make it hard to measure the success of cloud projects.
 
-## Antipattern: Missing motivation
+## Antipattern: Adopt the cloud without establishing goals
 
-In numerous companies we find that they nowadays announce a cloud-first or cloud-only strategy, while not defining a clear picture on what they want to achieve with the newly announced strategy. Without specifying concrete KPIs and motivations within strategy development cloud projects will most certainly not be successful, as the success of the project cannot be measured.
+Many companies announce cloud-first or cloud-only strategies. But, they don't clearly define what they want to achieve with those strategies. Cloud projects can't succeed without concrete KPIs and goals. It's impossible to measure project performance without indicators or specified targets.
 
-### Example of a missing motivation
+### Example: Migrate to the cloud without defining goals
 
-Contoso finds that their closest competitor is launching a cloud-only strategy defining that they want to have all their systems in the cloud within a year to accelerate their business. As Contoso does not want to be left behind, they now urge into strategic discussions on how to be able to adopt the cloud fast without defining concrete success criteria like cost reduction or better performing systems. As their first system is migrated to the cloud, they miss the possibility to check if the cloud strategy is successful, because they did not define what they wanted to achieve in the first place.
+A corporation's closest competitor launches a cloud-only strategy. The competitor's goal is to accelerate its business by having all its systems in the cloud within a year. The corporation doesn't want to trail behind. It begins strategic discussions on how to adopt the cloud quickly. But, it doesn't define any concrete success criteria like reducing costs or improving system performance.
 
-### Preferred outcome: defined motivations
+The corporation's first system migrates to the cloud. But, it can't check whether its cloud strategy is successful because it never defined what it wanted to achieve.
 
-When discussing the motivation why adopting the cloud, define concrete KPIs that need to be accomplished to be able to communicate if the strategy is successful and should be followed for more projects. To find out more about motivations, see [Why are we moving to the cloud?](../strategy/motivations.md).
+### Preferred outcome: Define goals and KPIs
 
-## Antipattern: Misalignment of motivation
+Define concrete KPIs when discussing your reasons for adopting the cloud. Then you'll be able to measure how successful your strategy is. You'll also know whether you can use the same strategy for other projects. See [Why are we moving to the cloud?](../strategy/motivations.md) to learn more about motivations for cloud adoption.
 
-One of the major reasons why cloud adoptions journeys fail, is the misalignment within the company when it comes to motivation or cloud adoption triggers. While the business sees major benefits by adopting the cloud, adoption triggers are often not communicated and aligned with the IT even though these motivations do not only influence the business strategy of a company but also the IT strategy. If there is no alignment and the motivation is not documented, a cloud journey most probably fails.
+## Antipattern: Fail to communicate motivations
 
-### Example of misaligned motivation
+Cloud adoption journeys often fail when motivations or cloud adoption triggers are misaligned within a company. A business might see major benefits in adopting the cloud. But, they might fail to communicate these adoption triggers to IT. This problem even comes up when these motivations influence the company's IT strategy, not just its business strategy. Without alignment or documented motivations, most cloud journeys fail.
 
-Contoso starts using the cloud because the managing board has proclaimed "Cloud-First" as the future IT-Strategy. However, they have not outlined the reasons or motivations on why and how this will be beneficial for the company. Therefore, the IT department as well as the business departments are not certain why they are adopting the cloud and consequently do not work on a common goal. The arising uncertainty, especially in the IT department leads to lack of focus and willingness to adopt the cloud. The IT-Strategy gets under scrutiny because the goals have not been set and leading to more questions than answers.
+### Example: Fail to communicate benefits
 
-### Preferred outcome: alignment
+A corporation starts using the cloud when its managing board announces a cloud-first IT strategy. But, the board doesn't explain how the strategy benefits the company. The IT and business departments aren't certain why they're adopting the cloud. This uncertainty leads to a lack of focus, meaning the departments fail to work toward this common goal. It also increases hesitancy about adopting the cloud, especially within IT. Because the IT strategy has poorly defined goals, it comes under scrutiny, leading to more questions than answers.
 
-Deciding on motivations on why to adopt the cloud is essential within the cloud adoption. Motivations on why to move to the cloud should be defined by and communicated throughout the company. This leads to more acceptance within the company throughout the business and IT and can influence (technical) decisions in later stages of the cloud adoption journey. Additionally, customers should review the [cloud migration myths](../strategy/cloud-migration-business-case.md), that should be clarified and understood before building a business justification for the cloud.
+### Preferred outcome: Define and communicate reasons for cloud adoption
+
+Decide why you want to adopt the cloud. Then clearly define your reasons and communicate them throughout the company. Your IT and business departments will then accept cloud adoption more readily. You can also use these motivations to influence technical decisions in later stages of the cloud adoption journey. Before justifying a move to the cloud, review [cloud migration myths](../strategy/cloud-migration-business-case.md).
 
 ## Next steps
 

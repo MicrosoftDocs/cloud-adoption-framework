@@ -1,9 +1,9 @@
 ---
-title: "Cloud adoption plan antipatterns"
-description: Misalignment on the operating model(s), service models can however result in reduced time to market, misunderstandings, and increased pressure on the IT department.
+title: Cloud adoption plan antipatterns
+description: Cloud adoption antipatterns can emerge when companies choose replacement projects over modernization or when they opt for the wrong operating or service model.
 author: mahia127
 ms.author: brblanch
-ms.date: 01/15/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -12,47 +12,77 @@ ms.custom: think-tank
 
 # Cloud adoption plan antipatterns
 
-Customers frequently experience a number of common cloud adoption antipatterns while in the planning phase of cloud adoption. Misalignment on the operating model(s) can result in reduced time to market, misunderstandings, and increased pressure on the IT department.Companies can use the wrong service model when it is purely based on the assumption that Platform as a Service (PaaS) leads to more cost savings. Change of architecture can lead to major replacement projects, that are not only very complex to manage and execute but also cost intensive.
+Customers often experience antipatterns while planning a cloud adoption. Misaligned operating models can lead to increased time to market, misunderstandings, and increased pressure on IT departments. Companies sometimes choose the wrong service model when they assume that platform as a service (PaaS) decreases costs. When an organization's architecture changes, major replacement projects can result. Managing these projects is often complex and cost intensive.
 
-## Antipattern: The wrong cloud operating model
+## Antipattern: Choose the wrong cloud operating model
 
-Based on their strategic priority and scope of the portfolio, that needs to be managed, companies can define different cloud operating models with different types of accountability, landing zones and focus. The misalignment on the operating model(s) can however result in reduced time to market, misunderstandings, and increased pressure on the IT department.
+A company's strategic priorities and the scope of its portfolio determine its cloud operating model. Models can have different types of accountability, landing zones, and focus. When models don't line up with company goals, problems can result:
 
-### Example of the wrong operating model
+- Increased time to market
+- Misunderstandings
+- Increased pressure on IT departments
 
-AdventureWorks introduced an operation model in which the IT department has the accountability for everything that runs inside the cloud. However, the team responsible for the cloud, consists of three persons. This leads to a slow adoption journey as the team will only approve something when it fully understood the business, operations and security impact, even though it’s not their (main) area of expertise. This is leading to increased pressure by the business units where Subject Matter Experts want to use the service. Eventually Shadow-IT can be expected, where business units used company credit cards to create environments for themselves.
+### Example: Assign too much responsibility to a small team
 
-### Preferred outcome: Review, compare and choose the right operating model
+A corporation introduces an operating model that makes the IT department accountable for everything that runs inside the cloud. The team that's responsible for the cloud contains three people. This setup leads to a slow adoption journey because:
 
-Companies should [review and compare their current cloud operating model](../operating-model/compare.md) to explore different options and to be able to define one or more cloud operating models that suit them. The article mentioned above outlines the four most common cloud operations patterns. As soon as the operating model is decided roles will change. Therefore, it is necessary to [build a skill readiness plan](../plan/adapt-roles-skills-processes.md) upon new roles that are given due to the operating model change when moving to the cloud.
+- The team only approves measures after it fully understands their impact on the business, operations, and security.
+- These issues aren't the team's main area of expertise.
 
-## Antipattern: The wrong "as a Service" model
+Subject matter experts would like to use the service, so business units increase pressure. Shadow IT will probably emerge as business units use company credit cards to create environments for themselves.
 
-Companies can use the wrong service model when it is purely based on the assumption that Platform as a Service (PaaS) leads to more cost savings when comparing it to Infrastructure as a Service (IaaS). This phenomenon can mostly be seen in cost-conscious companies that have "cost savings" as one of their main cloud adoption motivations. These companies tend to forget, that with the adoption of PaaS, processes need to be changed as well, especially when certain responsibilities are moved towards the cloud provider. This can lead to unforeseen cost increases and delays because the usage of PaaS can introduce more fundamental changes when looking at: Coordination efforts, engineering practices and delivery pipelines.
+### Preferred outcome: Compare models and build a readiness plan
 
-### Example of choosing the wrong service model
+Review strategic priorities, portfolio scope, requirements, and constraints. Explore operating model options by [comparing the four most common cloud operations patterns](../operating-model/compare.md) with your current cloud operating model. Identify one or more cloud operating models that suit your organization. Then decide on a model. Since roles change with operating models, [build a skill readiness plan](../plan/adapt-roles-skills-processes.md) before moving to the cloud.
 
-LitWare Inc. launches a program to migrate their data centers towards the cloud. The goal of the executives is to modernize their current application architecture and tooling all at once, to be most cost efficient and develop a more modern application portfolio. Therefore, the adoption strategy is to use PaaS over IaaS. A year into their cloud adoption journeys LitWare realized, that they have a very slow adoption rate since a lot of processes, practices and tools need to be changed to adopt PaaS to the full extent. The usual impacts and benefits of PaaS are not visible to the board, but the IT is seen slower than ever before, whilst the costs of the data centers are remaining the same.
+## Antipattern: Choose the wrong service model
 
-### Preferred outcome: Adopt the cloud with the least disruption to your business
+Companies sometimes assume that PaaS solutions cost less than infrastructure as a service (IaaS) solutions. This assumption can lead to the wrong choice of service model. Cost-conscious companies often make this mistake when their main reason for moving to the cloud is to save costs. These companies tend to forget that they also need to change processes when they adopt PaaS, especially when they move certain responsibilities to cloud providers. Switching to PaaS introduces fundamental changes in coordination efforts, engineering practices, and delivery pipelines. Unexpected cost increases and delays can result.
 
-To reduce the coordination effort when adopting cloud in several cases it is a common strategy to start with IaaS for the first projects combined with introducing a cloud skilling initiative. The experiences that employees gather during the adoption of IaaS, can be used to faster adopt PaaS. The most common migration and modernization paths relate to the 5 Rs being: rehost, refactor, rearchitect, rebuild, replace described in [cloud rationalization](../digital-estate/5-rs-of-rationalization.md). When going for IaaS first you can adopt the cloud almost instantly without much disruption to your business and business processes.
+### Example: Choose PaaS over IaaS
 
-Additionally, the effort of skilling and coordination needed to adapt the processes and practices are more manageable compared to the introduction. Especially in datacenter transformation scenarios, it's recommended to adopt IaaS fist and gradually modernize and adopt PaaS later, while the workload is already in the cloud. Using this strategy, the experiences gathered in the migration project can be used to reduce the effort of skilling and process changes when modernizing.
+A publisher launches a program to migrate its data centers to the cloud. The executives would like to modernize their current application architecture and tooling all at once. Their reasons include:
 
-## Antipattern: Replacing over modernizing
+- Maximizing cost efficiency.
+- Developing a more modern application portfolio.
 
-Applications based on PaaS and SaaS are relatively easy to maintain and do not require big management efforts. Therefore, a lot of companies want to replace or redesign an old complex architecture landscapes with SaaS and cloud native concepts in mind, when adopting the cloud.  This change of architecture however, usually leads to major replacement projects, that are not only very complex to manage and execute but also cost intensive. Additionally, there are other substantial risks as processes and the operating model needs to be changed.
+For their adoption strategy, they choose PaaS over IaaS. A year into their cloud adoption journey, they have a slow adoption rate. They've had to change numerous processes, practices, and tools to adopt PaaS to the full extent. The board doesn't see the usual impacts and benefits associated with PaaS. At the same time, IT is slower than ever, while datacenter costs remain the same.
 
-### Example of replacing over modernizing
+### Preferred outcome: Minimize disruption to your business
 
-AdventureWorks Inc. has a huge SAP environment. They want to replace the landscape, since they are having several issues when it comes to performance and stability. After starting of a replacement project, they realize that the due diligence list for replacing the whole environment is getting longer day by day as they go on. Therefore, they were exploring the option of gradually modernizing the environment and changing the hosting platform to Azure. They quickly realized that those changes result in a quick performance and stability. Hence, they change the scope of the project to modernizing their landscape, resulting in better performance and reliability for a fraction of the estimated replacement costs.
+To reduce coordination efforts, start with IaaS for initial cloud adoption projects. Adapting new processes and practices is more manageable when you move to the cloud later instead of at the outset. Adopt IaaS first, especially in datacenter transformation scenarios. At the same time, launch a cloud skills initiative.
 
-### Preferred outcome: understand your digital estate and rationalize the best way to migrate or modernize
+Gradually modernize and adopt PaaS later, after the workload is already in the cloud. The experience that you've gained will help you adopt PaaS faster. You'll need to learn fewer new skills and processes for modernization. You also won't significantly disrupt your business processes.
 
-Before replacing a rather huge and complex application environment, companies should explore the option of incrementally improving the environment by modernizing it, rather than replacing it. Therefore, it's highly recommended to understand the [digital estate companies](../digital-estate/index.md) have and when as well as how to match one of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md), being rehost, refactor, rearchitect, rebuild and replace.
+Evaluate digital assets according to [Cloud rationalization](../digital-estate/5-rs-of-rationalization.md). This article describes the most common migration and modernization paths, or the five Rs:
 
-Companies should keep in mind, that relatively small changes to the application environment might already have a huge impact on performance and reliability. Companies should ask themselves more questions before deciding on the innovation strategy by exploring the different options of modernization and evaluating these in e.g., a Proof of Concept (PoC).
+- Rehost
+- Refactor
+- Rearchitect
+- Rebuild
+- Replace
+
+## Antipattern: Replace architecture with SaaS solutions
+
+Applications that are based on PaaS and SaaS are relatively easy to maintain. They require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
+
+### Example: Choose replacement over modernization
+
+A corporation has a substantial SAP environment. The IT department would like to replace this landscape since it's causing several performance and stability issues. After IT starts on a replacement project, its due diligence list for replacing the entire environment gets longer every day.
+
+As a result, IT considers gradually modernizing the environment and changing the hosting platform to Azure. IT soon realizes that these changes can provide stability and quick results. IT then reduces the scope of the project to modernizing the landscape. Improved performance and reliability result, at a fraction of the estimated replacement cost.
+
+### Preferred outcome: Rationalize your digital estate
+
+Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing it instead. Understand your company's [digital estate](../digital-estate/index.md). Determine which of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md) works best for modernizing or migrating your assets:
+
+- Rehost
+- Refactor
+- Rearchitect
+- Rebuild
+- Replace
+
+Keep in mind that relatively small changes to your application environment can have a huge impact on performance and reliability. Before deciding on an innovation strategy, explore different modernization options. Evaluate these options in a proof of concept (PoC).
 
 ## Next steps
 
