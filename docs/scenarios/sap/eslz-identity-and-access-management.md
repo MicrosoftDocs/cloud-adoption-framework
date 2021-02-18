@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale identity and access management for <Insert narrative Name>"
+title: "Enterprise-Scale identity and access management for SAP on Azure"
 description: Describe how this enterprise-scale scenario can improve identity and access management of SAP
 author: BrianBlanchard
 ms.author: brblanch

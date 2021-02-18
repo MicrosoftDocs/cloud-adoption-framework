@@ -28,7 +28,7 @@ The SAP on Azure team has produced a comprehensive framework for migrating and i
 
 This article series outlines an SAP scenario for the Cloud Adoption Framework, and it complements the current SAP migration framework. These articles are also designed for a slightly different audience with slightly different goals, and they can help your organization if you're integrating the migration of SAP into your overall cloud adoption plan. As organizations migrate to the cloud, they typically need to migrate, innovate, and manage a range of workloads and technology platforms to accomplish their business goals. Those efforts align with the methodologies in the Cloud Adoption Framework for consistent processes and approaches across various technology platforms and workloads.
 
-If your team(s) is following the guidance in both frameworks, you will see very similar guidance just in packaging that better aligns with the audience and their objectives. Below is a list of the terms to help both audiences to have a similar conversation:
+If your team(s) is following the guidance in both frameworks, you will see very similar guidance just in packaging that better aligns with the audience and their objectives. Below is a list of the terms that can help both audiences to have a similar conversation:
 
 |||
 |---------|---------|
