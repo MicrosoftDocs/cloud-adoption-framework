@@ -44,11 +44,11 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If partner NVAs are required for east/west or south/north traffic protection and filtering:
 
-  - For Virtual WAN network topologies, deploy the NVAs to a separate virtual network (for example, NVA virtual network). Then connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs. [This article](/azure/virtual-wan/virtual-wan-route-table-portal) describes the process.
+  - For Virtual WAN network topologies, deploy the NVAs to a separate virtual network (for example, NVA virtual network). Then connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs. [This article](/azure/virtual-wan/scenario-route-through-nva) describes the process.
   - For non-Virtual WAN network topologies, deploy the partner NVAs in the central-hub virtual network.
 
 - If partner NVAs are required for inbound HTTP/S connections, deploy them within a landing-zone virtual network and together with the applications that they're protecting and exposing to the internet.
 
-- Use [Azure DDoS Protection Standard protection plans](/azure/virtual-network/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
+- Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
 
 - Don't replicate on-premises perimeter network concepts and architectures into Azure. Similar security capabilities are available in Azure, but the implementation and architecture must be adapted to the cloud.
