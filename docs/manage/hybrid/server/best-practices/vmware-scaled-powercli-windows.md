@@ -112,7 +112,7 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
 3. From the `azure_arc_servers_jumpstart\vmware\scaled-deploy\powercli\windows` folder, open PowerShell session as an administrator and run the `scale-deploy.ps1` script.
 
-    ![[A screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-windows-scale-deploy-1.png)
+    ![A screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-windows-scale-deploy-1.png)
 
     ![A second screenshot of how to scale-deploy with a PowerShell script.](./media/vmware-scale-powercli/cli-windows-scale-deploy-2.png)
 

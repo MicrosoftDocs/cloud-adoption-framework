@@ -109,7 +109,7 @@ Before executing the Terraform plan, you must export the environment variables w
 2. The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your AWS and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
     - `TF-VAR-subscription-id` = Your Azure subscription ID
-    - `TF-VAR-client-id` = Your Azure service principal app id
+    - `TF-VAR-client-id` = Your Azure service principal app ID
     - `TF-VAR-client-secret` = Your Azure service principal password
     - `TF-VAR-tenant-id` = Your Azure tenant ID
     - `AWS-ACCESS-KEY-ID` = AWS access key

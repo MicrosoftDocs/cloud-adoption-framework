@@ -72,9 +72,9 @@ On the designated machine, open PowerShell ISE **as Administrator** and run the 
 
 Upon completion, you will have your Windows Server instance, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the 'az_connect' Windows script running.](./media/onboard-server/az-connect-windows.png)
+![A screenshot of the `az_connect` Windows script running.](./media/onboard-server/az-connect-windows.png)
 
-![[A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/windows-resource.png)
+![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/windows-resource.png)
 
 ![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/windows-resource-detail.png)
 
@@ -82,7 +82,7 @@ Upon completion, you will have your Windows Server instance, connected as a new 
 
 To delete the server, select the server and delete it from the Azure portal.
 
-![A screenshot of Delete option to delete a resource in the Azure portal.](./media/onboard-server/windows-delete-resource.png)
+![A screenshot of the option to delete a resource in the Azure portal.](./media/onboard-server/windows-delete-resource.png)
 
 To delete the entire deployment, delete the Azure resource group from the Azure portal.
 

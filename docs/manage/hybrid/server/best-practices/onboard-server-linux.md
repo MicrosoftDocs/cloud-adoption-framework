@@ -85,8 +85,8 @@ Upon successful completion, you will have your Linux server, connected as a new 
 
 To delete the server, select the server and delete it from the Azure portal.
 
-![A screenshot of Delete option to delete a resource in the Azure portal.](./media/onboard-server/linux-delete-resource.png)
+![A screenshot of the option to delete a resource in the Azure portal.](./media/onboard-server/linux-delete-resource.png)
 
 To delete the entire deployment, delete the Azure resource group from the Azure portal.
 
-![[A screenshot of the option to delete a resource group via the Azure portal.](./media/onboard-server/linux-delete-resource-group.png)
+![A screenshot of the option to delete a resource group via the Azure portal.](./media/onboard-server/linux-delete-resource-group.png)
