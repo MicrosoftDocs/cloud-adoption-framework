@@ -2,7 +2,7 @@
 title: Private Link and DNS integration at scale
 description: Private Link and DNS integration at scale
 author: JefferyMitchell
-ms.author: jemitche
+ms.author: brblanch
 ms.date: 02/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -53,7 +53,7 @@ From the previous diagram, it is important to highlight that:
 There are two conditions that must be true to allow application teams the freedom to create any required Azure PaaS resources in their subscription:
 
 - Central networking and/or central platform team must ensure that application teams can only deploy and access Azure PaaS services via private endpoints.
-- Central networking and/or central platform teams must ensure that whenever private endpoints are created, the corresponding records are automatically created in the centralized Private DNS zone that matches the service created.
+- Central networking and/or central platform teams must ensure that whenever private endpoints are created, the corresponding records are automatically created in the centralized private DNS zone that matches the service created.
   - DNS record needs to follow the lifecycle of the private endpoint and automatically remove the DNS record when the private endpoint is deleted.
 
 The following sections describe how application teams can enable these conditions by using [Azure Policy][link-10]. We will use Azure Storage as the Azure service that application teams need to deploy in our example below, but the same principle can be applied to most Azure services that [support][link-2] Private Link.
@@ -82,7 +82,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
 
    ![image-5][image-5]
 
-   The exact policy rule may differ between PaaS services. For Azure storage accounts, we look at the **networkAcls.defaultAction** property that defines whether requests from public network are allowed or not. In our case, we will set a condition to deny the creation of the **Microsoft.Storage/storageAccounts** resource type if the property **networkAcls.defaultAction** is not `Deny`. This policy definition is listed below:
+   The exact policy rule may differ between PaaS services. For Azure Storage accounts, we look at the **networkAcls.defaultAction** property that defines whether requests from public network are allowed or not. In our case, we will set a condition to deny the creation of the **Microsoft.Storage/storageAccounts** resource type if the property **networkAcls.defaultAction** is not `Deny`. This policy definition is listed below:
 
    ```json
    {
@@ -145,7 +145,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
 
 3. **DeployIfNotExists** policy to automatically create the required DNS record in the central private DNS zone
 
-   This policy will be triggered if a private endpoint resource is created with a service-specific **groupId**. The **groupId** is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a ['privateDNSZoneGroup'][link-6] within the private endpoint, which is used to associate the private endpoint with our private DNS zone. For our example, the **groupId** for Azure Storage blobs are "blob" (**groupId** for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that **groupId** in the private endpoint created, it will deploy a [privateDnsZoneGroup][link-6] within the private endpoint, and it will be linked to the private DNS zone resource ID that is specified as parameter. For our example, the private DNS zone resource ID would be:
+   This policy will be triggered if a private endpoint resource is created with a service-specific `groupId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which is used to associate the private endpoint with our private DNS zone. For our example, the `groupId` for Azure Storage blobs is `blob` (`groupId` for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that `groupId` in the private endpoint created, it will deploy a [`privateDNSZoneGroup`][link-6] within the private endpoint, and it will be linked to the private DNS zone resource ID that is specified as parameter. For our example, the private DNS zone resource ID would be:
 
    `/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net`
 
@@ -289,7 +289,7 @@ Once the platform team has deployed the platform infrastructure components (priv
 
 7. Select **Review + create**, and then select **Create** to deploy the private endpoint.
 
-8. After a few minutes, the **DeployIfNotExists** policy will be triggered and the subsequent **dnsZoneGroup** deployment will add the required DNS records for the private endpoint in the centrally managed DNS zone.
+8. After a few minutes, the `DeployIfNotExists` policy will be triggered and the subsequent `dnsZoneGroup` deployment will add the required DNS records for the private endpoint in the centrally managed DNS zone.
 
 9. Once the private endpoint has been created, select it, and review its FQDN and private IP:
 
@@ -307,27 +307,27 @@ At this point, application teams can use the storage account via a private endpo
 
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed.
 
-[Link-1]: /azure/private-link/private-link-overview
-[Link-2]: /azure/private-link/private-link-overview#availability
-[Link-3]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
-[Link-4]: /azure/private-link/private-endpoint-dns
-[Link-5]: /azure/governance/policy/tutorials/create-custom-policy-definition
-[Link-6]: /azure/templates/microsoft.network/2020-05-01/privateendpoints/privatednszonegroups
-[Link-7]: /azure/governance/policy/assign-policy-portal
-[Link-8]: /azure/dns/dns-protect-private-zones-recordsets
-[Link-9]: /azure/governance/policy/how-to/remediate-resources
-[Link-10]: /azure/governance/policy/overview
-[Image-1]: ./media/Privatelink-Example-central-DNS.png
-[Image-2]: ./media/Privatelink-storagewithblob.jpg
-[Image-3]: ./media/Privatelink-storage-policy-step1.jpg
-[Image-4]: ./media/Privatelink-storage-policy-step2.jpg
-[Image-5]: ./media/Privatelink-storage-policy-step3.jpg
-[Image-6]: ./media/Privatelink-privatedns-setno.jpg
-[Image-7]: ./media/Privatelink-createstorage.jpg
-[Image-8]: ./media/Privatelink-networkprivate.jpg
-[Image-9]: ./media/Privatelink-createprivate.jpg
-[Image-10]: ./media/Privatelink-targetblob.jpg
-[Image-11]: ./media/Privatelink-integratewithprivate.jpg
-[Image-12]: ./media/Privatelink-FQDNprivateIP.jpg
-[Image-13]: ./media/Privatelink-activitylog.jpg
-[Image-14]: ./media/Privatelink-checkprivateDNS.jpg
+[link-1]: /azure/private-link/private-link-overview
+[link-2]: /azure/private-link/private-link-overview#availability
+[link-3]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
+[link-4]: /azure/private-link/private-endpoint-dns
+[link-5]: /azure/governance/policy/tutorials/create-custom-policy-definition
+[link-6]: /azure/templates/microsoft.network/2020-05-01/privateendpoints/privatednszonegroups
+[link-7]: /azure/governance/policy/assign-policy-portal
+[link-8]: /azure/dns/dns-protect-private-zones-recordsets
+[link-9]: /azure/governance/policy/how-to/remediate-resources
+[link-10]: /azure/governance/policy/overview
+[image-1]: ./media/Privatelink-Example-central-DNS.png
+[image-2]: ./media/Privatelink-storagewithblob.jpg
+[image-3]: ./media/Privatelink-storage-policy-step1.jpg
+[image-4]: ./media/Privatelink-storage-policy-step2.jpg
+[image-5]: ./media/Privatelink-storage-policy-step3.jpg
+[image-6]: ./media/Privatelink-privatedns-setno.jpg
+[image-7]: ./media/Privatelink-createstorage.jpg
+[image-8]: ./media/Privatelink-networkprivate.jpg
+[image-9]: ./media/Privatelink-createprivate.jpg
+[image-10]: ./media/Privatelink-targetblob.jpg
+[image-11]: ./media/Privatelink-integratewithprivate.jpg
+[image-12]: ./media/Privatelink-FQDNprivateIP.jpg
+[image-13]: ./media/Privatelink-activitylog.jpg
+[image-14]: ./media/Privatelink-checkprivateDNS.jpg

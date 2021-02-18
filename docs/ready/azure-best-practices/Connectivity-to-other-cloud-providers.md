@@ -26,7 +26,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
   - FastPath is available on all ExpressRoute circuits.
 
-  - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must be the `UltraPerformance` or `ErGw3AZ` SKUs ExpressRoute gateway for route management. The virtual network gateway must be either ultra performance or `ErGw3AZ`.
+  - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must use either the Ultra Performance SKU or the ErGw3AZ SKU for the ExpressRoute gateway to enable route management.
 
 - There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet peering.
 
@@ -34,7 +34,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - In Azure regions that support [Availability Zones](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small impact on latency. Design your application to balance availability and performances requirements.
 
-- Interconnectivity between Azure and OCI is only available in [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
+- Interconnectivity between Azure and OCI is only available for [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
 - For more in-depth documentation about interconnectivity between Azure and OCI, refer to [Oracle application solutions integrating Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or refer to the [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
 

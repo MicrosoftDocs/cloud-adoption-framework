@@ -1,7 +1,7 @@
 ---
 title: Virtual WAN network topology
 description: Examine key design considerations and recommendations surrounding virtual wide area networks in Microsoft Azure.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 01/08/2021
 ms.topic: conceptual
@@ -10,8 +10,8 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
+<!-- docutune:casing "Azure VPN Gateway" "Local, Standard, or Premium SKU" "ExpressRoute Standard or Premium circuits" L7 -->
+<!-- cSpell:ignore autoregistration onprem privatelink -->
 
 # Virtual WAN network topology (Microsoft-managed)
 
@@ -20,8 +20,6 @@ Explore key design considerations and recommendations surrounding virtual wide a
 ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
 
 *Figure 1: Virtual WAN network topology.*
-
-<!-- docutune:casing "Local, Standard, or Premium SKU" -->
 
 **Design considerations:**
 
@@ -60,7 +58,7 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - ExpressRoute circuits using a Local, Standard, or Premium SKU can be connected to a Virtual WAN hub.
 
-- ExpressRoute Standard or Premium circuits that are in locations supported by ExpressRoute Global Reach can connect to a Virtual WAN ExpressRoute gateway and enjoy all Virtual WAN transit capabilities (VPN-to-VPN, VPN, and ExpressRoute transit). ExpressRoute Standard and Premium circuits that are in locations not supported by Global Reach can connect to Azure resources, but cannot use Virtual WAN transit capabilities.
+- ExpressRoute Standard or Premium circuits that are in locations supported by ExpressRoute Global Reach can connect to a Virtual WAN ExpressRoute gateway and enjoy all Virtual WAN transit capabilities (VPN-to-VPN, VPN, and ExpressRoute transit). ExpressRoute Standard or Premium circuits that are in locations not supported by Global Reach can connect to Azure resources, but cannot use Virtual WAN transit capabilities.
 
 - ExpressRoute Local is supported with Azure Virtual WAN hubs if the spoke VNets connected to a Virtual WAN hub are in the same region as the Virtual WAN hub.
 
@@ -106,4 +104,4 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - Plan your deployment carefully, and ensure that your network architecture is within the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
-- Use [Insights in Azure Monitor for Virtual WAN (preview)](/azure/virtual-wan/azure-monitor-insights) to monitor the end-to-end topology of your Virtual WAN as well as status and [key metrics](/azure/virtual-wan/azure-monitor-insights#detailed).
+- Use [insights in Azure Monitor for Virtual WAN (preview)](/azure/virtual-wan/azure-monitor-insights) to monitor the end-to-end topology of your Virtual WAN as well as status and [key metrics](/azure/virtual-wan/azure-monitor-insights#detailed).
