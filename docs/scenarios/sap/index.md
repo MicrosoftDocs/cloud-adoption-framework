@@ -22,17 +22,17 @@ To accelerate these efforts, the articles also include detailed technical resour
 
 ## How to align to the SAP migration framework
 
-The SAP on Azure team has produced a comprehensive framework for migrating and innovating with SAP on Azure. That framework is the main guide for organizations who are focused on delivering the best possible migration of SAP to Azure. If your highest priority is successfully migrating SAP to the cloud, then continue to use that guide.
+The SAP on Azure team has produced a comprehensive framework for migrating and innovating with SAP on Azure. That framework is the main guide for organizations that focus on delivering the most successful SAP migration to Azure. If your highest priority is successfully migrating SAP to the cloud, then continue to use that guide.
 
 ![Diagram of the SAP migration framework.](./media/sap-migration-framework.png)
 
 This article series outlines an SAP scenario for the Cloud Adoption Framework, and it complements the current SAP migration framework. These articles are also designed for a slightly different audience with slightly different goals, and they can help your organization if you're integrating the migration of SAP into your overall cloud adoption plan. As organizations migrate to the cloud, they typically need to migrate, innovate, and manage a range of workloads and technology platforms to accomplish their business goals. Those efforts align with the methodologies in the Cloud Adoption Framework for consistent processes and approaches across various technology platforms and workloads.
 
-If your team(s) is following the guidance in both frameworks, you will see very similar guidance just in packaging that better aligns with the audience and their objectives. Below is a list of the terms to help both audiences can have a similar conversation:
+If your team(s) is following the guidance in both frameworks, you will see very similar guidance just in packaging that better aligns with the audience and their objectives. Below is a list of the terms to help both audiences to have a similar conversation:
 
 |||
 |---------|---------|
-|**Discover**|When cloud adoption spans multiple technology platforms, we've found that it's best to separate the discovery process into two conversations: [Strategy](./strategy.md), to engage business executives during strategic alignment, and [Plan](./plan.md), to prepare the plan based on current and future-state data.|
+|**Discover**|When cloud adoption spans multiple technology platforms, it's helpful to separate the discovery process into two conversations: [Strategy](./strategy.md), to engage business executives during strategic alignment, and [Plan](./plan.md), to prepare the plan based on current and future-state data.|
 |**Prepare**|The [Ready](./ready.md) methodology prepares your team and the environment for the coming work. This scenario also integrates Azure landing zones to provide pre-developed and opinionated approaches to help your team to rapidly deploy environments that can support various technology platforms.|
 |**Migrate**|The [Migrate](./migrate.md) methodology demonstrates how an SAP migration can integrate with other repeatable migration processes.|
 |**Run**|The [Manage](./manage.md) methodology shows how a common operations baseline can address many of the run-state concerns addressed in [Migrate](./migrate.md) and also meet the operational needs of other technology platforms.|
