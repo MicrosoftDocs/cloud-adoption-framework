@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale platform automation and devops for <Insert narrative Name>"
+title: "Enterprise-Scale platform automation and devops for SAP on Azure"
 description: Describe how this enterprise-scale scenario can improve platform automation and devops of SAP
 author: BrianBlanchard
 ms.author: brblanch
