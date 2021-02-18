@@ -23,21 +23,21 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
 
 ## Prerequisites
 
-- Clone the Azure Arc Jumpstart repository.
+1. Clone the Azure Arc Jumpstart repository.
 
     ```console
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-- [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
+2. [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
 
-  ```console
-  az --version
-  ```
+    ```console
+    az --version
+    ```
 
-- Azure subscription: If you don't have an Azure subscription, you can [create a free Azure account](https://azure.microsoft.com/free/).
+3. **Azure subscription:** If you don't have an Azure subscription, you can [create a free Azure account](https://azure.microsoft.com/free/).
 
-- Create an Azure service principal.
+4. Create an Azure service principal.
 
     In order for you to deploy the Azure resources using the ARM template, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
@@ -56,11 +56,11 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
 
     ```json
     {
-    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "displayName": "AzureArcServers",
-    "name": "http://AzureArcServers",
-    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "AzureArcServers",
+      "name": "http://AzureArcServers",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 
@@ -98,11 +98,11 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 As mentioned, this deployment will use ARM templates. You will deploy a single template, responsible for creating all the Azure resources in a single resource group and onboarding the created VM to Azure Arc.
 
-- Before deploying the ARM template, sign-in using Azure CLI with the `az login` command.
+1. Before deploying the ARM template, sign-in using Azure CLI with the `az login` command.
 
-- The deployment is using the ARM template parameters file. Before initiating the deployment, edit the [`azuredeploy.parameters.json`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.parameters.json) file located in your local cloned repository folder. An example parameters file is located [here](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.parameters.example.json).
+2. The deployment is using the ARM template parameters file. Before initiating the deployment, edit the [`azuredeploy.parameters.json`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.parameters.json) file located in your local cloned repository folder. An example parameters file is located [here](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.parameters.example.json).
 
-- To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azure/linux/arm_template) and run the following command:
+3. To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azure/linux/arm_template) and run the following command:
 
     ```console
     az group create --name <Name of the Azure resource group> --location <Azure region> --tags "Project=jumpstart-azure-arc-servers"
@@ -127,7 +127,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     --parameters azuredeploy.parameters.json
     ```
 
-- Once Azure resources have been provisioned, you will see them in the Azure portal.
+4. Once Azure resources have been provisioned, you will see them in the Azure portal.
 
     ![A screenshot of an output from an ARM template.](./media/arm-template/template-linux-output.png)
 
@@ -135,13 +135,13 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 
 ## Linux sign-in and post-deployment
 
-- Now that the Linux VM is created, the next step is connecting to it. Using its public IP address, SSH to the VM.
+1. Now that the Linux VM is created, the next step is connecting to it. Using its public IP address, SSH to the VM.
 
     ![A screenshot of an Azure VM public IP address.](./media/arm-template/template-linux-ip.png)
 
-- Upon first sign-in, as mentioned in the [Automation flow](#automation-flow) section, a logon script will get executed. This script was created as part of the automated deployment process.
+2. Upon first sign-in, as mentioned in the [Automation flow](#automation-flow) section, a logon script will get executed. This script was created as part of the automated deployment process.
 
-- Let the script run and **do not close** the SSH session. The session will close for you automatically once completed.
+3. Let the script run and **do not close** the SSH session. The session will close for you automatically once completed.
 
     ![A screenshot of one type of script output.](./media/arm-template/template-linux-script-1.png)
 
@@ -149,7 +149,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 
     ![A screenshot of a third type of script output.](./media/arm-template/template-linux-script-3.png)
 
-- Upon successful completion, a new Azure Arc enabled server will be added to the resource group.
+4. Upon successful completion, a new Azure Arc enabled server will be added to the resource group.
 
     ![A screenshot of a resource group from an Azure Arc enabled server.](./media/arm-template/template-linux-resource-gp.png)
 

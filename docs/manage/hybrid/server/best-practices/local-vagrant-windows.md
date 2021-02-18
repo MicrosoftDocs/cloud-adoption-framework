@@ -16,33 +16,33 @@ The following article provides guidance for deploying a local **Windows 10** vir
 
 ## Prerequisites
 
-- Clone the Azure Arc Jumpstart repository.
+1. Clone the Azure Arc Jumpstart repository.
 
     ```console
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-- [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
+2. [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
 
-  ```console
-  az --version
-  ```
+    ```console
+    az --version
+    ```
 
-- Vagrant relies on an underlying hypervisor. For this guide, we will be using Oracle VM VirtualBox.
+3. Vagrant relies on an underlying hypervisor. For this guide, we will be using Oracle VM VirtualBox.
 
-  - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+    1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-    - If you are an macOS user, run `brew cask install virtualbox`
-    - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
-    - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
+        - If you are an macOS user, run `brew cask install virtualbox`
+        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
+        - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
 
-  - Install [Vagrant](https://www.vagrantup.com/docs/installation)
+    2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
-    - If you are an macOS user, run `brew cask install vagrant`
-    - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
-    - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
+        - If you are an macOS user, run `brew cask install vagrant`
+        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
+        - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
 
-- Create an Azure service principal.
+4. Create an Azure service principal.
 
     To connect the Vagrant virtual machine to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
@@ -61,11 +61,11 @@ The following article provides guidance for deploying a local **Windows 10** vir
 
     ```json
     {
-    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "displayName": "AzureArcServers",
-    "name": "http://AzureArcServers",
-    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "AzureArcServers",
+      "name": "http://AzureArcServers",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 
@@ -85,10 +85,10 @@ The following article provides guidance for deploying a local **Windows 10** vir
 
 Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes) is needed. At a high level, the deployment will:
 
-1. Download the Windows 10 image file [Vagrant box](https://app.vagrantup.com/StefanScherer/boxes/windows_10)
-2. Execute the Azure Arc installation script
+- Download the Windows 10 image file [Vagrant box](https://app.vagrantup.com/StefanScherer/boxes/windows_10)
+- Execute the Azure Arc installation script
 
-After editing the **scripts/vars.ps1** script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. As this is the first time you are creating the VM, the first run will be **much slower** than the ones to follow. This is because the deployment is downloading the Windows 10 box for the first time.
+After editing the `scripts/vars.ps1` script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. As this is the first time you are creating the VM, the first run will be **much slower** than the ones to follow. This is because the deployment is downloading the Windows 10 box for the first time.
 
 ![A screenshot of running the `vagrant up` command.](./media/local-vagrant/vagrant-windows-cmd.png)
 
@@ -110,21 +110,21 @@ The last step of the run is to register the VM as a new Azure Arc enabled server
 
 If you want to demo/control the actual registration process, do the following:
 
-- In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/install_arc_agent.ps1) PowerShell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
+1. In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/install_arc_agent.ps1) PowerShell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
     ![A screenshot of the `install_arc_agent` PowerShell script.](./media/local-vagrant/vagrant-windows-install-arc-agent.png)
 
     ![A screenshot of the `az group create` command.](./media/local-vagrant/vagrant-windows-az-group-create.png)
 
-- RDP the VM using the `vagrant rdp` command. Use `vagrant/vagrant` as the username/password.
+2. RDP the VM using the `vagrant rdp` command. Use `vagrant/vagrant` as the username/password.
 
     ![A screenshot of accessing a Vagrant server with the Microsoft Remote Desktop Protocol.](./media/local-vagrant/vagrant-windows-rdp.png)
 
-- Open PowerShell ISE **as Administrator** and edit the `C:\runtime\vars.ps1` file with your environment variables.
+3. Open PowerShell ISE **as Administrator** and edit the `C:\runtime\vars.ps1` file with your environment variables.
 
     ![A screenshot of Windows PowerShell ISE.](./media/local-vagrant/vagrant-windows-ise.png)
 
-- Paste the `Invoke-Expression "C:\runtime\vars.ps1"` command, the `az group create --location $env:location --name $env:resourceGroup --subscription $env:subscriptionId` command and the same `azcmagent connect` command you out and execute the script.
+4. Paste the `Invoke-Expression "C:\runtime\vars.ps1"` command, the `az group create --location $env:location --name $env:resourceGroup --subscription $env:subscriptionId` command and the same `azcmagent connect` command you out and execute the script.
 
     ![A screenshot of PowerShell ISE running a script.](./media/local-vagrant/vagrant-windows-ise-script.png)
 

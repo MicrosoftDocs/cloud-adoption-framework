@@ -2,9 +2,9 @@
 #cSpell:ignore devtest mariadb
 
 items:
-  - name: Hybrid and Multicloud - Microsoft Cloud Adoption Framework for Azure
+  - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
     href: scenario-overview.md
-    pdf_name: Hybrid and Multicloud - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
     - name: Intro to hybrid and multicloud
@@ -27,7 +27,7 @@ items:
   - name: Manage your portfolio
     href: manage.md
 
-  - name: Well-Architected hybrid workloads
+  - name: Well-architected hybrid workloads
     items:
     - name: Overview
       href: https://review.docs.microsoft.com/azure/architecture/framework/hybrid/hybrid-overview?branch=pr-en-us-2449&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json

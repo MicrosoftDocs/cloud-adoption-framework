@@ -67,11 +67,11 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
     ```json
     {
-    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "displayName": "AzureArcServers",
-    "name": "http://AzureArcServers",
-    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "AzureArcServers",
+      "name": "http://AzureArcServers",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 
