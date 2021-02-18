@@ -1,13 +1,13 @@
 ---
 title: Plan for inbound and outbound internet connectivity
 description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
-ms.date: 02/02/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, csu
+ms.custom: think-tank, csu
 ---
 
 # Plan for inbound and outbound internet connectivity

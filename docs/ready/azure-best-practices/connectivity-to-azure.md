@@ -1,13 +1,13 @@
 ---
 title: Connectivity to Azure
 description: Examine key design considerations and recommendations surrounding network topologies for connecting on-premises to Azure.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 <!-- docutune:casing "Azure VPN Gateway" L7 -->
