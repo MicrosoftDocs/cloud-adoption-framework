@@ -65,7 +65,7 @@ Contoso uses Microsoft tools for its migration assessment. The tools align with 
 
 | Technology | Description | Cost |
 | --- | --- | --- |
-| [Data Migration Assistant](/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso uses Data Migration Assistant to assess and detect compatibility issues that might affect its database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets. It recommends performance and reliability improvements. | Data Migration Assistant is a free downloadable tool. |
+| [Data Migration Assistant](/sql/dma/dma-overview) | Contoso uses Data Migration Assistant to assess and detect compatibility issues that might affect its database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets. It recommends performance and reliability improvements. | Data Migration Assistant is a free downloadable tool. |
 | [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. However, you may incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate).  |
 | [Service Map](/azure/operations-management-suite/operations-management-suite-service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges. |
 
@@ -186,7 +186,7 @@ Results are displayed as soon as they're available. If Contoso fixes issues, it 
     ![Data Migration Assistant: Feature recommendations report](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-6.png)
 
     > [!NOTE]
-    > Contoso should [enable transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017) for all SQL Server databases. This is even more critical when a database is in the cloud than when it's hosted on-premises. Transparent data encryption should be enabled only after migration. If transparent data encryption is already enabled, Contoso must move the certificate or asymmetric key to the `master` database of the target server. Learn how to [move a transparent data encryption-protected database to another SQL Server instance](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server?view=sql-server-2017).
+    > Contoso should [enable transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption) for all SQL Server databases. This is even more critical when a database is in the cloud than when it's hosted on-premises. Transparent data encryption should be enabled only after migration. If transparent data encryption is already enabled, Contoso must move the certificate or asymmetric key to the `master` database of the target server. Learn how to [move a transparent data encryption-protected database to another SQL Server instance](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server?view=sql-server-2017).
 
 3. Contoso can export the assessment in JSON or CSV format.
 
@@ -194,8 +194,8 @@ Results are displayed as soon as they're available. If Contoso fixes issues, it 
 > For large-scale assessments:
 >
 > - Run multiple assessments concurrently and view the state of the assessments on the **All assessments** page.
-> - Consolidate assessments into a [SQL Server database](/sql/dma/dma-consolidatereports?view=ssdt-18vs2017).
-> - Consolidate assessments into a [Power BI report](/sql/dma/dma-powerbiassesreport?view=ssdt-18vs2017).
+> - Consolidate assessments into a [SQL Server database](/sql/dma/dma-consolidatereports).
+> - Consolidate assessments into a [Power BI report](/sql/dma/dma-powerbiassesreport).
 
 ## Step 3: Prepare for VM assessment by using Azure Migrate
 
@@ -316,7 +316,7 @@ Now, Contoso runs the collector to discover VMs. Currently, the collector curren
 
     ![Azure Migrate Collector: Verify prerequisites](../migrate/azure-best-practices/media/contoso-migration-assessment/collector-verify-prereqs-v2.png)
 
-5. Sign into your Azure account and select the subscription and Migrate project you created earlier. Also enter a name for the **appliance** so you can identify it in the Azure portal.
+5. Sign in to your Azure account and select the subscription and Migrate project you created earlier. Also enter a name for the **appliance** so you can identify it in the Azure portal.
 
 6. In **Specify vCenter Server details**, Contoso enters the name (FQDN) or IP address of the vCenter Server instance and the read-only credentials used for discovery.
 

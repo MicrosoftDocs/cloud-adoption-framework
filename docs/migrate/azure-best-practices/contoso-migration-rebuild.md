@@ -482,9 +482,9 @@ Contoso admins provision the Computer Vision API. The API will be called by the 
 
 3. They save the connection settings for the API to a text file for later reference.
 
-     ![Screenshot of saving the API's connection settings to a text file.](./media/contoso-migration-rebuild/vision3.png)
+     ![Screenshot of saving the API connection settings to a text file.](./media/contoso-migration-rebuild/vision3.png)
 
-    _Figure 49: Saving an API's connection settings._
+    _Figure 49: Saving the API connection settings._
 
 ### Provision the Azure web app
 
