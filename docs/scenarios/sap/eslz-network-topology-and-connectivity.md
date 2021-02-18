@@ -24,7 +24,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
 
 The following architecture diagram shows enterprise-scale networking considerations in an SAP on Azure construction set:
 
- ![A diagram of enterprise-scale networking considerations in an SAP on Azure construction set.](./media/ntc-architecture.png)
+ ![A diagram of enterprise-scale networking considerations in an SAP on Azure construction set.](./media/ntc-architecture.png#lightbox)
 
 _Figure 1: A diagram of enterprise-scale networking considerations in an SAP on Azure construction set._
 

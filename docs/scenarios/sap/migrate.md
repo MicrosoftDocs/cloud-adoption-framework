@@ -63,7 +63,7 @@ Explore the [SAP on Azure Architecture Guide](https://docs.microsoft.com/azure/a
 
 The DBMS needs to be changed, or the internal format of the same DBMS system needs to change to the little endian format supported in the Intel world; for example, migrating from the IBM pSeries to Azure. The SAP workload's datapoints help to choose the appropriate migration approach: classical or an SAP Database Migration Option (DMO).
 
-**Classical migration:** The SAP Software Provisioning Manager is used specifically as a software logistics tool for database migrations. Classical migration uses a heterogenous system copy approach and is sometimes called a  _two-step migration_. This approach is commonly used when the following observations surface in the migration plan:
+**Classical migration:** The SAP Software Provisioning Manager is used specifically as a software logistics tool for database migrations. Classical migration uses a heterogenous system copy approach and is sometimes called a _two-step migration_. This approach is commonly used when the following observations surface in the migration plan:
 
 - The operating systems (OS) and DBMS are compatible with Azure.
 - There aren't other requirements to upgrade/replatform the OS or DBMS systems.
@@ -73,7 +73,7 @@ The DBMS needs to be changed, or the internal format of the same DBMS system nee
 - The current OS isn't supported in Azure, requiring an upgrade/replatform.
 - There is a plan to upgrade to SAP S/4HANA during migration.
 
-Explore the [Migrating an SAP platform to Azure](https://docs.microsoft.com/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
+Explore the [Migrating an SAP platform to Azure](/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
 
 ## Migrate the workload
 
