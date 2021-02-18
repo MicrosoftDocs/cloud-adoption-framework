@@ -242,7 +242,7 @@ items:
           - name: Network topology and connectivity
             items:
             - name: Overview
-              href: ready/enterprise-scale/network-topology-and-connectivity-overview.md
+              href: ready/enterprise-scale/network-topology-and-connectivity.md
             - name: Plan for IP addressing
               href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: DNS for on-premises and Azure resources
