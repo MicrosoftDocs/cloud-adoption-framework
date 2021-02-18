@@ -13,6 +13,32 @@ ms.subservice: ready
 
 As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are open and extensible platforms with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 
+## Design considerations
+
+Here are some design considerations for AKS platform automation and DevOps:
+
+- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your continuous integration/continuous delivery (CI/CD) environment when determining your engineering and automation approach. For another example, see the [GitHub usage limitations](https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration).
+
+- When securing and protecting access to development, test, Q&A, and production environments, consider security options from a CI/CD perspective. Deployments happen automatically, so map access control accordingly.
+
+- Consider using prefixes and suffixes with well-defined conventions to uniquely identify every deployed resource. These naming conventions avoid conflicts in deploying solutions next to each other, and improve overall team agility and throughput.
+
+- Inventory the workflows to support in engineering, updating, and deploying your solution in normal and Digital Rebar Provisioning (DRP) regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
+  
+  Some example scenarios and pipelines to consider are:
+  - Deploying, patching, and upgrading clusters
+  - Deploying and upgrading applications
+  - Deploying and maintaining add-ons
+  - Failing over for disaster recovery
+  - Blue-green deployments
+  - Maintaining canary environments
+
+- Consider using a [service mesh](/azure/aks/servicemesh-about) to add more security, encryption, and log capabilities to your workloads.
+ 
+- Consider deploying other resources like subscriptions, tagging, and labels to support your DevOps experience by tracking and tracing deployments and related artifacts.
+
+- Consider the impact of the *cattle versus pets* paradigm shift. Expect pods and other aspects of Kubernetes to be ephemeral, and align your automation and pipeline infrastructure accordingly. Don't rely on IP addresses or other resources to be fixed or permanent.
+
 ## Design recommendations
 
 Here are some design recommendations for AKS platform automation and DevOps:
@@ -41,30 +67,4 @@ Here are some design recommendations for AKS platform automation and DevOps:
   - Policy, by using policy as code and enforcing policies in a cloud-native manner through admission controllers.
   
 - Treat every failure, error, or outage as an opportunity to automate and improve overall solution quality. Integrate this approach in your Shift Left and [site reliability engineering (SRE)](/azure/site-reliability-engineering/) framework.
-
-## Design considerations
-
-Here are some design considerations for AKS platform automation and DevOps:
-
-- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your continuous integration/continuous delivery (CI/CD) environment when determining your engineering and automation approach. For another example, see the [GitHub usage limitations](https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration).
-
-- When securing and protecting access to development, test, Q&A, and production environments, consider security options from a CI/CD perspective. Deployments happen automatically, so map access control accordingly.
-
-- Consider using prefixes and suffixes with well-defined conventions to uniquely identify every deployed resource. These naming conventions avoid conflicts in deploying solutions next to each other, and improve overall team agility and throughput.
-
-- Inventory the workflows to support in engineering, updating, and deploying your solution in normal and Digital Rebar Provisioning (DRP) regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
-  
-  Some example scenarios and pipelines to consider are:
-  - Deploying, patching, and upgrading clusters
-  - Deploying and upgrading applications
-  - Deploying and maintaining add-ons
-  - Failing over for disaster recovery
-  - Blue-green deployments
-  - Maintaining canary environments
-
-- Consider using a [service mesh](/azure/aks/servicemesh-about) to add more security, encryption, and log capabilities to your workloads.
- 
-- Consider deploying other resources like subscriptions, tagging, and labels to support your DevOps experience by tracking and tracing deployments and related artifacts.
-
-- Consider the impact of the *cattle versus pets* paradigm shift. Expect pods and other aspects of Kubernetes to be ephemeral, and align your automation and pipeline infrastructure accordingly. Don't rely on IP addresses or other resources to be fixed or permanent.
 
