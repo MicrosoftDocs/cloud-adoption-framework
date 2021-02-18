@@ -16,33 +16,33 @@ This article provides guidance for deploying a local **Ubuntu** virtual machine 
 
 ## Prerequisites
 
-- Clone the Azure Arc Jumpstart repository.
+1. Clone the Azure Arc Jumpstart repository.
 
     ```console
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-- [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
+2. [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
 
-  ```console
-  az --version
-  ```
+    ```console
+    az --version
+    ```
 
-- Vagrant relies on an underlying hypervisor. For this guide, we will be using "Oracle VM VirtualBox".
+3. Vagrant relies on an underlying hypervisor. For this guide, we will be using "Oracle VM VirtualBox".
 
-  - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+    1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-    - If you are a macOS user, run `brew cask install virtualbox`
-    - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
-    - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
+        - If you are a macOS user, run `brew cask install virtualbox`
+        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
+        - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
 
-  - Install [Vagrant](https://www.vagrantup.com/docs/installation)
+    2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
-    - If you are a macOS user, run `brew cask install vagrant`
-    - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
-    - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
-
-- Create an Azure service principal.
+        - If you are a macOS user, run `brew cask install vagrant`
+        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
+        - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
+  
+4. Create an Azure service principal.
 
     To connect the Vagrant virtual machine to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
@@ -61,32 +61,32 @@ This article provides guidance for deploying a local **Ubuntu** virtual machine 
 
     ```json
     {
-    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "displayName": "AzureArcServers",
-    "name": "http://AzureArcServers",
-    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "AzureArcServers",
+      "name": "http://AzureArcServers",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-- The Vagrant file executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you created.
+5. The Vagrant file executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/vars.sh) shell script to match the Azure service principal you created.
 
-  - `subscriptionId` = your Azure subscription ID
-  - `appId` = your Azure service principal name
-  - `password` = your Azure service principal password
-  - `tenantId` = your Azure tenant ID
-  - `resourceGroup` = Azure resource group name
-  - `location` = Azure region
+    - `subscriptionId` = your Azure subscription ID
+    - `appId` = your Azure service principal name
+    - `password` = your Azure service principal password
+    - `tenantId` = your Azure tenant ID
+    - `resourceGroup` = Azure resource group name
+    - `location` = Azure region
 
 ## Deployment
 
 Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/Vagrantfile) and a [Vagrant box](https://www.vagrantup.com/docs/boxes) is needed. At a high-level, the deployment will:
 
-1. Download the Ubuntu 16.04 image file [Vagrant box](https://app.vagrantup.com/ubuntu/boxes/xenial64)
-2. Execute the installation script
+- Download the Ubuntu 16.04 image file [Vagrant box](https://app.vagrantup.com/ubuntu/boxes/xenial64)
+- Execute the installation script
 
 After editing the `scripts/vars.sh` script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. Since this is the first time creating the VM, the first run will be **much slower** than the ones to follow, because the deployment is downloading the Ubuntu box for the first time.
 
@@ -110,17 +110,17 @@ The last step is to register the VM as a new Azure Arc enabled server resource.
 
 If you want to demo/control the actual registration process, complete the following steps:
 
-- In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/install_arc_agent.sh) shell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
+1. In the [`install_arc_agent`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/ubuntu/scripts/install_arc_agent.sh) shell script, comment out the `run connect command` section and save the file. You can also comment out or change the creation of the resource group.
 
     ![A screenshot of the `azcmagent connect` command.](./media/local-vagrant/vagrant-ubuntu-azcmagent.png)
 
     ![A screenshot of the `az group create` command.](./media/local-vagrant/vagrant-ubuntu-azgroup-create.png)
 
-- SSH to the VM using the `vagrant ssh` command.
+2. SSH to the VM using the `vagrant ssh` command.
 
     ![A screenshot of an SSH key connecting to the Vagrant machine.](./media/local-vagrant/vagrant-ubuntu-ssh.png)
 
-- Run the same `azcmagent connect` command you commented out using your environment variables.
+3. Run the same `azcmagent connect` command you commented out using your environment variables.
 
     ![Another screenshot of the `azcmagent connect` command.](./media/local-vagrant/vagrant-ubuntu-azcmagent-2.png)
 

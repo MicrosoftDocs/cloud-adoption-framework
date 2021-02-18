@@ -16,13 +16,13 @@ This article provides guidance for connecting a Windows machine to Azure Arc usi
 
 ## Prerequisites
 
-- [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
+1. [Install or update Azure CLI to version 2.7 and above](/cli/azure/install-azure-cli). Use the following command to check your current installed version.
 
-  ```console
-  az --version
-  ```
+    ```console
+    az --version
+    ```
 
-- Create an Azure service principal.
+2. Create an Azure service principal.
 
     To connect a server to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
@@ -41,24 +41,24 @@ This article provides guidance for connecting a Windows machine to Azure Arc usi
 
     ```json
     {
-    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "displayName": "AzureArcServers",
-    "name": "http://AzureArcServers",
-    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "AzureArcServers",
+      "name": "http://AzureArcServers",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-- Create a new Azure resource group for your machines.
+3. Create a new Azure resource group for your machines.
 
     ![A screenshot of an empty resource group in the Azure portal.](./media/onboard-server/windows-resource-group.png)
 
-- Download the [`az-connect-win`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
+4. Download the [`az-connect-win`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
 
-- Change the environment variables according to your environment and copy the script to the designated machine.
+5. Change the environment variables according to your environment and copy the script to the designated machine.
 
     ![A screenshot of the environment variables to be changed.](./media/onboard-server/windows-variables.png)
 
@@ -80,7 +80,7 @@ Upon completion, you will have your Windows Server instance, connected as a new 
 
 ## Delete the deployment
 
-T0 delete the server, select the server and delete it from the Azure portal.
+To delete the server, select the server and delete it from the Azure portal.
 
 ![A screenshot of Delete option to delete a resource in the Azure portal.](./media/onboard-server/windows-delete-resource.png)
 
