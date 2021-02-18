@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for AKS"
+title: "Enterprise-scale network topology and connectivity for AKS"
 description: Learn how this enterprise-scale scenario can improve the network topology and connectivity of the Azure Kubernetes Service (AKS).
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for Azure Kubernetes Service (AKS) Enterprise-Scale scenario
+# Network topology and connectivity for Azure Kubernetes Service (AKS) enterprise-scale scenario
 
 ## Design considerations
 
@@ -18,18 +18,18 @@ ms.subservice: ready
   - Only CNI supports Windows Server node and Network Policies pool.
   - kubenet requires user-defined routes (UDRs) to be manually applied.
   - Verify the [current list](https://docs.microsoft.com/azure/aks/concepts-network#compare-network-models) of supported capabilities by each CNI plugin.
-- IP addressing and the size of the VNet subnet must be carefully planned to support the scaling of the cluster by adding more nodes, etc.
+- IP addressing and the size of the Virtual Network subnet must be carefully planned to support the scaling of the cluster. For example, you can add more nodes.
 - Virtual nodes can be used for quick cluster scaling, but there are some [known limitations](https://docs.microsoft.com/azure/aks/virtual-nodes-portal).
 - AKS clusters support Basic and Standard Azure Load Balancer SKUs.
 - AKS services can be exposed with public or internal Load Balancers. Internal Load Balancers can be configured in the same subnet as the Kubernetes nodes or in a dedicated subnet.
 - Azure Policy and the [Azure Policy add-on for AKS](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes "Azure Policy for AKS") can control and limit the objects created in your AKS cluster, such as denying the creation of public IP addresses in the cluster.
-- AKS uses CoreDNS to provide name resolution to pods running in the cluster:
+- AKS uses CoreDNS to provide name resolution to pods running in the cluster.
   - CoreDNS will resolve cluster-internal domains directly.
-  - Other domains will be forwarded to the DNS servers configured in the Virtual Network, which will be either the default Azure DNS resolver or any custom DNS servers configured at the Virtual Network level.
+  - Other domains will be forwarded to the DNS servers configured in Azure Virtual Network, which will be either the default Azure DNS resolver or any custom DNS servers configured at the virtual network level.
 - Egress network traffic can be sent through an Azure Firewall or Network Virtual Appliance cluster.
   - By default, AKS clusters have unrestricted outbound (egress) Internet access.
   - Egress traffic from the AKS cluster can be sent through Azure Firewall or a Network Virtual Appliance cluster by configuring UDRs in the AKS subnet.
-- By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster: two [network policy models](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks) are available for AKS.
+- By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster. Two [network policy models](https://docs.microsoft.com/azure/aks/use-network-policies#network-policy-options-in-aks) are available for AKS.
 - A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability. For more information, see the documented [selection criteria](https://docs.microsoft.com/azure/aks/servicemesh-about#selection-criteria).
 - Global load balancing mechanisms such as [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) and [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview) increase resiliency by routing traffic across multiple clusters, potentially in different Azure regions.
 
@@ -37,16 +37,16 @@ ms.subservice: ready
 
 AKS cluster IP visibility can be either public or private (see [Create a private AKS cluster](https://docs.microsoft.com/azure/aks/private-clusters). Private clusters expose the Kubernetes API over a private IP address, and not over a public one. This private IP address is actually represented in the AKS Virtual Network through a [Private Endpoint](https://docs.microsoft.com/azure/private-link/private-endpoint-overview). The Kubernetes API should not be accessed via its IP address but through its Fully Qualified Domain Name (FQDN). The resolution from the Kubernetes API FQDN to its IP address will typically be performed by an [Azure Private DNS Zone](https://docs.microsoft.com/azure/dns/private-dns-overview). This DNS zone can be created by Azure in the AKS node resource group (see [Why are two resource groups created with AKS?](https://docs.microsoft.com/azure/aks/faq#why-are-two-resource-groups-created-with-aks)), or you can specify an existing DNS zone (see [No Private DNS Zone Prerequisites](https://docs.microsoft.com/azure/aks/private-clusters#no-private-dns-zone-prerequisites)).
 
-Following Enterprise Scale proven practices, DNS resolution for Azure workloads is offered by centralized DNS servers deployed in the Connectivity Subscription (either in a hub Virtual Network or in a Shared Services Virtual Network connected to Virtual WAN). These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), as well as private names using corporate DNS servers. However, these centralized DNS servers will not be able to resolve the AKS API FQDN until they are connected with the DNS private zone created for the AKS cluster. Note that each AKS will have a unique DNS private zone, since a random GUID is prepended to the zone name. Consequently, for each new AKS cluster its corresponding private DNS zone should be connected to the Virtual Network where the central DNS servers are located.
+Following enterprise-scale proven practices, DNS resolution for Azure workloads is offered by centralized DNS servers deployed in the Connectivity Subscription (either in a hub Virtual Network or in a Shared Services Virtual Network connected to an Azure Virtual WAN). These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), as well as private names using corporate DNS servers. However, these centralized DNS servers will not be able to resolve the AKS API FQDN until they are connected with the DNS private zone created for the AKS cluster. Note that each AKS will have a unique DNS private zone, since a random GUID is prepended to the zone name. Consequently, for each new AKS cluster its corresponding private DNS zone should be connected to the Virtual Network where the central DNS servers are located.
 
 All Virtual Networks should be configured to use these central DNS servers for name resolution. However, if the AKS Virtual Network is configured to use the central DNS servers, and these are not connected to the private DNS zone yet, the AKS nodes will not be able to resolve the FQDN of the Kubernetes API, and the creation of the AKS cluster will fail. The AKS Virtual Network should be configured to use the central DNS servers only after cluster creation.
 
-Once the cluster is created, the connection is created between the DNS private zone and the Virtual Network where the central DNS servers are deployed, the AKS Virtual Network has been configured to use the central DNS servers in the Connectivity Subscription, and administrator access to the AKS Kubernetes API will follow this flow:
+Once the cluster is created, the connection is created between the DNS private zone and the Virtual Network where the central DNS servers are deployed. The AKS Virtual Network has also been configured to use the central DNS servers in the Connectivity Subscription, and administrator access to the AKS Kubernetes API will follow this flow:
 
 ![Private Cluster](media/Network_PrivateCluster.png)
 
 > [!NOTE]
-> The images in this document reflect the design using the traditional hub and spoke connectivity model. Enterprise Scale Landing Zones can opt for the Virtual WAN connectivity model, in which the central DNS servers would be in a Shared Services Virtual Network connected to a Virtual WAN hub.
+> The images in this article reflect the design using the traditional hub and spoke connectivity model. Enterprise-scale landing zones can opt for the Virtual WAN connectivity model, in which the central DNS servers would be in a Shared Services Virtual Network connected to a Virtual WAN hub.
 
 1. The administrator will resolve the FQDN of the Kubernetes API. The on-premises DNS servers forward the request to the authoritative servers - the DNS resolvers in Azure. These servers forward the request to the Azure DNS server (168.63.129.16), which will find out the IP address from the Azure Private DNS Zone.
 2. After resolving the IP address, traffic to the Kubernetes API is routed from on-premises to the VPN or ExpressRoute gateway in Azure, depending on the connectivity model.
@@ -88,7 +88,7 @@ The Azure Application Gateway in this example can be deployed in the same subscr
 > [!NOTE]
 > These flows are only valid for web applications. Non-web applications are outside the scope of this article, and they can be exposed through the Azure Firewall in the hub Virtual Network (or the secure virtual hub if using the Virtual WAN connectivity model).
 
-Alternatively, the traffic flows for web-based applications can be made to traverse both the Azure Firewall in the Connectivity Subscription and the WAF in the AKS VNet. This approach has the advantage of offering some additional protection, such as using [Azure Firewall Intelligence-based Filtering](https://docs.microsoft.com/azure/firewall/threat-intel) to drop traffic from known malicious IP addresses in the Internet. However, it has some drawbacks too. For example, the loss of the original client IP address, as well as the additional coordination required between the Firewall and the Application teams when exposing applications. This is because Destination Network Address Translation (DNAT) rules will be needed in the Azure Firewall.
+Alternatively, the traffic flows for web-based applications can be made to traverse both the Azure Firewall in the Connectivity Subscription and the WAF in the AKS Virtual Network. This approach has the advantage of offering some additional protection, such as using [Azure Firewall Intelligence-based Filtering](https://docs.microsoft.com/azure/firewall/threat-intel) to drop traffic from known malicious IP addresses in the Internet. However, it has some drawbacks too. For example, the loss of the original client IP address, as well as the additional coordination required between the Firewall and the Application teams when exposing applications. This is because Destination Network Address Translation (DNAT) rules will be needed in the Azure Firewall.
 
 ### Traffic from the AKS pods to backend services
 
@@ -114,7 +114,7 @@ Traffic between the AKS pods and the private endpoints per default will not go t
 - Use Azure Container Networking Interface (CNI) as network model, unless you have a limited range of IP addresses that can be assigned to the AKS cluster.
   - Follow the documentation with regards to [IP address planning](https://docs.microsoft.com/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster) with CNI.
   - If you want to use Windows Server node pools and virtual nodes to verify eventual limitations, please refer to the [Windows AKS support FAQ](https://docs.microsoft.com/azure/aks/windows-faq).
-- Use Azure DDoS Protection Standard to protect the Azure VNet used for the AKS cluster.
+- Use Azure DDoS Protection Standard to protect the Virtual Network used for the AKS cluster.
 - Use the DNS configuration linked to the overall network setup with Azure Virtual WAN or hub and spoke architecture, Azure DNS Zones, and your own DNS infrastructure.
 - Use Private Link to secure network connections and use private IP-based connectivity to other managed Azure services used that support Private Link, such as Azure Storage, Azure Container Registry, Azure SQL Database, and Azure Key Vault.
 - Use an Ingress controller to provide advanced HTTP routing and security, and to offer a single endpoint for applications.
@@ -124,4 +124,4 @@ Traffic between the AKS pods and the private endpoints per default will not go t
   - If there are no resource or operational constraints, or AGIC does not provide the required features, use an in-cluster Ingress controller solution like NGINX, Traefik, or any other Kubernetes-supported solution.
 - For Internet-facing and security-critical internal-facing web applications, use a Web Application Firewall (WAF) with the Ingress controller.
   - Azure Application Gateway and Azure Front Door both integrate the [Azure WAF](https://docs.microsoft.com/azure/web-application-firewall/ag/ag-overview) to protect web-based applications.
-- If your security policy mandates inspecting all Internet-outbound traffic generated in the AKS cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the (managed) hub VNet. See [Limit Egress Traffic](https://docs.microsoft.com/azure/aks/limit-egress-traffic) for more details.
+- If your security policy mandates inspecting all Internet-outbound traffic generated in the AKS cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the (managed) hub Virtual Network. See [Limit Egress Traffic](https://docs.microsoft.com/azure/aks/limit-egress-traffic) for more details.
