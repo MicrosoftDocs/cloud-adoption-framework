@@ -24,7 +24,7 @@ In cloud-native security and governance, the cloud can be dynamic, whereas most 
 
 With the adoption of cloud and DevOps models, security must adapt to changes, so it doesn't become an impediment to business and progress. Security adaptations include people processes like creating the right roles and responsibilities, and automation and technical tools like scanning, testing, and Infrastructure as Code. These tools are part of a DevOps pipeline that enables innovation and fast delivery times, while still meeting security requirements.
 
-The temptation is to begin by doing what you do today, but the key takeaway is that if you try to do in the cloud exactly what you do today on premises, you will fail. Cloud adoption is an opportunity to learn, update skills, and increase the organization's security posture. You can position security to be an enabler rather than a blocker by streamlining security as part of the development to production process. If you use 10-20 year-old tools and processes, you inherit or introduce 10-20 year-old security challenges, problems, and frustrations to the business. Cloud adoption is your chance to start fresh.
+The temptation is to begin by doing what you do today, but the key takeaway is that if you try to do in the cloud exactly what you do today on premises, you will fail. Cloud adoption is an opportunity to learn, update skills, and increase the organization's security posture. You can position security to be an enabler rather than a blocker by streamlining security as part of the development to production process. If you use 10-20 year-old tools and processes, you inherit or introduce 10-20 year-old security challenges, problems, and frustrations. Cloud adoption is your chance to start fresh.
 
 Starting fresh begins with an understanding of the cloud.
 
@@ -32,7 +32,7 @@ Starting fresh begins with an understanding of the cloud.
 - How do you operate the cloud services and controls?
 - What are the available security tools and governance tools?
 - How can you use security and governance tools in processes and systems, so lines of business can be more agile with a modern DevOps model?
-- How can you ensure that security and compliance requirements are met?
+- How can you make sure to meet security and compliance requirements?
 
 It's often easiest to start a lifecycle framework from a process perspective, both in establishing security controls, and managing and operationalizing the controls themselves. For establishing security controls, many customers use common frameworks and standards like NIST 800-53, ISO, CIS benchmarks, and HIPAA/HITRUST. These standards can help establish a comprehensive framework, and offer guidance to help establish, document, and audit security controls and processes.
 
@@ -54,12 +54,12 @@ One of the key benefits of a security control framework is its incorporation of 
 
 ## Azure security controls setup
 
-This section walks through setting up the overarching Azure-specific security control framework. This section assumes organizational security controls are already established. Defining these security controls is out of scope for this article.
+This section walks through setting up an overarching Azure-specific security control framework. This section assumes organizational security controls are already established. Defining these security controls is out of scope for this article.
 
-The following sections describe implementing controls to meet security requirements for a fictitious Contoso Financials scenario:
+The following sections describe implementing the following controls to meet security requirements for a fictitious Contoso Financials scenario:
 
 - Log all Cloud API requests for audit reporting purposes.
-- Enable authorized IP ranges to secure access to your API server.
+- Enable authorized IP ranges to secure access to the API server.
 - Use allowed locations to create AKS clusters only in certain regions.
 
 These controls are just a subset of the security controls and Azure policies that a full Azure deployment includes. Once you understand the process, you can repeat it to implement any other security controls your organization requires.
@@ -76,7 +76,7 @@ The following screenshot shows an Azure Activity Log capture in an Azure Log Ana
 
 ### Enable Azure security monitoring to check for authorized IP ranges
 
-Before you create anything, look to your cloud provider for security monitoring best practices and recommendations. The cloud provider doesn't implement all security controls that an organization needs, but the key is to use the provided controls to avoid reinventing the wheel, and to create custom controls only when necessary.
+Before you create anything, look to your cloud provider for security monitoring best practices and recommendations. The cloud provider doesn't implement all the security controls an organization needs, but the key is to use the provided controls to avoid reinventing the wheel, and to create custom controls only when necessary.
 
 In Azure, you can enable Azure Security Center to see security monitoring recommendations. You can also use Azure Security Center to determine whether an AKS cluster has authorized IP ranges enabled.
 
@@ -88,7 +88,7 @@ The following screenshot shows Azure Security Center Standard monitoring:
 
 ### Enforce an Azure Policy to create AKS clusters only in certain regions
 
-Also look to the cloud provider for policy enforcement. In Azure, evaluate Azure Policy, which is a key part of the Enterprise Control Plane (ECP). You can't do everything with Azure Policy, but the key is to use what is provided to avoid reinventing the wheel, and to create custom controls only when necessary.
+Also look to the cloud provider for policy enforcement. In Azure, evaluate Azure Policy, which is a key part of the Enterprise Control Plane (ECP). You can't do everything with Azure Policy, but the key is to use what's provided to avoid reinventing the wheel, and to create custom controls only when necessary.
 
 You can use Azure Policy to implement allowed locations for creating Azure resources like AKS clusters. For more information and instructions, see [Tutorial: Create and manage policies to enforce compliance](/azure/governance/policy/tutorials/create-and-manage).
 
@@ -123,7 +123,7 @@ The ability to restrict resource creation to a specific region is just one of ma
 
 Cost governance is the continuous process of implementing policies to control costs. In the Kubernetes context, there are several ways organizations can control and optimize costs. These include native Kubernetes tooling to manage and govern resource usage and consumption and proactively monitor and optimize the underlying infrastructure.
 
-In this section, you use [Kubecost monitor](https://kubecost.com/) to govern your AKS cluster cost. You can scope cost allocation to a deployment, service, label, pod, or namespace, which gives you flexibility in how you charge back or show cluster users.
+This section shows how to use [Kubecost monitor](https://kubecost.com/) to govern AKS cluster cost. You can scope cost allocation to a deployment, service, label, pod, or namespace, which provides flexibility in charging back or showing cluster users.
 
 ### Install Kubecost
 
@@ -188,7 +188,7 @@ Take some time to navigate around the different views and features that Kubecost
 
 ## Design considerations
 
-AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Networking that require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
+AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Networking, which require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
 Here are some other design considerations for AKS security governance and compliance:
 
