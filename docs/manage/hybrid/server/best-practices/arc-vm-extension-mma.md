@@ -24,7 +24,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 - [GCP Ubuntu instance](./gcp-terraform-ubuntu.md)
 - [GCP Windows instance](./gcp-terraform-windows.md)
 - [AWS Ubuntu EC2 instance](./aws-terraform-ubuntu.md)
-- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-al2.md)
+- [AWS Amazon Linux 2 EC2 instance](./aws-terraform-amazon-linux-2.md)
 - [VMware vSphere Ubuntu VM](./vmware-terraform-ubuntu.md)
 - [VMware vSphere Windows Server VM](./vmware-terraform-windows.md)
 - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)

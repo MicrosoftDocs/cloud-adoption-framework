@@ -189,7 +189,7 @@ items:
         - name: AWS Ubuntu with Terraform
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-terraform-ubuntu.md
         - name: AWS Linux with Terraform
-          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-terraform-al2.md
+          href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-terraform-amazon-linux-2.md
         - name: AWS EC2 onboard with Ansible
           href: https://docs.microsoft.com/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/aws-scale-ansible.md
       - name: GCP - Google Cloud Provider
