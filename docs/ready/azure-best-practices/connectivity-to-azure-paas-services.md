@@ -1,9 +1,9 @@
 ---
-title: Network topology and connectivity
-description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
-author: BrianBlanchard
+title: Connectivity to Azure PaaS services
+description: Examine key design considerations and recommendations surrounding connectivity to Azure platform as a service technologies.
+author: JefferyMitchell
 ms.author: brblanch
-ms.date: 01/08/2021
+ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -21,9 +21,9 @@ Building on the previous connectivity sections, this section explores recommende
 
 - Azure PaaS services are typically accessed over public endpoints. However, the Azure platform provides capabilities to secure such endpoints or even make them entirely private:
 
-  - Virtual network injection provides dedicated private deployments for supported services. But management plane traffic flows through public IP addresses.
+  - Virtual network injection provides dedicated private deployments for supported services. Management plane traffic still flows through public IP addresses.
 
-  - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard Tier.
+  - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier.
 
   - Virtual network service endpoints provide service-level access from selected subnets to selected PaaS services.
 

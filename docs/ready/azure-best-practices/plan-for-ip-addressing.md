@@ -1,9 +1,9 @@
 ---
-title: Network topology and connectivity
-description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
-author: BrianBlanchard
+title: Plan for IP addressing
+description: Examine key design considerations and recommendations surrounding IP addressing in Azure.
+author: JefferyMitchell
 ms.author: brblanch
-ms.date: 01/08/2021
+ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -15,7 +15,7 @@ ms.custom: think-tank
 
 # Plan for IP addressing
 
-It's vital that your organization plans for IP addressing in Azure to ensure that IP address space doesn't overlap across on-premises locations and Azure regions.
+It's vital that your organization plans for IP addressing in Azure to ensure that the IP address space doesn't overlap across on-premises locations and Azure regions.
 
 **Design considerations:**
 
