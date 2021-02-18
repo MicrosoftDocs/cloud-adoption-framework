@@ -3,7 +3,7 @@ title: Plan for traffic inspection
 description: Examine key design considerations and recommendations surrounding mirroring or tapping traffic within an Azure virtual network.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 01/08/2021
+ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
