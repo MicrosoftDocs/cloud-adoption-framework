@@ -50,11 +50,11 @@ items:
         href: scenarios/sap/eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: scenarios/sap/eslz-network-topology-and-connectivity.md
-      - name: Management and Monitoring
+      - name: Management and monitoring
         href: scenarios/sap/eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
         href: scenarios/sap/eslz-business-continuity-and-disaster-recovery.md
-      - name: Security governance and compliance
+      - name: Security, governance, and compliance
         href: scenarios/sap/eslz-security-governance-and-compliance.md
       - name: Platform automation and DevOps
         href: scenarios/sap/eslz-platform-automation-and-devops.md
