@@ -46,7 +46,7 @@ Enhance your operations baseline by onboarding a continuously broader range of a
 
 In addition to tagging and onboarding assets, you can also deliver a number of operations management disciplines using hybrid and multicloud tools.
 
-One example of a mature operations management discipline, is the use of Microsoft Monitoring Agent to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
+One example of a mature operations management discipline, is the use of Microsoft Monitoring Agent (MMA) to manage software installation, anti-virus protection, or other configuration management functions. The following articles demonstrate configuration of MMA in your hybrid and multicloud environment.
 
 - [Manage VMs with MMA](../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md)
 - [Scale configuration of MMA](../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md)
