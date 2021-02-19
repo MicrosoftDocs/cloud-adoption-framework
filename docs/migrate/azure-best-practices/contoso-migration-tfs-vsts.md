@@ -474,7 +474,7 @@ With the migration now completed, Contoso admins want to move source code manage
 
 **Need more help?**
 
-For more information, see [Import repositories from TFVC to Git](/azure/devops/repos/git/import-from-TFVC?view=vsts&preserve-view=true).
+For more information, see [Import repositories from TFVC to Git](/azure/devops/repos/git/import-from-tfvc?view=vsts&preserve-view=true).
 
 ## Clean up after migration
 

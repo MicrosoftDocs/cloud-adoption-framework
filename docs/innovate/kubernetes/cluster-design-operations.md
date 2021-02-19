@@ -35,7 +35,7 @@ As you get started, the checklist and resources below will help you plan the clu
 
 ## Go to production and apply best practices
 
-As you prepare the application for production, you should implement a minimum set of best practices. Use the checklist below at this stage. You should be able to answer these questions:
+As you prepare the application for production, you should implement a minimum set of best practices. Use the following checklist at this stage. You should be able to answer these questions:
 
 > [!div class="checklist"]
 >
@@ -46,7 +46,7 @@ As you prepare the application for production, you should implement a minimum se
 
 > | Checklist | Resources |
 > |---|---|
-> | **Automate cluster provisioning.** With infrastructure as code, you can automate infrastructure provisioning to provide more resiliency during disasters and gain agility to quickly redeploy the infrastructure as needed. | <li> [Create a Kubernetes cluster with Azure Kubernetes Service using Terraform](/azure/terraform/terraform-create-k8s-cluster-with-tf-and-aks) |
+> | **Automate cluster provisioning.** With infrastructure as code, you can automate infrastructure provisioning to provide more resiliency during disasters and gain agility to quickly redeploy the infrastructure as needed. | <li> [Create a Kubernetes cluster with Azure Kubernetes Service using Terraform](/azure/developer/terraform/create-k8s-cluster-with-tf-and-aks) |
 > | **Plan for availability using pod disruption budgets.** To maintain the availability of applications, define pod disruption budgets (PDBs) to ensure that a minimum number of pods are available in the cluster during hardware failures or cluster upgrades. | <li> [Plan&nbsp;for&nbsp;availability&nbsp;using&nbsp;pod disruption&nbsp;budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets)  |
 > | **Enforce resource quotas on namespaces.** Plan and apply resource quotas at the namespace level. Quotas can be set on compute resources, storage resources, and object count.| <li> [Enforce resource quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)  |
 
@@ -66,4 +66,4 @@ Now that the application is in production, how can you optimize your workflow an
 > |--|--|
 > | **Automatically scale a cluster to meet application demands.** To keep up with application demands, you may need to adjust the number of nodes that run your workloads automatically using the cluster autoscaler. | <li> [Configure Kubernetes cluster autoscaler](/azure/aks/cluster-autoscaler) |
 > | **Plan for business continuity and disaster recovery.** Plan for multiregion deployment, create a storage migration plan, and enable geo-replication for container images. | <li> [Best practices for region deployments](/azure/aks/operator-best-practices-multi-region) <li> [Azure Container Registry geo-replication](/azure/container-registry/container-registry-geo-replication) |
-> | **Configure monitoring and troubleshooting at scale.** Set up alerting and monitoring for applications in Kubernetes. Learn about the default configuration, how to integrate more advanced metrics, and how to add your own custom monitoring and alerting to reliably operate your application. | <li> [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?v=W7aN_z-cyUw&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16) <li> [Configure alerts using Azure Monitor for containers](/azure/azure-monitor/insights/container-insights-overview) <li> [Review&nbsp;diagnostic&nbsp;logs&nbsp;for master components](/azure/aks/view-master-logs) <li> [Azure Kubernetes Service (AKS) diagnostics](/azure/aks/concepts-diagnostics) |
+> | **Configure monitoring and troubleshooting at scale.** Set up alerting and monitoring for applications in Kubernetes. Learn about the default configuration, how to integrate more advanced metrics, and how to add your own custom monitoring and alerting to reliably operate your application. | <li> [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?v=W7aN_z-cyUw&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16) <li> [Configure alerts using Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview) <li> [Review&nbsp;diagnostic&nbsp;logs&nbsp;for master components](/azure/aks/view-control-plane-logs) <li> [Azure Kubernetes Service (AKS) diagnostics](/azure/aks/concepts-diagnostics) |

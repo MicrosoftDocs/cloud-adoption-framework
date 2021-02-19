@@ -34,4 +34,4 @@ For a complete list of Azure security tools and services, see [Security services
 
 Customers commonly use third-party tools to enable Security Baseline discipline activities. For more information, see the article [integrate security solutions in Azure Security Center](/azure/security-center/security-center-partner-integration).
 
-In addition to security tools, the [Microsoft Trust Center](https://www.microsoft.com/microsoft-365/business/compliance-solutions#office-KeyMessages-k3j63yo) contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your migration planning process.
+In addition to security tools, [Compliance Management in Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/compliance-management) provides extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your migration planning process.

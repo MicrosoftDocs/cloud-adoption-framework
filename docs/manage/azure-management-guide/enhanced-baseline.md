@@ -45,7 +45,7 @@ This table outlines a few processes, tools, and potential effects common in cust
 | Discipline | Process | Tool | Potential impact | Learn more |
 |---|---|---|---|---|
 | Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](/azure/governance/resource-graph/overview) |
-| Inventory and visibility | IT Service Management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/platform/itsmc-overview) |
+| Inventory and visibility | IT Service Management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/alerts/itsmc-overview) |
 | Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
 | Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
@@ -124,6 +124,6 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 ### Learn more
 
-To learn more, see [Azure Security Center documentation](/azure/security-center).
+To learn more, see [Azure Security Center documentation](/azure/security-center/).
 
 ::: zone-end

@@ -30,11 +30,11 @@ As you get started, the checklist and resources below will help you plan for clu
 > |---|---|
 > | **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. | [The definitive guide to securing Kubernetes (white paper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original)     |
 > | **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. | [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image)     |
-> | **Setup cluster Kubernetes role-based access control (Kubernetes RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads. | [Understand Kubernetes role-based access control (Kubernetes RBAC) (video)](https://www.youtube.com/watch?v=G3R24JSlGjY&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=12) <br> [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration) <br> [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)   |
+> | **Setup cluster Kubernetes role-based access control (Kubernetes RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads. | [Understand Kubernetes role-based access control (Kubernetes RBAC) (video)](https://www.youtube.com/watch?v=G3R24JSlGjY&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=12) <br> [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br> [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)   |
 
 ## Deploy to production and apply best practices
 
-As you prepare the application for production, you should implement a minimum set of best practices. Use the checklist below at this stage. You should be able to answer these questions:
+As you prepare the application for production, you should implement a minimum set of best practices. Use the following checklist at this stage. You should be able to answer these questions:
 
 > [!div class="checklist"]
 >
@@ -52,7 +52,7 @@ As you prepare the application for production, you should implement a minimum se
 > | **Restrict cluster egress traffic.** Learn what ports and addresses to allow if you restrict egress traffic for the cluster. You can use Azure Firewall or a third-party firewall appliance to secure your egress traffic and define these required ports and addresses. | [Control egress traffic for cluster nodes in AKS](/azure/aks/limit-egress-traffic) |
 > | **Secure traffic with Web Application Firewall (WAF).** Use Azure Application Gateway as an ingress controller for Kubernetes clusters. | [Configure Azure Application Gateway as an ingress controller](/azure/application-gateway/ingress-controller-overview) |
 > | **Apply security and kernel updates to worker nodes.** Understand the AKS node update experience. To protect your clusters, security updates are automatically applied to Linux nodes in AKS. These updates include OS security fixes or kernel updates. Some of these updates require a node reboot to complete the process. | [Use kured to automatically reboot nodes to apply updates](/azure/aks/node-updates-kured) |
-> | **Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls. | [Azure Container Registry integration with Security Center](/azure/security-center/azure-container-registry-integration) <br> [Azure Kubernetes Service integration with Security Center](/azure/security-center/azure-kubernetes-service-integration)  |
+> | **Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls. | [Azure Container Registry integration with Security Center](/azure/security-center/defender-for-container-registries-introduction) <br> [Azure Kubernetes Service integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)  |
 
 ## Optimize and scale
 
@@ -65,5 +65,5 @@ Now that the application is in production, how can you optimize your workflow an
 >
 > | Checklist | Resources |
 > |---|---|
-> | **Enforce cluster governance policies.** Apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. | [Control deployments with Azure Policy](/azure/governance/policy/concepts/rego-for-aks) |
+> | **Enforce cluster governance policies.** Apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. | [Control deployments with Azure Policy](/azure/governance/policy/concepts/policy-for-kubernetes) |
 > | **Rotate cluster certificates periodically.** Kubernetes uses certificates for authentication with many of its components. You may want to periodically rotate those certificates for security or policy reasons. | [Rotate certificates in Azure Kubernetes Service (AKS)](/azure/aks/certificate-rotation) |
