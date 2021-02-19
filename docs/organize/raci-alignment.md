@@ -34,7 +34,7 @@ The last row of each table (except the first) contains a link to the most-aligne
 
 ## Cloud adoption team only
 
-| Team | Solution delivery | Business alignment | Change management | Solution operations | Governance  | Platform maturity | Platform operations | Platform automation |
+| Team | Solution delivery | Business alignment | Change management | Solution operations | Governance | Platform maturity | Platform operations | Platform automation |
 | ------------------- | ----------------- | ------------------ | ----------------- | ------------------- | ----------- | ----------------- | ------------------- | ------------------- |
 | Cloud adoption team | Accountable       | Accountable        | Accountable       | Accountable         | Accountable | Accountable       | Accountable         | Accountable         |
 

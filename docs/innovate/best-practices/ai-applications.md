@@ -84,7 +84,9 @@ Cognitive Services has been awarded certifications such as CSA STAR certificatio
 
 You can [download](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) certifications for your own audits and security reviews.
 
-To understand privacy and data management, go to the [Microsoft Trust Center](https://servicetrust.microsoft.com/).
+To understand privacy and data management, go to (the [Microsoft Trust Center](https://servicetrust.microsoft.com/)).
+
+ALSO GO TO [ASP.NET Tracing](/previous-versions/dotnet/articles/ms972204(v=msdn.10)#bookmark).
 
 ## How are Cognitive Services and Azure Machine Learning similar?
 

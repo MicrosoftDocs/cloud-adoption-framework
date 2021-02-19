@@ -42,7 +42,7 @@ Both workload operations and platform operations require changes to design and a
 
 This table outlines a few processes, tools, and potential effects common in customers' enhanced management baselines:
 
-| Discipline  | Process  | Tool | Potential impact | Learn more |
+| Discipline | Process | Tool | Potential impact | Learn more |
 |---|---|---|---|---|
 | Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](/azure/governance/resource-graph/overview) |
 | Inventory and visibility | IT Service Management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/platform/itsmc-overview) |
