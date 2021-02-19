@@ -63,7 +63,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Determine your organization's [encryption](../../decision-guides/encryption/index.md) strategy for cloud-hosted data.
 - Evaluate your cloud deployment's [identity](../../decision-guides/identity/index.md) strategy. Determine how your cloud-based identity solution will coexist or integrate with on-premises identity providers.
 - Determine network boundary policies for your [Software Defined Networking (SDN)](../../decision-guides/software-defined-network/index.md) design to ensure secure virtualized networking capabilities.
-- Evaluate your organization's [least-privilege access](/azure/active-directory/users-groups-roles/roles-delegate-by-task) policies, and use task-based roles to provide access to specific resources.
+- Evaluate your organization's [least-privilege access](/azure/active-directory/roles/delegate-by-task) policies, and use task-based roles to provide access to specific resources.
 - Apply security and monitoring mechanisms to all cloud services and virtual machines.
 - Automate [security policies](../../decision-guides/policy-enforcement/index.md) where possible.
 - Review your Security Baseline policy and determine whether you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).

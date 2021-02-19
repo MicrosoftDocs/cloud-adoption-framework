@@ -16,7 +16,7 @@ The [Security Baseline discipline](./index.md) is one of the [Five Disciplines o
 
 The following list of Azure tools can help mature the policies and processes that support this discipline.
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal) and [Azure Resource Manager](/azure/azure-resource-manager/management/overview)  | [Azure Key Vault](/azure/key-vault)  | [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Policy](/azure/governance/policy/overview) | [Azure Security Center](/azure/security-center/security-center-intro) | [Azure Monitor](/azure/azure-monitor/overview) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal/) and [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Key Vault](/azure/key-vault/)  | [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Policy](/azure/governance/policy/overview) | [Azure Security Center](/azure/security-center/security-center-introduction) | [Azure Monitor](/azure/azure-monitor/overview) |
 |------------------------------------------------------------|---------------------------------|-----------------|----------|--------------|-----------------------|---------------|
 | Apply access controls to resources and resource creation   | Yes                             | No              | Yes      | No           | No                    | No            |
 | Secure virtual networks                                    | Yes                             | No              | No       | Yes          | No                    | No            |

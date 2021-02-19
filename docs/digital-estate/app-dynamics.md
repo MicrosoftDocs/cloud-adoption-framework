@@ -34,7 +34,7 @@ Prior to migration, a small, lightweight agent is deployed alongside your applic
 
 ![An AppDynamics flow map](./media/app-dynamics-flow-map.jpg)
 
-_Figure 1: An AppDynamics flow map._
+*Figure 1: An AppDynamics flow map.*
 
 ## AppDynamics identifies business metrics
 
@@ -66,7 +66,7 @@ Configurable dashboards are one of many AppDynamics tools that visualize these i
 
 ![AppDynamics business impact dashboard](./media/app-dynamics-business-impact-dashboard.jpg)
 
-_Figure 2: AppDynamics business impact dashboard._
+*Figure 2: AppDynamics business impact dashboard.*
 
 ## Resources to help identify business metrics
 
@@ -88,8 +88,8 @@ In this case, they were able to see an increase in conversion rates from 48 to 7
 
 ![AppDynamics migration comparison](./media/app-dynamics-migration-comparison.jpg)
 
-_Figure 3: AppDynamics migration comparison._
+*Figure 3: AppDynamics migration comparison.*
 
 ## Next steps
 
-AppDynamics gives organizations the unique ability to measure the business outcomes during their cloud adoption strategy. Visit [AppDynamics](https://www.appdynamics.com/product/infrastructure-monitoring/cloud-monitoring/microsoft-azure) to learn more about AppDynamics with Azure.
+AppDynamics gives organizations the unique ability to measure the business outcomes during their cloud adoption strategy. Visit [AppDynamics](https://www.appdynamics.com/solutions/azure-monitoring) to learn more about AppDynamics with Azure.

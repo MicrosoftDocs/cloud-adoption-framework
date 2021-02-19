@@ -117,7 +117,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Assist the cloud adoption teams and the cloud strategy team in understanding and resolving these anomalies.
 - Determine whether changes need to be made to your Resource Consistency discipline for billing and SLAs.
 - Evaluate logging and monitoring tools to determine whether your on-premises, cloud gateway, or hybrid solution needs adjusting.
-- For business units and geographically distributed groups, determine whether your organization should consider using additional cloud management features such as [Azure management groups](/azure/governance/management-groups) to better apply centralized policy and meet SLA requirements.
+- For business units and geographically distributed groups, determine whether your organization should consider using additional cloud management features such as [Azure management groups](/azure/governance/management-groups/) to better apply centralized policy and meet SLA requirements.
 
 ## Next steps
 
@@ -125,5 +125,5 @@ Now that you understand the concept of cloud resource governance, move on to lea
 
 > [!div class="nextstepaction"]
 > [Learn about resource access management in Azure](./resource-access-management.md)
-> [Learn about service-level agreements for Azure](https://azure.microsoft.com/support/legal/sla)
+> [Learn about service-level agreements for Azure](https://azure.microsoft.com/support/legal/sla/)
 > [Learn about logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)
