@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Migrate an SAP platform to Azure
 
-SAP is a powerful platform with specific, complex, and strict technical, security, and compliance requirements; this platform is seldom moved in a standard migration factory. Azure Migrate features tools that can migrate most platforms and workloads, but SAP workloads require different tools and processes to replicate and deploy their assets. Once the core platform is deployed, standard processes and tools will help dependant workloads to resume and finish migrating.
+SAP is a powerful platform with specific, complex, and strict technical, security, and compliance requirements; this platform is unlikely to move in a standard migration factory. Azure Migrate features tools that can migrate most platforms and workloads, but SAP workloads require different tools and processes to replicate and deploy their assets. Once the core platform is deployed, standard processes and tools will help dependant workloads to resume and finish migrating.
 
 ## SAP process flow
 
@@ -28,7 +28,7 @@ There are a few steps to consider when migrating SAP workloads, some of which de
 
 ## Assess the SAP platform and dependant workloads
 
-A few considerations aren't commonly factored into the migration process when an SAP platform and dependant workloads are assessed:
+Organizations typically don't consider the following questions when assessing an SAP platform and dependant workloads:
 
 - What operating systems and versions are your SAP virtual machines running?
 
@@ -48,16 +48,16 @@ A few considerations aren't commonly factored into the migration process when an
 
 ## Evaluate sizing considerations for the SAP platform
 
-A number of sizing considerations should be made prior to deploying an SAP platform. Organizations typically start by evaluating sizing requirements for current assets and databases, and they should also consider long-term platform operations and feature requirements. The following should be considered at a minimum:
+Several sizing considerations should be made prior to deploying an SAP platform. Organizations typically start by evaluating sizing requirements for current assets and databases, and they should also consider long-term platform operations and feature requirements. The following should be considered at a minimum:
 
-- Virtual Machine (VM) Sizing
-- VM Storage
+- Virtual machine (VM) sizing
+- VM storage
 - Uptime factors
 - Licensing factors
-- High availability/redundancy factors
+- High-availability/redundancy factors
 - Database high-availability factors
 
-Explore the [SAP on Azure Architecture Guide](https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) to see examples of reference architectures and sizing considerations.
+Explore the [SAP on Azure Architecture Guide](/azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) to see examples of reference architectures and sizing considerations.
 
 ## Migrate the platform
 
