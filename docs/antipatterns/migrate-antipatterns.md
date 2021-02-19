@@ -72,7 +72,7 @@ A conglomerate decides to spin off its hotel division into a separate company. T
 
 ### Preferred outcome: Use a segmentation strategy
 
-Separate duties and plan for a different environment before you migrate to Azure. You can reach subscription limits quickly when you combine different stages into one subscription. Establish a [segmentation strategy](/azure/architecture/framework/security/design-segmentation) to make it easier to [implement governance and compliance](../ready/enterprise-scale/management-group-and-subscription-organization.md).
+Separate various duties and plan for a different environment before you migrate to Azure. You can reach subscription limits quickly when you combine different stages into one subscription. Establish a [segmentation strategy](/azure/architecture/framework/security/design-segmentation) to make it easier to [implement governance and compliance](../ready/enterprise-scale/management-group-and-subscription-organization.md).
 
 ## Next steps
 
