@@ -44,7 +44,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | Service name | Service description |
 | --- | --- |
 | [Speech](/azure/cognitive-services/speech-service/) | Speech service adds speech-enabled features to applications. |
-| [Speaker Recognition](/azure/cognitive-services/speech-service/speaker-recognition-overview "Speaker Recognition API") (preview) | The Speaker Recognition API provides algorithms for Speaker Identification and verification. |
+| [Speaker Recognition](/azure/cognitive-services/speech-service/speaker-recognition-overview) (preview) | The Speaker Recognition API provides algorithms for Speaker Identification and verification. |
 | [Bing Speech](/azure/cognitive-services/speech-service/how-to-migrate-from-bing-speech) (retired) | You can migrate existing Bing Speech API applications to the Speech service. |
 | [Translator Speech](/azure/cognitive-services/speech-service/how-to-migrate-from-translator-speech-api) (retired) | You can migrate existing Bing Translator Speech API applications to the Speech service. |
 
@@ -53,7 +53,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | Service name | Service description |
 |--|--|
 | [Language Understanding (LUIS)](/azure/cognitive-services/luis/) | The Language Understanding service (LUIS) allows your application to understand what a person wants in their own words. |
-| [QnA Maker](/azure/cognitive-services/qnamaker/ "QnA Maker") | QnA Maker allows you to build a question-and-answer service from your semistructured content. |
+| [QnA Maker](/azure/cognitive-services/qnamaker/) | QnA Maker allows you to build a question-and-answer service from your semistructured content. |
 | [Text Analytics](/azure/cognitive-services/text-analytics/) | Text Analytics provides natural language processing over raw text for sentiment analysis, key phrase extraction, and language detection. |
 | [Translator](/azure/cognitive-services/translator/) | Translator provides machine-based text translation in near real time. |
 
@@ -62,7 +62,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | Service name | Service description |
 | --- | --- |
 | [Anomaly Detector](/azure/cognitive-services/anomaly-detector/) (preview) | Anomaly Detector allows you to monitor and detect abnormalities in your time series data. |
-| [Content Moderator](/azure/cognitive-services/content-moderator/overview "Content Moderator") | Content Moderator provides monitoring for possible offensive, undesirable, and risky content. |
+| [Content Moderator](/azure/cognitive-services/content-moderator/overview) | Content Moderator provides monitoring for possible offensive, undesirable, and risky content. |
 | [Personalizer](/azure/cognitive-services/personalizer/) | Personalizer allows you to learn from users' real-time behavior in order to choose the most tailored experience for them. |
 
 ### Supported cultural languages

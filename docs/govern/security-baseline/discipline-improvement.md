@@ -17,7 +17,6 @@ The Security Baseline discipline focuses on ways of establishing policies that p
 This article outlines some potential tasks your company can engage in to better develop and mature the Security Baseline discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Phases of an incremental approach to cloud governance](../../_images/govern/adoption-phases.png)
-
 *Figure 1: Phases of an incremental approach to cloud governance.*
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Security Baseline discipline.

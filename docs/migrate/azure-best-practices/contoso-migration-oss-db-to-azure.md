@@ -48,7 +48,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 Contoso has already performed a [migration assessment](../..//plan/contoso-migration-assessment.md) of its digital estate by using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
 ![Diagram shows the migration process.](./media/contoso-migration-oss-db-to-azure/migration-process.png)
-_Figure 1: The migration process._
+*Figure 1: The migration process.*
 
 ### Solution review
 
@@ -87,7 +87,7 @@ Data migrations follow a standard and repeatable pattern. This process involves 
 
 #### Step 1: Discovery
 
-Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid#install-the-dependency-agent-on-windows).
+Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](/azure/azure-monitor/agents/agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/vm/vminsights-enable-hybrid#install-the-dependency-agent-on-windows).
 
 Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40 percent can be moved to PaaS-based services. Of the remaining 60 percent, they must be moved to an IaaS-based approach with a VM running the respective database software.
 
@@ -144,7 +144,7 @@ Contoso needs to:
 - Ensure that its new Azure database workloads are secure. For more information, see [Azure SQL Database and SQL Managed Instance security capabilities](/azure/azure-sql/database/security-overview).
 - Review the firewall and virtual network configurations.
 - Set up Azure Private Link so that all database traffic is kept inside Azure and the on-premises network.
-- Enable Azure Advanced Threat Protection.
+- Enable Microsoft Defender for Identity.
 
 #### Backups
 
