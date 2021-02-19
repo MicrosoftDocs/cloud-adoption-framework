@@ -1,9 +1,9 @@
 ---
 title: Cloud operation and management antipatterns
-description: Just because a new or modernized tooling-chain is introduced it does not equate to faster delivery or better business outcome.
+description: "Introducing or modernizing IT tools doesn't necessarily guarantee faster deliveries or better business outcomes."
 author: lpassig
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -12,21 +12,21 @@ ms.custom: think-tank
 
 # Cloud operation and management antipatterns
 
-Customers frequently experience common cloud adoption antipatterns while in the operation or management phase of cloud adoption. Be cautious when you introduce a new or modernized tool chain.
+Customers often experience antipatterns during the operation or management phase of cloud adoption. By introducing new or modernized tool chains with caution, you can often avoid these antipatterns.
 
-## Antipattern: Focusing on tooling rather than business outcomes
+## Antipattern: Focus on tooling, not business outcomes
 
-Introducing or modernizing IT tooling can be very exciting and pain-relieving. Measure new IT tooling to identify how it improves the business outcome. A new or modernized tool chain doesn't automatically mean that you get a faster delivery or a better business outcome.
+Modernized IT tooling can improve work environments by relieving employees of tedious tasks. It's important to measure new IT tooling so that you can identify whether it improves business outcomes. A new or modernized tool chain doesn't automatically provide faster delivery or a better business outcome.
 
-### Example: Tooling focus antipattern
+### Example: Introduce a platform that doesn't improve performance
 
-A company introduces a new, improved version of its continuous integration and continuous delivery (CI/CD) platform. The tool makes it easier to define delivery and deployment pipelines, so you can deploy features faster. The IT department is happy to deliver a platform that speeds up the pipeline configuration. Once a business unit uses the tool, it discovers that the time to market isn't significantly better compared to the old platform. The final approval and release process isn't changed or improved.
+A company introduces a new, improved version of its continuous integration and continuous delivery (CI/CD) platform. The tool makes it easier to define delivery and deployment pipelines, so you can deploy features faster. The IT department is enthusiastic about delivering a platform that speeds up the pipeline configuration. Once a business unit uses the tool, it discovers that the time to market isn't significantly better, compared with the old platform. The final approval and release process isn't changed or improved.
 
-### Preferred outcome: Business outcome definitions
+### Preferred outcome: Measure success with business outcomes
 
-To keep your technology and business goals aligned, leaders from both areas should jointly define desired outcomes. Make sure these outcomes and goals are Specific, Measurable, Achievable, Reasonable, and Time-bound (SMART). Ensure that the outcomes and goals have an impact on technology and the business. The Microsoft Cloud Adoption Framework for Azure can help to [determine a proper commitment within the business](/azure/cloud-adoption-framework/manage/considerations/commitment).
+To keep your technology and business goals aligned, have leaders from both areas jointly define desired outcomes. Make sure these outcomes and goals are Specific, Measurable, Achievable, Reasonable, and Time-bound (SMART). Ensure that the outcomes and goals have an impact on technology and the business. The Microsoft Cloud Adoption Framework for Azure can help to [determine a proper commitment within the business](/azure/cloud-adoption-framework/manage/considerations/commitment).
 
-Don't use simple technology outputs (such as faster deployment and pipeline configurations) to measure success. Instead, use technology and business outcomes. To help with this task, see [Developer Velocity](https://azure.microsoft.com/overview/developer-velocity/).
+Don't use simple technology outputs (such as faster deployment and pipeline configurations) to measure success. Instead, use technology and business outcomes. For help with this task, see [Developer Velocity](https://azure.microsoft.com/overview/developer-velocity/).
 
 ## Next step
 

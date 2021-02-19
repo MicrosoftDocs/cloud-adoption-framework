@@ -1,6 +1,6 @@
 ---
 title: Cloud organizational antipatterns
-description: Cloud adoption antipatterns can emerge because of tool sets and organizational issues like misaligned IT departments, partnerships, and engineering assignments.
+description: Avoid cloud adoption antipatterns that can emerge because of organizational issues like misaligned IT departments, partnerships, and engineering assignments.
 author: sarahwendel
 ms.author: brblanch
 ms.date: 02/19/2021
@@ -23,26 +23,26 @@ It's important to understand the role of each of these factors in a successful c
 
 ## Antipattern: Treat IT as a cost center
 
-Many companies treat IT departments as cost centers. This approach can lead to the perception that IT doesn't add value to the company. When employees view IT as a provider rather than an enabler, they can become discouraged. It also becomes hard for the company to attract the right talent. Reduced motivation and long life-cycle times result. The quality of work from IT can also suffer, and [silos and fiefdoms](../organize/fiefdoms-silos.md) can develop.
+Many companies treat IT departments as cost centers. This approach can lead to the perception that IT doesn't add value to the company. When employees view IT as a provider rather than an enabler, they can become discouraged. It's also hard for the company to attract the right talent. Reduced motivation and long lifecycle times result. The quality of work from IT can suffer, and [silos and fiefdoms](../organize/fiefdoms-silos.md) can develop.
 
 ### Example: Treat IT as a cost center
 
-A corporation manages its IT department as a cost center under the CFO's responsibility. The managing board perceives IT as a slow service provider that's one of the company's biggest cost drivers. The managing board doesn't realize that the Mobility business unit is consuming most of the assets that the IT department ordered. IT purchases a datacenter for all business units to use, but the Mobility business unit gets this oversized asset. The board doesn't view IT as an enabler or a partner.
+A corporation manages its IT department as a cost center under the chief financial officer's (CFO's) responsibility. The managing board perceives IT as a slow service provider that's one of the company's biggest cost drivers. The managing board doesn't realize that the Mobility business unit is consuming most of the assets that the IT department ordered. IT purchases a datacenter for all business units to use, but the Mobility business unit gets this oversized asset. The board doesn't view IT as an enabler or a partner.
 
 ### Preferred outcome: View IT as an enabler
 
 Instead of managing your IT department as a cost center, consider one of these approaches:
 
-- [Chargeback](../strategy/cloud-accounting.md#chargeback) Business units treat IT costs like operating expenses in their budgets.
+- [Chargeback](../strategy/cloud-accounting.md#chargeback): Business units treat IT costs like operating expenses in their budgets.
 - [Showback or awareness-back](../strategy/cloud-accounting.md#showback-or-awareness-back): IT functions as an agent. In reports back to the business, IT attributes any direct costs to relevant business units.
 
-Use the cloud as a tool to increase cost and business transparency. For instance, implement a [Cost Management discipline](../govern/cost-management/index.md) to increase cost transparency. Then you'll be more aware of the cost of different business units. You'll view the IT department as an enabler for those units.
+Use the cloud as a tool to increase cost and business transparency. For instance, implement [Cost Management discipline](../govern/cost-management/index.md) to increase cost transparency. Then you'll be more aware of the cost of different business units. You'll view the IT department as an enabler for those units.
 
 To improve transparency, focus on visibility, accountability, and optimization when moving to the cloud. For more information, see [Build a cost-conscious organization](../organize/cost-conscious-organization.md).
 
 ## Antipattern: Invest in new technology without involving the business
 
-IT departments often invest significant human and financial resources in building and deploying robust platforms and tool sets. But, sometimes IT fails to consider business units and their needs during design and development phases. This omission leads to new platforms with minimal relevance for business units. Employees are then hesitant to accept the new technology. Poor or slow adoption results.
+IT departments often invest significant human and financial resources in building and deploying robust platforms and tool sets. But, sometimes IT fails to consider business units and their needs during design and development phases. This omission leads to new platforms with minimal relevance for business units. Employees are then hesitant to accept the new technology. Poor or slow adoption can result.
 
 ### Example: Set up a platform without involving business units
 
@@ -53,17 +53,17 @@ The IT department of a data analysis firm sets up and customizes an Azure platfo
 - Issue support tickets, which lengthen approval cycles.
 - Begin to doubt the new platform.
 
-In the end, some developers purchase an Azure subscription by themselves to avoid the hassle of IT rules and regulations. Shadow IT results. Since the firm has little control over the shadow IT, high security risks emerge.
+In the end, some developers purchase an Azure subscription by themselves to avoid the hassle of IT rules and regulations. Shadow IT appears. Since the firm has little control over the shadow IT, high security risks emerge.
 
-### Preferred outcome: Integrate business units into decision making
+### Preferred outcome: Involve business units in decision making
 
-Avoid creating [IT silos](../organize/fiefdoms-silos.md) when deploying an enterprise-ready cloud platform. Integrate developers and technical decision makers (TDMs) from business units into design and development processes. To improve platform adoption, listen to business unit input.
+Avoid creating [IT silos](../organize/fiefdoms-silos.md) when deploying an enterprise-ready cloud platform. Involve developers and technical decision makers (TDMs) from business units in design and development processes. To improve platform adoption, listen to business unit input.
 
-Refer to the [enterprise-scale architecture](../ready/enterprise-scale/index.md) for Azure best practices and design principles that increase adoption speed and are tailored toward developers. Strike the right balance between compliance and flexibility. For instance, find ways to satisfy governance and security policies while keeping development environments agile.
+Refer to [Start with Cloud Adoption Framework enterprise-scale landing zones](../ready/enterprise-scale/index.md) for Azure best practices and design principles that increase adoption speed and are tailored toward developers. Strike the right balance between compliance and flexibility. For instance, find ways to satisfy governance and security policies while keeping development environments agile.
 
 ## Antipattern: Outsource core business functions
 
-Consulting partners and managed service providers (MSPs) can play an important role in a cloud journey. But, companies should take care that this work doesn't provide the most value in their business. Companies that outsource responsibilities to MSPs or cloud providers shouldn't become dependent on these providers.
+Consulting partners and managed service providers (MSPs) can play an important role in a cloud journey. But, companies should take care that the partners' and MSPs' work doesn't provide the most value in their business. Companies that outsource responsibilities to MSPs or cloud consultants shouldn't become dependent on these providers.
 
 ### Example: Outsource cloud adoption and migration
 
@@ -90,7 +90,7 @@ A research institute hires several TDMs to lead its cloud journey. After the ini
 
 ### Preferred outcome: Use cloud engineers for the implementation phase
 
-Remember that engineers are essential for properly implementing cloud automation and landing zone concepts. Responsibilities and tasks can shift significantly when you adopt service models. By shifting responsibilities to a cloud provider, you can go into production faster. You can also use TDMs for decision making. But, use capable cloud engineers for tasks that require deep engineering knowledge. Then you'll realize the advantages that the cloud provides.
+Remember that engineers are essential for properly implementing cloud automation and landing zone concepts. Responsibilities and tasks can shift significantly when you adopt service models. By shifting responsibilities to a cloud provider, you can go into production faster. You can also use TDMs for decision making. But, use capable cloud engineers for tasks that require deep engineering knowledge. Then you can realize the advantages that the cloud provides.
 
 ## Next steps
 

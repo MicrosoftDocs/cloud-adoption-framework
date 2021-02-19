@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption plan antipatterns
-description: Cloud adoption antipatterns can emerge when companies choose replacement projects over modernization or when they opt for the wrong operating or service model.
+description: Avoid cloud adoption planning antipatterns like choosing replacement projects over modernization and using the wrong operating or service model.
 author: mahia127
 ms.author: brblanch
 ms.date: 02/19/2021
@@ -12,7 +12,11 @@ ms.custom: think-tank
 
 # Cloud adoption plan antipatterns
 
-Customers often experience antipatterns while planning a cloud adoption. Misaligned operating models can lead to increased time to market, misunderstandings, and increased pressure on IT departments. Companies sometimes choose the wrong service model when they assume that platform as a service (PaaS) decreases costs. When an organization's architecture changes, major replacement projects can result. Managing these projects is often complex and cost intensive.
+Customers often experience antipatterns while planning a cloud adoption, for many reasons:
+
+- Misaligned operating models can lead to increased time to market, misunderstandings, and increased pressure on IT departments.
+- Companies sometimes choose the wrong service model when they assume that platform as a service (PaaS) decreases costs.
+- When an organization's architecture changes, major replacement projects can result. Managing these projects is often complex and cost intensive.
 
 ## Antipattern: Choose the wrong cloud operating model
 
@@ -26,10 +30,10 @@ A company's strategic priorities and the scope of its portfolio determine its cl
 
 A corporation introduces an operating model that makes the IT department accountable for everything that runs inside the cloud. The team that's responsible for the cloud contains three people. This setup leads to a slow adoption journey because:
 
-- The team only approves measures after it fully understands their impact on the business, operations, and security.
+- The team only approves measures after fully understanding their impact on the business, operations, and security.
 - These issues aren't the team's main area of expertise.
 
-Subject matter experts would like to use the service, so business units increase pressure. Shadow IT will probably emerge as business units use company credit cards to create environments for themselves.
+Subject matter experts would like to use the cloud service, so business units increase pressure. Shadow IT will probably emerge as business units use company credit cards to create environments for themselves.
 
 ### Preferred outcome: Compare models and build a readiness plan
 
@@ -50,7 +54,7 @@ For their adoption strategy, they choose PaaS over IaaS. A year into their cloud
 
 ### Preferred outcome: Minimize disruption to your business
 
-To reduce coordination efforts, start with IaaS for initial cloud adoption projects. Adapting new processes and practices is more manageable when you move to the cloud later instead of at the outset. Adopt IaaS first, especially in datacenter transformation scenarios. At the same time, launch a cloud skills initiative.
+To reduce coordination efforts, start with IaaS for initial cloud adoption projects. Adopting new processes and practices is more manageable when you move to the cloud later instead of at the outset. Adopt IaaS first, especially in datacenter transformation scenarios. At the same time, launch a cloud skills initiative.
 
 Gradually modernize and adopt PaaS later, after the workload is already in the cloud. The experience that you've gained will help you adopt PaaS faster. You'll need to learn fewer new skills and processes for modernization. You also won't significantly disrupt your business processes.
 
@@ -64,17 +68,17 @@ Evaluate digital assets according to [Cloud rationalization](../digital-estate/5
 
 ## Antipattern: Replace architecture with SaaS solutions
 
-Applications that are based on PaaS and SaaS are relatively easy to maintain. They require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
+Applications that are based on PaaS and SaaS are relatively easy to maintain. They usually require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
 
 ### Example: Choose replacement over modernization
 
-A corporation has a substantial SAP environment. The IT department would like to replace this landscape since it's causing several performance and stability issues. After IT starts on a replacement project, its due diligence list for replacing the entire environment gets longer every day.
+A corporation has a large SAP environment. The IT department would like to replace this landscape since it's causing several performance and stability issues. After IT starts on a replacement project, the due diligence list for replacing the entire environment gets longer every day.
 
 As a result, IT considers gradually modernizing the environment and changing the hosting platform to Azure. IT soon realizes that these changes can provide stability and quick results. IT then reduces the scope of the project to modernizing the landscape. Improved performance and reliability result, at a fraction of the estimated replacement cost.
 
 ### Preferred outcome: Rationalize your digital estate
 
-Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing it instead. Understand your company's [digital estate](../digital-estate/index.md). Determine which of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md) works best for modernizing or migrating your assets:
+Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing instead. Understand your company's [digital estate](../digital-estate/index.md). Determine which of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md) works best for modernizing or migrating your assets:
 
 - Rehost
 - Refactor
