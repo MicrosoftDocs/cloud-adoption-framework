@@ -28,7 +28,7 @@ A company's strategic priorities and the scope of its portfolio determine its cl
 
 ### Example: Assign too much responsibility to a small team
 
-A corporation introduces an operating model that makes the IT department accountable for everything that runs inside the cloud. The team that's responsible for the cloud contains three people. This setup leads to a slow adoption journey because:
+A corporation introduces an operating model that makes the IT department accountable for everything that runs inside the cloud. The team that's responsible for the cloud contains three people. This setup leads to a slow adoption journey, because:
 
 - The team only approves measures after fully understanding their impact on the business, operations, and security.
 - These issues aren't the team's main area of expertise.
@@ -37,15 +37,15 @@ Subject matter experts would like to use the cloud service, so business units in
 
 ### Preferred outcome: Compare models and build a readiness plan
 
-Review strategic priorities, portfolio scope, requirements, and constraints. Explore operating model options by [comparing the four most common cloud operations patterns](../operating-model/compare.md) with your current cloud operating model. Identify one or more cloud operating models that suit your organization. Then decide on a model. Since roles change with operating models, [build a skill readiness plan](../plan/adapt-roles-skills-processes.md) before moving to the cloud.
+Review strategic priorities, portfolio scope, requirements, and constraints. Explore operating model options by [comparing the four most common cloud operations patterns](../operating-model/compare.md) with your current cloud operating model. Identify one or more cloud operating models that suit your organization. Then decide on a model. Because roles change with operating models, [build a skill readiness plan](../plan/adapt-roles-skills-processes.md) before moving to the cloud.
 
 ## Antipattern: Choose the wrong service model
 
-Companies sometimes assume that PaaS solutions cost less than infrastructure as a service (IaaS) solutions. This assumption can lead to the wrong choice of service model. Cost-conscious companies often make this mistake when their main reason for moving to the cloud is to save costs. These companies tend to forget that they also need to change processes when they adopt PaaS, especially when they move certain responsibilities to cloud providers. Switching to PaaS introduces fundamental changes in coordination efforts, engineering practices, and delivery pipelines. Unexpected cost increases and delays can result.
+Companies sometimes assume that PaaS solutions cost less than infrastructure as a service (IaaS) solutions. This assumption can lead to the wrong choice of service model. Cost-conscious companies often make this mistake when their main reason for moving to the cloud is to save costs. These companies forget that they also need to change processes when they adopt PaaS, especially when they move certain responsibilities to cloud providers. Switching to PaaS introduces fundamental changes in coordination efforts, engineering practices, and delivery pipelines. Unexpected cost increases and delays can result.
 
 ### Example: Choose PaaS over IaaS
 
-A publisher launches a program to migrate its data centers to the cloud. The executives would like to modernize their current application architecture and tooling all at once. Their reasons include:
+A publisher launches a program to migrate its datacenters to the cloud. The executives would like to modernize their current application architecture and tooling all at once. Their reasons include:
 
 - Maximizing cost efficiency.
 - Developing a more modern application portfolio.
@@ -66,27 +66,27 @@ Evaluate digital assets according to [Cloud rationalization](../digital-estate/5
 - Rebuild
 - Replace
 
-## Antipattern: Replace architecture with SaaS solutions
+## Antipattern: Replace architecture
 
-Applications that are based on PaaS and SaaS are relatively easy to maintain. They usually require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
+Applications that are based on PaaS and software as a service (SaaS) are relatively easy to maintain. They usually require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
 
 ### Example: Choose replacement over modernization
 
-A corporation has a large SAP environment. The IT department would like to replace this landscape since it's causing several performance and stability issues. After IT starts on a replacement project, the due diligence list for replacing the entire environment gets longer every day.
-
-As a result, IT considers gradually modernizing the environment and changing the hosting platform to Azure. IT soon realizes that these changes can provide stability and quick results. IT then reduces the scope of the project to modernizing the landscape. Improved performance and reliability result, at a fraction of the estimated replacement cost.
+A corporation has a large SAP environment. The IT department would like to replace this landscape, which is causing several performance and stability issues. After IT starts on a replacement project, the due diligence list for replacing the entire environment gets longer every day.
 
 ### Preferred outcome: Rationalize your digital estate
 
-Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing instead. Understand your company's [digital estate](../digital-estate/index.md). Determine which of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md) works best for modernizing or migrating your assets:
+Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing instead. Relatively small changes to your application environment can have a huge impact on performance and reliability. For instance, changing the hosting platform to Azure can provide stability and quick results. Improved performance and reliability result, at a fraction of the estimated replacement cost.
+
+When deciding on an innovation strategy, explore different modernization options. Evaluate these options in a proof of concept (PoC).
+
+Understand your company's [digital estate](../digital-estate/index.md). Determine which of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md) works best for modernizing or migrating your assets:
 
 - Rehost
 - Refactor
 - Rearchitect
 - Rebuild
 - Replace
-
-Keep in mind that relatively small changes to your application environment can have a huge impact on performance and reliability. Before deciding on an innovation strategy, explore different modernization options. Evaluate these options in a proof of concept (PoC).
 
 ## Next steps
 

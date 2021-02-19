@@ -56,7 +56,7 @@ A company might pursue a microservice-first strategy when developing in the clou
 
 ### Example: Use a microservice architecture for all apps
 
-A company's chief information officer (CIO) establishes a policy of using a microservice architecture when building up new applications in the cloud. The company developers have never worked with the microservice architecture. They need to develop a simple web app. After working on the application for a few months, the developers realize that they probably would've already finished development if they had started with a monolithic architecture. The company hasn't achieved a faster time to market, among other benefits.
+A company's chief information officer (CIO) establishes a policy of using a microservice architecture when building up new applications in the cloud. The company developers have never worked with the microservice architecture. They need to develop a simple web app. After working on the application for a few months, the developers realize that they probably would have already finished development if they had started with a monolithic architecture. The company hasn't achieved a faster time to market, among other benefits.
 
 ### Preferred outcome: Base architectural decisions on assessments
 
@@ -68,7 +68,7 @@ Companies often decide to use only one subscription to host all their workloads.
 
 ### Example: Migrate under one subscription
 
-A conglomerate decides to spin off its hotel division into a separate company. The hotel division needs to move or migrate its IT assets to a new place. The new hotel company chooses a cloud-first approach and migrates all IT assets to the cloud. Because of time constraints, the new company migrates everything into one subscription and uses a huge virtual network, where there are few possibilities for separating duties and the security model properly. Three months after the spinoff is complete, the hotel company determines that its assets are less secure and governed than before, and that it's running into subscription limits.
+A conglomerate decides to spin off its hotel division into a separate company. The hotel division needs to move or migrate its IT assets to a new place. The new hotel company chooses a cloud-first approach and migrates all IT assets to the cloud. Because of time constraints, the new company migrates everything into one subscription and uses a huge virtual network, where there are few possibilities for separating duties and the security model properly. Three months after the spin-off is complete, the hotel company determines that its assets are less secure and governed than before, and that it's running into subscription limits.
 
 ### Preferred outcome: Use a segmentation strategy
 

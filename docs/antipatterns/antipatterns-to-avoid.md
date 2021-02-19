@@ -24,7 +24,7 @@ The following table lists antipatterns and the methodologies, or cloud adoption 
 | Strategy | Misaligned motivation | [Antipattern: Fail to communicate motivations](./strategy-antipatterns.md#antipattern-fail-to-communicate-motivations) |
 | Plan | Wrong cloud operating model | [Antipattern: Choose the wrong cloud operating model](./plan-antipatterns.md#antipattern-choose-the-wrong-cloud-operating-model) |
 | Plan | Wrong service model | [Antipattern: Choose the wrong service model](./plan-antipatterns.md#antipattern-choose-the-wrong-service-model) |
-| Plan | Replacement instead of modernization | [Antipattern: Replace architecture with SaaS solutions](./plan-antipatterns.md#antipattern-replace-architecture-with-saas-solutions) |
+| Plan | Replacement instead of modernization | [Antipattern: Replace architecture](./plan-antipatterns.md#antipattern-replace-architecture) |
 | Ready | Preview services in production | [Antipattern: Assume released services are ready for production](./ready-antipatterns.md#antipattern-assume-released-services-are-ready-for-production) |
 | Ready | Inaccurate resiliency and availability assumptions | [Antipattern: Assume increased resiliency and availability](./ready-antipatterns.md#antipattern-assume-increased-resiliency-and-availability) |
 | Ready | IT as cloud provider | [Antipattern: Become a cloud provider](./ready-antipatterns.md#antipattern-become-a-cloud-provider) |

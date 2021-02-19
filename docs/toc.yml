@@ -65,6 +65,11 @@ items:
       - name: Build a cloud operations team
         href: get-started/team/cloud-operations.md
 
+    - name: Adoption scenarios
+      items:
+      - name: Hybrid and multicloud
+        href: scenarios/hybrid/index.md
+
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
 
