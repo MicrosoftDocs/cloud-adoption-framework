@@ -20,7 +20,7 @@ The following section outlines how you can apply the concept of unified operatio
 
 [Azure Arc](/azure/azure-arc/overview) reduces the complexity and cost of extending your operations baseline. Deploying Azure Arc across your datacenter, hybrid cloud, and multicloud environments will extend the native features of Azure that are included in Azure Resource Manager.
 
-To get started with an operations baseline that spans multiple cloud providers, complete a simple inventory and tagging exercise. This simple exercise will begin to extend your operations baselines in a few simple steps:
+To get started with an operations baseline that spans on-premises and multiple cloud providers, complete a simple inventory and tagging exercise. This simple exercise will begin to extend your operations baselines in a few simple steps:
 
 - Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
 - Tag resources from AWS, GCP, and so on.

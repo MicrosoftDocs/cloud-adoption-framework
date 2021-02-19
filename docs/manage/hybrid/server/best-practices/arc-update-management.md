@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use Update Management in Azure Automation to manage operating system updates for Azure Arc enabled servers
 
-This article provides guidance on how to onboard Azure Arc enabled servers to [Update Management in Azure Automation](/azure/automation/update-management/overview), so that you can manage operating system updates for your Azure Arc enabled servers running Windows or Linux.
+This article provides guidance on how to onboard Azure Arc enabled servers to [Update Management in Azure Automation](https://docs.microsoft.com/azure/automation/update-management/overview), so that you can manage operating system updates for your Azure Arc enabled servers running Windows or Linux.
 
 In the following procedures you create and configure an Azure Automation account and Log Analytics workspace to support Update Management for Azure Arc enabled servers by doing the following:
 
@@ -129,7 +129,7 @@ Now that we have configured the Update Management solution, you can deploy updat
 
     ![A screenshot of a scheduled update within Update management.](./media/arc-update-management/scheduled-update.png)
 
-This Update Management solution will update your Azure Arc enabled servers in the deployment window based on the schedule you defined. There's a lot more you can do with [Update Management](/azure/automation/update-management/overview) that is outside the scope of this scenario. Review the [documentation](/azure/automation/update-management/overview) for more information.
+This Update Management solution will update your Azure Arc enabled servers in the deployment window based on the schedule you defined. There's a lot more you can do with [Update Management](https://docs.microsoft.com/azure/automation/update-management/overview) that is outside the scope of this scenario. Review the [documentation](https://docs.microsoft.com/azure/automation/update-management/overview) for more information.
 
 ## Clean up your environment
 
