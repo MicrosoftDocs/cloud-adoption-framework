@@ -51,7 +51,7 @@ Available capacity is compared to the storage requirements of all assets to be m
 > [!IMPORTANT]
 > At the conclusion of the analysis, you might need to update the release plan to reflect the time required to ship, restore, and synchronize the assets to be transferred offline.
 
-**Drift analysis:** Analyze each asset to be transferred offline for storage and configuration drift. _Storage drift_ is the amount of change in the underlying storage over time. _Configuration drift_ is change in the configuration of the asset over time. From the time the storage is copied to the time the asset is promoted to production, any drift might be lost. If that drift needs to be reflected in the migrated asset, you'll need to synchronize the local asset and the migrated asset. Flag this for consideration during migration execution.
+**Drift analysis:** Analyze each asset to be transferred offline for storage and configuration drift. *Storage drift* is the amount of change in the underlying storage over time. *Configuration drift* is change in the configuration of the asset over time. From the time the storage is copied to the time the asset is promoted to production, any drift might be lost. If that drift needs to be reflected in the migrated asset, you'll need to synchronize the local asset and the migrated asset. Flag this for consideration during migration execution.
 
 ## Migration process changes
 
