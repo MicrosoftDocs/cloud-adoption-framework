@@ -1,6 +1,6 @@
 ---
 title: Rehost an application on Azure VMs by using Azure Migrate
-description: Learn how contoso uses the Azure Migrate service to perform a lift-and-shift migration of on-premises machines to Azure and rehost an on-premises app.
+description: Learn how Contoso uses the Azure Migrate service to perform a lift-and-shift migration of on-premises machines to Azure and rehost an on-premises application.
 author: givenscj
 ms.author: abuck
 ms.date: 07/01/2020
@@ -16,7 +16,7 @@ ms.custom: think-tank
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual machines (VMs) by migrating application VMs to Azure VMs.
 
-The SmartHotel360 application used in this example is provided as open source. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
+The SmartHotel360 application used in this example is provided as open-source software. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
 ## Business drivers
 
@@ -87,7 +87,7 @@ Contoso will migrate the application front-end and database VMs to Azure VMs by 
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](/azure/cloud-adoption-framework/migrate/) | The service orchestrates and manages migration of on-premises applications and workloads as well as Amazon Web Services (AWS) and Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
+| [Azure Migrate: Server Migration](../index.md) | The service orchestrates and manages migration of on-premises applications and workloads as well as Amazon Web Services (AWS) and Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
 
 ## Prerequisites
 
@@ -160,7 +160,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
     - Ensure that TCP and UDP rules are added for the **Public** profile.
     - Check that RDP or SSH is allowed in the operating system firewall.
 
-2. For access over site-to-site VPN:
+2. For access over Site-to-site VPN:
 
     - Enable RDP or SSH on the on-premises VM before migration.
     - Check that RDP or SSH is allowed in the operating system firewall.
@@ -299,9 +299,8 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 Contoso has existing licensing for its VMs and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs to take advantage of this pricing.
 
-Contoso will enable [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage Azure resources.
+Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage Azure resources.
 
 ## Conclusion
 
-In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool.
-You can also take a look at the Azure DevOps projects which have been published in the [DevOps generator](https://aka.ms/adopt/plan/generator). Once in the generator download the [Server Migration Project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration) under the Cloud Adoption Framework navigation.
+In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool. You can also review the Azure DevOps projects which have been published in the [DevOps generator](https://aka.ms/adopt/plan/generator). Once in the generator download the [server migration project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration) under the Cloud Adoption Framework navigation.
