@@ -37,7 +37,7 @@ As you get started, the checklist and resources below will help you plan your ap
 
 To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services. Visit the product pages to learn more and to interact with demos to learn more about the capabilities available, such as vision, speech, language, and decision. There is also an e-book that walks through common scenarios and how to build your first application with Cognitive Services.
 
-- [Cognitive Services](/azure/cognitive-services/welcome)
+- [Cognitive Services](/azure/cognitive-services/what-are-cognitive-services)
 - [Interactive demos across the product/service pages](https://azure.microsoft.com/services/cognitive-services/)
 - [Building intelligent applications with cognitive APIs](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/) (e-book)
 
@@ -82,7 +82,7 @@ Familiarize yourself with Azure Bot Service and Microsoft Bot Framework.
 - Azure Bot Service is a dedicated service within Azure that allows you to host or publish your bot in Azure and connect to popular channels.
 
 - Read the [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction)
-- Learn about [Principles of bot design](/azure/bot-service/bot-service-design-principles)
+- Learn about [principles of bot design](/azure/bot-service/bot-service-design-principles)
 - Get the [latest versions of Bot Framework SDK and tools](/azure/bot-service/what-is-new)
 
 One of the simplest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes.

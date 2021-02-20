@@ -1,5 +1,5 @@
 ---
-title: "Innovative Solutions Guide"
+title: Innovative solutions guide
 description: Before you start, look at this guide for innovative solutions using the Cloud Adoption Framework. Get cloud innovation that helps engage customers and drive adoption.
 author: matticusau
 ms.author: brblanch

@@ -17,7 +17,6 @@ The Deployment Acceleration discipline focuses on establishing policies that ens
 This article outlines some potential tasks your company can engage in to better develop and mature the Deployment Acceleration discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Phases of an incremental approach to cloud governance](../../_images/govern/adoption-phases.png)
-
 *Figure 1: Phases of an incremental approach to cloud governance.*
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Identity Baseline discipline.
@@ -46,7 +45,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 
 - For new cloud-based applications, introduce fully automated deployments early in the development process. This investment will improve the reliability of your testing processes and ensure consistency across your development, QA, and production environments.
 - Store all deployment artifacts such as deployment templates or configuration scripts using a source-control platform such as GitHub or Azure DevOps.
-- Store all secrets, passwords, certificates, and connection strings in [Azure Key Vault](/azure/key-vault).
+- Store all secrets, passwords, certificates, and connection strings in [Azure Key Vault](/azure/key-vault/).
 - Consider a pilot test before implementing your [Deployment Acceleration toolchain](./toolchain.md), making sure it streamlines your deployments as much as possible. Apply feedback from pilot tests during the predeployment phase, repeating as needed.
 - Evaluate the logical and physical architecture of your applications, and identify opportunities to automate the deployment of application resources or improve portions of the architecture using other cloud-based resources.
 - Update the architecture guidelines document to include deployment and user adoption plans, and distribute to key stakeholders.

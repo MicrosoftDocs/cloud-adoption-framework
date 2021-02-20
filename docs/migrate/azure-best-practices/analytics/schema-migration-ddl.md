@@ -51,7 +51,7 @@ It's good practice to measure the compression ratio and index overhead for your 
 
 It might be possible to simplify your existing data warehouse before migration by reducing complexity to ease migration. This effort might include:
 
-- Removing or archiving unused tables before migrating to avoid migrating data that's not used. Archiving to Azure Blob storage and defining the data as an external table might keep the data available for a lower cost.
+- Removing or archiving unused tables before migrating to avoid migrating data that's not used. Archiving to Azure Blob Storage and defining the data as an external table might keep the data available for a lower cost.
 - Converting physical data marts to virtual data marts by using data virtualization software to reduce what you have to migrate. This conversion also improves agility and reduces total cost of ownership. You might consider it as modernization during migration.
 
 One objective of the migration exercise might also be to modernize the warehouse by changing the underlying data model. One example is moving from an Inmon-style data model to a data vault approach. You should decide this as part of the preparation phase and incorporate a strategy for the transition into the migration plan.
@@ -68,7 +68,7 @@ If the migration project includes any changes to the data model, the best practi
 
 You can migrate the existing system as several layers (for example, data ingest/staging layer, data warehouse layer, and reporting or data mart layer). Each layer consists of relational tables and views. Although you can migrate all these to Azure Synapse Analytics as is, it might be more cost-effective and reliable to use some of the features and capabilities of the Azure ecosystem. For example:
 
-- **Data ingest and staging:** You can use Azure Blob storage in conjunction with PolyBase for fast parallel data loading for part of the ETL (extract, transform, load) or ELT (extract, load, transform) process, rather than relational tables.
+- **Data ingest and staging:** You can use Azure Blob Storage in conjunction with PolyBase for fast parallel data loading for part of the ETL (extract, transform, load) or ELT (extract, load, transform) process, rather than relational tables.
 - **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics might eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It might be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, you can achieve the process for data migration of historical data and possibly also incremental updates as shown in this diagram:
 
    ![Diagram that illustrates a modern data warehouse.](../../../_images/analytics/schema-migration-ddl.png)

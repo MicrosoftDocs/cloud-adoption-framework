@@ -33,7 +33,7 @@ Familiarize yourself with Azure Bot Service and Microsoft Bot Framework.
 - Azure Bot Service is a dedicated service within Azure that allows you to host or publish your bot in Azure and connect to popular channels.
 
 - Read the [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction)
-- Learn about [Principles of bot design](/azure/bot-service/bot-service-design-principles)
+- Learn about [principles of bot design](/azure/bot-service/bot-service-design-principles)
 - Get the [latest versions of Bot Framework SDK and tools](/azure/bot-service/what-is-new)
 
 One of the simplest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes.

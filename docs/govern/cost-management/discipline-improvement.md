@@ -17,8 +17,7 @@ The Cost Management discipline attempts to address core business risks related t
 This article outlines potential tasks your company perform to develop and mature your Cost Management discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution. The tasks are then iterated on to allow the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Phases of an incremental approach to cloud governance.](../../_images/govern/adoption-phases.png)
-
-_Figure 1: Phases of an incremental approach to cloud governance._
+*Figure 1: Phases of an incremental approach to cloud governance.*
 
 No single document can account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Cost Management discipline capabilities.
 
