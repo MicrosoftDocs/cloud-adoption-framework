@@ -1,5 +1,5 @@
 ---
-title: "Optimize and promote"
+title: Optimize and promote
 description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
 ms.author: brblanch
@@ -57,7 +57,7 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 ::: zone target="docs"
 
-- [Manage reservations for Azure resources](/azure/billing/billing-manage-reserved-vm-instance)
+- [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
 - [Resize a Windows VM](/azure/virtual-machines/windows/resize-vm)
 - [Resize a Linux virtual machine using Azure CLI](/azure/virtual-machines/linux/change-vm-size)
 
@@ -123,8 +123,8 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 
 ::: zone target="docs"
 
-- [Tutorial: Optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
-- [Prevent unexpected charges with Azure Cost Management + Billing](/azure/billing/billing-getting-started)
-- [Explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis)
+- [Tutorial: optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
+- [Prevent unexpected charges with Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview)
+- [Explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis)
 
 ::: zone-end

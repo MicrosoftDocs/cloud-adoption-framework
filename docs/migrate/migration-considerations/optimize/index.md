@@ -1,5 +1,5 @@
 ---
-title: "Optimize migrated workloads"
+title: Optimize migrated workloads
 description: Use the Cloud Adoption Framework for Azure to prepare your migrated workload and assets to be promoted to production.
 author: BrianBlanchard
 ms.author: brblanch

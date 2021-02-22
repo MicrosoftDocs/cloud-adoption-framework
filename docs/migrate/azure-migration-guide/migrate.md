@@ -92,7 +92,7 @@ For more information, see:
 - [Azure Database Migration Service overview](/azure/dms/dms-overview)
 - [Create an instance of Azure Database Migration Service](/azure/dms/quickstart-create-data-migration-service-portal)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
-- [Azure portal: Create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
+- [Azure portal: create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
 
 ::: zone-end
 
@@ -125,7 +125,7 @@ You might also decide to change the Azure App Service hosting plan and other set
 
 For more information, see:
 
-[Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure/)
+[Migrate ASP.NET applications to Azure](/learn/paths/migrate-dotnet-apps-azure/)
 
 ### Data Migration Assistant
 
@@ -167,7 +167,7 @@ For more information, see:
 
 Database Experimentation Assistant (DEA) is a new A/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
 
-The database experimentation assistant contains the following workflow activities:
+The Database Experimentation Assistant contains the following workflow activities:
 
 - **Capture:** The first step of SQL Server a/B testing is to capture a trace on your source server. The source server usually is the production server.
 - **Replay:** The second step of SQL Server a/B testing is to replay the trace file that was captured to your target servers. Then, collect extensive traces from the replays for analysis.
@@ -175,11 +175,11 @@ The database experimentation assistant contains the following workflow activitie
 
 For more information, see:
 
-- [Overview of database experimentation assistant](/sql/dea/database-experimentation-assistant-overview)
+- [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview)
 
 ### Azure Cosmos DB data migration tool
 
-Azure Cosmos DB data migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The data migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
+Azure Cosmos DB data migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The data migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
 
 For more information, see:
 
@@ -233,7 +233,7 @@ Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) 
 
 Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite.
 
-Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](/azure/cloud-adoption-framework/plan/template). You can then modify the template to reflect the [workloads](/azure/cloud-adoption-framework/plan/workloads) and [assets](/azure/cloud-adoption-framework/plan/assets) to be migrated.
+Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](../../plan/template.md). You can then modify the template to reflect the [workloads](../../plan/workloads.md) and [assets](../../plan/assets.md) to be migrated.
 
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
@@ -260,4 +260,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 ## [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place additional usage requirements on your services, periodic cost analysis helps you avoid unexpected usage charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md) section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place additional usage requirements on your services, periodic cost analysis helps you avoid unexpected usage charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Optimize and transform](./optimize-and-transform.md) section.
