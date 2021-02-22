@@ -66,7 +66,7 @@ While these features are built into Azure, each of the above requires configurat
 
 ### Security monitoring
 
-Security monitoring is a proactive strategy that audits your resources to identify systems that do not meet organizational standards or best practices. Azure Security Center provides unified security baseline and Azure Advanced Threat Protection across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks, including:
+Security monitoring is a proactive strategy that audits your resources to identify systems that do not meet organizational standards or best practices. Azure Security Center provides unified security baseline and Microsoft Defender for Identity across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks, including:
 
 - Unified view of security across all on-premises and cloud workloads with Azure Security Center.
 - Continuous monitoring and security assessments to ensure compliance and remediate any vulnerabilities.

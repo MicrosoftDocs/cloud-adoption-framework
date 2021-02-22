@@ -1,5 +1,5 @@
 ---
-title: "Empower Digital Transformation"
+title: Empower digital transformation
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation. Get digital transformation services on Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,6 +15,8 @@ keywords: Digital transformation, digital transformation services, cloud adoptio
 # Empower cloud adoption
 
 You know that innovation and digital transformation is critical to business success. Digital transformation is the adoption of cloud-based and digital technologies to replace old systems and create better customer experiences, better efficiency, business insights, and greater innovation from the data. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. Developers are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+
+<!-- docutune:ignore "one thing: drive" -->
 
 ## Generate value
 
@@ -94,8 +96,8 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 ### Learn more
 
 - [Open source starts in GitHub](https://azure.microsoft.com/products/github/)
-- [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource/)
-- [Microsoft Teams](/MicrosoftTeams/teams-overview)
+- [Open source on Azure](https://azure.microsoft.com/overview/open-source/)
+- [Microsoft Teams](/microsoftteams/teams-overview)
 
 ## [Innovation characteristics](#tab/Characteristics)
 

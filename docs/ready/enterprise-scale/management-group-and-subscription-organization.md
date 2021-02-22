@@ -110,76 +110,76 @@ Cost transparency across a technical estate is a critical management challenge f
 
 Enterprise-scale Azure policies can be used to enforce following governance requirements.
 
-**Prevent Public IP based services**
+- **Prevent Public IP based services**
 
-Most of the Azure Platform-as-a-service (PaaS) services are created with a public IP address assigned to them. This is a good option for developers who want to quickly get started with these services. Public endpoint accelerates learning curve and is ideal when developing pilots and small-scale Proof Of Concept (PoC) implementations.
+    Most of the Azure Platform-as-a-service (PaaS) services are created with a public IP address assigned to them. This is a good option for developers who want to quickly get started with these services. Public endpoint accelerates learning curve and is ideal when developing pilots and small-scale Proof Of Concept (PoC) implementations.
 
-However, when these pilots/PoCs make transition to production-ready enterprise applications, their use of public IP addresses is sometimes overlooked.
+    However, when these pilots/PoCs make transition to production-ready enterprise applications, their use of public IP addresses is sometimes overlooked.
 
-Production workloads using public IPs without proper security measures in place can increase security risks. Malicious actors can potentially use public IP as a gateway to launch an attack. Many enterprise compliance policies do not allow use of public IP just to avoid exposure to such security risks.
+    Production workloads using public IPs without proper security measures in place can increase security risks. Malicious actors can potentially use public IP as a gateway to launch an attack. Many enterprise compliance policies do not allow use of public IP just to avoid exposure to such security risks.
 
-There is a custom policy on denying creation of public IP address which prevents pubic IP getting created in a scope targeted by policy. Enterprises can easily prevent Virtual Machines (VMs) getting created with public IP using this policy.
+    There is a custom policy on denying creation of public IP address which prevents pubic IP getting created in a scope targeted by policy. Enterprises can easily prevent Virtual Machines (VMs) getting created with public IP using this policy.
 
-Similarly there is a custom Policy Initiative / PolicySet which helps enterprises prevent Azure services getting created with a public IP address in the first place.
+    Similarly there is a custom Policy Initiative / PolicySet which helps enterprises prevent Azure services getting created with a public IP address in the first place.
 
-**Enforce audit and log information collection**
+- **Enforce audit and log information collection**
 
-Lack of auditing and diagnostics information at granular level can impact operational practices. Incomplete audit information makes it difficult to correlate logs from multiple Azure services and form a coherent debugging experience.
+    Lack of auditing and diagnostics information at granular level can impact operational practices. Incomplete audit information makes it difficult to correlate logs from multiple Azure services and form a coherent debugging experience.
 
-It is desirable that once Azure services are provisioned, they provide detailed information about Azure platform they interact with.
-Such information can be broadly divided into logs and metrics. Each Azure service can be further categorized into its sub-components (e.g. An Azure Public IP resource has `DDoSProtectionNotifications`, `DDoSMitigationReports` and `DDoSMitigationFlowLogs` as its sub-components. Collecting diagnostic information at these sub-categories can greatly enhance auditing and debugging experience.
+    It is desirable that once Azure services are provisioned, they provide detailed information about Azure platform they interact with.
+    Such information can be broadly divided into logs and metrics. Each Azure service can be further categorized into its sub-components (e.g. An Azure Public IP resource has `DDoSProtectionNotifications`, `DDoSMitigationReports` and `DDoSMitigationFlowLogs` as its sub-components. Collecting diagnostic information at these sub-categories can greatly enhance auditing and debugging experience.
 
- A custom Policy Initiative is available to enforce logs and metrics collection at a deeper level which helps enterprises gather logs and metrics per Azure Service. This initiative includes a policy for every Azure service. Key log categories for each Azure service and all metrics are collected automatically through these policies.
+     A custom Policy Initiative is available to enforce logs and metrics collection at a deeper level which helps enterprises gather logs and metrics per Azure Service. This initiative includes a policy for every Azure service. Key log categories for each Azure service and all metrics are collected automatically through these policies.
 
- **Provide comprehensive security for SQL Databases**
+- **Provide comprehensive security for SQL Databases**
 
- SQL databases are prevalent Azure service in most Azure deployments. Unfortunately, they are also prime target for malicious activities from within and outside of an enterprise.
+     SQL databases are prevalent Azure service in most Azure deployments. Unfortunately, they are also prime target for malicious activities from within and outside of an enterprise.
 
-A custom Policy Initiative specifically fo SQL Databases helps implement following key governance practices.
+    A custom Policy Initiative specifically fo SQL Databases helps implement following key governance practices.
 
-**Encrypt SQL data at rest**
+  - **Encrypt SQL data at rest**
 
-SQL database and its backups are prone to risks of getting into hands of malicious actors. It's very easy to restore SQL database from either database files or backup. Without proper defence system in place, malicious actors can have access to all the data.
+    SQL database and its backups are prone to risks of getting into hands of malicious actors. It's very easy to restore SQL database from either database files or backup. Without proper defence system in place, malicious actors can have access to all the data.
 
-Ensuring that SQL database is encrypted at rest is one of the first steps towards building SQL database defence strategy. Azure SQL database Transparent Data Encryption (TDE) ensures that data is encrypted at rest without needing any application code level change.
+    Ensuring that SQL database is encrypted at rest is one of the first steps towards building SQL database defence strategy. Azure SQL database Transparent Data Encryption (TDE) ensures that data is encrypted at rest without needing any application code level change.
 
-A SQL database with TDE enabled makes it hard for malicious actors to get access to data it holds even if its compromised.
+    A SQL database with TDE enabled makes it hard for malicious actors to get access to data it holds even if its compromised.
 
-As Azure SQL database deployments within an enterprise increases, it is very important to ensure that Azure SQL databases are created with TDE enabled.
+    As Azure SQL database deployments within an enterprise increases, it is very important to ensure that Azure SQL databases are created with TDE enabled.
 
-There is a custom policy to ensure that Azure SQL databases have TDE enabled.
+    There is a custom policy to ensure that Azure SQL databases have TDE enabled.
 
-**Enforce alerts for suspicious activity**
+  - **Enforce alerts for suspicious activity**
 
-Bad actors are on the constant lookout to access and exploit business-critical Azure SQL databases. Risk of such attempts going unnoticed can reduce an enterprise's ability to detect and respond to them. In worst case scenario, an enterprise may never know if its SQL database has been compromised.
+    Bad actors are on the constant lookout to access and exploit business-critical Azure SQL databases. Risk of such attempts going unnoticed can reduce an enterprise's ability to detect and respond to them. In worst case scenario, an enterprise may never know if its SQL database has been compromised.
 
-Azure SQL database provides way to set up security alerts that can report suspicious activities on SQL server. Such alert sends email a to pre-configured email addresses and optionally to Azure subscription admins and owners.
+    Azure SQL database provides way to set up security alerts that can report suspicious activities on SQL server. Such alert sends email a to pre-configured email addresses and optionally to Azure subscription admins and owners.
 
-There is a custom policy to enforce enabling of security alerts on Azure SQL databases. Enterprise can benefit from identifying malicious activities such as SQL injection attack, brute force attack, etc. though these alert. Security alerts provide detailed information about every incident. This detailed information is surfaced in Azure portal as well as email message triggered.
+    There is a custom policy to enforce enabling of security alerts on Azure SQL databases. Enterprise can benefit from identifying malicious activities such as SQL injection attack, brute force attack, etc. though these alert. Security alerts provide detailed information about every incident. This detailed information is surfaced in Azure portal as well as email message triggered.
 
-**Enforce audit trail of operations**
+  - **Enforce audit trail of operations**
 
-A business-critical Azure SQL database can be subject to a large number of DML (Data Manipulation Language), DCL (Data Control Language) and DDL (Data Definition Language) commands as part of day to day operations. Without a clear control and insight into these operational activities, its challenging to distinguish between legitimate and suspicious operations.
+    A business-critical Azure SQL database can be subject to a large number of DML (Data Manipulation Language), DCL (Data Control Language) and DDL (Data Definition Language) commands as part of day to day operations. Without a clear control and insight into these operational activities, its challenging to distinguish between legitimate and suspicious operations.
 
-Enabling SQL Auditing can help in gathering important information about all database activities. Its also a requirement for many industry/regional regulatory compliance requirements. SQL Auditing helps generating and reporting audit trail of database events.
+    Enabling SQL Auditing can help in gathering important information about all database activities. Its also a requirement for many industry/regional regulatory compliance requirements. SQL Auditing helps generating and reporting audit trail of database events.
 
-Enterprises can use a custom policy to enforce Azure SQL Database Auditing. This policy audits and reports key database events such as ownership changes, successful/failed logins, role membership changes, schema changes, etc. Enterprises can use this policy and audit trail it generates to gain rich insights into database operations and comply with industry/regional regulatory requirements.
+    Enterprises can use a custom policy to enforce Azure SQL Database Auditing. This policy audits and reports key database events such as ownership changes, successful/failed logins, role membership changes, schema changes, etc. Enterprises can use this policy and audit trail it generates to gain rich insights into database operations and comply with industry/regional regulatory requirements.
 
-**Enforce evaluation against proven best practices**
+- **Enforce evaluation against proven best practices**
 
-Throughout it's lifecycle, Azure SQL database undergoes very large number of schema, permission and configuration changes. There is always a risk of such changes resulting in deviation from best practices. Excessive permissions, orphaned roles and many such configurational drifts can be exploited by malicious actors.
+    Throughout it's lifecycle, Azure SQL database undergoes very large number of schema, permission and configuration changes. There is always a risk of such changes resulting in deviation from best practices. Excessive permissions, orphaned roles and many such configurational drifts can be exploited by malicious actors.
 
-Azure SQL database has built-in vulnerability assessment service.  State of Azure SQL database through the lense of Microsoft's best practices for SQL database can be evaluated using vulnerability assessment. A vulnerability assessment scan identifies database and server level security risks. A remediation task in applicable scenario may be also generated to fix the vulnerability.
+    Azure SQL database has built-in vulnerability assessment service.  State of Azure SQL database through the lense of Microsoft's best practices for SQL database can be evaluated using vulnerability assessment. A vulnerability assessment scan identifies database and server level security risks. A remediation task in applicable scenario may be also generated to fix the vulnerability.
 
-A custom policy deployed in  ensures that Azure SQL databases are configured with vulnerability assessment. The assessment scans are performed periodically and reports are stored in Azure storage account. Pre-defined email address is used to share the results of periodic scan results for reporting purposes.
+    A custom policy deployed in  ensures that Azure SQL databases are configured with vulnerability assessment. The assessment scans are performed periodically and reports are stored in Azure storage account. Pre-defined email address is used to share the results of periodic scan results for reporting purposes.
 
-**Protect against intentional/unintentional secret deletion**
+- **Protect against intentional/unintentional secret deletion**
 
-Azure Key Vault is a service to store confidential information such as keys, certificates, passwords, etc. A malicious user can potentially abuse Azure Key Vault service by deleting secrets stored inside it. It is also quite likely that a user may accidentally delete sensitive information stored in Azure Key Vault. Without proper provisions in place, either malicious or accidental deletion in Azure Key Vault can cause significant business harm.
+    Azure Key Vault is a service to store confidential information such as keys, certificates, passwords, etc. A malicious user can potentially abuse Azure Key Vault service by deleting secrets stored inside it. It is also quite likely that a user may accidentally delete sensitive information stored in Azure Key Vault. Without proper provisions in place, either malicious or accidental deletion in Azure Key Vault can cause significant business harm.
 
-Azure Key Vault provides protection against intentional or unintentional deletion of contents stored inside it through soft-delete feature. When soft-delete is enabled, deleted keys will be retained for a pre-configured time period. If the delete operation was unintentional then deleted key can be restored within pre-configured time window. If the delete operation was intentional then key content can be deleted until an additional *purge* operation is performed - typically by someone with higher privileges.
+    Azure Key Vault provides protection against intentional or unintentional deletion of contents stored inside it through soft-delete feature. When soft-delete is enabled, deleted keys will be retained for a pre-configured time period. If the delete operation was unintentional then deleted key can be restored within pre-configured time window. If the delete operation was intentional then key content can be deleted until an additional *purge* operation is performed - typically by someone with higher privileges.
 
-There is a custom policy to ensure that Azure Key vault is enabled with soft-delete feature by default. Enterprises get better control on deletion of Azure Key Vault content for unintentional operations. This policy also provides an additional security layer for malicious deletion of Azure Key Vault content.
+    There is a custom policy to ensure that Azure Key vault is enabled with soft-delete feature by default. Enterprises get better control on deletion of Azure Key Vault content for unintentional operations. This policy also provides an additional security layer for malicious deletion of Azure Key Vault content.
 
 **Enforce Web Application Firewall (WAF)**
 
@@ -203,7 +203,7 @@ Azure Private DNS Zones help create and manage DNS records for Azure resources. 
 
 Azure Private DNS Zone can be deployed centrally for easier management of DNS records. Azure Virtual Network linked with Azure Private Zone can potentially run domain controllers which facilitates streamlined connectivity from on-premise sites. Azure services which support Private Link/Endpoint can leverage centrally managed Azure Private Zone and prevent having to create them per application deployment.
 
-An  custom policy can be deployed to prevent creation of Azure Private DNS Zone in the scope over which it is applied. Enterprises can view compliance status against this policy even when the policy enforcement is disabled. This policy helps in streamlining connectivity from on-premise sites as well as access to Azure PaaS services using Private Link/Endpoint.
+A custom policy can be deployed to prevent creation of Azure Private DNS Zone in the scope over which it is applied. Enterprises can view compliance status against this policy even when the policy enforcement is disabled. This policy helps in streamlining connectivity from on-premise sites as well as access to Azure PaaS services using Private Link/Endpoint.
 
 **Enforce network traffic control**
 

@@ -63,11 +63,11 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 
     ```json
     {
-    "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "displayName": "AzureArcServers",
-    "name": "http://AzureArcServers",
-    "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "AzureArcServers",
+      "name": "http://AzureArcServers",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 
@@ -77,7 +77,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 To demonstrate the custom script extension, use the below Linux and Windows scripts.
 
 - [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_linux.sh): The script will modify the message of the day on the operating system.
-- [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7zip and Visual Studio Code [Chocolatey](https://chocolatey.org/) packages on the VM.
+- [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/custom_script_windows.ps1): The script will install Windows Terminal, Microsoft Edge, 7-Zip, and Visual Studio Code [Chocolatey](https://chocolatey.org/) packages on the VM.
 
 ## Azure Arc enabled servers custom script extension deployment
 
@@ -135,7 +135,7 @@ Another way to verify successful custom script execution is by connecting to the
 
   ![A screenshot of an updated daily message.](./media/arc-vm-extension-custom-script/daily-message.png)
 
-- For the Windows VM, use RDP to connect the VM and verify that the additional software has been installed: Microsoft Edge, 7zip and Visual Studio Code.
+- For the Windows VM, use RDP to connect the VM and verify that the additional software has been installed: Microsoft Edge, 7-Zip, and Visual Studio Code.
 
   ![A screenshot of additional software installed.](./media/arc-vm-extension-custom-script/additional-software.png)
 

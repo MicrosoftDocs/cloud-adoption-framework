@@ -23,7 +23,7 @@ Watch the following 15 minute video to learn more about how to choose the Azure 
 
 > [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RWwZeg>]
 
-You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/partner-landing-zone).
+You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](./partner-landing-zone.md).
 
 ## Overview of landing zone options
 
@@ -48,7 +48,7 @@ The following table summarizes considerations for each landing zone implementati
         **Initial considerations**
     :::column-end:::
     :::column:::
-        [Operating model alignment](/azure/cloud-adoption-framework/operating-model/compare#operating-model-comparison)
+        [Operating model alignment](../../operating-model/compare.md#operating-model-comparison)
     :::column-end:::
     :::column:::
         Centralized operations
@@ -224,7 +224,7 @@ Centralized operations favor a start-small-and-expand approach. Enterprise opera
 
 Do you need a baseline architecture or environment? The start-small-and-expand approach offers a simple starting point where you can build your own solution. The enterprise-scale approach provides an environment for the entire Azure tenant, which includes cloud-native operations.
 
-For more information about operations types, see [Compare common cloud operating models](/azure/cloud-adoption-framework/operating-model/compare).
+For more information about operations types, see [Compare common cloud operating models](../../operating-model/compare.md).
 
 ## Adoption plan considerations
 
@@ -236,9 +236,9 @@ The following considerations are key to your adoption plan for either type:
 
 Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps accelerate, compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
 
-If you start small and expand, there are ways to get to self-sufficiency, adoption velocity, and operational excellence. Use the Govern or Manage methodologies inside the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines), to iteratively improve your design.
+If you start small and expand, there are ways to get to self-sufficiency, adoption velocity, and operational excellence. Use the Govern or Manage methodologies inside the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](../enterprise-scale/design-guidelines.md), to iteratively improve your design.
 
-To learn more about operational excellence, see [Deliver operational excellence during digital transformation](/azure/cloud-adoption-framework/get-started/operational-excellence).
+To learn more about operational excellence, see [Deliver operational excellence during digital transformation](../../get-started/operational-excellence.md).
 
 ## Compliance considerations
 
@@ -249,9 +249,9 @@ Consider the following issues around compliance for your organization:
 
 Your organization might need to have a particular workload or application that needs to be compliant in a short amount of time, and this requirement could affect your choice.
 
-Start small and expand is an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see the [Govern methodology for the cloud](/azure/cloud-adoption-framework/govern/methodology) and [IT management and operations in the cloud](/azure/cloud-adoption-framework/manage/considerations/).
+Start small and expand is an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see the [Govern methodology for the cloud](../../govern/methodology.md) and [IT management and operations in the cloud](../../manage/considerations/index.md).
 
-The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
+The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](../enterprise-scale/security-governance-and-compliance.md#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
 
 If possible, identify low-risk workloads to implement first. This technique helps you build infrastructure and skills over time. You can add the Govern and Manage methodologies as you understand how the cloud works.
 
@@ -269,7 +269,7 @@ Both implementation offer best practices. Start small and expand lets you add be
 
 Enterprise-scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
-For more information, see [Best practices for Azure readiness](/azure/cloud-adoption-framework/ready/azure-best-practices/).
+For more information, see [Best practices for Azure readiness](../azure-best-practices/index.md).
 
 Both methodologies offer automation capabilities.
 
@@ -278,8 +278,8 @@ Both methodologies offer automation capabilities.
 
 Start small and expand uses ARM templates, Azure Policy, and Azure Blueprints.
 
-- [CAF Foundation blueprint](/azure/cloud-adoption-framework/ready/landing-zone/foundation-blueprint)
-- [CAF Migration landing zone blueprint](/azure/cloud-adoption-framework/ready/landing-zone/migrate-landing-zone)
+- [CAF Foundation blueprint](./foundation-blueprint.md)
+- [CAF Migration landing zone blueprint](./migrate-landing-zone.md)
 
 Enterprise-scale uses ARM templates, Azure Policy, and offers three reference implementation and different deployments.
 

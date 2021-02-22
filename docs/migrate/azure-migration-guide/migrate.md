@@ -233,7 +233,7 @@ Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) 
 
 Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite.
 
-Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](/azure/cloud-adoption-framework/plan/template). You can then modify the template to reflect the [workloads](/azure/cloud-adoption-framework/plan/workloads) and [assets](/azure/cloud-adoption-framework/plan/assets) to be migrated.
+Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](../../plan/template.md). You can then modify the template to reflect the [workloads](../../plan/workloads.md) and [assets](../../plan/assets.md) to be migrated.
 
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 

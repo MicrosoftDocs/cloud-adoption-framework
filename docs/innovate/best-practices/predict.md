@@ -1,5 +1,5 @@
 ---
-title: AI Prediction and Innovation Tools
+title: AI prediction and innovation tools
 description: Use AI applications and AI agents to create innovative tools that help detect patterns, integrate AI predictions, and influence customer behavior. Discover AI tools.
 author: v-hanki
 ms.author: janet
@@ -13,7 +13,7 @@ keywords: innovation tools, ai predictions, ai applications, digital innovation,
 
 # Use innovation tools with AI to predict and influence
 
-AI means artificial intelligence, in which a computer detects patterns of data to produce insights that can help businesses understand the behavior of their customers. AI predictions can predict customer needs and automate business processes. Using AI applications and digital innovation tools, companies can discover information lying latent in unstructured data and deliver new ways to engage with customers to deliver better experiences.
+AI means *artificial intelligence*, in which a computer detects patterns of data to produce insights that can help businesses understand the behavior of their customers. AI predictions can predict customer needs and automate business processes. Using AI applications and digital innovation tools, companies can discover information lying latent in unstructured data and deliver new ways to engage with customers to deliver better experiences.
 
 You can accelerate this type of digital innovation through each of the following solution areas. Best practices and technical guidance to accelerate digital invention are listed in the table of contents on the left side of this page. Those articles are grouped by solution area:
 
@@ -29,7 +29,7 @@ AI strategy, AI culture, responsible and scalable AI, and AI for each of the dif
 
 - **AI culture:** To successfully develop an AI culture, key changes might be required to become AI-ready. This includes the ability to explore AI potential across the business, recognition and fostering of the skills and roles required to make AI success, providing examples of successful implementations of AI with relevant scenarios in finance, marketing, sales, and customer service and AI application evangelism.
 
-- **Responsible AI:** Responsible AI is a commitment to the advancement of AI driven by principles that put people first. Microsoft AI principles and resources support trusted AI within infrastructure and business frameworks. To successfully build an AI practice, responsible AI should be incorporated into your digital innovation approach.
+- **Responsible AI:** Responsible AI is a commitment to the advancement of AI, driven by principles that put people first. Microsoft AI principles and resources support trusted AI within infrastructure and business frameworks. To successfully build an AI practice, responsible AI should be incorporated into your digital innovation approach.
 
 - **Scalable AI:** Scalable AI enables fueling innovation tools at all levels, evaluating AI investments, and establishing technical processes for AI throughout your organization. AI patterns and best practices allow scaling AI horizontal and vertical through the enterprise.
 

@@ -48,7 +48,7 @@ Microsoft has developed [InterpretML](https://interpret.ml/), an open-source too
 
 - Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like LIME or SHapley Additive exPlanations (SHAP) interpret these models by analyzing the relationship between the input and output.
 
-- [Fairlearn](https://fairlearn.github.io/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. Use explainers to understand what mainly influences the model and domain experts to validate these influences.
+- [Fairlearn](https://fairlearn.org/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. Use explainers to understand what mainly influences the model and domain experts to validate these influences.
 
 Explore [model interpretability in Azure Machine Learning](/azure/machine-learning/how-to-machine-learning-interpretability) to learn more about explainability.
 
