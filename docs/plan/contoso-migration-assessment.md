@@ -25,7 +25,7 @@ To get started and to better understand the technologies involved, Contoso asses
 | App name | Platform | App tiers | Details |
 | --- | --- | --- | --- |
 | **SmartHotel360** <br><br> (manages Contoso travel requirements) | Runs on Windows with a SQL Server database | Two-tiered app. The front-end ASP.NET website runs on one VM (`WEBVM`) and the SQL Server runs on another VM (`SQLVM`). | VMs run on a VMware ESXi host managed by vCenter Server. <br><br> You can download the sample app from [GitHub](https://github.com/Microsoft/SmartHotel360). |
-| **osTicket** <br><br> (Contoso service desk app) | Runs on a [LAMP](https://wikipedia.org/wiki/LAMP_(software_bundle)) stack. | Two-tiered app. A front-end PHP website runs on one VM (`OSTICKETWEB`) and the MySQL database runs on another VM (`OSTICKETMYSQL`). | The app is used by customer service apps to track issues for internal employees and external customers. <br><br> You can download the sample from [GitHub](https://github.com/osTicket/osTicket). |
+| **osTicket** <br><br> (Contoso service desk app) | Runs on a [LAMP](https://wikipedia.org/wiki/LAMP_software_bundle) stack. | Two-tiered app. A front-end PHP website runs on one VM (`OSTICKETWEB`) and the MySQL database runs on another VM (`OSTICKETMYSQL`). | The app is used by customer service apps to track issues for internal employees and external customers. <br><br> You can download the sample from [GitHub](https://github.com/osTicket/osTicket). |
 
 ## Current architecture
 
