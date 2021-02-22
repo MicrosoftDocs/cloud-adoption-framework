@@ -26,7 +26,7 @@ Here are some design considerations for SAP on Azure monitoring and management:
 
 ### Design recommendations
 
-Here are design recommendations for SAP on Azure monitoring and management:
+Here are some design recommendations for SAP on Azure monitoring and management:
 
 - Monitor SAP systems and solutions.
 

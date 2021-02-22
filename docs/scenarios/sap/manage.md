@@ -11,44 +11,59 @@ ms.subservice: operate
 
 # Manage SAP in Azure
 
-Your long term operations management strategy has a big impact on your SAP migration and landing zone requirements. Achieving an understanding of your operations management requirements early is important. This article will focus on the later state of managing SAP, once it's in Azure to help shape your vision.
+The long term operations management strategy has a big impact on your SAP migration and landing zone requirements. 
 
-## SAP business alignment
+To achieve an understanding of your operations management requirements once your data's in Azure, focus on the later stage guidelines to manage SAP and help shape your vision.
 
-Generally, the SAP Platform and dependent workloads are viewed as Mission-Critical technology assets. There will likely be investments above and beyond your operations baseline to support both the SAP Platform and each of the dependent workloads. Most organizations require a mixture of platform operations (SAP Basis Operations) and workload operations (outlined below). However, during business alignment, strive to separate operations needs of the environment, the workloads, and your core SAP platform to evaluate the right level of investments required at each level. This is in alignment to the Modern Cloud Service Management. 
+To better align your business, the SAP Platform and dependent workloads are viewed as *mission-critical* technology assets. These are often investments above and beyond your operations baseline to support both the SAP Platform and each of the dependent workloads. 
 
-Considerations during business alignment:
+Most organizations require a mixture of platform operations, **SAP Basis Operations**, and workload operations, such as: 
 
-- Environments: Identify any non-production environments running an instance of the SAP platform. Any development, QA, or other environments are less likely to need any form of specialized operations.
-- Workloads: Often times, there will be a host of workloads that interact with and extend the core SAP platform. The basic operations baseline will provide a sufficient SLA for those dependent workloads. When a higher level of operations is required, consider workload operations on a case-by-case basis.
+- **Environments**, identify any non-production environment running an instance of the SAP platform, such as development, QA, or other environment less likely to need any form of specialized operations.
+- **Workloads**, identify the host of workloads that interact with and extend the core SAP platform. This basic operations baseline will provide a sufficient SLA for these dependent workloads.
 
-## Operations baseline
+   > [!NOTE]
+   > When a higher level of operations is required, consider workload operations on a case-by-case basis.
 
-When adopting SAP in Azure, your operations baseline will not likely change. The assets that run your SAP platform & workloads will be included in the standard processes & tools for creating visibility, optimizing operations, and recovery.
+During business alignment, strive to separate the operation's needs of the environment, the workloads, and your core SAP platform to evaluate the right level of investments required at each level. This is in alignment to the **Modern Cloud Service Management**. 
 
-The operations baseline may not need to be changed. However, you will likely need additional processes and tools as part of your SAP specific platform operations deployment.
+## Baseline operations
 
-## SAP platform operations
+When adopting SAP in Azure, your operation's baseline will not likely change. The assets that run your SAP platform and workloads, will be included in the standard processes and tools to create visibility, optimize operations, and recover.
 
-Given the mission critical nature of your SAP platform, most organizations have dedicated operations staff who are responsible for the operational management of the core SAP platform.
+> [!NOTE]
+> If operation's baseline are unchanged, you might still need additional processes and tools as part of your SAP specific platform operations deployment.
 
-The core platform team is often called SAP Basis Operations. That team may be staffed in-house our could be provided by a service provider. In either case, the SAP Basis operations team should be familiar with the configuration of you SAP landing zone, the operations baseline provided to all Azure resources, and any shared services made available through the configuration of the broader Azure platform configuration decisions. Those data points will aid the SAP Basis Operations team to determine the levels of platform operations that must be added to meet operational requirements.
+## Platform operations
 
-If your organization has a centralized SAP platform team, you will want to consider tooling to enhance operations of the core platform. The [enterprise scale scenario for SAP](./enterprise-scale-landing-zone.md) provides guidance on elevated management and DR/BC scenarios that can improve operations of the platform.
+Given the mission critical nature of your SAP platform, most organizations support a dedicated operations staff responsible for the operational management of the core SAP platform.
 
-## SAP workload operations
+The core platform team, referred as **SAP Basis Operations**, is either staffed in-house or provided by a service provider, and is familiar with:
 
-Each of the workloads that depend on the SAP platform are likely to have material impact on business processes. The downtime costs of those individual workloads is unlikely to impact the business to the same degree as downtime for the core SAP platform. Since there is less downtime impact, there is likely to be a lower ROI when investing in reliability and business continuity for each workload. However, some of those workloads will still require dedicated, specialized operations.
+- the configuration of your SAP landing zone
+- the operations baseline provided to all Azure resources
+- any shared services made available through the configuration of the broader Azure platform configuration decisions.
 
-When dependent workloads have their own specialized operations requirements, run the [Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review&mode=pre-assessment) and review the [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) to understand how to optimize operations for those specific workloads.
+Those data points will aid this team to determine the levels of platform operations that must be added to meet operational requirements.
 
-## Next step: Your next migration iteration
+> [!NOTE]
+> If your organization has a centralized SAP platform team, please consider tooling to enhance operations of the core platform using an [enterprise scale scenario for SAP](./enterprise-scale-landing-zone.md) for elevated management and DR/BC scenarios that can improve operations of the platform.
 
-Once the SAP migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition SAP platforms to be migrated, this article series can be used again to guide your next SAP migration or deployment.
+## Workload operations
 
-- [Strategy for SAP](./strategy.md)
-- [Plan for SAP](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate SAP](./migrate.md)
-- [Innovate with SAP](./innovate.md)
-- [Manage SAP](./manage.md)
+Each workload that depends on the SAP platform is likely to have a material impact on business processes, with the downtime costs of each individual workload as unlikely to impact the business to the same degree as downtime for the core SAP platform. With less impact, there's likely to be a lower ROI when investing in the reliability and business continuity per workload. 
+
+> [!NOTE]
+> If a workload requires dedicated, specialized operations, run the [Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review&mode=pre-assessment) and review the [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) to understand how to optimize operations per workload.
+
+## Next steps
+
+Once the SAP migration is complete, the cloud adoption team can begin scenario-specific migration iterations. Otherwise, use these articles again, if there are additional SAP platforms to migrate.
+
+> [!div class="nextstepaction"]
+> [Strategy for SAP](./strategy.md)
+> [Plan for SAP](./plan.md)
+> [Review your environment or Azure Landing Zone(s)](./ready.md)
+> [Migrate SAP](./migrate.md)
+> [Innovate with SAP](./innovate.md)
+> [Manage SAP](./manage.md)
