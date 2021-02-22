@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
+<!--docutune:casing "Layer-7 inbound" -->
+
 # Traditional Azure networking topology
 
 Explore key design considerations and recommendation surrounding network topologies in Microsoft Azure.
