@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Plan for landing zone network segmentation
 
 This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.

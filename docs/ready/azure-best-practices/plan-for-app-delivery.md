@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Plan for application delivery
 
 This section explores key recommendations to deliver internal-facing and external-facing applications in a secure, highly scalable, and highly available way.

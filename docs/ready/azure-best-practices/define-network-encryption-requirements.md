@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Define network encryption requirements
 
 This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.

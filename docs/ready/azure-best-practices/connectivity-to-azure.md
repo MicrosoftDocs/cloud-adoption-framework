@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Connectivity to Azure
 
 This section expands on the network topology to consider recommended models for connecting on-premises locations to Azure.

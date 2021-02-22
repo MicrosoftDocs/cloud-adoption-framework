@@ -10,8 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
+<!--docutune:casing "Layer-7 inbound" -->
 
 # Traditional Azure networking topology
 
@@ -99,7 +98,7 @@ The following figure shows this topology.
 
   - There are no conflicting configurations with Azure networking.
 
-- Don't deploy L7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the application in their respective landing zones.
+- Don't deploy Layer-7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the application in their respective landing zones.
 
 - Use your existing network, MPLS and SD-WAN, for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 

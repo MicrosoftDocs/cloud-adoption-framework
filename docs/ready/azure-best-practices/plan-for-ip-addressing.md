@@ -10,8 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
+<!-- docutune:ignore "Azure VPN Gateway" -->
 
 # Plan for IP addressing
 
