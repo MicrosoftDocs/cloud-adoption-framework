@@ -1,5 +1,5 @@
 ---
-title: "Silos and fiefdoms"
+title: Silos and fiefdoms
 description: Learn about antipatterns that can block a growth mindset in organizations. Specifically, learn about silo and fiefdom antipatterns.
 author: BrianBlanchard
 ms.author: brblanch
@@ -62,7 +62,7 @@ This antipattern often emerges from of a common passion for a specific solution.
 
 IT silos can be addressed through the following approaches. The best approach will depend on the root cause of the resistance.
 
-**Create virtual teams:** The [organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers will want to participate in. This helps create new cross-solution alignments that aren't bound by organizational-chart constraints, and will drive inclusion of top engineers who have been sheltered by IT silos.
+**Create virtual teams:** The [Organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers will want to participate in. This helps create new cross-solution alignments that aren't bound by organizational-chart constraints, and will drive inclusion of top engineers who have been sheltered by IT silos.
 
 Introduction of a [cloud strategy team](./cloud-strategy.md) will create immediate visibility to IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
 

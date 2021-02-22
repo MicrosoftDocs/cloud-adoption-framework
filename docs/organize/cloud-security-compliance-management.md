@@ -22,7 +22,7 @@ Cloud introduces changes to security compliance including:
 - **Pre-cloud guidance:** While many regulatory requirements have been updated to incorporate the dynamic nature of cloud services, some do not yet include this. Organizations should work with regulatory bodies to get these updated and be prepared to explain these differences during audit exercises.
 - **Linking compliance to risk:** Ensure that organizations are tying compliance violations and exceptions to organizational risks to ensure the right level of attention and funding to correct issues.
 - **Tracking and reporting enabled by cloud:** This function shoudl actively embrace the software defined nature of cloud as this offers comprehensive logging, configuration data, and analytical insight that make reporting on compliance more efficient than traditional on-premises approaches.
-- **Cloud-based compliance tools** are available to facilitate easier reporting of regulatory compliance such as [Microsoft Compliance Manager](/microsoft-365/compliance/compliance-manager-overview), which can reduce overhead costs of this function.
+- **Cloud-based compliance tools** are available to facilitate easier reporting of regulatory compliance such as [Microsoft Compliance Manager](/microsoft-365/compliance/compliance-manager), which can reduce overhead costs of this function.
 
 ## Team composition and key relationships
 
