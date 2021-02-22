@@ -120,7 +120,7 @@ This connectivity is delivered through Azure ExpressRoute and will require some 
 
 Contoso will need to plan an IP address scheme that includes non-overlapping address space for its [virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm). The company will need to include a gateway subnet for the [ExpressRoute gateway](/azure/expressroute/expressroute-about-virtual-network-gateways).
 
-The Azure VMware Solution private cloud is connected to Contoso's Azure Virtual Network by using another Azure ExpressRoute connection. ExpressRoute Global Reach will be enabled to allow [direct connection](/azure/azure-vmware/concepts-networking#on-premises-interconnectivity) from on-premises VMs to VMs running on the Azure VMware Solution private cloud. The ExpressRoute Premium SKU is required to enable Global Reach.
+The Azure VMware Solution private cloud is connected to Contoso's virtual network in Azure by using another Azure ExpressRoute connection. ExpressRoute Global Reach will be enabled to allow [direct connection](/azure/azure-vmware/concepts-networking#on-premises-interconnectivity) from on-premises VMs to VMs running on the Azure VMware Solution private cloud. The ExpressRoute Premium SKU is required to enable Global Reach.
 
 ![Diagram of ExpressRoute Global Reach with Azure VMware Solution.](./media/contoso-migration-vmware-to-azure/adjacency-overview-drawing-double.png)
 
@@ -193,7 +193,7 @@ For more information, see [Install HCX for Azure VMware Solution](/azure/azure-v
 
 #### Install and configure VMware HCX for the public cloud
 
-[VMware HCX](https://cloud.vmware.com/vmware-hcx) is a VMware product that's part of the Azure VMware Solution default installation. HCX advanced is installed by default, but it can be upgraded to HCX enterprise as additional features and functionality are required.
+[VMware HCX](https://cloud.vmware.com/vmware-hcx) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but it can be upgraded to HCX Enterprise as additional features and functionality are required.
 
 Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter domain. These elements are then paired with the Azure VMware Solution cloud appliance, so that customers can take advantage of services such as migration and L2 stretch.
 

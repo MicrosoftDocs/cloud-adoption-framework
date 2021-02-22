@@ -55,7 +55,7 @@ Other tips for planning are:
 
 ## Best practice: Implement a hub and spoke network topology
 
-A hub and spoke network topology isolates workloads while sharing services, such as identity and security. The hub is an Azure Virtual Network that acts as a central point of connectivity. The spokes are virtual networks that connect to the hub virtual network by using peering. Shared services are deployed in the hub, while individual workloads are deployed as spokes.
+A hub and spoke network topology isolates workloads while sharing services, such as identity and security. The hub is an Azure virtual network that acts as a central point of connectivity. The spokes are virtual networks that connect to the hub virtual network by using peering. Shared services are deployed in the hub, while individual workloads are deployed as spokes.
 
 Consider the following:
 
@@ -161,7 +161,7 @@ For a successful migration, it's critical to connect on-premises corporate netwo
 
 To implement a Site-to-Site VPN, you set up a VPN gateway in Azure.
 
-- A VPN gateway is a specific type of virtual network gateway. It sends encrypted traffic between an Azure Virtual Network and an on-premises location over the public internet.
+- A VPN gateway is a specific type of virtual network gateway. It sends encrypted traffic between an Azure virtual network and an on-premises location over the public internet.
 - A VPN gateway can also send encrypted traffic between virtual networks in Azure over the Microsoft network.
 - Each virtual network can have only one VPN gateway.
 - You can create multiple connections to the same VPN gateway. When you create multiple connections, all VPN tunnels share the available gateway bandwidth.
@@ -184,7 +184,7 @@ When setting up a Site-to-Site VPN:
 - You specify the gateway SKU that you want to use. This depends on your workload requirements, throughput, features, and SLAs.
 - Border Gateway Protocol (BGP) is an optional feature. You can use it with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your virtual networks.
 
-![Diagram of site-to-site VPN.](./media/migrate-best-practices-networking/vpn.png)
+![Diagram of a Site-to-Site VPN.](./media/migrate-best-practices-networking/vpn.png)
 *Figure 5: Site-to-Site VPN.*
 
 **Learn more:**
@@ -206,17 +206,13 @@ When you create a VPN gateway in Azure, you must use a special subnet named `Gat
 - When you're using the Azure gateway subnet, never deploy any VMs or other devices, such as Azure Application Gateway, to the gateway subnet.
 - Don't assign a network security group (NSG) to this subnet. It will cause the gateway to stop functioning.
 
-**Learn more:**
-
-- [Use this tool](/samples/browse/?redirectedfrom=TechNet-Gallery) to determine your IP address space.
-
 ## Best practice: Implement Azure Virtual WAN for branch offices
 
 For multiple VPN connections, Azure Virtual WAN is a networking service that provides optimized and automated, branch-to-branch connectivity through Azure.
 
 - Virtual WAN allows you to connect and configure branch devices to communicate with Azure. You can do this manually, or by using preferred provider devices through an Azure Virtual WAN partner.
 - Using preferred provider devices allows for simple use, connectivity, and configuration management.
-- The Azure Virtual WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale, Site-to-site connectivity.
+- The Azure Virtual WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale, site-to-site connectivity.
 
 **Learn more:** Learn about [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about).
 
@@ -467,7 +463,7 @@ Here are some additional notes about WAF:
 
 ## Best practice: Implement Azure Network Watcher
 
-Azure Network Watcher provides tools to monitor resources and communications in an Azure Virtual Network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
+Azure Network Watcher provides tools to monitor resources and communications in an Azure virtual network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
 
 ![Screenshot of Network Watcher.](./media/migrate-best-practices-networking/network-watcher.png)
 *Figure 12: Network Watcher.*
@@ -508,7 +504,7 @@ We recommend using one set of Azure firewalls (or NVAs) for traffic originating 
 
 **Learn more:**
 
-- Learn about [using NVAs in an Azure Virtual Network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
+- Learn about [using NVAs in an Azure virtual network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 
 ## Next steps
 
