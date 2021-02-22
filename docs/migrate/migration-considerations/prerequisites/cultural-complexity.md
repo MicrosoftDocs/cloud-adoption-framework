@@ -1,5 +1,5 @@
 ---
-title: "Cultural complexity of aligning roles and responsibilities"
+title: Cultural complexity of aligning roles and responsibilities
 description: Use the Cloud Adoption Framework for Azure to prepare for cultural complexity by aligning roles and responsibilities to drive clarity during the migration process.
 author: BrianBlanchard
 ms.author: brblanch
