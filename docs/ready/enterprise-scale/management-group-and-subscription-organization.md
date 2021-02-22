@@ -181,148 +181,149 @@ Enterprise-scale Azure policies can be used to enforce following governance requ
 
     There is a custom policy to ensure that Azure Key vault is enabled with soft-delete feature by default. Enterprises get better control on deletion of Azure Key Vault content for unintentional operations. This policy also provides an additional security layer for malicious deletion of Azure Key Vault content.
 
-**Enforce Web Application Firewall (WAF)**
+- **Enforce Web Application Firewall (WAF)**
 
-Web applications running on Azure are potential targets of number of malicious attacks. [Top 10 common attacks](https://owasp.org/www-project-top-ten/) - such as - injection, cross-site scripting, etc. try to exploit known vulnerabilities typically associated with web applications. Consequences of a successful attack can be very costly and may impact brand value negatively.
+    Web applications running on Azure are potential targets of number of malicious attacks. [Top 10 common attacks](https://owasp.org/www-project-top-ten/) - such as - injection, cross-site scripting, etc. try to exploit known vulnerabilities typically associated with web applications. Consequences of a successful attack can be very costly and may impact brand value negatively.
 
-Azure Application Gateway Web Application Firewall (WAF) provides protection against common attacks on web applications. It implements Core Rule Set (CRS) 3.1, 3.0 or 2.2.9 as recommended by the Open Web Application Security Project (OWASP). WAF policies can be associated with Azure Application Gateway either in *Prevention* or *Detection* mode.
+    Azure Application Gateway Web Application Firewall (WAF) provides protection against common attacks on web applications. It implements Core Rule Set (CRS) 3.1, 3.0 or 2.2.9 as recommended by the Open Web Application Security Project (OWASP). WAF policies can be associated with Azure Application Gateway either in *Prevention* or *Detection* mode.
 
-there is a custom policy to help in preventing potential misconfiguration on Azure Application Gateway. It enforces Azure Application Gateway can't be created without a Web Application Firewall (WAF). Web Applications running on Azure and using Azure Application Gateway are guaranteed to be protected by Web Application Firewall (WAF) on Azure Application Gateway.
+    There is a custom policy to help in preventing potential misconfiguration on Azure Application Gateway. It enforces Azure Application Gateway can't be created without a Web Application Firewall (WAF). Web Applications running on Azure and using Azure Application Gateway are guaranteed to be protected by Web Application Firewall (WAF) on Azure Application Gateway.
 
-**Prevent IP forwarding on VMs**
+- **Prevent IP forwarding on VMs**
 
-IP forwarding enables Azure VM to route traffic it receives to other destinations. Unless explicitly required, such routing may potentially expose a VM with public IP address as a router. Other unintended networks can be reached via VM-turned-router with IP forwarding.
+    IP forwarding enables Azure VM to route traffic it receives to other destinations. Unless explicitly required, such routing may potentially expose a VM with public IP address as a router. Other unintended networks can be reached via VM-turned-router with IP forwarding.
 
-Azure provides an option to configure IP forwarding on Virtual Machines (VMs). This enables specialized softwares such as firewalls, load balancers, etc. to be deployed via Azure Marketplace. Any application that may need to use these services, can use them via Azure Marketplace transaction.
+    Azure provides an option to configure IP forwarding on Virtual Machines (VMs). This enables specialized softwares such as firewalls, load balancers, etc. to be deployed via Azure Marketplace. Any application that may need to use these services, can use them via Azure Marketplace transaction.
 
-However, outside of specific needs, IP forwarding on VMs may become a security liability. There is a custom policy to prevent VMs acting as IP forwarding routers. This policy is explicitly applied at landing zone scope. VMs in landing zone should be final destinations for user requests. Any routing should be implemented in the connectivity subscription.
+    However, outside of specific needs, IP forwarding on VMs may become a security liability. There is a custom policy to prevent VMs acting as IP forwarding routers. This policy is explicitly applied at landing zone scope. VMs in landing zone should be final destinations for user requests. Any routing should be implemented in the connectivity subscription.
 
-**Enforce centralized DNS record management**
+- **Enforce centralized DNS record management**
 
-Azure Private DNS Zones help create and manage DNS records for Azure resources. Uncontrolled proliferation of Azure Private Zones can result in management & network connectivity debugging issues. In hybrid environments where connectivity from on-premise sites to Azure resources is desired, fragmented DNS zones can result in duplication of DNS records and associated maintenance challenges.
+    Azure Private DNS Zones help create and manage DNS records for Azure resources. Uncontrolled proliferation of Azure Private Zones can result in management & network connectivity debugging issues. In hybrid environments where connectivity from on-premise sites to Azure resources is desired, fragmented DNS zones can result in duplication of DNS records and associated maintenance challenges.
 
-Azure Private DNS Zone can be deployed centrally for easier management of DNS records. Azure Virtual Network linked with Azure Private Zone can potentially run domain controllers which facilitates streamlined connectivity from on-premise sites. Azure services which support Private Link/Endpoint can leverage centrally managed Azure Private Zone and prevent having to create them per application deployment.
+    Azure Private DNS Zone can be deployed centrally for easier management of DNS records. Azure Virtual Network linked with Azure Private Zone can potentially run domain controllers which facilitates streamlined connectivity from on-premise sites. Azure services which support Private Link/Endpoint can leverage centrally managed Azure Private Zone and prevent having to create them per application deployment.
 
-A custom policy can be deployed to prevent creation of Azure Private DNS Zone in the scope over which it is applied. Enterprises can view compliance status against this policy even when the policy enforcement is disabled. This policy helps in streamlining connectivity from on-premise sites as well as access to Azure PaaS services using Private Link/Endpoint.
+    A custom policy can be deployed to prevent creation of Azure Private DNS Zone in the scope over which it is applied. Enterprises can view compliance status against this policy even when the policy enforcement is disabled. This policy helps in streamlining connectivity from on-premise sites as well as access to Azure PaaS services using Private Link/Endpoint.
 
-**Enforce network traffic control**
+- **Enforce network traffic control**
 
-An Azure Virtual Network (VNet) can be segmented into multiple Subnets. By default, there is no network access control between these subnets. Lack of network access control can result in unsolicited network traffic arriving inside a subnet.
+    An Azure Virtual Network (VNet) can be segmented into multiple Subnets. By default, there is no network access control between these subnets. Lack of network access control can result in unsolicited network traffic arriving inside a subnet.
 
-Azure Network Security Group (NSG) helps is filtering incoming traffic to and from a subnet. NSGs can allow or deny network traffic based on stateful packet inspection. Any resources inside subnet can receive traffic from only allowed IP address range(s).
+    Azure Network Security Group (NSG) helps is filtering incoming traffic to and from a subnet. NSGs can allow or deny network traffic based on stateful packet inspection. Any resources inside subnet can receive traffic from only allowed IP address range(s).
 
-There is a custom  policy to enforce every subnet has a NSG associated with it. A combination of subnet and NSG ensures that a default set of rules controls traffic to and from a subnet. Enterprises can add/modify rules to control traffic further based on the needs.
+    There is a custom  policy to enforce every subnet has a NSG associated with it. A combination of subnet and NSG ensures that a default set of rules controls traffic to and from a subnet. Enterprises can add/modify rules to control traffic further based on the needs.
 
-**Detect and protect against security threats by using Azure Security Center**
+- **Detect and protect against security threats by using Azure Security Center**
 
-An Azure subscription can hold multiple types of resource (e.g. VMs, Container Images, etc.) These resources are exposed to risks such as malware/unwanted software installation, uncontrolled access to management ports on a VM, etc. With security attacks getting ever sophisticated and a limited-supply of experienced security professionals, detecting security vulnerabilities and protecting workloads is extremely challenging.
+    An Azure subscription can hold multiple types of resource (e.g. VMs, Container Images, etc.) These resources are exposed to risks such as malware/unwanted software installation, uncontrolled access to management ports on a VM, etc. With security attacks getting ever sophisticated and a limited-supply of experienced security professionals, detecting security vulnerabilities and protecting workloads is extremely challenging.
 
-Azure Security Center is Azure's native security management system which assesses Azure resources for their security posture against security best practices.  Azure security center helps to detect and prevent threats against data and application services. With multiple integration points, Azure Security center can be deployed very quickly.
+    Azure Security Center is Azure's native security management system which assesses Azure resources for their security posture against security best practices.  Azure security center helps to detect and prevent threats against data and application services. With multiple integration points, Azure Security center can be deployed very quickly.
 
-A custom policy helps in enrolling Azure subscription(s) with Azure Security Center Standard mode which enables those subscription(s) to start getting security threat detection and protection capabilities offered by Azure Security Center. This policy also ensures that key Azure services such as VMs, Storage Accounts and seven other services are automatically covered by Azure Security Center. Enterprises benefits from continuous security assessment and actionable recommendations should there be any deviation from security best practice.
+    A custom policy helps in enrolling Azure subscription(s) with Azure Security Center Standard mode which enables those subscription(s) to start getting security threat detection and protection capabilities offered by Azure Security Center. This policy also ensures that key Azure services such as VMs, Storage Accounts and seven other services are automatically covered by Azure Security Center. Enterprises benefits from continuous security assessment and actionable recommendations should there be any deviation from security best practice.
 
-**Protect against ransomware attacks and other data-loss related issues**
+- **Protect against ransomware attacks and other data-loss related issues**
 
-Increasing frequency of ransomware & intrusion attacks pose yet another concern for enterprises. A successful ransomware attack can disrupt business-critical processes and applications. Attackers are known to hold enterprises as hostage for huge amounts of money.
+    Increasing frequency of ransomware & intrusion attacks pose yet another concern for enterprises. A successful ransomware attack can disrupt business-critical processes and applications. Attackers are known to hold enterprises as hostage for huge amounts of money.
 
-Azure Backup provides protection for Azure VMs against accidental or intentional data destruction. Azure Backups are easy to configure and scale. Data is backed up in Azure Recovery Vault for easy management and protection.
+    Azure Backup provides protection for Azure VMs against accidental or intentional data destruction. Azure Backups are easy to configure and scale. Data is backed up in Azure Recovery Vault for easy management and protection.
 
-There is a custom policy that protects Azure VMs by configuring Azure Backup for them. This policy automatically provisions Azure Recovery Services Vault and creates backup container for every Azure VM that gets created.
+    There is a custom policy that protects Azure VMs by configuring Azure Backup for them. This policy automatically provisions Azure Recovery Services Vault and creates backup container for every Azure VM that gets created.
 
-**Protect against DDoS attacks**
+- **Protect against DDoS attacks**
 
-Any publically reachable Azure resource is exposed to threat of Distributed Denial of Service (DDoS) attack. A successful DDoS attack can impact the application's availability to it's intended users. A prolonged DDoS attack can exhaust all available resources and result in downtime for business-critical application(s).
+    Any publically reachable Azure resource is exposed to threat of Distributed Denial of Service (DDoS) attack. A successful DDoS attack can impact the application's availability to it's intended users. A prolonged DDoS attack can exhaust all available resources and result in downtime for business-critical application(s).
 
-Azure DDoS Protection service defends Azure resources against DDoS attacks. Azure DDoS Protection continuously monitors incoming traffic to identify potential indications of a DDoS attack. Enterprises benefit from working with Microsoft's DDoS Rapid Response (DRR) team during an active attack.
+    Azure DDoS Protection service defends Azure resources against DDoS attacks. Azure DDoS Protection continuously monitors incoming traffic to identify potential indications of a DDoS attack. Enterprises benefit from working with Microsoft's DDoS Rapid Response (DRR) team during an active attack.
 
-There is a custom policy that automatically provisions Azure DDoS Standard plan on all Azure subscriptions under its scope. Same policy also enables enterprises to select the Azure regions to be covered as part of the assignment.
+    There is a custom policy that automatically provisions Azure DDoS Standard plan on all Azure subscriptions under its scope. Same policy also enables enterprises to select the Azure regions to be covered as part of the assignment.
 
-**Auto-provision Private Link/Endpoint with Private DNS Zone**
+- **Auto-provision Private Link/Endpoint with Private DNS Zone**
 
-Azure Private Link and Azure Private Endpoint provide access to Azure Platform-as-a-service (PaaS) services using private IP addresses. However, Azure Private DNS Zone is needed for DNS record resolution. Creation of Azure Private Zones for every application that needs to access Azure PaaS services is a management and maintenance challenge.
+    Azure Private Link and Azure Private Endpoint provide access to Azure Platform-as-a-service (PaaS) services using private IP addresses. However, Azure Private DNS Zone is needed for DNS record resolution. Creation of Azure Private Zones for every application that needs to access Azure PaaS services is a management and maintenance challenge.
 
-Azure Private DNS Zone Group helps is grouping the Private Link connections by Azure Services (blob, queue, table, sql, etc.) using an Azure Private Zone per service.
+    Azure Private DNS Zone Group helps is grouping the Private Link connections by Azure Services (blob, queue, table, sql, etc.) using an Azure Private Zone per service.
 
-Enterprises can create central Azure Private Zones and custom policies will auto-provision connections between Private Link/Endpoint and Private DNS Zone for Azure services.
+    Enterprises can create central Azure Private Zones and custom policies will auto-provision connections between Private Link/Endpoint and Private DNS Zone for Azure services.
 
-**Centrally manage firewall rules**
+- **Centrally manage firewall rules**
 
-Fragmented firewall rules can lead to uncontrolled and ambiguous network traffic paths. Continuous changes in the firewalls rules for every instance of firewall makes it difficult to assess the network security posture. Multiple rules makes it impossible to distinguish between centrally managed basic set of rules and workload specific network path rules.
+    Fragmented firewall rules can lead to uncontrolled and ambiguous network traffic paths. Continuous changes in the firewalls rules for every instance of firewall makes it difficult to assess the network security posture. Multiple rules makes it impossible to distinguish between centrally managed basic set of rules and workload specific network path rules.
 
-Azure Firewall Policy helps to define basic minimum set of rules applicable throughout an enterprise. Application specific policy can inherit from basic rules to allow creation of hierarchial rules to meet both enterprise as well as application specific firewall rule requirements. When rules are configured through policies then they can be centrally managed and monitored.
+    Azure Firewall Policy helps to define basic minimum set of rules applicable throughout an enterprise. Application specific policy can inherit from basic rules to allow creation of hierarchial rules to meet both enterprise as well as application specific firewall rule requirements. When rules are configured through policies then they can be centrally managed and monitored.
 
-A custom policy enables enterprises to define Azure Firewall policies centrally. Enterprises are in control of defining priority as well as rules to meet their network traffic routing requirements. By defining firewall policies centrally, enterprises can apply them to either Azure Virtual WAN or Azure Hub and Spoke Networking topology depending upon needs.
+    A custom policy enables enterprises to define Azure Firewall policies centrally. Enterprises are in control of defining priority as well as rules to meet their network traffic routing requirements. By defining firewall policies centrally, enterprises can apply them to either Azure Virtual WAN or Azure Hub and Spoke Networking topology depending upon needs.
 
-**Provision Hub and Spoke Network topology**
+- **Provision Hub and Spoke Network topology**
 
-As more workloads starts to get deployed in Azure, they start to use a common set of services such as Firewall, VPN gateways, etc. If not carefully planned, common services deployment gets replicated per application deployment resulting not only in unnecessary costs but also operational overhead. In scenarios where on-premise connectivity is needed from Azure, network topology becomes difficult to maintain as this connectivity is established per application deployment.
+    As more workloads starts to get deployed in Azure, they start to use a common set of services such as Firewall, VPN gateways, etc. If not carefully planned, common services deployment gets replicated per application deployment resulting not only in unnecessary costs but also operational overhead. In scenarios where on-premise connectivity is needed from Azure, network topology becomes difficult to maintain as this connectivity is established per application deployment.
 
-Azure Hub and Spoke network topology streamlines the network connectivity needs. A Hub Virtual Network (VNet) can host the shared services while spoke VNets can host application specific Azure resources. Hub and Spoke VNets are connected with each other via VNet Peering. Hub and Spoke network topology promotes clean network design, easier management and cost optimization.
+    Azure Hub and Spoke network topology streamlines the network connectivity needs. A Hub Virtual Network (VNet) can host the shared services while spoke VNets can host application specific Azure resources. Hub and Spoke VNets are connected with each other via VNet Peering. Hub and Spoke network topology promotes clean network design, easier management and cost optimization.
 
-There is a custom policy that auto-provisions Hub VNet with Azure Firewall, VPN Gateway and ExpressRoute (ER) Gateway. Enterprises can configure all the options for Firewall, VPN and ER gateway as part of the policy assignment. This policy simplifies the process to deploy Azure Hub and Spoke network topology.
+    There is a custom policy that auto-provisions Hub VNet with Azure Firewall, VPN Gateway and ExpressRoute (ER) Gateway. Enterprises can configure all the options for Firewall, VPN and ER gateway as part of the policy assignment. This policy simplifies the process to deploy Azure Hub and Spoke network topology.
 
-Another custom policy prevents two Virtual Networks (VNets) getting peered with each other as they can communicate with each other via Hub VNet. By forcing VNets to communicate with each other through Hub makes it possible to control and monitor network connections. Network topology is simplified from overall maintenance perspective as well.
+    Another custom policy prevents two Virtual Networks (VNets) getting peered with each other as they can communicate with each other via Hub VNet. By forcing VNets to communicate with each other through Hub makes it possible to control and monitor network connections. Network topology is simplified from overall maintenance perspective as well.
 
-**Provision default configuration for Azure Monitor**
-Inability to identify and visualize relationship between Azure platform, Azure service(s) and Azure application(s) may result into an outage or degraded performance going undetected. Operations or Support team may miss an opportunity to take corrective action to a specific condition. An Azure application may not scale itself to respond to either surge or slump in the demand.
+- **Provision default configuration for Azure Monitor**
 
-Azure Monitor Logs along with Azure Log Analytics Workspace help enterprises in dealing with critical conditions using Alerts. Azure Monitor Logs and Log Analytics Workspace together, empower enterprises to visualize and interact with rich set of log information through dashboards, workbooks and Power BI. Enterprises can use Azure Monitor Logs and Log Analytics Workspace together to configure auto-scaling on VMs to automatically adding or removing additional instances.
+    Inability to identify and visualize relationship between Azure platform, Azure service(s) and Azure application(s) may result into an outage or degraded performance going undetected. Operations or Support team may miss an opportunity to take corrective action to a specific condition. An Azure application may not scale itself to respond to either surge or slump in the demand.
 
-A custom policy helps in configuring Log Analytics Workspace with Azure Monitor. This policy deploys pre-packaged dashboard reports referred as Azure Monitor Solutions for specific Azure services such as Azure SQL Database or Azure Active Directory. It also configures data sources such as Linux and Windows VM Performance metrics with Azure Monitor.
+    Azure Monitor Logs along with Azure Log Analytics Workspace help enterprises in dealing with critical conditions using Alerts. Azure Monitor Logs and Log Analytics Workspace together, empower enterprises to visualize and interact with rich set of log information through dashboards, workbooks and Power BI. Enterprises can use Azure Monitor Logs and Log Analytics Workspace together to configure auto-scaling on VMs to automatically adding or removing additional instances.
 
-**Enable Log Storage and Querying**
+    A custom policy helps in configuring Log Analytics Workspace with Azure Monitor. This policy deploys pre-packaged dashboard reports referred as Azure Monitor Solutions for specific Azure services such as Azure SQL Database or Azure Active Directory. It also configures data sources such as Linux and Windows VM Performance metrics with Azure Monitor.
 
-If not carefully planned, log information coming from multiple sources is Azure can easily become unwieldy. Capturing, storing and managing logs can consume plenty of resources, time and costs. Identifying trends or patterns over a long period of time and over huge amount of logs can become challenging.
+- **Enable Log Storage and Querying**
 
-Azure Log Analytics enables enterprises to store and manage logs from multiple sources efficiently. Querying the data stored in Azure Log Analytics for trend or pattern analysis is very easy with Azure Log Analytics. Alerts or interactive reports can be created using Azure Log Analytics queries.
+    If not carefully planned, log information coming from multiple sources is Azure can easily become unwieldy. Capturing, storing and managing logs can consume plenty of resources, time and costs. Identifying trends or patterns over a long period of time and over huge amount of logs can become challenging.
 
-There exists an  custom policy which creates Azure Log Analytics Workspace that acts as a repository to store log data. An Azure Automation Account is also created and linked with Log Analytics Workspace for automating tasks or deploying Azure Monitor Solutions which may have dependency on Log Analytics Workspace. It also helps in configuring properties such as log retention period, azure region, etc.
+    Azure Log Analytics enables enterprises to store and manage logs from multiple sources efficiently. Querying the data stored in Azure Log Analytics for trend or pattern analysis is very easy with Azure Log Analytics. Alerts or interactive reports can be created using Azure Log Analytics queries.
 
-**Provision logging for Azure-Arc enabled servers**
+    There is a custom policy which creates Azure Log Analytics Workspace that acts as a repository to store log data. An Azure Automation Account is also created and linked with Log Analytics Workspace for automating tasks or deploying Azure Monitor Solutions which may have dependency on Log Analytics Workspace. It also helps in configuring properties such as log retention period, azure region, etc.
 
-With IT estates spanning multiple clouds, on-premise sites and edge locations, many enterprises may be struggling to manage and govern servers which are scattered across environments and geographic locations. Using multitude of products to monitor servers can be a jarring experience. Putting servers in multiple environments under a single unified access and identity management solution can be challenging to set up and manage.
+- **Provision logging for Azure-Arc enabled servers**
 
-Azure Arc simplifies governance and management of resources such as servers, kubernetes clusters and data services across heterogeneous environments. By projecting hybrid resources as native Azure resources, Azure Arc provides a single pane of control for management of native as well as hybrid resources. Azure Arc brings native as well as hybrid resources under a single unified RBAC solution.
+    With IT estates spanning multiple clouds, on-premise sites and edge locations, many enterprises may be struggling to manage and govern servers which are scattered across environments and geographic locations. Using multitude of products to monitor servers can be a jarring experience. Putting servers in multiple environments under a single unified access and identity management solution can be challenging to set up and manage.
 
-A pair of custom  policies helps enterprises setting up Log Analytics agent on Azure Arc enabled Linux & Windows servers. A Log Analytics Workspace is also configured to store and manage logs. When assigned successfully, policy returns the the name of server(s) within the scope of policy which is configured with Log Analytics agent on it.
+    Azure Arc simplifies governance and management of resources such as servers, kubernetes clusters and data services across heterogeneous environments. By projecting hybrid resources as native Azure resources, Azure Arc provides a single pane of control for management of native as well as hybrid resources. Azure Arc brings native as well as hybrid resources under a single unified RBAC solution.
 
-**Enforce Network Traffic Log collection**
+    A pair of custom policies helps enterprises setting up Log Analytics agent on Azure Arc enabled Linux & Windows servers. A Log Analytics Workspace is also configured to store and manage logs. When assigned successfully, policy returns the the name of server(s) within the scope of policy which is configured with Log Analytics agent on it.
 
-While Azure Virtual Network (VNet) and Subnet provide a logical private network boundary, it is still essential to monitor the network traffic in Azure. Without proper network monitoring, enterprises are exposed to the risk of undesired or unknown traffic coming to Azure networks from compromised IP addresses. It becomes challenging to provision additional capacity for any increase in the network traffic without understanding the current traffic.
+- **Enforce Network Traffic Log collection**
 
-Azure Network Watcher provides a way to monitor and if necessary repair any network issue related to IaaS services in Azure. Network Security Group (NSG) flow logs provides a way to capture information about network traffic traversing through NSG. Enterprises can benefit from traffic analysis & patterns, forecast future capacity needs and enforce compliance against corporate governance policies.
+    While Azure Virtual Network (VNet) and Subnet provide a logical private network boundary, it is still essential to monitor the network traffic in Azure. Without proper network monitoring, enterprises are exposed to the risk of undesired or unknown traffic coming to Azure networks from compromised IP addresses. It becomes challenging to provision additional capacity for any increase in the network traffic without understanding the current traffic.
 
-There is a custom policy which helps in setting up Azure Network Watcher NSG flow logs. An Azure Storage Account is provisioned as repository to store NSG flow logs. This policy also configuring the retention period to store the NSG flow logs.  
+    Azure Network Watcher provides a way to monitor and if necessary repair any network issue related to IaaS services in Azure. Network Security Group (NSG) flow logs provides a way to capture information about network traffic traversing through NSG. Enterprises can benefit from traffic analysis & patterns, forecast future capacity needs and enforce compliance against corporate governance policies.
 
-**Provision at-scale network connectivity solution**
+    There is a custom policy which helps in setting up Azure Network Watcher NSG flow logs. An Azure Storage Account is provisioned as repository to store NSG flow logs. This policy also configuring the retention period to store the NSG flow logs.  
 
-Network connectivity requirements for an enterprise can be complex. Constant requests for adding New sites, devices and users to ever-expanding network are very challenging to provision and manage. Network bandwidth and throughput demands by multiple touch-points within an enterprise can be very demanding.
+- **Provision at-scale network connectivity solution**
 
-Azure Virtual WAN (vWAN) is an enterprise-grade network service aimed towards addressing any-to-any connectivity challenges. Azure vWAN provides higher aggregate throughput with network connectivity. It provides optimal routing over Azure backbone as well as a unified management experience from Azure.
+    Network connectivity requirements for an enterprise can be complex. Constant requests for adding New sites, devices and users to ever-expanding network are very challenging to provision and manage. Network bandwidth and throughput demands by multiple touch-points within an enterprise can be very demanding.
 
-A custom  policy enables setting up a Azure vWAN.
-This policy helps in provisioning Azure vWAN hub inside vWAN. Enterprises can deploy a Virtual Hub which acts as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways and Azure Firewall is also provisioned to address any-to-any network connectivity requirements.  
+    Azure Virtual WAN (vWAN) is an enterprise-grade network service aimed towards addressing any-to-any connectivity challenges. Azure vWAN provides higher aggregate throughput with network connectivity. It provides optimal routing over Azure backbone as well as a unified management experience from Azure.
 
-**Provision backup for Azure VMs**
+    A custom policy enables setting up a Azure vWAN.
+    This policy helps in provisioning Azure vWAN hub inside vWAN. Enterprises can deploy a Virtual Hub which acts as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways and Azure Firewall is also provisioned to address any-to-any network connectivity requirements.  
 
-As cloud adoption increases, enterprise face challenges of ensuring that workloads running in Azure are backed up. Conventional IT support model where app development and IT operations are managed by separate Teams, sometimes leaves the door open for unclear ownership of VM backups. In either intentional or unintentional scenario which requires VM backups for workload restoration, missing backup process can result in costly consequences.
+- **Provision backup for Azure VMs**
 
-Azure Backup provides a seamless, easy and integrated option for backing up VMs running either in Azure or in on-premise sites. Azure Backup leverages cloud scale storage and frees enterprises from having to constantly procure and manage storage needed for backups. Azure Backup provides a repository to store data securely in transit as well as at-rest.
+    As cloud adoption increases, enterprise face challenges of ensuring that workloads running in Azure are backed up. Conventional IT support model where app development and IT operations are managed by separate Teams, sometimes leaves the door open for unclear ownership of VM backups. In either intentional or unintentional scenario which requires VM backups for workload restoration, missing backup process can result in costly consequences.
 
-There is a custom policy that automatically configures Azure backup protection for Windows as well as Linux VMs. A Recovery Service Vault is configured for storing backup which securely stores data as well as provides protection against malicious deletion of backup through soft delete. A default backup policy is created and assigned with pre-configured values for backup schedule, backup retention period, etc.
+    Azure Backup provides a seamless, easy and integrated option for backing up VMs running either in Azure or in on-premise sites. Azure Backup leverages cloud scale storage and frees enterprises from having to constantly procure and manage storage needed for backups. Azure Backup provides a repository to store data securely in transit as well as at-rest.
 
-**Provision connectivity between Virtual Networks (VNets)**
+    There is a custom policy that automatically configures Azure backup protection for Windows as well as Linux VMs. A Recovery Service Vault is configured for storing backup which securely stores data as well as provides protection against malicious deletion of backup through soft delete. A default backup policy is created and assigned with pre-configured values for backup schedule, backup retention period, etc.
 
-It is very common to have workloads scattered across multiple subscriptions or virtual networks (VNets) in an enterprise. Without a dedicated and secure network connectivity between them, critical business applications will struggle with data exchange. An internet-based network connectivity will pose inconsistent network bandwidth and performance. Potential high network latency may impact user experience adversely.
+- **Provision connectivity between Virtual Networks (VNets)**
 
-Azure Virtual Network Peering provides network connectivity between two virtual networks (VNets) over Microsoft backbone network. Azure Peering enables high-bandwidth low-latency network connectivity. Data can be exchanged securely between separate Azure subscriptions, tenants or Azure regions.
+    It is very common to have workloads scattered across multiple subscriptions or virtual networks (VNets) in an enterprise. Without a dedicated and secure network connectivity between them, critical business applications will struggle with data exchange. An internet-based network connectivity will pose inconsistent network bandwidth and performance. Potential high network latency may impact user experience adversely.
 
-A custom  policy provides a template for setting up Virtual Network Peering. A network layout expressed in ARM template definition can be passed as a parameter. This policy will spin up Virtual Networks and configure VNet Peering between them along with dependencies such as NSG, UDR, etc.
+    Azure Virtual Network Peering provides network connectivity between two virtual networks (VNets) over Microsoft backbone network. Azure Peering enables high-bandwidth low-latency network connectivity. Data can be exchanged securely between separate Azure subscriptions, tenants or Azure regions.
 
-**Enforce Windows VMs to join AD Domain**
+    A custom policy provides a template for setting up Virtual Network Peering. A network layout expressed in ARM template definition can be passed as a parameter. This policy will spin up Virtual Networks and configure VNet Peering between them along with dependencies such as NSG, UDR, etc.
 
-Enterprises have been using domain joined VMs for a consistent management experience. When operations such as corporate password policy, central authentication, etc. are created as part of domain policies, a VM which does not join the domain, is exposed to risks such as weak password, inability to connect with corporate devices, applications, etc. Legacy applications which rely upon authentication protocols such as NTLM, Kerberos may face authentication issues when deployed on VMs which are not domain joined.
+- **Enforce Windows VMs to join AD Domain**
 
-Azure provides managed as well as un-managed solutions for implementing domain services. With self-managed Active Directory Domain Services (AD DS) in Azure, enterprises get complete control on the setup, configuration and operations just same as in an on-premise environment. Azure Active Directory Domain Service (AAD DS) takes away all the management overhead away from enterprises while still providing essential domain services.
+    Enterprises have been using domain joined VMs for a consistent management experience. When operations such as corporate password policy, central authentication, etc. are created as part of domain policies, a VM which does not join the domain, is exposed to risks such as weak password, inability to connect with corporate devices, applications, etc. Legacy applications which rely upon authentication protocols such as NTLM, Kerberos may face authentication issues when deployed on VMs which are not domain joined.
 
-A custom policy that ensures any newly created Windows VM automatically joins the domain. An extension - *JsonADDomainExtension* - is deployed on the VM which uses other configuration settings such as username, domain, OUPath, etc. to ensure that VM joins the specified domain. This policy uses Azure KeyVault to manage confidential information such as domain username and password.
+    Azure provides managed as well as un-managed solutions for implementing domain services. With self-managed Active Directory Domain Services (AD DS) in Azure, enterprises get complete control on the setup, configuration and operations just same as in an on-premise environment. Azure Active Directory Domain Service (AAD DS) takes away all the management overhead away from enterprises while still providing essential domain services.
+
+    A custom policy that ensures any newly created Windows VM automatically joins the domain. An extension - *JsonADDomainExtension* - is deployed on the VM which uses other configuration settings such as username, domain, OUPath, etc. to ensure that VM joins the specified domain. This policy uses Azure KeyVault to manage confidential information such as domain username and password.
