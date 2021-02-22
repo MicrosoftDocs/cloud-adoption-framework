@@ -23,8 +23,9 @@ Consider Inter-VM latency monitoring for latency-sensitive application
 
 ### Design Recommendations
 
-Leverage SAP Solution Manager and [Azure Monitor for SAP Solutions](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, HA SuSE Cluster and SQL Systems.
+Leverage SAP Solution Manager.
 
+Deploy and use [Azure Monitor for SAP Solutions (AMS)](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP Application, Database, High-availability (pacemaker) clusters, OS and more at one place in Azure Portal. 
 
 Deploy VM Extension for SAP,  VM Extension uses a Managed Identity assigned to the VM to access monitoring and configuration data of the VM. This check makes sure that all performance metrics that appear inside your SAP application are provided by the underlying [Azure Extension for SAP](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/deployment-guide). 
 
