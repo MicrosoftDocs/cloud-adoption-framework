@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Connectivity to Azure PaaS services
 
 Building on the previous connectivity sections, this section explores recommended connectivity approaches for using Azure PaaS services.

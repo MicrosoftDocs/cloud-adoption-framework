@@ -10,8 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" "Local, Standard, or Premium SKU" "ExpressRoute Standard or Premium circuits" L7 -->
-<!-- cSpell:ignore autoregistration onprem privatelink -->
+<!-- docutune:casing "Local, Standard, or Premium SKU" "ExpressRoute Standard or Premium circuits"-->
 
 # Virtual WAN network topology (Microsoft-managed)
 

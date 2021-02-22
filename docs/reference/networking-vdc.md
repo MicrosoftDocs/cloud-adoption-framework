@@ -428,8 +428,8 @@ Learn more about the Azure capabilities discussed in this document.
     :::column:::
         **Load balancing** <br>
         [Azure Front Door][azure-front-door] <br>
-        [Azure Load Balancer (L4)][ALB] <br>
-        [Application Gateway (L7)][AppGW] <br>
+        [Azure Load Balancer (Layer 4)][ALB] <br>
+        [Application Gateway (Layer 7)][AppGW] <br>
         [Azure Traffic Manager][azure-traffic-manager]
     :::column-end:::
     :::column:::
