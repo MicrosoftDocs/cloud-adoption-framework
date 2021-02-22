@@ -1,55 +1,58 @@
 ---
-title: "Introduction to the SAP adoption scenario"
-description: Describe the scenario
+title: Introduction to an SAP adoption scenario
+description: Understand the process for integrating an SAP platform into your cloud adoption efforts.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: think-tank
 ---
 
-# SAP on Azure
+# Introduction to an SAP adoption scenario
 
-This article series outlines the process for integrating SAP into your cloud adoption efforts.
+This article series outlines the process for integrating an SAP platform into your cloud adoption efforts.
 
-## SAP on Azure executive summary
+## Executive summary of SAP on Azure
 
-This article series outlines how SAP workload impacts your overall strategy, cloud adoption plan, and environmental readiness efforts with detailed guidance on common drift for each effort. Once an environment is established, the series explains the processes for migrating an SAP platform and innovating on that platform using cloud technologies. To support your cloud adoption needs, the series also outlines the considerations for governance and operations management commonly necessitated by an SAP deployment.
+These articles describe how SAP workloads impact your overall strategy, cloud adoption plan, and environmental readiness efforts, with detailed guidance on common drift for each effort. Once an environment is established, the series explains the processes for migrating an SAP platform and how to use cloud technologies to innovate on that platform. To support your cloud adoption needs, the series also outlines considerations and best practices for managing governance and operations throughout an SAP deployment.
 
-To accelerate each of the above efforts, the article series also includes detailed technical references demonstrating how you can build an enterprise-scale landing zone to support all of your mission critical SAP needs.
+To accelerate these efforts, the articles also include detailed technical resources that describe how to build an enterprise-scale landing zone that can support your mission-critical SAP needs.
 
-## Alignment to SAP Migration framework
+## How to align to the SAP migration framework
 
-The SAP on Azure team has produced a comprehensive framework for migrating and innovating with SAP on Azure. That framework is the de facto guide for organizations who are hyper-focused on delivering the best possible migration of SAP to Azure. If your highest priority is the successful migration of SAP to the cloud, continue to use that guide.
+The SAP on Azure team has produced a comprehensive framework for migrating and innovating with SAP on Azure. That framework is the main guide for organizations that focus on delivering the most successful SAP migration to Azure. If your highest priority is successfully migrating SAP to the cloud, then continue to use that guide.
 
-![SAP Migration framework](./media/sap-migration-framework.png)
+![A diagram of the SAP migration framework.](./media/sap-migration-framework.png)
 
-The Cloud Adoption Framework's SAP scenario (this article series) is a compliment to the existing SAP Migration framework. But the articles in this series are designed for a slightly different audience with slightly different goals. As organizations migrate to the cloud, they will commonly need to migrate, innovate, and manage a variety of workloads and technology platforms to accomplish business goals. Those efforts follow the methodologies in the Cloud Adoption Framework for consistent processes and approaches across various technology platforms and workloads. If you are integrating the migration of SAP into your overall cloud adoption plan, use this article series.
+This article series outlines an SAP scenario for the Cloud Adoption Framework, and it complements the current SAP migration framework. These articles are also designed for a slightly different audience with slightly different goals, and they can help your organization if you're integrating the migration of SAP into your overall cloud adoption plan. As organizations migrate to the cloud, they typically need to migrate, innovate, and manage a range of workloads and technology platforms to accomplish their business goals. Those efforts align with the methodologies in the Cloud Adoption Framework for consistent processes and approaches across various technology platforms and workloads.
 
-If your team(s) is following the guidance in both frameworks, you will see very similar guidance just in packaging that better aligns with the audience and their objectives. Below is a mapping of the terms so both audiences can have a similar conversation:
+If your team(s) is following the guidance in both frameworks, you'll see very similar guidance just in packaging that better aligns with the audience and their objectives. Below is a list of terms for the methodologies that can help both audiences to have a similar conversation:
 
 |||
 |---------|---------|
-|**Discover**|When cloud adoption spans multiple technology platforms, we've found that it's best to seperate the discovery process into two conversations: [Strategy](./strategy.md) to engage business executives during strategic alignment & [Plan](./plan.md) to prepare the plan based on current and future state data|
-|**Prepare**|The [Ready](./ready.md) methodology prepares your team and the environment for the coming work. This scenario also integrates the Azure Landing Zones to provide pre-developed and opinionated approaches to rapidly deploy environments that can support a variety of technology platforms.|
-|**Migrate**|The [Migrate](./migrate.md) methodology will demonstrate how SAP migration can be integrated into other repeatable migration processes.|
-|**Run**|The [Manage](./manage.md) methodology will show how a common operations baseline can address many of the run-state concerns addressed in the SAP Migration guide, while also meeting the operational needs of other technology platforms.|
-|**Innovate**|The [Innovate](methodology.md) outlines a variety of ways that you can take your SAP platform to the next level and integrate cloud-native solutions into your workloads.|
+|**Discover**|When cloud adoption spans multiple technology platforms, it's helpful to separate the discovery process into two conversations: [Strategy](./strategy.md), to engage business executives during strategic alignment, and [Plan](./plan.md), to prepare the plan based on current and future-state data.|
+|**Prepare**|The [Ready](./ready.md) methodology prepares your team and the environment for the coming work. This scenario also integrates Azure landing zones to provide pre-developed and opinionated approaches to help your team to rapidly deploy environments that can support various technology platforms.|
+|**Migrate**|The [Migrate](./migrate.md) methodology demonstrates how an SAP migration can integrate with other repeatable migration processes.|
+|**Run**|The [Manage](./manage.md) methodology shows how a common operations baseline can address many of the run-state concerns addressed in [Migrate](./migrate.md) and also meet the operational needs of other technology platforms.|
+|**Innovate**|The [Innovate](methodology.md) outlines how you can take your SAP platform to the next level and integrate cloud-native solutions into your workloads.|
 
-The guidance is designed to align & compliment between these two sources, to allow your SAP and central IT teams to work together during all phases of cloud adoption.
+The guidance aligns these sources to help your SAP and central IT teams work together during all phases of cloud adoption.
 
-## SAP adoption scenario
+## The SAP adoption process
 
-Adoption of SAP workloads in the cloud will touch on most of the methodologies within the cloud adoption framework. In each of those phases, there are distinct constraints which will require SAP specific actions. This article series includes a mapping between the standard processes & SAP specific tasks.
+Adopting SAP workloads in the cloud incorporates and addresses most of the methodologies and phases within the Cloud Adoption Framework. Distinct constraints within each phase will require actions specific to SAP, and this article series maps standard processes to SAP-specific tasks.
 
-![Get started with migration in Azure](../../_images/get-started/caf-baseline-journey.png)
+![A diagram of the methodologies within the Cloud Adoption Framework and how to get started with a migration in Azure.](../../_images/get-started/caf-baseline-journey.png)
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful adopting SAP in Azure.
+## Next steps
 
-- [Strategy for SAP](./strategy.md)
-- [Plan for SAP](./plan.md)
+The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
+
+- [The strategic impact of SAP in the cloud](./strategy.md)
+- [Plan for SAP cloud adoption in Azure](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate SAP](./migrate.md)
+- [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)
