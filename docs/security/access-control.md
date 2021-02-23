@@ -16,16 +16,28 @@ This article summarizes the areas for consideration when planning and implementi
 
 ## Context
 
-As organizations plan for cloud-based environments, the concept of network boundaries as the outer edge of the security perimeter is challenged.
-With users and applications expanding beyond internal network boundaries, securing access becomes an even more important element of corporate security.
+As organizations plan for cloud-based environments, the concept of network boundaries as the single outer edge of the security perimeter is challenged. With users and applications expanding beyond internal network boundaries, organizations must plan access control in a holistic way across technologies including  network, identity, applications, data, and more.
 
-Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services as scale without compromising security or increasing risk.
+Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
+
+## Enterprise Access Model and blended control Plane
+
+Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privilged accounts with adminsitrative access to systems.  
+
+![Adding user and application access pathways](./media/privileged-access-strategy/user-app-control-management-data-workload-planes.png)
+
+For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
+
+While access controls will be infused throughout the environment, the control plane will be primarily a blend of identity and network controls. While the focus level on each will vary by type of environment, these should be designed to work in harmony to meet both productivity and security goals. 
+
+(new diagram)
 
 ## First principles
 
-Irrespective of the scale of the environment, the technologies in use or workloads in scope, implementing access controls should deliver a consistent outcome - demonstrating to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled.
+Implementing access controls should deliver to business stakeholders an assurance that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.  
 
-By establishing these fundamentals, the business is able to monitor against a 'known' standard, review anomalies and agree exceptions.
+By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests. 
+
 Scaling this standard requires three things -
 
 - **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
@@ -36,9 +48,7 @@ Scaling this standard requires three things -
 
 A [Zero Trust](https://www.microsoft.com/security/business/zero-trust) approach assumes breach within an organization's infrastructure and establishes processes where each request is explicitly validated as though it originates from an open network.
 
-Zero Trust teaches us to "never trust, always verify".
-
-Every access request is fully authenticated, authorized, and encrypted before granting access.  
+Zero Trust teaches us to "never trust, always verify" and ensure every access request is fully authenticated, authorized, and encrypted before granting access.  
 
 ## Identity
 
@@ -57,8 +67,7 @@ User accounts authenticating against services should use strong passwords and mu
 ### Multifactor authentication (MFA)
 
 MFA is becoming a commonly used component of safeguarding access into corporate systems. Many large scale cloud services offer MFA as an authentication step in order ask the person attempting to authenticate that they are who they say they are.
-The principles of MFA are 'something you know'  - typically your username and password, and 'something you have' - for example a phone, or a cryptokey
-Text messages, phone calls, and authentication smartphone apps are commonly used authentication factors.
+The factors of MFA are 'something you know'  - typically your username and password, 'something you are' - typically a biometric, and 'something you have' - for example a phone, or a cryptokey. For more details on Microsoft's MFA and passwordless recommendations, see https://docs.microsoft.com/en-us/security/compass/privileged-access-accounts#account-security
 
 By using MFA to secure accounts reduces the impact of a user's account details being stolen as the attacker would still need to obtain the 'something you have' item in order to gain access. As a result, using multi-factor authentication is a highly recommended security mechanism to protect access into organizations.
 
