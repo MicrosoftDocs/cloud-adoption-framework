@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: cognitive search, azure cognitive services, cognitive search engine, what is cognitive, azure search
 ---
 
-<!-- cSpell:ignore Lucene -->
-
 <!-- docutune:casing "JFK Files" -->
 <!-- docutune:ignore "Azure Search" -->
 
