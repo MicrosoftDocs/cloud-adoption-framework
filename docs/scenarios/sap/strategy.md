@@ -36,7 +36,7 @@ Motivations to adopt an SAP platform in the cloud are often based on an organiza
 
 1. SAP hosting contracts lock in vendors across multiple years. If your hosting, managed service, or maintenance contracts are coming up for renewal, some cloud adoption opportunities and benefits are to improve agile, unlock new innovations, and streamline operations for your most mission-critical platform.
 
-1. Refresh and contract renewals can be triggered by SAP upgrade cycles or a business driver to expand into HANA, SAP business suite, or others SAP features. If your organization is seeking to expand SAP capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
+1. Refresh and contract renewals can be triggered by SAP upgrade cycles or a business driver to expand into HANA, SAP Business Suite, or others SAP features. If your organization is seeking to expand SAP capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
 
 ## How to measure progress during an SAP adoption
 

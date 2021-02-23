@@ -17,7 +17,7 @@ This article describes how to approach system identifier (sid) automation on SAP
 
 An SAP application consists of systems, environments, and landscapes. Platform automation and DevOps target these components.
 
-The following diagram illustrates the dependencies between SAP systems, environments, and landscapes. The application has three landscapes: SAP ERP central component (ecc), SAP customer relationship management (CRM), and SAP business warehouse (bw). Each landscape has three environment tiers: development, quality assurance, and production. Each environment contains one or more systems.
+The following diagram illustrates the dependencies between SAP systems, environments, and landscapes. The application has three landscapes: SAP ERP Central Component (ecc), SAP customer relationship management (CRM), and SAP Business Warehouse (BW). Each landscape has three environment tiers: development, quality assurance, and production. Each environment contains one or more systems.
 
 ![Diagram showing architectural dependencies between SAP systems, environments, and landscapes.](media/architectural-principles.png)
 
@@ -40,7 +40,7 @@ Environments provide the following services to SAP systems:
 
 ### Landscape
 
-A landscape is a collection of systems in different environments in an SAP application. The example diagram shows three SAP landscapes: SAP ERP central component (ecc), SAP customer relationship management (CRM), and SAP business warehouse (bw).
+A landscape is a collection of systems in different environments in an SAP application. The example diagram shows three SAP landscapes: SAP ERP Central Component (ecc), SAP customer relationship management (CRM), and SAP Business Warehouse (BW).
 
 **Design considerations:**
 
@@ -48,7 +48,7 @@ A landscape is a collection of systems in different environments in an SAP appli
 
 - Define service principal name (SPN) strategy for automation. Will each environment have a unique SPN?
 
-- Define secrets or credentials management. Azure Key Vault is the recommended solution for key management and key storage. SAP automation uses SPN credentials from Azure Key Vault. By default, all systems in an environment use the same credentials from the environment Key Vault. Determine whether any systems need unique credentials.
+- Define secrets or credentials management. Azure Key Vault is the recommended solution for key management and key storage. SAP Automation uses SPN credentials from Azure Key Vault. By default, all systems in an environment use the same credentials from the environment Key Vault. Determine whether any systems need unique credentials.
 
 - Decide whether to use an Azure Marketplace image or a custom-built image. Custom-built images have several advantages, like customer-specific OS configuration, security hardening, and compliance tooling. Custom-built images can also potentially streamline image lifecycle management.
 
@@ -58,9 +58,9 @@ A landscape is a collection of systems in different environments in an SAP appli
 
 - Store archival copies of automation tool binaries. Keep copies of Terraform/Ansible binary libraries of the specific version applicable to your code.
 
-- Use default SAP automation standard naming conventions. SAP automation publishes a set of naming convention guidelines.
+- Use default SAP Automation standard naming conventions. SAP Automation publishes a set of naming convention guidelines.
 
-- Provide a managed SAP automation environment. Three methods to orchestrate automation are:
+- Provide a managed SAP Automation environment. Three methods to orchestrate automation are:
 
   - Begin by deploying deployment infrastructure as a central automation controller VM for SAP environments np and production.
 

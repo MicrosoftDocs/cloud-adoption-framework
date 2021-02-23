@@ -97,7 +97,7 @@ Since SAP Web Dispatcher and NetScaler are more intelligent than Application Gat
 
 - Use a Web Application Firewall to scan your traffic when it's exposed to the internet; another option is to use it with your load balancer or resources with built-in firewall capabilities like Application Gateway or third-party solutions.
 
-- To prevent data leakage, use Azure Private Link to securely access platform as a service resources like Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2, Azure Data Factory, and more. Azure private endpoint can also help to secure traffic between VNets and services like Azure Storage, Azure Backup, and more. Traffic between your VNet and the Private-EndPoint-enabled service travels across the Microsoft global network, which prevents its exposure to the public internet.
+- To prevent data leakage, use Azure Private Link to securely access platform as a service resources like Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2, Azure Data Factory, and more. Azure Private Endpoint can also help to secure traffic between VNets and services like Azure Storage, Azure Backup, and more. Traffic between your VNet and the Private-EndPoint-enabled service travels across the Microsoft global network, which prevents its exposure to the public internet.
 
 ## Define network encryption requirements
 
@@ -132,9 +132,9 @@ It isn't recommended to host the database management system (DBMS) and applicati
   - Windows Server 2012 R2 or later
   - SUSE Linux 12 sp3 or later
   - Red Hat Enterprise Linux 7.4 or later
-  - Oracle Linux 7.5: Release 3.10.0-862.13.1.el7 is required for the kernel compatible with Red Hat Enterprise Linux. Release 5 is required for the Oracle unbreakable enterprise kernel.
+  - Oracle Linux 7.5: Release 3.10.0-862.13.1.el7 is required for the kernel compatible with Red Hat Enterprise Linux. Release 5 is required for the Oracle Unbreakable Enterprise Kernel.
 
-- Make sure that internal deployments for Azure Load Balancer are set up to use direct server return, dsr. This setting will reduce latency when internal load balancer configurations are used for high-availability configurations on the DBMS layer.
+- Make sure that internal deployments for Azure Load Balancer are set up to use Direct Server Return (DSR). This setting will reduce latency when internal load balancer configurations are used for high-availability configurations on the DBMS layer.
 
 - If using load balancer with Linux guest operating systems, check that the Linux network parameter `net.ipv4.tcp_timestamps` is set to `0`.
 

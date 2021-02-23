@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Large Instances" Pacemaker Veritas Infoscale -->
+<!-- docutune:casing "Large Instances" -->
 
 # Business continuity and disaster recovery for an SAP enterprise-scale migration
 
@@ -34,7 +34,7 @@ As we go through this article, we work our way from top to the bottom by coverin
 
 ### Cross-regional or disaster recovery
 
-Azure has over 60 Azure regions as you can see in the [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/). Not all regions are running the same services. Looking at larger SAP software deployments, especially the ones using SAP HANA, you need to look for Azure regions that offer Azure [M-series VMs](/azure/virtual-machines/m-series) and/or [mv2-series VMs](/azure/virtual-machines/mv2-series). Azure Storage also has pairing between different regions that allow Azure Storage to replicate a smaller subset of storage types to such another region. The mapping can be found [here](/azure/best-practices-availability-paired-regions). The principle problem around the Azure region pairing for SAP workload is:
+Azure has over 60 Azure regions as you can see in the [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/). Not all regions are running the same services. Looking at larger SAP software deployments, especially the ones using SAP HANA, you need to look for Azure regions that offer Azure [M-series VMs](/azure/virtual-machines/m-series) and/or [Mv2-series VMs](/azure/virtual-machines/mv2-series). Azure Storage also has pairing between different regions that allow Azure Storage to replicate a smaller subset of storage types to such another region. The mapping can be found [here](/azure/best-practices-availability-paired-regions). The principle problem around the Azure region pairing for SAP workload is:
 
 - In quite some cases, the pairs are not consistent with m/mv2 VM services. Therefore we are observing many customers deploying their SAP systems **not** following our paired regions, but following service availability of the required VM families.
 - The storage type that can be replicated between the region pairs is Azure standard storage that can't be used as storage for your databases, or-based VHDs. So, you are restricted to e.g. Having backups replicated between paired region that you use. For all the other data, you need to provide your own replications, which in the database space is usually native DBMS functionality, like SQL Server Always On, HANA System Replication, and so on. And for the SAP application layer, a mixture of Azure Site Recovery, rsync/robocopy, or other third-party software.
@@ -59,9 +59,9 @@ Thinking of high availability, you are mainly looking into providing availabilit
 - Single point of failure in the application, like ASCS/SCS as with the SAP NetWeaver and S/4HANA architecture
 - Eventually other components, like SAP Web Dispatcher
 
-In all those cases, the discussion of availability should not be restricted on the case of infrastructure or software failures, but need to include all the lifecycle management tasks that you need to perform, like patching the OS in the VMs. Patching of the DBMS or SAP software. Common technology used for protecting against larger unplanned service disruption can be used for minimizing the outages due to planned downtime and lifecycle management tasks
+In all those cases, the discussion of availability should not be restricted on the case of infrastructure or software failures, but need to include all the lifecycle management tasks that you need to perform, like patching the OS in the VMs. Patching of the DBMS or SAP software. Common technology used for protecting against larger unplanned service disruption can be used for minimizing the outages due to planned downtime and lifecycle management tasks.
 
-Common technologies that SAP and SAP supported DBMS provider support are automatic failover clusters. In the case of Windows, this is the Windows failover cluster server functionality. In the case of Linux, this is Linux Pacemaker or third-party products like sios protection suite for Linux or Veritas Infoscale. Keep in mind that only a subset of the scenarios you can deploy as high availability configurations in your own datacenter are supported in Azure as well.
+Common technologies that SAP and SAP supported DBMS provider support are automatic failover clusters. In the case of Windows, this is the Windows failover cluster server functionality. In the case of Linux, this is Linux Pacemaker or third-party products like SIOS Protection Suite for Linux or Veritas Infoscale. Keep in mind that only a subset of the scenarios you can deploy as high availability configurations in your own datacenter are supported in Azure as well.
 
 What is supported, what is not supported? Check the articles [SAP workload on Azure virtual machine supported scenarios](/azure/virtual-machines/workloads/sap/sap-planning-supported-configurations) and [supported scenarios for HANA Large Instances](/azure/virtual-machines/workloads/sap/hana-supported-scenario) for scenarios that are supported.
 
@@ -158,7 +158,7 @@ The following are best practices for your design:
 
 - Use Azure ExpressRoute to connect customer sites (on-premises) to primary and secondary (DR) Azure regions. You can also set up a VPN connection between customer sites (on-premises) to primary and secondary (DR) Azure regions.
 
-- For SUSE Linux enterprise server (sles), use a stonith block device (sbd) (up to three sbds in different fds) or an Azure fence agent; additional VMs aren't required. Refer to [sles Pacemaker](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker) if you plan to use Azure fence agents.
+- For Suse Linux Enterprise Server (SLES), use a STONITH Block Device (SBD) (up to three SBDs in different fencing devices) or an Azure fence agent; additional VMs aren't required. Refer to [SLES Pacemaker](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker) if you plan to use Azure fence agents.
 
 - Use an Azure fence agent for Red Hat Enterprise Linux.
 
@@ -170,13 +170,13 @@ The following are best practices for your design:
 
 - For VNet applications requiring DR network access, make sure that the VNet is peered to the secondary (DR) region. For example, HSR replication will required an SAP HANA database VNet to be peered to the secondary site's SAP HANA database VNet.
 
-- You can also [use VNet to ExpressRoute peering](/azure/expressroute/expressroute-howto-linkVNet-portal-resource-manager) or [ExpressRoute globalreach](/azure/expressroute/expressroute-global-reach) instead of VNet peering.
+- You can also [use VNet to ExpressRoute peering](/azure/expressroute/expressroute-howto-linkVNet-portal-resource-manager) or [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) instead of VNet peering.
 
 - The primary VNet's classless inter-domain routing (CIDR) shouldn't conflict or overlap with the disaster site VNet's CIDR.
 
 - The load balancer configuration should be in front of dual web dispatchers and ASCS and database nodes.
 
-- Make sure that the floating IP is enabled in the load balancer.
+- Make sure that the Floating IP is enabled in the load balancer.
 
 - To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Azure NetApp Files paired regions are different than standard Azure paired regions.
 
@@ -210,7 +210,7 @@ Consider the following compute options:
 
 **Design recommendations for compute:**
 
-- Use an E-series SKU for SAP NetWeaver application server Java. An E-series SKU has better memory than a D-series with same input, output, and throughput limits. Java application servers require a lot of memory, and the E-series will provide better CPU memory-mapping. It is recommended to use [gen2 VM SKUs](/azure/virtual-machines/generation-2), when possible.
+- Use an E-series SKU for SAP NetWeaver application server Java. An E-series SKU has better memory than a D-series with same input, output, and throughput limits. Java application servers require a lot of memory, and the E-series will provide better CPU memory-mapping. It is recommended to use [Gen2 VM SKUs](/azure/virtual-machines/generation-2), when possible.
 
 - Use an E-series SKU for AnyDB deployments. A database's performance increases with the size of its cache. The two main advantages of E-series SKUs over D-series are 1:8 memory mapping and constrained core options to help you save on database license costs without compromising input, output, and throughput limits.
 
@@ -280,6 +280,6 @@ Consider the following compute options:
 
 - For any database deployment, the [readonly cache](/azure/virtual-machines/premium-storage-performance#disk-caching) must be enabled for data disks that contain database data files. The readonly cache can only be enabled on disks smaller than 4,095 GB.
 
-- Use only database-native encryption instead Azure Disk Encryption for database disks; for example, transparent data encryption, TDE, for Oracle or SQL Server.
+- Use only database-native encryption instead Azure Disk Encryption for database disks; for example, Transparent Data Encryption, TDE, for Oracle or SQL Server.
 
-- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the p50 disk gives 7500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a standard d8s_v3 that only supports 192 Mbps, it doesn't help realize the p50 disk's throughput.
+- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk gives 7500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a standard d8s_v3 that only supports 192 Mbps, it doesn't help realize the P50 disk's throughput.

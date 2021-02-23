@@ -32,7 +32,7 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 
 - Use SAP Solution Manager and [Azure Monitor for SAP solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, high-availability SUSE clusters, and SQL systems.
 
-- Run a VM extension for SAP check. VM extension for SAP uses a VM's assigned managed identity to access VM monitoring and configuration data. The check ensures that all performance metrics that appear inside your SAP application come from the underlying [Azure extension for SAP](/azure/virtual-machines/workloads/sap/deployment-guide).
+- Run a VM Extension for SAP check. VM Extension for SAP uses a VM's assigned managed identity to access VM monitoring and configuration data. The check ensures that all performance metrics that appear inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/deployment-guide).
 
 - Protect your HANA database with [Azure Backup](/azure/virtual-machines/workloads/sap/sap-hana-backup-guide) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots.
 
@@ -42,7 +42,7 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 
 - Use [Azure Site Recovery](/azure/site-recovery/monitoring-common-questions) monitoring to maintain disaster recovery service health for SAP application servers.
 
-- Optimize and manage SAP Basis operations by using [SAP landscape management (LaMa)](https://www.sap.com/products/landscape-management.html). Use the [SAP LaMa connector for Azure](/azure/virtual-machines/workloads/sap/lama-installation) to relocate, copy, clone, and refresh SAP systems.
+- Optimize and manage SAP Basis Operations by using [SAP Landscape Management (LaMa)](https://www.sap.com/products/landscape-management.html). Use the [SAP LaMa connector for Azure](/azure/virtual-machines/workloads/sap/lama-installation) to relocate, copy, clone, and refresh SAP systems.
 
 - Perform a [quality check for SAP HANA](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/QualityCheck) on the provisioned Azure infrastructure to verify that provisioned VMs comply with SAP HANA on Azure best practices.
 

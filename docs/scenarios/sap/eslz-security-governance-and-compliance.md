@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
+<!-- docutune:casing "Enterprise Edition" -->
+
 # Enterprise-scale security, governance, and compliance for SAP on Azure
 
 SAP is a common technology many organizations use in their most crucial workloads today. When planning SAP architecture, you should pay special attention to ensuring that the architecture is robust and secure. The goal of this article is to document the security, compliance, and governance design criteria for enterprise-scale SAP on Azure. The article discusses design recommendations, best practices, and design considerations that reflect input from the field.
@@ -32,7 +34,7 @@ For more information about the shared responsibility model, see [Shared responsi
 
 Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
-For generally-accepted security guidance, refer to the center for internet security (cis) standards at [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/).
+For generally-accepted security guidance, refer to the Center for Internet Security (CIS) standards at [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/).
 
 ### Enable Azure Security Center
 
@@ -64,7 +66,7 @@ The following screenshot shows the Azure Security Center dashboard in the Azure 
 
 Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Microsoft Active Directory (Azure AD), combined with third-party security products, have enabled this capability for both SAP GUI and web-browser-based applications for years. When a user signs in to their workstation and successfully authenticates, ad issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
 
-You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for diag (SAP GUI), RFC, and SPNEGO for HTTPS.
+You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS.
 
 Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
 
@@ -107,13 +109,13 @@ Server-side encryption (SSE) for SAP on Azure VMs protects your data and helps y
 
 Azure Storage encryption is enabled for all Azure Resource Manager and classic storage accounts, and can't be disabled. Because your data is encrypted by default, you don't need to modify your code or applications to use Azure Storage encryption.
 
-For SAP database server encryption, use the SAP HANA native encryption technology. If you're using Azure SQL Database, use [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) offered by the DBMS provider to secure your data and log files, and ensure the backups are also encrypted.
+For SAP database server encryption, use the SAP HANA native encryption technology. If you're using Azure SQL Database, use [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) offered by the DBMS provider to secure your data and log files, and ensure the backups are also encrypted.
 
 ### Secure data in transit
 
 Data is in transit or in flight when it moves from one location to another, whether internally on-premises or within Azure, or externally, like across the internet to the end user. Azure offers several mechanisms to keep data private in transit. All the mechanisms can use protection methods like encryption. These mechanisms include:
 
-- Communication through virtual private networks (VPNs), using IPsec/ike encryption
+- Communication through virtual private networks (VPNs), using IPsec/IKE encryption
 - Transport Layer Security (TLS) 1.2 or later via Azure components like Azure Application Gateway or Azure Front Door
 - Protocols available on the Azure VMs, like Windows IPsec or SMB
 
@@ -133,7 +135,7 @@ For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsof
 
 For internet-facing applications, you must make sure to distribute load per application requirements while maintaining security levels. The term load balancing refers to the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
 
-Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like secure socket layer (SSL) termination and forwarding.
+Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like Secure Sockets Layer (SSL) termination and forwarding.
 
 You can categorize Azure load-balancing services along global versus regional and HTTP(s) versus non-HTTP(s) dimensions.
 
@@ -156,7 +158,7 @@ The following table summarizes the Azure load-balancing services by category:
 
 - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 
-- [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door, because of common challenges around DNS caching and systems not honoring DNS ttl.
+- [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door, because of common challenges around DNS caching and systems not honoring DNS TTL.
 
 - [Application Gateway](/azure/application-gateway/overview) provides application delivery controller (adc) as a service, offering various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web farm productivity by offloading CPU-intensive SSL termination to the gateway.
 
@@ -170,7 +172,7 @@ Every SAP application has unique requirements, so treat the preceding flow chart
 
 ### Monitor security
 
-[Azure Monitor for SAP solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) is an Azure-native monitoring product for SAP landscapes that works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [SAP on Azure large instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
+[Azure Monitor for SAP solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) is an Azure-native monitoring product for SAP landscapes that works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [HANA Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
 
 ### Security scoping decisions
 
@@ -216,13 +218,13 @@ Create required Azure resources at the start of your SAP project. When all addit
 
 Customize role-based access control (RBAC) roles for SAP on Azure spoke subscriptions to avoid accidental network-related changes. You can allow the SAP on Azure infrastructure team members to deploy VMs into Azure Virtual Network and restrict them from changing anything on the Azure virtual network peered to the hub subscription. On the other hand, you allow members of the networking team to create and configure virtual networks, but prohibit them from deploying or configuring VMs in virtual networks where SAP applications are running.
 
-### Use Azure connector for SAP LaMa
+### Use Azure Connector for SAP LaMa
 
-Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and bw, and there is an ongoing need to perform SAP system copies and SAP system refreshes. Examples are creating new SAP projects for technical or application releases, or periodically refreshing QA systems from production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
+Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. Examples are creating new SAP projects for technical or application releases, or periodically refreshing QA systems from production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
 
-SAP landscape manager (LaMa) enterprise edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
+SAP Landscape Management (LaMa) Enterprise Edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure Connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
 
-For VM operations, the Azure connector for LaMa can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the LaMa interface you can schedule your SAP S/4HANA sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure connector for LaMa also lets you resize your VMs when performance demands arise directly from within LaMa.
+For VM operations, the Azure Connector for LaMa can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the LaMa interface you can schedule your SAP S/4HANA sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure Connector for LaMa also lets you resize your VMs when performance demands arise directly from within LaMa.
 
 ### Compliance and governance scoping decisions
 
@@ -237,7 +239,7 @@ The following recommendations are for various compliance and governance scenario
 ## Next steps
 
 - [Introduction to Azure security](/azure/security/fundamentals/overview)
-- [SAP on Azure architecture guide](/azure/architecture/reference-architectures/sap/sap-overview)
+- [SAP on Azure Architecture Guide](/azure/architecture/reference-architectures/sap/sap-overview)
 - [SAP workloads on Azure: planning and deployment checklist](/azure/virtual-machines/workloads/sap/sap-deployment-checklist)
 - [Best practices in migrating SAP applications to Azure - part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure - designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
