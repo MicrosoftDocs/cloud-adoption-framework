@@ -37,7 +37,7 @@ As we go through this article, we work our way from top to the bottom by coverin
 Azure has over 60 Azure regions as you can see in the [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/). Not all regions are running the same services. Looking at larger SAP software deployments, especially the ones using SAP HANA, you need to look for Azure regions that offer Azure [M-series VMs](/azure/virtual-machines/m-series) and/or [Mv2-series VMs](/azure/virtual-machines/mv2-series). Azure Storage also has pairing between different regions that allow Azure Storage to replicate a smaller subset of storage types to such another region. The mapping can be found [here](/azure/best-practices-availability-paired-regions). The principle problem around the Azure region pairing for SAP workload is:
 
 - In quite some cases, the pairs are not consistent with M-series or Mv2-series VMs. Therefore we are observing many customers deploying their SAP systems **not** following our paired regions, but following service availability of the required VM families.
-- The storage type that can be replicated between the region pairs is Azure standard storage that can't be used as storage for your databases, or-based VHDs. So, you are restricted to e.g. Having backups replicated between paired region that you use. For all the other data, you need to provide your own replications, which in the database space is usually native DBMS functionality, like SQL Server Always On, HANA System Replication, and so on. And for the SAP application layer, a mixture of Azure Site Recovery, rsync/robocopy, or other third-party software.
+- The storage type that can be replicated between the region pairs is Azure standard storage that can't be used as storage for your databases, or-based VHDs. So, you are restricted to e.g. Having backups replicated between paired region that you use. For all the other data, you need to provide your own replications, which in the database space is usually native DBMS functionality, like SQL Server Always On, HANA System Replication, and so on. And for the SAP application layer, a mixture of Azure Site Recovery, `rsync`/`robocopy`, or other third-party software.
 
 As you defined the Azure regions, the second big design decision circles around the question whether you are going to deploy production systems into your primary region and non-production SAP systems into the 'DR region'. Or are you going with an architecture that puts all SAP systems into the primary region, so, that the DR region is only used for DR regions. Looking at the current SAP customer deployment pattern, one can state that most customers use both regions for SAP systems that are in operations. Customers that traditionally run complete copies of their production systems as business regression test systems, are usually planning for using the business regression test system of the specific SAP product line as DR target.
 
@@ -198,7 +198,7 @@ Consider the following compute options:
 
 - Use the most current generation of SKUs where possible; for example, v3 or 4. Refer to SAP note [1928533](https://launchpad.support.sap.com/#/notes/1928533) for information about the certified D-series SKU for an SAP deployment.
 
-- Use the [E-series](/azure/virtual-machines/sizes-memory) or [m-series](/azure/virtual-machines/m-series) SKU for AnyDB. E-series and m-series SKUs are optimized for memory and provide a consistent CPU-to-memory ratio.
+- Use the [E-series VM](/azure/virtual-machines/sizes-memory) or [M-series VM](/azure/virtual-machines/m-series) SKU for AnyDB. E-series and M-series VMs are optimized for memory and provide a consistent CPU-to-memory ratio.
 
 - Follow the design principle of scaling up and then out. From a cost perspective, scale-out deployments could cost less than a scale-up setup in some scenarios.
 
@@ -214,11 +214,11 @@ Consider the following compute options:
 
 - Use an E-series SKU for AnyDB deployments. A database's performance increases with the size of its cache. The two main advantages of E-series SKUs over D-series are 1:8 memory mapping and constrained core options to help you save on database license costs without compromising input, output, and throughput limits.
 
-- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the p50 disk generates 7,500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a standard d8s_v3 that only supports 192 Mbps, it doesn't help the p50 disk to achieve its throughput.
+- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk generates 7,500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a standard d8s_v3 that only supports 192 Mbps, it doesn't help the P50 disk to achieve its throughput.
 
-- Use an m-series SKU for a HANA production deployment. The m-series support 256 gigabytes to 12 TB of scaling up and 96 TB of scaling out. Visit the [SAP hardware directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/iaas.html#categories=Microsoft%20Azure) for setup support.
+- Use an m-series VM for a HANA production deployment. M-series VMs support 256 gigabytes to 12 TB of scaling up and 96 TB of scaling out. Visit the [SAP hardware directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/iaas.html#categories=Microsoft%20Azure) for setup support.
 
-- Ultra-SSD or Azure NetApp Files should be used for log volumes in production HANA deployments that use E-series SKUs. Azure NetApp Files should be used for log volumes and HANA data volumes.
+- Ultra disks or Azure NetApp Files should be used for log volumes in production HANA deployments that use E-series SKUs. Azure NetApp Files should be used for log volumes and HANA data volumes.
 
 - Use [Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture) for processing online transactions and scale-up deployments larger than 12 TB.
 
@@ -252,7 +252,7 @@ Consider the following compute options:
   - Azure ultra disks
   - Azure NetApp Files (supported for HANA only)
 
-- For a cost-conscious deployment, consider deploying preproduction, or test systems on standard SSDs and convert to premium for the test cycle period, as needed; for example, an e20 disk costs half as much as a p20.
+- For a cost-conscious deployment, consider deploying preproduction, or test systems on standard SSDs and convert to premium for the test cycle period, as needed; for example, an e20 disk costs half as much as a P20.
 
 - For cost-conscious deployments, consider:
 
@@ -276,7 +276,7 @@ Consider the following compute options:
 
 - Azure premium managed storage must be used for the SAP global transport directory.
 
-- The OS disk size should be at least 128 gigabytes (GB) (p10) in production deployments. Customer experiences show application logging and monitoring agents writing data to the OS disk and driving high input/output requirements; using a smaller disk throttles disk performance.
+- The OS disk size should be at least 128 gigabytes (GB) (P10) in production deployments. Customer experiences show application logging and monitoring agents writing data to the OS disk and driving high input/output requirements; using a smaller disk throttles disk performance.
 
 - For any database deployment, the [readonly cache](/azure/virtual-machines/premium-storage-performance#disk-caching) must be enabled for data disks that contain database data files. The readonly cache can only be enabled on disks smaller than 4,095 GB.
 

@@ -1,13 +1,13 @@
 ---
 title: Review your environment or Azure landing zone for an SAP enterprise-scale migration
 description: Prepare your Azure environment or Azure landing zone for an SAP enterprise-scale migration.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # Review your environment or Azure landing zone for an SAP enterprise-scale migration

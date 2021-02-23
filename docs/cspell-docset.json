@@ -6,7 +6,8 @@
       "offboarding",
       "passwordless",
       "personalizer",
-      "preintegration"
+      "preintegration",
+      "replatform"
   ],
   "ignoreWords": [
       "AppOps",

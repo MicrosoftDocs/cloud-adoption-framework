@@ -1,13 +1,13 @@
 ---
 title: Plan for SAP cloud adoption in Azure
 description: Understand how to plan SAP cloud adoption in Azure.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # Plan for SAP cloud adoption in Azure

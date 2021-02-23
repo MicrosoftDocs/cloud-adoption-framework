@@ -66,9 +66,9 @@ The DBMS needs to be changed, or the internal format of the same DBMS system nee
 **Classical migration:** The SAP Software Provisioning Manager is used specifically as a software logistics tool for database migrations. Classical migration uses a heterogenous system copy approach and is sometimes called a *two-step migration*. This approach is commonly used when the following observations surface in the migration plan:
 
 - The operating systems (OS) and DBMS are compatible with Azure.
-- There aren't other requirements to upgrade/replatform the OS or DBMS systems.
+- There aren't other requirements to upgrade or replatform the OS or DBMS systems.
 
-**DMO:** Dmo uses one tool to upgrade an SAP workload and a database migration to the SAP HANA database, and this process is often called a *one-step migration*. The SAP Software Update Manager, sum, tool creates a shadow repository for current database while also creating a target database at the same time. It eventually copies the shadow repository and switches the SAP database connection to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
+**DMO:** DMO uses one tool to upgrade an SAP workload and a database migration to the SAP HANA database, and this process is often called a *one-step migration*. The SAP Software Update Manager, sum, tool creates a shadow repository for current database while also creating a target database at the same time. It eventually copies the shadow repository and switches the SAP database connection to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
 
 - The current OS isn't supported in Azure, requiring an upgrade/replatform.
 - There is a plan to upgrade to SAP S/4HANA during migration.

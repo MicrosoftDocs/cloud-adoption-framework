@@ -1,12 +1,13 @@
 ---
 title: Enterprise-scale support for SAP on Azure construction set
 description: Learn about enterprise-scale construction sets that let you build platform workload landing zones.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 02/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
 # Enterprise-scale support for SAP on Azure construction set

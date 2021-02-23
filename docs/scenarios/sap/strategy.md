@@ -1,13 +1,13 @@
 ---
 title: The strategic impact of SAP in the cloud
 description: Understand the strategic impact of SAP in the cloud.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # The strategic impact of SAP in the cloud

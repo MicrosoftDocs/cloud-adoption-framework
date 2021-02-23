@@ -1,7 +1,7 @@
 ---
 title: Manage SAP in Azure
 description: Operations management considerations when managing SAP on Azure
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.subservice: operate
 
 The long term operations management strategy has a big impact on your SAP migration and landing zone requirements.
 
-To achieve an understanding of your operations management requirements once your data's in Azure, focus on the later stage guidelines to manage SAP and help shape your vision.
+To achieve an understanding of your operations management requirements once your data is in Azure, focus on the later stage guidelines to manage SAP and help shape your vision.
 
 To better align your business, the SAP platform and dependent workloads are viewed as *mission-critical* technology assets. These are often investments above and beyond your operations baseline to support both the SAP platform and each of the dependent workloads.
 

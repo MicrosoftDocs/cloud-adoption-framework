@@ -1,12 +1,13 @@
 ---
 title: Enterprise-scale platform automation and DevOps for SAP on Azure
 description: Understand the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 02/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
 # SAP enterprise-scale platform automation and DevOps
@@ -17,7 +18,7 @@ This article describes how to approach system identifier (sid) automation on SAP
 
 An SAP application consists of systems, environments, and landscapes. Platform automation and DevOps target these components.
 
-The following diagram illustrates the dependencies between SAP systems, environments, and landscapes. The application has three landscapes: SAP ERP Central Component (ecc), SAP customer relationship management (CRM), and SAP Business Warehouse (BW). Each landscape has three environment tiers: development, quality assurance, and production. Each environment contains one or more systems.
+The following diagram illustrates the dependencies between SAP systems, environments, and landscapes. The application has three landscapes: SAP ERP Central Component (ECC), SAP customer relationship management (CRM), and SAP Business Warehouse (BW). Each landscape has three environment tiers: development, quality assurance, and production. Each environment contains one or more systems.
 
 ![Diagram showing architectural dependencies between SAP systems, environments, and landscapes.](media/architectural-principles.png)
 
@@ -40,7 +41,7 @@ Environments provide the following services to SAP systems:
 
 ### Landscape
 
-A landscape is a collection of systems in different environments in an SAP application. The example diagram shows three SAP landscapes: SAP ERP Central Component (ecc), SAP customer relationship management (CRM), and SAP Business Warehouse (BW).
+A landscape is a collection of systems in different environments in an SAP application. The example diagram shows three SAP landscapes: SAP ERP Central Component (ECC), SAP customer relationship management (CRM), and SAP Business Warehouse (BW).
 
 **Design considerations:**
 
