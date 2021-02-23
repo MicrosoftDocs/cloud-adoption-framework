@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- docutune:casing LMS -->
+
 # Enterprise-scale identity and access management for SAP on Azure construction set
 
 This article examines design considerations and recommendations that relate to identity and access management in an SAP deployment on Microsoft Azure.
@@ -34,26 +36,26 @@ Here are common Azure admin activities involved in administration and management
 | Networking | Microsoft.Network/networkSecurityGroups | Read NSG |
 | Networking | Microsoft.Network/azureFirewalls | Read firewall |
 
-- If you're using SAP cloud platform services, consider using principal propagation to forward an identity from SAP cloud platform application to your on-premises SAP landscape. Use SAP Cloud Connector.
+- If you're using SAP Cloud Platform services, consider using principal propagation to forward an identity from SAP Cloud Platform application to your on-premises SAP landscape. Use SAP Cloud Connector.
 
 - Consider a migration to Azure an opportunity to review and realign identity and access management processes. Review the processes in your SAP landscape and the processes at your enterprise level:
   - Review SAP dormant user lockout policies.
-  - Review SAP user password policy and align it with Azure Active Directory (ad).
-  - Review leavers, movers, and starters (lms) procedures and align them with Azure AD. If you're using SAP human capital management (hcm), it's likely that SAP hcm drives the lms process.
+  - Review SAP user password policy and align it with Azure Active Directory (Azure AD).
+  - Review leavers, movers, and starters (LMS) procedures and align them with Azure AD. If you're using SAP Human Capital Management (HCM), it's likely that SAP HCM drives the LMS process.
 
-- Consider using the automatic user provisioning feature of Azure AD to set up and remove users in SAP SaaS applications. SAP analytics cloud and SAP identity authentication service currently support this scenario.
+- Consider using the automatic user provisioning feature of Azure AD to set up and remove users in SAP SaaS applications. SAP Analytics Cloud and SAP Identity Authentication service currently support this scenario.
 
-- Secure Network File System (NFS) communication between Azure NetApp Files and Azure Virtual Machines with [NFS client encryption using Kerberos](/azure/azure-netapp-files/configure-kerberos-encryption). Azure NetApp Files supports both Active Directory Domain Services (adds) and Azure Active Directory Domain Services (aadds) for Azure AD connections. Consider the [performance impact of Kerberos on nfsv4.1](/azure/azure-netapp-files/configure-kerberos-encryption#kerberos_performance).
+- Secure Network File System (NFS) communication between Azure NetApp Files and Azure Virtual Machines with [NFS client encryption using Kerberos](/azure/azure-netapp-files/configure-kerberos-encryption). Azure NetApp Files supports both Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services for Azure AD connections. Consider the [performance impact of Kerberos on NFS v4.1](/azure/azure-netapp-files/configure-kerberos-encryption#kerberos_performance).
 
-- Secure remote function call (RFC) connections between SAP systems with secure network communications (snc) using appropriate protection level like quality of protection (qop). Snc protection generates some performance overhead. To protect RFC communication between application servers of the same SAP system, SAP recommends using network security instead of snc. These Azure services support SNC-protected RFC connections to an SAP system: Azure Data Factory, on-premises data gateway (Logic Apps, Power BI), and so on.
+- Secure remote function call (RFC) connections between SAP systems with secure network communications (SNC) using appropriate protection level like quality of protection (QoP). SNC protection generates some performance overhead. To protect RFC communication between application servers of the same SAP system, SAP recommends using network security instead of SNC. These Azure services support SNC-protected RFC connections to an SAP system: Azure Data Factory, on-premises data gateway (Logic Apps, Power BI), and so on.
 
 **Design recommendations:**
 
 - Implement single sign-on (SSO) using Azure AD or Active Directory Federation Services (AD FS) so the end users can connect to SAP applications:
-  - Implement [SSO to SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like SAP fiori, webgui, and so on, with SAML.
+  - Implement [SSO to SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like SAP Fiori, SAP WebGUI, and so on, with SAML.
   - You can implement SSO to SAP GUI using either SAP NetWeaver SSO or a partner solution.
-  - Implement [SSO to SAP SaaS applications](/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) like SAP analytics cloud, SAP cloud platform, SAP cloud platform ias, and SAP c4c with Azure AD using SAML.
+  - Implement [SSO to SAP SaaS applications](/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) like SAP Analytics Cloud, SAP Cloud Platform, SAP Cloud Platform Identity Authentication service, and SAP C4C with Azure AD using SAML.
 
-- If you're using SAP cloud identity authentication service (SAP ias), it's recommended to integrate ias with Azure AD. With this integration, SAP ias acts as a proxy identity provider and forwards identity authentication requests to Azure AD, which handles user management.
+- If you're using SAP Cloud Platform Identity Authentication service, you should integrate it with Azure AD. This integration lets SAP IAS acts as a proxy identity provider and forwards identity authentication requests to Azure AD, which handles user management.
 
 - If you're using SAP SuccessFactors, it's recommended to use the [automated user provisioning](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) feature of Azure AD. With this integration, as you add new employees to SAP SuccessFactors, you can automatically create their user accounts in Azure AD. Optionally, user accounts can be created in Microsoft 365 and other SaaS applications supported by Azure AD. Use write-back of the email address to SAP SuccessFactors.

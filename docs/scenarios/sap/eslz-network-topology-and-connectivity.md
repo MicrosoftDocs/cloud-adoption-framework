@@ -91,9 +91,9 @@ This section recommends connectivity models for in- and outbound connectivity to
 
 - Take advantage of Web Application Firewall policies in Azure Front Door when you're using this service and Application Gateway to protect HTTP(s) applications. Lock down Application Gateway to receive traffic only from Azure Front Door.
 
-- Application Gateway and Web Application Firewall have limitations when Application Gateway serves as a reverse proxy for SAP web apps, as shown in the comparison between Application Gateway, SAP Web Dispatcher, and a third-party service, netscaler. [Image doesn't exist]
+- Application Gateway and Web Application Firewall have limitations when Application Gateway serves as a reverse proxy for SAP web apps, as shown in the comparison between Application Gateway, SAP Web Dispatcher, and a third-party service, NetScaler. [Image doesn't exist]
 
-Since SAP Web Dispatcher and netscaler are more intelligent than Application Gateway, extensive testing is necessary to replace them with this service. Verify the most current status and list all supported and not supported (or tested/not tested) scenarios, if possible.
+Since SAP Web Dispatcher and NetScaler are more intelligent than Application Gateway, extensive testing is necessary to replace them with this service. Verify the most current status and list all supported and not supported (or tested/not tested) scenarios, if possible.
 
 - Use a Web Application Firewall to scan your traffic when it's exposed to the internet; another option is to use it with your load balancer or resources with built-in firewall capabilities like Application Gateway or third-party solutions.
 
@@ -136,7 +136,7 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 - Make sure that internal deployments for Azure Load Balancer are set up to use direct server return, dsr. This setting will reduce latency when internal load balancer configurations are used for high-availability configurations on the DBMS layer.
 
-- If using load balancer with Linux guest operating systems, check that the Linux network parameter 'net.IPv4.tcp_timestamps' is set to 0.
+- If using load balancer with Linux guest operating systems, check that the Linux network parameter `net.ipv4.tcp_timestamps` is set to `0`.
 
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
 

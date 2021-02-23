@@ -7,7 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 # The strategic impact of SAP in the cloud
@@ -28,7 +28,7 @@ SAP is an influential platform, and organizations have several motivations to ad
 
 - **Uncertain infrastructure requirements:** The infrastructure required for business transformation can be uncertain, such as with SAP S/4HANA.
 
-SAP customers are often motivated by all four categories above. To successfully implement an SAP platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
+SAP customers are often motivated by all four categories above. To successfully implement an SAP platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
 
 Motivations to adopt an SAP platform in the cloud are often based on an organization's strategic objectives, and the majority of motivations tie into prioritizing SAP adoption in the near future. The following three topics are for your organization if your team is reviewing this adoption scenario:
 
@@ -36,11 +36,11 @@ Motivations to adopt an SAP platform in the cloud are often based on an organiza
 
 1. SAP hosting contracts lock in vendors across multiple years. If your hosting, managed service, or maintenance contracts are coming up for renewal, some cloud adoption opportunities and benefits are to improve agile, unlock new innovations, and streamline operations for your most mission-critical platform.
 
-1. Refresh and contract renewals can be triggered by SAP upgrade cycles or a business driver to expand into HANA, SAP Business Suite, or others SAP features. If your organization is seeking to expand SAP capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
+1. Refresh and contract renewals can be triggered by SAP upgrade cycles or a business driver to expand into HANA, SAP business suite, or others SAP features. If your organization is seeking to expand SAP capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
 
 ## How to measure progress during an SAP adoption
 
-Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on [business outcomes](../../strategy/business-outcomes.md).
+Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on [business outcomes](../../strategy/business-outcomes/index.md).
 
 Given the impact of an SAP platform, you need to define a number of defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down SAP adoption into manageable efforts. Read [objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
 
@@ -48,14 +48,14 @@ Given the impact of an SAP platform, you need to define a number of defined obje
 
 [Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel a number of common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for the moving pieces associated with SAP cloud adoption.
 
-The [Forrester study on the Total Economic Impact of Microsoft Azure for SAP](https://azure.microsoft.com/resources/sap-on-azure-forrester-tei/) offers an analysis where the following justifications are typically defendable:
+The [forrester study on the total economic impact of Microsoft Azure for SAP](https://azure.microsoft.com/resources/sap-on-azure-forrester-tei/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
 - 102-percent return on investment
 - Pay back in nine months
 
-Actual returns are likely to vary for individual customers. However, the tables in the Forrester study can capture your organization's financial data for validation and business justification activities.
+Actual returns are likely to vary for individual customers. However, the tables in the forrester study can capture your organization's financial data for validation and business justification activities.
 
 Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to [gather inventory and develop a plan](./plan.md). Once your digital estate is catalogued and assessed, you can refine your justification and present clearer plans for financial returns.
 
@@ -64,7 +64,7 @@ Understand that your initial business justification is a directional estimate th
 The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
 
 - [Plan for SAP cloud adoption in Azure](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Review your environment or Azure landing zone(s)](./ready.md)
 - [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)

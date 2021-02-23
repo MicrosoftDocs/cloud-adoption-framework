@@ -62,11 +62,11 @@ The following screenshot shows the Azure Security Center dashboard in the Azure 
 
 ### Secure authentication
 
-Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Microsoft Active Directory (ad), combined with third-party security products, have enabled this capability for both SAP GUI and web-browser-based applications for years. When a user signs in to their workstation and successfully authenticates, ad issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
+Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Microsoft Active Directory (Azure AD), combined with third-party security products, have enabled this capability for both SAP GUI and web-browser-based applications for years. When a user signs in to their workstation and successfully authenticates, ad issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
 
-You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (snc) for diag (SAP GUI), RFC, and SPNEGO for HTTPS.
+You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for diag (SAP GUI), RFC, and SPNEGO for HTTPS.
 
-Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP cloud platform.
+Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
 
 ### Harden operating systems
 
