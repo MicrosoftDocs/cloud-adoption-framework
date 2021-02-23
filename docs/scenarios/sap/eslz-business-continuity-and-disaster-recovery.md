@@ -49,7 +49,7 @@ Though not necessarily recommended, but used by quite a few customers, is an arc
 - Data sovereignty aspects
 - Geopolitical considerations
 
-Another aspect you need to consider choosing your DR region is e.g. RPO and RTO for the specific case of failing over to the DR site. The further the distance between the production region and DR region, the larger the network latency. Though you would replicate asynchronously between different Azure regions, a smaller or larger network latency can have impact on the throughput you are able to replicate and with that on the RPO target. Using the combined HA/DR architecture, you are often able to minimize your RPO. But at the costs of a higher risk to be affected by large scale natural disasters.
+Another aspect you need to consider choosing your DR region is the RPO and RTO for the specific case of failing over to the DR site. The further the distance between the production region and DR region, the larger the network latency. Though you would replicate asynchronously between different Azure regions, a smaller or larger network latency can have impact on the throughput you are able to replicate and with that on the RPO target. Using the combined HA/DR architecture, you are often able to minimize your RPO. But at the costs of a higher risk to be affected by large scale natural disasters.
 
 ### High availability within an Azure region
 
