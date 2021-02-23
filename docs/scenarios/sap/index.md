@@ -36,7 +36,7 @@ If your team is following the guidance in both frameworks, you'll see very simil
 | **Prepare** |The [ready](./ready.md) methodology prepares your team and the environment for the coming work. This scenario also integrates Azure landing zones to provide pre-developed and opinionated approaches to help your team to rapidly deploy environments that can support various technology platforms.|
 | **Migrate** |The [migrate](./migrate.md) methodology demonstrates how an SAP migration can integrate with other repeatable migration processes.|
 | **Run** |The [manage](./manage.md) methodology shows how a common operations baseline can address many of the run-state concerns addressed in [Migrate](./migrate.md) and also meet the operational needs of other technology platforms.|
-| **Innovate** |The [innovate](./methodology.md) methodology outlines how you can take your SAP platform to the next level and integrate cloud-native solutions into your workloads.|
+| **Innovate** |The [innovate](./innovate.md) methodology outlines how you can take your SAP platform to the next level and integrate cloud-native solutions into your workloads.|
 
 The guidance aligns these sources to help your SAP and central IT teams work together during all phases of cloud adoption.
 

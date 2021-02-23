@@ -15,7 +15,7 @@ This article examines design considerations and recommendations that relate to i
 
 **Design considerations:**
 
-- Determine the Azure resource administration boundaries versus the SAP basis administration boundaries between the infrastructure team and the SAP basis team. Consider providing the SAP basis team with elevated Azure resource administration access in an SAP non-production environment. For example, give them a [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role. You can also give them partially elevated administration access like partial Virtual Machine Contributor in a production environment. Both options achieve a good balance between separation of duties and operational efficiency.
+- Determine the Azure resource administration boundaries versus the SAP Basis administration boundaries between the infrastructure team and the SAP Basis team. Consider providing the SAP Basis team with elevated Azure resource administration access in an SAP non-production environment. For example, give them a [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role. You can also give them partially elevated administration access like partial Virtual Machine Contributor in a production environment. Both options achieve a good balance between separation of duties and operational efficiency.
 
 - Review the Azure administration and management activities you require your teams to do. Consider your SAP on Azure landscape. Figure out the best possible distribution of responsibilities within your organization.
 
@@ -27,14 +27,14 @@ Here are common Azure admin activities involved in administration and management
 | Virtual machines | Microsoft.Compute/disks | Read and write to disk |
 | Storage | Microsoft.Storage | Read, change on storage accounts (for example boot diagnostics) |
 | Storage | Microsoft.NetApp | Read, change on NetApp capacity pools and volumes |
-| Storage | Microsoft.NetApp | Anf snapshots |
-| Storage | Microsoft.NetApp | Anf Cross-region replication |
+| Storage | Microsoft.NetApp | ANF snapshots |
+| Storage | Microsoft.NetApp | ANF Cross-region replication |
 | Networking | Microsoft.Network/networkInterfaces | Read, create, change network interfaces |
 | Networking | Microsoft.Network/loadBalancers | Read, create, change load balancers |
 | Networking | Microsoft.Network/networkSecurityGroups | Read NSG |
 | Networking | Microsoft.Network/azureFirewalls | Read firewall |
 
-- If you're using SAP cloud platform services, consider using principal propagation to forward an identity from SAP cloud platform application to your on-premises SAP landscape. Use SAP cloud connector.
+- If you're using SAP cloud platform services, consider using principal propagation to forward an identity from SAP cloud platform application to your on-premises SAP landscape. Use SAP Cloud Connector.
 
 - Consider a migration to Azure an opportunity to review and realign identity and access management processes. Review the processes in your SAP landscape and the processes at your enterprise level:
   - Review SAP dormant user lockout policies.
@@ -50,10 +50,10 @@ Here are common Azure admin activities involved in administration and management
 **Design recommendations:**
 
 - Implement single sign-on (SSO) using Azure AD or Active Directory Federation Services (AD FS) so the end users can connect to SAP applications:
-  - Implement [SSO to SAP netweaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like SAP fiori, webgui, and so on, with SAML.
-  - You can implement SSO to SAP GUI using either SAP netweaver SSO or a partner solution.
+  - Implement [SSO to SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial) based web applications like SAP fiori, webgui, and so on, with SAML.
+  - You can implement SSO to SAP GUI using either SAP NetWeaver SSO or a partner solution.
   - Implement [SSO to SAP SaaS applications](/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) like SAP analytics cloud, SAP cloud platform, SAP cloud platform ias, and SAP c4c with Azure AD using SAML.
 
 - If you're using SAP cloud identity authentication service (SAP ias), it's recommended to integrate ias with Azure AD. With this integration, SAP ias acts as a proxy identity provider and forwards identity authentication requests to Azure AD, which handles user management.
 
-- If you're using SAP successfactors, it's recommended to use the [automated user provisioning](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) feature of Azure AD. With this integration, as you add new employees to SAP successfactors, you can automatically create their user accounts in Azure AD. Optionally, user accounts can be created in Microsoft 365 and other SaaS applications supported by Azure AD. Use write-back of the email address to SAP successfactors.
+- If you're using SAP SuccessFactors, it's recommended to use the [automated user provisioning](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) feature of Azure AD. With this integration, as you add new employees to SAP SuccessFactors, you can automatically create their user accounts in Azure AD. Optionally, user accounts can be created in Microsoft 365 and other SaaS applications supported by Azure AD. Use write-back of the email address to SAP SuccessFactors.

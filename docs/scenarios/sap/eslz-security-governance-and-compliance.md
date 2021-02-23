@@ -64,9 +64,9 @@ The following screenshot shows the Azure Security Center dashboard in the Azure 
 
 Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Microsoft Active Directory (ad), combined with third-party security products, have enabled this capability for both SAP GUI and web-browser-based applications for years. When a user signs in to their workstation and successfully authenticates, ad issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
 
-You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (snc) for diag (SAP GUI), RFC, and spnego for HTTPS.
+You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (snc) for diag (SAP GUI), RFC, and SPNEGO for HTTPS.
 
-Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP netweaver, SAP HANA, and the SAP cloud platform.
+Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP cloud platform.
 
 ### Harden operating systems
 
@@ -121,7 +121,7 @@ Encryption using MACsec, an ieee standard at the data-link layer, is automatical
 
 ### Manage keys and secrets
 
-To control and manage disk encryption keys and secrets for non-HANA Windows and non-Windows operating systems, use Azure Key Vault. Key Vault has capabilities for provisioning and managing secure sockets layer (SSL) /TLS certificates. You can also protect secrets with hardware security modules (HSMs). SAP HANA isn't supported with Azure Key Vault, so you must use alternate methods like SAP abap or SSH keys.
+To control and manage disk encryption keys and secrets for non-HANA Windows and non-Windows operating systems, use Azure Key Vault. Key Vault has capabilities for provisioning and managing Secure Sockets Layer (SSL) /TLS certificates. You can also protect secrets with hardware security modules (HSMs). SAP HANA isn't supported with Azure Key Vault, so you must use alternate methods like SAP ABAP or SSH keys.
 
 ### Secure web and mobile applications
 
@@ -133,7 +133,7 @@ For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsof
 
 For internet facing applications, you must make sure to distribute load per application requirements while maintaining security levels. The term load balancing refers to the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
 
-Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP web dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like secure socket layer (SSL) termination and forwarding.
+Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like secure socket layer (SSL) termination and forwarding.
 
 You can categorize Azure load-balancing services along global versus regional and HTTP(s) versus non-HTTP(s) dimensions.
 
@@ -216,13 +216,13 @@ Create required Azure resources at the start of your SAP project. When all addit
 
 Customize role-based access control (RBAC) roles for SAP on Azure spoke subscriptions to avoid accidental network-related changes. You can allow the SAP on Azure infrastructure team members to deploy VMs into Azure Virtual Network and restrict them from changing anything on the Azure virtual network peered to the hub subscription. On the other hand, you allow members of the networking team to create and configure virtual networks, but prohibit them from deploying or configuring VMs in virtual networks where SAP applications are running.
 
-### Use Azure connector for SAP lama
+### Use Azure connector for SAP LaMa
 
 Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and bw, and there is an ongoing need to perform SAP system copies and SAP system refreshes. Examples are creating new SAP projects for technical or application releases, or periodically refreshing QA systems from production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
 
-SAP landscape manager (lama) enterprise edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure connector for lama](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
+SAP landscape manager (LaMa) enterprise edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
 
-For VM operations, the Azure connector for lama can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the lama interface you can schedule your SAP s/4hana sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure connector for lama also lets you resize your VMs when performance demands arise directly from within lama.
+For VM operations, the Azure connector for LaMa can reduce the run costs for your SAP estate on Azure. You can stop or deallocate and start your SAP VMs, which enables you to run certain workloads with a reduced utilization profile. For example, through the LaMa interface you can schedule your SAP S/4HANA sandbox VM to be online from 08:00-18:00, 10 hours per day, instead of running 24 hours. The Azure connector for LaMa also lets you resize your VMs when performance demands arise directly from within LaMa.
 
 ### Compliance and governance scoping decisions
 
@@ -241,4 +241,4 @@ The following recommendations are for various compliance and governance scenario
 - [SAP workloads on Azure: planning and deployment checklist](/azure/virtual-machines/workloads/sap/sap-deployment-checklist)
 - [Best practices in migrating SAP applications to Azure - part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure - designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
-- [Azure Virtual Machines planning and implementation for SAP netweaver](/azure/virtual-machines/workloads/sap/planning-guide)
+- [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)
