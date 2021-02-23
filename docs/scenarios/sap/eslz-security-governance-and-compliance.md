@@ -131,7 +131,7 @@ For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsof
 
 ### Securely manage traffic
 
-For internet facing applications, you must make sure to distribute load per application requirements while maintaining security levels. The term load balancing refers to the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
+For internet-facing applications, you must make sure to distribute load per application requirements while maintaining security levels. The term load balancing refers to the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
 
 Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like secure socket layer (SSL) termination and forwarding.
 
@@ -152,7 +152,7 @@ The following table summarizes the Azure load-balancing services by category:
 | Azure Front Door | Global | HTTP(s) |
 | Traffic Manager | Global | non-HTTP(s) |
 | Application Gateway | Regional | HTTP(s) |
-| Azure Load Balancer | Global | non-HTTP(s) |
+| Azure Load Balancer | Regional | non-HTTP(s) |
 
 - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 
