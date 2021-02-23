@@ -22,13 +22,13 @@ Establishing patterns of people and services securely connecting to infrastructu
 
 ## Enterprise Access Model and blended control Plane
 
-Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privilged accounts with adminsitrative access to systems.  
+Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
 
 ![Adding user and application access pathways](./media/privileged-access-strategy/user-app-control-management-data-workload-planes.png)
 
 For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
-While access controls will be infused throughout the environment, the control plane will be primarily a blend of identity and network controls. While the focus level on each will vary by type of environment, these should be designed to work in harmony to meet both productivity and security goals. 
+While access controls will be infused throughout the environment, the control plane will be primarily a blend of identity and network controls. While the focus level on each will vary by type of environment, these should be designed to work in harmony to meet both productivity and security goals.
 
 (new diagram)
 
@@ -36,7 +36,7 @@ While access controls will be infused throughout the environment, the control pl
 
 Implementing access controls should deliver to business stakeholders an assurance that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.  
 
-By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests. 
+By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
 
 Scaling this standard requires three things -
 
