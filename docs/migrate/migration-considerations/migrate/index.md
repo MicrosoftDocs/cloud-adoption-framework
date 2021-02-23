@@ -1,5 +1,5 @@
 ---
-title: "Executing a migration"
+title: Executing a migration
 description: Get an overview of the articles that explain the various activities that may be involved in migrating a workload in Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -22,7 +22,7 @@ The objective of a migration is to migrate a single workload to the cloud.
 
 The migration phase is complete when a workload is staged and ready for testing in the cloud, including all dependent assets required for the workload to function. During the optimize process, the workload is prepared for production usage.
 
-This _definition of done_ can vary, depending on your testing and release processes. The next article in this series covers [deciding on a promotion model](./promotion-models.md) and can help you understand when it would be best to promote a migrated workload to production.
+This *definition of done* can vary, depending on your testing and release processes. The next article in this series covers [deciding on a promotion model](./promotion-models.md) and can help you understand when it would be best to promote a migrated workload to production.
 
 ## Accountability during migration
 

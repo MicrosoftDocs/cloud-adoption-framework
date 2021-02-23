@@ -200,13 +200,13 @@ items:
           href: manage/hybrid/server/best-practices/gcp-terraform-windows.md
     - name: Operate
       items:
-      - name: Inventory and Tag assets
+      - name: Inventory and tag assets
         href: manage/hybrid/server/best-practices/arc-inventory-tagging.md
-      - name: Patch and Update Management
+      - name: Patch and update management
         href: manage/hybrid/server/best-practices/arc-updateManagement.md
-      - name: Apply Policies
+      - name: Apply policies
         href: manage/hybrid/server/best-practices/arc-policies-mma.md
-      - name: Collect and Detect security data
+      - name: Collect and detect security data
         href: manage/hybrid/server/best-practices/arc-securitycenter.md
       - name: Investigate and respond to security threats
         href: manage/hybrid/server/best-practices/arc-azuresentinel.md

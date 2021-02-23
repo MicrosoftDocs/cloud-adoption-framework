@@ -85,12 +85,12 @@ Virtual WAN is used to meet large-scale interconnectivity requirements. Because 
 
 - Your organization intends to deploy resources across several Azure regions and requires global connectivity between VNets in these Azure regions and multiple on-premises locations.
 - Your organization intends to integrate a large-scale branch network directly in to Azure, either via a software-defined WAN (SD-WAN) deployment or requires more than 30 branch sites for native IPsec termination.
-- You require transitive routing between VPN and ExpressRoute. E.g. Remote branches connected via Site-to-site VPN or remote users connected via Point-to-site VPN, require connectivity to an ExpressRoute connected DC, via Azure.
+- You require transitive routing between VPN and ExpressRoute. E.g. Remote branches connected via Site-to-Site VPN or remote users connected via Point-to-Site VPN, require connectivity to an ExpressRoute connected DC, via Azure.
 
 A traditional hub-and-spoke network topology helps you build customized secure large-scale networks in Azure with routing and security managed by the customer. A traditional topology may be most appropriate if any of the following points meet your requirements:
 
 - Your organization intends to deploy resources across one or several Azure regions and while some traffic across Azure regions is expected (for example, traffic between two virtual networks across two different Azure regions), a full mesh network across all Azure regions is not required.
-- You have a low number of remote or branch locations per region. That is, you need fewer than 30 IP security (IPsec) site-to-site tunnels.
+- You have a low number of remote or branch locations per region. That is, you need fewer than 30 IP security (IPsec) Site-to-Site VPN tunnels.
 - You require full control and granularity for manually configuring of your Azure network routing policy.
 
 ## Virtual WAN network topology (Microsoft-managed)
@@ -114,7 +114,7 @@ _Figure 1: Virtual WAN network topology._
   - Branch to virtual network
   - Branch to branch
 
-- Virtual WAN hubs are restricted to the deployment of Microsoft managed resources. The only resources that you can deploy within them are virtual network gateways (point-to-site VPN, site-to-site VPN, and Azure ExpressRoute), Azure Firewall via Firewall Manager, route tables and [some Network Virtual Appliances (NVA)](/azure/virtual-wan/about-nva-hub) for vendor-specific SD-WAN capabilities.
+- Virtual WAN hubs are restricted to the deployment of Microsoft managed resources. The only resources that you can deploy within them are virtual network gateways (Point-to-Site VPN, Site-to-Site VPN, and Azure ExpressRoute), Azure Firewall via Firewall Manager, route tables and [some Network Virtual Appliances (NVA)](/azure/virtual-wan/about-nva-hub) for vendor-specific SD-WAN capabilities.
 
 - Virtual WAN is bound to some Azure subscription limits, which are documented on [this](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits) article.
 
@@ -130,7 +130,7 @@ _Figure 1: Virtual WAN network topology._
 
 - User VPN (Point-to-site) gateways in Virtual WAN can scale up to 20 Gbps aggregated throughput and 10,000 client connections per virtual hub.
 
-- Site-to-site VPN gateways in Virtual WAN can scale up to 20 Gbps aggregated throughput.
+- Site-to-Site VPN gateways in Virtual WAN can scale up to 20 Gbps aggregated throughput.
 
 - ExpressRoute circuits with the SKU Local, Standard or Premium are available for connection to a Virtual WAN Hub.
 

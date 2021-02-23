@@ -1,5 +1,5 @@
 ---
-title: "Build a growth mindset with retrospectives"
+title: Build a growth mindset with retrospectives
 description: Learn how retrospectives help build a growth mindset and empower teams to create sustainable growth.
 author: BrianBlanchard
 ms.author: brblanch

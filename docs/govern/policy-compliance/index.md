@@ -46,8 +46,6 @@ With an incremental approach to cloud governance, there is sometimes a natural f
 
 The first step in an emerging partnership between your cloud governance and adoption teams is an agreement regarding the policy MVP. Your MVP for cloud governance should acknowledge that business risks are small in the beginning, but will likely grow as your organization adopts more cloud services over time.
 
-<!-- cSpell:ignore HBI -->
-
 For example, the business risk is small for a business deploying five VMs that don't contain any high business impact (HBI) data. Later in the cloud adoption process, when the number reaches 1,000 VMs and the business is starting to move HBI data, the business risk grows.
 
 Policy MVP attempts to define a required foundation for policies needed to deploy the first *x* VMs or the first *x* number of applications, where *x* is a small yet meaningful quantity of the units being adopted. This policy set requires few constraints, but would contain the foundational aspects needed to quickly grow from one incremental cloud adoption effort to the next. Through incremental policy development, this governance strategy would grow over time. Through slow subtle shifts, the policy MVP would grow into feature parity with the outputs of the policy review exercise.
