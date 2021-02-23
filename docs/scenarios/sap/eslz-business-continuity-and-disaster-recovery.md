@@ -162,7 +162,7 @@ The following are best practices for your design:
 
 - Use an Azure fence agent for Red Hat Enterprise Linux.
 
-- For ASCS clusters, use Azure Site Recovery to replicate cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Pacemaker cluster on the DR site; for example, replace 'vip', `corosync.conf`, and so on.
+- For ASCS clusters, use Azure Site Recovery to replicate cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Pacemaker cluster on the DR site; for example, replace `vip`, `corosync.conf`, and so on.
 
 - Use Azure Site Recovery to replicate application servers to the DR site. Do not use Azure Site Recovery to replicate database servers.
 
@@ -180,7 +180,7 @@ The following are best practices for your design:
 
 - To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Azure NetApp Files paired regions are different than standard Azure paired regions.
 
-- You can also use the 'rsync' utility to sync data from one region to another in Azure NetApp Files (one zone to another if using zonal deployment).
+- You can also use the `rsync` utility to sync data from one region to another in Azure NetApp Files (one zone to another if using zonal deployment).
 
 - For resource metadata to be stored in the DR region, deploy the DR resources in a resource group assigned to the same Azure region where DR resources are created. This allows changes to Azure DR resources if the Azure production region is down.
 
