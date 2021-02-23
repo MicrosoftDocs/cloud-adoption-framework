@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Enterprise-scale business continuity and disaster recovery for an SAP migration
 
-Your organization or enterprise needs to design suitable, platform-level capabilities that help application workloads to meet their specific requirements. The following requirements apply to SAP applications that run an organization's most critical business processes:
+Your organization or enterprise needs to design platform-level capabilities that help application workloads to meet their specific requirements. The following requirements apply to SAP applications that run an organization's most critical business processes have the following requirements:
 
 - Service/business process availability
 
