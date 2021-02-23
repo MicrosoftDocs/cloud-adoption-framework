@@ -1,6 +1,6 @@
 ---
 title: Security title
-description: Security description
+description: Security description goes here
 author: JanetCThomas
 ms.author: brblanch
 ms.date: 04/04/2021

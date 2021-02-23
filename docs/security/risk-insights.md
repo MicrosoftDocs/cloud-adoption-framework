@@ -1,13 +1,14 @@
 ---
 title: Risk Management Insights
 description: Integrate security insights into you risk management framework and digital initiatives
-author: JanetCThomas
-ms.author: brblanch
+author: NaomiOooo
+ms.author: naomio
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
+
 ---
 
 # Risk Management Insights
