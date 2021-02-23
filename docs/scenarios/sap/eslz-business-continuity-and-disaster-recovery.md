@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Enterprise-scale business continuity and disaster recovery for an SAP migration
 
-Your organization or enterprise needs to design suitable, platform-level capabilities that help application workloads meet their specific requirements. The following requirements apply to SAP applications that run an organization's most critical business processes:
+Your organization or enterprise needs to design suitable, platform-level capabilities that help application workloads to meet their specific requirements. The following requirements apply to SAP applications that run an organization's most critical business processes:
 
 - Service/business process availability
 
@@ -20,7 +20,7 @@ Your organization or enterprise needs to design suitable, platform-level capabil
 
 - Recovery point objectives (RPOs) for a failure scenario limited to a component of an SAP system or a widespread failure impacting a datacenter or an Azure region
 
-- Operational and lifecycle management tasks can require technology that typically fills in for failure scenarios. A few of these management tasks are patching guest operating systems (OSs), patching database management systems (DBMSs), cloning, and refreshing SAP systems.
+- Operational and lifecycle management tasks can require technology that fills in for failure scenarios. These management tasks include patching guest operating systems (OSs), patching database management systems (DBMSs), cloning, and refreshing SAP systems.
 
 ## Scenario and scope
 
@@ -51,12 +51,12 @@ Some customers use a combination HA/DR architecture, which groups HA and with DR
 
 - Sufficient compliance from configurations that support smaller distances between production deployment and a DR target
 - Data sovereignty aspects
-- Geopolitical considerations  
+- Geopolitical factors
 
 Another factor that you should consider when choosing your DR region is the RPO and RTO for failing over to the DR site. The further the distance between the production and DR regions, the larger the network latency. Though you would replicate asynchronously between different Azure regions, a smaller or larger network latency can impact the throughput you're able to replicate and the RPO target. You can often minimize your RPO by using HA/DR architecture but with potential higher risk from large-scale, natural disasters.
 
 ### HA within an Azure region
- 
+
 With HA, the focus is to provide availability for SAP software's single point of failure, such as with:
 
 - DBMSs
@@ -193,7 +193,7 @@ Consider the following compute options:
 
 - Use the most current generation of SKUs where possible; for example, V3 or 4. Refer to SAP note [1928533](https://launchpad.support.sap.com/#/notes/1928533) for information about the certified D-series SKU for an SAP deployment.
 
-- Use the [E-series](/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-series](/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for AnyDB. E- and M-series SKUs are optimized for memory and provide a consistent CPU-to-memory ratio.
+- Use the [E-series](/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-series](/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for SAP third-party databases (AnyDBs). E- and M-series SKUs are optimized for memory and provide a consistent CPU-to-memory ratio.
 
 - Follow the design principle of scaling up and then out. From a cost perspective, scale-out deployments could cost less than a scale-up setup in some scenarios.
 
@@ -201,7 +201,7 @@ Consider the following compute options:
 
 - Use the E-series SKU for smaller and cost-conscious production and nonproduction deployments.
 
-- Use input/output operations per second (IOPS) and throughput limits of VM SKUs for SAP third-party database (AnyDB) production deployments.
+- Use input/output operations per second (IOPS) and VM SKU throughput limits for AnyDB production deployments.
 
 **Design recommendations for compute:**
 
