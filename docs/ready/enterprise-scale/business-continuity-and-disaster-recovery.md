@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
 
-## Design considerations
+**Design considerations:**
 
 Consider the following factors:
 
@@ -58,7 +58,7 @@ Consider the following factors:
 
 - Azure Key Vault DR for application keys, certificates, and secrets.
 
-## Design recommendations
+**Design recommendations:**
 
 The following are best practices for your design:
 

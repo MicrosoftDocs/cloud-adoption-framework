@@ -22,14 +22,11 @@ As with security controls, organizations should understand the division of respo
 
 The following are descriptions of compliance regulations in various industries and geographies:
 
-<!-- docutune:casing PHI "Health Information Portability and Accountability Act" -->
-
 ## HIPAA
 
-A healthcare application that processes protected health information (PHI) is subject to both the privacy rule and the security rule encompassed within the Health Information Portability and Accountability Act (HIPAA). At a minimum, HIPAA could likely require that a healthcare business must receive written assurances from the cloud provider that it will safeguard any PHI received or created.
+A healthcare application that processes protected health information (PHI) is subject to both the privacy rule and the security rule encompassed within the Health Insurance Portability and Accountability Act (HIPAA). At a minimum, HIPAA could likely require that a healthcare business must receive written assurances from the cloud provider that it will safeguard any PHI received or created.
 
 <!-- docutune:ignore Discover -->
-<!-- cSpell:ignore Visa Mastercard -->
 
 ## PCI
 
