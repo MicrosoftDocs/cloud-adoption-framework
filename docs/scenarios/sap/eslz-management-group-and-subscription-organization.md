@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management group and subscription organization for SAP on Azure"
+title: Enterprise-Scale management group and subscription organization for SAP on Azure
 description: Describe how this enterprise-scale scenario can improve management group and subscription organization of SAP
 author: BrianBlanchard
 ms.author: brblanch

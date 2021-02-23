@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale support for SAP on Azure construction set
-description:  Learn about Enterprise-scale construction sets that let you build platform workload landing zones.
+description: Learn about enterprise-scale construction sets that let you build platform workload landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/15/2021
@@ -10,8 +10,8 @@ ms.subservice: ready
 ---
 
 # Enterprise-scale support for SAP on Azure construction set
-  
-Enterprise-scale construction sets provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework Enterprise scale landing zone. After you have successfully implemented an enterprise-scale landing zone, they can use the SAP on Azure construction set. Review the enterprise-scale [overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the SAP on Azure construction set.
+
+Enterprise-scale construction sets provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. After you have successfully implemented an enterprise-scale landing zone, they can use the SAP on Azure construction set. Review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the SAP on Azure construction set.
 
 ## Adopting the SAP on Azure construction set
 
@@ -25,22 +25,22 @@ Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framewo
 
 You have to make critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. Consider these six critical design areas:
 
-- [Identity and Access Management](eslz-identity-and-access-management.md)
-- [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Management and monitoring](eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance,  and compliance](eslz-security-governance-and-compliance.md)
-- [Platform automation and DevOps](eslz-platform-automation-and-devops.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Management and monitoring](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Security, governance,  and compliance](./eslz-security-governance-and-compliance.md)
+- [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
 
 ## Architecture
 
 The following image shows a conceptual reference architecture that demonstrates design areas:
 
-![A diagram depicting the SAP construction set conceptual reference architecture.](media/overview-architecture.png)
+![A diagram depicting the SAP construction set conceptual reference architecture.](./media/overview-architecture.png)
 
 ## Implementation
 
- **SAP on Azure Deployment Automation Framework** is a collection of processes combined with a flexible workflow. The [SAP Deployment Automation Framework repository](https://github.com/Azure/sap-hana) has code that automatically deploys SAP landscapes in the Azure Cloud.
+The **SAP on Azure deployment automation framework** is a collection of processes combined with a flexible workflow. The [SAP deployment automation framework repository](https://github.com/Azure/sap-hana) has code that automatically deploys SAP landscapes in the Azure cloud.
 
 The templates are split into two categories:
 
@@ -55,10 +55,10 @@ The templates are split into two categories:
 
 Deploy and install the Ansible playbook components on the infrastructure that the Terraform modules built.
 
-![Diagram showing an overview of a SAP Reference Implementation.](media/overview-automation.png)
+![Diagram showing an overview of a SAP reference implementation.](./media/overview-automation.png)
 
 ## Next steps
 
 Review the design areas for the SAP on Azure construction set that are critical to making complete considerations and recommendations for your SAP on Azure construction set architecture:
 
-- [Identity and Access Management](./eslz-identity-and-access-management.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)

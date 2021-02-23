@@ -7,7 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 # Plan for SAP cloud adoption in Azure
@@ -26,23 +26,23 @@ Like most complex platforms, your SAP digital estate will include three asset ca
 
 - **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 
-For guidance on SAP digital estate planning, look through the processes outlined in the article series on [digital estate planning](../../digital-estate/inventory.md). The best practice article on [assessing on-premises workloads for migration to Azure](../../plan/contoso-migration-assessment) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
+For guidance on SAP digital estate planning, look through the processes outlined in the article series on [digital estate planning](../../digital-estate/inventory.md). The best practice article on [assessing on-premises workloads for migration to Azure](../../plan/contoso-migration-assessment.md) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
 
 Several considerations should be included in those processes when planning for SAP adoption:
 
 - **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio. See [Step 5 of the best practice article](../../plan/contoso-migration-assessment.md#step-5-prepare-for-dependency-analysis.md) for an actionable reference guide.
 
-- **Tagging/Grouping/Meta data:** Carefully tag or group all assets: 
+- **Tagging/Grouping/Meta data:** Carefully tag or group all assets:
 
   - Thoroughly tag and group assets on the platform. It's important to not miss any assets, as they're key to refining the financial or technical plan.
-  
+
   - Separate and group any foundational assets on which the SAP deployment depends. These can later be replaced with more efficient Azure landing zone options.
-  
+
   - Group each dependant workload individually. Those workloads can each be considered independently during rationalization and migration efforts.
-  
+
 - **Asset rationalization:** Rationalization is one of the most important considerations for the financial plan. Think about the following with each group of assets:
 
-  - Can foundational assets be retired in favor of cloud-native Azure Landing Zone options?
+  - Can foundational assets be retired in favor of cloud-native Azure landing zone options?
 
   - For each workload, will you retire the workload? Would it make sense to rehost the workload to infrastructure as a service? Should you modernize this workload? Is this workload impactful enough to consider rearchitecting or rebuilding the workload to take advantage of cloud-native hosting?
 
@@ -52,11 +52,11 @@ Several considerations should be included in those processes when planning for S
 
 - **Environment planning:** Are you moving production and nonproduction SAP platforms at the same time or separately? Customers sometimes move their nonproduction SAP platform to Azure, creating an environment for learning and reducing risk. Once the team is comfortable with the SAP platform's operations and Azure workloads, they will migrate the production platform and workloads weeks or months later?
 
-- **Platform rationalization:** The most important consideration is how to rationalize an SAP platform's assets; consider how you'll migrate the platform. The migration approach will shape the inventory of assets that will persist in the cloud and the work to get there. The following options can be considered: 
+- **Platform rationalization:** The most important consideration is how to rationalize an SAP platform's assets; consider how you'll migrate the platform. The migration approach will shape the inventory of assets that will persist in the cloud and the work to get there. The following options can be considered:
 
 - Rehost: Use Azure Migrate or a homogeneous system copy to lift and shift the current SAP product/operating system [OS]/database management system (DBMS) platform.
 
-- Replatform: Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This include when an SAP NetWeaver production changes to HANA as aDBMS.
+- Replatform: Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This include when an SAP netweaver production changes to HANA as adbms.
 
 - Rearchitect: Implement a new SAP platform on Azure.
 
@@ -64,12 +64,12 @@ Once these considerations are integrated into your digital estate evaluation, yo
 
 ## SAP cloud adoption plan
 
-The Cloud Adoption Framework includes a tool and several templates for creating a cloud adoption plan or Azure DevOps Backlog, which are based on the tasks outlined in each methodology. Learn more about templates in the [Cloud adoption plan and Azure DevOps](../../plan/template.md) article.
+The Cloud Adoption Framework includes a tool and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology. Learn more about templates in the [cloud adoption plan and Azure DevOps](../../plan/template.md) article.
 
 Whether you use templates or your own project planning tools, factor in the following SAP-specific actions:
 
 - Evaluate your foundational assets, and deploy an appropriate Azure landing zone.
-- Use your platform rationalization efforts to finish migrating the SAP Platform.
+- Use your platform rationalization efforts to finish migrating the SAP platform.
 - Account for each workload (or wave of workloads) to be migrated.
 
 You can use the [Azure DevOps web interface](/azure/devops/project/navigation/?view=azure-devops) to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [tracking workloads](../../plan/workloads.md).
@@ -84,7 +84,7 @@ This project's team members could be SAP or Azure experts, but it's unlikely for
 
 The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
 
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Review your environment or Azure landing zone(s)](./ready.md)
 - [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)

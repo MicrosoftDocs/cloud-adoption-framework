@@ -1,6 +1,6 @@
 ---
-title: "Govern SAP"
-description: Describe the scenario's impact on Governance
+title: Govern SAP
+description: Describe the scenario's impact on governance
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2010

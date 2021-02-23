@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale enterprise enrollment and Azure AD tenants for SAP on Azure"
+title: Enterprise-Scale enterprise enrollment and Azure AD tenants for SAP on Azure
 description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of SAP
 author: BrianBlanchard
 ms.author: brblanch
