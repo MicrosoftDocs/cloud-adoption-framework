@@ -64,7 +64,7 @@ Understand that your initial business justification is a directional estimate th
 The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
 
 - [Plan for SAP cloud adoption in Azure](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)

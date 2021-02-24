@@ -47,7 +47,7 @@ The core platform team, referred as **SAP Basis Operations**, is either staffed 
 Those data points will aid this team to determine the levels of platform operations that must be added to meet operational requirements.
 
 > [!NOTE]
-> If your organization has a centralized SAP platform team, please consider tooling to enhance operations of the core platform using an [enterprise-scale scenario for SAP](./enterprise-scale-landing-zone.md) for elevated management and DR/bc scenarios that can improve operations of the platform.
+> If your organization has a centralized SAP platform team, please consider tooling to enhance operations of the core platform using an [enterprise-scale scenario for SAP](./enterprise-scale-landing-zone.md) for elevated management and BCDR scenarios that can improve operations of the platform.
 
 ## Workload operations
 
@@ -63,7 +63,7 @@ Once the SAP migration is complete, the cloud adoption team can begin scenario-s
 > [!div class="nextstepaction"]
 > [Strategy for SAP](./strategy.md)
 > [Plan for SAP](./plan.md)
-> [Review your environment or Azure landing zone(s)](./ready.md)
+> [Review your environment or Azure landing zones](./ready.md)
 > [Migrate SAP](./migrate.md)
 > [Innovate with SAP](./innovate.md)
 > [Manage SAP](./manage.md)

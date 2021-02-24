@@ -52,7 +52,7 @@ The following articles provide guidance for specific points throughout the cloud
 
 - [The strategic impact of SAP in the cloud](./strategy.md)
 - [Plan for SAP cloud adoption in Azure](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)

@@ -68,12 +68,12 @@ The DBMS needs to be changed, or the internal format of the same DBMS system nee
 - The operating systems (OS) and DBMS are compatible with Azure.
 - There aren't other requirements to upgrade or replatform the OS or DBMS systems.
 
-**DMO:** DMO uses one tool to upgrade an SAP workload and a database migration to the SAP HANA database, and this process is often called a *one-step migration*. The SAP Software Update Manager, sum, tool creates a shadow repository for current database while also creating a target database at the same time. It eventually copies the shadow repository and switches the SAP database connection to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
+**DMO:** DMO uses one tool to upgrade an SAP workload and a database migration to the SAP HANA database, and this process is often called a *one-step migration*. The SAP Software Update Manager tool creates a shadow repository for current database while also creating a target database at the same time. It eventually copies the shadow repository and switches the SAP database connection to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
 
 - The current OS isn't supported in Azure, requiring an upgrade/replatform.
 - There is a plan to upgrade to SAP S/4HANA during migration.
 
-Explore the [migrating an SAP platform to Azure](/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
+Explore [migrating an SAP platform to Azure](/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
 
 ## Migrate the workload
 

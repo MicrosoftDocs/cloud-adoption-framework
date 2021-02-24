@@ -32,7 +32,7 @@ Several considerations should be included in those processes when planning for S
 
 - **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio. See [Step 5 of the best practice article](../../plan/contoso-migration-assessment.md#step-5-prepare-for-dependency-analysis.md) for an actionable reference guide.
 
-- **Tagging/Grouping/Meta data:** Carefully tag or group all assets:
+- **Tagging, grouping, and metadata:** Carefully tag or group all assets:
 
   - Thoroughly tag and group assets on the platform. It's important to not miss any assets, as they're key to refining the financial or technical plan.
 
@@ -84,7 +84,7 @@ This project's team members could be SAP or Azure experts, but it's unlikely for
 
 The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
 
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)
