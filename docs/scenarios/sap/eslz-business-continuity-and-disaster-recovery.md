@@ -61,7 +61,7 @@ With HA, the focus is to provide availability for SAP software's single point of
 
 - DBMSs
 - Single points of failure in the application, like with ABAP SAP Central Service (ASCS)/SCS (for example, with SAP NetWeaver and S/4HANA architecture)
-- Other tools, like SAP WebDispatcher
+- Other tools, like SAP Web Dispatcher
 
 For other scenarios, availability shouldn't be restricted to infrastructure or software failures and should include all necessary lifecycle management tasks, such as patching the OS in the VMs, the DBMS, or SAP software. To minimize outages that can happen during planned downtime and lifecycle management tasks, you can use common tools that protect against unplanned service disruptions.
 
@@ -81,9 +81,9 @@ Explore [high-availability architecture and scenarios for SAP NetWeaver](https:/
 
 Before you deploy your HA infrastructure and depending on the region you've chosen, decide if you want to deploy through an [Azure availability set](https://docs.microsoft.com/azure/virtual-machines/availability) or Availability Zone. The main differences of VMs deployed with an availability set are that:
 
-- They're not spread across different Availability Zones.
+- They aren't spread across different Availability Zones.
 
-- The type of VMs that can be deployed through a single availability set are restricted since the host is defined by the first VM deployed in the set. One example result is that you won't be able to combine an M-series and E-Series VM into one availability set.
+- The type of VMs that can be deployed through a single availability set are restricted since the host is defined by the first VM deployed in the set. One example result is that you won't be able to combine M- and E-series VMs into one availability set.
 
 One advantage of deploying your HA architecture across different Availability Zones is that your SLA for the VMs could be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines/). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. For details on SAP workload deployments across different Azure Availability Zones, read the article [SAP workload configurations with Azure Availability Zones](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
@@ -113,7 +113,7 @@ Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview
 
 Consider the following factors:
 
-- You SAP systems could have various components like ASCS, an SAP Web dispatcher or application, or database servers. Create a different availability set for Web dispatcher, SAP application servers, SCS, or HANA.
+- You SAP systems could have various components like ASCS, an SAP Web Dispatcher or application, or database servers. Create a different availability set for SAP Web Dispatcher, application servers, SCS, or HANA.
 
 > [!NOTE]
 > This document describes single-SID deployment, but Azure also supports multi-SID-cluster deployments. A maximum of five SAP SIDs can be deployed in a Linux cluster running in Azure.
@@ -173,7 +173,7 @@ The following are best practices for your design:
 
 - Make sure that the floating IP is enabled in the load balancer.
 
-- To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Azure NetApp Files paired regions are different than standard Azure paired regions.
+- To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Paired regions in Azure NetApp Files are different than standard Azure paired regions.
 
 - You can also use the 'rsync' utility to sync data from one region to another in Azure NetApp Files (one zone to another if using zonal deployment).
 
@@ -209,7 +209,7 @@ Consider the following compute options:
 
 - Use an E-series SKU for AnyDB deployments. A database's performance increases with the size of its cache. The two main advantages of E-series SKUs over D-series are 1:8 memory mapping and constrained core options to help you save on database license costs without compromising input, output, and throughput limits.
 
-- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk generates 7,500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a Standard D8s_v3 that only supports 192 Mbps, it doesn’t help the P50 disk to achieve its throughput.
+- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk generates 7,500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a Standard D8sv3 that only supports 192 Mbps, it doesn’t help the P50 disk to achieve its throughput.
 
 - Use an M-series SKU for a HANA production deployment. The M-series support 256 gigabytes to 12 TB of scaling up and 96 TB of scaling out. Visit the [SAP Hardware Directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/iaas.html#categories=Microsoft%20Azure) for setup support.
 
