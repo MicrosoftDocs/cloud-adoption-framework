@@ -140,4 +140,4 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
 
-- Explore the [SAP support portal](https://support.sap.com/en/index.html) and [note 2391465 in SAP notes](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
+- Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2391465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.

@@ -10,9 +10,11 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
+<!-- docutune:casing Snow -->
+
 # SAP enterprise-scale platform automation and DevOps
 
-This article describes how to approach system identifier (sid) automation on SAP by using an AppOps approach.
+This article describes how to approach security identifier (SID) automation on SAP by using an AppOps approach.
 
 ## Architecture
 
@@ -24,7 +26,7 @@ The following diagram illustrates the dependencies between SAP systems, environm
 
 ### System
 
-An SAP system is an instance of an SAP application that has the resources the application needs to run, like virtual machines (VMs), disks, load balancers, proximity placement groups, availability sets, subnets, and network security groups. Each system deploys into a separate Azure resource group with a unique sid.
+An SAP system is an instance of an SAP application that has the resources the application needs to run, like virtual machines (VMs), disks, load balancers, proximity placement groups, availability sets, subnets, and network security groups. Each system deploys into a separate Azure resource group with a unique SID.
 
 ### Environment
 
@@ -49,7 +51,7 @@ A landscape is a collection of systems in different environments in an SAP appli
 
 - Define service principal name (SPN) strategy for automation. Will each environment have a unique SPN?
 
-- Define secrets or credentials management. Azure Key Vault is the recommended solution for key management and key storage. SAP Automation uses SPN credentials from Azure Key Vault. By default, all systems in an environment use the same credentials from the environment Key Vault. Determine whether any systems need unique credentials.
+- Define secrets or credentials management. Azure Key Vault is the recommended solution for key management and key storage. SAP Automation uses SPN credentials from Azure Key Vault. By default, all systems in an environment use the same credentials from the key vault in that environment. Determine whether any systems need unique credentials.
 
 - Decide whether to use an Azure Marketplace image or a custom-built image. Custom-built images have several advantages, like customer-specific OS configuration, security hardening, and compliance tooling. Custom-built images can also potentially streamline image lifecycle management.
 
@@ -63,8 +65,8 @@ A landscape is a collection of systems in different environments in an SAP appli
 
 - Provide a managed SAP Automation environment. Three methods to orchestrate automation are:
 
-  - Begin by deploying deployment infrastructure as a central automation controller VM for SAP environments np and production.
+  - Begin by deploying deployment infrastructure as a central automation controller VM for SAP production and nonproduction environments.
 
   - Use Azure DevOps for automation runs, bypassing a controller VM. You can begin from SAP library and SAP IaaS builds.
 
-  - Use resource provider (rp) -based automation. You can make script run calls from the snow portal.
+  - Use resource-provider-based automation. You can make script run calls from the Snow portal.

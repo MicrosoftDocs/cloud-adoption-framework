@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Enterprise Edition" -->
+<!-- docutune:casing "Enterprise Edition" SOAR -->
 
 # Enterprise-scale security, governance, and compliance for SAP on Azure
 
@@ -18,7 +18,7 @@ SAP is a common technology many organizations use in their most crucial workload
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, the cloud hosted many larger-scale workloads, like SAP on Azure. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of cloud services.
 
-The vision for SAP enterprise-scale landing zone (enterprise-scale landing zone) security, compliance, and governance on Azure is to give organizations tools and processes to prevent risk and make effective decisions. The enterprise-scale landing zone defines security, governance, and compliance roles and responsibilities, so everyone knows what is expected from them.
+The vision for SAP enterprise-scale landing zone security, compliance, and governance on Azure is to give organizations tools and processes to prevent risk and make effective decisions. The enterprise-scale landing zone defines security, governance, and compliance roles and responsibilities, so everyone knows what is expected from them.
 
 ## Shared responsibility model
 
@@ -34,7 +34,7 @@ For more information about the shared responsibility model, see [Shared responsi
 
 Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
-For generally-accepted security guidance, refer to the Center for Internet Security (CIS) standards at [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/).
+For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/)from the Center for Internet Security (CIS).
 
 ### Enable Azure Security Center
 
@@ -50,7 +50,7 @@ Enable Azure Security Center Standard for SAP on Azure subscriptions to:
 
 - See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP VMs, disks, and applications.
 
-- Delegate an SAP admin custom role with [just in time access](/azure/security-center/just-in-time-explained).
+- Delegate an SAP admin custom role with [just-in-time access](/azure/security-center/just-in-time-explained).
 
 When you enable Azure Security Center Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
 
@@ -60,11 +60,11 @@ The following screenshot shows the Azure Security Center dashboard in the Azure 
 
 ### Enable Azure Sentinel
 
-[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (soar) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 ### Secure authentication
 
-Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Microsoft Active Directory (Azure AD), combined with third-party security products, have enabled this capability for both SAP GUI and web-browser-based applications for years. When a user signs in to their workstation and successfully authenticates, ad issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
+Single sign-on (SSO) is the foundation for integrating SAP and Microsoft products. Kerberos tokens from Active Directory, combined with third-party security products, have enabled this capability for both SAP GUI and web-browser-based applications for years. When a user signs in to their workstation and successfully authenticates, Active Directory issues them a Kerberos token. A third-party security product then uses the Kerberos token to handle the authentication to the SAP application without the user having to reauthenticate.
 
 You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS.
 
