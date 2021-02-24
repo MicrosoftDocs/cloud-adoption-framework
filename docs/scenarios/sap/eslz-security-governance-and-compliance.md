@@ -137,24 +137,24 @@ For internet-facing applications, you must make sure to distribute load per appl
 
 Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like Secure Sockets Layer (SSL) termination and forwarding.
 
-You can categorize Azure load-balancing services along global versus regional and HTTP(s) versus non-HTTP(s) dimensions.
+You can categorize Azure load-balancing services along global versus regional and HTTP/S versus non-HTTP/S dimensions.
 
 - Global load-balancing services distribute traffic across regional backends, clouds, or hybrid on-premises services. These services route end-user traffic to the closest available backend. These services also maximize availability and performance by reacting to changes in service reliability or performance. You can think of these services as systems that load balance between application stamps, endpoints, or scale units hosted across different regions or geographies.
 
 - Regional load-balancing services distribute traffic within virtual networks across VMs or zonal and zone-redundant service endpoints within a region. You can think of these services as systems that load balance between VMs, containers, or clusters within a region in a virtual network.
 
-- HTTP(s) load-balancing services are Layer 7 load balancers that only accept HTTP(s) traffic and are intended for web applications or other HTTP(s) endpoints. HTTP(s) load-balancing services include features like SSL offload, WAF, path-based load balancing, and session affinity.
+- HTTP/S load-balancing services are Layer 7 load balancers that only accept HTTP/S traffic and are intended for web applications or other HTTP/S endpoints. HTTP/S load-balancing services include features like SSL offload, WAF, path-based load balancing, and session affinity.
 
-- Non-HTTP/S load-balancing services that can handle non-HTTP(s) traffic are recommended for non-web workloads.
+- Non-HTTP/S load-balancing services that can handle non-HTTP/S traffic are recommended for non-web workloads.
 
 The following table summarizes the Azure load-balancing services by category:
 
 | Service | Global or regional | Recommended traffic |
 |---|---|---|
-| Azure Front Door | Global | HTTP(s) |
-| Traffic Manager | Global | non-HTTP(s) |
-| Application Gateway | Regional | HTTP(s) |
-| Azure Load Balancer | Regional | non-HTTP(s) |
+| Azure Front Door | Global | HTTP/S |
+| Traffic Manager | Global | non-HTTP/S |
+| Application Gateway | Regional | HTTP/S |
+| Azure Load Balancer | Regional | non-HTTP/S |
 
 - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 

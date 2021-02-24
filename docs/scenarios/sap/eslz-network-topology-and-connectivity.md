@@ -34,7 +34,7 @@ You can [dedicate](/azure/virtual-network/virtual-network-for-azure-services#ser
 
 **Use case:**
 
-Delegated subnets are required for implementing Azure NetApp Files, which is popular during SAP deployments with shared file systems. A delegated subnet is required only for Application Gateway during Azure Application Gateway SAP scenarios like load balancing or SAP business objects business intelligence, a load-balancing SAP web application server.
+Delegated subnets are required for implementing Azure NetApp Files, which is popular during SAP deployments with shared file systems. A delegated subnet is required only for Application Gateway during Azure Application Gateway SAP scenarios like load balancing or SAP BusinessObjects Business Intelligence, a load-balancing SAP web application server.
 
 ## Configure DNS and name resolution for on-premises and Azure resources
 
@@ -87,9 +87,9 @@ This section recommends connectivity models for in- and outbound connectivity to
 
 **Design recommendations for SAP implementation:**
 
-- For customers with a global footprint, [Azure Front Door](/azure/frontdoor/front-door-overview) helps SAP deployments by using Azure Web Application Firewall policies to deliver and protect global HTTP(s) applications (applications) across Azure regions.
+- For customers with a global footprint, [Azure Front Door](/azure/frontdoor/front-door-overview) helps SAP deployments by using Azure Web Application Firewall policies to deliver and protect global HTTP/S applications (applications) across Azure regions.
 
-- Take advantage of Web Application Firewall policies in Azure Front Door when you're using this service and Application Gateway to protect HTTP(s) applications. Lock down Application Gateway to receive traffic only from Azure Front Door.
+- Take advantage of Web Application Firewall policies in Azure Front Door when you're using this service and Application Gateway to protect HTTP/S applications. Lock down Application Gateway to receive traffic only from Azure Front Door.
 
 - Application Gateway and Web Application Firewall have limitations when Application Gateway serves as a reverse proxy for SAP web apps, as shown in the comparison between Application Gateway, SAP Web Dispatcher, and a third-party service, NetScaler. [Image doesn't exist]
 
