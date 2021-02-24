@@ -20,7 +20,7 @@ The [strategy and plan template](https://raw.githubusercontent.com/microsoft/Clo
 
 Like most complex platforms, your SAP digital estate will include three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
-- **Platform assets:** Your SAP platform runs on a collection of dedicated applications, data, virtual machines (and/or servers), and potentially, appliances. Regardless of what your organization does on that platform, those assets are as defined by SAP deployment requirements.
+- **Platform assets:** Your SAP platform runs on a collection of dedicated applications, data, virtual machines or server, and potentially appliances. Regardless of what your organization does on that platform, those assets are as defined by SAP deployment requirements.
 
 - **Foundational assets:** Your SAP platform and the supporting environment are also upheld by a collection of necessary assets like identity providers, networking, operational management tools, and more. Azure refers to these assets as foundational utilities, and this articles series will later describe how to deploy of an Azure landing zone to provide them.
 
@@ -54,11 +54,11 @@ Several considerations should be included in those processes when planning for S
 
 - **Platform rationalization:** The most important consideration is how to rationalize an SAP platform's assets; consider how you'll migrate the platform. The migration approach will shape the inventory of assets that will persist in the cloud and the work to get there. The following options can be considered:
 
-- Rehost: Use Azure Migrate or a homogeneous system copy to lift and shift the current SAP product/operating system [OS]/database management system (DBMS) platform.
+  - **Rehost:** Use Azure Migrate or a homogeneous system copy to lift and shift the current SAP product/operating system [OS]/database management system (DBMS) platform.
 
-- Replatform: Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This include when an SAP NetWeaver production changes to HANA as adbms.
+  - **Replatform:** Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This include when an SAP NetWeaver production changes to HANA as a DBMS.
 
-- Rearchitect: Implement a new SAP platform on Azure.
+- **Rearchitect:** Implement a new SAP platform on Azure.
 
 Once these considerations are integrated into your digital estate evaluation, you can refine your business justification. You'll also be ready to build out your SAP cloud adoption plan.
 
