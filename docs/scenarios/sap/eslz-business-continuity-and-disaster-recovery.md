@@ -31,7 +31,8 @@ This article covers the following aspects of BCDR:
 - Cross-regional versus regional DR decision criteria
 - High availability (HA) within an Azure region
 - Backup/restore considerations
-- Select virtual machine (VM) and storage components with optimal HA
+- HA considerations for an enterprise-scale SAP scenario
+- Compute and storage considerations for an enterprise-scale SAP scenario
 
 ### Cross-regional vs. DR decision criteria
 
@@ -107,9 +108,9 @@ If you're satisfied with your current solution, check if your backup vendor supp
 
 Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you're using [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) to store your SAP HANA databases, you can perform backups based on HANA-consistent storage snapshots.
 
-## Select VM and storage components with optimal HA
+### HA considerations for an enterprise-scale SAP scenario
 
-**Design considerations:**
+**Design considerations for HA:**
 
 Consider the following factors:
 
@@ -124,7 +125,7 @@ Consider the following factors:
 
 - Optimize Azure NetApp Files for shared storage file systems.
 
-**Design recommendations:**
+**Design recommendations for HA:**
 
 The following are best practices for your design:
 
@@ -173,13 +174,13 @@ The following are best practices for your design:
 
 - Make sure that the floating IP is enabled in the load balancer.
 
-- To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Paired regions in Azure NetApp Files are different than standard Azure paired regions.
+- To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Paired regions in Azure NetApp Files paired regions are different than standard Azure paired regions.
 
 - You can also use the 'rsync' utility to sync data from one region to another in Azure NetApp Files (one zone to another if using zonal deployment).
 
 - For resource metadata to be stored in the DR region, deploy the DR resources in a resource group assigned to the same Azure region where DR resources are created. This allows changes to Azure DR resources if the Azure production region is down.
 
-## Scalability for compute and storage in an SAP enterprise-scale scenario
+### Compute and storage considerations for an enterprise-scale SAP scenario
 
 **Design considerations for compute:**
 
