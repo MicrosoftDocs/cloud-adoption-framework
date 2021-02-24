@@ -103,7 +103,7 @@ For more information about SAP on Azure network security, see [SAP security oper
 
 ### Encrypt data at rest
 
-Data at rest is information in persistent storage on physical media, in any digital format. Media can include files on magnetic or optical media, archived data, and data backups. Azure offers a variety of data storage solutions including File Storage, Disk Storage, Blob Storage, and Table Storage. Some Azure Storage data encryption at rest occurs by default with optional customer configuration. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
+Data at rest is information in persistent storage on physical media, in any digital format. Media can include files on magnetic or optical media, archived data, and data backups. Azure offers a variety of data storage solutions including files, disks, blobs, and tables. Some Azure Storage data encryption at rest occurs by default with optional customer configuration. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
 
 Server-side encryption (SSE) for SAP on Azure VMs protects your data and helps you meet organizational security and compliance commitments. SSE automatically encrypts data at rest on Azure-managed OS and data disks when persisting data to the cloud. SSE encrypts Azure-managed disk data transparently using 256-bit [AES encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard), one of the strongest block ciphers available, and is FIPS 140-2 compliant. SSE doesn't impact managed disk performance, and has no additional cost. For more information about the cryptographic modules underlying Azure-managed disks, see [Cryptography API: next generation](/windows/win32/seccng/cng-portal).
 
@@ -119,7 +119,7 @@ Data is in transit or in flight when it moves from one location to another, whet
 - Transport Layer Security (TLS) 1.2 or later via Azure components like Azure Application Gateway or Azure Front Door
 - Protocols available on the Azure VMs, like Windows IPsec or SMB
 
-Encryption using MACsec, an ieee standard at the data-link layer, is automatically enabled for all Azure traffic between Azure datacenters. This encryption ensures customer data confidentiality and integrity. For more information, see [Azure customer data protection](/azure/security/fundamentals/protection-customer-data).
+Encryption using MACsec, an IEEE standard at the data-link layer, is automatically enabled for all Azure traffic between Azure datacenters. This encryption ensures customer data confidentiality and integrity. For more information, see [Azure customer data protection](/azure/security/fundamentals/protection-customer-data).
 
 ### Manage keys and secrets
 
@@ -162,7 +162,7 @@ The following table summarizes the Azure load-balancing services by category:
 
 - [Application Gateway](/azure/application-gateway/overview) provides an managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
 
-- [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load balancer handles millions of requests per second. Load balancer is zone-redundant, ensuring high availability across Availability Zones.
+- [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
 
 Refer to the following decision tree to make SAP on Azure application load-balancing decisions:
 
@@ -216,7 +216,7 @@ Create required Azure resources at the start of your SAP project. When all addit
 
 ### Implement role-based access control
 
-Customize role-based access control (RBAC) roles for SAP on Azure spoke subscriptions to avoid accidental network-related changes. You can allow the SAP on Azure infrastructure team members to deploy VMs to an Azure Virtual Network and restrict them from changing anything on the virtual network peered to the hub subscription. On the other hand, you allow members of the networking team to create and configure virtual networks, but prohibit them from deploying or configuring VMs in virtual networks where SAP applications are running.
+Customize role-based access control (RBAC) roles for SAP on Azure spoke subscriptions to avoid accidental network-related changes. You can allow the SAP on Azure infrastructure team members to deploy VMs to an Azure virtual network and restrict them from changing anything on the virtual network peered to the hub subscription. On the other hand, you allow members of the networking team to create and configure virtual networks, but prohibit them from deploying or configuring VMs in virtual networks where SAP applications are running.
 
 ### Use Azure Connector for SAP LaMa
 

@@ -48,14 +48,14 @@ Given the impact of an SAP platform, you need to define a number of defined obje
 
 [Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel a number of common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for the moving pieces associated with SAP cloud adoption.
 
-The [forrester study on the total economic impact of Microsoft Azure for SAP](https://azure.microsoft.com/resources/sap-on-azure-forrester-tei/) offers an analysis where the following justifications are typically defendable:
+The [Forrester study on the total economic impact of Microsoft Azure for SAP](https://azure.microsoft.com/resources/sap-on-azure-forrester-tei/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
 - 102-percent return on investment
 - Pay back in nine months
 
-Actual returns are likely to vary for individual customers. However, the tables in the forrester study can capture your organization's financial data for validation and business justification activities.
+Actual returns are likely to vary for individual customers. However, the tables in the Forrester study can capture your organization's financial data for validation and business justification activities.
 
 Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to [gather inventory and develop a plan](./plan.md). Once your digital estate is catalogued and assessed, you can refine your justification and present clearer plans for financial returns.
 

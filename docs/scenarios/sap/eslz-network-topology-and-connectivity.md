@@ -130,13 +130,13 @@ It isn't recommended to host the database management system (DBMS) and applicati
 - Make sure that Azure accelerated networking is enabled on the VMs used in the SAP application and DBMS layers. Consider that different operating system levels support accelerated networking in Azure:
 
   - Windows Server 2012 R2 or later
-  - SUSE Linux 12 sp3 or later
+  - SUSE Linux 12 SP3 or later
   - Red Hat Enterprise Linux 7.4 or later
   - Oracle Linux 7.5: Release 3.10.0-862.13.1.el7 is required for the kernel compatible with Red Hat Enterprise Linux. Release 5 is required for the Oracle Unbreakable Enterprise Kernel.
 
 - Make sure that internal deployments for Azure Load Balancer are set up to use Direct Server Return (DSR). This setting will reduce latency when internal load balancer configurations are used for high-availability configurations on the DBMS layer.
 
-- If using load balancer with Linux guest operating systems, check that the Linux network parameter `net.ipv4.tcp_timestamps` is set to `0`.
+- If using Load Balancer with Linux guest operating systems, check that the Linux network parameter `net.ipv4.tcp_timestamps` is set to `0`.
 
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
 
