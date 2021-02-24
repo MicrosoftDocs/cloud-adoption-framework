@@ -103,7 +103,7 @@ For more information about SAP on Azure network security, see [SAP security oper
 
 ### Encrypt data at rest
 
-Data at rest is information in persistent storage on physical media, in any digital format. Media can include files on magnetic or optical media, archived data, and data backups. Azure offers a variety of data storage solutions including file, disk, blob, and Table Storage. Some Azure Storage data encryption at rest occurs by default, with optional customer configuration. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
+Data at rest is information in persistent storage on physical media, in any digital format. Media can include files on magnetic or optical media, archived data, and data backups. Azure offers a variety of data storage solutions including File Storage, Disk Storage, Blob Storage, and Table Storage. Some Azure Storage data encryption at rest occurs by default with optional customer configuration. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
 
 Server-side encryption (SSE) for SAP on Azure VMs protects your data and helps you meet organizational security and compliance commitments. SSE automatically encrypts data at rest on Azure-managed OS and data disks when persisting data to the cloud. SSE encrypts Azure-managed disk data transparently using 256-bit [AES encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard), one of the strongest block ciphers available, and is FIPS 140-2 compliant. SSE doesn't impact managed disk performance, and has no additional cost. For more information about the cryptographic modules underlying Azure-managed disks, see [Cryptography API: next generation](/windows/win32/seccng/cng-portal).
 
@@ -123,11 +123,11 @@ Encryption using MACsec, an ieee standard at the data-link layer, is automatical
 
 ### Manage keys and secrets
 
-To control and manage disk encryption keys and secrets for non-HANA Windows and non-Windows operating systems, use Azure Key Vault. Key Vault has capabilities for provisioning and managing Secure Sockets Layer (SSL) /TLS certificates. You can also protect secrets with hardware security modules (HSMs). SAP HANA isn't supported with Azure Key Vault, so you must use alternate methods like SAP ABAP or SSH keys.
+To control and manage disk encryption keys and secrets for non-HANA Windows and non-Windows operating systems, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs). SAP HANA isn't supported with Azure Key Vault, so you must use alternate methods like SAP ABAP or SSH keys.
 
 ### Secure web and mobile applications
 
-For internet facing applications like fiori, make sure to distribute load per application requirements while maintaining security levels. For Layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Azure Marketplace.
+For internet-facing applications like SAP Fiori, make sure to distribute load per application requirements while maintaining security levels. For Layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Azure Marketplace.
 
 For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) can integrate SAP internet-facing applications as it helps to protect and secure your organization and empowers your employees to work in new and flexible ways.
 
@@ -160,7 +160,7 @@ The following table summarizes the Azure load-balancing services by category:
 
 - [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door, because of common challenges around DNS caching and systems not honoring DNS TTL.
 
-- [Application Gateway](/azure/application-gateway/overview) provides application delivery controller (adc) as a service, offering various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web farm productivity by offloading CPU-intensive SSL termination to the gateway.
+- [Application Gateway](/azure/application-gateway/overview) provides an managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
 
 - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load balancer handles millions of requests per second. Load balancer is zone-redundant, ensuring high availability across Availability Zones.
 
@@ -178,11 +178,11 @@ Every SAP application has unique requirements, so treat the preceding flow chart
 
 The following recommendations are for various security scenarios. The in-scope requirements are for the security solution to be cost-effective and scalable.
 
-|Scope (scenario) |Recommendation|Notes|
+| Scope (scenario) | Recommendation | Notes |
 |---|---|---|
 | See a consolidated view of all-up Azure and on-premises security posture. | Azure Security Center Standard | Azure Security Center Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
 | Encrypt all SAP on Azure databases to meet regulatory requirements. | SAP HANA native encryption and SQL TDE | For databases, use the SAP HANA native encryption technology. If you're using SQL Database, enable TDE. |
-| Secure a fiori application for global users with HTTPS traffic. | Azure Front Door | Front Door is an application delivery network that provides global load balancing and site acceleration service for web applications. |
+| Secure an SAP Fiori application for global users with HTTPS traffic. | Azure Front Door | Front Door is an application delivery network that provides global load balancing and site acceleration service for web applications. |
 
 ## Compliance and governance design recommendations
 
@@ -190,7 +190,7 @@ The following recommendations are for various security scenarios. The in-scope r
 
 ### Use Azure resource naming and tagging conventions
 
-To align with the Cloud Adoption Framework [ready](../../ready/index.md) section, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
+To align with the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
 The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
 
