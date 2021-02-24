@@ -91,7 +91,7 @@ This section recommends connectivity models for in- and outbound connectivity to
 
 - Take advantage of Web Application Firewall policies in Azure Front Door when you're using this service and Application Gateway to protect HTTP/S applications. Lock down Application Gateway to receive traffic only from Azure Front Door.
 
-- Application Gateway and Web Application Firewall have limitations when Application Gateway serves as a reverse proxy for SAP web apps, as shown in the comparison between Application Gateway, SAP Web Dispatcher, and a third-party service, NetScaler. [Image doesn't exist]
+- Application Gateway and Web Application Firewall have limitations when Application Gateway serves as a reverse proxy for SAP web apps, as shown in the comparison between Application Gateway, SAP Web Dispatcher, and a third-party service, NetScaler.
 
 Since SAP Web Dispatcher and NetScaler are more intelligent than Application Gateway, extensive testing is necessary to replace them with this service. Verify the most current status and list all supported and not supported (or tested/not tested) scenarios, if possible.
 
