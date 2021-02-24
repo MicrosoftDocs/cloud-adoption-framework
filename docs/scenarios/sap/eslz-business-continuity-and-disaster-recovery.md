@@ -32,7 +32,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - High availability (HA) within an Azure region
 - Backup/restore considerations
 - HA considerations
-- Compute and storage considerations 
+- Compute and storage considerations
 
 ### Cross-regional vs. DR decision criteria
 
@@ -46,7 +46,7 @@ The main challenges of pairing Azure regions for SAP workloads are:
 
 After defining Azure regions, your organization's second design decision should consider whether you're going to deploy production systems into your primary region, nonproduction SAP systems into the DR region, or if you're using an architecture that groups all SAP systems into the primary region so that the DR region is only used for DR regions. The current SAP customer deployment pattern shows most customers using both regions for SAP systems that are operating. Customers that traditionally run complete copies of their production systems as business regression test systems typically plan to use the SAP product line's business regression test system as a DR target.
 
-Another important design factor for determining which of at least two Azure regions should be the DR region is if you have multiple Azure ExpressRoute circuits connecting to Azure. At least one ExpressRoute circuit should connect to the primary Azure region, and the other ExpressRoute circuit should connect to the DR region. This type of architecture should connect you to the Azure network in a different geographic area and guard your connection if a catastrophe impactions another Azure region.
+Another important design factor for determining which of at least two Azure regions should be the DR region is if you have multiple Azure ExpressRoute circuits connecting to Azure. At least one ExpressRoute circuit should connect to the primary Azure region, and the other(s) should connect to the DR region. This type of architecture should connect you to the Azure network in a different geographic area and guard your connection if a catastrophe impactions another Azure region.
 
 Some customers use a combination HA/DR architecture, which groups HA and with DR within the same Azure region and isn't commonly recommended. [Azure Availability Zones](/azure/availability-zones/az-overview) support this architecture. Since the distance between Availability Zones within one Azure region isn't as large as the distance between two different Azure regions, a natural disaster could jeopardize this architecture in the region where it occurs. Customers choose this architecture because of:
 
