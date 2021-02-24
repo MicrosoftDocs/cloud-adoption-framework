@@ -6,60 +6,6 @@ items:
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
 
-  - name: SAP adoption scenario
-    items:
-    - name: Overview
-      href: scenarios/sap/index.md
-    - name: Strategy
-      href: scenarios/sap/strategy.md
-    - name: Planning
-      href: scenarios/sap/plan.md
-    - name: Azure landing zone review
-      href: scenarios/sap/ready.md
-    - name: Migrate SAP to Azure
-      href: scenarios/sap/migrate.md
-    - name: Innovate with SAP and Azure
-      href: scenarios/sap/innovate.md
-    - name: Manage SAP platform and workloads
-      href: scenarios/sap/manage.md
-    - name: Well-Architected considerations
-      href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-    - name: Accelerate with SAP architectures
-      items:
-      - name: SAP HANA on Azure (Large Instances)
-        href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/hana-large-instances?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: SAP HANA Scale-up on Linux
-        href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: SAP NetWeaver on Windows on Azure
-        href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-netweaver?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: SAP S/4HANA in Linux on Azure
-        href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/sap-s4hana?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: SAP BW/4HANA in Linux on Azure
-        href: https://docs.microsoft.com/azure/architecture/reference-architectures/sap/run-sap-bw4hana-with-linux-virtual-machines?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: SAP NetWeaver on SQL Server
-        href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/sap-netweaver-on-sql-server?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: SAP deployment using an Oracle DB
-        href: https://docs.microsoft.com/azure/architecture/example-scenario/apps/sap-production?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: Dev/test for SAP
-        href: https://docs.microsoft.com/azure/architecture/example-scenario/apps/sap-dev-test?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json          
-    - name: Enterprise-Scale Construction Set
-      items:
-      - name: Overview
-        href: scenarios/sap/enterprise-scale-landing-zone.md
-      - name: Identity and Access Management
-        href: scenarios/sap/eslz-identity-and-access-management.md
-      - name: Network topology and connectivity
-        href: scenarios/sap/eslz-network-topology-and-connectivity.md
-      - name: Management and monitoring
-        href: scenarios/sap/eslz-management-and-monitoring.md
-      - name: Business continuity and disaster recovery
-        href: scenarios/sap/eslz-business-continuity-and-disaster-recovery.md
-      - name: Security, governance, and compliance
-        href: scenarios/sap/eslz-security-governance-and-compliance.md
-      - name: Platform automation and DevOps
-        href: scenarios/sap/eslz-platform-automation-and-devops.md
-
-
   - name: About the Framework
     href: overview.md
   - name: What's new
@@ -975,9 +921,9 @@ items:
             href: innovate/best-practices/apps.md
           - name: Citizen developers
             items:
-            - name: PowerApps overview
+            - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Creating apps in PowerApps
+            - name: Creating apps in Power Apps
               href: /powerapps/maker?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Create your first workflow with Power Automate
               href: /power-automate/getting-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1070,7 +1016,7 @@ items:
               href: https://guides.github.com/introduction/git-handbook
             - name: Get started with a shared backlog
               href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
-            - name: Synchronize PowerApps with Azure DevOps
+            - name: Synchronize Power Apps with Azure DevOps
               href: /powerapps/developer/common-data-service/build-tools-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Feedback loops
             items:

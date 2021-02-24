@@ -168,7 +168,7 @@ The following are best practices for your design:
 
 - For VNet applications requiring DR network access, make sure that that the VNet is peered to the secondary (DR) region. For example, HSR replication will required an SAP/HANA database VNet to be peered to the secondary site's SAP/HANA database VNet.
 
-- You can also [use VNet to ExpressRoute peering](/azure/expressroute/expressroute-howto-linkVNet-portal-resource-manager) or [ExpressRoute GlobalReach](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-global-reach) instead of VNet peering.
+- You can also [use VNet to ExpressRoute peering](/azure/expressroute/expressroute-howto-linkVNet-portal-resource-manager) or [ExpressRoute Global Reach](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-global-reach) instead of VNet peering.
 
 - The primary VNet's classless inter-domain routing (CIDR) shouldn't conflict or overlap with the disaster site VNet's CIDR.
 
@@ -279,6 +279,6 @@ _Figure 2: Azure Storage SKU options._
 
 - For any database deployment, the [ReadOnly cache](/azure/virtual-machines/premium-storage-performance#disk-caching) must be enabled for data disks that contain database data files. The ReadOnly cache can only be enabled on disks smaller than 4,095 GB.
 
-- Use only database-native encryption instead Azure disk encryption for database disks; for example, Transparent Data Encryption, TDE, for Oracle or SQL server.
+- Use only database-native encryption instead Azure disk encryption for database disks; for example, Transparent Data Encryption, TDE, for Oracle or SQL Server.
 
 - The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk gives 7500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a Standard D8s_v3 that only supports 192 Mbps, it doesn’t help realize the P50 disk's throughput.

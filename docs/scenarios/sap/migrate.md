@@ -57,23 +57,23 @@ Several sizing considerations should be made prior to deploying an SAP platform.
 - High-availability/redundancy factors
 - Database high-availability factors
 
-Explore the [SAP on Azure Architecture Guide](/azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) to see examples of reference architectures and sizing considerations.
+Explore the [SAP on Azure Architecture Guide](/azure/architecture/reference-architectures/sap/sap-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) to see examples of reference architectures and sizing considerations.
 
 ## Migrate the platform
 
-The DBMS needs to be changed, or the internal format of the same DBMS system needs to change to the little endian format supported in the Intel world; for example, migrating from the IBM pSeries to Azure. The SAP workload's datapoints help to choose the appropriate migration approach: classical or an SAP Database Migration Option (DMO).
+The DBMS needs to be changed, or the internal format of the same DBMS system needs to change to the little endian format supported in the Intel world; for example, migrating from the IBM pSeries to Azure. The SAP workload's data points help to choose the appropriate migration approach: classical or an SAP Database Migration Option (DMO).
 
-**Classical migration:** The SAP Software Provisioning Manager is used specifically as a software logistics tool for database migrations. Classical migration uses a heterogenous system copy approach and is sometimes called a _two-step migration_. This approach is commonly used when the following observations surface in the migration plan:
+**Classical migration:** The SAP Software Provisioning Manager is used specifically as a software logistics tool for database migrations. Classical migration uses a heterogenous system copy approach and is sometimes called a *two-step migration*. This approach is commonly used when the following observations surface in the migration plan:
 
 - The operating systems (OS) and DBMS are compatible with Azure.
-- There aren't other requirements to upgrade/replatform the OS or DBMS systems.
+- There aren't other requirements to upgrade or replatform the OS or DBMS systems.
 
-**DMO:** DMO uses one tool to upgrade an SAP workload and a database migration to the SAP HANA database, and this process is often called a _one-step migration_. The SAP Software Update Manager, SUM, tool creates a shadow repository for current database while also creating a target database at the same time. It eventually copies the shadow repository and switches the SAP database connection to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
+**DMO:** DMO uses one tool to upgrade an SAP workload and a database migration to the SAP HANA database, and this process is often called a *one-step migration*. The SAP Software Update Manager tool creates a shadow repository for current database while also creating a target database at the same time. It eventually copies the shadow repository and switches the SAP database connection to the target database. This approach is commonly used when the follow data points are observed in the migration plan:
 
 - The current OS isn't supported in Azure, requiring an upgrade/replatform.
 - There is a plan to upgrade to SAP S/4HANA during migration.
 
-Explore the [Migrating an SAP platform to Azure](/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
+Explore [migrating an SAP platform to Azure](/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
 
 ## Migrate the workload
 
@@ -86,4 +86,4 @@ The following articles provide guidance for specific points throughout the cloud
 - [Innovate with SAP](./innovate.md)
 - [Manage SAP](./manage.md)
 
-Learn more about operating systems, DBMSs, and other [SAP software supported for Azure deployments](/azure/virtual-machines/workloads/sap/sap-supported-product-on-azure).
+Learn more about operating systems, database management systems, and other [SAP software supported for Azure deployments](/azure/virtual-machines/workloads/sap/sap-supported-product-on-azure).

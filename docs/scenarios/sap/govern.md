@@ -1,12 +1,13 @@
 ---
-title: "Govern SAP"
-description: Describe the scenario's impact on Governance
-author: BrianBlanchard
+title: Govern SAP
+description: Describe the scenario's impact on governance
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
+ms.custom: think-tank
 ---
 
 # Govern SAP
@@ -20,6 +21,7 @@ Are there specific corporate policies that should be in place prior to adopting 
 ## SAP disciplines
 
 Are there changes to how the governance team should approach the governance disciplines for this scenario?
+
 - Cost
 - Security baseline
 - Identity

@@ -1,7 +1,7 @@
 ---
-title: "Enterprise-scale management and monitoring for SAP on Azure"
+title: Enterprise-scale management and monitoring for SAP on Azure
 description: Learn about design considerations and recommendations for managing and monitoring SAP on Azure.
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 03/01/2021
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 This article explores how to operationally maintain an SAP on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform.
 
-### Design considerations
+**Design considerations:**
 
 Here are some design considerations for SAP on Azure monitoring and management:
 
@@ -24,7 +24,7 @@ Here are some design considerations for SAP on Azure monitoring and management:
 
 - Consider scheduling [AzAcSnap](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
 
-### Design recommendations
+**Design recommendations:**
 
 Here are some design recommendations for SAP on Azure monitoring and management:
 
@@ -36,17 +36,16 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 
 - Protect your HANA database with [Azure Backup](/azure/virtual-machines/workloads/sap/sap-hana-backup-guide) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots.
 
-- Create a monitoring platform using [SAPTELEMETRY](https://github.com/microsoft/SAPTELEMETRY) tools to provide business process insights.
+- Create a monitoring platform using [SAP telemetry tools](https://github.com/microsoft/saptelemetry) tools to provide business process insights.
 
 - Use Network Watcher [Connection Monitor](/azure/network-watcher/connection-monitor) to monitor SAP database and application server latency metrics, or collect and display network latency measurements with [Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
 
 - Use [Azure Site Recovery](/azure/site-recovery/monitoring-common-questions) monitoring to maintain disaster recovery service health for SAP application servers.
 
-- Optimize and manage SAP Basis operations by using [SAP Landscape Management (LaMa)](https://www.sap.com/products/landscape-management.html). Use the [SAP LaMa Azure Connector](/azure/virtual-machines/workloads/sap/lama-installation) to relocate, copy, clone, and refresh SAP systems.
+- Optimize and manage SAP Basis operations by using [SAP Landscape Management (LaMa)](https://www.sap.com/products/landscape-management.html). Use the [SAP LaMa connector for Azure](/azure/virtual-machines/workloads/sap/lama-installation) to relocate, copy, clone, and refresh SAP systems.
 
-- Perform [Quality Check for SAP HANA](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/QualityCheck) on the provisioned Azure infrastructure to verify that provisioned VMs comply with SAP HANA on Azure best practices.
+- Perform a [quality check for SAP HANA](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/QualityCheck) on the provisioned Azure infrastructure to verify that provisioned VMs comply with SAP HANA on Azure best practices.
 
-- For each Azure subscription, run an [Azure Availability Zone Latency Test](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/AvZone-Latency-Test) before zonal deployment to choose low-latency zones for SAP on Azure deployment.
+- For each Azure subscription, run an [Azure Availability Zone latency test](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/AvZone-Latency-Test) before zonal deployment to choose low-latency zones for SAP on Azure deployment.
 
 - Implement threat protection for SAP with [Azure Sentinel](/azure/sentinel/overview).
-
