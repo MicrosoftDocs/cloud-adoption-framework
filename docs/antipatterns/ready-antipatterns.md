@@ -68,11 +68,11 @@ Some companies try to make their internal IT department a cloud provider. IT the
 
 ### Example: Provide monolithic managed cloud services
 
-A corporation's IT department establishes a Cloud Center of Excellence (CCoE) that serves as a broker between IT and business units. To ensure the corporation is cloud-compliant, the managing board assigns the CCoE the task of providing monolithic end-to-end services. It sets up an internal cloud procurement portal that business units can use to order a fully managed cloud VM as a service. The business units don't get access to the cloud portal. They only get access through secure shell (SSH) and remote desktop protocol (RDP) to the server that they order.
+A corporation's IT department establishes a Cloud Center of Excellence (CCoE) that serves as a broker between IT and business units. To ensure the corporation is cloud-compliant, the managing board assigns the CCoE the task of providing monolithic end-to-end services. The CCoE sets up an internal cloud procurement portal that business units can use to order a fully managed cloud VM as a service. But, IT controls who can access and use the entire platform. As a result, IT actively prevents business units from taking advantage of the full range of services that Azure provides. Business units can't access the cloud portal. They only get access through secure shell (SSH) and remote desktop protocol (RDP) to the server that they order.
 
 For several reasons, the CCoE then has trouble providing a monolithic managed service to wrap each service that's available in the cloud:
 
-- The cloud offers a large number of services.
+- The cloud offers a large number of services across multiple solution areas. Compared with developing IaaS solutions, designing and engineering Internet of Things (IoT) and artificial intelligence (AI) solutions requires different expertise and skill sets.
 - Cloud services change frequently.
 - Trying to provide monolithic services increases the time to market substantially, with IT managing the process, not the business units.
 

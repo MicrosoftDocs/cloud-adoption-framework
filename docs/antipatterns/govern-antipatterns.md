@@ -20,7 +20,7 @@ When you adopt the cloud, it's not always clear where your responsibility ends a
 
 ### Example: Assume the cloud provider manages updates
 
-Members of a company's human resources (HR) department set up many Windows servers in the cloud using infrastructure as a service (IaaS). They assume that the cloud provider manages updates, because on-site IT usually handles update installation. Because Azure doesn't deploy and install the operating system updates, the HR department configures the updates separately. As a result, the servers are noncompliant and pose a security risk.
+Members of a company's human resources (HR) department set up many Windows servers in the cloud using infrastructure as a service (IaaS). They assume that the cloud provider manages updates, because on-site IT usually handles update installation. The HR department doesn't configure the updates because they're not aware that Azure doesn't deploy and install operating system updates by default. As a result, the servers are noncompliant and pose a security risk.
 
 ### Preferred outcome: Create a readiness plan
 
