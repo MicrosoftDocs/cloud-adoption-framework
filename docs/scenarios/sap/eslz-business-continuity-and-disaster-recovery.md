@@ -10,124 +10,122 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Business continuity and disaster recovery for an SAP enterprise-scale migration
+# Enterprise-scale business continuity and disaster recovery for an SAP migration
 
-Your organization or enterprise needs to design suitable platform-level capabilities that application workloads can consume to meet their specific requirements. SAP workloads typically run your most critical business processes and have requirements such as:
+Your organization or enterprise needs to design platform-level capabilities that help application workloads to meet their specific requirements. SAP applications running an organization's most critical business processes have the following requirements:
 
-- Service/business process availability.
-- In case of a failure or disaster scenario, recovery time objectives (RTO) for a failure case limited to a component of a SAP system and the case of a widespread failure scenario affecting a datacenter or a region of Azure.
-- Recovery point objectives (RPO) for a failure case limited to a component of a SAP system and the case of a widespread failure scenario affecting a datacenter or a region of Azure.
-- Often forgotten, but even more likely to be used, operational and life-cycle management tasks that can require technologies usually used to compensate for failure scenarios. These operations include guest OS patching, DBMS patching, cloning, or refreshing of SAP systems.
+- Service/business process availability
+
+- Recovery time objectives (RTOs) during failure or disaster scenarios; for example, a failure scenario limited to a component of an SAP system or a widespread failure impacting a datacenter or Azure region
+
+- Recovery point objectives (RPOs) for a failure scenario limited to a component of an SAP system or a widespread failure impacting a datacenter or an Azure region
+
+- Operational and lifecycle management tasks can require technology that fills in for failure scenarios. These management tasks include patching guest operating systems (OSs), patching database management systems (DBMSs), cloning, and refreshing SAP systems.
 
 ## Scenario and scope
 
-As you approach the BCDR scenarios that need to be covered by your architecture, we can state that most of the principles and tasks you have on-premise are applying in Azure as well. The main difference may be that there is more hardware capacity in Azure to compensate for a host failure in Azure than you might have at home. So even for the largest Azure VMs, those can be service healed by restarting them on another server. But other than that the same rules apply as on-premise. Systems that you deployed with automatic failover cluster configurations on-premise or on bare metal hardware should be deployed in Azure with such a functionality as well.
+Your architecture factors in many principles and tasks to address business continuity and disaster recovery (BCDR) scenarios on-premises, and these also apply in Azure. The main difference is that Azure might have more hardware capacity than your organization to compensate for a host failure. Even the largest Azure VMs can be service-healed by having them restart on another server. Aside from this, the same conditions apply as with on-premises. Systems that you deployed with automatic failover cluster configurations on-premises or on bare, metal hardware should also be deployed in Azure this way.
 
-As we go through this document, we work our way from top to the bottom by covering these aspects of BCDR:
+This article covers the following aspects of BCDR for an enterprise-scale SAP scenario:
 
-- Cross regional or regional disaster recovery
-- High availability within an Azure region
+- Cross-regional versus regional DR decision criteria
+- High availability (HA) within an Azure region
 - Backup/restore considerations
-- Selection of VM and storage components with best high availability
+- HA considerations
+- Compute and storage considerations
 
-### Cross regional or disaster recovery
-Azure has over 60 Azure regions as you can see in the [Azure Region Map](https://azure.microsoft.com/global-infrastructure/geographies/). Not all regions are running the same services. Looking at larger SAP software deployments, especially the ones using SAP HANA, you need to look for Azure regions that offer Azure [M-Series VMs](https://docs.microsoft.com/azure/virtual-machines/m-series) and/or [Mv2-Series VMs](https://docs.microsoft.com/azure/virtual-machines/mv2-series). Azure storage also has pairing between different regions that allow Azure storage to replicate a smaller subset of storage types to such another region. The mapping can be found [here](https://docs.microsoft.com/azure/best-practices-availability-paired-regions). The principle problem around the Azure region pairing for SAP workload is:
+### Cross-regional vs. DR decision criteria
 
-- In quite some cases, the pairs are not consistent with M/Mv2 VM services. Therefore we are observing many customers deploying their SAP systems **NOT** following our paired regions, but following service availability of the required VM families
-- The storage type that can be replicated between the region pairs is Azure standard storage that can't be used as storage for your databases, or based VHDs. So, you are restricted to e.g. having backups replicated between paired region that you use. For all the other data, you need to provide your own replications, which in the database space is usually native DBMS functionality, like SQL Server AlwaysOn, HANA System replication, etc. And for the SAP application layer, a mixture of Azure Site recovery, rsync/robocopy, or other third party software 
+The [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/) shows over 60 Azure regions, and not all of them run the same services. During larger SAP software deployments and especially the ones using SAP HANA, look for Azure regions that offer Azure [M-series](/azure/virtual-machines/m-series) and/or [Mv2-series](/azure/virtual-machines/mv2-series) VMs. Azure storage also pairs different regions to replicate a smaller subset of storage types to another region. An [overview of Azure paired regions](/azure/best-practices-availability-paired-regions) provides more information.
 
-As you defined the Azure regions, the second big design decision circles around the question whether you are going to deploy production systems into your primary region and non-production SAP systems into the 'DR region'. Or are you going with an architecture that puts all SAP systems into the primary region, so, that the DR region is only used for DR regions. Looking at the current SAP customer deployment pattern, one can state that most customers use both regions for SAP systems that are in operations. Customers that traditionally run complete copies of their production systems as business regression test systems, are usually planning for using the business regression test system of the specific SAP product line as DR target.
+The main challenges of pairing Azure regions for SAP workloads are:
 
-An important design criteria when using at least two Azure regions of which should be the disaster recovery region is that you need to have multiple ExpressRoute circuits connecting to Azure. The minimum should be one ExpressRoute circuit to the primary Azure region and the other ExpressRoute circuit should go to the disaster recovery region. Such an architecture should give you a second entry point into the Azure network in a different area or geography. So, that a catastrophe that impacts one Azure regions does not cut your connectivity into Azure.
+- The pairs aren't always consistent with M-/Mv2-series VM services. Many customers deploying their SAP systems aren't following Azure paired regions and are following the service availability of required VM families instead.
 
-Though not necessarily recommended, but used by quite a few customers, is an architecture that we call a combined HA/DR architecture. Such an architecture combines the high availability within an Azure region with disaster recovery within the same region. The underlying Azure construct used are [Azure Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview). the distance of different Availability Zones within one Azure region is by far not as large as the distance between two different Azure regions. Huge regional natural catastrophes could jeopardize such an architecture eventually. Reasons for customers choosing such an option can be: 
+- Azure Standard storage can be replicated between paired regions, but it can't store your databases or virtual hard disks. You're restricted to replicating backups only between paired region that you use. For all the other data, perform your own replications with native DBMS features like SQL Server AlwaysOn, SAP HANA system replication, and other services. Use a combination of Azure Site Recovery, 'rsync'/'robocopy', and other third-party software for the SAP application layer.
 
-- Compliance rules sufficient with such a configuration of smaller distance between production deployment and disaster recovery target
+After defining Azure regions, your organization's second design decision should consider whether you're going to deploy production systems into your primary region, nonproduction SAP systems into the DR region, or if you're using an architecture that groups all SAP systems into the primary region so that the DR region is only used for DR regions. The current SAP customer deployment pattern shows most customers using both regions for SAP systems that are operating. Customers that traditionally run complete copies of their production systems as business regression test systems typically plan to use the SAP product line's business regression test system as a DR target.
+
+Another important design factor for determining which of at least two Azure regions should be the DR region is if you have multiple Azure ExpressRoute circuits connecting to Azure. At least one ExpressRoute circuit should connect to the primary Azure region, and the other(s) should connect to the DR region. This type of architecture should connect you to the Azure network in a different geographic area and guard your connection if a catastrophe impactions another Azure region.
+
+Some customers use a combination HA/DR architecture, which groups HA and with DR within the same Azure region and isn't commonly recommended. [Azure Availability Zones](/azure/availability-zones/az-overview) support this architecture. Since the distance between Availability Zones within one Azure region isn't as large as the distance between two different Azure regions, a natural disaster could jeopardize this architecture in the region where it occurs. Customers choose this architecture because of:
+
+- Sufficient compliance from configurations that support smaller distances between production deployment and a DR target
 - Data sovereignty aspects
-- Geopolitical considerations  
+- Geopolitical factors
 
-Another aspect you need to consider choosing your DR region is e.g. RPO and RTO for for the specific case of failing over to the DR site. The further the distance between the production region and DR region, the larger the network latency. Though you would replicate asynchronously between different Azure regions, a smaller or larger network latency can have impact on the throughput you are able to replicate and with that on the RPO target. Using the 'combined' HA/DR architecture, you are often able to minimize your RPO. But at the costs of a higher risk to be affected by large scale natural disasters.
+Another factor that you should consider when choosing your DR region is the RPO and RTO for failing over to the DR site. The further the distance between the production and DR regions, the larger the network latency. Though you would replicate asynchronously between different Azure regions, a smaller or larger network latency can impact the throughput you're able to replicate and the RPO target. You can often minimize your RPO by using HA/DR architecture but with potential higher risk from large-scale, natural disasters.
 
- 
+### HA within an Azure region
 
-### High availability within an Azure region
-Thinking of high availability, you are mainly looking into providing availability for the single point of failures of SAP software that can be listed like:
+With HA, the focus is to provide availability for SAP software's single point of failure, such as with:
 
-- DBMS
-- Single point of failure in the application, like ASCS/SCS as with the SAP NetWeaver and S/4HANA architecture
-- Eventual other components, like Webdispatcher
+- DBMSs
+- Single points of failure in the application, like with ABAP SAP Central Service (ASCS)/SCS (for example, with SAP NetWeaver and S/4HANA architecture)
+- Other tools, like SAP Web Dispatcher
 
-In all those cases, the discussion of availability should not be restricted on the case of infrastructure or software failures, but need to include all the life-cycle management tasks that you need to perform, like patching the OS in the VMs. Patching of the DBMS or SAP software. Common technology used for protecting against larger unplanned service disruption can be used for minimizing the outages due to planned downtime and life-cycle management tasks
+For other scenarios, availability shouldn't be restricted to infrastructure or software failures and should include all necessary lifecycle management tasks, such as patching the OS in the VMs, the DBMS, or SAP software. To minimize outages that can happen during planned downtime and lifecycle management tasks, you can use common tools that protect against unplanned service disruptions.
 
-Common technologies that SAP and SAP supported DBMS provider support are automatic failover clusters. In the case of Windows, this is the Windows Failover Cluster Server functionality. In the case of Linux, this is Linux Pacemaker or third party products like SIOS Protection Suite for Linux or Veritas Infoscale. Keep in mind that only a subset of the scenarios you can deploy as high availability configurations in your own datacenter are supported in Azure as well. 
+SAP and SAP DBMSs support automatic failover clusters. The Windows Server Failover Clustering feature achieves this in Windows, whereas Linux Pacemaker or third-party tools like SIOS Protection Suite or Veritas InfoScale are for Linux. With Azure, you can only deploy a subset HA configurations in your own datacenter.
 
-What is supported, what is not supported? Check the articles [SAP workload on Azure virtual machine supported scenarios](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-planning-supported-configurations) and [Supported scenarios for HANA Large Instances](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-supported-scenario) for scenarios that are supported. 
+Explore [SAP workload on Azure VM-supported scenarios](/azure/virtual-machines/workloads/sap/sap-planning-supported-configurations) and [supported scenarios for SAP HANA Large Instances](/azure/virtual-machines/workloads/sap/hana-supported-scenario) to learn more about what Azure supports for SAP.
 
-For the DBMS layer the common architecture pattern is to use synchronous DBMS replication functionality in combination with different storage stacks the two VMs (primary/secondary) are using. Architectures where the primary and secondary VM are using a shared storage for the DBMS data and transaction/redo log is not supported on Azure. The guiding principle is always that there are two independent storage stacks, even if those are based on NFS shares. This is the biggest restriction compared to what is possible on-premise.
+For the DBMS layer, the common architecture pattern is to replicate DBMSs at the same time and with different storage stacks that the primary and secondary VMs are using. Azure doesn't support architectures where the primary and secondary VM share storage for DBMS data, nor does it support transaction/redo logs. The guiding principle is that there must two independent storage stacks, even if they're based on network file system (NFS) shares, and this is the main limitation when compared to what's possible with on-premises.
 
-As of the single point of failure of SAP, there are various possibilities. In opposite to the DBMS layer, the usage of a single NFS or SMB share is supported. For Windows in particular [Azure shared disk](https://docs.microsoft.com/azure/virtual-machines/disks-shared) can be used for a specific high availability scenario for SAP's ASCS/SCS components.
+Azure does present other options, as the service supports either NFS or server message block sharing. [Azure shared disk](https://docs.microsoft.com/azure/virtual-machines/disks-shared) can be used in Windows for ASCS/SCS components and specific HA scenarios. Failover clusters should be set up separately for SAP application layer components and the DMBS layer since Azure doesn't support HA architectures that combine SAP application layer components and the DBMS layer into one failover cluster.
 
-High availability architectures that include the integration of SAP application layer components and DBMS layer in a single failover cluster are not supported on Azure. The DBMS layer and SAP application layer components require different failover cluster setups.
+Most failover clusters for SAP application layer components and the DBMS layer require a virtual IP address for a failover cluster. One common exception is with Oracle Data Guard, whose functionality doesn't require a virtual IP address. [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) should handle the virtual IP address for all other  cases. As a design principle, use one Load Balancer per cluster configuration, and it's recommended to use the 'Standard' Load Balancer of the two different versions. To learn more, review [public endpoint connectivity for Virtual Machines using Azure Standard Load Balancer in SAP high-availability scenarios](/azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections).
 
-As you create failover clusters for SAP application layer components and DBMS layer, you are required to work with a virtual IP address for the cluster resources in most of the cases. One well known exception is the case of Oracle Data Guard, where Oracle functionality does not require a virtual IP address. In all other cases, the virtual IP address needs to be handled by an [Azure Load Balancer](https://docs.microsoft.com/azure/load-balancer/load-balancer-overview). As a design principle, we use one Load Balancer per cluster configuration. There are two different versions of the Azure Load Balancer. The one recommended to be used is the 'Standard' Load Balancer. Using the 'Standard' Load Balancer, you should make yourself familiar with the article [Public endpoint connectivity for Virtual Machines using Azure Standard Load Balancer in SAP high-availability scenarios](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections).
+Explore [high-availability architecture and scenarios for SAP NetWeaver](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios) for more information and possibilities.
 
-For details and possibilities, start with the document [High-availability architecture and scenarios for SAP NetWeaver](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios) 
+#### Azure availability sets vs. Availability Zones
 
-#### Availability sets or Azure Availability Zones
-Before you deploy your high availability infrastructure, you need, dependent on your chosen region, decide whether you want to deploy through an  [Azure availability set](https://docs.microsoft.com/azure/virtual-machines/availability) or Azure Availability Zone. The biggest differences is that deploying DVM through an availability set, the VMs will:
+Before you deploy your HA infrastructure and depending on the region you've chosen, decide if you want to deploy through an [Azure availability set](https://docs.microsoft.com/azure/virtual-machines/availability) or Availability Zone. The main differences of VMs deployed with an availability set are that:
 
-- The VMs deployed are not spread across different Availability Zones
-- The type of VMs that can be deployed through a single availability set are restricted since the type of host is defined with the first VM that is deployed in the set. As a result, you can't.e.g. have a M-series VM and an E-Series VM combined in one availability set
+- They aren't spread across different Availability Zones.
 
-Advantage of deploying your high availability architecture across different Availability Zones is that your SLA for the VMS might be slightly higher. For details, check [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines/). However, dependent on the Azure region, you might encounter different network latency conditions in network traffic between VMs. For details on SAP workload deployments across different Azure Availability Zones, read the article [SAP workload configurations with Azure Availability Zones](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
+- The type of VMs that can be deployed through a single availability set are restricted since the host is defined by the first VM deployed in the set. One example result is that you won't be able to combine M- and E-series VMs into one availability set.
 
-### Backup and restore
+One advantage of deploying your HA architecture across different Availability Zones is that your SLA for the VMs could be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines/). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. For details on SAP workload deployments across different Azure Availability Zones, read the article [SAP workload configurations with Azure Availability Zones](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
-Though backup and restore are mostly not considered an adequate high availability functionality for production SAP workload, it is a technology that covers various other areas. Besides the fact that most companies using SAP applications are under compliance regulations that require backups being stored for many years, there are other cases where having a backup and being able to restore from it are essential. The assumption is that you are having solid backup and restore practices established for your current deployment of SAP applications already. Means you:
+### Backup/restore considerations
 
-- Are able to perform a point-in-time recovery for your production databases at any point in time in a time frame that meets your RTO. Point-in-time recovery usually covers the case of operator errors deleting data either on the DBMS layer or through SAP incidentally
-- Have a store where you keep your long term backups to meet your compliance regulations
-- Have the ability to clone a SAP system by using database backups and restore those against another server/VM
-- Have the ability to use database backups to refresh non-production systems with data of production databases
-- Have the ability to either backup the disks of he SAP application servers/VMs or snapshot the VMs
+Though backup and restore aren't typically considered as adequate HA functionality for a production SAP workload, this technology covers various other areas. Most companies that use SAP applications need to follow compliance regulations that require backups to be stored for many years. There are also other conditions and scenarios where having a backup and being able to restore from it are essential. The assumption is that you're already establishing and following backup and restore best practices for deploying your SAP applications. This means that you can:
 
-As you have that all on-premise, you now need to see how you can get these capabilities for the SAP systems you have in Azure as well. One solution that for sure is not recommended is to pull your backups from Azure into your on-premise backup infrastructure. In the past customers found this too intrusive on the bandwidth consumption of their Expressroute circuits. Especially with very large databases.
+- Perform a point-in-time recovery for your production databases at any point and in a time frame that meets your RTO; point-in-time recovery typically includes operator errors deleting data either on the DBMS layer or through SAP, incidentally.
 
-If you are very satisfied with your current solution you have in place, check with your backup vendor whether they support deployment in Azure or whether they even have a SaaS solution established in Azure. If that is the case, test the solution for backup but also for restore times. Some of the solutions might show great backup times and throughput using Azure Blob storage. But might be significantly slower in reading from those Blobs and as a result have significant lower restore throughput. 
+- Maintain a store where you keep your long-term backups to meet compliance regulations.
 
-Azure itself has a Azure backup SaaS service as well, that has its strengths in taking VM snapshots and managing streaming backups of [SQL Server](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) and [SAP HANA](https://docs.microsoft.com/azure/backup/sap-hana-db-about). If you are using Azure NetApp Files storage for your SAP HANA databases, you have other possibilities to perform backups that are based on HANA consistent storage snapshots.
+- Use database backups to clone an SAP system and restore those against another server/VM.
 
-The recommendations and considerations factor in the following criteria. These recommendations and considerations might need to be reexamined if a scenario changes:
+- Use production database data from database backups to refresh nonproduction systems.
 
-- Compute: Virtual machines (VMs); not SAP HANA on Azure (Large Instances)
-- Storage: Premium SSD Managed Disks
-- VM SLA: 99.95 percent for deploying an availability set
-- SAP S/4HANA deployment: ABAP SAP Central Service (ASCS) cluster; HANA System Replication (HSR) cluster
-- Single security identifier (SID) deployment
-- Network file system (NFS): Azure NetApp Files for cluster-shared file systems
-- Operating system: Linux
-- HANA database memory size: 2 terabytes (TB)
-- RTO: 24 hours, RPO: 4 hours
-- Backup: Long-term retention required; a full backup must finish in eight hours.
-- Cost-optimization deployment: QA instance on DR region running the production instance
-- Reference architecture: [SAP S/4HANA in Linux on Azure](/azure/architecture/reference-architectures/sap/sap-s4hana)
+- Back up SAP application servers/VMs disks or VM snapshots.
 
-**Design considerations:**
+When you can do this on-premises, you need to bring these capabilities to SAP systems in Azure. One solution that isn't recommended is to pull your backups from Azure into your on-premises backup infrastructure. In the past, especially with large databases, customers found this option to intrude on how much bandwidth that their ExpressRoute circuits consumed.
+
+If you're satisfied with your current solution, check if your backup vendor supports Azure deployments or if they've set up a software as a service (SaaS) solution in Azure. If so, test the solution for backup and restore times. Some of the solutions might show fast backup times and throughput with Azure Blob Storage, but they might read from those Blobs slower, also slowing restore times.
+
+Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you're using [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) to store your SAP HANA databases, you can perform backups based on HANA-consistent storage snapshots.
+
+### HA considerations
+
+**Design considerations for HA:**
 
 Consider the following factors:
 
-- You SAP systems could have various components like ASCS, an SAP Web dispatcher or application, or database servers. Create a different availability set for Web dispatcher, SAP application servers, SCS, or HANA.
+- You SAP systems could have various components like ASCS, an SAP Web Dispatcher or application, or database servers. Create a different availability set for SAP Web Dispatcher, application servers, SCS, or HANA.
 
 > [!NOTE]
 > This document describes single-SID deployment, but Azure also supports multi-SID-cluster deployments. A maximum of five SAP SIDs can be deployed in a Linux cluster running in Azure.
 
-- When designing for high availability, protect all single points of failure and designs for resilience. You can use Linux Pacemaker clustering for the ASCS (central service) and database VMs.
+- When designing for HA, protect all single points of failure and designs for resilience. You can use Linux Pacemaker clustering for the ASCS (central service) and database VMs.
 
-- Keep the database and application layer on separate clusters. 
+- Keep the database and application layer on separate clusters.
 
 - Optimize Azure NetApp Files for shared storage file systems.
 
-**Design recommendations:**
+**Design recommendations for HA:**
 
 The following are best practices for your design:
 
@@ -144,7 +142,7 @@ The following are best practices for your design:
 
 - Two Azure NetApp Files accounts should be created  within two different regions and with at least a premium service level.
 
-- Azure NetApp Files Should be on a separate subnet; one  subnet per virtual network (VNet) is allowed.
+- Azure NetApp Files should be on a separate subnet; one subnet per virtual network (VNet) is allowed.
 
 - Use the same subscription ID across the same landscape; multiple subscriptions could be supported in the future.
 
@@ -160,7 +158,7 @@ The following are best practices for your design:
 
 - Use an Azure fence agent for Red Hat Enterprise Linux.  
 
-- For ASCS clusters, use Azure Site Recovery to replicate cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Pacemaker cluster on the DR site; for example, replace 'VIP', 'corosync.conf', etc.
+- For ASCS clusters, use Azure Site Recovery to replicate cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Pacemaker cluster on the DR site; for example, replace 'VIP', 'corosync.conf', and others.
 
 - Use Azure Site Recovery to replicate application servers to the DR site. Do not use Azure Site Recovery to replicate database servers.
 
@@ -174,19 +172,19 @@ The following are best practices for your design:
 
 - The load balancer configuration should be in front of dual web dispatchers and ASCS and database nodes.
 
-- Make sure that the Floating IP is enabled in the load balancer.
+- Make sure that the floating IP is enabled in the load balancer.
 
-- To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Azure NetApp Files paired regions are different than standard Azure paired regions.
+- To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Paired regions in Azure NetApp Files paired regions are different than standard Azure paired regions.
 
 - You can also use the 'rsync' utility to sync data from one region to another in Azure NetApp Files (one zone to another if using zonal deployment).
 
 - For resource metadata to be stored in the DR region, deploy the DR resources in a resource group assigned to the same Azure region where DR resources are created. This allows changes to Azure DR resources if the Azure production region is down.
 
-## Scalability for compute and storage in an SAP enterprise-scale scenario
+### Compute and storage considerations
 
 **Design considerations for compute:**
 
-![A diagram of Azure compute SKU options.](./media/bcdr-compute-options-2.png#lightbox)
+![A diagram of Azure compute SKU options.](./media/bcdr-compute-options-1.png#lightbox)
 
 _Figure 1: Azure compute SKU options._
 
@@ -196,7 +194,7 @@ Consider the following compute options:
 
 - Use the most current generation of SKUs where possible; for example, V3 or 4. Refer to SAP note [1928533](https://launchpad.support.sap.com/#/notes/1928533) for information about the certified D-series SKU for an SAP deployment.
 
-- Use the [E-series](/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-series](/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for AnyDB. E- and M-series SKUs are optimized for memory and provide a consistent CPU-to-memory ratio.
+- Use the [E-series](/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) or [M-series](/azure/virtual-machines/m-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) SKU for SAP third-party databases (AnyDBs). E- and M-series SKUs are optimized for memory and provide a consistent CPU-to-memory ratio.
 
 - Follow the design principle of scaling up and then out. From a cost perspective, scale-out deployments could cost less than a scale-up setup in some scenarios.
 
@@ -204,7 +202,7 @@ Consider the following compute options:
 
 - Use the E-series SKU for smaller and cost-conscious production and nonproduction deployments.
 
-- Use input/output operations per second (IOPS) and throughput limits of VM SKUs for SAP third-party database (AnyDB) production deployments.
+- Use input/output operations per second (IOPS) and VM SKU throughput limits for AnyDB production deployments.
 
 **Design recommendations for compute:**
 
@@ -212,7 +210,7 @@ Consider the following compute options:
 
 - Use an E-series SKU for AnyDB deployments. A database's performance increases with the size of its cache. The two main advantages of E-series SKUs over D-series are 1:8 memory mapping and constrained core options to help you save on database license costs without compromising input, output, and throughput limits.
 
-- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk generates 7,500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a Standard D8s_v3 that only supports 192 Mbps, it doesn’t help the P50 disk to achieve its throughput.
+- The combined IOPS/throughput of all disks attached to a VM should be less than or equal to the VM's IOPS and throughput limits. For example, the P50 disk generates 7,500 IOPS and a 250 megabits per second (Mbps) throughput. When this is attached to a Standard D8sv3 that only supports 192 Mbps, it doesn’t help the P50 disk to achieve its throughput.
 
 - Use an M-series SKU for a HANA production deployment. The M-series support 256 gigabytes to 12 TB of scaling up and 96 TB of scaling out. Visit the [SAP Hardware Directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/iaas.html#categories=Microsoft%20Azure) for setup support.
 
