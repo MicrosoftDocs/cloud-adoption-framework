@@ -202,7 +202,7 @@ items:
 
   - name: Enterprise-Scale Construction Set
     items:
-    - name: Overview
+    - name: Construction set for AKS enterprise-scale scenario
       href: enterprise-scale-landing-zone.md
     - name: Identity and Access Management
       href: eslz-identity-and-access-management.md
