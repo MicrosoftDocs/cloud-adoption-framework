@@ -11,21 +11,21 @@ ms.subservice: govern
 
 # Govern modern container solutions
 
-The [cloud adoption framework provides a governance methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend that standard governance approach to govern Kubernetes clusters that are deployed to Azure or other public/private clouds.
+The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Kubernetes clusters deployed to Azure or other public or private clouds.
 
 ## Initial governance foundation
 
-Governance starts with an [initial governance foundation often referred to as a governance MVP](../../govern/initial-foundation.md). That foundation deploys the basic Azure products required to deliver governance across your cloud environment.
+Governance starts with an [initial governance foundation often referred to as a governance MVP](../../govern/initial-foundation.md). This foundation deploys the basic Azure products required to deliver governance across your cloud environment.
 
 The initial governance foundation focuses on the following aspects of governance:
 
-- Basic hybrid network and connectivity
-- Azure Role-based access control (RBAC) for identity and access control
-- Naming and tagging standard for consistent identification of resources
-- Organization of resources using resource groups, subscriptions, and management groups
-- Azure Policy and Azure Blueprint to enforce governance policies
+- Basic hybrid network and connectivity.
+- Azure Role-based access control (RBAC) for identity and access control.
+- Naming and tagging standards for consistent identification of resources.
+- Organization of resources using resource groups, subscriptions, and management groups.
+- Azure Policy and Azure Blueprint to enforce governance policies.
 
-Each of these features of the initial governance foundation should be used to govern modern container solutions instances. But first, you will need to add a few key components to that initial foundation to apply [Azure Policy to your containers](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). Once enabled, you can use Azure Policy & your initial governance foundation to govern the following types of containers:
+Each of these features of the initial governance foundation can be used to govern modern container solutions instances. But first, you'll need to add a few components to the initial foundation to apply [Azure Policy to your containers](https://docs.microsoft.com/azure/governance/policy/concepts/policy-for-kubernetes?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). Once configured, you can use Azure Policy and your initial governance foundation to govern the following types of containers:
 
 - [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 - [Azure Arc enabled Kubernetes](/azure/azure-arc/kubernetes/overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
@@ -33,7 +33,7 @@ Each of these features of the initial governance foundation should be used to go
 
 ## Expand on governance disciplines
 
-The initial governance foundation can then be used to expand on various disciplines of governance to ensure consistent, stable deployment approaches across all of your Kubernetes instances.
+The initial governance foundation can be used to expand on various disciplines of governance to ensure consistent, stable deployment approaches across all of your Kubernetes instances.
 
 Governance of Kubernetes clusters can be looked at with _five_ distinct perspectives.
 
@@ -71,7 +71,7 @@ The fifth is around operations, such as node image freshness (patching) and Kube
 
 ### Security baseline
 
-The following best practices can help add to your initial security baseline, to account for security of your AKS clusters:
+The following best practices can be added to your security baseline, to account for security of your AKS clusters:
 
 - [Secure pods](/azure/aks/use-pod-security-on-azure-policy?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 - [Secure traffic between pods](/azure/aks/use-network-policies?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
@@ -79,7 +79,7 @@ The following best practices can help add to your initial security baseline, to 
 
 ### Identity
 
-There are also a number of best practices you can apply to your identity baseline to ensure consistent identity and access management across your kubernetes clusters:
+There are many best practices you can apply to your identity baseline to ensure consistent identity and access management across your Kubernetes clusters:
 
 - [Azure AD integration](/azure/aks/managed-aad?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
 - [RBAC and Azure AD integration](/azure/aks/azure-ad-rbac?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json)
@@ -88,6 +88,6 @@ There are also a number of best practices you can apply to your identity baselin
 
 ## Next step: Manage modern container solutions
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+The following articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Manage modern container solutions](./manage.md)

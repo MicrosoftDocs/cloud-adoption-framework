@@ -11,17 +11,17 @@ ms.subservice: ready
 
 # Azure Landing Zone review for modern containers
 
-The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure Landing Zones](../../ready/landing-zone/index.md). Azure Landing Zones provide a number of [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
+The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure Landing Zones](../../ready/landing-zone/index.md). Azure Landing Zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
-With Azure Landing Zones, you could start with a small implementation and expand over time. Alternatively, for more sophisticated environments, you could start with enterprise-scale implementation options. In either scenario, you will need to evaluate any landing zone that is to be used for modern container solutions.
+With Azure Landing Zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern container solutions no matter what implementation option you choose.
 
 ## Environmental considerations for orchestrated containers
 
-If you haven't already chosen an Azure Landing Zone implementation approach, review the [Azure Landing Zones](../../ready/landing-zone/index.md) article series. Then review how that landing zone option can best be aligned to a modern container scenario.
+If you haven't already selected an Azure Landing Zone implementation approach, review the [Azure Landing Zones](../../ready/landing-zone/index.md) article series. Then review how that landing zone option can best be aligned to a modern container scenario.
 
-**Start-small options:** Container orchestration via Azure Kubernetes Service (AKS) does require critical environmental configuration, as AKS is not a "self-contained" service, and relies heavily on bring-your-own virtual networks, ingress resources, and other Azure services. The [baseline architecture and reference implementation for an Azure Kubernetes Service (AKS) cluster for Azure Landing Zones](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) lists considerations regarding networking, compute, identity, security, BCDR, and operations. This is a foundational architecture that build out a single cluster, in a single region, adhering to best practices and provides networking observability both into and out of the cluster.
+**Start-small options:** Container orchestration via Azure Kubernetes Service (AKS) requires some environmental configuration. The [baseline architecture for an Azure Kubernetes Service (AKS) cluster for Azure Landing Zones](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) provides considerations about networking, compute, identity, security, BCDR, and operations.
 
-**Enterprise-scale options:** The enterprise-scale construction set for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. It's based on the baseline architecture found above but is tailored specifically to deploy into your enterprise-scale landing zone for AKS. Included in the construction set documentation is a series of implementation considerations and recommendations. If you use the start small options, you'll find the perspectives shared in this series valuable as you compare your current state to the enterprise-scale variation if you decide to move to the enterprise-scale landing zone approach.
+**Enterprise-scale options:** The enterprise-scale construction set for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. Included in the construction set documentation is a series of best practices that can be used to evaluate production readiness of any AKS environment. These considerations apply even if you select a start-small landing zone implementation. See the following articles to evaluate your AKS environment:
 
 - [Identity and Access Management](eslz-identity-and-access-management.md)
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
@@ -34,9 +34,9 @@ The primary deference between the two options above resides in how separation of
 
 ## Environmental considerations for non-orchestrated container solutions
 
-The following container services run as Platform as a service solutions, which require less environmental configuration. But the reduced configuration requirements result in reduced control over container orchestration and solutions specific configurations to integrate the workload into other assets, like VMs or other containers. These non-orchestrated solutions tend to lend themselves to a workload-biased operations strategy.
+The following container services run as platform as a service solutions, which require less environmental configuration. But the reduced configuration requirements result in reduced control over container orchestration and solutions specific configurations to integrate the workload into other assets, like VMs or other containers. These non-orchestrated solutions tend to lend themselves to a workload-biased operations strategy.
 
-Review the concepts and how-to guides in each of the product documentation links below to evaluate different types of environmental configurations for non-orchestrated container type:
+Review the concepts and how-to guides in each of the product documentation links below to evaluate different types of environmental configurations for non-orchestrated container types:
 
 - [App Service](/azure/app-service/)
 - [Azure Functions](/azure/azure-functions/functions-overview)
@@ -45,7 +45,7 @@ Review the concepts and how-to guides in each of the product documentation links
 
 ## Next step: Migrate workload to modern containers
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+The following list of articles will take you to guidance found at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Migrate workloads to modern containers](./migrate.md)
 - [Innovate using modern container solutions](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks-start-here?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)

@@ -11,46 +11,45 @@ ms.subservice: operate
 
 # Manage modern container solutions clusters
 
-The [cloud adoption framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense, along with best practices for establishing an operations management baseline & other specialized layers of operations. That guidance will likely still apply for organizations that have a mixture of Iaas, PaaS, and containerized workloads. This article outlines what you need to integrate into you existing operations to prepare for the management of containers and more specifically the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
+The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This guidance might still apply for organizations that have a mixture of infrastructure as a service (Iaas), platform as a service (PaaS), and containerized workloads. This article outlines what you need to integrate into your existing operations to prepare for container management. It also highlights the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
 
 ## Business alignment for operations management needs
 
-In [strategy](./strategy.md), you've decided if your clusters are going to be single-tenant (one workload owner per cluster) or multi-tenant (multiple workload owners, across multiple workloads per cluster). Operations on those two cluster topologies present themselves differently, and impact operations management practices significantly. Because the Kubernetes platform features are often highly leveraged in the workload for performance efficiency and security concerns, having multiple disperate workloads often leads to significant management challenges. Most clusters then trend toward single workload, single owner, specifically due to operations management concerns. For all but very basic lift-and-shift migrations, the cluster runtime and your workload are in a symbiotic relationship, both contributing to the health of your application. While containers abstract away dependencies on operating systems, that's exchanged for taking dependencies on the orchestrator.
+Containers remove dependencies on several layers of infrastructure, leading to improved operations management capabilities. To realize these operational improvements, you might have to revise your overall cloud management strategy, starting with the business alignment.
 
 To establish proper operations management practices, you must understand how containers will be used in your cloud adoption plans and what benefits you want to realize from this shift to containerized workloads.
 
-- Will you manage multiple technology solutions (containers, IaaS, and PaaS) in your cloud platform?
-- Will centralized teams support operations and management of the container or AKS platform? When and how does that accountability shift to the individual workload teams?
-- Will centralized teams support operations and management of the workloads running in each pod? When and how does that accountability shift to the individual workload teams?
-- How do workload teams reliably share metrics for cluster health calculations and conversely how does cluster health get factored into workload health metrics?
+- Will you manage multiple technology solutions, such as containers, IaaS, and PaaS, in your cloud platform?
+- Will centralized teams support operations and management of the container or AKS platform? Does this accountability shift to the individual workload teams?
+- Will centralized teams support operations and management of the workloads running in each container or pod? Does this accountability shift to the individual workload teams?
 - Are you using containers for mission-critical workloads?
 - Are you only using containers for less-critical or utility workloads to reduce costs?
 - How important is the performance and reliability of your individual workloads?
-- Are the applications in your containers stateless or do you need to persist state to protect and recover the workloads in the containers?
+- Are the applications in your containers state-less? Do you need to persist state to protect and recover the workloads in the containers?
 
-These basic questions will shape how to best integrate containers and AKS into you operations management strategy.
+These basic questions will shape how to best integrate containers and AKS into your operations management strategy.
 
 ## Operations baseline
 
-Implementation of an operations baseline will provide centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't already have an operations baseline for your non-container assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md) to get started with basic operations.
+Implementing an operations baseline provides centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't have an operations baseline for your non-containerized assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md).
 
 Your operations baseline should include tools and configurations to provide visibility, monitoring, operational compliance, optimization, and protection/recovery.
 
 ![Operations management baseline](../../_images/manage/management-baseline.png)
 
-The operations baseline outlined in the articles above will not provide support for your AKS platform or its workload(s). But it will provide the tooling foundation that can be extended to support containers, such as Azure Monitor, Azure Backup, and other tools.
+The operations baseline outlined in the articles above won't provide support for your containers or AKS platform. However, it will provide the tooling foundation that can be extended to support containers, such as Azure Monitor, Azure Backup, and other tools.
 
-If the majority of your portfolio in the cloud is hosted in containers, you may want to consider including the specialize platform operations in the next section into your operations baseline.
+If most of your portfolio in the cloud is hosted in containers, consider including the specialized platform operations in the next section into your operations baseline.
 
 ## Platform operations
 
-Unless this is your organization's first or only deployment to the cloud, you should have some form of operations baseline. This section will identify a few additional tools you may want to include to better manage container or AKS deployments.
+Unless this implementation is your organization's first or only deployment to the cloud, you should have an operations baseline. This section identifies a few tools you might want to include to help manage container or AKS deployment.
 
 ### Inventory and visibility
 
-Monitoring containers and AKS clusters uses the tools, dashboards, and alerts included in your operations baseline. But you may need to add a bit of additional configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for containers](/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). See the [overview of Azure Monitor for container operators](/azure/azure-monitor/insights/container-insights-enable-new-cluster?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
+Monitoring containers and AKS clusters use the tools, dashboards, and alerts included in your operations baseline. However, you might need to do more configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for Containers](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json). See the [overview of Azure Monitor for containers](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
 
-Once you've configured Azure monitor to collect data on your containers, you'll be able to monitor the following as part of your centralized management processes:
+Once you've configured Azure monitor to collect data on your containers, you can monitor the following areas as part of your centralized management processes:
 
 - Identify clusters running in various regions, ideally tied to a service tree entry and identify key facts on those clusters
   - Identify cluster node pool, networking, and storage topologies of those clusters
@@ -61,7 +60,7 @@ Once you've configured Azure monitor to collect data on your containers, you'll 
 - Configure alerts to proactively notify you or record when CPU and memory utilization on nodes or containers exceed your thresholds, or when a health state change occurs in the cluster at the infrastructure or nodes health rollup.
 - Use [queries](/azure/azure-monitor/insights/container-insights-log-search) to create a common set of alerts, dashboards, and detailed perform detailed analysis
 
-This data will also support workload operations teams by providing more detailed information on each workload running on the containerized platform:
+This data will also support workload operations teams by providing detailed information about the workloads running on the containerized platform:
 
 - Review the resource utilization of workloads running on the host that are unrelated to the standard processes that support the pod.
 - Integrate with [Prometheus](/azure/azure-monitor/insights/container-insights-prometheus-integration) to view application metrics.
