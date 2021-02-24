@@ -103,7 +103,7 @@ Though backup and restore aren't typically considered as adequate HA functionali
 
 When you can do this on-premises, you need to see how to bring these capabilities to SAP systems in Azure. One solution that isn't recommended is to pull your backups from Azure into your on-premises backup infrastructure. In the past and especially with large databases, customers found this option to intrude on the bandwidth consumption of their ExpressRoute circuits.
 
-If you're satisfied with your current solution, check if your backup vendor supports Azure deployments or if they've set up a software as a service (SaaS) solution in Azure. If so, test the solution for backup and restore times. Some of the solutions might show great backup times and throughput with Azure Blob Storage, but they might read from those Blobs slower, also slowing restore times.
+If you're satisfied with your current solution, check if your backup vendor supports Azure deployments or if they've set up a software as a service (SaaS) solution in Azure. If so, test the solution for backup and restore times. Some of the solutions might show fast backup times and throughput with Azure Blob Storage, but they might read from those Blobs slower, also slowing restore times.
 
 Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you're using [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) to store your SAP HANA databases, you can perform backups based on HANA-consistent storage snapshots.
 
