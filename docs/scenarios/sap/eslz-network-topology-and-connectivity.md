@@ -42,7 +42,7 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 **Design recommendations for SAP implementation:**
 
-The following recommendations are for when a virtual machine's (VM's) DNS or virtual name doesn't change during migration.
+The following recommendations are for when a virtual machine's DNS or virtual name doesn't change during migration.
 
 **Use case:**
 
@@ -87,7 +87,7 @@ This section recommends connectivity models for in- and outbound connectivity to
 
 **Design recommendations for SAP implementation:**
 
-- For customers with a global footprint, [Azure Front Door](/azure/frontdoor/front-door-overview) helps SAP deployments by using Azure Web Application Firewall policies to deliver and protect global HTTP/S applications (applications) across Azure regions.
+- For customers with a global footprint, [Azure Front Door](/azure/frontdoor/front-door-overview) helps SAP deployments by using Azure Web Application Firewall policies to deliver and protect global HTTP/S applications across Azure regions.
 
 - Take advantage of Web Application Firewall policies in Azure Front Door when you're using this service and Application Gateway to protect HTTP/S applications. Lock down Application Gateway to receive traffic only from Azure Front Door.
 
