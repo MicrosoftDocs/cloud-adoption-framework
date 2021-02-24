@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore DPIAs inexhaustive -->
-
 # Microsoft security guidance
 
 ## Tools
