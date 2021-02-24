@@ -78,7 +78,7 @@ Most failover clusters for SAP application layer components and the DBMS layer r
 
 Explore [high-availability architecture and scenarios for SAP NetWeaver](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios) for more information and possibilities.
 
-#### Availability sets or Azure Availability Zones
+#### Azure availability sets vs. Availability Zones
 
 Before you deploy your HA infrastructure and depending on the region you've chosen, decide if you want to deploy through an [Azure availability set](https://docs.microsoft.com/azure/virtual-machines/availability) or Availability Zone. The main differences of VMs deployed with an availability set are that:
 
@@ -98,11 +98,11 @@ Though backup and restore aren't typically considered as adequate HA functionali
 
 - Use database backups to clone an SAP system and restore those against another server/VM.
 
-- Use production databases data from database backups to refresh nonproduction systems.
+- Use production database data from database backups to refresh nonproduction systems.
 
 - Back up SAP application servers/VMs disks or VM snapshots.
 
-When you can do this on-premises, you need to see how to bring these capabilities to SAP systems in Azure. One solution that isn't recommended is to pull your backups from Azure into your on-premises backup infrastructure. In the past and especially with large databases, customers found this option to intrude on the bandwidth consumption of their ExpressRoute circuits.
+When you can do this on-premises, you need to bring these capabilities to SAP systems in Azure. One solution that isn't recommended is to pull your backups from Azure into your on-premises backup infrastructure. In the past, especially with large databases, customers found this option to intrude on how much bandwidth that their ExpressRoute circuits consumed.
 
 If you're satisfied with your current solution, check if your backup vendor supports Azure deployments or if they've set up a software as a service (SaaS) solution in Azure. If so, test the solution for backup and restore times. Some of the solutions might show fast backup times and throughput with Azure Blob Storage, but they might read from those Blobs slower, also slowing restore times.
 
