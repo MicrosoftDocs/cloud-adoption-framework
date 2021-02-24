@@ -26,13 +26,13 @@ Your organization or enterprise needs to design platform-level capabilities that
 
 Your architecture factors in many principles and tasks to address business continuity and disaster recovery (BCDR) scenarios on-premises, and these also apply in Azure. The main difference is that Azure might have more hardware capacity than your organization to compensate for a host failure. Even the largest Azure VMs can be service-healed by having them restart on another server. Aside from this, the same conditions apply as with on-premises. Systems that you deployed with automatic failover cluster configurations on-premises or on bare, metal hardware should also be deployed in Azure this way.
 
-This article covers the following aspects of BCDR:
+This article covers the following aspects of BCDR for an enterprise-scale SAP scenario:
 
 - Cross-regional versus regional DR decision criteria
 - High availability (HA) within an Azure region
 - Backup/restore considerations
-- HA considerations for an enterprise-scale SAP scenario
-- Compute and storage considerations for an enterprise-scale SAP scenario
+- HA considerations
+- Compute and storage considerations 
 
 ### Cross-regional vs. DR decision criteria
 
@@ -108,7 +108,7 @@ If you're satisfied with your current solution, check if your backup vendor supp
 
 Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you're using [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) to store your SAP HANA databases, you can perform backups based on HANA-consistent storage snapshots.
 
-### HA considerations for an enterprise-scale SAP scenario
+### HA considerations
 
 **Design considerations for HA:**
 
@@ -142,7 +142,7 @@ The following are best practices for your design:
 
 - Two Azure NetApp Files accounts should be created  within two different regions and with at least a premium service level.
 
-- Azure NetApp Files Should be on a separate subnet; one  subnet per virtual network (VNet) is allowed.
+- Azure NetApp Files should be on a separate subnet; one subnet per virtual network (VNet) is allowed.
 
 - Use the same subscription ID across the same landscape; multiple subscriptions could be supported in the future.
 
@@ -180,7 +180,7 @@ The following are best practices for your design:
 
 - For resource metadata to be stored in the DR region, deploy the DR resources in a resource group assigned to the same Azure region where DR resources are created. This allows changes to Azure DR resources if the Azure production region is down.
 
-### Compute and storage considerations for an enterprise-scale SAP scenario
+### Compute and storage considerations
 
 **Design considerations for compute:**
 
