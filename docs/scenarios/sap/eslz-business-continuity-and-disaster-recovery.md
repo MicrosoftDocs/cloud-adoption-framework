@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Enterprise-scale business continuity and disaster recovery for an SAP migration
 
-Your organization or enterprise needs to design platform-level capabilities that help application workloads to meet their specific requirements. The following requirements apply to SAP applications that run an organization's most critical business processes have the following requirements:
+Your organization or enterprise needs to design platform-level capabilities that help application workloads to meet their specific requirements. SAP applications running an organization's most critical business processes have the following requirements:
 
 - Service/business process availability
 
@@ -120,7 +120,7 @@ Consider the following factors:
 
 - When designing for HA, protect all single points of failure and designs for resilience. You can use Linux Pacemaker clustering for the ASCS (central service) and database VMs.
 
-- Keep the database and application layer on separate clusters. 
+- Keep the database and application layer on separate clusters.
 
 - Optimize Azure NetApp Files for shared storage file systems.
 
