@@ -157,7 +157,7 @@ The following are best practices for your design:
 
 - Use an Azure fence agent for Red Hat Enterprise Linux.  
 
-- For ASCS clusters, use Azure Site Recovery to replicate cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Pacemaker cluster on the DR site; for example, replace 'VIP', 'corosync.conf', etc.
+- For ASCS clusters, use Azure Site Recovery to replicate cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Pacemaker cluster on the DR site; for example, replace 'VIP', 'corosync.conf', and others.
 
 - Use Azure Site Recovery to replicate application servers to the DR site. Do not use Azure Site Recovery to replicate database servers.
 
@@ -171,7 +171,7 @@ The following are best practices for your design:
 
 - The load balancer configuration should be in front of dual web dispatchers and ASCS and database nodes.
 
-- Make sure that the Floating IP is enabled in the load balancer.
+- Make sure that the floating IP is enabled in the load balancer.
 
 - To take advantage of Azure NetApp Files features like cross-region replication (in public preview), use a paired Azure NetApp Files region. Azure NetApp Files paired regions are different than standard Azure paired regions.
 
