@@ -24,14 +24,14 @@ Some resources in Azure can be moved post creation, and there are different appr
 
 | Scope | Destination | Pros | Cons |
 |--|--|--|--|
-| Resources in resource groups | Can be moved to new resource group in same or different subscription  | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
-| Subscriptions in a tenant  | Can be moved to different management groups | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
+| Resources in resource groups | Can be moved to new resource group in same or different subscription | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
+| Subscriptions in a tenant | Can be moved to different management groups | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
 
 To understand which move strategy you should use, we will go through examples of both:
 
 ## Subscription move
 
-The common use cases for moving subscriptions are to organize subscriptions into management groups or when transfering subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer).
+The common use cases for moving subscriptions are to organize subscriptions into management groups or when transferring subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer).
 
 ### Azure RBAC requirements
 

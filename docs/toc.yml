@@ -5,37 +5,38 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-
   - name: About the Framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  - name: Get started
+  - name: Adoption Journeys
     items:
-    - name: Overview
-      href: get-started/index.md
-
-    - name: Foundational alignment
+    - name: Get Started
       items:
-      - name: Document foundational alignment decisions
-        href: get-started/cloud-concepts.md
-      - name: How does Azure work?
-        href: get-started/what-is-azure.md
-      - name: Azure fundamental concepts
-        href: ready/considerations/fundamental-concepts.md
-      - name: Portfolio hierarchy
-        href: reference/fundamental-concepts/hosting-hierarchy.md
-      - name: Azure hierarchy support
-        href: reference/fundamental-concepts/hierarchy-azure-tools.md
+      - name: Overview
+        href: get-started/index.md
 
-    - name: Accelerate adoption
-      items:
-      - name: Accelerate migration
-        href: get-started/migrate.md
-      - name: Build new products and services
-        href: get-started/innovate.md
-      - name: Unblock environment design and configuration
-        href: get-started/design-and-configuration.md
+      - name: Foundational alignment
+        items:
+        - name: Document foundational alignment decisions
+          href: get-started/cloud-concepts.md
+        - name: How does Azure work?
+          href: get-started/what-is-azure.md
+        - name: Azure fundamental concepts
+          href: ready/considerations/fundamental-concepts.md
+        - name: Portfolio hierarchy
+          href: reference/fundamental-concepts/hosting-hierarchy.md
+        - name: Azure hierarchy support
+          href: reference/fundamental-concepts/hierarchy-azure-tools.md
+
+      - name: Accelerate adoption
+        items:
+        - name: Accelerate migration
+          href: get-started/migrate.md
+        - name: Build new products and services
+          href: get-started/innovate.md
+        - name: Unblock environment design and configuration
+          href: get-started/design-and-configuration.md
 
     - name: Improve controls
       items:
@@ -64,6 +65,13 @@ items:
         href: get-started/team/cloud-governance.md
       - name: Build a cloud operations team
         href: get-started/team/cloud-operations.md
+
+    - name: Adoption scenarios
+      items:
+      - name: Hybrid and multicloud
+        href: scenarios/hybrid/index.md
+      - name: AKS adoption
+        href: scenarios/aks/index.md
 
   - name: Strategy
     items:
@@ -217,6 +225,8 @@ items:
         href: ready/landing-zone/index.md
       - name: Design areas
         href: ready/landing-zone/design-areas.md
+      - name: Choose a landing zone option
+        href: ready/landing-zone/choose-landing-zone-option.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
       - name: Start with enterprise scale
@@ -1495,6 +1505,8 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
+
+
       - name: Monitoring
         items:
         - name: Overview

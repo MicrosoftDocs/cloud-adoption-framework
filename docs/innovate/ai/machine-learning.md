@@ -18,7 +18,7 @@ Azure empowers you with the most advanced machine learning capabilities. Quickly
 
 You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray and RLlib.
 
-Get started with [Machine Learning](/azure/machine-learning/). You'll find a tutorial on how to get [started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
+Get started with [Machine Learning](/azure/machine-learning/). You'll find a tutorial on how to get [started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](https://www.onnxruntime.ai/).
 
 Common scenarios for machine learning solutions include:
 
@@ -31,10 +31,10 @@ Common scenarios for machine learning solutions include:
 
 ## Checklist
 
-- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter Notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
+- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
 
   - [Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml)
-  - [Create your first machine learning experiment with a Jupyter Notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
+  - [Create your first machine learning experiment with a Jupyter notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
   - [Visual drag-and-drop experiments](/azure/machine-learning/tutorial-designer-automobile-price-train-score)
   - [Use the AutoML UI](/azure/machine-learning/tutorial-first-experiment-automated-ml)
   - [Configure your dev environment](/azure/machine-learning/how-to-configure-environment)

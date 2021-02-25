@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness for cloud monitoring"
+title: Skills readiness for cloud monitoring
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
 ms.author: brblanch
@@ -24,7 +24,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy diagnostic settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](/powershell/azure/?view=azps-3.6.1). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
+- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli), which is our cross-platform command-line experience for managing Azure resources. Also review the introduction to [Azure PowerShell](/powershell/azure/). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
 
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
@@ -79,11 +79,11 @@ Various learning options beyond these initial options are available for developi
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and partners offer a variety of options for all audiences to develop their skills with Azure services:
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
+- [Map roles and skills](../../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-Turn your knowledge of Azure into official recognition with [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
 ## Azure DevOps and project management
 
@@ -111,4 +111,4 @@ Review the following to understand the updates made to the most popular ITSM fra
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.

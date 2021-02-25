@@ -1,5 +1,5 @@
 ---
-title: "Mainframe migration overview"
+title: Mainframe migration overview
 description: Migrate mainframe workloads, applications, and databases to Azure, for a proven, highly available, scalable infrastructure without many of the drawbacks of mainframes.
 author: njray
 ms.author: brblanch
@@ -18,7 +18,7 @@ ms.custom: think-tank
 
 Many companies and organizations benefit from moving some or all their mainframe workloads, applications, and databases to the cloud. Azure provides mainframe-like features at cloud scale without many of the drawbacks associated with mainframes.
 
-The term _mainframe_ generally refers to a large computer system, but the vast majority currently of mainframes deployed are IBM System z servers or IBM plug-compatible systems running MVS, DOS, VSE, OS/390, or z/OS. Mainframe systems continue to be used in many industries to run vital information systems, and they have a place in highly specific scenarios, such as large, high-volume, transaction-intensive IT environments.
+The term *mainframe* generally refers to a large computer system, but the vast majority currently of mainframes deployed are IBM System z servers or IBM plug-compatible systems running MVS, DOS, VSE, OS/390, or z/OS. Mainframe systems continue to be used in many industries to run vital information systems, and they have a place in highly specific scenarios, such as large, high-volume, transaction-intensive IT environments.
 
 Migrating to the cloud enables companies to modernize their infrastructure. With cloud services you can make mainframe applications, and the value that they provide, available as a workload whenever your organization needs it. Many workloads can be transferred to Azure with only minor code changes, such as updating the names of databases. You can migrate more complex workloads using a phased approach.
 
@@ -46,7 +46,7 @@ A typical IBM mainframe architecture includes these common components:
 
 - **Code:** Programming languages used by mainframes include COBOL, Fortran, PL/I, and Natural. Job control language (JCL) is used to work with z/OS.
 
-- **Database tier:** A common relational database management system (DBMS) for z/OS is IBM DB2. It manages data structures called _dbspaces_ that contain one or more tables and are assigned to storage pools of physical data sets called _dbextents_. Two important database components are the directory that identifies data locations in the storage pools, and the log that contains a record of operations performed on the database. Various flat-file data formats are supported. DB2 for z/OS typically uses Virtual Storage Access Method (VSAM) datasets to store the data.
+- **Database tier:** A common relational database management system (DBMS) for z/OS is IBM DB2. It manages data structures called *dbspaces* that contain one or more tables and are assigned to storage pools of physical data sets called *dbextents*. Two important database components are the directory that identifies data locations in the storage pools, and the log that contains a record of operations performed on the database. Various flat-file data formats are supported. DB2 for z/OS typically uses Virtual Storage Access Method (VSAM) datasets to store the data.
 
 - **Management tier:** IBM mainframes include scheduling software such as TWS-OPC, tools for print and output management such as CA-SAR and SPOOL, and a source control system for code. Secure access control for z/OS is handled by resource access control facility (RACF). A database manager provides access to data in the database and runs in its own partition in a z/OS environment.
 

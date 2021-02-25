@@ -41,7 +41,7 @@ In the first stage of ambient experience, the user moves away from the computer.
 
 When customers are mobile and change locations frequently, that may represent the most relevant form of ambient experience for a particular solution. Over the past decade, innovation has frequently been triggered by the integration of existing solutions with a mobile experience.
 
-Azure App Service is a great example of this approach. During early iterations, the [web app feature of Azure App Service](/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Service](/azure/app-service-mobile) can extend the web app to run in a variety of mobile platforms.
+Azure App Service is a great example of this approach. During early iterations, the [web app feature of Azure App Service](/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Service](/previous-versions/azure/app-service-mobile/) can extend the web app to run in a variety of mobile platforms.
 
 ## Mixed reality
 
@@ -64,9 +64,9 @@ This experience is ideal when some form of device is consistently within the sam
 
 Examples of integrated reality in Azure could include:
 
-- [Azure Internet of Things (IoT) solutions](/azure/iot-fundamentals): A collection of services in Azure that each aid in managing devices and the flow of data from those devices into the cloud and back out to end users.
-- [Azure Sphere](/azure-sphere): A combination of hardware and software that provides an intrinsically secure way to enable an existing device to securely transmit data between the device and Azure IoT solutions.
-- [Azure Kinect DK](/azure/kinect-dk), AI sensors with advanced computer vision and speech models. These sensors can collect visual and audio data from the immediate surroundings and feed those inputs into your solution.
+- [Azure Internet of Things (IoT) solutions](/azure/iot-fundamentals/): A collection of services in Azure that each aid in managing devices and the flow of data from those devices into the cloud and back out to end users.
+- [Azure Sphere](/azure-sphere/): A combination of hardware and software that provides an intrinsically secure way to enable an existing device to securely transmit data between the device and Azure IoT solutions.
+- [Azure Kinect DK](/azure/kinect-dk/), AI sensors with advanced computer vision and speech models. These sensors can collect visual and audio data from the immediate surroundings and feed those inputs into your solution.
 
 You can use all three of these tools to collect data from the natural surroundings and at the point of customer need. From there, your solution can respond to those data inputs to solve the need, sometimes before the customer is even aware that a trigger for that need has occurred.
 
@@ -78,11 +78,11 @@ Virtual assistants and smart speakers offer great examples of adjusted reality. 
 
 Factory floors around the world provide additional examples of adjusted reality. During early stages of integrated reality, sensors on devices detected conditions like overheating, and then alerted a human being through an application. In adjusted reality, the customer might still be involved, but the feedback loop is tighter. On an adjusted reality factory floor, one device might detect overheating in a vital machine somewhere along the assembly line. Somewhere else on the floor, a second device then slows production slightly to allow the machine to cool and then resume full pace when the condition is resolved. In this situation, the customer is a second-hand participant. The customer uses your application to set the rules and understand how those rules have affected production, but they're not necessary to the feedback loop.
 
-The Azure services described in [Azure Internet of Things (IoT) solutions](/azure/iot-fundamentals), [Azure Sphere](/azure-sphere), and [Azure Kinect DK](/azure/kinect-dk) can all be components of an adjusted reality solution. Your original application and business logic would then serve as the intermediary between the environmental input and the change that should be made in the physical environment.
+The Azure services described in [Azure Internet of Things (IoT) solutions](/azure/iot-fundamentals/), [Azure Sphere](/azure-sphere/), and [Azure Kinect DK](/azure/kinect-dk/) can all be components of an adjusted reality solution. Your original application and business logic would then serve as the intermediary between the environmental input and the change that should be made in the physical environment.
 
 A digital twin is another example of adjusted reality. This term refers to a digital representation of a physical device, presented through computer, mobile, or mixed-reality formats. Unlike less sophisticated 3D models, a digital twin reflects data collected from an actual device in the physical environment. This solution allows the user to interact with the digital representation in ways that could never be done in the real world. In this approach, physical devices adjust a mixed reality environment. However, the solution still gathers data from an integrated reality solution and uses that data to shape the reality of the customer's current surroundings.
 
-In Azure, digital twins are created and accessed through a service called [Azure Digital Twins](/azure/digital-twins/about-digital-twins).
+In Azure, digital twins are created and accessed through a service called [Azure Digital Twins](/azure/digital-twins/overview).
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
-title: Azure Landing Zone design areas
-description: Evaluate a set of standard considerations which are used to define all Azure Landing Zones.
+title: Azure landing zone design areas
+description: Evaluate a set of standard considerations which are used to define all Azure landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -12,9 +12,9 @@ ms.custom: internal
 
 <!-- TODO: Refactor terms: "design area", "well-architected" -->
 
-# Azure Landing Zone design areas
+# Azure landing zone design areas
 
-Each Azure Landing Zone implementation option provides a deployment approach and defined design principles. Before choosing an implementation option, use this article to gain an understanding of the design areas listed in the following table.
+Each Azure landing zone implementation option provides a deployment approach and defined design principles. Before choosing an implementation option, use this article to gain an understanding of the design areas listed in the following table.
 
 > [!NOTE]
 > These design areas describe what you should consider prior to deploying a landing zone. Use it as a simple reference. See the [landing zone implementation options](./implementation-options.md) for design principles and actionable steps for deployment.
@@ -23,7 +23,7 @@ Each Azure Landing Zone implementation option provides a deployment approach and
 
 Regardless of the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends.
 
-| Design areas | Objective  | Relevant methodologies |
+| Design areas | Objective | Relevant methodologies |
 |---|---|---|
 | Enterprise enrollment | For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step. | Ready |
 | Identity | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |

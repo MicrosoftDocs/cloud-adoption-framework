@@ -1,5 +1,5 @@
 ---
-title: "Evaluate workload readiness"
+title: Evaluate workload readiness
 description: Understand what it takes to evaluate the readiness of a workload to migrate to the cloud. You'll learn how to validate all assets and associated dependencies.
 author: BrianBlanchard
 ms.author: brblanch
@@ -30,8 +30,8 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 ## Common database evaluation activities
 
 - Document the recovery point objectives (RPOs) and recovery time objectives (RTOs) of the current database deployment. These are used during [architecture activities](./architect.md) to aid in decision-making.
-- Document any requirements for high-availability configuration. For assistance understanding SQL Server requirements, see the [SQL Server high availability solutions guide](/sql/sql-server/failover-clusters/high-availability-solutions-sql-server).
-- Evaluate PaaS compatibility. The [Azure data migration guide](https://datamigration.microsoft.com) maps on-premises databases to compatible Azure PaaS solutions, like [Azure Cosmos DB](/azure/cosmos-db), [Azure SQL Database](/azure/sql-database) [Azure Database for MySQL](/azure/mysql), [Azure Database for PostgreSQL](/azure/postgresql), or [Azure Database for MariaDB](/azure/mariadb).
+- Document any requirements for high-availability configuration. For assistance understanding SQL Server requirements, see the [SQL Server high availability solutions guide](/sql/database-engine/sql-server-business-continuity-dr).
+- Evaluate PaaS compatibility. The [Azure data migration guide](https://datamigration.microsoft.com) maps on-premises databases to compatible Azure PaaS solutions, like [Azure Cosmos DB](/azure/cosmos-db/), [Azure SQL Database](/azure/azure-sql/) [Azure Database for MySQL](/azure/mysql/), [Azure Database for PostgreSQL](/azure/postgresql/), or [Azure Database for MariaDB](/azure/mariadb/).
 - When PaaS compatibility is an option without the need for any remediation, consult the team responsible for [architecture activities](./architect.md). PaaS migrations can produce significant time savings and reductions in the total cost of ownership (TCO) of most cloud solutions.
 - When PaaS compatibility is an option but remediation is required, consult the teams responsible for [architecture activities](./architect.md) and [remediation activities](../migrate/remediate.md). In many scenarios, the advantages of PaaS migrations for database solutions can outweigh the increase in remediation time.
 - Document the size and rate of change for each database to be migrated.

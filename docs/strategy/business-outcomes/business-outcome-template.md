@@ -25,7 +25,6 @@ In this template, business outcomes focus on three topics:
 - Mapping outcomes to specific solutions and technical capability.
 
 ![Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities](../../_images/strategy/business-outcome-house.png)
-
 *Figure 1: Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities.*
 
 The business outcome template focuses on simplified conversations that can quickly engage stakeholders without getting too deep into the technical solution. By rapidly understanding and aligning the key performance indicators (KPIs) and business drivers that are important to stakeholders, your team can think about high-level approaches and transformations before diving into the implementation details.
@@ -33,7 +32,6 @@ The business outcome template focuses on simplified conversations that can quick
 An example can be found on the "example outcome" tab of the spreadsheet, as shown below. To track multiple outcomes, add them to the "collective outcomes" tab.
 
 ![Example of a business outcome template](../../_images/strategy/business-outcome-template.png)
-
 *Figure 2: Example of a business outcome template.*
 
 ## Why is this template relevant?
@@ -41,7 +39,6 @@ An example can be found on the "example outcome" tab of the spreadsheet, as show
 Discovery is a fundamental tenet of enterprise architecture. If discovery is limited to technical discovery, the solution is likely to miss many opportunities to improve the business. Enterprise architects, solution architects, and other technically minded leaders can master the discovery process by using this template. In effective discovery processes, these leaders consider five key aspects of the business outcome before leading a transformation journey, as shown in the following image:
 
 ![Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities](../../_images/strategy/business-outcome-focus-areas.png)
-
 *Figure 3: Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities.*
 
 **Stakeholders:** Who in the organization is likely to see the greatest value in a specific business outcome? Who is most likely to support this transformation, especially when things get tough or time consuming? Who has the greatest stake in the success of this transformation? This person is a potential stakeholder.
