@@ -70,7 +70,7 @@ items:
       items:
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
-      - name: AKS adoption
+      - name: Modern containers
         href: scenarios/aks/index.md
 
   - name: Strategy
