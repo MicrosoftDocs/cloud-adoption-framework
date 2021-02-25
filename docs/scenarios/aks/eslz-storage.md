@@ -30,6 +30,6 @@ The following are proven practices for your design:
 
 - If stateful workloads are considered, prepare the dynamic storage Azure disks or Azure Files.
 - If multipod needs to write-read in same storage, support Azure Files or third-party as Azure NetApp Files.
-- In most cases, it is recommended to use Premium SSD storage.
+- In most cases, premium SSD storage is recommended.
 - Use node pools for different workloads requiring different storage and performance characteristics.
 - Create storage classes.

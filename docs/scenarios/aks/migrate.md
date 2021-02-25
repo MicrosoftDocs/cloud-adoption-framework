@@ -15,9 +15,9 @@ Most modern container options require a rearchitecture or redeployment of the ap
 
 There's a clear and growing trend of migrating existing workloads from on-premises datacenters to a Kubernetes cluster in Azure. This approach has the potential of reducing the post-migration infrastructure footprint. More importantly, migrating to containers allows for greater portability in the portfolio, allowing workloads to be more easily moved between public and private cloud. This trend is most commonly experienced when organizations have a large collection of web applications.
 
-## One migrate approach
+## One Migrate approach
 
-You can migrate to Azure Kubernetes Service (AKS) to accelerate containers in the cloud, as a part of the [Cloud Adoption Framework's one migrate scenario](../index.md). Typically, migration to Azure uses Azure Migrate and partner tools to assess workloads, migrate workloads, and release workloads to the cloud. You can apply this three-step process to AKS migration, however, you might need a few other tools to help with the migration steps.
+You can migrate to Azure Kubernetes Service (AKS) to accelerate containers in the cloud, as a part of the [Cloud Adoption Framework's One Migrate scenario](../index.md). Typically, migration to Azure uses Azure Migrate and partner tools to assess workloads, migrate workloads, and release workloads to the cloud. You can apply this three-step process to AKS migration, however, you might need a few other tools to help with the migration steps.
 
 ### Assess workloads
 
@@ -35,16 +35,16 @@ All migrations (even downtime migrations), may need to modify the existing appli
 
 Currently, you'll need to use one of several open-source tools to complete the replication of your container and workloads to Azure:
 
-If you're coming from an existing Kubernetes platform (AKS engine, acs, or another Kubernetes implementation), you might consider using some open-source tooling to help with the migration. In these cases you've already got a workload that functions in Kubernetes, and rehosting in AKS is usually much simpler. Validate all capabilities exist in AKS before performing any migration.
+If you're coming from an existing Kubernetes platform (AKS Engine, ACS, or another Kubernetes implementation), you might consider using some open-source tooling to help with the migration. In these cases you've already got a workload that functions in Kubernetes, and rehosting in AKS is usually much simpler. Validate all capabilities exist in AKS before performing any migration.
 
 - [Velero](https://velero.io)
 - [Azure kube CLI extension](https://github.com/yaron2/azure-kube-cli)
 - [Reshifter](https://github.com/mhausenblas/reshifter)
-- Migrating from [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) to AKS
+- Migrating from [AKS Engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) to AKS
 - Migrating from [Azure container service (acs)](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/) to AKS
 - Moving existing resources to a different region
 
-When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it may not be within the supported range and require upgrading versions to be supported by AKS. For more information, see [AKS supported Kubernetes versions](/azure/aks/supported-kubernetes-versions). Where possible, always try to migrate to the same version of Kubernetes. That means either do an inplace upgrade in the existing system or plan a post-migration upgrade -- based on your priorities.
+When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it may not be within the supported range and require upgrading versions to be supported by AKS. For more information, see [AKS supported Kubernetes versions](/azure/aks/supported-kubernetes-versions). Where possible, always try to migrate to the same version of Kubernetes. That means either do an in-place upgrade in the existing system or plan a post-migration upgrade -- based on your priorities.
 
 ## Next step: Innovate using modern container solutions
 

@@ -14,7 +14,7 @@ items:
   - name: Migrate to modern containers
     href: migrate.md
   - name: Innovate with modern containers
-    href: /azure/architecture/reference-architectures/containers/aks-start-here?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    href: /azure/architecture/reference-architectures/containers/aks-start-here?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
   - name: Govern your portfolio
     href: govern.md
   - name: Manage your portfolio
@@ -23,78 +23,78 @@ items:
   - name: Well-Architected hybrid workloads
     items:
     - name: Best Practices for application developers
-      href: /azure/aks/developer-best-practices-resource-management?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Best Practices for pod security
-      href: /azure/aks/developer-best-practices-pod-security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/aks/developer-best-practices-pod-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
   - name: Architectures
     items:
     - name: AKS Baseline Cluster
-      href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Microservices architecture on AKS
-      href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices.yml?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Microservices with AKS and Azure DevOps
-      href: /azure/architecture/solution-ideas/articles/microservices-with-aks.yml?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/solution-ideas/articles/microservices-with-aks.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Secure DevOps for AKS
-      href: /azure/architecture/solution-ideas/articles/secure-devops-for-kubernetes.yml?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/solution-ideas/articles/secure-devops-for-kubernetes.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Building a telehealth system
-      href: /azure/architecture/example-scenario/apps/telehealth-system.yml?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/example-scenario/apps/telehealth-system.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: CI/CD pipeline for container-based workloads
-      href: /azure/architecture/example-scenario/apps/devops-with-aks.yml?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/example-scenario/apps/devops-with-aks.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
   - name: Best Practices
     items:
     - name: Overview
-      href: /azure/architecture/browse/hybrid_index?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
     - name: Multi-tenancy
       items:
       - name: cluster isolation
-        href: /azure/aks/operator-best-practices-cluster-isolation.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-cluster-isolation.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: basic scheduler features
-        href: /azure/aks/operator-best-practices-scheduler.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-scheduler.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: advanced scheduler features
-        href: /azure/aks/operator-best-practices-advanced-scheduler.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-advanced-scheduler.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: authentication and authorization
-        href: /azure/aks/operator-best-practices-identity.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-identity.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Security
       items:
       - name: cluster security and upgrades
-        href: /azure/aks/operator-best-practices-cluster-security.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-cluster-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: container image management and security
-        href: /azure/aks/operator-best-practices-container-image-management.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-container-image-management.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: pod security
-        href: /azure/aks/developer-best-practices-pod-security.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/developer-best-practices-pod-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Network and storage
       items:
       - name: network connectivity
-        href: /azure/aks/operator-best-practices-network.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-network.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: storage and backups
-        href: /azure/aks/operator-best-practices-storage.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-storage.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: BCDR
       items:
       - name: business continuity and disaster recovery
-        href: /azure/aks/operator-best-practices-multi-region.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/operator-best-practices-multi-region.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: AKS day-2 operations guide
       items:
         - name: Introduction
-          href: /azure/architecture/operator-guides/aks/day-2-operations-guide.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/architecture/operator-guides/aks/day-2-operations-guide.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Triage practices
           items:
             - name: Overview
-              href: /azure/architecture/operator-guides/aks/aks-triage-practices.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/operator-guides/aks/aks-triage-practices.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: 1- Cluster health
-              href: /azure/architecture/operator-guides/aks/aks-triage-cluster-health.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/operator-guides/aks/aks-triage-cluster-health.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: 2- Node and pod health
-              href: /azure/architecture/operator-guides/aks/aks-triage-node-health.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/operator-guides/aks/aks-triage-node-health.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: 3- Workload deployments
-              href: /azure/architecture/operator-guides/aks/aks-triage-deployment.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/operator-guides/aks/aks-triage-deployment.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: 4- Admission controllers
-              href: /azure/architecture/operator-guides/aks/aks-triage-controllers.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/operator-guides/aks/aks-triage-controllers.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: 5- Container registry connectivity
-              href: /azure/architecture/operator-guides/aks/aks-triage-container-registry.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/operator-guides/aks/aks-triage-container-registry.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Patching and upgrade guidance
-          href: /azure/architecture/operator-guides/aks/aks-upgrade-practices.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/architecture/operator-guides/aks/aks-upgrade-practices.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Common issues
-          href: /azure/aks/troubleshooting?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/troubleshooting?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           maintainContext: true
 
     - name: Migration
@@ -220,169 +220,169 @@ items:
   - name: Azure Container products
     items:
     - name: Container product decision tree
-      href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Kubernetes Service (AKS)
       items:
       - name: Overview
-        href: /azure/aks/intro-kubernetes?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Deploy an AKS Cluster in the Azure portal
-        href: /azure/aks/kubernetes-walkthrough-portal?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/kubernetes-walkthrough-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Deploy an AKS Cluster with an ARM template
-        href: /azure/aks/kubernetes-walkthrough-portal?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/kubernetes-walkthrough-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Develop with Helm
-        href: /azure/aks/quickstart-helm?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/aks/quickstart-helm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Package & Migrate a workload
         items:
         - name: 1 - Prepare application for AKS
-          href: /azure/aks/tutorial-kubernetes-prepare-app.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-prepare-app.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: 2 - Create container registry
-          href: /azure/aks/tutorial-kubernetes-prepare-acr.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-prepare-acr.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: 3 - Create Kubernetes cluster
-          href: /azure/aks/tutorial-kubernetes-deploy-cluster.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-deploy-cluster.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: 4 - Run application
-          href: /azure/aks/tutorial-kubernetes-deploy-application.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-deploy-application.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: 5 - Scale application
-          href: /azure/aks/tutorial-kubernetes-scale.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-scale.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: 6 - Update application
-          href: /azure/aks/tutorial-kubernetes-app-update.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-app-update.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: 7 - Upgrade cluster
-          href: /azure/aks/tutorial-kubernetes-upgrade-cluster.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/aks/tutorial-kubernetes-upgrade-cluster.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Develop with Kubernetes
       items:
       - name: Overview
-        href: /visualstudio/containers/overview-local-process-kubernetes?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /visualstudio/containers/overview-local-process-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Bridge to Kubernetes
-        href: /visualstudio/containers/bridge-to-kubernetes.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /visualstudio/containers/bridge-to-kubernetes.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: How Bridge to Kubernetes works
-        href: /visualstudio/containers/overview-bridge-to-kubernetes.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /visualstudio/containers/overview-bridge-to-kubernetes.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Configure Bridge to Kubernetes
-        href: /visualstudio/containers/configure-bridge-to-kubernetes.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /visualstudio/containers/configure-bridge-to-kubernetes.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: App Service
       items:
       - name: Overview
-        href: /azure/app-service/overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: ASP.NET Core
-        href: /azure/app-service/quickstart-dotnetcore.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-dotnetcore.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: ASP.NET
-        href: /azure/app-service/quickstart-dotnet-framework.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-dotnet-framework.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Node.js
-        href: /azure/app-service/quickstart-nodejs.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-nodejs.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: PHP
-        href: /azure/app-service/quickstart-php.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-php.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Java
-        href: /azure/app-service/quickstart-java.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-java.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Python
-        href: /azure/app-service/quickstart-python.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-python.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Ruby
-        href: /azure/app-service/quickstart-ruby.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-ruby.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Static HTML site
-        href: /azure/app-service/quickstart-html.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-html.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: ARM template
         displayName: Resource Manager
-        href: /azure/app-service/quickstart-arm-template.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-arm-template.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Custom container
-        href: /azure/app-service/quickstart-custom-container.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-custom-container.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Multi-container app
-        href: /azure/app-service/quickstart-multi-container.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/app-service/quickstart-multi-container.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Container Instances
       items:
         - name: Overview
-          href: /azure/container-instances/container-instances-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/container-instances-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: About Azure Container Instances
-          href: /azure/container-instances/container-instances-overview.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/container-instances-overview.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Deploy a container instance - CLI
-          href: /azure/container-instances/container-instances-quickstart.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/container-instances-quickstart.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Deploy a container instance - Portal
-          href: /azure/container-instances/container-instances-quickstart-portal.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/container-instances-quickstart-portal.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Deploy a container instance - PowerShell
-          href: /azure/container-instances/container-instances-quickstart-powershell.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/container-instances-quickstart-powershell.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Deploy a container instance - ARM template
           displayName: Resource Manager
-          href: /azure/container-instances/container-instances-quickstart-template.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/container-instances-quickstart-template.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Deploy a container instance - Docker CLI
-          href: /azure/container-instances/quickstart-docker-cli.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/container-instances/quickstart-docker-cli.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Batch
       items:
       - name: Overview
-        href: /azure/batch/batch-technical-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/batch/batch-technical-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Run a Batch job - CLI
-        href: /azure/batch/quick-create-cli.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/batch/quick-create-cli.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Run a Batch job - Portal
-        href: /azure/batch/quick-create-portal.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/batch/quick-create-portal.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Run a Batch job - .NET
-        href: /azure/batch/quick-run-dotnet.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/batch/quick-run-dotnet.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Run a Batch job - Python
-        href: /azure/batch/quick-run-python.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/batch/quick-run-python.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create a Batch account - ARM template
-        href: /azure/batch/quick-create-template.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/batch/quick-create-template.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Service Fabric
       items:
       - name: Azure Service Fabric
-        href: /azure/service-fabric/service-fabric-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/service-fabric-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Service Fabric managed clusters
-        href: /azure/service-fabric/overview-managed-cluster.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/overview-managed-cluster.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: ARM template
         displayName: Resource Manager
-        href: /azure/service-fabric/quickstart-cluster-template.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/quickstart-cluster-template.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Managed cluster
-        href: /azure/service-fabric/quickstart-managed-cluster-template.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/quickstart-managed-cluster-template.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create .NET application
-        href: /azure/service-fabric/service-fabric-quickstart-dotnet.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/service-fabric-quickstart-dotnet.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Deploy a Linux container application
-        href: /azure/service-fabric/service-fabric-quickstart-containers-linux.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/service-fabric-quickstart-containers-linux.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Deploy a Windows container application
-        href: /azure/service-fabric/service-fabric-quickstart-containers.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/service-fabric-quickstart-containers.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Deploy a Spring Boot application
-        href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Deploy a Reliable Services application
-        href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Container Registry
       items:
       - name: Overview
-        href: /azure/container-registry-intro.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-intro.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create container registry - CLI
-        href: /azure/container-registry-get-started-azure-cli.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-get-started-azure-cli.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create container registry - Portal
-        href: /azure/container-registry-get-started-portal.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-get-started-portal.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create container registry - PowerShell
-        href: /azure/container-registry-get-started-powershell.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-get-started-powershell.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create container registry - ARM template
         displayName: Resource Manager
-        href: /azure/container-registry-get-started-geo-replication-template.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-get-started-geo-replication-template.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Send events to Event Grid - CLI
-        href: /azure/container-registry-event-grid-quickstart.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-event-grid-quickstart.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Build and push Java images - CLI
-        href: /azure/container-registry-java-quickstart.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/container-registry-java-quickstart.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Red Hat OpenShift
       items:
       - name: Azure Red Hat OpenShift
-        href: /azure/openshift/intro-openshift?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/openshift/intro-openshift?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create an ARO cluster
-        href: /azure/openshift/tutorial-create-cluster.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/openshift/tutorial-create-cluster.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Connect to an ARO cluster
-        href: /azure/openshift/tutorial-connect-cluster.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/openshift/tutorial-connect-cluster.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Delete an ARO cluster
-        href: /azure/openshift/tutorial-delete-cluster.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/openshift/tutorial-delete-cluster.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Functions
       items:
       - name: Azure Functions
-        href: /azure/azure-functions/functions-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Create your first function in Visual Studio Code with 
         items:
         - name: C#
-          href: /azure/azure-functions/create-first-function-vs-code-csharp.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-functions/create-first-function-vs-code-csharp.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Java
-          href: /azure/azure-functions/create-first-function-vs-code-java.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-functions/create-first-function-vs-code-java.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: JavaScript
-          href: /azure/azure-functions/create-first-function-vs-code-node.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-functions/create-first-function-vs-code-node.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: PowerShell
-          href: /azure/azure-functions/create-first-function-vs-code-powershell.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-functions/create-first-function-vs-code-powershell.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Python
-          href: /azure/azure-functions/create-first-function-vs-code-python.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-functions/create-first-function-vs-code-python.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: TypeScript
-          href: /azure/azure-functions/create-first-function-vs-code-typescript.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-        - name: Other (Go/Rust?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-          href: /azure/azure-functions/create-first-function-vs-code-other.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-functions/create-first-function-vs-code-typescript.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Other (Go/Rust?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          href: /azure/azure-functions/create-first-function-vs-code-other.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
   - name: Learn modules
     items:

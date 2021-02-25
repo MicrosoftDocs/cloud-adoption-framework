@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
+<!-- docutune:ignore "public container registry" -->
+
 # Govern modern container solutions
 
 The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Kubernetes clusters deployed to Azure or other public or private clouds.
@@ -29,7 +31,7 @@ Each of these features of the initial governance foundation can be used to gover
 
 - [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Azure Arc enabled Kubernetes](/azure/azure-arc/kubernetes/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [AKS engine](https://github.com/Azure/aks-engine/blob/master/docs/README.md)
+- [AKS Engine](https://github.com/Azure/aks-engine/blob/master/docs/README.md)
 
 ## Expand on governance disciplines
 
@@ -51,7 +53,7 @@ Azure Policy applied at management group/subscription level can help deliver a l
 
 Since Kubernetes is itself a platform, the second is the governance of what happens within a cluster. This would include things like namespace guidance, network policies, Kubernetes RBAC, limits, and quotas. This would be governance applied to the workloads, less to the cluster. Every workload is going to be unique, since they all solve different business problems and will be implemented in various ways with various technologies. There might not be many "one size fits all" governance practices, but you should consider governance around OCI artifact creation/consumption, supply chain requirements, public container registry usage, image quarantining process, deployment pipeline governance.
 
-Consider standardizing around common tooling and patterns as well, if practicable to do. Put forth recommendations on things like Helm, service mesh, ingress controllers, GitOps operators, persistent volumes, and so on. Included in here would also be governance around the usage of pod managed identity and sourcing secrets from Key Vault.
+Consider standardizing around common tooling and patterns as well, if practicable to do. Put forth recommendations on technologies like Helm, service mesh, ingress controllers, GitOps operators, persistent volumes, and so on. Included in here would also be governance around the usage of pod managed identity and sourcing secrets from Key Vault.
 
 Drive strong expectations around access to telemetry, to ensure workload owners have appropriate access to the metrics and data they need to improve their product, while also ensuring cluster operators have access to system telemetric to improve their service offering. Data often needs to be cross correlated between the two, ensure governance policies are in place to ensure appropriate access when necessary.
 

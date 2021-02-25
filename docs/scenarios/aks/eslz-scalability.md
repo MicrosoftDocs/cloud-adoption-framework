@@ -15,7 +15,7 @@ ms.subservice: migrate
 
 AKS can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding additional node pools with special capabilities like GPU, or application needs, in this case you have a number of factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
 
-The most common scalability options for AKS are the cluster autoscaler (automatically adding/removing nodes based on CPU and memory utilization) or the hpa (horizontal pod autoscaler) for your applications to scale-in and out based on CPU and memory utilization as well as more advanced metrics.
+The most common scalability options for AKS are the cluster autoscaler (automatically adding/removing nodes based on CPU and memory utilization) or the HPA (horizontal pod autoscaler) for your applications to scale-in and out based on CPU and memory utilization as well as more advanced metrics.
 
 ## Design considerations
 
@@ -45,9 +45,9 @@ Follow these best practices for your design:
 - Use [cluster autoscaler](/azure/aks/cluster-autoscaler) and [scale-to-zero](/azure/aks/scale-cluster#scale-user-node-pools-to-0) for predictable scalability using VM-based worker nodes.
 - Enable [cluster autoscaler](/azure/aks/cluster-autoscaler) to meet application demands.
   - You can enable autoscale for your [multiple node pools](/azure/aks/cluster-autoscaler#use-the-cluster-autoscaler-with-multiple-node-pools-enabled).
-- Enable [horizontal pod autoscaler (hpa)](/azure/aks/concepts-scale#horizontal-pod-autoscaler) to mitigate the busy hours of your application.
+- Enable [horizontal pod autoscaler (HPA)](/azure/aks/concepts-scale#horizontal-pod-autoscaler) to mitigate the busy hours of your application.
   - All your containers and pods must have resource requests and limits defined.
-  - Hpa automatically scales the number of pods based on observed resource limits CPU/memory or custom metrics.
+  - HPA automatically scales the number of pods based on observed resource limits CPU/memory or custom metrics.
 - Enable [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview) and live monitoring to monitor the cluster and workload utilization.
 - Use multiple node pools when your applications have different resource requirements.
   - Remember you can [specify a VM size for a node pool](/azure/aks/use-multiple-node-pools#specify-a-vm-size-for-a-node-pool).

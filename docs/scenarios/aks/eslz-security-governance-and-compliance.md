@@ -124,11 +124,11 @@ Cost governance is the continuous process of implementing policies to control co
 
 This section shows how to use [Kubecost](https://kubecost.com/) to govern AKS cluster cost. You can scope cost allocation to a deployment, service, label, pod, or namespace, which provides flexibility in charging back or showing cluster users.
 
-### Install kubecost
+### Install Kubecost
 
-There are several kubecost installation options. For more information, see [Installing kubecost](https://docs.kubecost.com/install).
+There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install).
 
-To install kubecost directly, use the following commands:
+To install Kubecost directly, use the following commands:
 
 ```bash
 
@@ -141,14 +141,14 @@ kubectl create namespace kubecost
 kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-chart/master/kubecost.yaml --namespace kubecost
 ```
 
-To install kubecost by using helm 2, use the following commands:
+To install Kubecost by using Helm 2, use the following commands:
 
 ```bash
 helm repo add kubecost https://kubecost.github.io/cost-analyzer/
 helm install kubecost/cost-analyzer --namespace kubecost --name kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
 ```
 
-To install kubecost by using helm 3, use the following commands:
+To install Kubecost by using Helm 3, use the following commands:
 
 ```bash
 kubectl create namespace kubecost
@@ -156,7 +156,7 @@ helm repo add kubecost https://kubecost.github.io/cost-analyzer/
 helm install kubecost kubecost/cost-analyzer --namespace kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
 ```
 
-After a few minutes, check to make sure that kubecost is up and running:
+After a few minutes, check to make sure that Kubecost is up and running:
 
 ```bash
 kubectl get pods -n kubecost
@@ -166,9 +166,9 @@ kubectl get pods -n kubecost
 kubectl port-forward -n kubecost svc/kubecost-cost-analyzer 9090:9090
 ```
 
-You can now open your browser and point to `http://127.0.0.1:9090` to open the kubecost UI. In the kubecost UI, select your cluster to view cost allocation information.
+You can now open your browser and point to `http://127.0.0.1:9090` to open the Kubecost UI. In the Kubecost UI, select your cluster to view cost allocation information.
 
-### Navigate kubecost
+### Navigate Kubecost
 
 Kubecost breaks down resources into the following categories:
 
@@ -189,17 +189,17 @@ Select **Savings** on the left to dig into cost savings for underutilized resour
 
 :::image type="content" source="./media/kubecost-savings.png" alt-text="Screenshot showing the Kubecost Savings screen.":::
 
-Take some time to navigate around the different views and features that kubecost provides.
+Take some time to navigate around the different views and features that Kubecost provides.
 
 ## Design considerations
 
-AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual N    etwork, which require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
+AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual Network, which require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
 Here are some other design considerations for AKS security governance and compliance:
 
 - Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
 
-- Evaluate using the built-in [Apparmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems.
+- Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems.
 
 - Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
 
@@ -211,7 +211,7 @@ Here are some other design considerations for AKS security governance and compli
 
 - [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
 
-- Use [Pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for secrets store csi driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) to protect secrets, certificates, and connection strings.
+- Use [Pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) to protect secrets, certificates, and connection strings.
 
 - Make sure to [rotate certificates](/azure/aks/certificate-rotation) regularly, like every 90 days.
 
