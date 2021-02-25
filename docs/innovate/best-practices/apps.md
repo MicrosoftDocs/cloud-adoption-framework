@@ -1,5 +1,5 @@
 ---
-title: Innovation tools to engage via applications 
+title: Innovation tools to engage via applications
 description: Find out about Azure tools to accelerate development of applications that align to the Innovate methodology of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Tools to engage via applications in Azure
 
-Build cloud-native apps to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. Cloud-native apps are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
+Build cloud-native applications to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. Cloud-native applications are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
 
 As described in [Engage via applications](../considerations/apps.md), applications can be an important aspect of a minimal viable product (MVP) solution. Applications are often required for testing a hypothesis. This article helps you learn the tools Azure provides to accelerate development of those applications.
 

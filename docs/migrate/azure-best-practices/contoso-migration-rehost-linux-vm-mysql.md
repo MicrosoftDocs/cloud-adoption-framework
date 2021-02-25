@@ -1,6 +1,6 @@
 ---
 title: Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
-description: Learn how Contoso rehosts an on-premises Linux app by migrating it to Azure VMs and Azure Database for MySQL.
+description: Learn how Contoso rehosts an on-premises Linux application by migrating it to Azure VMs and Azure Database for MySQL.
 author: givenscj
 ms.author: abuck
 ms.date: 07/01/2020
@@ -14,9 +14,9 @@ ms.custom: think-tank
 
 # Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
 
-This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application and migrates it from on-premises to Azure by using Azure Virtual Machines (VMs) and Azure Database for MySQL.
+This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application and migrates it from on-premises to Azure by using Azure Virtual Machines (VMs) and Azure Database for MySQL.
 
-The service desk application used in this example, osTicket, is provided as open source. If you want to use it for your own testing, you can download it from [GitHub](https://github.com/osTicket/osTicket).
+The service desk application used in this example, osTicket, is provided as open-source software. If you want to use it for your own testing, you can download it from [GitHub](https://github.com/osTicket/osTicket).
 
 ## Business drivers
 
@@ -336,7 +336,7 @@ Contoso admins migrate the database by using backup and restore with MySQL tools
 
 1. Install MySQL Workbench for Windows by following the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html).
 
-1. In MySQL Workbench, create a MySQL connection to OSTICKETMYSQL.
+1. In MySQL Workbench, create a MySQL connection to `OSTICKETMYSQL`.
 
     ![Screenshot that shows the Connection tab.](./media/contoso-migration-rehost-linux-vm-mysql/workbench1.png)
 
@@ -424,4 +424,4 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 - After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure](./contoso-migration-infrastructure.md#set-up-tagging) deployment.
 - There are no licensing issues for the Contoso Ubuntu servers.
-- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
+- Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.

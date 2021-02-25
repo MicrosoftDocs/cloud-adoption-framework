@@ -23,7 +23,7 @@ Each Azure landing zone implementation option provides a deployment approach and
 
 Regardless of the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends.
 
-| Design areas | Objective  | Relevant methodologies |
+| Design areas | Objective | Relevant methodologies |
 |---|---|---|
 | Enterprise enrollment | For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step. | Ready |
 | Identity | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |

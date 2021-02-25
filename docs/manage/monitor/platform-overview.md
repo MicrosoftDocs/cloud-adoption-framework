@@ -23,7 +23,7 @@ This article provides a high-level overview of our monitoring platforms to help 
 
 ## The story of System Center Operations Manager
 
-In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a reengineered version of the product, System Center Operations Manager. It moved beyond simple Windows Server monitoring and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
+In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a reengineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of Windows Server instances and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
 
 ## The story of Azure Monitor
 
@@ -104,7 +104,7 @@ Because these monitoring settings are isolated from each other and work from the
 
 #### Data sources
 
-Azure Monitor collects data from a variety of sources, including Azure infrastructure and platform resources, agents on Windows and Linux computers, and monitoring data collected in Azure storage. Any REST client can write log data to Azure Monitor by using an API, and you can define custom metrics for your web applications. Some metric data can be routed to different locations, depending on its usage. For example, you might use the data for "as-fast-as-possible" alerting or for long-term trend analysis searches in conjunction with other log data.
+Azure Monitor collects data from a variety of sources, including Azure infrastructure and platform resources, agents on Windows and Linux computers, and monitoring data collected in Azure Storage. Any REST client can write log data to Azure Monitor by using an API, and you can define custom metrics for your web applications. Some metric data can be routed to different locations, depending on its usage. For example, you might use the data for "as-fast-as-possible" alerting or for long-term trend analysis searches in conjunction with other log data.
 
 #### Monitoring solutions and insights
 

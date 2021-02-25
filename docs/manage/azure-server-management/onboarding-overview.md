@@ -1,5 +1,5 @@
 ---
-title: "Onboard Azure server management services"
+title: Onboard Azure server management services
 description: Onboard Azure server management services with information for virtual machines in Azure and on-premises servers.
 author: BrianBlanchard
 ms.author: brblanch

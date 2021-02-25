@@ -34,7 +34,7 @@ This table outlines a few common processes, tools, and potential effects common 
 | Service catalog | Managed applications center | Providing a self-service catalog of approved solutions that meet organizational standards | Platform operations |
 | Container performance | Azure Monitor for containers | Monitoring and diagnostics of containers | Platform operations |
 | Platform as a service (PaaS) data performance | Azure SQL Analytics | Monitoring and diagnostics for PaaS databases | Platform operations |
-| Infrastructure as a service (IaaS) data performance | SQL Server health check | Monitoring and diagnostics for IaaS databases | Platform operations |
+| Infrastructure as a service (IaaS) data performance | SQL Server Health Check | Monitoring and diagnostics for IaaS databases | Platform operations |
 
 ## High-level process
 
@@ -156,6 +156,6 @@ Platform specialization and platform operations both depend on strong feedback l
 
 Containers and SQL Server are the two most common centrally managed platforms. These articles can help you get started with continuous-improvement data collection on those platforms:
 
-- [Container performance](/azure/azure-monitor/insights/container-insights-overview)
+- [Container performance](/azure/azure-monitor/containers/container-insights-overview)
 - [PaaS database performance](/azure/azure-monitor/insights/azure-sql)
 - [IaaS database performance](/azure/azure-monitor/insights/sql-assessment)

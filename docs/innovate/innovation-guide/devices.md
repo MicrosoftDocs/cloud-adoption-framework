@@ -1,6 +1,6 @@
 ---
-title: "Ubiquitous Computing and Device Management"
-description: Learn about ubiquitous computing and Azure’s framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
+title: Ubiquitous computing and device management
+description: Learn about ubiquitous computing and Azure's framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
 author: umarmohamedusman
 ms.author: brblanch
 ms.date: 01/27/2021
@@ -18,14 +18,14 @@ keywords: Connected devices, ubiquitous computing, device management, edge devic
 
 Innovate through intermittently connected devices and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
 
-Ubiquitous computing is the processing of information that connects devices and processors to have constant availability, so that computing and processing is made to appear anytime and everywhere needed, using any connected device or perceptive edge device. Examples of ubiquitous computing include any system that sends information to another system to complete a task seamlessly, like a fitness watch that alerts that there is an incoming call from a cell phone and allows completion of the call through the watch, or systems that “learn and adjust” such as a thermostat or smart speakers.
+Ubiquitous computing is the processing of information that connects devices and processors to have constant availability, so that computing and processing is made to appear anytime and everywhere needed, using any connected device or perceptive edge device. Examples of ubiquitous computing include any system that sends information to another system to complete a task seamlessly, like a fitness watch that alerts that there is an incoming call from a cell phone and allows completion of the call through the watch, or systems that learn and adjust such as a thermostat or smart speakers.
 
 Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data (close to their users, the data, or both), with complete device management. Users get real-time insights and experiences, delivered by highly responsive and contextually aware applications. By moving parts of the workload to the edge, these connected devices can spend less time sending messages to the cloud and react more quickly to spatial events.
 
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - [Microsoft HoloLens 2](/hololens)
+> - [Microsoft HoloLens 2](/hololens/)
 > - [Azure Sphere](/azure-sphere/product-overview/what-is-azure-sphere)
 > - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
@@ -47,8 +47,8 @@ Here are a few features you'll find:
 
 ### Learn more
 
-- [Azure IoT Hub](/azure/iot-hub)
-- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
+- [Azure IoT Hub](/azure/iot-hub/)
+- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps/)
 
 ::: zone-end
 
@@ -98,7 +98,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ### Learn more
 
-- [Azure Digital Twins](/azure/digital-twins/about-digital-twins)
+- [Azure Digital Twins](/azure/digital-twins/overview)
 
 ::: zone-end
 
@@ -135,7 +135,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ### Learn more
 
-- [Azure Maps](/azure/azure-maps)
+- [Azure Maps](/azure/azure-maps/)
 
 ::: zone-end
 
