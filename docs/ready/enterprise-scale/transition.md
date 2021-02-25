@@ -1,7 +1,7 @@
 ---
 title: Transitioning existing Azure environments to enterprise-scale
 description: Onboard existing environments to an enterprise-scale architecture
-author: BrianBlanchard
+author: JefferyMitchell
 ms.author: brblanch
 ms.date: 10/15/2020
 ms.topic: conceptual
@@ -20,7 +20,7 @@ This article helps organizations to navigate the right path based on an existing
 
 ## Moving resources in Azure
 
-Some resources in Azure can be moved post creation, and there are different approaches organizations can take subject to users Azure RBAC permissions at – and across scopes. The following table outlines which resources can be moved, at which scope, and the pros/cons associated with each.
+Some resources in Azure can be moved post creation, and there are different approaches organizations can take subject to users Azure RBAC permissions at - and across scopes. The following table outlines which resources can be moved, at which scope, and the pros/cons associated with each.
 
 | Scope | Destination | Pros | Cons |
 |--|--|--|--|
@@ -49,11 +49,11 @@ Once subscriptions are moved to a management group with existing Azure RBAC and 
 
 - Any Azure RBAC that is inherited to the moved subscriptions can take up to 30 minutes before the user tokens in the management group cache are refreshed. To expedite this process, you can refresh the token by signing out and in or request a new token.
 - Any policy where the assignment scope includes the moved subscriptions, will perform audit operations only on the existing resources. More specifically:
-  - Any existing resource in the subscription subject to **deployIfNotExists** policy effect will appear as noncompliant and will not be remediated automatically but requires user interaction to perform the remediation manually.
-  - Any existing resource in the subscription subject to **deny** policy effect will appear as noncompliant and will not be rejected. User must manually mitigate this result as appropriate.
-  - Any existing resource in the subscription subject to **append** and **modify** policy effect will appear as noncompliant and requires user interaction to mitigate.
-  - Any existing resource in the subscription subject to **audit** and **auditIfNotExist** will appear as noncompliant and requires user interaction to mitigate.
-- All new writes to resources in the moved subscription will be subject to the assigned policies at real-time as normal.
+  - Any existing resource in the subscription subject to a `DeployIfNotExists` policy effect will appear as noncompliant and will not be remediated automatically but requires user interaction to perform the remediation manually.
+  - Any existing resource in the subscription subject to `Deny` policy effect will appear as noncompliant and will not be rejected. User must manually mitigate this result as appropriate.
+  - Any existing resource in the subscription subject to `Append` and `Modify` policy effect will appear as noncompliant and requires user interaction to mitigate.
+  - Any existing resource in the subscription subject to `Audit` and `AuditIfNotExist` policy effect will appear as noncompliant and requires user interaction to mitigate.
+- All new writes to resources in the moved subscription is subject to the assigned policies at real-time as normal.
 
 ## Resource move
 
@@ -67,4 +67,4 @@ Prior to a move operation, you must verify that the [resources in scope are supp
 
 ### Post-move operation
 
-When the resources are moved into a new resource group in the same subscription, any inherited Azure RBAC and policies from management group or/and subscription scope will still apply. If you move to a resource group in a new subscription – where the subscription may be subject to other Azure RBAC and policy assignment, same guidance applies as to the move subscription scenario to validate the resource compliance and access controls.
+When the resources are moved into a new resource group in the same subscription, any inherited Azure RBAC and policies from management group or/and subscription scope will still apply. If you move to a resource group in a new subscription - where the subscription may be subject to other Azure RBAC and policy assignment, same guidance applies as to the move subscription scenario to validate the resource compliance and access controls.
