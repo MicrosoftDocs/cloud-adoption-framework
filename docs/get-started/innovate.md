@@ -190,8 +190,8 @@ The Innovate methodology provides guidance on the tools and product management a
   - Custom-built applications.
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
-  - Ambient intelligence: integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
+  - Ambient intelligence: Integration of nonintrusive technology into an environment.
+  - Azure Cognitive Services: Big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 
@@ -208,7 +208,7 @@ The assessment takes 5 to 10 minutes and measures your organization's capability
 
 **Deliverables:**
 
-- Use the [AI Maturity Model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
+- Use the [AI Maturity Model tool](https://www.gartner.com/en/documents/3982174/artificial-intelligence-maturity-model) to assess your organization's AI maturity to create AI-based systems.
 
 **Guidance to support deliverable completion:**
 

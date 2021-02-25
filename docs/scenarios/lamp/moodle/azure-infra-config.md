@@ -1,12 +1,13 @@
 ---
 title: How to set up Moodle worker nodes
 description: Learn how to configure a virtual machine scale set for Moodle. See how to access the scale set from the controller by using a private IP address.
-author: BrianBlanchard
+author: UmakanthOS
 ms.author: brblanch
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
+ms.custom: think-tank
 ---
 
 # How to set up Moodle worker nodes
@@ -56,6 +57,7 @@ mkdir -p backup/moodle
 ```
 
 ### Configure the PHP and web server
+
 To configure the PHP and web server, take these steps:
 
 1. Set the PHP version to a variable:
@@ -89,7 +91,26 @@ Take these steps to install missing extensions:
    php -m
    ```
 
-1. Use an Azure Resource Manager template to install the following PHP extensions: fpm, cli, curl, zip, pear, mbstring, dev, mcrypt, soap, json, redis, bcmath, gd, mysql, xmlrpc, intl, xml, and bz2.
+1. Use an Azure Resource Manager template to install the following PHP extensions:
+
+    - `fpm`
+    - `cli`
+    - `curl`
+    - `zip`
+    - `pear`
+    - `mbstring`
+    - `dev`
+    - `mcrypt`
+    - `soap`
+    - `json`
+    - `redis`
+    - `bcmath`
+    - `gd`
+    - `mysql`
+    - `xmlrpc`
+    - `intl`
+    - `xml`
+    - `bz2`
 
 1. If the on-premises Moodle application has any additional PHP extensions that aren't in the controller virtual machine, install them manually with this command:
 

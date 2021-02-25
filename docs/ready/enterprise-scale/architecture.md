@@ -22,7 +22,7 @@ Not all enterprises adopt Azure the same way, so the Cloud Adoption Framework en
 
 ## Landing zone in enterprise-scale
 
-Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security, governance, networking, and identity. Azure landing zones enable application migrations and greenfield development at enterprise scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
+Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security, governance, networking, and identity. Azure landing zones enable application migrations and greenfield development at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
 
 An example is how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared utility services that must be readily available to help streamline the application migration process before it begins.
 
@@ -32,7 +32,7 @@ _Figure 1: Landing zone design._
 
 ## High-level architecture
 
-An enterprise-scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an enterprise-scale architecture based on an Azure Virtual WAN network topology (depictured on figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted on figure 3).
+An enterprise-scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an enterprise-scale architecture based on an Azure Virtual WAN network topology (depicted in figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted in figure 3).
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
@@ -44,7 +44,7 @@ _Figure 3: Cloud Adoption Framework enterprise-scale landing zone architecture b
 
 Download the PDF or Visio files that contain the enterprise-scale architecture diagrams based on the [Virtual WAN (PDF)](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) network topology or a traditional Azure network topology based on the [hub and spoke (PDF)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-cust.pdf) architecture. A Visio file containing both the Virtual WAN and the hub and spoke architecture diagram can be downloaded as a [Visio diagram (VSDX)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture.vsdx).
 
-On figures 2 and 3 there are references to the enterprise-scale critical design areas, which are indicated with the letters a to I:
+On figures 2 and 3 there are references to the enterprise-scale critical design areas, which are indicated with the letters A to I:
 
 ![The letter A](./media/a.png) [Enterprise Agreement (EA) enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md). An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. An Azure AD tenant provides identity and access management, which is an important part of your security posture. An Azure AD tenant ensures that authenticated and authorized users have access to only the resources for which they have access permissions.
 
@@ -58,7 +58,7 @@ On figures 2 and 3 there are references to the enterprise-scale critical design 
 
 ![The letter F](./media/f.png), ![The letter G](./media/g.png), ![The letter H](./media/h.png) [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md) and [Security, governance, and compliance](./security-governance-and-compliance.md). Holistic and landing-zone-specific policies must be identified, described, built, and deployed onto the target Azure platform to ensure corporate, regulatory, and line-of-business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning or administration capability.
 
-![The letter I](./media/i.png) [Platform automation and DevOps](platform-automation-and-devops.md). An end-to-end DevOps experience with robust software development lifecycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed by using dedicated integration, release, and deployment pipelines with strong source control and traceability.
+![The letter I](./media/i.png) [Platform automation and DevOps](./platform-automation-and-devops.md). An end-to-end DevOps experience with robust software development lifecycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed by using dedicated integration, release, and deployment pipelines with strong source control and traceability.
 
 ## Next steps
 

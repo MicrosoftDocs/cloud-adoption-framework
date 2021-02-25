@@ -74,6 +74,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | App Service environment | `ase-` |
 | App Service plan | `plan-` |
 | Web app | `app-` |
+| Static web app | `stapp` |
 | Function app | `func-` |
 | Cloud service | `cld-` |
 | Notification Hubs | `ntf-` |
@@ -121,7 +122,10 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Data Factory | `adf-` |
 | Data Lake Store account | `dls` |
 | Data Lake Analytics account | `dla` |
+| Event Hubs namespace | `evhns-` |
 | Event hub | `evh-` |
+| Event Grid domain | `evgd-` |
+| Event Grid topic | `evgt-` |
 | HDInsight - Hadoop cluster | `hadoop-` |
 | HDInsight - HBase cluster | `hbase-` |
 | HDInsight - Kafka cluster | `kafka-` |
@@ -137,6 +141,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Abbreviation |
 |---|---|
 | App Configuration store | `appcs-` |
+| Azure Static Web Apps | `stap-` |
 
 ## Integration
 
@@ -160,7 +165,6 @@ This list provides recommended abbreviations for various Azure resource types to
 | Key vault | `kv-` |
 | Log Analytics workspace | `log-` |
 | Application Insights | `appi-` |
-| Azure Purview | `pvw-` |
 
 ## Migration
 

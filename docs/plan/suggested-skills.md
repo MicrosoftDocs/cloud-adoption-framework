@@ -32,7 +32,7 @@ The Cloud Adoption Framework guides readers through the full adoption lifecycle.
   - **Manage:** Gain the skills needed to manage a cloud environment.
   - **[Monitor](../manage/monitor/suggested-skills.md):** Gain the skills needed to monitor a cloud environment.
 
-Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
+Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition. As you evolve your learning paths take a view at how your employees and learners will want to get certification. The following resource will help map out the certification paths from understanding the portfolio available to the overview of the certification, the suggested steps and recommended training needed to certify. [Azure Certification Deck](https://aka.ms/azuretraincertdeck). 
 
 ## Microsoft Learn
 
@@ -48,4 +48,4 @@ Examples of tailored learning paths on Microsoft Learn that align to the Plan me
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.

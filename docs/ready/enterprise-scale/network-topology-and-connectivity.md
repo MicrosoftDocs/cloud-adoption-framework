@@ -3,7 +3,7 @@ title: Network topology and connectivity
 description: Examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/15/2020
+ms.date: 01/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -85,12 +85,12 @@ Virtual WAN is used to meet large-scale interconnectivity requirements. Because 
 
 - Your organization intends to deploy resources across several Azure regions and requires global connectivity between VNets in these Azure regions and multiple on-premises locations.
 - Your organization intends to integrate a large-scale branch network directly in to Azure, either via a software-defined WAN (SD-WAN) deployment or requires more than 30 branch sites for native IPsec termination.
-- You require transitive routing between VPN and ExpressRoute. E.g. Remote branches connected via Site-to-site VPN or remote users connected via Point-to-site VPN, require connectivity to an ExpressRoute connected DC, via Azure.
+- You require transitive routing between VPN and ExpressRoute. E.g. Remote branches connected via Site-to-Site VPN or remote users connected via Point-to-Site VPN, require connectivity to an ExpressRoute connected DC, via Azure.
 
 A traditional hub-and-spoke network topology helps you build customized secure large-scale networks in Azure with routing and security managed by the customer. A traditional topology may be most appropriate if any of the following points meet your requirements:
 
 - Your organization intends to deploy resources across one or several Azure regions and while some traffic across Azure regions is expected (for example, traffic between two virtual networks across two different Azure regions), a full mesh network across all Azure regions is not required.
-- You have a low number of remote or branch locations per region. That is, you need fewer than 30 IP security (IPsec) site-to-site tunnels.
+- You have a low number of remote or branch locations per region. That is, you need fewer than 30 IP security (IPsec) Site-to-Site VPN tunnels.
 - You require full control and granularity for manually configuring of your Azure network routing policy.
 
 ## Virtual WAN network topology (Microsoft-managed)
@@ -114,7 +114,7 @@ _Figure 1: Virtual WAN network topology._
   - Branch to virtual network
   - Branch to branch
 
-- Virtual WAN hubs are restricted to the deployment of Microsoft managed resources. The only resources that you can deploy within them are virtual network gateways (point-to-site VPN, site-to-site VPN, and Azure ExpressRoute), Azure Firewall via Firewall Manager, route tables and [some Network Virtual Appliances (NVA)](/azure/virtual-wan/about-nva-hub) for vendor-specific SD-WAN capabilities.
+- Virtual WAN hubs are restricted to the deployment of Microsoft managed resources. The only resources that you can deploy within them are virtual network gateways (Point-to-Site VPN, Site-to-Site VPN, and Azure ExpressRoute), Azure Firewall via Firewall Manager, route tables and [some Network Virtual Appliances (NVA)](/azure/virtual-wan/about-nva-hub) for vendor-specific SD-WAN capabilities.
 
 - Virtual WAN is bound to some Azure subscription limits, which are documented on [this](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits) article.
 
@@ -130,7 +130,7 @@ _Figure 1: Virtual WAN network topology._
 
 - User VPN (Point-to-site) gateways in Virtual WAN can scale up to 20 Gbps aggregated throughput and 10,000 client connections per virtual hub.
 
-- Site-to-site VPN gateways in Virtual WAN can scale up to 20 Gbps aggregated throughput.
+- Site-to-Site VPN gateways in Virtual WAN can scale up to 20 Gbps aggregated throughput.
 
 - ExpressRoute circuits with the SKU Local, Standard or Premium are available for connection to a Virtual WAN Hub.
 
@@ -483,7 +483,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - Configuring a Site-to-Site VPN connection over ExpressRoute private peering is now [in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
-- You can apply [media access control security (MACsec)](/azure/expressroute/expressroute-howto-MACsec) encryption to ExpressRoute Direct to achieve network encryption.
+- You can apply [media access control security (MACsec)](/azure/expressroute/expressroute-howto-macsec) encryption to ExpressRoute Direct to achieve network encryption.
 
 - When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is used on the underlying network hardware. This is applicable to VNet peering traffic.
 
@@ -495,7 +495,7 @@ _Figure 8: Encryption flows._
 
 - When you're establishing VPN connections from on-premises to Azure by using VPN gateways, traffic is encrypted at a protocol level through IPsec tunnels. The preceding diagram shows this encryption in flow `A`.
 
-- When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at the layer-two level between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
+- When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-macsec) in order to encrypt traffic at the layer-two level between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
 
 - For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use a Virtual WAN VPN gateway to establish [IPsec tunnels over ExpressRoute private peering](/azure/virtual-wan/vpn-over-expressroute). The diagram shows this encryption in flow `C`.
 
@@ -503,7 +503,7 @@ _Figure 8: Encryption flows._
 
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
-  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering)).
+  - Evaluate the capability to [configure a Site-to-Site VPN connection over ExpressRoute private peering (in preview)](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - If traffic between Azure regions must be encrypted, use global VNet peering to connect virtual networks across regions.
 

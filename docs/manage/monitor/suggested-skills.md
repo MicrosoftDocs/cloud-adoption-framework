@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness for cloud monitoring"
+title: Skills readiness for cloud monitoring
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
 ms.author: brblanch
@@ -14,7 +14,7 @@ ms.custom: internal
 
 # Skills readiness for cloud monitoring
 
-During the Plan phase of your migration journey, the objective is to develop the plans necessary to guide implementation. The plans need to also include how you will operate these workloads before they are transitioned or released into production, and not afterwards. Business stakeholders expect valuable services, and they expect them without disruption. IT staff members realize they need to learn new skills and adapt so they are prepared to confidently use the integrated Azure services to effectively monitor resources in Azure and hybrid environments.
+When planning your migration journey, the objective is to develop the plans necessary to guide implementation. The plans need to also include how you will operate these workloads before they are transitioned or released into production, and not afterwards. Business stakeholders expect valuable services, and they expect them without disruption. IT staff members realize they need to learn new skills and adapt so they are prepared to confidently use the integrated Azure services to effectively monitor resources in Azure and hybrid environments.
 
 Developing the necessary skills can be accelerated with the following learning paths. They are organized starting with learning the fundamentals and then divided across three primary subject domains: infrastructure, application, and data analysis.
 
@@ -24,7 +24,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy diagnostic settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](/powershell/azure/?view=azps-3.6.1). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
+- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli), which is our cross-platform command-line experience for managing Azure resources. Also review the introduction to [Azure PowerShell](/powershell/azure/). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
 
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
@@ -75,31 +75,31 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Deeper skills exploration
 
-Beyond these initial options for developing skills, there are a variety of learning options available.
+Various learning options beyond these initial options are available for developing skills.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and partners offer a variety of options for all audiences to develop their skills with Azure services:
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
+- [Map roles and skills](../../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-Turn your knowledge of Azure into official recognition with [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
 ## Azure DevOps and project management
 
-The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern service management practices, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
+The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern practices to manage services, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
 
-As part of migrating to a cloud monitoring platform, the IT team responsible for managing monitoring in the enterprise needs to include agile training and participation in DevOps activities. This also includes following the _Dev_ in DevOps by taking requirements and turning into organized agile requirements, in order to deliver minimally viable monitoring solutions that are refined iteratively and in line with business needs. For source control to manage the iterative monitoring solution packages and any other related collateral, connect your Azure DevOps Server project with a GitHub Enterprise Server repository. This provides a link between GitHub commits and pull requests to work items. You can use GitHub Enterprise for development in support of continuous monitoring integration and deployment, while using Azure Boards to plan and track your work.
+As part of migrating to a cloud monitoring platform, the IT team responsible for managing monitoring in the enterprise needs to include agile training and participation in DevOps activities. This also includes following the _Dev_ in DevOps by taking requirements and turning into organized agile requirements, in order to deliver minimally viable monitoring solutions that are refined iteratively and in line with business needs. For source control to manage the iterative monitoring solution packages and any other related collateral, connect your Azure DevOps Server project with a GitHub Enterprise Server repository. This provides a link from commits and pull requests in GitHub to work items. You can use GitHub Enterprise for development in support of continuous monitoring integration and deployment, while using Azure Boards to plan and track your work.
 
 To learn more, review the following:
 
 - [Get started with Azure DevOps](/learn/modules/get-started-with-devops).
 
-- [Learn about DevOps dojo white belt foundation](/learn/paths/devops-dojo-white-belt-foundation)
+- [Learn about DevOps Dojo white belt foundation](/learn/paths/devops-dojo-white-belt-foundation).
 
-- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices)
+- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices).
 
-- [Automate your deployments with Azure DevOps](/learn/paths/automate-deployments-azure-devops)
+- [Automate your deployments with Azure DevOps](/learn/paths/automate-deployments-azure-devops).
 
 ## Other considerations
 
@@ -111,4 +111,4 @@ Review the following to understand the updates made to the most popular ITSM fra
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the roles filter to align learning paths with your role.

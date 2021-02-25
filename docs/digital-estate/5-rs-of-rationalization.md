@@ -28,7 +28,7 @@ Rationalizing an entire IT portfolio or even a single datacenter can delay the r
 
 ### Myth: Business justification has to wait for all workloads to be rationalized
 
-To develop a business justification for a cloud adoption effort, make a few basic assumptions at the portfolio level. When motivations are aligned to innovation, assume rearchitecture. When motivations are aligned to migration, assume rehost. These assumptions can accelerate the business justification process. Assumptions are then challenged and budgets refined during the Assess phase of each workload's adoption cycles.
+To develop a business justification for a cloud adoption effort, make a few basic assumptions at the portfolio level. When motivations are aligned to innovation, assume rearchitecture. When motivations are aligned to migration, assume rehost. These assumptions can accelerate the business justification process. Assumptions are then challenged and budgets refined during the assessment phase of each workload's adoption cycle.
 
 Now review the following five Rs of rationalization to familiarize yourself with the long-term process. While developing your cloud adoption plan, choose the option that best aligns with your motivations, business outcomes, and current state environment. The goal in digital estate rationalization is to set a baseline, not to rationalize every workload.
 
@@ -113,7 +113,7 @@ Qualitative analysis factors:
 
 ## Rebuild
 
-In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This is especially true for applications that previously met the needs of a business but are now unsupported or misaligned with the current business processes. In this case, a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative) approach.
+In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This is especially true for applications that previously met the needs of a business but are now unsupported or misaligned with the current business processes. In this case, a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative/) approach.
 
 Common drivers might include:
 

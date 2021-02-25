@@ -1,5 +1,5 @@
 ---
-title: "Assess each workload and refine plans"
+title: Assess each workload and refine plans
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
 ms.author: brblanch
@@ -27,7 +27,7 @@ Azure Migrate assesses on-premises infrastructure, applications, and data for mi
 - Performs performance-based sizing.
 - Provides cost estimates for running on-premises assets in Azure.
 
-If you're considering a lift and shift approach, or are in the early assessment stages of migration, this service is for you. After completing the assessment, use Azure Migrate to execute the migration.
+If you're considering a lift-and-shift approach or are in the early assessment stages of migration, this service is for you. After completing the assessment, use Azure Migrate to execute the migration.
 
 ![Azure Migrate overview](./media/assess/azure-migrate-overview-1.png)
 
@@ -72,16 +72,16 @@ Azure Migrate uses Service Map to enhance the reporting capabilities and depende
 
 To use dependency visualization, download and install agents on each on-premises machine that you want to analyze.
 
-- [Microsoft Monitoring Agent](/azure/log-analytics/log-analytics-agent-windows) must be installed on each machine.
-- The [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) must be installed on each machine.
+- [Microsoft Monitoring Agent](/azure/azure-monitor/agents/agent-windows) must be installed on each machine.
+- The [Microsoft Dependency Agent](/azure/azure-monitor/vm/vminsights-enable-hybrid#install-the-dependency-agent-on-windows) must be installed on each machine.
 - Also, if you have machines with no internet connectivity, download and install Log Analytics gateway on those machines.
 
 <!-- markdownlint-disable MD024 -->
 
 #### Learn more
 
-- [Using Service Map solution in Azure](/azure/azure-monitor/insights/service-map)
-- [Azure Migrate and Service Map: Dependency visualization](/azure/migrate/concepts-dependency-visualization)
+- [Using Service Map solution in Azure](/azure/azure-monitor/vm/service-map)
+- [Azure Migrate and Service Map: dependency visualization](/azure/migrate/concepts-dependency-visualization)
 
 ## [Challenge assumptions](#tab/Challenge-Assumptions)
 

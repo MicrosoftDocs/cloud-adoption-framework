@@ -40,12 +40,12 @@ The following are a number of tags commonly used across Azure to increase visibi
 | **Budget required/approved** | Money allocated for this application, service, or workload. | _BudgetAmount_ <br><br> <li> `$200,000` |
 | **Cost center** | Accounting cost center associated with this resource. | _CostCenter_ <br><br> <li> `55332` |
 | **Disaster recovery** | Business criticality of the application, workload, or service. | _DR_ <br><br> <li> `Mission-critical` <li> `Critical` <li> `Essential` |
-| **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | _EndDate_ <br><br> <li> `10/15/2023` |
+| **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | _EndDate_ <br><br> <li> `2023-10-15` |
 | **Environment** | Deployment environment of the application, workload, or service. | _Env_ <br><br> <li> `Prod` <li> `Dev` <li> `QA` <li> `Stage` <li> `Test` |
 | **Owner name** | Owner of the application, workload, or service. | _Owner_ <br><br> <li> `jane@contoso.com` |
 | **Requester name** | User who requested the creation of this application. | _Requester_ <br><br> <li> `john@contoso.com` |
 | **Service class** | Service level agreement level of the application, workload, or service. | _ServiceClass_ <br><br> <li> `Dev` <li> `Bronze` <li> `Silver` <li> `Gold` |
-| **Start date of the project** | Date when the application, workload, or service was first deployed. | _StartDate_ <br><br> <li> `10/15/2020` |
+| **Start date of the project** | Date when the application, workload, or service was first deployed. | _StartDate_ <br><br> <li> `2020-10-15` |
 
 ## Take action
 

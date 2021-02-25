@@ -53,6 +53,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/identity-baseline-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on identity requirements. |
 | [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on resource consistency. |
 | [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on security baseline. |
+| [Azure Security Benchmark](/azure/security/benchmarks/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
 | [Azure governance visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) | The Azure governance visualizer is a PowerShell script that iterates through an Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities such as Azure Policy, Azure role-based access control (Azure RBAC), and Azure Blueprints. From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
 
 ## Migrate
@@ -61,6 +62,14 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 |----------|-------------|
 | [Datacenter migration discovery checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/migrate/datacenter-migration-discovery-checklist.docx) | Review this checklist for information that helps identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
 | [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator we have built a number of templates which you can use to help streamline your projects. Templates have been created for [WVD](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [Server Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
+
+
+## Innovate
+
+| Resource | Description |
+|----------|-------------|
+| [Deployment templates](https://aka.ms/adopt/plan/generator) | The [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine) template gives you a structured approach to uncovering latent insights contained in structured and unstructured data. .
+
 
 ## Manage
 

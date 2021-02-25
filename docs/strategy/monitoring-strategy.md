@@ -18,7 +18,7 @@ As you undergo your digital transformation to the cloud, it's important that you
 
 ## Where to start?
 
-To ease your journey to the cloud, use the [Strategy phase](./index.md) and the [Plan phase](../plan/index.md) of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. Include monitoring in the strategy and plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
+To ease your journey to the cloud, use the [strategizing](./index.md) and the [planning](../plan/index.md) phase of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. Include monitoring during strategizing and planning phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
 
 The following are important areas that strongly influence a sound monitoring strategy:
 
@@ -56,7 +56,7 @@ As a manageability expert, you may be working closely with a steering committee,
 
 ## High-level modeling
 
-As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services, for example, do not eliminate your monitoring responsibility. You'll decide who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure. You need to look beyond the common cloud models as shown below. If you're using Microsoft Office applications delivered by [Microsoft 365](/microsoft-365/?view=o365-worldwide) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
+As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services, for example, do not eliminate your monitoring responsibility. You'll decide who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure. You need to look beyond the common cloud models as shown below. If you're using Microsoft Office applications delivered by [Microsoft 365](/microsoft-365/) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
 
 ![Cloud models diagram](./media/monitoring-strategy/cloud-models.png)
 
@@ -110,7 +110,7 @@ To assemble this architecture, here are several considerations:
 
 - A dataflow approach starting from service assets and going up the stack: metrics and log data emitted by infrastructure, IoT devices, mobile devices, and others. Are all of the items under management—to-monitoring tools (mid-tier)? Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, and others).
 
-- Whether to continue with [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-2019) or other monitoring tools.
+- Whether to continue with [System Center Operations Manager](/system-center/scom/welcome) or other monitoring tools.
 
 - The economic cost.
 
@@ -204,7 +204,7 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 - **Learn and improve:** Providers and consumers participating in learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (such as new, modified, or retired) and continues to match the actual service warranty.
 
-To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier in the Plan phase. If you're using System Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
+To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier during the planning phase. If you're using System Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 | Type | Monitoring objective | Example objective |
 |-----|---------------------|------------------|

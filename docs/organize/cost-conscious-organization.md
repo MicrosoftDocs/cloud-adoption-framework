@@ -1,5 +1,5 @@
 ---
-title: "Building a cost-conscious organization"
+title: Building a cost-conscious organization
 description: Use the Cloud Adoption Framework for Azure to learn best practices for building a cost-conscious organization.
 author: BrianBlanchard
 ms.author: brblanch
@@ -14,10 +14,10 @@ ms.custom: internal
 
 As outlined in [Motivations: why are we moving to the cloud?](../strategy/motivations.md), there are many sound reasons for a company to adopt the cloud. When cost reduction is a primary driver, it's important to create a cost-conscious organization.
 
-Ensuring cost consciousness is not a one-time activity. Like other cloud-adoption topics, it's iterative. The following diagram outlines this process to focus on three interdependent activities: _visibility_, _accountability_, and _optimization_. These processes play out at macro and micro levels, which we describe in detail in this article.
+Ensuring cost consciousness is not a one-time activity. Like other cloud-adoption topics, it's iterative. The following diagram outlines this process to focus on three interdependent activities: *visibility*, *accountability*, and *optimization*. These processes play out at macro and micro levels, which we describe in detail in this article.
 
 ![Cost-conscious process](../_images/ready/cost-optimization-process.png)
-_Figure 1: Outline of the cost-conscious organization._
+*Figure 1: Outline of the cost-conscious organization.*
 
 ## General cost-conscious processes
 
@@ -49,7 +49,7 @@ The [cloud adoption team](./cloud-adoption.md) is at the center of all adoption 
 
 - **Visibility:**
 
-  - **Awareness:** It's important for the cloud adoption team to have visibility into the cost-saving goals of the effort. Simply stating that the cloud-adoption effort will help reduce costs is a recipe for failure. _Specific_ visibility is important. For example, if the goal is to reduce datacenter TCO by 3 percent or annual operating expenses by 7 percent, disclose those targets early and clearly.
+  - **Awareness:** It's important for the cloud adoption team to have visibility into the cost-saving goals of the effort. Simply stating that the cloud-adoption effort will help reduce costs is a recipe for failure. *Specific* visibility is important. For example, if the goal is to reduce datacenter TCO by 3 percent or annual operating expenses by 7 percent, disclose those targets early and clearly.
   - **Telemetry:** This team needs visibility into the impact of their decisions. During migration or innovation activities, their decisions have a direct effect on costs and performance. The team needs to balance these two competing factors. Performance monitoring and cost monitoring that's scoped to the team's active projects are important to provide the necessary visibility.
 
 - **Accountability:** The cloud adoption team needs to be aware of any preset budgets that are associated with their adoption efforts. When real costs don't align with the budget, there's an opportunity to create accountability. Accountability doesn't equate to penalizing the adoption team for exceeding budget, because budget excess can result from necessary performance decisions. Instead, accountability means educating the team about the goals and how their decisions affect those goals. Additionally, accountability includes providing a dialog in which the team can communicate about decisions that led to overspending. If those decisions are misaligned with the goals of the project, this effort provides a good opportunity to partner with the cloud strategy team to make better decisions.

@@ -58,7 +58,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints. No public-facing web site backed by IaaS should be exposed to the internet without DDoS.
 
-**Potential design option:** Use [Azure DDoS Protection Standard](/azure/virtual-network/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
+**Potential design option:** Use [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
 
 ## Secure on-premises connectivity
 
@@ -82,7 +82,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Azure Security Center](/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Azure Security Center](/azure/security-center/security-center-introduction) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness for cloud migration"
+title: Skills readiness for cloud migration
 description: Skills readiness for cloud migration
 author: BrianBlanchard
 ms.author: brblanch
@@ -18,7 +18,7 @@ There are four distinct processes that are completed iteratively in the Migrate 
 
 ## Prerequisites skilling resources
 
-Implementation of the Migrate methodology builds on the skills acquired during the [Plan phase](../strategy/suggested-skills.md) and [Ready phase](../organize/suggested-skills.md) of the migration journey.
+Implementation of the Migrate methodology builds on the skills acquired during [planning](../strategy/suggested-skills.md) and [preparing](../organize/suggested-skills.md) a migration journey.
 
 ## Assess skilling resources
 
