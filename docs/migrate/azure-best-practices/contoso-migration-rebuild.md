@@ -303,7 +303,7 @@ Now, Contoso admins do the following:
 
 The admins create the pipeline:
 
-1. In Visual Studio, they update the `/deploy/k8s/config_local.yml` file with the database connection information that they noted earlier.
+1. In Visual Studio, they update the */deploy/k8s/config_local.yml* file with the database connection information that they noted earlier.
 
     ![Screenshot showing the **New pipeline** button in Visual Studio.](./media/contoso-migration-rebuild/back-pipe1.png)
     *Figure 28: Database connections.*
