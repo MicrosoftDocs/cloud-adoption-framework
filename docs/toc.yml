@@ -615,7 +615,7 @@ items:
             href: scenarios/wvd/migrate-deploy.md
           - name: Release
             href: scenarios/wvd/migrate-release.md
-            
+
         - name: Data platforms
           items:
           - name: Overview
