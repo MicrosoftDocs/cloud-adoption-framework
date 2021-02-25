@@ -38,10 +38,10 @@ The construction set approach to landing zones provides these assets to support 
 These articles provide guidelines for creating your landing zone:
 
 - [Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md)
-- [Network topology and connectivity for AKS Enterprise-Scale scenario](./eslz-network-topology-and-connectivity.md)
-- [Management and monitoring for AKS Enterprise-Scale scenario](./eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery for AKS Enterprise-Scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance for AKS Enterprise-Scale scenario](./eslz-security-governance-and-compliance.md)
+- [Network topology and connectivity for AKS enterprise-scale scenario](./eslz-network-topology-and-connectivity.md)
+- [Management and monitoring for AKS enterprise-scale scenario](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery for AKS enterprise-scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance for AKS enterprise-scale scenario](./eslz-security-governance-and-compliance.md)
 - [Platform automation and DevOps for AKS enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
