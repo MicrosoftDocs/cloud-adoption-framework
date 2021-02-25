@@ -48,7 +48,7 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-![Responsibility zones](./media/aks-enterprise-scale_landing-zone.png)
+![Responsibility zones](./media/aks-enterprise-scale-landing-zone.png)
 
 ## Obtain the AKS construction set
 
