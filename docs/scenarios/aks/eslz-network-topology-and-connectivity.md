@@ -45,7 +45,7 @@ All virtual networks should be configured to use these central DNS servers for n
 
 Once the cluster is created, the connection is created between the DNS private zone and the virtual network where the central DNS servers are deployed. The AKS virtual network has also been configured to use the central DNS servers in the connectivity subscription, and administrator access to the AKS Kubernetes API will follow this flow:
 
-![Private Cluster](media/Network_PrivateCluster.png)
+![Private Cluster](./media/network-private-cluster.png)
 
 > [!NOTE]
 > The images in this article reflect the design using the traditional hub and spoke connectivity model. Enterprise-scale landing zones can opt for the Virtual WAN connectivity model, in which the central DNS servers would be in a shared services virtual network connected to a Virtual WAN hub.
@@ -72,7 +72,7 @@ Ingress controllers can expose applications and APIs with a public or a private 
 
 Application traffic can come from either on-premises or the public internet. The following picture describes an example where an [Azure Application Gateway](/azure/application-gateway/overview) is configured to reverse-proxy connections to the clusters both from on-premises and from the public internet.
 
-![Application Traffic](media/Network_AppAccess.png)
+![Application Traffic](./media/network-app-access.png)
 
 Traffic from on-premises follows the flow of the numbered blue callouts in the previous diagram.
 
@@ -102,7 +102,7 @@ It's possible to create the A-records manually, but associating the private DNS 
 
 Backend connectivity from AKS pods to Azure PaaS services exposed through private endpoints will follow this sequence:
 
-![Backend traffic](media/Network_BackendAccess.png)
+![Backend traffic](./media/network-backend-access.png)
 
 1. The AKS pods will resolve the FQDN of the Azure platform as a service (PaaS) using the central DNS servers in the connectivity subscription, which are defined as custom DNS servers in the AKS virtual network.
 2. The resolved IP will be the private IP address of the private endpoints, which are accessed directly from the AKS pods.
