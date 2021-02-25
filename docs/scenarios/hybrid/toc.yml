@@ -29,8 +29,8 @@ items:
 
   - name: Well-architected hybrid workloads
     items:
-    - name: Overview
-      href: /azure/architecture/framework/hybrid/hybrid-overview?branch=pr-en-us-2449&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: Overview - TODO - Remove branch - Add Short TOC to back
+      href: /azure/architecture/framework/hybrid/hybrid-overview?bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Cost Optimization
       href: /azure/architecture/framework/hybrid/hybrid-cost?branch=pr-en-us-2449&bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Operational excellence
@@ -156,8 +156,8 @@ items:
       items:
       - name: Azure
         items:
-        - name: Azure Linux with ARM Templates
-          href: manage/hybrid/server/best-practices/template-linux.md
+        - name: Azure Linux with ARM Templates TODO - Add Short TOC to back & Relative link to front /azure/cloud-adoption-framework/
+          href: /azure/cloud-adoption-framework/manage/hybrid/server/best-practices/template-linux.md?bc=/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
         - name: Azure Windows with ARM Templates
           href: manage/hybrid/server/best-practices/template-windows.md
       - name: On-prem - Local datacenter
