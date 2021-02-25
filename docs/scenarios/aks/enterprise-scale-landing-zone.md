@@ -48,13 +48,13 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-![Responsibility zones](media/aks_enterprise_scale_lz.png)
+![Responsibility zones](./media/aks-enterprise-scale_landing-zone.png)
 
 ## Obtain the AKS construction set
 
-The AKS construction set is an open-source collection of Terraform templates. You find it in GitHub: [Azure / caf-terraform-landingzones-starter](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
+The AKS construction set is an open-source collection of Terraform templates, available in [this GitHub repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
 
-The templates are of two types:
+There are two types of templates:
 
 - Terraform modules that deploy infrastructure components like virtual machines, networks, or storage to Azure.
 - Ansible playbooks that run different roles to configure virtual machines, and to install AKS HANA and required applications, on the already deployed infrastructure.
