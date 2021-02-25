@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management and monitoring for AKS Enterprise-Scale scenario
+# Management and monitoring for AKS enterprise-scale scenario
 
 Kubernetes is a relatively young technology, rapidly evolving and has an impressive ecosystem. As such it can be a challenge to manage it. By properly designing the solution with management and monitoring in mind, you can work towards operational excellence and customer success.
 

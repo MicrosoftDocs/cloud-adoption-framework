@@ -1,6 +1,6 @@
 ---
-title: AKS Enterprise-scale scalability
-description: AKS guidelines for Enterprise-scale scalability
+title: AKS enterprise-scale scalability
+description: AKS guidelines for enterprise-scale scalability
 author: xstabel
 ms.author: ctalaver
 ms.date: 03/01/2021
@@ -11,11 +11,11 @@ ms.subservice: migrate
 
 <!-- docutune:casing "HPA" -->
 
-# AKS Enterprise-scale scalability
+# AKS enterprise-scale scalability
 
-AKS can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding additional node pools with special capabilities like GPU, or application needs, in this case you have a number of factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
+AKS can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding node pools with special capabilities like GPU, or application needs, in this case you have several factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
 
-The most common scalability options for AKS are the cluster autoscaler (automatically adding/removing nodes based on CPU and memory utilization) or the HPA (horizontal pod autoscaler) for your applications to scale-in and out based on CPU and memory utilization as well as more advanced metrics.
+The most common scalability options for AKS are the cluster autoscaler (automatically adding/removing nodes based on CPU and memory utilization) or the HPA (horizontal pod autoscaler) for your applications to scale in and out based on CPU and memory utilization as well as more advanced metrics.
 
 ## Design considerations
 
@@ -39,7 +39,7 @@ Here are some crucial factors to consider:
 
 Follow these best practices for your design:
 
-- Use VM scale sets, which are required for scenarios including autoscaling, multiple node pools, and Windows node pool support.
+- Use virtual machine scale sets, which are required for scenarios including autoscaling, multiple node pools, and Windows node pool support.
   - Don't manually enable or edit settings for scalability in the Azure portal or using the Azure CLI.
 - If you need fast burst autoscaling choose to burst from AKS cluster using Azure Container Instances and [virtual nodes](/azure/aks/virtual-nodes-portal) for rapid and infinite scalability and per-second billing.
 - Use [cluster autoscaler](/azure/aks/cluster-autoscaler) and [scale-to-zero](/azure/aks/scale-cluster#scale-user-node-pools-to-0) for predictable scalability using VM-based worker nodes.
