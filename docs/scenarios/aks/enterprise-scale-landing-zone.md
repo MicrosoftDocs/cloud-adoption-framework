@@ -19,8 +19,8 @@ Customers adopt AKS in various ways. The construction set can be adapted to prod
 
 The AKS construction set assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
 
-- [Start with Cloud Adoption Framework enterprise-scale landing zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/)
-- [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation)
+- [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
+- [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
 ## What the AKS construction set provides
 
@@ -42,13 +42,13 @@ These articles provide guidelines for creating your landing zone:
 - [Management and monitoring for AKS Enterprise-Scale scenario](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery for AKS Enterprise-Scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
 - [Security, governance, and compliance for AKS Enterprise-Scale scenario](./eslz-security-governance-and-compliance.md)
-- [Platform automation and devops for AKS Enterprise-Scale scenario](./eslz-platform-automation-and-devops.md)
+- [Platform automation and DevOps for AKS enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-![Responsibility Zones](media\aks_enterprise_scale_lz.png)
+![Responsibility zones](media/aks_enterprise_scale_lz.png)
 
 ## Obtain the AKS construction set
 
@@ -56,7 +56,7 @@ The AKS construction set is an open-source collection of Terraform templates. Yo
 
 The templates are of two types:
 
-- Terraform modules that deploy the infrastructure components (for example: virtual machines, networks, storage) in Azure.
+- Terraform modules that deploy infrastructure components like virtual machines, networks, or storage to Azure.
 - Ansible playbooks that run different roles to configure virtual machines, and to install AKS HANA and required applications, on the already deployed infrastructure.
 
 ## Next steps

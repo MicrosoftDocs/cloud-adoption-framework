@@ -1,5 +1,5 @@
 ---
-title: "Strategy for modern container adoption"
+title: Strategy for modern container adoption
 description: Describe the scenario's impact on strategy
 author: BrianBlanchard
 ms.author: brblanch
@@ -23,24 +23,24 @@ Kubernetes then provides a layer of orchestration to make it easier for the orga
 
 ## Modern container outcomes
 
-To measure the impact of container and Kubernetes adoption efforts, the following a few key outcomes that can be tracked & evaluated:
+To measure the impact of container and Kubernetes adoption efforts, the following a few key outcomes that can be tracked and evaluated:
 
-- Provisioning and scale time: Infrastructure elasticity to reduce the time to provision and scale the resources supporting your workloads.
-- Accelerated development times: Combining development tools, automated deployment, and integrated monitoring across consistent & standardized environments allows developers to focus more on building great products and less on the supporting infrastructure configuration across dev and prod environments.
-- Workload portability: Move your applications anywhere with a common containerized environment. Since there is a layer of abstraction between the Kubernetes cluster and the underlying infrastructure, you can move workloads between development and production environments or between cloud providers with less effort than cloud provider native solutions.
-- Safe deployment practices: Kubernetes workloads and constructs supports many deployment methods, allowing workloads to rolled out with confidence.
-- Integrated access management: Integration between your existing identity and access management (IAM) provider and your clusters ensures a secure environment across all stages of deployment.
-- Infrastructure isolation: Kubernetes clusters can range from a public cloud offering through a completely private offering, allowing you to control exposure of your workload and its runtime environment specifically to the desired level.
-- Network observability: Traffic entering and exiting Kubernetes clusters can be subjected to internal traffic monitoring and control to achieve desired security outcomes.
-- Talent Retention: Modern infrastructure improves hiring and retaining of talent due to leveraging modern, industry-standard, cloud agnostic tooling that is seen as highly desirable to work with.
+- **Provisioning and scale time:** Infrastructure elasticity to reduce the time to provision and scale the resources supporting your workloads.
+- **Accelerated development times:** Combining development tools, automated deployment, and integrated monitoring across consistent and standardized environments allows developers to focus more on building great products and less on the supporting infrastructure configuration across dev and prod environments.
+- **Workload portability:** Move your applications anywhere with a common containerized environment. Since there is a layer of abstraction between the Kubernetes cluster and the underlying infrastructure, you can move workloads between development and production environments or between cloud providers with less effort than cloud provider native solutions.
+- **Safe deployment practices:** Kubernetes workloads and constructs supports many deployment methods, allowing workloads to rolled out with confidence.
+- **Integrated access management:** Integration between your existing identity and access management (IAM) provider and your clusters ensures a secure environment across all stages of deployment.
+- **Infrastructure isolation:** Kubernetes clusters can range from a public cloud offering through a completely private offering, allowing you to control exposure of your workload and its runtime environment specifically to the desired level.
+- **Network observability:** Traffic entering and exiting Kubernetes clusters can be subjected to internal traffic monitoring and control to achieve desired security outcomes.
+- **Talent retention:** Modern infrastructure improves hiring and retaining of talent due to using modern, industry-standard, cloud agnostic tooling that is seen as highly desirable to work with.
 
 ## Next step: Plan for modern containers
 
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Plan for modern containers](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](https://docs.microsoft.com/azure/architecture/reference-architectures/containers/aks-start-here?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
+- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 - [Govern modern container solutions](./govern.md)
 - [Manage modern container solutions](./manage.md)
