@@ -29,11 +29,10 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - Backup/restore considerations
 - Disaster recovery - Cross-regional versus regional DR decision criteria
 
-
 ### High Availability(HA) within an Azure region
 
 **Design Considerations for HA:**
- 
+
 With HA, the focus is to provide availability for SAP software's single point of failure, such as with:
 
 - Database management systems
@@ -66,14 +65,14 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 **Design Recommendations for High Availability:**
 
-- Azure offers various options to meet your applications infrastructure SLA, you can select from one of the following options which fulfils your SLA. You must consider the same option for all the three SAP components (Central services, Application server and Database).
-  - single VM SLA offers 99.9%
-  - Availability set deployment offers 99.95%
-  - Availability zones offers 99.99%
+- Azure offers various options to meet your applications infrastructure [SLA](https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_9/) from 99.9% to 99.99%, you can select from one of the following options which fulfils your SLA. You must consider the same option for all the three SAP components (Central services, Application server and Database).
+  - Single VM deployment.
+  - Availability set deployment.
+  - Availability zones deployment.
 - In an availability set deployment each component of SAP system has to be in its own availability set. SAP central services VMs, database VMs, application VMs must be in their respective availability sets
 - Whilst using Proximity placement group, in an Availability set deployment, all the three SAP components (Central services, Application server and Database) must be in the same proximity placement group (PPG).
-- It is recommended to use one PPG per SAP SID. PPG doesn’t span across the Availability zones nor Azure regions.
-- It is not currently supported to combine ASCS and DB HA in the same pacemaker cluster, keep them in their respective clusters. However you can combine [multiple central services clusters](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) (up to 5) into a pair of VMs.
+- It is recommended to use one PPG per SAP SID. When you assign your virtual machines to a proximity placement group, the virtual machines are placed in the same data center, thus PPG doesn’t span across availability zones nor azure regions.
+- It is not currently supported to combine ASCS and DB HA in the same pacemaker cluster, keep them in their respective clusters. However you can combine [multiple central services clusters](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) (up to 5) on a pair of VMs.
 - It is always recommended to use  a Standard Azure Load balancer SKU in front of ASCS and DB clusters.
 - All production systems must be running on Premium managed SSDs, whilst using Azure Netapp files (ANF) or Ultra Disks at least the OS disk must be Premium managed disk to achieve better performance and best SLA.
 - Both the VM’s in the HA pair must be deployed in an availability set or availability zones must be of the same size and must have the same storage configuration.
@@ -148,6 +147,6 @@ Another factor that you should consider when choosing your DR region is the RPO 
 - Azure Site Recovery (ASR) can be used for Application server replication to DR site.
 - Azure Site Recovery (ASR) can be used to replicate the central services cluster VMs to the DR site. However, when you invoke DR, you will need to reconfigure the pacemaker cluster on the DR site (Ex: replace VIP, SBD, corosync config etc).
 - Whilst using Azure Netapp Files (ANF) you can leverage cross-region replication (CRR) for synchronising ANF volumes between primary and DR region. Please note CRR is currently in [public preview](https://docs.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction).
-- Native database replication must be used for data synchronisation to DR site. ASR must not be used.
+- Native database replication must be used for data synchronisation to DR site. Azure site recovery for databases running SAP workload has not been tested.
 - It is recommended to peer the Primary and the DR VNET. For ex: HANA HSR replication will need SAP/HANA DB VNET peered to the SAP/HANADB VNET of the DR site.
 - Whilst using ANF storage for your SAP deployments two ANF accounts needs to be created in two different regions with a minimum of premium service level.
