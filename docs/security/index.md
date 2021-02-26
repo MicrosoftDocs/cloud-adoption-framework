@@ -56,10 +56,10 @@ Because of these shifts, your cloud adoption program should focus heavily on bus
 
 This transformation will affect each security discipline differently. While all of these are extremely important and require investment , these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud :
 
-- **Access Control:**
-- **Security Operations:**
-- **Asset Protection:**
-- **Security Governance:**
+- **Access Control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
+- **Security Operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continously reduce risk of breach
+- **Asset Protection:** Maximize protection of all assets (VMs, Data, Applications, Networks, and Identities) to minimize risk to the overall enviornment
+- **Security Governance:** Delegated decisions accelerate innovation and introduce new risks. Monitor decisions, configurations, and data to govern decisions made across the environment and within all workloads across the portfolio.
 - **Innovation Security:** As organization adopt DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
 
 ### Guiding Principles
