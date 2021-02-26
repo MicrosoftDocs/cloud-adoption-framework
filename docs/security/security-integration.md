@@ -13,12 +13,26 @@ ms.custom: internal
 # Security Integration
 Rather than being considered a separate discipline, separated from the general flow of operations, security should be integrated into each facet of the business. 
 TODO: Why? How does that impact the business?
+Business inherently requires risk. The objective of security isn't to tell the business "No. Don't take that risk.". When mature, the objective of security, is to expose risks, mitigate risks, and empower business change with minimal risk. That level of maturity requires security integration.
+
 
 ## Integrated processes
 TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture.
 What processes and people need to be inplace to ensure integration of security? 
 Does the security team have a responsibility to train & ready other teams to integrate security into their decisions?
 How does this team coordinate with IT staff and/or workload staff?
+
+### Strategic integration
+Security integration begins with integration of security into business processes. Evaluate digital transformation strategy and cloud adoption strategies with the cloud strategy team on a regular rythm. Build on those strategies to identify required changes & risks resulting from that change. Use that risk and risk management insights to educate the business on the risks and other options that may mitigate risks, while empowering change.
+
+### Platform and environment integration
+Many security breaches start with inconsistent environmental configuration. Using approaches like Azure Landing Zones, define security requirements that must be included in the configuration of any environments.
+
+### Governance integration
+Automate enforcement of security requirements using integration with security governance and IT operations governance. Security requirements that aren't set at the environment level, but can be automatically enforced, should be added to standard governance processes.
+
+### Adoption integration
+Integrate with adoption, innovation, and workload teams, to understand cloud adoption plans & the teams which will be making critical decisions. Use those plans to educate technical teams on risks and risk tolerances to aid in decision making. Prepare those teams for innovation within automated security guardrails & any required security reviews. Coach the teams on ways to reach their goals within defined guardrails.
 
 ## Technical integration
 
