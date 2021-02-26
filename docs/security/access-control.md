@@ -14,11 +14,12 @@ ms.custom: internal
 
 This article summarizes the areas for consideration when planning and implementing good access control practices inside your organization.
 
-## Context
-
 As organizations plan for cloud-based environments, the concept of network boundaries as the single outer edge of the security perimeter is challenged. With users and applications expanding beyond internal network boundaries, organizations must plan access control in a holistic way across technologies including  network, identity, applications, data, and more.
 
 Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
+
+TODO: Why? It feels like the first principles speak to this a bit. do you want to pull some of that to the top to explain what Access control is & why?
+TODO: After setting the context, set the vision before you communicate the solution. Briefly establish high-level processes needed to ensure proper access control. Is this a one-time thing? Is a security process? Do you need a process to handle exceptions?
 
 ## Enterprise Access Model and blended control Plane
 
