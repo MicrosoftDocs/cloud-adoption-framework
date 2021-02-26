@@ -14,13 +14,15 @@ ms.custom: internal
 
 This article provides areas of consideration for organisations planning to establish a security operation function.
 
-## Background
+TODO/question: Thought we were distinquishing between SOC & security operations within IT to monitor for breach at an IT level. If so, does that chance the definitions of security operations to be more central IT aligned?
 
 Security operations (sometimes called a security operations center (SOC)) is focused on reducing organizational risk by detecting and remediating active attacks on enterprise assets. Security operations does this with a variety of functions including reactively respond to detected attacks, proactively hunting for undetected attacks, gathering and dissemintating threat intelligence, and helping the organization prepare for future attacks.
 
 Security operations is currently undergoing significant modernization at all levels with the advent of cloud technologies, adversary targeting of IoT and OT resources, and the zero trust transformation of security to a multi-layer discipline (vs. a network centric strategy). This modernization of security operations is becoming urgent because of the massive increase in relevant telemetry (which is hard to process with classic techniques), the availability of cloud services to provide analytics such as machine learning (ML) and behavior analytics, and the time sensitive nature of the security operations mission.
 
 Security tools are only as good as the processes that surround them, so it is crucial that organizations design and run a well-structured security operations function to keep the organization safe.  
+
+TODO: Why does the business care? 
 
 ## Operations within a security strategy
 
@@ -50,7 +52,8 @@ This data can be filtered, modelled, and have business logic applied to it in or
 
 Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools.
 
-## Migrating to an 'assume breach' mindset
+TODO: Review change to H2
+## Processes required to 'assume breach'
 
 ### Holistic monitoring
 
