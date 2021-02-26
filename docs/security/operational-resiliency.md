@@ -11,12 +11,19 @@ ms.custom: internal
 
 ---
 # Secure Operational Resiliency
-To be perfectly secure, a system must be perfectly inaccessable. As being inaccessable generally defeats the purpose of most systems, the conclusion we reach is that the security will not be perfect. It is not a question of *if* a breach will occur, but rather *when*. 
+To be perfectly secure, a system must be perfectly inaccessable. As being inaccessable generally defeats the purpose of most systems, the conclusion we reach is that the security will not be perfect. It is not a question of *if* a breach will occur, but rather *when*. TODOL Review this possible addition... In the realm of security, operational resiliency focuses on preparing the business and supporting IT solutions for breach of security.
 
-Originally, security was concerned with stopping attackers and idealizing a prevention-centric defense. If the installed firewalls, intrusion detection systems, and antivirus scanners returned "All clear" signals, it was assumed that the infrastructure was secure and uncompromised. However, reviewing the recent large data breaches, we have seen time and time again that attackers had often had access to the compromised systems for multiple months before being detected. These breaches resulted in hundreds of millions of pieces of Personally Identifiable Information (PII), credit card data, username/password combinations, and other data being stolen. In addition to losing consumer confidence, these companies were often fined millions of dollars by regulators for being unable to protect their customers' data. 
+Originally, security was concerned with stopping attackers and idealizing a prevention-centric defense. If the installed firewalls, intrusion detection systems, and antivirus scanners returned "All clear" signals, it was assumed that the infrastructure was secure and uncompromised. However, reviewing the recent large data breaches, we have seen time and time again that attackers often had access to the compromised systems for multiple months before being detected. These breaches resulted in hundreds of millions of pieces of Personally Identifiable Information (PII), credit card data, username/password combinations, and other data being stolen. In addition to losing consumer confidence, these companies were often fined millions of dollars by regulators for being unable to protect their customers' data. 
 
-By adopting the "Assume Breach" mindset, the focus is shifted away from prevention-only methods. By increasing the security toolkit with options for detection, response, and recovery, combined with a properly implemented zero trust access model, the potential attack surface is limited to a singular, segmented, area. 
+By adopting the "Assume Breach" mindset, the focus is shifted away from prevention-only methods. Risk of post-breach impact is reduced by increasing the security toolkit with proceses and technology focused specifically on recovery and resiliency. Teaming sound resiliency practices that include processes for risk management insights, security integration, and the disciplinse of cloud security, reduces the potential attack surface limiting resiliency needs to singular, segmented, areas of impact. 
 
+Business alignment around operational resiliencey requires the following commitments and processes to ensure rapid recovery from breach:
+
+- Incident response plan
+- Impact evaluation
+- Rapid response
+
+The following sections describe these processese in greater details. The security disciplines in this methodology will aid in implementing tools to automate or support these critical processes.
 
 ## Creating and Maintaining an incident response plan
 In the event of a security incident, the general responsibility of a security operations team is to coordinate the activities of the Incident Response Plan, and verify that the affected system or systems has returned to an active and secured run state. Depending on the system, this may be a single step instruction to alert a specialist and request they take ownership of the issue, or it may be a multi-step, detailed, procedure to capture data and actively take steps to secure a system. 
@@ -32,8 +39,7 @@ As an example, during the process of determining the risk value for a particular
 
 Understanding all of the technical inter-connectivity exemplifies the need for the technical expert to weigh in during the risk assessment. 
 
-
-## Response
+## Rapid Response
 
 After the creation of the incident response plan, the next question revolves around the personel responsible for carrying out the plan.
 
