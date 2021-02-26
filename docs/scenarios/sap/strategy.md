@@ -26,11 +26,11 @@ SAP is an influential platform, and organizations have several motivations to ad
 
 - **Innovation motivations:** The cloud unlocks new opportunities for SAP to expand and deliver transformative products and services.
 
-- **Uncertain infrastructure requirements:** The infrastructure required for business transformation can be uncertain, such as with SAP S/4HANA.
+- **Infrastructure scale flexibility requirements:** The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with SAP S/4HANA.
 
 SAP customers are often motivated by all four categories above. To successfully implement an SAP platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
 
-Motivations to adopt an SAP platform in the cloud are often based on an organization's strategic objectives, and the majority of motivations tie into prioritizing SAP adoption in the near future. The following three topics are for your organization if your team is reviewing this adoption scenario:
+Motivations to adopt an SAP platform in the cloud are often based on an organization's strategic objectives. The following topics are for your organization if your team is reviewing this adoption scenario:
 
 1. Cycles to refresh SAP infrastructure require significant capital expenditures. If your SAP infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs.
 
