@@ -20,6 +20,8 @@ TODO: Ok, as a non-technical person, I can see the value. In a paragraph or less
 ## Insights
 TODO: When we are good at this, what kind of insights should we see & why are those example insights important to the business?
 
+## Processes
+TODO: What processes should be in place to review, evaluate, and apply these insights?
 
 ## Risk Management integration
 In order for risk management to be effective, it must be integrated into all aspects of the governance and compliance activities of an organization. In order for risks to be properly assessed, security must always be considered as part of a comprehensive approach.
