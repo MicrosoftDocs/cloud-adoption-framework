@@ -12,10 +12,13 @@ ms.custom: internal
 
 # Security Integration
 Rather than being considered a separate discipline, separated from the general flow of operations, security should be integrated into each facet of the business. 
-TODO: Why?
+TODO: Why? How does that impact the business?
 
-## Integrated disciplines & operations
-TODO: Paint the picture. What does the world look like when security is integrated? Are there differences in the processes, team structures, level of protection? How does that impact the business?
+## Integrated processes
+TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture.
+What processes and people need to be inplace to ensure integration of security? 
+Does the security team have a responsibility to train & ready other teams to integrate security into their decisions?
+How does this team coordinate with IT staff and/or workload staff?
 
 ## Technical integration
 
