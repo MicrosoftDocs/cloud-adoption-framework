@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Testing approach for Enterprise Scale
 
-We recognise that larger organisations may wish to also test their Enterprise Scale deployments (e.g. Azure Policies, RBAC, etc.) whether this is via automation or manually. This article will provide a suggested approach that can be taken to achieve the testing of changes in Enterprise Scale deployments.
+We recognise that larger organisations may wish to also test their Enterprise Scale deployments (e.g. Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
 
 ## Diagram 
 
