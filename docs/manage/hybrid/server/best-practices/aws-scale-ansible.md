@@ -49,15 +49,15 @@ This guide can be used even if you do not already have an existing Ansible test 
       az login
       az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
       ```
-  
+
       For example:
-  
+
       ```console
       az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor
       ```
-  
+
       Output should look like this:
-  
+
       ```json
       {
       "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -67,10 +67,10 @@ This guide can be used even if you do not already have an existing Ansible test 
       "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
       }
       ```
-  
+
       > [!NOTE]
-      > We highly recommend that you scope the service principal to a   specific [Azure subscription and resource group](/cli/azure/ad/sp).
-  
+      > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
+
 ## Create an AWS identity
 
 In order for Terraform to create resources in AWS, we'll need to create a new AWS IAM role with appropriate permissions and configure Terraform to use it.

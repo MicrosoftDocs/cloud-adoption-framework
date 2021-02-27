@@ -67,7 +67,7 @@ Use Resource Graph Explorer to query and view resources in Azure.
 
 ## Create a basic Azure tag taxonomy
 
-Open Azure CLI and run the following commands to create a basic taxonomy structure that lets you easily query and report on where your server resources are hosted (whether in Azure, AWS, GCP , or on-premises). For more guidance on building out a tag taxonomy please review the [resource naming and tagging decision guide](../../../../decision-guides/resource-tagging/index.md).
+Open Azure CLI and run the following commands to create a basic taxonomy structure that lets you easily query and report on where your server resources are hosted (whether in Azure, AWS, GCP, or on-premises). For more guidance on building out a tag taxonomy please review the [resource naming and tagging decision guide](../../../../decision-guides/resource-tagging/index.md).
 
 ```console
 az tag create --name "Hosting Platform"

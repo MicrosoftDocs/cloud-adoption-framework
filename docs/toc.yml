@@ -98,13 +98,13 @@ items:
       - name: Performance outcomes
         href: strategy/business-outcomes/performance-outcomes.md
       - name: Sustainability outcomes
-        href: strategy/business-outcomes/sustainability.md       
+        href: strategy/business-outcomes/sustainability.md
       - name: Business outcome template
         href: strategy/business-outcomes/business-outcome-template.md
       - name: Align efforts to learning metrics
         href: strategy/learning-metrics.md
       - name: Objectives and key results
-        href: strategy/business-outcomes/okr.md        
+        href: strategy/business-outcomes/okr.md
     - name: Business justification
       items:
       - name: Build a business justification
@@ -132,7 +132,7 @@ items:
       - name: Responsible AI
         href: strategy/responsible-ai.md
       - name: Accelerate cloud adoption with GitHub
-        href: scenarios/github-velocity/index.md 
+        href: scenarios/github-velocity/index.md
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
@@ -279,8 +279,8 @@ items:
               href: ready/azure-best-practices/define-network-encryption-requirements.md
             - name: Plan for traffic inspection
               href: ready/azure-best-practices/plan-for-traffic-inspection.md  
-            - name: Connectivity to other cloud providers 
-              href: ready/azure-best-practices/connectivity-to-other-cloud-providers.md                
+            - name: Connectivity to other cloud providers
+              href: ready/azure-best-practices/connectivity-to-other-cloud-providers.md
           - name: Management and monitoring
             href: ready/enterprise-scale/management-and-monitoring.md
           - name: Business continuity and disaster recovery
@@ -495,7 +495,7 @@ items:
             - name: Follow up Moodle migration
               href: scenarios/lamp/moodle/migration-post.md
 
-        - name: Dev/test workloads 
+        - name: Dev/test workloads
           items:
           - name: Migrate dev/test environments to Azure IaaS
             href: migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md
@@ -746,10 +746,10 @@ items:
           - name: Govern
             href: scenarios/azure-stack/govern.md
           - name: Manage
-            href: scenarios/azure-stack/manage.md            
+            href: scenarios/azure-stack/manage.md
 
         - name: Analytics solutions
-          items: 
+          items:
           - name: Overview
             href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
           - name: Teradata
@@ -940,7 +940,7 @@ items:
           - name: AI apps and agents
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
-            href: innovate/ai/knowledge-mining.md  
+            href: innovate/ai/knowledge-mining.md
 
       - name: Best practices
         items:
@@ -1505,7 +1505,6 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-
 
       - name: Monitoring
         items:

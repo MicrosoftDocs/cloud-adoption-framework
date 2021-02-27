@@ -1,5 +1,5 @@
 ---
-title: "Cloud adoption plan deployment to Azure DevOps"
+title: Cloud adoption plan deployment to Azure DevOps
 description: Learn how to quickly deploy a backlog to Azure DevOps by using a template that aligns cloud adoption efforts to a standardized process.
 author: BrianBlanchard
 ms.author: brblanch
@@ -28,7 +28,7 @@ To deploy the cloud adoption plan, open the [Azure DevOps demo generator](https:
 
 After your project has been created, continue through this article series to learn how to modify the template to align to your cloud adoption plan.
 
-For additional support and guidance on this tool, see [Azure DevOps Services demo generator](/azure/devops/demo-gen).
+For additional support and guidance on this tool, see [Azure DevOps Services demo generator](/azure/devops/demo-gen/).
 
 ## Bulk edit the cloud adoption plan
 
@@ -42,7 +42,7 @@ Some users may want to use Microsoft Project to track their tasks, create backlo
 
 The cloud adoption plan organizes activities by activity type:
 
-- **Epics:** An _epic_ represents an overall phase of the cloud adoption lifecycle.
+- **Epics:** An *epic* represents an overall phase of the cloud adoption lifecycle.
 - **Features:** Features are used to organize specific objectives within each phase. For instance, migration of a specific workload would be one feature.
 - **User stories:** User stories group work into logical collections of activities based on a specific goal.
 - **Tasks:** Tasks are the actual work to be done.
