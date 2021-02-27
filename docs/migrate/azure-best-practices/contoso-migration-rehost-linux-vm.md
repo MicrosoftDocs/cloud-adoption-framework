@@ -1,6 +1,6 @@
 ---
 title: Rehost an on-premises Linux application to Azure VMs
-description: Learn how Contoso rehosts an on-premises Linux app by migrating to Azure VMs.
+description: Learn how Contoso rehosts an on-premises Linux application by migrating to Azure VMs.
 author: deltadan
 ms.author: abuck
 ms.date: 07/01/2020
@@ -14,9 +14,9 @@ ms.custom: think-tank
 
 # Rehost an on-premises Linux application to Azure VMs
 
-This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application by using Azure infrastructure as a service (IaaS) virtual machines (VMs).
+This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application by using Azure infrastructure as a service (IaaS) virtual machines (VMs).
 
-The service desk application used in this example, osTicket, is provided as open source. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/osTicket/osTicket).
+The service desk application used in this example, osTicket, is provided as open-source software. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/osTicket/osTicket).
 
 ## Business drivers
 
@@ -81,7 +81,7 @@ Contoso will complete the migration process as follows:
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](/azure/migrate/contoso-migration-rehost-linux-vm) | The service orchestrates and manages migration of your on-premises applications and workloads as well as Amazon Web Services (AWS) and Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when migration occurs. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
+| [Azure Migrate: Server Migration](../index.md) | The service orchestrates and manages migration of your on-premises applications and workloads as well as Amazon Web Services (AWS) and Google Cloud Platform (GCP) VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when migration occurs. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
 
 ## Prerequisites
 
@@ -89,10 +89,10 @@ Here's what Contoso needs for this scenario.
 
 Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control (Azure RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control (Azure RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | Learn how [Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) for Azure Migrate: Server Migration. |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, or 6.5. <br><br> An ESXi host running version 5.5, 6.0, or 6.5. <br><br> One or more VMware VMs running on the ESXi host. |
-| **On-premises VMs** | [Review Linux Distros](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
+| **On-premises VMs** | [Review Linux distros](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
 ## Scenario steps
 
@@ -127,7 +127,7 @@ They set up these components as follows:
 
 **Need more help?**
 
-Learn about how to [set up the Azure Migrate: Server Migration tool](/azure/migrate).
+Learn about how to [set up the Azure Migrate: Server Migration tool](/azure/migrate/).
 
 ## Step 2: Prepare on-premises VMware for Azure Migrate: Server Migration
 
@@ -278,7 +278,7 @@ With the application now running, Contoso needs to fully operationalize and secu
 
 ### Security
 
-The Contoso security team reviews the OSTICKETWEB and OSTICKETMYSQL VMs to determine any security issues.
+The Contoso security team reviews the `OSTICKETWEB` and `OSTICKETMYSQL` VMs to determine any security issues.
 
 - The team reviews the network security groups (NSGs) for the VMs to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - The team also considers securing the data on the VM disks by using Azure Disk Encryption and Azure Key Vault.
@@ -290,10 +290,11 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 For business continuity and disaster recovery, Contoso takes the following actions:
 
 - **Keep data safe.** Contoso backs up the data on the VMs by using [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+
 - **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 
 - After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure deployment](./contoso-migration-infrastructure.md#set-up-tagging).
 - Contoso has no licensing issues with the Ubuntu servers.
-- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
+- Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.

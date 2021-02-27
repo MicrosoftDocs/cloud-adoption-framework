@@ -1,5 +1,5 @@
 ---
-title: "Adapt roles, skills, and processes for the cloud"
+title: Adapt roles, skills, and processes for the cloud
 description: Use the Cloud Adoption Framework for Azure to learn to adapt your existing roles, skills, and processes as your organization makes the shift to cloud computing.
 author: BrianBlanchard
 ms.author: brblanch
@@ -32,7 +32,7 @@ IT staff members commonly have concerns about acquiring the training needed to s
 
 ## Identify gaps
 
-Identifying gaps is another important aspect of organization readiness. A _gap_ is a role, skill, or process that is required for your digital transformation but doesn't currently exist in your enterprise.
+Identifying gaps is another important aspect of organization readiness. A *gap* is a role, skill, or process that is required for your digital transformation but doesn't currently exist in your enterprise.
 
 1. Enumerate the responsibilities that come with the digital transformation. Emphasize new responsibilities and existing responsibilities to be retired.
 1. Identify the area that aligns with each responsibility. For each new responsibility, check how closely it aligns with the area. Some responsibilities might span several areas. This crossover represents an opportunity for better alignment that you should document as a concern. In the case where no area is identified as being responsible, document this gap.

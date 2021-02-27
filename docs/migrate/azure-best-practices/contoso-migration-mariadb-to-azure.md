@@ -54,7 +54,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Current application
 
-The MariaDB database hosts employee data that's used for all aspects of the company's HR department. A [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application is used as the front end to handle employee HR requests. Contoso has 100,000 employees worldwide, so uptime is important for its databases.
+The MariaDB database hosts employee data that's used for all aspects of the company's HR department. A [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application is used as the front end to handle employee HR requests. Contoso has 100,000 employees worldwide, so uptime is important for its databases.
 
 ### Proposed solution
 
@@ -86,7 +86,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 ## Proposed architecture
 
 ![Diagram shows the scenario architecture.](./media/contoso-migration-mariadb-to-azure/architecture.png)
-_Figure 1: Scenario architecture._
+*Figure 1: Scenario architecture.*
 
 ### Migration process
 
@@ -105,7 +105,7 @@ The network:
 Contoso needs to set up a virtual network gateway connection from its on-premises environment to the virtual network where its MariaDB database is located. This connection allows the on-premises application to access the database over the gateway when the connection strings are updated.
 
   ![Diagram shows the migration process.](./media/contoso-migration-mariadb-to-azure/migration-process.png)
-  _Figure 2: The migration process._
+  *Figure 2: The migration process.*
 
 #### Migration
 
@@ -120,7 +120,7 @@ Contoso used the following steps to migrate its databases.
   ```
 
   ![Screenshot shows how to determine the on-premises MariaDB version.](./media/contoso-migration-mariadb-to-azure/mariadb_version.png)
-  _Figure 3: Determining the on-premises MariaDB version._
+  *Figure 3: Determining the on-premises MariaDB version.*
 
 - Create a new MariaDB instance in Azure:
 
@@ -129,7 +129,7 @@ Contoso used the following steps to migrate its databases.
   - Search for `MariaDB`.
 
     ![Screenshot shows a new MariaDB instance in Azure.](./media/contoso-migration-mariadb-to-azure/azure-mariadb-create.png)
-    _Figure 4: A new MariaDB instance in Azure._
+    *Figure 4: A new MariaDB instance in Azure.*
 
   - Select **Create**.
   - Select your subscription and resource group.
@@ -139,8 +139,8 @@ Contoso used the following steps to migrate its databases.
   - Enter an admin username and password.
   - Select **Review + create**.
 
-    ![Screenshot shows the Create MariaDB server screen.](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
-    _Figure 5: Review and create._
+    ![Screenshot of the **Create MariaDB Server** page.](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
+    *Figure 5: Review and create.*
 
   - Select **Create**.
   - Record the server hostname, username, and password.
@@ -151,13 +151,13 @@ Contoso used the following steps to migrate its databases.
 - Run the following commands to export the database called `Employees`. Repeat for each database:
 
     ```cmd
-    mysqldump -h localhost -u root -p -–skip-triggers -–single-transaction –-extended-insert -–order-by-primary -–disable-keys Employees > Employees.sql
+    mysqldump -h localhost -u root -p --skip-triggers --single-transaction --extended-insert --order-by-primary --disable-keys Employees > Employees.sql
     ```
 
 - Restore the database. Replace with the endpoint for your Azure Database for MariaDB instance and the username:
 
   ```cmd
-  mysql -h {name}.mariadb.database.azure.com -u user@{name} -p –ssl
+  mysql -h {name}.mariadb.database.azure.com -u user@{name} -p -ssl
   create database employees;
   use database employees;
   source employees.sql;
@@ -184,7 +184,7 @@ Contoso needs to:
 - Configure any outbound IP requirements to allow connections to the MariaDB [gateway IP addresses](/azure/mariadb/concepts-connectivity-architecture).
 - Update all applications to [require SSL](/azure/mariadb/concepts-ssl-connection-security) connections to the databases.
 - Set up [Private Link](/azure/mariadb/concepts-data-access-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
-- Enable [Azure Advanced Threat Protection (ATP)](/azure/mariadb/concepts-data-access-and-security-threat-protection).
+- Enable [Microsoft Defender for Identity](/azure/mariadb/concepts-data-access-and-security-threat-protection).
 - Configure Log Analytics to monitor and send alerts on security and logs entries of interest.
 
 ### Backups

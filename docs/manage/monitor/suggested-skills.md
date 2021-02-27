@@ -24,7 +24,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy diagnostic settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](/powershell/azure/?view=azps-3.6.1). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
+- Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli), which is our cross-platform command-line experience for managing Azure resources. Also review the introduction to [Azure PowerShell](/powershell/azure/). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
 
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
@@ -81,7 +81,7 @@ Various learning options beyond these initial options are available for developi
 
 Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Map roles and skills](/azure/cloud-adoption-framework/plan/suggested-skills): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
+- [Map roles and skills](../../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
 - Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 

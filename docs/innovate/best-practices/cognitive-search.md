@@ -1,6 +1,6 @@
 ---
 title: What is Azure Cognitive Search?
-description: Formerly Azure Search, Azure Cognitive Search is the cognitive search engine that helps you apply AI processes while indexing. Learn more about Azure Cognitive Services.
+description: Formerly Azure Search, Azure Cognitive Search is a cognitive search engine that helps you apply AI processes while indexing. Learn more about Azure Cognitive Services.
 author: v-hanki
 ms.author: janet
 ms.date: 01/26/2021
@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: cognitive search, azure cognitive services, cognitive search engine, what is cognitive, azure search
 ---
 
-<!-- cSpell:ignore Lucene -->
-
 <!-- docutune:casing "JFK Files" -->
 <!-- docutune:ignore "Azure Search" -->
 
@@ -22,7 +20,7 @@ Formerly known as Azure Search, Azure Cognitive Search is a managed cloud soluti
 
 On the other side of your service, your application code issues query requests and handles responses. The search experience is defined in your client by using functionality from Azure Cognitive Search, with query execution over a persisted index that you create, own, and store in your service.
 
-Cognitive search is important functionality in applications. The ability to rapidly find relevant data is essential to the end-user experience and results. Cognitive search engine uses AI functionality that helps applications work in a more human-like manner and make associations that go beyond mere keyword matching. Azure Cognitive Services can help your end users find what they need to know, faster.
+Azure Cognitive Search is important functionality in applications. The ability to rapidly find relevant data is essential to the end-user experience and results. The Azure Cognitive Search engine uses AI functionality that helps applications work in a more human-like manner and make associations that go beyond mere keyword matching. Azure Cognitive Services can help your end users find what they need to know, faster.
 
 ![Diagram that shows Azure Cognitive Search.](../../_images/ai-cognitive-search.png)
 
@@ -59,15 +57,13 @@ A schema can be created in the Azure portal or programmatically by using the [.N
 
 After you define an index, you're ready to upload content. You can use either a push or pull model.
 
-The pull model retrieves data from external data sources. It's supported through indexers that streamline and automate aspects of data ingestion, such as connecting to, reading, and serializing data. [Indexers](/rest/api/searchservice/Indexer-operations) are available for Azure Cosmos DB, Azure SQL Database, Azure Blob Storage, and SQL Server hosted in an Azure Virtual Machines instance. You can configure an indexer for on-demand or scheduled data refresh.
+The pull model retrieves data from external data sources. It's supported through indexers that streamline and automate aspects of data ingestion, such as connecting to, reading, and serializing data. [Indexers](/rest/api/searchservice/indexer-operations) are available for Azure Cosmos DB, Azure SQL Database, Azure Blob Storage, and SQL Server hosted in an Azure Virtual Machines instance. You can configure an indexer for on-demand or scheduled data refresh.
 
 The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) or [how to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
 
 ### Step 4: Search
 
-
-After populating an index, you can [issue search queries](/azure/search/search-query-overview) to your service endpoint by using simple HTTP requests with [REST APIs](/rest/api/searchservice/search-documents) or the [.NET SDK](/dotnet/api/microsoft.azure.search.idocumentsoperations?view=azure-dotnet&preserve-view=true). Step through [creating your first search application](/azure/search/tutorial-csharp-create-first-app) to build and then extend a web page that collects user input and handles results. You can also use [Postman for interactive REST](/azure/search/search-get-started-postman) calls or the built-in [Search explorer](/azure/search/search-explorer) in the Azure portal to query an existing index.
-
+After populating an index, you can [issue search queries](/azure/search/search-query-overview) to your service endpoint by using simple HTTP requests with [REST APIs](/rest/api/searchservice/search-documents) or the [.NET SDK](/dotnet/api/microsoft.azure.search.idocumentsoperations). Step through [creating your first search application](/azure/search/tutorial-csharp-create-first-app) to build and then extend a web page that collects user input and handles results. You can also use [Postman for interactive REST](/azure/search/search-get-started-rest) calls or the built-in [Search explorer](/azure/search/search-explorer) in the Azure portal to query an existing index.
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: "Empower Digital Transformation"
+title: Empower digital transformation
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation. Get digital transformation services on Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,6 +15,8 @@ keywords: Digital transformation, digital transformation services, cloud adoptio
 # Empower cloud adoption
 
 You know that innovation and digital transformation is critical to business success. Digital transformation is the adoption of cloud-based and digital technologies to replace old systems and create better customer experiences, better efficiency, business insights, and greater innovation from the data. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. Developers are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+
+<!-- docutune:ignore "one thing: drive" -->
 
 ## Generate value
 
@@ -57,7 +59,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer a
 
 ::: zone target="docs"
 
-**Go to [Azure DevOps documentation](/azure/devops/user-guide/?view=azure-devops&preserve-view=true)**
+**Go to [Azure DevOps documentation](/azure/devops/get-started/)**
 
 ::: zone-end
 
@@ -94,8 +96,8 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 ### Learn more
 
 - [Open source starts in GitHub](https://azure.microsoft.com/products/github/)
-- [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
-- [Microsoft Teams](/MicrosoftTeams/teams-overview)
+- [Open source on Azure](https://azure.microsoft.com/overview/open-source/)
+- [Microsoft Teams](/microsoftteams/teams-overview)
 
 ## [Innovation characteristics](#tab/Characteristics)
 
@@ -135,4 +137,4 @@ Game development is one example of an industry that's embracing LiveOps today. M
 
 PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device and platform agnostic and can be easily integrated with social identity providers like Facebook or Steam, store platforms to orchestrate commerce, and device platforms like iOS, Android, Xbox, and PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
-**Go to the [Azure PlayFab documentation](/gaming/playfab)**
+**Go to the [Azure PlayFab documentation](/gaming/playfab/)**

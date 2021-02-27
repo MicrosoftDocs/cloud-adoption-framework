@@ -1,6 +1,6 @@
 ---
-title: 'AI Innovation, Machine Learning, and More'
-description: Learn about Azure solutions to predict customer needs, automate business processes. Use knowledge mining, machine learning, and AI for better customer experiences.
+title: "Azure innovation: Innovate with AI"
+description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/27/2021
@@ -23,7 +23,7 @@ As an innovator, your company has rich information about its business and its cu
 - Discover information that's latent in unstructured data.
 - Engage with customers in new ways to deliver better experiences.
 
- This article introduces a few approaches to innovating with AI. Innovations can expand your company’s business insights into your existing data. The following table can help you find the best solution for your implementation needs.
+ This article introduces a few approaches to innovating with AI. Innovations can expand your company's business insights into your existing data. The following table can help you find the best solution for your implementation needs.
 
 | Solution category | Description                                                                                                                              | Required skills              |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
@@ -35,7 +35,7 @@ As an innovator, your company has rich information about its business and its cu
 
 Azure provides advanced machine learning capabilities. Build, train, and deploy your machine learning models across the cloud and edge by using Azure Machine Learning. Develop models faster by using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml) and [getting started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open-source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
+For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml) and [getting started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open-source model format and runtime for machine learning, see [ONNX Runtime](https://www.onnxruntime.ai/).
 
 <!-- markdownlint-disable MD024 -->
 
@@ -141,7 +141,7 @@ Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/
 
 ## Knowledge mining
 
-Knowledge mining uses artificial intelligence (AI) to drive content understanding over vast amounts of unstructured, semi-structured, and structured information. Use Azure Cognitive Search to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
+Knowledge mining uses AI to drive content understanding over vast amounts of unstructured, semi-structured, and structured information. Use Azure Cognitive Search to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
 
 <!-- docutune:ignore "Azure Search" -->
 
