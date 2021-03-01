@@ -13,7 +13,7 @@ keywords: innovation tools, ai predictions, ai applications, digital innovation,
 
 # Use innovation tools with AI to predict and influence
 
-AI means *artificial intelligence*, in which a computer detects patterns of data to produce insights that can help businesses understand the behavior of their customers. AI predictions can predict customer needs and automate business processes. Using AI applications and digital innovation tools, companies can discover information lying latent in unstructured data and deliver new ways to engage with customers to deliver better experiences.
+AI means *AI*, in which a computer detects patterns of data to produce insights that can help businesses understand the behavior of their customers. AI predictions can predict customer needs and automate business processes. Using AI applications and digital innovation tools, companies can discover information lying latent in unstructured data and deliver new ways to engage with customers to deliver better experiences.
 
 You can accelerate this type of digital innovation through each of the following solution areas. Best practices and technical guidance to accelerate digital invention are listed in the table of contents on the left side of this page. Those articles are grouped by solution area:
 
