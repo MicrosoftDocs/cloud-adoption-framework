@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Testing approach for Enterprise Scale
 
-We recognise that large organisations may wish to also test their Enterprise Scale deployments (e.g. Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, AzOps, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
+We recognize that large organizations may wish to also test their Enterprise Scale deployments (e.g. Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, AzOps, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
 
 ## Reasons To Not Use Separate Azure AD Tenants for Enterprise Scale
 
