@@ -1,18 +1,21 @@
 ---
 title: Enterprise Scale Analytics and AI DevOps Models
 description: Enterprise Scale Analytics and AI Architecture DevOps Models.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 02/10/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 # Enterprise Scale Analytics and AI DevOps Models
 
-The Enterprise Scale Analytics and AI solution pattern consists of:-
+The Enterprise Scale Analytics and AI solution pattern consists of:
 
-- A Data Management Subscription.
+- A Data Management Landing Zone.
 - One or more Data Landing Zones.
 - One or more Domains in each Data Landing Zone.
 - One or more Data Products in each Data Landing Zone.
@@ -24,7 +27,7 @@ Table 1, summarizes the teams involved in an Enterprise Scale Analytics and AI d
 |Name  |Role|# of teams|
 |-|-|-|
 |Cloud Platform Ops| The Azure Cloud Platform team in your organization| One for the whole Azure platform |
-|Data Platform Ops|In charge of creating and maintaining ARM template repositories for the different levels of the Enterprise Scale Analytics and AI. Also maintains the Data Management Subscription and supports other ops teams in case of deployment issues or required enhancements.| One for the Enterprise Scale Analytics and AI |
+|Data Platform Ops|In charge of creating and maintaining ARM template repositories for the different levels of the Enterprise Scale Analytics and AI. Also maintains the Data Management Landing Zone and supports other ops teams in case of deployment issues or required enhancements.| One for the Enterprise Scale Analytics and AI |
 |Data Landing Zone Ops |In charge of deploying and maintaining a specific Data Landing Zone. Also, supports the deployment and enhancement of data Domains and Data Products. | One team per Data Landing Zone |
 |Domain Ops|In charge of Domain deployment and updates| One team per Domain |
 |Data Product Team|In charge of Data Products deployment and updates| One team per Data Product |
@@ -62,12 +65,12 @@ Figure 1: Automation High Level Principles
 
 Figure 1, illustrates how their automation principle are implemented for a Data Landing Zone. How they call API's and the functions of each team.
 
-## Data Management Subscription Deployment Process
+## Data Management Landing Zone Deployment Process
 
- The Data Platform Ops team are responsible for deploying a Data Management Subscription before any Data Landing Zones are created. The Data Management Subscription should have its own repository which is maintained by the Data Platform team.  
+ The Data Platform Ops team are responsible for deploying a Data Management Landing Zone before any Data Landing Zones are created. The Data Management Landing Zone should have its own repository which is maintained by the Data Platform team.  
 
 >[!CAUTION]
->A Data Management Subscription must be created before any Data Landing Zones are deployed.
+>A Data Management Landing Zone must be created before any Data Landing Zones are deployed.
 
 ## Data Landing Zone Deployment Process
 
@@ -144,7 +147,7 @@ Figure 5: Data Ops Model
 
 At the start of the project, the Data Platform will have one Azure DevOps project with one or many ado boards. They will be formed into one AzureOps teams and will focus on:
 
-- One repository for the Data Management Subscription with pipelines and a service connection to the cloud environment
+- One repository for the Data Management Landing Zone with pipelines and a service connection to the cloud environment
 - One template repository for the Data Landing Zone with pipelines to deploy a Data Landing Zone instance with corresponding ADO connections to cloud environments.
 - One template repository for a Data Domain with pipelines to deploy a Data Domain instance with corresponding ADO connections to cloud environments.  These are forked to Data Landing Zone ADO projects.
 - One template repository for Data Products with pipelines to deploy a Data Product instance with corresponding ADO connections to cloud environments. These are forked to Data Landing Zone ADO projects.
@@ -153,13 +156,13 @@ Once Data Landing Zones have been deployed then the Enterprise Scale Analytics a
 
 - Each Data Landing Zone wil have its own ADO Project with one or many ADO boards.
 - For each new Data Domain or Data Product, the respective template gets forked to the respective Data Landing Zone ADO Project after the request has been approved.
-- For each Data Domain or Data Product there is a:-
+- For each Data Domain or Data Product there is a:
   - Service connection.
   - A registered Pipeline.
   - An ADO team with access to their ADO Board, and repository.
   - Different policies are defined for the forked repository.
 
-To control the deployment of Domain and Data Products we implement the principles of: -
+To control the deployment of Domain and Data Products we implement the principles of:
 
 - Main branch is secured and owned by Data Landing Zone Ops team.
 - Only main branch can be used to deploy to test and prod environments.
@@ -175,11 +178,12 @@ The Enterprise Scale Analytic and AI solution has create the following core **st
 
 |Repo|Content|Required Y/N|Deployment model|
 |-|-|-|-|
-|[Data Management Subscription Template](https://github.com/Azure/data-hub)| Central data management services as well as shared data services such as data catalog, SHIR etc. | Mandatory | One per Enterprise Scale Analytics and AI |
-|[Data Landing Zone Template](https://github.com/Azure/data-node)| Shared services for a Data Landing Zone like data storage and ingestion services as well as management services | Mandatory | One per Data Landing Zone |
-| [Domain Template](https://github.com/Azure/data-Domain) | Additional services required for a data Domain | Optional | One or many per Data Landing Zone |
-|[Data Product Template - Standard](https://github.com/Azure/data-product)| Additional services required for a data product | Optional | One or many per Data Landing Zone |
-| [Data Product Template - Analytics](https://github.com/Azure/data-product-analytics) | Additional services required for a data product | Optional | One or many per Data Landing Zone|
+|[Data Management Landing Zone Template](https://github.com/Azure/data-management-zone)| Central data management services as well as shared data services such as data catalog, SHIR etc. | Mandatory | One per Enterprise Scale Analytics and AI |
+|[Data Landing Zone Template](https://github.com/Azure/data-landing-zone)| Shared services for a Data Landing Zone like data storage and ingestion services as well as management services | Mandatory | One per Data Landing Zone |
+|[Domain Batch Template](https://github.com/Azure/data-domain-batch) | Additional services required for a Domain Batch | Optional | One or many per Data Landing Zone |
+|[Domain Streaming Template](https://github.com/Azure/data-domain-streaming) | Additional services required for a Domain Streaming | Optional | One or many per Data Landing Zone |
+|[Data Product Template - Analytics and Data Science](https://github.com/Azure/data-product-analytics)| Additional services required for a data product analytics and AI| Optional | One or many per Data Landing Zone |
+| [Data Product Template - Reporting](https://github.com/Azure/data-product-reporting) | Additional services required for a data product reporting | Optional | One or many per Data Landing Zone|
 
 These templates should not only contain ARM templates and the respective parameter files, but also CI/CD pipeline definitions for deploying the resources.
 Because of new requirements and new services on Azure, these templates will evolve over time. Therefore the `main` branch of these repositories should be secured to ensure that it is always error free and ready for consumption and deployment. A development subscription should be used to test changes to the configuration of the templates, before merging feature enhancements back into the `main` branch.

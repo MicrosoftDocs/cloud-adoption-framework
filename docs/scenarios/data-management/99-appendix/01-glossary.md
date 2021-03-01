@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Business Glossary
 description: Enterprise Scale Analytics and AI Architecture Business Glossary.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 02/10/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Glossary of Terms and Acronyms
 

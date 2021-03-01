@@ -1,16 +1,19 @@
 ---
 title: Enterprise Scale Analytics and AI Team Functions
 description: Enterprise Scale Analytics and AI Architecture Team Functions.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 02/10/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 # Teams and Functions
 
-The Enterprise Scale Analytics and AI moves teams from being a centralized data team, working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are groups together under a common Platform Group.
+The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 
 ![Enterprise Scale Analytics and AI Teams](../images/esaaiteams.png)
 
@@ -20,7 +23,7 @@ Figure 1: Enterprise Scale Analytics and AI Teams
 
 Platform Ops are part of the Platform Group team. They operate and own the cloud platform all up.
 
-Within Enterprise Scale Analytics they are responsible for instantiating Data Management Subscription and Data Landing Zone scaffolding such as networking, peering, core service and monitoring.
+Within Enterprise Scale Analytics they are responsible for instantiating Data Management Landing Zone and Data Landing Zone scaffolding such as networking, peering, core service and monitoring.
 
 At the start of rolling out Enterprise Scale Analytics and AI they are likely to have a heavy involvement in working, with the Data Platform Ops, in developing IT Service Management interfaces which personas in Data Landing Zone can use. These interfaces would typically be REST API calls to a service to onboard datasets, set security and add services to Data Landing Zones.
 
@@ -30,15 +33,15 @@ The Data Platform Ops group which is encompassed within the Platform Group Team.
 
 Data Platform Ops provides a host of services such as central monitoring, cataloguing services, as well as providing reusable policies for Data Landing Zones and Data Products.
 
-Data Platform Ops own the Data Management Subscription and have further responsibility which are detailed in the following sections.
+Data Platform Ops own the Data Management Landing Zone and have further responsibility which are detailed in the following sections.
 
 ### Develop Infrastructure
 
-The Data Platform Ops is responsible for developing infrastructure as code templates for use by Data Landing Zone personas. The templates can cover multiple scenarios which must be kept up to date and enhanced over times.
+The Data Platform Ops team is responsible for developing infrastructure as code templates for use by Data Landing Zone personas. The templates can cover multiple scenarios, which must be kept up to date and enhanced over times.
 
-The team rely on a feedback cycle from other teams to prioritize templates and add new functionality.
+The team relies on a feedback cycle from other teams to prioritize templates and add new functionality.
 
-The team are working in a agile framework with a common goal of driving standard infrastructure templates.
+The team is working in an agile framework with a common goal of driving standard infrastructure templates.
 
 ### Respond to new Data Landing Zone Requests
 
@@ -112,7 +115,7 @@ This team provide access to reusable data assets and must carefully assess acces
 
 Domain Ops would receive a request to onboard a new dataset via the business raising a ticket in there IT Service Management solution.
 
-Domain Ops reviews data catalogue for existing assets and source systems.
+Domain Ops reviews data catalog for existing assets and source systems.
 
 Domain Ops collect the metadata to be associated with the source such as schema, location, privacy requirements and ingest pattern.
 
@@ -120,7 +123,7 @@ Using there forked repo they would develop ingestion pipelines and deploy to the
 
 Finally, as part of the Enterprises dataset onboarding process they would register the dataset which would then drive creation of:
 
-1. Registering the dataset in the data catalogue.
+1. Registering the dataset in the data catalog.
 1. Creating Azure Data Lake Folders for the dataset.
 1. Notify the domain ops and data product teams of the new data asset.
 
@@ -128,11 +131,11 @@ Finally, as part of the Enterprises dataset onboarding process they would regist
 
 Domain Ops would receive a request to update a dataset via the business raising a ticket in there IT Service Management solution.
 
-Using there forked repo they would update pipelines and deploy to there domain resource groups. Upon deployment they would update the dataset in the data catalogue and notify the domain ops and data product teams of the new data asset.
+Using there forked repo they would update pipelines and deploy to there domain resource groups. Upon deployment they would update the dataset in the data catalog and notify the domain ops and data product teams of the new data asset.
 
-Finally, as part of the updating the dataset definition they would:-
+Finally, as part of the updating the dataset definition they would:
 
-1. Update the the dataset in the data catalogue.
+1. Update the the dataset in the data catalog.
 1. Notify the domain ops and data product teams of the new data asset.
 
 ### Manage Access Requests to Datasets
@@ -146,11 +149,11 @@ Domain Ops can use a data access heatmap to identify traffic and hotspots which 
 The heatmaps help prioritize support investment and manage storage costs whilst highlighting low traction data assets. In the case of low traction dataset, Domain Ops would contact the owners to evaluate archiving options.
 
 >[!NOTE]
->Some Data Catalogue solutions provide heatmaps as part of there integrated solution. However, it is possible to use other reporting tools such as PowerBI to.
+>Some Data Catalog solutions provide heatmaps as part of there integrated solution. However, it is possible to use other reporting tools such as PowerBI to.
 
 ### Domain Ops Feedback and Enhancement Loop
 
-The Domain ops would analyse feedback provided via a User Voice process such as a feedback portal and other channels (DL, open office hours etc.)
+The Domain ops would analyze feedback provided via a User Voice process such as a feedback portal and other channels (DL, open office hours etc.)
 
 Working with the business the team would identify major blockers for data options and collaborate with:
 
@@ -217,7 +220,7 @@ This would follow an ML Ops Model which is associated with the Data Landing Zone
 
 The Data Science Products Team would start by searching and finding the relevant dataset for there use case. The Data Governance solution should produce additional details such as data quality, lineage, similar dataset and data profile.
 
-For each of the datasets they would see if there is a sample dataset available and if the data is relevant for the project, they ask for access through the data catalogue or AD Access Package. Once data access was granted, she can access the data through the services in the Data Landing zone to start explorative data analysis.
+For each of the datasets they would see if there is a sample dataset available and if the data is relevant for the project, they ask for access through the data catalog or AD Access Package. Once data access was granted, she can access the data through the services in the Data Landing zone to start explorative data analysis.
 
 The team would use local compute or remote compute to process the data and start analyzing sample datasets, before processing all data. They can leverage remote compute targets, with larger datasets, to train and develop ML models with runs, outputs and models tracked inside Azure Machine Learning.
 
@@ -236,26 +239,26 @@ Self-service enablement is a key principle, in line with this analysts can acces
 
 ### Find and Request Data
 
-Analyst consults data marketplace/catalogue to discover relevant datasets.
+Analyst consults data marketplace/catalog to discover relevant datasets.
 
 * If the data asset can't be found or doesn't exist then they can raise a ticket with Domain Ops to support. The Domain Ops will assist in finding the dataset or add the request to there backlog for assessment in another development cycle.
-* If the dataset exists the analytics will be able to identify AAD-group membership for asset listed in catalogue and request access to the AAD-group via Access Package portal.
+* If the dataset exists the analytics will be able to identify AAD-group membership for asset listed in catalog and request access to the AAD-group via Access Package portal.
 
 ### Build New Reports
 
 Analysts can use the discovered dataset to build reports using tools such as PowerBI. When they are ready to publish they can use the report for there own benefit or chose to publish as a certified data product. Certifying a report would invoke the Data Products certification process for security, compliance and performance before publishing the workbook for discovery across the organization.
 
-### Ad-Hoc Queries
+### *Ad Hoc* Queries
 
-The Enterprise Scale Analytics and AI solution pattern has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process ad-hoc queries.
+The Enterprise Scale Analytics and AI solution pattern has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process *ad hoc* queries.
 
-In both cases Analyst can run queries against data assets across Data Landing Zone(s) subject to their permissions. The results from ad-hoc queries can be stored in Azure Data Lake workspace for re-use.
+In both cases Analyst can run queries against data assets across Data Landing Zone(s) subject to their permissions. The results from *ad hoc* queries can be stored in Azure Data Lake workspace for re-use.
 
 ### User Feedback
 
 Analyst can be an untapped source of improvements and enterprises are highly encouraged to create user feedback groups for each Data Landing Zone.
 
-Alongside encouraging participation in these user groups, analysts should log feedback for data assets to Domain Ops, Data Catalogue issues within the data catalogue or within IT Service Management solution. Lastly, Data process issues can be raise with data product teams or the T Service Management solution.
+Alongside encouraging participation in these user groups, analysts should log feedback for data assets to Domain Ops, Data Catalog issues within the data catalog or within IT Service Management solution. Lastly, Data process issues can be raise with data product teams or the T Service Management solution.
 
 >[!NOTE]
 >IT Service Management should be considered as a central location to raise feedback and issues. Whilst directly logging feedback to the individual teams might seem a quicker solution it doesn't give the enterprise a full view of challenges in the platform. \
@@ -269,7 +272,7 @@ Alongside encouraging participation in these user groups, analysts should log fe
 * Consulted - Who will be communicated with regarding decisions and tasks
 * Informed - Who will be updated on the decision's and actions during the project
 
-|Role |Cloud Environment|Data Management Subscription|Data Landing Zone|Domain|Data Products|
+|Role |Cloud Environment|Data Management Landing Zone|Data Landing Zone|Domain|Data Products|
 |-|-|-|-|-|-|
 |ES-AAI Service owner|Informed|Accountable|Consulted Informed|Consulted Informed|Consulted Informed|
 |Data Landing Zone Service owner|Informed|Consulted Informed|Accountable|Accountable|Accountable|

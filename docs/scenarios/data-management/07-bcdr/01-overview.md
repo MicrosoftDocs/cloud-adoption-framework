@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Business Continuity and Disaster Recovery
 description: Enterprise Scale Analytics and AI Architecture Business Continuity and Disaster Recovery.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 02/10/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Resiliency
 
@@ -33,11 +36,11 @@ For an overview of a disaster recovery architecture useful for Azure Databricks 
 
 ## Azure SQL Database
 
-For an overview of business continuity with Azure SQL Database see [Overview of business continuity with Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview).
+For an overview of business continuity with Azure SQL Database, see [Overview of business continuity with Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview).
 
 ## Azure Cosmos DB
 
-For an overview of High Availability with Azure Cosmos DB see [How does Azure Cosmos DB provide high availability](https://docs.microsoft.com/azure/cosmos-db/high-availability).
+For an overview of High Availability with Azure Cosmos DB, see [How does Azure Cosmos DB provide high availability](https://docs.microsoft.com/azure/cosmos-db/high-availability).
 
 ## Azure Data Factory
 
