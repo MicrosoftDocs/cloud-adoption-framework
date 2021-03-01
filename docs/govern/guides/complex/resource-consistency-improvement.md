@@ -20,7 +20,7 @@ The cloud adoption teams have met all requirements to move protected data. With 
 
 ### Changes in the current state
 
-- IT's actively moving production workloads with protected data into Azure. Some low-priority workloads are serving production traffic. More can be cut over as soon as IT operations signs off on readiness to support the workloads.
+- IT is actively moving production workloads with protected data into Azure. Some low-priority workloads are serving production traffic. More can be cut over as soon as IT operations signs off on readiness to support the workloads.
 - The application development teams are ready for production traffic.
 - The BI team is ready to integrate predictions and insights into the systems that run operations for the three business units.
 
