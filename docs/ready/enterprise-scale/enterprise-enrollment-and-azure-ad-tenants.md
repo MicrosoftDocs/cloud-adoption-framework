@@ -10,20 +10,20 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Enterprise Agreement enrollment and Azure Active Directory tenants
+# Enterprise Agreement enrolment and Azure Active Directory tenants
 
-## Plan for enterprise enrollment
+## Plan for enterprise enrolment
 
-An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
+An Enterprise Agreement (EA) enrolment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
 
 ![Diagram that shows Azure EA hierarchies.](./media/ea.png)
 
-_Figure 1: An Azure EA enrollment hierarchy._
+_Figure 1: An Azure EA enrolment hierarchy._
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level. The quota isn't enforced firmly and is used for reporting purposes.
 - Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
 - Subscriptions are the smallest unit in the Azure EA portal. They're containers for Azure services managed by the Service Administrator. They're where your organization deploys Azure services.
-- EA enrollment roles link users with their functional role. These roles are:
+- EA enrolment roles link users with their functional role. These roles are:
   - Enterprise Administrator
   - Department Administrator
   - Account Owner
@@ -34,7 +34,7 @@ _Figure 1: An Azure EA enrollment hierarchy._
 
 - The enrollment provides a hierarchical organizational structure to govern the management of subscriptions.
 - Multiple environments can be separated at an EA-account level to support holistic isolation.
-- There can be multiple administrators appointed to a single enrollment.
+- There can be multiple administrators appointed to a single enrolment.
 - Each subscription must have an associated Account Owner.
 - Each Account Owner will be made a subscription owner for any subscriptions provisioned under that account.
 - A subscription can belong to only one account at any given time.
@@ -45,9 +45,9 @@ _Figure 1: An Azure EA enrollment hierarchy._
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
 - Set up the Notification Contact email address to ensure notifications are sent to an appropriate group mailbox.
 - Assign a budget for each account, and establish an alert associated with the budget.
-- An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map your organization structure to your enrollment hierarchy.
+- An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map your organization structure to your enrolment hierarchy.
 - Create a new department for IT if business domains have independent IT capabilities.
-- Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
+- Restrict and minimize the number of account owners within the enrolment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 - If multiple Azure Active Directory (Azure AD) tenants are used, verify that the Account Owner is associated with the same tenant as where subscriptions for the account are provisioned.
 - Set up Enterprise Dev/Test and production environments at an EA account level to support holistic isolation.
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
@@ -64,7 +64,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 **Design considerations:**
 
-- Multiple Azure AD tenants can function in the same enrollment.
+- Multiple Azure AD tenants can function in the same enrolment.
 
 **Design recommendations:**
 
@@ -74,4 +74,4 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 - Plan and implement for [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
 - If dev/test and production are going to be isolated environments from an identity perspective, separate them at a tenant level via multiple tenants.
-- Avoid creating a new Azure AD tenant unless there's a strong identity and access management justification and processes are already in place.
+- Avoid creating multiple Azure AD Tenants as per guidance [here](testing-approach) and [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](../../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity)
