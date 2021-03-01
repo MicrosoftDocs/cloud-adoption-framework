@@ -12,13 +12,13 @@ ms.custom: think-tank
 
 # Testing approach for Enterprise Scale
 
-We recognize that large organizations may wish to also test their Enterprise Scale deployments (e.g. Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, AzOps, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
+We recognize that large organizations may wish to test their Enterprise Scale deployments (Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, AzOps, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
 
 ## Reasons To Not Use Separate Azure AD Tenants for Enterprise Scale
 
 - As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](../../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance
 - Increased/Duplicated Azure AD licensing costs due to multiple identities across different Azure AD Tenants.
-- Azure Policy & RBAC testing is not as accurate due to a large majority of parameters requiring to be changed between different Azure AD Tenants
+- Azure Policy & RBAC testing is not as accurate due to most parameters requiring to be changed between different Azure AD Tenants
   - This also increases chances of the testing not actually benefitting the deployment process due to potential for increased deployment failures.
 - Single Tenant approach:
   - Allows for a single break-glass/emergency access process for all environments
