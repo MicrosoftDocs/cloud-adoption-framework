@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Data Handling
 description: Enterprise Scale Analytics and AI Architecture Data Handling.
-author: 
-ms.author:  # Microsoft employees only
+author: mboswell
+ms.author: mboswell # Microsoft employees only
 ms.date: 12/8/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

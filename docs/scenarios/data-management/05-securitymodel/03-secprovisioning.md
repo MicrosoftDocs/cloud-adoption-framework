@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Security Provisioning
 description: Enterprise Scale Analytics and AI Architecture Security Provisioning.
-author: 
-ms.author:  # Microsoft employees only
+author: mboswell
+ms.author: mboswell # Microsoft employees only
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
