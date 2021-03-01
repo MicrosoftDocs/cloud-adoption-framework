@@ -3,7 +3,7 @@ title: Testing approach for Enterprise Scale
 description: Testing approach for Enterprise Scale
 author: jtracey93
 ms.author: jatracey
-ms.date: 02/02/2021
+ms.date: 01/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready 
@@ -23,8 +23,8 @@ We recognise that large organisations may wish to also test their Enterprise Sca
 - Single Tenant approach:
   - Allows for a single break-glass/emergency access process for all environments
   - Reduces complexity
-  - 
-
+  - Reduces chances for configuration drift
+  - Reduces time to make changes and to deploy into production
 
 ## Diagram 
 
