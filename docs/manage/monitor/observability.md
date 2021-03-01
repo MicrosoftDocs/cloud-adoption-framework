@@ -24,7 +24,7 @@ The goal of this article is to take the [monitoring strategy](../../strategy/mon
 
 ## Why observability is important
 
-Quite simply, it's observability *first* that drives the monitoring consumer to understand what is considered or perceived as *normal* operation of a service. In other words, you seek *total visibility,* a key monitoring principle, as soon as possible. Once initial observability is achieved, then you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate AIOps solutions. This allows you time to get comfortable with the underlying metric and log monitoring data.
+Quite simply, its observability *first* that drives the monitoring consumer to understand what is considered or perceived as *normal* operation of a service. In other words, you seek *total visibility,* a key monitoring principle, as soon as possible. Once initial observability is achieved, then you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate AIOps solutions. This allows you time to get comfortable with the underlying metric and log monitoring data.
 
 >[!NOTE]
 >This is the opposite approach taken in the past, when teams worked to define all of the monitoring requirements first on paper, before build, test, and deploy.
@@ -66,9 +66,9 @@ Architects must, like operators, understand what diagnostic information an IT in
 
 * Guidance in the form of documentation, software, training, or consulting by the software or hardware vendor.
 
-If you are familiar with System Center Operations Manager, Microsoft and its partners provide *management packs.*  Management packs are technology specific; for example you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less pre-defined by the product engineers at Microsoft and dozens of industries. With Operations Manager you don't need to worry about north-south and east-west dependencies, so that observing the health of SQL is part of the larger IT service with networking, virtualization and applications included. Owing to a common schema based on the familiar four-part *health model*, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural patterns, relative to cloud services.
+If you are familiar with System Center Operations Manager, Microsoft and its partners provide *management packs.*  Management packs are technology-specific; for example you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less pre-defined by the product engineers at Microsoft and dozens of industries. With Operations Manager you don't need to worry about north-south and east-west dependencies, so that observing the health of SQL is part of the larger IT service with networking, virtualization and applications included. Owing to a common schema based on the familiar four-part *health model*, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural patterns, relative to cloud services.
 
-In the cloud, you have enormous flexibility in the kind of services you want. Monitoring includes how they change over time - they can be dynamical, global and resilient.  As a cloud architect, you are not constrained by fixed, on-premises thinking. Operations Manager can participate, but again, it's forte is traditional on-premises infrastructure and applications. Whereas Azure Monitor's architecture is much more flexible in covering all three cloud models. To reach your observability goals in Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to visualize the components working together.
+In the cloud, you have enormous flexibility in the kind of services you want. Monitoring includes how they change over time - they can be dynamical, global and resilient.  As a cloud architect, you are not constrained by fixed, on-premises thinking. Operations Manager can participate, but again, its strength is traditional on-premises infrastructure and applications. In contrast, Azure Monitor's architecture is much more flexible in supporting all three cloud models. To reach your observability goals in Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to visualize the components working together.
 
 With Azure Monitor, you can take advantage of existing workbooks that are included in [Insights](/azure/azure-monitor/monitor-reference), which provide similar functionality that a management pack in Operations Manager does. Otherwise, you need to review the Azure documentation for each of the Azure services in order to understand how you can monitor and detect for known failures or symptoms that indicate potential failure.
 
@@ -134,7 +134,7 @@ Your value stream needs to consider service observability much earlier and in th
 
 * It monitors in sufficient depth and breadth.
 * It provides coverage across the health model (availability, capacity/performance, security, conformance).
-* It monitors utility also, what the services does, including the end user experience.
+* It monitors utility also, what the service does, including the end-user experience.
 
 In the monitoring strategy, we recommend establishing a monitoring plan that starts with what is minimally viable or most important to monitor and observe. This can be based on recommendations from Microsoft, other reputable sources, and your internal developers or system engineers depending on the resource or system. Establish initial visibility of the *consumption*, *performance*, *security*, and *availability* of the resources in your Azure resource groups and your Azure Active Directory tenant. Through observation, you learn how to interpret the data and learn what's significant in order to further tune and optimize how the service is monitored. Value is achieved when incremental, and there is a co-creation of value here in that the consumers are working with the monitoring team (or in some cases the service provider) on co-creation of value.
 
@@ -145,8 +145,8 @@ Observability evolves gradually, starting with a minimally viable monitoring pla
 * Evaluate if this wasn't anticipated, what can be done to improve the infrastructure, application, etc.
 * Rule out it's the infrastructure or application, and narrow down to a specific browser, browser version, or client operating system is the potential issue.
 * Identify, and document or implement, workarounds that can be used to minimize any performance or availability issues with the application, infrastructure, etc.
-* Adapt to the dynamical and complex nature of an application. Continue learning it's normal behavior patterns in order to narrow in on the unusual ones.
-* Tune the type of data colleted, aggregated, and alerted on to minimize storage cost for data you never analyze, alert on, or visualize.
+* Adapt to the dynamical and complex nature of an application. Continue learning its normal behavior patterns in order to narrow in on the unusual ones.
+* Tune the type of data collected, aggregated, and alerted on to minimize storage cost for data you never analyze, alert on, or visualize.
 
 At first, you no longer need to worry about the infrastructure or application as was the case in an on-premises world; you are now free to monitor or obtain monitoring data to support the needs of those responsible for managing and operating the workload.
 
@@ -162,7 +162,7 @@ Thus in the need to control infrastructure services by monitoring solutions, cus
 
 A fixed approach cannot occur in the cloud given the near infinite arrangement and combinations of resources both in space and in time. Each service can be unique. Service observability in Azure must be built depending on the flexible nature of the service (that is, dynamical, global, resilient, user-centric, etc.) or according to some set of architectural templates, which may not yet exist.
 
-Observability then, is first and paramount to holistically seeing how all components are working together *before* establishing event significance (alerts, digests, workbooks, etc).
+Observability then, is first and paramount to holistically seeing how all components are working together *before* establishing event significance (alerts, digests, workbooks, etc.).
 
 Again, cloud service monitoring is much more flexible and dynamical with faster speed of change.
 
@@ -230,7 +230,7 @@ Summarize the plan to ensure it communicates and informs all relevant consumers,
 
 ### Lean and agile considerations
 
-**Minimum Viable Product:** Let the plan define the minimum viable product, that is what is initially needed to go live, then continue to evolve the monitoring solution to maximize value. For example, you may define a future task later to build additional Azure log analytics-powered workbooks, pinning to Azure dashboards and expanding stakeholder access to the Azure Portal.
+**Minimum Viable Product:** Let the plan define the minimum viable product, that is what is initially needed to go live, then continue to evolve the monitoring solution to maximize value. For example, you may define a future task later to build additional Azure log analytics-powered workbooks, pinning to Azure dashboards and expanding stakeholder access to the Azure portal.
 
 **Start Where You’re At and Get Value Fast:**  Rapidly and radically experiment, exploit with SaaS out of the box, because its easy and valuable
 
