@@ -180,7 +180,7 @@ A key component of the service review process is to ensure that services that do
 
 A staged approach of allowing the service use in different environments allows for earlier access to controls for adoption teams while reducing the exposure of services without controls.
 
-![Infographic of new service control lifecycle](../_images/govern/new-service-control-lifecycle.png)
+![Infographic of a new service control lifecycle](../_images/govern/new-service-control-lifecycle.png)
 
 To ensure that adoption teams are not blocked during the creation of new Service Guidance, there are several stages. The process looks to accelerate their ability to start using the service. The first stage is for the adoption team to nominate the new service that they need for a service review.
 
