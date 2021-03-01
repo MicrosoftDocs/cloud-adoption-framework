@@ -1,5 +1,5 @@
 ---
-title: "Management levels in cloud management"
+title: Management levels in cloud management
 description: Learn how to narrow cloud management options to a consistent set of processes and tools that you can offer for workloads hosted in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -36,7 +36,7 @@ The remaining articles in this series outline processes that are commonly found 
 
 Each suggested management level can call on a variety of cloud management disciplines. However, the mapping is designed to make it easier to find the suggested processes and tools to deliver on the appropriate level of cloud management.
 
-In most cases, the previously discussed _management baseline level_ consists of processes and tools from the following disciplines. In each case, a few processes and tools are highlighted to demonstrate _enhanced baseline functions_.
+In most cases, the previously discussed *management baseline level* consists of processes and tools from the following disciplines. In each case, a few processes and tools are highlighted to demonstrate *enhanced baseline functions*.
 
 - **Inventory and visibility:** At a minimum, a management baseline should include a means of inventorying assets and creating visibility into the run state of each asset.
 - **Operational compliance:** Regular management of configuration, sizing, cost, and performance of assets is key to maintaining performance expectations and a management baseline.

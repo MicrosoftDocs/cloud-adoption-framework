@@ -129,7 +129,7 @@ If you want to demo/control the actual registration process, do the following:
 
 1. In the [`install_arc_agent.sh.tmpl`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/install_arc_agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
 
-    ![A screenshot showing 'main.tf' being commented out to disable automatic onboarding of an Azure Arc agent.](./media/gcp-ubuntu/ubuntu-main-tf.png)
+    ![A screenshot showing `main.tf` being commented out to disable automatic onboarding of an Azure Arc agent.](./media/gcp-ubuntu/ubuntu-main-tf.png)
 
 2. Get the public IP of the GCP VM by running `terraform output`.
 
@@ -141,11 +141,12 @@ If you want to demo/control the actual registration process, do the following:
 
 4. Export all the environment variables in [`vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh)
 
-    ![A screenshot of environment variables exporting with 'vars.sh'.](./media/gcp-ubuntu/ubuntu-export-variables.png)
+    ![A screenshot of environment variables exporting with `vars.sh`.](./media/gcp-ubuntu/ubuntu-export-variables.png)
 
 5. Run the following command:
 
-    ```console azcmagent connect --service-principal-ID $tf-VAR-client-ID --service-principal-secret $tf-VAR-client-secret --resource-group "Azure Arc gcp-demo" --tenant-ID $tf-VAR-tenant-ID --location "westus2" --subscription-ID $tf-VAR-subscription-ID
+    ```console
+    azcmagent connect --service-principal-ID $tf-VAR-client-ID --service-principal-secret $tf-VAR-client-secret --resource-group "Azure Arc gcp-demo" --tenant-ID $tf-VAR-tenant-ID --location "westus2" --subscription-ID $tf-VAR-subscription-ID
     ```
 
     ![A screenshot of the `azcmagent connect` command completing successfully.](./media/gcp-ubuntu/ubuntu-azcmagent.png)

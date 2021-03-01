@@ -50,7 +50,7 @@ As your subscription model grows, you might decide that some resources belong in
 - Identify who is responsible for creating new subscriptions.
 - Decide which resource types are available in a subscription by default.
 - Decide what all standard subscriptions should look like. Considerations include Azure RBAC access, policies, tags, and infrastructure resources.
-- If possible, [programmatically create new subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription) via a service principal. You must [grant permission to the service principal](/azure/azure-resource-manager/grant-access-to-create-subscription) to create subscriptions. Define a security group that can request new subscriptions via an automated workflow.
+- If possible, [programmatically create new subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription) via a service principal. You must [grant permission to the service principal](/azure/cost-management-billing/manage/grant-access-to-create-subscription) to create subscriptions. Define a security group that can request new subscriptions via an automated workflow.
 - If you're an Enterprise Agreement (EA) customer, ask Azure support to block creation of non-EA subscriptions for your organization.
 
 ## Next steps

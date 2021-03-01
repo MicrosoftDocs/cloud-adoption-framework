@@ -123,7 +123,7 @@ Before executing the Terraform plan, you must set the environment variables whic
 
     ![A screenshot of an Azure Arc enabled server being deleted.](./media/vmware-terraform-windows/delete-server.png)
 
-- If you delete the instance manually, then you should also delete *install-azure-arc-agent.ps1*, which is created by the Terraform plan.
+- If you delete the instance manually, then you should also delete `install-azure-arc-agent.ps1`, which is created by the Terraform plan.
 
 - If you want to tear down the entire environment, use the `terraform destroy --auto-approve` command as shown below.
 
