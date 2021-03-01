@@ -52,7 +52,6 @@ This data can be filtered, modelled, and have business logic applied to it in or
 
 Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools.
 
-TODO: Review change to H2
 ## Processes required to 'assume breach'
 
 ### Holistic monitoring
