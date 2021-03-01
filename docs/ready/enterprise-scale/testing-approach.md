@@ -1,7 +1,7 @@
 ---
 title: Testing approach for Enterprise Scale
 description: Testing approach for Enterprise Scale
-author: JackTracey
+author: jtracey93
 ms.author: jatracey
 ms.date: 02/02/2021
 ms.topic: conceptual
@@ -12,25 +12,50 @@ ms.custom: think-tank
 
 # Testing approach for Enterprise Scale
 
-We recognise that larger organisations may wish to also test their Enterprise Scale deployments (e.g. Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
+We recognise that large organisations may wish to also test their Enterprise Scale deployments (e.g. Azure Policy definitions and assignments, RBAC custom roles and assignments, etc.) whether this is via automation (ARM Templates, AzOps, Terraform etc.) or manually via the portal. This article will provide a suggested approach that can be taken to achieve the testing of changes and their impact in Enterprise Scale deployments.
+
+## Reasons To Not Use Separate Azure AD Tenants for Enterprise Scale
+
+- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](../../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance
+- Increased/Duplicated Azure AD licensing costs due to multiple identities across different Azure AD Tenants.
+- Azure Policy & RBAC testing is not as accurate due to a large majority of parameters requiring to be changed between different Azure AD Tenants
+  - This also increases chances of the testing not actually benefitting the deployment process due to potential for increased deployment failures.
+- Single Tenant approach:
+  - Allows for a single break-glass/emergency access process for all environments
+  - Reduces complexity
+  - 
+
 
 ## Diagram 
 
-***THIS DIAGRAM NEEDS UPDATING TO SHOW THE CANARY SIDE OF THE MANAGEMENT GROUP HIERARCHY***
+![Diagram that shows management group hierarchy.](./media/canary-mgmt-groups.png)
 
-![Diagram that shows management group hierarchy.](./media/sub-org.png)
+_Figure 1: Canary Management Group hierarchy._
 
-_Figure 1: Management group hierarchy._
+## Explanation
 
-## Summary
+As the above diagram shows, the entire "production" Management Group hierarchy is duplicated beneath the ```Tenant Root Group``` and the "canary" name is appended to the Management Group display names (this can also be done for the Management Group IDs, as they must be unique within the Tenant).
 
+>[!NOTE] The term "canary" is used to avoid confusion with development or test environments. 
 
-### Reasons Why Not To Use Seperate Azure AD Tenants:
+The "canary" Management Group hierarchy is then used to test the following resource types:
 
-- Have to purchase duplicate licenses for Azure AD features (PIM/MFA etc.)
-- Users have to have multiple accounts - security risk
-  - Protect with AAD P2 features & PIM from single AAD tenant instead to fix this
-- Doesn't allow testing of RBAC and Policy changes effectively - due to separate tenant so code will be different
-  - Better to use single tenant and split out separate management group structure beneath Tenant - Root Group - e.g "Contoso" = Prod, "Contoso-Canary" = dev/test
-- Single tenant and multiple MG structures allow single view for security and compliance
-- Single tenant keep things simple and reduces risk of shadow IT for Azure
+- Management Groups
+- RBAC
+  - Roles
+  - Assignments
+- Azure Policy
+  - Definitions
+  - Initiatives 
+  - Assignments
+
+>[!IMPORTANT]This is not for development or test environments that would be used by application/service owners; these are handled within the "production" Management Group hierarchy and associated governance (RBAC & Azure Policy).
+
+## Implementation Guidance
+
+Below is some guidance on how to implement and use the "canary" Management Group hierarchy for Enterprise Scale:
+
+1. Use separate Azure AD SPNs or MSIs that are granted permissions over the relevant "production" or "canary" Management Group hierarchy
+   - This follows the principle of least privilege (PoLP)
+2. Use separate git branches or repositories to hold the Infrastructure-as-Code for the "production" and "canary" Management Group hierarchies and their associated RBAC & Azure Policies.
+   - Using the relevant Azure AD SPN or MSI as part of the CI/CD pipelines depending on which hierarchy is being deployed to
