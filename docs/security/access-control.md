@@ -17,9 +17,18 @@ This article summarizes the areas for consideration when planning and implementi
 As organizations plan for cloud-based environments, the concept of network boundaries as the single outer edge of the security perimeter is challenged. With users and applications expanding beyond internal network boundaries, organizations must plan access control in a holistic way across technologies including  network, identity, applications, data, and more.
 
 Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
+  
+By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
+Access control is an on-going process of checks and balances, baselines and refinements. The controls established should be included in an organisation's standard operations and reviewed regularly, alongside other standard processes.
+New infrastructure types will require the controls to be refactored to accommodate new secure access methods, security incidents will require controls to be revewied and refined.  
 
-TODO: Why? It feels like the first principles speak to this a bit. do you want to pull some of that to the top to explain what Access control is & why?
-TODO: After setting the context, set the vision before you communicate the solution. Briefly establish high-level processes needed to ensure proper access control. Is this a one-time thing? Is a security process? Do you need a process to handle exceptions?
+Implementing access controls should deliver assurances to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.
+
+Scaling this standard requires three things -
+
+- **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
+- **Orchestration** - streamline processes as much as possible in order to aggregate access requests and permissions management centrally. This context enables teams to approve access and govern usage of permissions in context and help spot patterns that require investigation
+- **Automation** - as much as possible use the technologies available to automate monitoring, detecting, and responding to exceptions in access control patterns
 
 ## Enterprise Access Model and blended control Plane
 
@@ -32,18 +41,6 @@ For more details on Microsoft's reference model for enterprise access, see [Ente
 While access controls will be infused throughout the environment, the control plane will be primarily a blend of identity and network controls. While the focus level on each will vary by type of environment, these should be designed to work in harmony to meet both productivity and security goals.
 
 (new diagram)
-
-## First principles
-
-Implementing access controls should deliver to business stakeholders an assurance that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.  
-
-By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
-
-Scaling this standard requires three things -
-
-- **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
-- **Orchestration** - streamline processes as much as possible in order to aggregate access requests and permissions management centrally. This context enables teams to approve access and govern usage of permissions in context and help spot patterns that require investigation
-- **Automation** - as much as possible use the technologies available to automate monitoring, detecting, and responding to exceptions in access control patterns
 
 ## Zero Trust concept
 
