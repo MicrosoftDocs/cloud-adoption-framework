@@ -109,20 +109,13 @@ items:
   
   - name: Enterprise Scale Analytics and AI Solution Pattern
     items:
-
      - name: Enterprise Scale Teams
        href: ./01-overview/02-esa-ai-teams.md
-
      - name: Cost Management and Policies
        href: ./01-overview/04-policy.md
      - name: Enterprise Scale Analytics and AI Networking
        href: ./01-overview/05-networking.md
-
-
-  - name: Data Ingestion Pattern
-    items:
-
-    
+  
   - name: Enterprise Scale Analytics and AI Security
     items:
       - name: Enterprise Scale Analytics and AI Security
@@ -131,10 +124,6 @@ items:
         href: ./05-securitymodel/02-sensitive.md
       - name:  Security Provisioning
         href: ./05-securitymodel/03-secprovisioning.md
-
-  - name: Dev and Data Ops
-    items:
-
 
   - name: Business Continuity and Disaster Recovery
     items:
