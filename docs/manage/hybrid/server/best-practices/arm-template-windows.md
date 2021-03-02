@@ -35,7 +35,7 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
     az --version
     ```
 
-3. Azure subscription: If you don't have an Azure subscription, you can [create a free Azure account](https://azure.microsoft.com/free/).
+3. Azure subscription: if you don't have an Azure subscription, you can [create a free Azure account](https://azure.microsoft.com/free/).
 
 4. Create an Azure service principal.
 

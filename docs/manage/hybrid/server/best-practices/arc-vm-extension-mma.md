@@ -98,7 +98,7 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
     To match your configuration you will need to provide:
 
-    - The VM name as it is registered in Azure Arc.
+    - The VM name as registered in Azure Arc.
 
       ![A screenshot of a machine name from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-machine-name.png)
 
