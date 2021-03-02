@@ -215,6 +215,6 @@ To delete all the resources you created as part of this demo, use the `terraform
 
       ![A screenshot of an Ansible playbook running.](./media/aws-scale-ansible/ansible-playbook.png)
 
-    As earlier, open Azure portal and navigate to the arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+    As earlier, open Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
     ![A screenshot of the Azure portal showing Azure Arc enabled servers.](./media/aws-scale-ansible/onboarding-servers.png)

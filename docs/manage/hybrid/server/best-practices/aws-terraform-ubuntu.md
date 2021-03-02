@@ -133,7 +133,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
 1. Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
 
-2. Open the Azure portal and navigate to the arc-aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
+2. Open the Azure portal and navigate to the `arc-aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
     ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./media/aws-ubuntu/aws-ubuntu-server.png)
 
