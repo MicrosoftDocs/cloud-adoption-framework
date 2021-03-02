@@ -180,7 +180,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
     ![A screenshot of an Ansible playbook running.](./media/aws-scale-ansible/ansible-playbook.png)
 
-6. Open the Azure portal and navigate to the arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+6. Open the Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
 
     ![A screenshot of the Azure portal onboarding Azure Arc enabled servers.](./media/aws-scale-ansible/onboarding-servers.png)
 
