@@ -15,6 +15,46 @@ Rather than being considered a separate discipline, separated from the general f
 TODO: Why? How does that impact the business?
 Business inherently requires risk. The objective of security isn't to tell the business "No. Don't take that risk.". When mature, the objective of security, is to expose risks, mitigate risks, and empower business change with minimal risk. That level of maturity requires security integration.
 
+## Security Operations nomenclature disambiguation
+Within the security space exists many commonly used terms for individual positions or teams whose definition, roles, and duties, can often differ wildly from organization to organization. Even the term for someone working in the security field can require clarification - "Security" might be specific to physical security, while "Cybersecurity" is reserved for all things technology related. However as identity becomes the new perimeter, even this deliniation becomes nebulous as physical security becomes tied to cybersecurity for things such as building or workstation access. What does become clear is the need for security as a concept which needs to be integrated into every part of an organization. 
+
+The following is a breakdown of roles and their responsibilities as utilized in the Cloud Adoption Framework security documentation. Not all of the roles listed here are required to be separate individuals, as the overall workload will vary from company to company. However, the all of the responsibilities listed should have defined owners.
+
+### CISO - Chief Information Security Officer / Office of the CISO
+>A [CISO](https://en.wikipedia.org/wiki/Chief_information_security_officer) is the senior-level executive within an organization responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected.
+
+The CISO acts as the executive-level sponsor for all security-centric endevors and is accountable for the overall security posture and establishing the risk tolerance of an organization. The CISO and the Office of the CISO coordinates with other subject matter experts to create guidance, governance, as well as maintaining audit compliance. All security-specific personel generally report under or have a "dotted-line" relationship with the CISO. In larger enterprises, the Office of the CISO may act as a aggregation-only entity, acting as a auditing and reporting body without any hands-on-keyboard interactions with the environment. In other organizations, the CISO may not only define the company's security posture, but have direct reports responsible for the actual implementation of the policies, working hand-in-hand with the Chief Technology Officer (CTO) and their Information Technology (IT) teams.
+
+**Responsibilities** - The CISO is the top executive sponsor, accountable for the establishment, implementation, and maintenance of the overall security posture, as well as ensuring that the organization is abiding by all required compliance and governance standards. The CISO is also responsible for the enterprise security vision, balancing the protection of information versus allowing for agility and growth. 
+
+### SOC - Security Operations Center
+> Often referred to as / also known as: Cyber Defense Operations Center ([CDOC](https://www.microsoft.com/en-us/msrc/cdoc)), Information Security Operations Center (ISOC)
+
+To some organizations, the way we define the SOC within the Cloud Adoption Framework will potentially be the largest shift compared to some other contemporary definitions of the group. The SOC is responsible for all of the traditional functions expected of other Operations Center entities (such as the Network Operations Center (NOC)) - that is, monitoring for, and responding to active events - often referred to as **Incident Management**. Within [CAF](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center), the SOC takes on additional responsibilities and migrates from a reactive-only stance to also including proactive activities. 
+
+**Responsibilities** - The Security Operations Center encompasses [Security Operations functions](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center). This includes:
+
+- Elevation to business risk management: SOC is growing into a key component of managing business risk for the organization
+- Metrics and goals: Tracking SOC effectiveness is evolving from "time to detect" to these key indicators:
+  - Responsiveness via mean time to acknowledge (MTTA).
+  - Remediation speed via mean time to remediate (MTTR).
+- Technology evolution: SOC technology is evolving from exclusive use of static analysis of logs in a SIEM to add the use of specialized tooling and sophisticated analysis techniques. This provides deep insights into assets that provide high quality alerts and investigation experience that complement the breadth view of the SIEM. Both types of tooling are increasingly using AI and machine learning, behavior analytics, and integrated threat intelligence to help spot and prioritize anomalous actions that could be a malicious attacker.
+- Threat hunting: SOCs are adding hypothesis driven threat hunting to proactively identify advanced attackers and shift noisy alerts out of frontline analyst queues.
+- Incident management: Discipline is becoming formalized to coordinate nontechnical elements of incidents with legal, communications, and other teams. Integration of internal context: To help prioritize SOC activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
+- Practice Exercises / Tabletops: Activity engaging in breach and bug testing activities against internal assets and endpoints to verify proper asset hardening.
+
+### Security Operations
+
+### Security Architect
+
+### Governance and Compliance
+
+### Platform Security Engineer
+
+### Application Security Engineer / DevSecOps
+
+
+
 
 ## Integrated processes
 TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture.
