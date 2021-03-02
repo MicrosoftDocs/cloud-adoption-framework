@@ -27,23 +27,24 @@ The CISO acts as the executive-level sponsor for all security-centric endevors a
 
 **Responsibilities** - The CISO is the top executive sponsor, accountable for the establishment, implementation, and maintenance of the overall security posture, as well as ensuring that the organization is abiding by all required compliance and governance standards. The CISO is also responsible for the enterprise security vision, balancing the protection of information versus allowing for agility and growth. 
 
-### SOC - Security Operations Center
-> Often referred to as / also known as: Cyber Defense Operations Center ([CDOC](https://www.microsoft.com/en-us/msrc/cdoc)), Information Security Operations Center (ISOC)
+### SO - Security Operations
+> Similar to / also known as: Security Operations Center (SOC), Cyber Defense Operations Center ([CDOC](https://www.microsoft.com/en-us/msrc/cdoc)), Information Security Operations Center (ISOC)
 
-To some organizations, the way we define the SOC within the Cloud Adoption Framework will potentially be the largest shift compared to some other contemporary definitions of the group. The SOC is responsible for all of the traditional functions expected of other Operations Center entities (such as the Network Operations Center (NOC)) - that is, monitoring for, and responding to active events - often referred to as **Incident Management**. Within [CAF](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center), the SOC takes on additional responsibilities and migrates from a reactive-only stance to also including proactive activities. 
+To some organizations, the way we define Security Operations within the Cloud Adoption Framework will potentially be the largest shift compared to some other contemporary definitions of the group. SO is responsible for all of the traditional functions expected of other Operations Center entities (such as the Network Operations Center (NOC)) - that is, monitoring for, and responding to active events - often referred to as **Incident Management**. Within [CAF](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center), SO takes on additional responsibilities and migrates from a reactive-only stance to also including proactive activities. 
 
-**Responsibilities** - The Security Operations Center encompasses [Security Operations functions](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center). This includes:
+**Responsibilities** - Security Operations encompasses [Security Operations functions](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center). This includes:
 
-- Elevation to business risk management: SOC is growing into a key component of managing business risk for the organization
-- Metrics and goals: Tracking SOC effectiveness is evolving from "time to detect" to these key indicators:
+- Elevation to business risk management: SO is growing into a key component of managing business risk for the organization
+- Metrics and goals: Tracking SO effectiveness is evolving from "time to detect" to these key indicators:
   - Responsiveness via mean time to acknowledge (MTTA).
   - Remediation speed via mean time to remediate (MTTR).
-- Technology evolution: SOC technology is evolving from exclusive use of static analysis of logs in a SIEM to add the use of specialized tooling and sophisticated analysis techniques. This provides deep insights into assets that provide high quality alerts and investigation experience that complement the breadth view of the SIEM. Both types of tooling are increasingly using AI and machine learning, behavior analytics, and integrated threat intelligence to help spot and prioritize anomalous actions that could be a malicious attacker.
-- Threat hunting: SOCs are adding hypothesis driven threat hunting to proactively identify advanced attackers and shift noisy alerts out of frontline analyst queues.
-- Incident management: Discipline is becoming formalized to coordinate nontechnical elements of incidents with legal, communications, and other teams. Integration of internal context: To help prioritize SOC activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
+- Technology evolution: SO technology is evolving from exclusive use of static analysis of logs in a SIEM to add the use of specialized tooling and sophisticated analysis techniques. This provides deep insights into assets that provide high quality alerts and investigation experience that complement the breadth view of the SIEM. Both types of tooling are increasingly using AI and machine learning, behavior analytics, and integrated threat intelligence to help spot and prioritize anomalous actions that could be a malicious attacker.
+- Threat hunting: SO is adding hypothesis driven threat hunting to proactively identify advanced attackers and shift noisy alerts out of frontline analyst queues.
+- Incident management: Discipline is becoming formalized to coordinate nontechnical elements of incidents with legal, communications, and other teams. Integration of internal context: To help prioritize SO activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
 - Practice Exercises / Tabletops: Activity engaging in breach and bug testing activities against internal assets and endpoints to verify proper asset hardening.
 
-### Security Operations
+**Security Operations or Security Operations Center?**
+When many people think of an IT Operations Center, they imagine a group of people in a room - surrounded by monitors, graphs, and various tickers. While this is one implementation of an operations center, it is not the only option. In smaller organizations, the individuals focused on security may be directly integrated into the day-to-day IT operations staff. Even in larger enterprises a segregated SOC may not exist, its functions absorbed into other monitoring teams. In the overall security context, the most important point is that all of the responsibilities listed above are addressed.
 
 ### Security Architect
 
