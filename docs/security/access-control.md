@@ -19,8 +19,8 @@ As organizations plan for cloud-based environments, the concept of network bound
 Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
   
 By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
-Access control is an on-going process of checks and balances, baselines and refinements. The controls established should be included in an organisation's standard operations and reviewed regularly, alongside other standard processes.
-New infrastructure types will require the controls to be refactored to accommodate new secure access methods, security incidents will require controls to be revewied and refined.  
+Access control is an on-going process of checks and balances, baselines and refinements. The controls established should be included in an organization's standard operations and reviewed regularly, alongside other standard processes.
+New infrastructure types will require the controls to be refactored to accommodate new secure access methods, security incidents will require controls to be reviewed and refined.  
 
 Implementing access controls should deliver assurances to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.
 
