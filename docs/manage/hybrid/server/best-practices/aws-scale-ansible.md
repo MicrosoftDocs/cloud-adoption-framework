@@ -197,7 +197,7 @@ To delete all the resources you created as part of this demo, use the `terraform
 
 ### Review provided Ansible configuration and playbook
 
-1. Navigate to the `ansible-config` directory and review the provided configuration. The provided configuration contains a basic `ansible.cfg` file. This file enables the [`amazon.aws.aws-ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws-ec2-inventory.html) Ansible plugin which dynamically loads your server inventory by using an AWS IAM role. Ensure that the IAM role you are using has sufficient privileges to access the inventory you wish to onboard.
+1. Navigate to the `ansible-config` directory and review the provided configuration. The provided configuration contains a basic `ansible.cfg` file. This file enables the [`amazon.aws.aws-ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html) Ansible plugin which dynamically loads your server inventory by using an AWS IAM role. Ensure that the IAM role you are using has sufficient privileges to access the inventory you wish to onboard.
 
     ![A screenshot showing the details of an `ansible.cfg` file.](./media/aws-scale-ansible/ansible-cfg-details.png)
 
