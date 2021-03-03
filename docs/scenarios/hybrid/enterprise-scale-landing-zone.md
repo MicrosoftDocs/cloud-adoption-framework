@@ -88,13 +88,13 @@ To achieve hybrid identity, organizations should consider the following three Az
 Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards.
 As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
 
-The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture) includes patterns for standardizing the deployment of [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
+The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
 These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
 
 ## Management
 
 Similar to the considerations needed for governance in a hybrid environment, managing distributed workloads at scale requires planning in order to ensure issues are not introduced as the span of deployments scales.
-Using technologies such as [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a 'single pane of glass'](../../manage/azure-management-guide/inventory?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.  
+Using technologies such as [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a 'single pane of glass'](../../manage/azure-management-guide/inventory.md?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.  
 
 Also similar to governance techniques, the management technologies described above can also be extended out to other environments, such as on-premises and other cloud platforms for certain use cases.
 
