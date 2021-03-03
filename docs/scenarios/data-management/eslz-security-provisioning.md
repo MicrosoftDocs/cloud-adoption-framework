@@ -52,7 +52,7 @@ As Figure 1 above illustrates:
 >[!TIP]
 >Although Figure 1 illustrates adding Azure AD User Groups, the same process could be achieved for adding Azure Service Principals which would be used by Data Product teams for ingestion pipelines etc.
 >[!IMPORTANT]
->It is recommended that you set up two lifecycle settings. One for users to ask for access for a short time period (30 days) and anoter for requesting a longer period of access (90 days).
+>It is recommended that you set up two lifecycle settings. One for users to ask for access for a short time period (30 days) and another for requesting a longer period of access (90 days).
 
 ## Configuring Azure AD entitlement management
 

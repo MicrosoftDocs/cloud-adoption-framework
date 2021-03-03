@@ -90,7 +90,7 @@ The table above gives an overview of how ACLs and RBAC can be used to manage per
 >[!CAUTION]
 >For every subdomain dataset two Azure AD Security Groups should be created: one for Read and Write and the other for Read-only.\
 \
-If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](02-sensitive.md) for further details on our sensitive data security pattern.
+If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](eslz-data-privacy.md) for further details on our sensitive data security pattern.
 
 Resist the opportunity to directly assign individual users or service principals. Using an Azure AD Security Group structure will allow you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Azure AD security group.
 
@@ -129,4 +129,4 @@ Other polygot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
 >[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](02-sensitive.md#sensitive-data).
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](eslz-data-privacy.md#sensitive-data).

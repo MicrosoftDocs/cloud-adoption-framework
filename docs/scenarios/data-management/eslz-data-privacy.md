@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Privacy
 
-The Enterprise Scale Analytic and AI solution pattern addresses PII (Personally Identifiable information) at multiple layers, whilst leaving it to the business to decide upon the best pattern to suit its requirements. Personally Identifiable Information (PII), is any data that can be used used to identify individuals, such as names, driver's license numbers, SSNs, bank account numbers, passport numbers, or email addresses. Many regulations from GDPR to HIPPA require strict protection of user privacy.
+The Enterprise Scale Analytics and AI solution pattern addresses PII (Personally Identifiable information) at multiple layers, whilst leaving it to the business to decide upon the best pattern to suit its requirements. Personally Identifiable Information (PII), is any data that can be used used to identify individuals, such as names, driver's license numbers, SSNs, bank account numbers, passport numbers, or email addresses. Many regulations from GDPR to HIPPA require strict protection of user privacy.
 
 Before Domains ingest data into the solution pattern, they must be able to classify the data as non-sensitive or sensitive.
 
