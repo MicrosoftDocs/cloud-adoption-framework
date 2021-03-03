@@ -20,6 +20,8 @@ Within the security space exists many commonly used terms for individual positio
 
 The following is a breakdown of roles and their responsibilities as utilized in the Cloud Adoption Framework security documentation. Not all of the roles listed here are required to be separate individuals, as the overall workload will vary from company to company. However, the all of the responsibilities listed should have defined owners.
 
+[//]: # (Security people be doin' security things)
+
 ### CISO - Chief Information Security Officer / Office of the CISO
 >A [CISO](https://en.wikipedia.org/wiki/Chief_information_security_officer) is the senior-level executive within an organization responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected.
 
@@ -43,12 +45,30 @@ To some organizations, the way we define Security Operations within the Cloud Ad
 - Incident management: Discipline is becoming formalized to coordinate nontechnical elements of incidents with legal, communications, and other teams. Integration of internal context: To help prioritize SO activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
 - Practice Exercises / Tabletops: Activity engaging in breach and bug testing activities against internal assets and endpoints to verify proper asset hardening.
 
-**Security Operations or Security Operations Center?**
-When many people think of an IT Operations Center, they imagine a group of people in a room - surrounded by monitors, graphs, and various tickers. While this is one implementation of an operations center, it is not the only option. In smaller organizations, the individuals focused on security may be directly integrated into the day-to-day IT operations staff. Even in larger enterprises a segregated SOC may not exist, its functions absorbed into other monitoring teams. In the overall security context, the most important point is that all of the responsibilities listed above are addressed.
+**Security Operations versus Security Operations Center?**
+
+When many people think of an IT Operations Center, they imagine a group of people in a room - surrounded by monitors, graphs, and various ticker streams. While this is an example implementation of an operations center, it is not the only option. In smaller organizations, the individuals focused on security may be directly integrated into the day-to-day IT operations staff. In some larger enterprises, a segregated SOC may not exist - its functions absorbed into other monitoring teams. The important takeaway is that all of the security responsibilities are covered.
 
 ### Security Architect
 
+Security Architects often report directly to the CISO, being hyper-focused on the security posture of an environment, considering both current and future-tense implementations or changes. The Security Architect generally differs from operations-focused technical personel in scope (a more holistic enterprise view versus workload specific) and consideration of buisiness impact (return on investment, adherence to compliance).
+
+**Responsibilities** 
+
+- Influence [security policies and standards](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-policy-standards)
+- Guide the [cloud security posture management](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-posture-management)
+- Evangellize security education initiatives for [people security in the cloud](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-people)
+- Ensure [governance and compliance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-compliance-management) management functions are properly aligned with regulatory requirements
+
 ### Governance and Compliance
+
+Whether you are operating in a global landscape, a [regulated industry](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/policy-compliance/regulatory-compliance), or building a new online presence, governance and compliance can often present a challenge for an organization. Those focused on governance and compliance are tasked with validating that corporate governance is properly aligned and compliant with all regulations. Many industries may have additional requirements which necessitate third party auditors to validate compliance on a scheduled basis. 
+
+**Responsibilities**
+
+- Work hand-in-hand with the Security Architect to determine applicable regulatory compliance requirements for the enterprise.
+- 
+
 
 ### Platform Security Engineer
 
