@@ -106,19 +106,19 @@ FROM hr_enriched
 where region='EU'
 ```
 
-You would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the **Azure Databricks Sensitive Workspace** and apply the following permissions:
+For this to work you would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the Azure Databricks Workspace and apply the following permissions:
 
 * Grant DA-AMERICA-HRMANAGER-R and DA-AMERICA-HRGENERAL-R Azure AD Groups access to the `vhr_us` view.
 * Grant DA-EUROPE-HRMANAGER-R and DA-EUROPE-HRGENERAL-R Azure AD Groups access to the `vhr_eu` view.
 
 As the columns are encrypted and cannot be decrypted in the non-sensitive workspace, the non-sensitive workspaces could still make use of Azure AD Passthrough and allow users to explore the lake based upon their permissions.
 
-Where table access is used, teams requiring access would be added to the Azure Databricks Sensitive workspace. Azure Databricks would map to Azure Data Lake Storage via service principals, but the data would be secured with Databricks Table Access Control.
+Where table access is used, teams requiring access would be added to the Azure Databricks Workspace. Azure Databricks would map to Azure Data Lake Storage via service principals, but the data would be secured with Databricks Table Access Control.
 
-As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the **Azure Databricks Sensitive Workspace** and add the correct Azure AD Groups to those permissions.
+As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the an Azure Databricks workspace and add the correct Azure AD Groups to those permissions.
 
 >[!NOTE]
->Azure Databricks Table Access Control cannot be mixed with Azure AD Passthrough. Therefore, you could decide to only have one Azure Databricks workspace and use table access control, as you want to have access to all your data and not only your sensitive data from the **Azure Databricks Sensitive Workspace**.
+>Azure Databricks Table Access Control cannot be mixed with Azure AD Passthrough. Therefore, you could decide to only have one Azure Databricks workspace and use just table access control instead.
 
 #### Option 3 - Policy Engine
 
