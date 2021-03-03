@@ -104,13 +104,13 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
     - Windows:
 
          ```powershell
-         powershell -ExecutionPolicy Unrestricted -File custom-script-windows.ps1
+         powershell -ExecutionPolicy Unrestricted -File custom_script_windows.ps1
          ```
 
     - Linux:
 
          ```bash
-         ./custom-script-linux.sh
+         ./custom_script_linux.sh
          ```
 
 4. To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/extensions/arm) and run the following command with the templates that match your operating system:

@@ -261,7 +261,7 @@ Now imagine that you have an Azure deployment (for example, Azure App Service) i
 
 **Solution:**
 
-To optimize routing for both offices, you need to know which prefix is from Azure `West US` and which is from Azure `East US`. You can encode this information by using BGP community values.
+To optimize routing for both offices, you need to know which prefix is from Azure `West US` and which prefix is from Azure `East US`. You can encode this information by using BGP community values.
 
 - You assign a unique BGP community value to each Azure region. For example, 12076:51004 for `East US`; 12076:51006 for `West US`.
 - Now that it's clear which prefix belongs to which Azure region, you can configure a preferred ExpressRoute circuit.
