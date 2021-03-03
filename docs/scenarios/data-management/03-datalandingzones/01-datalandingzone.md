@@ -8,9 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 
 # Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 
@@ -27,25 +24,30 @@ A Data Landing Zone has several layers to enable agility to service the domains 
 ## Data Landing Zone Provisioning
 
 Every new Data Landing Zone will contain the following resource groups:
- - a single Network
- - Security
- - Ingest and Processing
- - an empty Ingest Storage Service
- - Data Lake Services
- - Shared Synapse
- - Shared Databricks
- - Metadata Services
+
+- A Single Network
+- Security
+- Ingest and Processing
+- an empty Ingest Storage Service
+- Data Lake Services
+- Shared Synapse
+- Shared Databricks
+- Metadata Services
 
 ### Networking
+
 The `network` resource group contains core enterprise components such as NSG, Network Watcher, and Virtual Network. These will be deployed into a single resource group. As part of a Data Landing Zone deployment, the network of a Data Landing Zone is automatically peered with the Data Management Landing Zone VNet and Connectivity Subscription VNet.
 
 ### Monitoring
+
 The Enterprise Scale pattern recommends that all logs should be sent to a central Log Analytics workspace.  However, we also create a Monitoring resource group in each Data Landing Zone.  This workspace should only be used for capturing Databricks Spark logs. The resource group contains a shared Log Analytics workspace and Key Vault to store the Log Analytics keys. These two services are deployed into a single resource group.
 
 ### Data Lake Services
+
 Three [Azure Data Lake Storage Gen V2 (ADLS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group.
 
 ### Upload Ingest Storage Service
+
 Third-party data publishers require the ability to land their data into the platform so domains can pull it into their Data Lakes. The "Upload Ingest Storage" resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
 
 ![Upload Ingest Storage Service](../images/dlzingeststorage.png)

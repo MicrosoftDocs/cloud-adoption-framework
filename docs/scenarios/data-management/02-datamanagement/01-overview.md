@@ -8,9 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 
 # Data Management Landing Zone
 
@@ -124,22 +121,27 @@ Using Azure Data Factory, you can pull current master data via the Master Data M
 A number of Master Data Management solutions are fully integrated with Azure Active Directory, which allows you to secure the domains and provide different views for different user groups.
 
 ### Approaches
+
 Enterprises have developed many different approaches to Master Data Management. The list below includes some of the more common approaches and how they can be implemented within the Enterprise Scale Analytics and AI framework.
 
 #### Registry
+
 A central repository exists for all master data keys. The "registry" lives in the Data Management Landing Zone, but each Data Landing Zone owns its own master data repository. This model allows a centralized lookup while still supporting a variety of source locations for master data.
 
 Changes to master data continue to be made in the source systems. This allows source systems to independently manage the quality of their master data. This approach also helps to support  numerous distributed sources of master data.
 
 #### Consolidation
+
 Master data from across the Data Landing Zones is consolidated into one hub in the Data Management Landing Zone. Updates made to source master data are written back to the source system. This is the quickest and simplest model if you have no existing Master Data Management system.
 
 #### Coexistence
+
 This approach allows you to establish a single version of the truth in the same way the consolidation style does. The difference is that the Data Management Landing Zone stores master data while updates can also take place in the source systems. All of the master data model attributes must have consistency. Cleansing must take place before uploading them into the MDM system. Master data changes can happen in both the MDS system and application systems. Data from the hub can be published back to sources.
 
 Master Data is consolidated into one hub in the Data Management Landing Zone. Master Data from Data Landing Zones is consolidated into the central hub. Updates made to source Master Data are written back to the source system. This is the quickest and simplest model if you have no existing Master Data Management system.
 
 #### Centralized
+
 This builds on the Coexistence approach above. There exists a central Master Data Management repository in the Data Management Landing Zone representing the truth, also known as "the Golden Record". Master data can be pulled from various systems and consolidated into a central hub. Applications and systems use this as the source of Master Data. Source systems can subscribe to updates published by the central hub.
 
 >[!IMPORTANT]
@@ -214,10 +216,6 @@ Azure Synapse Analytics private link hubs are Azure resources which act as conne
 There are two steps to connect to Synapse Studio using private links. First, you must create a private link hubs resource. Second, you must create a private endpoint from your Azure virtual network to this private link hub. You can then use private endpoints to securely communicate with Synapse Studio. You must integrate the private endpoints with your DNS solution, either in your on-premises solution or with Azure Private DNS.
 
 See [Connect to Synapse Studio using private links](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-private-link-hubs) for further details.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2002-datamanagement%20%E2%9E%9F%2001-overview.md)
 
 >[Previous](../01-overview/05-networking.md)
 >[Next](../03-datalandingzones/01-datalandingzone.md)

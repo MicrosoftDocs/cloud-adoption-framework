@@ -8,9 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 
 # Data Lake Services
 
@@ -268,10 +265,6 @@ In a Data Landing Zone, all the monitoring is sent to the Data Management Landin
 
 >[!IMPORTANT]
 >Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzone%20%E2%9E%9F%2002-datalakeservices.md)
 
 >[Previous](01-datalandingzone.md)
 >[Next](03-databricks.md)

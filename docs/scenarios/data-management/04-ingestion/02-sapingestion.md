@@ -8,9 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 
 # SAP Ingestion
 
@@ -55,10 +52,6 @@ Our recommendation focuses a hybrid option using a combination of options as an 
 SLT, BODS, and Attunity are used to extract the data from SAP transactional systems (ECC), and ADF is then used to pull the data into Azure and convert it to Parquet format before writing to Data Lake storage.
 
 Azure Data Factory alone is used to extract data from SAP BW leveraging the existing framework.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2004-ingestion%20%E2%9E%9F%2001-sapingestion.md)
 
 >[Previous](01-overview.md)
 >[Next](03-dataonboarding.md)

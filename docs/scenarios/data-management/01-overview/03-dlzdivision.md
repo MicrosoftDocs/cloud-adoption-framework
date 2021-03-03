@@ -8,9 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 # Data Landing Zone Division and Consumption
 
 If the enterprise has settled on implementing a harmonized mesh, they should give consideration on how they wish to separate the Data Landing Zones into business groups, integrators, and enablers. If they are going for a core service provider pattern, they should consider the [domains](#domain-division) which they will need to provision.
@@ -106,9 +103,6 @@ The central corporate finance team can curate and ingest the finance objects int
 - **Angel Lopez. Layered Architecture in Domain-Driven Design** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-Domain-driven-design/>
 
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2003-dlzdivision.md)
 
 >[Previous](02-esa-ai-teams.md)
 >[Next](04-policy.md)

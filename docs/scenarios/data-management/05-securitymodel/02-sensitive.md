@@ -8,9 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 
 # Data Privacy
 
@@ -154,10 +151,6 @@ The expectation of any policy solution providing Data Privacy is to tokenize sen
 As mentioned, for a policy engine to succeed it is important that there is an integration into the Data Catalog and a REST API which can be used by the DevOps process when onboarding a new dataset.
 
 As Domains and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify sensitive data. The policy engine should import this definition and deny any access to this data until the domain has set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2005-securitymodel%20%E2%9E%9F%2002-sensitive.md)
 
 >[Previous](01-securitymodel.md)
 >[Next](03-secprovisioning.md)
