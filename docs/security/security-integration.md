@@ -67,14 +67,32 @@ Whether you are operating in a global landscape, a [regulated industry](https://
 **Responsibilities**
 
 - Work hand-in-hand with the Security Architect to determine applicable regulatory compliance requirements for the enterprise.
-- 
+- Validate adherance to required regulatory guidelines by way of stateful monitoring and scheduled auditing.
 
 
 ### Platform Security Engineer
+> Similar to / also known as: IT Operations, Systems Administrator, Security Administrator
+
+The platform security engineer is the more traditional hands-on role, generally tasked with the work of installing and actually implementing security fixes into the environment. The platform security engineer is generally tightly integrated not only with the Security Architect and Security Operations group, but also with individual workload owner and specialists. While the Security Operations team may often begin the incident response process, it usually falls into the domain of the platform security engineer to act as the subject matter expert (SME) when working to resolve the incident as well as to provide insight during a post mortem process. 
+
+**Responsibilities**
+
+- Have awareness of the risk mitigation posture across the enterprise systems. 
+- Deep understanding of systems interconnectivity, endpoints, data classification, and common attack surfaces for enterprise systems.
+- Ensure all systems and workloads abide by security requirements.
+- Create procedure for regularlly scheduled patch and maintenance events.
+- Act as the SME as needed during security incidents.
+- 
 
 ### Application Security Engineer / DevSecOps
 
+With the shift to serverless applications, the line between the responsibilities of an platform security engineer or the persons responsible for securing an application are becoming muddled. The idea of [DevSecOps](https://www.microsoft.com/en-us/securityengineering/devsecops) blurs the lines further by introducing concepts of continuous integration / continuous delivery (CI/CD) where the workload owners are the ones responsible for continuously updating the application. While DevSecOps and the application security engineer may currently be the outliers, cloud-native and containerized applications are quickly becoming the norm, supplanting traditional virtual machine-hosted workloads. 
 
+**Responsibilities**
+
+- Adoption of a full DevOps pipeline and [Secure Development Lifecycle (SDL)](https://www.microsoft.com/en-us/securityengineering/sdl) engineering practices.
+- Understanding all regulatory requirements and defining metrics to successfully meet governance and compliance objectives.
+- Utilization of threat modeling in order to reduce risk and further secure application against well known attack vectors.
 
 
 ## Integrated processes
