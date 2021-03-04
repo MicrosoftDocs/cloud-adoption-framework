@@ -16,7 +16,7 @@ We recognize that large organizations may wish to test their Enterprise Scale de
 
 ## Reasons To Not Use Separate Azure AD Tenants for Enterprise Scale
 
-- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](../../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance
+- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](../../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance; single Azure AD Tenants are best practice for most.
 - Increased/Duplicated Azure AD licensing costs due to multiple identities across different Azure AD Tenants.
 - Azure Policy & RBAC testing is not as accurate due to most parameters requiring to be changed between different Azure AD Tenants
   - This also increases chances of the testing not actually benefitting the deployment process due to potential for increased deployment failures.
@@ -28,7 +28,7 @@ We recognize that large organizations may wish to test their Enterprise Scale de
 
 ## Diagram 
 
-![Diagram that shows management group hierarchy.](./media/canary-mgmt-groups.png)
+![Diagram that shows management group hierarchy.](./media/canary-mgmt-groups.png#lightbox)
 
 _Figure 1: Canary Management Group hierarchy._
 
@@ -36,7 +36,8 @@ _Figure 1: Canary Management Group hierarchy._
 
 As the above diagram shows, the entire "production" Management Group hierarchy is duplicated beneath the ```Tenant Root Group``` and the "canary" name is appended to the Management Group display names (this can also be done for the Management Group IDs, as they must be unique within the Tenant).
 
->[!NOTE] The term "canary" is used to avoid confusion with development or test environments. 
+>[!NOTE]
+ > The term "canary" is used to avoid confusion with development or test environments. 
 
 The "canary" Management Group hierarchy is then used to test the following resource types:
 
@@ -49,7 +50,8 @@ The "canary" Management Group hierarchy is then used to test the following resou
   - Initiatives 
   - Assignments
 
->[!IMPORTANT]This is not for development or test environments that would be used by application/service owners; these are handled within the "production" Management Group hierarchy and associated governance (RBAC & Azure Policy).
+>[!IMPORTANT]
+ > This is not for development or test environments that would be used by application/service owners; these are handled within the "production" Management Group hierarchy and associated governance (RBAC & Azure Policy).
 
 ## Implementation Guidance
 
