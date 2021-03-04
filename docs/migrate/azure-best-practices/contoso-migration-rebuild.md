@@ -238,7 +238,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
     ![Screenshot of building and configuring the build in Azure DevOps.](./media/contoso-migration-rebuild/vsts8.png)
     *Figure 19: Building and configuring the build.*
 
-10. They specify the path of the `docker-compose.yaml` file in the *src* folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
+10. They specify the path of the `docker-compose.yaml` file in the `src` folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
 
     ![Screenshot of various task-building specifics in Azure DevOps.](./media/contoso-migration-rebuild/vsts9.png)
     *Figure 20: The specifics of the task.*
@@ -303,10 +303,7 @@ Now, Contoso admins do the following:
 
 The admins create the pipeline:
 
-1. In Visual Studio, they update the */deploy/k8s/config_local.yml* file with the database connection information that they noted earlier.
-
-    ![Screenshot showing the **New pipeline** button in Visual Studio.](./media/contoso-migration-rebuild/back-pipe1.png)
-    *Figure 28: Database connections.*
+1. In Visual Studio, they update the `/deploy/k8s/config_local.yml` file with the database connection information that they noted earlier.
 
 2. They open Azure DevOps and, in the SmartHotel360 project, they select **+ New pipeline** on the **Releases** pane.
 
@@ -391,7 +388,7 @@ Instructions for this section use the [SmartHotel360-website](https://github.com
 
 4. They capture the access details for the storage account in a text file for future reference.
 
-    ![Screenshot of a text file capturing access details.](./media/contoso-migration-rebuild/blob2.png)
+    ![Screenshot of a text file capturing access details.](./media/contoso-migration-rebuild/blob3.png)
     *Figure 42: A text file capturing access details.*
 
 ### Provision an Azure Cosmos DB database
