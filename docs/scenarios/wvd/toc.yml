@@ -14,13 +14,13 @@ items:
   - name: Migrate your virtual desktop platform
     items:
     - name: Proof of concept
-      href: scenarios/wvd/proof-of-concept.md
+      href: proof-of-concept.md
     - name: Assess
-      href: scenarios/wvd/migrate-assess.md
+      href: migrate-assess.md
     - name: Migrate (or Deploy)
-      href: scenarios/wvd/migrate-deploy.md
+      href: migrate-deploy.md
     - name: Release
-      href: scenarios/wvd/migrate-release.md    
+      href: migrate-release.md    
   - name: Innovate in the cloud - TBD
     href: migrate.md
   - name: Govern your portfolio - TBD
