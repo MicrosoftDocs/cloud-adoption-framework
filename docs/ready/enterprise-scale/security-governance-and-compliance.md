@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-scale security governance and compliance
 
-This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services. 
+This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
 ## Define encryption and key management
 
@@ -170,7 +170,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Develop a security allow-list plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
-- Determine the incident response plan for Azure services before allowing.
+- Determine the incident response plan for Azure services before allowing it into production.
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
@@ -178,7 +178,16 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
-<!-- docsTest:ignore "and conditional access" -->
+<!-- docutune:ignore "and conditional access" -->
+
+## Azure Security Benchmarks
+
+The Azure Security Benchmark includes a collection of high-impact security recommendations you can use to help secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
+
+The Azure Security Benchmark documentation specifies security controls and service recommendations.
+
+- [Security Controls](/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
+- [Service Recommendations](/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Service enablement framework
 

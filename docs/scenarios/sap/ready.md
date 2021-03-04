@@ -1,35 +1,47 @@
 ---
-title: "Azure Landing Zone review for SAP"
-description: Describe the scenario's impact on Azure Landing Zone design
-author: BrianBlanchard
+title: Review your environment or Azure landing zone for an SAP enterprise-scale migration
+description: Prepare your Azure environment or Azure landing zone for an SAP enterprise-scale migration.
+author: JefferyMitchell
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
-# Azure Landing Zone review for SAP
+# Review your environment or Azure landing zone for an SAP enterprise-scale migration
 
-Describe how your scenario impacts the Azure landing zone design
+The SAP platform typically supports business functions, sensitive data, and workloads that are vital to business operations. Before deploying your SAP platform and workloads to the cloud, your landing zones should meet governance, security, and operations requirements for secure, mission-critical applications.
 
-## SAP evaluation
+If you have followed a central operations model and built your landing zones with a *start small and expand* approach, you must be in the [Govern](../../govern/index.md) and [Manage](../../govern/index.md) phases of the Cloud Adoption Framework before deploying a production SAP platform in Azure. Featuring an SAP platform in your adoption plan indicates that your cloud environment could have more operations, compliance, and security requirements. However, consider starting with the enterprise-scale approach to landing zones if you're just starting your cloud journey. Read about [Azure landing zones](../../ready/landing-zone/index.md) to understand how to start with either approach.
 
-What should the customer be looking for when evaluating an Azure Landing Zone for compatibility?
+## How to evaluate an SAP Azure landing zone
 
-## SAP Azure Landing Zone acceleration
+Azure landing zones hosting SAP products should meet all of the following criteria:
 
-Reference any articles, reference architectures, or best practices that would accelerate deployment of an Azure Landing Zone that passed the evaluation criteria.
+- They have defined processes and tooling for security, governance, and ongoing operations.
 
-## Next step: Assess for SAP
+- They offer an acceptable operations management baseline to ensure necessary monitoring, operational compliance, and recovery requirements.
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+- Network connectivity factors in the rationalization and plan for your SAP platform and all workload assets to allow sufficient data transmission between the on-premises datacenter and the Azure environment.
 
-- [Plan for SAP](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for SAP migration](./migrate-assess.md)
-- [Migrate SAP](./migrate-deploy.md)
-- [Release SAP to production](./migrate-release.md)
+- Since the SAP platform is mission critical, you should consider redundancy in network connectivity between Azure and your existing datacenters.
+
+- Management groups hierarchies are important to the long-term governance of SAP environments in Azure. You should have at least two SAP management groups to allow distinct controls to be applied easily to production and nonproduction environments.
+
+- Organizing subscriptions is another important aspect of environmental segmentation for your core SAP platform and all dependant workloads in the cloud. To isolate your SAP platform from dependant workloads, consider separating the core platform into dedicated subscription(s).
+
+If the landing zone provided by the cloud platform team doesn't address the basic requirements, work with the team to solidify the environment before beginning your cloud adoption efforts.
+
+## How to accelerate an SAP Azure landing zone
+
+Developing of an enterprise-scale environment can be complex and time-consuming. Review the [SAP enterprise-scale construction set](./enterprise-scale-landing-zone.md) to accelerate Azure landing zone deployment for SAP products and understand how to architect and implement an environment capable of supporting your SAP platform.
+
+## Next step: Migrate an SAP platform to Azure
+
+The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
+
+- [Migrate an SAP platform to Azure](./migrate.md)
 - [Innovate with SAP](./innovate.md)
-- [Govern SAP](./govern.md)
 - [Manage SAP](./manage.md)

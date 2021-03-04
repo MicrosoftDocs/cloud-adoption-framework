@@ -55,12 +55,12 @@ The clearest view of the cloud adoption plan comes from the **Epics** backlog vi
 
 ## Align the cloud adoption plan
 
-The overview pages for the strategy and planning phases of the cloud adoption lifecycle each reference the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. If you haven't done so already, you might want to complete the exercises related to [strategy](../strategy/index.md) and [planning](../plan/index.md) before aligning your new project.
+The overview pages for the Strategy methodology and the Plan methodology each refer to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. Considering completing the exercises in the [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) before aligning your new project.
 
 The following articles support alignment of the cloud adoption plan:
 
 - [Workloads](./workloads.md): Align features within the cloud migration epic to capture each workload to be migrated or modernized. Add and modify those features to capture the effort to migrate your top 10 workloads.
-- [Assets](./assets.md): Each asset (VM, application, or data) is represented by the user stories under each workload. Add and modify those user stories to align with your digital estate.
+- [Assets](./assets.md): Each asset (virtual machine, application, or data) is represented by the user stories under each workload. Add and modify those user stories to align with your digital estate.
 - [Rationalization](./review-rationalization.md): As each workload is defined, the initial assumptions about that workload can be challenged. This might result in changes to the tasks under each asset.
 - [Create release plans](./iteration-paths.md): Iteration paths establish release plans by aligning efforts with various releases and iterations.
 - [Establish timelines](./timelines.md): Defining start and end dates for each iteration creates a timeline to manage the overall project.

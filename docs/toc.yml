@@ -5,50 +5,6 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
- 
-  - name: SAP adoption scenario
-    items:
-    - name: Overview
-      href: scenarios/sap/index.md
-    - name: Strategy
-      href: scenarios/sap/strategy.md
-    - name: Planning
-      href: scenarios/sap/plan.md
-    - name: Azure landing zone review
-      href: scenarios/sap/ready.md
-    - name: Innovate
-      href: scenarios/sap/innovate.md
-    - name: Migrate - Assess workloads
-      href: scenarios/sap/migrate-assess.md
-    - name: Migrate - Deploy workloads
-      href: scenarios/sap/migrate-deploy.md
-    - name: Migrate - Release workloads
-      href: scenarios/sap/migrate-release.md
-    - name: Govern
-      href: scenarios/sap/govern.md
-    - name: Manage
-      href: scenarios/sap/manage.md
-    - name: Enterprise-Scale landing zone
-      items:
-      - name: Overview
-        href: scenarios/sap/enterprise-scale-landing-zone.md
-      - name: Enterprise enrollment and Azure AD Tenant
-        href: scenarios/sap/eslz-enterprise-enrollment-and-azure-ad-tenants.md
-      - name: Identity and Access Management
-        href: scenarios/sap/eslz-identity-and-access-management.md
-      - name: Management group and subscription organization
-        href: scenarios/sap/eslz-management-group-and-subscription-organization.md
-      - name: Network topology and connectivity
-        href: scenarios/sap/eslz-network-topology-and-connectivity.md
-      - name: Management and Monitoring
-        href: scenarios/sap/eslz-management-and-monitoring.md
-      - name: Business continuity and disaster recovery
-        href: scenarios/sap/eslz-business-continuity-and-disaster-recovery.md
-      - name: Security governance and compliance
-        href: scenarios/sap/eslz-security-governance-and-compliance.md
-      - name: Platform automation and DevOps
-        href: scenarios/sap/eslz-platform-automation-and-devops.md
-
 
   - name: About the Framework
     href: overview.md
@@ -72,34 +28,42 @@ items:
       - name: Azure hierarchy support
         href: reference/fundamental-concepts/hierarchy-azure-tools.md
 
-    - name: Accelerate migration
-      href: get-started/migrate.md
-    - name: Build new products and services
-      href: get-started/innovate.md
-    - name: Unblock environment design and configuration
-      href: get-started/design-and-configuration.md
-    - name: Enable customer success
-      href: get-started/enable.md
-    - name: Deliver operational excellence
-      href: get-started/operational-excellence.md
-    - name: Manage cloud costs
-      href: get-started/manage-costs.md
-    - name: Secure the enterprise environment
-      href: get-started/security.md
-    - name: Improve reliability
-      href: get-started/reliability.md
-    - name: Ensure consistent performance
-      href: get-started/performance.md
-    - name: Align your organization
-      href: get-started/org-alignment.md
-    - name: Build a cloud strategy team
-      href: get-started/team/cloud-strategy.md
-    - name: Build a cloud adoption team
-      href: get-started/team/cloud-adoption.md
-    - name: Build a cloud governance team
-      href: get-started/team/cloud-governance.md
-    - name: Build a cloud operations team
-      href: get-started/team/cloud-operations.md
+    - name: Accelerate adoption
+      items:
+      - name: Accelerate migration
+        href: get-started/migrate.md
+      - name: Build new products and services
+        href: get-started/innovate.md
+      - name: Unblock environment design and configuration
+        href: get-started/design-and-configuration.md
+
+    - name: Improve controls
+      items:
+      - name: Enable customer success
+        href: get-started/enable.md
+      - name: Deliver operational excellence
+        href: get-started/operational-excellence.md
+      - name: Manage cloud costs
+        href: get-started/manage-costs.md
+      - name: Secure the enterprise environment
+        href: get-started/security.md
+      - name: Improve reliability
+        href: get-started/reliability.md
+      - name: Ensure consistent performance
+        href: get-started/performance.md
+
+    - name: Establish teams
+      items:
+      - name: Align your organization
+        href: get-started/org-alignment.md
+      - name: Build a cloud strategy team
+        href: get-started/team/cloud-strategy.md
+      - name: Build a cloud adoption team
+        href: get-started/team/cloud-adoption.md
+      - name: Build a cloud governance team
+        href: get-started/team/cloud-governance.md
+      - name: Build a cloud operations team
+        href: get-started/team/cloud-operations.md
 
   - name: Strategy
     items:
@@ -125,10 +89,14 @@ items:
         href: strategy/business-outcomes/engagement-outcomes.md
       - name: Performance outcomes
         href: strategy/business-outcomes/performance-outcomes.md
+      - name: Sustainability outcomes
+        href: strategy/business-outcomes/sustainability.md       
       - name: Business outcome template
         href: strategy/business-outcomes/business-outcome-template.md
       - name: Align efforts to learning metrics
         href: strategy/learning-metrics.md
+      - name: Objectives and key results
+        href: strategy/business-outcomes/okr.md        
     - name: Business justification
       items:
       - name: Build a business justification
@@ -176,8 +144,16 @@ items:
         href: digital-estate/rationalize.md
       - name: Align cost models to forecast costs
         href: digital-estate/calculate.md
+      - name: Measure business outcomes with AppDynamics
+        href: digital-estate/app-dynamics.md
     - name: Initial organization alignment
       href: plan/initial-org-alignment.md
+    - name: Skills readiness plan
+      items:
+      - name: Build a readiness plan
+        href: plan/adapt-roles-skills-processes.md
+      - name: Map roles and skills
+        href: plan/suggested-skills.md
     - name: Cloud adoption plan
       items:
       - name: Overview
@@ -196,12 +172,6 @@ items:
         href: plan/iteration-paths.md
       - name: Estimate timelines
         href: plan/timelines.md
-    - name: Skills readiness plan
-      items:
-      - name: Build a readiness plan
-        href: plan/adapt-roles-skills-processes.md
-      - name: Map roles and skills
-        href: plan/suggested-skills.md
     - name: Best practices
       items:
       - name: Digital estate assessment in Azure
@@ -279,6 +249,8 @@ items:
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implementation guidelines
           href: ready/enterprise-scale/implementation-guidelines.md
+        - name: Transition to enterprise-scale (brownfield)
+          href: ready/enterprise-scale/transition.md
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
@@ -325,7 +297,7 @@ items:
             - name: Azure network security best practices
               href: /azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Azure operational security best practices
-              href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+              href: /azure/security/fundamentals/operational-best-practices?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
       - name: Partner landing zones
         href: ready/landing-zone/partner-landing-zone.md
       - name: Infrastructure-as-code theory
@@ -692,6 +664,8 @@ items:
             href: scenarios/azure-stack/migrate-deploy.md
           - name: Govern
             href: scenarios/azure-stack/govern.md
+          - name: Manage
+            href: scenarios/azure-stack/manage.md            
 
         - name: Analytics solutions
           items: 
@@ -947,9 +921,9 @@ items:
             href: innovate/best-practices/apps.md
           - name: Citizen developers
             items:
-            - name: PowerApps overview
+            - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Creating apps in PowerApps
+            - name: Creating apps in Power Apps
               href: /powerapps/maker?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Create your first workflow with Power Automate
               href: /power-automate/getting-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -978,7 +952,7 @@ items:
               - name: Computer vision in Visual Studio
                 href: /azure/cognitive-services/computer-vision/home?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Translate text in real time
-                href: /azure/cognitive-services/translator/quickstart-translate?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/translator/quickstart-translator?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Understand sentiment using LUIS
                 href: /azure/cognitive-services/luis/tutorial-publish-settings?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Recognize speech from a microphone
@@ -1042,7 +1016,7 @@ items:
               href: https://guides.github.com/introduction/git-handbook
             - name: Get started with a shared backlog
               href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
-            - name: Synchronize PowerApps with Azure DevOps
+            - name: Synchronize Power Apps with Azure DevOps
               href: /powerapps/developer/common-data-service/build-tools-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Feedback loops
             items:
@@ -1559,7 +1533,8 @@ items:
     items:
     - name: Tools and templates
       href: reference/tools-templates.md
-
+    - name: Azure security best practices
+      href: ./security/security-top-10.md
     - name: Decision guides
       items:
       - name: Overview
@@ -1602,7 +1577,7 @@ items:
       - name: Microsoft Azure Well-Architected Framework for workload architecture
         href: /azure/architecture/framework
       - name: Docs for product implementation
-        href: 
+        href: /
       - name: Learn to develop skills
         href: /learn
       - name: Assessments to personalize guidance

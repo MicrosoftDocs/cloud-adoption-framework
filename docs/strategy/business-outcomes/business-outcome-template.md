@@ -1,5 +1,5 @@
 ---
-title: "How to use the business outcome template"
+title: How to use the business outcome template
 description: Learn to use the business outcome template to capture business outcomes that will be used in the development of customer transformation journey strategies.
 author: BrianBlanchard
 ms.author: brblanch
@@ -25,7 +25,7 @@ In this template, business outcomes focus on three topics:
 
 ![Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities](../../_images/strategy/business-outcome-house.png)
 
-_Figure 1: Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities._
+*Figure 1: Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities.*
 
 The business outcome template focuses on simplified conversations that can quickly engage stakeholders without getting too deep into the technical solution. By rapidly understanding and aligning the key performance indicators (KPIs) and business drivers that are important to stakeholders, your team can think about high-level approaches and transformations before diving into the implementation details.
 
@@ -33,7 +33,7 @@ An example can be found on the "example outcome" tab of the spreadsheet, as show
 
 ![Example of a business outcome template](../../_images/strategy/business-outcome-template.png)
 
-_Figure 2: Example of a business outcome template._
+*Figure 2: Example of a business outcome template.*
 
 ## Why is this template relevant?
 
@@ -41,7 +41,7 @@ Discovery is a fundamental tenet of enterprise architecture. If discovery is lim
 
 ![Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities](../../_images/strategy/business-outcome-focus-areas.png)
 
-_Figure 3: Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities._
+*Figure 3: Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities.*
 
 **Stakeholders:** Who in the organization is likely to see the greatest value in a specific business outcome? Who is most likely to support this transformation, especially when things get tough or time consuming? Who has the greatest stake in the success of this transformation? This person is a potential stakeholder.
 
@@ -49,7 +49,7 @@ _Figure 3: Five areas of focus in discovery: stakeholders, outcomes, drivers, KP
 
 **Business drivers:** Business drivers capture the current challenge that's preventing the company from achieving desired outcomes. They can also capture new opportunities that the business can capitalize on with the right solution. How would you describe the current challenges or future state of the business? What business functions would be changing to meet the desired outcomes?
 
-**KPIs:** How will this change be measured? How does the business know if they are successful? How frequently will this KPI be observed? Understanding each KPI helps enable incremental change and experimentation.
+**KPIs:** How will this change be measured? How does the business know whether they are successful? How frequently will this KPI be observed? Understanding each KPI helps enable incremental change and experimentation.
 
 **Capabilities:** When you define any transformation journey, how will technical capabilities accelerate realization of the business outcome? What applications must be included in the transformation to achieve business objectives? How do various applications or workloads get prioritized to deliver on capabilities? How do parts of the solution need to be expanded or rearchitected to meet each of the outcomes? Can execution approaches (or timelines) be rearranged to prioritize high-impact business outcomes?
 

@@ -10,8 +10,6 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
-<!-- cSpell:ignore ccoe -->
-
 # Mature team structures
 
 Every cloud function is provided by someone during every cloud adoption effort. These assignments and team structures can develop organically, or they can be intentionally designed to match a defined team structure.

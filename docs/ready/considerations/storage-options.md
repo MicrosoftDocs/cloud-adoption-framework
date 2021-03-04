@@ -44,10 +44,9 @@ Azure offers multiple products and services for different storage capabilities. 
 
 ### Block storage scenarios
 
-<!-- docsTest:ignore M-series -->
-<!-- markdownlint-disable MD033 -->
+<!-- docutune:ignore M-series -->
 
-| Scenario  | Suggested Azure services | Considerations for suggested services |
+| Scenario | Suggested Azure services | Considerations for suggested services |
 |---|---|---|
 | I have bare-metal servers or VMs (Hyper-V or VMware) with direct attached storage running LOB applications. | [Azure disk storage (premium SSD)](/azure/virtual-machines/windows/disks-types#premium-ssd) | For production services, the premium SSD option provides consistent low-latency coupled with high IOPS and throughput. |
 | I have servers that will host web and mobile apps. | [Azure disk storage (standard SSD)](/azure/virtual-machines/windows/disks-types#standard-ssd) | standard SSD IOPS and throughput might be sufficient (at a lower cost than premium SSD) for CPU-bound web and app servers in production. |
@@ -107,8 +106,6 @@ After you identify the Azure tools that best match your requirements, use the de
 | [Azure Data Box Edge](/azure/databox-online/data-box-edge-overview) | Azure Data Box Edge is an on-premises network device that moves data into and out of Azure. Data Box Edge has AI-enabled edge compute to preprocess data during upload. Data Box Gateway is a virtual version of the device but with the same data transfer capabilities. |
 | [Azure Data Box Gateway](/azure/databox-online/data-box-gateway-overview) | Azure Data Box Gateway is a storage solution that enables you to seamlessly send data to Azure. Data Box Gateway is a virtual device based on a virtual machine provisioned in your virtualized environment or hypervisor. The virtual device resides on-premises and you write data to it by using the NFS and SMB protocols. The device then transfers your data to Azure block blobs or Azure page blobs, or to Azure Files. |
 | [Avere vFXT for Azure](/azure/avere-vfxt/avere-vfxt-overview) | Avere vFXT for Azure is a filesystem caching solution for data-intensive high-performance computing (HPC) tasks. Take advantage of cloud computing's scalability to make your data accessible when and where it's needed, even for data that's stored in your own on-premises hardware. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Data redundancy and availability
 

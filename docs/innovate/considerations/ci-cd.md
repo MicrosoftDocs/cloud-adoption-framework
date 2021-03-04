@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore deprioritize -->
-
 # Empower adoption with digital invention
 
 The ultimate test of innovation is customer reaction to your invention. Did the hypothesis prove true? Do customers use the solution? Does it scale to meet the needs of the desired percentage of users? Most importantly, do they keep coming back? None of these questions can be asked until the minimum viable product (MVP) solution has been deployed. In this article, we'll focus on the discipline of empowering adoption.
@@ -86,7 +84,7 @@ At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](/azure
 
 ## Integrated measurements
 
-When you [measure for customer impact](./measure.md), it's important to understand how customers react to changes in the solution. This data, known as _telemetry_, provides insights into the actions a user (or cohort of users) took when working with the solution. From this data, it's easy to get a quantitative validation of the hypothesis. Those metrics can then be used to adjust the solution and generate more fine-grained hypotheses. Those subtler changes help mature the initial solution in subsequent iterations, ultimately driving to repeat adoption at scale.
+When you [measure for customer impact](./measure.md), it's important to understand how customers react to changes in the solution. This data, known as *telemetry*, provides insights into the actions a user (or cohort of users) took when working with the solution. From this data, it's easy to get a quantitative validation of the hypothesis. Those metrics can then be used to adjust the solution and generate more fine-grained hypotheses. Those subtler changes help mature the initial solution in subsequent iterations, ultimately driving to repeat adoption at scale.
 
 In Azure, [Azure Monitor](/azure/azure-monitor/overview) provides the tools and interface to collect and review data from customer experiences. You can apply those observations and insights to refine the backlog by using [Azure Boards](/azure/devops/boards).
 

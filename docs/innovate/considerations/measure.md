@@ -15,16 +15,17 @@ There are several ways to measure for customer impact. This article will help yo
 
 ## Strategic metrics
 
-During the [Strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
+The [Strategy methodology](../../strategy/index.md) examines [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics to test customer impact. When innovation is successful, you'll usually see results that are aligned with your strategic objectives.
 
-Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas:
-    - [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
-    - [Customer engagement](../../strategy/business-outcomes/engagement-outcomes.md)
-    - [Customer reach](../../strategy/business-outcomes/reach-outcomes.md)
-    - [Financial impact](../../strategy/business-outcomes/fiscal-outcomes.md)
-    - [Solution performance](../../strategy/business-outcomes/fiscal-outcomes.md), in the case of operational innovation.
+Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally, those strategic metrics align with one or more of the following outcome areas:
 
-Document the agreed-upon metrics and track their impact frequently. But don't expect results in any of these metrics to emerge for several iterations. For more information about setting and aligning expectations across the parties involved, see [Commitment to iteration](./index.md#commitment-to-iteration).
+- [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
+- [Customer engagement](../../strategy/business-outcomes/engagement-outcomes.md)
+- [Customer reach](../../strategy/business-outcomes/reach-outcomes.md)
+- [Financial impact](../../strategy/business-outcomes/fiscal-outcomes.md)
+- [Solution performance](../../strategy/business-outcomes/fiscal-outcomes.md), in the case of operational innovation.
+
+Document the agreed-upon metrics and track their impact frequently, but don't expect results in any of these metrics to emerge for several iterations. For more information about setting and aligning expectations across the parties involved, see [Commitment to iteration](./index.md#commitment-to-iteration).
 
 Aside from motivation and business outcome metrics, the remainder of this article focuses on learning metrics designed to guide transparent discovery and customer-focused iterations. For more information about these aspects, see [Commitment to transparency](./index.md#commitment-to-transparency).
 

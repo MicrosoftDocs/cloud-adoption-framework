@@ -1,6 +1,6 @@
 ---
 title: Risk tolerance metrics and indicators in the Resource Consistency discipline
-description: Use the the Cloud Adoption Framework for Azure to quantify business risk tolerance related to Resource Consistency discipline.
+description: Use the Cloud Adoption Framework for Azure to quantify business risk tolerance related to Resource Consistency discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
-
-<!-- cSpell:ignore MTBF MTTR -->
 
 # Risk tolerance metrics and indicators in the Resource Consistency discipline
 
@@ -54,7 +52,7 @@ Once you have a baseline, establish minimum benchmarks representing an unaccepta
 - **Tagging and naming trigger.** A company with more than *x* resources lacking required tagging information or not obeying naming standards should consider investing in the Resource Consistency discipline to help refine these standards and ensure consistent application of them to cloud-deployed assets.
 - **Overprovisioned resources trigger.** If a company has more than *x%* of assets regularly using small amounts of their available memory, CPU, or network capabilities, investment in the Resource Consistency discipline is suggested to help optimize resources usage for these items.
 - **Underprovisioned resources trigger.** If a company has more than *x%* of assets regularly exhausting most of their available memory, CPU, or network capabilities, investment in the Resource Consistency discipline is suggested to help ensure these assets have the resources necessary to prevent service interruptions.
-- **Resource age trigger.** A company with more than *x* resources that haven't been updated in over _y_ months could benefit from investment in the Resource Consistency discipline aimed at ensuring active resources are patched and healthy, while retiring obsolete or otherwise unused assets.
+- **Resource age trigger.** A company with more than *x* resources that haven't been updated in over *y* months could benefit from investment in the Resource Consistency discipline aimed at ensuring active resources are patched and healthy, while retiring obsolete or otherwise unused assets.
 - **Service-level agreement trigger.** A company that cannot meet its service-level agreements to its external customers or internal partners should invest in the Deployment Acceleration discipline to reduce system downtime.
 - **Recovery time triggers.** If a company exceeds the required thresholds for recovery time following a system failure, it should invest in improving its Deployment Acceleration discipline and systems design to reduce or eliminate failures or the effect of individual component downtime.
 - **VM health trigger.** A company that has more than *x%* of VMs experiencing a critical health issue should invest in the Resource Consistency discipline to identify issues and improve VM stability.
