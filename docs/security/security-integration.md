@@ -11,9 +11,10 @@ ms.custom: internal
 ---
 
 # Security Integration
-Rather than being considered a separate discipline, separated from the general flow of operations, security should be integrated into each facet of the business. 
-TODO: Why? How does that impact the business?
-Business inherently requires risk. The objective of security isn't to tell the business "No. Don't take that risk.". When mature, the objective of security, is to expose risks, mitigate risks, and empower business change with minimal risk. That level of maturity requires security integration.
+
+While the majority of security functions operate out of sight of daily business workflows, some security goals require integration of security considerations into daily workflows and operations throughout the business organization. Just as security in the physical world is an integrated part of workflows like "if you see something, say something" and airport security checkpoints, so too must security be integrated into the normal experience of planning and operating the business. 
+
+The goal of security integration is to achieve critical security goals while minimizing friction and change for the business, a delicate balance that is important to get right.
 
 ## Security Operations nomenclature disambiguation
 Within the security space exists many commonly used terms for individual positions or teams whose definition, roles, and duties, can often differ wildly from organization to organization. Even the term for someone working in the security field can require clarification - "Security" might be specific to physical security, while "Cybersecurity" is reserved for all things technology related. However as identity becomes the new perimeter, even this deliniation becomes nebulous as physical security becomes tied to cybersecurity for things such as building or workstation access. What does become clear is the need for security as a concept which needs to be integrated into every part of an organization. 
