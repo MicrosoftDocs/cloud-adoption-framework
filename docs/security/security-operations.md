@@ -14,15 +14,24 @@ ms.custom: internal
 
 This article provides areas of consideration for organizations planning to establish a security operation function.
 
-TODO/question: Thought we were distinquishing between SOC & security operations within IT to monitor for breach at an IT level. If so, does that chance the definitions of security operations to be more central IT aligned?
+Security operations are those teams within a business that are focused on reducing organizational risk by detecting and remediating active attacks on enterprise assets.
+Security operations does this with a variety of functions including the following two key areas:
 
-Security operations (sometimes called a security operations center (SOC)) is focused on reducing organizational risk by detecting and remediating active attacks on enterprise assets. Security operations does this with a variety of functions including reactively respond to detected attacks, proactively hunting for undetected attacks, gathering and disseminating threat intelligence, and helping the organization prepare for future attacks.
+- Reactively respond to detected attacks, proactively hunting for undetected attacks, gathering and disseminating threat intelligence. This is often delivered through teams referred to as a SOC.
+- Helping the organization prepare for future attacks, which is a broader strategic set of activities aimed at defining and protecting the assets considered valuable or sensitive to the business.
 
 Security operations is currently undergoing significant modernization at all levels with the advent of cloud technologies, adversary targeting of IoT and OT resources, and the zero trust transformation of security to a multi-layer discipline (vs. a network centric strategy). This modernization of security operations is becoming urgent because of the massive increase in relevant telemetry (which is hard to process with classic techniques), the availability of cloud services to provide analytics such as machine learning (ML) and behavior analytics, and the time sensitive nature of the security operations mission.
 
+Today, there are two commonly observed patterns for how organizations structure their security functions:
+
+- **IT-driven security** - often within an IT organization, and focussed primarily on responding to threat telemetry and resolving security incidents. In this structure, security is often defined within the IT organization and builds processes and architectures based on the outcome of securing the infrastructure that runs the business operations.
+
+- **Business-driven security** - in this pattern, IT security is a mechanism for contributing to a broader concept of security within a business. The definition of what needs to be secured and the risk appetite is driven from stakeholders outside of IT and considered in a broader context of what is valuable to the business.
+Securing infrastructure and applications is often part of the approach, rather than the success criteria itself, in this model.  
+
 Security tools are only as good as the processes that surround them, so it is crucial that organizations design and run a well-structured security operations function to keep the organization safe.
 
-Recent history has often shown the importance of maintaining a clear watch over the infrastructure and systems within an organization. The very real risk of unauthorized data access or exfiltration, rogue actors affecting production systems or deploying malware that disrupts the business' day to day operations should be top of mind for any company executives.
+Recent history has repeatedly shown the importance of maintaining a clear watch over the infrastructure and systems within an organization. The very real risk of unauthorized data access or exfiltration, rogue actors affecting production systems or deploying malware that disrupts the business' day to day operations should be top of mind for any company executives.
 It is almost impossible to prevent a break in at a house if no one is checking that the doors and windows are shut and locked.
 
 Organizations are becoming hyper-aware of the need to ensure that there are strong processes in place to ensure that the metaphorical doors and windows of their environments are shut and locked, and - when a window is left open - there is a process in place to close it and ensure it stays closed.
