@@ -14,6 +14,8 @@ ms.custom: internal
 
 All IT portfolios contain a few workloads and ideas that could significantly improve a company's position in the market. Most cloud adoption efforts focus on the migration and modernization of existing workloads. It's innovation, however, that can provide the greatest business value. Cloud adoption-related innovation can unlock new technical skills and expanded business capabilities.
 
+UPDATE IN PROGRESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 This section of the Cloud Adoption Framework focuses on the elements of your portfolio that drive the greatest return on investment.
 
 To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
