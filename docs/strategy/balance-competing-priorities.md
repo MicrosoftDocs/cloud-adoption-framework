@@ -24,7 +24,7 @@ The following sections align to the flow of the cloud adoption lifecycle visual 
 
 ## General theme of the Cloud Adoption Framework approach
 
-Monolithic solutions and advanced planning are both built on a-series of assumptions that may (or may not) prove to be accurate over time. Adopting the cloud is often a new experience for the business and the technical teams. As with most new experiences or learning opportunities, there is a high probability that those assumptions will be proven false.
+Monolithic solutions and advanced planning are both built on a series of assumptions that may (or may not) prove to be accurate over time. Adopting the cloud is often a new experience for the business and the technical teams. As with most new experiences or learning opportunities, there is a high probability that those assumptions will be proven false.
 
 Following proven agile principles of delayed technical decisions is the favored approach for most guidance within this framework. That approach follows a consistent pattern: establish a general end-state, move quickly to initial implementation, test and validate assumptions, and refactor early to address assumptions. This type of growth mindset maximizes learning and minimizes risk to business value, but it requires some comfort with ambiguity.
 

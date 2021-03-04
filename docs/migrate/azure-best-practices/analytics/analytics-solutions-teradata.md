@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics migration for Teradata 
+title: Azure Synapse Analytics migration for Teradata
 description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions for Teradata and migrating to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
@@ -88,7 +88,7 @@ As you plan your migration from a legacy Teradata environment to Azure Synapse, 
 
 ### Multiple databases vs. a single database and schemas
 
-In a Teradata environment, you might have multiple, separate databases for different parts of the overall environment. For example, you might have a separate database for data ingestion and staging tables, a database for core warehouse tables, and another database for data marts (sometimes called a _semantic layer_). Processing separate databases as ETL/ELT pipelines in Azure Synapse might require implementing cross-database joins and moving data between the separate databases.
+In a Teradata environment, you might have multiple, separate databases for different parts of the overall environment. For example, you might have a separate database for data ingestion and staging tables, a database for core warehouse tables, and another database for data marts (sometimes called a *semantic layer*). Processing separate databases as ETL/ELT pipelines in Azure Synapse might require implementing cross-database joins and moving data between the separate databases.
 
 The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a series of schemas in Azure Synapse to mimic any separate databases you migrate from Teradata.
 
@@ -205,7 +205,7 @@ Consider the following information when you plan how to extract metadata and dat
 
   You can call Teradata Parallel Transporter directly from Data Factory. We recommend this approach for managing the data migration process, whether the Teradata instance is on-premises or copied to a VM in the Azure environment, as described earlier.
 
-  The data formats we recommend for extracted data are delimited text files (also called _comma-separated values_), optimized row columnar files, or Parquet files.
+  The data formats we recommend for extracted data are delimited text files (also called *comma-separated values*), optimized row columnar files, or Parquet files.
 
 For detailed information about the process of migrating data and ETL from a Teradata environment, see the Teradata documentation.
 
@@ -217,7 +217,7 @@ The platforms have some differences when it comes to optimization. In the follow
 
   For large table/large table joins, hash distributing in one or both (ideally, both) tables on the join columns helps ensure that join processing can be performed locally because the data rows to be joined are already colocated on the same processing node.
 
-  Azure Synapse provides an additional way to achieve local joins for small table/large table joins (often called a _dimension table/fact table join_ in a star schema model). You replicate the smaller table across all nodes, thereby ensuring that any value of the join key for the larger table has a matching dimension row that's locally available. The overhead of replicating the dimension table is relatively low if the tables aren't large. In this case, using the hash distribution approach described earlier is preferable.
+  Azure Synapse provides an additional way to achieve local joins for small table/large table joins (often called a *dimension table/fact table join* in a star schema model). You replicate the smaller table across all nodes, thereby ensuring that any value of the join key for the larger table has a matching dimension row that's locally available. The overhead of replicating the dimension table is relatively low if the tables aren't large. In this case, using the hash distribution approach described earlier is preferable.
 
 - **Data indexing:** Azure Synapse provides various indexing options, but the options are different in operation and usage from indexing options in Teradata. To learn about the indexing options in Azure Synapse, see [Design tables in an Azure Synapse pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
 

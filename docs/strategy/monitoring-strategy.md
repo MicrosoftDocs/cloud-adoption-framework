@@ -56,7 +56,7 @@ As a manageability expert, you may be working closely with a steering committee,
 
 ## High-level modeling
 
-As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services, for example, do not eliminate your monitoring responsibility. You'll decide who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure. You need to look beyond the common cloud models as shown below. If you're using Microsoft Office applications delivered by [Microsoft 365](/microsoft-365/?view=o365-worldwide) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
+As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services, for example, do not eliminate your monitoring responsibility. You'll decide who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure. You need to look beyond the common cloud models as shown below. If you're using Microsoft Office applications delivered by [Microsoft 365](/microsoft-365/) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
 
 ![Cloud models diagram](./media/monitoring-strategy/cloud-models.png)
 
@@ -110,7 +110,7 @@ To assemble this architecture, here are several considerations:
 
 - A dataflow approach starting from service assets and going up the stack: metrics and log data emitted by infrastructure, IoT devices, mobile devices, and others. Are all of the items under management—to-monitoring tools (mid-tier)? Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, and others).
 
-- Whether to continue with [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-2019) or other monitoring tools.
+- Whether to continue with [System Center Operations Manager](/system-center/scom/welcome) or other monitoring tools.
 
 - The economic cost.
 
@@ -136,7 +136,7 @@ Consider a single policy in your governance plan for event significance, through
 
 ## Formulate initiatives
 
-As a monitoring expert or systems administrator, you've discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won't know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability: _that which is needed to begin the journey_. Here are two example initiatives that help declare forward motion:
+As a monitoring expert or systems administrator, you've discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won't know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability: *that which is needed to begin the journey*. Here are two example initiatives that help declare forward motion:
 
 - **Initiative 1:** To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability using Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.
 

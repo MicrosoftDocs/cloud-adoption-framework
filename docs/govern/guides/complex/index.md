@@ -14,7 +14,7 @@ ms.custom: internal
 
 ## Overview of best practices
 
-This governance guide follows the experiences of a fictional company through various stages of governance maturity. It is based on real customer experiences. The suggested best practices are based on the constraints and needs of the fictional company.
+This governance guide follows the experiences of a fictional company through various stages of governance maturity. It's based on real customer experiences. The suggested best practices are based on the constraints and needs of the fictional company.
 
 As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
@@ -41,7 +41,7 @@ Every application should be deployed in the proper area of the management group,
 
 1. Resource groups should be deployed in a manner that considers its contents lifecycle. Resources that are developed together, managed together, and retired together belong in the same resource group. For more information about best practices for using resource groups, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md).
 
-1. [Region selection](../../../migrate/azure-best-practices/multiple-regions.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
+1. [Region selection](../../../migrate/azure-best-practices/multiple-regions.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
 
 ![Diagram of large enterprise resource organization](../../../_images/govern/large-enterprise-resource-organization.png)
 

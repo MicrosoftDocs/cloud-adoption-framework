@@ -1,5 +1,5 @@
 ---
-title: "Align assets to prioritized workloads"
+title: Align assets to prioritized workloads
 description: Use the Cloud Adoption Framework for Azure to learn how to align assets to your prioritized workloads.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,7 +29,7 @@ The objective of the preceding data points is to capture relative technical effo
 
 **Modernize:** When the goal for a workload is to modernize applications or other assets, these data points are still solid measures of complexity. However, it might be wise to add an input for modernization opportunities to the workload documentation.
 
-**Innovate:** When data or business logic is undergoing material change during a cloud adoption effort, it's considered an _innovate_ type of transformation. The same is true when you're creating new data or new business logic. For any innovate scenarios, the migration of assets will likely represent the smallest amount of effort required. For these scenarios, the team should devise a set of technical data inputs to measure relative complexity.
+**Innovate:** When data or business logic is undergoing material change during a cloud adoption effort, it's considered an *innovate* type of transformation. The same is true when you're creating new data or new business logic. For any innovate scenarios, the migration of assets will likely represent the smallest amount of effort required. For these scenarios, the team should devise a set of technical data inputs to measure relative complexity.
 
 ## Azure Migrate
 

@@ -42,7 +42,7 @@ Strategies for migration to the cloud fall into four broad patterns: rehost, ref
 This section provides examples of several common migration scenarios. Each example includes background information and detailed deployment scenarios that illustrate how to set up a migration infrastructure and assess the suitability of on-premises resources for migration. More articles will be added to this section over time.
 
 ![Diagram of migration and modernization project categories.](./media/migration-patterns.png)
-_Figure 1: Common migration and modernization project categories._
+*Figure 1: Common migration and modernization project categories.*
 
 This series focuses on each migration scenario, driven by slightly different business goals that determine the migration strategy. For each deployment scenario, we provide information about:
 

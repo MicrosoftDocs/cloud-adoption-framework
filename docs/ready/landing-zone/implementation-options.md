@@ -42,9 +42,9 @@ The following table looks at some of these implementation options from a slightl
 
 | Implementation option | Hub | Spoke | Deployment technology | Deployment instructions |
 |---|---|---|---|---|
-| [Cloud Adoption Framework enterprise-scale landing zone](../enterprise-scale/index.md) | Included  | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
+| [Cloud Adoption Framework enterprise-scale landing zone](../enterprise-scale/index.md) | Included | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
 | [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Refactor required | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprints | [Deploy](./migrate-landing-zone.md) |
-| [CAF Terraform modules](./terraform-landing-zone.md)  | Included in virtual datacenter module | Included | Terraform | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| [CAF Terraform modules](./terraform-landing-zone.md) | Included in virtual datacenter module | Included | Terraform | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
 
 ## Next steps
 

@@ -30,7 +30,7 @@ When you [build with customer empathy](./build.md), all processes elevate custom
 
 Many successful innovations have been launched as a minimum viable product (MVP) that deliver manual, data-driven processes on behalf of the customer. In this concierge model, an employee is the data consumer. That employee uses data to aid the customer. Each time the customer engages manual support, a hypothesis can be tested and validated. This approach is often a cost effective means of testing a customer-focused hypothesis before you invest heavily in integrated solutions.
 
-The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like [Power BI](/power-bi).
+The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like [Power BI](/power-bi/).
 
 > [!NOTE]
 > Before you share data, make sure you've read the following sections. Sharing data might require governance to provide protection for the shared data. Also, that data might be spread across multiple clouds and could require centralization. Much of the data might even reside within applications, which will require data collection before you can share it.
@@ -56,7 +56,7 @@ When data is disrupted across an IT environment, opportunities to innovate can b
 
 If centralization of data is required, you should first define the appropriate data store for the centralized data. It's a good practice to establish a data warehouse in the cloud. This scalable option provides a central location for all your data. This type of solution is available in online analytical processing (OLAP) or big data options.
 
-The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
+The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data/) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
 > [!IMPORTANT]
 > Depending on the customer need and the aligned solution, a simpler approach may be sufficient. The cloud architect should challenge the team to consider lower cost solutions that could result in faster validation of the customer hypothesis, especially during early development. The following section on collecting data covers some scenarios that might suggest a different solution for your situation.

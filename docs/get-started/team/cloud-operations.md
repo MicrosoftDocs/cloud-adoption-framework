@@ -194,6 +194,6 @@ As adoption and operations scale, it's important to define and automate governan
 Learn more about:
 
 - [Cloud center of excellence functions](../../organize/cloud-center-of-excellence.md)
-- [Organizational antipatterns: Silos and fiefdoms](../../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md)
 
 Align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

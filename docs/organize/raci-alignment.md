@@ -1,5 +1,5 @@
 ---
-title: "Aligning responsibilities across teams"
+title: Aligning responsibilities across teams
 description: Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Align responsibilities across teams
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):
 
 - [Cloud adoption team only](#cloud-adoption-team-only)
 - [MVP best practice](#best-practice-minimum-viable-product-mvp)
@@ -25,16 +25,16 @@ To track organizational structure decisions over time, download and modify the [
 
 The examples in this article specify these RACI constructs:
 
-- The one team that is _accountable_ for a function.
-- The teams that are _responsible_ for the outcomes.
-- The teams that should be _consulted_ during planning.
-- The teams that should be _informed_ when work is completed.
+- The one team that is *accountable* for a function.
+- The teams that are *responsible* for the outcomes.
+- The teams that should be *consulted* during planning.
+- The teams that should be *informed* when work is completed.
 
 The last row of each table (except the first) contains a link to the most-aligned cloud capability for additional information.
 
 ## Cloud adoption team only
 
-| Team | Solution delivery | Business alignment | Change management | Solution operations | Governance  | Platform maturity | Platform operations | Platform automation |
+| Team | Solution delivery | Business alignment | Change management | Solution operations | Governance | Platform maturity | Platform operations | Platform automation |
 | ------------------- | ----------------- | ------------------ | ----------------- | ------------------- | ----------- | ----------------- | ------------------- | ------------------- |
 | Cloud adoption team | Accountable       | Accountable        | Accountable       | Accountable         | Accountable | Accountable       | Accountable         | Accountable         |
 

@@ -32,7 +32,7 @@ Inclusiveness mandates that AI should consider all human races and experiences, 
 
 ### Reliability and safety
 
-AI systems need to be reliable and safe in order to be trusted. It is important for a system to perform as it was originally designed and for it to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation. Rigorous testing and validation should be established for operating conditions to ensure that the system responds safely to edge cases, and A/B testing and champion/challenger methods should be integrated into the evaluation process.
+AI systems need to be reliable and safe in order to be trusted. It's important for a system to perform as it was originally designed and for it to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation. Rigorous testing and validation should be established for operating conditions to ensure that the system responds safely to edge cases, and A/B testing and champion/challenger methods should be integrated into the evaluation process.
 
 An AI system's performance can degrade over time, so a robust monitoring and model tracking process needs to be established to reactively and proactively measure the model's performance and retrain it, as necessary, to modernize it.
 
@@ -48,7 +48,7 @@ Microsoft has developed [InterpretML](https://interpret.ml/), an open-source too
 
 - Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like LIME or SHapley Additive exPlanations (SHAP) interpret these models by analyzing the relationship between the input and output.
 
-- [Fairlearn](https://fairlearn.github.io/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. Use explainers to understand what mainly influences the model and domain experts to validate these influences.
+- [Fairlearn](https://fairlearn.org/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. Use explainers to understand what mainly influences the model and domain experts to validate these influences.
 
 Explore [model interpretability in Azure Machine Learning](/azure/machine-learning/how-to-machine-learning-interpretability) to learn more about explainability.
 
