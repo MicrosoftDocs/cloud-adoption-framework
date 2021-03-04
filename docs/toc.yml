@@ -917,23 +917,38 @@ items:
       items:
       - name: Overview
         href: innovate/index.md
-      - name: Azure innovation guide
-        items:
-        - name: Innovation guide overview
-          href: innovate/innovation-guide/index.md
-        - name: Prepare for customer feedback
-          href: innovate/innovation-guide/adoption.md
-        - name: Democratize data
-          href: innovate/innovation-guide/data.md
-        - name: Engage customers through apps
-          href: innovate/innovation-guide/apps.md
-        - name: Empower adoption
-          href: innovate/innovation-guide/ci-cd.md
-        - name: Interact through devices
-          href: innovate/innovation-guide/devices.md
-        - name: Innovate with AI
-          href: innovate/innovation-guide/predict.md
 
+        - name: Overview
+          href: innovate/considerations/index.md
+        - name: Business value consensus
+          href: innovate/business-value.md
+        - name: Build with customer empathy
+          href: innovate/considerations/build.md
+        - name: Measure for customer impact
+          href: innovate/considerations/measure.md
+        - name: Learn with customers
+          href: innovate/considerations/learn.md
+        - name: Digital invention
+          items:
+          - name: Develop digital inventions
+            href: innovate/considerations/invention.md
+          - name: Democratize data
+            href: innovate/considerations/data.md
+          - name: Engage via apps
+            href: innovate/considerations/apps.md
+          - name: Empower adoption
+            href: innovate/considerations/ci-cd.md
+          - name: Interact with devices
+            href: innovate/considerations/devices.md
+          - name: Predict and influence
+            href: innovate/considerations/predict.md
+        - name: Where do these go?
+          items:
+          - name: Feedback loops
+            href: innovate/considerations/adoption.md
+          - name: Customer challenges and blockers
+            href: innovate/considerations/challenges.md
+            
       - name: Innovation scenarios
         items:
         - name: Kubernetes
@@ -1242,38 +1257,6 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
-      - name: Process improvements
-        items:
-        - name: Overview
-          href: innovate/considerations/index.md
-        - name: Business value consensus
-          href: innovate/business-value.md
-        - name: Customer adoption
-          items:
-          - name: Feedback loops
-            href: innovate/considerations/adoption.md
-          - name: Build with customer empathy
-            href: innovate/considerations/build.md
-          - name: Measure for customer impact
-            href: innovate/considerations/measure.md
-          - name: Learn with customers
-            href: innovate/considerations/learn.md
-          - name: Customer challenges and blockers
-            href: innovate/considerations/challenges.md
-        - name: Digital invention
-          items:
-          - name: Develop digital inventions
-            href: innovate/considerations/invention.md
-          - name: Democratize data
-            href: innovate/considerations/data.md
-          - name: Engage via apps
-            href: innovate/considerations/apps.md
-          - name: Empower adoption
-            href: innovate/considerations/ci-cd.md
-          - name: Interact with devices
-            href: innovate/considerations/devices.md
-          - name: Predict and influence
-            href: innovate/considerations/predict.md
 
   - name: Govern
     items:
