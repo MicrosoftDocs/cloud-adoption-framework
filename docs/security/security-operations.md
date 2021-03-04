@@ -12,15 +12,20 @@ ms.custom: internal
 
 # Security Operations
 
-This article provides areas of consideration for organisations planning to establish a security operation function.
+This article provides areas of consideration for organizations planning to establish a security operation function.
 
-## Background
+TODO/question: Thought we were distinquishing between SOC & security operations within IT to monitor for breach at an IT level. If so, does that chance the definitions of security operations to be more central IT aligned?
 
-Security operations (sometimes called a security operations center (SOC)) is focused on reducing organizational risk by detecting and remediating active attacks on enterprise assets. Security operations does this with a variety of functions including reactively respond to detected attacks, proactively hunting for undetected attacks, gathering and dissemintating threat intelligence, and helping the organization prepare for future attacks.
+Security operations (sometimes called a security operations center (SOC)) is focused on reducing organizational risk by detecting and remediating active attacks on enterprise assets. Security operations does this with a variety of functions including reactively respond to detected attacks, proactively hunting for undetected attacks, gathering and disseminating threat intelligence, and helping the organization prepare for future attacks.
 
 Security operations is currently undergoing significant modernization at all levels with the advent of cloud technologies, adversary targeting of IoT and OT resources, and the zero trust transformation of security to a multi-layer discipline (vs. a network centric strategy). This modernization of security operations is becoming urgent because of the massive increase in relevant telemetry (which is hard to process with classic techniques), the availability of cloud services to provide analytics such as machine learning (ML) and behavior analytics, and the time sensitive nature of the security operations mission.
 
-Security tools are only as good as the processes that surround them, so it is crucial that organizations design and run a well-structured security operations function to keep the organization safe.  
+Security tools are only as good as the processes that surround them, so it is crucial that organizations design and run a well-structured security operations function to keep the organization safe.
+
+Recent history has often shown the importance of maintaining a clear watch over the infrastructure and systems within an organization. The very real risk of unauthorized data access or exfiltration, rogue actors affecting production systems or deploying malware that disrupts the business' day to day operations should be top of mind for any company executives.
+It is almost impossible to prevent a break in at a house if no one is checking that the doors and windows are shut and locked.
+
+Organizations are becoming hyper-aware of the need to ensure that there are strong processes in place to ensure that the metaphorical doors and windows of their environments are shut and locked, and - when a window is left open - there is a process in place to close it and ensure it stays closed.
 
 ## Operations within a security strategy
 
@@ -50,7 +55,7 @@ This data can be filtered, modelled, and have business logic applied to it in or
 
 Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools.
 
-## Migrating to an 'assume breach' mindset
+## Processes required to 'assume breach'
 
 ### Holistic monitoring
 

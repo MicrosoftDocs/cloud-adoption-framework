@@ -12,6 +12,18 @@ ms.custom: internal
 ---
 
 # Risk Management Insights
+TODO: Intro the concept. As a non-technical person, why should I care about risk management insights? Why is this important? 
+
+## Risk Management
+TODO: Ok, as a non-technical person, I can see the value. In a paragraph or less, what is the Risk Management thing you're talking about?
+
+## Insights
+TODO: When we are good at this, what kind of insights should we see & why are those example insights important to the business?
+
+## Processes
+TODO: What processes should be in place to review, evaluate, and apply these insights?
+
+## Risk Management integration
 In order for risk management to be effective, it must be integrated into all aspects of the governance and compliance activities of an organization. In order for risks to be properly assessed, security must always be considered as part of a comprehensive approach.
 
 The International Organization for Standardization (ISO) is the world's largest independant develpoper of international standards. Following the risk management framework published by the ISO in [31000](https://www.iso.org/obp/ui/#iso:std:iso:31000:ed-2:v1:en) (or similarly well-adopted frameworks by other organizations) helps ensure a non-biased approach to utilizing a framework which accurately determines risk tolerance and mitigation practices for your organization.

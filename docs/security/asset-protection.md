@@ -14,10 +14,12 @@ ms.custom: internal
 
 This article summarizes the areas of consideration when planning to implement protection measures for corporate assets and data.
 
-## Context
+Running infrastructure and services in a public cloud introduces many security benefits that are difficult to replicate at equal scale in private data centres, but that doesn't mean that the task of securing an environment is complete. Protecting company assets - from virtual machines and networks to applications and identity - is still mission critical in order to provide the best possible security to the functions of the business and company data.
 
-Running infrastructure and services in a public cloud introduces many security benefits that are difficult to replicate at equal scale in private data centres, but that doesn't mean that the task of securing an environment is complete.
-Protecting company assets - from virtual machines and networks to applications and identity - is still mission critical in order to provide the best possible security to the functions of the business and company data.
+The value of protecting corporate assets lies in the information they store - often sensitive data related to employees or products.
+In the same way as companies protect their physical buildings with doors and ID badge checks, or sensitive paper records with locked filing cabinets, the virtual assets owned by an organisation need to be protected to prevent unathorised access.
+
+TODO: What processes are required to protect assets? What decisions? Are the following more of a best practices list? Could we summarize all of those key points within a set of processes?
 
 ## Securing Data
 
