@@ -1,0 +1,63 @@
+# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
+#cSpell:ignore devtest mariadb
+
+items:
+  - name: <Insert Scenario Name> - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: <Insert Scenario Name> - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    href: ready.md
+  - name: Migrate apps to the cloud
+    href: migrate.md
+  - name: Innovate in the cloud
+    href: migrate.md
+  - name: Govern your portfolio
+    href: govern.md
+  - name: Manage your portfolio
+    href: manage.md
+
+  - name: Well-architected - TBD
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Architectures - TBD
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Best practices - TBD
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Enterprise-scale construction set
+    items:
+    - name: Construction set for <Insert ESLZ Scenario Name> enterprise-scale scenario
+      href: enterprise-scale-landing-zone.md
+    - name: Identity and access management
+      href: eslz-identity-and-access-management.md
+    - name: Network topology and connectivity
+      href: eslz-network-topology-and-connectivity.md
+    - name: Management and monitoring
+      href: eslz-management-and-monitoring.md
+    - name: Business continuity and disaster recovery
+      href: eslz-business-continuity-and-disaster-recovery.md
+    - name: Security governance and compliance
+      href: eslz-security-governance-and-compliance.md
+    - name: Platform automation and DevOps
+      href: eslz-platform-automation-and-devops.md
+       
+  - name: Microsoft products - Add links to product docs
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Learn modules - TBD
+    items:
+    - name: Example
+      href: /azure
