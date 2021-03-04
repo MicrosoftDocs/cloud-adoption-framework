@@ -12,6 +12,11 @@ ms.custom: internal
 ---
 
 # Risk Management Insights
+
+Business inherently requires risk and security's role is to inform and advise decision makers that own all risks and benefits on how security risks fit in those frameworks. The goal of security isn't to say "No. Don't take that risk." but to learn the business, apply their security expertise to identify risks to business objectives and assets, and advise those decision makers on the risks and which ones are recommended to accept or not (with the understanding that the final risk acceptance and accountability for consequences lies with the asset/process owner in the business.
+
+When mature, the objective of security, is to expose risks, mitigate risks, and empower business change with minimal risk. That level of maturity requires risk insights and deep security integration.
+
 TODO: Intro the concept. As a non-technical person, why should I care about risk management insights? Why is this important? 
 
 ## Risk Management
