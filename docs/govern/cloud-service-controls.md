@@ -227,4 +227,4 @@ For example, if a cloud adoption team would suddenly need a new service that has
 Learn more about regulatory compliance in the cloud.
 
 > [!div class="nextstepaction"]
-> [Regulatory compliance](./regulatory-compliance.md)
+> [Regulatory compliance](./policy-compliance/regulatory-compliance.md)
