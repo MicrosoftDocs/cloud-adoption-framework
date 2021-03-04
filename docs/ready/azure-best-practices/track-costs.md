@@ -15,7 +15,7 @@ ms.custom: internal
 [Building a cost-conscious organization](../../organize/cost-conscious-organization.md) requires visibility and properly defined access (or scope) to cost-related data. This best-practice article outlines decisions and implementation approaches to creating tracking mechanisms.
 
 ![Outline of the cost-conscious process](../../_images/ready/cost-optimization-process.png)
-_Figure 1: Outline of a cost-conscious process._
+*Figure 1: Outline of a cost-conscious process.*
 
 ## Establish a well-managed environment hierarchy
 
@@ -25,7 +25,7 @@ Assets (also known as resources) include all virtual machines, data sources, and
 
 ### Classification
 
-_Tagging_ is an easy way to classify assets. Tagging associates metadata to an asset. That metadata can be used to classify the asset based on various data points. When tags are used to classify assets as part of a cost management effort, companies often need the following tags: business unit, department, billing code, geography, environment, project, and workload or "application categorization." Azure Cost Management + Billing can use these tags to create different views of cost data.
+*Tagging* is an easy way to classify assets. Tagging associates metadata to an asset. That metadata can be used to classify the asset based on various data points. When tags are used to classify assets as part of a cost management effort, companies often need the following tags: business unit, department, billing code, geography, environment, project, and workload or application categorization. Azure Cost Management + Billing can use these tags to create different views of cost data.
 
 Tagging is a primary way to understand the data in any cost reporting. It's a fundamental part of any well-managed environment. It's also the first step in establishing proper governance of any environment.
 
@@ -38,7 +38,7 @@ There are several approaches to organizing assets. This section outlines a best 
 For a large enterprise, the following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Blueprints or Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
 ![Diagram of resource organization for a large enterprise](../../_images/govern/large-enterprise-resource-organization.png)
-_Figure 2: Resource organization for a large enterprise._
+*Figure 2: Resource organization for a large enterprise.*
 
 In the preceding diagram, the root of the management group hierarchy contains a node for each business unit. In this example, the multinational company needs visibility into the regional business units, so it creates a node for geography under each business unit in the hierarchy.
 
@@ -127,9 +127,9 @@ To begin using Azure Cost Management + Billing, see [How to optimize your cloud 
 ### Use Azure Cost Management + Billing to govern AWS costs
 
 - [Set up AWS Cost and Usage report integration](/azure/cost-management-billing/costs/aws-integration-set-up-configure)
-- [Manage AWS costs](/azure/cost-management/aws-integration-manage)
+- [Manage AWS costs](/azure/cost-management-billing/costs/aws-integration-manage)
 
 ### Establish access, roles, and scope
 
-- [Understanding cost management scope](/azure/cost-management/understand-work-scopes)
+- [Understanding cost management scope](/azure/cost-management-billing/costs/understand-work-scopes)
 - [Setting scope for a resource group](/azure/role-based-access-control/quickstart-assign-role-user-portal)

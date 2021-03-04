@@ -1,5 +1,5 @@
 ---
-title: "Initial organization alignment"
+title: Initial organization alignment
 description: Use the Cloud Adoption Framework for Azure to learn how to complete your initial organization alignment and get your teams ready for cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -20,7 +20,7 @@ Full organization alignment is not a required component of the cloud adoption pl
 
 ## Initial best-practice structure
 
-To create a balance between speed and control, we recommend that during cloud adoption, at a minimum, you have people accountable for _cloud adoption_ and _cloud governance_. This might be a team of people sharing responsibilities for each of these areas, or _capabilities_. It might also be individual people who are both accountable for the outcomes and responsible for the work. In either scenario, cloud adoption and cloud governance are two capabilities that involve natural friction between moving quickly and reducing risks. Here's how the two teams fit together:
+To create a balance between speed and control, we recommend that during cloud adoption, at a minimum, you have people accountable for *cloud adoption* and *cloud governance*. This might be a team of people sharing responsibilities for each of these areas, or *capabilities*. It might also be individual people who are both accountable for the outcomes and responsible for the work. In either scenario, cloud adoption and cloud governance are two capabilities that involve natural friction between moving quickly and reducing risks. Here's how the two teams fit together:
 
 ![Cloud adoption with a cloud center of excellence](../_images/ready/org-ready-best-practice.png)
 

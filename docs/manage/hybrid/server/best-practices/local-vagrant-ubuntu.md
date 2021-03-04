@@ -41,7 +41,7 @@ This article provides guidance for deploying a local **Ubuntu** virtual machine 
         - If you are a macOS user, run `brew cask install vagrant`
         - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
         - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
-  
+
 4. Create an Azure service principal.
 
     To connect the Vagrant virtual machine to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).

@@ -20,7 +20,7 @@ The following section outlines how you can apply the concept of unified operatio
 
 [Azure Arc](/azure/azure-arc/overview) reduces the complexity and cost of extending your operations baseline. Deploying Azure Arc across your datacenter, hybrid cloud, and multicloud environments extends the native features of Azure that are included in Azure Resource Manager.
 
-To get started with an operations baseline that spans multiple cloud providers, complete an inventory and tagging exercise. This exercise will begin to extend your operations baselines in a few steps:
+To get started with an operations baseline that spans on-premises and multiple cloud providers, complete an inventory and tagging exercise. This exercise will begin to extend your operations baselines in a few steps:
 
 - Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
 - Tag resources from AWS, GCP, and so on.
@@ -48,8 +48,8 @@ Along with tagging and bringing on assets, you can also deliver many operations 
 
 One example of a mature operations management discipline is the use of Microsoft Monitoring Agent to manage software installation, antivirus protection, or other configuration management functions. The following articles demonstrate configuration of Monitoring Agent in your hybrid and multicloud environment:
 
-- [Manage VMs with MMA](../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md)
-- [Scale configuration of MMA](../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md)
+- [Manage VMs with Monitoring Agent](../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md)
+- [Scale configuration of Monitoring Agent](../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md)
 
 ## Next steps
 

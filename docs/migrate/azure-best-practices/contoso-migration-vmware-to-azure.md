@@ -83,7 +83,7 @@ Contoso evaluates its proposed design by putting together a pros and cons list, 
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | <li>Bare-metal VMware infrastructure with high performance. <li>Infrastructure that's fully dedicated to Contoso and is physically isolated from the infrastructure of other customers. <li>Because Contoso is using a rehost that uses VMware, there's no special configuration or migration complexity. <li>Contoso can take advantage of its investment in Software Assurance by using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms. <li>Contoso will retain full control of the application VMs in Azure. <br><br> |
+| **Pros** | <li> Bare-metal VMware infrastructure with high performance. <li> Infrastructure that's fully dedicated to Contoso and is physically isolated from the infrastructure of other customers. <li> Because Contoso is using a rehost that uses VMware, there's no special configuration or migration complexity. <li> Contoso can take advantage of its investment in Software Assurance by using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](/windows-server/) for legacy Windows and SQL platforms. <li> Contoso will retain full control of the application VMs in Azure. <br><br> |
 | **Cons** | <li>Contoso will need to continue supporting the application as VMware VMs rather than move them to a managed service such as Azure App Service and Azure SQL Database. <li>Azure VMware Solution is set up and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. Contoso will need to plan its capacity needs, because the company currently uses an on-premises environment that restricts it from the on-demand nature of other services in Azure. |
 
 > [!NOTE]
@@ -189,13 +189,11 @@ To move VMware VMs to Azure using HCX, the Contoso team will need to follow thes
 
 For more information, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/tutorial-deploy-vmware-hcx).
 
-<!-- docutune:casing L2 -->
-
 #### Install and configure VMware HCX for the public cloud
 
 [VMware HCX](https://cloud.vmware.com/vmware-hcx) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but it can be upgraded to HCX Enterprise as additional features and functionality are required.
 
-Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter domain. These elements are then paired with the Azure VMware Solution cloud appliance, so that customers can take advantage of services such as migration and L2 stretch.
+Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter domain. These elements are then paired with the Azure VMware Solution cloud appliance, so that customers can take advantage of services such as migration and Layer 2 stretch.
 
 - The Contoso team is deploying the HCX by using an OVF package that's provided by VMware.
 

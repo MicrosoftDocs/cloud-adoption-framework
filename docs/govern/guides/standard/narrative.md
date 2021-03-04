@@ -18,7 +18,7 @@ The following narrative describes the use case for governance during a [standard
 
 The board of directors started the year with plans to energize the business in several ways. They're pushing leadership to improve customer experiences to gain market share. They're also pushing for new products and services that will position the company as a thought leader in the industry. They also initiated a parallel effort to reduce waste and cut unnecessary costs. Though intimidating, the actions of the board and leadership show that this effort is focusing as much capital as possible on future growth.
 
-In the past, the company's CIO has been excluded from these strategic conversations. Because the future vision is intrinsically linked to technical growth, IT has a seat at the table to help guide these big plans. IT is now expected to deliver in new ways. The team isn't prepared for these changes and is likely to struggle with the learning curve.
+In the past, the company's CIO has been excluded from these strategic conversations. Because the future vision is intrinsically linked to technical growth, IT has a seat at the table to help guide these big plans and is now expected to deliver in new ways. The team isn't prepared for these changes and is likely to struggle with the learning curve.
 
 ## Business characteristics
 
