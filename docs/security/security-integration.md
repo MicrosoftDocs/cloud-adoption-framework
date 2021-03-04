@@ -96,10 +96,19 @@ With the shift to serverless applications, the line between the responsibilities
 
 
 ## Integrated processes
-TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture.
-What processes and people need to be inplace to ensure integration of security? 
-Does the security team have a responsibility to train & ready other teams to integrate security into their decisions?
-How does this team coordinate with IT staff and/or workload staff?
+
+The Security Roles list above can often seem daunting when intially attempting to fufill all of the various positions. The actual size of a security team will vary wildly depending on the size and need of an organization. In very general terms, the following needs must be met:
+
+Regulatory Observance | Risk Management | Security Oversight | Security Event Monitoring | Incident Management | Risk Mitigation | Threat Modeling
+
+Each of the needs eventually feeds into the others. Regulatory requirements often helps determine the risk management threshold of an organization. This in turn helps shape the overall security posture, leading to identifiable metrics which can be utilized to monitor the systems and workloads. Should a security event trigger on one of the monitored resources, an incident is spawned, triaged, and resolved through the mitigation process. The information from the post mortem of the incident can be used to adjust future threat models.
+
+As part of the risk mitigation process or often as a regulatory requirement, user education may be required. The persons needing to be educated may be the application developer who was unaware of a specific type of potential breach attack, or an end user (client) who fell victim to a phishing attempt. 
+
+[//]: # (TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture. What processes and people need to be inplace to ensure integration of security? Does the security team have a responsibility to train & ready other teams to integrate security into their decisions? How does this team coordinate with IT staff and/or workload staff?)
+
+
+
 
 ### Strategic integration
 Security integration begins with integration of security into business processes. Evaluate digital transformation strategy and cloud adoption strategies with the cloud strategy team on a regular rythm. Build on those strategies to identify required changes & risks resulting from that change. Use that risk and risk management insights to educate the business on the risks and other options that may mitigate risks, while empowering change.
