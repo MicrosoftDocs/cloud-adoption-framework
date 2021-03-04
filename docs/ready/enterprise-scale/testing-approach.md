@@ -28,7 +28,7 @@ We recognize that large organizations may wish to test their Enterprise Scale de
 
 ## Diagram
 
-[![Diagram that shows management group hierarchy.](./media/canary-mgmt-groups.png)](./media/canary-mgmt-groups.png#lightbox)
+[![Diagram that shows management group hierarchy with "canary" testing approach.](./media/canary-mgmt-groups.png)](./media/canary-mgmt-groups.png#lightbox)
 
 _Figure 1: Canary Management Group hierarchy._
 
