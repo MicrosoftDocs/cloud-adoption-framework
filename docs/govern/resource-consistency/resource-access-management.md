@@ -89,7 +89,7 @@ The next control is a check that the request is allowed under the settings speci
 ![Azure resource policy](../../_images/govern/design/governance-1-19.png)
 *Figure 11: Azure resource policy.*
 
-The next control is a check that the request does not exceed an [Azure subscription limit](/azure/azure-resource-manager/management/azure-subscription-service-limits). For example, each subscription has a limit of 980 resource groups per subscription. If a request is received to deploy an additional resource group when the limit has been reached, it is denied.
+The next control is a check that the request does not exceed an [Azure subscription limit](/azure/azure-resource-manager/management/azure-subscription-service-limits). For example, each subscription has a limit of 980 resource groups per subscription. If a request is received to deploy an additional resource group when the limit has been reached, it's denied.
 
 ![Azure resource limits](../../_images/govern/design/governance-1-20.png)
 *Figure 12: Azure resource limits.*

@@ -53,7 +53,7 @@ To provide an example of the process, let's again use the tape backup policy in 
   - An assumed business risk associated with the storage of backups in the same physical location as the production equipment.
 - Does the risk still exist? Yes. Even in the cloud, a dependence on a single facility does create some risk. There is a lower probability of this risk affecting the business than was present in the on-premises solution, but the risk still exists.
 - Rewrite of the policy. In the case of a datacenter-wide disaster, there must exist a means of restoring production systems within 24 hours of the outage in a different datacenter and different geographic location.
-  - It is also important to consider that the timeline specified in the above requirement may have been set by technical constraints that are no longer present in the cloud. Make sure to understand the technical constraints and capabilities of the cloud before simply applying a legacy RTO/RPO.
+  - It's also important to consider that the timeline specified in the above requirement may have been set by technical constraints that are no longer present in the cloud. Make sure to understand the technical constraints and capabilities of the cloud before simply applying a legacy RTO/RPO.
 - Review with the cloud adoption teams. Depending on the solution being implemented, there are multiple means of adhering to this Resource Consistency policy.
 
 ## Next steps

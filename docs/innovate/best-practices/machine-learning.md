@@ -63,7 +63,7 @@ When you have the right model, you can easily use it in a web service, on an IoT
 
 Then you can manage your deployed models by using the [Azure Machine Learning SDK for Python](/python/api/overview/azure/ml/), [Azure Machine Learning studio](https://ml.azure.com/), or the [Machine learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli).
 
-These models can be consumed and return predictions in [real time](/azure/machine-learning/how-to-consume-web-service) or [asynchronously](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification) on large quantities of data.
+These models can be consumed and return predictions in [Real time](/azure/machine-learning/how-to-consume-web-service) or [asynchronously](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification) on large quantities of data.
 
 And with advanced [machine learning pipelines](/azure/machine-learning/concept-ml-pipelines), you can collaborate on each step from data preparation, model training and evaluation, through deployment. Pipelines allow you to:
 

@@ -26,7 +26,7 @@ Machine learning presents unique security considerations for businesses, and com
 
 ## Deploy Azure Kubernetes Service to secure an inference environment
 
-It's recommended to use Azure Kubernetes Service (AKS) for inference in a production environment. Two options are available in your virtual network:
+Azure Kubernetes Service (AKS) is recommended for inference in a production environment. Two options are available in your virtual network:
 
 - Deploy or attach an AKS cluster with a public IP address to your virtual network.
 - Attach a private AKS cluster to your virtual network.

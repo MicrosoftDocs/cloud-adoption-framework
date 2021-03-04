@@ -20,9 +20,9 @@ Cloud adoption enables services that weren't often considered in traditional IT 
 
 Like most policies, security and governance policies within an organization tend to grow organically. When security incidents happen, they shape policy to inform users and reduce the likelihood of repeat occurrences. While natural, this approach creates policy bloat and technical dependencies. Cloud transformation journeys create a unique opportunity to modernize and reset policies. While preparing for any transformation journey, the CISO can create immediate and measurable value by serving as the primary stakeholder in a [policy review](./cloud-policy-review.md).
 
-In such a review, the role of the CISO is to create a safe balance between the constraints of existing policy/compliance and the improved security posture of cloud providers. Measuring this progress can take many forms, often it is measured in the number of security policies that can be safely offloaded to the cloud provider.
+In such a review, the role of the CISO is to create a safe balance between the constraints of existing policy/compliance and the improved security posture of cloud providers. Measuring this progress can take many forms, often it's measured in the number of security policies that can be safely offloaded to the cloud provider.
 
-**Transferring security risks:** As services are moved into infrastructure as a service (IaaS) hosting models, the business assumes less direct risk regarding hardware provisioning. The risk isn't removed, instead it is transferred to the cloud vendor. Should a cloud vendor's approach to hardware provisioning provide the same level of risk mitigation, in a secure repeatable process, the risk of hardware provisioning execution is removed from corporate IT's area of responsibility and transferred to the cloud provider. This reduces the overall security risk corporate IT is responsible for managing, although the risk itself should still be tracked and reviewed periodically.
+**Transferring security risks:** As services are moved into infrastructure as a service (IaaS) hosting models, the business assumes less direct risk regarding hardware provisioning. The risk isn't removed, instead it's transferred to the cloud vendor. Should a cloud vendor's approach to hardware provisioning provide the same level of risk mitigation, in a secure repeatable process, the risk of hardware provisioning execution is removed from corporate IT's area of responsibility and transferred to the cloud provider. This reduces the overall security risk that corporate IT is responsible for managing, although the risk itself should still be tracked and reviewed periodically.
 
 As solutions move further "up stack" to incorporate platform as a service (PaaS) or software as a service (SaaS) models, additional risks can be avoided or transferred. When risk is safely moved to a cloud provider, the cost of executing, monitoring, and enforcing security policies or other compliance policies can be safely reduced as well.
 
@@ -39,7 +39,7 @@ Knowledge about the cloud is fundamental to approaching a [policy review](./clou
 - [Security development lifecycle, internal audits](https://www.microsoft.com/sdl)
 - [Mandatory security training, background checks](https://downloads.cloudsecurityalliance.org/star/self-assessment/StandardResponsetoRequestforInformationWindowsAzureSecurityPrivacy.docx)
 - [Penetration testing, intrusion detection, DDoS, audits, and logging](https://www.microsoft.com/security/business/operations)
-- [State-of-the-art datacenter](https://www.microsoft.com/cloud-platform/global-datacenters), physical security, [secure network](/azure/security/security-network-overview)
+- [State-of-the-art datacenter](https://azure.microsoft.com/global-infrastructure/), physical security, [secure network](/azure/security/fundamentals/network-overview)
 
 **Privacy and controls:**
 
