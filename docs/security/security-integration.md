@@ -20,6 +20,8 @@ Within the security space exists many commonly used terms for individual positio
 
 The following is a breakdown of roles and their responsibilities as utilized in the Cloud Adoption Framework security documentation. Not all of the roles listed here are required to be separate individuals, as the overall workload will vary from company to company. However, the all of the responsibilities listed should have defined owners.
 
+[//]: # (Security people be doin' security things)
+
 ### CISO - Chief Information Security Officer / Office of the CISO
 >A [CISO](https://en.wikipedia.org/wiki/Chief_information_security_officer) is the senior-level executive within an organization responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected.
 
@@ -43,25 +45,70 @@ To some organizations, the way we define Security Operations within the Cloud Ad
 - Incident management: Discipline is becoming formalized to coordinate nontechnical elements of incidents with legal, communications, and other teams. Integration of internal context: To help prioritize SO activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
 - Practice Exercises / Tabletops: Activity engaging in breach and bug testing activities against internal assets and endpoints to verify proper asset hardening.
 
-**Security Operations or Security Operations Center?**
-When many people think of an IT Operations Center, they imagine a group of people in a room - surrounded by monitors, graphs, and various tickers. While this is one implementation of an operations center, it is not the only option. In smaller organizations, the individuals focused on security may be directly integrated into the day-to-day IT operations staff. Even in larger enterprises a segregated SOC may not exist, its functions absorbed into other monitoring teams. In the overall security context, the most important point is that all of the responsibilities listed above are addressed.
+**Security Operations versus Security Operations Center?**
+
+When many people think of an IT Operations Center, they imagine a group of people in a room - surrounded by monitors, graphs, and various ticker streams. While this is an example implementation of an operations center, it is not the only option. In smaller organizations, the individuals focused on security may be directly integrated into the day-to-day IT operations staff. In some larger enterprises, a segregated SOC may not exist - its functions absorbed into other monitoring teams. The important takeaway is that all of the security responsibilities are covered.
 
 ### Security Architect
 
+Security Architects often report directly to the CISO, being hyper-focused on the security posture of an environment, considering both current and future-tense implementations or changes. The Security Architect generally differs from operations-focused technical personel in scope (a more holistic enterprise view versus workload specific) and consideration of buisiness impact (return on investment, adherence to compliance).
+
+**Responsibilities** 
+
+- Influence [security policies and standards](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-policy-standards)
+- Guide the [cloud security posture management](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-posture-management)
+- Evangellize security education initiatives for [people security in the cloud](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-people)
+- Ensure [governance and compliance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-compliance-management) management functions are properly aligned with regulatory requirements
+
 ### Governance and Compliance
 
+Whether you are operating in a global landscape, a [regulated industry](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/policy-compliance/regulatory-compliance), or building a new online presence, governance and compliance can often present a challenge for an organization. Those focused on governance and compliance are tasked with validating that corporate governance is properly aligned and compliant with all regulations. Many industries may have additional requirements which necessitate third party auditors to validate compliance on a scheduled basis. 
+
+**Responsibilities**
+
+- Work hand-in-hand with the Security Architect to determine applicable regulatory compliance requirements for the enterprise.
+- Validate adherance to required regulatory guidelines by way of stateful monitoring and scheduled auditing.
+
+
 ### Platform Security Engineer
+> Similar to / also known as: IT Operations, Systems Administrator, Security Administrator
+
+The platform security engineer is the more traditional hands-on role, generally tasked with the work of installing and actually implementing security fixes into the environment. The platform security engineer is generally tightly integrated not only with the Security Architect and Security Operations group, but also with individual workload owner and specialists. While the Security Operations team may often begin the incident response process, it usually falls into the domain of the platform security engineer to act as the subject matter expert (SME) when working to resolve the incident as well as to provide insight during a post mortem process. 
+
+**Responsibilities**
+
+- Have awareness of the risk mitigation posture across the enterprise systems. 
+- Deep understanding of systems interconnectivity, endpoints, data classification, and common attack surfaces for enterprise systems.
+- Ensure all systems and workloads abide by security requirements.
+- Create procedure for regularlly scheduled patch and maintenance events.
+- Act as the SME as needed during security incidents.
+- 
 
 ### Application Security Engineer / DevSecOps
 
+With the shift to serverless applications, the line between the responsibilities of an platform security engineer or the persons responsible for securing an application are becoming muddled. The idea of [DevSecOps](https://www.microsoft.com/en-us/securityengineering/devsecops) blurs the lines further by introducing concepts of continuous integration / continuous delivery (CI/CD) where the workload owners are the ones responsible for continuously updating the application. While DevSecOps and the application security engineer may currently be the outliers, cloud-native and containerized applications are quickly becoming the norm, supplanting traditional virtual machine-hosted workloads. 
 
+**Responsibilities**
+
+- Adoption of a full DevOps pipeline and [Secure Development Lifecycle (SDL)](https://www.microsoft.com/en-us/securityengineering/sdl) engineering practices.
+- Understanding all regulatory requirements and defining metrics to successfully meet governance and compliance objectives.
+- Utilization of threat modeling in order to reduce risk and further secure application against well known attack vectors.
 
 
 ## Integrated processes
-TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture.
-What processes and people need to be inplace to ensure integration of security? 
-Does the security team have a responsibility to train & ready other teams to integrate security into their decisions?
-How does this team coordinate with IT staff and/or workload staff?
+
+The Security Roles list above can often seem daunting when intially attempting to fufill all of the various positions. The actual size of a security team will vary wildly depending on the size and need of an organization. In very general terms, the following needs must be met:
+
+Regulatory Observance | Risk Management | Security Oversight | Security Event Monitoring | Incident Management | Risk Mitigation | Threat Modeling
+
+Each of the needs eventually feeds into the others. Regulatory requirements often helps determine the risk management threshold of an organization. This in turn helps shape the overall security posture, leading to identifiable metrics which can be utilized to monitor the systems and workloads. Should a security event trigger on one of the monitored resources, an incident is spawned, triaged, and resolved through the mitigation process. The information from the post mortem of the incident can be used to adjust future threat models.
+
+As part of the risk mitigation process or often as a regulatory requirement, user education may be required. The persons needing to be educated may be the application developer who was unaware of a specific type of potential breach attack, or an end user (client) who fell victim to a phishing attempt. 
+
+[//]: # (TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture. What processes and people need to be inplace to ensure integration of security? Does the security team have a responsibility to train & ready other teams to integrate security into their decisions? How does this team coordinate with IT staff and/or workload staff?)
+
+
+
 
 ### Strategic integration
 Security integration begins with integration of security into business processes. Evaluate digital transformation strategy and cloud adoption strategies with the cloud strategy team on a regular rythm. Build on those strategies to identify required changes & risks resulting from that change. Use that risk and risk management insights to educate the business on the risks and other options that may mitigate risks, while empowering change.
