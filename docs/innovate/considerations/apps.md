@@ -22,10 +22,10 @@ In some cases, data alone is enough to drive change and meet customer needs. Mor
 
 Teams that more quickly and accurately respond to customer feedback, market changes, and opportunities to innovate typically lead their respective markets in innovation. The first principle of innovative applications is summed up in the [growth mindset overview](./learn.md#growth-mindset): "Share the code." Over time, innovation emerges from a cultural focus. To sustain innovation, diverse perspectives and contributions are required.
 
-To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
+To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](/azure/devops/repos/get-started/what-is-repos) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
 
-- [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): Distributed version control.
-- [Team Foundation Version Control (TFVC)](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): Centralized version control.
+- [Git](/azure/devops/repos/get-started/what-is-repos#git): Distributed version control.
+- [Team Foundation Version Control (TFVC)](/azure/devops/repos/get-started/what-is-repos#tfvc): Centralized version control.
 
 ## Citizen developers
 
