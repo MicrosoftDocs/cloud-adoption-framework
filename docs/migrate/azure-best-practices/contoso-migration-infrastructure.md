@@ -108,11 +108,10 @@ License Mobility through Software Assurance gives Microsoft Volume Licensing cus
 
 Predictable workloads always need to be available with VMs running, such as line-of-business applications like an SAP ERP system. Unpredictable workloads are variable, like VMs that are on during high demand and off when demand is low.
 
-![Diagram of Azure Reserved Virtual Machine Instances.](./media/contoso-migration-infrastructure/reserved-instance.png)
+![Diagram of Azure Reserved VM Instances.](./media/contoso-migration-infrastructure/reserved-instance.png)
+_Figure 3: Azure Reserved VM Instances._
 
-_Figure 3: Azure Reserved Virtual Machine Instances._
-
-In exchange for using reserved instances for specific VM instances that must be maintained for long durations, Contoso can get both a discount and prioritized capacity. Using [Azure Reserved Virtual Machine Instances](https://azure.microsoft.com/pricing/reserved-vm-instances/) together with Azure Hybrid Benefit can save Contoso up to 82 percent off regular pay-as-you-go pricing (as of April 2018).
+In exchange for using reserved instances for specific VM instances that must be maintained for long durations, Contoso can get both a discount and prioritized capacity. Using [Azure Reserved VM Instances](https://azure.microsoft.com/pricing/reserved-vm-instances/) together with Azure Hybrid Benefit can save Contoso up to 82 percent off regular pay-as-you-go pricing (as of April 2018).
 
 ## Step 2: Manage hybrid identity
 

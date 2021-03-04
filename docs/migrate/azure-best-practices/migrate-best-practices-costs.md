@@ -88,7 +88,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 - Learn more about [VM types and sizing](/azure/virtual-machines/windows/sizes), and map sizes to types.
 - Plan [sizes for VM instances](/azure/cloud-services/cloud-services-sizes-specs).
-- Review a [sample assessment for the fictional company, Contoso](/azure/migrate/contoso-migration-assessment).
+- Review a [sample assessment for the fictional company Contoso](/azure/migrate/contoso-migration-assessment).
 
 ## Best practice: Select the right storage
 
@@ -244,7 +244,7 @@ With Azure Cost Management + Billing, you can:
 
 In Azure you pay for what you use, when resources are consumed, and you don't pay when they aren't. For VMs, billing occurs when a VM is allocated, and you aren't charged after a VM is deallocated. With this in mind, you should monitor VMs in use, and verify VM sizing.
 
-Continually evaluate your VM workloads to determine baselines. For example, if your workload is used heavily Monday through Friday, 8 AM to 6 PM, but hardly used outside those hours, you can downgrade VMs outside peak times. This might mean changing VM sizes, or using VM scale sets to autoscale VMs up or down. Some companies "snooze" VMs via a calendar that specifies when they should be available and when they're not needed.
+Continually evaluate your VM workloads to determine baselines. For example, if your workload is used heavily Monday through Friday, 8 AM to 6 PM, but hardly used outside those hours, you can downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down. Some companies "snooze" VMs via a calendar that specifies when they should be available and when they're not needed.
 
 You can monitor VM usage by using Microsoft tools, such as Azure Cost Management + Billing, Azure Monitor, and Azure Advisor. Third-party tools are also available.
 
@@ -287,7 +287,7 @@ If you followed best practices for selecting storage before migration, you're pr
 
 Identifying and moving stale data to cheaper storage areas can have a huge impact on your monthly storage budget and cost savings. Azure provides many ways to help you identify and then store this stale data.
 
-- Take advantage of access tiers for general-purpose v2 storage, moving less important data from hot to cool, and archived tiers.
+- Take advantage of access tiers for general-purpose v2 storage, moving less important data from the hot tier to the cool or archived tiers.
 - Use StorSimple to help move stale data that's based on customized policies.
 
 **Learn more:**
@@ -298,16 +298,16 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 ## Best practice: Automate VM optimization
 
-The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized or have frequent periods when VMs aren't used, it makes sense to either shut them down or downscale them by using VM scale sets.
+The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized or have frequent periods when VMs aren't used, it makes sense to either shut them down or downscale them by using virtual machine scale sets.
 
-You can optimize a VM with Azure Automation, VM scale sets, auto-shutdown, and scripted or third-party solutions.
+You can optimize a VM with Azure Automation, virtual machine scale sets, auto-shutdown, and scripted or third-party solutions.
 
 **Learn more:**
 
 - Learn about [vertical autoscaling](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision).
 - [Schedule a VM autostart](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start).
 - Learn how to [start or stop VMs off hours in Azure Automation](/azure/automation/automation-solution-vm-management).
-- Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [ARO toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+- Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [Azure resource optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practices: Use Azure Logic Apps and runbooks with Budgets API
 
@@ -335,5 +335,5 @@ After migrating and thoroughly reviewing these types of tasks, you might conside
 
 Review other best practices:
 
-- Explore [best practices for security and management](./migrate-best-practices-security-management.md) after a migration.
-- Explore [best practices for networking](./migrate-best-practices-networking.md) after a migration.
+- Explore [best practices for security and management](./migrate-best-practices-security-management.md) after migrating workloads to Azure.
+- Explore [best practices for networking](./migrate-best-practices-networking.md) after migrating workloads to Azure.

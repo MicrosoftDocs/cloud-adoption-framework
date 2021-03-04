@@ -1,6 +1,6 @@
 ---
 title: Schema migration data definition languages
-description: Learn about design considerations and performance options for data definition languages, DDLs, when you're migrating schemas to Azure Synapse Analytics.
+description: Learn about design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020
@@ -10,15 +10,13 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore DDLs Attunity "Attunity Replicate" "Attunity Visibility" Inmon Denodo Teradata Netezza Wherescape DMVs multinode equi Datometry -->
-
 # Data definition languages for schema migration
 
 This article describes design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
 
 ## Design considerations
 
-TBD
+Review these design considerations as you plan your schema migration.
 
 ### Preparation for migration
 
@@ -75,24 +73,23 @@ You can migrate the existing system as several layers; for example, the data ing
 - **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics might eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It might be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, you can achieve the process for migrating historical data and possibly, making incremental updates, as shown in this diagram:
 
    ![Diagram that illustrates a modern data warehouse.](../../../_images/analytics/schema-migration-ddl.png)
-
     _Figure 1: A modern data warehouse._
 
 If you can use these or similar approaches, the number of tables to be migrated is reduced. Some processes might be simplified or eliminated, again reducing the migration workload. The applicability of these approaches depends on the individual use case. But, the general principle is to consider using the features and facilities of the Azure ecosystem, where possible, to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions, such as backup/restore and workflow management and monitoring.
 
-Products and services available from Microsoft partners can help with data warehouse migrations and automate parts of the process for some cases. If the existing system incorporates a third-party ETL product, it might already support Azure Synapse Analytics as a target environment. The existing ETL workflows can be redirected to the new target Azure SQL data warehouse.
+Products and services available from Microsoft partners can help with data warehouse migrations and automate parts of the process for some cases. If the existing system incorporates a third-party ETL product, it might already support Azure Synapse Analytics as a target environment. The existing ETL workflows can be redirected to the new target data warehouse.
 
 ### Data marts: Physical or virtual
 
 It's a common practice for organizations with older data warehouse environments to create data marts that provide their departments or business functions with good ad hoc self-service query and report performance. A data mart typically consists of a subset of the data warehouse that contains aggregated versions of the original data. Its form, typically a dimensional data model, supports users to easily query the data and receive fast response times from user-friendly tools like Tableau, MicroStrategy, or Microsoft Power BI.
 
-One use of data marts is to expose the data in a usable form, even if the underlying warehouse data model is something different (for example, data vault). This approach is also known as a three-tier model.
+One use of data marts is to expose the data in a usable form, even if the underlying warehouse data model is something different (such as a data vault). This approach is also known as a three-tier model.
 
 You can use separate data marts for individual business units within an organization to implement robust data security regimes. For example, you can allow user access to specific data marts relevant to them and eliminate, obfuscate, or anonymize sensitive data.
 
 If these data marts are implemented as physical tables, they require additional storage resources to house them and additional processing to build and refresh them regularly. Physical tables show that the data in the mart is only as current as the last refresh operation, so they may not be suitable for highly volatile data dashboards.
 
-With the advent of low-cost, scalable massively parallel processing (MPP) architectures, you might be able to provide data mart functionality without having instantiating the mart as a set of physical tables. You can achieve this with Azure Synapse Analytics by using one of these methods to virtualize the data marts:
+With the advent of low-cost, scalable massively parallel processing (MPP) architectures, you might be able to provide data mart functionality without needing to instantiate the mart as a set of physical tables. You can achieve this with Azure Synapse Analytics by using one of these methods to virtualize the data marts:
 
 - SQL views on the main data warehouse.
 - A virtualization layer that uses features such as views in Azure Synapse Analytics or third-party virtualization products such as Denodo.
@@ -122,8 +119,6 @@ Some older database systems include support for data types that aren't directly 
 
 Here's an alphabetical list of supported data types:
 
-<!-- TODO: Review format of this list. Are the arguments necessary for this list? -->
-
 - `bigint`
 - `binary [ (n) ]`
 - `bit`
@@ -138,7 +133,7 @@ Here's an alphabetical list of supported data types:
 - `money`
 - `nchar [ (n) ]`
 - `numeric [ (precision [ , scale ]) ]`
-- `nvarchar [ (n) | MAX) ]`
+- `nvarchar [ (n | MAX) ]`
 - `real [ (n) ]`
 - `smalldatetime`
 - `smallint`
@@ -146,26 +141,24 @@ Here's an alphabetical list of supported data types:
 - `time [ (n) ]`
 - `tinyint`
 - `uniqueidentifier`
-- `varbinary [ (n) | MAX) ]`
-- `varchar [ (n) | MAX) ]`
-
-<!-- docutune:enable -->
+- `varbinary [ (n | MAX) ]`
+- `varchar [ (n | MAX) ]`
 
 The following table lists common data types that aren't currently supported, together with the recommended approach for storing them in Azure Synapse Analytics.
 
 | Unsupported data type | Workaround |
 |--|--|
-| `geometry`              | `varbinary`                                                       |
-| `geography`             | `varbinary`                                                       |
-| `hierarchyid`           | `nvarchar(4000)`                                                  |
-| `image`                 | `varbinary`                                                       |
-| `text`                  | `varchar`                                                         |
-| `ntext`                 | `nvarchar`                                                        |
-| `sql_variant`           | Split column into several strongly typed columns                |
-| `table`                 | Convert to temporary tables                                     |
-| `timestamp`             | Rework code to use `datetime2` and the `CURRENT_TIMESTAMP` function |
-| `xml`                   | `varchar`                                                         |
-| User-defined type     | Convert back to the native data type when possible              |
+| `geometry` | `varbinary` |
+| `geography` | `varbinary` |
+| `hierarchyid` | `nvarchar(4000)` |
+| `image` | `varbinary` |
+| `text` | `varchar` |
+| `ntext` | `nvarchar` |
+| `sql_variant` | Split column into several strongly typed columns |
+| `table` | Convert to temporary tables |
+| `timestamp` | Rework code to use `datetime2` and the `CURRENT_TIMESTAMP` function |
+| `xml` | `varchar` |
+| User-defined type | Convert back to the native data type when possible |
 
 #### Potential data issues
 
@@ -174,7 +167,7 @@ Depending on the source environment, some issues can cause problems when you're 
 - There can be subtle differences in the way that `NULL` data is handled in different database products. Examples include collation sequence and handling of empty character strings.
 - `DATE`, `TIME`, `INTERVAL`, and `TIME ZONE` data and associated functions can vary widely from product to product.
 
-Test these thoroughly to determine if the desired results are achieved in the target environment. The migration exercise can uncover bugs or incorrect results that are currently part of the existing source system, and the migration process is a good opportunity to correct anomalies.
+Test these thoroughly to determine whether the desired results are achieved in the target environment. The migration exercise can uncover bugs or incorrect results that are currently part of the existing source system, and the migration process is a good opportunity to correct anomalies.
 
 #### Best practices for defining columns in Azure Synapse Analytics
 
@@ -182,7 +175,7 @@ It's common for older systems to contain columns with inefficient data types. Fo
 
 It's a good time to check and rationalize current data definitions during a migration exercise. You can automate these tasks by using SQL queries to find the maximum numeric value or character length within a data field and comparing the result to the data type.
 
-In general, it's a good practice to minimize the total defined row length for a table. For the best query performance, you can use the smallest data type for each column, as described earlier. The recommended approach to load data from external tables in Azure Synapse Analytics is to use the PolyBase utility, which supports a maximum defined row length of 1 megabyte (MB). PolyBase won't load tables with rows longer than 1 MB, and you must use the Bulk Copy Program instead.
+In general, it's a good practice to minimize the total defined row length for a table. For the best query performance, you can use the smallest data type for each column, as described earlier. The recommended approach to load data from external tables in Azure Synapse Analytics is to use the PolyBase utility, which supports a maximum defined row length of 1 megabyte (MB). PolyBase won't load tables with rows longer than 1 MB, and you must use the [`bcp` utility](/sql/tools/bcp-utility) instead.
 
 For the most efficient join execution, define the columns on both sides of the join as the same data type. If the key of a dimension table is defined as `SMALLINT`, then the corresponding reference columns in fact tables using that dimension should also be defined as `SMALLINT`.
 
@@ -204,7 +197,7 @@ This section describes the features available within Azure Synapse Analytics tha
 
 The platform's features run performance tuning on the database that will be migrated. Indexes, data partitioning, and data distribution are examples of such performance tuning. When you're preparing for migration, documenting the tuning can capture and reveal optimizations that you can apply in the Azure Synapse Analytics target environment.
 
-For example, the presence of a non-unique index on a table can indicate that fields used in the index are used frequently for filtering, grouping, or joining. This will still be the case in the new environment, so keep it in mind when you're choosing which fields to index there. For more detailed information about Teradata or Netezza environments, see Azure Synapse Analytics articles about [solutions and migration for Teradata](./analytics-solutions-teradata.md) and [solutions and migration for Netezza](./analytics-solutions-netezza.md).
+For example, the presence of a non-unique index on a table can indicate that fields used in the index are used frequently for filtering, grouping, or joining. This will still be the case in the new environment, so keep it in mind when you're choosing which fields to index there. For more detailed information about Teradata or Netezza environments, see Azure the Synapse Analytics articles about [solutions and migration for Teradata](./analytics-solutions-teradata.md) and [solutions and migration for Netezza](./analytics-solutions-netezza.md).
 
 Use the performance and scalability of the target Azure Synapse Analytics environment to experiment with different performance options like data distribution. Determine the best choice of alternative approaches (for example, replicated versus hash-distributed for a large dimension table). This doesn't mean that data must be reloaded from external sources. It's relatively quick and easy to test alternative approaches in Azure Synapse Analytics by creating copies of any table with different partitioning or distribution options via a `CREATE TABLE AS SELECT` statement.
 
@@ -272,7 +265,7 @@ Indexes are automatically created when `UNIQUE` or `PRIMARY KEY` constraints are
 
 #### Clustered columnstore index
 
-Clustered columnstore index is the default indexing option within Azure Synapse Analytics. It provides the best compression and query performance for large tables. For smaller tables of fewer than 60 million rows, these indexes aren't efficient, so you should use the HEAP option. Similarly, a heap or a temporary table might be more efficient if the data in a table is transient and part of an ETL/ELT process.
+Clustered columnstore index is the default indexing option within Azure Synapse Analytics. It provides the best compression and query performance for large tables. For smaller tables of fewer than 60 million rows, these indexes aren't efficient, so you should use the `HEAP` option. Similarly, a heap or a temporary table might be more efficient if the data in a table is transient and part of an ETL/ELT process.
 
 #### Clustered index
 

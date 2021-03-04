@@ -1,5 +1,5 @@
 ---
-title: CAF enterprise-scale business continuity and disaster recovery
+title: Enterprise-scale business continuity and disaster recovery
 description: Learn about enterprise-scale business continuity and disaster recovery in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# CAF enterprise-scale business continuity and disaster recovery
+# Enterprise-scale business continuity and disaster recovery
 
 Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
 
@@ -34,7 +34,7 @@ Consider the following factors:
 
   - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.
 
-  - Using Availability Zones is required if Microsoft Azure Ultra Disk Storage is used.
+  - Using Availability Zones is required if Microsoft Azure ultra disk storage is used.
 
 - Consistent backups for applications and data.
 
@@ -72,7 +72,7 @@ The following are best practices for your design:
 
 - Use Azure-native backup capabilities.
 
-  Azure Backup and PaaS-native backup features remove the need for managing third-party backup software and infrastructure. As with other native features, you can set, audit, and enforce backup configurations with Azure Policy. This ensures that services comply with the organization's requirements.
+  Azure Backup and PaaS-native backup features remove the need for managing third-party backup software and infrastructure. As with other native features, you can set, audit, and enforce backup configurations with Azure Policy. This ensures that services remain compliant with the organization's requirements.
 
 - Use multiple regions and peering locations for ExpressRoute connectivity.
 

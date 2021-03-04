@@ -1,5 +1,5 @@
 ---
-title: CAF platform automation and DevOps
+title: Platform automation and DevOps
 description: Learn about platform automation and DevOps in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# CAF platform automation and DevOps
+# Platform automation and DevOps
 
 ![Diagram of platform automation and DevOps.](./media/devops.png)
 

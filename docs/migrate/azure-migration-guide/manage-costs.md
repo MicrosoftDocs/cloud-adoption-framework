@@ -15,7 +15,7 @@ ms.custom: think-tank, fasttrack-edit, AQC
 
 The cloud introduces a few shifts in how we work, regardless of our role on the technology team. Cost is a great example of this shift. In the past, only finance and IT leadership were concerned with the cost of IT assets (infrastructure, apps, and data). The cloud empowers every member of IT to make and act on decisions that better support the end user. However, with that power comes the responsibility to be cost conscious when making those decisions.
 
-This article introduces the tools that can help make wise cost decisions before, during, and after a migration to Azure.
+This article introduces the tools that can help make wise cost decisions before, during, and after migrating workloads to Azure.
 
 The tools in this article include:
 

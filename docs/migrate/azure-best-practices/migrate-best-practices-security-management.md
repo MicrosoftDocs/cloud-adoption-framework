@@ -78,7 +78,7 @@ Encryption is an important part of Azure security practices. Ensuring that encry
   - Data stored in Azure Storage accounts can be encrypted by using Microsoft-generated AES keys that are FIPS 140-2 compliant, or you can use your own keys.
   - Azure Storage encryption is enabled for all new and existing storage accounts, and it can't be disabled.
 
-### Encryption for platform as a service 
+### Encryption for platform as a service
 
 Unlike IaaS, in which you manage your own VMs and infrastructure, in a platform as a service (PaaS) model platform and infrastructure is managed by the provider. You can focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how you might enable encryption for Azure SQL Database.
 
@@ -105,7 +105,7 @@ In particular, older Azure-migrated VMs might not have the appropriate level of 
 
 - Microsoft Antimalware for Azure Cloud Services and Virtual Machines generates alerts when known malicious or unwanted software tries to install itself.
 - It's a single agent solution that runs in the background without human intervention.
-- In Security Center, you can identify VMs that don't have endpoint protection running and install Microsoft antimalware, as needed.
+- In Security Center, you can identify VMs that don't have endpoint protection running and install Microsoft antimalware as needed.
 
   ![Screenshot of Antimalware for VMs.](./media/migrate-best-practices-security-management/antimalware.png)
 
@@ -152,7 +152,7 @@ Azure provides the following solutions:
 As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including Azure role-based access control (Azure RBAC) to authorize permissions to access Azure resources.
 
 - Azure RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
-- Azure RBAC can assign roles to security principals (for example, owner, contributor, and reader) and role definitions (a collection of permissions) that define the operations that the roles can perform.
+- Azure RBAC can assign roles to security principals (such as Owner, Contributor, and Reader) and role definitions (a collection of permissions) that define the operations that the roles can perform.
 - Azure RBAC can also set scopes that set the boundary for a role. The scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
@@ -190,7 +190,7 @@ Azure AD provides activity logs that appear in Azure Monitor. The logs capture t
 
 Azure provides other security features that provide advanced security options. Note that some of the following best practices require add-on licenses and premium options.
 
-- **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units, OU. To use AU, the AU admin must have a premium Azure AD license. For more information, see [Administrative units management in Azure AD](/azure/active-directory/users-groups-roles/directory-administrative-units).
+- **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OUs). To use AUs, the AU admin must have a premium Azure AD license. For more information, see [Administrative units management in Azure AD](/azure/active-directory/users-groups-roles/directory-administrative-units).
 - **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. When a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all of your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge response. Learn more about [security guidance](/azure/active-directory/authentication/multi-factor-authentication-security-best-practices), and [how to set up multi-factor authentication](/azure/active-directory/authentication/multi-factor-authentication-security-best-practices).
 - **Implement conditional access.** In most small and medium-sized organizations, Azure admins and the support team are probably located in a single geography. In this case, most sign-ins come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator sign-ins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access, combined with multi-factor authentication, to prevent signing in from remote locations. This can also prevent spoofed locations from random IP addresses. Learn more about [conditional access](/azure/active-directory/conditional-access/overview) and [review best practices](/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
 - **Review enterprise application permissions.** Over time, admins select Microsoft and third-party links without knowing their affect on the organization. Links can present consent screens that assign permissions to Azure apps. This might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the applications to which your admins and users have allowed access to Azure resources. Ensure that these applications have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to application pages, so that they're aware of the applications to which they've allowed access to their organizational data. For more information, see [Unexpected application in my applications list](/azure/active-directory/manage-apps/application-types), and [how to control](/azure/active-directory/manage-apps/remove-user-or-group-access-portal) application assignments in Azure AD.
@@ -325,7 +325,7 @@ Azure Policy evaluates your resources, scanning for those not compliant with you
 
 ## Best practice: Implement a BCDR strategy
 
-Planning for BCDR is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a _force majeure_ clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run and recover where necessary and when disaster strikes. Your ability to do this can make or break your company's future.
+Planning for BCDR is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a *force majeure* clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you must ensure that essential services continue to run and recover when disaster strikes. Your ability to do this can make or break your company's future.
 
 Broadly, your BCDR strategy must consider:
 

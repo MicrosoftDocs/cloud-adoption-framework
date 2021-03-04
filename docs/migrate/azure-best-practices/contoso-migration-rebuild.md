@@ -257,7 +257,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
     _Figure 19: Building and configuring the build._
 
-10. They specify the path of the `docker-compose.yaml` file in the *src* folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
+10. They specify the path of the `docker-compose.yaml` file in the `src` folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
 
     ![Screenshot of various task-building specifics in Azure DevOps.](./media/contoso-migration-rebuild/vsts9.png)
 
@@ -269,7 +269,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
     _Figure 21: Configuring the second Docker task._
 
-12. They enter the *docker-compose.yaml* file name and select **Push service images**, including the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
+12. They enter the `docker-compose.yaml` file name and select **Push service images**, including the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
 
     ![Screenshot of changing the Azure DevOps task name.](./media/contoso-migration-rebuild/vsts11.png)
 
@@ -330,11 +330,7 @@ Now, Contoso admins do the following:
 
 The admins create the pipeline:
 
-1. In Visual Studio, they update the */deploy/k8s/config_local.yml* file with the database connection information that they noted earlier.
-
-    ![TBD.](./media/contoso-migration-rebuild/back-pipe1.png)
-
-    _Figure 28: TBD._
+1. In Visual Studio, they update the `/deploy/k8s/config_local.yml` file with the database connection information that they noted earlier.
 
 2. They open Azure DevOps and, in the SmartHotel360 project, they select **+ New pipeline** on the **Releases** pane.
 
@@ -582,7 +578,7 @@ Now Contoso admins configure the web app to use Contoso resources.
 
     _Figure 59: The application URL._
 
-7. In the *appsettings.Production.json* file, they update the `SettingsURL` to the URL of the new file.
+7. In the `appsettings.Production.json` file, they update the `SettingsURL` to the URL of the new file.
 
     ![Screenshot of updating the URL to the new file.](./media/contoso-migration-rebuild/configure-webapp5.png)
 

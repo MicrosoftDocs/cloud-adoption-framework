@@ -18,8 +18,8 @@ When fictional company Contoso migrates its VMware virtual machines (VMs) from a
 
 | Migration options | Outcome |
 | --- | --- |
-| [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/) | <li>[Assess](/azure/migrate/tutorial-assess-vmware) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <li>Run workloads using Azure infrastructure as a service (IaaS). <li>Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/). |
-| [Azure VMware Solution](https://azure.microsoft.com/overview/azure-vmware) | <li>Use VMware Hybrid Cloud Extension (HCX) or vMotion to move on-premises VMs. <li>Run native VMware workloads on Azure bare-metal hardware. <li>Manage VMs using vSphere. |
+| [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/) | <li> [Assess](/azure/migrate/tutorial-assess-vmware) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <li> Run workloads using Azure infrastructure as a service (IaaS). <li> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/). |
+| [Azure VMware Solution](https://azure.microsoft.com/overview/azure-vmware) | <li> Use VMware Hybrid Cloud Extension (HCX) or vMotion to move on-premises VMs. <li> Run native VMware workloads on Azure bare-metal hardware. <li> Manage VMs using vSphere. |
 
 In this article, Contoso uses Azure VMware Solution to create a private cloud in Azure with native access to VMware vCenter and other tools that are supported by VMware for workload migration. Contoso can confidently use Azure VMware Solution, knowing that it's a first-party Microsoft offering backed by VMware.
 
@@ -83,8 +83,8 @@ Contoso evaluates its proposed design by putting together a pros and cons list, 
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | <li>Bare-metal VMware infrastructure with high performance. <li>Infrastructure that's fully dedicated to Contoso and is physically isolated from the infrastructure of other customers. <li>Because Contoso is using a rehost that uses VMware, there's no special configuration or migration complexity. <li>Contoso can take advantage of its investment in Software Assurance by using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms. <li>Contoso will retain full control of the application VMs in Azure. <br><br> |
-| **Cons** | <li>Contoso will need to continue supporting the application as VMware VMs rather than move them to a managed service such as Azure App Service and Azure SQL Database. <li>Azure VMware Solution is set up and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. Contoso will need to plan its capacity needs, because the company currently uses an on-premises environment that restricts it from the on-demand nature of other services in Azure. |
+| **Pros** | <li> Bare-metal VMware infrastructure with high performance. <li> Infrastructure that's fully dedicated to Contoso and is physically isolated from the infrastructure of other customers. <li> Because Contoso is using a rehost that uses VMware, there's no special configuration or migration complexity. <li> Contoso can take advantage of its investment in Software Assurance by using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms. <li> Contoso will retain full control of the application VMs in Azure. <br><br> |
+| **Cons** | <li> Contoso will need to continue supporting the application as VMware VMs rather than move them to a managed service such as Azure App Service and Azure SQL Database. <li> Azure VMware Solution is set up and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. Contoso will need to plan its capacity needs, because the company currently uses an on-premises environment that restricts it from the on-demand nature of other services in Azure. |
 
 > [!NOTE]
 > For information about pricing, see [Azure VMware Solution pricing](https://azure.microsoft.com/pricing/details/azure-vmware/).

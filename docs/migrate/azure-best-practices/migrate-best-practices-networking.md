@@ -130,7 +130,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
 
 - Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure.
 
-- With Availability Zones, Azure offers an SLA of 99.99-percent VM uptime.
+- With Availability Zones, Azure offers an SLA of 99.99 percent for VM uptime.
 
     ![Diagram of Availability Zones within an Azure region.](./media/migrate-best-practices-networking/availability-zone.png)
 
@@ -416,8 +416,8 @@ _Figure 10: Service endpoints._
 Public IP addresses in Azure can be associated with VMs, load balancers, application gateways, and VPN gateways.
 
 - Public IP addresses allow internet resources to communicate inbound to Azure resources, and Azure resources to communicate outbound to the internet.
-- Public IP addresses are created with a basic or Standard SKU, between which are several differences. Standard SKUs can be assigned to any service but are usually configured on VMs, load balancers, and application gateways.
-- It's important to note that a basic public IP address doesn't have an NSG automatically configured. You need to configure your own, and assign rules to control access. Standard SKU IP addresses have an NSG, and rules assigned by default.
+- Public IP addresses are created using either a Basic SKU or Standard SKU. Standard SKUs can be assigned to any service, but are usually configured on VMs, load balancers, and application gateways.
+- A Basic public IP address doesn't have an NSG automatically configured. You need to configure your own, and assign rules to control access. Standard SKU IP addresses have an NSG, and rules assigned by default.
 - As a best practice, VMs shouldn't be configured with a public IP address.
   - If you need a port opened, it should only be for web services, such as port 80 or 443.
   - Standard remote management ports, such as SSH (22) and RDP (3389), along with all other ports, should be set to deny by using NSGs.
@@ -430,7 +430,7 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 ## Take advantage of Azure security features for networking
 
-Azure has platform-level security features, including Azure Firewall, Azure Web Application Firewall, and Azure Network Watcher.
+Azure has platform-level security features, including Azure Firewall, Azure Web Application Firewall (WAF), and Azure Network Watcher.
 
 ## Best practice: Deploy Azure Firewall
 
