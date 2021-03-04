@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Databricks Pattern
 description: Enterprise Scale Analytics and AI Databricks Pattern
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Azure Databricks Integration
 
@@ -17,13 +20,12 @@ For the purpose of Enterprise Scale Analytics and AI v1, we have focused on Azur
 
 ## Overview
 
-For every Data Landing Zone deployed, three shared Azure Databricks Workspaces will be created.
+For every Data Landing Zone deployed, two shared Azure Databricks Workspaces will be created.
 
 1. An Azure Databricks Workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. This is referred to as **Azure Databricks Engineering Workspace**.
 1. An Azure Databricks Workspace is provisioned for all Data Scientists and Data Ops which will connect to the Azure Data Lake using AAD Passthrough. This is referred to as **Azure Databricks Analytics and Data Science Workspace**.
-1. An Azure Databricks Workspace provisioned for use with Sensitive and/or Secret Data Azure Data Lake using AAD Passthrough, Table Access Control, and Conditional Access. This is referred to as **Azure Databricks Sensitive Workspace**.
 
-The **Azure Databricks Analytics and Data Science Workspace** and **Azure Databricks Sensitive Workspace** are shared across the whole Data Landing Zone, with all users which have been given access to the Workspace. These workspaces should not be used for Data Ingestion, Transformation, and Load &mdash; the **Azure Databricks Engineering Workspace** should be used for this instead.
+The **Azure Databricks Analytics and Data Science Workspace** is shared across the whole Data Landing Zone, with all users which have been given access to the Workspace. These workspaces should not be used for Data Ingestion, Transformation, and Load &mdash; the **Azure Databricks Engineering Workspace** should be used for this instead.
 
 If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Domain, for running developed engineering pipelines to transform from RAW to ENRICHED.
 
@@ -34,7 +36,7 @@ The **Azure Databricks Data Engineering Workspace** should use Service Principal
 >[!NOTE]
 >Automated ingestion framework engine refers to the case where you have developed an automated solution for registering and ingesting data which in turn drives an Azure Data Factory or other ETL product. A developed pipeline is where the Domain has had to write the pipeline, end-to-end, in Azure Data Factory or another ETL product.
 
-The **Azure Databricks Analytics and Data Science** and **Azure Databricks Sensitive** workspaces should have Cluster Policies which require creation of High-Concurrency Clusters. This type of cluster will allow the Data Lakes to be explored using AAD Credential passthrough. See [AAD Credential passthrough](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md#pattern-3---aad-credential-passthrough).
+The **Azure Databricks Analytics and Data Science** workspace should have Cluster Policies which require creation of High-Concurrency Clusters. This type of cluster will allow the Data Lakes to be explored using AAD Credential passthrough. See [AAD Credential passthrough](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md#pattern-3---aad-credential-passthrough).
 
 ## Azure Databricks Configuration
 
@@ -50,7 +52,7 @@ All Azure Databricks Workspaces should use the Premium Plan, which provides the 
 
 To align to the Enterprise Scale Analytics and AI solution pattern, we recommend that **ALL** Workspaces have the following default deployment options configured:
 
-* The Azure Databricks Workspaces should connect to an external Hive Metastore which resides in the Data Management Landing Zone.
+* The Azure Databricks Workspaces should connect to an external Hive Metastore which resides in the Data Landing Zone.
 * Each Workspace should be configured to send Databricks Diagnostic Logging to Azure Log Analytics.
 * Cluster Policies should be implemented to limit the ability to create clusters based on a set of rules. See [Manage Cluster Policies](https://docs.microsoft.com/azure/databricks/administration-guide/clusters/policies).
   * Multiple cluster policies will be defined which each target group (Domain) as part of onboarding process would be assigned permissions to use by the Data Landing Zone Ops. By default, cluster creation permission will be denied to all of the users except Data Landing Zone Ops team, but permission to use cluster policies will be given to different teams/groups.
@@ -61,13 +63,13 @@ To align to the Enterprise Scale Analytics and AI solution pattern, we recommend
 >[!WARNING]
 >Failure to configure the Azure Databricks Workspaces to use the Azure Databricks SCIM interface will impact how you provide security controls. It will move from automated to a manual process and break all deployment CI/CD pipelines.
 
-The following Access Control options are set for **ALL** three Databricks Workspaces.
+The following Access Control options are set for **ALL** Databricks Workspaces.
 
 1. Workspace Visibility Control: Enabled (default: Disabled)
 1. Cluster Visibility Control: Enabled (default: Disabled)
 1. Job Visibility Control: Enabled (default: Disabled)
 
-The following options are enabled for the Azure Sensitive Workspace over and above the default deployment settings:
+Depending on your use case you might wish to enable the following options for the **Azure Databricks Analytics and Data Science** workspace:
 
 1. Notebook Exporting: Disabled (default: Enabled)
 1. Notebook Table Clipboard Features: Disabled (default: Enabled)
@@ -76,7 +78,7 @@ The following options are enabled for the Azure Sensitive Workspace over and abo
 
 ## Azure Databricks Deployment
 
-The three Azure Databricks Workspaces are deployed as part of a new Data Landing Zone deployment. Figure 1 shows the overall workflow of deploying an Azure Databricks environment in Enterprise Scale Analytics and AI.
+The two Azure Databricks Workspaces are deployed as part of a new Data Landing Zone deployment. Figure 1 shows the overall workflow of deploying an Azure Databricks environment in Enterprise Scale Analytics and AI.
 
 ![Azure Databricks Deployment into a Data Landing Zone](../images/databricksdeploy.png)
 
@@ -96,14 +98,14 @@ For the **Azure Databricks Engineering Workspace**:
 1. If the Data Landing Zone Ops team has requested Databricks Pools or Clusters, these can be integrated into the deployment process.
 1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
-For **Azure Databricks Analytics and Data Science** and **Azure Databricks Sensitive**:
+For **Azure Databricks Analytics and Data Science**:
 
 1. Deploy Data Analytic Policies which have been defined by the Data Platform Ops team.
 1. Data Landing Zone Ops have requested Databricks Pools or Clusters, these can be integrated into the deployment process.
 1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
->During the creation of a new Domain we will alter the configuration of all three Azure Databricks Workspaces within a Data Landing Zone. Please see [Domain & Data Product Deployment Process](../06-dataops/02-es-aai-devops.md#domain--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
+>During the creation of a new Domain we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Domain & Data Product Deployment Process](../06-dataops/02-es-aai-devops.md#domain--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
 
 ### External Hive Metastore
 
@@ -122,6 +124,10 @@ The Enterprise Scale Analytics and AI takes into account the following best prac
 
 * [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 * [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzones%20%E2%9E%9F%2003-databricks.md)
 
 >[Previous](02-datalakeservices.md)
 >[Next](04-synapse.md)

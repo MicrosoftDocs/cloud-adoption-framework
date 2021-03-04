@@ -1,24 +1,27 @@
 ---
 title: Enterprise Scale Analytics and AI Ingest Overview
 description: Enterprise Scale Analytics and AI Ingest Overview
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Data Ingestion
 
 In the Enterprise Scale Analytics and AI solution pattern, Domain and Data Product will ingress, transform, and egest data.
 
 >[!IMPORTANT]
->Domains will copy data from source to raw and then to enriched with conformed data types. Domains do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together, such as weather and location data, then the domain could be asked to create this in the enriched layer. \
+>Domains do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together, such as weather and location data, then the domain could be asked to create this in the curated layer. \
 \
 >Data Products teams can apply transformations and create their datasets in the curated layer of the Data Lake as well as the [Polygot Storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they have chosen to use.
 
-Azure provides several services for ingesting and egesting data to various native and third-party platforms. Depending on volume, velocity, variety, and direction, different services can be leveraged. Some of these services are listed below. 
+Azure provides several services for ingesting and egesting data to various native and third-party platforms. Depending on volume, velocity, variety, and direction, different services can be leveraged. Some of these services are listed below.
 
 - [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/introduction) is a service built for all data integration needs and skill levels. Easily construct ETL and ELT processes code-free within the intuitive visual environment or write your own code. Visually integrate data sources using more than 90+ natively built and maintenance-free connectors at no added cost. Using integration runtimes, engineers can extend pipelines to third-party environments, including on-premises data sources and other clouds.\
 \
@@ -54,7 +57,7 @@ This guidance builds on top of:
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 - [Azure Databricks Configuration in a Data Landing](../03-datalandingzones/03-databricks.md#)
 
-A single Azure Databricks Data Engineering Premium Workspace should be deployed per Data Landing Zone in the production Ingest and Processing resource group. This will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
+A single premium **Azure Databricks Data Engineering** Workspace should be deployed per Data Landing Zone in the production Ingest and Processing resource group. This will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 
 For Development we would expect Domain Teams to have their own Databricks environments before checking in code to be deployed to the single Azure Databricks workspace in both Test and Production.
 
@@ -66,11 +69,7 @@ The Data Lakes will be mounted into this workspace using service principals. See
 
 Domain teams can deploy short, automated jobs on Databricks and expect their clusters to start quickly, execute the job, and terminate. Databricks Pools are recommended to be setup to reduce the time it takes for clusters to spin up for jobs.
 
-![New Azure Databricks Domain Dataset](../images/new_databricks_dataset.png)
-
-Figure 1: New Azure Databricks Domain Dataset
-
-Figure 1 is an example of how pipelines created by the Domain Ops teams in Azure Databricks can take data from SOURCE to RAW to ENRICH and from ENRICHED to another ENRICHED dataset. Domains must deploy their notebooks via a Domain Ops repo using the Domain Ops Service Principle which was created when onboarding their domain. The notebook is called from the Domain Azure Data Factory.
+Pipeline created by the Domain Ops teams in Azure Databricks can take data from SOURCE to RAW to ENRICH  to CURATED. Domains must deploy their notebooks via a Domain Ops repo using the Domain Ops Service Principle which was created when onboarding their domain. The notebook is called from the Domain Azure Data Factory.
 
 It is recommended that enterprises use Azure DevOps to implement a deployment framework for new pipelines which create the dataset folders, assign ACLs, and create a table with or without Databricks Table Access Controls enforced.
 
@@ -135,6 +134,10 @@ Table 6: Ingestion Services
 Table 7: Data Sources Mapping to Service
 
 Depending on the destination, Azure Data Migration service can replicate from on-premises and third-party databases (*e.g.* SQL Server, Postgres, MySQL, or Oracle) to an Azure-based data store.
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2004-ingestion%20%E2%9E%9F%2001-overview.md)
 
 >[Previous](../03-datalandingzones/06-dataproducts.md)
 >[Next](02-sapingestion.md)

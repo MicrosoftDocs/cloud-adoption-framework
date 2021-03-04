@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Teams
 description: Enterprise Scale Analytics and AI Architecture Persona and Teams structure
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Personas and Teams
 
@@ -114,7 +117,9 @@ For further details on all how the groups align inside the Data Management Sub a
 
 [Data Landing Zone Division and Consumption](03-dlzdivision.md)
 
+## Log Feedback to Enterprise Scale Analytics v-team
 
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2002-esa-ai-teams.md)
 
 >[Previous](01-overview.md)
 >[Next](03-dlzdivision.md)

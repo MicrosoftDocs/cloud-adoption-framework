@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Security Provisioning
 description: Enterprise Scale Analytics and AI Architecture Security Provisioning.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 # Security Provisioning
 
 In previous sections we have focused on ingesting different types of data and how we onboard domains and data products. The focus has been predominantly on using automation as much as possible.
@@ -16,7 +19,7 @@ The story for self-service access to data relies upon automation, which starts w
 
 At a minimum, the high level registration process should provide REST APIs to support the following actions:
 
-1. Create the folders inside the Domain's Data Lake Containers
+1. Create the folders inside the Domain's Data Lake Folders
 1. Create the required Azure AD Groups for access. Each data asset in Azure Data Lake Store owns two matching Azure Active Directory Groups.
 1. Create an Access Package within [Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-overview)
 
@@ -32,7 +35,7 @@ Figure 1: Granting Access to Datasets
 
 As Figure 1 above illustrates:
 
-1. Domain Ops onboards to a new dataset to a Data Landing Zone. 
+1. Domain Ops onboards to a new dataset to a Data Landing Zone.
 1. A Data Asset Security Group (DASG) will be created and assigned to the dataset. A DASG is in fact an Azure Active Directory Group which could have been granted access to the data via AD Passthrough or via Table Access Control in Azure Databricks or Azure Synapse Analytics. The name of the AD Group should follow the recommended convention:
 
    - Data Landing Zone Name
@@ -80,6 +83,10 @@ Figure 2 brings all of this together on how different personas would work togeth
 
 - Video: [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be).
 - [Common scenarios in Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-scenarios).
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2005-securitymodel%20%E2%9E%9F%2003-secprovisioning.md)
 
 >[Previous](02-sensitive.md)
 >[Next](../06-dataops/01-overview.md)

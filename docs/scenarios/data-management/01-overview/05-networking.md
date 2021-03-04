@@ -1,17 +1,21 @@
 ---
 title: Enterprise Scale Analytics and AI Networking
 description: Enterprise Scale Analytics and AI Architecture Networking.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Enterprise Scale Analytics and AI Networking
 
 This section outlines the networking patterns to assist with:
+
 - integrating across clouds
 - restricting data exfiltration
 - facilitating remote workers
@@ -39,8 +43,8 @@ The first challenge when trying to resolve Private Endpoints from on-premises ne
 
 It is important that on-premises DNS Servers are configured correctly to forward the appropriate requests to the Custom DNS server in Azure. There are multiple ways to do this.
 
-* If you have Custom DNS already in Azure, you just need to setup conditional forwarders on your on-premises DNS server pointing to it.
-* If you do not have a Custom DNS VM in Azure, you can deploy the Azure Virtual Machine Scale Set that includes Nginx already configured to forward DNS requests to Azure-provided DNS IP **168.63.129.16**. Refer to [Deploy VMSS of a NGINX DNS Proxy into an existing Virtual Network](https://github.com/Microsoft/PL-DNS-Proxy).
+- If you have Custom DNS already in Azure, you just need to setup conditional forwarders on your on-premises DNS server pointing to it.
+- If you do not have a Custom DNS VM in Azure, you can deploy the Azure Virtual Machine Scale Set that includes Nginx already configured to forward DNS requests to Azure-provided DNS IP **168.63.129.16**. Refer to [Deploy VMSS of a NGINX DNS Proxy into an existing Virtual Network](https://github.com/Microsoft/PL-DNS-Proxy).
 
 ![Example of DNS Setup](../images/dns_setup.png)
 
@@ -52,12 +56,12 @@ Azure's original IPv6 connectivity makes it easy to provide dual stack (IPv4/IPv
 
 IPv6 usage has the following limitations:
 
-* ExpressRoute gateways CAN be used for IPv4-only traffic in a VNet with IPv6 enabled.
-* VPN gateways CANNOT be used in a VNet with IPv6 enabled, either directly or peered with "UseRemoteGateway".
-* The Azure platform does not support IPv6 communication for Containers. (*e.g.* Azure Kubernetes Service)
-* IPv6 can be load balanced only to the primary network interface controller (NIC) on Azure VMs. Load balancing IPv6 traffic to secondary NICs is not supported.
-* IPv6-only Virtual Machines or Virtual Machines Scale Sets are not supported; each NIC must include at least one IPv4 IP configuration.
-* Forward DNS for IPv6 is supported for Azure public DNS today but Reverse DNS is not yet supported.
+- ExpressRoute gateways CAN be used for IPv4-only traffic in a VNet with IPv6 enabled.
+- VPN gateways CANNOT be used in a VNet with IPv6 enabled, either directly or peered with "UseRemoteGateway".
+- The Azure platform does not support IPv6 communication for Containers. (*e.g.* Azure Kubernetes Service)
+- IPv6 can be load balanced only to the primary network interface controller (NIC) on Azure VMs. Load balancing IPv6 traffic to secondary NICs is not supported.
+- IPv6-only Virtual Machines or Virtual Machines Scale Sets are not supported; each NIC must include at least one IPv4 IP configuration.
+- Forward DNS for IPv6 is supported for Azure public DNS today but Reverse DNS is not yet supported.
 
 >[!WARNING]
 >As of July 2020, we do not recommend using dual stack within the Enterprise Scale Analytics and AI Framework and will update our guidance should this change.
@@ -91,7 +95,11 @@ To enable connectivity between a Data Management Landing Zone and a third-party 
 Site-to-Site VPN can provide better continuity for your workloads in a hybrid cloud setup with Azure.
 
 >[!IMPORTANT]
->For connections to AWS, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and Amazon Web Services Connectivity Subscription.
+>For connections to a third-party cloud, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and third-party clouds Connectivity Subscription.
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2005-networking.md)
 
 >[Previous](04-policy.md)
 >[Next](../02-datamanagement/01-overview.md)

@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Automated Ingestion Framework
 description: Enterprise Scale Analytics and AI Architecture Automated Ingestion Framework
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Automated Ingestion Framework
 
@@ -56,7 +59,7 @@ If the business requires, Data Landing Zone Ops and Domain Ops could build opera
 
 Figure 2 suggests a detailed registration process for automating the ingestion of new data sources.
 
-![New Dataset Ingestion(Automated)](../images/new_dataset_ingestion.png)
+![New Dataset Registration(Automated)](../images/new_dataset_ingestion.png)
 
 Figure 2: New Dataset Ingestion (Automated)
 
@@ -64,7 +67,7 @@ By entering data into the Azure Data Factory Metastore via a custom app, Logic A
 
 - Source details are registered, including production and non-production environments.
 - Data shape, format, and quality constraints are captured.
-- Domains indicate if the data is sensitive, and this classification drives the process upon which Data Lake container folders are created for ingestion of RAW and ENRICHED. RAW is named by source and ENRICHED is named by Data Asset.
+- Domains indicate if the data is sensitive, and this classification drives the process upon which Data Lake folders are created for ingestion of RAW and ENRICHED. RAW is named by source and ENRICHED is named by Data Asset.
 - Service Principal and Security Groups are created for ingesting and giving access to the dataset.
 - An ingestion job is created in the Data Landing Zone ADF Metastore.
 - The Data Definition is inserted in the Azure Purview via its API.
@@ -205,6 +208,10 @@ Run the scan on data sources using the following API call:
 ```HTTP
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
 ```
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2004-ingestion%20%E2%9E%9F%2003-dataonboarding.md)
 
 >[Previous](02-sapingestion.md)
 >[Next](../05-securitymodel/01-securitymodel.md)

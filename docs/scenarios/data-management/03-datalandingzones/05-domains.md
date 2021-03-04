@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Domains
 description: Enterprise Scale Analytics and AI Domains
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Domains
 
@@ -49,35 +52,17 @@ Each Data Landing Zone will have an Azure Key Vault per Domain. This functionali
 
 An Azure Data Factory will be deployed to allow pipelines written by the Domain Ops team to take data from RAW to ENRICHED using developed pipelines. We prescribe using Mapping Data Flows for transformations and breaking out to use **Azure Databricks Engineering Workspace** for complex transformations.
 
-## Event and IOT Hubs (Optional)
+## Event Hubs (Optional)
 
-If the Domain has a requirement to stream data in and the Event Hubs and IoT Hubs, it is possible to deploy downstream Event and IoT Hubs in the Domains resource group.
+If the Domain has a requirement to stream data in, it is possible to deploy downstream Event Hubs in the Domains resource group.
 
-## Configuration specific to Databricks During New Data Landing Zone Creation
-
-![Data Landing Zone Provisioning for Databricks](../images/domainprovisioning.png)
-
-Figure 2: Data Landing Zone Provisioning for Databricks
-
-Figure 2 illustrates how the Databricks workspaces are created in a new Data Landing Zone and the steps which are linked to creating the three Azure Databricks workspaces:
-
-1. The process checks for an external Hive Metastore in the Data Management Landing Zone.
-1. The process checks for a Log Analytics in the Enterprise Scale Management Subscription.
-1. The workspace is configured to send it logs to a Log Analytics workspace
-1. We register an enterprise application for each Azure Databricks workspace and Configure SCIM provisioning for [Microsoft Azure Active Directory](https://docs.microsoft.com/azure/databricks/administration-guide/users-groups/scim/aad).
-1. If an engineering workspace is being created, we configure it for service principle access using the service principle assigned to the domain.
-1. For all workspaces, we then deploy Cluster Policies which are aligned to either **Azure Databricks Engineering Workspace** or a **Azure Databricks Analytics and Data Science Workspace**.
-1. If you have decided to reduce the start up times of your jobs or data exploration, you can make use of [Pools](https://docs.microsoft.com/azure/databricks/clusters/instance-pools/).
-1. If you have requested specific cluster configurations, the process should provision those cluster types.
-1. Depending on the workspace type, you should enable different workspace options see [Azure Databricks Deployment](03-databricks.md#azure-databricks-deployment).
-
-## Subprocess of adding a Domain to a Data Landing Zone
+## Configuration specific to Databricks of adding a Domain to a Data Landing Zone
 
 ![Adding Permissions to Databricks Workspaces](../images/addingpermissionstodatabricksworkspaces.png)
 
-Figure 3: Adding Permissions to Databricks Workspaces
+Figure 2: Adding Permissions to Databricks Workspaces
 
-Figure 3 shows the subprocess of adding a Domain to a pre-existing Azure Databricks workspaces within the Data Landing Zone. The subprocess adds the security groups to the Azure Enterprise Application and then into the workspace. The Domain Service Principal PAT is stored in an Azure Key Vault-backed scope in the Domain for use with the developed engineering pipelines.
+Figure 2 shows the subprocess of adding a Domain to a pre-existing Azure Databricks workspaces within the Data Landing Zone. The subprocess adds the security groups to the Azure Enterprise Application and then into the workspace. The Domain Service Principal PAT is stored in an Azure Key Vault-backed scope in the Domain for use with the developed engineering pipelines.
 
 ### Azure Databricks Engineering Workspace Process
 
@@ -92,24 +77,15 @@ Figure 3 shows the subprocess of adding a Domain to a pre-existing Azure Databri
 1. Add the Domain Azure AD Groups to the workspace Azure AD Enterprise Application.
 1. Wait for Azure AD Enterprise Application to sync with Azure Databricks.
 1. Add Domain Engineering Azure AD Group to the workspace.
-1. Add Domain User Azure AD Group to the workspace.
 1. Assign the Domain Azure AD Groups access to the Cluster Policies.
 1. Assign appropriate workspace permissions to Domain Azure AD Groups.
 
 >[!NOTE]
->The Domain Engineering Azure AD Group allows read/write access, and the Domain User Azure AD Group should allow read-only access. All of this is via Azure AD Passthrough.
+>The Domain Engineering Azure AD Group allows read/write access, and the Domain User Azure AD Group should allow read-only access.
 
-#### Azure Databricks Sensitive
+## Log Feedback to Enterprise Scale Analytics v-team
 
-1. Add the Domain Azure AD Groups to the workspace Azure AD Enterprise Application
-1. Wait for Azure AD Enterprise Application to sync with Azure Databricks
-1. Add Domain Engineering Azure AD Group to the workspace.
-1. Add Domain Sensitive AD Group to the workspace.
-1. Assign the Domain Azure AD Groups access to the Cluster Policies.
-1. Assign appropriate workspace permissions to Domain Azure AD Groups.
-
->[!NOTE]
->The Domain Engineering Azure AD Group and Domain Sensitive Azure AD Group should be setup so only the Sensitive AD Group can see the sensitive data. This should be achieved by a Policy Engine or some of the methods described in [Sensitive Data](../05-securitymodel/02-sensitive.md#sensitive-data).
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzones%20%E2%9E%9F%2005-domains.md)
 
 >[Previous](04-synapse.md)
 >[Next](06-dataproducts.md)

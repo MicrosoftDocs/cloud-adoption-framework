@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Data Handling
 description: Enterprise Scale Analytics and AI Architecture Data Handling.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
+author: 
+ms.author:  # Microsoft employees only
 ms.date: 12/8/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Data Privacy
 
@@ -20,7 +23,7 @@ Before Domains ingest data into the solution pattern, they must be able to class
 
 ## Non-Sensitive
 
-For every domain which is on-boarded we create two data lake folders for each data lake layer (Standard and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names(UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
+For every domain which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names(UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive folders for RAW, Enriched and Curated.
 
 This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering.
 
@@ -106,19 +109,19 @@ FROM hr_enriched
 where region='EU'
 ```
 
-You would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the **Azure Databricks Sensitive Workspace** and apply the following permissions:
+For this to work you would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the Azure Databricks Workspace and apply the following permissions:
 
 * Grant DA-AMERICA-HRMANAGER-R and DA-AMERICA-HRGENERAL-R Azure AD Groups access to the `vhr_us` view.
 * Grant DA-EUROPE-HRMANAGER-R and DA-EUROPE-HRGENERAL-R Azure AD Groups access to the `vhr_eu` view.
 
-As the columns are encrypted and cannot be decrypted in the non-sensitive workspace, the non-sensitive workspaces could still make use of Azure AD Passthrough and allow users to explore the lake based upon their permissions.
+As the columns are encrypted and cannot be decrypted, you could have an Azure Databricks workspaces which made use of Azure AD Passthrough and allows users to explore the lake based upon their Azure Data Lake permissions.
 
-Where table access is used, teams requiring access would be added to the Azure Databricks Sensitive workspace. Azure Databricks would map to Azure Data Lake Storage via service principals, but the data would be secured with Databricks Table Access Control.
+Where table access is used, teams requiring access would be added to the Azure Databricks Workspace with Table Access Control enabled. Azure Databricks would map to Azure Data Lake Storage via service principals, but the data would be secured with Databricks Table Access Control.
 
-As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the **Azure Databricks Sensitive Workspace** and add the correct Azure AD Groups to those permissions.
+As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the an Azure Databricks workspace and add the correct Azure AD Groups to those permissions.
 
 >[!NOTE]
->Azure Databricks Table Access Control cannot be mixed with Azure AD Passthrough. Therefore, you could decide to only have one Azure Databricks workspace and use table access control, as you want to have access to all your data and not only your sensitive data from the **Azure Databricks Sensitive Workspace**.
+>Azure Databricks Table Access Control cannot be mixed with Azure AD Passthrough. Therefore, you could decide to only have one Azure Databricks workspace and use just table access control instead or two workspaces - one which has table access control enabled and other with Azure AD Passthrough enabled.
 
 #### Option 3 - Policy Engine
 
@@ -138,7 +141,7 @@ A policy engine will allows a central way of managing, securing, and controlling
 
 Typically, a policy engine would integrate with a Data Catalog such as Azure Purview. There are a number of solutions from third-party vendors in the Azure marketplace.
 
-Some of vendors work with both Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing Row- and Column-Level Security. Vendors to consider are [Immuta](https://www.immuta.com/integrations/azure-synapse/), [Privacera](https://privacera.com/), and [Okera](https://www.okera.com/partners/microsoft-gold-partner/).
+Some of vendors work with both Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing Row- and Column-Level Security.
 
 The Policy Engine should use Azure AD Groups to apply the policies to the datasets.
 
@@ -147,6 +150,10 @@ The expectation of any policy solution providing Data Privacy is to tokenize sen
 As mentioned, for a policy engine to succeed it is important that there is an integration into the Data Catalog and a REST API which can be used by the DevOps process when onboarding a new dataset.
 
 As Domains and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify sensitive data. The policy engine should import this definition and deny any access to this data until the domain has set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2005-securitymodel%20%E2%9E%9F%2002-sensitive.md)
 
 >[Previous](01-securitymodel.md)
 >[Next](03-secprovisioning.md)

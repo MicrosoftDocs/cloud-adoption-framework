@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Teams Data Lake Services
 description: Enterprise Scale Analytics and AI Architecture Data Lake Services
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Data Lake Services
 
@@ -39,9 +42,9 @@ Azure Data Lake Storage provides:
 
 Whilst the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the Data Landing Zone. Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example you might want your RAW data to be geo-redundant whereas Workspace is used for data exploration and requires locally redundant disaster recovery.
 
-Each **Domain** should have two containers on each data lake over which they should have ownership, following best practices for each data lake layer.
+Each **Domain** should have two folders on each data lake over which they should have ownership, following best practices for each data lake layer.
 
-The two containers per **Domain** should be divided by classification (non-sensitive and sensitive) with access controlled by RBAC and ACLs.
+The two folders per **Domain** should be divided by classification (non-sensitive and sensitive) with access controlled by ACLs.
 
 >[!IMPORTANT]
 >Access to the data is restricted by a combination of ACLs and AAD-groups. These control what can and cannot be accessed by other groups. **Domain teams** should approve or reject access to their data assets.
@@ -83,7 +86,7 @@ Depending on the retention policies of your enterprise, this data is either stor
 
 ### Enriched Data (Data Lake Two)
 
-Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchial directory structure as the raw layer and resides in either the internal or sensitive container for **Domain** on Data Lake Two.
+Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchial directory structure as the raw layer and resides in either the non-sensitive or sensitive folder for **Domain** on Data Lake Two.
 
 #### Enriched Directory Layout
 
@@ -265,6 +268,10 @@ In a Data Landing Zone, all the monitoring is sent to the Data Management Landin
 
 >[!IMPORTANT]
 >Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzone%20%E2%9E%9F%2002-datalakeservices.md)
 
 >[Previous](01-datalandingzone.md)
 >[Next](03-databricks.md)

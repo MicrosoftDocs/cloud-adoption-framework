@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI DevOps Models
 description: Enterprise Scale Analytics and AI Architecture DevOps Models.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 # Enterprise Scale Analytics and AI DevOps Models
 
 The Enterprise Scale Analytics and AI solution pattern consists of:
@@ -107,7 +110,7 @@ Best practices for repositories should be adopted in order to enforce the use of
 
 Figure 3: Data Landing Zone Automation Process
 
-Figure 3 expands on the the previous Figure 2 in illustrating how you can control the approval process using a [Logic App](https://docs.microsoft.com/azure/logic-apps/logic-apps-overview) to control the process. We can use Logic Apps to email for approval and to call Rest APIs.
+Figure 3 illustrates how the On-boarding process is separated from the Data Landing Zone deployment based on the assumption that most organization have a standard Azure subscription deployment process as part of their Cloud Operation Model. In this case, the first step process is used to deploy standard corporate components (e.g. via a 3rd party ITSM tool such as ServiceNow) and the second step to deploy the Data Landing Zone specific components.
 
 Overall, this approach gives the different teams much greater flexibility, while also making sure that performed actions are compliant with the requirements of the company and, in addition, a lifecycle management is introduced, which allows to leverage new feature enhancements or optimizations added to the original templates.
 
@@ -184,6 +187,10 @@ The Enterprise Scale Analytic and AI solution has create the following core **st
 
 These templates should not only contain ARM templates and the respective parameter files, but also CI/CD pipeline definitions for deploying the resources.
 Because of new requirements and new services on Azure, these templates will evolve over time. Therefore the `main` branch of these repositories should be secured to ensure that it is always error free and ready for consumption and deployment. A development subscription should be used to test changes to the configuration of the templates, before merging feature enhancements back into the `main` branch.
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2006-dataops%20%E2%9E%9F%2002-es-aai-devops.md)
 
 >[Previous](01-overview.md)
 >[Next](03-teamfunctions.md)

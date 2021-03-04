@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 description: Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 
 # Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 
@@ -25,10 +28,10 @@ A Data Landing Zone has several layers to enable agility to service the domains 
 
 Every new Data Landing Zone will contain the following resource groups:
 
-- A Single Network
+- A single Network
 - Security
 - Ingest and Processing
-- an empty Ingest Storage Service
+- An empty Ingest Storage Service
 - Data Lake Services
 - Shared Synapse
 - Shared Databricks
@@ -48,7 +51,7 @@ Three [Azure Data Lake Storage Gen V2 (ADLS)](https://docs.microsoft.com/azure/s
 
 ### Upload Ingest Storage Service
 
-Third-party data publishers require the ability to land their data into the platform so domains can pull it into their Data Lakes. The "Upload Ingest Storage" resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
+Third-party data publishers require the ability to land their data into the platform so domains can pull it into their Data Lakes. The Upload Ingest Storage resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
 
 ![Upload Ingest Storage Service](../images/dlzingeststorage.png)
 
@@ -62,6 +65,7 @@ Once the data has been pulled from the storage blobs into RAW, the data should b
 >Deploy an empty storage services resource group per Data Landing Zone.
 
 ### Ingestion and Processing Resource Group
+
 If your enterprise has already developed an ingestion framework engine for automatically ingesting data based on registering metadata which includes connection strings, path to copy data from and to, and ingestion schedule, the ingestion and processing resource group has key services to leverage such a framework.
 
 Ingest and Processing will be deployed into a single resource group.
@@ -80,16 +84,19 @@ If you have an ingestion framework engine, we recommend using Azure Data Factory
 >Ingestion and Processing is discussed at length under [Data Ingestion](../04-ingestion/01-overview.md).
 
 #### Azure Databricks
-Azure Databricks should always deployed because it would be used by the Domains for ingestion, transformation, and loading of data. See the "[Azure Databricks](#shared-azure-databricks)" section for details of workspace deployments.
+
+Azure Databricks should always deployed because it would be used by the Domains for ingestion, transformation, and loading of data. See the [Azure Databricks](#shared-azure-databricks) section for details of workspace deployments.
 
 An Azure Databricks workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. These are referred to as **Azure Databricks Engineering Workspaces**.
 
 The Databricks workspaces are locked down to only allow deployment of notebooks or jars from the Domains Azure DevOps Repo via a Data Domains Service Principal.
 
 #### Real-Time Streaming
+
 IOT Hubs and Event Hubs could be used by your ingestion framework engine for real-time streaming to Event Hubs and for processing of both batch and streaming via a Databricks Engineering Workspace.
 
 ### Metadata Services
+
 Across the Data Landing Zone there is the requirement for a number of shared metadata services which provide functionality to other shared services. These will be deployed into a single resource group.
 
 ![Data Landing Zone Metadata Services](../images/dlzsharedservices.png)
@@ -102,10 +109,10 @@ A Self-Hosted Integration Runtime will be deployed for use with Azure Purview to
 
 An Azure Key Vault will be provisioned to store secrets relating to Data Landing Zone Services such as:
 
-* Azure Data Factory Metastore credentials
-* Azure Databricks PAT tokens for use with the automated ingestion process
-* Service Principal Credentials for the automated ingestion process
-* Data Landing Zone Data Lake Services Keys
+- Azure Data Factory Metastore credentials
+- Azure Databricks PAT tokens for use with the automated ingestion process
+- Service Principal Credentials for the automated ingestion process
+- Data Landing Zone Data Lake Services Keys
 
 The types of data which you will store in the Data Landing Zone will help determine any additional services which should reside here. For example, if you are storing sensitive data, you may choose to include a tokenization engine to ensure that all sensitive data can be tokenized as it is ingested into the data lake.
 
@@ -115,16 +122,17 @@ To enable rapid onboarding of datasets, to the Data Landing Zone, we recommend d
 
 To enable you would need to: -
 
-* Create at least one Azure Data Factory in the Integration RG, in the Data Landing Zone, which would only be used for link the Shared Integration Runtime and not for data pipelines.
-* Create at least two Virtual Machines, with a Self-Hosted Integration Runtime inside an availability zone using the [ARM template](https://github.com/Azure/Azure-quickstart-templates/tree/master/101-vms-with-selfhost-integration-runtime).
-* [The Self Hosted Integration Runtimes should be setup in high availability mode](https://docs.microsoft.com/Azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
-* The Self Hosted Integration Runtimes should be associated with Azure Data Factories in the Data Landing Zone(s).
-* [Azure Automation should be setup to update the Self Hosted Integration Runtime periodically](https://docs.microsoft.com/Azure/data-factory/self-hosted-integration-runtime-automation-scripts)
+- Create at least one Azure Data Factory in the Integration RG, in the Data Landing Zone, which would only be used for link the Shared Integration Runtime and not for data pipelines.
+- Create at least two Virtual Machines, with a Self-Hosted Integration Runtime inside an availability zone using the [ARM template](https://github.com/Azure/Azure-quickstart-templates/tree/master/101-vms-with-selfhost-integration-runtime).
+- [The Self Hosted Integration Runtimes should be setup in high availability mode](https://docs.microsoft.com/Azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
+- The Self Hosted Integration Runtimes should be associated with Azure Data Factories in the Data Landing Zone(s).
+- [Azure Automation should be setup to update the Self Hosted Integration Runtime periodically](https://docs.microsoft.com/Azure/data-factory/self-hosted-integration-runtime-automation-scripts)
 
 >[!NOTE]
 >This does not restrict the deployment of Integration Runtimes inside a Data Landing Zone or into 3rd party clouds.
 
-#### Integration with Databricks and HDInsight
+### Integration with Databricks and HDInsight
+
 To integrate data from both the Azure Databricks and HDInsight Hive Metastore, you will need to use the Atlas API to update Azure Purview.
 
 While it is possible to reverse engineer the table form by scanning all the Parquet files generated by Databricks and HDInsight, it is preferable to enable catalog updates by using the metadata which has been created in the Hive Metastore.
@@ -133,23 +141,25 @@ The pattern is to have a single Hive Metadata Store in the Data Landing Zone for
 
 This single database would be scanned by Azure Data Factory to extract the tables and paths to update the Event Data Management Landing Zone associated with Azure Purview.
 
-### Shared Analytics and Data Science
-For each Data Landing Zone, a Shared Synapse Analytics workspace and two Azure Databricks workspaces will be provisioned for use by everybody in the Data Landing Zone for exploratory purposes.
+### Shared Products
+
+For each Data Landing Zone, a shared Synapse Analytics workspace and Azure Databricks workspaces will be provisioned for use by everybody in the Data Landing Zone for exploratory purposes.
 
 #### Shared Azure Databricks
+
 Azure Databricks service is envisioned to be one of the key consumers of the data lake storage service. The atomic file operations are optimized for Spark Analytic Engines. This speeds up completion of Spark jobs issued from the Databricks service.
 
-As mentioned above, for every Data Landing Zone deployed, two shared Azure Databricks workspaces will be created under the Shared Analytics and Data Science layer. They are:
+An Azure Databricks workspace provisioned for all Data Scientists and Data Ops called the **Azure Databricks Analytics and Data Science Workspace**. It can be configured to connect to the Azure Data Lake using AAD Passthrough or Table Access Control.
 
-1. An Azure Databricks workspace provisioned for all Data Scientists and Data Ops which will connect to the Azure Data Lake using AAD Passthrough. This is referred to as **Azure Databricks Analytics and Data Science Workspace**.
-2. An Azure Databricks workspace provisioned for use with sensitive and/or secret data. It will connect to Azure Data Lake using AAD Passthrough, Table Access Control, and Conditional Access. This is referred to as **Azure Databricks Sensitive Workspace**.
+Depending on the use case Conditional Access can be configured as an additional security measure.
 
 The Enterprise Scale Analytics and AI solution pattern takes into account the following best practices for integrating Azure Databricks into the solution pattern:
 
-* [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-* [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+- [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
+- [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 
 #### Shared Azure Synapse Analytics
+
 **Azure Synapse** is the provisioned integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of **SQL** technologies used in enterprise data warehousing, **Spark** technologies used for big data, and **Pipelines** for data integration and ETL/ELT. **Synapse Studio** provides a unified experience for management, monitoring, coding and security. Synapse has deep integration with other Azure services such as **Power BI**, **CosmosDB** and **Azure Machine Learning**.
 
 During the initial setup of a Data Landing Zone a single Azure Synapse Analytics Workspace will be deployed to for use by all Domains. Additional ones can be optionally setup for Domains should costs management and recharge be required. Domain and Data Products teams might make use of Synapse Analytics for creating dedicated SQL Pools, as a Read Data Store, which is used by the visualization layer.

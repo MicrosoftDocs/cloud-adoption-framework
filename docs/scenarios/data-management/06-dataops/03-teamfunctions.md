@@ -1,13 +1,16 @@
 ---
 title: Enterprise Scale Analytics and AI Team Functions
 description: Enterprise Scale Analytics and AI Architecture Team Functions.
-author: mboswell
-ms.author: mboswell # Microsoft employees only
-ms.date: 03/01/2021
+author: 
+ms.author:  # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+\
+**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
+&nbsp;
 # Teams and Functions
 
 The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
@@ -278,6 +281,10 @@ Alongside encouraging participation in these user groups, analysts should log fe
 |Data Landing Zone Ops|Informed|Responsible|Responsible|Responsible|Responsible|
 |Domain Ops||Informed|Informed|Responsible|Consulted|
 |Data Products Team||Informed|Informed|Informed|Responsible|
+
+## Log Feedback to Enterprise Scale Analytics v-team
+
+[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2006-dataops%20%E2%9E%9F%2003-teamfunctions.md)
 
 >[Previous](02-es-aai-devops.md)
 >[Next](../07-bcdr/01-overview.md)
