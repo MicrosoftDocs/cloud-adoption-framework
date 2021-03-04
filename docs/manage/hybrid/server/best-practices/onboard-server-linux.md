@@ -56,7 +56,7 @@ This article provides guidance for connecting a Linux server to Azure Arc using 
 
     ![A screenshot of the Azure portal with an empty resource group.](./media/onboard-server/linux-resource-group.png)
 
-4. Download the [`az-connect-linux`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_linux.sh) shell script.
+4. Download the [`az_connect_linux`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_linux.sh) shell script.
 
 5. Change the environment variables according to your environment.
 
@@ -68,14 +68,14 @@ This article provides guidance for connecting a Linux server to Azure Arc using 
 
 ## Deployment
 
-Run the script using the `. ./az-connect-linux.sh` command.
+Run the script using the `. ./az_connect_linux.sh` command.
 
 > [!NOTE]
-> The extra dot is because the script has an *export* function and needs to have the vars exported in the same shell session as the rest of the commands.
+> The extra dot is because the script has an _export_ function and needs to have the vars exported in the same shell session as the rest of the commands.
 
 Upon successful completion, you will have your Linux server, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the `az_connect` Linux script running.](./media/onboard-server/az-connect-linux.png)
+![A screenshot of the `az_connect_linux.sh` Linux script running.](./media/onboard-server/az-connect-linux.png)
 
 ![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/linux-resource.png)
 

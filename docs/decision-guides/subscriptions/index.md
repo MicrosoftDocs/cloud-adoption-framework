@@ -24,7 +24,7 @@ Adopting Azure begins by creating an Azure subscription, associating it with an 
 
 ## Model your organization
 
-Because every organization is different, Azure management groups are designed to be flexible. Modeling your cloud estate to reflect your organization's hierarchy helps you define and apply policies at higher levels of the hierarchy, and rely on inheritance to ensure that those policies are automatically applied to management groups lower in the hierarchy. Although subscriptions can be moved between different management groups, it is helpful to design an initial management group hierarchy that reflects your anticipated organizational needs.
+Because every organization is different, Azure management groups are designed to be flexible. Modeling your cloud estate to reflect your organization's hierarchy helps you define and apply policies at higher levels of the hierarchy, and rely on inheritance to ensure that those policies are automatically applied to management groups lower in the hierarchy. Although subscriptions can be moved between different management groups, it's helpful to design an initial management group hierarchy that reflects your anticipated organizational needs.
 
 Before finalizing your subscription design, also consider how [resource consistency](../resource-consistency/index.md) considerations might influence your design choices.
 

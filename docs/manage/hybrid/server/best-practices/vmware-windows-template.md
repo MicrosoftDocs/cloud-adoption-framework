@@ -75,23 +75,23 @@ Before converting the VM to a template, several actions are required.
 
 1. Install VMware tools and restart.
 
-    ![First screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-1.png)
+    ![First screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-1.png)
 
-    ![Second screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-2.png)
+    ![Second screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-2.png)
 
-    ![Third screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-3.png)
+    ![Third screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-3.png)
 
-    ![Fourth screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-4.png)
+    ![Fourth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-4.png)
 
-    ![Fifth screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-5.png)
+    ![Fifth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-5.png)
 
-    ![Sixth screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-6.png)
+    ![Sixth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-6.png)
 
-    ![Seventh screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-7.png)
+    ![Seventh screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-7.png)
 
-    ![Eighth screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-8.png)
+    ![Eighth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-8.png)
 
-    ![Ninth screenshot of a WMware Tools installation.](./media/vmware-template/windows-template-tools-9.png)
+    ![Ninth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-9.png)
 
 2. Perform Windows updates.
 

@@ -24,7 +24,7 @@ After you've onboarded Azure server management services, you'll need to focus on
 
 Azure Security Center is the central place to manage security for your environment. You'll see an overall assessment and targeted recommendations.
 
-We recommend that you review and implement the recommendations provided by this service. For information about additional benefits of Azure Security Center, see [Follow Azure Security Center recommendations](../../migrate/azure-best-practices/migrate-best-practices-security-management#best-practice-follow-azure-security-center-recommendations).
+We recommend that you review and implement the recommendations provided by this service. For information about additional benefits of Azure Security Center, see [Follow Azure Security Center recommendations](../../migrate/azure-best-practices/migrate-best-practices-security-management.md#best-practice-follow-azure-security-center-recommendations).
 
 ## Next steps
 

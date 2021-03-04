@@ -102,7 +102,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 | **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA). | Critical high-performance applications. |
 
 - It's important to understand the pricing differences between these VMs, and the long-term budget effects.
-- Each type has several VM series within it.
+- Each type has several series of VMs within it.
 - Additionally, when you select a VM within a series, you can only scale the VM up and down within that series. For example, a `DS2_v2` instance can scale up to `DS4_v2`, but it can't be changed to an instance of a different series such as a `F2S_v2` instance.
 
 **Learn more:**
@@ -128,7 +128,7 @@ Azure provides different types of storage data.
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access and connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard HDD, standard SSD, premium SSD, or ultra disks. <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
-| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
+| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
 
 ### Access tiers
@@ -247,7 +247,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 
 ## Best practice: Reduce nonproduction costs
 
-Development, testing, and quality assurance (QA) environments are needed during development cycles. Unfortunately, it is common for those environments to stay provisioned long after they cease to be useful. A regular review of unused nonproduction environments can have an immediate impact on costs.
+Development, testing, and quality assurance (QA) environments are needed during development cycles. Unfortunately, it's common for those environments to stay provisioned long after they cease to be useful. A regular review of unused nonproduction environments can have an immediate impact on costs.
 
 Additionally, consider general cost reductions for any nonproduction environments:
 

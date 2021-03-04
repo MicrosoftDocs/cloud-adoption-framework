@@ -50,7 +50,7 @@ Our recommended approach to monitoring each layer of the stack is summarized in 
 
 ## Hybrid cloud monitoring
 
-For many organizations, transition to the cloud must be approached gradually, where the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while you avoid disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain as to which is the best choice to support their business and IT operational goals.
+For many organizations, transition to the cloud must be approached gradually, where the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while you avoid disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain as to which platform is the best choice to support their business and IT operational goals.
 
 In this section, we address the uncertainty by reviewing several factors and offering an understanding of which platform to consider.
 
