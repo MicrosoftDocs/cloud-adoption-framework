@@ -47,7 +47,7 @@ Unless this implementation is your organization's first or only deployment to th
 
 ### Inventory and visibility
 
-Monitoring containers and AKS clusters use the tools, dashboards, and alerts included in your operations baseline. However, you might need to do more configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json toc=/azure/cloud-adoption-framework/toc.json). See the [overview of Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json toc=/azure/cloud-adoption-framework/toc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
+Monitoring containers and AKS clusters use the tools, dashboards, and alerts included in your operations baseline. However, you might need to do more configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). See the [overview of Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
 
 Once you've configured Azure Monitor to collect data on your containers, you can monitor the following areas as part of your centralized management processes:
 

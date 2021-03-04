@@ -2,8 +2,8 @@
 title: Hub and spoke network topology
 description: Learn about hub and spoke network topologies for more efficient management of common communication or security requirements.
 author: tracsman
-manager: rossort
 ms.author: brblanch
+manager: rossort
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -13,7 +13,7 @@ ms.custom: think-tank, virtual-network
 
 # Hub and spoke network topology
 
-_Hub and spoke_ is a networking model for efficiently managing common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
+*Hub and spoke* is a networking model for efficiently managing common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
 
 - **Cost savings and management efficiency.** Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort.
 - **Overcoming subscription limits.** Large cloud-based workloads might require using more resources than are allowed in a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
@@ -31,7 +31,7 @@ Smaller cloud estates might not benefit from the added structure and capabilitie
 
 ![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-hub-spoke-high-level.png)
 
-_Figure 1: Example of a hub and spoke network topology._
+*Figure 1: Example of a hub and spoke network topology.*
 
 As shown in the diagram, Azure supports two types of hub and spoke design. It supports communication, shared resources, and centralized security policy (labeled as `VNet hub` in the diagram), or a design based on Azure Virtual WAN (labeled as `Virtual WAN` in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
 
@@ -62,7 +62,7 @@ In cases where limits might be an issue, you can scale up the architecture furth
 
 ![Cluster of hubs and spokes](../../_images/azure-best-practices/network-hub-spokes-cluster.png)
 
-_Figure 2: A cluster of hubs and spokes._
+*Figure 2: A cluster of hubs and spokes.*
 
 The introduction of multiple hubs increases the cost and management overhead of the system. This is only justified by scalability, system limits, or redundancy and regional replication for user performance or disaster recovery. In scenarios that require multiple hubs, all the hubs should strive to offer the same set of services for operational ease.
 
@@ -76,6 +76,6 @@ A typical example of this scenario is the case where application processing serv
 
 ![Spokes connecting to each other and a hub](../../_images/azure-best-practices/network-spoke-to-spoke.png)
 
-_Figure 3: Spokes connecting to each other and a hub._
+*Figure 3: Spokes connecting to each other and a hub.*
 
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level (level 0) becomes the hub of lower spokes (level 1) of the hierarchy. The spokes of a hub and spoke implementation are required to forward the traffic to the central hub so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub and spoke relationship.

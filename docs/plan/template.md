@@ -1,5 +1,5 @@
 ---
-title: "Cloud adoption plan deployment to Azure DevOps"
+title: Cloud adoption plan deployment to Azure DevOps
 description: Learn how to quickly deploy a backlog to Azure DevOps by using a template that aligns cloud adoption efforts to a standardized process.
 author: BrianBlanchard
 ms.author: brblanch
@@ -28,13 +28,13 @@ To deploy the cloud adoption plan, open the [Azure DevOps demo generator](https:
 
 After your project has been created, continue through this article series to learn how to modify the template to align to your cloud adoption plan.
 
-For additional support and guidance on this tool, see [Azure DevOps Services demo generator](/azure/devops/demo-gen).
+For additional support and guidance on this tool, see [Azure DevOps Services demo generator](/azure/devops/demo-gen/).
 
 ## Bulk edit the cloud adoption plan
 
 When the plan project has been deployed, you can use Microsoft Excel to modify it. It's much easier to create new workloads or assets in the plan by using Microsoft Excel than by using the Azure DevOps browser experience.
 
-To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
+To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel).
 
 Some users may want to use Microsoft Project to track their tasks, create backlog and assign resource. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project?view=tfs-2018).
 
@@ -42,14 +42,14 @@ Some users may want to use Microsoft Project to track their tasks, create backlo
 
 The cloud adoption plan organizes activities by activity type:
 
-- **Epics:** An _epic_ represents an overall phase of the cloud adoption lifecycle.
+- **Epics:** An *epic* represents an overall phase of the cloud adoption lifecycle.
 - **Features:** Features are used to organize specific objectives within each phase. For instance, migration of a specific workload would be one feature.
 - **User stories:** User stories group work into logical collections of activities based on a specific goal.
 - **Tasks:** Tasks are the actual work to be done.
 
 At each layer, activities are then sequenced based on dependencies. Activities are linked to articles in the Cloud Adoption Framework to clarify the objective or task at hand.
 
-The clearest view of the cloud adoption plan comes from the **Epics** backlog view. For help with changing to the **Epics** backlog view, see the article on [viewing a backlog](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops#view-a-backlog-or-portfolio-backlog). From this view, it's easy to plan and manage the work required to complete the current phase of the adoption lifecycle.
+The clearest view of the cloud adoption plan comes from the **Epics** backlog view. For help with changing to the **Epics** backlog view, see the article on [viewing a backlog](/azure/devops/boards/backlogs/define-features-epics#view-a-backlog-or-portfolio-backlog). From this view, it's easy to plan and manage the work required to complete the current phase of the adoption lifecycle.
 
 > [!NOTE]
 > The current state of the cloud adoption plan focuses heavily on migration efforts. Tasks related to governance, innovation, or operations must be populated manually.

@@ -97,7 +97,7 @@ The table shows an example of a virtual network with an address space of `10.245
 **Learn more:**
 
 - Learn about [designing subnets](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
-- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](/azure/cloud-adoption-framework/migrate/).
+- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](../../migrate/index.md).
 
 ## Best practice: Set up a DNS server
 
@@ -117,7 +117,7 @@ Azure adds a DNS server by default when you deploy a virtual network. This allow
 
 **Learn more:**
 
-- Learn about [name resolution when you use your own DNS server](/azure/cloud-adoption-framework/migrate/).
+- Learn about [name resolution when you use your own DNS server](../../migrate/index.md).
 - Learn about [DNS naming rules and restrictions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Set up Availability Zones
@@ -261,7 +261,7 @@ Now imagine that you have an Azure deployment (for example, Azure App Service) i
 
 **Solution:**
 
-To optimize routing for both offices, you need to know which prefix is from Azure `West US` and which is from Azure `East US`. You can encode this information by using BGP community values.
+To optimize routing for both offices, you need to know which prefix is from Azure `West US` and which prefix is from Azure `East US`. You can encode this information by using BGP community values.
 
 - You assign a unique BGP community value to each Azure region. For example, 12076:51004 for `East US`; 12076:51006 for `West US`.
 - Now that it's clear which prefix belongs to which Azure region, you can configure a preferred ExpressRoute circuit.

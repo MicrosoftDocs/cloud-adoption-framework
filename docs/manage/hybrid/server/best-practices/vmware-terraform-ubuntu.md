@@ -77,17 +77,17 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 2. The Terraform plan creates resources in both Microsoft Azure and VMware vSphere. It then executes a script on the virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your VMware vSphere and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-    - `TF-VAR-subscription-id` = Your Azure subscription ID
-    - `TF-VAR-client-id` = Your Azure service principal name
-    - `TF-VAR-client-secret`= Your Azure service principal password
-    - `TF-VAR-tenant-id` = Your Azure tenant ID
-    - `TF-VAR-resourceGroup` = Azure resource group name
-    - `TF-VAR-location` = Azure Region
-    - `TF-VAR-vsphere-user` = vCenter Admin Username
-    - `TF-VAR-vsphere-password` = vCenter Admin Password
-    - `TF-VAR-vsphere-server` = vCenter server FQDN/IP
-    - `TF-VAR-admin-user` =OS Admin Username
-    - `TF-VAR-admin-password` = OS Admin Password
+    - `TF_VAR_subscription_id` = Your Azure subscription ID
+    - `TF_VAR_client_id` = Your Azure service principal name
+    - `TF_VAR_client_secret`= Your Azure service principal password
+    - `TF_VAR_tenant_id` = Your Azure tenant ID
+    - `TF_VAR_resourceGroup` = Azure resource group name
+    - `TF_VAR_location` = Azure region
+    - `TF_VAR_vsphere_user` = vCenter admin username
+    - `TF_VAR_vsphere_password` = vCenter admin password
+    - `TF_VAR_vsphere_server` = vCenter server FQDN/IP
+    - `TF_VAR_admin_user` =OS admin username
+    - `TF_VAR_admin_password` = OS admin password
 
 3. From CLI, navigate to the `azure_arc_servers_jumpstart/vmware/ubuntu/terraform` directory of the cloned repo.
 
@@ -95,9 +95,9 @@ Before executing the Terraform plan, you must set the environment variables whic
 
     `source ./scripts/vars.sh`
 
-5. In addition to the `TF-VAR` environment variables you've just exported, edit the Terraform variables in the [`terraform.tfvars`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/ubuntu/terraform/terraform.tfvars) to match your VMware vSphere environment.
+5. In addition to the `TF_VAR` environment variables you've just exported, edit the Terraform variables in the [`terraform.tfvars`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/ubuntu/terraform/terraform.tfvars) to match your VMware vSphere environment.
 
-    ![A screenshot of TF-VAR environment variables](./media/vmware-terraform-ubuntu/variables.png)
+    ![A screenshot of the `TF_VAR` environment variables](./media/vmware-terraform-ubuntu/variables.png)
 
 6. Run the `terraform init` command which will download the Terraform AzureRM, local, and vSphere providers.
 
@@ -121,7 +121,7 @@ Before executing the Terraform plan, you must set the environment variables whic
 
   ![A screenshot of an Azure Arc enabled server being deleted.](./media/vmware-terraform-ubuntu/delete-server.png)
 
-  If you delete the instance manually, then you should also delete *install-azure-arc-agent.sh* which is created by the Terraform plan.
+  If you delete the instance manually, then you should also delete `install_arc_agent.sh`, which is created by the Terraform plan.
 
 - If you want to tear down the entire environment, use the `terraform destroy --auto-approve` command as shown below.
 

@@ -15,11 +15,11 @@ ms.custom: internal
 The [Security Baseline discipline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on general security topics including protection of the network, digital assets, and data. This article discusses a cloud-native sample policy for the Security Baseline discipline.
 
 > [!NOTE]
-> Microsoft is in no position to dictate corporate or IT policy. This article will help you prepare for an internal policy review. It is assumed that this sample policy will be extended, validated, and tested against your corporate policy before attempting to use it. Any use of this sample policy as-is is discouraged.
+> Microsoft is in no position to dictate corporate or IT policy. This article will help you prepare for an internal policy review. It's assumed that this sample policy will be extended, validated, and tested against your corporate policy before attempting to use it. Any use of this sample policy as-is is discouraged.
 
 ## Policy alignment
 
-This sample policy synthesizes a cloud-native scenario, meaning that the tools and platforms provided by Azure are sufficient to manage business risks involved in a deployment. In this scenario, it is assumed that a simple configuration of the default Azure services provides sufficient asset protection.
+This sample policy synthesizes a cloud-native scenario, meaning that the tools and platforms provided by Azure are sufficient to manage business risks involved in a deployment. In this scenario, it's assumed that a simple configuration of the default Azure services provides sufficient asset protection.
 
 ## Cloud security and compliance
 
@@ -40,7 +40,7 @@ A sample cloud-native policy for identity across cloud and on-premises directori
 - Just-in-time (JIT), just-enough access granted on a task-by-task basis to limit exposure of overprivileged admin credentials.
 - Extended user identity and access to policies across multiple environments through Azure Active Directory.
 
-While it is important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
+While it's important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
 
 ### Network access policies
 
@@ -80,7 +80,7 @@ Using the cloud can reduce some of the security burden. Microsoft provides physi
 
 Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to detect, prevent, or mitigate cyberattacks are considerable. In fact, while organizations used to worry about whether the cloud was secure, most now understand that the level of investment in people and specialized infrastructure made by vendors like Microsoft makes the cloud more secure than most on-premises datacenters.
 
-Even with this investment in a cloud-native security baseline, it is suggested that any Security Baseline policy extend the default cloud-native policies. The following are examples of extended policies that should be considered, even in a cloud-native environment:
+Even with this investment in a cloud-native security baseline, it's suggested that any Security Baseline policy extend the default cloud-native policies. The following are examples of extended policies that should be considered, even in a cloud-native environment:
 
 - **Secure VMs.** Security should be every organization's top priority, and doing it effectively requires several things. You must assess your security state, protect against security threats, and then detect and respond rapidly to threats that occur.
 - **Protect VM contents.** Setting up regular automated backups is essential to protect against user errors. This isn't enough, though; you must also make sure that your backups are safe from cyberattacks and are available when you need them.

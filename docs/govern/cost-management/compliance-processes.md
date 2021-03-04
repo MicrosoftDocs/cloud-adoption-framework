@@ -24,7 +24,7 @@ The best Cost Management tools in the cloud are only as good as the processes an
 
 **Annual planning:** On an annual basis, perform a roll-up analysis on all deployed and to-be-deployed assets. Align budgets by business units, departments, teams, and other appropriate divisions to empower self-service adoption. Ensure that the leader of each billing unit is aware of the budget and how to track spending.
 
-This is the time to make a precommitment or prepurchase to maximize discounting. It is wise to align annual budgeting with the cloud vendor's fiscal year to further capitalize on year-end discount options.
+This is the time to make a precommitment or prepurchase to maximize discounting. It's wise to align annual budgeting with the cloud vendor's fiscal year to further capitalize on year-end discount options.
 
 **Quarterly planning:** On a quarterly basis, review budgets with each billing unit leader to align forecast and actual spending. If there are changes to the plan or unexpected spending patterns, align and reallocate the budget.
 
