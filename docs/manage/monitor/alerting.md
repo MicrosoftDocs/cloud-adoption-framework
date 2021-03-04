@@ -1,16 +1,16 @@
 ---
-title: "Cloud monitoring and alerting"
+title: Cloud monitoring and alerting
 description: Use the Cloud Adoption Framework for Azure to learn how to determine when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
 author: MGoedtel
-ms.author: magoedte
+ms.author: brblanch
 ms.date: 08/05/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-services: azure-monitor
+ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore kusto multiresource multisignal -->
+<!-- cSpell:ignore multisignal -->
 
 # Cloud monitoring guide: Alerting
 
@@ -33,7 +33,7 @@ Ask these questions when you're initially developing a monitoring configuration.
 
 After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users, and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery, as part of an ongoing, continuous monitoring improvement process. It's not just about evaluating alert noise or missed alerts, but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine whether you're improving.
 
-Both System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support IT Service Management (ITSM) integration, to automate the creation of incident records and escalate to the correct support team, or any other alert management system that uses a webhook.
+Both System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support IT service management (ITSM) integration, to automate the creation of incident records and escalate to the correct support team, or any other alert management system that uses a webhook.
 
 When possible, you can use any of several services to automate recovery actions. These include System Center Orchestrator, Azure Automation, Azure Logic Apps, or autoscaling in the case of elastic workloads. While notifying the responsible teams is the most common action for alerting, automating corrective actions might also be appropriate. This automation can help streamline the entire incident management process. Automating these recovery tasks can also reduce the risk of human error.
 
@@ -57,34 +57,32 @@ Depending on the feature and configuration you're using, you can store monitorin
 
 Azure Monitor has four types of alerts, each somewhat tied to the repository that the data is stored in:
 
-- [Metric alert](/azure/azure-monitor/platform/alerts-metric): Alerts on metric data in Azure Monitor. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to "normal" state.
+- [Metric alert](/azure/azure-monitor/alerts/alerts-metric): Alerts on metric data in Azure Monitor. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to "normal" state.
 
-- [Log query alert](/azure/azure-monitor/platform/alerts-log-query): Available to alert on log data from Application Insights or Azure Monitor Logs. It can also alert based on cross-workspace queries.
+- [Log query alert](/azure/azure-monitor/alerts/alerts-log-query): Available to alert on log data from Application Insights or Azure Monitor Logs. It can also alert based on cross-workspace queries.
 
-- [Activity log alert](/azure/azure-monitor/platform/alerts-activity-log): Alerts on items in the activity log, with the exception of Azure Service Health data.
+- [Activity log alert](/azure/azure-monitor/alerts/alerts-activity-log): Alerts on items in the activity log, with the exception of Azure Service Health data.
 
-- [Azure Service Health alert](/azure/azure-monitor/platform/alerts-activity-log-service-notifications): A special type of alert that's used only for Azure Service Health issues that come from the activity log, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](/azure/service-health/service-health-overview), a companion service to Azure Monitor.
+- [Azure Service Health alert](/azure/service-health/alerts-activity-log-service-notifications-portal): A special type of alert that's used only for Azure Service Health issues that come from the activity log, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](/azure/service-health/service-health-overview), a companion service to Azure Monitor.
 
 ### Enable alerting through partner tools
 
-If you're using an external alerting solution, route as much as you can through Azure Event Hubs, which is the fastest path out of Azure Monitor. You'll have to pay for ingestion into Event Hub. If cost is an issue and speed isn't, you can use Azure Storage as a less expensive alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
+If you're using an external alerting solution, route as much as you can through Azure Event Hubs, which is the fastest path out of Azure Monitor. You'll have to pay for ingestion into Event Hubs. If cost is an issue and speed isn't, you can use Azure Storage as a less expensive alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
 
 Azure Monitor includes support for integrating with other monitoring platforms, and ITSM software such as ServiceNow. You can use Azure alerting and still trigger actions outside of Azure, as required by your incident management or DevOps process. If you want to alert in Azure Monitor and automate the response, you can initiate automated actions by using Azure Functions, Azure Logic Apps, or Azure Automation, based on your scenario and requirements.
 
 ### Specialized Azure monitoring offerings
 
-[Management solutions](/azure/azure-monitor/insights/solutions-inventory) generally store their data Azure Monitor Logs. Two exceptions are Azure Monitor for VMs and Azure Monitor for containers. The following table describes the alerting experience based on the particular data type and where it is stored.
+[Management solutions](/azure/azure-monitor/monitor-reference) generally store their data Azure Monitor Logs. Two exceptions are Azure Monitor for VMs and Azure Monitor for containers. The following table describes the alerting experience based on the particular data type and where it is stored.
 
 | Solution | Data type | Alert behavior |
 |---| ---| --- |
 | Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics database. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time. |
 | | Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the workspace. Container logs and inventory information are also written to the workspace. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts. |
-| Azure Monitor for VMs | Health criteria are metrics stored in the metrics database. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications. |
+| Azure Monitor for VMs | Health criteria are metrics stored in the metrics database. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only action groups that are configured to send SMS or email notifications. |
 | | Map and guest operating system performance log data is written to the Log Analytics workspace. | Create log query alerts. |
 
-<!-- docsTest:ignore "speed driven by cost" -->
-
-### Fastest speed driven by cost
+### Fastest speed, driven by cost
 
 Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real-time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it is stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.
 
@@ -92,13 +90,13 @@ That said, there are some important footnotes to this rule.
 
 **Guest OS telemetry** has multiple paths to get into the system.
 
-- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
+- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor/).
 
 - The least expensive, but with some ingestion latency, is to send it to a Log Analytics workspace. Running the Log Analytics agent on the VM is the best way to get all guest operating system metric and log data into the workspace.
 
-- You can send it for storage as a metric and a log in Azure Monitor by running both the Diagnostic extension and the Log Analytics agent on the same VM. You can then alert quicker, but also use the guest operating system data as part of more complex queries when you combine it with other telemetry.
+- You can send it for storage as a metric and a log in Azure Monitor by running both the Azure Diagnostics extension and the Log Analytics agent on the same VM. You can then alert quicker, but also use the guest operating system data as part of more complex queries when you combine it with other telemetry.
 
-**Importing data from on-premises:** If you're trying to query and monitor across machines running in Azure and on-premises, you can use the Log Analytics agent to collect guest operating system data. You can then use a feature called [logs to metrics](/azure/azure-monitor/platform/alerts-metric-logs) to collect and store as metrics in Azure Monitor. This method bypasses part of the ingestion process into Azure Monitor Logs, and the data is thus available sooner.
+**Importing data from on-premises:** If you're trying to query and monitor across machines running in Azure and on-premises, you can use the Log Analytics agent to collect guest operating system data. You can then use a feature called [logs to metrics](/azure/azure-monitor/alerts/alerts-metric-logs) to collect and store as metrics in Azure Monitor. This method bypasses part of the ingestion process into Azure Monitor Logs, and the data is thus available sooner.
 
 ### Minimize alerts
 
@@ -109,11 +107,11 @@ If you aren't using Azure Monitor for VMs, make the job of creating alerts and m
 > [!NOTE]
 > These features apply only to metric alerts, alerts based on data that's being sent to the Azure Monitor metric database. The features don't apply to the other types of alerts. As mentioned previously, the primary objective of metric alerts is speed. If getting an alert in less than five minutes isn't of primary concern, you can use a log query alert instead.
 
-- [Dynamic thresholds](/azure/azure-monitor/platform/alerts-dynamic-thresholds): Dynamic thresholds look at the activity of the resource over a time period, and create upper and lower "normal behavior" thresholds. When the metric being monitored falls outside of these thresholds, you get an alert.
+- [Dynamic thresholds](/azure/azure-monitor/alerts/alerts-dynamic-thresholds): Dynamic thresholds look at the activity of the resource over a time period, and create upper and lower "normal behavior" thresholds. When the metric being monitored falls outside of these thresholds, you get an alert.
 
-- [Multisignal alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts): You can create a metric alert that uses the combination of two different inputs from two different resource types. For example, if you want to fire an alert when the CPU utilization of a VM is over 90 percent, and the number of messages in a certain Azure Service Bus queue feeding that VM exceeds a certain amount, you can do so without creating a log query. This feature works for only two signals. If you have a more complex query, feed your metric data into the Log Analytics workspace, and use a log query.
+- [Multisignal alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts/): You can create a metric alert that uses the combination of two different inputs from two different resource types. For example, if you want to fire an alert when the CPU utilization of a VM is over 90 percent, and the number of messages in a certain Azure Service Bus queue feeding that VM exceeds a certain amount, you can do so without creating a log query. This feature works for only two signals. If you have a more complex query, feed your metric data into the Log Analytics workspace, and use a log query.
 
-- [Multiresource alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts): Azure Monitor allows a single metric alert rule that applies to all VM resources. This feature can save you time because you don't need to create individual alerts for each VM. Pricing for this type of alert is the same. Whether you create 50 alerts for monitoring CPU utilization for 50 VMs, or one alert that monitors CPU utilization for all 50 VMs, it costs you the same amount. You can use these types of alerts in combination with dynamic thresholds as well.
+- [Multiresource alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts/): Azure Monitor allows a single metric alert rule that applies to all VM resources. This feature can save you time because you don't need to create individual alerts for each VM. Pricing for this type of alert is the same. Whether you create 50 alerts for monitoring CPU utilization for 50 VMs, or one alert that monitors CPU utilization for all 50 VMs, it costs you the same amount. You can use these types of alerts in combination with dynamic thresholds as well.
 
 Used together, these features can save time by minimizing alert notifications and the management of the underlying alerts.
 
@@ -123,4 +121,4 @@ Be sure to note the [limits on the number of alerts you can create](/azure/azure
 
 ### Best query experience
 
-If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Azure Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.
+If you're looking for trends across all your data, it makes sense to import all your data into Azure Monitor Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Azure Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.

@@ -1,5 +1,5 @@
 ---
-title: "Security Baseline sample policy statements"
+title: Security Baseline sample policy statements
 description: Refer to these sample Security Baseline policy statements to help draft policy statements to address your organization's needs.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Security Baseline sample policy statements
@@ -50,7 +50,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** No subnet containing protected data can be directly accessed over public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution capable of performing packet scanning and blocking functions.
 
-**Potential design option:** In Azure, secure public endpoints by deploying a [perimeter network between the public internet and your cloud-based network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Consider deployment, configuration, and automation of [Azure Firewall](/azure/firewall/overview).
+**Potential design option:** In Azure, secure public endpoints by deploying a [perimeter network between the public internet and your cloud-based network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Consider deployment, configuration, and automation of [Azure Firewall](/azure/firewall/overview).
 
 ## DDoS protection
 
@@ -58,7 +58,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints. No public-facing web site backed by IaaS should be exposed to the internet without DDoS.
 
-**Potential design option:** Use [Azure DDoS Protection Standard](/azure/virtual-network/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
+**Potential design option:** Use [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
 
 ## Secure on-premises connectivity
 
@@ -82,7 +82,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Azure Security Center](/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Azure Security Center](/azure/security-center/security-center-introduction) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 

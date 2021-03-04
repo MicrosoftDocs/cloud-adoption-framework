@@ -1,5 +1,5 @@
 ---
-title: "Impact of global market decisions"
+title: Impact of global market decisions
 description: Use the Cloud Adoption Framework for Azure to understand how global market decisions can affect the transformation journey to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # How will global market decisions affect the transformation journey?
@@ -35,7 +36,7 @@ It is equally important to understand the usage patterns of external users, like
 
 ## Next steps
 
-Learn about the [skills needed during the Strategy phase](./suggested-skills.md) of your cloud adoption journey.
+Learn about the [skills needed during the strategizing phase](./suggested-skills.md) of your cloud adoption journey.
 
 > [!div class="nextstepaction"]
-> [Skills needed during the Strategy phase](./suggested-skills.md)
+> [Skills needed during the strategizing phase](./suggested-skills.md)

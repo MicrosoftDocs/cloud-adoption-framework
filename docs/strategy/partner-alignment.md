@@ -1,5 +1,5 @@
 ---
-title: "Partner alignment strategy"
+title: Partner alignment strategy
 description: Use the Cloud Adoption Framework for Azure to include partner alignment in your strategy
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,19 +7,20 @@ ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore MSPs -->
 
 # Strategy for partner alignment
 
-The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In reality, it is not safe to assume that a self-service approach will be sufficient for all adoption activities.
+The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In practice, you can't assume that a self-service approach will be sufficient for all adoption activities.
 
 Successful cloud adoption programs typically involve at least one level of support. Some cloud adoption efforts may require support from multiple partners working together towards a common goal.
 
 ## Steps to align the partnership strategy
 
-During the early strategy phases of adoption, it's important to start aligning your partnership strategy. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
+It's important to start aligning your partnership strategy during the strategizing phase of adoption. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
 
 1. Start to understand support needs.
 1. Consider partnership options that fit your culture and needs.
@@ -41,13 +42,14 @@ Throughout the cloud adoption lifecycle, the various teams may require support t
 - **Manage:** Support or ongoing managed services to operate the cloud platform and the workloads hosted in the cloud.
 
 Few corporations have the diversity of skills required to support strategy, planning, readiness, adoption, governance, and management. Partners and other support models are often necessary to fill in the gaps in the team's skills and responsibilities.
-Various partnership options can help develop needed skills, augment staffing requirement, or completely offload specific processes.
+
+Various partnership options can help develop needed skills, augment staffing requirement, or completely offload-specific processes.
 
 ## Partnership options
 
 You are not alone in your cloud journey. There are several options to support your team throughout your cloud adoption journey.
 
-- **Azure solution providers (partners):** Get connected with Azure expert managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
+- **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
 - **Azure Migration Program (AMP):** The AMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
 
@@ -55,9 +57,9 @@ You are not alone in your cloud journey. There are several options to support yo
 
 Microsoft certified solution providers specialize in providing modern customer solutions base on Microsoft technologies across the world. Optimize your business in the cloud with help from an experienced partner.
 
-**[Find a cloud solution provider (CSP)](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
+**[Find a Cloud Solution Provider (CSP)](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
 
-Azure expert managed services providers (MSP) have undergone a third-party audit to validate a higher tier of capability, demonstrated through certified staff headcounts, customer references, annual consumption of Azure at scale, and other criteria.
+Azure expert-managed services providers (MSP) have undergone a third-party audit to validate a higher tier of capability, demonstrated through certified staff headcounts, customer references, annual consumption of Azure at scale, and other criteria.
 
 **[Find a managed service partner](https://www.microsoft.com/solution-providers/search?cacheid=16a3b49b-fef2-449d-bdf0-628008114cca).** An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
 
@@ -72,7 +74,8 @@ During a typical FastTrack for Azure engagement, Microsoft helps to define the b
 ### Azure Migration Program (AMP)
 
 The [Azure Migration Program (AMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
-The program leverages FastTrack for Azure and Azure solution providers to improve customer success during migration.
+
+The program uses FastTrack for Azure and Azure solution providers to improve customer success during migration.
 
 Watch this short video to get an overview of how the Azure Migration Program can help you.
 
@@ -88,7 +91,8 @@ If you have questions or need help, [create a support request](https://portal.az
 
 ## Shortlist of partner options
 
-During strategy development, its hard to define specific partnership needs. During development of the cloud adoption plan and skilling plan, those needs will come into focus.
+During strategy development, it's hard to define specific partnership needs. During development of the cloud adoption plan and skilling plan, those needs will come into focus.
+
 But, based on the culture and maturity of your team, it may be possible to decide on a partnership option that is more aligned with your expected needs.
 
 Choose one or more of the partnership options above to narrow down the options to investigate first.
@@ -96,7 +100,9 @@ Choose one or more of the partnership options above to narrow down the options t
 ## Begin contract and paperwork reviews
 
 As the shortlist of options is reviewed, there will likely be one or more partners that stand out. If there is a clear leader among the partners, start the process to review contracts and paperwork with the partner.
+
 The contracting process can take time. Reviewing legal terms ahead of time can remove one barrier to engagement when your teams need help the most.
+
 This is especially true if your company requires vendors to be added to an approved vendor list.
 
 ## Next steps

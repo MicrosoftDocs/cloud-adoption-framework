@@ -7,14 +7,21 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Get started: Understand and document foundational alignment decisions
 
-The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand. As you work through this guide, record those decisions by using the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle.
+The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand.
 
 > [!NOTE]
 > Selecting any of the following links might lead you to bounce around the table of contents for the Microsoft Cloud Adoption Framework for Azure, looking for fundamental concepts that you'll use later to help the team implement the associated guidance. Bookmark this page to come back to this checklist often.
+
+## Before you begin
+
+As you work through this guide, record our foundational decisions using the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle by clarifying how your cloud environment is configured and why.
+
+If you already have an environment running in Azure, the [Azure governance visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer) can help you accelerate your documentation. Gain insight into policies, Azure role-based access control (Azure RBAC), Azure Blueprints, subscriptions, and more. From the collected data the tool provides visibility on your hierarchy map, creates a tenant summary, and builds granular scope insights about management groups and subscriptions.
 
 ## Step 1: Understand how Azure works
 
@@ -47,7 +54,6 @@ Whatever cloud provider you choose, all cloud hosting and environmental decision
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of the workloads and assets that are slated for adoption in the cloud.
 - [Digital estate analysis](../digital-estate/approach.md) is an approach to documenting existing workloads and assets that are slated for adoption in the cloud. In Azure, the digital estate is best represented in a tool called [Azure Migrate](/azure/migrate/migrate-support-matrix).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -66,7 +72,6 @@ Hosting assets and workloads in the cloud can be simple, consisting of a single 
 
 - Understand the levels of the [portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md) to align fundamental terms.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -88,7 +93,6 @@ All existing workloads and assets should be properly named and tagged in accorda
 - [Review and update existing tags in Azure](/azure/azure-resource-manager/management/tag-resources).
 - [Enforce tagging policies in Azure](/azure/azure-resource-manager/management/tag-policies).
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -110,12 +114,11 @@ To ensure consistent alignment with the portfolio hierarchy decisions, it's impo
 
 Build a subscription strategy:
 
-- Start with [two subscriptions by design](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs, like shared services or sandbox subscriptions.
+- Start with [Two subscriptions by design](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs, like shared services or sandbox subscriptions.
 - [Manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as additional subscriptions are required to support the cloud adoption plan.
 - Establish [clear boundaries based on the portfolio hierarchy](../reference/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
 - When required, [move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) to adhere to the organization strategy.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -130,14 +133,11 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 - Complete the getting-started guides for organizational alignment based on these concepts.
 
-<!-- docsTest:ignore "Get started: Align your organization" -->
-
 **Guidance to support deliverable completion:**
 
 - Use the prior steps as a guide to evaluate the [portfolio hierarchy accountability guidance](../reference/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities might need to be delivered by dedicated organizations or virtual teams.
 - Use [Get started: Align your organization](./org-alignment.md) to apply the portfolio hierarchy accountability guidance to the RACI (responsible, accountable, consulted, and informed) diagram.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

@@ -1,5 +1,5 @@
 ---
-title: "Deploy workloads to Azure Stack Hub"
+title: Deploy workloads to Azure Stack Hub
 description: Learn to deploy workloads in your datacenter using Azure Stack Hub.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Deploy workloads to Azure Stack Hub
@@ -32,8 +33,6 @@ When the cloud runs in your datacenter, your stack hub administrators will need 
 ## Deploy workloads
 
 After the Azure Stack Hub administrator has properly configured your stack instance, migrations can continue as they would with most other Azure migration efforts. By using Azure Stack, your team can run any of the following types of migration:
-
-<!-- cSpell:ignore howto -->
 
 - [Ethereum blockchain network](/azure-stack/user/azure-stack-ethereum?view=azs-2002)
 - [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002)

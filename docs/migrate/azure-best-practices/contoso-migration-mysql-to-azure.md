@@ -7,7 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore mysqldump InnoDB binlog Navicat -->
@@ -45,16 +45,13 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Current application
 
-The MySQL database stores employee data that's used for all aspects of the company's HR department. A [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application is used as the front end to handle employee HR requests. Contoso has 100,000 employees worldwide, so uptime is important.
+The MySQL database stores employee data that's used for all aspects of the company's HR department. A [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application is used as the front end to handle employee HR requests. Contoso has 100,000 employees worldwide, so uptime is important.
 
 ### Proposed solution
 
 Use Azure Database Migration Service to migrate the database to an Azure Database for MySQL instance. Modify all applications and processes to use the new Azure Database for MySQL instance.
 
 ### Database considerations
-
-<!-- TODO: Verify GraphDBMS term -->
-<!-- docsTest:ignore ColumnStore GraphDBMS -->
 
 As part of the solution design process, Contoso reviewed the features in Azure for hosting its MySQL data. The following considerations helped the company decide to use Azure:
 
@@ -63,9 +60,9 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Azure Database for MySQL has the required compliance and privacy certifications that Contoso must meet for its auditors.
 - Report and application processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no public access) by using [Azure Private Link](/azure/mysql/concepts-data-access-security-private-link).
-- Contoso chose not to move to Azure Database for MySQL because it's looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
+- Contoso chose not to move to Azure Database for MySQL because it's considering using the MariaDB ColumnStore and graph database model in the future.
 - Aside from MySQL features, Contoso is a proponent of true open-source projects and chose not to use MySQL.
-- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either Azure ExpressRoute or Site-to-Site VPN).
 
 ### Solution review
 
@@ -79,7 +76,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 ## Proposed architecture
 
 ![Diagram shows the scenario architecture.](./media/contoso-migration-mysql-to-azure/architecture.png)
-_Figure 1: Scenario architecture._
+*Figure 1: Scenario architecture.*
 
 ### Migration process
 
@@ -89,9 +86,9 @@ Before you can migrate your MySQL databases, you need to ensure that those insta
 
 #### Supported versions
 
-MySQL uses the X.Y.Z versioning scheme. For example, X is the major version, Y is the minor version, and Z is the patch version.
+MySQL uses the `x.y.z` versioning scheme, where `x` is the major version, `y` is the minor version, and `z` is the patch version.
 
-Azure currently supports 10.2.25 and 10.3.16.
+Azure currently supports MySQL versions 10.2.25 and 10.3.16.
 
 Azure automatically manages upgrades for patch updates. Examples are 10.2.21 to 10.2.23. Minor and major version upgrades aren't supported. For example, upgrading from MySQL 10.2 to MySQL 10.3 isn't supported. If you want to upgrade from 10.2 to 10.3, take a dump and restore it to a server created with the new engine version.
 
@@ -100,7 +97,7 @@ Azure automatically manages upgrades for patch updates. Examples are 10.2.21 to 
 Contoso needs to set up a virtual network gateway connection from its on-premises environment to the virtual network where its MySQL database is located. This connection allows the on-premises application to access the database over the gateway when the connection strings are updated.
 
 ![Diagram shows the migration process.](./media/contoso-migration-mysql-to-azure/migration-process.png)
-_Figure 2: The migration process._
+*Figure 2: The migration process.*
 
 #### Migration
 
@@ -113,7 +110,7 @@ As a summary, they must do the following tasks:
 
 - Ensure all migration prerequisites are met:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration wizard: "Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full'." For more information, see this [MySQL website](https://go.microsoft.com/fwlink/?linkid=873009`).
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal.' please change it to 'full'.` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
   - User must have the `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or a VPN to your on-premises network.
@@ -122,7 +119,7 @@ As a summary, they must do the following tasks:
 - Create a new Database Migration Service project:
 
   ![Screenshot shows how to create a new Database Migration Service project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)
-  _Figure 3: An Azure Database Migration Service project._
+  *Figure 3: An Azure Database Migration Service project.*
 
 #### Migration by using native tools
 
@@ -132,7 +129,7 @@ As an alternative to using Azure Database Migration Service, Contoso can use com
   - Use the exclude-triggers option in mysqldump to prevent triggers from executing during import and improve performance.
   - Use the single-transaction option to set the translation isolation mode to `REPEATABLE READ`, and send a `START TRANSACTION` SQL statement before you dump data.
   - Use the disable-keys option in mysqldump to disable foreign key constraints before load. Removing constraints provides performance gains.
-  - Use Azure Blob storage to store the backup files and perform the restore from there for faster restore.
+  - Use Azure Blob Storage to store the backup files and perform the restore from there for faster restore.
   - Update application connection strings.
   - After the database is migrated, Contoso must update the connection strings to point to the new Azure Database for MySQL.
 
@@ -151,11 +148,11 @@ Contoso needs to:
 - Ensure that its new Azure Database for MySQL instance and databases are secure. For more information, see [Security in Azure Database for MySQL](/azure/mysql/concepts-security).
 - Review the firewall and virtual network configurations.
 - Set up Private Link so that all database traffic is kept inside Azure and the on-premises network.
-- Enable Azure Advanced Threat Protection.
+- Enable Microsoft Defender for Identity.
 
 ### Backups
 
-Ensure that the Azure Databases for MySQL instances are backed up by using geo-restore. In this way, backups can be used in a paired region if a regional outage occurs.
+Ensure that the Azure Database for MySQL instances are backed up by using geo-restore, so that backups can be used in a paired region if a regional outage occurs.
 
 > [!IMPORTANT]
 > Ensure that the Azure Database for MySQL resource has a resource lock to prevent it from being deleted. Deleted servers can't be restored.

@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency sample policy statements"
+title: Resource Consistency sample policy statements
 description: Use the Cloud Adoption Framework for Azure to get sample Resource Consistency policy statements that will help you draft your organization's policy statements.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Resource Consistency sample policy statements
@@ -41,7 +41,7 @@ The following sample policy statements address common business risks related to 
 
 **Policy statement:** Creation of new subscriptions or management groups for any mission-critical applications or protected data will require a review from the cloud governance team. Approved changes will be integrated into a proper blueprint assignment.
 
-**Potential design options:** Lock down administrative access to your organizations [Azure management groups](/azure/governance/management-groups) to only approved governance team members who will control the subscription creation and access control process.
+**Potential design options:** Lock down administrative access to your organizations [Azure management groups](/azure/governance/management-groups/) to only approved governance team members who will control the subscription creation and access control process.
 
 ## Manage updates to virtual machines
 
@@ -49,7 +49,9 @@ The following sample policy statements address common business risks related to 
 
 **Policy statement:** Governance tooling must enforce that automatic updates are enabled on all deployed VMs. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
 
-**Potential design options:** For Azure hosted VMs, you can provide consistent update management using the [update management solution in Azure Automation](/azure/automation/automation-update-management).
+<!-- docutune:ignore "consistent update management" -->
+
+**Potential design options:** For Azure hosted VMs, you can provide consistent update management using the [Update Management solution in Azure Automation](/azure/automation/update-management/overview).
 
 ## Deployment compliance
 
@@ -60,7 +62,7 @@ The following sample policy statements address common business risks related to 
 - Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
 - Deployment scripts must be maintained in central repository accessible by the cloud governance team for periodic review and auditing.
 
-**Potential design options:** Consistent use of [Azure Blueprints](/azure/governance/blueprints) to manage automated deployments allows consistent deployments of Azure resources that adhere to your organization's governance standards and policies.
+**Potential design options:** Consistent use of [Azure Blueprints](/azure/governance/blueprints/) to manage automated deployments allows consistent deployments of Azure resources that adhere to your organization's governance standards and policies.
 
 ## Monitoring
 
@@ -71,7 +73,7 @@ The following sample policy statements address common business risks related to 
 - Governance tooling must validate that all assets are included in monitoring for resource depletion, security, compliance, and optimization.
 - Governance tooling must validate that the appropriate level of logging data is being collected for all applications and data.
 
-**Potential design options:** [Azure Monitor](/azure/azure-monitor/overview) is the default monitoring service in Azure, and consistent monitoring can be enforced via [Azure Blueprints](/azure/governance/blueprints) when deploying resources.
+**Potential design options:** [Azure Monitor](/azure/azure-monitor/overview) is the default monitoring service in Azure, and consistent monitoring can be enforced via [Azure Blueprints](/azure/governance/blueprints/) when deploying resources.
 
 ## Disaster recovery
 

@@ -7,6 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
+ms.custom: internal
 ---
 
 # Define corporate policy for cloud governance
@@ -18,8 +19,7 @@ Once you've analyzed the known risks and related risk tolerances for your organi
 In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud governance is built on similar concepts.
 
 ![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-large.png)
-
-_Figure 1: Corporate governance and governance disciplines._
+*Figure 1: Corporate governance and governance disciplines.*
 
 The image above illustrates the relationship between business risk, policy and compliance, and monitoring and enforcement mechanisms that need to interact as part of your governance strategy. The Five Disciplines of Cloud Governance allow you to manage these interactions and realize your strategy.
 

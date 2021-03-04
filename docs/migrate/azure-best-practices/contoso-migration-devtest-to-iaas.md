@@ -7,11 +7,10 @@ ms.date: 07/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: azure-migrate
+ms.custom: think-tank
 ---
 
-<!-- docsTest:ignore SmartHotel360 -->
-<!-- cSpell:ignore vcenter contosohost contosodc NSGs agentless osTicket WEBVMDEV SQLVMDEV OSTICKETWEBDEV OSTICKETMYSQLDEV -->
+<!-- cSpell:ignore vcenter contosohost contosodc NSGs agentless WEBVMDEV SQLVMDEV OSTICKETWEBDEV OSTICKETMYSQLDEV -->
 
 # Rehost an on-premises dev/test environment on Azure Virtual Machines via Azure Migrate
 
@@ -25,7 +24,7 @@ Contoso has several options available for moving dev/test environments to Azure:
 
 | Migration options | Outcome |
 | --- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | [Assess](/azure/migrate/tutorial-assess-vmware) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <br><br> Run dev/test servers by using Azure infrastructure as a service (IaaS). <br><br> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | [Assess](/azure/migrate/tutorial-assess-vmware-azure-vm) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <br><br> Run dev/test servers by using Azure infrastructure as a service (IaaS). <br><br> Manage VMs with [Azure Resource Manager](/azure/azure-resource-manager/management/overview). |
 | [Azure DevTest Labs](/azure/devtest-labs/devtest-lab-overview) | Quickly provision development and test environments. <br><br> Minimize waste with quotas and policies. <br><br> Set automated shutdowns to minimize costs. <br><br> Build Windows and Linux environments. |
 
 > [!NOTE]
@@ -36,7 +35,7 @@ Contoso has several options available for moving dev/test environments to Azure:
 The development leadership team has outlined what it wants to achieve with this migration. It aims to quickly move dev/test capabilities out of an on-premises datacenter and no longer purchase hardware to develop software. It also seeks to empower developers to create and run their environments without involvement from IT.
 
 > [!NOTE]
-> Contoso will use the [Pay-As-You-Go Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p) for its environments. Each active Visual Studio subscriber on the team can use the Microsoft software included with the subscription virtual machines for dev/test at no extra charge. Contoso will just pay the Linux rate for VMs that it runs. That includes VMs with SQL Server, SharePoint Server, or other software that's normally billed at a higher rate.
+> Contoso will use the [Pay-As-You-Go Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p/) for its environments. Each active Visual Studio subscriber on the team can use the Microsoft software included with the subscription virtual machines for dev/test at no extra charge. Contoso will just pay the Linux rate for VMs that it runs. That includes VMs with SQL Server, SharePoint Server, or other software that's normally billed at a higher rate.
 
 ## Migration goals
 
@@ -66,8 +65,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
   ![Diagram of the proposed scenario architecture, with on-premises and virtual machines.](./media/contoso-migration-devtest-to-iaas/architecture.png)
-  
-  _Figure 1: Proposed architecture._
+  *Figure 1: Proposed architecture.*
 
 ### Database considerations
 
@@ -100,14 +98,13 @@ Contoso will migrate its development front end and database to Azure VMs by usin
 - After the development VMs are up and running in Azure, Contoso will reconfigure its development workstations to point at the VMs now running in Azure.
 
 ![Diagram of the migration process.](./media/contoso-migration-devtest-to-iaas/migration-process-az-migrate.png)
-
-_Figure 2: An overview of the migration process._
+*Figure 2: An overview of the migration process.*
 
 ### Azure services
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](/azure/migrate) | The service orchestrates and manages migrating on-premises applications and workloads and AWS or GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created and incur charges when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
+| [Azure Migrate: Server Migration](/azure/migrate/) | The service orchestrates and manages migrating on-premises applications and workloads and AWS or GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created and incur charges when the migration occurs and the VMs are running in Azure. Learn more about [charges and pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
 
 ## Prerequisites
 
@@ -115,7 +112,7 @@ This is what Contoso needs to run this scenario:
 
 | Requirements | Details |
 | --- | --- |
-| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to take advantage of reducing costs up to 80 percent. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the admin of your subscription, and you can perform all actions. <br><br> If you use an existing subscription but you're not the admin, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with role-based access control (RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p/) to take advantage of reducing costs up to 80 percent. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the admin of your subscription, and you can perform all actions. <br><br> If you use an existing subscription but you're not the admin, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control (Azure RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](#prerequisites) for Azure Migrate: Server Migration. |
 | **On-premises servers** | On-premises vCenter servers should be running version 5.5, 6.0, 6.5, or 6.7. <br><br> ESXi hosts should run version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs should be running on the ESXi host. |
 
@@ -136,7 +133,7 @@ Contoso needs to migrate the VMs to a virtual network where the Azure VMs will r
 
 1. Set up a network: Contoso already set up a network that can be for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md).
 
-    - The VMs to be migrated are used for development. They will migrate to the Azure development virtual network (`VNET-DEV-EUS2`) in the primary East US 2 region.
+    - The VMs to be migrated are used for development. They will migrate to the Azure development virtual network (`VNET-DEV-EUS2`) in the primary `East US 2` region.
     - Both VMs will be placed in the `ContosoDevRG` resource group, which is used for development resources.
     - The application front-end VMs (`WEBVMDEV` and `OSTICKETWEBDEV`) will migrate to the front-end subnet (`DEV-FE-EUS2`), in the development virtual network.
     - The application database VM (`SQLVMDEV` and `OSTICKETMYSQLDEV`) will migrate to the database subnet (`DEV-DB-EUS2`), in the development virtual network.
@@ -145,41 +142,36 @@ Contoso needs to migrate the VMs to a virtual network where the Azure VMs will r
 
     1. From Azure Migrate, download the .OVA image and import it into VMware.
 
-       ![Screenshot of the screen to download the .OVA file.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)
-
-       _Figure 3: Download the .OVA file._
+       ![Screenshot of downloading the .OVA file.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)
+       *Figure 3: Download the .OVA file.*
 
     1. Start the imported image and configure the tool, including the following steps:
 
        - Set up the prerequisites.
 
          ![Screenshot of the section for setting up prerequisites.](./media/contoso-migration-devtest-to-iaas/migration-setup-prerequisites.png)
-
-         _Figure 4: Setting up the prerequisites._
+         *Figure 4: Setting up the prerequisites.*
 
        - Point the tool to the Azure subscription.
 
          ![Screenshot of the section for setting up discovery for Azure Migrate.](./media/contoso-migration-devtest-to-iaas/migration-register-azure.png)
-
-         _Figure 5: The Azure subscription._
+         *Figure 5: The Azure subscription.*
 
        - Set the VMware vCenter credentials.
 
          ![Screenshot of the section for setting VMware vCenter credentials.](./media/contoso-migration-devtest-to-iaas/migration-vcenter-server.png)
-
-         _Figure 6: Setting the VMware vCenter credentials._
+         *Figure 6: Setting the VMware vCenter credentials.*
 
        - Add any Windows-based credentials for discovery.
 
          ![Screenshot of the section for discovering applications and dependencies on VMs.](./media/contoso-migration-devtest-to-iaas/migration-credentials.png)
-
-         _Figure 7: Adding Windows-based credentials for discovery._
+         *Figure 7: Adding Windows-based credentials for discovery.*
 
 3. When you complete the configuration, the tool will take some time to enumerate all the VMs. You'll see them populate the Azure Migrate tool in Azure when this process finishes.
 
 **Need more help?**
 
-Learn how to [set up the Azure Migrate: Server Migration tool](/azure/migrate).
+Learn how to [set up the Azure Migrate: Server Migration tool](/azure/migrate/).
 
 ### Prepare on-premises VMs
 
@@ -192,7 +184,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
     - Check that RDP or SSH is allowed in the operating system firewall.
     - Install SSH via the following command: `sudo apt-get ssh install -y`.
 
-2. For access over site-to-site VPN, they:
+2. For access over Site-to-Site VPN, they:
 
     - Enable RDP or SSH on the on-premises VM before migration.
     - Check that RDP or SSH is allowed in the operating system firewall.
@@ -200,7 +192,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 3. Install the [Azure Windows agent](/azure/virtual-machines/extensions/agent-windows) and the [Azure Linux agent](/azure/virtual-machines/extensions/agent-linux).
 
-For Windows, there shouldn't be Windows updates pending on the VM when you're triggering a migration. If there are, the admins won't be able to log in to the VM until the updates finish. After migration, the admins can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+For Windows, there shouldn't be Windows updates pending on the VM when you're triggering a migration. If there are, the admins won't be able to sign in to the VM until the updates finish. After migration, the admins can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -213,16 +205,14 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**. Then select **Replicate**.
 
     ![Screenshot that shows the Replicate button under migration tools.](./media/contoso-migration-devtest-to-iaas/select-replicate.png)
-
-    _Figure 8: Replicating VMs._
+    *Figure 8: Replicating VMs.*
 
 2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
 3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up, and then select **OK**.
 
     ![Screenshot that shows source settings and the box for appliance name.](./media/contoso-migration-devtest-to-iaas/source-settings.png)
-
-    _Figure 9: The source settings._
+    *Figure 9: The source settings.*
 
 4. In **Virtual machines**, select the machines that you want to replicate.
     - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium or standard) recommendations from the assessment results. To do this, in **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
@@ -230,17 +220,16 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
     - If you selected to use the assessment, select the VM group and assessment name.
 
       ![Screenshot that shows assessment selection for virtual machines.](./media/contoso-migration-devtest-to-iaas/select-assessment.png)
-
-      _Figure 10: How to set up the prerequisites._
+      *Figure 10: How to set up the prerequisites.*
 
 5. In **Virtual machines**, search for VMs as needed and check each VM you want to migrate. Then select **Next: Target settings**.
 
-6. In **Target settings**, select the subscription and target region to which you'll migrate. Then specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network or subnet to which the Azure VMs will be joined after migration.
+6. In **Target settings**, select the subscription and target region to which you'll migrate. Then specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the virtual network or subnet to which the Azure VMs will be joined after migration.
 
 7. In **Azure Hybrid Benefit**, select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**. Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
       > [!NOTE]
-      > In the case of Contoso, the admins will select **No** to Azure Hybrid Benefit because this is an Azure Dev/Test subscription. This means they'll pay for the compute only. [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) should be used only for production systems that have Software Assurance benefits.
+      > In the case of Contoso, the admins will select **No** to Azure Hybrid Benefit because this is an Azure Dev/Test subscription. This means they'll pay for the compute only. [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) should be used only for production systems that have Software Assurance benefits.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
@@ -264,23 +253,20 @@ Contoso admins run a quick test migration and then a full migration to migrate t
 1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
 
     ![Screenshot that shows the selection to test migrated servers.](./media/contoso-migration-devtest-to-iaas/test-migrated-servers.png)
-
-    _Figure 11: Testing migrated servers._
+    *Figure 11: Testing migrated servers.*
 
 2. Select and hold (or right-click) the VM to test, and then select **Test migrate**.
 
     ![Screenshot that shows the button for testing migration.](./media/contoso-migration-devtest-to-iaas/test-migrate.png)
+    *Figure 12: Testing the migration.*
 
-    _Figure 12: Testing the migration._
-
-3. In **Test Migration**, select the Azure virtual network in which the Azure VM will be located after the migration. We recommend that you use a nonproduction virtual network.
+3. In **Test Migration**, select the virtual network in which the Azure VM will be located after the migration. We recommend that you use a nonproduction virtual network.
 4. The **Test migration** job starts. Monitor the job in the portal notifications.
 5. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a **-Test** suffix.
 6. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines**, and then select **Clean up test migration**.
 
     ![Screenshot that shows the selection for cleaning up the test migration.](./media/contoso-migration-devtest-to-iaas/clean-up.png)
-
-    _Figure 13: Cleaning up the test migration._
+    *Figure 13: Cleaning up the test migration.*
 
 ### Migrate the VMs
 
@@ -289,8 +275,7 @@ Now Contoso admins run a full migration.
 1. In the Azure Migrate project, select **Servers** > **Azure Migrate: Server Migration** > **Replicating servers**.
 
     ![Screenshot that shows the selections for replicating servers.](./media/contoso-migration-devtest-to-iaas/replicating-servers.png)
-
-    _Figure 14: Replicating servers._
+    *Figure 14: Replicating servers.*
 
 2. In **Replicating machines**, select and hold (or right-click) the VM, and then select **Migrate**.
 3. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**. By default, Azure Migrate shuts down the on-premises VM and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This ensures no data loss. If you don't want to shut down the VM, select **No**.
@@ -329,7 +314,7 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-Contoso will ensure that all development Azure resources are created through this dev/test subscription to save 80 percent. The admins will enable [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+Contoso will ensure that all development Azure resources are created through an Azure Dev/Test subscription to save 80 percent. The admins will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 
 ## Conclusion
 

@@ -1,5 +1,5 @@
 ---
-title: "Security Baseline discipline template"
+title: Security Baseline discipline template
 description: Use this template as a starting point for documenting and communicating policy statements that govern security related issues in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,12 +7,12 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Security Baseline discipline template
 
-The first step to implementing change is communicating what is desired. The same is true when changing governance practices. The template below provides a starting point for documenting and communicating policy statements that govern security related issues in the cloud.
+The first step to implementing change is communicating what is desired. The same is true when changing governance practices. The following template provides a starting point for documenting and communicating policy statements that govern security related issues in the cloud.
 
 As your discussions progress, use this template's structure as a model for capturing the business risks, risk tolerances, compliance processes, and tooling needed to define your organization's Security Baseline policy statements.
 

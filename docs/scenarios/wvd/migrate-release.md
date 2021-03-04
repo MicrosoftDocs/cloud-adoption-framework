@@ -1,12 +1,13 @@
 ---
-title: "Windows Virtual Desktop post-deployment and release tasks"
-description: Use the Cloud Adoption Framework for Azure to learn Windows Virtual Desktop migration best practices to reduce complexity and standardize the migration process.
+title: Windows Virtual Desktop post-deployment and release tasks
+description: Use the Cloud Adoption Framework best practices to learn about the release process for the migration or deployment of Windows Virtual Desktop instances.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Windows Virtual Desktop post-deployment

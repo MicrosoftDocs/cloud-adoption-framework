@@ -1,12 +1,13 @@
 ---
-title: "Understand the function of cloud strategy"
+title: Understand the function of cloud strategy
 description: Understand how cloud strategy functions provide alignment between business outcomes and cloud adoption efforts.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/05/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/05/2020
+ms.custom: internal
 ---
 
 # Cloud strategy functions
@@ -31,8 +32,8 @@ This helps guide critical prioritization and discovery efforts during cloud adop
 
 ## Preparation
 
-- [Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure).
-- [Learn how the Cloud Adoption Framework](/learn/modules/microsoft-cloud-adoption-framework-for-azure) can help you align the strategy for business, people, and technology.
+- [Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure/).
+- [Learn how the Cloud Adoption Framework](/learn/modules/microsoft-cloud-adoption-framework-for-azure/) can help you align the strategy for business, people, and technology.
 - Review the [cloud adoption strategy](../strategy/index.md) process.
 - Download the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 

@@ -1,13 +1,13 @@
 ---
-title: "Architectural decision guides"
+title: Architectural decision guides
 description: Use these core cloud deployment infrastructure component patterns and models to support your specific cloud deployment scenarios.
-author: rotycenh
+author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Architectural decision guides
@@ -20,7 +20,7 @@ These decision guides supplement the sample governance journeys by providing alt
 
 ## Decision guidance categories
 
-The following categories represent foundational technologies for all cloud deployments. The sample governance journeys make design decisions related to these technologies based on the needs of example businesses, and some of these decisions might not match your own organization's needs. The sections below discuss alternative options for each category, allowing you to choose a pattern or model better suited to your requirements.
+The following categories represent foundational technologies for all cloud deployments. The sample governance journeys make design decisions related to these technologies based on the needs of example businesses, and some of these decisions might not match your organization's needs. The following sections discuss alternative options for each category, allowing you to choose a pattern or model better suited to your requirements.
 
 [Subscriptions](./subscriptions/index.md): Plan your cloud deployment's subscription design and account structure to match your organization's ownership, billing, and management capabilities.
 

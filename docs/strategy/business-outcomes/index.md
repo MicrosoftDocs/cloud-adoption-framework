@@ -1,12 +1,13 @@
 ---
-title: "Business outcomes from transformation journeys"
+title: Business outcomes from transformation journeys
 description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 03/27/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # What business outcomes are associated with transformation journeys?
@@ -17,6 +18,12 @@ During any cloud transformation, the ability to speak in terms of business outco
 
 To learn more about business outcomes and the business outcome template, see [Documenting business outcomes](./business-outcome-template.md), or download the [business outcome template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/business-outcome-template.xlsx).
 
+## Optimize your cloud investment using cloud economics
+
+What are the fundamentals of cloud economics in Azure? Whether you're running existing workloads or architecting new solutions in Azure—learn best practices guidance to navigate the economics of the cloud for your organization, and optimize your operating costs in Azure based on your specific workloads. Get started with successfully building your cloud business case with key financial and technical guidance, and maximize the full benefit of your cloud investment.
+
+Learn more about [how cloud economics works](https://azure.microsoft.com/overview/cloud-economics/).
+
 ## Prepare for conversations with different personas
 
 The following are a few business outcomes that tend to trigger conversations with various personas:
@@ -25,6 +32,7 @@ The following are a few business outcomes that tend to trigger conversations wit
 - **Marketing:** Acquire and retain customers, build reputation.
 - **Sales:** Accelerate sales, improve customer lifetime value.
 - **Human resources:** Retain, recruit, and empower employees.
+- **Executive leadership:** Meeting market growth requirements and environmental sustainability metrics.
 
 ## Sample outcomes by category
 
@@ -44,7 +52,7 @@ Today's fast-changing business environment places a premium on time. The ability
 
 View samples of [agility outcomes](./agility-outcomes.md).
 
-<!-- docsTest:ignore "global reach" -->
+<!-- docutune:ignore "global reach" -->
 
 ### Reach outcomes
 
@@ -63,6 +71,12 @@ Learn more about [customer engagement outcomes](./engagement-outcomes.md).
 Performance and reliability are assumed. When either falters, reputation damage can be painful and long-lasting.
 
 Learn more about [performance outcomes](./performance-outcomes.md).
+
+### Sustainability goals
+
+Organizations are increasingly discussing environmental goals and sustainability targets.
+
+Learn more about [sustainability goals](./sustainability.md).
 
 Each of the business outcomes listed in the preceding categories can help facilitate a focused conversation among your business and technical team members. However, you shouldn't limit your conversations to these generic samples. Understanding the unique needs of your own business, and building outcomes that match, maximizes the value of a cloud transformation.
 

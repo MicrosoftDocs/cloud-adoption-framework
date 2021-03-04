@@ -1,5 +1,5 @@
 ---
-title: "Identity Baseline policy compliance processes"
+title: Identity Baseline policy compliance processes
 description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support an Identity Baseline discipline.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Identity Baseline policy compliance processes
@@ -20,7 +20,7 @@ Identity management tools offer capabilities and features that greatly assist us
 
 **Initial risk assessment and planning:** As part of your initial adoption of the Identity Baseline discipline, identify your core business risks and tolerances related to cloud identity management. Use this information to discuss specific technical risks with members of your IT teams responsible for managing identity services and develop a baseline set of security policies for mitigating these risks to establish your initial governance strategy.
 
-**Deployment planning:** Before any deployment, review the access needs for any workloads and develop an access control strategy that aligns with established corporate identity policy. Document any gaps between needs and current policy to determine if policy updates are required, and modify policy as needed.
+**Deployment planning:** Before any deployment, review the access needs for any workloads and develop an access control strategy that aligns with established corporate identity policy. Document any gaps between needs and current policy to determine whether policy updates are required, and modify policy as needed.
 
 **Deployment testing:** As part of the deployment, the cloud governance team, in cooperation with IT teams responsible for identity services, will be responsible for reviewing the deployment to validate identity policy compliance.
 
@@ -32,7 +32,7 @@ This planning process is also a good time to evaluate the current membership of 
 
 **Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest identity policy requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they're in sync with the latest corporate policy statements.
 
-**Monthly audit and reporting reviews:** On a monthly basis, perform an audit on all cloud deployments to assure their continued alignment with identity policy. Use this review to check user access against business change to ensure users have correct access to cloud resources, and ensure access strategies such as RBAC are being followed consistently. Identify any privileged accounts and document their purpose. This review process produces a report for the cloud strategy team and each cloud adoption team detailing overall adherence to policy. The report is also stored for auditing and legal purposes.
+**Monthly audit and reporting reviews:** On a monthly basis, perform an audit on all cloud deployments to assure their continued alignment with identity policy. Use this review to check user access against business change to ensure users have correct access to cloud resources, and ensure access strategies such as Azure RBAC are being followed consistently. Identify any privileged accounts and document their purpose. This review process produces a report for the cloud strategy team and each cloud adoption team detailing overall adherence to policy. The report is also stored for auditing and legal purposes.
 
 ## Processes for ongoing monitoring
 

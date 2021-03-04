@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Inventory and visibility in cloud management
@@ -35,7 +36,7 @@ These challenges stem from a small number of questions that can be answered only
 - Were the changes intentional? Malicious?
 - How did changes affect performance telemetry?
 
-It is difficult, if not impossible, to answer these questions without a rich, centralized source for logs and telemetry data. To enable cloud management by ensuring the consistent configuration that's required to centralize the data, the baseline service must first start by defining the processes. The processes should capture how such a configuration enforces data collection to support the components of inventory and visibility in the next section.
+It's difficult, if not impossible, to answer these questions without a rich, centralized source for logs and telemetry data. To enable cloud management by ensuring the consistent configuration that's required to centralize the data, the baseline service must first start by defining the processes. The processes should capture how such a configuration enforces data collection to support the components of inventory and visibility in the next section.
 
 ## Components of inventory and visibility
 
@@ -57,7 +58,7 @@ If no one knows that an asset exists, it's difficult to manage the asset. Before
 
 ### Central logging
 
-Centralized logging is critical to the visibility that's required day to day by the operations management teams. All assets deployed to the cloud should record logs to a central location. In Azure, that central location is log analytics. The centralization of logging drives reports about change management, service health, configuration, and most other aspects of IT operations.
+Centralized logging is critical to the visibility that's required day to day by the operations management teams. All assets deployed to the cloud should record logs to a central location. In Azure, that central location is Log Analytics. The centralization of logging drives reports about change management, service health, configuration, and most other aspects of IT operations.
 
 Enforcing the consistent use of central logging is the first step toward establishing repeatable operations. Enforcement can be accomplished through corporate policy. When possible, however, enforcement should be automated to ensure consistency.
 
@@ -70,6 +71,8 @@ Change is the one constant in a technology environment. Awareness and understand
 Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets that support the workload.
 
 The ongoing health and operations of the network, DNS, operating systems, and other foundational aspects of the environment are critical data points that factor into the overall health of any workload.
+
+<!-- docutune:ignore "cloud management methodology" "service management integration" -->
 
 ## Processes
 
@@ -99,7 +102,7 @@ Regardless of the cloud platform, the five components of inventory and visibilit
 
 ### Share visibility
 
-Data without action produces little return. Cloud management might expand beyond cloud-native tools and processes. To accommodate broader processes, a cloud management baseline might need to be enhanced to include reporting, IT Service Management integration, or data centralization. Cloud management might need to include one or more of the following during various phases of operational maturity.
+Data without action produces little return. Cloud management might expand beyond cloud-native tools and processes. To accommodate broader processes, a cloud management baseline might need to be enhanced to include reporting, IT service management integration, or data centralization. Cloud management might need to include one or more of the following during various phases of operational maturity.
 
 ### Report
 

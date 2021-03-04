@@ -7,9 +7,10 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore Netezza Teradata Exadata Giga GigaOM MPP -->
+<!-- cSpell:ignore Giga -->
 
 # Azure Synapse Analytics solutions
 
@@ -19,9 +20,9 @@ Many organizations are ready to take the step of shifting expensive tasks like i
 
 ![Design and performance for Teradata migrations](../../../_images/analytics/analytics-solutions-overview.png)
 
-Azure Synapse Analytics provides best-of-class relational database performance through techniques like massively parallel processing and automatic in-memory caching. The results of this approach can be seen in independent benchmarks like the one run recently by [GigaOM](https://gigaom.com), which compares Azure Synapse to other popular cloud data warehouse offerings.
+Azure Synapse Analytics provides best-of-class relational database performance through techniques like massively parallel processing and automatic in-memory caching. The results of this approach can be seen in independent benchmarks like the one run recently by [GigaOm](https://gigaom.com), which compares Azure Synapse to other popular cloud data warehouse offerings.
 
-Organizations that have already migrated to Synapse Analytics have seen many benefits, including:
+Organizations that have already migrated to Azure Synapse Analytics have seen many benefits, including:
 
 - Improved performance and price for performance.
 - Increased agility and shorter time to value.

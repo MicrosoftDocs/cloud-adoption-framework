@@ -1,17 +1,18 @@
 ---
-title: "Get started: Unblock environment design and configuration"
-description: Get started designing and configuring your cloud environment.
+title: "Get started: Environment design and configuration"
+description: Get started with unblocking the design and configuration of your cloud environment.
 author: JanetCThomas
 ms.author: janet
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
-# Get started: Design and configuration
+# Get started: Environment design and configuration
 
-Environmental design and configuration are the most common blockers to adoption efforts focused on migration or innovation. Quickly implementing a design that supports your long-term adoption plan can be difficult. This article establishes an approach and series of steps to help overcome common blockers and accelerate your adoption efforts.
+Environment design and configuration are the most common blockers to adoption efforts that are focused on migration or innovation. Quickly implementing a design that supports your long-term adoption plan can be difficult. This article establishes an approach and series of steps that help to overcome common blockers and accelerate your adoption efforts.
 
 ![Get started with design and configuration](../_images/get-started/environment-map.png)
 
@@ -29,11 +30,10 @@ A clear and concise business strategy helps the cloud platform team understand w
 
 **Guidance to support deliverable completion:**
 
-- [Motivations](../strategy/motivations.md): The first step to strategic alignment is to agree on the motivations that drive the migration effort. Start by understanding and categorizing motivations and common themes from various stakeholders across business and IT.
-- [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics you can use to measure the overall transformation.
-- [Building a cloud migration business case](../strategy/cloud-migration-business-case.md): Now you can start to develop a migration business case with clear guidance on formulas and tools that can aid in business justification.
+- [Understand business motivations](../strategy/motivations.md): The first step to strategic alignment is to agree on the motivations that drive the migration effort. Start by understanding and categorizing motivations and common themes from various stakeholders across business and IT.
+- [Document business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, you can capture the desired business outcomes. This information provides clear metrics you can use to measure the overall transformation.
+- [Build a cloud migration business case](../strategy/cloud-migration-business-case.md): Start developing a business case for migration, including clear guidance on the formulas and tools that help your business justification.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Informed teams |
@@ -58,7 +58,6 @@ The output of the digital estate assessment provides the cloud platform team wit
 - [Inventory existing systems](../digital-estate/inventory.md): Understanding the current state from a programmatic, data-driven approach is the first step. Find and gather data to enable all assessment activities.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): Streamline assessment efforts to focus on a qualitative analysis of all assets, possibly even to support the business case. Then add a deep qualitative analysis for the first 10 workloads to be migrated.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Informed teams |
@@ -87,7 +86,6 @@ A review of the short-term cloud adoption plan and backlog helps the cloud platf
 - [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define efforts for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity, and releases for the migrated workloads.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Informed teams |
@@ -110,7 +108,6 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 - [Choose a landing zone](../ready/landing-zone/index.md): Use this section to find the right approach to deploying a landing zone based on your short-term adoption plan. Then deploy that standardized code base.
 - [Expand your landing zone](../ready/considerations/index.md): Don't attempt to meet long-term governance, security, or operation constraints yet, unless they're required to support the short-term adoption plan.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -128,15 +125,14 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 - Deploy an initial governance foundation.
 - Complete a governance benchmark to plan for future improvements.
 - Timeline risks:
-  - Improvement policies and governance implementation can add one to four weeks per discipline.
+  - Improvement of policies and governance implementation can add one to four weeks per discipline.
 
 **Guidance to support deliverable completion:**
 
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then build the disciplines required to deliver on governance across your cloud enterprise adoption efforts.
 - [Governance benchmark tool](../govern/benchmark.md): Find gaps in your current state so that you can plan for the future.
-- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the Identity Baseline discipline, Security Baseline discipline, and Deployment Acceleration discipline that are required to create a governance minimum viable product (MVP) to serve as the foundation for all adoption.
+- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the governance disciplines that are required to create a governance minimum viable product (MVP) to serve as the foundation for all adoption.
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
@@ -145,9 +141,7 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 
 ## Step 6: Implement an operations baseline
 
-Operations management is another requirement to reach migration success. Migrating to the cloud without an understanding of ongoing operations is a risky decision. In parallel with migration, you should start planning for longer-term operations.
-
-As those plans are made, they feed back into the parallel efforts of the cloud platform team.
+Migrating to the cloud without understanding ongoing operations is risky. In parallel with migration, start planning for longer-term operations management. Feed those plans back into the parallel efforts of the cloud platform team.
 
 **Deliverables:**
 
@@ -155,8 +149,8 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 - Complete the operations management workbook.
 - Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
-  - Review the workbook: estimate one hour per application owner.
-  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
+  - Review the workbook: Estimate one hour per application owner.
+  - Complete the Microsoft Azure Well-Architected Review assessment: Estimate one hour per application.
 
 **Guidance to support deliverable completion:**
 
@@ -165,7 +159,6 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 - [Expand the management baseline](../manage/best-practices.md)
 - [Get specific with advanced operations](../manage/design-principles.md)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
@@ -191,7 +184,6 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 - [Expand landing zone operations](../ready/considerations/landing-zone-operations.md)
 - [Expand landing zone security](../ready/considerations/landing-zone-security.md)
 
-<!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |

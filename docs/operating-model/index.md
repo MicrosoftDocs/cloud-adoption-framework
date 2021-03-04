@@ -1,5 +1,5 @@
 ---
-title: "Understand cloud operating models"
+title: Understand cloud operating models
 description: Understand cloud operating models and how they impact your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,10 +7,10 @@ ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.custom: operating-model
+ms.custom: internal, operating-model
 ---
 
-<!-- docsTest:ignore GRC -->
+<!-- docutune:casing GRC -->
 <!-- cspell:ignore reimagine -->
 
 # Understand cloud operating models

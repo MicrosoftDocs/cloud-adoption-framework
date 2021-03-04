@@ -3,10 +3,11 @@ title: Function of cloud security policy and standards
 description: Understand the function of cloud security policy and standards.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Function of cloud security policy and standards
@@ -20,7 +21,7 @@ The policies and standards should:
 
 **Security policy** should reflect long term sustainable objectives that align to the organizations security strategy and risk tolerance. Policy should always address:
 
-- Regulatory compliance requirements and current compliance status (requirements met, risks accepted, etc.)
+- Regulatory compliance requirements and current compliance status (requirements met, risks accepted, and so on.)
 - Architectural assessment of current state and what is technically possible to design, implement, and enforce
 - Organizational culture and preferences
 - Industry best practices

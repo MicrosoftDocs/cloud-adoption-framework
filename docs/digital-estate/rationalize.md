@@ -1,5 +1,5 @@
 ---
-title: "Rationalize the digital estate"
+title: Rationalize the digital estate
 description: Use cloud rationalization to evaluate your digital assets and determine the best approach to hosting them in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Rationalize the digital estate
@@ -32,7 +32,7 @@ For guidance about building a list of qualitative analysis questions, see [Appro
 
 **Rationalization decision:** In the hands of an experienced rationalization team, the qualitative and quantitative data creates clear decisions. Unfortunately, teams with a high degree of rationalization experience are expensive to hire or take months to train.
 
-## Rationalization at enterprise scale
+## Rationalization at enterprise-scale
 
 If this effort is time consuming and daunting for a 50-VM digital estate, imagine the effort that's required to drive business transformation in an environment with thousands of VMs and hundreds of applications. The human effort required can easily exceed 1,500 FTE hours and nine months of planning.
 

@@ -3,10 +3,11 @@ title: Function of cloud security incident preparation
 description: Understand the function of cloud security incident preparation.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Function of cloud security incident preparation
@@ -24,10 +25,10 @@ Practice exercises have become powerful tools to ensure stakeholders are informe
 - **Technical team members** to investigate and remediate incident.
 - **Business continuity integration** with organizational functions that own crisis management, disaster recovery, and business continuity plans.
 
-<!-- docsTest:ignore "Incident Response Reference Guide (IRRG) " -->
+<!-- docutune:casing "Incident Response Reference Guide" "IRRG" -->
 <!-- cSpell:ignore IRRG -->
 
-Microsoft has published lessons learned and recommendations in the [incident response reference guide (IRRG)](https://aka.ms/IRRG).
+Microsoft has published lessons learned and recommendations in the [Incident Response Reference Guide (IRRG)](https://aka.ms/IRRG).
 
 ## Team composition and key relationships
 

@@ -1,5 +1,5 @@
 ---
-title: "Review and compare common cloud operating models"
+title: Review and compare common cloud operating models
 description: Learn how other companies have implemented their cloud operating model and review guidance that can support your efforts.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
-ms.custom: operating-model
+ms.custom: internal, operating-model
 ---
 
 # Compare common cloud operating models
@@ -16,7 +16,7 @@ Operating models are unique and specific to the business they support, based on 
 
 ## Operating model comparison
 
-The following image maps common operating models based on the range of complexity, from least complex (decentralized) to most complex (global operations). The tables below compares the same operating models based on relative value of a few other attributes.
+The following image maps common operating models based on the range of complexity, from least complex (decentralized) to most complex (global operations). The following tables compares the same operating models based on relative value of a few other attributes.
 
 ![Degrees of operating model complexity](../_images/operating-model/operating-model-complexity.png)
 
@@ -49,17 +49,17 @@ While many teams and individuals will be responsible for supporting different fu
 
 ||Decentralized ops |Centralized ops  |Enterprise ops          |Distributed ops|
 |---------              |---------      |---------    |---------          |---------|
-|Business alignment|[Workload team](../organize/cloud-adoption.md)|[Central cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
-|[Cloud operations](../organize/cloud-operations.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
-|[Cloud governance](../organize/cloud-governance.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|[Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md)|
-|[Cloud security](../organize/cloud-security.md)|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [Define a security strategy](../strategy/define-security-strategy.md)|
-|[Cloud automation and DevOps](../organize/cloud-automation.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|**Business alignment**|[Workload team](../organize/cloud-adoption.md)|[Central cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
+|**[Cloud operations](../organize/cloud-operations.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|**[Cloud governance](../organize/cloud-governance.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|[Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md)|
+|**[Cloud security](../organize/cloud-security.md)**|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [Define a security strategy](../strategy/define-security-strategy.md)|
+|**[Cloud automation and DevOps](../organize/cloud-automation.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
 
 ### Accelerate operating model implementation in Azure
 
 As discussed in [Define your operating model](./define.md), each methodology of the Cloud Adoption Framework provides a structured path to iteratively developing each aspect of your operating model. Following the most relevant methodology will help you overcome blockers to adoption that stem from gaps in the cloud operating model.
 
-But there are ways to accelerate your operating model implementation, as outlined in the table below.
+But there are ways to accelerate your operating model implementation, as outlined in the following table.
 
 |  | Decentralized ops | Centralized ops | Enterprise ops | Distributed ops |
 |--|--|--|--|--|
@@ -120,7 +120,7 @@ Stable state environments might not require as much focus on the architecture or
 - **Operations support:** Reducing complexity and centralizing operations makes it easy for smaller IT teams to support operations.
 - **Expertise:** Centralization of supporting teams allow for experts in the fields of security, risk, governance, and operations to drive business critical decisions.
 - **Landing zone design:** Central IT tends to minimize the number of landing zones and subscriptions to reduce complexity. Landing zone designs tend to mimic the preceding datacenter designs, which reduces transition time. As adoption progresses, shared resources can then be moved out into a separate subscription or platform foundation.
-- **Foundational utilities:** Carrying existing datacenter designs into the cloud results in foundational, shared services that mimic on-premises tools and operations. When on-premises operations are your primary operating model, this can be an advantage (beware the disadvantages below). Doing so reduces transition time, capitalizes on economies of scale, and allows for consistent operational processes between on-premises and cloud hosted workloads. This approach can reduce short-term complexity/effort and allow smaller teams to support cloud operations with reduced learning curves.
+- **Foundational utilities:** Carrying existing datacenter designs into the cloud results in foundational, shared services that mimic on-premises tools and operations. When on-premises operations are your primary operating model, this can be an advantage (and beware the following disadvantages). Doing so reduces transition time, capitalizes on economies of scale, and allows for consistent operational processes between on-premises and cloud hosted workloads. This approach can reduce short-term complexity/effort and allow smaller teams to support cloud operations with reduced learning curves.
 - **Separation of duties:** Separation of duties is clear in central operations. Central IT maintains control of the production environments reducing the need for any elevated permissions from other teams. This reduces the surface area of breach by reducing the number of accounts with elevated privileges.
 
 ### Disadvantages of centralized operations

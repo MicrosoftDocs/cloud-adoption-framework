@@ -9,3 +9,5 @@ _repo.*/
 .cspell.json
 *.bak
 .vscode/launch.json
+docs/cspell-empty.json
+.DS_Store

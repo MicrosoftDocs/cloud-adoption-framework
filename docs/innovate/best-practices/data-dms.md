@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Collect data through the migration and modernization of existing data sources
@@ -21,9 +22,9 @@ During the Assess phase within the Migrate methodology, a cloud adoption team as
 
 ## Primary toolset
 
-When you migrate and modernize on-premises data, the most common Azure tool choice is [Azure Database Migration Service](/azure/dms). This service is part of the broader [Azure Migrate](/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) can help you assess and migrate a small number of data structures.
+When you migrate and modernize on-premises data, the most common Azure tool choice is [Azure Database Migration Service](/azure/dms/). This service is part of the broader [Azure Migrate](/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) can help you assess and migrate a small number of data structures.
 
-To support Oracle and NoSQL migrations, you can also use [Database Migration Service](/azure/dms) for certain types of source-to-target databases. Examples include migrating Oracle databases to PostgreSQL or MongoDB databases to Azure Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine options based on infrastructure as a service (IaaS).
+To support Oracle and NoSQL migrations, you can also use [Database Migration Service](/azure/dms/) for certain types of source-to-target databases. Examples include migrating Oracle databases to PostgreSQL or MongoDB databases to Azure Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine options based on infrastructure as a service (IaaS).
 
 ## Considerations and guidance
 
@@ -41,10 +42,10 @@ With an offline migration, application downtime starts when the migration starts
 
 We suggest that you decide your acceptable business downtime and test an offline migration. You do so to check if the restoration time meets the acceptable downtime. If the restoration time is unacceptable, do an online migration.
 
-| Source  | Target  | Tool  | Migration type | Guidance |
-|---|---|---|---|---|
+| Source | Target | Tool | Migration type | Guidance |
+|--|--|--|--|--|
 | SQL Server | Azure SQL Database | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-sql-server-to-azure-sql) |
-| SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-sql-server-azure-sql-online) |
+| SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-sql-server-to-azure-sql) |
 | SQL Server | Azure SQL Managed Instance | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-sql-server-to-managed-instance) |
 | SQL Server | Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-sql-server-managed-instance-online) |
 | RDS SQL Server | Azure SQL Database or Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |

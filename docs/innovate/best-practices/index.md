@@ -7,17 +7,18 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Develop digital inventions in Azure
 
-Azure can help accelerate the development of each area of digital invention. This section of the Cloud Adoption Framework for Azure builds on the [Innovate methodology](../considerations/index.md). This section shows how you can combine Azure services to create a toolchain for digital invention.
+Azure can help accelerate the development of each area of digital invention. This section of the Cloud Adoption Framework builds on the [Innovate methodology](../considerations/index.md). This section shows how you can combine Azure services to create a toolchain for digital invention.
 
 ## Alignment to the methodology
 
 There are many combinations of cloud-based tools for digital invention and innovation within Azure. The following article series demonstrates a few of the tools that closely align with the Innovate methodology. The following image shows an overview of how different tools align to each type of innovation.
 
-![Diagram that shows the Cloud Adoption Framework Innovate toolchain.](../../_images/innovate/innovate-toolchain.png)
+![Diagram that shows the Cloud Adoption Framework innovate toolchain.](../../_images/innovate/innovate-toolchain.png)
 
 ## Toolchain
 

@@ -1,5 +1,5 @@
 ---
-title: "Protect and recover in cloud management"
+title: Protect and recover in cloud management
 description: Learn the importance of preparing for a potential workload outage. This preparation allows your team to detect failures sooner and recover more quickly.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Protect and recover in cloud management
@@ -25,7 +26,7 @@ At a minimum, each asset that supports any given workload should have a baseline
 
 ### Recovery time objectives (RTO)
 
-When disaster strikes, a recovery time objective is the amount of time it should take to recovery any system to its state prior to the disaster. For each workload, that would include the time required to restore minimum necessary functionality for the VMs and apps. It also includes the amount of time required to restore the data that's required by the applications.
+When disaster strikes, a recovery time objective is the amount of time it should take to recovery any system to its state prior to the disaster. For each workload, that would include the time required to restore minimum necessary functionality for the VMs and applications. It also includes the amount of time required to restore the data that's required by the applications.
 
 In business terms, RTO represents the amount of time that the business process will be out of service. For mission-critical workloads, this variable should be relatively low, allowing the business processes to resume quickly. For lower-priority workloads, a standard level of RTO might not have a noticeable impact on company performance.
 
@@ -53,7 +54,7 @@ Data is arguably the most valuable asset in the digital economy. The ability to 
 
 Before cloud management teams implement platform operations, it's common for them to support improved operations for a platform as a service (PaaS) data platform. For instance, it's easy for a cloud management team to enforce a higher frequency of backup or multiregion replication for Azure SQL Database or Azure Cosmos DB solutions. Doing so allows the development team to easily improve RPO by modernizing their data platforms.
 
-To learn more about this thought process, see [platform operations discipline](./platform.md).
+To learn more about this thought process, see [Platform operations discipline](./platform.md).
 
 ### Protect and recover VMs
 
@@ -63,7 +64,9 @@ Every minute of downtime on those virtual machines could cause lost revenue or r
 
 Each of the preceding models reduces the RTO, resulting in a faster restoration of business process capabilities. However, each model also results in significantly increased cloud management costs.
 
-For more information about this thought process, see [workload operations discipline](./workload.md).
+Also, please note that, apart from replication for high-availability, backup should be enabled for scenarios such as accidental delete, data corruption and ransomware attacks.
+
+For more information about this thought process, see [Workload operations discipline](./workload.md).
 
 ## Next steps
 

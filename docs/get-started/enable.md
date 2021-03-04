@@ -7,6 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Enable customer success with a sound operating model and organizational alignment
@@ -17,7 +18,7 @@ Customer success in cloud adoption efforts often has little to do with technical
 
 As you drive innovation, alignment between business and technical teams is paramount to the success of your solution.
 
-- For business stakeholders, we've created the [Microsoft AI business school](https://www.microsoft.com/ai/ai-business-school) to support business strategy development and provide example best practices.
+- For business stakeholders, we've created the [Microsoft AI Business School](https://www.microsoft.com/ai/ai-business-school) to support business strategy development and provide example best practices.
 - For technical stakeholders, the [Microsoft AI learning paths](/learn/) are available to help you build new AI skills.
 
 ## Blockers
@@ -36,10 +37,10 @@ The following guides will help you get started with operating model alignment an
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide will help the strategy team lead organizational change management to consistently ensure operational excellence. |
 | [How do we manage enterprise costs?](./manage-costs.md)                                          | Start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This get-started guide can help ensure that the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recovery when a breach occurs.                                       |
-| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This get-started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
-| [How do we ensure performance across the enterprise?](./performance.md)                               | This get-started guide can help you establish processes for maintaining performance across the enterprise.                               |
-| [How do we align our organization?](./org-alignment.md)                               | This get-started guide can help you establish an appropriately staffed organizational structure.                               |
+| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This getting started guide can help ensure that the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recovery when a breach occurs.                                       |
+| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This getting started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
+| [How do we ensure performance across the enterprise?](./performance.md)                               | This getting started guide can help you establish processes for maintaining performance across the enterprise.                               |
+| [How do we align our organization?](./org-alignment.md)                               | This getting started guide can help you establish an appropriately staffed organizational structure.                               |
 
 ## Shared architecture principles
 

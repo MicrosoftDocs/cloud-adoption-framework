@@ -1,12 +1,13 @@
 ---
-title: "Migrate or deploy Windows Virtual Desktop instances to Azure"
-description: Migrate or deploy Windows Virtual Desktop instances to Azure.
+title: Migrate or deploy Windows Virtual Desktop instances to Azure
+description: Use the Cloud Adoption Framework best practices to migrate or deploy Windows Virtual Desktop instances to Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Migrate or deploy Windows Virtual Desktop instances to Azure
@@ -29,7 +30,7 @@ Virtualization of your end users' desktops in the cloud can help your team reali
 
 ## Approach: Windows Virtual Desktop refactor and modernization
 
-In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with a platform as a service solution called Windows Virtual Desktop.
+In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with a platform as a service (PaaS) solution called Windows Virtual Desktop.
 
 In this scenario, desktop images are either migrated to Azure or new images are generated. Similarly, user profiles are either migrated to Azure or new profiles are created. For the most part, the client solution is enabled but largely unchanged by this migration effort.
 
@@ -42,7 +43,7 @@ When the migration to the cloud is finished, the overhead and costs of managing 
 For guidance on specific elements of the cloud adoption journey, see:
 
 - [Plan for Windows Virtual Desktop migration or deployment](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Complete a Windows Virtual Desktop proof-of-concept](./proof-of-concept.md)
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)

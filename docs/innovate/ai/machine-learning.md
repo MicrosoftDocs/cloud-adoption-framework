@@ -7,6 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
@@ -17,7 +18,7 @@ Azure empowers you with the most advanced machine learning capabilities. Quickly
 
 You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray and RLlib.
 
-Get started with [Machine Learning](/azure/machine-learning/). You'll find a tutorial on how to get [started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
+Get started with [Machine Learning](/azure/machine-learning/). You'll find a tutorial on how to get [started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](https://www.onnxruntime.ai/).
 
 Common scenarios for machine learning solutions include:
 
@@ -44,7 +45,7 @@ Common scenarios for machine learning solutions include:
   - [Classify images with scikit-learn](/azure/machine-learning/tutorial-train-models-with-aml)
   - [Build a Machine Learning pipeline for batch scoring](/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 
-- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, MLOps, ONNX Runtime, model interpretability and transparency, and more.
+- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, machine learning operations (MLOps), ONNX Runtime, model interpretability and transparency, and more.
 
   - [What's new with Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
   - [Use AutoML to build models](https://aka.ms/automlvideo)
