@@ -43,7 +43,8 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 - Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own Management Groups under the root management group).
 - [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for such management group is a `Sandbox` management group.
 
->[!NOTE] For testing guidance for Enterprise Scale deployments, please review [Testing approach for Enterprise Scale](testing-approach)
+>[!NOTE]
+ > For testing guidance for Enterprise Scale deployments, please review [Testing approach for Enterprise Scale](azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
 
 ## Subscription organization and governance
 

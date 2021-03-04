@@ -16,7 +16,7 @@ We recognize that large organizations may wish to test their Enterprise Scale de
 
 ## Reasons To Not Use Separate Azure AD Tenants for Enterprise Scale
 
-- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](../../security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance; single Azure AD Tenants are best practice for most.
+- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance; single Azure AD Tenants are best practice for most.
 - Increased/Duplicated Azure AD licensing costs due to multiple identities across different Azure AD Tenants.
 - Azure Policy & RBAC testing is not as accurate due to most parameters requiring to be changed between different Azure AD Tenants
   - This also increases chances of the testing not actually benefitting the deployment process due to potential for increased deployment failures.
@@ -26,9 +26,9 @@ We recognize that large organizations may wish to test their Enterprise Scale de
   - Reduces chances for configuration drift
   - Reduces time to make changes and to deploy into production
 
-## Diagram 
+## Diagram
 
-![Diagram that shows management group hierarchy.](./media/canary-mgmt-groups.png#lightbox)
+[![Diagram that shows management group hierarchy.](./media/canary-mgmt-groups.png)](./media/canary-mgmt-groups.png#lightbox)
 
 _Figure 1: Canary Management Group hierarchy._
 
@@ -37,7 +37,7 @@ _Figure 1: Canary Management Group hierarchy._
 As the above diagram shows, the entire "production" Management Group hierarchy is duplicated beneath the ```Tenant Root Group``` and the "canary" name is appended to the Management Group display names (this can also be done for the Management Group IDs, as they must be unique within the Tenant).
 
 >[!NOTE]
- > The term "canary" is used to avoid confusion with development or test environments. 
+ > The term "canary" is used to avoid confusion with development or test environments.
 
 The "canary" Management Group hierarchy is then used to test the following resource types:
 
