@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale security, governance and compliance
+title: Enterprise-scale security, governance, and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,10 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore FIPS SIEM majeure NSGs -->
-<!-- docutune:casing "FIPS 140-2 Level" "Patch and update management" "SOC2 Trust Service Principles and Criteria" -->
-
-# Enterprise-scale security, governance and compliance
+# Enterprise-scale security, governance, and compliance
 
 This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
@@ -222,7 +219,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 | Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
 |                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
-|                              |                                                                       | Does Azure-to-Azure (service-to-service) authentication use an MSI/service principal?                                                         |
+|                              |                                                                       | Does authentication bwtween Azure services use managed identities  or service principals?                                                         |
 |                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
 |                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |

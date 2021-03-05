@@ -26,7 +26,7 @@ Transform your business and reduce costs with an energy-efficient infrastructure
 
 - **Example 1:** A services company worked a hosting provider that hosted multiple operational infrastructure assets. Those systems suffered from frequent outages and poor performance. The company migrated its assets to Azure to take advantage of the SLA and performance controls of the cloud. Any downtime would cost the company approximately $15,000 USD per minute of outage. With between four and eight hours of outage per month, it was easy to justify this organizational transformation.
 
-- **Example 2:** A consumer investment company was in the early stages of a cloud-enabled application innovation effort. Agile processes and DevOps were maturing well, but application performance was spiky. As a more mature transformation, the company started a program to monitor and automate sizing based on usage demands. The company eliminated sizing issues by using Azure performance management tools, resulting in a surprising five-percent increase in transactions.
+- **Example 2:** A consumer investment company was in the early stages of a cloud-enabled application innovation effort. Agile processes and DevOps were maturing well, but application performance was spiky. As a more mature transformation, the company started a program to monitor and automate sizing based on usage demands. The company eliminated sizing issues by using Azure performance management tools, resulting in a surprising 5 percent increase in transactions.
 
 ## Reliability
 

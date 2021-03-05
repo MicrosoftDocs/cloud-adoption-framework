@@ -1,6 +1,6 @@
 ---
 title: Platform automation and DevOps
-description: Platform automation and DevOps.
+description: Learn about platform automation and DevOps in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-
-<!-- docutune:casing PlatformOps AppDevOps AppDataOps AppSecOps -->
 
 # Platform automation and DevOps
 
@@ -50,7 +48,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Platform-as-code (managing templates, scripts, and other assets).
 
-  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, Graph API registration, and defining roles).
+  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, registering the Microsoft Graph API, and defining roles).
 
 - **SecOps** (security operations)
 

@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Customers often experience cloud adoption antipatterns within their organizational structure. Many factors can cause these problems:
 
-- Tool sets
+- Toolsets
 - Partners
 - Engineers
 - Misaligned IT departments
@@ -42,7 +42,7 @@ To improve transparency, focus on visibility, accountability, and optimization w
 
 ## Antipattern: Invest in new technology without involving the business
 
-IT departments often invest significant human and financial resources in building and deploying robust platforms and tool sets. But, sometimes IT fails to consider business units and their needs during design and development phases. This omission leads to new platforms with minimal relevance for business units. Employees are then hesitant to accept the new technology. Poor or slow adoption can result. Frustration also builds within IT when business units don't use its platforms.
+IT departments often invest significant human and financial resources in building and deploying robust platforms and toolsets. But, sometimes IT fails to consider business units and their needs during design and development phases. This omission leads to new platforms with minimal relevance for business units. Employees are then hesitant to accept the new technology. Poor or slow adoption can result. Frustration also builds within IT when business units don't use its platforms.
 
 ### Example: Set up a platform without involving business units
 
