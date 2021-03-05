@@ -27,6 +27,11 @@ items:
   - name: Manage your portfolio
     href: manage.md
 
+  - name: Enterprise-scale landing zones
+    items:
+      - name: Support for hybrid and multicloud
+        href: enterprise-scale-landing-zone.md
+
   - name: Well-architected hybrid workloads
     items:
     - name: Overview
