@@ -3,14 +3,11 @@ title: Enterprise Scale Analytics and AI Data Management Overview
 description: Enterprise Scale Analytics and AI Architecture Data Management Landing Zone Overview
 author: 
 ms.author:  # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
-\
-**General disclaimer: DO NOT COPY - UNDER DEVELOPMENT - MS INTERNAL ONLY** \
-&nbsp;
 
 # Data Management Landing Zone
 

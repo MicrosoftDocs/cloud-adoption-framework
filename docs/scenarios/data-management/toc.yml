@@ -2,15 +2,13 @@
 #cSpell:ignore devtest mariadb
 
 items:
-  - name: Data Management - Microsoft Cloud Adoption Framework for Azure
+  - name: Enterprise Scale Analytics and AI - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Data Management - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
-    - name: Intro to data management
-      href: intro-data-management.md
-    - name: Intro to data governance
-      href: intro-data-governance.md
+    - name: Intro to Enterprise Scale Analytics and AI
+      href: intro-enterprise-ecale-analytics-ai.md
 
   - name: Build an initial strategy
     href: strategy.md
@@ -46,6 +44,7 @@ items:
     - name: Security governance and compliance
       href: ./eslz-security-governance-and-compliance.md
     - name: Platform automation and DevOps
+    items:
     - name:  Data Ops
       href: ./06-dataops/01-overview.md
     - name: Enterprise Scale Analytics and AI DevOps Models

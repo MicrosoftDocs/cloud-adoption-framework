@@ -36,13 +36,13 @@ The Enterprise Scale Analytics and AI solutions pattern consists of a Data Manag
 
 The platform can be extended to include other Azure services on demand. The proposed approach is to provision the analytics platform with the required services, with t-shirt sizing, and extend it further as new use cases are onboarded. This allows enterprises to regulate the platform cost effectively. The framework builds on our [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
-![Enterprise Scale Data Management and Single Data Landing Zone](../images/hldsimple.png)
+![Enterprise Scale Data Management and Single Data Landing Zone](./images/hldsimple.png)
 
 Figure 1: Enterprise Scale Data Management and Single Data Landing Zone
 
 Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (known as a Data Landing Zone). For a number of environments this will be the starting point. It allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones. This is close to a Core Service Provider pattern which builds-out common core services with flexibility to bolt-on domain specific customizations.
 
-![Enterprise Scale Data Management and Multiple Data Landing Zones](../images/hld.png)
+![Enterprise Scale Data Management and Multiple Data Landing Zones](./images/hld.png)
 
 Figure 2: Enterprise Scale Data Management and Multiple Data Landing Zones
 
@@ -81,8 +81,3 @@ The Data Landing Zone is discussed in detail in the [Data Landing Zone guide](..
 \
 >A **data product** is data from a domain read data source which has had some data transformation applied. This could be a new curated dataset or BI report.
 
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2001-overview.md)
-
->[Next](02-esa-ai-teams.md)
