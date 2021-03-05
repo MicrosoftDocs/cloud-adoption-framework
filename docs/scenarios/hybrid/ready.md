@@ -45,7 +45,7 @@ The answers to these questions will depend on your hybrid and multicloud strateg
 
 ## Analyze your cloud mix
 
-If you're unsure about your current cloud mix, the tools in Azure's control plane can help. Azure Arc, a built-in benefit of Azure Resource Manager, provides visibility into your cloud mix. This tool set is often the first step toward taking control of your cloud mix. You can use Azure Arc (as a complimentary tool) for discovery across all your cloud platforms.
+If you're unsure about your current cloud mix, the tools in Azure's control plane can help. Azure Arc, a built-in benefit of Azure Resource Manager, provides visibility into your cloud mix. This toolset is often the first step toward taking control of your cloud mix. You can use Azure Arc (as a complimentary tool) for discovery across all your cloud platforms.
 
 To start evaluating your cloud mix across multiple cloud providers, complete an inventory and tagging exercise in a few steps:
 

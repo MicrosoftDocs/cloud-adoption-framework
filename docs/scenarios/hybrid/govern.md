@@ -22,7 +22,7 @@ Well-defined governance starts with sound resource consistency practices. Organi
 
 - Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
 - Tag resources from AWS, GCP, and so on.
-- Query your resources to see where they're all hosted.
+- Query your resources to see where each is hosted.
 
 To get started, [inventory and tag your hybrid and multicloud resources](../../manage/hybrid/server/best-practices/arc-inventory-tagging.md).
 
@@ -30,7 +30,7 @@ After you establish your tagging standards and bring on some of your assets, you
 
 ## Governance disciplines
 
-With a basic understanding of unified operations and Azure Arc, you can begin to extend your disciplines of cloud governance to deployments hosted outside of your Azure environments.
+With a basic understanding of unified operations and Azure Arc, you can extend your disciplines of cloud governance to deployments hosted outside of your Azure environments.
 
 Security baselines are among the most common ways that you can expand your governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
 

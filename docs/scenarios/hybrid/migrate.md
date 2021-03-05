@@ -16,7 +16,7 @@ In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Frame
 
 ![Diagram that shows the shift from unidirectional cloud migration to bidirectional hybrid and multicloud migration described in the next paragraph.](../../_images/hybrid/primary-cloud-provider.png)
 
-Typically, migration efforts have been seen as a one-way street. Assets move up to the cloud, or to a new cloud, and stay there. In a hybrid and multicloud environment, migration efforts are more like a multilane highway. Assets move between multiple public and private clouds based on shifting business or technical requirements. This shift in migration strategy has little effect on the migration process but can directly affect all of the work that comes before and after migration.
+Typically, migration efforts have been seen as a one-way street. Assets move up to the cloud, or to a new cloud, and stay there. In a hybrid and multicloud environment, migration efforts are more like a multilane highway. Assets move between multiple public and private clouds based on shifting business or technical requirements. This shift in migration strategy has minimal impact on the migration process, but it can directly affect the work that comes before and after migration.
 
 ## Effect on migration-specific processes
 
@@ -47,7 +47,7 @@ Hybrid and multicloud migrations that come across assessment challenges indicate
 
   - **Azure Stack HCI compatibility,** which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
   - **Kubernetes compatibility,** which is important if you're maintaining portability through container-based infrastructure.
-  - **Azure edge compatibility,** which might be important to extend workloads and reduce latency at the point of interaction.
+  - **Azure Edge compatibility,** which might be important to extend workloads and reduce latency at the point of interaction.
   - **Regulatory, compliance, or business requirements,** which might dictate that some assets or data remain on-premises. To monitor assets that are migrated, you might need to add more monitoring tools.
 
 These articles will help you to develop the most impactful processes required for this type of migration:
@@ -70,7 +70,7 @@ When you migrate to the cloud, have a clear inventory of all dependent assets an
 
 ## Release migrated workloads for hybrid and multicloud
 
-Testing, benchmarking or sizing, and promotion plans are important when you migrate to the cloud. Hybrid and multicloud workloads have greater dependencies on decentralized assets and the networks that connect them. They're more prone to latency, connectivity, and routing issues, which could appear to be cloud platform performance issues. Testing and debugging of hybrid and multicloud workloads need a greater time allocation than workloads deployed to a single cloud provider for the added layers in identity and networking.
+Testing, benchmarking and sizing, and promotion plans are important when you migrate to the cloud. Hybrid and multicloud workloads have greater dependencies on decentralized assets and the networks that connect them. They're more prone to latency, connectivity, and routing issues, which could appear to be cloud platform performance issues. Testing and debugging of hybrid and multicloud workloads need a greater time allocation than workloads deployed to a single cloud provider for the added layers in identity and networking.
 
 Here are a few considerations to include in your testing plan when you migrate to a hybrid and multicloud environment:
 
