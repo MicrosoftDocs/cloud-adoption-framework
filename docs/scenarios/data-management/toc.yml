@@ -43,6 +43,7 @@ items:
       href: ./eslz-business-continuity-and-disaster-recovery.md
     - name: Security governance and compliance
       href: ./eslz-security-governance-and-compliance.md
+      
     - name: Platform automation and DevOps
       items:
       - name:  Data Ops
