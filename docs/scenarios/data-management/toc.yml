@@ -44,13 +44,13 @@ items:
     - name: Security governance and compliance
       href: ./eslz-security-governance-and-compliance.md
     - name: Platform automation and DevOps
-    items:
-    - name:  Data Ops
-      href: ./06-dataops/01-overview.md
-    - name: Enterprise Scale Analytics and AI DevOps Models
-      href: ./06-dataops/02-es-aai-devops.md
-    - name: Teams and Functions
-      href: ./06-dataops/03-teamfunctions.md
+      items:
+      - name:  Data Ops
+        href: ./06-dataops/01-overview.md
+      - name: Enterprise Scale Analytics and AI DevOps Models
+        href: ./06-dataops/02-es-aai-devops.md
+      - name: Teams and Functions
+        href: ./06-dataops/03-teamfunctions.md
 
   - name: Well-Architected workloads (TBD)
     items:
