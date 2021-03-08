@@ -26,82 +26,28 @@ In addition to the recommended design areas, your platform development velocity 
 
 ## Implementation options
 
-The Cloud Adoption Framework offers a selection of implementation options based on these two primary modes for deploying Azure landing zones, but you may also want to consider partner delivered solutions. The following sections describe some of these options and the variables that might drive your decision.
+The following table describes some of the implementation options for landing zones and the variables that might drive your decision.
 
-### Start with enterprise scale
-
-The following implementation options for enterprise scale provide a proven path for accelerating deployment of Azure landing zones in large organizations, where [Policy-driven governance](../enterprise-scale/design-principles.md#policy-driven-governance) is used to allow application workloads to be rapidly deployed safely at scale using [subscription democratization](../enterprise-scale/design-principles.md#subscription-democratization) as a unit of management and scale.
-
-All enterprise scale implementation options are based on a common set of [design principles](../enterprise-scale/design-principles.md), allowing you to build your environment at scale and with confidence.
-
-| Implementation option | Description | Deploy |
-|---|---|---|---|
-| [CAF enterprise-scale landing zone (foundations)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with shared services to support the full IT portfolio. Use this option when you need to operate in a cloud-native operating model using Internet connectivity to connect to your services, or plan to add hybrid connectivity later when needed. | [![DTA-Button-WingTip]][DTA-WingTip] |
-| [CAF enterprise-scale landing zone (hybrid connectivity with hub and spoke)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with shared services to support the full IT portfolio. Use this option when you need to implement hybrid connectivity using a "hub and spoke" network topology to allow optimal flexibility and scale in Azure. Includes full coverage of the foundations solution. | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
-| [CAF enterprise-scale landing zone (hybrid connectivity with Virtual WAN)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with shared services to support the full IT portfolio. Use this option when you need to implement hybrid connectivity using a "Virtual WAN" network topology to simplify management of more complex hybrid connectivity scenarios, including SD-WAN integration, or to enable native transitive connectivity between spoke networks. Includes full coverage of the foundations solution. | [![DTA-Button-Contoso]][DTA-Contoso] |
-| [Terraform module for CAF enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. This module is officially verified on the Terraform Registry. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. | [Deployment instructions][ESTF-Registry] |
-
-<!-- Consider updating "Deployment instructions" link for "Terraform module for CAF enterprise-scale" to point to Wiki page once available -->
-
-### Start small and expand
-
-The following implementation options for start small and expand provide a proven path for organizations who want to focus on getting started in Azure and iterate your design as needed. Each option follows a unique set of design principles, allowing you to pick the one which best fits your requirements and preferred approach.
-
-| Implementation option | Description | Design | Deploy |
-|---|---|---|---|
-| [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. | [Design principles](./migrate-landing-zone.md#design-principles) | [Deployment instructions](./migrate-landing-zone.md) |
-| [CAF Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. | [Design principles](./foundation-blueprint.md#design-principles) | [Deployment instructions](./foundation-blueprint.md) |
-| [CAF Terraform landing zones](./terraform-landing-zone.md) | Open Source project providing a collection of reference Terraform modules and DevOps tooling for delivering Azure landing zones. Use this option when you plan to use Terraform to manage your platform and application workloads across multiple Subscriptions, and need a prescriptive framework for orchestrating Terraform deployments and state file management. | [Design principles](./terraform-landing-zone.md#design-decisions) | [Deployment instructions](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
-
-## Partner solutions
-
-Whether you just need help to get started, or are looking for a fully managed support option for your Azure landing zones, use our guidance to help you decide which partner is right for you. Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can help deliver Azure landing zones.
-
-Whether you want to start with enterprise scale, start small and expand, or use a customized implementation option, use our [partner guidance](./partner-landing-zone.md) to find the right partner for your organization. Our guidance will help you ask the right questions to ensure the partner can help you select the right approach and deliver successfully.
-
-You can also search our full list of [Cloud Adoption Framework partners][CAF-Ready-Partners] directly.
-
-## Technical decision making
+| Implementation option | Description | Deployment velocity | Deeper design principles | Deployment instructions |
+|---|---|---|---|---|
+| [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. | Start small | [Design principles](./migrate-landing-zone.md#design-principles) | [Deploy](./migrate-landing-zone.md) |
+| [CAF Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. | Start small | [Design principles](./foundation-blueprint.md#design-principles) | [Deploy](./foundation-blueprint.md) |
+| [CAF enterprise-scale landing zone (hybrid connectivity with Virtual WAN)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, including hybrid connectivity (Virtual WAN). | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md) |
+| [CAF enterprise-scale landing zone (hybrid connectivity with hub and spoke)](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, including hybrid connectivity (hub and spoke). | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) |
+| [CAF enterprise-scale landing zone](../enterprise-scale/index.md) | Deploys an enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, where connectivity can be added later as needed. | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md) |
+| [Terraform module for CAF enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. This module is officially verified on the Terraform Registry. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) |
+| [CAF Terraform modules](./terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | Start small | [Design principles](./terraform-landing-zone.md#design-decisions) | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. | Variable | [Design principles](./partner-landing-zone.md) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
 The following table looks at some of these implementation options from a slightly different perspective to guide more technical decision processes.
 
-| Implementation option | Hub | Spoke | Deployment technology | Deploy |
+| Implementation option | Hub | Spoke | Deployment technology | Deployment instructions |
 |---|---|---|---|---|
-| [CAF enterprise-scale landing zone (foundations)](../enterprise-scale/index.md) | Excluded | Excluded | Azure Resource Manager templates, Azure Portal, Azure Policy and GitHub | [![DTA-Button-WingTip]][DTA-WingTip] |
-| [CAF enterprise-scale landing zone (hybrid connectivity with hub and spoke)](../enterprise-scale/index.md) | Included (Hub with VNet Peering) | Included | Azure Resource Manager templates, Azure Portal, Azure Policy and GitHub | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
-| [CAF enterprise-scale landing zone (hybrid connectivity with Virtual WAN)](../enterprise-scale/index.md) | Included (Virtual WAN Hub) | Included | Azure Resource Manager templates, Azure Portal, Azure Policy and GitHub | [![DTA-Button-Contoso]][DTA-Contoso] |
-| [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Refactor required | Included | Azure Resource Manager templates, Azure Portal, and Azure Blueprints | [Deployment instructions](./migrate-landing-zone.md) |
-| [CAF Terraform reference deployment](./terraform-landing-zone.md)  | Included in virtual datacenter module | Included | Terraform, and [rover][AZTFMOD-Rover] (custom DevOps toolset) | [Deployment instructions](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
-| [Terraform module for CAF enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md)  | Excluded | Excluded | Terraform | [Deployment instructions][ESTF-Registry] |
-
-<!-- Table missing CAF Foundation blueprint -->
+| [Cloud Adoption Framework enterprise-scale landing zone](../enterprise-scale/index.md) | Included | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
+| [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Refactor required | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprints | [Deploy](./migrate-landing-zone.md) |
+| [CAF Terraform modules](./terraform-landing-zone.md) | Included in virtual datacenter module | Included | Terraform | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| [Terraform module for CAF enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md)  | Excluded | Excluded | Terraform | [Deploy](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) |
 
 ## Next steps
 
 To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.
-
-<!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
-
- [//]: # (*******************************)
- [//]: # (EXTERNAL IMAGE REFERENCES BELOW)
- [//]: # (*******************************)
-
- [DTA-Button-WingTip]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy WingTip reference implementation (foundation) to Azure."
- [DTA-Button-AdventureWorks]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy AdventureWorks reference implementation (hybrid connectivity with hub and spoke) to Azure."
- [DTA-Button-Contoso]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Contoso reference implementation (hybrid connectivity with virtual wan) to Azure."
-
- [//]: # (**************************)
- [//]: # (EXTERNAL LINK LABELS BELOW)
- [//]: # (**************************)
-
- [ESTF-Registry]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest
-
- [DTA-WingTip]: https://ms.portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fwingtip%2FarmTemplates%2Fes-foundation.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fwingtip%2FarmTemplates%2Fportal-es-foundation.json
-
- [DTA-AdventureWorks]: https://ms.portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-hubspoke.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fportal-es-hubspoke.json
-
- [DTA-Contoso]: https://ms.portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fcontoso%2FarmTemplates%2Fes-vwan.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fcontoso%2FarmTemplates%2Fportal-es-vwan.json
-
- [CAF-Ready-Partners]: https://www.microsoft.com/azure/partners/adopt?filters=ready
-
- [AZTFMOD-Rover]: https://github.com/aztfmod/rover
