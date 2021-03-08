@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- docutune:casing ARO -->
-
 # Best practices for costing and sizing resources hosted in Azure
 
 While delivering the disciplines of governance, cost management is a recurring theme at the enterprise level. By optimizing and managing costs, you can ensure the long-term success of your Azure environment. It's critical that all teams (such as finance, management, and application development teams) understand associated costs and review them on a recurring basis.
@@ -182,7 +180,7 @@ Once resources are in production, data can be aggregated and trends analyzed at 
 - Analyze data to generate a budget baseline for Azure resource groups and resources.
 - Identify patterns of use that would allow you to reduce size and stop or pause resources to further reduce your costs.
 
-Best practices in this section include using Azure Hybrid Benefit and Azure Reserved Virtual Machine Instances, reduce cloud spending across subscriptions, using Azure Cost Management + Billing for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
+Best practices in this section include using Azure Hybrid Benefit and Azure Reserved VM Instances, reduce cloud spending across subscriptions, using Azure Cost Management + Billing for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
 
 ## Best practice: Take advantage of Azure Hybrid Benefit
 
@@ -207,8 +205,8 @@ Using Azure Reserved VM Instances, you prepay for either a one-year or three-yea
 - Reserved instances provide a billing discount, and don't affect the runtime state of your resources.
 - You can cancel reserved instances.
 
-![Azure Reserved Virtual Machine Instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
-*Figure 1: Azure reserved VMs.*
+![Azure Reserved VM Instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
+*Figure 1: Azure Reserved VM instances.*
 
 **Learn more:**
 

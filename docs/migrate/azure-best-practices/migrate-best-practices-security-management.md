@@ -36,19 +36,19 @@ These best practices are described in more detail in the sections that follow.
 
 ## Best practice: Follow Azure Security Center recommendations
 
-Azure tenant admins need to enable security features that protect workloads from attacks. Azure Security Center provides unified security management. From Security Center, you can apply security policies across workloads, limit threat exposure, and detect and respond to attacks. Security Center analyzes resources and configurations across Azure tenants, and makes security recommendations, including:
+Azure tenant admins need to enable security features that protect workloads from attacks. Security Center provides unified security management. From Security Center, you can apply security policies across workloads, limit threat exposure, and detect and respond to attacks. Security Center analyzes resources and configurations across Azure tenants, and makes security recommendations, including:
 
 - **Centralized policy management:** Ensure compliance with company or regulatory security requirements by centrally managing security policies across all your hybrid cloud workloads.
 - **Continuous security assessment:** Monitor the security posture of machines, networks, storage and data services, and applications to discover potential security issues.
 - **Actionable recommendations:** Remediate security vulnerabilities before they can be exploited by attackers, with prioritized and actionable security recommendations.
 - **Prioritized alerts and incidents:** Focus on the most critical threats first, with prioritized security alerts and incidents.
 
-In addition to assessments and recommendations, Azure Security Center provides other security features that you can enable for specific resources.
+In addition to assessments and recommendations, Security Center provides other security features that you can enable for specific resources.
 
-- **Just-in-time (JIT) access.** Reduce your network attack surface with just-in-time, controlled access to management ports on Azure VMs.
+- **Just-in-time (JIT) access.** Reduce your network attack surface with JIT, controlled access to management ports on Azure VMs.
   - Having VM RDP port 3389 open on the internet exposes VMs to continual activity from bad actors. Azure IP addresses are well-known, and hackers continually probe them for attacks on open 3389 ports.
-  - Just-in-time uses network security groups (NSGs) and incoming rules that limit the amount of time that a specific port is open.
-  - With just-in-time access enabled, Security Center checks that a user has Azure role-based access control (Azure RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
+  - JIT uses network security groups (NSGs) and incoming rules that limit the amount of time that a specific port is open.
+  - With JIT access enabled, Security Center checks that a user has Azure role-based access control (Azure RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
 - **Adaptive application controls.** Keep software and malware off VMs by controlling which applications run on them, by using dynamic allow lists.
   - Adaptive application controls allow you to approve applications, and prevent rogue users or administrators from installing unapproved or vetting software applications on your VMs.
     - You can block or alert attempts to run malicious applications, avoid unwanted or malicious applications, and ensure compliance with your organization's application security policy.
@@ -67,25 +67,25 @@ In addition to assessments and recommendations, Azure Security Center provides o
 
 Encryption is an important part of Azure security practices. Ensuring that encryption is enabled at all levels helps prevent unauthorized parties from gaining access to sensitive data, including data in transit and at rest.
 
-### Encryption for infrastructure as a service (IaaS)
+### Encryption for infrastructure as a service
 
-- **Virtual machines:** For VMs, you can use Azure Disk Encryption to encrypt your Windows and Linux IaaS VM disks.
+- **Virtual machines:** For VMs, you can use Azure Disk Encryption to encrypt your Windows and Linux infrastructure as a service (IaaS) VM disks.
   - Azure Disk Encryption uses BitLocker for Windows, and dm-crypt for Linux, to provide volume encryption for the operating system and data disks.
   - You can use an encryption key created by Azure, or you can supply your own encryption keys, safeguarded in Azure Key Vault.
   - With Azure Disk Encryption, IaaS VM data is secured at rest (on the disk) and during VM boot.
-    - Azure Security Center alerts you if you have VMs that aren't encrypted.
+    - Security Center alerts you if you have VMs that aren't encrypted.
 - **Storage:** Protect at-rest data stored in Azure Storage.
   - Data stored in Azure Storage accounts can be encrypted by using Microsoft-generated AES keys that are FIPS 140-2 compliant, or you can use your own keys.
   - Azure Storage encryption is enabled for all new and existing storage accounts, and it can't be disabled.
 
-### Encryption for platform as a service (PaaS)
+### Encryption for platform as a service
 
-Unlike IaaS, in which you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider. You can focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how you might enable encryption for Azure SQL Database.
+Unlike IaaS, in which you manage your own VMs and infrastructure, in a platform as a service (PaaS) model platform and infrastructure is managed by the provider. You can focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how you might enable encryption for Azure SQL Database.
 
 - **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
   - You create an Always Encrypted key to encrypt individual column data.
   - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
-  - Most likely, to use this feature, you'll need to make application changes.
+  - Most likely, you'll need to make application changes to use this feature.
 - **Transparent data encryption (TDE):** Protect the Azure SQL Database with real-time encryption and decryption of the database, associated backups, and transaction log files at rest.
   - TDE allows encryption activities to take place without changes at the application layer.
   - TDE can use encryption keys provided by Microsoft, or you can bring your own key.
@@ -96,16 +96,16 @@ Unlike IaaS, in which you manage your own VMs and infrastructure, in a PaaS mode
 - Enable [Azure Disk Encryption for Windows VMs](/azure/virtual-machines/windows/disk-encryption-overview).
 - Learn about [Azure Storage encryption for data at rest](/azure/storage/common/storage-service-encryption).
 - Read the [Always Encrypted overview](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
-- Read about [transparent data encryption for SQL Database and Azure Synapse](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
-- Learn about [Azure SQL Database transparent data encryption with customer-managed key](/azure/azure-sql/database/transparent-data-encryption-byok-overview).
+- Read about [TDE for SQL Database and Azure Synapse](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
+- Learn about [Azure SQL Database TDE with customer-managed key](/azure/azure-sql/database/transparent-data-encryption-byok-overview).
 
 ## Best practice: Protect VMs with antimalware
 
 In particular, older Azure-migrated VMs might not have the appropriate level of antimalware installed. Azure provides a free endpoint solution that helps protect VMs from viruses, spyware, and other malware.
 
-- Microsoft Antimalware for Azure Cloud Services and virtual machines generates alerts when known malicious or unwanted software tries to install itself.
-- It's a single agent solution that runs in the background, without human intervention.
-- In Azure Security Center, you can easily identify VMs that don't have endpoint protection running, and install Microsoft antimalware as needed.
+- Microsoft Antimalware for Azure Cloud Services and Virtual Machines generates alerts when known malicious or unwanted software tries to install itself.
+- It's a single agent solution that runs in the background without human intervention.
+- In Security Center, you can identify VMs that don't have endpoint protection running and install Microsoft antimalware as needed.
 
   ![Screenshot of Antimalware for VMs.](./media/migrate-best-practices-security-management/antimalware.png)
   *Figure 1: Antimalware for VMs.*
@@ -133,7 +133,7 @@ Azure provides the following solutions:
 - **Web Application Firewall:** This is a feature of Azure Application Gateway that provides centralized protection for web apps.
   - It protects web apps without requiring back-end code modifications.
   - It protects multiple web apps at the same time, behind Application Gateway.
-  - You can monitor Web Application Firewall by using Azure Monitor. Web Application Firewall is integrated into Azure Security Center.
+  - You can monitor Web Application Firewall by using Azure Monitor. Web Application Firewall is integrated into Security Center.
 
   ![Diagram of Azure Key Vault and secure web apps.](./media/migrate-best-practices-security-management/web-apps.png)
   *Figure 2: Azure Key Vault.*
@@ -150,8 +150,8 @@ Azure provides the following solutions:
 As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including Azure role-based access control (Azure RBAC) to authorize permissions to access Azure resources.
 
 - Azure RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
-- Azure RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
-- Azure RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
+- Azure RBAC can assign roles to security principals (such as Owner, Contributor, and Reader) and role definitions (a collection of permissions) that define the operations that the roles can perform.
+- Azure RBAC can also set scopes that set the boundary for a role. The scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
 Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
@@ -161,13 +161,13 @@ Ensure that admins with Azure access can access only resources that you want to 
 
 **Learn more:**
 
-- Learn about [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
+- Learn about [Azure RBAC](/azure/role-based-access-control/overview).
 - Learn to manage access via [Azure RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 - Learn about [custom roles](/azure/role-based-access-control/custom-roles).
 
 ## Best practice: Review audit and security logs
 
-Azure Active Directory (Azure AD) provides activity logs that appear in Azure Monitor. The logs capture the operations performed in Azure tenancy, when they occurred, and who performed them.
+Azure AD provides activity logs that appear in Azure Monitor. The logs capture the operations performed in Azure tenancy, when they occurred, and who performed them.
 
 - Audit logs show the history of tasks in the tenant. Sign-in activity logs show who carried out the tasks.
 - Access to security reports depends on your Azure AD license. With the free and basic licenses, you get a list of risky users and sign-ins. With the premium licenses, you get underlying event information.
@@ -186,10 +186,10 @@ Azure Active Directory (Azure AD) provides activity logs that appear in Azure Mo
 
 Azure provides other security features that provide advanced security options. Note that some of the following best practices require add-on licenses and premium options.
 
-- **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OU). To use AU, the AU admin must have a premium Azure AD license. For more information, see [Administrative units management in Azure Active Directory](/azure/active-directory/roles/administrative-units).
-- **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. When a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all of your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge response. Learn more about [security guidance](/azure/active-directory/authentication/howto-mfa-getstarted), and [how to set up multi-factor authentication](/azure/active-directory/authentication/howto-mfa-getstarted).
-- **Implement conditional access.** In most small and medium-sized organizations, Azure admins and the support team are probably located in a single geography. In this case, most sign-ins come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator sign-ins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access, combined with multi-factor authentication, to prevent signing in from remote locations. This can also prevent spoofed locations from random IP addresses. Learn more about [conditional access](/azure/active-directory/conditional-access/overview) and [review best practices](/azure/active-directory/conditional-access/overview) for conditional access in Azure AD.
-- **Review enterprise application permissions.** Over time, admins select Microsoft and third-party links without knowing their affect on the organization. Links can present consent screens that assign permissions to Azure apps. This might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the applications to which your admins and users have allowed access to Azure resources. Ensure that these applications have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to application pages, so that they're aware of the applications to which they've allowed access to their organizational data. For more information, see [Unexpected application in my applications list](/azure/active-directory/manage-apps/application-types), and [how to control](/azure/active-directory/manage-apps/assign-user-or-group-access-portal) application assignments in Azure AD.
+- **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OUs). To use AUs, the AU admin must have a premium Azure AD license. For more information, see [Administrative units management in Azure AD](/azure/active-directory/users-groups-roles/directory-administrative-units).
+- **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. When a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all of your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge response. Learn more about [security guidance](/azure/active-directory/authentication/multi-factor-authentication-security-best-practices), and [how to set up multi-factor authentication](/azure/active-directory/authentication/multi-factor-authentication-security-best-practices).
+- **Implement conditional access.** In most small and medium-sized organizations, Azure admins and the support team are probably located in a single geography. In this case, most sign-ins come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator sign-ins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access, combined with multi-factor authentication, to prevent signing in from remote locations. This can also prevent spoofed locations from random IP addresses. Learn more about [conditional access](/azure/active-directory/conditional-access/overview) and [review best practices](/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
+- **Review enterprise application permissions.** Over time, admins select Microsoft and third-party links without knowing their affect on the organization. Links can present consent screens that assign permissions to Azure apps. This might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the applications to which your admins and users have allowed access to Azure resources. Ensure that these applications have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to application pages, so that they're aware of the applications to which they've allowed access to their organizational data. For more information, see [Unexpected application in my applications list](/azure/active-directory/manage-apps/application-types), and [how to control](/azure/active-directory/manage-apps/remove-user-or-group-access-portal) application assignments in Azure AD.
 
 ## Managed migrated workloads
 
@@ -319,7 +319,7 @@ Azure Policy evaluates your resources, scanning for those not compliant with you
 
 ## Best practice: Implement a BCDR strategy
 
-Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a *force majeure* clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strikes. Your ability to do this can make or break your company's future.
+Planning for BCDR is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a *force majeure* clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you must ensure that essential services continue to run and recover when disaster strikes. Your ability to do this can make or break your company's future.
 
 Broadly, your BCDR strategy must consider:
 
@@ -459,7 +459,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 
 - Alerts proactively notify you when conditions are found in your monitoring data. You can then address issues before system users notice them. You can alert on metric values, log search queries, activity log events, platform health, and website availability.
 - When alerts are triggered, you can run a logic app playbook. A playbook helps you to automate and orchestrate a response to a specific alert. Playbooks are based on Azure Logic Apps. You can use logic app templates to create playbooks, or create your own.
-- As a simple example, you can create an alert that triggers when a port scan happens against a network security group. You can set up a playbook that runs and locks down the IP address of the scan origin.
+- As a simple example, you can create an alert that triggers when a port scan happens against an NSG. You can set up a playbook that runs and locks down the IP address of the scan origin.
 - Another example is an application with a memory leak. When the memory usage gets to a certain point, a playbook can recycle the process.
 
   ![Screenshot of alerts.](./media/migrate-best-practices-security-management/alerts.png)
@@ -474,8 +474,10 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 
 The Azure portal is a web-based unified console that allows you to build, manage, and monitor everything from simple web apps to complex cloud applications. It includes a customizable dashboard and accessibility options.
 
-- You can create multiple dashboards, and share them with others who have access to your Azure subscriptions.
-- With this shared model, your team has visibility into the Azure environment, allowing them to be proactive when managing systems in the cloud.
+- You can create multiple dashboards and share them with others who have access to your Azure subscriptions.
+- With this shared model, your team has visibility into the Azure environment, which helps them them to be proactive when managing systems in the cloud.
+
+  ![Screenshot of an Azure dashboard.](./media/migrate-best-practices-security-management/dashboard.png)
 
   ![Screenshot of Azure dashboard.](./media/migrate-best-practices-security-management/dashboard.png)
   *Figure 16: Azure dashboard.*
@@ -507,10 +509,10 @@ Keeping Azure VMs updated with the latest operating system and software updates 
 - You can use Update Management in Azure Automation to manage operating system updates. This applies to machines that run Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
 - Use Update Management to quickly assess the status of available updates on all agent computers, and manage update installation.
 - You can enable Update Management for VMs directly from an Azure Automation account. You can also update a single VM from the VM page in the Azure portal.
-- In addition, you can register Azure VMs with System Center Configuration Manager. You can then migrate the Configuration Manager workload to Azure, and do reporting and software updates from a single web interface.
+- In addition, you can register Azure VMs with System Center Configuration Manager. You can then migrate the Configuration Manager workload to Azure and do reporting and software updates from a single web interface.
 
   ![Diagram of VM updates.](./media/migrate-best-practices-security-management/updates.png)
-  *Figure 18: Updates.*
+  *Figure 18: VM updates.*
 
 **Learn more:**
 
@@ -533,8 +535,9 @@ Azure has a change-tracking solution in Azure Automation:
 - Logic is applied to the received data, and the cloud service records the data.
 - On the change tracking dashboard, you can easily see the changes that were made in your server infrastructure.
 
-  ![Screenshot of change management.](./media/migrate-best-practices-security-management/change.png)
-  *Figure 19: Change management.*
+  ![Screenshot of a change management chart.](./media/migrate-best-practices-security-management/change.png)
+
+  _Figure 19: A change management chart._
 
 **Learn more:**
 

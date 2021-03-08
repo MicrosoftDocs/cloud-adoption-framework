@@ -16,7 +16,9 @@ Creating new products and services in the cloud requires a different approach th
 
 This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
-![Diagram of the Cloud Adoption Framework, including the Innovate methodology.](../_images/get-started/innovation-map.png)
+![The Cloud Adoption Framework methodologies, including the Innovate methodology.](../_images/get-started/innovation-map.png)
+
+_Figure 1: The Cloud Adoption Framework methodologies, including the Innovate methodology._
 
 ## Step 1: Document the business strategy
 
@@ -202,13 +204,13 @@ The Innovate methodology provides guidance on the tools and product management a
 
 ## Step 9: Assess the innovation maturity of your organization
 
-To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
+To support the development of your innovation strategy, the [AI readiness assessment tool](https://info.microsoft.com/ww-landing-ai-maturity-model-website.html) is a free resource that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
 
-The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI Maturity Model to compute your organization's score and provide an estimate of the AI innovation maturity on a curve.
+The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI readiness assessment tool to compute your organization's score and provide an estimate of the AI innovation maturity on a curve.
 
 **Deliverables:**
 
-- Use the [AI Maturity Model tool](https://www.gartner.com/en/documents/3982174/artificial-intelligence-maturity-model) to assess your organization's AI maturity to create AI-based systems.
+- Use the [Gartner AI Maturity Model](https://www.gartner.com/en/documents/3982174/artificial-intelligence-maturity-model) to assess your organization's AI maturity to create AI-based systems.
 
 **Guidance to support deliverable completion:**
 
