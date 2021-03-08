@@ -43,7 +43,7 @@ When the migration to the cloud is finished, the overhead and costs of managing 
 For guidance on specific elements of the cloud adoption journey, see:
 
 - [Plan for Windows Virtual Desktop migration or deployment](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Complete a Windows Virtual Desktop proof-of-concept](./proof-of-concept.md)
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)

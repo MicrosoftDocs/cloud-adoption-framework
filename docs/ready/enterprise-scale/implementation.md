@@ -18,7 +18,7 @@ When business requirements necessitate a rich initial implementation of landing 
 
 The following table lists example reference implementations based on the recommended enterprise scale architecture.
 
-| Example deployment  | Description  | GitHub repo | Deploy to Azure |
+| Example deployment | Description | GitHub repo | Deploy to Azure |
 |---------|---------|---------|---------|---------|---------|---------|---------|
 | Enterprise-scale foundation | This is the suggested foundation for enterprise-scale adoption. | [Example in GitHub][GitHub-WingTip] | [![DTA-Button-WingTip]][DTA-WingTip] |
 | Enterprise-scale hub and spoke | Add a hub and spoke network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |

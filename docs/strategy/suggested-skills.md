@@ -74,13 +74,13 @@ Various learning options beyond these initial options are available for developi
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and partners offer various options to help all audiences develop their skills with Azure services:
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Microsoft IT Pro Center](https://www.microsoft.com/itpro). Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
+- [Map roles and skills](../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-We recommend turning knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
-## Microsoft Learn
+### Microsoft Learn
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
@@ -90,4 +90,4 @@ Here is an example of a tailored learning path that aligns to the Strategy metho
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.

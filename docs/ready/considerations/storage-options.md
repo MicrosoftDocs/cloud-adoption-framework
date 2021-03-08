@@ -96,7 +96,7 @@ Azure offers multiple products and services for different storage capabilities. 
 
 After you identify the Azure tools that best match your requirements, use the detailed documentation linked in the following table to familiarize yourself with these services:
 
-| Service  | Description |
+| Service | Description |
 |---|---|
 | [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) | Azure Blob storage is Microsoft's object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a specific data model or definition, such as text or binary data. <br><br> Blob storage is designed for: <li> Serving images or documents directly to a browser. <li> Storing files for distributed access. <li> Streaming video and audio. <li> Writing to log files. <li> Storing data for backup and restore, disaster recovery, and archiving. <li> Storing data for analysis by an on-premises or Azure-hosted service. |
 | [Azure Data Lake Storage gen 2](/azure/storage/blobs/data-lake-storage-introduction) | Blob storage supports Azure Data Lake Storage Gen2, Microsoft's enterprise big data analytics solution for the cloud. Azure Data Lake Storage Gen2 offers a hierarchical file system as well as the advantages of Blob storage, including low-cost, tiered storage; high availability; strong consistency; and disaster recovery capabilities. |

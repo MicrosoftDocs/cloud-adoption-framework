@@ -122,7 +122,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Data Factory | `adf-` |
 | Data Lake Store account | `dls` |
 | Data Lake Analytics account | `dla` |
-| Event Hubs namespace | `evhns` |
+| Event Hubs namespace | `evhns-` |
 | Event hub | `evh-` |
 | Event Grid domain | `evgd-` |
 | Event Grid topic | `evgt-` |
@@ -141,6 +141,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Abbreviation |
 |---|---|
 | App Configuration store | `appcs-` |
+| Azure Static Web Apps | `stap-` |
 
 ## Integration
 

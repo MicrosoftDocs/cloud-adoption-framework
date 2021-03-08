@@ -1,5 +1,5 @@
 ---
-title: "Timelines in a cloud adoption plan"
+title: Timelines in a cloud adoption plan
 description: Use the Cloud Adoption Framework for Azure to learn how to estimate timelines based on your cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
