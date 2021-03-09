@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise Scale Analytics and AI Security Overview
+# Enterprise Scale Analytics and AI Security Overview - COPIED
 
 The Enterprise Analytics and AI solution pattern relies on a number of security features which can be enabled on Azure. They include Encryption, Role-Based Access Control, Access Control Lists, and Networking restrictions.
 

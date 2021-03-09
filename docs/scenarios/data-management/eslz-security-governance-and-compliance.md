@@ -24,7 +24,7 @@ There are multiple services that support DaR encryption, including Storage Accou
 
 ## Networking
 
-The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](../01-overview/05-networking.md).
+The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
 
 ## Azure Defender
 
@@ -66,7 +66,7 @@ In addition to managing access using Azure Active Directory identities for RBAC 
 >[!IMPORTANT]
 >We recommend [Prevent Shared Key authorization for an Azure Storage account (preview)](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent) for the Data Landing Zone Data Lakes.
 
-**RBAC** lets you assign roles to security principals (a user, group, service principal, or managed identity in Azure Active Directory), and these roles are associated with sets of permissions to the data in your file system. RBAC can help manage roles related to control plane operations (such as adding other users, assigning roles, managing encryption settings and firewall rules, etc.) or for data plane operations (such as creating file systems, reading and writing datac etc.).
+**RBAC** lets you assign roles to security principals (a user, group, service principal, or managed identity in Azure Active Directory), and these roles are associated with sets of permissions to the data in your file system. RBAC can help manage roles related to control plane operations (such as adding other users, assigning roles, managing encryption settings and firewall rules, etc.) or for data plane operations (such as creating file systems, reading and writing data etc.).
 
 RBAC is essentially scoped to top-level resources, either storage accounts or file systems in Azure Data Lake Storage Gen2. You can also apply RBAC across resources at a resource group or subscription level.
 
@@ -96,7 +96,7 @@ Resist the opportunity to directly assign individual users or service principals
 
 #### Data Lake Zones Security
 
-![Data Lake Zones Security](../images/adlssecurityzones.png)
+![Data Lake Zones Security](./images/adlssecurityzones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 

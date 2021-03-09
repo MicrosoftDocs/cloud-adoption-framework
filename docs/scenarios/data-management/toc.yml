@@ -1,5 +1,5 @@
 # docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
+# cSpell:ignore devtest mariadb
 
 items:
   - name: Enterprise Scale Analytics and AI - Microsoft Cloud Adoption Framework for Azure
@@ -42,16 +42,23 @@ items:
     - name: Business continuity and disaster recovery
       href: ./eslz-business-continuity-and-disaster-recovery.md
     - name: Security governance and compliance
+      items:
+        - name: Security governance and compliance
+          href: ./eslz-security-governance-and-compliance.md
+        - name: Data Privacy
+          href: ./eslz-data-privacy.md
+        - name:  Security Provisioning
+          href: ./eslz-security-provisioning.md
       href: ./eslz-security-governance-and-compliance.md
       
     - name: Platform automation and DevOps
       items:
-      - name:  Data Ops
-        href: ./06-dataops/01-overview.md
-      - name: Enterprise Scale Analytics and AI DevOps Models
-        href: ./06-dataops/02-es-aai-devops.md
-      - name: Teams and Functions
-        href: ./06-dataops/03-teamfunctions.md
+        - name:  Data Ops
+          href: ./eslz-dataops.md
+        - name: Enterprise Scale Analytics and AI DevOps Models
+          href: ./eslz-devops-models.md
+        - name: Teams and Functions
+          href: ./eslz-teams-and-functions.md
 
   - name: Well-Architected workloads (TBD)
     items:
