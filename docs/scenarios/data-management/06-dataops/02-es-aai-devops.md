@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI DevOps Models
 description: Enterprise Scale Analytics and AI Architecture DevOps Models.
-author: 
-ms.author:  # Microsoft employees only
+author:  mboswell
+ms.author:  mboswell # Microsoft employees only
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
