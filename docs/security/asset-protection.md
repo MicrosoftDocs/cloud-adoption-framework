@@ -25,7 +25,7 @@ TODO: What processes are required to protect assets? What decisions? Are the fol
 
 Organizations should treat the unauthorized access or theft of data among the highest impact risks to guard against.
 The reputational - and often financial - impact of losing control of sensitive data can significantly affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organization.
-Organisations need to put security measures in place to protect data at rest, and in transit.
+Organisations need to put security measures in place to protect data at rest, and in transit while at the same time being able to remain operational should the organization ever have to deal with an issue. Resiliency is a key piece to asset protection as well. 
 
 ### At rest
 
@@ -37,10 +37,10 @@ TDE is a feature of Azure SQL and Azure Synapse Analytics that helps protect dat
 
 Encrypting disks attached to virtual machines and storage used for applications or services helps protect data stored locally.
 
-#### RBAC
+#### Role Based Access Control (RBAC)
 
-Access should be restricted to data to only accounts with a verified reason and only for the data sets explicitly required for the approved use.
-Access should be deliberately split between accounts that can access and accounts that can modify.
+Access should be restricted to data to only accounts with a verified reason and only for the data sets explicitly required for the approved use. 
+Access should be deliberately split between accounts that can access and accounts that can modify. Access Control based on roles is something Microsoft can help customer implement straight from the identity console. There are over 70 different built in roles with the ability to add customer roles as well. 
 
 #### Rights management
 
@@ -77,7 +77,7 @@ For example, policies can be used to:
 
 ### Endpoint detection and response (EDR)
 
-Technologies such as Windows Defender should be running on all virtual machines to provide anti-malware scanning and File Integrity Monitoring (FIM).
+Technologies such as Microsoft Defender should be running on all virtual machines to provide anti-malware scanning and File Integrity Monitoring (FIM).
 
 ### Disk encryption
 
@@ -108,6 +108,6 @@ This can be particularly effective for internet facing services such as files sh
 
 ## Securing identity
 
-Protecting identity is a key consideration when planning an organization's approach to securing assets. Identity is one the most common routes for attackers to gain unauthorized access to applications and infrastructure.
+Protecting identity is a key consideration when planning an organization's approach to securing assets. Identity is one the most common routes for attackers to gain unauthorized access to applications and infrastructure.This has become so important that Microsoft often calls this the "new control plane". 
 
 [Guidance is provided here for areas of consideration related to protecting and controlling access.](./security/access-control.md)
