@@ -112,7 +112,7 @@ Though backup and restore aren't typically considered as adequate HA functionali
 
 - Use production database data from database backups to refresh nonproduction systems.
 
-- Back up SAP application servers/VMs disks or VM snapshots.
+- Back up SAP application servers/VMs, disks, or VM snapshots.
 
 When you can do this on-premises, you need to bring these capabilities to SAP systems in Azure.
 
