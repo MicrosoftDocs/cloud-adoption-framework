@@ -32,7 +32,7 @@ The itemized assumptions can create roadblocks that could slow progress or cause
 
 - **Paying for technical debt.** Some aging workloads carry with them a high amount of technical debt. Technical debt can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
 - **Improving reliability.** Standard operations baselines provide a degree of reliability and recovery in the cloud. But, some workload teams may require higher SLAs which could lead to architectural changes.
-- **High-cost workloads.** All assets should be cost optmized during migration. But, some workloads may require architectural modifications to address specific cost concerns.
+- **High-cost workloads.**  During migration, all assets should be optimized to align sizing with actual usage. But, some workloads may require architectural modifications to address specific cost concerns.
 - **Performance requirements.** When workload performance has a direct business impact, extra architectural consideration may be required.
 - **Secure applications.** Security requirements tend to be implemented centrally and applied to all workloads in the portfolio. But, some workloads may have specific security requirements that could lead to architectural changes.
 
@@ -44,7 +44,7 @@ The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/)
 
 Some scenarios could require an different architecture than the assumed IaaS rehosting strategy. The following are a few examples:
 
-- **PaaS modernization.** Some technology assets can be migrated to more modern Platform as a Service solutions, reducing risk during migration. Automated migration tools like Azure Migrate suggest and even automate modernization opportunities. A few examples of in-flight modernization would include low risk changes like the use of [Azure Database Migration Service (dms)](/azure/dms/dms-overview) to modernize databases. For a list of approaches that could benefit from a PaaS conversion, see the article on [evaluating assets](./evaluate.md).
+- **PaaS modernization.** Some technology assets can be migrated to more modern Platform as a Service solutions, reducing risk during migration. Automated migration tools like Azure Migrate suggest and even automate modernization opportunities. A few examples of in-flight modernization would include low risk changes like the use of [Azure Database Migration Service (DMS)](/azure/dms/dms-overview) to modernize databases. For a list of approaches that could benefit from a PaaS conversion, see the article on [evaluating assets](./evaluate.md).
 - **Scripted deployments/DevOps.** If a workload has an existing DevOps deployment or other forms of scripted deployment, the cost of changing those scripts could be lower than the cost of migrating the asset.
 - **Remediation efforts.** The remediation efforts required to prepare a workload for migration can be extensive. In some cases, it makes more sense to modernize the solution than it does to remediate underlying compatibility issues.
 
