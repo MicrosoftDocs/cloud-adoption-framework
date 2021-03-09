@@ -24,7 +24,6 @@ The following assumptions are typical for any migration effort:
 - **Resize assets.** It is assumed that few on-premises assets are fully using the allocated resources. Prior to migration, it is assumed that assets will be resized to best fit actual usage requirements.
 - **Business continuity and disaster recovery (BCDR) requirements.** It is assumed that an agreed-on SLA for the workload has been negotiated with the business prior to release planning. These requirements are likely to produce minor architecture changes.
 - **Migration downtime.** Likewise, downtime to promote the workload to production can have an adverse effect on the business. Sometimes, the solutions that must transition with minimum downtime need architecture changes. It is assumed that a general understanding of downtime requirements has been established prior to release planning.
-- **Reduce risk through modernization.** Some technology assets can be migrated to more modern Platform as a Service solutions, reducing risk during migration. Automated migration tools like Azure Migrate suggest and even automate modernization opportunities. A few examples of in-flight modernization would include low risk changes like the use of [Azure Database Migration Service (dms)](/azure/dms/dms-overview) to modernize databases.
 - **User traffic patterns.** Existing solutions may depend on existing network routing patterns. These patterns could slow performance considerably. Further, introduction of new hybrid wide area network (WAN) solutions can take weeks or even months. Prior to migration, it is assumed that your landing zones have already considered the relevant traffic patterns and changes to any core infrastructure services.
 
 ## Mitigating potential roadblocks
@@ -37,15 +36,17 @@ The itemized assumptions can create roadblocks that could slow progress or cause
 - **Performance requirements.** When workload performance has a direct business impact, additional architectural consideration may be required.
 - **Secure applications.** Security requirements tend to be implemented centrally and applied to all workloads in the portfolio. But, some workloads may have specific security requirements that could lead to architectural changes.
 
-Each of the above criteria serve as indicators of potential migration roadblocks. It is suggested that the criteria above be addressed after a workload is migrated. But if any of those criteria are required before a workload is migrated, it should be removed from the migration wave and evaluated individually. The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would be classified as a re-architecture efforts, given the additional time required to re-architect a solution, those workloads should not be considered part of the migration process.
+Each of the above criteria serve as indicators of potential migration roadblocks. It is suggested that the criteria above be addressed after a workload is migrated. But if any of those criteria are required before a workload is migrated, it should be removed from the migration wave and evaluated individually. 
+
+The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would then be classified as a re-architecture effort in your cloud adoption plan. Given the additional time required to re-architect a workload, these alternative workload adoption paths should not be considered part of the migration process.
 
 ## Accelerate business value
 
 Some scenarios could require an different architecture than the assumed IaaS rehosting strategy. The following are a few examples:
 
-- PaaS alternatives. PaaS deployments can reduce hosting costs, and they can also reduce the time required to migrate certain workloads. For a list of approaches that could benefit from a PaaS conversion, see the article on [evaluating assets](./evaluate.md).
-- Scripted deployments/DevOps. If a workload has an existing DevOps deployment or other forms of scripted deployment, the cost of changing those scripts could be lower than the cost of migrating the asset.
-- Remediation efforts. The remediation efforts required to prepare a workload for migration can be extensive. In some cases, it makes more sense to modernize the solution than it does to remediate underlying compatibility issues.
+- **PaaS modernization.** Some technology assets can be migrated to more modern Platform as a Service solutions, reducing risk during migration. Automated migration tools like Azure Migrate suggest and even automate modernization opportunities. A few examples of in-flight modernization would include low risk changes like the use of [Azure Database Migration Service (dms)](/azure/dms/dms-overview) to modernize databases. For a list of approaches that could benefit from a PaaS conversion, see the article on [evaluating assets](./evaluate.md).
+- **Scripted deployments/DevOps.** If a workload has an existing DevOps deployment or other forms of scripted deployment, the cost of changing those scripts could be lower than the cost of migrating the asset.
+- **Remediation efforts.** The remediation efforts required to prepare a workload for migration can be extensive. In some cases, it makes more sense to modernize the solution than it does to remediate underlying compatibility issues.
 
 In each of these itemized scenarios, an alternative architecture could be the best possible solution.
 
