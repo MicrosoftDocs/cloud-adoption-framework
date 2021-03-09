@@ -18,7 +18,7 @@ This article expands on the assessment process by reviewing activities associate
 
 The following assumptions are typical for any migration effort:
 
-- **IaaS.** It is commonly assumed that migrating workloads primarily involves the movement of virtual machines from a physical datacenter to a cloud datacenter via an IaaS migration, requiring a minimum of redevelopment or reconfiguration. This is known as a *lift and shift* migration. (Exceptions follow.)
+- **IaaS.** It is commonly assumed that migrating workloads primarily involves the movement of virtual machines from a physical datacenter to a cloud datacenter via an IaaS migration, requiring a minimum of redevelopment or reconfiguration. This approach is known as a *lift and shift* migration. (Exceptions follow.)
 - **Architecture consistency.** Changes to core architecture during a migration considerably increase complexity. Debugging a changed system on a new platform introduces many variables that can be difficult to isolate. For this reason, workloads should undergo only minor changes during migration and any changes should be thoroughly tested.
 - **Retirement test.** Migrations and the hosting of assets consume operational and potential capital expenses. It is assumed that any workloads being migrated have been reviewed to validate ongoing usage. The choice to retire unused assets produces immediate cost savings.
 - **Resize assets.** It is assumed that few on-premises assets are fully using the allocated resources. Prior to migration, it is assumed that assets will be resized to best fit actual usage requirements.
@@ -30,15 +30,15 @@ The following assumptions are typical for any migration effort:
 
 The itemized assumptions can create roadblocks that could slow progress or cause later pain points. The following are a few roadblocks to watch for, prior to the release:
 
-- **Paying for technical debt.** Some aging workloads carry with them a high amount of technical debt. This can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
+- **Paying for technical debt.** Some aging workloads carry with them a high amount of technical debt. Technical debt can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
 - **Improving reliability.** Standard operations baselines provide a degree of reliability and recovery in the cloud. But, some workload teams may require higher SLAs which could lead to architectural changes.
 - **High-cost workloads.** All assets should be cost optmized during migration. But, some workloads may require architectural modifications to address specific cost concerns.
-- **Performance requirements.** When workload performance has a direct business impact, additional architectural consideration may be required.
+- **Performance requirements.** When workload performance has a direct business impact, extra architectural consideration may be required.
 - **Secure applications.** Security requirements tend to be implemented centrally and applied to all workloads in the portfolio. But, some workloads may have specific security requirements that could lead to architectural changes.
 
-Each of the above criteria serve as indicators of potential migration roadblocks. It is suggested that the criteria above be addressed after a workload is migrated. But if any of those criteria are required before a workload is migrated, it should be removed from the migration wave and evaluated individually. 
+Each of the above criteria serve as indicators of potential migration roadblocks. The above criteria is usually addressed after a workload is migrated. But if any of those criteria are required before a workload is migrated, it should be removed from the migration wave and evaluated individually. 
 
-The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would then be classified as a re-architecture effort in your cloud adoption plan. Given the additional time required to re-architect a workload, these alternative workload adoption paths should not be considered part of the migration process.
+The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would then be classified as a rearchitecture effort in your cloud adoption plan. Given the extra time required to rearchitect a workload, these alternative workload adoption paths should not be considered part of the migration process.
 
 ## Accelerate business value
 
