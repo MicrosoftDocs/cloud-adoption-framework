@@ -1,5 +1,5 @@
 ---
-title: Identity and access management
+title: Identity and access management (IAM)
 description: Examine design considerations and recommendations related to identity and access management in an enterprise environment.
 author: BrianBlanchard
 ms.author: brblanch
