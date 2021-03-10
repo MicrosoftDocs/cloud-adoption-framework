@@ -7,7 +7,6 @@ items:
     pdf_name: Enterprise Scale Analytics and AI
   - name: Overview
     href: intro-enterprise-scale-analytics-ai.md
-
   - name: Build an initial strategy (TBD)
     href: strategy.md
   - name: Define your plan (TBD)
