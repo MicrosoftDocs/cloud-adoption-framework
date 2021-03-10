@@ -120,7 +120,9 @@ items:
     - name: Azure Database for Maria DB
       href: https://docs.microsoft.com/azure/mariadb/
     - name: Azure Database for MySQL
-      href: https://docs.microsoft.com/azure/mysql/ 
+      href: https://docs.microsoft.com/azure/mysql/
+    - name: Azure Database for PostgreSQL
+      href: https://docs.microsoft.com/azure/data-explorer       
     - name: Azure Databricks
       href: https://docs.microsoft.com/azure/databricks/
     - name: Azure Data Explorer
@@ -151,11 +153,6 @@ items:
       href: https://docs.microsoft.com/azure/network-watcher/
     - name: Virtual Network
       href: https://docs.microsoft.com/azure/virtual-network/ 
-    - name: Azure Database for PostgreSQL
-      href: https://docs.microsoft.com/azure/data-explorer
-
-
-
 
   - name: Learn modules (TBD)
     items:
