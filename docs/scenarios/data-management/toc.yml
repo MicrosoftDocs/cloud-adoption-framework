@@ -6,7 +6,7 @@ items:
     href: index.md
     pdf_name: Data Management - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
-      href: intro-enterprise-ecale-analytics-ai.md
+    href: intro-enterprise-ecale-analytics-ai.md
 
   - name: Build an initial strategy
     href: strategy.md
@@ -32,11 +32,13 @@ items:
     - name: Identity and access management
       href: ./eslz-identity-and-access-management.md
     - name: Management group and subscription organization
-          items:
-          - name: Cost Management and Policies
-            href: ./eslz-management-group-and-subscription-organization.md
-          - name: Cost Management and Policies
-            href: ./eslz-management-group-and-subscription-organization.md
+      items:
+       - name: Cost Management and Policies
+         href: ./eslz-management-group-and-subscription-organization.md
+       - name: Data Management Subscription
+         href: ./02-datamanagement/01-overview.md
+       - name: Data Landing Zone
+         href: ./03-datalandingzones/01-datalandingzone.md
     - name: Network topology and connectivity
       href: ./eslz-network-topology-and-connectivity.md
     - name: Management and monitoring
