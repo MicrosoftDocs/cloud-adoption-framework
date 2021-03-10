@@ -26,7 +26,7 @@ items:
   - name: Enterprise-Scale construction set
     items:
     - name: Overview
-      href: ./enterprise-scale-landing-zone.md
+      href: ./eslz-overview.md
     - name: Identity and access management
       href: ./eslz-identity-and-access-management.md
     - name: Management group and subscription organization

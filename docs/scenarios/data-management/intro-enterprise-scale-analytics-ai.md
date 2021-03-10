@@ -62,7 +62,7 @@ The solution pattern places a strong emphasis on central cataloging and classifi
 * This environment is highly controlled and subject to stringent audits.
 * All data classification types will be stored in a central Data Catalog. Access patterns are enforced by metadata-dependent policies. The Data Catalog can serve as a back-end repository for data market front-ends.
 
-The Data Management Landing Zone is discussed in detail in the [Data Management Landing Zone guide](../02-datamanagement/01-overview.md).
+The Data Management Landing Zone is discussed in detail in the [Data Management Landing Zone guide](eslz-data-management-landing-zone.md).
 
 ## Data Landing Zone(s)
 
@@ -75,7 +75,7 @@ The Data Management Landing Zone is discussed in detail in the [Data Management 
   * Reporting with niche requirements, *e.g.* compliance, tax reporting, HR, etc.
   * Specialized capabilities that address gaps in the baseline policies.
 
-The Data Landing Zone is discussed in detail in the [Data Landing Zone guide](../03-datalandingzones/01-datalandingzone.md)
+The Data Landing Zone is discussed in detail in the [Data Landing Zone guide](eslz-data-landing-zone.md)
 
 >[!IMPORTANT]
 >A **domain** is responsible for ingestion of data into a read data source. The data shouldn't have any data transformation applied apart from data quality checks and data types being applied. \

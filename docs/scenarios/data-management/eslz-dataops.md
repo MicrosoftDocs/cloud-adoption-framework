@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale platform automation and devops for data management"
-description: Describe how this enterprise-scale scenario can improve platform automation and devops of data management
+title: "Enterprise-Scale platform automation and devops Overview"
+description: Enterprise-Scale platform automation and devops Overview
 author: xigyenge
 ms.author: xigyenge
 ms.date: 03/05/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Overview
+# Overview
 
 The Enterprise Scale Analytics and AI architecture was designed with the following core principles in mind:
 

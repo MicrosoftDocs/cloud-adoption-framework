@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for data management"
-description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of data management
+title: "Enterprise-Scale Analytics and AI Security Provisioning"
+description: Enterprise-Scale Analytics and AI Security Provisioning
 author: xigyenge
 ms.author: xigyenge
 ms.date: 03/03/2021
@@ -34,7 +34,7 @@ Figure 1: Granting Access to Datasets
 
 As Figure 1 above illustrates:
 
-1. Domain Ops onboards to a new dataset to a Data Landing Zone.
+1. Domain Ops onboard the new dataset to a Data Landing Zone.
 1. A Data Asset Security Group (DASG) will be created and assigned to the dataset. A DASG is in fact an Azure Active Directory Group which could have been granted access to the data via AD Passthrough or via Table Access Control in Azure Databricks or Azure Synapse Analytics. The name of the AD Group should follow the recommended convention:
 
    - Data Landing Zone Name

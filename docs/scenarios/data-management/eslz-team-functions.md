@@ -103,7 +103,7 @@ The team monitor the Data Landing Zone for incidents and health events. They wil
 
 Domain Ops primary function is to ingest data from source and to provide a read data store version in the Data Landing Zone. The only change to the structure is to add conformed data types.
 
-Onboarding a domain was covered in [Domain & Data Product Deployment Process](aslz-devops-models.md#domain--data-product-deployment-process).
+Onboarding a domain was covered in [Domain & Data Product Deployment Process](eslz-devops-models.md#domain--data-product-deployment-process).
 
 Jordan is a Data Manager within the Domain-Ops team.
 
@@ -178,7 +178,7 @@ The Data Office assess the requirements and assembles a new Data Product Team ba
 
 The team identifies the data assets required for the data product and raises requests for permission to the data asset. If a new data asset is require Domain Ops would receive a ticket to ingest the new data asset.
 
-THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Domain & Data Product Deployment Process](eslz-devops-models.md#domain--data-product-deployment-process)
+THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Domain & Data Product Deployment Process](eslz-deployment-models#domain--data-product-deployment-process)
 
 The Data Product team is given a forked repo from the master Data Products template to work with to deploy data product.
 

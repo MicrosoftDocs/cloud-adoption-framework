@@ -108,15 +108,4 @@ The Architecture Review Board performs the primary function of reviewing and ass
 
 The Feedback and Support Operating Board are responsible for taking feedback on processes and working with the other groups to create backlog items to address gaps and improvements to the solution.
 
-For further details on all how the groups align inside the Data Management Landing Zone and Data Landing Zone(s) please see [Enterprise Scale Analytics and AI DevOps Models](../06-dataops/02-es-aai-devops.md)
-
-## Further Reading
-
-[Data Landing Zone Division and Consumption](03-dlzdivision.md)
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2002-esa-ai-teams.md)
-
->[Previous](01-overview.md)
->[Next](03-dlzdivision.md)
+For further details on all how the groups align inside the Data Management Landing Zone and Data Landing Zone(s) please see [Enterprise Scale Analytics and AI DevOps Models](eslz-team-functions.md).
