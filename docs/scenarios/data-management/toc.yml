@@ -8,19 +8,19 @@ items:
   - name: Overview
     href: intro-enterprise-scale-analytics-ai.md
 
-  - name: Build an initial strategy
+  - name: Build an initial strategy (TBD)
     href: strategy.md
-  - name: Define your plan
+  - name: Define your plan (TBD)
     href: plan.md
-  - name: Prepare your environments
+  - name: Prepare your environments (TBD)
     href: ready.md
-  - name: Migrate to the cloud
+  - name: Migrate to the cloud (TBD)
     href: migrate.md
-  - name: Innovate in the cloud
+  - name: Innovate in the cloud (TBD)
     href: migrate.md
-  - name: Govern your portfolio
+  - name: Govern your portfolio (TBD)
     href: govern.md
-  - name: Manage your portfolio
+  - name: Manage your portfolio (TBD)
     href: manage.md
 
   - name: Enterprise-Scale construction set
