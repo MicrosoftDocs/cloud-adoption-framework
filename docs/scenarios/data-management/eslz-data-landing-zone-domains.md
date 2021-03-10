@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Domains
 
-Previously, we explained the role of a Domain under [Enterprise Scale Analytics and AI Teams](../01-overview/02-esa-ai-teams.md#domain-ops-per-domain) and that Domains help understand [Data Landing Zone Division and Consumption](../01-overview/03-dlzdivision.md).
+Previously, we explained the role of a Domain under [Enterprise Scale Analytics and AI Teams](eslz-team-functions.md#domain-ops-per-domain) and that Domains help understand [Data Landing Zone Division and Consumption](eslz-data-landing-zone-division-and-consumption.md).
 
 This section explains the infrastructure which is deployed for each Domain inside a Data Landing Zone.
 
@@ -79,10 +79,3 @@ Figure 2 shows the subprocess of adding a Domain to a pre-existing Azure Databri
 
 >[!NOTE]
 >The Domain Engineering Azure AD Group allows read/write access, and the Domain User Azure AD Group should allow read-only access.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2003-datalandingzones%20%E2%9E%9F%2005-domains.md)
-
->[Previous](04-synapse.md)
->[Next](06-dataproducts.md)

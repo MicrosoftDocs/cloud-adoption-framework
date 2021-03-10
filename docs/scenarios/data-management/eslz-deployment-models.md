@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale platform automation and devops for data management"
-description: Describe how this enterprise-scale scenario can improve platform automation and devops of data management
+title: "Enterprise-Scale Analytics and AI Deployment Models"
+description: Enterprise-Scale Analytics and AI Deployment Models
 author: xigyenge
 ms.author: xigyenge
 ms.date: 03/05/2021

@@ -1,6 +1,6 @@
 ---
-title: Enterprise Scale Analytics and AI Overview
-description: Enterprise Scale Analytics and AI Architecture Overview represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized, monolithic data lake, this architecture is using a core service provider or harmonized data mesh pattern.
+title: Enterprise Scale Analytics and AI Intro
+description: Enterprise Scale Analytics and AI Intro
 author: mboswell
 ms.author: mboswell  # Microsoft employees only
 ms.date: 03/03/2021
