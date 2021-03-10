@@ -1,9 +1,9 @@
 ---
 title: "Enterprise-Scale platform automation and devops for data management"
 description: Describe how this enterprise-scale scenario can improve platform automation and devops of data management
-author: XintiaGyenge
+author: xigyenge
 ms.author: xigyenge
-ms.date: 05/03/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -60,9 +60,9 @@ The Enterprise Scale Analytics and AI ethos is based upon self-service agility w
 
 The Data Platform Ops team are core to working alongside Platform Ops in defining what good looks like. They would work with the Platform Ops team to implement the data specific policies. As features are added to products the Data Platform team should have a review process to keep on top and update as necessary.
 
-### Deployment and Operation of Data Management Sub
+### Deployment and Operation of Data Management Landing Zone
 
-The Data Platform Ops will deploy and operated the Data Management Sub(s) alongside the Platform Ops team. The Data Management Sub is the central piece of Enterprise Scale Analytics and AI which will provide shared services to the Data Landing Zones.
+The Data Platform Ops will deploy and operated the Data Management Landing Zone(s) alongside the Platform Ops team. The Data Management Landing Zone is the central piece of Enterprise Scale Analytics and AI which will provide shared services to the Data Landing Zones.
 
 ## Data Landing Zone Ops
 

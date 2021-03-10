@@ -1,7 +1,7 @@
 ---
 title: "Enterprise-Scale security, governance, and compliance for data management"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of data management
-author: XintiaGyenge
+author: xigyenge
 ms.author: xigyenge
 ms.date: 03/03/2021
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Before Domains ingest data into the solution pattern, they must be able to class
 
 ## Non-Sensitive
 
-For every domain which is on-boarded we create two data lake folders for each data lake layer (Standard and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names(UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
+For every domain which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names(UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
 
 This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering.
 

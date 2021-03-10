@@ -81,9 +81,3 @@ The Data Landing Zone is discussed in detail in the [Data Landing Zone guide](..
 >A **domain** is responsible for ingestion of data into a read data source. The data shouldn't have any data transformation applied apart from data quality checks and data types being applied. \
 \
 >A **data product** is data from a domain read data source which has had some data transformation applied. This could be a new curated dataset or BI report.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2001-overview.md)
-
->[Next](02-esa-ai-teams.md)

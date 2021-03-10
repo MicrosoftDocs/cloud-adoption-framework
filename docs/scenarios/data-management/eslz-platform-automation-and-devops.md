@@ -1,7 +1,7 @@
 ---
 title: "Enterprise-Scale platform automation and devops for data management"
 description: Describe how this enterprise-scale scenario can improve platform automation and devops of data management
-author: XintiaGyenge
+author: xigyenge
 ms.author: xigyenge
 ms.date: 05/03/2021
 ms.topic: conceptual

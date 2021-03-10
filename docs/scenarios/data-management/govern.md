@@ -20,6 +20,7 @@ Are there specific corporate policies that should be in place prior to adopting 
 ## Data management disciplines
 
 Are there changes to how the governance team should approach the governance disciplines for this scenario?
+
 - Cost
 - Security baseline
 - Identity

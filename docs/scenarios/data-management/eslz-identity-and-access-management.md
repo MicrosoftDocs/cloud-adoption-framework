@@ -1,7 +1,7 @@
 ---
 title: "Enterprise-Scale identity and access management for data management"
 description: Describe how this enterprise-scale scenario can improve identity and access management of data management
-author: XintiaGyenge
+author: xigyenge
 ms.author: xigyenge
 ms.date: 03/03/2021
 ms.topic: conceptual

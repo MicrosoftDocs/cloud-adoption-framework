@@ -1,7 +1,7 @@
 ---
 title: "Enterprise-Scale management group and subscription organization for data management"
 description: Cost management and Azure policies
-author: hamoodaleem
+author: abdale
 ms.author: hamoodaleem
 ms.date: 03/03/2021
 ms.topic: conceptual

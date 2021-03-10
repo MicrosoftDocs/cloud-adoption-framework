@@ -1,7 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Overview
 description: Enterprise Scale Analytics and AI Architecture Overview represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized, monolithic data lake, this architecture is using a core service provider or harmonized data mesh pattern.
-ms.author:  # Microsoft employees only
+author: mboswell
+ms.author: mboswell  # Microsoft employees only
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -48,7 +49,7 @@ Figure 2: Enterprise Scale Data Management and Multiple Data Landing Zones
 
 Figure 2 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **multiple** spoke (known as a Data Landing Zones). This is similar to a Harmonized Mesh pattern, which leverages common policies that ensure baseline security and compatibility. Different groups within the enterprise can customize capabilities as they see fit.
 
-The Enterprise Scale Analytics and AI framework advocates consistent governance using a common architecture that defines baseline capabilities and policies. Thus, all Data Landing Zones adhere to the same controls and auditing. Crucially, however, teams operating within the Data Landing Zone have the freedom to create data pipelines, ingest sources, create Data Products (such as reports and dashboards), and perform *ad hoc* Spark/SQL analysis. Furthermore, Data Landing Zone capabilities can be augmented by adding services on top of the baseline capability set out in the policy. Thus, a team could, for instance, add a third-party graph engine to address some niche business requirement.
+The Enterprise Scale Analytics and AI framework advocates consistent governance using a common architecture that defines baseline capabilities and policies. Thus, all Data Landing Zones adhere to the same controls and auditing. Crucially, however, teams operating within the Data Landing Zone have the freedom to create data pipelines, ingest sources, create Data Products (such as reports and dashboards), and perform *ad hoc* Spark/SQL analysis. Furthermore, Data Landing Zone capabilities can be augmented by adding services on top of the baseline capability set out in the policy. For instance, a team could add a third-party graph engine to address some niche business requirement.
 
 If you have multiple Data Landing Zones, these can connect to data lakes hosted in other zones, allowing groups to collaborate across the enterprise (subject to SSO access controls).
 
@@ -80,9 +81,3 @@ The Data Landing Zone is discussed in detail in the [Data Landing Zone guide](..
 >A **domain** is responsible for ingestion of data into a read data source. The data shouldn't have any data transformation applied apart from data quality checks and data types being applied. \
 \
 >A **data product** is data from a domain read data source which has had some data transformation applied. This could be a new curated dataset or BI report.
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2001-overview.md)
-
->[Next](02-esa-ai-teams.md)

@@ -1,7 +1,7 @@
 ---
 title: "Enterprise-Scale business continuity and disaster recovery for data management"
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of data management
-author: hamoodaleem
+author: abdale
 ms.author: hamoodaleem
 ms.date: 03/03/2021
 ms.topic: conceptual

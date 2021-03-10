@@ -1,7 +1,7 @@
 ---
 title: "Enterprise-Scale network topology and connectivity for data management"
 description: Describe how this enterprise-scale scenario can improve network topology and connectivity of data management
-author: XintiaGyenge
+author: xigyenge
 ms.author: xigyenge
 ms.date: 03/03/2021
 ms.topic: conceptual

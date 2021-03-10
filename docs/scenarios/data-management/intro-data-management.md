@@ -13,10 +13,10 @@ ms.subservice: overview
 
 Describe data management in a way that non-technical audiences can understand.
 
-# Data management responsibilities
+## Data management responsibilities
 
 Describe who is responsible for data management. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
 
-# Data management in Azure
+## Data management in Azure
 
 Describe the tools used to manage data & how they help

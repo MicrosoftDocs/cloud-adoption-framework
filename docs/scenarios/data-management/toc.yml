@@ -4,9 +4,9 @@
 items:
   - name: Enterprise Scale Analytics and AI - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: Data Management - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Enterprise Scale Analytics and AI
   - name: Overview
-    href: intro-enterprise-ecale-analytics-ai.md
+    href: intro-enterprise-scale-analytics-ai.md
 
   - name: Build an initial strategy
     href: strategy.md
@@ -27,18 +27,18 @@ items:
     items:
     - name: Overview
       href: ./enterprise-scale-landing-zone.md
-    - name: Enterprise enrollment and Azure AD Tenant
-      href: ./eslz-enterprise-enrollment-and-azure-ad-tenants.md
     - name: Identity and access management
       href: ./eslz-identity-and-access-management.md
     - name: Management group and subscription organization
       items:
        - name: Cost Management and Policies
          href: ./eslz-management-group-and-subscription-organization.md
-       - name: Data Management Subscription
-         href: ./02-datamanagement/01-overview.md
+       - name: Data Management Landing Zone
+         href: ./eslz-data-management-landing-zone.md
        - name: Data Landing Zone
-         href: ./03-datalandingzones/01-datalandingzone.md
+         href: ./eslz-data-landing-zone.md
+       - name: Data Landing Zone Division and Consumption
+         href: ./eslz-data-landing-zone-division-and-consumption.md
     - name: Network topology and connectivity
       href: ./eslz-network-topology-and-connectivity.md
     - name: Management and monitoring
@@ -47,7 +47,7 @@ items:
       href: ./eslz-business-continuity-and-disaster-recovery.md
     - name: Security governance and compliance
       items:
-        - name: Enterprise Scale Analytics and AI Security Overview
+        - name: Security Overview
           href: ./eslz-security-governance-and-compliance.md
         - name: Data Privacy
           href: ./eslz-data-privacy.md
@@ -56,12 +56,15 @@ items:
       
     - name: Platform automation and DevOps
       items:
-        - name:  Data Ops
+        - name:  Overview
           href: ./eslz-dataops.md
-        - name: Enterprise Scale Analytics and AI DevOps Models
-          href: ./eslz-devops-models.md
-        - name: Teams and Functions
-          href: ./eslz-teams-and-functions.md
+        - name: Personas and Teams
+          href: ./eslz-persona-and-teams.md
+        - name: Teams Functions
+          href: ./eslz-team-functions.md
+        - name: Deployment Models
+          href: ./eslz-deployment-models.md
+
 
   - name: Well-Architected workloads (TBD)
     items:
@@ -78,33 +81,33 @@ items:
     - name: Security (TBD)
       href: index.md
 
-  - name: Architectures (TBD)
+  - name: Architectures
     items:
-      - name: Data Management Subscription
-        href: ./02-datamanagement/01-overview.md
-      - name: Data Landing Zone
-        href: ./03-datalandingzones/01-datalandingzone.md
+       - name: Data Management Landing Zone
+         href: ./eslz-data-management-landing-zone.md
+       - name: Data Landing Zone
+         href: ./eslz-data-landing-zone.md
 
   - name: Best practices
     items:
-      - name: Data Landing Zone Division and Consumption
-        href: ./01-overview/03-dlzdivision.md
       - name:  Data Lake Services
-        href: ./03-datalandingzones/02-datalakeservices.md
+        href: ./eslz-data-lake-services.md
       - name:  Azure Databricks Integration
-        href: ./03-datalandingzones/03-databricks.md
+        href: ./eslz-azure-databricks-integration.md
       - name: Azure Synapse Analytics Integration
-        href: ./03-datalandingzones/04-synapse.md
-      - name: Domains
-        href: ./03-datalandingzones/05-domains.md
-      - name: Data Products
-        href: ./03-datalandingzones/06-dataproducts.md
-      - name: Ingestion
-        href: ./04-ingestion/01-overview.md
-      - name: SAP Ingestion
-        href: ./04-ingestion/02-sapingestion.md
-      - name: Automated Ingestion Framework
-        href: ./04-ingestion/03-dataonboarding.md
+        href: ./eslz-azure-synapse-analytics-integration.md
+      - name: Data Landing Zone Data Domains
+        href: ./eslz-data-landing-zone-domains.md
+      - name: Data Landing Zone Data Products
+        href: ./eslz-data-landing-zone-data-products.md
+      - name: Data Landing Zone Ingestion
+        items:
+          - name: Data Ingestion
+            href: ./eslz-data-ingestion.md
+          - name: SAP Data Ingestion
+            href: ./eslz-sap-data-ingestion.md
+          - name: Automated Ingestion Pattern
+            href: ./eslz-automated-ingestion-pattern.md
 
   - name: Featured Azure products
     items:

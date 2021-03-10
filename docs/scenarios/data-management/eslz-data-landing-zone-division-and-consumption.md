@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Division and Consumption
 description: Enterprise Scale Analytics and AI Architecture Division and Consumption
-author: 
-ms.author: 
+author: mboswell
+ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -30,7 +30,7 @@ Figure 1: Contoso Business Units
 - Legal
 - IT
 
-Using the concepts of a [Domain-driven design (DDD)](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice) which advocates modeling based on the reality of business as relevant to your use cases. We can apply this to designing our Data Landing Zones using **data** Domain-driven design. We focus firstly on the Domains residing with the business unit and then followed by the Sub-Domain.
+Using the concepts of a [Domain-driven design (DDD)](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice), we can apply this to designing our Data Landing Zones using **data** Domain-driven design. This method advocates modeling based on the reality of the business and it is relevance to your use cases.  We focus first on the Domains residing within the business unit and then by any additional Sub-Domain(s).
 
 >[!NOTE]
 >Domain separation allows you to separate data, processing, and tasks into logical groupings called Domains.
@@ -103,10 +103,3 @@ The central corporate finance team can curate and ingest the finance objects int
 
 - **Angel Lopez. Layered Architecture in Domain-Driven Design** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-Domain-driven-design/>
-
-## Log Feedback to Enterprise Scale Analytics v-team
-
-[Log Feedback for this page](https://github.com/Azure/enterprise-scale-analytics/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20Solution%20Engineering%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20Content%3A%2001-overview%20%E2%9E%9F%2003-dlzdivision.md)
-
->[Previous](02-esa-ai-teams.md)
->[Next](04-policy.md)
