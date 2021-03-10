@@ -111,8 +111,51 @@ items:
 
   - name: Featured Azure products
     items:
-    - name: Links to Azure products used for data management and governance
-      href: https://docs.microsoft.com/
+    - name: ARM Templates
+      href: https://docs.microsoft.com/azure/azure-resource-manager/templates/
+    - name: Blob Storage
+      href: https://docs.microsoft.com/azure/storage/blobs/
+    - name: Azure Cosmos DB
+      href: https://docs.microsoft.com/azure/cosmos-db/
+    - name: Azure Database for Maria DB
+      href: https://docs.microsoft.com/azure/mariadb/
+    - name: Azure Database for MySQL
+      href: https://docs.microsoft.com/azure/mysql/ 
+    - name: Azure Databricks
+      href: https://docs.microsoft.com/azure/databricks/
+    - name: Azure Data Explorer
+      href: https://docs.microsoft.com/      
+    - name: Azure Data Lake
+      href: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction
+    - name: Azure Key Vault
+      href: https://docs.microsoft.com/azure/key-vault/
+    - name: Azure Policy
+      href: https://docs.microsoft.com/azure/governance/policy/      
+    - name: Azure Private Link
+      href: https://docs.microsoft.com/azure/private-link/
+    - name: Azure Purview
+      href: https://docs.microsoft.com/azure/purview/
+    - name: Azure Stream Analytics
+      href: https://docs.microsoft.com/azure/stream-analytics/
+    - name: Azure SQL
+      href: https://docs.microsoft.com/azure/azure-sql/
+    - name: Azure Synapse Analytics
+      href: https://docs.microsoft.com/azure/synapse-analytics/
+    - name: Data Factory
+      href: https://docs.microsoft.com/azure/data-factory/
+    - name: Event Hubs
+      href: https://docs.microsoft.com/en-us/azure/event-hubs/
+    - name: HDInsight
+      href: https://docs.microsoft.com/azure/hdinsight/           
+    - name: Network Watcher
+      href: https://docs.microsoft.com/azure/network-watcher/
+    - name: Virtual Network
+      href: https://docs.microsoft.com/azure/virtual-network/ 
+    - name: Azure Database for PostgreSQL
+      href: https://docs.microsoft.com/azure/data-explorer
+
+
+
 
   - name: Learn modules (TBD)
     items:
