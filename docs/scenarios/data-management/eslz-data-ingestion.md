@@ -33,7 +33,7 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 - [Azure Data Share](https://docs.microsoft.com/azure/data-share) enables organizations to securely share data with multiple external customers and partners. Once a data share account is created and datasets added, customers and partners can be invited to the data share. Data providers are always in control of the data that they have shared. Azure Data Share makes it simple to manage and monitor what data was shared, when, and by whom.
 
 >[!IMPORTANT]
->Every Data Landing Zone has an [Ingestion and Processing Resource Group](eslz-data-management-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](eslz-automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
+>Every Data Landing Zone has an [Ingestion and Processing Resource Group](eslz-data-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](eslz-automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
 
 ## Azure Data Factory Ingest Considerations
 

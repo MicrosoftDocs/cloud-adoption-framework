@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale platform automation and devops for data management"
-description: Describe how this enterprise-scale scenario can improve platform automation and devops of data management
+title: "Enterprise-Scale Analytics and AI Personas and Teams"
+description: Enterprise-Scale Analytics and AI Personas and Teams 
 author: xigyenge
 ms.author: xigyenge
 ms.date: 03/05/2021
@@ -9,9 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and devops for data management Enterprise-Scale scenario
-
-## Personas and Teams
+# Personas and Teams
 
 The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 

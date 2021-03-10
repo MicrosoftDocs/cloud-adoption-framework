@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale platform automation and devops for data management"
-description: Describe how this enterprise-scale scenario can improve platform automation and devops of data management
+title: "Enterprise Scale Analytics and AI Teams and Functions"
+description: Enterprise Scale Analytics and AI Teams and Functions
 author: xigyenge
 ms.author: xigyenge
 ms.date: 03/05/2021
@@ -17,7 +17,7 @@ The Enterprise Scale Analytics and AI moves teams from working horizontally acro
 
 Figure 1: Enterprise Scale Analytics and AI Teams
 
-## Platform Ops
+### Platform Ops
 
 Platform Ops are part of the Platform Group team. They operate and own the cloud platform all up.
 
@@ -25,7 +25,7 @@ Within Enterprise Scale Analytics they are responsible for instantiating Data Ma
 
 At the start of rolling out Enterprise Scale Analytics and AI they are likely to have a heavy involvement in working, with the Data Platform Ops, in developing IT Service Management interfaces which personas in Data Landing Zone can use. These interfaces would typically be REST API calls to a service to onboard datasets, set security and add services to Data Landing Zones.
 
-## Data Platform Ops
+### Data Platform Ops
 
 The Data Platform Ops group which is encompassed within the Platform Group Team.
 
@@ -33,7 +33,7 @@ Data Platform Ops provides a host of services such as central monitoring, catalo
 
 Data Platform Ops own the Data Management Landing Zone and have further responsibility which are detailed in the following sections.
 
-### Develop Infrastructure
+#### Develop Infrastructure
 
 The Data Platform Ops team is responsible for developing infrastructure as code templates for use by Data Landing Zone personas. The templates can cover multiple scenarios, which must be kept up to date and enhanced over times.
 
@@ -41,26 +41,26 @@ The team relies on a feedback cycle from other teams to prioritize templates and
 
 The team is working in an agile framework with a common goal of driving standard infrastructure templates.
 
-### Respond to new Data Landing Zone Requests
+#### Respond to new Data Landing Zone Requests
 
 The Data Platform Ops team must provide a code free way of consuming the templates that they have created. Using an IT Service Management tooling such as ServiceNow could handle ticket requests which are approved by the Data Platform Ops team for creating new Data Landing Zones.
 
 Upon approved a new DevOps project would be created for that new landing zone forked from the base templates and the pipelines will be executed to deploy the templates to the new environment.
 
-### Data Platform Ops Feedback and Enhancement Loop
+#### Data Platform Ops Feedback and Enhancement Loop
 
 There are two options to incorporate enhancements into the templates:
 
 * Teams in charge of instances of the infrastructure templates would enhance there DevOps templates and deployments. If teams discover issues in the templates, the Data Platform Ops can support the teams and merge changes back from there fork into the template.
 * Other teams in the Data Landing Zones should be able to raise tickets for improvements and backlogs created to enhance templates based on prioritization.
 
-### Azure Policies for Enterprise Scale Analytics and AI
+#### Azure Policies for Enterprise Scale Analytics and AI
 
 The Enterprise Scale Analytics and AI ethos is based upon self-service agility with guardrails to protect data, costs and patterns.
 
 The Data Platform Ops team are core to working alongside Platform Ops in defining what good looks like. They would work with the Platform Ops team to implement the data specific policies. As features are added to products the Data Platform team should have a review process to keep on top and update as necessary.
 
-### Deployment and Operation of Data Management Landing Zone
+#### Deployment and Operation of Data Management Landing Zone
 
 The Data Platform Ops will deploy and operated the Data Management Landing Zone(s) alongside the Platform Ops team. The Data Management Landing Zone is the central piece of Enterprise Scale Analytics and AI which will provide shared services to the Data Landing Zones.
 
@@ -103,7 +103,7 @@ The team monitor the Data Landing Zone for incidents and health events. They wil
 
 Domain Ops primary function is to ingest data from source and to provide a read data store version in the Data Landing Zone. The only change to the structure is to add conformed data types.
 
-Onboarding a domain was covered in [Domain & Data Product Deployment Process](eslz-devops-models.md#domain--data-product-deployment-process).
+Onboarding a domain was covered in [Domain & Data Product Deployment Process](eslz-deployment-models.md#domain--data-product-deployment-process).
 
 Jordan is a Data Manager within the Domain-Ops team.
 
@@ -178,7 +178,7 @@ The Data Office assess the requirements and assembles a new Data Product Team ba
 
 The team identifies the data assets required for the data product and raises requests for permission to the data asset. If a new data asset is require Domain Ops would receive a ticket to ingest the new data asset.
 
-THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Domain & Data Product Deployment Process](eslz-deployment-models#domain--data-product-deployment-process)
+THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Domain & Data Product Deployment Process](eslz-deployment-models.md#domain--data-product-deployment-process)
 
 The Data Product team is given a forked repo from the master Data Products template to work with to deploy data product.
 

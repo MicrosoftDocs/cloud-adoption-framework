@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise Scale Analytics and AI
+# Enterprise Scale Analytics and AI Overview
 
 Today, customers are investing in moving data to the cloud and have been following a modern data warehouse (MDW) pattern published by multiple cloud vendors. This MDW pattern pushes for singular enterprise data lakes which focuses the organization on centralized analytics. These patterns are aligned to on-premises deployments as opposed to the agility and self-service of the cloud.
 
