@@ -13,7 +13,7 @@ ms.subservice: ready
 ---
 # Data Products
 
-![Data Products Resource Group](../images/dataproductsrg.png)
+![Data Products Resource Group](./images/dataproductsrg.png)
 
 ## Multiple Resource Groups by Data Domain
 
@@ -46,7 +46,7 @@ Data Products should be automatically registered in Azure Purview to allow scann
 
 Figure 1 illustrates how a Data Product is created. It shows how a Data Landing Zone hosts multiple data domains and that a Domain logical boundary is driven by data ownership and knowledge. A Data Product is created by ingesting data from Domains either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Domain.
 
-![Creating a Data Product](../images/dataproductcrossdlz.png)
+![Creating a Data Product](./images/dataproductcrossdlz.png)
 
 Figure 1: Creating a Data Product
 
@@ -56,7 +56,7 @@ Azure Machine Learning should be considered a data product and can be used to en
 
 Azure Machine Learning will cover all aspects of the data science lifecycle from datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical ML to deep learning, including both supervised and unsupervised learning. Whether you prefer to write Python or R code or use zero-code/low-code options such as the designer, you can build, train, and track highly accurate machine learning and deep learning models in an Azure Machine Learning Workspace.
 
-![Sample Data Science workflow](../images/sampledatascienceflow.png)
+![Sample Data Science workflow](./images/sampledatascienceflow.png)
 
 Figure 2: Sample Data Science workflow
 
@@ -74,7 +74,7 @@ Azure Machine Learning clusters should be used for production-grade model traini
 
 For every Data Landing Zone, an empty Visualization Resource Group is created. Visualization is considered a **data product** and, depending on the complexity, can be created via a self-serve process or managed by a data product team.
 
-![Visualization Resource Group](../images/visualizationrg.png)
+![Visualization Resource Group](./images/visualizationrg.png)
 
 >[!NOTE]
 >Licensing costs might mean that is it more economical to deploy third-party products such as Spotfire and Tableau into the Data Management Landing Zone and for the products to connect across to the Data Landing Zone to pull data back.

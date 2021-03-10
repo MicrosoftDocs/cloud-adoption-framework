@@ -84,22 +84,21 @@ items:
         href: ./02-datamanagement/01-overview.md
       - name: Data Landing Zone
         href: ./03-datalandingzones/01-datalandingzone.md
+
+  - name: Best practices
+    items:
       - name: Data Landing Zone Division and Consumption
         href: ./01-overview/03-dlzdivision.md
-      - name: Domains
-        href: ./03-datalandingzones/05-domains.md
-      - name: Data Products
-        href: ./03-datalandingzones/06-dataproducts.md
-
-
-  - name: Best practices (TBD)
-    items:
       - name:  Data Lake Services
         href: ./03-datalandingzones/02-datalakeservices.md
       - name:  Azure Databricks Integration
         href: ./03-datalandingzones/03-databricks.md
       - name: Azure Synapse Analytics Integration
         href: ./03-datalandingzones/04-synapse.md
+      - name: Domains
+        href: ./03-datalandingzones/05-domains.md
+      - name: Data Products
+        href: ./03-datalandingzones/06-dataproducts.md
       - name: Ingestion
         href: ./04-ingestion/01-overview.md
       - name: SAP Ingestion
@@ -107,7 +106,7 @@ items:
       - name: Automated Ingestion Framework
         href: ./04-ingestion/03-dataonboarding.md
 
-  - name: Featured Azure products (TBD)
+  - name: Featured Azure products
     items:
     - name: Links to Azure products used for data management and governance
       href: https://docs.microsoft.com/

@@ -27,7 +27,7 @@ The final step of creating an access package allows users to request access to t
 
 Onboarding new Data Domain uses cases or Data Products is handled via Azure Active Directory (Azure Active Directory) entitlement management.
 
-![Granting Access](../images/granting_access.png)
+![Granting Access](./images/granting_access.png)
 
 Figure 1: Granting Access to Datasets
 
@@ -59,7 +59,7 @@ Enterprise Scale Analytics and AI roles map to the configuration and maintenance
 
 We are able to delegate access governance to access package managers in Azure AD entitlement management so that Data Landing Zone can look after themselves without having to go back to the Platform teams.
 
-![User Access Management](../images/user_access_management.png)
+![User Access Management](./images/user_access_management.png)
 
 Figure 2: Configuring Azure AD entitlement management
 

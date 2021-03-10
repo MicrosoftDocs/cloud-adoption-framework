@@ -194,7 +194,7 @@ With the Common Data Model (CDM), organizations can use a data format that provi
 
 ## Data Lake Zones Security
 
-![Data Lake Zones Security](../images/adlssecurityzones.png)
+![Data Lake Zones Security](./images/adlssecurityzones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 

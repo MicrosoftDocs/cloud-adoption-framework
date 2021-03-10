@@ -96,7 +96,7 @@ Resist the opportunity to directly assign individual users or service principals
 
 #### Data Lake Zones Security
 
-![Data Lake Zones Security](../images/adlssecurityzones.png)
+![Data Lake Zones Security](./images/adlssecurityzones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 

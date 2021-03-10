@@ -77,7 +77,7 @@ Depending on your use case you might wish to enable the following options for th
 
 The two Azure Databricks Workspaces are deployed as part of a new Data Landing Zone deployment. Figure 1 shows the overall workflow of deploying an Azure Databricks environment in Enterprise Scale Analytics and AI.
 
-![Azure Databricks Deployment into a Data Landing Zone](../images/databricksdeploy.png)
+![Azure Databricks Deployment into a Data Landing Zone](./images/databricksdeploy.png)
 
 Figure 1: Azure Databricks Deployment into a Data Landing Zone
 

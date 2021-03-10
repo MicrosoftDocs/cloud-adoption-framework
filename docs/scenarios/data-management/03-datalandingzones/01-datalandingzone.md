@@ -15,7 +15,7 @@ Data Landing Zones (spokes) are connected to the Data Management Landing Zone by
 
 Before provisioning a Data Landing Zone, you should have your DevOps CI/CD operating model in place and a Data Management Landing Zone deployed. It is highly recommended that you also consider the number of initial Data Landing Zones you want to deploy.
 
-![Data Landing Zone](../images/datalandingzone.png)
+![Data Landing Zone](./images/datalandingzone.png)
 
 Figure 1: Data Landing Zone
 
@@ -50,7 +50,7 @@ Three [Azure Data Lake Storage Gen V2 (ADLS)](https://docs.microsoft.com/azure/s
 
 Third-party data publishers require the ability to land their data into the platform so domains can pull it into their Data Lakes. The Upload Ingest Storage resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
 
-![Upload Ingest Storage Service](../images/dlzingeststorage.png)
+![Upload Ingest Storage Service](./images/dlzingeststorage.png)
 
 Figure 3: Upload Ingest Storage Service
 
@@ -67,7 +67,7 @@ If your enterprise has already developed an ingestion framework engine for autom
 
 Ingest and Processing will be deployed into a single resource group.
 
-![Data Landing Zone Ingest and Processing](../images/automatedingestprocessing.png)
+![Data Landing Zone Ingest and Processing](./images/automatedingestprocessing.png)
 
 Figure 4: Data Landing Zone Ingest and Processing
 
@@ -96,7 +96,7 @@ IOT Hubs and Event Hubs could be used by your ingestion framework engine for rea
 
 Across the Data Landing Zone there is the requirement for a number of shared metadata services which provide functionality to other shared services. These will be deployed into a single resource group.
 
-![Data Landing Zone Metadata Services](../images/dlzsharedservices.png)
+![Data Landing Zone Metadata Services](./images/dlzsharedservices.png)
 
 Figure 2: Data Landing Zone Metadata Services
 
@@ -177,7 +177,7 @@ Further reading on onboarding [Data Products](06-dataproducts.md) explains the p
 
 For every Data Landing Zone, an empty visualization resource group will be created. This group can be filled with services required to implement your visualization solution. Using the existing VNet will enable your solution to connect to Data Products.
 
-![Visualization Resource Group](../images/visualizationrg.png)
+![Visualization Resource Group](./images/visualizationrg.png)
 
 Figure 5: Visualization Resource Group
 

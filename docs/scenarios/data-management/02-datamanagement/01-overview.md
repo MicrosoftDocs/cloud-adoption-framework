@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Data Management Landing Zone is classified as a management function and is at the heart of the Enterprise Scale Analytics and AI platform. It is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
-![Data Management Landing Zone Overview](../images/datamanagementoverview.png)
+![Data Management Landing Zone Overview](./images/datamanagementoverview.png)
 
 Figure 1: Data Management Landing Zone Overview
 
@@ -40,7 +40,7 @@ The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview]
 * API for registering and reading data information.
 * compliance dashboard hub
 
-![Azure Purview Overview](../images/purviewoverview.png)
+![Azure Purview Overview](./images/purviewoverview.png)
 
 Figure 2: Azure Purview Overview
 
@@ -79,7 +79,7 @@ Data Lineage plays an important component in an Enterprise Scale Analytics and A
 
 One of the primary features of a Data Catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three ADF activities: Copy Data, Data Flow, and Execute SSIS Package. In addition to the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
-![Data Lineage](../images/datalineage.png)
+![Data Lineage](./images/datalineage.png)
 
 Figure 3: Data Lineage
 

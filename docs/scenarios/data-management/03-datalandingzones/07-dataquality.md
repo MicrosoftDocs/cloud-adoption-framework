@@ -19,7 +19,7 @@ Data cleansing and data integrity validation should be at the point of Data Prod
 
 High-quality Data Sets and Products should be discoverable and descriptive. This role is fulfilled by the Data Catalogue. Ideally Data Sets and Products should be usable with minimal hand-holding.
 
-![Data Landing Zone Quality](../images/datalandingzonequality.png)
+![Data Landing Zone Quality](./images/datalandingzonequality.png)
 
 Figure 1: Data Landing Zone Quality
 

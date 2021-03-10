@@ -36,13 +36,13 @@ The Enterprise Scale Analytics and AI solutions pattern consists of a Data Manag
 
 The platform can be extended to include other Azure services on demand. The proposed approach is to provision the analytics platform with the required services, with t-shirt sizing, and extend it further as new use cases are onboarded. This allows enterprises to regulate the platform cost effectively. The framework builds on our [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
-![Enterprise Scale Data Management and Single Data Landing Zone](../images/hldsimple.png)
+![Enterprise Scale Data Management and Single Data Landing Zone](./images/hldsimple.png)
 
 Figure 1: Enterprise Scale Data Management and Single Data Landing Zone
 
 Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (known as a Data Landing Zone). For a number of environments this will be the starting point. It allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones. This is close to a Core Service Provider pattern which builds-out common core services with flexibility to bolt-on domain specific customizations.
 
-![Enterprise Scale Data Management and Multiple Data Landing Zones](../images/hld.png)
+![Enterprise Scale Data Management and Multiple Data Landing Zones](./images/hld.png)
 
 Figure 2: Enterprise Scale Data Management and Multiple Data Landing Zones
 
