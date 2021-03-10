@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Teams
 description: Enterprise Scale Analytics and AI Architecture Persona and Teams structure
-author:  mboswell
-ms.author:  mboswell # Microsoft employees only
+author: xigyenge
+ms.author: xigyenge # Microsoft employees only
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
