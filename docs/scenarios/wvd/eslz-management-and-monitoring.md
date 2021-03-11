@@ -21,7 +21,7 @@ ms.subservice: ready
     - Application Groups
     - Hostpools
 - Performance Counters
-  | Object | name	| Counter name | Instance name | Interval |	id |
+| Object | name	| Counter name | Instance name | Interval |	id |
 | --- | --- | --- | --- | --- | --- |
 | LogicalDisk |	% Free Space | C: |	60 | LogicalDisk, % Free Space, C: |
 | PhysicalDisk | Avg. Disk sec/Read | * | 30 | PhysicalDisk, Avg. Disk sec/Read, * |
