@@ -60,6 +60,16 @@ ms.subservice: ready
 | PhysicalDisk | Avg. Disk Queue Length | * | 30 | PhysicalDisk, Avg. Disk Queue Length, * | 
 
 - Windows Event Logs should be collected into the Azure Monitor Log Analytics Workspace
+
+| Windows Event Log Name | Windows Event Log Type |
+| --- | --- |
+| System | Error, Warning, Information |
+| Application | Error, Warning, Information | 
+| Microsoft-Windows-TerminalServices-LocalSessionManager/Operational | Error, Warning, Information |
+| Microsoft-FSLogix-Apps/Operational | Error, Warning, Information |
+| Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin | Error, Warning, Information |
+| Microsoft-FSLogix-Apps/Admin | Error, Warning, Information |
+
 - Application Groups should be assigned to user groups for ease of user administration overhead.
 - Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
 - Utilize the Workbooks on the [WVD Community GitHub](https://github.com/wvdcommunity) for visualizations of log data.
