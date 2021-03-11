@@ -18,11 +18,11 @@ Not all enterprises adopt Azure in the same way, so the Cloud Adoption Framework
 
 ## Prescriptive guidance
 
-The enterprise-scale architecture provides prescriptive guidance coupled with Azure best practices. It follows design principles across the critical design areas for an organization's Azure environment.
+The enterprise-scale architecture provides prescriptive guidance coupled with best practices for your Azure control plane. It follows design principles across the critical design areas for an organization's Azure environment.
 
 ## Qualifiers: Should I start with enterprise-scale?
 
-The enterprise-scale architecture is modular by design. It allows you to start with foundational landing zones that support your application portfolios, no matter whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside your business requirements regardless of scale point.
+The enterprise-scale architecture is modular by design. It allows you to start with a foundational landing zone control plane that support your application portfolios, no matter whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside your business requirements regardless of scale point.
 
 ## Start with a Cloud Adoption Framework enterprise-scale landing zone
 
