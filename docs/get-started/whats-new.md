@@ -18,12 +18,6 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
-## March 2021
-
-We've updated the Cloud Adoption Framework to include two new Adoption scenarios—[Hybrid and multicloud](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview), and [Modern containers](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/aks/).
-
-We've also added a new article on [Antipatterns to avoid](https://docs.microsoft.com/azure/cloud-adoption-framework/antipatterns/antipatterns-to-avoid).
-
 ## February 2021
 
 We've updated and expanded the business outcomes overview with an introduction to cloud economics, and added a use case pointing to a successful business case to each business outcome category.
