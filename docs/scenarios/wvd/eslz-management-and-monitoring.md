@@ -28,7 +28,7 @@ ms.subservice: ready
 
 - Centralize your Azure Monitor Log Analytics workspace in the region of your Windows Virtual Desktop deployment.
 - Diagnostic settings can be exported to a storage account should there be a need to go beyond the two-year retention period.
-- Platform service diagnostic telemetry stated in the considerations should be enabled to go to the Azure Monitor Log Anayatics.
+- Platform service diagnostic telemetry stated in the considerations should be enabled to go to the Azure Monitor Log Analytics.
 - The following Windows Performance Counters should be collected by Log Analytics for WVD Monitoring.
 
 | Object name | Counter name | Instance name | Interval | id |
