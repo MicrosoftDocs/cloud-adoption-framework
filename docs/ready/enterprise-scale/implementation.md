@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Implement Cloud Adoption Framework enterprise-scale landing zones in Azure
 
-When business requirements necessitate a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start, use the enterprise-scale example options listed here. With this approach, you can use the Azure portal or infrastructure as code to set up and configure your environment. It's also possible to transition between the portal and infrastructure as code (recommended) when your organization is ready.
+When business requirements necessitate a rich initial implementation of landing zones with fully integrated governance, security, and operations control plane from the start, use the enterprise-scale example options listed here. With this approach, you can use the Azure portal or infrastructure as code to set up and configure your Azure environment. It's also possible to transition between the portal and infrastructure as code (recommended) when your organization is ready.
 
 ## Example implementation
 
