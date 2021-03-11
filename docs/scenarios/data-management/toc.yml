@@ -30,15 +30,14 @@ items:
       href: ./eslz-identity-and-access-management.md
     - name: Management group and subscription organization
       items:
-       - name: Overview
-         href: ./eslz-management-group-and-subscription-organization.md
        - name: Cost Management and Policies
-         href: ./eslz-cost-management-and-policies.md
+         href: ./eslz-management-group-and-subscription-organization.md
        - name: Data Management Landing Zone
          href: ./eslz-data-management-landing-zone.md
        - name: Data Landing Zone
-         href: ./eslz-data-landing-zone.md
          items:
+          - name: Overview
+            href: ./eslz-data-landing-zone.md
           - name: Data Landing Zone Data Domains
             href: ./eslz-data-landing-zone-domains.md
           - name: Data Landing Zone Data Products
