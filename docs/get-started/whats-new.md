@@ -18,13 +18,44 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
-## February 2021
+## March 2021
 
-We've updated and expanded the business outcomes overview with an introduction to cloud economics, and added a use case pointing to a successful business case to each business outcome category.
+This release is the largest update of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework.
 
-| Article | Description |
+### Adoption journeys
+
+Most notable in this release is the addition of adoption journeys, which provide a short, consumable overlay or lenses that rest on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance in the Cloud Adoption Framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), the [Azure Architecture Center](/azure/architecture), [Microsoft Learn](/learn), and other [Microsoft documentation](/) to the adoption of specific technology platforms. The table below provides links to the overview page for each of the new journeys:
+
+| Journey | Description |
 |--|--|
-| [Business&nbsp;outcomes&nbsp;overview](../strategy/business-outcomes/index.md) | We've updated the introduction to each category of business outcomes with references to case studies on cloud economics, demonstrating how organizations achieve the related business objective. The refreshed introductions with illustrative case studies include: <br><br> <li> [Fiscal outcomes](../strategy/business-outcomes/fiscal-outcomes.md) <li> [Agility outcomes](../strategy/business-outcomes/agility-outcomes.md) <li> [Global Reach outcomes](../strategy/business-outcomes/reach-outcomes.md) <li> [Customer engagement outcomes](../strategy/business-outcomes/engagement-outcomes.md)<li> [Performance outcomes](../strategy/business-outcomes/performance-outcomes.md) <li> [Sustainability goals](../strategy/business-outcomes/sustainability.md) |
+| [Hybrid and multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
+| [Modern containers](../scenarios/aks/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
+| SAP on Azure (coming soon) | As part of our One Migrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
+
+### Cloud economics
+
+Building on feedback and lessons learned, this is our first step to refresh the [Strategy methodology](../strategy/index.md) by integrating Microsoft's [cloud economics program](https://azure.microsoft.com/overview/cloud-economics/).
+
+We've updated the introduction to each category of business outcomes with references to case studies on cloud economics, demonstrating how organizations achieve the related business objective. The refreshed introductions with illustrative case studies include:
+
+- [Fiscal outcomes](../strategy/business-outcomes/fiscal-outcomes.md)
+- [Agility outcomes](../strategy/business-outcomes/agility-outcomes.md)
+- [Global reach outcomes](../strategy/business-outcomes/reach-outcomes.md)
+- [Customer engagement outcomes](../strategy/business-outcomes/engagement-outcomes.md)
+- [Performance outcomes](../strategy/business-outcomes/performance-outcomes.md)
+- [Sustainability goals](../strategy/business-outcomes/sustainability.md)
+
+### Enterprise-scale updates
+
+The critical design area of [network topology and connectivity](ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on connecting to multicloud providers like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration.
+
+### Anti-patterns
+
+Companies often miss important steps in their cloud adoption journey. The new [cloud adoption anti-patterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The anti-patterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
+
+### Implementing governance
+
+The Govern methodology is expanded to add an approach for implementing governance, including a long-awaited article on managing deny lists and allow lists.
 
 ## January 2021
 
