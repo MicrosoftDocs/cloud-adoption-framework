@@ -26,7 +26,7 @@ ms.subservice: ready
 | --- | --- | --- | --- | --- |
 | LogicalDisk |	% Free Space | C: |	60 | LogicalDisk, % Free Space, C: |
 | PhysicalDisk | Avg. Disk sec/Read | * | 30 | PhysicalDisk, Avg. Disk sec/Read, * |
-|PhysicalDisk |	Avg. Disk sec/Transfer | * | 30 | PhysicalDisk, Avg. Disk sec/Transfer, * |
+| PhysicalDisk | Avg. Disk sec/Transfer | * | 30 | PhysicalDisk, Avg. Disk sec/Transfer, * |
 | PhysicalDisk | Avg. Disk sec/Write | * | 30 | PhysicalDisk, Avg. Disk sec/Write, * |
 | Process | % User Time | * | 30 | Process, % User Time, * |
 | Process | Thread Count | * | 30 | Process, Thread Count, * |
