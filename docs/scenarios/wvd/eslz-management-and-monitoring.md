@@ -31,8 +31,8 @@ ms.subservice: ready
 | Process | % User Time | * | 30 | Process, % User Time, * |
 | Process | Thread Count | * | 30 | Process, Thread Count, * |
 | Process | % Processor Time | * | 20 | Process, % Processor Time, * |
-| Process | IO Write Operations/sec	* | 30 | Process, IO Write Operations/sec, * | 
-| Process | IO Read Operations/sec	* | 30 | Process, IO Read Operations/sec, * | 
+| Process | IO Write Operations/sec | * | 30 | Process, IO Write Operations/sec, * | 
+| Process | IO Read Operations/sec | * | 30 | Process, IO Read Operations/sec, * | 
 | Processor Information | % Processor Time | _Total | 30 | Processor Information, % Processor Time, _Total | 
 | Terminal Services | Active Sessions | * | 60 | Terminal Services, Active Sessions, * | 
 | LogicalDisk | Avg. Disk Queue Length | C: | 30 | LogicalDisk, Avg. Disk Queue Length, C: | 
