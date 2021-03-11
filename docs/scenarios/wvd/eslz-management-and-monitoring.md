@@ -21,6 +21,7 @@ ms.subservice: ready
     - Application Groups
     - Hostpools
 - Performance Counters
+
 | Object | name	| Counter name | Instance name | Interval |	id |
 | --- | --- | --- | --- | --- | --- |
 | LogicalDisk |	% Free Space | C: |	60 | LogicalDisk, % Free Space, C: |
@@ -48,6 +49,7 @@ ms.subservice: ready
 | Memory | Pages/sec | * | 30 | Memory, Pages/sec, * | 
 | Memory | % Committed Bytes In Use | * |30 | Memory, % Committed Bytes In Use, * |
 | PhysicalDisk | Avg. Disk Queue Length | * | 30 | PhysicalDisk, Avg. Disk Queue Length, * | 
+
 -	Dashboarding created from the platform logs to centralize visuals for reporting operations.
 
 ### Design Recommendations
