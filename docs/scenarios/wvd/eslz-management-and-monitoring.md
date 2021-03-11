@@ -20,6 +20,34 @@ ms.subservice: ready
     - Workspaces
     - Application Groups
     - Hostpools
+- Performance Counters
+  | Object | name	| Counter name | Instance name | Interval |	id |
+| --- | --- | --- | --- | --- | --- |
+| LogicalDisk |	% Free Space | C: |	60 | LogicalDisk, % Free Space, C: |
+| PhysicalDisk | Avg. Disk sec/Read | * | 30 | PhysicalDisk, Avg. Disk sec/Read, * |
+|PhysicalDisk |	Avg. Disk sec/Transfer | * | 30 | PhysicalDisk, Avg. Disk sec/Transfer, * |
+| PhysicalDisk | Avg. Disk sec/Write	* | 30 | PhysicalDisk, Avg. Disk sec/Write, * |
+| Process | % User Time	* | 30 | Process, % User Time, * |
+| Process | Thread Count | * | 30 | Process, Thread Count, * |
+| Process | % Processor Time | * | 20 | Process, % Processor Time, * |
+| Process | IO Write Operations/sec	* | 30 | Process, IO Write Operations/sec, * | 
+| Process | IO Read Operations/sec	* | 30 | Process, IO Read Operations/sec, * | 
+| Processor Information | % Processor Time | _Total | 30 | Processor Information, % Processor Time, _Total | 
+| Terminal Services | Active Sessions | * | 60 | Terminal Services, Active Sessions, * | 
+| LogicalDisk | Avg. Disk Queue Length | C: | 30 | LogicalDisk, Avg. Disk Queue Length, C: | 
+| Terminal Services | Inactive Sessions | * | 60 | Terminal Services, Inactive Sessions, * |
+| Terminal Services | Total Sessions | * | 60 | Terminal Services, Total Sessions, * |
+| User Input Delay per Process | Max Input Delay | * | 30 | User Input Delay per Process, Max Input Delay, * |
+| User Input Delay per Session | Max Input Delay | * | 30 | User Input Delay per Session, Max Input Delay, * |
+| RemoteFX Network | Current TCP RTT | * | 30 | RemoteFX Network, Current TCP RTT, * |
+| RemoteFX Network | Current UDP Bandwidth | * | 30 | RemoteFX Network, Current UDP Bandwidth, * |
+| LogicalDisk | Avg. Disk sec/Transfer | C: | 60 | LogicalDisk, Avg. Disk sec/Transfer, C: |
+| LogicalDisk | Current Disk Queue Length | C: | 30 | LogicalDisk, Current Disk Queue Length, C: |
+| Memory | Available Mbytes | * | 30 | Memory, Available Mbytes, * |
+| Memory | Page Faults/sec | * | 30 |Memory, Page Faults/sec, * |
+| Memory | Pages/sec | * | 30 | Memory, Pages/sec, * | 
+| Memory | % Committed Bytes In Use | * |30 | Memory, % Committed Bytes In Use, * |
+| PhysicalDisk | Avg. Disk Queue Length | * | 30 | PhysicalDisk, Avg. Disk Queue Length, * | 
 -	Dashboarding created from the platform logs to centralize visuals for reporting operations.
 
 ### Design Recommendations
