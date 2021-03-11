@@ -53,10 +53,6 @@ The critical design area of [network topology and connectivity](ready/azure-best
 
 Companies often miss important steps in their cloud adoption journey. The new [cloud adoption anti-patterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The anti-patterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
 
-### Implementing governance
-
-The Govern methodology is expanded to add an approach for implementing governance, including a long-awaited article on managing deny lists and allow lists.
-
 ## January 2021
 
 To help you accelerate adoption and innovation, we've added new information about using GitHub and updated best practices for machine learning. We've published a new article and video to help you choose the best landing zone.
