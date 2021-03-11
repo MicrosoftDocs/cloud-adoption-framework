@@ -20,7 +20,16 @@ ms.subservice: ready
     - Workspaces
     - Application Groups
     - Hostpools
-- Performance Counters
+- Performance Counters should be collected.
+- Windows Event Logs should be collected.
+-	Dashboarding created from the platform logs to centralize visuals for reporting operations.
+
+### Design Recommendations
+
+- Centralize your Azure Monitor Log Analytics workspace in the region of your Windows Virtual Desktop deployment.
+- Diagnostic settings can be exported to a storage account should there be a need to go beyond the two-year retention period.
+- Platform service diagnostic telemetry stated in the considerations should be enabled to go to the Azure Monitor Log Anayatics
+- The following Windows Performance Counters should be collected by Log Analytics for WVD Monitoring
 
 | Object name | Counter name | Instance name | Interval | id |
 | --- | --- | --- | --- | --- |
@@ -50,15 +59,10 @@ ms.subservice: ready
 | Memory | % Committed Bytes In Use | * |30 | Memory, % Committed Bytes In Use, * |
 | PhysicalDisk | Avg. Disk Queue Length | * | 30 | PhysicalDisk, Avg. Disk Queue Length, * | 
 
--	Dashboarding created from the platform logs to centralize visuals for reporting operations.
-
-### Design Recommendations
-
--	Centralize your Azure Monitor Log Analytics workspace in the region of your Windows Virtual Desktop deployment.
--	Diagnostic settings can be exported to a storage account should there be a need to go beyond the two-year retention period.
--	Application Groups should be assigned to user groups for ease of user administration overhead.
--	Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
--	Utilize the Workbooks on the [WVD Community GitHub](https://github.com/wvdcommunity) for visualizations of log data.
+- Windows Event Logs should be collected into the Azure Monitor Log Analytics Workspace
+- Application Groups should be assigned to user groups for ease of user administration overhead.
+- Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
+- Utilize the Workbooks on the [WVD Community GitHub](https://github.com/wvdcommunity) for visualizations of log data.
 
 ## Infrastructure Management & Monitoring
 
