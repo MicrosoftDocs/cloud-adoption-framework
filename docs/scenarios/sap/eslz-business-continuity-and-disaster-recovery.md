@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale business continuity and disaster recovery for an SAP migration
 description: Learn about enterprise-scale business continuity and disaster recovery for an SAP migration in the Microsoft Cloud Adoption Framework for Azure.
-author: JefferyMitchell
+author: JeffreyMitchell
 ms.author: brblanch
 ms.date: 3/12/2021
 ms.topic: conceptual
@@ -83,7 +83,7 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 - Use a Standard Load Balancer SKU in front of ASCS and DB clusters.
 
-- All production systems should run on premium-managed SSDs and use Azure NetApp Files or ultra disks. At least the OS disk should be premium-managed to achieve better performance and the best SLA.
+- All production systems should run on premium-managed SSDs and use Azure NetApp Files or ultra disks. At least the OS disk should be Premium to achieve better performance and the best SLA.
 
 - Both VMs in the HA pair should be deployed in an availability set, or Availability Zones should be the same size and have the same storage configuration.
 
@@ -100,7 +100,7 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 ### Backup/restore
 
-**Design Considerations for Backup/Restore:**
+**Design Considerations for backup/restore:**
 
 Though backup and restore aren't typically considered as adequate HA functionality for a production SAP workload, this technology covers various other areas. Most companies that use SAP applications need to follow compliance regulations that require backups to be stored for many years. There are also other conditions and scenarios where having a backup and being able to restore from it are essential. The assumption is that you're already establishing and following backup and restore best practices for deploying your SAP applications. This means that you can:
 
