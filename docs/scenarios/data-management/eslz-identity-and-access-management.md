@@ -45,4 +45,3 @@ In the case of **secure and sensitive data**, the following recommendations shou
 The figure below shows how ACLs and Groups can be applied to an Enterprise Scale Analytics and AI deployment:
 
 ![Data Access Model](./images/data_security_model.png)
-*Figure 1: Sample Data Access Model*
