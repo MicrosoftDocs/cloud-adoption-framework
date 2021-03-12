@@ -10,35 +10,32 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore -->
-<!-- docutune:casing -->
-
 # Terraform module for Cloud Adoption Framework enterprise-scale
 
 Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp.
 
-This section shows how to use the official [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) to accelerate your journey to managing Azure landing zones at scale using Terraform.
+This section shows how to use the official [Terraform module for Cloud Adoption Framework enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) to accelerate your journey to managing Azure landing zones at scale using Terraform.
 
-## Purpose of enterprise scale landing zones
+## Purpose of enterprise-scale landing zones
 
-The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) provides a simplified approach for deploying the [Management Group and Subscription organization](./management-group-and-subscription-organization.md) hierarchy from the enterprise scale [reference architecture](./architecture.md#high-level-architecture) using Terraform, enabling:
+The [Terraform Module for Cloud Adoption Framework enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) provides a simplified approach for deploying the [Management Group and Subscription organization](./management-group-and-subscription-organization.md) hierarchy from the enterprise scale [reference architecture](./architecture.md#high-level-architecture) using Terraform, enabling:
 
-1. Managed resource hierarchy for _Subscription_ organization using _Management Groups_.
-1. A scalable security and governance model using _Azure Policy_ and _Access Control (IAM)_, with an extensive library of custom definitions ready to assign.
-1. Enforced security and governance settings across _Subscriptions_ through _Management Group_ inheritance.
+1. Managed resource hierarchy for *subscription* organization using *management groups*.
+1. A scalable security and governance model using *Azure Policy* and *Access Control (IAM)*, with an extensive library of custom definitions ready to assign.
+1. Enforced security and governance settings across *subscriptions* through *management group* inheritance.
 
 By packaging these capabilities into a single Terraform module, it becomes easier to build and enforce consistency across the Azure platform when operating at scale.
 
 ## Use standard modules
 
-Reuse of components is a fundamental principle of Infrastructure-as-Code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. This module is published to the official [Terraform Registry](https://registry.terraform.io/modules/Azure/) and is verified by HashiCorp.
+Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. This module is published to the official [Terraform registry](https://registry.terraform.io/modules/Azure) and is verified by HashiCorp.
 
 ## Architecture diagram
 
-The [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) deploys the following components from the enterprise scale [reference architecture](./architecture.md#high-level-architecture):
+The [Terraform module for Cloud Adoption Framework enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) deploys the following components from the enterprise scale [reference architecture](./architecture.md#high-level-architecture):
 
-![Overview of resources deployed by the Terraform Module for Cloud Adoption Framework Enterprise-scale](media/terraform-caf-enterprise-scale-overview.png)
-_Figure 1: Overview of resources deployed by the Terraform Module for Cloud Adoption Framework Enterprise-scale._
+![Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale](media/terraform-caf-enterprise-scale-overview.png)
+*Figure 1: Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale.*
 
 ## Capabilities
 
@@ -46,24 +43,24 @@ The components deployed and their purpose include the following:
 
 | Component | Responsibility |
 |---|---|
-| Management groups | Core Management Groups provide the resource hierarchy foundations of the enterprise scale reference architecture:<ul><li>Optional Management Groups for demo landing zones (SAP, Corp and Online)</li><li>Optional Management Groups for custom landing zones (define your own)</li></ul> |
-| Azure Policy | Azure Policy to provide security and governance across the platform: <ul><li>Custom Policy Definitions and Policy Set Definitions to cover common governance patterns not covered by the built-in policies.</li><li>Create and assign policies at any scope within the Management Group hierarchy to ensure compliance is enforced through inheritance</li><li>Expand with your own custom definitions to meet your specific security and governance requirements:</li></ul> |
-| Access control (IAM) settings | Create and assign Roles in the resource hierarchy to ensure compliance with RBAC policies:<ul><li>Create custom Role Definitions to ensure principle of least privilege</li><li>Create Role Assignments at the right scope to ensure platform and application teams have the right permissions</li></ul> |
-| Subscriptions | Subscriptions are assigned to Management Groups:<ul><li>Enables policy and RBAC inheritance</li><li>Ensures compliance with platform security and governance requirements</li></ul> |
+| Management groups | Core management groups provide the resource hierarchy foundations of the enterprise-scale reference architecture: <li> Optional management groups for demo landing zones (SAP, corp and online) <li> Optional management groups for custom landing zones (define your own) |
+| Azure Policy | Azure Policy to provide security and governance across the platform: <li> Custom policy definitions and policy set definitions to cover common governance patterns not covered by the built-in policies <li> Create and assign policies at any scope within the management group hierarchy to ensure compliance is enforced through inheritance <li> Expand with your own custom definitions to meet your specific security and governance requirements </li> |
+| Access control (IAM) settings | Create and assign roles in the resource hierarchy to ensure compliance with RBAC policies: <li> Create custom role definitions to ensure principle of least privilege <li> Create role assignments at the right scope to ensure platform and application teams have the right permissions |
+| Subscriptions | Subscriptions are assigned to management groups: <li> Enables policy and RBAC inheritance <li> Ensures compliance with platform security and governance requirements |
 
 ## Customize and deploy
 
-To simplify getting started with this module, it has been published to the [Terraform Registry](https://registry.terraform.io/modules/Azure/). This allows you to consume it directly from the registry as a re-usable module and can benefit from updates as they get released.
+To simplify getting started with this module, it has been published to the [Terraform registry](https://registry.terraform.io/modules/Azure). This allows you to consume it directly from the registry as a re-usable module and can benefit from updates as they get released.
 
 The only dependencies for this module are as follows:
 
-- Terraform (_recommended version 0.13.2 and later_)
-- AzureRM Provider (_recommended version 2.34.0 and later_)
+- Terraform (*recommended version 0.13.2 and later*)
+- AzureRM provider (*recommended version 2.34.0 and later*)
 
 > [!IMPORTANT]
-> There are known issues with some Terraform and AzureRM Provider version combinations. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment. We generally recommend pinning to specific versions, and testing thoroughly before upgrading. As each new version of the module is released, the project team plan to rebase the module to ensure compatibility with the latest Terraform and AzureRM Provider versions.
+> There are known issues with some Terraform and AzureRM provider version combinations. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment. We generally recommend pinning to specific versions, and testing thoroughly before upgrading. As each new version of the module is released, the project team plan to rebase the module to ensure compatibility with the latest Terraform and AzureRM provider versions.
 
-### Simple Example
+### Simple example
 
 The following is a simple starting configuration for your `main.tf` root module:
 
@@ -71,6 +68,7 @@ The following is a simple starting configuration for your `main.tf` root module:
 > Although the module has only one mandatory variable `root_parent_id`, we also recommend setting `root_id`. Changing the `root_id` value will initiate a full redeployment of all resources managed by the module, including downstream dependencies.
 
 ```hcl
+
 # We strongly recommend using the required_providers block to set the
 # Azure Provider source and version being used.
 
@@ -106,16 +104,18 @@ module "enterprise_scale" {
 }
 ```
 
-This example code will deploy the minimum recommended [Management Group and Subscription organization](./management-group-and-subscription-organization.md) from the enterprise scale reference architecture. You can then start to customize your deployment once you've got this up and running.
+<!-- docutune:enable -->
+
+This example code will deploy the minimum recommended [management group and subscription organization](./management-group-and-subscription-organization.md) from the enterprise-scale reference architecture. You can then start to customize your deployment once you've got this up and running.
 
 > [!TIP]
-> If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started), covering installation and use of Terraform, and the [AzureRM Provider Guides](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) for information on how to configure the provider and authenticate with Azure.
+> If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started), covering installation and use of Terraform, and the [AzureRM provider guides](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) for information on how to configure the provider and authenticate with Azure.
 
 ## Next steps
 
-The Terraform Module for Cloud Adoption Framework Enterprise-scale provides an accelerated path to building out your enterprise scale landing zones. It also provides a great deal of flexibility to expand and customize your deployment whilst retaining a simplified approach to managing the configuration of each landing zone.
+The Terraform module for Cloud Adoption Framework enterprise-scale provides an accelerated path to building out your enterprise-scale landing zones. It also provides a great deal of flexibility to expand and customize your deployment whilst retaining a simplified approach to managing the configuration of each landing zone.
 
-To find out more, review the module on Terraform Registry, and explore the [GitHub Wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki) where we will post more examples and tutorials covering how to customize your deployment.
+To find out more, review the module on Terraform registry, and explore the [GitHub wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki) where we will post more examples and tutorials covering how to customize your deployment.
 
 > [!div class="nextstepaction"]
-> [Review the module on Terraform Registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest)
+> [Review the module on Terraform registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest)
