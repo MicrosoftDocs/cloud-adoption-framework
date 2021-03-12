@@ -10,6 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
+<!-- docutune:casing "Azure Fence Agent" -->
+<!-- docutune:ignore DB -->
+
 # Enterprise-scale business continuity and disaster recovery for an SAP migration
 
 ## Scenario and scope
@@ -31,7 +34,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - Backup/restore considerations
 - DR: Cross-regional versus regional DR decision criteria
 
-### High Availability (HA) within an Azure region
+### High availability (HA) within an Azure region
 
 **Design Considerations for HA:**
 
@@ -51,7 +54,7 @@ For the DBMS layer, the common architecture pattern is to replicate databases at
 
 Azure does present other options, as the service supports either NFS or Server Message Block sharing. [Azure shared disk](/azure/virtual-machines/disks-shared) can be used in Windows for ASCS/SCS components and specific HA scenarios. Failover clusters should be set up separately for SAP application layer components and the DBMS layer since Azure doesn't support HA architectures that combine SAP application layer components and the DBMS layer into one failover cluster.
 
-Most failover clusters for SAP application layer components and the DBMS layer require a virtual IP address for a failover cluster. One common exception is with Oracle Data Guard, whose functionality doesn't require a virtual IP address. [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) should handle the virtual IP address for all other cases. As a design principle, use one Load Balancer per cluster configuration; the standard version of the Load Balancer is recommended. For more information, see [public endpoint connectivity for virtual machines using Azure Standard Load Balancer in SAP HA scenarios](/azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections).
+Most failover clusters for SAP application layer components and the DBMS layer require a virtual IP address for a failover cluster. One common exception is with Oracle Data Guard, whose functionality doesn't require a virtual IP address. [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) should handle the virtual IP address for all other cases. As a design principle, use one Load Balancer per cluster configuration; the standard version of the load balancer is recommended. For more information, see [Public endpoint connectivity for virtual machines using Azure Standard Load Balancer in SAP HA scenarios](/azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections).
 
 Explore [HA architecture and scenarios for SAP NetWeaver](/azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios) for more information and possibilities.
 
@@ -72,18 +75,18 @@ One advantage of deploying your HA architecture across different Availability Zo
   - A single VM SLA offers 99.9 percent.
   - Availability set deployment offers 99.95 percent.
   - Availability Zones offer 99.99 percent.
-  
+
 - In an availability set deployment, each component of an SAP system has to be in its own availability set. SAP central services, database, and application VMs should be grouped in their availability sets.
 
-- When using Azure proximity placement groups (PPGs) in an availability set deployment, all the three SAP components (central services, application server, and database) should be in the same PPG.
+- When using Azure proximity placement groups in an availability set deployment, all the three SAP components (central services, application server, and database) should be in the same proximity placement group.
 
-- Use one PPG per SAP SID. PPG doesn’t span across Availability Zones or Azure regions.
+- Use one proximity placement group per SAP SID. Groups don't span across Availability Zones or Azure regions.
 
-- Azure doesn't currently support combining ASCS and DB HA in the same Linux Pacemaker cluster; separate them into individual clusters. However, you can combine up to five [multiple central-services clusters](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) into a pair of VMs.
+- Azure doesn't currently support combining ASCS and db HA in the same Linux Pacemaker cluster; separate them into individual clusters. However, you can combine up to five [multiple central-services clusters](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) into a pair of VMs.
 
 - Use a Standard Load Balancer SKU in front of ASCS and DB clusters.
 
-- All production systems should run on premium-managed SSDs and use Azure NetApp Files or ultra disks. At least the OS disk should be Premium to achieve better performance and the best SLA.
+- All production systems should run on premium-managed SSDs and use Azure NetApp Files or ultra disks. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
 
 - Both VMs in the HA pair should be deployed in an availability set, or Availability Zones should be the same size and have the same storage configuration.
 
@@ -91,11 +94,11 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 - One of the following services should be selected for running SAP central-services clusters on different operating systems:
 
-  - [SUSE Linux Enterprise Server Pacemaker cluster](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files): Supports up to three STONITH Block Devices (SBDs) or Azure fence agent.
+  - [SUSE Linux Enterprise Server Pacemaker cluster](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files): Supports up to three STONITH block devices (SBDs) or Azure Fence Agent.
   - [Red Hat Enterprise Linux Pacemaker cluster](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files): SBD isn't supported yet; only Azure fence agent is supported.
   - [Windows cluster](/azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-shared-disk)
   - SAP-certified third-party cluster software
-  
+
 - You should set up the cluster timeout parameters recommended in the documentation for central-services and database clusters.
 
 ### Backup/restore
@@ -162,12 +165,12 @@ Another factor that you should consider when choosing your DR region is the RPO 
 
 - An alternative to using ExpressRoute is to set up VPN connections from on-premies to the primary and secondary Azure DR region.
 
-- Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run 'corosync.conf', and more).
+- Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run `corosync.conf`, and more).
 
-- Use Cross-region Replication (CRR) in Azure NetApp Files to synchronize file volumes between the primary and DR region. CRR is currently in [public preview](/azure/azure-netapp-files/cross-region-replication-introduction).
+- Use Cross-region replication in Azure NetApp Files to synchronize file volumes between the primary and DR region. Cross-region replication is [currently in public preview](/azure/azure-netapp-files/cross-region-replication-introduction).
 
 - Native database replication should be used to synchronize data to the DR site; Site Recovery shouldn't be used.
 
-- Peer the primary and DR VNet. For example, for HANA System Replication, an SAP/HANA DB VNet needs to be peered to DR site's SAP/HANA DB VNet.
+- Peer the primary and DR VNets. For example, for HANA System Replication, an SAP HANA DB VNet needs to be peered to the DR site's SAP HANA DB VNet.
 
-- You should create two Azure NetApp Files accounts in two different regions at the Premium service level, at least, if you use Azure NetApp Files storage for your SAP deployments.  
+- You should create two Azure NetApp Files accounts in two different regions at the Premium tier, at least, if you use Azure NetApp Files storage for your SAP deployments.
