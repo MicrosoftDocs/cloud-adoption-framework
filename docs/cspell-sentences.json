@@ -318,7 +318,10 @@
     "ignoreRegExpList": [
         "\\]\\([#/][^\\)]+\\)",
         "\\n *(author|ms\\.author|manager): .*(?=\\r?\\n)",
-        "OpenBlade\\[.*\\]"
+        "OpenBlade\\[.*\\]",
+        "\\s`[^`]+`\\s",
+        "\\n *```[a-z]+\\r?\\n([^.\\r\\n]+\\r?\\n)+ *``` *\\r\\n",
+        "\\]\\((?:\\.\\.?/)?(?!http)[a-z\\d][^\\(]+\\)"
     ],
     "import": [
         ".\\cspell-docset.json",
