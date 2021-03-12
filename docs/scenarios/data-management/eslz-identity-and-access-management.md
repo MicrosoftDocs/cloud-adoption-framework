@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for data management Enterprise-Scale Analytics and AI scenario
+# Identity and access management for Enterprise-Scale Analytics and AI
 
 ## Access to the central datasets
 
