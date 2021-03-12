@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Identity Baseline discipline improvement
@@ -17,8 +17,7 @@ The Identity Baseline discipline focuses on ways of establishing policies that e
 This article outlines some potential tasks your company can engage in to better develop and mature the Identity Baseline discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Phases of an incremental approach to cloud governance](../../_images/govern/adoption-phases.png)
-
-_Figure 1: Phases of an incremental approach to cloud governance._
+*Figure 1: Phases of an incremental approach to cloud governance.*
 
 It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Identity Baseline discipline.
 
@@ -98,7 +97,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
 - Enable conditional access for [on-premises federated applications](/azure/active-directory/devices/overview).
 - Distribute identity across global regions in multiple hubs with synchronization between regions.
-- Establish central role-based access control (RBAC) federation.
+- Establish central Azure role-based access control (Azure RBAC) federation.
 
 ## Operate and post-implementation
 
@@ -127,7 +126,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Consider implementing a development security operations (DevSecOps) approach.
 - Conduct an impact analysis to gauge results on costs, security, and user adoption.
 - Periodically produce an impact report that shows the changes in metrics created by the system and estimate the business impacts of the [hybrid identity strategy](../../decision-guides/identity/index.md).
-- Establish integrated monitoring recommended by the [Azure Security Center](/azure/security-center/security-center-intro).
+- Establish integrated monitoring recommended by the [Azure Security Center](/azure/security-center/security-center-introduction).
 
 ## Next steps
 

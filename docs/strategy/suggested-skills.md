@@ -1,17 +1,18 @@
 ---
-title: Skills readiness path during the Plan phase of a migration journey
-description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the Plan phase of migration.
+title: Skills readiness path during the planning phase of a migration journey
+description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the planning phase of migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
-# Skills readiness path during the Plan phase of a migration journey
+# Skills readiness path during the planning phase of a migration journey
 
-During the Plan phase of a migration journey, the objective is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
+The objective during the planning phase of a migration journey is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
 
 - Establishing the vision.
 - Building the business justification.
@@ -39,7 +40,7 @@ Justifying the investment to adopt the cloud can require deeper analysis and an 
 You can refine your business case by aligning the desired business case with current and future digital estate inventory. These articles can guide the development of a digital estate rationalization:
 
 - [Incremental rationalization](../digital-estate/rationalize.md): An agile approach to rationalization that properly aligns late-bound technical decisions.
-- The [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
+- [The five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
 ## Create a migration backlog (technical plan)
 
@@ -47,7 +48,7 @@ Convert the business case and rationalized digital estate into an actionable mig
 
 ## Business planning skills
 
-During the Ready phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
+During the readiness phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
 
 - [Create an Azure account](/learn/modules/create-an-azure-account). The first step to using Azure is to create an account. Your account holds the Azure services you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](/learn/modules/tour-azure-portal). Tour the Azure portal features and services, and customize the portal.
@@ -57,7 +58,7 @@ During the Ready phase, technical staff creates a migration landing zone capable
 - [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure). Create a virtual machine by using the Azure portal.
 - [Azure networking](/learn/modules/intro-to-azure-networking). Learn the basics of Azure networking and how Azure networking helps you improve resiliency and reduce latency.
 - [Azure compute options](/learn/modules/intro-to-azure-compute). Learn about the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac). Use RBAC to secure resources.
+- [Secure resources with Azure RBAC](/learn/modules/secure-azure-resources-with-rbac). Use Azure RBAC to secure resources.
 - [Data storage options](/learn/modules/intro-to-data-in-azure). Learn about the benefits of Azure data storage.
 
 ## Organizational skills
@@ -69,24 +70,24 @@ Depending on the motivations and desired business outcomes of a cloud adoption e
 
 ## Deeper skills exploration
 
-Beyond these initial options for developing skills, a variety of learning options is available.
+Various learning options beyond these initial options are available for developing skills.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and partners offer various options to help all audiences develop their skills with Azure services:
+Microsoft and partners offer various options for all audiences to develop skills with Azure services.
 
-- [Microsoft IT Pro Center](https://www.microsoft.com/itpro). Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
+- [Map roles and skills](../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-We recommend turning knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
+- Explore [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx) to gain official recognition for your Azure knowledge.
 
-## Microsoft Learn
+### Microsoft Learn
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
 Here is an example of a tailored learning path that aligns to the Strategy methodology of the Cloud Adoption Framework.
 
-[Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
+[Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure Cloud Services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
 
 ## Learn more
 
-To discover additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.

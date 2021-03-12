@@ -1,5 +1,5 @@
 ---
-title: "Migration environment planning checklist"
+title: Migration environment planning checklist
 description: Use the migration environment planning checklist to validate environmental readiness prior to migration.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Migration environment planning checklist: Validate environmental readiness prior to migration
@@ -17,7 +18,7 @@ The following checklist aligns with the guidance in the [Ready methodology](../.
 
 ## Effort type assumption
 
-This article and checklist assume a _rehost_ or _cloud transition_ approach to cloud migration.
+This article and checklist assume a *rehost* or *cloud transition* approach to cloud migration.
 
 ## Governance alignment
 

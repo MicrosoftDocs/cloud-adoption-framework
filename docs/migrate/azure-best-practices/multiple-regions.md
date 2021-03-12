@@ -7,21 +7,21 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Azure regions decision guide
 
-Azure comprises many regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/regions) has specific characteristics that make choosing which region to use incredibly important. These include available services, capacity, constraints, and sovereignty:
+Azure comprises many regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics that make choosing which region to use incredibly important. These include available services, capacity, constraints, and sovereignty:
 
-- **Available services:** Services that are deployed to each region differ, based on various factors. Select a region for your workload that contains your desired service. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services).
+- **Available services:** Services that are deployed to each region differ, based on various factors. Select a region for your workload that contains your desired service. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 - **Capacity:** Each region has a maximum capacity. This can affect which types of subscriptions can deploy which types of services and under what circumstances. This is different than subscription quotas. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team or account manager to confirm that you can deploy at the scale necessary.
-- **Constraints:** Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup or failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies).
+- **Constraints:** Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup or failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies/).
 - **Sovereignty:** Certain regions are dedicated to specific sovereign entities. While all regions are Azure regions, these sovereign regions are completely isolated from the rest of Azure. They aren't necessarily managed by Microsoft and might be restricted to certain types of customers. These sovereign regions are:
-  - [Azure China](https://azure.microsoft.com/global-infrastructure/china)
-  - [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany): Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
-  - [Azure US government](https://azure.microsoft.com/global-infrastructure/government)
-  - Two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) are managed by Microsoft but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to the other sovereign clouds.
+  - [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/geographies/)
+  - [Azure Germany](https://azure.microsoft.com/global-infrastructure/geographies/): Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
+  - [Azure US government](https://azure.microsoft.com/global-infrastructure/government/)
+  - Two regions in [Australia](https://azure.microsoft.com/global-infrastructure/geographies/) are managed by Microsoft but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to the other sovereign clouds.
 
 ## Operate in multiple geographic regions
 
@@ -40,17 +40,17 @@ Any robust cloud deployment requires a well-considered network that takes into a
 
 - Azure regions are deployed in pairs. In the event of a catastrophic region failure, another region within the same geopolitical boundary is designated as its paired region. Consider deploying into paired regions as a primary and secondary resiliency strategy. One exception to this strategy is `Brazil South`, which is paired with `South Central US`. For more information, see [Azure paired regions](/azure/best-practices-availability-paired-regions).
 
-  - Azure Storage supports [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy-grs). This means that three copies of your data are stored within your primary region, and three additional copies are stored in the paired region. You can't change the storage pairing for GRS.
+  - Azure Storage supports [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy). This means that three copies of your data are stored within your primary region, and three additional copies are stored in the paired region. You can't change the storage pairing for GRS.
   - Services that rely on Azure Storage GRS can take advantage of this paired region capability. To do so, your applications and the network must be oriented to support that.
   - If you don't plan to use GRS to support your regional resiliency needs, you shouldn't use the paired region as your secondary. In the event of a regional failure, there will be intense pressure on resources in the paired region as resources migrate. You can avoid that pressure by recovering to an alternate site and gaining additional speed during your recovery.
   > [!WARNING]
-  > Do not attempt to use Azure GRS for VM backups or recovery. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup) and [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery), along with [Azure managed disks](/azure/virtual-machines/windows/managed-disks-overview), to support your infrastructure as a service (IaaS) workload resiliency.
+  > Do not attempt to use Azure GRS for VM backups or recovery. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/) and [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), along with [Azure managed disks](/azure/virtual-machines/managed-disks-overview), to support your infrastructure as a service (IaaS) workload resiliency.
 
-- Azure Backup and Azure Site Recovery work in tandem with your network design to facilitate regional resiliency for your IaaS and data backup needs. Make sure the network is optimized so data transfers remain on the Microsoft backbone and use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview), if possible. Some larger organizations with global deployments might instead use [ExpressRoute premium](/azure/expressroute/expressroute-introduction), to route traffic between regions and potentially save regional egress charges.
+- Azure Backup and Azure Site Recovery work in tandem with your network design to facilitate regional resiliency for your IaaS and data backup needs. Make sure the network is optimized so data transfers remain on the Microsoft backbone and use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview), if possible. Some larger organizations with global deployments might instead use [ExpressRoute Premium](/azure/expressroute/expressroute-introduction), to route traffic between regions and potentially save regional egress charges.
 
 - Azure resource groups are regional specific. It's normal, however, for resources within a resource group to span multiple regions. Consider that in the event of a regional failure, control plane operations against a resource group will fail in the affected region, even though the resources in other regions (within that resource group) will continue to operate. This can affect both your network design and your resource group design.
 
-- Many platform as a service (PaaS) services within Azure support [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) or [Azure Private Link](/azure/private-link/private-link-overview). Both of these solutions affect your network considerations substantially with regard to regional resiliency, migration, and governance.
+- Many platform as a service (PaaS) services within Azure Support [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) or [Azure Private Link](/azure/private-link/private-link-overview). Both of these solutions affect your network considerations substantially with regard to regional resiliency, migration, and governance.
 
 - Many PaaS services rely on their own regional resiliency solutions. For example, both Azure SQL Database and Azure Cosmos DB allow you to easily replicate to additional regions. Services such as Azure DNS don't have regional dependencies. As you consider which services you will use in your adoption process, make sure to clearly understand the failover capabilities and recovery steps that can be required for each Azure service.
 
@@ -107,7 +107,7 @@ The location of existing datacenters can affect a migration strategy. For exampl
 
 The following approach uses a data-driven model for addressing global migration complexities. When the scope for a migration includes multiple regions, the cloud adoption team should evaluate the following readiness considerations:
 
-- Data sovereignty might require localization of some assets, but many assets might not be governed by those compliance constraints. Things like logging, reporting, network routing, identity, and other central IT services might be eligible to be hosted as shared services across multiple subscriptions, or even multiple regions. The cloud adoption team should evaluate by using a shared service model for those services, as outlined in the [reference architecture for a hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/shared-services).
+- Data sovereignty might require localization of some assets, but many assets might not be governed by those compliance constraints. Things like logging, reporting, network routing, identity, and other central IT services might be eligible to be hosted as shared services across multiple subscriptions, or even multiple regions. The cloud adoption team should evaluate by using a shared service model for those services, as outlined in the [reference architecture for a hub and spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/#hub-spoke-network-topology).
 - When you're deploying multiple instances of similar environments, an environment factory can create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
 When the team is comfortable with the baseline approach and readiness is aligned, you should then consider a few data-driven prerequisites:
@@ -116,7 +116,7 @@ When the team is comfortable with the baseline approach and readiness is aligned
 - **Perform a user profile analysis on each affected country:** It's important to understand general end-user routing early in the migration process. Changing global lease lines and adding connections like ExpressRoute to a cloud datacenter can require months of networking delays. Address this as early in the process as possible.
 - **Initial digital estate rationalization:** Whenever complexity is introduced into a migration strategy, you should complete an initial digital estate rationalization. See the guidance on [digital estate rationalization](../../digital-estate/index.md).
   - **Additional digital estate requirements:** Establish tagging policies to identify any workload affected by data sovereignty requirements. Required tags should begin in the digital estate rationalization and carry through to the migrated assets.
-- **Evaluate a hub-and-spoke model:** Distributed systems often share common dependencies. Those dependencies can often be addressed through the implementation of a hub-and-spoke model. While such a model is out of scope for the migration process, it should be flagged for consideration during future iterations of the [ready processes](../../ready/index.md).
+- **Evaluate a hub and spoke model:** Distributed systems often share common dependencies. Those dependencies can often be addressed through the implementation of a hub and spoke model. While such a model is out of scope for the migration process, it should be flagged for consideration during future iterations of the [ready processes](../../ready/index.md).
 - **Prioritization of the migration backlog:** When network changes are required to support the production deployment of a workload that supports multiple regions, the cloud strategy team should track and manage escalations regarding those network changes. The higher level of executive support helps to accelerate the change by freeing the strategy team to reprioritize the backlog and ensure that global workloads aren't blocked by network changes. Such workloads should only be prioritized after the network changes are complete.
 
 These prerequisites help establish processes that can address this complexity during execution of the migration strategy.

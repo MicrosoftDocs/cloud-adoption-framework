@@ -207,6 +207,8 @@
         "showbacks",
         "sqlcmd",
         "submillisecond",
+        "subcomponent",
+        "subcomponents",
         "subscope",
         "subservice",
         "tebibytes",
@@ -217,6 +219,7 @@
         "toolchain",
         "toolchains",
         "toolset",
+        "toolsets",
         "transactionally",
         "transcoder",
         "transcoding",
@@ -317,7 +320,7 @@
     ],
     "ignoreRegExpList": [
         "\\]\\([#/][^\\)]+\\)",
-        "\\n(author|ms\\.author|manager): .*(?=\\r?\\n)",
+        "\\n *(author|ms\\.author|manager): .*(?=\\r?\\n)",
         "OpenBlade\\[.*\\]"
     ],
     "import": [

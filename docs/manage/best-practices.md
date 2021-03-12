@@ -1,5 +1,5 @@
 ---
-title: "Introduction to operational management"
+title: Introduction to operational management
 description: Use the Cloud Adoption Framework for Azure to understand the various transitions that must be made to enable operational management in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Establish operational management practices in the cloud
@@ -36,6 +37,6 @@ Both of these best practices build toward a future-state methodology for operati
 - **Platform operations:** All IT environments contain a set of commonly used platforms. Those platforms could include data stores such as SQL Server or Azure HDInsight. Other common platforms could include container solutions such as Azure Kubernetes Service (AKS). Regardless of the platform, platform operations maturity focuses on customizing operations based on how the common platforms are deployed, configured, and used by workloads.
 - **Workload operations:** At the highest level of operational maturity, cloud operations teams can tune operations for critical workloads. For those workloads, available data can assist in automating the remediation, sizing, or protection of workloads based on their utilization.
 
-Additional guidance, such as the [Design Review Framework (Code name: Cloud Design Principles)](/azure/architecture/framework/resiliency/overview), can help you make detailed architectural decisions about each workload, within the previously described disciplines.
+Additional guidance, such as the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), can help you make detailed architectural decisions about each workload, within the previously described disciplines.
 
 This section of the Cloud Adoption Framework will build on each of the preceding topics to help promote mature cloud operations within your organization.

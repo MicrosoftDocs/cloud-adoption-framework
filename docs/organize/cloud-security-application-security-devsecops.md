@@ -3,10 +3,11 @@ title: Understand application security and DevSecOps functions
 description: Understand application security and DevSecOps functions.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Application security and DevSecOps functions
@@ -23,7 +24,7 @@ This modernization of antiquated development models presents both opportunity an
 
 - **Security is integrated, not outside approval:** The rapid pace of change in application development makes classic arms-length "scan and report" approaches obsolete. These legacy approaches can't keep up with releases without grinding development to a halt and creating time-to-market delays, developer underutilization, and growth of issue backlog.
   - **Shift left** to engage security earlier in application development processes as fixing issues earlier is cheaper, faster, and more effective. If you wait until after the cake is baked, it is harder to change the shape.
-  - **Native integration:** Security practices must be integrated seamlessly to avoid unhealthy friction in development workflows and continuous integration/continuous deployment (CI/CD) processes. For more information about the GitHub approach, see [Securing software, together](https://github.blog/2019-09-18-securing-software-together).
+  - **Native integration:** Security practices must be integrated seamlessly to avoid unhealthy friction in development workflows and continuous integration/continuous deployment (CI/CD) processes. For more information about the GitHub approach, see [Securing software, together](https://github.blog/2019-09-18-securing-software-together/).
   - **High-quality security:** Security must provide high-quality findings and guidance that enable developers to fix issues fast and don't waste developer time with false positives.
   - **Converged culture:** Security, development, and operations roles should contribute key elements into a shared culture, shared values, and shared goals and accountabilities.
 - **Agile security:** Shift security from a "must be perfect to ship" approach to an agile approach that starts with minimum viable security for applications (and for the processes to develop them) that is continuously improved incrementally.

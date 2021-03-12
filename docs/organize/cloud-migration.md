@@ -3,10 +3,11 @@ title: Understand cloud migration functions
 description: Understand cloud migration functions.
 author: JanetCThomas
 ms.author: janet
+ms.date: 05/15/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.topic: conceptual
-ms.date: 05/15/2020
+ms.custom: internal
 ---
 
 # Cloud migration functions
@@ -17,10 +18,10 @@ Regardless of the type or number of cloud migration teams, these teams generally
 
 ## Prerequisites
 
-- [Create an Azure account](/learn/modules/create-an-azure-account): The first step to using Azure is to create an account.
-- [Azure portal](/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
-- [Introduction to Azure](/learn/modules/welcome-to-azure): Get started with Azure. Create and configure your first virtual machine in the cloud.
-- [Azure fundamentals](/learn/paths/azure-for-the-data-engineer): Learn cloud concepts, understand the benefits, compare and contrast basic strategies, and explore the breadth of services available in Azure.
+- [Create an Azure account](/learn/modules/create-an-azure-account/): The first step to using Azure is to create an account.
+- [Azure portal](/learn/modules/tour-azure-portal/): Tour the Azure portal features and services, and customize the portal.
+- [Introduction to Azure](/learn/modules/intro-to-azure-fundamentals/): Get started with Azure. Create and configure your first virtual machine in the cloud.
+- [Azure fundamentals](/learn/paths/azure-for-the-data-engineer/): Learn cloud concepts, understand the benefits, compare and contrast basic strategies, and explore the breadth of services available in Azure.
 - Review the [Migrate methodology](../migrate/index.md).
 
 ## Minimum scope
@@ -64,7 +65,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 - Data scientists
 - Data or application platform specialists
 
-For optimal collaboration and efficiency, we recommend that cloud adoption teams have an average team size of six people. These teams should be self-organizing from a technical execution perspective. We highly recommend that these teams also include project management expertise, with deep experience in agile, scrum, or other iterative models. This team is most effective when managed using a flat structure.
+For optimal collaboration and efficiency, we recommend that cloud adoption teams have an average team size of six people. These teams should be self-organizing from a technical execution perspective. We highly recommend that these teams also include project management expertise, with deep experience in agile, Scrum, or other iterative models. This team is most effective when managed using a flat structure.
 
 ## Out of scope
 

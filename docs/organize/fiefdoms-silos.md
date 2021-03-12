@@ -1,5 +1,5 @@
 ---
-title: "Silos and fiefdoms"
+title: Silos and fiefdoms
 description: Learn about antipatterns that can block a growth mindset in organizations. Specifically, learn about silo and fiefdom antipatterns.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,7 +7,7 @@ ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: organize
+ms.custom: internal
 ---
 
 # Organizational antipatterns: Silos and fiefdoms
@@ -62,7 +62,7 @@ This antipattern often emerges from of a common passion for a specific solution.
 
 IT silos can be addressed through the following approaches. The best approach will depend on the root cause of the resistance.
 
-**Create virtual teams:** The [organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers will want to participate in. This helps create new cross-solution alignments that aren't bound by organizational-chart constraints, and will drive inclusion of top engineers who have been sheltered by IT silos.
+**Create virtual teams:** The [Organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers will want to participate in. This helps create new cross-solution alignments that aren't bound by organizational-chart constraints, and will drive inclusion of top engineers who have been sheltered by IT silos.
 
 Introduction of a [cloud strategy team](./cloud-strategy.md) will create immediate visibility to IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
 
@@ -110,7 +110,7 @@ Generally, fiefdoms are the result of a line manager who fears loss of the team 
 
 IT fiefdoms can demonstrate some growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up the organizational chart). Challenges that are IT silo-driven are typically simpler to overcome.
 
-When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md) , [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
+When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
 
 > [!NOTE]
 > IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. But transformational efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.

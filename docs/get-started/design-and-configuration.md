@@ -7,6 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Get started: Environment design and configuration
@@ -148,8 +149,8 @@ Migrating to the cloud without understanding ongoing operations is risky. In par
 - Complete the operations management workbook.
 - Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
-  - Review the workbook: estimate one hour per application owner.
-  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
+  - Review the workbook: Estimate one hour per application owner.
+  - Complete the Microsoft Azure Well-Architected Review assessment: Estimate one hour per application.
 
 **Guidance to support deliverable completion:**
 

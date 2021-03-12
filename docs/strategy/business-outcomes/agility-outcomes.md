@@ -1,12 +1,13 @@
 ---
 title: Examples of agility outcomes
 description: Use the Cloud Adoption Framework for Azure to understand your company's market position and competitive landscape.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: internal
 ---
 
 # Examples of agility outcomes
@@ -15,9 +16,11 @@ As discussed in the [business outcomes overview](./index.md), several potential 
 
 Traditionally, chief investment officers and IT teams were considered a source of stability in core mission-critical processes. This is still true. Few businesses can function well when their IT platform is unstable. However, in today's business world, much more is expected. IT can expand beyond a simple cost center by partnering with the business to provide market advantages. Many chief investment officers and executives assume that stability is simply a baseline for IT. For these leaders, business agility is the measure of IT's contribution to the business.
 
+The [Academy of Motion Picture Arts and Sciences](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure) migrated its legacy web applications to the cloud, delivering new streaming applications to members in a rich, responsive, and cross-platform experience.
+
 ## Why is agility so important?
 
-Markets change at a faster pace today than ever before. As of 2015, only 57 companies were still in the Fortune 500 61 years later&mdash;an 88.6 percent turnover rate. This represents market change at a previously unheard-of rate. IT agility or even business agilities are unlikely to affect an organization listing on the Fortune 500, but these figures help us understand the pace at which markets continue to change.
+Markets change at a faster pace today than ever before. As of 2015, only 57 companies were still in the Fortune 500 61 years later, an 88.6 percent turnover rate. This represents market change at a previously unheard-of rate. IT agility or even business agilities are unlikely to affect an organization listing on the Fortune 500, but these figures help us understand the pace at which markets continue to change.
 
 For incumbents and upstarts alike, business agility can be the difference between success or failure of a business initiative. Quickly adapting to market changes can help ring-fence existing customers or claim market share from competitors. The agility-related outcomes in the next sections can help communicate the value of the cloud during a transformation.
 

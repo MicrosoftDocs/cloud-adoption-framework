@@ -1,12 +1,13 @@
 ---
 title: Engage via applications for digital invention
-description: Understand how to create app solutions to shape data and create experiences that engage customers and support innovation.
+description: Understand how to create application solutions to shape data and create experiences that engage customers and support innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Engage via applications
@@ -21,16 +22,16 @@ In some cases, data alone is enough to drive change and meet customer needs. Mor
 
 Teams that more quickly and accurately respond to customer feedback, market changes, and opportunities to innovate typically lead their respective markets in innovation. The first principle of innovative applications is summed up in the [growth mindset overview](./learn.md#growth-mindset): "Share the code." Over time, innovation emerges from a cultural focus. To sustain innovation, diverse perspectives and contributions are required.
 
-To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
+To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](/azure/devops/repos/get-started/what-is-repos) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
 
-- [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): Distributed version control.
-- [Team Foundation Version Control (TFVC)](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): Centralized version control.
+- [Git](/azure/devops/repos/get-started/what-is-repos#git): Distributed version control.
+- [Team Foundation Version Control (TFVC)](/azure/devops/repos/get-started/what-is-repos#tfvc): Centralized version control.
 
 ## Citizen developers
 
 Professional developers are a vital component of innovation. When a hypothesis proves accurate at scale, professional developers are required to stabilize and prepare the solution for scale. Most of the principles referenced in this article require support from professional developers. Unfortunately, current trends suggest there's a greater demand for professional developers than there are developers. Moreover, the cost and pace of innovation can be less favorable when professional development is deemed necessary. In response to these challenges, citizen developers provide a way to scale development efforts and accelerate early hypothesis testing.
 
-The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [Power Apps](/powerapps/powerapps-overview) for application interfaces, [AI Builder](/powerapps/use-ai-builder) for processes and predictions, [Power Automate](/power-automate) for workflows, and [Power BI](/power-bi) for data consumption.
+The use of citizen developers is viable and effective when early hypotheses can be validated through tools like [Power Apps](/powerapps/powerapps-overview) for application interfaces, [AI Builder](/powerapps/use-ai-builder) for processes and predictions, [Power Automate](/power-automate) for workflows, and [Power BI](/power-bi) for data consumption.
 
 > [!NOTE]
 > When you rely on citizen developers to test hypotheses, it's advisable to have some professional developers on hand to provide support, review, and guidance. After a hypothesis is validated at scale, a process for transitioning the application into a more robust programming model will accelerate returns on the innovation. By involving professional developers in process definitions early on, you can realize cleaner transitions later.
@@ -51,7 +52,7 @@ Adding intelligence to a solution can enable speech to text, text translation, C
 
 ### Bots
 
-Bots provide an experience that feels less like using a computer and more like dealing with a person — at least with an intelligent robot. They can be used to shift simple, repetitive tasks (such as making a dinner reservation or gathering profile information) onto automated systems that might no longer require direct human intervention. Users converse with a bot through text, interactive cards, and speech. A bot interaction can range from a quick question-and-answer to a sophisticated conversation that intelligently provides access to services.
+Bots provide an experience that feels less like using a computer and more like dealing with a person, or at least with an intelligent robot. They can be used to shift simple, repetitive tasks (such as making a dinner reservation or gathering profile information) onto automated systems that might no longer require direct human intervention. Users converse with a bot through text, interactive cards, and speech. A bot interaction can range from a quick question-and-answer to a sophisticated conversation that intelligently provides access to services.
 
 Bots are a lot like modern web applications: they live on the internet and use APIs to send and receive messages. What's in a bot varies widely depending on what kind of bot it is. Modern bot software relies on a stack of technology and tools to deliver increasingly complex experiences on a variety of platforms. However, a simple bot could just receive a message and echo it back to the user with very little code involved.
 
@@ -98,9 +99,9 @@ If you're trying to scale or meet global demand for an existing solution, this a
 
 The more there is to maintain within a solution, the slower that solution will iterate. This means you can accelerate innovation by reducing the impact of operations on available bandwidth.
 
-To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](/azure/app-service/overview) or [containers](/azure/containers).
+To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](/azure/app-service/overview) or [containers](/azure/containers/).
 
-In parallel, Azure provides serverless transaction data options that also reduce overhead. The [Azure product catalog](/azure) provides database options that host data without the need for a full data platform.
+In parallel, Azure provides serverless transaction data options that also reduce overhead. The [Azure product catalog](/azure/) provides database options that host data without the need for a full data platform.
 
 ## Next steps
 

@@ -7,7 +7,7 @@ ms.date: 09/13/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Improve your initial cloud governance foundation
@@ -16,10 +16,10 @@ This article assumes that you have established an [initial cloud governance foun
 
 ## Maturity vectors
 
-At any time, the following best practices can be applied to the initial governance foundation to address the risk or need mentioned in the table below.
+At any time, the following best practices can be applied to the initial governance foundation to address the risk or need mentioned in the following table.
 
 > [!IMPORTANT]
-> Resource organization can affect how these best practices are applied. It is important to start with the recommendations that best align with the initial cloud governance foundation you implemented in the previous step.
+> Resource organization can affect how these best practices are applied. It's important to start with the recommendations that best align with the initial cloud governance foundation you implemented in the previous step.
 
 | Risk/need | Standard enterprise | Complex enterprise |
 |---|---|---|

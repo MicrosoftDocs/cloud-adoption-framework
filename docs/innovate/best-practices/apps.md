@@ -7,11 +7,14 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Tools to engage via applications in Azure
 
-As described in [Engage via applications](../considerations/apps.md), applications can be an important aspect of an MVP solution. Applications are often required for testing a hypothesis. This article helps you learn the tools Azure provides to accelerate development of those applications.
+Build cloud-native applications to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. Cloud-native applications are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
+
+As described in [Engage via applications](../considerations/apps.md), applications can be an important aspect of a minimal viable product (MVP) solution. Applications are often required for testing a hypothesis. This article helps you learn the tools Azure provides to accelerate development of those applications.
 
 ![Cloud Adoption Framework approach to engaging via applications](../../_images/innovate/engage-via-apps.png)
 

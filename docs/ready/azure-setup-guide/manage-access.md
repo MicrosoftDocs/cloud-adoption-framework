@@ -1,30 +1,30 @@
 ---
-title: Manage access to your Azure environment with role-based access control
-description: Learn how to set up access control for your Azure environment with role-based access control.
+title: Manage access to your Azure environment with Azure role-based access control
+description: Learn how to set up access control for your Azure environment with Azure role-based access control.
 author: LijuKodicheraJayadevan
-ms.author: kfollis
+ms.author: brblanch
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
-# Manage access to your Azure environment with role-based access control
+# Manage access to your Azure environment with Azure role-based access control
 
-Managing who can access your Azure resources and subscriptions is an important part of your Azure governance strategy, and assigning group-based access rights and privileges is a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Azure role-based access control (RBAC) is the primary method of managing access in Azure.
+Managing who can access your Azure resources and subscriptions is an important part of your Azure governance strategy, and assigning group-based access rights and privileges is a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Azure role-based access control (Azure RBAC) is the primary method of managing access in Azure.
 
-RBAC provides detailed access management of resources in Azure. It helps you manage who has access to Azure resources, what they can do with those resources, and what scopes they can access.
+Azure RBAC provides detailed access management of resources in Azure. It helps you manage who has access to Azure resources, what they can do with those resources, and what scopes they can access.
 
-When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning RBAC.
+When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning Azure RBAC.
 
-![Diagram that shows RBAC roles](./media/manage-access/role-examples.png)
-_Figure 1: RBAC roles._
+![Diagram that shows Azure roles](./media/manage-access/role-examples.png)
+*Figure 1: Azure roles.*
 
 When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
 
-The Cloud Adoption Framework offers additional guidance on using [role-based access control](../considerations/roles.md) in your cloud adoption efforts.
+The Cloud Adoption Framework offers additional guidance on using [Azure role-based access control](../considerations/roles.md) in your cloud adoption efforts.
 
 ::: zone target="chromeless"
 
@@ -62,7 +62,7 @@ To grant a user access to a subscription:
 
 To grant a user access to a resource group:
 
-1. Go to [resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
+1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
 1. Select a resource group.
 1. Select **Access control (IAM)**.
 1. Select **+ Add** > **Add role assignment**.
@@ -72,7 +72,7 @@ To grant a user access to a resource group:
 
 To grant a user access to a subscription:
 
-1. Go to [subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
+1. Go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
 1. Select a subscription.
 1. Select **Access control (IAM)**.
 1. Select **+ Add** > **Add role assignment**.
@@ -82,7 +82,7 @@ To grant a user access to a subscription:
 
 To learn more, see:
 
-- [What is role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
-- [Cloud Adoption Framework: Use role-based access control](../considerations/roles.md)
+- [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
+- [Cloud Adoption Framework: Use Azure role-based access control](../considerations/roles.md)
 
 ::: zone-end

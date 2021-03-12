@@ -1,12 +1,13 @@
 ---
-title: "Onboard Azure server management services"
-description: Onboard Azure server management services with information for Azure virtual machines and on-premises servers.
+title: Onboard Azure server management services
+description: Onboard Azure server management services with information for virtual machines in Azure and on-premises servers.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: internal
 ---
 
 # Phase 2: Onboarding Azure server management services
@@ -18,11 +19,11 @@ After you're familiar with the [tools](./tools-services.md) and [planning](./pre
 
 ## Onboarding processes
 
-This section of the guidance covers the following onboarding processes for both Azure virtual machines and on-premises servers:
+This section of the guidance covers the following onboarding processes for both virtual machines in Azure and on-premises servers:
 
-- **Enable management services on a single VM for evaluation by using the portal**. Use this process to familiarize yourself with the Azure server management services.
-- **Configure management services for a subscription by using the portal**. This process helps you configure the Azure environment so that any new VMs that are provisioned will automatically use management services. Use this approach if you prefer the Azure portal experience to scripts and command lines.
-- **Configure management services for a subscription by using Azure Automation**. This process is fully automated. Just create a subscription, and the scripts will configure the environment to use management services for any newly provisioned VM. Use this approach if you're familiar with PowerShell scripts and Azure Resource Manager templates, or if you want to learn to use them.
+- **Enable management services on a single VM for evaluation by using the portal.** Use this process to familiarize yourself with the Azure server management services.
+- **Configure management services for a subscription by using the portal.** This process helps you configure the Azure environment so that any new VMs that are provisioned will automatically use management services. Use this approach if you prefer the Azure portal experience to scripts and command lines.
+- **Configure management services for a subscription by using Azure Automation.** This process is fully automated. Just create a subscription, and the scripts will configure the environment to use management services for any newly provisioned VM. Use this approach if you're familiar with PowerShell scripts and Azure Resource Manager templates, or if you want to learn to use them.
 
 The procedures for each of these approaches are different.
 

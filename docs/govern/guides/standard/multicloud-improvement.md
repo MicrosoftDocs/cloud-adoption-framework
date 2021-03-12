@@ -7,7 +7,7 @@ ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Standard enterprise governance guide: Multicloud improvement
@@ -75,7 +75,7 @@ This section of the article will change the governance MVP design to include new
     1. Governance enforcement is cloud-specific.
     2. The corporate policies established in the governance guide are not cloud-specific. While the implementation may vary from cloud to cloud, the policies can be applied to the secondary provider.
 
-Multicloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multicloud adoption grows, so does complexity and security risks.
+Multicloud adoption should be contained to where it's required based on technical needs or specific business requirements. As multicloud adoption grows, so does complexity and security risks.
 
 ## Conclusion
 

@@ -7,6 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 <!-- cSpell:ignore HDFS databox VHDX -->
@@ -17,7 +18,7 @@ In a cloud migration, you replicate and synchronize assets over the network betw
 
 ## General scope expansion
 
-Most of the effort required in this scope expansion occurs during the prerequisites, assess, and migrate phases of a migration.
+Most of the effort required in this scope expansion occurs during the prerequisite planning, assessment, and migration phases of a migration.
 
 ## Suggested prerequisites
 

@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Democratize data with digital invention
@@ -29,7 +30,7 @@ When you [build with customer empathy](./build.md), all processes elevate custom
 
 Many successful innovations have been launched as a minimum viable product (MVP) that deliver manual, data-driven processes on behalf of the customer. In this concierge model, an employee is the data consumer. That employee uses data to aid the customer. Each time the customer engages manual support, a hypothesis can be tested and validated. This approach is often a cost effective means of testing a customer-focused hypothesis before you invest heavily in integrated solutions.
 
-The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like [Power BI](/power-bi).
+The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like [Power BI](/power-bi/).
 
 > [!NOTE]
 > Before you share data, make sure you've read the following sections. Sharing data might require governance to provide protection for the shared data. Also, that data might be spread across multiple clouds and could require centralization. Much of the data might even reside within applications, which will require data collection before you can share it.
@@ -55,7 +56,7 @@ When data is disrupted across an IT environment, opportunities to innovate can b
 
 If centralization of data is required, you should first define the appropriate data store for the centralized data. It's a good practice to establish a data warehouse in the cloud. This scalable option provides a central location for all your data. This type of solution is available in online analytical processing (OLAP) or big data options.
 
-The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
+The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data/) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
 > [!IMPORTANT]
 > Depending on the customer need and the aligned solution, a simpler approach may be sufficient. The cloud architect should challenge the team to consider lower cost solutions that could result in faster validation of the customer hypothesis, especially during early development. The following section on collecting data covers some scenarios that might suggest a different solution for your situation.
@@ -66,7 +67,7 @@ When you need data to be centralized to address a customer need, it's very likel
 
 **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 
-Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like Azure Database Migration Service and Azure Data Factory are two examples. The reference architecture for [data factory with an OLAP data store](/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
+Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like Azure Database Migration Service and Azure Data Factory are two examples. The reference architecture for [Data Factory with an OLAP data store](/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
 
 **Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
 

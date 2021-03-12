@@ -7,6 +7,7 @@ ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Assess workloads for Azure Stack Hub migration
@@ -59,7 +60,7 @@ Assess the impact of licensing and support:
 
 - Avoid duplication of effort and optimize service-level agreements (SLAs) by examining the correlation between IT-managed cloud services and application-specific services.
 - Consider the automation that's required to orchestrate the provisioning of services during deployment and migration of applications.
-- To help meet your operations requirements, consider [scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, virtual machine (VM) availability sets, VM scale sets, network adapters, and the ability to add and resize VMs and disks.
+- To help meet your operations requirements, consider [scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, availability sets, virtual machine scale sets, network adapters, and the ability to add and resize VMs and disks.
 
 ## Monitoring
 

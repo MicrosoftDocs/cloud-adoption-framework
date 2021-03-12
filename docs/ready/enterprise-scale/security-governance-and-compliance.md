@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale security governance and compliance
+title: Enterprise-scale security, governance, and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,9 +7,10 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
-# Enterprise-scale security governance and compliance
+# Enterprise-scale security, governance, and compliance
 
 This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
@@ -17,7 +18,7 @@ This article covers defining encryption and key management, planning for governa
 
 Encryption is a vital step toward ensuring data privacy, compliance, and data residency in Microsoft Azure. It's also one of the most important security concerns of many enterprises. This section covers design considerations and recommendations as they pertain to encryption and key management.
 
-### Design considerations
+**Design considerations:**
 
 - Subscription and scale limits as they apply to Azure Key Vault: Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see [Azure limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
@@ -25,9 +26,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate [control access](/azure/key-vault/general/best-practices).
 
-<!-- cSpell:ignore FIPS -->
-
-- You can optimize premium SKUs where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 level 3 compliance by considering the supported scenarios.
+- You can optimize Premium SKUs where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 Level 3 compliance by considering the supported scenarios.
 
 - Key rotation and secret expiration.
 
@@ -45,12 +44,12 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 - Delegated Key Vault instantiation and privileged access: [secure access](/azure/key-vault/general/secure-your-key-vault).
 
 - Requirements for using customer-managed keys for native encryption mechanisms such as Azure Storage encryption:
-  - [Customer-managed keys](/azure/storage/common/storage-encryption-keys-portal).
+  - [Customer-managed keys](/azure/storage/common/customer-managed-keys-configure-key-vault).
   - Whole-disk encryption for virtual machines (VMs).
   - Data-in-transit encryption.
   - Data-at-rest encryption.
 
-### Design recommendations
+**Design recommendations:**
 
 - Use a federated Azure Key Vault model to avoid transaction scale limits.
 
@@ -76,9 +75,9 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 ## Plan for governance
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement role-based access control (RBAC) that controls what actions authorized users can perform.
+Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement Azure role-based access control (Azure RBAC) that controls what actions authorized users can perform.
 
-### Design considerations
+**Design considerations:**
 
 - Determine what Azure policies are needed.
 
@@ -90,13 +89,13 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- Understand regulatory compliance policies. These might include the health insurance portability and accountability act, payment card industry, data security standards, service organization controls trust service principals, and criteria.
+- Understand regulatory compliance policies. These might include HIPAA, PCI-DSS, or SOC 2 trust service principles.
 
-### Design recommendations
+**Design recommendations:**
 
 - Identify required Azure tags and use the append policy mode to enforce usage.
 
-- Map regulatory and compliance requirements to Azure Policy definitions and Azure AD RBAC assignments.
+- Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
 
 - Establish Azure Policy definitions at the top-level root management group so that they can be assigned at inherited scopes.
 
@@ -106,7 +105,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Use built-in policies where possible to minimize operational overhead.
 
-- Assign the built-in policy contributor role at a particular scope to enable application-level governance.
+- Assign the built-in Policy Contributor role at a particular scope to enable application-level governance.
 
 - Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 
@@ -114,7 +113,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 An enterprise must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
-### Design considerations
+**Design considerations:**
 
 - Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period.
 
@@ -132,15 +131,15 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Vulnerability assessment of VMs.
 
-### Design recommendations
+**Design recommendations:**
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
-- Export Azure activity logs to Azure Monitor logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
+- Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
 - Enable Security Center Standard for all subscriptions, and use Azure Policy to ensure compliance.
 
-- Monitor base operating system patching drift via Azure Monitor logs and Azure Security Center.
+- Monitor base operating system patching drift via Azure Monitor Logs and Azure Security Center.
 
 - Use Azure policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration.
 
@@ -154,7 +153,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 You must maintain a healthy security posture as you adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
 
-### Design considerations
+**Design considerations:**
 
 - Shared responsibility.
 
@@ -164,7 +163,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Multitenancy for key platform components. This includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
 
-### Design recommendations
+**Design recommendations:**
 
 - In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, this might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
@@ -178,16 +177,16 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
-<!-- docutune:ignore "and conditional access" -->
+<!-- docutune:ignore "and conditional access" "patch and update management" -->
 
-## Azure Security Benchmarks
+## Azure Security Benchmark
 
 The Azure Security Benchmark includes a collection of high-impact security recommendations you can use to help secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
 
 The Azure Security Benchmark documentation specifies security controls and service recommendations.
 
-- [Security Controls](/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service Recommendations](/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
+- [Security controls](/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
+- [Service recommendations](/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Service enablement framework
 
@@ -200,7 +199,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 |                              |                                                                       | Can Azure services interact directly with the service endpoint?                                                                              |
 |                              |                                                                       | Does it support Azure Private Link endpoints?                                                                                                           |
 |                              |                                                                       | Can it be deployed within a virtual network?                                                                                                            |
-|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate border gateway protocol community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
+|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate Border Gateway Protocol (BGP) community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
 |                              |                                                                       | Does the service support Private Link endpoints?                                                                                                       |
 |                              | Enforce network traffic flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force-tunnelled with user-defined routing?                                    |
 |                              |                                                                       | Do management operations use Azure shared public IP ranges?                                                                                 |
@@ -208,7 +207,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 |                              | Data encryption at-rest                                               | Is encryption applied by default?                                                                                                            |
 |                              |                                                                       | Can encryption be disabled?                                                                                                                  |
 |                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys?                                                   |
-|                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (secure sockets layer/transport layer security)?                                                                           |
+|                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (SSL/TLS)?                                                                           |
 |                              |                                                                       | Are there any HTTP endpoints, and can they be disabled?                                                                                        |
 |                              |                                                                       | Is underlying service communication also encrypted?                                                                                          |
 |                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?)                                                                               |
@@ -220,7 +219,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 | Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
 |                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
-|                              |                                                                       | Does Azure-to-Azure (service-to-service) authentication use an MSI/service principal?                                                         |
+|                              |                                                                       | Does authentication bwtween Azure services use managed identities  or service principals?                                                         |
 |                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
 |                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |

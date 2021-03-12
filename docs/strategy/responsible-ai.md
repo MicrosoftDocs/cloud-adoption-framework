@@ -7,6 +7,7 @@ ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank
 ---
 
 <!-- docutune:ignore InterpretML FairLearn -->
@@ -53,7 +54,7 @@ Tools are available to help developers and data scientists understand, protect, 
 
 ## Next steps
 
-For further resources to support your responsible solution development, visit:
+For more information about responsible solution development, visit:
 
 - [Responsible AI overview](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6)
 - [Responsible AI resources](https://www.microsoft.com/ai/responsible-ai-resources)

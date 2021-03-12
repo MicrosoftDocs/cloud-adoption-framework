@@ -2,13 +2,13 @@
 title: Monitoring and reporting in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up monitoring, reporting, and alerts for your Azure management environment.
 author: timleyden
-ms.author: tileyden
+ms.author: brblanch
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 # Monitoring and reporting in Azure
@@ -29,9 +29,9 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
  Start monitoring your:
 
-- [Applications](/azure/application-insights/app-insights-overview)
-- [Containers](/azure/monitoring/monitoring-container-overview)
-- [Virtual machines](/azure/monitoring/monitoring-service-map)
+- [Applications](/azure/azure-monitor/app/app-insights-overview)
+- [Containers](/azure/azure-monitor/containers/container-insights-overview)
+- [Virtual machines](/azure/azure-monitor/vm/service-map)
 - [Networks](/azure/networking/network-monitoring-overview)
 
 To monitor other resources, find additional solutions in the Azure Marketplace.
@@ -40,7 +40,7 @@ To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#bla
 
 ### Learn more
 
-To learn more, see [Azure Monitor documentation](/azure/monitoring-and-diagnostics).
+To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 ::: zone-end
 
@@ -88,7 +88,7 @@ To set up an Azure Service Health alert, go to the [Azure portal](https://portal
 
 ### Learn more
 
-For more information, see [Azure Service Health](/azure/service-health).
+For more information, see [Azure Service Health](/azure/service-health/).
 
 ::: zone-end
 
@@ -97,7 +97,7 @@ For more information, see [Azure Service Health](/azure/service-health).
 Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry and recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
 
 - **High availability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
-- **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying Azure disk encryption or enabling network security groups.
+- **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying Azure Disk Encryption or enabling network security groups.
 - **Performance:** To improve the speed of your applications. Recommendations might include boosting SQL query performance by creating indexes or reconfiguring your Traffic Manager settings.
 - **Cost:** To optimize and reduce your overall Azure spending. Recommendations might include resizing or shutting down underused virtual machines or switching to Azure Reservations to lower total cost of ownership.
 - **Operational excellence:** To improve process and workflow efficiency and manageability. Recommendations might include setting up and enforcing Azure Policy rules, repairing invalid log alert rules, and configuring Service Health alerts.
@@ -118,7 +118,7 @@ To explore Azure Advisor, go to the [Azure portal](https://portal.azure.com/#bla
 
 ### Learn more
 
-To learn more, see [Azure Advisor documentation](/azure/advisor).
+To learn more, see [Azure Advisor documentation](/azure/advisor/).
 
 ::: zone-end
 
@@ -148,6 +148,6 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 ### Learn more
 
-To learn more, see [Azure Security Center documentation](/azure/security-center).
+To learn more, see [Azure Security Center documentation](/azure/security-center/).
 
 ::: zone-end

@@ -1,14 +1,14 @@
 ---
-title: "Introduction to the Azure migration guide"
+title: Introduction to the Azure migration guide
 description: Use the Cloud Adoption Framework for Azure to learn how to effectively migrate your organization's services to Azure.
 author: matticusau
-ms.author: mlavery
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
+ms.custom: think-tank, fasttrack-new, AQC
 ---
 
 # Azure migration guide overview
@@ -40,7 +40,7 @@ It is assumed that a landing zone has already been deployed, in alignment with t
 
 ## [When to use this guide](#tab/WhenToUseThisGuide)
 
-While the tools discussed in this guide support a wide variety of migration scenarios, this guide will focus on limited scope efforts with _minimal complexity_. To determine whether this migration guide is suitable for your project, consider if the following conditions apply to your situation:
+While the tools discussed in this guide support a wide variety of migration scenarios, this guide will focus on limited scope efforts with *minimal complexity*. To determine whether this migration guide is suitable for your project, consider whether the following conditions apply to your situation:
 
 - The workloads for initial migration aren't mission critical and don't contain sensitive data.
 - You're migrating a homogeneous environment.
@@ -49,6 +49,8 @@ While the tools discussed in this guide support a wide variety of migration scen
 - You're migrating a small number of servers.
 - The dependency mapping of the components to be migrated is simple to define.
 - Your industry has minimal regulatory requirements relevant to this migration.
+
+<!-- docutune:casing "our Microsoft teams" -->
 
 If any of these conditions don't apply to your situation, you should instead consider other [best practices for cloud migration](../azure-best-practices/index.md). We also recommend you request assistance from one of our Microsoft teams or partners to perform more complex migrations. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
 

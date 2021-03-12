@@ -2,11 +2,12 @@
 title: Use Terraform to build your landing zones
 description: Learn to use Terraform by HashiCorp to build your landing zones.
 author: arnaudlh
-ms.author: arnaul
+ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
@@ -29,6 +30,8 @@ The first landing zone deploys the following components in your subscription:
 
 ![Foundational landing zone using Terraform](../../_images/ready/foundations-terraform-landing-zone.png)
 _Figure 1: A foundation landing zone using Terraform._
+
+<!-- docutune:casing NetworkMonitoring AdAssessment AdReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
 ## Capabilities
 
@@ -83,7 +86,7 @@ The minimum set of tags shown below must be present on all resources and resourc
 <!-- TODO: Review capitalization and hyphenation -->
 <!-- TODO: Eliminate either "Tag name" or "Key" column -->
 
-| Tag name          | Description                                                                                        | Key             | Example values                                    |
+| Tag name          | Description                                                                                        | Key               | Example values                                    |
 |-------------------|----------------------------------------------------------------------------------------------------|-------------------|--------------------------------------------------|
 | Business unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | `BusinessUnit`    | `finance`, `marketing`, `<product-name>`, `corp`, `shared` |
 | Cost center       | Accounting cost center associated with this resource.                                              | `CostCenter`      | `<cost-center-number>`                                     |
@@ -144,7 +147,7 @@ tags_hub = {
 }
 ```
 
-Then, we specify the Log Analytics name and a set of solutions that analyze the deployment. Here, we retained network monitoring, Active Directory assessment and replication, DNS analytics, and Key Vault analytics.
+Then, we specify the Log Analytics name and a set of solutions that analyze the deployment. Here, we retained network monitoring, Active Directory assessment and replication, DNS Analytics, and Key Vault analytics.
 
 ```hcl
 

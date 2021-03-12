@@ -7,7 +7,10 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
+
+<!-- docutune:casing IR -->
 
 # Get started: Implement security across the enterprise environment
 
@@ -33,33 +36,36 @@ Use these steps to plan and execute your strategy for securing your cloud assets
 
 ## Step 1: Establish essential security practices
 
-Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied. 
+Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied.
 
 Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
+
+<!-- markdownlint-disable MD029 -->
 
 **People:**
 
 1. [Educate teams about the cloud security journey](../security/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
-2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology) 
+2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
 
 **Process:**
 
 3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update Incident Response (IR) processes for cloud](../security/security-top-10.md#4-process-update-incident-response-ir-processes-for-cloud)
+4. [Update incident response processes for cloud](../security/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
 5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**
 
-6. [Require Passwordless or Multi-Factor Authentication (MFA)](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
+6. [Require passwordless or multi-factor authentication](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
 7. [Integrate native firewall and network security](../security/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
 8. [Integrate native threat detection](../security/security-top-10.md#8-technology-integrate-native-threat-detection)
 
-**Foundational Architecture Decisions:**
+**Foundational architecture decisions:**
 
 9. [Standardize on a single directory and identity](../security/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
-10. [Use identity based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
+10. [Use identity-based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
 11. [Establish a single unified security strategy](../security/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
+<!-- markdownlint-enable MD029 -->
 
 > [!NOTE]
 > Each organization should define its own minimum standards. Risk posture and subsequent tolerance to that risk can vary widely based on industry, culture, and other factors. For example, a bank might not tolerate any potential damage to its reputation from even a minor attack on a test system. Some organizations would gladly accept that same risk if it accelerated their digital transformation by three to six months.
@@ -157,7 +163,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
     - [Zero-trust user access reference architecture](/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
 
-    - [Azure Security Center](/azure/security-center) and [Microsoft cloud application security](/cloud-app-security) to help secure cloud assets.
+    - [Azure Security Center](/azure/security-center/) and [Microsoft cloud application security](/cloud-app-security/) to help secure cloud assets.
 
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
 
@@ -195,7 +201,7 @@ Your security plan is likely to be more successful if your planning takes the ap
 
 - **Review Microsoft learnings and guidance:** Microsoft has published insights and perspectives to help your organization plan its transformation to the cloud and a modern security strategy. The material includes recorded training, documentation, and security best practices and recommended standards.
 
-  For technical guidance to help build your plan and architecture, see the [Microsoft security documentation](/security).
+  For technical guidance to help build your plan and architecture, see the [Microsoft security documentation](/security/).
 
 <br>
 
@@ -224,14 +230,14 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   Microsoft has published guidance to help you build your security baselines:
   - [Azure security standards for strategy and architecture](/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
   - [Azure security benchmarks](/azure/security/benchmarks/introduction): Specific configuration recommendations for securing Azure environments.
-  - [Azure security baseline training](/learn/modules/create-security-baselines).
+  - [Azure security baseline training](/learn/modules/create-security-baselines/).
 
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
 
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
   - [Azure Blueprints](/azure/governance/blueprints/overview): Cloud architects and centralized IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
-  - [Azure Policy](/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
+  - [Azure Policy](/azure/governance/policy/): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager/), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
   - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
 <br>
@@ -258,7 +264,7 @@ After you ensure that new applications and landing zones follow security best pr
 - Balance operational and security risk. Because these environments might host production systems that enable critical business processes, you might need to implement security improvements incrementally to avoid risking operational downtime.
 - Prioritize the discovery and remediation of security risk by business criticality. Start with workloads that have a high business impact if compromised and workloads that have a high exposure to risk.
 
-For more information, see [Identify and classify business-critical applications](/azure/architecture/framework/security/applications-services#identify-and-classify-business-critical-applications).
+For more information, see [Identify and classify business-critical applications](/azure/architecture/framework/security/design-apps-services#identify-and-classify-business-critical-applications).
 
 <br>
 
@@ -295,8 +301,8 @@ The steps in this guide have helped you implement the strategy, controls, proces
 
 As you continue into the operations mode of cloud security, consider these next steps:
 
-- Review [Microsoft security documentation](/security). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
+- Review [Microsoft security documentation](/security/). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
 - Review security information in [Built-in security controls for Azure services](/azure/security/fundamentals/security-controls).
-- Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/azure-security-services-technologies).
+- Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/fundamentals/services-technologies).
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
 - Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](/azure/security-center/security-center-partner-integration).

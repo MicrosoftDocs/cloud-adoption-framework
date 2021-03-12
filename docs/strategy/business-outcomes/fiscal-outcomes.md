@@ -1,13 +1,13 @@
 ---
 title: Examples of fiscal outcomes
 description: Use the Cloud Adoption Framework for Azure to understand fiscal outcomes in the context of a cloud transformation.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: governance
+ms.custom: internal
 ---
 
 # Examples of fiscal outcomes
@@ -20,6 +20,8 @@ At the top level, fiscal conversations consist of three basic concepts:
 
 The remainder of this article explains these fiscal outcomes in the context of a cloud transformation.
 
+[Sentara Healthcare](https://customers.microsoft.com/story/769786-sentara-healthcare-health-provider-azure) moved its data to Azure, providing members a better experience with mobile apps, faster access for clinicians to critical data for faster diagnoses, reduced costs for the IT team, and improved patient care with a more agile, change-ready organization.
+
 > [!NOTE]
 > The following examples are hypothetical and should not be considered a guarantee of returns when adopting any cloud strategy.
 
@@ -29,7 +31,7 @@ The remainder of this article explains these fiscal outcomes in the context of a
 
 The cloud can help create opportunities to deliver new products to customers or deliver existing products in a new way. New revenue streams are innovative, entrepreneurial, and exciting for many people in the business world. New revenue streams are also prone to failure and are considered by many companies to be high risk. When revenue-related outcomes are proposed by IT, there will likely be resistance. To add credibility to these outcomes, partner with a business leader who's a proven innovator. Validation of the revenue stream early in the process helps avoid roadblocks from the business.
 
-- **Example:** A company has been selling books for over a hundred years. An employee of the company realizes that the content can be delivered electronically. The employee creates a device that can be sold in the bookstore, which allows the same books to be downloaded directly, driving _$x_ in new book sales.
+- **Example:** A company has been selling books for over a hundred years. An employee of the company realizes that the content can be delivered electronically. The employee creates a device that can be sold in the bookstore, which allows the same books to be downloaded directly, driving *$x* in new book sales.
 
 ### Revenue increases
 
@@ -91,7 +93,7 @@ However, before you associate any transformation journey with this type of capit
 
 If an operating expense model is desirable, the following example could be a viable business outcome:
 
-- **Example:** The company's datacenter is currently depreciating at _$x USD_ per year for the next three years. It is expected to require an additional _$y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _$z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
+- **Example:** The company's datacenter is currently depreciating at *$x USD* per year for the next three years. It is expected to require an additional *$y USD* to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of *$z USD* per month, allowing for better management of and accountability for the operating costs of technology.
 
 ## Next steps
 

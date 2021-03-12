@@ -7,6 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: internal
 ---
 
 # Get started: Align your organization
@@ -80,5 +81,5 @@ At each level of maturity, accountability for various cloud functions shifts to 
 ## Additional information
 
 - [Adapt existing roles, skills, and processes for the cloud](../plan/adapt-roles-skills-processes.md)
-- [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: silos and fiefdoms](../organize/fiefdoms-silos.md)
 - [Download the RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)

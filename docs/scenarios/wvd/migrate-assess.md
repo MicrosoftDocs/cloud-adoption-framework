@@ -7,6 +7,7 @@ ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal
 ---
 
 # Windows Virtual Desktop assessment
@@ -40,14 +41,14 @@ How many distinct personas will be required to support all of the users included
 
 Distinctions in each of the preceding questions will start to illustrate user personas by business function, cost center, geographic region, and technical requirements. The following table can aid in recording responses to populate a completed assessment or design document:
 
-| Criterion  | Persona group&nbsp;1  | Persona group&nbsp;2  | Persona group&nbsp;3  |
+| Criterion | Persona group&nbsp;1 | Persona group&nbsp;2 | Persona group&nbsp;3 |
 |---------|---------|---------|---------|
-| Pools  | Pools | Pools | Dedicated (security concerns) |
+| Pools | Pools | Pools | Dedicated (security concerns) |
 | Density | Light (6&nbsp;users/vCPU) | Heavy (2&nbsp;users/vCPU) | Dedicated (1&nbsp;user/vCPU) |
 | Performance | Low | High memory | Low |
 | GPU | N/A | Required | N/A |
 | Azure region | North America | Western Europe | North America |
-| User count | 1000 | 50 | 20 |
+| User count | 1,000 | 50 | 20 |
 | Session count | 200 | 50 | 10 |
 
 Each persona, or each group of users with distinct business functions and technical requirements, would require a specific host-pool configuration.
@@ -64,7 +65,7 @@ Both Movere and lakeside scans of the current on-premises environment can provid
 
 - Do any applications need to be installed for the persona to use this desktop? Unless the persona uses 100 percent web-based software as a service applications, you'll likely need to [configure a custom master VHD image](/azure/virtual-desktop/set-up-customize-master-image) for each persona, with the required applications installed on the master image.
 - Does this persona need Microsoft 365 applications? If so, you'll need to [add Microsoft 365 to a customized master VHD image](/azure/virtual-desktop/install-office-on-wvd-master-image).
-- Is this application compatible with Windows&nbsp;10 multi-session? If an application isn't compatible, a [personal pool](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) might be required to run the custom VHD image. For assistance with application and Windows Virtual Desktop compatibility issues, see the [desktop application assure](/fasttrack/win-10-app-assure-assistance-offered) service.
+- Is this application compatible with Windows&nbsp;10 Enterprise multi-session? If an application isn't compatible, a [personal pool](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) might be required to run the custom VHD image. For assistance with application and Windows Virtual Desktop compatibility issues, see the [desktop application assure](/fasttrack/win-10-app-assure-assistance-offered) service.
 - Are mission-critical applications likely to suffer from latency between the Windows Virtual Desktop instance and any back-end systems? If so, you might want to consider migrating the back-end systems that support the application to Azure.
 
 The answers to these questions might require the plan to include remediation to the desktop images or supporting application components prior to desktop migration or deployment.

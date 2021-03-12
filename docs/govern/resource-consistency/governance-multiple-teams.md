@@ -7,7 +7,7 @@ ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: governance
+ms.custom: internal
 ---
 
 <!-- TODO: Rationalize name formats. -->
@@ -32,7 +32,7 @@ The requirements are:
   - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the resource group scope.
   - Management access for the shared infrastructure resources, limited to the shared infrastructure owners.
   - Management access for each workload restricted to the workload owner in production, and increasing levels of control as development proceeds through the various deployment environments (development, test, staging, and production).
-  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](/azure/role-based-access-control/built-in-roles) available in Azure's role-based access control (RBAC). If the enterprise absolutely requires custom RBAC roles, additional processes would be needed to synchronize custom roles across the three environments.
+  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](/azure/role-based-access-control/built-in-roles) available in Azure role-based access control (Azure RBAC). If the enterprise absolutely requires custom roles, additional processes would be needed to synchronize custom roles across the three environments.
 - Cost tracking by workload owner name, environment, or both.
 
 ## Identity management
@@ -48,7 +48,7 @@ There is only one service trusted by Azure for identity, and that is Azure Activ
 
 When your organization signed up for an Azure account, at least one Azure **account owner** was assigned. Also, an Azure AD **tenant** was created, unless an existing tenant was already associated with your organization's use of other Microsoft services such as Microsoft 365. A **global administrator** with full permissions on the Azure AD tenant was associated when it was created.
 
-The user identities for both the Azure account owner and the Azure AD global administrator are stored in a highly secure identity system that is managed by Microsoft. The Azure account owner is authorized to create, update, and delete subscriptions. The Azure AD global administrator is authorized to perform many actions in Azure AD, but for this design guide you'll focus on the creation and deletion of user identity.
+The user identities for both the Azure account owner and the Azure AD Global Administrator are stored in a highly secure identity system that is managed by Microsoft. The Azure account owner is authorized to create, update, and delete subscriptions. The Azure AD Global Administrator is authorized to perform many actions in Azure AD, but for this design guide you'll focus on the creation and deletion of user identity.
 
 > [!NOTE]
 > Your organization may already have an existing Azure AD tenant if there's an existing Microsoft 365, Intune, or Dynamics 365 license associated with your account.
@@ -56,31 +56,31 @@ The user identities for both the Azure account owner and the Azure AD global adm
 The Azure account owner has permission to create, update, and delete subscriptions:
 
 ![Diagram showing an Azure account with an Azure account owner and Azure AD global admin.](../../_images/govern/design/governance-3-0.png)
-_Figure 1: An Azure account with an Azure account owner and Azure AD global administrator._
+*Figure 1: An Azure account with an Azure account owner and Azure AD global administrator.*
 
 The Azure AD **global administrator** has permission to create user accounts:
 
 ![Diagram showing that the Azure AD global administrator creates the required user accounts in the tenant.](../../_images/govern/design/governance-3-0a.png)
-_Figure 2: The Azure AD global administrator creates the required user accounts in the tenant._
+*Figure 2: The Azure AD global administrator creates the required user accounts in the tenant.*
 
 The first two accounts, **app1 workload owner** and **app2 workload owner**, are each associated with an individual in your organization responsible for managing a workload. The **network operations** account is owned by the individual that is responsible for the shared infrastructure resources. Finally, the **subscription owner** account is associated with the individual responsible for ownership of subscriptions.
 
 ## Resource access permissions model of least privilege
 
-Now that your identity management system and user accounts have been created, you have to decide how to apply role-based access control (RBAC) roles to each account to support a permissions model of least privilege.
+Now that your identity management system and user accounts have been created, you have to decide how to apply Azure roles to each account to support a permissions model of least privilege.
 
 There's another requirement stating the resources associated with each workload be isolated from one another such that no one workload owner has management access to any other workload they do not own. There's also a requirement to implement this model using only built-in roles for Azure role-based access control.
 
-Each RBAC role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
+Each Azure role is applied at one of three scopes in Azure: **subscription**, **resource group**, then an individual **resource**. Roles are inherited at lower scopes. For example, if a user is assigned the [built-in Owner role](/azure/role-based-access-control/built-in-roles#owner) at the subscription level, that role is also assigned to that user at the resource group and individual resource level unless overridden.
 
-Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in owner role at the subscription scope, each workload owner would have management access to all workloads.
+Therefore, to create a model of least-privilege access you have to decide the actions a particular type of user is allowed to take at each of these three scopes. For example, the requirement is for a workload owner to have permission to manage access to only the resources associated with their workload and no others. If you were to assign the built-in Owner role at the subscription scope, each workload owner would have management access to all workloads.
 
-Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the service administrator to create resource groups. In the second example, the model assigns the built-in owner role to each workload owner at the subscription scope.
+Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the Service Administrator to create resource groups. In the second example, the model assigns the built-in Owner role to each workload owner at the subscription scope.
 
-In both examples, there is a subscription service administrator that is assigned the built-in owner role at the subscription scope. Recall that the built-in owner role grants all permissions including the management of access to resources.
+In both examples, there is a subscription Service Administrator that is assigned the built-in Owner role at the subscription scope. Recall that the built-in Owner role grants all permissions including the management of access to resources.
 
 ![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
-_Figure 3: A subscription with a service administrator assigned the built-in owner role._
+*Figure 3: A subscription with a Service Administrator assigned the built-in Owner role.*
 
 <!-- docutune:casing "group A" "groups A and B" "owner A" -->
 
@@ -92,7 +92,7 @@ _Figure 3: A subscription with a service administrator assigned the built-in own
   ![Service administrator adds workload owner A to resource group A](../../_images/govern/design/governance-2-4.png)
 1. Let's assume that **workload owner A** has a requirement for a pair of team members to view the CPU and network traffic monitoring data as part of capacity planning for the workload. Because **workload owner A** is assigned the Contributor role, they do not have permission to add a user to **resource group A**. They must send this request to the **service administrator**.
   ![Workload owner requests workload contributors be added to resource group](../../_images/govern/design/governance-2-5.png)
-1. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in reader role](/azure/role-based-access-control/built-in-roles#contributor).
+1. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in Reader role](/azure/role-based-access-control/built-in-roles#contributor).
   ![Service administrator adds workload contributors to resource group A](../../_images/govern/design/governance-2-6.png)
 1. Next, **workload owner B** also requires a resource group to contain the resources for their workload. As with **workload owner A**, **workload owner B** initially does not have permission to take any action at the subscription scope so they must send a request to the **service administrator**.
   ![Workload owner B requests creation of resource group B](../../_images/govern/design/governance-2-7.png)
@@ -103,7 +103,8 @@ _Figure 3: A subscription with a service administrator assigned the built-in own
 
 At this point, each of the workload owners is isolated in their own resource group. None of the workload owners or their team members have management access to the resources in any other resource group.
 
-![A diagram showing a subscription with resource groups A and B.](../../_images/govern/design/governance-2-10.png) gfigure 4: a subscription with two workload owners isolated with their own resource group._
+![A diagram showing a subscription with resource groups A and B.](../../_images/govern/design/governance-2-10.png)
+*Figure 4: a subscription with two workload owners isolated with their own resource group.*
 
 This model is a least-privilege model. Each user is assigned the correct permission at the correct resource management scope.
 
@@ -111,23 +112,23 @@ Consider that every task in this example was performed by the **service administ
 
 Let's take a look at second example that reduces the number of tasks performed by the **service administrator**.
 
-1. In this model, **workload owner A** is assigned the built-in owner role at the subscription scope, enabling them to create their own resource group: **resource group A**.
+1. In this model, **workload owner A** is assigned the built-in Owner role at the subscription scope, enabling them to create their own resource group: **resource group A**.
   ![Service administrator adds workload owner A to subscription](../../_images/govern/design/governance-2-11.png)
-1. When **resource group A** is created, **workload owner A** is added by default and inherits the built-in owner role from the subscription scope.
+1. When **resource group A** is created, **workload owner A** is added by default and inherits the built-in Owner role from the subscription scope.
   ![Workload owner A creates resource group A](../../_images/govern/design/governance-2-12.png)
-1. The built-in owner role grants **workload owner A** permission to manage access to the resource group. **Workload owner A** adds two **workload contributors** and assigns the built-in reader role to each of them.
+1. The built-in Owner role grants **workload owner A** permission to manage access to the resource group. **Workload owner A** adds two **workload contributors** and assigns the built-in Reader role to each of them.
   ![Workload owner A adds workload contributors](../../_images/govern/design/governance-2-13.png)
-1. **Service administrator** now adds **workload owner B** to the subscription with the built-in owner role.
-  ![Service administrator adds workload owner B to subscription](../../_images/govern/design/governance-2-14.png)
-1. **Workload owner B** creates **resource group B** and is added by default. Again, **workload owner B** inherits the built-in owner role from the subscription scope.
+1. The **Service Administrator** now adds **workload owner B** to the subscription with the built-in Owner role.
+  ![Service Administrator adds workload owner B to subscription](../../_images/govern/design/governance-2-14.png)
+1. **Workload owner B** creates **resource group B** and is added by default. Again, **workload owner B** inherits the built-in Owner role from the subscription scope.
   ![Workload owner B creates resource group B](../../_images/govern/design/governance-2-15.png)
 
 Note that in this model, the **service administrator** performed fewer actions than they did in the first example due to the delegation of management access to each of the individual workload owners.
 
 ![A diagram showing a Service Administrator and two workload owners for resource groups A and B.](../../_images/govern/design/governance-2-16.png)
-_Figure 5: A subscription with a service administrator and two workload owners, all assigned the built-in owner role._
+*Figure 5: A subscription with a Service Administrator and two workload owners, all assigned the built-in Owner role.*
 
-Because both **workload owner A** and **workload owner B** are assigned the built-in owner role at the subscription scope, they have each inherited the built-in owner role for each other's resource group. This means that not only do they have full access to each other's resources, they can also delegate management access to each other's resource groups. For example, **workload owner B** has rights to add any other user to **resource group A** and can assign any role to them, including the built-in owner role.
+Because both **workload owner A** and **workload owner B** are assigned the built-in Owner role at the subscription scope, they have each inherited the built-in Owner role for each other's resource group. This means that not only do they have full access to each other's resources, they can also delegate management access to each other's resource groups. For example, **workload owner B** has rights to add any other user to **resource group A** and can assign any role to them, including the built-in Owner role.
 
 If you compare each example to the requirements, you'll see that both examples support a single trusted user at the subscription scope with permission to grant resource access rights to the two workload owners. Each of the two workload owners did not have access to resource management by default and required the **service administrator** to explicitly assign permissions to them. Only the first example supports the requirement that the resources associated with each workload are isolated from one another such that no workload owner has access to the resources of any other workload.
 
@@ -148,12 +149,12 @@ Before you look at examples of each of these models, let's review the management
 Recall from the requirements that you have an individual in the organization who is responsible for subscriptions, and this user owns the **subscription owner** account in the Azure AD tenant. This account does not have permission to create subscriptions. Only the **Azure account owner** has permission to do this:
 
 ![An Azure account owner creates a subscription](../../_images/govern/design/governance-3-0b.png)
-_Figure 6: An Azure account owner creates a subscription._
+*Figure 6: An Azure account owner creates a subscription.*
 
 Once the subscription has been created, the **Azure account owner** can add the **subscription owner** account to the subscription with the **owner** role:
 
 ![The Azure account owner adds the subscription owner user account to the subscription with the owner role.](../../_images/govern/design/governance-3-0c.png)
-_Figure 7: The Azure account owner adds the **subscription owner** user account to the subscription with the **owner** role._
+*Figure 7: The Azure account owner adds the subscription owner user account to the subscription with the owner role.*
 
 The **subscription owner** account can now create **resource groups** and delegate resource access management.
 
@@ -162,7 +163,7 @@ First let's look at an example resource management model using a single subscrip
 1. Align each environment to a single resource group. All shared infrastructure resources are deployed to a single **shared infrastructure** resource group. All resources associated with development workloads are deployed to a single **development** resource group. All resources associated with production workloads are deployed into a single **production** resource group for the **production** environment.
 1. Create separate resource groups for each workload, using a naming convention and tags to align resource groups with each of the three environments.
 
-Let's begin by evaluating the first option. You'll be using the permissions model that was discussed in the previous section, with a single subscription service administrator who creates resource groups and adds users to them with either the built-in **contributor** or **reader** role.
+Let's begin by evaluating the first option. You'll be using the permissions model that was discussed in the previous section, with a single subscription Service Administrator who creates resource groups and adds users to them with either the built-in **contributor** or **reader** role.
 
 1. The first resource group deployed represents the **shared infrastructure** environment. The **subscription owner** account creates a resource group for the shared infrastructure resources named `netops-shared-rg`.
   ![Creating a resource group](../../_images/govern/design/governance-3-0d.png)
@@ -238,11 +239,11 @@ You've learned about several different models for governing access to Azure reso
 
 Follow these steps:
 
-1. Create an [Azure account](/azure/active-directory/sign-up-organization) if your organization doesn't already have one. The person who signs up for the Azure account becomes the Azure account administrator, and your organization's leadership must select an individual to assume this role. This individual will be responsible for:
+1. Create an [Azure account](/azure/active-directory/fundamentals/sign-up-organization) if your organization doesn't already have one. The person who signs up for the Azure account becomes the Azure account administrator, and your organization's leadership must select an individual to assume this role. This individual will be responsible for:
     - Creating subscriptions.
     - Creating and administering [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) tenants that store user identity for those subscriptions.
 2. Your organization's leadership team decides who is responsible for:
-    - Management of user identity; an [Azure AD tenant](/azure/active-directory/develop/active-directory-howto-tenant) is created by default when your organization's Azure account is created, and the account administrator is added as the [Azure AD global administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) by default. Your organization can choose another user to manage user identity by [assigning the Azure AD global administrator role to that user](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
+    - Management of user identity; an [Azure AD tenant](/azure/active-directory/develop/quickstart-create-new-tenant) is created by default when your organization's Azure account is created, and the account administrator is added as the [Azure AD Global Administrator](/azure/active-directory/roles/permissions-reference) by default. Your organization can choose another user to manage user identity by [assigning the Azure AD Global Administrator role to that user](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
     - Subscriptions, which means these users:
         - Manage costs associated with resource usage in that subscription.
         - Implement and maintain least permission model for resource access.
@@ -251,7 +252,7 @@ Follow these steps:
         - On-premises to Azure network connectivity.
         - Ownership of network connectivity within Azure through virtual network peering.
     - Workload owners.
-3. The Azure AD global administrator [creates the new user accounts](/azure/active-directory/add-users-azure-active-directory) for:
+3. The Azure AD Global Administrator [creates the new user accounts](/azure/active-directory/fundamentals/add-users-azure-active-directory) for:
     - The person who will be the subscription owner for each subscription associated with each environment. Note that this is necessary only if the subscription **service administrator** will not be tasked with managing resource access for each subscription/environment.
     - The person who will be the **network operations user**.
     - The people who are **workload owners**.
@@ -259,15 +260,15 @@ Follow these steps:
     - A subscription for the **shared infrastructure** environment.
     - A subscription for the **production** environment.
     - A subscription for the **development** environment.
-5. The Azure account administrator [adds the subscription service owner to each subscription](/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
+5. The Azure account administrator [adds the subscription service owner to each subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator#to-assign-a-user-as-an-administrator).
 6. Create an approval process for **workload owners** to request the creation of resource groups. The approval process can be implemented in many ways, such as over email, or you can using a process management tool such as [SharePoint workflows](https://support.office.com/article/introduction-to-sharepoint-workflow-07982276-54e8-4e17-8699-5056eff4d9e3). The approval process can follow these steps:
     - The **workload owner** prepares a bill of materials for required Azure resources in either the **development** environment, **production** environment, or both, and submits it to the **subscription owner**.
-    - The **subscription owner** reviews the bill of materials and validates the requested resources to ensure that the requested resources are appropriate for their planned use, such as checking that the requested [virtual machine sizes](/azure/virtual-machines/windows/sizes) are correct.
-    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](../../ready/azure-best-practices/naming-and-tagging.md), [adds the **workload owner**](/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
+    - The **subscription owner** reviews the bill of materials and validates the requested resources to ensure that the requested resources are appropriate for their planned use, such as checking that the requested [virtual machine sizes](/azure/virtual-machines/sizes) are correct.
+    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](../../ready/azure-best-practices/naming-and-tagging.md), [adds the **workload owner**](/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
 7. Create an approval process for workload owners to request a virtual network peering connection from the shared infrastructure owner. As with the previous step, this approval process can be implemented using email or a process management tool.
 
 Now that you've implemented your governance model, you can deploy your shared infrastructure services.
 
 ## Related resources
 
-[Built-in roles for Azure resources](/azure/role-based-access-control/built-in-roles)
+[Azure built-in roles](/azure/role-based-access-control/built-in-roles)

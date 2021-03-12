@@ -7,6 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
+ms.custom: internal
 ---
 
 # Tools to democratize data in Azure
@@ -34,26 +35,26 @@ All guidance maps to the four preceding processes. Guidance ranges from the high
 
 In Azure, the following tools are commonly used to accelerate digital invention across the preceding phases:
 
-- [Power BI](/power-bi)
-- [Azure Data Catalog](/azure/data-catalog)
-- [Azure Synapse Analytics](/azure/synapse-analytics)
-- [Azure Cosmos DB](/azure/cosmos-db)
-- [Azure Database for PostgreSQL](/azure/postgresql)
-- [Azure Database for MySQL](/azure/mysql)
-- [Azure Database for MariaDB](/azure/mariadb)
+- [Power BI](/power-bi/)
+- [Azure Data Catalog](/azure/data-catalog/)
+- [Azure Synapse Analytics](/azure/synapse-analytics/)
+- [Azure Cosmos DB](/azure/cosmos-db/)
+- [Azure Database for PostgreSQL](/azure/postgresql/)
+- [Azure Database for MySQL](/azure/mysql/)
+- [Azure Database for MariaDB](/azure/mariadb/)
 - [Azure Database for PostgreSQL hyperscale](/azure/postgresql/concepts-hyperscale-nodes)
 - [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction)
-- [Azure Database Migration Service](/azure/dms)
-- [Azure SQL Database, with or without Azure SQL Managed Instance](/azure/sql-database)
-- [Azure Data Factory](/azure/data-factory)
-- [Azure Stream Analytics](/azure/stream-analytics)
-- [SQL Server Integration Services](/sql/integration-services)
-- [Azure Stack](/azure-stack)
-- [SQL Server Stretch Database](/sql/sql-server/stretch-database)
-- [Azure StorSimple](/azure/storsimple)
-- [Azure Files](/azure/storage/files)
-- [Azure file sync](/azure/storage/files/storage-sync-files-planning)
-- [PolyBase](/sql/relational-databases/polybase)
+- [Azure Database Migration Service](/azure/dms/)
+- [Azure SQL Database, with or without Azure SQL Managed Instance](/azure/azure-sql/)
+- [Azure Data Factory](/azure/data-factory/)
+- [Azure Stream Analytics](/azure/stream-analytics/)
+- [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services)
+- [Azure Stack](/azure-stack/)
+- [SQL Server Stretch Database](/sql/sql-server/stretch-database/stretch-database)
+- [Azure StorSimple](/azure/storsimple/)
+- [Azure Files](/azure/storage/files/)
+- [Azure File Sync](/azure/storage/files/storage-sync-files-planning)
+- [PolyBase](/sql/relational-databases/polybase/polybase-guide)
 
 As the invention approaches adoption at scale, the aspects of each solution require refinement and technical maturity. As that happens, more of these services are likely to be required. Use the table of contents on the left side of this page for Azure tools guidance relevant to your hypothesis-testing process.
 
