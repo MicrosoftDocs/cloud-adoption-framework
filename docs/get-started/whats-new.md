@@ -30,7 +30,7 @@ Most notable in this release is the addition of adoption journeys, which provide
 |--|--|
 | [Hybrid&nbsp;and&nbsp;multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
 | [Modern containers](../scenarios/aks/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
-| SAP on Azure (coming soon) | As part of our OneMigrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
+| [SAP on Azure](../scenarios/sap/index.md) | As part of our OneMigrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
 
 ### Cloud economics
 
