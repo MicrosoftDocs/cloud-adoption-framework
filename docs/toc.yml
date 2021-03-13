@@ -1024,9 +1024,9 @@ items:
             href: innovate/best-practices/apps.md
           - name: Citizen developers
             items:
-            - name: PowerApps overview
+            - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Creating apps in PowerApps
+            - name: Creating apps in Power Apps
               href: /powerapps/maker?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Create your first workflow with Power Automate
               href: /power-automate/getting-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1119,7 +1119,7 @@ items:
               href: https://guides.github.com/introduction/git-handbook
             - name: Get started with a shared backlog
               href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
-            - name: Synchronize PowerApps with Azure DevOps
+            - name: Synchronize Power Apps with Azure DevOps
               href: /powerapps/developer/common-data-service/build-tools-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Feedback loops
             items:

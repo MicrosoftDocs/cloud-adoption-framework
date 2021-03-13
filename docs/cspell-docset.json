@@ -8,7 +8,8 @@
       "passwordless",
       "personalizer",
       "preintegration",
-      "reauthenticate"
+      "reauthenticate",
+      "replatform"
   ],
   "ignoreWords": [
       "BYOK",
