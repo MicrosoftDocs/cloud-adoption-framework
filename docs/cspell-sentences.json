@@ -211,7 +211,6 @@
         "subcomponents",
         "subscope",
         "subservice",
-        "tebibytes",
         "telco",
         "telehealth",
         "timeboxing",
@@ -255,7 +254,6 @@
         "eastus",
         "hierarchyid",
         "highres",
-        "ipsec",
         "linktype",
         "localizationpriority",
         "mariadb",
@@ -272,8 +270,6 @@
         "nvarchar",
         "onmicrosoft",
         "ries",
-        "robocopy",
-        "rsync",
         "satya",
         "segoe",
         "seodec",
@@ -322,7 +318,10 @@
     "ignoreRegExpList": [
         "\\]\\([#/][^\\)]+\\)",
         "\\n *(author|ms\\.author|manager): .*(?=\\r?\\n)",
-        "OpenBlade\\[.*\\]"
+        "OpenBlade\\[.*\\]",
+        "\\s`[^`]+`\\s",
+        "\\n *```[a-z]+\\r?\\n([^.\\r\\n]+\\r?\\n)+ *``` *\\r\\n",
+        "\\]\\((?:\\.\\.?/)?(?!http)[a-z\\d][^\\(]+\\)"
     ],
     "import": [
         ".\\cspell-docset.json",
