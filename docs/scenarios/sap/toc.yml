@@ -17,25 +17,25 @@ items:
   - name: Manage SAP platform and workloads
     href: scenarios/sap/manage.md
   - name: Well-Architected considerations
-    href: /azure/architecture/reference-architectures/sap/sap-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+    href: /azure/architecture/reference-architectures/sap/sap-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
   - name: Accelerate with SAP architectures
     items:
     - name: SAP HANA on Azure (Large Instances)
-      href: /azure/architecture/reference-architectures/sap/hana-large-instances?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/sap/hana-large-instances?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: SAP HANA Scale-up on Linux
-      href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: SAP NetWeaver on Windows on Azure
-      href: /azure/architecture/reference-architectures/sap/sap-netweaver?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/sap/sap-netweaver?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: SAP S/4HANA in Linux on Azure
-      href: /azure/architecture/reference-architectures/sap/sap-s4hana?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/sap/sap-s4hana?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: SAP BW/4HANA in Linux on Azure
-      href: /azure/architecture/reference-architectures/sap/run-sap-bw4hana-with-linux-virtual-machines?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/reference-architectures/sap/run-sap-bw4hana-with-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: SAP NetWeaver on SQL Server
-      href: /azure/architecture/solution-ideas/articles/sap-netweaver-on-sql-server?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/solution-ideas/articles/sap-netweaver-on-sql-server?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: SAP deployment using an Oracle DB
-      href: /azure/architecture/example-scenario/apps/sap-production?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      href: /azure/architecture/example-scenario/apps/sap-production?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Dev/test for SAP
-      href: /azure/architecture/example-scenario/apps/sap-dev-test?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json          
+      href: /azure/architecture/example-scenario/apps/sap-dev-test?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json          
   - name: Enterprise-scale construction set
     items:
     - name: Overview
