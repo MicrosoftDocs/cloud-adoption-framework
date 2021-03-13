@@ -30,7 +30,7 @@ For guidance on SAP digital estate planning, look through the processes outlined
 
 Several considerations should be included in those processes when planning for SAP adoption:
 
-- **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio. See [Step 5 of the best practice article](../../plan/contoso-migration-assessment.md#step-5-prepare-for-dependency-analysis.md) for an actionable reference guide.
+- **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio. See [Step 5 of the `best practices` article](../../plan/contoso-migration-assessment.md#step-5-prepare-for-dependency-analysis) for an actionable reference guide.
 
 - **Tagging, grouping, and metadata:** Carefully tag or group all assets:
 
@@ -54,7 +54,7 @@ Several considerations should be included in those processes when planning for S
 
 - **Platform rationalization:** The most important consideration is how to rationalize an SAP platform's assets; consider how you'll migrate the platform. The migration approach will shape the inventory of assets that will persist in the cloud and the work to get there. The following options can be considered:
 
-  - **Rehost:** Use Azure Migrate or a homogeneous system copy to lift and shift the current SAP product/operating system [OS]/database management system (DBMS) platform.
+  - **Rehost:** Use Azure Migrate or a homogeneous system copy to lift and shift the current SAP/OS/DBMS platform.
 
   - **Replatform:** Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This include when an SAP NetWeaver production changes to HANA as a DBMS.
 
