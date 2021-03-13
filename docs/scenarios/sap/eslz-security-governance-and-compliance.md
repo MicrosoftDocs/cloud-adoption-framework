@@ -46,7 +46,7 @@ Enterprises that use hub-spoke network topologies often deploy cloud architectur
 
 Enable Azure Security Center Standard for SAP on Azure subscriptions to:
 
-- Strengthen your datacenters' security posture, and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
+- Strengthen the security posture your datacenters and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
 
 - See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP VMs, disks, and applications.
 
@@ -56,7 +56,7 @@ When you enable Azure Security Center Standard for SAP, make sure to exclude the
 
 The following screenshot shows the Azure Security Center dashboard in the Azure portal:
 
-![Azure Security Center Dashboard](./media/security-center-dashboard.png)
+![Azure Security Center dashboard](./media/security-center-dashboard.png)
 
 ### Enable Azure Sentinel
 
@@ -139,7 +139,7 @@ Load balancers direct traffic to VMs in the application subnet. For high availab
 
 You can categorize Azure load-balancing services along global versus regional and HTTP/S versus non-HTTP/S dimensions.
 
-- Global load-balancing services distribute traffic across regional backends, clouds, or hybrid on-premises services. These services route end-user traffic to the closest available backend. These services also maximize availability and performance by reacting to changes in service reliability or performance. You can think of these services as systems that load balance between application stamps, endpoints, or scale units hosted across different regions or geographies.
+- Global load-balancing services distribute traffic across regional back ends, clouds, or hybrid on-premises services. These services route end-user traffic to the closest available backend. These services also maximize availability and performance by reacting to changes in service reliability or performance. You can think of these services as systems that load balance between application stamps, endpoints, or scale units hosted across different regions or geographies.
 
 - Regional load-balancing services distribute traffic within virtual networks across VMs or zonal and zone-redundant service endpoints within a region. You can think of these services as systems that load balance between VMs, containers, or clusters within a region in a virtual network.
 

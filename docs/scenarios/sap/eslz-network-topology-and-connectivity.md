@@ -95,7 +95,7 @@ This section recommends connectivity models for in- and outbound connectivity to
 
 Since SAP Web Dispatcher and NetScaler are more intelligent than Application Gateway, extensive testing is necessary to replace them with this service. Verify the most current status and list all supported and not supported (or tested/not tested) scenarios, if possible.
 
-- Use a Web Application Firewall to scan your traffic when it's exposed to the internet; another option is to use it with your load balancer or resources with built-in firewall capabilities like Application Gateway or third-party solutions.
+- Use a Web Application Firewall to scan your traffic when it's exposed to the internet. Another option is to use it with your load balancer or with resources that have built-in firewall capabilities like Application Gateway or third-party solutions.
 
 - To prevent data leakage, use Azure Private Link to securely access platform as a service resources like Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2, Azure Data Factory, and more. Azure Private Endpoint can also help to secure traffic between VNets and services like Azure Storage, Azure Backup, and more. Traffic between your VNet and the Private-EndPoint-enabled service travels across the Microsoft global network, which prevents its exposure to the public internet.
 
@@ -109,7 +109,7 @@ This section explores key recommendations for encrypting networks between on-pre
 
 - It isn't necessary to encrypt traffic over ExpressRoute for SAP deployments. SAP traffic typically consumes a lot of bandwidth and is sensitive to performance. IPsec tunnels encrypt internet traffic by default, and encryption or decryption could negatively affect the traffic's performance.
 
-- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md#define-network-encryption-requirements.md) to understand network encryption options in enterprise-scale landing zones.
+- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
 
 ## Segregate systems
 

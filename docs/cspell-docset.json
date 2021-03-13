@@ -10,7 +10,6 @@
       "preintegration",
       "reauthenticate",
       "replatform"
-      "reauthenticate"
   ],
   "ignoreWords": [
       "BYOK",
