@@ -5,17 +5,17 @@ items:
     href: index.md
     pdf_name: SAP adoption scenario - Microsoft Cloud Adoption Framework for Azure
   - name: Strategy
-    href: scenarios/sap/strategy.md
+    href: strategy.md
   - name: Planning
-    href: scenarios/sap/plan.md
+    href: plan.md
   - name: Azure landing zone review
-    href: scenarios/sap/ready.md
+    href: ready.md
   - name: Migrate SAP to Azure
-    href: scenarios/sap/migrate.md
+    href: migrate.md
   - name: Innovate with SAP and Azure
-    href: scenarios/sap/innovate.md
+    href: innovate.md
   - name: Manage SAP platform and workloads
-    href: scenarios/sap/manage.md
+    href: manage.md
   - name: Well-Architected considerations
     href: /azure/architecture/reference-architectures/sap/sap-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
   - name: Accelerate with SAP architectures
@@ -39,16 +39,16 @@ items:
   - name: Enterprise-scale construction set
     items:
     - name: Overview
-      href: scenarios/sap/enterprise-scale-landing-zone.md
+      href: enterprise-scale-landing-zone.md
     - name: Identity and access management
-      href: scenarios/sap/eslz-identity-and-access-management.md
+      href: eslz-identity-and-access-management.md
     - name: Network topology and connectivity
-      href: scenarios/sap/eslz-network-topology-and-connectivity.md
+      href: eslz-network-topology-and-connectivity.md
     - name: Management and monitoring
-      href: scenarios/sap/eslz-management-and-monitoring.md
+      href: eslz-management-and-monitoring.md
     - name: Business continuity and disaster recovery
-      href: scenarios/sap/eslz-business-continuity-and-disaster-recovery.md
+      href: eslz-business-continuity-and-disaster-recovery.md
     - name: Security, governance, and compliance
-      href: scenarios/sap/eslz-security-governance-and-compliance.md
+      href: eslz-security-governance-and-compliance.md
     - name: Platform automation and DevOps
-      href: scenarios/sap/eslz-platform-automation-and-devops.md
+      href: eslz-platform-automation-and-devops.md
