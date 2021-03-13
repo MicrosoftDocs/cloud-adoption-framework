@@ -72,7 +72,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 - Use your platform rationalization efforts to finish migrating the SAP platform.
 - Account for each workload (or wave of workloads) to be migrated.
 
-You can use the [Azure DevOps web interface](/azure/devops/project/navigation/?view=azure-devops) to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [tracking workloads](../../plan/workloads.md).
+You can use the [Azure DevOps web interface](/azure/devops/project/navigation/) to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [tracking workloads](../../plan/workloads.md).
 
 ## SAP readiness plan
 
