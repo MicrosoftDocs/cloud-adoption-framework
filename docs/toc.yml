@@ -954,6 +954,8 @@ items:
             href: innovate/ai/index.md
           - name: Machine learning
             href: innovate/ai/machine-learning.md
+          - name: Conversational AI
+            href: innovate/ai/conversational-ai.md
           - name: AI apps and agents
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
