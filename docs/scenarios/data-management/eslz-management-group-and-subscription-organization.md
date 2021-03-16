@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management group and subscription organization for data management"
+title: "Cost management and Azure policies"
 description: Cost management and Azure policies
 author: abdale
 ms.author: hamoodaleem

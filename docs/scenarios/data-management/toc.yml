@@ -35,9 +35,15 @@ items:
        - name: Data Management Landing Zone
          href: ./eslz-data-management-landing-zone.md
        - name: Data Landing Zone
-         href: ./eslz-data-landing-zone.md
-       - name: Data Landing Zone Division and Consumption
-         href: ./eslz-data-landing-zone-division-and-consumption.md
+         items:
+          - name: Overview
+            href: ./eslz-data-landing-zone.md
+          - name: Data Landing Zone Data Domains
+            href: ./eslz-data-landing-zone-domains.md
+          - name: Data Landing Zone Data Products
+            href: ./eslz-data-landing-zone-data-products.md
+          - name: Data Landing Zone Division and Consumption
+            href: ./eslz-data-landing-zone-division-and-consumption.md
     - name: Network topology and connectivity
       href: ./eslz-network-topology-and-connectivity.md
     - name: Management and monitoring
@@ -95,10 +101,6 @@ items:
         href: ./eslz-azure-databricks-integration.md
       - name: Azure Synapse Analytics Integration
         href: ./eslz-azure-synapse-analytics-integration.md
-      - name: Data Landing Zone Data Domains
-        href: ./eslz-data-landing-zone-domains.md
-      - name: Data Landing Zone Data Products
-        href: ./eslz-data-landing-zone-data-products.md
       - name: Data Landing Zone Ingestion
         items:
           - name: Data Ingestion
