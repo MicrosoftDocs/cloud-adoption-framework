@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale platform automation and DevOps for SAP in Azure
+title: Enterprise-scale platform automation and DevOps recommendations for SAP in Azure
 description: Understand the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
 author: JefferyMitchell
 ms.author: brblanch
@@ -12,10 +12,9 @@ ms.custom: think-tank
 
 <!-- docutune:casing Snow -->
 
-# Enterprise-scale platform automation and DevOps for SAP in Azure
+# Enterprise-scale platform automation and DevOps recommendations for SAP in Azure
 
-The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach,
-it's important to identify an SAP application's key components and then use those observations to guide the strategy.
+The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy.
 
 SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone)] to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
 
@@ -83,7 +82,7 @@ The SAP deployment automation framework supports deployments in multiple Azure r
 - 1-n workload zones
 - 1-n SAP systems deployed in the workload zones
 
-The following illustration shows the deployment strategy for two Azure regions.
+The following illustration shows a deployment strategy for two Azure regions.
 
 ![A diagram of an SAP DevOps strategy.](./media/sap-devops-strategy.png)
 
@@ -109,7 +108,7 @@ In this model, SAP environments are grouped into sandbox, development, quality a
 **Design considerations:**
 
 - How many workload zones are required?
-- Subscription design: Does a subscription contain multiple workload zones?
+- For subscription design, does a subscription contain multiple workload zones?
 - To which regions are the workloads deployed?
 - Outbound internet connectivity
 - Network connectivity to an on-premises network
@@ -177,7 +176,7 @@ The SAP deployment automation framework capabilities matrix:
 | Availability Zones | Y | The automation can deploy VMs in zones or across Availability Zones. |
 | Azure Files for network file systems | N | These are on the roadmap. |
 | Azure Firewall | Y | The automation can deploy an Azure Firewall in the deployer network. |
-| Azure Load Balancer | Y | The automation uses standard Azure load balancers. |
+| Azure Load Balancer | Y | The automation uses standard load balancers from Azure Load Balancer. |
 | Azure NetApp Files | N | These are on the roadmap. |
 | Boot diagnostics storage account | Y | The boot diagnostics storage account is shared across all systems in a workload zone. |
 | Azure key vaults | Y | New or current key vaults in Azure. |
