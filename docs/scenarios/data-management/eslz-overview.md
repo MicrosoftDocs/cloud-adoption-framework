@@ -1,83 +1,134 @@
 ---
-title: Enterprise Scale Analytics and AI Overview
-description: Enterprise Scale Analytics and AI Architecture Overview represents the strategic design path and target technical state for an Azure Analytics environment. Addressing the challenges of a centralized, monolithic data lake, this architecture is using a core service provider or harmonized data mesh pattern.
+title: Enterprise Scale Analytics and AI Intro
+description: Enterprise Scale Analytics and AI Intro
 author: mboswell
 ms.author: mboswell  # Microsoft employees only
-ms.date: 03/01/2021
+ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise Scale Analytics and AI Overview
+# Introduction to Enterprise Scale Analytics and AI
 
 Today, customers are investing in moving data to the cloud and have been following a modern data warehouse (MDW) pattern published by multiple cloud vendors. This MDW pattern pushes for singular enterprise data lakes which focuses the organization on centralized analytics. These patterns are aligned to on-premises deployments as opposed to the agility and self-service of the cloud.
 
-The Enterprise Scale Analytics and AI solution pattern represents the strategic design path and targets the technical state for an Azure Analytics and AI environment. It addresses the challenges of a centralized monolithic data lake by using either a core service provider or harmonized data mesh pattern.
+The Enterprise Scale Analytics and AI solution pattern represents the strategic design path and targets the technical state for an Azure Analytics and AI environment. It addresses the challenges of a centralized and monolithic data lake by using either a core service provider or a harmonized data mesh pattern.
 
-Distribution of the data and pipelines enables the Domains to have ownership of accessibility, usability, and development. The Enterprise Scale Analytics and AI solution pattern includes storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
+A core service provider or harmonized data mesh pattern relies upon distribution of the data and its pipelines across [domains](eslz-data-landing-zone-division-and-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI solution pattern includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
+
+> [!NOTE]
+> The Enterprise Scale Analytics and AI framework builds on our [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
 ## Critical Design Areas
 
-Enterprise Scale Analytics and AI considers six critical design areas that help translate organizational requirements to Azure constructs and capabilities. These design areas can help address the mismatch between on-premises and cloud-design infrastructure as well as data monoliths. These areas typically create dissonance and friction between the enterprise-scale definition and Azure adoption:
+Enterprise Scale Analytics and AI considers six critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Enterprise Scale Analytics and AI uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure as well as data monoliths:
 
-1. Data Management
-1. Data Domains
-1. Data Products
-1. Data Platform Operational Excellence
+1. [Data Management](#data-management)
+1. [Data Domains](#data-domains)
+1. [Data Products](#data-products)
+1. [Data Platform Operational Excellence](#data-platform-operational-excellence)
 1. Data Science Environment
-1. Data Science Workflow and MLOps
+1. Data Science Workflow and MLOps  
 
-## Data Management Landing Zone and Data Landing Zone(s)
+### Data Management
 
-The Enterprise Scale Analytics and AI solutions pattern consists of a Data Management Landing Zone with multiple connected Data Landing Zones:
+At the heart of Enterprise Scale Analytics and AI is its data management capability which is enabled through the Data Management Landing Zone.
 
-* The Data Management Landing Zone consists of a data catalog, master data management, data quality, data contracts, and API management.
-* The Data Landing Zone can host multiple analytics and AI solutions relevant to their respective business domain.
+The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 
-The platform can be extended to include other Azure services on demand. The proposed approach is to provision the analytics platform with the required services, with t-shirt sizing, and extend it further as new use cases are onboarded. This allows enterprises to regulate the platform cost effectively. The framework builds on our [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
+* [Data Catalog](eslz-data-management-landing-zone.md#data-catalog)
+* [Data Classification](eslz-data-management-landing-zone.md#data-classification)
+* [Data Lineage](eslz-data-management-landing-zone.md#data-lineage)
+* [Data Quality Management](eslz-data-management-landing-zone.md#data-quality-management)
+* [Data Modelling Repository](eslz-data-management-landing-zone.md#data-modelling-repository)
+* [Master Data Management](eslz-data-management-landing-zone.md#master-data-management)
+* [API Catalog](eslz-data-management-landing-zone.md#api-catalog)
+* Data Sharing and Contracts
+
+For further reading, see [Data Management Landing Zone](eslz-data-management-landing-zone.md).
+
+The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective business domain. These subscriptions within the Enterprise Scale Analytics and AI solution pattern represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems. A few important points to keep in mind about Data Landing Zones:
+
+* Ingestion capabilities exist in each Data Landing Zone to allow domain subject matter experts to pull in data sources from third-party clouds or on-premises environments if they wish to do so.
+* Data Landing Zone are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.
+* A Data Landing Zone can host one or many [Data Domains](#data-domains).
+* A Data Landing Zone can also host one or many [Data Products](#data-products).
+
+For further reading, see [Data Landing Zone](eslz-data-landing-zone.md).
+
+### Data Domains
+
+The responsibility of ingesting data into Enterprise Analytics and AI lies with Domains. A Domain exists in a Data Landing Zone as a resource group and contains the following:
+
+- A Domain Azure Key Vault.
+- A Domain Azure Data Factory for running developed engineering pipelines to transformations.
+- A Domain security user group which we use to give access to the Azure Databricks Analytics and Data Science workspace.
+- A Domain sensitive security group which we use to give access to the Azure Databricks Sensitive workspace.
+- A Service Principal which is used by the Domain for deploying ingest jobs to the Azure Databricks Engineering workspace.
+
+Additional services such as Event Hubs, IoT Hubs, Stream Insight, and Machine Learning can optionally be created.
+
+>[!IMPORTANT]
+>A **domain** is responsible for ingestion of data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
+
+For further reading, see [Data Landing Zone Data Domains](eslz-data-landing-zone-domains.md).
+
+### Data Products
+
+A data product is anything that drives business value (*e.g.* reports, workbooks, bespoke database or data API). It can leverage additional services and technologies which are not part of Data Landing Zone core architecture such as:
+ 
+* Reporting with niche requirements, *e.g.* compliance, tax reporting, HR, etc.
+* Specialized capabilities that address gaps in the baseline policies.
+
+Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. 
+
+Examples of Data Products include Azure Functions, App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL DB, Azure MySQL, and Azure CosmosDB.
+
+>[!IMPORTANT]
+>A **data product** is data from a domain READ data source which has had some data transformation applied. This could be a newly curated dataset or a BI report.
+
+For further reading, see [Data Landing Zone Data Products](eslz-data-landing-zone-data-products.md).
+
+### Data Platform Operational Excellence
+
+The Enterprise Analytics and AI platform was designed with data platform operational excellence at its core through self-service enablement, governance and streamlined deployments. The working model for data operations enables these core principles through the use of Infrastructure as Code, deployment templates, deployment processes that includes a forking and branching strategy and a central repository.
+
+For further reading, see [Platform automation and DevOps](eslz-dataops.md).
+
+
+### Data Science Environment
+
+[needs info]
+
+### Data Science Workflow and MLOps
+
+[needs info]
+
+## Provisioning the Enterprise Scale Analytics and AI Platform
+
+In order to extend your analytics platform to include other Azure services on demand, the prescribed approach is to provision the platform with only the services you require, with t-shirt sizing, and extend it further as new use cases are onboarded. This approach also allows enterprises to regulate the platform cost effectively.
+
+### Starting with a single Data Landing Zone
+
+If your environment is at a starting point, consider the following approach: 
 
 ![Enterprise Scale Data Management and Single Data Landing Zone](./images/hldsimple.png)
+*Figure 1: Enterprise Scale Data Management with a single Data Landing Zone*
 
-Figure 1: Enterprise Scale Data Management and Single Data Landing Zone
+Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (i.e., the Data Landing Zone). For many environments this approach of deploying a central hub with a single spoke will be the starting point. An advantage of starting with this approach is that it allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones at a later stage as needed. This is close to a core service provider pattern which builds out common core services with flexibility to bolt on domain specific customizations.
 
-Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (known as a Data Landing Zone). For a number of environments this will be the starting point. It allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones. This is close to a Core Service Provider pattern which builds-out common core services with flexibility to bolt-on domain specific customizations.
+### Starting with multiple Data Landing Zones
+
+For environments requiring multiple Data Landing Zones, consider the following approach:
 
 ![Enterprise Scale Data Management and Multiple Data Landing Zones](./images/hld.png)
+*Figure 2: Enterprise Scale Data Management with multiple Data Landing Zones*
 
-Figure 2: Enterprise Scale Data Management and Multiple Data Landing Zones
+Figure 2 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and **multiple** spokes (i.e., the Data Landing Zones). This is similar to a harmonized mesh pattern which leverages common policies that ensure baseline security and compatibility. Different groups within the enterprise can customize capabilities as they see fit using this pattern.
 
-Figure 2 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **multiple** spoke (known as a Data Landing Zones). This is similar to a Harmonized Mesh pattern, which leverages common policies that ensure baseline security and compatibility. Different groups within the enterprise can customize capabilities as they see fit.
-
-The Enterprise Scale Analytics and AI framework advocates consistent governance using a common architecture that defines baseline capabilities and policies. Thus, all Data Landing Zones adhere to the same controls and auditing. Crucially, however, teams operating within the Data Landing Zone have the freedom to create data pipelines, ingest sources, create Data Products (such as reports and dashboards), and perform *ad hoc* Spark/SQL analysis. Furthermore, Data Landing Zone capabilities can be augmented by adding services on top of the baseline capability set out in the policy. Thus, a team could, for instance, add a third-party graph engine to address some niche business requirement.
+The Enterprise Scale Analytics and AI framework advocates consistent governance using a common architecture that defines baseline capabilities and policies. Thus, all Data Landing Zones adhere to the same controls and auditing. Crucially, however, teams operating within the Data Landing Zone have the freedom to create data pipelines, ingest sources, create data products (such as reports and dashboards), and perform *ad hoc* Spark/SQL analysis. Furthermore, Data Landing Zone capabilities can be augmented by adding services on top of the baseline capability set out in the policy. For instance, a team could add a third-party graph engine to address some niche business requirement.
 
 If you have multiple Data Landing Zones, these can connect to data lakes hosted in other zones, allowing groups to collaborate across the enterprise (subject to SSO access controls).
 
 The solution pattern places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
-
-## Data Management Landing Zone
-
-* The Data Management Landing Zone hosts centralized services such as data cataloging, monitoring, auditing, etc.
-* The Data Landing Zone(s) are automatically peered to the Data Management Landing Zone to allow the data catalog to crawl across the Data Landing Zone(s) for data discovery and governance. The Data Management Landing Zone as deployed is peered to the Connectivity Management Subscription.
-* This environment is highly controlled and subject to stringent audits.
-* All data classification types will be stored in a central Data Catalog. Access patterns are enforced by metadata-dependent policies. The Data Catalog can serve as a back-end repository for data market front-ends.
-
-The Data Management Landing Zone is discussed in detail in the [Data Management Landing Zone guide](./eslz-data-management-landing-zone.md).
-
-## Data Landing Zone(s)
-
-* Data Landing Zone(s) are subscriptions within the solution pattern representing primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems.
-* Ingestion capabilities will exist in each Data Landing Zone to allow Domain subject matter experts to pull in data sources from third-party clouds or on-premises environments.
-* Data Landing Zone are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.
-* A Data Landing Zone can host one or many Domains.
-* A Data Landing Zone can also host one or many Data Products.
-* A data product is anything that drives business value (*e.g.* reports, workbooks, bespoke database or data API). It can leverage additional services/technologies not part of Data Landing Zone core architecture. For example:
-  * Reporting with niche requirements, *e.g.* compliance, tax reporting, HR, etc.
-  * Specialized capabilities that address gaps in the baseline policies.
-
-The Data Landing Zone is discussed in detail in the [Data Landing Zone guide](./eslz-data-landing-zone.md)
-
->[!IMPORTANT]
->A **domain** is responsible for ingestion of data into a read data source. The data shouldn't have any data transformation applied apart from data quality checks and data types being applied. \
-\
->A **data product** is data from a domain read data source which has had some data transformation applied. This could be a new curated dataset or BI report.
