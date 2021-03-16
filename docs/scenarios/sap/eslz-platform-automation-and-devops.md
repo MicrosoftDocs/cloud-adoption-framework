@@ -181,7 +181,7 @@ The SAP deployment automation framework capabilities matrix:
 | Boot diagnostics storage account | Y | The boot diagnostics storage account is shared across all systems in a workload zone. |
 | Azure key vaults | Y | New or current key vaults in Azure. |
 | Customer images | Y | These custom images need to be replicated to the region. |
-| Customer managed disk encryption keys | Y | These keys need to be created ahead of time and stored in Azure Key Vault. |
+| Customer-managed disk encryption keys | Y | These keys need to be created ahead of time and stored in Azure Key Vault. |
 | Deployment environment | Y | This is a VM in a network peered to the SAP network(s). |
 | Disk sizing | Y | The default disk sizing is specified and can be configured. |
 | IP addressing | Y | IP addresses are provided by the customer and Azure. |
