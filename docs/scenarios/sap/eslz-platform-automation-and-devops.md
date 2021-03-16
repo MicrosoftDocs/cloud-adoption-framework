@@ -199,7 +199,7 @@ The SAP deployment automation framework capabilities matrix:
 
 ### Planning for the parameter files
 
-SAP deployment automation leverages json parameter files to configure the Azure environment with different parameter files for different artifacts. The development environment should clone the `SAP HANA` and customer repositories to the same root folder. Defining a folder structure and keeping parameter files in dedicated folders will simplify automated deployment operations.
+SAP deployment automation uses JSON parameter files to configure the Azure environment with different parameter files for different artifacts. The development environment should clone the `SAP HANA` and customer repositories to the same root folder. Defining a folder structure and keeping parameter files in dedicated folders will simplify automated deployment operations.
 
 **Design recommendations:**
 
