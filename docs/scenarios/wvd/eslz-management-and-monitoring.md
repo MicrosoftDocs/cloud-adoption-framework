@@ -37,11 +37,6 @@ ms.subservice: ready
 | PhysicalDisk | Avg. Disk sec/Read | * | 30 | PhysicalDisk, Avg. Disk sec/Read, * |
 | PhysicalDisk | Avg. Disk sec/Transfer | * | 30 | PhysicalDisk, Avg. Disk sec/Transfer, * |
 | PhysicalDisk | Avg. Disk sec/Write | * | 30 | PhysicalDisk, Avg. Disk sec/Write, * |
-| Process | % User Time | * | 30 | Process, % User Time, * |
-| Process | Thread Count | * | 30 | Process, Thread Count, * |
-| Process | % Processor Time | * | 20 | Process, % Processor Time, * |
-| Process | IO Write Operations/sec | * | 30 | Process, IO Write Operations/sec, * | 
-| Process | IO Read Operations/sec | * | 30 | Process, IO Read Operations/sec, * | 
 | Processor Information | % Processor Time | _Total | 30 | Processor Information, % Processor Time, _Total | 
 | Terminal Services | Active Sessions | * | 60 | Terminal Services, Active Sessions, * | 
 | LogicalDisk | Avg. Disk Queue Length | C: | 30 | LogicalDisk, Avg. Disk Queue Length, C: | 
@@ -63,8 +58,8 @@ ms.subservice: ready
 
 | Windows Event Log Name | Windows Event Log Type |
 | --- | --- |
-| System | Error, Warning, Information |
-| Application | Error, Warning, Information | 
+| System | Error, Warning |
+| Application | Error, Warning | 
 | Microsoft-Windows-TerminalServices-LocalSessionManager/Operational | Error, Warning, Information |
 | Microsoft-FSLogix-Apps/Operational | Error, Warning, Information |
 | Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin | Error, Warning, Information |
@@ -73,6 +68,7 @@ ms.subservice: ready
 - [Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor) should be utilized for ease of configuration.
 - Application Groups should be assigned to user groups for ease of user administration overhead.
 - Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
+- For glossary and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
 
 ## Infrastructure Management & Monitoring
 
@@ -87,6 +83,6 @@ ms.subservice: ready
 ### Design Recommendations
 
 -	Centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
--	Setting up the Performance Counters in accordance with the [Tech Community post](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/proactively-monitor-arm-based-windows-virtual-desktop-with-azure/ba-p/1508735).
+-	Setting up the Performance Counters in accordance with the [documentation](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
 -	Network Performance Monitor to be set up in the same region as your Virtual Network and Session Host(s).
 -	Azure Policy and Governance from Enterprise Scale to incorporated into WVD landing zone.
