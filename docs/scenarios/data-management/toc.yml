@@ -30,7 +30,7 @@ items:
       href: ./eslz-identity-and-access-management.md
     - name: Management group and subscription organization
       items:
-       - name: Cost Management and Policies
+       - name: Overview
          href: ./eslz-management-group-and-subscription-organization.md
        - name: Data Management Landing Zone
          href: ./eslz-data-management-landing-zone.md
