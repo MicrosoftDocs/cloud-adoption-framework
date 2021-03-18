@@ -9,9 +9,9 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  - name: Adoption Journeys
+  - name: Adoption journeys
     items:
-    - name: Get Started
+    - name: Get started
       items:
       - name: Overview
         href: get-started/index.md
@@ -72,6 +72,8 @@ items:
         href: scenarios/hybrid/index.md
       - name: Modern containers
         href: scenarios/aks/index.md
+      - name: SAP
+        href: scenarios/sap/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
