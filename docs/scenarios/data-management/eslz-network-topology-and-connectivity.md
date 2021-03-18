@@ -45,6 +45,8 @@ It is important that on-premises DNS Servers are configured correctly to forward
 
 ![Example of DNS Setup](./images/dns_setup.png)
 
+*Figure 1: DNS Setup*
+
 When Custom DNS servers are pointing to other DNS servers as forwarders, you may face similar name resolution challenges when dealing with on-premises DNS Servers to resolve Private Endpoints records stored in Azure Private DNS zones. Most of those challenges can be easily resolved by having your on-premises DNS Server use conditional forwarders for original PaaS service names (*e.g.* `blob.core.windows.net`).
 
 ### IPv6 Usage
@@ -70,7 +72,7 @@ The Data Management Landing Zone will connect to the Azure Networking Management
 Data Management Landing Zone services which support Private Link such as Azure Purview will be injected into the Data Management Landing Zone VNet.
 
 ![High Level Overview of Networking for Enterprise Scale Analytics and AI](./images/networking_overview.png)
-Figure 1: High Level Overview of Networking for Enterprise Scale Analytics and AI
+*Figure 2: High Level Overview of Networking for Enterprise Scale Analytics and AI*
 
 ## Data Management Landing Zone to Data Landing Zone
 

@@ -30,7 +30,7 @@ Onboarding new Data Domain uses cases or Data Products is handled via Azure Acti
 
 ![Granting Access](./images/granting_access.png)
 
-Figure 1: Granting Access to Datasets
+*Figure 1: Granting Access to Datasets*
 
 As Figure 1 above illustrates:
 
@@ -62,7 +62,7 @@ We are able to delegate access governance to access package managers in Azure AD
 
 ![User Access Management](./images/user_access_management.png)
 
-Figure 2: Configuring Azure AD entitlement management
+*Figure 2: Configuring Azure AD entitlement management*
 
 Figure 2 brings all of this together on how different personas would work together to control access to data assets.
 

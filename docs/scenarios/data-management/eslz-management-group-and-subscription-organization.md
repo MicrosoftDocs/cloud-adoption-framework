@@ -19,7 +19,7 @@ A core principle of the Enterprise Scale Analytics and AI solution pattern is to
 
 ![How Azure Governance works](./images/azure_governance.png)
 
-Figure 1: How Azure Governance Works
+*Figure 1: How Azure Governance Works*
 
 Azure Policy is essential to ensuring security and compliance within Enterprise Scale Analytics and AI.
 
@@ -48,7 +48,7 @@ You should use Azure Policy to set and track ARM tagging policies. For example, 
 
 ![Example of Tagging in Azure](./images/azure_tagging.png)
 
-Figure 2: Example of Tagging in Azure
+*Figure 2: Example of Tagging in Azure*
 
 Resource tags should be used for cost categorization and resource grouping. This model allows a chargeback mechanism for workloads that share a Data Landing Zone or for workloads that span across Data Landing Zones. Resource tags should be enforced and appended through Azure Policy to query and horizontally navigate across the management group hierarchy.
 
