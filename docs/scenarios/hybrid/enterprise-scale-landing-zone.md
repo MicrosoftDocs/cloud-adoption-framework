@@ -56,7 +56,7 @@ Landing zones are a set of reference architectures that help organizations quick
 
 The Cloud Adoption Framework includes specific guidance for developing architectures in Azure for connecting to external environments. [Patterns such as Hub and Spoke can be used to create landing zones for ingress from and egress to external locations.](../../ready/enterprise-scale/implementation.md)
 
-For example, [Guidance can be found here](../../ready/azure-best-practices/connectivity-to-other-cloud-providers.md) to help building out Landing Zone architectures specifically for connectivity to other cloud environments.
+For example, [Guidance can be found here](../../ready/azure-best-practices/connectivity-to-other-providers.md) to help building out Landing Zone architectures specifically for connectivity to other cloud environments.
 
 ## Network
 
@@ -77,18 +77,18 @@ Azure has technologies that help organizations manage identities across on-premi
 
 To achieve hybrid identity, organizations should consider the following three Azure Active Directory approaches:
 
-- [Password hash synchronization (PHS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-phs)
-- [Pass-through authentication (PTA)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta)
-- [Federation (AD FS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed)
+- [Password hash synchronization (PHS)](/azure/active-directory/hybrid/whatis-phs)
+- [Pass-through authentication (PTA)](/azure/active-directory/hybrid/how-to-connect-pta)
+- [Federation (AD FS)](/azure/active-directory/hybrid/whatis-fed)
 
-[Further information can be found here](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)  for planning identity models in a hybrid environment.
+[Further information can be found here](/azure/active-directory/hybrid/whatis-hybrid-identity)  for planning identity models in a hybrid environment.
 
 ## Governance
 
 Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards.
 As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
 
-The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
+The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
 These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
 
 ## Management
