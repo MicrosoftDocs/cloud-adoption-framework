@@ -19,7 +19,7 @@ This section explains the infrastructure which is deployed for each Domain insid
 
 ![Domains](./images/domainrg.png)
 
-Figure 1: Domain Resource Group
+*Figure 1: Domain Resource Group*
 
 For each Domain in a Data Landing Zone, we will  create:
 
@@ -57,7 +57,7 @@ If the Domain has a requirement to stream data in, it is possible to deploy down
 
 ![Adding Permissions to Databricks Workspaces](./images/addingpermissionstodatabricksworkspaces.png)
 
-Figure 2: Adding Permissions to Databricks Workspaces
+*Figure 2: Adding Permissions to Databricks Workspaces*
 
 Figure 2 shows the subprocess of adding a Domain to a pre-existing Azure Databricks workspaces within the Data Landing Zone. The subprocess adds the security groups to the Azure Enterprise Application and then into the workspace. The Domain Service Principal PAT is stored in an Azure Key Vault-backed scope in the Domain for use with the developed engineering pipelines.
 

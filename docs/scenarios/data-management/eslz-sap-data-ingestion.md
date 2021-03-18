@@ -19,6 +19,8 @@ Our recommended pattern is that each business group ingests their data from SAP 
 
 ![Example SAP Ingestion](./images/example_sap_ingestion.png)
 
+*Figure 1: SAP Ingestion*
+
 The figure above illustrates three options for getting data into Azure.
 
 ## Azure Data Factory

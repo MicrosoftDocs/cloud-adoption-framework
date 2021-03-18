@@ -15,7 +15,7 @@ The Enterprise Scale Analytics and AI moves teams from working horizontally acro
 
 ![Enterprise Scale Analytics and AI Teams](./images/esaaiteams.png)
 
-Figure 1: Enterprise Scale Analytics and AI Teams
+*Figure 1: Enterprise Scale Analytics and AI Teams*
 
 ### Platform Ops
 

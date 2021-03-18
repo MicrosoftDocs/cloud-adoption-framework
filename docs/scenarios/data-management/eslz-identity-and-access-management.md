@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Identity and access management for Enterprise Scale Analytics and AI
 
-Enterprise Scale Analytics and AI supports an access control model using Azure Active Directory (AAD) identities which utilizes both Role-based access control (Azure RBAC) and access control lists (ACLs).
+Enterprise Scale Analytics and AI supports an access control model using Azure Active Directory (AAD) identities which utilizes both Role-based Access Control (Azure RBAC) and Access Control Lists (ACLs).
 
 ## Managing access to central datasets
 
@@ -45,3 +45,5 @@ In the case of **secure and sensitive data**, the following recommendations shou
 The figure below shows how ACLs and Groups can be applied to an Enterprise Scale Analytics and AI deployment:
 
 ![Data Access Model](./images/data_security_model.png)
+
+*Figure 1: Data Access Model*

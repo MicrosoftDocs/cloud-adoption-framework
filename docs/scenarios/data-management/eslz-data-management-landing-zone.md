@@ -15,7 +15,7 @@ The Data Management Landing Zone is classified as a management function and is a
 
 ![Data Management Landing Zone Overview](./images/datamanagementoverview.png)
 
-Figure 1: Data Management Landing Zone Overview
+*Figure 1: Data Management Landing Zone Overview*
 
 The Data Management Landing Zone is a separate subscription which has the standard services of an Enterprise Scale framework but are connected to the Data Landing Zone(s) and connectivity subscription via Virtual Network Peering. This allows the data governance of the data, via crawlers, which connect to the Data Lakes and polyglot storage in the Data Landing Zone(s).
 
@@ -42,7 +42,7 @@ The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview]
 
 ![Azure Purview Overview](./images/purviewoverview.png)
 
-Figure 2: Azure Purview Overview
+*Figure 2: Azure Purview Overview*
 
 Being part of the Data Management Landing Zone, the Data Catalog will be able to communicate with each Data Landing Zone via its VNet Peering and Self-Hosted Integration Runtimes. Discovery of datasets in on-premises stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
@@ -81,7 +81,7 @@ One of the primary features of a Data Catalog is the ability to show the lineage
 
 ![Data Lineage](./images/datalineage.png)
 
-Figure 3: Data Lineage
+*Figure 3: Data Lineage*
 
 >[!IMPORTANT]
 >It is recommended that Azure Data Factory be used for ingestion solutions as it will enable data lineage in Azure Purview. Other ingestion patterns should use Apache Atlas API to update Data Lineage as part of their data processing.

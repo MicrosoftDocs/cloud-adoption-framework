@@ -59,7 +59,7 @@ Over the standard configuration the Data Landing Zone has specific requirements:
 
 ![Automation High Level Overview](./images/automationhl.png)
 
-Figure 1: Automation High Level Principles
+*Figure 1: Automation High Level Principles*
 
 Figure 1, illustrates how their automation principle are implemented for a Data Landing Zone. How they call API's and the functions of each team.
 
@@ -88,7 +88,7 @@ The workflow mentioned above needs to be orchestrated, which can be achieved thr
 
 ![Forked DevOp Model](./images/forkeddevops.png)
 
-Figure 2: Forked DevOps Model with Enterprise Scale Analytics and AI
+*Figure 2: Forked DevOps Model with Enterprise Scale Analytics and AI*
 
 As illustrated in Figure 2, a forking pattern should be chosen, because it allows the different ops teams to follow the lifecycle of the original templates that the repository were forked from and that were used for the initial deployment. If new enhancements or changes are implemented in the template repositories, ops teams get the possibility to pull changes back to their repository, to leverage improvements and new features.
 
@@ -106,7 +106,7 @@ Best practices for repositories should be adopted in order to enforce the use of
 
 ![Data Landing Zone Automation Process](./images/dlzautoprocess.png)
 
-Figure 3: Data Landing Zone Automation Process
+*Figure 3: Data Landing Zone Automation Process*
 
 Figure 3 illustrates how the On-boarding process is separated from the Data Landing Zone deployment based on the assumption that most organization have a standard Azure subscription deployment process as part of their Cloud Operation Model. In this case, the first step process is used to deploy standard corporate components (e.g. via a 3rd party ITSM tool such as ServiceNow) and the second step to deploy the Data Landing Zone specific components.
 
@@ -133,7 +133,7 @@ This process is done either directly using DevOps tooling or called via pipeline
 
 ![Domain and Product Deployment Automation](./images/domainandproductdeploymentautomation.png)
 
-Figure 4 : Domain and Product Deployment Automation
+*Figure 4 : Domain and Product Deployment Automation*
 
 Figure 4 illustrates the process to onboard a new Domain or data product.
 
@@ -154,7 +154,7 @@ By using the above patterns we can facilitate both control, agility, self servic
 
 ![Overall Data Ops Model](./images/overalldataopsmodel.png)
 
-Figure 5: Data Ops Model
+*Figure 5: Data Ops Model*
 
 At the start of the project, the Data Platform will have one Azure DevOps project with one or many ado boards. They will be formed into one AzureOps teams and will focus on:
 

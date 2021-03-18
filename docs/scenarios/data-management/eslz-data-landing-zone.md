@@ -17,7 +17,7 @@ Before provisioning a Data Landing Zone, you should have your DevOps CI/CD opera
 
 ![Data Landing Zone](./images/datalandingzone.png)
 
-Figure 1: Data Landing Zone
+*Figure 1: Data Landing Zone*
 
 A Data Landing Zone has several layers to enable agility to service the domains within the Data Landing Zone. A new Data Landing Zone is always deployed with a standard set of services to enable the Data Landing Zone to start ingesting and analyzing data.
 
@@ -52,7 +52,7 @@ Third-party data publishers require the ability to land their data into the plat
 
 ![Upload Ingest Storage Service](./images/dlzingeststorage.png)
 
-Figure 3: Upload Ingest Storage Service
+*Figure 2: Upload Ingest Storage Service*
 
 These storage blobs are requested by the Domain Ops Teams and approved by the Data Landing Zone Ops Team.
 
@@ -69,7 +69,7 @@ Ingest and Processing will be deployed into a single resource group.
 
 ![Data Landing Zone Ingest and Processing](./images/automatedingestprocessing.png)
 
-Figure 4: Data Landing Zone Ingest and Processing
+*Figure 3: Data Landing Zone Ingest and Processing*
 
 The ingestion framework engine should copy data through the layers of the data lake service from source to raw to enriched.
 
@@ -98,7 +98,7 @@ Across the Data Landing Zone there is the requirement for a number of shared met
 
 ![Data Landing Zone Metadata Services](./images/dlzsharedservices.png)
 
-Figure 2: Data Landing Zone Metadata Services
+*Figure 4: Data Landing Zone Metadata Services()
 
 If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the RAW to ENRICHED in the Data Landing Zone data lakes.
 
@@ -179,7 +179,7 @@ For every Data Landing Zone, an empty visualization resource group will be creat
 
 ![Visualization Resource Group](./images/visualizationrg.png)
 
-Figure 5: Visualization Resource Group
+*Figure 5: Visualization Resource Group*
 
 This resource group could host third-party Virtual Machines for services such as Spotfire or Tableau.
 
