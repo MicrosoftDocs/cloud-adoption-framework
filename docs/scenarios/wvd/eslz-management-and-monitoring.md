@@ -23,7 +23,7 @@ ms.subservice: ready
 - Performance Counters should be collected.
 - Windows Event Logs should be collected.
 - Dashboarding created from the platform logs to centralize visuals for reporting operations.
-- [Windows Virtual Desktop Monitoring documentation](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor) should be used as additional guidelines.
+- [Windows Virtual Desktop Monitoring documentation](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) should be used as additional guidelines.
 
 ### Design Recommendations
 
@@ -67,10 +67,10 @@ ms.subservice: ready
 | Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin | Error, Warning, Information |
 | Microsoft-FSLogix-Apps/Admin | Error, Warning, Information |
 
-- [Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor) should be utilized for ease of configuration.
+- [Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) should be utilized for ease of configuration.
 - Application Groups should be assigned to user groups for ease of user administration overhead.
 - Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
-- For glossary and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
+- For glossary and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
 
 ## Infrastructure Management & Monitoring
 
@@ -85,6 +85,6 @@ ms.subservice: ready
 ### Design Recommendations
 
 -	Centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
--	Setting up the Performance Counters in accordance with the [documentation](https://docs.microsoft.com/en-us/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
+-	Setting up the Performance Counters in accordance with the [documentation](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
 -	Network Performance Monitor to be set up in the same region as your Virtual Network and Session Host(s).
 -	Azure Policy and Governance from Enterprise Scale to incorporated into WVD landing zone.
