@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Introduction to the hybrid and multicloud scenario
 
-As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes slightly more complex. This article series consolidates the various technical and non-technical considerations required to prepare for a hybrid and multicloud adoption scenario.
+As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes slightly more complex. This article series consolidates various technical and non-technical considerations required to prepare for a hybrid and multicloud adoption scenario.
 
 This scenario focuses on enabling two targeted outcomes:
 
