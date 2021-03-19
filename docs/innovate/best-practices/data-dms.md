@@ -13,7 +13,7 @@ keywords: collect data, migrate data, data migration, data modernization
 
 # Collect data through the migration and data modernization of existing sources
 
-Companies often have different kinds of existing data that they can [democratize](../considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data migration and data modernization to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your migration and modernization by using the Migrate methodology](../../migrate/index.md).
+Companies often have different kinds of existing data that they can [democratize](../considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data migration and data modernization to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your migration and modernization by using the [Migrate methodology](../../migrate/index.md).
 
 ## Use of this article
 
@@ -23,7 +23,7 @@ During the assess workloads phase, a cloud adoption team assesses the current st
 
 ## Primary toolset
 
-When you migrate and modernize on-premises data, the most common Azure tool choice is the [Azure Database Migration service](/azure/dms/). This service is part of the broader [Azure Migrate](/azure/migrate/migrate-services-overview) service. For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) helps you assess and migrate data structures.
+When you migrate and modernize on-premises data, the most common Azure tool choice is the [Azure Database Migration Service](/azure/dms/). This service is part of the broader [Azure Migrate hub](/azure/migrate/migrate-services-overview). For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) helps you assess and migrate data structures.
 
 To support Oracle and NoSQL data migrations, you can also use Azure Database Migration Service for certain types of source-to-target databases. For example, migrating Oracle databases to PostgreSQL or migrating MongoDB databases to Azure Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine options based on infrastructure as a service (IaaS).
 
@@ -41,7 +41,7 @@ With an offline migration, application downtime starts when the migration starts
 
 Test an offline migration to determine whether the downtime is acceptable. If the restoration time is unacceptable, do an online migration.
 
-The following data migration type table shows source and target pairs to review with the migration team. Each pair includes a tool choice and a link to a related guide.
+The following data migration type table shows source and target pairs to review with the migration team. Each pair includes a tool choice and a link to a related tutorial.
 
 | Source | Target | Tool | Migration type | Guidance |
 |--|--|--|--|--|
