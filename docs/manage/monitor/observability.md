@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 02/26/2021
+ms.date: 03/19/2021
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -52,9 +52,9 @@ This is demonstrated in the following ways:
 
 2. Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
 
-3. Cloud native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
+3. Cloud-native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
 
-For architects, diagnostics form the core of their exploitation of more cost effective cloud native monitoring structures that let IT manage services holistically across the different cloud models.
+For architects, diagnostics form the core of their exploitation of more cost effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
 
 Architects must, like operators, understand what diagnostic information an IT infrastructure component or application emits. To create a fusion of multi-variate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence, it depends on the following:
 
@@ -109,7 +109,7 @@ Before we go into details on observability, we need to highlight several monitor
 
 ## The art of being observant
 
-Observability relies on what is being monitored an how. In Azure, there are multiple sources, and each delivers a different perspective of how something is behaving. Not to mention, Azure includes multiple tools to help analyze the different aspects of this data. Observing the health and performance of Azure services and non-Azure resources is the primary way you'll use Azure Monitor and its features. In Azure, Microsoft has an extensive catalog of services, and virtual machines are not the primary focus. In Azure, we provide the perspective of the *service provider* through different platform logs:
+Observability relies on what is being monitored and how. In Azure, there are multiple sources, and each delivers a different perspective of how something is behaving. Not to mention, Azure includes multiple tools to help analyze the different aspects of this data. Observing the health and performance of Azure services and non-Azure resources is the primary way you'll use Azure Monitor and its features. In Azure, Microsoft has an extensive catalog of services, and virtual machines are not the primary focus. In Azure, we provide the perspective of the *service provider* through different platform logs:
 
 * Service health reported by Azure about service incidents and planned maintenance.
 * Azure Activity log reports subscription-level events across all of the resources deployed in the subscription.
@@ -118,7 +118,7 @@ Observability relies on what is being monitored an how. In Azure, there are mult
 
 All other perspectives based on metrics and logs, are delivered through the various features of Azure Monitor. Or, depending on the Azure resource, you can view its platform metrics directly from that resource in the portal.
 
-Observability is a term meant to set the expectation that Azure Monitor gives you total visibility of the health, performance, and other aspects of Azure services in depth and breadth. But, there are other activities or focus than service and component monitoring. Being observant shouldn't be considered something that only certain personas perform on an as-needed basis, as required by their role or function, or in support of a process. It's similar to astronomy. Observation isn't once and done, rather you'll want to monitor objects in space occasionally, over set time intervals or continuously. Some objects, such as black holes are difficult to observe. What kind of monitoring depends on the consumer. For example, amateur astronomers observe occasionally, while astrophysicists value the long-term measurement and continuous monitoring of radio emissions.
+Observability is a term meant to set the expectation that Azure Monitor gives you total visibility of the health, performance, and other aspects of Azure services in depth and breadth. But, there are other activities or focus than service and component monitoring. Being observant shouldn't be considered something that only certain personas perform on an as-needed basis, as required by their role or function, or in support of a process. It's similar to astronomy. Observation isn't once and done, rather you'll want to monitor objects in space occasionally, over set time intervals or continuously. Some objects, such as black holes are difficult to observe. The kind of monitoring needed depends on the consumer. For example, amateur astronomers observe occasionally, while astrophysicists value the long-term measurement and continuous monitoring of radio emissions.
 
 With proper planning, you can create a medium to complex service in Azure in a few hours, versus weeks or longer on-premises. If you did, you'd arrange a combination of more than a dozen Azure resources (service components) across regions. You'll govern and manage these resources using Azure Resource Manager and from using resource group monitoring in Azure, you'll get a picture of the service. Once in production, the service is dynamical and flexible. Consumption starts to ramp up and scale out. Capacity responds to demand. Events will occur, and service consumers can observe monitoring data, look at trends, and establish their significance.
 
@@ -230,18 +230,18 @@ Summarize the plan to ensure it communicates and informs all relevant consumers,
 
 ### Lean and agile considerations
 
-**Minimum Viable Product:** Let the plan define the minimum viable product, that is what is initially needed to go live, then continue to evolve the monitoring solution to maximize value. For example, you may define a future task later to build additional Azure log analytics-powered workbooks, pinning to Azure dashboards and expanding stakeholder access to the Azure portal.
+- **Minimum Viable Product:** Let the plan define the minimum viable product, that is what is initially needed to go live, then continue to evolve the monitoring solution to maximize value. For example, you may define a future task later to build additional log-based workbooks, pinning to Azure dashboards, and expanding stakeholder access to the Azure portal.
 
-**Start Where You’re At and Get Value Fast:**  Rapidly and radically experiment, exploit with SaaS out of the box, because it's easy and valuable
+- **Start Where You’re At and Get Value Fast:**  Rapidly and radically experiment, exploit with SaaS out of the box, because it's easy and valuable.
 
-**Know the Guardrails:** Cloud is new and uncertain, so let experts guide you so that you don’t add risk, e.g., expose sensitive monitoring data
+- **Know the Guardrails:** Cloud is new and uncertain, so let experts guide you so that you don’t add risk, (for example, expose sensitive monitoring data).
 
-**M365 Sits on Azure:**  Any good plan considers your Azure tenant with M365 as a major player—M365 depends on Azure AD, Azure Monitor provides M365 integration e.g., with Endpoint management…
+- **M365 Sits on Azure:**  Any good plan considers your Azure tenant with M365 as a major player. M365 depends on Azure AD, and Azure Monitor provides M365 integration with Endpoint management.
 
-**Observability Wins:**  Focus on total visibility before alerting, as alerting is now a cost.
+- **Observability Wins:**  Focus on total visibility before alerting, as alerting is now a cost.
 
-**Log Architecture:**  Emitters, telemetry, signals, AI, and pre-packaged solutions such as the Intelligent Security Graph – focus on more of a SIEM approach, how to amass disparate logs into log solutions such as Log Analytics.
+- **Log Architecture:**  Emitters, telemetry, signals, AI, and pre-packaged solutions such as the Intelligent Security Graph – focus on more of a SIEM approach, how to amass disparate logs into log solutions such as Azure Monitor Logs.
 
-**Moving Data:**  Much more monitoring focus on emitter-to-dashboard and where data is going over the internet and across your cloud regions, express routes and VPNs
+- **Moving Data:**  Much more monitoring focus on emitter-to-dashboard and where data is going over the Internet and across your cloud regions, Express routes, and VPNs.
 
-**Activity Monitoring:** Audit, sign in and Activity Logs are now easy to slice and dice for service owners and security.
+- **Activity Monitoring:** Audit, sign in, and Activity Logs are now easy to slice and dice for service owners and security.
