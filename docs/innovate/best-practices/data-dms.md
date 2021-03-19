@@ -3,7 +3,7 @@ title: Collect data and migrate
 description: Learn about Azure Database Migration Service and other data migration tools for data modernization for cloud inventions and innovations.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 03/18/2021
+ms.date: 03/18/2021  # original date was 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -13,13 +13,13 @@ keywords: collect data, migrate data, data migration, data modernization
 
 # Collect data through the migration and data modernization of existing sources
 
-Companies often have different kinds of existing data that they can [democratize](../considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data migration and data modernization to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your migration and modernization by using the [Cloud Adoption Framework migrate methodology](../../migrate/index.md).
+Companies often have different kinds of existing data that they can [democratize](../considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data migration and data modernization to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your migration and modernization by using the Migrate methodology](../../migrate/index.md).
 
 ## Use of this article
 
-This article outlines a series of approaches that align with the migrate methodology. You can best align these approaches to the standard database migration toolchain.
+This article outlines a series of approaches that align with the Migrate methodology. You can best align these approaches to the standard database migration toolchain.
 
-During the assess workloads phase, a cloud adoption team assesses the current state and desired future state for the migrated asset. When that process is part of an innovation effort, both cloud adoption teams can use this article to help make those assessments.
+During the assess workloads phase, a cloud adoption team assesses the current state and future state for the migrated asset. When that process is part of an innovation effort, both cloud adoption teams can use this article to help make those assessments.
 
 ## Primary toolset
 
