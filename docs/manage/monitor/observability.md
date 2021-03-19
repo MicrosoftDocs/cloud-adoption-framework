@@ -1,6 +1,6 @@
 ---
 title: Cloud monitoring observability
-description: Gain an understanding of how to define an effective cloud monitoring strategy.
+description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 03/19/2021
@@ -37,7 +37,7 @@ This approach also simplifies your plans. In all cases, total visibility means a
 1. Monitoring in breadth,
 1. Monitoring across the health model.  
 
-Being observant isn't just an IT focus; remember the goal is to ensure end users can consume and business expectations are met. You can't monitor what you don't understand or know, and as a result you won't able to deliver the level of service availability promised to the business. Before the advent of cloud computing, Microsoft emphasized failure mode analysis during application design and development. Failure mode analysis helped developers consider how and when logic or other critical errors could occur in their code. And when it does, expose the condition in a meaningful way to allow the monitoring tool not only detect it and act on it, but also provide developers, operators, or system engineers with useful information to help better understand the applications behavior and make data-driven decisions. Today, the [Cloud Adoption Framework](../../../architecture/resiliency/failure-mode-analysis.md) recommends you follow that process as part of the architecture and design phases to build recovery of the Azure services in your design.
+Being observant isn't just an IT focus; remember the goal is to ensure end users can consume and business expectations are met. You can't monitor what you don't understand or know, and as a result you won't able to deliver the level of service availability promised to the business. Before the advent of cloud computing, Microsoft emphasized failure mode analysis during application design and development. Failure mode analysis helped developers consider how and when logic or other critical errors could occur in their code. And when it does, expose the condition in a meaningful way to allow the monitoring tool not only detect it and act on it, but also provide developers, operators, or system engineers with useful information to help better understand the applications behavior and make data-driven decisions. Today, the [Cloud Adoption Framework](/architecture/resiliency/failure-mode-analysis) recommends you follow that process as part of the architecture and design phases to build recovery of the Azure services in your design.
 
 Bottom line, it's the observability you want, early, and in your minimum viable product.
 
@@ -74,9 +74,9 @@ With Azure Monitor, you can take advantage of existing workbooks that are includ
 
 ## Monitoring disciplines
 
-The following figure shows the Observe discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role.
+The following figure shows the Observe discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role here.
 
-![Monitoring Disciplines](Monitoring-discplines.jpg)
+![Monitoring Disciplines](./media/observability/monitoring-and-control-disciplines.jpg)
 
 ## Observability and response
 
