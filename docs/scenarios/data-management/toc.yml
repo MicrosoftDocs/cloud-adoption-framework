@@ -38,12 +38,14 @@ items:
          items:
           - name: Overview
             href: ./eslz-data-landing-zone.md
-          - name: Data Landing Zone Data Domains
+          - name: Data Domains
             href: ./eslz-data-landing-zone-domains.md
-          - name: Data Landing Zone Data Products
+          - name: Data Products
             href: ./eslz-data-landing-zone-data-products.md
-          - name: Data Landing Zone Division and Consumption
+          - name: Division and Consumption
             href: ./eslz-data-landing-zone-division-and-consumption.md
+    - name: Policies and Cost Management
+      href: ./eslz-policies-and-cost-management.md
     - name: Network topology and connectivity
       href: ./eslz-network-topology-and-connectivity.md
     - name: Management and monitoring
