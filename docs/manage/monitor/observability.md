@@ -234,7 +234,7 @@ Summarize the plan to ensure it communicates and informs all relevant consumers,
 
 - **Start Where You’re At and Get Value Fast:**  Rapidly and radically experiment, exploit with SaaS out of the box, because it's easy and valuable.
 
-- **Know the Guardrails:** Cloud is new and uncertain, so let experts guide you so that you don’t add risk, (for example, expose sensitive monitoring data).
+- **Know the Guardrails:** Cloud is new and uncertain, so let experts guide you so that you don’t add risk (for example, expose sensitive monitoring data).
 
 - **Microsoft 365 Sits on Azure:**  Any good plan considers your Azure tenant with Microsoft 365 as a major player. Microsoft 365 depends on Azure AD, and Azure Monitor provides Microsoft 365 integration with Endpoint management.
 
