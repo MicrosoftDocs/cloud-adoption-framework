@@ -18,7 +18,7 @@ This scenario focuses on two targeted outcomes:
 - **Containerized solutions:** Containers create a layer of abstraction between technical assets and underlying infrastructure. Organizations include containers in their overall strategy to reduce vendor lock-in and make workloads more portable.
 - **Managing containers with Kubernetes:** Kubernetes provides a control plane for managing and deploying containerized applications, managing compute density, and describing high availability needs of workloads.
 
-This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation of the cloud.
+This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
 
 ## Components of the scenario
 
