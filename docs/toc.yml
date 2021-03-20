@@ -1513,6 +1513,8 @@ items:
           href: manage/monitor/index.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
+        - name: Observability
+          href: manage/monitor/observability.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Alerting
