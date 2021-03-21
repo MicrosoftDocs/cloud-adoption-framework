@@ -15,6 +15,11 @@ ms.custom: internal
 
 Business inherently requires risk and security's role is to inform and advise decision makers that own all risks and benefits on how security risks fit in those frameworks. The goal of security isn't to say "No. Don't take that risk." but to learn the business, apply their security expertise to identify risks to business objectives and assets, and advise those decision makers on the risks and which ones are recommended to accept or not (with the understanding that the final risk acceptance and accountability for consequences lies with the asset/process owner in the business).
 
+> [!NOTE]
+> This rule of thumb on who should be accountable for risk helps illustrate the natural ownership of risk:
+>
+>> The person who owns (and accepts) the risk is the one who will stand in front of the news cameras and explain to the world why the worst case scenario happened.
+
 When mature, the objective of security, is to expose risks, mitigate risks, and empower business change with minimal risk. That level of maturity requires risk insights and deep security integration. At any maturity level of organization, the top security risks to the organization should appear on the organization's risk register and be actively managed down to an acceptable level like any other risk. 
 
 ## What is Cybersecurity Risk?
@@ -31,7 +36,12 @@ Security leaders must step back from the technical lens, learn what assets and d
 
 ## Process - Aligning Security Risk Management
 
-Understand how business value translates to technical assets is an ongoing process that should be a normal part of business operations and security. It's critical to get started on this journey if you haven't already, starting with developing a better understanding of the most sensitive and business critical assets in the organization. 
+You should continuously build a stronger bridge between cybersecurity and your organizational leadership, both in human relationships and explicity processes. The dynamic nature of security risk and the divergent dyanmics of business opportunities and security risk sources require ongoing investment into building and improving this relationship. 
+
+A key ongoing process in this relationship is translating how business value maps to specific technical assets. Without this north star, security will not be sure what really matters to the organization and will only succeed at protecting the most important assets with lucky guesses. 
+ 
+It's critical to get started on this journey if you haven't already, starting with developing a better understanding of the most sensitive and business critical assets in the organization. 
+
 
 The typical process of starting this transformation is:
 
