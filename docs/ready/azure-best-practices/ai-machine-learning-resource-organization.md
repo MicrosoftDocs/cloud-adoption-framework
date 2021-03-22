@@ -104,14 +104,12 @@ Regionality of resources, data, or users, might impose the requirement to create
 
 To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization `Contoso` has set up Azure Machine Learning given their organizational constraints, reporting and budgeting requirements:
 
-* Only IT administrators can create resource groups and Azure resources on a project/solution basis and only for projects that are already funded due to budgeting requirements.
-* Due to the explorative and uncertain nature of Data Science, there’s a need for users to have a dedicated place for them to use Azure Machine Learning for data and use case explorative work. Exploration entails understanding if an idea is feasible in terms of data availability and data quality. This work cannot be associated to a project or solution. Idea is that everyone in the organization has access to these resources and budgeting is done centrally across business departments from R&D budget.
-* At Contoso, each funded solution gets allocated its own resource groups in three Azure environments (Dev, QA, Prod), including ML Solutions.
-* Once a ML use case proves itself to be successful in the explorative environment, resource group(s) can be set up for iterative experimentation project work, and access to production data sources will be provided once permitted by the data owner.
+* Contoso creates resource groups on a solution basis for cost management and reporting reasons.
+* Due to budgeting requirements, IT administrators can only create resource groups and resources for funded solutions. 
+* Due to the explorative and uncertain nature of Data Science, there’s a need for users to have a place to experiment and work for use case and data exploration. Explorative work however can in many cases not be directly associated yet to a particular use case, rather only to R&D budget. Contoso is hence looking to fund some Azure ML resources centrally that anyone can use for exploration purposes.
+* Once a ML use case proves itself to be successful in the explorative environment, teams can request resource group(s) (Dev, QA, Prod) for iterative experimentation project work, and access to production data sources can be set up.
 * Data segregation and compliance requirements disallow live production data to exists in dev environments.
 * Different RBAC requirement exist for various user groups by IT policy per environment e.g. access is more restrictive in prod.
-* Since ML use cases are bound to a business department, costs for dev, qa and prod environments yielding from these use cases is to be funded by those departments.
-* Explorative work is funded centrally across departments through R&D budget.
 * All data, experimentation and inferencing takes place in a single Azure region.
 
 To adhere to the above requirements, Contoso has set up their resources in the following way:
@@ -119,5 +117,6 @@ To adhere to the above requirements, Contoso has set up their resources in the f
 * Azure Machine Learning workspaces and resource groups scoped per Project to comply with budgeting and use case segregation requirements.
 * A multiple-environment set up for Azure ML and associated resources to address cost managment, RBAC and data access requirements. 
 * A single resource group and ML Workspace that is dedicated for Exploration -- the so-called ‘Exploration’ environment.
+* All resources created in a single Azure region.
 
 ![Contoso Reference Implementation](media/azureml-setup-contoso-reference-implementation.png)
