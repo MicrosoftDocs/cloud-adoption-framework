@@ -43,7 +43,8 @@ This guide is useful primarily for enterprise administrators, IT operations, IT 
 This article is part of a series. The following articles are meant to be read together, in order:
 
 - Introduction (this article)
-- [Monitoring strategy for cloud deployment models](./cloud-models-monitor-overview.md)
+- [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)
+- [Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)
 - [Observability](./observability.md)
 - [Collect the right data](./data-collection.md)
 - [Alerting](./alerting.md)

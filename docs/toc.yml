@@ -1511,6 +1511,8 @@ items:
         items:
         - name: Overview
           href: manage/monitor/index.md
+        - name: Cloud monitoring strategy
+          href: strategy/monitoring-strategy.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
