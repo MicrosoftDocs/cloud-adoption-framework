@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 03/19/2021
+ms.date: 03/22/2021
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -33,9 +33,11 @@ Whether the plan (that is, objective) targets an Azure resource type such as Key
 
 This approach also simplifies your plans. In all cases, total visibility means achieving and sustaining, sufficient visibility across three dimensions or aspects:
 
-1. Monitoring-in-depth,
-1. Monitoring in breadth,
-1. Monitoring across the health model.  
+* Monitoring-in-depth,
+* Monitoring in breadth,
+* Monitoring across the health model.
+
+![Three-sided cube example](../../strategy/media/monitoring-strategy/three-sided-cube.png)
 
 Being observant isn't just an IT focus; remember the goal is to ensure end users can consume and business expectations are met. You can't monitor what you don't understand or know, and as a result you won't able to deliver the level of service availability promised to the business. Before the advent of cloud computing, Microsoft emphasized failure mode analysis during application design and development. Failure mode analysis helped developers consider how and when logic or other critical errors could occur in their code. And when it does, expose the condition in a meaningful way to allow the monitoring tool not only detect it and act on it, but also provide developers, operators, or system engineers with useful information to help better understand the applications behavior and make data-driven decisions. Today, the [Cloud Adoption Framework](/architecture/resiliency/failure-mode-analysis) recommends you follow that process as part of the architecture and design phases to build recovery of the Azure services in your design.
 
@@ -245,3 +247,8 @@ Summarize the plan to ensure it communicates and informs all relevant consumers,
 - **Moving Data:**  Much more monitoring focus on emitter-to-dashboard and where data is going over the Internet and across your cloud regions, Express routes, and VPNs.
 
 - **Activity Monitoring:** Audit, sign in, and Activity Logs are now easy to slice and dice for service owners and security.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Collect the right data](./data-collection.md)

@@ -274,3 +274,8 @@ In summary your monitoring consumer roles probably need broad access, versus you
 ## Establish readiness
 
 Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure. Consider the [skills readiness guidance](./suggested-skills.md) for monitoring that includes foundational needs, as well as those specific to monitoring.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Observability](../manage/monitor/observability.md)
