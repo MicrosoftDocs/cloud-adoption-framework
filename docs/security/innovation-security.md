@@ -56,6 +56,8 @@ As part of this automation, development teams should include security tools that
 
 ## Feedback loops
 
+![Continuous Security model](./media/continuous-security.png)
+
 All of these techniques and tools should enable teams to find and flag risks and vulnerabilities that require investigation and potential resolution.
 Operations teams who receive an alert, or discover a potential issue when investigating a support ticket, need a route back to the development team in order to flag items for review.
 This feedback loop being a smooth collaboration is vital to issues being addressed quickly and the risk of a vulnerability being minimized as much as possible.
