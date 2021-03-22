@@ -20,8 +20,10 @@ Identify for cluster configuration and network design. Future-proof scalability 
 
 As you get started, the checklist and resources below will help you plan the cluster design. You should be able answer these questions:
 
-- Have you identified the networking design requirements for your cluster?
-- Do you have workloads with varying requirements? How many node pools are you going to use?
+> [!div class="checklist"]
+>
+>- Have you identified the networking design requirements for your cluster?
+>- Do you have workloads with varying requirements? How many node pools are you going to use?
 
 Checklist
 
@@ -44,8 +46,10 @@ For the cluster configuration, a minimum of two nodes in an availability set or 
 
 As you prepare the application for production, you should implement a minimum set of best practices. Use the following checklist at this stage. You should be able to answer these questions:
 
-- Are you able to confidently redeploy the cluster infrastructure?
-- Have you applied resource quotas?
+> [!div class="checklist"]
+>
+>- Are you able to confidently redeploy the cluster infrastructure?
+>- Have you applied resource quotas?
 
 Checklist
 
@@ -53,15 +57,17 @@ Checklist
 
 - **Plan for availability using pod disruption budgets.** To maintain the availability of applications, define pod disruption budgets (PDB) to ensure that a minimum number of pods are available in the cluster during hardware failures or cluster upgrades. To learn more, see [Plan&nbsp;for&nbsp;availability&nbsp;using&nbsp;pod disruption&nbsp;budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
-- **Enforce resource quotas on namespaces.** Plan and apply resource quotas at the namespace level. Quotas can be set on compute resources, storage resources, and object count. For more information, see [Enforce resource quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
+- **Enforce resource quotas on namespaces.** Plan and apply resource quotas at the namespace level. Quotas can be set on compute resources, storage resources, and object count. For more information, see [Enforce resource quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas).
 
 ## Optimize and scale
 
 Once the application is in production, how can you optimize your workflow and prepare your application and team to scale? Use the optimization and scaling checklist to prepare. You should be able to answer these questions:
 
-- Do you have a plan for business continuity and disaster recovery?
-- Can your cluster scale to meet application demands?
-- Are you able to monitor your cluster and application health and receive alerts?
+> [!div class="checklist"]
+>
+>- Do you have a plan for business continuity and disaster recovery?
+>- Can your cluster scale to meet application demands?
+>- Are you able to monitor your cluster and application health and receive alerts?
 
 Checklist
 
