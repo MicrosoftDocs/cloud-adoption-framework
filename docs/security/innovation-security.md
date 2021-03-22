@@ -38,16 +38,24 @@ Developing applications requires a number of teams to work harmoniously in order
 ## Security in repositories
 
 Typically, developers create, manage and share their code in repositories such as GitHub or Azure DevOps Repos. This provides a central, version controlled library of code that can be collaborate on easily.
-
+However, enabling a number of collaborators on a single codebase can also introduce the risk of changes being introduced that lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits.
+To address this, development teams should evaluate and implement a repository scanning capability. Repository scanning tools are intended to perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation.
+This capability acts as a backstop to protect against human error and is a useful safeguard in distributed teams where a number of people are collaborating in the same repository.
+The security validation of code can happen both within the Integrated Development Environment (IDE), such as Visual Studio Code, or at the point of creating a pull request to merge code into a branch or repository.
 
 ## Security in pipelines
 
 Many organizations use build and release pipelines (often referred to as Continuos Integration and Continuous Delivery or CI/CD) to automate and standardize the processes for building and deploying code into various environments.
 This use of pipelines allows development teams to make iterative changes to sections of code quickly and at scale, without the need to spend large amounts of time re-deploying or upgrading existing environments.
 Using pipelines also enables teams to promote code from development environments, through testing environments and ultimately into production.
+As part of this automation, development teams should include security tools that run scripted automated tests when code is deployed into testing environments. This can include tests such as unit testing the applications features to check for vulnerabilities or checking for public endpoints to ensure they are intentionally accessible. 
 
 ## Security in environments
 
 ## Actionable intelligence
 
 ## Feedback loops
+
+All of these techniques and tools should enable teams to find and flag risks and vulnerabilities that require investigation and potential resolution.
+Operations teams who receive an alert, or discover a potential issue when investigating a support ticket, need a route back to the development team in order to flag items for review.
+This feedback loop being a smooth collaboration is vital to issues being addressed quickly and the risk of a vulnerability being minimized as much as possible.
