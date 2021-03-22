@@ -102,7 +102,7 @@ Regionality of resources, data, or users, might impose the requirement to create
 
 # Reference implementation
 
-To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization `Contoso` has set up Azure Machine Learning given their organizational constraints, reporting and budgeting requirements:
+To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization 'Contoso' has set up Azure Machine Learning given their organizational constraints, reporting and budgeting requirements:
 
 * Contoso creates resource groups on a solution basis for cost management and reporting reasons.
 * Due to budgeting requirements, IT administrators can only create resource groups and resources for funded solutions. 
