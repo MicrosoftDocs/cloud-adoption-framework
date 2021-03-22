@@ -2,6 +2,7 @@
 title: Innovation tools to democratize data
 description: Learn about Azure Data Catalog and other data collection services that help you quickly test a hypothesis before expanding into broader, more costly digital inventions.
 author: BrianBlanchard
+keywords: democratize data, democratizing data, data collection, innovation tools
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
@@ -10,7 +11,6 @@ ms.subservice: innovate
 ms.custom: 
  - internal
  - seo-caf-innovate
-ms.keyword: democratize data, democratizing data, data collection, innovation tools
 ---
 
 # Innovation tools to democratize data in Azure
@@ -19,7 +19,7 @@ As described in the conceptual article on [democratizing data](../considerations
 
 Starting with data democratization is a quick way to test a hypothesis before expanding into broader, more costly digital inventions. As you refine more of the hypothesis and begin to adopt the inventions at scale, the following processes will help you prepare for operational support of the innovation.
 
-![Cloud Adoption Framework approach to democratizing data](../../_images/innovate/democratize-data.png)
+![Diagram that shows the Cloud Adoption Framework approach to democratizing data.](../../_images/innovate/democratize-data.png)
 
 ## Alignment to the methodology
 
