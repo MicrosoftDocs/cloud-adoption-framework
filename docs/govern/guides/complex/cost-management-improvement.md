@@ -52,14 +52,14 @@ The following changes to policy will help remediate the new risks and guide impl
 - All costs must be allocated to a business function for accountability purposes.
 - Cloud assets should be continually monitored for optimization opportunities.
 - Cloud governance tooling must limit asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
-- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as Azure Reserved Virtual Machine Instances or license cost reductions.
+- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as Azure Reserved VM Instances or license cost reductions.
 - All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
 
 ## Incremental improvement of best practices
 
 This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management + Billing. Together, these two design changes will fulfill the new corporate policy statements.
 
-1. Make changes in the Azure EA portal to bill the department administrator for the Canadian deployment.
+1. Make changes in the Azure EA portal to bill the Department Administrator for the Canadian deployment.
 2. Implement Azure Cost Management + Billing.
     1. Establish the right level of access scope to align with the subscription pattern and resource grouping pattern. Assuming alignment with the governance MVP defined in prior articles, this would require **enrollment account scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance, like the Canadian procurement team, will require **resource group scope** access.
     2. Establish a budget in Azure Cost Management + Billing.

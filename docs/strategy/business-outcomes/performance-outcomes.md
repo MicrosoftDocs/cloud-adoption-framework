@@ -1,9 +1,9 @@
 ---
 title: Examples of performance outcomes
 description: Use the Cloud Adoption Framework for Azure to understand performance outcomes in the context of a cloud transformation.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -16,6 +16,8 @@ As discussed in [Business outcomes](./index.md), several potential business outc
 
 In today's technological society, customers assume that applications will perform well and always be available. When this expectation isn't met, it causes reputation damage that can be costly and long-lasting.
 
+[GE Aviation's Digital Group](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure) deployed Microsoft Azure Digital Twins and other Azure resources to ingest and model data from multiple sources, building a complete digital aircraft view with built-in digital traceability of individual components that helps customers drive greater fuel efficiency, reduce maintenance costs, and boost their fleets' flight-readiness.
+
 ## Performance
 
 The biggest cloud computing services run on a worldwide network of secure datacenters, which are regularly upgraded to the latest generation of fast and efficient computing hardware. This provides several benefits over a single corporate datacenter, such as reduced network latency for applications and greater economies of scale.
@@ -24,7 +26,7 @@ Transform your business and reduce costs with an energy-efficient infrastructure
 
 - **Example 1:** A services company worked a hosting provider that hosted multiple operational infrastructure assets. Those systems suffered from frequent outages and poor performance. The company migrated its assets to Azure to take advantage of the SLA and performance controls of the cloud. Any downtime would cost the company approximately $15,000 USD per minute of outage. With between four and eight hours of outage per month, it was easy to justify this organizational transformation.
 
-- **Example 2:** A consumer investment company was in the early stages of a cloud-enabled application innovation effort. Agile processes and DevOps were maturing well, but application performance was spiky. As a more mature transformation, the company started a program to monitor and automate sizing based on usage demands. The company eliminated sizing issues by using Azure performance management tools, resulting in a surprising five-percent increase in transactions.
+- **Example 2:** A consumer investment company was in the early stages of a cloud-enabled application innovation effort. Agile processes and DevOps were maturing well, but application performance was spiky. As a more mature transformation, the company started a program to monitor and automate sizing based on usage demands. The company eliminated sizing issues by using Azure performance management tools, resulting in a surprising 5 percent increase in transactions.
 
 ## Reliability
 

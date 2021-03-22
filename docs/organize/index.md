@@ -1,5 +1,5 @@
 ---
-title: "Manage organization alignment"
+title: Manage organization alignment
 description: Use the Cloud Adoption Framework for Azure to learn how to establish and maintain your organization's alignment.
 author: BrianBlanchard
 ms.author: brblanch
@@ -45,6 +45,7 @@ The following is a list of functions that are required to succeed at cloud adopt
 - [Cloud center of excellence](./cloud-center-of-excellence.md): Improve quality, speed, and resiliency of adoption.
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](./cloud-automation.md): Accelerate adoption and innovation.
+- [Cloud data](./cloud-data.md): Manage data and enable analytics solutions.
 - [Cloud security](./cloud-security.md): Manage information security risk.
 
 To some degree, each of these functions are delivered in every cloud adoption effort, either explicitly or in accordance with a defined team structure.

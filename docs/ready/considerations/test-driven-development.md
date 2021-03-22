@@ -62,12 +62,12 @@ The last point above is not a feature or acceptance criteria. But it is an indic
 The Govern methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of "definition of done" and "acceptance criteria", in the form of policy statements.
 
 - [Initial policy statements](../../govern/guides/complex/initial-corporate-policy.md#policy-statements): Example of corporate policies governing and initial definition of done based on early stage adoption requirements.
-- [Identity expansion](../../govern/guides/complex/identity-baseline-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing ("definition of done") to meet requirements to expand identity management for a landing zone.
-- [Security expansion](../../govern/guides/complex/security-baseline-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing ("definition of done") to meet security requirements aligned to the reference cloud adoption plan.
-- [Operations expansion](../../govern/guides/complex/resource-consistency-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing ("definition of done") to meet basic operations management requirements.
-- [Cost expansion](../../govern/guides/complex/cost-management-improvement.md#changes-to-the-policy-statements): Example of corporate policies governing ("definition of done") to meet cost management requirements.
+- [Identity expansion](../../govern/guides/complex/identity-baseline-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing *definition of done* to meet requirements to expand identity management for a landing zone.
+- [Security expansion](../../govern/guides/complex/security-baseline-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing *definition of done* to meet security requirements aligned to the reference cloud adoption plan.
+- [Operations expansion](../../govern/guides/complex/resource-consistency-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing *definition of done* to meet basic operations management requirements.
+- [Cost expansion](../../govern/guides/complex/cost-management-improvement.md#changes-to-the-policy-statements): Example of corporate policies governing *definition of done* to meet cost management requirements.
 
-The above examples are basic samples to help develop a "definition of done" for your landing zones. Additional sample policies are available for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
+The above examples are basic samples to help develop a *definition of done* for your landing zones. Additional sample policies are available for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
 
 ## Next steps
 

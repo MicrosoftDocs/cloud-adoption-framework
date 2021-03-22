@@ -1,7 +1,7 @@
 ---
-title: Develop a cloud adoption strategy
+title: Using cloud economics to develop a cloud adoption strategy
 description: Use the Cloud Adoption Framework for Azure to understand how the cloud can help advance your business strategy.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 05/04/2019
 ms.topic: conceptual

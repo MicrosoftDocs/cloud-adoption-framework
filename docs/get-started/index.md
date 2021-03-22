@@ -12,20 +12,30 @@ ms.custom: internal
 
 # Get started with the Cloud Adoption Framework
 
-The Cloud Adoption Framework can help you get started in several ways, so there are several different getting started guides. This article groups the guides to help you find the one that best aligns with your current challenges.
+The Cloud Adoption Framework can help you get started with several different getting started guides. This article groups the guides to help you find the one that best aligns with your current challenges.
 
 <br>
 
 Each of the following links takes you to questions that are typically asked when an organization is trying to accomplish a certain goal during their cloud adoption journey.
 
+- [Choose the cloud adoption scenario that best supports your strategy](#cloud-adoption-scenarios)
+- [Examine antipatterns across methodologies and their solutions](#cloud-adoption-antipatterns)
 - [Align foundational concepts to onboard a person, project, or team](#align-foundation)
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)
 - [Improve controls to ensure proper operations of the cloud](#improve-controls)
 - [Establish teams to support adoption and operations](#establish-teams)
 
+## Cloud adoption scenarios
+
+Your organization's cloud adoption effort will tend to align towards supporting the requirements of the long-term strategic goals of your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, or preparing for Kubernetes and container integration into your cloud strategy, we have updated guidance for a [hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md) and a [modern containers adoption scenario](../scenarios/aks/index.md).
+
+## Cloud adoption antipatterns
+
+You may encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [Antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.  
+
 ## Align foundation
 
-A company's cloud adoption journey is typically built on a set of foundational decisions that impact the outcomes of a cloud adoption journey. The following information can help you make core decisions and record them as a reference to be used during the cloud adoption lifecycle.
+Your company's cloud adoption journey is typically guided with foundational decisions that will affect the outcomes of your cloud adoption journey. The following information can help you make core decisions, and record them as a reference to be used during the cloud adoption lifecycle.
 
 - [Get started aligning foundation decisions](./cloud-concepts.md)
 - [How does Azure work](./what-is-azure.md)
@@ -40,7 +50,7 @@ Cloud adoption requires technical change, but to digitally transform with the cl
 | Guide | Description |
 | ----- | ----------- |
 | [We want to migrate existing workloads to the cloud.](./migrate.md)                   | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
-| [We want to build new products and services in the cloud.](./innovate.md)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
+| [We want to build new products and services in the cloud.](/azure/architecture/reference-architectures/containers/aks-start-here?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
 | [We're blocked by environment design and configuration.](./design-and-configuration.md) | This guide provides a quick approach to designing and configuring your environment.                                           |
 
 ## Improve controls

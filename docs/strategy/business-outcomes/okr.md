@@ -48,7 +48,7 @@ To do this, focus on what happens in a month, a quarter, and other short-term in
 
 OKRs help to create alignment and accountability within organizations.
 
-![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/OKR.jpg)
+![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/okr.jpg)
 
 _Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster._
 
@@ -65,8 +65,8 @@ Here are some example of OKRs:
 **Key results:**
 
 1. 45 percent of K-12 schools using our platform
-1. A 12-percent increase in student engagement, as measured through internal systems
-1. A 95-percent satisfaction rate from quarterly parent surveys
+1. A 12 percent increase in student engagement, as measured through internal systems
+1. A 95 percent satisfaction rate from quarterly parent surveys
 
 **Objective 2:** Build a technology platform that supports every person in our business to innovate and create.
 
@@ -98,7 +98,7 @@ Five steps can help your organization to move forward with OKRs:
 
 **Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful, but an organization can benefit most from everyone participating to meet objectives and gaining insights from the aligned data.
 
-Contact [WorkBoard](https://appsource.microsoft.com/en-us/marketplace/co-sell/SOL-31525-NGJ) to get started.
+Contact [WorkBoard](https://appsource.microsoft.com/product/office/WA104381599) to get started.
 
 > [!div class="nextstepaction"]
 > [Align efforts for learning metrics](../learning-metrics.md)

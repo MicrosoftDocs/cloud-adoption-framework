@@ -18,19 +18,19 @@ Cloud custodians, cloud guardians, and cloud architects with an interest in gove
 
 The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 
-|  | [Azure Policy](/azure/governance/policy/overview) | [Azure management groups](/azure/governance/management-groups) | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Blueprints](/azure/governance/blueprints/overview) | [Azure Resource Graph](/azure/governance/resource-graph/overview) | [Azure Cost Management + Billing](/azure/cost-management) |
+|  | [Azure Policy](/azure/governance/policy/overview) | [Azure management groups](/azure/governance/management-groups/) | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Blueprints](/azure/governance/blueprints/overview) | [Azure Resource Graph](/azure/governance/resource-graph/overview) | [Azure Cost Management + Billing](/azure/cost-management-billing/) |
 |---------|---------|---------|---------|---------|---------|---------|
 | **Implement corporate policies**     | Yes | No  | No  | No | No | No |
 | **Apply policies across subscriptions**     | Required | Yes  | No  | No | No | No |
 | **Deploy defined resources**     | No | No  | Yes  | No | No | No |
-| **Create fully compliant environments**      | Required | Required  | Required  | Yes | No | No |
+| **Create fully compliant environments**      | Required | Required | Required | Yes | No | No |
 | **Audit policies**      | Yes | No  | No  | No | No | No |
 | **Query Azure resources**      | No | No  | No  | No | Yes | No |
 | **Report on cost of resources**      | No | No  | No  | No | No | Yes |
 
 The following are additional tools that may be required to accomplish specific deployment acceleration objectives. Often these tools are used outside of the governance team, but are still considered an aspect of the Deployment Acceleration discipline.
 
-|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](/azure/azure-resource-manager/management/overview)  | [Azure Policy](/azure/governance/policy/overview) | [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) | [Azure Backup](/azure/backup/backup-overview) | [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) |
+|  | [Azure portal](https://azure.microsoft.com/features/azure-portal/) | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Policy](/azure/governance/policy/overview) | [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) | [Azure Backup](/azure/backup/backup-overview) | [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) |
 |---------|---------|---------|---------|---------|---------|---------|
 | **Manual deployment (single asset)**     | Yes | Yes  | No  | Not efficiently | No | Yes |
 | **Manual deployment (full environment)**     | Not efficiently | Yes | No  | Not efficiently | No | Yes |
@@ -40,4 +40,4 @@ The following are additional tools that may be required to accomplish specific d
 | **Manage configuration drift**     | Not efficiently | Not efficiently | Yes  | Yes  | No | Yes, during replication |
 | **Create an automated pipeline to deploy code and configure assets (DevOps)**     | No | No | No | Yes | No | No |
 
-Aside from the Azure native tools mentioned above, it is common for customers to use third-party tools to facilitate deployment acceleration and DevOps deployments.
+Aside from the Azure native tools mentioned above, it's common for customers to use third-party tools to facilitate deployment acceleration and DevOps deployments.

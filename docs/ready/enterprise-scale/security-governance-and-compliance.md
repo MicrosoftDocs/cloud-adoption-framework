@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale security, governance and compliance
+title: Enterprise-scale security, governance, and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,10 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore FIPS SIEM majeure NSGs -->
-<!-- docutune:casing "FIPS 140-2 Level" "Patch and update management" "SOC2 Trust Service Principles and Criteria" -->
-
-# Enterprise-scale security, governance and compliance
+# Enterprise-scale security, governance, and compliance
 
 This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
@@ -21,7 +18,7 @@ This article covers defining encryption and key management, planning for governa
 
 Encryption is a vital step toward ensuring data privacy, compliance, and data residency in Microsoft Azure. It's also one of the most important security concerns of many enterprises. This section covers design considerations and recommendations as they pertain to encryption and key management.
 
-### Design considerations
+**Design considerations:**
 
 - Subscription and scale limits as they apply to Azure Key Vault: Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see [Azure limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
@@ -47,12 +44,12 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 - Delegated Key Vault instantiation and privileged access: [secure access](/azure/key-vault/general/secure-your-key-vault).
 
 - Requirements for using customer-managed keys for native encryption mechanisms such as Azure Storage encryption:
-  - [Customer-managed keys](/azure/storage/common/storage-encryption-keys-portal).
+  - [Customer-managed keys](/azure/storage/common/customer-managed-keys-configure-key-vault).
   - Whole-disk encryption for virtual machines (VMs).
   - Data-in-transit encryption.
   - Data-at-rest encryption.
 
-### Design recommendations
+**Design recommendations:**
 
 - Use a federated Azure Key Vault model to avoid transaction scale limits.
 
@@ -92,7 +89,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- Understand regulatory compliance policies. These might include the HIPAA, PCI DSS, and SOC2 Trust Service Principles and Criteria.
+- Understand regulatory compliance policies. These might include HIPAA, PCI-DSS, or SOC 2 trust service principles.
 
 **Design recommendations:**
 
@@ -180,7 +177,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
-<!-- docutune:ignore "and conditional access" -->
+<!-- docutune:ignore "and conditional access" "patch and update management" -->
 
 ## Azure Security Benchmark
 
@@ -202,7 +199,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 |                              |                                                                       | Can Azure services interact directly with the service endpoint?                                                                              |
 |                              |                                                                       | Does it support Azure Private Link endpoints?                                                                                                           |
 |                              |                                                                       | Can it be deployed within a virtual network?                                                                                                            |
-|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate border gateway protocol community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
+|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate Border Gateway Protocol (BGP) community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
 |                              |                                                                       | Does the service support Private Link endpoints?                                                                                                       |
 |                              | Enforce network traffic flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force-tunnelled with user-defined routing?                                    |
 |                              |                                                                       | Do management operations use Azure shared public IP ranges?                                                                                 |
@@ -210,7 +207,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 |                              | Data encryption at-rest                                               | Is encryption applied by default?                                                                                                            |
 |                              |                                                                       | Can encryption be disabled?                                                                                                                  |
 |                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys?                                                   |
-|                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (secure sockets layer/transport layer security)?                                                                           |
+|                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (SSL/TLS)?                                                                           |
 |                              |                                                                       | Are there any HTTP endpoints, and can they be disabled?                                                                                        |
 |                              |                                                                       | Is underlying service communication also encrypted?                                                                                          |
 |                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?)                                                                               |
@@ -222,7 +219,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 | Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
 |                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
-|                              |                                                                       | Does Azure-to-Azure (service-to-service) authentication use an MSI/service principal?                                                         |
+|                              |                                                                       | Does authentication bwtween Azure services use managed identities  or service principals?                                                         |
 |                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
 |                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |

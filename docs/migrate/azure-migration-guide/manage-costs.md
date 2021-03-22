@@ -15,7 +15,7 @@ ms.custom: think-tank, fasttrack-edit, AQC
 
 The cloud introduces a few shifts in how we work, regardless of our role on the technology team. Cost is a great example of this shift. In the past, only finance and IT leadership were concerned with the cost of IT assets (infrastructure, apps, and data). The cloud empowers every member of IT to make and act on decisions that better support the end user. However, with that power comes the responsibility to be cost conscious when making those decisions.
 
-This article introduces the tools that can help make wise cost decisions before, during, and after a migration to Azure.
+This article introduces the tools that can help make wise cost decisions before, during, and after migrating workloads to Azure.
 
 The tools in this article include:
 
@@ -37,8 +37,8 @@ Prior to migration of any asset (infrastructure, app, or data), there is an oppo
 
 For manual cost calculations, there are two handy calculators that can provide a quick cost estimate based on the architecture of the workload to be migrated.
 
-- The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) provides cost estimates for the Azure products you select.
-- Sometimes decisions require a comparison of the future cloud costs and the current on-premises costs. The [total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator) can provide such a comparison.
+- The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) provides cost estimates for the Azure products you select.
+- Sometimes decisions require a comparison of the future cloud costs and the current on-premises costs. The [total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator/) can provide such a comparison.
 
 These manual cost calculators can be used on their own to forecast potential spend and savings. They can also be used in conjunction with the cost forecasting tools of Azure Migrate to adjust the cost expectations to fit alternative architectures or performance constraints.
 
@@ -61,11 +61,11 @@ The resulting estimate, pictured below, identifies the monthly costs of compute 
 
 ![Cost details view](./media/manage-costs/compute-storage-monthly-cost-estimate.png)
 
-_Figure 1: Diagram of the cost details view of an assessment in Azure Migrate._
+*Figure 1: Diagram of the cost details view of an assessment in Azure Migrate.*
 
 ### Additional resources
 
-- [Set up and review an assessment with Azure Migrate](/azure/migrate/tutorial-assess-vmware#set-up-an-assessment)
+- [Set up and review an assessment with Azure Migrate](/azure/migrate/tutorial-assess-vmware-azure-vm#set-up-an-assessment)
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see [Cost Management discipline guidance](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 
 ## [Estimate and optimize VM costs during and after migration](#tab/EstimateOptimize)
@@ -101,7 +101,7 @@ This analysis will allow you to review total costs, budget (if available), and a
 
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see the [Cost Management discipline](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 - For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](/azure/advisor/advisor-cost-recommendations).
-- For more information about Azure Cost Management + Billing, see [Understand and work with scopes](/azure/cost-management/understand-work-scopes) and [explore and analyze costs with cost analysis](/azure/cost-management/quick-acm-cost-analysis).
+- For more information about Azure Cost Management + Billing, see [Understand and work with scopes](/azure/cost-management-billing/costs/understand-work-scopes) and [explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 
 ## [Tips and tricks to optimize costs](#tab/TipsTricks)
 
@@ -129,7 +129,7 @@ Speak with your Microsoft account representative to understand how you can take 
 
 ### Use Azure Hybrid Benefit
 
-If you already have Windows Server or SQL Server licenses in your on-premises deployments, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) program to save in Azure. With the Windows Server benefit, each license covers the cost of the OS (up to two virtual machines), and you only pay for base compute costs. You can use existing SQL Server licenses to save up to 55 percent on vCore-based SQL Database options. Options include SQL Server in Azure Virtual Machines and SQL Server Integration Services.
+If you already have Windows Server or SQL Server licenses in your on-premises deployments, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) program to save in Azure. With the Windows Server benefit, each license covers the cost of the OS (up to two virtual machines), and you only pay for base compute costs. You can use existing SQL Server licenses to save up to 55 percent on vCore-based SQL Database options. Options include SQL Server in Azure Virtual Machines and SQL Server Integration Services.
 
 ### Low-priority VMs with batch
 

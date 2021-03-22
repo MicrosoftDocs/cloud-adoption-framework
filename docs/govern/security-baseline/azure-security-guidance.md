@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore DPIAs inexhaustive -->
-
 # Microsoft security guidance
 
 ## Tools
@@ -24,7 +22,7 @@ The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) and Com
 
 These tools are designed to help organizations meet complex compliance obligations and improve data protection capabilities when choosing and using Microsoft cloud services.
 
-The **Microsoft Service Trust Portal** provides in-depth information and tools to help meet your needs for using Microsoft cloud services, including Azure, Microsoft 365, Dynamics 365, and Windows. The portal is a one-stop shop for security, regulatory, compliance, and privacy information related to the Microsoft cloud. It is where we publish the information and resources needed to perform self-service risk assessments of cloud services and tools. The portal was created to help track regulatory compliance activities within Azure, including:
+The **Microsoft Service Trust Portal** provides in-depth information and tools to help meet your needs for using Microsoft cloud services, including Azure, Microsoft 365, Dynamics 365, and Windows. The portal is a one-stop shop for security, regulatory, compliance, and privacy information related to the Microsoft cloud. It's where we publish the information and resources needed to perform self-service risk assessments of cloud services and tools. The portal was created to help track regulatory compliance activities within Azure, including:
 
 - **Compliance Manager:** Compliance Manager, a workflow-based risk assessment tool in the Microsoft Service Trust Portal, enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft cloud services, such as Microsoft 365, Dynamics 365, and Azure. You can find more details in the next section.
 - **Trust documents:** Three categories of guides provide abundant resources to assess the Microsoft cloud, learn about Microsoft operations in security, compliance, and privacy, and help you act on improving your data protection capabilities. These guides include:
@@ -46,7 +44,7 @@ The **Microsoft Service Trust Portal** provides in-depth information and tools t
 
 ## Unique intelligent insights
 
-As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Azure Security Center overview](/azure/security-center/security-center-intro).
+As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Azure Security Center overview](/azure/security-center/security-center-introduction).
 
 ## Azure threat intelligence
 

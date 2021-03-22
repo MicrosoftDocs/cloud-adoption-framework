@@ -1,5 +1,5 @@
 ---
-title: "Business criticality in cloud management"
+title: Business criticality in cloud management
 description: Use the Cloud Adoption Framework for Azure to understand workload criticality and prevent adverse impact on revenue and profitability.
 author: BrianBlanchard
 ms.author: brblanch
@@ -49,7 +49,7 @@ Because there's a clear and direct cost to operations management in the cloud, i
 
 An initial review of every workload in the portfolio can be time consuming. To ensure that this effort doesn't block your broader cloud strategy, we recommend that your teams agree on a default criticality to apply to all workloads.
 
-Based on the preceding criticality-scale table, we recommend that you adopt _medium_ criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
+Based on the preceding criticality-scale table, we recommend that you adopt *medium* criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
 
 ## Use the template
 

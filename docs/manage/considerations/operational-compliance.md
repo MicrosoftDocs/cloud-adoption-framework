@@ -1,5 +1,5 @@
 ---
-title: "Operational compliance in cloud management"
+title: Operational compliance in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to maintain compliance with operational commitments.
 author: BrianBlanchard
 ms.author: brblanch
@@ -30,19 +30,17 @@ The most effective step that a cloud management team can take toward operational
 
 ### Environment consistency
 
-Establishing consistent environments, or landing zones, is the next most important step toward operational compliance. When landing zones are consistent and enforced through automated tools, it is significantly less complex to diagnose and resolve operational issues. For deeper guidance on environment consistency, see the [Ready phase](../../ready/index.md) of the cloud adoption lifecycle. The exercises in that phase help build a repeatable process for defining and maturing a consistent, code-first approach to the development of cloud-based environments.
+Establishing consistent environments, or landing zones, is the next most important step toward operational compliance. When landing zones are consistent and enforced through automated tools, it's significantly less complex to diagnose and resolve operational issues. For deeper guidance on environment consistency, see the [readiness phase](../../ready/index.md) of the cloud adoption lifecycle. The exercises in this phase help build a repeatable process for defining and maturing a consistent, code-first approach to developing cloud-based environments.
 
 ### Resource configuration consistency
 
-As it builds on governance and readiness approaches, cloud management should include processes for the ongoing monitoring and evaluation of its adherence to resource consistency requirements. As workloads change or new versions are adopted, it is vital that cloud management processes evaluate any configuration changes, which are not easily regulated through automation.
+As it builds on governance and readiness approaches, cloud management should include processes for the ongoing monitoring and evaluation of its adherence to resource consistency requirements. As workloads change or new versions are adopted, it's vital that cloud management processes evaluate any configuration changes, which are not easily regulated through automation.
 
 When inconsistencies are discovered, some are addressed by consistency in updates and others can be automatically remediated.
 
 ### Update consistency
 
 Stability in approach can lead to more stable operations. But some changes are required within cloud management processes. In particular, regular patching and performance changes are essential to reducing interruptions and controlling costs.
-
-<!-- docutune:ignore "a cloud management methodology" -->
 
 One of the many values of a mature cloud management methodology is a focus on stabilizing and controlling necessary change.
 
