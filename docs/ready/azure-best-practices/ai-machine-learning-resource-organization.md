@@ -100,13 +100,13 @@ Regionality of resources, data, or users, might impose the requirement to create
 
     ![Regional Finetuning](media/azureml-setup-regional-finetuning.png)
 
-# Example deployment: Contoso
+# Reference implementation
 
-To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the fictive organization Contoso has set up Azure Machine Learning given their organizational constraints, reporting and budgeting requirements:
+To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization `Contoso` has set up Azure Machine Learning given their organizational constraints, reporting and budgeting requirements:
 
-* Contoso’s IT administrators only create resource groups and Azure resources on a project/solution basis and for projects that are already funded due to budgeting requirements.
-* Due to the explorative and uncertain nature of Data Science, there’s a need for users to have a dedicated place for them to use Azure Machine Learning for data and use case explorative work – an exploration environment to understand if an idea is feasible in terms of data availability and quality.
-* At Contoso, each funded solution gets allocated its own resource groups in three Azure environments (Dev, QA, Prod), so is the case for ML solutions.
+* Only IT administrators can create resource groups and Azure resources on a project/solution basis and only for projects that are already funded due to budgeting requirements.
+* Due to the explorative and uncertain nature of Data Science, there’s a need for users to have a dedicated place for them to use Azure Machine Learning for data and use case explorative work. Exploration entails understanding if an idea is feasible in terms of data availability and data quality. This work cannot be associated to a project or solution. Idea is that everyone in the organization has access to these resources and budgeting is done centrally across business departments from R&D budget.
+* At Contoso, each funded solution gets allocated its own resource groups in three Azure environments (Dev, QA, Prod), including ML Solutions.
 * Once a ML use case proves itself to be successful in the explorative environment, resource group(s) can be set up for iterative experimentation project work, and access to production data sources will be provided once permitted by the data owner.
 * Data segregation and compliance requirements disallow live production data to exists in dev environments.
 * Different RBAC requirement exist for various user groups by IT policy per environment e.g. access is more restrictive in prod.
@@ -116,8 +116,8 @@ To illustrate the deployment of Azure Machine Learning in a larger setting, this
 
 To adhere to the above requirements, Contoso has set up their resources in the following way:
 
-* Azure Machine Learning workspaces and resource groups scoped per Project.
-* A single resource group and ML Workspace that is dedicated for Exploration -- the so-called ‘Exploration’ environment. Everyone in the organization has access to these resources and budgeting is done centrally across business departments. Finance and IT have allocated compute quota to this Workspace aligned with available R&D budget for ML experimentation.
-* Once a use case is proven feasible, Machine Learning practitioners can request with IT one or multiple project environments for further experimentation and eventually to take the solution into production. IT then set ups monitoring, cost and budget spends controls to the respective business departments cost centers.
+* Azure Machine Learning workspaces and resource groups scoped per Project to comply with budgeting and use case segregation requirements.
+* A multiple-environment set up for Azure ML and associated resources to address cost managment, RBAC and data access requirements. 
+* A single resource group and ML Workspace that is dedicated for Exploration -- the so-called ‘Exploration’ environment.
 
 ![Contoso Reference Implementation](media/azureml-setup-contoso-reference-implementation.png)
