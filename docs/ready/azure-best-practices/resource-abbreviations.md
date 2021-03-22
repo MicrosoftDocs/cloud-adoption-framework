@@ -90,8 +90,9 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Cache for Redis instance | `redis-` |
 | MySQL database | `mysql-` |
 | PostgreSQL database | `psql-` |
-| Azure SQL Data Warehouse | `sqldw-` |
-| Azure Synapse Analytics | `syn-` |
+| Azure Synapse Analytics Workspaces | `syn-` |
+| Azure Synapse Analytics SQL Dedicated Pool| `syndw-` |
+| Azure Synapse Analytics Spark Pool| `synspark-` |
 | SQL Server Stretch Database | `sqlstrdb-` |
 | SQL Managed Instance | `sqlmi-` |
 
