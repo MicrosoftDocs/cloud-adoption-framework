@@ -14,7 +14,7 @@ ms.custom: internal
 
 Cloud technologies enable organizations to envision new ideas and products that were not possible before. Put simply, cloud can enable innovation.
 However, that innovation can often introduce new ways of working that test or break existing security or operational processes and controls.
-As part of the journey to cloud environment organizations will need to consider and implement new ways of working to ensure secure is at the core of everything that is built.
+As part of the journey to cloud environment organizations should consider new ways of working to ensure secure is at the core of everything that is built.
 
 This article explores how to integrate modern security practices (such as DevSecOps) into processes.
 A key objective is to align security, development, and operational practices.
@@ -22,38 +22,38 @@ A key objective is to align security, development, and operational practices.
 ## Secure by design
 
 As development teams adopt cloud technologies as part of their development environment, there is an opportunity to integrate tools and techniques to make security a default part of the development lifecycle.
-Modern software development is orientated around code repositories and build pipelines, which created an effective method of collaboration between teams and enables high volume, repeatable build and release of code into various environments.
+Modern software development uses code repositories and build pipelines, which created an effective method of collaboration between teams. This approach enables high volume, repeatable build and release of code into various environments.
 
-This streamlined process removes many manual steps from the development process, which can result in the reduced need for manual review and approval during the development cycle. This approach is a huge benefit, but can also introduce a risk of unintentional security issues if not approached correctly.
-Building security checks into development cycles can reduce the risk of tokens or credentials being checked into a code repository or left in a software release. Scanning for vulnerabilities in third-party libraries can also help to reduce the risk of vulnerabilities in code and in environments.
+This streamlined process removes many manual steps from the development process. Removing manual steps can result in the reduced need for manual review and approval during the development cycle. This approach is a huge benefit, but can also introduce a risk of unintentional security issues if not approached correctly.
+Building security checks into development cycles can reduce the risk of tokens or credentials being checked into a code repository. Scanning for vulnerabilities in third-party libraries can also help to reduce the risk in code and in environments.
 
-Setting these techniques as default behavior within the development process - and, crucially automating it - helps organizations move closer to the principle of secure by design, as opposed to security being a waterfall activity after development finishes.
+These techniques as default development processes help organizations move closer to the principle of secure by design, as opposed to security being a waterfall activity after development finishes.
 
 ## What is DevSecOps?
 
 In the same way that DevOps is the combination of people, process, and technology the same is true of DevSecOps - the difference being the expansion of the core teams to include the organization's security functions.
 
 **Development, Security, Operations**. Three key functions within an organization working together in a common model to help build secure, resilient applications.
-Developing applications requires many teams to work harmoniously in order to ensure that - from concept to live environment - the code and services that are developed have been regularly checked for vulnerabilities and issues addressed.
+Developing applications requires many teams to work harmoniously in order to ensure that from concept to live environment, the code and services that are developed have been regularly checked for vulnerabilities and issues addressed.
 
 [The Cloud Adoption Framework's Organize methodology provides some further context on the team composition and key relationships for DevSecOps structures in an organization](../organize/cloud-security-application-security-devsecops.md)
 
-The fundamental principles of DevSecOps are to bring teams closer together to design and operate applications to be inherently secure, with risks and vulnerabilities found, assessed and mitigated as quickly as possible.
-People and process are the most important elements, but tools play a key role in enabling the environments to scale without processes breaking or requiring a cost prohibitive number of people.
+The core principles of DevSecOps are to bring teams closer together to design and operate applications to be secure, with risks found, assessed and mitigated as quickly as possible.
+People and process are the most important elements. However, tools play a key role in enabling the environments to scale without processes breaking or requiring a cost prohibitive number of people.
 
 ## Security in repositories
 
 Typically, developers create, manage, and share their code in repositories such as GitHub or Azure DevOps Repos. This approach provides a central, version controlled library of code that can be collaborate on easily.
-However, enabling a number of collaborators on a single codebase can also introduce the risk of changes being introduced that lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits.
+However, enabling a number of collaborators on a single codebase can also introduce the risk of changes being introduced. That risk can lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits.
 
-To address this risk, development teams should evaluate and implement a repository scanning capability. Repository scanning tools are intended to perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation.
+To address this risk, development teams should evaluate and implement a repository scanning capability. Repository scanning tools perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation.
 
-This capability acts as a backstop to protect against human error and is a useful safeguard in distributed teams where a number of people are collaborating in the same repository.
-The security validation of code can happen both within the Integrated Development Environment (IDE), such as Visual Studio Code, or at the point of creating a pull request to merge code into a branch or repository.
+This capability acts to protect against human error and is a useful safeguard in distributed teams where a number of people are collaborating in the same repository.
+The validation of code can happen both within the Integrated Development Environment (IDE), such as Visual Studio Code, or at the point of creating a pull request to merge code into a branch or repository.
 
 ## Security in pipelines
 
-Many organizations use build and release pipelines (often referred to as Continuos Integration and Continuous Delivery or CI/CD) to automate and standardize the processes for building and deploying code into various environments.
+Many organizations use build and release pipelines (often referred to as Continuos Integration and Continuous Delivery or CI/CD) to automate and standardize the processes for building and deploying code.
 
 This use of pipelines allows development teams to make iterative changes to sections of code quickly and at scale, without the need to spend large amounts of time redeploying or upgrading existing environments.
 Using pipelines also enables teams to promote code from development environments, through testing environments and ultimately into production.
