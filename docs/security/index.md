@@ -12,15 +12,15 @@ ms.custom: internal
 
 # Secure Methodology - Building security into your cloud adoption journey
 
-Just as adopting the cloud is a journey. So too, security for the cloud age is an ongoing journey. Cloud security is not a static destination.
+Just as adopting the cloud is a journey, security for the cloud age is an ongoing journey. Cloud security is not a static destination.
 
 ## Envision a security end state
 
-A journey without a target destination is just wandering. The Secure methodology provides a rough vision of the end state, to guide your maturity over time. The following infographic provides a visual mapping of the considerations which are important to reach your end state and the key components it must include.
+A journey without a target destination is just wandering. The Secure methodology provides a vision of the complete end state to guide your maturity over time. The following infographic provides a visual mapping of the considerations which are important to reach your end state and the key components it must include.
 
 ![CAF Secure Methodology](../_images/security/secure-methodology.png)
 
-The Cloud Adoption Framework provides security guidance for this security journey by providing clarity in the processes, best practices, models, and experiences. This is based on the experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and Center for Internet Security (CIS).
+The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and Center for Internet Security (CIS).
 
 ## Security Transformation
 
