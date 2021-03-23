@@ -37,26 +37,56 @@ Azure policies in Enterprise Scale Analytics And AI were developed with the foll
 
 ## Azure Policies for Enterprise Scale Analytics and AI
 
-Following is a list of Azure policies associated with Enterprise Scale Analytics and AI:
+Following are the Azure policies associated with Enterprise Scale Analytics and AI:
 
-|Azure Service |Policy Scope and Type |Definition|
-|-| -| -|
-|All Data services| {scope}/diagnosticSettings (deployIfNotExists)| Collect all diagnostic logs in a central log analytics workspace per region.
-|All Data services |Tags (modify) |Add and enforce data specific tags to resources.|
-|Azure SQL Server| Microsoft.Sql/servers/vulnerabilityAssessments (deployIfNotExists) |Automatically enable vulnerability Assessments for SQL servers.|
-|Azure SQL Managed Instance |Microsoft.Sql/managedInstances/vulnerabilityAssessments (deployIfNotExists) |Automatically enable vulnerability Assessments for SQL managed instances.|
-|Azure SQL DB |servers/databases/backupLongTermRetentionPolicies (deployIfNotExists), servers/databases/backupShortTermRetentionPolicies (deployIfNotExists) |Automatically set default short term and long-term retention policies for all Azure SQL DBs to fulfil legal and internal requirements.|
-|Azure SQL Managed Instance| managedInstances/databases/backupLongTermRetentionPolicies (deployIfNotExists), managedInstances/databases/backupShortTermRetentionPolicies (deployIfNotExists) |Automatically set default short term and long-term retention policies for all SQL Managed Instance DBs to fulfil legal and internal requirements.|
-|Azure Cosmos DB |Microsoft.DocumentDB/databaseAccounts/disableKeyBasedMetadataWriteAccess (Append) |Disable the key-based metadata write access on all Cosmos DB accounts.
-|Azure Data Factory |Microsoft.OperationsManagement/solutions (deployIfNotExists) |Deploy a data factory analytics service for each data factory and feed data into the central log analytics workspace.|
-|Azure Data Factory| Microsoft.DataFactory/factories/linkedservices (deployIfNotExists) |Automatically add shared integration runtimes to Azure Data Factories.|
-|Azure Purview| linkedServices (deployIfNotExists) |Automatically add all data sources in Data Landing Zones to the data catalog in the Data Management Landing Zone so that crawlers can detect and index datasets.|
-|Azure Storage| Microsoft.Storage/storageAccounts/blobServices (deployIfNotExists), Microsoft.Storage/storageAccounts/fileServices (deployIfNotExists), Microsoft.Storage/storageAccounts/tableServices (deployIfNotExists), Microsoft.Storage/storageAccounts/queueServices (deployIfNotExists)| Automatically define default retention policies, versioning policies, snapshot policies, enable/disable changeFeed, restore policies, CORS rules and container delete retention policies.|
-|Azure Storage |Microsoft.Storage/storageAccounts/managementPolicies (deployIfNotExists) |Automatically define a default data lifecycle (to cold tier, to archive tier)|
-|Azure Storage |Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies (deployIfNotExists) |Automatically define a default immutability policy.|
-|Azure Storage |Microsoft.Storage/storageAccounts/objectReplicationPolicies (deployIfNotExists) |Automatically define a default object replication policy.|
-|Azure Storage |Microsoft.Storage/storageAccounts/routingPreference.routingChoice (deny) |Enforce routing through Azure backbone and not through the internet.|
-|Azure KeyVault| Microsoft.KeyVault/vaults (append)| Enforce soft delete and purge protection for all Key Vaults.|
+### All
+
+|Policy Name  |Purpose  |Description  |
+|---------|---------|---------|
+| Deny-PublicIp|Network Isolation|Restrict deployment of public IPs.|
+|Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the aad tenant and subscription.|
+|Row4     |         |         |
+|Row5     |         |         |
+
+### Storage
+
+|Policy Name  |Purpose  |Description  |
+|---------|---------|---------|
+|Append-Storage-Encryption | Encryption |Enforce encryption for storage accounts. |
+|Row2     |         |         |
+|Row3     |         |         |
+|Row4     |         |         |
+|Row5     |         |         |
+
+### Key Vault
+### Data Factory
+### Synapse
+
+### Purview
+### Databricks
+### Log Analytics
+### IoTHub
+### EventHub
+### Stream Analytics
+### Data Explorer
+### Cosmos DB
+### ACR
+### Cognitive Services
+### Machine Learning
+### SQL Managed Instance
+### SQL
+### MariaDB
+### MySQL
+### Postgres
+### Search
+### DNS
+### NSG
+### Batch
+### Redis Cache
+### Container Instance
+### Firewall
+### HDInsight
+### PrivateLinkServicesForPowerBI
 
 ## Cost Management
 
