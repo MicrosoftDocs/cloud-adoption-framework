@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Cloud Monitoring Guide: Observability
+# Cloud monitoring guide: Observability
 
 This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the Azure landing zone (that is, in every minimum viable product) for each monitoring solution.
 
