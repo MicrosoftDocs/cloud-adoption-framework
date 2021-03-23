@@ -34,13 +34,15 @@ Scaling this standard requires three things -
 
 Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
 
-![Adding user and application access pathways](./media/privileged-access-strategy/user-app-control-management-data-workload-planes.png)
+![Adding user and application access pathways](./media/privileged-access-over-underlying-planes.png)
 
 For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
+## Blend network and identity access controls
+
 While access controls will be infused throughout the environment, the control plane will be primarily a blend of identity and network controls. While the focus level on each will vary by type of environment, these should be designed to work in harmony to meet both productivity and security goals.
 
-(new diagram)
+![Network and access controls](./media/Network-and-access-controls.png)
 
 ## Zero Trust concept
 

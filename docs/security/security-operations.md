@@ -19,7 +19,7 @@ Security operations reduces organizational risk by detecting and remediating act
 Security operations does this with an integrated set of functions focused on:
 
 - **Incident Management -** Reactively respond to detected attacks, proactively hunting for undetected attacks, and coordinating the legal, communictions, and other business implications of security incidents. This is often delivered through teams referred to as a SOC.
-- **Incident Preparation -** Helping the organization prepare for future attacks, which is a broader strategic set of activities aimed at building context and muscle memory to better handle attacks as well as develop insights on how to improve security processes overall.   
+- **Incident Preparation -** Helping the organization prepare for future attacks, which is a broader strategic set of activities aimed at building context and muscle memory to better handle attacks as well as develop insights on how to improve security processes overall.
 - **Threat Intelligence -** Gathering, processing, and disseminating threat intelligence to security operations, security teams, security leadership, and business leadership stakeholders (via security leadership).  
 
 Security operations is currently undergoing significant modernization at all levels with the advent of cloud technologies, adversary targeting of IoT and OT resources, and the zero trust transformation of security to a multi-layer discipline (vs. a network centric strategy). This modernization of security operations is becoming urgent because of the massive increase in relevant telemetry (which is hard to process with classic techniques), the availability of cloud services to provide analytics such as machine learning (ML) and behavior analytics, and the time sensitive nature of the security operations mission.
@@ -39,10 +39,10 @@ It is almost impossible to prevent a break in at a house if no one is checking t
 Organizations are becoming hyper-aware of the need to ensure that there are strong processes in place to ensure that the metaphorical doors and windows of their environments are shut and locked, and - when a window is left open - there is a process in place to close it and ensure it stays closed.
 
 ## Security Operations nomenclature disambiguation
-A wide array of names are used to describe security operations within organization and the role definition and duties within that team can differ from organization to organization. Most of the variations we see are with security operations taking on some or all aspects of posture management (defined in greater detail in XXXXXXXXXXXX) given the need for operational urgency to address software vulnerabilities and the use of security operations data to prioritize preventive controls and policy enforcement. 
 
-Rather than merge these two functions (which is a valid configuration) We chose to differentiate between these two while emphasizing the need for their integration (whether part of the same team or separate teams). 
+A wide array of names are used to describe security operations within organization and the role definition and duties within that team can differ from organization to organization. Most of the variations we see are with security operations taking on some or all aspects of posture management (defined in greater detail in XXXXXXXXXXXX) given the need for operational urgency to address software vulnerabilities and the use of security operations data to prioritize preventive controls and policy enforcement.
 
+Rather than merge these two functions (which is a valid configuration) We chose to differentiate between these two while emphasizing the need for their integration (whether part of the same team or separate teams).
 
 ## Operations within a security strategy
 
