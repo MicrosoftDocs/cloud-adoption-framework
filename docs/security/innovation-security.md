@@ -69,11 +69,12 @@ Azure has capabilities that enable organization's to create security standards f
 These 'guardrails' enable teams to experiment within a safe and controlled environment, therefore balancing innovation and governance.
 
 **Penetration testing** is a recommended practice for environments in order to check for any vulnerabilities in the infrastructure or application configuration that may create weaknesses that attackers could exploit.
-There are a number of products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
+There are a number of products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](../azure/security/fundamentals/pen-testing)
 
 Testing typical covers the following test types:
+
 - Tests on your endpoints to uncover vulnerabilities
-- Fuzz testing (finding program errors by suppyling malformed input data) of your endpoints
+- Fuzz testing (finding program errors by supplying malformed input data) of your endpoints
 - Port scanning of your endpoints
 
 **Infrastructure scanning**
