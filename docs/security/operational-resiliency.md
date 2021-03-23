@@ -11,11 +11,28 @@ ms.custom: internal
 
 ---
 # Secure Operational Resiliency
-To be perfectly secure, a system must be perfectly inaccessable. As being inaccessable generally defeats the purpose of most systems, the conclusion we reach is that the security will not be perfect. It is not a question of *if* a breach will occur, but rather *when*. TODOL Review this possible addition... In the realm of security, operational resiliency focuses on preparing the business and supporting IT solutions for breach of security.
 
-Originally, security was concerned with stopping attackers and idealizing a prevention-centric defense. If the installed firewalls, intrusion detection systems, and antivirus scanners returned "All clear" signals, it was assumed that the infrastructure was secure and uncompromised. However, reviewing the recent large data breaches, we have seen time and time again that attackers often had access to the compromised systems for multiple months before being detected. These breaches resulted in hundreds of millions of pieces of Personally Identifiable Information (PII), credit card data, username/password combinations, and other data being stolen. In addition to losing consumer confidence, these companies were often fined millions of dollars by regulators for being unable to protect their customers' data. 
+Security can never be perfect, but it can effectively reduce risk. Like we are never perfectly immune to all health and safety risks in the physical world, the data and information systems we operate are also never perfectly safe. Taking a pragmatic view of the security threats we face can enable security to provide resiliency that allows the business to operate during an attack and rapidly recover full functionality after an attack. 
 
-By adopting the "Assume Breach" mindset, the focus is shifted away from prevention-only methods. Risk of post-breach impact is reduced by increasing the security toolkit with proceses and technology focused specifically on recovery and resiliency. Teaming sound resiliency practices that include processes for risk management insights, security integration, and the disciplinse of cloud security, reduces the potential attack surface limiting resiliency needs to singular, segmented, areas of impact. 
+Good security starts with assuming compromise, recognizing the essential truth that IT systems operate over the open internet where hostile criminals are continuously attacking organizations and sometimes succeed in compromising them. This assumption is a key principle of zero trust which drives healthy and pragmatic security behaviors, better preparing the organization to prevent attacks, limit their damage, and bounce back rapidly from them. 
+
+Assuming compromise is a significant shift from the classic security mindset that assumed organizations could establish a perfectly safe network protected by a security perimeter (and restrict all valuable business activity to that network). While elements of this strategy provide value in a resilient enterprise, the overall assumption of a perfectly safe network didn't survive contact with the real world of mobile work and continuously evolving business models, technology platforms, and security threats.
+
+Resiliency requires a close partnership between business stakeholders, information technology (IT) leaders and professionals, and security professionals. 
+
+## What are the goals of resiliency?
+
+Security resiliency is focused on supporting the resiliency of the business through:
+
+1. **enabling the business** to rapidly innovate and adapt to the ever changing business environment. Security should always be seeking safe ways to say "yes" to business innovation and technology adoption so that the organization is able to adapt to unexpected changes int eh business environment like the WFH of COVID-19. 
+1. **limiting the impact** to the business from active attacks (through blocking them ahead of time, limiting their blast radius, and rapidly responding to contain the time of damage)
+1. **ensuring rapid recovery** - from an attack (particularly major attacks) so that the business is able to return to full functionality as rapidly as possible. 
+
+
+>**======================================================**
+
+
+By adopting the "Assume Breach" mindset, the focus is shifted away from prevention-only methods. Risk of post-breach impact is reduced by increasing the security toolkit with proceses and technology focused specifically on recovery and resiliency. Teaming sound resiliency practices that include processes for risk management insights, security integration, and the disciplines of cloud security, reduces the potential attack surface limiting resiliency needs to singular, segmented, areas of impact. 
 
 Business alignment around operational resiliencey requires the following commitments and processes to ensure rapid recovery from breach:
 
