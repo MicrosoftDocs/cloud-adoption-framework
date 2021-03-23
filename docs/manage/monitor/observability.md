@@ -50,11 +50,11 @@ Business transformation applies technology to achieve current, and help shape, i
 
 This is demonstrated in the following ways:
 
-1. Business (digital) transformation efforts shift toward hyper-exploitation of cloud technology.
+* Business (digital) transformation efforts shift toward hyper-exploitation of cloud technology.
 
-2. Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
+* Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
 
-3. Cloud-native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
+* Cloud-native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
 
 For architects, diagnostics form the core of their exploitation of more cost effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
 
