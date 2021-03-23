@@ -35,6 +35,11 @@ In the same way that DevOps is the combination of people, process and technology
 Development, Security, Operations. Three key functions within an organization working together in a common model to help build secure, resilient applications.
 Developing applications requires a number of teams to work harmoniously in order to ensure that - from concept to live environment - the code and services that are developed have been regularly checked for vulnerabilities and issues addressed.
 
+[The Cloud Adoption Framework's Organize methodology provides some further context on the team composition and key relationships for DevSecOps structures in an organization](../organize/cloud-security-application-security-devsecops.md)
+
+The fundamental principles of DevSecOps are to bring teams closer together to design and operate applications to be inherently secure, with risks and vulnerabilities found, assessed and mitigated as quickly as possible.
+People and process are the most important elements, but tools play a key role in enabling the environments to scale without processes breaking or requiring a cost prohibitive number of people.
+
 ## Security in repositories
 
 Typically, developers create, manage and share their code in repositories such as GitHub or Azure DevOps Repos. This provides a central, version controlled library of code that can be collaborate on easily.
@@ -48,7 +53,7 @@ The security validation of code can happen both within the Integrated Developmen
 Many organizations use build and release pipelines (often referred to as Continuos Integration and Continuous Delivery or CI/CD) to automate and standardize the processes for building and deploying code into various environments.
 This use of pipelines allows development teams to make iterative changes to sections of code quickly and at scale, without the need to spend large amounts of time re-deploying or upgrading existing environments.
 Using pipelines also enables teams to promote code from development environments, through testing environments and ultimately into production.
-As part of this automation, development teams should include security tools that run scripted automated tests when code is deployed into testing environments. This can include tests such as unit testing the applications features to check for vulnerabilities or checking for public endpoints to ensure they are intentionally accessible. 
+As part of this automation, development teams should include security tools that run scripted automated tests when code is deployed into testing environments. This can include tests such as unit testing the applications features to check for vulnerabilities or checking for public endpoints to ensure they are intentionally accessible.
 
 ## Security in environments
 
@@ -58,6 +63,6 @@ As part of this automation, development teams should include security tools that
 
 ![Continuous Security model](./media/continuous-security.png)
 
-All of these techniques and tools should enable teams to find and flag risks and vulnerabilities that require investigation and potential resolution.
+All of these techniques and tools enable teams to find and flag risks and vulnerabilities that require investigation and potential resolution.
 Operations teams who receive an alert, or discover a potential issue when investigating a support ticket, need a route back to the development team in order to flag items for review.
 This feedback loop being a smooth collaboration is vital to issues being addressed quickly and the risk of a vulnerability being minimized as much as possible.
