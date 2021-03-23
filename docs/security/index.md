@@ -75,3 +75,10 @@ All security activities should be aligned to and shaped by a dual focus on
   - *Assume Breach:* When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
   - *Explicit Verification:* Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
   - *Least Privileged Access:* Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
+
+
+### Additional Resources
+
+This CAF Secure methodology is part of a comprehensive set of security guidance that also includes
+ - **Azure Well-Architected Framework** - Guidance on securing your workloads on Azure
+ - [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs) - Prescriptive Best Practices and Controls for Azure Security
