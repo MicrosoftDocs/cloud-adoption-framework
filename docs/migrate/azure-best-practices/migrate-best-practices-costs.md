@@ -14,10 +14,10 @@ ms.custom: internal
 
 # Best practices to cost and size workloads migrated to Azure
 
-As you plan and design for migration, focusing on costs ensures the long-term success of your Azure migration. During a migration project, it's critical that all teams (such as finance, management, and application development teams) understand associated costs.
+As you plan and design for an Azure migration, focusing on costs can help to ensure its long-term success. During a migration project, it's critical that all teams (such as finance, management, and application development teams) understand the costs associated with this process.
 
 - Before migration, it's important to have a baseline for monthly, quarterly, and yearly budget targets in order to estimate the amount you'd spend on your migration and ensure its success.
-- After migration, you should optimize costs, continually monitor workloads, and plan for future usage patterns. Migrated resources might start out as one type of workload, but shift to another type over time, based on usage, costs, and shifting business requirements.
+- After migration, you should optimize costs, continually monitor workloads, and plan for future usage patterns. Migrated resources might start out as one type of workload but because of usage, costs, and shifting business requirements, shift to another type over time.
 
 This article describes best practices for preparing for and managing cost and size, both before and after migration.
 
@@ -28,17 +28,17 @@ This article describes best practices for preparing for and managing cost and si
 
 Before you move your workloads to the cloud, estimate the monthly cost of running them in Azure. Proactively managing cloud costs helps you adhere to your operating expense budget. If budget is limited, take this into account before migration. Consider converting workloads to Azure serverless technologies, where appropriate, to reduce costs.
 
-The best practices in this section help you:
+The best practices in this section help you to:
 
 - Estimate costs.
 - Perform right-sizing for virtual machines (VMs) and storage.
 - Use Azure Hybrid Benefit.
-- Use Azure Reserved Virtual Machine Instances.
+- Use Azure Reserved VM Instances.
 - Estimate cloud spending across subscriptions.
 
 ## Best practice: Estimate monthly workload costs
 
-To forecast your monthly bill for migrated workloads, there are several tools you can use.
+You can use several tools to forecast your monthly bill for migrated workloads.
 
 <!-- TODO: Change "input costs" -->
 
@@ -52,7 +52,7 @@ To forecast your monthly bill for migrated workloads, there are several tools yo
   - Azure Migrate discovers and assesses your on-premises environment to provide an inventory.
   - Azure Migrate can map and show you dependencies between VMs, so that you have a complete picture.
   - An Azure Migrate assessment contains estimated cost.
-    - **Compute costs:** Using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Azure Billing APIs to calculate estimated monthly VM costs. The estimation considers the operating system, Software Assurance, Azure Reserved Virtual Machine Instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
+    - **Compute costs:** Using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Azure Billing APIs to calculate estimated monthly VM costs. The estimation considers the operating system, Software Assurance, Azure Reserved VM Instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
     - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Screenshot of Azure Migrate](./media/migrate-best-practices-costs/assess.png)
@@ -86,7 +86,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 - Learn more about [VM types and sizing](/azure/virtual-machines/sizes), and map sizes to types.
 - Plan [sizes for VM instances](/azure/cloud-services/cloud-services-sizes-specs).
-- Review a [sample assessment for the fictional Contoso company](/azure/cloud-adoption-framework/migrate/).
+- Review a [sample assessment for the fictional company Contoso](../../migrate/index.md).
 
 ## Best practice: Select the right storage
 
@@ -103,7 +103,7 @@ Azure provides different types of storage data.
 | Data type | Details | Usage |
 | --- | --- | --- |
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
-| **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access/connections to file data. |
+| **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares and to provide multiple access/connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type: standard (HDD or SSD) or premium (SSD). <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
 | **Tables** | Store tables. | This data type is part of Azure Cosmos DB Table API. |
@@ -116,7 +116,7 @@ Azure Storage provides different options for accessing block blob data. Selectin
 | --- | --- | --- |
 | **Hot** | Higher storage cost than cool. Lower access charges than cool. <br><br> This is the default tier. | Use for data in active use, that's accessed frequently. |
 | **Cool** | Lower storage cost than hot. Higher access charges than hot. <br><br> Store for minimum of 30 days. | Store short-term. Data is available but accessed infrequently. |
-| **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Data access is more expensive than hot and cold. | Use for data that can tolerate several hours of retrieval latency, and will remain in the tier for at least 180 days. |
+| **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Data access is more expensive than hot and cold. | Use for data that can tolerate several hours of retrieval latency and will remain in the tier for at least 180 days. |
 
 ### Storage account types
 
@@ -212,12 +212,12 @@ With Azure Cost Management + Billing, you can:
   - You can account for the services you consume or subscribe to for a specific period (monthly, quarterly, or annually), and a scope (subscriptions or resource groups). For example, you can create an Azure subscription budget for a monthly, quarterly, or annual period.
     - After you create a budget, it's shown in a cost analysis. Viewing your budget against current spending is important when you're analyzing your costs and spending.
   - You can choose to have email notifications sent when your budget thresholds are reached.
-  - You can export costs management data to Azure Storage, for analysis.
+  - You can export costs management data to Azure Storage to analyze it.
 
-  ![Screenshot of Cost Management budget.](./media/migrate-best-practices-costs/budget.png)
-  *Figure 4: Azure Cost Management + Billing budget.*
+  ![Screenshot of an Azure Cost Management budget.](./media/migrate-best-practices-costs/budget.png)
+  *Figure 4: An Azure Cost Management + Billing budget.*
 
-- Do a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
+- Perform a cost analysis to explore and analyze your organizational costs, to understand how costs are accrued, and identify spending trends.
   - Cost analysis is available to Enterprise Agreement users.
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
@@ -225,7 +225,7 @@ With Azure Cost Management + Billing, you can:
   ![Screenshot of Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
   *Figure 5: Azure Cost Management + Billing analysis.*
 
-- Get Advisor recommendations that show you how you can optimize and improve efficiency.
+- Get Azure Advisor recommendations that show you how you can optimize and improve efficiency.
 
 **Learn more:**
 
@@ -270,7 +270,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 - Not all log data is equal, and some resources will generate more log data than others.
 - Due to regulations and compliance, it's likely that you'll need to retain log data for some resources longer than for others.
 - You should walk a careful line between optimizing your log storage costs, and keeping the log data you need.
-- We recommend evaluating and setting up the logging immediately after completing a migration so that you don't spend money on retaining logs of no importance.
+- We recommend evaluating and setting up the logging immediately after completing a migration so that you don't spend money on retaining nonessential logs.
 
 **Learn more:**
 
@@ -282,7 +282,7 @@ If you followed best practices for selecting storage before migration, you're pr
 
 Identifying and moving stale data to cheaper storage areas can have a huge impact on your monthly storage budget and cost savings. Azure provides many ways to help you identify and then store this stale data.
 
-- Take advantage of access tiers for general-purpose v2 storage, moving less important data from hot to cool and archived tiers.
+- Take advantage of access tiers for general-purpose v2 storage, moving less important data from the hot tier to the cool or archived tiers.
 - Use StorSimple to help move stale data that's based on customized policies.
 
 **Learn more:**
@@ -317,7 +317,7 @@ The Azure Resource Usage and RateCard APIs can help you accurately predict and m
 
 ## Best practice: Implement serverless technologies
 
-VM workloads are often migrated "as-is" to avoid downtime. Often, VMs can host tasks that are intermittent, run over a short period, or alternately, take up many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
+VM workloads are often migrated "as-is" to avoid downtime. Often, VMs can host tasks that are intermittent, run over a short period, or take up many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're absorbing VM and disk storage costs.
 
 After migrating and thoroughly reviewing these types of tasks, you might consider migrating them to serverless technologies like Azure Functions or Azure Batch jobs. These solutions can cut costs, and you'd no longer need to manage and maintain the VMs.
 
@@ -330,5 +330,5 @@ After migrating and thoroughly reviewing these types of tasks, you might conside
 
 Review other best practices:
 
-- [Best practices for security and management](./migrate-best-practices-security-management.md) after migration.
-- [Best practices for networking](./migrate-best-practices-networking.md) after migration.
+- Explore [best practices for security and management](./migrate-best-practices-security-management.md) after migrating workloads to Azure.
+- Explore [best practices for networking](./migrate-best-practices-networking.md) after migrating workloads to Azure.

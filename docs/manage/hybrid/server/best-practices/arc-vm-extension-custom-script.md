@@ -36,7 +36,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-2. As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the following screenshots there is a GCP server has been connected with Azure Arc and it is visible as a resource in Azure.
+2. As mentioned previously, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. The following screenshots show a GCP server that's been connected with Azure Arc and is visible as a resource in Azure.
 
     ![A screenshot of a resource group from an Azure Arc enabled server.](./media/arc-vm-extension-custom-script/resource-group.png)
 
@@ -87,7 +87,7 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
 
 2. Provide the following information to match your environment configuration:
 
-    - The VM name as it is registered in Azure Arc.
+    - The VM name as registered in Azure Arc.
 
     ![A screenshot of a machine name from an Azure Arc enabled server.](./media/arc-vm-extension-custom-script/machine-name.png)
 
@@ -104,13 +104,13 @@ To demonstrate the custom script extension, use the below Linux and Windows scri
     - Windows:
 
          ```powershell
-         powershell -ExecutionPolicy Unrestricted -File custom-script-windows.ps1
+         powershell -ExecutionPolicy Unrestricted -File custom_script_windows.ps1
          ```
 
     - Linux:
 
          ```bash
-         ./custom-script-linux.sh
+         ./custom_script_linux.sh
          ```
 
 4. To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/extensions/arm) and run the following command with the templates that match your operating system:
@@ -135,7 +135,7 @@ Another way to verify successful custom script execution is by connecting to the
 
   ![A screenshot of an updated daily message.](./media/arc-vm-extension-custom-script/daily-message.png)
 
-- For the Windows VM, use RDP to connect the VM and verify that the additional software has been installed: Microsoft Edge, 7-Zip, and Visual Studio Code.
+- Connect to the Windows VM via RDP and verify that the additional software has been installed: Microsoft Edge, 7-zip, and Visual Studio Code.
 
   ![A screenshot of additional software installed.](./media/arc-vm-extension-custom-script/additional-software.png)
 

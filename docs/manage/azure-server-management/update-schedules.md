@@ -1,5 +1,5 @@
 ---
-title: "Create update schedules"
+title: Create update schedules
 description: Use the Cloud Adoption Framework for Azure to learn how to manage update schedules with the Azure portal or the new PowerShell cmdlet modules.
 author: BrianBlanchard
 ms.author: brblanch

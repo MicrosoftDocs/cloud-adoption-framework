@@ -40,4 +40,4 @@ The following are additional tools that may be required to accomplish specific d
 | **Manage configuration drift**     | Not efficiently | Not efficiently | Yes  | Yes  | No | Yes, during replication |
 | **Create an automated pipeline to deploy code and configure assets (DevOps)**     | No | No | No | Yes | No | No |
 
-Aside from the Azure native tools mentioned above, it is common for customers to use third-party tools to facilitate deployment acceleration and DevOps deployments.
+Aside from the Azure native tools mentioned above, it's common for customers to use third-party tools to facilitate deployment acceleration and DevOps deployments.

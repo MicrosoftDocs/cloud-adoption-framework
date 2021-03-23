@@ -20,7 +20,7 @@ At the top level, fiscal conversations consist of three basic concepts:
 
 The remainder of this article explains these fiscal outcomes in the context of a cloud transformation.
 
-[TransAlta](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers) increased data insights, benefiting from cost avoidance from an initial large-scale capital cost, and lowered operational cost on a month-by-month basis.
+[Sentara Healthcare](https://customers.microsoft.com/story/769786-sentara-healthcare-health-provider-azure) moved its data to Azure, providing members a better experience with mobile apps, faster access for clinicians to critical data for faster diagnoses, reduced costs for the IT team, and improved patient care with a more agile, change-ready organization.
 
 > [!NOTE]
 > The following examples are hypothetical and should not be considered a guarantee of returns when adopting any cloud strategy.

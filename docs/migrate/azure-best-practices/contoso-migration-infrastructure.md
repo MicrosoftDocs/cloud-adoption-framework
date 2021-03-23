@@ -26,12 +26,12 @@ Before Contoso can migrate to Azure, it's critical to prepare an Azure infrastru
 
 > [!div class="checklist"]
 >
-> - **Step 1: Azure subscriptions.** How will it purchase Azure and interact with the Azure platform and services?
-> - **Step 2: Hybrid identity.** How will it manage and control access to on-premises and Azure resources after migration? How does it extend or move identity management to the cloud?
-> - **Step 3: Disaster recovery and resilience.** How will it ensure that its applications and infrastructure are resilient if outages and disasters occur?
-> - **Step 4: Network.** How should it design a network infrastructure and establish connectivity between its on-premises datacenter and Azure?
-> - **Step 5: Security.** How will it secure the hybrid deployment?
-> - **Step 6: Governance.** How will it keep the deployment aligned with security and governance requirements?
+> - **Step 1: Azure subscriptions.** How will IT purchase Azure and interact with the Azure platform and services?
+> - **Step 2: Hybrid identity.** How will IT manage and control access to on-premises and Azure resources after migration? How does IT extend or move identity management to the cloud?
+> - **Step 3: Disaster recovery and resilience.** How will IT ensure that its applications and infrastructure are resilient if outages and disasters occur?
+> - **Step 4: Network.** How should IT design a network infrastructure and establish connectivity between its on-premises datacenter and Azure?
+> - **Step 5: Security.** How will IT secure the hybrid deployment?
+> - **Step 6: Governance.** How will IT keep the deployment aligned with security and governance requirements?
 
 ## Before you start
 
@@ -63,11 +63,11 @@ Contoso needs to figure out how to buy Azure, how to manage subscriptions, and h
 
 ### Buy Azure
 
-Contoso is enrolling in an [Enterprise Agreement](https://azure.microsoft.com/overview/sales-number/). This agreement entails an upfront monetary commitment to Azure. It entitles Contoso to earn benefits like flexible billing options and optimized pricing.
+Contoso is enrolling in an [Enterprise Agreement](https://azure.microsoft.com/overview/sales-number/). This agreement entails an upfront monetary commitment to Azure, which entitles Contoso to earn benefits like flexible billing options and optimized pricing.
 
 Here are the details:
 
-- Contoso estimated what its yearly Azure spend will be. When it signed the agreement, Contoso paid for the first year in full.
+- Contoso estimated what its yearly Azure spend will be. When Contoso signed the agreement, it paid for the first year in full.
 - Contoso needs to use all commitments before the year is over or lose the value for those dollars.
 - If for some reason Contoso exceeds its commitment and spends more, Microsoft will invoice for the difference.
 - Any cost incurred above the commitment will be at the same rates as those in the Contoso contract. There are no penalties for going over.
