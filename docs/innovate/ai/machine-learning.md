@@ -3,11 +3,11 @@ title: Machine Learning solutions
 description: These machine learning checklists and resources can help you plan your machine learning AI application development and deployment.
 author: v-hanki
 ms.author: janet
-ms.date: 03/22/2021 # original date was 7/14/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: seo-caf-innovate
+ms.custom: think-tank, seo-caf-innovate
 keywords: machine learning solutions, machine learning checklist, machine learning ai
 ---
 
