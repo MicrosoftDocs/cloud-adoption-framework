@@ -39,54 +39,397 @@ Azure policies in Enterprise Scale Analytics And AI were developed with the foll
 
 Following are the Azure policies associated with Enterprise Scale Analytics and AI:
 
-### All
+### All Services
 
-|Policy Name  |Purpose  |Description  |
+|Policy  |Purpose  |Description  |
 |---------|---------|---------|
 | Deny-PublicIp|Network Isolation|Restrict deployment of public IPs.|
 |Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the aad tenant and subscription.|
-|Row4     |         |         |
-|Row5     |         |         |
+|Deploy-DNSZoneGroup-{Service}-PrivateEndpoint|Network Isolation|Deploys the configurations of a Private DNS Zone Group by a parameter for service's private endpoint. Used to enforce the configuration to a single Private DNS Zone.|
+|DiagnosticSettings-{Service}-LogAnalytics|Logging|Send diagnostic settings for cosmos db to log analytics workspace.|
 
 ### Storage
 
-|Policy Name  |Purpose  |Description  |
+|Policy  |Purpose  |Description  |
 |---------|---------|---------|
-|Append-Storage-Encryption | Encryption |Enforce encryption for storage accounts. |
-|Row2     |         |         |
-|Row3     |         |         |
-|Row4     |         |         |
-|Row5     |         |         |
+|Append-Storage-Encryption|Encryption|Enforce encryption for storage accounts.|
+|Deny-Storage-AllowBlobPublicAccess|Network Isolation|Enforces no public access to all blobs or containers in the storage account.|
+|Deny-Storage-ContainerDeleteRetentionPolicy|-|Enforce container delete retention policies larger than seven days for storage account.|
+|Deny-Storage-CorsRules|Network Isolation|Deny cors rules for storage account.|
+|Deny-Storage-InfrastructureEncryption|Encryption|Enforce infrastructure (double) encryption for storage accounts.|
+|Deny-Storage-MinimumTlsVersion|Encryption|Enforces minimum tls version 1.2 for storage account.|
+|Deny-Storage-NetworkAclsBypass|Network Isolation|Enforces network bypass to none for storage account.|
+|Deny-Storage-NetworkAclsIpRules|Network Isolation|Enforces network ip rules for storage account.|
+|Deny-Storage-NetworkAclsVirtualNetworkRules|Network Isolation|Denies virtual network rules for storage account.|
+|Deny-Storage-Sku|SKU/Type|Enforces storage account SKUs.|
+|Deny-Storage-SupportsHttpsTrafficOnly|Encryption|Enforces https traffic for storage account.|
+|Deploy-Storage-BlobServices|SKU/Type|Deploy blob services default settings for storage account.|
+|Deny-Storage-RoutingPreference|Network Isolation||
+|Deny-Storage-Kind|SKU/Type||
+|Deny-Storage-NetworkAclsDefaultAction|Network Isolation||
 
 ### Key Vault
-### Data Factory
-### Synapse
 
-### Purview
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+|Audit-KeyVault-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for key vault.|
+|Deny-KeyVault-NetworkAclsBypass|Network Isolation|Enforces bypass network level rules for key vault.|
+|Deny-KeyVault-NetworkAclsDefaultAction|Network Isolation|Enforces default network acl level action for key vault.|
+|Deny-KeyVault-NetworkAclsIpRules|Network Isolation|Enforces network ip rules for key vault.|
+|Deny-KeyVault-NetworkAclsVirtualNetworkRules|Network Isolation|Denies virtual network rules for key vault.|
+|Deny-KeyVault-PurgeProtection|-|Enforces purge protection for key vault.|
+|Deny-KeyVault-SoftDelete|-|Enforces soft delete with minimum number of retention days for key vault.|
+|Deny-KeyVault-TenantId|-|Enforce tenant id for key vault.|
+
+### Azure Data Factory
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+|Append-DataFactory-IdentityType|Authentication|Enforces use of system assigned identity for data factory.|
+|Deny-DataFactory-ApiVersion|SKU/Type|Denies old API version for data factory V1.|
+|Deny-DataFactory-IntegrationRuntimeManagedVirtualNetwork|Network Isolation|Denies Integration Runtimes that are not connected to the Managed Virtual Network.|
+|Deny-DataFactory-LinkedServicesConnectionStringType|Authentication|Denies non Key Vault stored screts for linked services.|
+|Deny-DataFactory-ManagedPrivateEndpoints|Network Isolation|Denies external private endpoints for linked services.|
+|Deny-DataFactory-PublicNetworkAccess|Network Isolation|Denies public access to data factory.|
+|Deploy-DataFactory-ManagedVirtualNetwork|Network Isolation|Deploy managed virtualnetwork for data factory.|
+|Deploy-SelfHostedIntegrationRuntime-Sharing|-|Share self-hosted integration runtime hosted in the Data Hub with Data Factories in teh Data Nodes.|
+
+### Azure Synapse Analytics
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+|Append-Synapse-LinkedAccessCheckOnTargetResource|-|Enforce LinkedAccessCheckOnTargetResource in managed vnet settings when Synapse Workspace is created.|
+|Append-Synapse-Purview|-|Enforce connection between central purview instance and Synapse Workspace.|
+|Append-SynapseSpark-ComputeIsolation|Network Isolation|When a Synapse Spark Pool is created without compute isolation then this will add it.|
+|Append-SynapseSpark-DefaultSparkLogFolder|Logging|When a Synapse Spark Pool is created without logging then this will add it.|
+|Append-SynapseSpark-SessionLevelPackages|-|When a Synapse Spark Pool is created without session level packages then this will add it.|
+|Audit-Synapse-PrivateEndpointId|-|Audit public endpoints that are created in other subscriptions for synapse.|
+|Deny-Synapse-AllowedAadTenantIdsForLinking|Network Isolation||
+|Deny-Synapse-Firewall|Network Isolation|Setup firewall of Synapse.|
+|Deny-Synapse-ManagedVirtualNetwork|Network Isolation|When a Synapse Workspace is created without managed virtual network then this will add it.|
+|Deny-Synapse-PreventDataExfiltration|Network Isolation|Enforced prevention of data exfiltration for Synapse managed virtual network.|
+|Deny-SynapsePrivateLinkHub|Network Isolation|Denies Synapse Private Link Hub.|
+|Deny-SynapseSpark-AutoPause|SKU/Type|Enforces autopause for Synapse Spark Pools.|
+|Deny-SynapseSpark-AutoScale|SKU/Type|Enforces autoscale for Synapse Spark Pools.|
+|Deny-SynapseSql-Sku|SKU/Type|Denies certain Synapse Sql Pool Sku's.|
+|Deploy-SynapseSql-AuditingSettings|Logging|Send auditing logs for Synapse SQL pools to log analytics.|
+|Deploy-SynapseSql-MetadataSynch|-|Setup metadata sync for Synapse sql pools.|
+|Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse sql pool security alert policy.|
+|Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
+|Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
+
+### Azure Purview
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+|Deny-Purview|SKU/Type|Restrict deployment of Purview accounts to avoid proliferation.|
+
 ### Databricks
-### Log Analytics
-### IoTHub
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+|Append-Databricks-PublicIp|Network Isolation|Enforces no public access on Databricks workspaces.|
+|Deny-Databricks-Sku|SKU/Type|Deny non-premium Databricks sku.|
+|Deny-Databricks-VirtualNetwork|Network Isolation|Deny non-virtual network deployment for databricks.|
+
+Additional policies that are applied through Databricks cluster policies:
+
+- Restrict spark version
+- Restrict cluster size and VM types
+- Enforce Cost Tagging
+- Enforce Autoscale
+- Enforce AutoPause
+- Restrict DBUs per hour
+- Deny public SSH
+- Cluster credential passthrough enabled
+- Enable process isolation
+- Enforce spark monitoring
+- Enforce cluster logs
+- Allow only SQL, python
+- Deny additional setup scripts
+
+### IoT Hub
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+
 ### EventHub
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Stream Analytics
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Data Explorer
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Cosmos DB
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### ACR
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Cognitive Services
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Machine Learning
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### SQL Managed Instance
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### SQL
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### MariaDB
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### MySQL
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Postgres
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Search
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### DNS
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### NSG
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Batch
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Redis Cache
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Container Instance
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### Firewall
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### HDInsight
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
 ### PrivateLinkServicesForPowerBI
+
+|Policy  |Purpose  |Description  |
+|---------|---------|---------|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
 
 ## Cost Management
 
