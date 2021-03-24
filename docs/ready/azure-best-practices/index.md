@@ -54,6 +54,10 @@ Design your identity and access control infrastructure to improve the security a
 - [Database security best practices](/azure/security/azure-database-security-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for database security on the Azure platform.
 - [Choose the right data store](/azure/architecture/guide/technology-choices/data-store-overview). Select the right data store to meet your requirements. Hundreds of implementation choices are available among SQL and NoSQL databases. Data stores are often categorized by how they structure data and the types of operations they support. This article describes several common storage models.
 
+## AI + Machine Learning
+
+- [Setting up Azure Machine Learning for Enterprise scale](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization. 
+ 
 ## Cost management
 
 - [Tracking costs across business units, environments, and projects](./track-costs.md). Learn best practices for creating proper cost-tracking mechanisms.
