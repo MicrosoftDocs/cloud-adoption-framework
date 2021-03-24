@@ -34,20 +34,16 @@ Conceptual reference architecture that demonstrates design areas and best practi
 
 ![Construction Set Architecture](media\Overview_Architecture.png)
 
-## Implementation
+## Implementation with ARM Templates for Remote Desktop Services
 
-SAP Deployment Automation Framework is a collection of processes and a flexible workflow to automate the deployment of SAP on Azure. 
+ARM WVD Templates is a collection of Infrastructure as Code ARM Tempplate to deploy a WVD enviorment on Azure. 
 
-This Github repository contains code that can be used to automatically deploy SAP landscapes in the Azure Cloud.
-
-The templates are split into:
-Terraform modules which deploy the infrastructure components (such as VMs, network, storage) in Azure.
-Ansible playbooks which run different roles to configure and VMs and install SAP HANA and required applications on the already deployed infrastructure.
+This Github repository contains code that can be used to automatically deploy WVD enviorments in the Azure Cloud.
 
 Github repo
-[Automated SAP Deployments in Azure Cloud](https://github.com/Azure/sap-hana/tree/beta/v2.3) 
+[Automate WVD Deployments in Azure Cloud](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) 
 
 ![Reference Implementation Architecture](media\Overview_Automation.png)
 
 ## Next steps
-Review the SAP on Azure Construction Set critical design areas to make complete considerations and recommendations for your SAP on Azure Construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
+Review the Windows Virtual Desktop Construction Set critical design areas to make complete considerations and recommendations for your Windows Virtual Desktop Construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
