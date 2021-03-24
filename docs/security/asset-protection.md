@@ -25,7 +25,7 @@ TODO: What processes are required to protect assets? What decisions? Are the fol
 
 Organizations should treat the unauthorized access or theft of data among the highest impact risks to guard against.
 The reputational - and often financial - impact of losing control of sensitive data can significantly affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organization.
-Organisations need to put security measures in place to protect data at rest, and in transit while at the same time being able to remain operational should the organization ever have to deal with an issue. Resiliency is a key piece to asset protection as well. 
+Organisations need to put security measures in place to protect data at rest, and in transit while at the same time being able to remain operational should the organization ever have to deal with an issue. Resiliency is a key piece to asset protection as well.
 
 ### At rest
 
