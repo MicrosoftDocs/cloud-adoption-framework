@@ -30,7 +30,7 @@ The online shop team is innovative, so it begins modernizing the application, bu
 
 ### Preferred outcome: Establish security and compliance guardrails
 
-Before you shift workloads to the cloud, put security and compliance guardrails in place. These guardrails make sure that workloads follow security and compliance requirements. Have the cloud governance and cloud security teams deliver the guardrails within an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/). Check the guardrails with IT, especially for hybrid workloads. See [Cloud Adoption Framework enterprise-scale landing zone architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) for help with defining guardrails that support workload teams, so that they work in a fast, consistent, compliant, and secure manner.
+Before you shift workloads to the cloud, put security and compliance guardrails in place. These guardrails make sure that workloads follow security and compliance requirements. Have the cloud governance and cloud security teams deliver the guardrails within an [Azure landing zone](../ready/landing-zone/index.md). Check the guardrails with IT, especially for hybrid workloads. See [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) for help with defining guardrails that support workload teams, so that they work in a fast, consistent, compliant, and secure manner.
 
 ## Antipattern: Migrate, modernize, or innovate without an assessment
 
@@ -42,11 +42,11 @@ A team member plans to migrate applications to the cloud to reduce the company's
 
 ### Preferred outcome: Assess infrastructure before migrating or modernizing
 
-For a large-scale migration or modernization project, perform an infrastructure assessment before migration starts. This assessment helps you identify dependencies and compatibility issues. See [Azure migration guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/) for detailed information that the [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/overview) provides on [migration best practices](/azure/cloud-adoption-framework/migrate/azure-best-practices/).
+For a large-scale migration or modernization project, perform an infrastructure assessment before migration starts. This assessment helps you identify dependencies and compatibility issues. See [Azure migration guide](../migrate/azure-migration-guide/index.md) for detailed information that the [Microsoft Cloud Adoption Framework for Azure](../overview.md) provides on [migration best practices](../migrate/azure-best-practices/index.md).
 
-In modernization projects, use additional application assessments to identify coding antipatterns, compatibility issues, and technical debt. For more information about modernization aspects, see [Overview of application migration examples for Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-overview).
+In modernization projects, use additional application assessments to identify coding antipatterns, compatibility issues, and technical debt. For more information about modernization aspects, see [Overview of application migration examples for Azure](../migrate/azure-best-practices/contoso-migration-overview.md).
 
-For innovation projects, see [Azure innovative solutions guide overview](/azure/cloud-adoption-framework/innovate/innovation-guide/) for help with identifying the correct way to plan and develop an innovative cloud solution.
+For innovation projects, see [Azure innovative solutions guide overview](../innovate/innovation-guide/index.md) for help with identifying the correct way to plan and develop an innovative cloud solution.
 
 For mission-critical workloads or workloads which require architectural change, use the [Well-Architected Framework](/azure/architecture/framework) or [architectural design sessions (ADS)](/azure/architecture/serverless-quest/ads) to help design, build, and deploy a high-quality, robust architecture that scales within an enterprise. Use ADS whiteboards to discover, envision, and plan the solution.
 
@@ -76,6 +76,6 @@ Separate various duties and plan for a different environment before you migrate 
 
 ## Next steps
 
-- [Azure migration guide overview](/azure/cloud-adoption-framework/migrate/azure-migration-guide/)
-- [Azure cloud migration best practices checklist](/azure/cloud-adoption-framework/migrate/azure-best-practices/)
+- [Azure migration guide overview](../migrate/azure-migration-guide/index.md)
+- [Azure cloud migration best practices checklist](../migrate/azure-best-practices/index.md)
 - [Management group and subscription organization](../ready/enterprise-scale/management-group-and-subscription-organization.md)

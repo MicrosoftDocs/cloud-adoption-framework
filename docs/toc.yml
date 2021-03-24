@@ -9,9 +9,9 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  - name: Adoption Journeys
+  - name: Adoption journeys
     items:
-    - name: Get Started
+    - name: Get started
       items:
       - name: Overview
         href: get-started/index.md
@@ -72,6 +72,8 @@ items:
         href: scenarios/hybrid/index.md
       - name: Modern containers
         href: scenarios/aks/index.md
+      - name: SAP
+        href: scenarios/sap/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
@@ -1532,6 +1534,8 @@ items:
           href: manage/monitor/index.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
+        - name: Observability
+          href: manage/monitor/observability.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Alerting
