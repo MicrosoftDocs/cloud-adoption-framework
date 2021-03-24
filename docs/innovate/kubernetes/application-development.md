@@ -28,9 +28,7 @@ As you get started, the checklist and resources below will help you plan your ap
 
 <!-- docutune:casing "AAD Pod Identity" -->
 
-> [!div class="tdCol2BreakAll"]
->
-Checklist
+**Checklist:**
 
 - **Prepare your development environment.** Configure your environment with the tools you need to create containers and set up your development workflow.
 
@@ -82,9 +80,7 @@ As you prepare the application for production, you should implement a minimum se
 
 <!-- -->
 
-> [!div class="tdCol2BreakAll"]
->
-Checklist
+**Checklist:**
 
 - **Configure readiness and liveness health checks.** Kubernetes uses readiness and liveness checks to know when to your application is ready to receive traffic and when it needs to be restarted. Without defining such checks, Kubernetes will not be able to determine whether your application is up and running. To learn more, see [Liveness and readiness checks](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
 
@@ -120,9 +116,7 @@ Now that the application is in production, how can you optimize your workflow an
 
 <!-- docutune:casing Consul -->
 
-> [!div class="tdCol2BreakAll"]
-
-Checklist
+**Checklist:**
 
 - **Deploy an API gateway.** An API gateway serves as an entry point to microservices, decouples clients from your microservices, adds another layer of security, and decreases the complexity of your microservices by removing the burden of handling cross-cutting concerns. For more information, see [Use Azure API Management with microservices deployed in Azure Kubernetes Service](/azure/api-management/api-management-kubernetes).
 
