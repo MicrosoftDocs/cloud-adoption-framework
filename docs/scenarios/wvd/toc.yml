@@ -35,8 +35,8 @@ items:
 
   - name: Architectures - TBD
     items:
-    - name: Example
-      href: /azure
+    - name: Windows Virtual Desktop Architecture 
+      href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop.md
 
   - name: Best practices - TBD
     items:
@@ -67,5 +67,5 @@ items:
 
   - name: Learn modules - TBD
     items:
-    - name: Example
-      href: /azure
+    - name: Deliver Remote desktops and apps from Azure with Windows Virtual Desktop
+      href: /learn/paths/m365-wvd
