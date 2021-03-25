@@ -1,6 +1,6 @@
 ---
-title: "Policies and Cost Management"
-description: Policies and Cost Management in Enterprise Scale Analytics and AI
+title: "Policies"
+description: Policies in Enterprise Scale Analytics and AI
 author: abdale
 ms.author: hamoodaleem
 ms.date: 03/19/2021
@@ -39,44 +39,40 @@ Azure policies in Enterprise Scale Analytics And AI were developed with the foll
 
 [Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Enterprise Scale Analytics and AI comes with a set of pre-created policies to help you implement the required guard rails in your environment.
 
-> [!NOTE]
-> [note on policy assignment procedures]
-
 Enterprise Scale Analytics and AI contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more** that apply to the following services and areas:
 
 - [All Services](#all-services)
 - [Storage](#storage)
 - [Key Vault](#key-vault)
 - [Azure Data Factory](#azure-data-factory)
-- Azure Synapse Analytics
-- Purview
-- Databricks
-- Log Analytics
-- IoTHub
-- EventHub
-- StreamAnalytics
-- Data Explorer
-- Cosmos
-- ACR
-- Cognitive Services
-- Machine Learning
-- SQL Managed Instance
-- SQL
-- MariaDB
-- MySQL
-- PostgreSQL
-- Search
-- DNS
-- NSG
-- Batch
-- Redis Cache
-- Container Instance
-- Firewall
-- HDInsight
-- PrivateLinkServicesForPowerBI
+- [Azure Synapse Analytics](#azure-synapse-analytics)
+- [Azure Purview](#azure-purview)
+- [Azure Databricks](#azure-databricks)
+- [Azure IoT Hub](#azure-iot-hub)
+- [Azure Event Hubs](#azure-event-hubs)
+- [Azure Stream Analytics](#azure-stream-analytics)
+- [Azure Data Explorer](#azure-data-explorer)
+- [Azure Cosmos DB](#azure-cosmos-db)
+- [Azure Container Registry](#azure-container-registry)
+- [Azure Cognitive Services](#azure-cognitive-services)
+- [Azure Machine Learning](#azure-machine-learning)
+- [Azure SQL Managed Instance](#azure-sql-managed-instance)
+- [Azure SQL](#azure-sql)
+- [Azure Database for MariaDB](#azure-database-for-mariadb)
+- [Azure Database for MySQL](#azure-database-for-mysql)
+- [Azure Database for PostgreSQL](#azure-database-for-postgresql)
+- [Azure Cognitive Search](#azure-cognitive-search)
+- [Azure DNS](#azure-dns)
+- [Network Security Group](#network-security-group)
+- [Batch](#batch)
+- [Azure Cache for Redis](#azure-cache-for-redis)
+- [Container Instances](#container-instances)
+- [Azure Firewall](#azure-firewall)
+- [HDInsight](#hdinsight)
+- [Power BI](#power-bi)
 
 > [!NOTE]
-> The policies listed below are available in our Github repository.
+> The policies provided below are not applied by default during deployment. They should be viewed as guidance only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.
 
 ### All Services
 
@@ -400,32 +396,3 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
 |Deny-PrivateLinkServicesForPowerBI|Resource Management|Restrict deployment of private link services for Power BI to avoid proliferation.|
-
-## Cost Management
-
-Cost transparency across a technical estate is a critical management challenge faced by every large enterprise organization. Different principles should be followed to reduce, optimize, and allocate cost between organizations.
-
-A well-planned organizational structure for your Azure billing and resource hierarchies helps to give you a good understanding and control over costs as you create your Enterprise Scale Analytics and AI solution.
-
-We recommend checking that your enterprise is aligned to the Cloud Adoption Framework methodology for [Managing Cloud Costs](https://docs.microsoft.com/azure/cloud-adoption-framework/get-started/manage-costs).
-
-You should use Azure Policy to set and track ARM tagging policies. For example, we could require that all of Azure resources are created with the following tags:
-
-* Finance codes - CostCenter tag, etc.
-* Application context - AppService tag, etc.
-* Deployment context - Environment tag, etc.
-* Who is accountable - BusinessOwner tag, etc.
-
-![Example of Tagging in Azure](./images/azure_tagging.png)
-
-*Figure 2: Example of Tagging in Azure*
-
-Resource tags should be used for cost categorization and resource grouping. This model allows a chargeback mechanism for workloads that share a Data Landing Zone or for workloads that span across Data Landing Zones. Resource tags should be enforced and appended through Azure Policy to query and horizontally navigate across the management group hierarchy.
-
-Azure cost management should be used at the first level of aggregation and should be made available to data landing zone owners.
-
->[!TIP]
->Azure Advisor should be used to implement cost optimization recommendations.
-
->[!NOTE]
->Regulatory and compliance requirements definitions and Azure RBAC role assignments.
