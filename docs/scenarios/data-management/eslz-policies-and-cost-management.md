@@ -44,11 +44,11 @@ Azure policies in Enterprise Scale Analytics And AI were developed with the foll
 
 Enterprise Scale Analytics and AI contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more** that apply to the following services and areas:
 
-- All
-- Storage
-- KV
-- Data Factory
-- Synapse
+- [All Services](#all-services)
+- [Storage](#storage)
+- [Key Vault](#key-vault)
+- [Azure Data Factory](#azure-data-factory)
+- Azure Synapse Analytics
 - Purview
 - Databricks
 - Log Analytics
@@ -261,196 +261,145 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Append-MachineLearning-PublicAccessWhenBehindVnet|Network Isolation|Deny public access behind vnet for machine learning workspaces.|
+|Audit-MachineLearning-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for machine learning.|
+|Deny-MachineLearning-HbiWorkspace|Network Isolation|Enforce high business impact machine learning workspaces across the environment.|
+|Deny-MachineLearningAks|Resource Management|Deny AKS creation (not attaching) in machine learning.|
+|Deny-MachineLearningCompute-SubnetId|Network Isolation|Deny public IP for machine learning compute clusters and instances.|
+|Deny-MachineLearningCompute-VmSize|Resource Management|Limit allowed vm sizes for machine learning compute clusters and instances.|
+|Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess|Network Isolation|Deny public access of clusters via SSH.|
+|Deny-MachineLearningComputeCluster-Scale|Resource Management|Enforce scale settings for machine learning compute clusters.|
 
-### SQL Managed Instance
-
-|Policy Name  |Policy Area  |Description  |
-|---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-
-### SQL
+### Azure SQL Managed Instance
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Append-SqlManagedInstance-MinimalTlsVersion|Encryption|Enforces minimal TLS version for sql managed instance servers.|
+|Deny-SqlManagedInstance-PublicDataEndpoint|Network Isolation|Denies public data endpoint for sql managed instances.|
+|Deny-SqlManagedInstance-Sku|Resource Management|-|
+|Deny-SqlManagedInstance-SubnetId|Network Isolation|Enforces deployments to subnets of sql managed instances.|
+|Deploy-SqlManagedInstance-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL Managed Instance.|
+|Deploy-SqlManagedInstance-SecurityAlertPolicies|Logging|Deploy SQL Managed Instance security alert policies.|
+|Deploy-SqlManagedInstance-VulnerabilityAssessment|Logging|Deploy SQL Managed Instance vulnerability assessments.|
 
-### MariaDB
-
-|Policy Name  |Policy Area  |Description  |
-|---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-
-### MySQL
+### Azure SQL
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Append-Sql-MinimalTlsVersion|Encryption|Enforces minimal TLS version for sql servers.|
+|Audit-Sql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure SQL.|
+|Deny-Sql-PublicNetworkAccess|Network Isolation|Denies public network access for sql servers.|
+|Deny-Sql-StorageAccountType|Resilience|Enforces geo-redundant database backup.|
+|Deploy-Sql-AuditingSettings|Logging|Deploy SQL auditing settings.|
+|Deploy-Sql-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL server.|
+|Deploy-Sql-SecurityAlertPolicies|Logging|Deploy SQL security alert policies.|
+|Deploy-Sql-TransparentDataEncryption|Encryption|Deploy SQL transparent data encryption.|
+|Deploy-Sql-VulnerabilityAssessment|Logging|Deploy SQL vulnerability assessments.|
+|Deploy-SqlDw-AuditingSettings|Logging|Deploy SQL DW auditing settings.|
 
-### Postgres
-
-|Policy Name  |Policy Area  |Description  |
-|---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-
-### Search
+### Azure Database for MariaDB
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Append-MariaDb-MinimalTlsVersion|Encryption|Enforces minimal TLS version for MariaDB servers.|
+|Audit-MariaDb-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for MariaDB.|
+|Deny-MariaDb-PublicNetworkAccess|Network Isolation|Denies public network access for my MariaDB servers.|
+|Deny-MariaDb-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
+|Deploy-MariaDb-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for MariaDB|
 
-### DNS
+### Azure Database for MySQL
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Append-MySQL-MinimalTlsVersion|Encryption|Enforces minimal TLS version for MySQL servers.|
+|Audit-MySql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for MySQL.|
+|Deny-MySQL-InfrastructureEncryption|Encryption|Enforces infrastructure encryption for MySQL servers.|
+|Deny-MySQL-PublicNetworkAccess|Network Isolation|Denies public network access for MySQL servers.|
+|Deny-MySql-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
+|Deploy-MySql-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for MySQL.|
 
-### NSG
+### Azure Database for PostgreSQL
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Append-PostgreSQL-MinimalTlsVersion|Encryption|Enforces minimal TLS version for PostgreSQL servers.|
+|Audit-PostgreSql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for PostgreSQL.|
+|Deny-PostgreSQL-InfrastructureEncryption|Encryption|Enforces infrastructure encryption for PostgreSQL servers.|
+|Deny-PostgreSQL-PublicNetworkAccess|Network Isolation|Denies public network access for PostgreSQL servers.|
+|Deny-PostgreSql-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
+|Deploy-PostgreSql-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for PostgreSQL.|
+
+### Azure Cognitive Search
+
+|Policy Name  |Policy Area  |Description  |
+|---------|---------|---------|
+|Append-Search-IdentityType|Authentication|Enforces use of system assigned identity for Cognitive Search.|
+|Audit-Search-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Cognitive Search.|
+|Deny-Search-PublicNetworkAccess|Network Isolation|Denies public network access for Cognitive Search.|
+|Deny-Search-Sku|Resource Management|Enforces Cognitive Search SKUs.|
+
+### Azure DNS
+
+|Policy Name  |Policy Area  |Description  |
+|---------|---------|---------|
+|Deny-PrivateDnsZones|Resource Management|Restrict deployment of private DNS zones to avoid proliferation.|
+
+### Network Security Group
+
+|Policy Name  |Policy Area  |Description  |
+|---------|---------|---------|
+|Deploy-Nsg-FlowLogs|Logging|Deploy NSG flow logs and traffic analytics.|
 
 ### Batch
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Deny-Batch-InboundNatPools|Network Isolation|Denies inbound NAT pools for batch account VM pools.|
+|Deny-Batch-NetworkConfiguration|Network Isolation|Denies public IP addresses for batch account VM pools.|
+|Deny-Batch-PublicNetworkAccess|Network Isolation|Denies public network access for batch accounts.|
+|Deny-Batch-Scale|Resource Management|Denies certain scale configurations for batch account VM pools.|
+|Deny-Batch-VmSize|Resource Management|Denies certain VM sizes for batch account VM pools.|
 
-### Redis Cache
+### Azure Cache for Redis
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Deny-Cache-Enterprise|Resource Management|Denies Redis Cache Enterprise.|
+|Deny-Cache-FirewallRules|Network Isolation|Denies firewall rules for Redis Cache.|
+|Deny-Cache-MinimumTlsVersion|Encryption|Enforces minimum TLS version for Redis Cache.|
+|Deny-Cache-NonSslPort|Network Isolation|Enforces turning off the non-SSL port for Redis Cache.|
+|Deny-Cache-PublicNetworkAccess|Network Isolation|Enforces no public network access for Redis Cache.|
+|Deny-Cache-Sku|Resource Management|Enforces certain Skus for Redis Cache.|
+|Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies vnet injection for Redis Cache.|
 
-### Container Instance
-
-|Policy Name  |Policy Area  |Description  |
-|---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-
-### Firewall
+### Container Instances
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Deny-ContainerInstance-PublicIpAddress|Network Isolation|Denies public Container Instances created from Azure Machine Learning.|
+
+### Azure Firewall
+
+|Policy Name  |Policy Area  |Description  |
+|---------|---------|---------|
+|Deny-Firewall|Resource Management|Restrict deployment of Azure Firewall to avoid proliferation.|
 
 ### HDInsight
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Deny-HdInsight-EncryptionAtHost|Encryption|Enforce encryption at host for HDInsight clusters.|
+|Deny-HdInsight-EncryptionInTransit|Encyrption|Enforces encryption in transit for HDInsight clusters.|
+|Deny-HdInsight-MinimalTlsVersion|Encryption|Enforces minimal TLS version for HDInsight clusters.|
+|Deny-HdInsight-NetworkProperties|Network Isolation|Enforces private link enablement for HDInsight clusters.|
+|Deny-HdInsight-Sku||Enforces certain SKU's for HDInsight clusters.|
+|Deny-HdInsight-VirtualNetworkProfile|Network Isolation|Enforces virtual network injection for HDInsight clusters.|
 
-### PrivateLinkServicesForPowerBI
+### Power BI
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|Deny-PrivateLinkServicesForPowerBI|Resource Management|Restrict deployment of private link services for Power BI to avoid proliferation.|
 
 ## Cost Management
 
