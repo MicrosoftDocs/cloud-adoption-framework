@@ -19,50 +19,17 @@ Running infrastructure and services in a public cloud introduces many security b
 The value of protecting corporate assets lies in the information they store - often sensitive data related to employees or products.
 In the same way as companies protect their physical buildings with doors and ID badge checks, or sensitive paper records with locked filing cabinets, the virtual assets owned by an organization need to be protected to prevent unauthorized access.
 
-TODO: What processes are required to protect assets? What decisions? Are the following more of a best practices list? Could we summarize all of those key points within a set of processes?
+## Protection and secure management
 
-## Securing Data
+### Securing identity
 
-Organizations should treat the unauthorized access or theft of data among the highest impact risks to guard against.
-The reputational - and often financial - impact of losing control of sensitive data can significantly affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organization.
-Organisations need to put security measures in place to protect data at rest, and in transit while at the same time being able to remain operational should the organization ever have to deal with an issue. Resiliency is a key piece to asset protection as well. 
+Protecting identity is a key consideration when planning an organization's approach to securing assets. Identity is one the most common routes for attackers to gain unauthorized access to applications and infrastructure.This has become so important that Microsoft often calls this the "new control plane".
 
-### At rest
+[Guidance is provided here for areas of consideration related to protecting and controlling access.](./security/access-control.md)
 
-#### Transparent Data Encryption (TDE)
+## Devices, infrastructure and networks
 
-TDE is a feature of Azure SQL and Azure Synapse Analytics that helps protect data at rest by performing real-time encryption and decryption of the database, backups, and logs.  
-
-#### Disk and storage encryption
-
-Encrypting disks attached to virtual machines and storage used for applications or services helps protect data stored locally.
-
-#### Role Based Access Control (RBAC)
-
-Access should be restricted to data to only accounts with a verified reason and only for the data sets explicitly required for the approved use. 
-Access should be deliberately split between accounts that can access and accounts that can modify. Access Control based on roles is something Microsoft can help customer implement straight from the identity console. There are over 70 different built in roles with the ability to add customer roles as well. 
-
-#### Rights management
-
-For data held outside of a database - for example on a file server - tools such as Rights Management can help to control the data leakage or misuse. Rights Management applies encryption, identity and authorization policies to files to apply controls to data as it moved around within - or even outside - the organization.
-
-### In transit
-
-#### VPN for ingress/egress
-
-Sending or receiving data external to the business should be - wherever possible - via an encrypted network connection.
-One option for this is to establish a Virtual Private Network (VPN) connection, which encrypts the network route between two fixed points.
-VPNs enable smaller sites, such as branch offices to connect into the cloud environment in order to send and receive data securely.
-
-#### ExpressRoute
-
-For large-scale connections such as into an on-premises data centre, the Azure ExpressRoute solution can provide a secure and performant network connection between two trusted locations. ExpressRoute enables organizations to establish the secure network route for high-volume, high-frequency network traffic required as part of a hybrid landing zone implementation.
-
-#### HTTPS
-
-For web services, all pages and connections should be encrypted using HTTPS wherever possible.
-
-## Securing virtual machines
+### Virtual machines
 
 ### Policy
 
@@ -83,7 +50,7 @@ Technologies such as Microsoft Defender should be running on all virtual machine
 
 As mentioned in earlier sections, encrypting disks provides extra layers of security and protects data at rest.
 
-## Securing networks
+### Networks
 
 Network infrastructure connects users and devices to applications and data. As a result, it becomes a valuable target for those looking to gain unauthorized access, given its ability to enable them to access a broad range of sensitive areas of an organization's environment.
 
@@ -95,7 +62,17 @@ There are techniques and technologies that can reduce the risk (or subsequent im
 - Secure connectivity for inbound and outbound traffic
 - Distributed Denial of Service (DDoS) Protection
 
-## Securing applications
+#### VPN for ingress/egress
+
+Sending or receiving data external to the business should be - wherever possible - via an encrypted network connection.
+One option for this is to establish a Virtual Private Network (VPN) connection, which encrypts the network route between two fixed points.
+VPNs enable smaller sites, such as branch offices to connect into the cloud environment in order to send and receive data securely.
+
+#### ExpressRoute
+
+For large-scale connections such as into an on-premises data centre, the Azure ExpressRoute solution can provide a secure and performant network connection between two trusted locations. ExpressRoute enables organizations to establish the secure network route for high-volume, high-frequency network traffic required as part of a hybrid landing zone implementation.
+
+## Applications
 
 ### Microsoft Cloud Application Security
 
@@ -106,8 +83,37 @@ Microsoft Cloud Application Security (MCAS) enables organizations to control whi
 Using the rights managements techniques outlined earlier, data accessed within applications can be controlled in similar ways - even if a user has permissions within the application to extract data it is possible to apply rights to the data so that when it is extracted it is still governed and protected by the business rules applied.
 This can be particularly effective for internet facing services such as files shares.
 
-## Securing identity
+### HTTPS
 
-Protecting identity is a key consideration when planning an organization's approach to securing assets. Identity is one the most common routes for attackers to gain unauthorized access to applications and infrastructure.This has become so important that Microsoft often calls this the "new control plane". 
+For web services, all pages and connections should be encrypted using HTTPS wherever possible.
 
-[Guidance is provided here for areas of consideration related to protecting and controlling access.](./security/access-control.md)
+## Data
+
+Organizations should treat the unauthorized access or theft of data among the highest impact risks to guard against.
+The reputational - and often financial - impact of losing control of sensitive data can significantly affect a company's ability to operate. Protecting data is a fundamental requirement of any IT organization.
+Organisations need to put security measures in place to protect data at rest, and in transit while at the same time being able to remain operational should the organization ever have to deal with an issue. Resiliency is a key piece to asset protection as well.
+
+### Transparent Data Encryption (TDE)
+
+TDE is a feature of Azure SQL and Azure Synapse Analytics that helps protect data at rest by performing real-time encryption and decryption of the database, backups, and logs.  
+
+### Disk and storage encryption
+
+Encrypting disks attached to virtual machines and storage used for applications or services helps protect data stored locally.
+
+### Role Based Access Control (RBAC)
+
+Access should be restricted to data to only accounts with a verified reason and only for the data sets explicitly required for the approved use. 
+Access should be deliberately split between accounts that can access and accounts that can modify. Access Control based on roles is something Microsoft can help customer implement straight from the identity console. There are over 70 different built in roles with the ability to add customer roles as well. 
+
+### Rights management
+
+For data held outside of a database - for example on a file server - tools such as Rights Management can help to control the data leakage or misuse. Rights Management applies encryption, identity and authorization policies to files to apply controls to data as it moved around within - or even outside - the organization.
+
+## Areas of special consideration
+
+### DevSecOps
+
+### OT and IOT
+
+### Serverless
