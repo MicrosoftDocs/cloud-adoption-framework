@@ -6,7 +6,7 @@ items:
     href: index.md
     pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
-    href: strategy.md
+    href: WVD-Strategy.md
   - name: Technical planning
     href: plan.md
   - name: Prepare your environments
