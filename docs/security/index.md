@@ -1,8 +1,8 @@
 ---
-title: Security title
-description: Security description
-author: BrianBlanchard
-ms.author: brblanch
+title: Cloud Adoption Framework - Security Methodology
+description: Integrating security through the cloud adoption journey
+author: MarkSimos
+ms.author: mas
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
