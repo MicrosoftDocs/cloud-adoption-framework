@@ -12,21 +12,21 @@ ms.custom: internal
 
 # Innovation Security
 
-Innovation is the lifeblood of growth and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks, most frequently by securing the Development or DevOps process using a DevSecOps approach.
+Innovation is the lifeblood of growth and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Most frequently, by securing the Development or DevOps process using a DevSecOps approach.
 
-In the ideal state, security should be invisible but persistent. Just as delivering on time without sufficient quality will cost you more to fix the quality after the fact, so too will delivering without sufficient security cost you more to clean up afterward. Security must be a part of the organization's culture from the very top, just like innovation and reliability. 
+In the ideal state, security should be invisible but persistent. Just as delivering on time without sufficient quality will cost you more to fix the quality after the fact, delivering without sufficient security will cost you more to clean up afterward. Security must be a part of the organization's culture from the very top, just like innovation and reliability. 
 
-Cloud technologies enable organizations to innovate faster than ever before, rapidly implementing new new ideas and turning them into products and services at a rate that was not previously possible. Attackers also benefit from the speed of this platform and the challenge of keeping security controls current. 
+Cloud technologies enable organizations to innovate faster than ever before. Rapidly implementing new ideas and turning them into products and services at a rate that was not previously possible. Attackers also benefit from the speed of this platform and the challenge of keeping security controls current.
 
 As organization adopt DevOps and other rapid innovation methodologies, security must be a thread woven throughout the tapestry of the organization. 
 
-This article shares Microsoft's learnings on how to integrate modern security practices (such as DevSecOps) into innovation processes, aligning security, development, and operational practices.
+This article shares Microsoft's learnings on integrating modern security practices (such as DevSecOps) into innovation processes.  A key part of this is aligning security, development, and operational practices.
 
 ## Secure by design
 
-Security must be be a natural and native part of the envisioning, design, implementation, and operation of services and products. As development teams shift to  DevOps and adopt cloud technologies, security must be a part of that transformation. 
+Security must be core part of the envisioning, design, implementation, and operation of services and products. As development teams shift to DevOps and adopt cloud technologies, security must be a part of that transformation. 
 
-**Security for DevOps and Cloud** - As part of their development environment, security tools and techniques should be integrated throughout the process and made as invisible as possible. Security should show up where its needed as a  natural part of the workflow to avoid a "quality gate" role at the end which slows deployment and creates unneccesary friction. 
+**Security for DevOps and Cloud** - As part of their development environment, security tools and techniques should be integrated throughout the process and made as invisible as possible. Security should show up where its needed. As a natural part of the workflow, to avoid a "quality gate" role at the end which slows deployment and creates unneccesary friction.
 
 **DevOps and Cloud for Security** - Security should also leverage the speed of the DevOps/DevSecOps cycle and cloud technologies to improve security. Cloud technology offers rapid updating of security tools, real-time access to threat intelligence, easy ability to segment and contain risk, and more. The DevOps/DevSecOps process enables teams to rapidly address security issues rapidly as a natural part of the process/workflow. Automation in the cloud is much more sophisticated and can remove manual steps during the development cycle, further amplifying these benefits. 
 
@@ -47,7 +47,7 @@ DevOps expanded the traditional development model (people, process, and technolo
 
 **Development, Security, Operations**. Innovation and development are inherently complicated processes and it's extremely difficult to apply operational reliability and security assurances after the fact on a complex project. These three functions do their best work together in a common model, sharing context and working towards shared goals. 
 
-[The Cloud Adoption Framework's Organize methodology provides some further context on the team composition and key relationships for DevSecOps structures in an organization](../organize/cloud-security-application-security-devsecops.md)
+[The Cloud Adoption Framework's Organize methodology provides some further context on DevSecOps structures in an organization](../organize/cloud-security-application-security-devsecops.md)
 
 ## Why DevSecOps?
 
@@ -159,7 +159,7 @@ Azure has capabilities that enable organization's to create security standards f
 These 'guardrails' enable teams to experiment within a safe and controlled environment, therefore balancing innovation and governance.
 
 **Penetration testing** is a recommended practice for environments in order to check for any vulnerabilities in the infrastructure or application configuration that may create weaknesses that attackers could exploit.
-There are a number of products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](../azure/security/fundamentals/pen-testing)
+There are a number of products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](../azure/security/fundamentals/pen-testing.md)
 
 Testing typical covers the following test types:
 
