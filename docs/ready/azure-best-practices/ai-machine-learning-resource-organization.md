@@ -1,5 +1,5 @@
 ---
-title: Organize and setup Azure Machine Learning environments
+title: Organize and set up Azure Machine Learning environments
 description: When planning an Azure Machine Learning deployment for an enterprise environment, there are common consideration and decision points that impact how you create the Azure Machine Learning workspace(s).
 author: denniseik
 ms.author: deeikele
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Organize and setup Azure Machine Learning environments
+# Organize and set up Azure Machine Learning environments
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
@@ -58,7 +58,9 @@ A consideration for this approach is a single environment deployment is subject 
 
 ![Single environment deployment](media/azureml-setup-single-environment.png)
 
-**Multi-environment workspace deployment:** When you choose a multi-environment workspace deployment, a workspace instance is deployed for each environment. A common scenario for this setup is a regulated workplace with a clear separation of duties between environments, and for users who have resource access to those environments.
+**Multiple environment workspace deployment:** When you choose a multiple environment workspace deployment, a workspace instance is deployed for each environment. A common scenario for this setup is a regulated workplace with a clear separation of duties between environments, and for users who have resource access to those environments.
+
+The benefits of this setup are: 
 
 * Staged rollout of Machine Learning workflows and artifacts. For example, models across environments, with the potential of enhancing agility and reducing time-to-deployment.
 
