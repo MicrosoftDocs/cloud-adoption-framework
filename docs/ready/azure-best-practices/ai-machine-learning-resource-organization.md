@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
+# Plan your workspaces
+
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
 * **Team structure:** The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
@@ -97,7 +99,7 @@ A consideration for this approach is a multi-region setup provides several advan
 
 ![Regional serving](media/azureml-setup-regional-serving.png)
 
-Regional fine-tuning: A base model is trained on an initial dataset, for example, public data or data from all regions, and is later fine-tuned with a regional dataset. The regional dataset might only exist in a particular region because of compliance or data movement constraints. For example, base model training might be done in a workspace in region A, while fine tuning might be done in a workspace in region B.
+**Regional fine-tuning:** A base model is trained on an initial dataset, for example, public data or data from all regions, and is later fine-tuned with a regional dataset. The regional dataset might only exist in a particular region because of compliance or data movement constraints. For example, base model training might be done in a workspace in region A, while fine tuning might be done in a workspace in region B.
 
 The benefit of this setup is experimentation is available in compliance with the data center where the data resides, and still takes advantage of base model training on a larger dataset in an earlier pipeline stage.
 
