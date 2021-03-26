@@ -17,14 +17,13 @@ Before considering a deployment, it is important for your organization to decide
 
 A core principle of the Enterprise Scale Analytics and AI solution pattern is to enable agility by making it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them very agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance, which is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
 
-The [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) already uses this concept, and Enterprise Scale Analytics and AI solution pattern builds upon these standards by adding [additional Azure Policies](#azure-policies-for-enterprise-scale-analytics-and-ai) which are applied to our Data Management Landing Zone and Data Landing Zones.
+The [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) already uses this concept, and Enterprise Scale Analytics and AI solution pattern builds upon these standards by adding [custom Azure Policies](#azure-policies-for-enterprise-scale-analytics-and-ai) which are applied to our Data Management Landing Zone and Data Landing Zones.
 
 ![How Azure Governance works](./images/azure_governance.png)
 
 *Figure 1: How Azure Governance Works*
 
-> [!IMPORTANT]
-> Azure Policy is essential to ensuring security and compliance within Enterprise Scale Analytics and AI. It helps to enforce standards and to assess compliance at-scale. Policies can be used to evaluate resources in Azure and compare them to the desired properties. Several policies (business rules) can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure, such as management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and sub-scopes can be excluded with exceptions if necessary.
+Azure Policy is essential to ensuring security and compliance within Enterprise Scale Analytics and AI. It helps to enforce standards and to assess compliance at-scale. Policies can be used to evaluate resources in Azure and compare them to the desired properties. Several policies (business rules) can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure, such as management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and sub-scopes can be excluded with exceptions if necessary.
 
 ## Design considerations
 
@@ -72,7 +71,7 @@ Enterprise Scale Analytics and AI contains custom policies pertaining to **resou
 - [Power BI](#power-bi)
 
 > [!NOTE]
-> The policies provided below are not applied by default during deployment. They should be viewed as guidance only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.
+> The policies provided below are not applied by default during deployment. They should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.
 
 ### All Services
 
@@ -89,7 +88,7 @@ Enterprise Scale Analytics and AI contains custom policies pertaining to **resou
 |---------|---------|---------|
 |Append-Storage-Encryption|Encryption|Enforce encryption for storage accounts.|
 |Deny-Storage-AllowBlobPublicAccess|Network Isolation|Enforces no public access to all blobs or containers in the storage account.|
-|Deny-Storage-ContainerDeleteRetentionPolicy|-|Enforce container delete retention policies larger than seven days for storage account.|
+|Deny-Storage-ContainerDeleteRetentionPolicy|Resilience|Enforce container delete retention policies larger than seven days for storage account.|
 |Deny-Storage-CorsRules|Network Isolation|Deny cors rules for storage account.|
 |Deny-Storage-InfrastructureEncryption|Encryption|Enforce infrastructure (double) encryption for storage accounts.|
 |Deny-Storage-MinimumTlsVersion|Encryption|Enforces minimum tls version 1.2 for storage account.|
@@ -112,9 +111,9 @@ Enterprise Scale Analytics and AI contains custom policies pertaining to **resou
 |Deny-KeyVault-NetworkAclsDefaultAction|Network Isolation|Enforces default network acl level action for key vault.|
 |Deny-KeyVault-NetworkAclsIpRules|Network Isolation|Enforces network ip rules for key vault.|
 |Deny-KeyVault-NetworkAclsVirtualNetworkRules|Network Isolation|Denies virtual network rules for key vault.|
-|Deny-KeyVault-PurgeProtection|-|Enforces purge protection for key vault.|
-|Deny-KeyVault-SoftDelete|-|Enforces soft delete with minimum number of retention days for key vault.|
-|Deny-KeyVault-TenantId|-|Enforce tenant id for key vault.|
+|Deny-KeyVault-PurgeProtection|Resilience|Enforces purge protection for key vault.|
+|Deny-KeyVault-SoftDelete|Resilience|Enforces soft delete with minimum number of retention days for key vault.|
+|Deny-KeyVault-TenantId|Resource Management|Enforce tenant ID for key vault.|
 
 ### Azure Data Factory
 
@@ -127,18 +126,18 @@ Enterprise Scale Analytics and AI contains custom policies pertaining to **resou
 |Deny-DataFactory-ManagedPrivateEndpoints|Network Isolation|Denies external private endpoints for linked services.|
 |Deny-DataFactory-PublicNetworkAccess|Network Isolation|Denies public access to data factory.|
 |Deploy-DataFactory-ManagedVirtualNetwork|Network Isolation|Deploy managed virtualnetwork for data factory.|
-|Deploy-SelfHostedIntegrationRuntime-Sharing|-|Share self-hosted integration runtime hosted in the Data Hub with Data Factories in teh Data Nodes.|
+|Deploy-SelfHostedIntegrationRuntime-Sharing|Resilience|Share self-hosted integration runtime hosted in the Data Hub with Data Factories in the Data Nodes.|
 
 ### Azure Synapse Analytics
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-|Append-Synapse-LinkedAccessCheckOnTargetResource|-|Enforce LinkedAccessCheckOnTargetResource in managed vnet settings when Synapse Workspace is created.|
-|Append-Synapse-Purview|-|Enforce connection between central purview instance and Synapse Workspace.|
-|Append-SynapseSpark-ComputeIsolation|Network Isolation|When a Synapse Spark Pool is created without compute isolation then this will add it.|
+|Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource?view=azure-dotnet-preview) in managed vnet settings when Synapse Workspace is created.|
+|Append-Synapse-Purview|Network Isolation|Enforce connection between central purview instance and Synapse Workspace.|
+|Append-SynapseSpark-ComputeIsolation|Resource Management|When a Synapse Spark Pool is created without compute isolation then this will add it.|
 |Append-SynapseSpark-DefaultSparkLogFolder|Logging|When a Synapse Spark Pool is created without logging then this will add it.|
-|Append-SynapseSpark-SessionLevelPackages|-|When a Synapse Spark Pool is created without session level packages then this will add it.|
-|Audit-Synapse-PrivateEndpointId|-|Audit public endpoints that are created in other subscriptions for synapse.|
+|Append-SynapseSpark-SessionLevelPackages|Resource Management|When a Synapse Spark Pool is created without session level packages then this will add it.|
+|Audit-Synapse-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Synapse.|
 |Deny-Synapse-AllowedAadTenantIdsForLinking|Network Isolation||
 |Deny-Synapse-Firewall|Network Isolation|Setup firewall of Synapse.|
 |Deny-Synapse-ManagedVirtualNetwork|Network Isolation|When a Synapse Workspace is created without managed virtual network then this will add it.|
@@ -146,9 +145,9 @@ Enterprise Scale Analytics and AI contains custom policies pertaining to **resou
 |Deny-SynapsePrivateLinkHub|Network Isolation|Denies Synapse Private Link Hub.|
 |Deny-SynapseSpark-AutoPause|Resource Management|Enforces autopause for Synapse Spark Pools.|
 |Deny-SynapseSpark-AutoScale|Resource Management|Enforces autoscale for Synapse Spark Pools.|
-|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse Sql Pool Sku's.|
+|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse Sql Pool SKUs.|
 |Deploy-SynapseSql-AuditingSettings|Logging|Send auditing logs for Synapse SQL pools to log analytics.|
-|Deploy-SynapseSql-MetadataSynch|-|Setup metadata sync for Synapse sql pools.|
+|Deploy-SynapseSql-MetadataSynch|Resource Management|Setup metadata sync for Synapse sql pools.|
 |Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse sql pool security alert policy.|
 |Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
 |Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
@@ -182,8 +181,8 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Enable process isolation|Network Isolation|
 |Enforce spark monitoring|Logging|
 |Enforce cluster logs|Logging|
-|Allow only SQL, python|-|
-|Deny additional setup scripts|-|
+|Allow only SQL, python|Resource Management|
+|Deny additional setup scripts|Resource Management|
 
 ### Azure IoT Hub
 
@@ -193,7 +192,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Audit-IotHub-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for iot hubs.|
 |Deny-IotHub-PublicNetworkAccess|Network Isolation|Denies public network access for iot hub.|
 |Deny-IotHub-Sku|Resource Management|Enforces iot hub SKUs.|
-|Deploy-IotHub-IoTSecuritySolutions|-|Deploy Azure defender for IoT for IoT Hubs.|
+|Deploy-IotHub-IoTSecuritySolutions|Security|Deploy Azure defender for IoT for IoT Hubs.|
 
 ### Azure Event Hubs
 
@@ -210,7 +209,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
 |Append-StreamAnalytics-IdentityType|Authentication|Enforces use of system assigned identity for stream analytics.|
-|Deny-StreamAnalytics-ClusterId|-|Enforces use of stram analytics cluster.|
+|Deny-StreamAnalytics-ClusterId|Resource Management|Enforces use of Stream Analytics cluster.|
 |Deny-StreamAnalytics-StreamingUnits|Resource Management|Enforces number of stream analytics streaming units.|
 
 ### Azure Data Explorer
@@ -270,10 +269,10 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-|Append-SqlManagedInstance-MinimalTlsVersion|Encryption|Enforces minimal TLS version for sql managed instance servers.|
-|Deny-SqlManagedInstance-PublicDataEndpoint|Network Isolation|Denies public data endpoint for sql managed instances.|
-|Deny-SqlManagedInstance-Sku|Resource Management|-|
-|Deny-SqlManagedInstance-SubnetId|Network Isolation|Enforces deployments to subnets of sql managed instances.|
+|Append-SqlManagedInstance-MinimalTlsVersion|Encryption|Enforces minimal TLS version for SQL Managed Instance servers.|
+|Deny-SqlManagedInstance-PublicDataEndpoint|Network Isolation|Denies public data endpoint for SQL Managed Instances.|
+|Deny-SqlManagedInstance-Sku|Resource Management||
+|Deny-SqlManagedInstance-SubnetId|Network Isolation|Enforces deployments to subnets of SQL Managed Instances.|
 |Deploy-SqlManagedInstance-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL Managed Instance.|
 |Deploy-SqlManagedInstance-SecurityAlertPolicies|Logging|Deploy SQL Managed Instance security alert policies.|
 |Deploy-SqlManagedInstance-VulnerabilityAssessment|Logging|Deploy SQL Managed Instance vulnerability assessments.|
