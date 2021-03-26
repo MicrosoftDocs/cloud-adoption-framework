@@ -7,7 +7,7 @@ ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: think-tank
+ms.custom: think-tank, e2e-sap
 ---
 
 # Govern SAP

@@ -33,9 +33,9 @@ Whether the plan (that is, objective) targets an Azure resource type such as Key
 
 This approach also simplifies your plans. In all cases, total visibility means achieving and sustaining, sufficient visibility across three dimensions or aspects:
 
-* Monitoring-in-depth,
-* Monitoring in breadth,
-* Monitoring across the health model.
+- Monitoring-in-depth
+- Monitoring in breadth
+- Monitoring across the health model
 
 ![Three-sided cube example](../../strategy/media/monitoring-strategy/three-sided-cube.png)
 
@@ -50,23 +50,23 @@ Business transformation applies technology to achieve current, and help shape, i
 
 This is demonstrated in the following ways:
 
-* Business (digital) transformation efforts shift toward hyper-exploitation of cloud technology.
+- Business (digital) transformation efforts shift toward hyper-exploitation of cloud technology.
 
-* Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
+- Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
 
-* Cloud-native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
+- Cloud-native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
 
 For architects, diagnostics form the core of their exploitation of more cost effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
 
 Architects must, like operators, understand what diagnostic information an IT infrastructure component or application emits. To create a fusion of multi-variate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence, it depends on the following:
 
-* The knowledge and experience of the developer or system engineer, who have a deep understanding of the monitoring target.  
+- The knowledge and experience of the developer or system engineer, who have a deep understanding of the monitoring target.
 
-* Actual support and troubleshooting experience using the data, to find trouble or locate the causes of trouble.
+- Actual support and troubleshooting experience using the data, to find trouble or locate the causes of trouble.
 
-* Review of past incidents to find non-technology reasons, that later can be automated (auto remediation).
+- Review of past incidents to find non-technology reasons, that later can be automated (auto remediation).
 
-* Guidance in the form of documentation, software, training, or consulting by the software or hardware vendor.
+- Guidance in the form of documentation, software, training, or consulting by the software or hardware vendor.
 
 If you are familiar with System Center Operations Manager, Microsoft and its partners provide *management packs.*  Management packs are technology-specific; for example, you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less pre-defined by the product engineers at Microsoft and dozens of industries. With Operations Manager, you don't need to worry about north-south and east-west dependencies, so that observing the health of SQL is part of the larger IT service with networking, virtualization, and applications included. Owing to a common schema based on the familiar four-part *health model*, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural patterns, relative to cloud services.
 
@@ -91,7 +91,7 @@ The following figure shows the Observe discipline on the left, and later in this
 **Responsibility** Both the service consumer and service provider share in the need to learn and improve based on hard data. As such, you need to understand the cloud provider's responsibility vs. the customer/consumer's responsibility. For each Azure resource, you get perspectives based on logs or metrics, this data can be represented in resource-specific dashboards or custom visualizations based on your requirements, and shared with the necessary personas in the organization.
 
 > [!NOTE]
-> [Wikipedia's overview of Observability](https://en.wikipedia.org/wiki/Observability) is said to be a property of a system, stemming from system control theory. We can say its a measure of how well the internal states of a system can be inferred from its system *external* outputs; with [Controllability](https://en.wikipedia.org/wiki/Controllability) as another property of a system. In addition, a *dynamical system* also that over time, a state observer measures or estimates the health state of the system. But in modern service management terms, refer to the [Microsoft Operations Framework](https://docs.microsoft.com/previous-versions/tn-archive/cc506049(v=technet.10)?redirectedfrom=MSDN) (MOF) **Service Monitoring and Control**," and the Information Technology Infrastructure Library (ITIL) v3 **Monitor and control loop**.
+> [Wikipedia's overview of Observability](https://en.wikipedia.org/wiki/Observability) is said to be a property of a system, stemming from system control theory. We can say its a measure of how well the internal states of a system can be inferred from its system *external* outputs; with [Controllability](https://en.wikipedia.org/wiki/Controllability) as another property of a system. In addition, a *dynamical system* also that over time, a state observer measures or estimates the health state of the system. But in modern service management terms, refer to the [Microsoft Operations Framework](https://docs.microsoft.com/previous-versions/tn-archive/cc506049(v=technet.10)) (MOF) **Service Monitoring and Control**," and the Information Technology Infrastructure Library (ITIL) v3 **Monitor and control loop**.
 
 Before we go into details on observability, we need to highlight several monitoring-related terms we'll be using:
 
@@ -113,10 +113,10 @@ Before we go into details on observability, we need to highlight several monitor
 
 Observability relies on what is being monitored and how. In Azure, there are multiple sources, and each delivers a different perspective of how something is behaving. Not to mention, Azure includes multiple tools to help analyze the different aspects of this data. Observing the health and performance of Azure services and non-Azure resources is the primary way you'll use Azure Monitor and its features. In Azure, Microsoft has an extensive catalog of services, and virtual machines are not the primary focus. In Azure, we provide the perspective of the *service provider* through different platform logs:
 
-* Service health reported by Azure about service incidents and planned maintenance.
-* Azure Activity log reports subscription-level events across all of the resources deployed in the subscription.
-* Azure Resource Health reports on the current and past health of your resources.
-* Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.
+- Service health reported by Azure about service incidents and planned maintenance.
+- Azure Activity log reports subscription-level events across all of the resources deployed in the subscription.
+- Azure Resource Health reports on the current and past health of your resources.
+- Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.
 
 All other perspectives based on metrics and logs, are delivered through the various features of Azure Monitor. Or, depending on the Azure resource, you can view its platform metrics directly from that resource in the portal.
 
@@ -126,17 +126,17 @@ With proper planning, you can create a medium to complex service in Azure in a f
 
 The service can change in different, unpredictable ways over time. Hence we refer to this behavior as dynamical. Managers of cloud services observing the service over time needs to take into account that:
 
-* Resources move across locations or geography
-* Resources are added, deleted, or modified
-* Consumption varies
+- Resources move across locations or geography
+- Resources are added, deleted, or modified
+- Consumption varies
 
 As a monitoring service provider, your job is to facilitate monitoring solutions that provide value listed in the following order of priority: 1) to the service, 2) to stakeholders, and 3) to the primary consumers.
 
 Your value stream needs to consider service observability much earlier and in the following ways:
 
-* It monitors in sufficient depth and breadth.
-* It provides coverage across the health model (availability, capacity/performance, security, conformance).
-* It monitors utility also, what the service does, including the end-user experience.
+- It monitors in sufficient depth and breadth.
+- It provides coverage across the health model (availability, capacity/performance, security, conformance).
+- It monitors utility also, what the service does, including the end-user experience.
 
 In the monitoring strategy, we recommend establishing a monitoring plan that starts with what is minimally viable or most important to monitor and observe. This can be based on recommendations from Microsoft, other reputable sources, and your internal developers or system engineers depending on the resource or system. Establish initial visibility of the *consumption*, *performance*, *security*, and *availability* of the resources in your Azure resource groups and your Azure Active Directory tenant. Through observation, you learn how to interpret the data, and learn what's significant in order to fine-tune and optimize how the service is monitored. Value is achieved when incremental, and there is a co-creation of value here in that the consumers are working with the monitoring team (or in some cases the service provider) on co-creation of value.
 

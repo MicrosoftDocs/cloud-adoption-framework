@@ -7,6 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: think-tank, e2e-aks
 ---
 
 # Introduction to the modern containers adoption scenario
