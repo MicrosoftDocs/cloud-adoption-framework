@@ -36,7 +36,7 @@ For WVD, the baseline needs to expand to include controls for functions specific
 
 ## Security baseline
 
-The following guides provide best practices for implement security controls for WVD environments:
+The following guides provide best practices for implementing security controls for WVD environments:
 
 [Windows Virtual Desktop Security Baseline](https://docs.microsoft.com/azure/virtual-desktop/security-baseline)
 [Windows Virtual Dekstop Security Guide](https://docs.microsoft.com/azure/virtual-desktop/security-guide)

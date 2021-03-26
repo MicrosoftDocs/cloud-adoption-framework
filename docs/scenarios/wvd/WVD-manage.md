@@ -59,9 +59,11 @@ These metrics will enable operations teams to monitor and react to performance a
 
 Patching and scaling are key elements of the on-going operational management of a Windows Virtual Desktop environment. The operators may sit in a number of different teams, depending on your desired operations approach. To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift. Each of these are tasks that central IT organizations tend to deliver as part of the operations baseline for Infrastructure-as-a-Service (IaaS).
 
-ADD LINK FOR WVD Azure Monitor PREVIEW https://docs.microsoft.com/azure/virtual-desktop/azure-monitor
-ADD LINK FOR WVD Azure Advisor https://docs.microsoft.com/azure/virtual-desktop/azure-advisor
-ADD LINK FOR WVD Updates https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates
+The following guides provide best practices for implementing management capabilities for WVD environments:
+
+[WVD Azure Monitor PREVIEW](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor)
+[WVD Azure Advisor](https://docs.microsoft.com/azure/virtual-desktop/azure-advisor)
+[WVD Configure Automatic Updates](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates)
 
 ### Protect and recover
 
