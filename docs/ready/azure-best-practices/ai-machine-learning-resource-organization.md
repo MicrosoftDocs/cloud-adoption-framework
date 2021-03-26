@@ -20,7 +20,7 @@ When planning an Azure Machine Learning deployment for an enterprise environment
 
 * **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
 
-# Team structure and workspace setup
+## Team structure and workspace setup
 
 The workspace is the top-level resource in Azure Machine Learning. It stores the artifacts produced when working with Machine Learning and the managed compute and pointers to attached and associated resources. From a manageability standpoint, the workspace as an ARM resource allows for Azure role-based access control (Azure RBAC), management by Policy, and can be used as a unit for cost reporting.
 
@@ -44,7 +44,7 @@ The benefit of this setup is the cost of individual, non-project related work ca
 
 A consideration for this approach is the workspace might become cluttered quickly when many Machine Learning practitioners share the same instance. Users might require UI-based filtering of assets to effectively find their resources. You can create shared Machine Learning workspaces for each business division to mitigate scale concerns or to segment budgets.
 
-# Environments and workspace setup
+## Environments and workspace setup
 
 An environment is a collection of resources that deployments target based on their stage in the application lifecycle. Common examples of environment names are Dev, Test, QA, Staging, and Production.
 
@@ -78,7 +78,7 @@ A consideration for this approach a defined development and rollout process for 
 
 ![One environment with limited data access, one environment with production data access](media/azureml-setup-double-workspace-deployment.png)
 
-# Regions and resource setup
+## Regions and resource setup
 
 The location of your resources, data, or users, might require you to create Azure Machine Learning workspace instances and associated resources in multiple Azure regions. For example, one project might span its resources across the West Europe and East US Azure regions for performance, cost, and  compliance reasons. The following scenarios are common:
 
@@ -107,7 +107,7 @@ A consideration is this approach provides the ability for complex experimentatio
 
 ![Regional fine-tuning](media/azureml-setup-regional-finetuning.png)
 
-# Reference implementation
+## Reference implementation
 
 To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization 'Contoso' has set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements:
 
