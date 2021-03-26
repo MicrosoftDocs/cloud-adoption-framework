@@ -1,6 +1,6 @@
 ---
-title: Plan your workspaces
-description: When planning an Azure Machine Learning deployment for an enterprise environment, there are common decision points and scenarios that impact how you create the workspace.
+title: Organize and setup Azure Machine Learning environments
+description: When planning an Azure Machine Learning deployment for an enterprise environment, there are common consideration and decision points that impact how you create the Azure Machine Learning workspace(s).
 author: denniseik
 ms.author: deeikele
 ms.date: 03/22/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Plan your workspaces
+# Organize and setup Azure Machine Learning environments
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
