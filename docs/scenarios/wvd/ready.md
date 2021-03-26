@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Windows Virtual Desktop Azure landing zone review
 
-Before the Contoso cloud adoption team migrates to Windows Virtual Desktop, it will need an Azure landing zone that's capable of hosting desktops and any supporting workloads. The following checklist can help the team evaluate the landing zone for compatibility. Guidance in the [Ready methodology](../../ready/index.md) of this framework can help the team build a compatible Azure landing zone, if one has not been provided.
+Before implementing Windows Virtual Desktop, the environment needs an Azure landing zone capable of hosting desktops and any supporting workloads. The following checklist can help the team evaluate the landing zone for compatibility. Guidance in the [Ready methodology](../../ready/index.md) of this framework can help the team build a compatible Azure landing zone, if one has not been provided.
 
 ## Evaluate compatibility
 
