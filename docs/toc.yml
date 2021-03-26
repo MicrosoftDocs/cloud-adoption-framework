@@ -418,7 +418,7 @@ items:
           href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: AI + Machine Learning
         items:
-        - name: Organize and setup Azure Machine Learning environments
+        - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
       - name: Cost management
         items:
