@@ -22,7 +22,7 @@ When planning an Azure Machine Learning deployment for an enterprise environment
 
 ## Team structure and workspace setup
 
-The workspace is the top-level resource in Azure Machine Learning. It stores the artifacts produced when working with Machine Learning and the managed compute and pointers to attached and associated resources. From a manageability standpoint, the workspace as an ARM resource allows for Azure role-based access control (Azure RBAC), management by Policy, and can be used as a unit for cost reporting.
+The workspace is the top-level resource in Azure Machine Learning. It stores the artifacts produced when working with Machine Learning and the managed compute and pointers to attached and associated resources. From a manageability standpoint, the workspace as an Azure Resource Manager resource allows for Azure role-based access control (Azure RBAC), management by Policy, and can be used as a unit for cost reporting.
 
 Organizations typically choose one or a combination of the following solution patterns to follow manageability requirements.
 
