@@ -1,12 +1,13 @@
 ---
-title: "Enterprise-Scale support for hybrid and multicloud"
+title: Enterprise-Scale support for hybrid and multicloud
 description: Describe how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
-author: DominicAllen
+author: JefferyMitchell
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Enterprise-scale support for hybrid and multicloud
