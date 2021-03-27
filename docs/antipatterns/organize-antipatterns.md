@@ -27,7 +27,7 @@ Many companies treat IT departments as cost centers. This approach can lead to t
 
 ### Example: Treat IT as a cost center
 
-A corporation manages its IT department as a cost center responsible tp the chief financial officer (CFO). The managing board perceives IT as a slow service provider that's one of the company's biggest cost drivers. The managing board doesn't realize that the mobility business unit is consuming most of the assets that the IT department ordered. IT purchases a datacenter for all business units to use, but the mobility business unit gets this oversized asset. The board doesn't view IT as an enabler or a partner.
+A corporation manages its IT department as a cost center responsible to the chief financial officer (CFO). The managing board perceives IT as a slow service provider that's one of the company's biggest cost drivers. The managing board doesn't realize that the mobility business unit is consuming most of the assets that the IT department ordered. IT purchases a datacenter for all business units to use, but the mobility business unit gets this oversized asset. The board doesn't view IT as an enabler or a partner.
 
 ### Preferred outcome: View IT as an enabler
 
