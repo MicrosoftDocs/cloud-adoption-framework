@@ -39,7 +39,7 @@ The following table lists antipatterns and the methodologies, or cloud adoption 
 | Organize | IT cost centers | [Antipattern: treat IT as a cost center](./organize-antipatterns.md#antipattern-treat-it-as-a-cost-center) |
 | Organize | Platform development without business approval | [Antipattern: invest in new technology without involving the business](./organize-antipatterns.md#antipattern-invest-in-new-technology-without-involving-the-business) |
 | Organize | Core business function outsourcing | [Antipattern: outsource core business functions](./organize-antipatterns.md#antipattern-outsource-core-business-functions) |
-| Organize | Technical decision makers instead of cloud engineers | [Antipattern: hire technical decision makers instead of developing cloud engineers](./organize-antipatterns.md#antipattern-hire-tdms-instead-of-developing-cloud-engineers) |
+| Organize | Technical decision makers instead of cloud engineers | [Antipattern: hire technical decision makers instead of developing cloud engineers](./organize-antipatterns.md#antipattern-hire-technical-decision-makers-instead-of-developing-cloud-engineers) |
 
 ## Next steps
 
