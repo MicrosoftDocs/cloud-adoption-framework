@@ -1,6 +1,6 @@
 ---
 title: AI applications
-description: Discover the applications of AI to infuse AI into your application development. Use  Microsoft Azure Cognitive Services to become enterprise-ready.
+description: Discover the applications of AI to infuse AI into your application development. Use Microsoft Azure Cognitive Services to become enterprise-ready.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
