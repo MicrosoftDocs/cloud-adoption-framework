@@ -58,7 +58,7 @@ To reduce coordination efforts, start with IaaS for initial cloud adoption proje
 
 Gradually modernize and adopt PaaS later, after the workload is already in the cloud. The experience that you've gained will help you adopt PaaS faster. You'll need to learn fewer new skills and processes for modernization. You also won't significantly disrupt your business processes.
 
-Evaluate digital assets according to [Cloud rationalization](../digital-estate/5-rs-of-rationalization.md). This article describes the most common migration and modernization paths, or the five Rs:
+Evaluate digital assets according to [cloud rationalization](../digital-estate/5-rs-of-rationalization.md). This article describes the most common migration and modernization paths, or the five Rs:
 
 - Rehost
 - Refactor
@@ -78,7 +78,7 @@ A corporation has a large SAP environment. The IT department would like to repla
 
 Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing instead. Relatively small changes to your application environment can have a huge impact on performance and reliability. For instance, changing the hosting platform to Azure can provide stability and quick results. Improved performance and reliability result, at a fraction of the estimated replacement cost.
 
-When deciding on an innovation strategy, explore different modernization options. Evaluate these options in a proof of concept (PoC).
+When deciding on an innovation strategy, explore different modernization options. Evaluate these options in a proof of concept (POC).
 
 Understand your company's [digital estate](../digital-estate/index.md). Determine which of the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md) works best for modernizing or migrating your assets:
 

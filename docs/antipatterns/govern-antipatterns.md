@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Govern antipatterns
 
-Customers often experience antipatterns during the govern phase of cloud adoption. Taking the time to understand shared responsibilities helps you avoid these antipatterns, as does building your security strategy on existing frameworks instead of creating your own.
+Customers often experience antipatterns during the Govern phase of cloud adoption. Taking the time to understand shared responsibilities helps you avoid these antipatterns, as does building your security strategy on existing frameworks instead of creating your own.
 
 ## Antipattern: Misunderstand shared responsibilities
 
@@ -36,11 +36,11 @@ A company develops a new application in the cloud. It chooses an architecture ba
 
 ### Preferred outcome: Define a cloud security strategy
 
-Define a proper cloud [security strategy](../strategy/define-security-strategy.md). See [CISO cloud readiness guide](../govern/policy-compliance/cloud-security-readiness.md) for more information, and refer your chief information security office (CISO) to this guide. It discusses topics such as security platform resources, privacy and controls, compliance, and transparency.
+Define a proper [cloud security strategy](../strategy/define-security-strategy.md). See [CISO cloud readiness guide](../govern/policy-compliance/cloud-security-readiness.md) for more information, and refer your chief information security office (CISO) to this guide. It discusses topics such as security platform resources, privacy and controls, compliance, and transparency.
 
-Read about secure cloud workloads in the [Azure security benchmark](/azure/security/benchmarks/introduction). Build upon the [Center for Internet Security (CIS) Controls Version 7.1](https://learn.cisecurity.org/cis-controls-download) and [National Institute of Standards and Technology (NIST) SP800-53 Framework](https://www.nist.gov/privacy-framework/nist-sp-800-53), which address most security risks and measures.
+Read about secure cloud workloads in the [Azure Security Benchmark](/azure/security/benchmarks/introduction). Build upon the [CIS Controls v7.1](https://learn.cisecurity.org/cis-controls-download) from the Center for Internet Security, along with [NIST SP800-53 Framework](https://www.nist.gov/privacy-framework/nist-sp-800-53) from the National Institute of Standards and Technology, which address most security risks and measures.
 
-Use the Azure Security Center to identify risks, adapt best practices, and improve your company’s security posture.
+Use the Azure Security Center to identify risks, adapt best practices, and improve your company's security posture.
 
 Implement or support company-specific, automated compliance and security requirements by using [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview).
 
@@ -56,7 +56,7 @@ Azure offers a more comprehensive security and compliance structure that differs
 
 ### Preferred outcome: Rely on existing frameworks
 
-Use or build on existing frameworks, such as CIS Controls Version 7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure Blueprints samples page](/azure/governance/blueprints/samples). Blueprints for common compliance frameworks are also available for Azure.
+Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure Blueprints samples page](/azure/governance/blueprints/samples/). Blueprints for common compliance frameworks are also available for Azure.
 
 ## Next steps
 
