@@ -1,9 +1,9 @@
 ---
 title: Windows Virtual Desktop planning
 description: Use the Cloud Adoption Framework for Azure to plan your Windows Virtual Desktop migration using best practices that reduce complexity and standardize the migration process.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/17/2020
+author: DominicAllen
+ms.author: doallen
+ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

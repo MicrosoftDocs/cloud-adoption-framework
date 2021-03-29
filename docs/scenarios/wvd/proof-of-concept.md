@@ -1,9 +1,9 @@
 ---
 title: Windows Virtual Desktop proof of concept
 description: Use the Cloud Adoption Framework to learn about best practices for completing and testing a Windows Virtual Desktop proof of concept.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/17/2020
+author: DominicAllen
+ms.author: doallen
+ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -14,7 +14,7 @@ ms.custom: internal
 
 # Windows Virtual Desktop proof of concept
 
-Before the Contoso cloud adoption team deploys its end-user desktops, it validates the configuration of the Azure landing zone and end-user network capacity by completing and testing a proof of concept.
+Before deploying end-user desktops, validate the configuration of the Azure landing zone and end-user network capacity by completing and testing a proof of concept.
 
 The following approach to the migration process is simplified to outline a proof-of-concept implementation.
 
