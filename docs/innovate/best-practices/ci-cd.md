@@ -25,7 +25,7 @@ You can accelerate this type of digital invention through the following levels o
 
 - **Shared solution:** Establish a centralized repository for all aspects of the solution.
 - **Feedback loops:** Ensure feedback loops can be managed consistently throughout iterations.
-- **Continuous integration:** Regularly build and consolidate a continuous integration/continuous deployment (CI/CD) solution.
+- **Continuous integration:** Regularly build and consolidate a continuous integration and continuous deployment (CI/CD) solution.
 - **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements.
 - **Solution deployment:** Deploy a solution to allow a team to quickly share changes with customers.
 - **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team.
