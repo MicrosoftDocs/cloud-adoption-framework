@@ -55,7 +55,7 @@ The cloud is often a great platform for invention or the technological aspects o
 
 ## Cultural commitments
 
-Adopting the [Innovate methodology](../index.md) requires some cultural commitments to effectively use the metrics outlined in this article. Before you change your approach to driving innovation, make sure the adoption and leadership teams are ready to make these important commitments.
+Adopting the Innovate methodology requires some cultural commitments to effectively use the metrics outlined in this article. Before you change your approach to driving innovation, make sure the adoption and leadership teams are ready to make these important commitments.
 
 ## Commitment to prioritize customers over technology
 
@@ -73,8 +73,8 @@ Only one promise rings true across all innovation cycles: you won't get it right
 
 ## Next steps
 
-Before building the next great invention, get started with customer adoption by understanding the [build-measure-learn feedback loop](./adoption.md).
+Before building the next great invention, get started with customer adoption by understanding the [build-measure-learn feedback loop](./considerations/learn.md).
 
 > [!div class="nextstepaction"]
-> [Customer adoption with the build-measure-learn feedback loop](./adoption.md)
+> [Customer adoption with the build-measure-learn feedback loop](./considerations/learn.md)
 
