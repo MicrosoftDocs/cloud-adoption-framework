@@ -7,7 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-+ ms.custom:
+ms.custom:
  - think-tank
  - seo-caf-innovate
 keywords: AI applications, examples of AI applications, AI application checklist, applications of AI, AI agents
