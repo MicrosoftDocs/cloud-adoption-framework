@@ -48,19 +48,21 @@ In modernization projects, use additional application assessments to identify co
 
 For innovation projects, see [Azure innovative solutions guide overview](../innovate/innovation-guide/index.md) for help with identifying the correct way to plan and develop an innovative cloud solution.
 
-For mission-critical workloads or workloads which require architectural change, use the [Well-Architected Framework](/azure/architecture/framework) or [architectural design sessions (ADS)](/azure/architecture/serverless-quest/ads) to help design, build, and deploy a high-quality, robust architecture that scales within an enterprise. Use ADS whiteboards to discover, envision, and plan the solution.
+<!-- docutune:casing ADS -->
+
+For mission-critical workloads or workloads which require architectural change, use the [Azure Well-Architected Framework](/azure/architecture/framework/) or an [architectural design session (ADS)](/azure/architecture/serverless-quest/ads) to help design, build, and deploy a high-quality, robust architecture that scales within an enterprise. Use ADS whiteboards to discover, envision, and plan the solution.
 
 ## Antipattern: Dictate an architecture
 
 A company might pursue a microservice-first strategy when developing in the cloud, assuming that a microservice architecture always outperforms a traditional, monolithic architecture. If the company doesn't perform a proper application assessment and due diligence for its application, this strategy can fail. Other architectural approaches might be more suitable for the application. Choosing or dictating a microservice architecture or an architecture for all situations often results in failed projects.
 
-### Example: Use a microservice architecture for all apps
+### Example: Use a microservice architecture for all applications
 
 A company's chief information officer (CIO) establishes a policy of using a microservice architecture when building up new applications in the cloud. The company developers have never worked with the microservice architecture. They need to develop a simple web app. After working on the application for a few months, the developers realize that they probably would have already finished development if they had started with a monolithic architecture. The company hasn't achieved a faster time to market, among other benefits.
 
 ### Preferred outcome: Base architectural decisions on assessments
 
-Instead of fixating on a specific architecture style, make an architectural decision based on an assessment and due diligence of the use case or an architecture. Don't limit what architectures can be used, because freedom of choice is one of the major benefits of the cloud. Picking an architecture just because it's in fashion is an antipattern to avoid. For more information, see the [Azure application architecture guide](/azure/architecture/guide) and [Cloud design patterns](/azure/architecture/patterns).
+Instead of fixating on a specific architecture style, make an architectural decision based on an assessment and due diligence of the use case or an architecture. Don't limit what architectures can be used, because freedom of choice is one of the major benefits of the cloud. Picking an architecture just because it's in fashion is an antipattern to avoid. For more information, see the [Azure application architecture guide](/azure/architecture/guide/) and [cloud design patterns](/azure/architecture/patterns/).
 
 ## Antipattern: Use a single subscription
 

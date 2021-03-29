@@ -7,7 +7,7 @@ ms.date: 02/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, e2e-sap
 ---
 
 <!-- docutune:casing Snow -->
