@@ -7,7 +7,9 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank, seo-caf-innovate
++ ms.custom:
+ - think-tank
+ - seo-caf-innovate
 keywords: AI applications, examples of AI applications, AI application checklist, applications of AI, AI agents
 ---
 
@@ -36,7 +38,7 @@ Follow these guidelines to plan your AI application development and deployment:
 
 ## AI applications checklist
 
-To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services, such as vision, speech, language, decision, and web search. Visit the product pages to learn more and to interact with demos. Each category on the page offers a set of quick starts, tutorials, how-to guides for the REST APIs and SDKs. You can also read an e-book that describes common scenarios and how to build your first AI application with Cognitive Services.
+To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services, such as vision, speech, language, decision, and web search. Visit the product pages to learn more and to interact with demos. Each category on the page offers a set of quick starts, tutorials, and how-to guides for the REST APIs and SDKs. You can also read an e-book that describes common scenarios and how to build your first AI application with Cognitive Services.
 
 - Read the [Cognitive Services documentation](/azure/cognitive-services/).
 - Explore [interactive demos across the product/service pages](https://azure.microsoft.com/services/cognitive-services/).
