@@ -36,45 +36,46 @@ Follow these guidelines to plan your AI application development and deployment:
 
 ## AI applications checklist
 
-To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services, such as vision, speech, language, decision, and web search. Visit the product pages to learn more and to interact with demos. Each category on the page offers a set of quick starts, tutorials, how-to guides, whether you want to use the REST API or SDKs. You can also read an e-book that describes common scenarios and how to build your first AI application with Cognitive Services.
+To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services, such as vision, speech, language, decision, and web search. Visit the product pages to learn more and to interact with demos. Each category on the page offers a set of quick starts, tutorials, how-to guides for the REST APIs and SDKs. You can also read an e-book that describes common scenarios and how to build your first AI application with Cognitive Services.
 
 - Read the [Cognitive Services documentation](/azure/cognitive-services/).
 - Explore [interactive demos across the product/service pages](https://azure.microsoft.com/services/cognitive-services/).
 - Read the e-book, [Building Intelligent Apps with Cognitive APIs](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
 - Download the [Intelligent Kiosk](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk) to experience and demo the services. <!-- docutune:casing "Intelligent Kiosk" -->
 - Learn more about [Container support in Azure Cognitive Services](/azure/cognitive-services/cognitive-services-container-support).
-- Review [reference architectures for AI solutions](/azure/architecture/browse/#ai--machine-learning)
+- Review [reference architectures for AI solutions](/azure/architecture/browse/#ai--machine-learning).
 
 ## AI agents
 
-The Microsoft Azure AI platform aims to empower developers to innovate and accelerate their projects. Specifically for conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services like Language Understanding (LUIS), QnA Maker, and Speech service to add the abilities for your chatbot to understand and speak with your end users.
+The Microsoft Azure AI platform aims to empower developers to innovate and accelerate their projects. For conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools to enable developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services like Language Understanding (LUIS), QnA Maker, and Speech service to add the abilities for chatbots to understand and speak with their end users.
 
 Common scenarios for conversational AI or chatbot solutions include:
 
 - Informational Q&A chatbot
 - Customer service or support chatbot
 - IT help desk or HR chatbot
-- e-commerce or sales chatbot
+- Sales or e-commerce chatbot
 - Speech-enabled devices
 
 > [!NOTE]
-> Microsoft offers Power Virtual Agents, built on top of the Bot Framework, for developers who want to build a chatbot with a primarily no-code or low-code experience. In this scenario, developers don't host the bot themselves, nor do they control the natural language or other AI models with Cognitive Services.
+> Microsoft offers Power Virtual Agents, built on top of the Bot Framework, for developers who want to build a chatbot with a primarily no-code or low-code experience. In this scenario, developers don't host the bot themselves and don't control the natural language or other AI models with Cognitive Services.
 
 ## AI agents checklist
 
-Familiarize yourself with Azure Bot Service and Microsoft Bot Framework:
+Azure Bot Service and Microsoft Bot Framework have the following characteristics:
 
 - Bot Framework is an open-source offering that provides an SDK to help you design, build, and test your bot. This SDK is available in C#, JavaScript, Python, and Java. It also offers a free visual authoring canvas in Bot Framework Composer and a testing tool in Bot Framework Emulator.
 - Azure Bot Service is a dedicated service within Azure that allows you to host or publish your bot in Azure and connect to popular channels.
 
-For more information, about Bot Service and Bot Framework, see:
+For more information about Bot Service and Bot Framework, see:
+
 - [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction)
 - [Principles of bot design](/azure/bot-service/bot-service-design-principles)
 
-One of the simplest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes. To use QnA Maker, see:
+One of the easiest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes. To use QnA Maker, see:
 
 - [Tutorial: Use QnA Maker in your bot to answer questions](/azure/bot-service/bot-builder-tutorial-add-qna)
-- [Test out the QnA Maker service](https://www.qnamaker.ai/)
+- [Try out the QnA Maker service](https://www.qnamaker.ai/)
 
 To download and use Bot Framework SDK and tools for bot development, see:
 
@@ -87,7 +88,7 @@ To learn how to add Cognitive Services to make your bot even more intelligent, s
 - [A Developer's Guide to Building AI Applications (e-book)](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/)
 - [Cognitive Services documentation](/azure/cognitive-services/)
 
-To learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do, see [Bot Framework Solutions Documentation](https://microsoft.github.io/botframework-solutions/index).
+To learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do, see the [Bot Framework Solutions Documentation](https://microsoft.github.io/botframework-solutions/index).
 
 ## Next steps
 
