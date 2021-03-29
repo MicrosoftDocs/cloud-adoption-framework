@@ -32,4 +32,49 @@ As you build your MVP, you should consider using the 5 disciplines of digital in
 
 ![The Innovate methodology of the Cloud Adoption Framework](../_images/innovate/innovate-methodology.png)
 
-Not all disciplines need to be adopted at once. These disciplines define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. You can review the [innovate methodology](./considerations/invention.md) in detail.
+This article series emphasizes the following aspects of this methodology:
+
+- First, always start with customer adoption to generate feedback that builds customer partnerships through the build-measure-learn feedback loop.
+- Second, examine approaches to developing digital inventions that prioritize adoption.
+
+Not all disciplines need to be adopted at once. These disciplines define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. 
+
+The following section describes the formula for innovation and the commitments required for success with this approach.
+
+## Formula for innovation
+
+Successful innovation is not a big-bang transformational event or an elusive magical unicorn. Success in innovation is more of a balancing act, illustrated by a simple equation: **innovation = invention + adoption**.
+
+Innovation happens at the intersection of invention and adoption. True innovation stems from slowly adjusting human experiences through new approaches, new processes, and new technologies. In this formula, invention means creating a new solution that meets a customer need. Conversely, adoption means applying the new solution to shape human behaviors and interactions. Finding the right balance between invention and adoption requires iteration, data-driven decision making, constant learning, and a growth mindset. It also requires technologies that can keep pace with the countless opportunities to learn in today's digital society.
+
+The cloud is often a great platform for invention or the technological aspects of innovation. Unfortunately, most great ideas fail during the hard work of adoption, rather than during the ideation or invention processes. To ensure success, development teams should always start with adoption as the test for innovation. That's why this methodology starts with adoption. To use this methodology, the following three commitments should be agreed upon by the team:
+
+- [Commitment to prioritize customers over technology](#commitment-to-prioritize-customers-over-technology)
+- [Commitment to transparency](#commitment-to-transparency)
+- [Commitment to iteration](#commitment-to-iteration)
+
+## Cultural commitments
+
+Adopting the [Innovate methodology](../index.md) requires some cultural commitments to effectively use the metrics outlined in this article. Before you change your approach to driving innovation, make sure the adoption and leadership teams are ready to make these important commitments.
+
+## Commitment to prioritize customers over technology
+
+Every development team has a set of tools or technologies that they're most familiar with. It's wise to play to those strengths and use what you know. However, for innovation to be successful, teams must maintain a focus on customer needs and the hypothesis being tested. At times, this focus may not align with the capabilities of a particular tool or architectural approach. To be successful in innovation, the development team must remain open-minded. During the invention process, focus technical decisions on the needs of the customer over the preferences of your team.
+
+## Commitment to transparency
+
+To understand measurement in an innovation approach, you must first understand the commitment to transparency. Innovation can only thrive in an environment that adheres to a *growth mindset*. At the root of a growth mindset is a cultural imperative to learn from experiences. Successful innovation and continuous learning start with a commitment to transparency in measurement. This is a brave commitment for the cloud adoption team. However, that commitment is meaningless if it's not matched by a commitment to preserve transparency within the leadership and cloud strategy teams.
+
+Transparency is important because measuring customer impact doesn't address the question of right or wrong. Nor are impact measurements indicative of the quality of work or the performance of the adoption team. Instead, they represent an opportunity to learn and better meet your customers' needs. Misuse of innovation metrics can stifle that culture. Eventually, such misuse will lead to manipulation of metrics, which in turn causes long-term failure of the invention, the supporting staff, and ultimately the management structure who misused the data. Leaders and contributors alike should avoid using measurements for anything other than an opportunity to learn and improve the MVP solution.
+
+## Commitment to iteration
+
+Only one promise rings true across all innovation cycles: you won't get it right on the first try. Measurement helps you understand what adjustments you should make to achieve the desired results. Changes that lead to favorable outcomes stem from iterations of the build-measure-learn process. The cloud adoption team and the cloud strategy team must commit to an iterative mindset before adopting a growth mindset or a build-measure-learn approach.
+
+## Next steps
+
+Before building the next great invention, get started with customer adoption by understanding the [build-measure-learn feedback loop](./adoption.md).
+
+> [!div class="nextstepaction"]
+> [Customer adoption with the build-measure-learn feedback loop](./adoption.md)
+
