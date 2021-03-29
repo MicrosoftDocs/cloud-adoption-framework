@@ -915,11 +915,8 @@ items:
 
     - name: Innovate
       items:
-      - name: Overview from original TOC
+      - name: Overview
         href: innovate/index.md
-
-      - name: Overview from process improvements
-        href: innovate/considerations/index.md
       - name: Business value consensus
         href: innovate/business-value.md
       - name: Build with customer empathy
@@ -942,12 +939,6 @@ items:
           href: innovate/considerations/devices.md
         - name: Predict and influence
           href: innovate/considerations/predict.md
-      - name: Where do these go?
-        items:
-        - name: Feedback loops
-          href: innovate/considerations/adoption.md
-        - name: Customer challenges and blockers
-          href: innovate/considerations/challenges.md
             
       - name: Innovation scenarios
         items:
@@ -976,6 +967,8 @@ items:
         items:
         - name: Overview and Azure toolchain
           href: innovate/best-practices/index.md
+        - name: Customer challenges and blockers
+          href: innovate/considerations/challenges.md
         - name: Democratize data
           items:
           - name: Overview
