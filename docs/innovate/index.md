@@ -1,5 +1,5 @@
 ---
-title: Cloud Adoption-related Innovation
+title: Cloud Adoption-related innovation
 description: Learn how cloud adoption-related innovation can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,7 +12,7 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 ---
 
-# Cloud Adoption-related Innovation
+# Cloud Adoption-related innovation
 
 All IT portfolios contain a few workloads and ideas that could significantly improve a company's position in the market. Most cloud adoption efforts focus on the migration and modernization of existing workloads. Cloud innovation, however, can provide the greatest business value. Innovation related to cloud adoption can unlock new technical skills and expanded business capabilities.
 
