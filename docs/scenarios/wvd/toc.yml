@@ -28,20 +28,23 @@ items:
   - name: Manage your portfolio
     href: WVD-manage.md
 
-  - name: Well-architected - TBD
-    items:
-    - name: Example
-      href: /azure
-
-  - name: Architectures - TBD
+  - name: Architectures
     items:
     - name: Windows Virtual Desktop Architecture 
       href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop.md
 
-  - name: Best practices - TBD
+  - name: Best practices
     items:
-    - name: Example
-      href: /azure
+    - name: WVD Security Best Practices
+      href: /azure/virtual-desktop/security-guide.md
+    - name: Azure Security Baseline for Windows Virtual Desktop
+      href: /azure/virtual-desktop/security-baseline
+    - name: Virtual Desktop machine sizing
+      href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
+    - name: Configure device redirections
+      href: /azure/virtual-desktop/configure-device-redirections
+    - name: Scale session hosts
+      href: /azure/virtual-desktop/set-up-scaling-script
 
   - name: Enterprise-scale construction set
     items:
@@ -60,12 +63,12 @@ items:
     - name: Platform automation and DevOps
       href: eslz-platform-automation-and-devops.md
        
-  - name: Microsoft products - Add links to product docs
+  - name: Microsoft products
     items:
-    - name: Example
-      href: /azure
+    - name: Windows Virtual Desktop
+      href: /services/virtual-desktop/
 
-  - name: Learn modules - TBD
+  - name: Learn modules
     items:
     - name: Deliver Remote desktops and apps from Azure with Windows Virtual Desktop
       href: /learn/paths/m365-wvd
