@@ -1099,7 +1099,7 @@ items:
               - name: Distributed tracing with Azure Spring Cloud
                 href: /azure/spring-cloud/spring-cloud-tutorial-distributed-tracing?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
-                href: /azure/spring-cloud/spring-cloud-tutorial-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/spring-cloud/how-to-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Event-driven applications
               items:
               - name: Learning path for creating serverless applications
