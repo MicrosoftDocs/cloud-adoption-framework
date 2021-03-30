@@ -21,7 +21,7 @@ items:
       href: migrate-deploy.md
     - name: Release
       href: migrate-release.md    
-  - name: Innovate in the cloud - TBD
+  - name: Innovate in the cloud
     href: WVD-innovate.md
   - name: Govern your portfolio
     href: WVD-govern.md
