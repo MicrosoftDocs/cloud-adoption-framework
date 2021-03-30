@@ -52,7 +52,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Limit the number of Azure Policy assignments made at the root management group scope (`/`). This limitation minimizes debugging inherited policies in lower-level management groups.
 
-- Use Azure Policies available in Enterprise-scale landing zone to enforce compliance requirements either at management group or subscription scope. Refer to guidance on [Policy-driven Governance](#Policy-driven-governance) to know more about all possible governance requirements that can be addressed.
+- Use Azure Policies available in Enterprise-scale landing zone to enforce compliance requirements either at management group or subscription scope. Refer to guidance on [Policy-driven Governance](#policy-driven-governance) to know more about all possible governance requirements that can be addressed.
 
 - Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own Management Groups under the root management group).
 
@@ -139,7 +139,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 - Use Azure resource tags categorize costs and group resources. Using tags allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
 
-## Policy-driven Governance
+## Policy-driven governance
 
 Organizations can use enterprise-scale Azure policies to enforce the following governance requirements:
 
