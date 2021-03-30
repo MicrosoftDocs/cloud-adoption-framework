@@ -2,7 +2,7 @@
 title: Windows Virtual Desktop proof of concept
 description: Use the Cloud Adoption Framework to learn about best practices for completing and testing a Windows Virtual Desktop proof of concept.
 author: DominicAllen
-ms.author: doallen
+ms.author: doalle
 ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

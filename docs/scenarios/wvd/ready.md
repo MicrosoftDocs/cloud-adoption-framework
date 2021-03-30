@@ -2,7 +2,7 @@
 title: Azure landing zones for Windows Virtual Desktop instances
 description: Use the Cloud Adoption Framework for Azure to prepare your environment for virtual desktop migration using best practices that reduce complexity and standardize the migration process.
 author: DominicAllen
-ms.author: doallen
+ms.author: doalle
 ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
