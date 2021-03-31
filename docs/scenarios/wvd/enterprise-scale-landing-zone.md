@@ -1,6 +1,6 @@
 ---
 title: "Enterprise-Scale support for Windows Virtual Desktop"
-description: Describe how enterprise-scale can accelerate adoption of <Insert Scenario Name>
+description: Describe how enterprise-scale can accelerate adoption of Windows Virtual Desktop
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise Scale support for Windows Virtual Desktop Construction Set
   
-Enterprise scale Construction Sets provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework Enterprise scale landing zone. The SAP on Azure Construction Set are implementations for after a customer has successfully implemented Enterprise scale landing zone. Please review the enterprise scale [Overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the Windows Virtual Desktop construction set.
+Enterprise scale Construction Sets provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework Enterprise scale landing zone. The Windows Virtual Desktop Construction Set are implementations for after a customer has successfully implemented Enterprise scale landing zone. Please review the enterprise scale [Overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the Windows Virtual Desktop construction set.
 
 ## Should I start with Windows Virtual Desktop Construction Set?
 
@@ -32,7 +32,7 @@ Guide to the critical decisions that drive the design of the Cloud Adoption Fram
 
 Conceptual reference architecture that demonstrates design areas and best practices. example below
 
-![Construction Set Architecture](media\Overview_Architecture.png)
+![Construction Set Architecture](media\windowsvirtualdesktoparchitecture.png)
 
 ## Implementation with ARM Templates for Remote Desktop Services
 
@@ -42,8 +42,6 @@ This Github repository contains code that can be used to automatically deploy WV
 
 Github repo
 [Automate WVD Deployments in Azure Cloud](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) 
-
-![Reference Implementation Architecture](media\Overview_Automation.png)
 
 ## Next steps
 Review the Windows Virtual Desktop Construction Set critical design areas to make complete considerations and recommendations for your Windows Virtual Desktop Construction set architecture. [Identity and Access Management](./eslz-identity-and-access-management.md)
