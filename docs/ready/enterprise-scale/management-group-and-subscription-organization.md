@@ -18,7 +18,7 @@ _Figure 1: Management group hierarchy._
 
 ## Define a management group hierarchy
 
-Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping and must be considered thoroughly when an organization plans Azure adoption at scale.
+Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping and should be considered thoroughly when an organization plans Azure adoption at scale.
 
 **Design considerations:**
 
@@ -26,7 +26,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
-- Any principal (user, service principal) within an Azure AD tenant can create new management groups as Azure role-based access control (Azure RBAC) authorization for management group operations is not enabled by default.
+- Any principal (user, service principal) within an Azure AD tenant can create new management groups since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
 
 - All new subscriptions will be placed under the root management group by default.
 
@@ -36,7 +36,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Avoid duplicating your organizational structure into a deeply nested management group hierarchy. Management groups should be used for policy assignment versus billing purposes. This approach necessitates using management groups for their intended purpose in enterprise-scale architecture, which is providing Azure policies for workloads that require the same type of security and compliance under the same management group level.
 
-- Create management groups under your root-level management group to represent the types of workloads (archetype) that you'll host and ones based on their security, compliance, connectivity, and feature needs. This grouping structure allows you to have a set of Azure policies applied at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
+- Create management groups under your root-level management group to represent the types of workloads (archetypes) that you'll host and ones based on their security, compliance, connectivity, and feature needs. This grouping structure allows you to have a set of Azure policies applied at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
 
 - Use resource tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the management group hierarchy. Then you can group resources for search needs without having to use a complex management group hierarchy.
 
@@ -52,11 +52,11 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Limit the number of Azure Policy assignments made at the root management group scope (`/`). This limitation minimizes debugging inherited policies in lower-level management groups.
 
-- Use Azure Policies available in Enterprise-scale landing zone to enforce compliance requirements either at management group or subscription scope. Refer to guidance on [Policy-driven Governance](#policy-driven-governance) to know more about all possible governance requirements that can be addressed.
+- Use Azure Policies available in enterprise-scale landing zones to enforce compliance requirements either at the management group or subscription scope. Refer to guidance on [policy-driven governance](#policy-driven-governance) to learn more about all governance requirements that can be addressed.
 
-- Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own Management Groups under the root management group).
+- Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own management groups under the root management group).
 
-- [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for such management group is a `Sandbox` management group.
+- [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure that subscriptions aren't placed under the root management group. This is especially important if there are users eligible for MSDN Platforms or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `Sandbox` management group.
 
 ## Subscription organization and governance
 
