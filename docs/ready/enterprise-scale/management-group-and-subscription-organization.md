@@ -253,9 +253,9 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Protect against distributed denial of service attacks**
 
-    Publicly reachable Azure resources are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect the application's availability to it's intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical application(s).
+    Publicly reachable Azure resources are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect an application's availability to its intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical application(s).
 
-    Azure DDoS Protection defends Azure resources against DDoS attacks. The service continuously monitors incoming traffic to identify potential indications of a DDoS attack. During an active attack, enterprises can benefit from working with the Microsoft DDoS Rapid Response team.
+    Azure DDoS Protection defends Azure resources against DDoS attacks by continuously monitoring incoming traffic to identify potential threats. During an active attack, enterprises can benefit from working with the Microsoft DDoS Rapid Response team.
 
     Azure offers a custom policy that automatically provisions an Azure DDoS Standard plan on all Azure subscriptions in its scope. This policy allows enterprises to select the Azure regions that will be covered by the service.
 
