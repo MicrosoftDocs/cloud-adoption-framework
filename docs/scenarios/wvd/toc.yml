@@ -67,8 +67,22 @@ items:
     items:
     - name: Windows Virtual Desktop
       href: /services/virtual-desktop/
+    - name: Azure Files
+      href: https://azure.microsoft.com/services/storage/files/
 
   - name: Learn modules
     items:
-    - name: Deliver Remote desktops and apps from Azure with Windows Virtual Desktop
-      href: /learn/paths/m365-wvd
+    - name: Deliver remote desktops and apps from Azure with Windows Virtual Desktop
+      href: https://docs.microsoft.com/learn/paths/m365-wvd/
+    - name: Introduction to Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-wvd-intro/
+    - name: Prepare for Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-prepare-for-wvd/
+    - name: Deploy Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-deploy-wvd/
+    - name: Optimize Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-optimize-wvd/
+    - name: Deploy applications by using MSIX app attach for Windows Virtual Desktop
+      href: https://docs.microsoft.com/learn/modules/m365-wvd-application-management/
+    - name: Secure a Windows Virtual Desktop deployment
+      href: https://docs.microsoft.com/learn/modules/m365-wvd-security/
