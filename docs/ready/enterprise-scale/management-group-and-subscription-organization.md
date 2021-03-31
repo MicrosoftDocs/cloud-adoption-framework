@@ -1,9 +1,9 @@
 ---
 title: Management group and subscription organization
-description: Management group and subscription organization.
+description: Understand management groups and how to organize subscriptions.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/15/2020
+ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready 
@@ -253,7 +253,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Protect against distributed denial of service attacks**
 
-    Publicly reachable Azure resource are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect the application's availability to it's intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical application(s).
+    Publicly reachable Azure resources are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect the application's availability to it's intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical application(s).
 
     Azure DDoS Protection defends Azure resources against DDoS attacks. The service continuously monitors incoming traffic to identify potential indications of a DDoS attack. During an active attack, enterprises can benefit from working with the Microsoft DDoS Rapid Response team.
 
