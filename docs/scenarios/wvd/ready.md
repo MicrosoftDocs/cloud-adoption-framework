@@ -1,9 +1,9 @@
 ---
 title: Azure landing zones for Windows Virtual Desktop instances
 description: Use the Cloud Adoption Framework for Azure to prepare your environment for virtual desktop migration using best practices that reduce complexity and standardize the migration process.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/17/2020
+author: DominicAllen
+ms.author: doalle
+ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Windows Virtual Desktop Azure landing zone review
 
-Before the Contoso cloud adoption team migrates to Windows Virtual Desktop, it will need an Azure landing zone that's capable of hosting desktops and any supporting workloads. The following checklist can help the team evaluate the landing zone for compatibility. Guidance in the [Ready methodology](../../ready/index.md) of this framework can help the team build a compatible Azure landing zone, if one has not been provided.
+Before implementing Windows Virtual Desktop, the environment needs an Azure landing zone capable of hosting desktops and any supporting workloads. The following checklist can help the team evaluate the landing zone for compatibility. Guidance in the [Ready methodology](../../ready/index.md) of this framework can help the team build a compatible Azure landing zone, if one has not been provided.
 
 ## Evaluate compatibility
 

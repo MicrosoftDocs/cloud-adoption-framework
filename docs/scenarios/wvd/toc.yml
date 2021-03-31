@@ -6,7 +6,7 @@ items:
     href: index.md
     pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
-    href: strategy.md
+    href: WVD-Strategy.md
   - name: Technical planning
     href: plan.md
   - name: Prepare your environments
@@ -21,27 +21,30 @@ items:
       href: migrate-deploy.md
     - name: Release
       href: migrate-release.md    
-  - name: Innovate in the cloud - TBD
-    href: migrate.md
-  - name: Govern your portfolio - TBD
-    href: govern.md
-  - name: Manage your portfolio - TBD
-    href: manage.md
+  - name: Innovate in the cloud
+    href: WVD-innovate.md
+  - name: Govern your portfolio
+    href: WVD-govern.md
+  - name: Manage your portfolio
+    href: WVD-manage.md
 
-  - name: Well-architected - TBD
+  - name: Architectures
     items:
-    - name: Example
-      href: /azure
+    - name: Windows Virtual Desktop Architecture 
+      href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop.md
 
-  - name: Architectures - TBD
+  - name: Best practices
     items:
-    - name: Example
-      href: /azure
-
-  - name: Best practices - TBD
-    items:
-    - name: Example
-      href: /azure
+    - name: WVD Security Best Practices
+      href: /azure/virtual-desktop/security-guide.md
+    - name: Azure Security Baseline for Windows Virtual Desktop
+      href: /azure/virtual-desktop/security-baseline
+    - name: Virtual Desktop machine sizing
+      href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
+    - name: Configure device redirections
+      href: /azure/virtual-desktop/configure-device-redirections
+    - name: Scale session hosts
+      href: /azure/virtual-desktop/set-up-scaling-script
 
   - name: Enterprise-scale construction set
     items:
@@ -60,12 +63,26 @@ items:
     - name: Platform automation and DevOps
       href: eslz-platform-automation-and-devops.md
        
-  - name: Microsoft products - Add links to product docs
+  - name: Microsoft products
     items:
-    - name: Example
-      href: /azure
+    - name: Windows Virtual Desktop
+      href: /services/virtual-desktop/
+    - name: Azure Files
+      href: https://azure.microsoft.com/services/storage/files/
 
-  - name: Learn modules - TBD
+  - name: Learn modules
     items:
-    - name: Example
-      href: /azure
+    - name: Deliver remote desktops and apps from Azure with Windows Virtual Desktop
+      href: https://docs.microsoft.com/learn/paths/m365-wvd/
+    - name: Introduction to Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-wvd-intro/
+    - name: Prepare for Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-prepare-for-wvd/
+    - name: Deploy Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-deploy-wvd/
+    - name: Optimize Windows Virtual Desktop in Microsoft Azure
+      href: https://docs.microsoft.com/learn/modules/m365-optimize-wvd/
+    - name: Deploy applications by using MSIX app attach for Windows Virtual Desktop
+      href: https://docs.microsoft.com/learn/modules/m365-wvd-application-management/
+    - name: Secure a Windows Virtual Desktop deployment
+      href: https://docs.microsoft.com/learn/modules/m365-wvd-security/

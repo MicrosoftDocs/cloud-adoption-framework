@@ -1,9 +1,9 @@
 ---
 title: Windows Virtual Desktop post-deployment and release tasks
 description: Use the Cloud Adoption Framework best practices to learn about the release process for the migration or deployment of Windows Virtual Desktop instances.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/17/2020
+author: DominicAllen
+ms.author: doalle
+ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Windows Virtual Desktop post-deployment
 
-The release process for the migration or deployment of Windows Virtual Desktop instances is relatively straightforward. This process mirrors the one that's used during the [Windows Virtual Desktop proof of concept](./proof-of-concept.md):
+The release process for the migration or deployment of Windows Virtual Desktop instances is straightforward. This process mirrors the one used during the [Windows Virtual Desktop proof of concept](./proof-of-concept.md):
 
 - Test the performance and latency of application groups and deployed desktops for a sampling of users.
 - Onboard end users to teach them how to connect via:
