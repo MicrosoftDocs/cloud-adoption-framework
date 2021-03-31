@@ -330,4 +330,4 @@ If an application owner deletes the private endpoint, the corresponding records 
 [image-11]: ./media/10-Black-Create-Private-Endpoint-Configuration.jpg
 [image-12]: ./media/11-Black-Private-Endpoint-IP-FQDN.jpg
 [image-13]: ./media/12-Black-Private-Endpoint-Activity-Log.jpg
-[image-14]: ./media/13-Black-Private-DNS-zones.jpg
+[image-14]: ./media/13-Black-Private-DNS-zones.png
