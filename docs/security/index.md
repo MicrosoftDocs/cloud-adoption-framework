@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Secure Methodology - Building security into your cloud adoption journey
 
-Just as adopting the cloud is a journey, security for the cloud age is an ongoing journey. Cloud security is not a static destination.
+Just cloud adoption is a journey, cloud security is also an ongoing journey of incremental progress and maturity, not a static destination.
 
 ## Envision a security end state
 
@@ -57,23 +57,27 @@ For more information on detailed security functions held by roles, see https://a
 
 As organizations adopt the cloud, they quickly find that static security processes cannot keep up with the pace of change in cloud platforms, the threat environment, and the evolution of security technologies. Security must shift to a continuously evolving approach to match pace with this change that will transform organizational culture and daily processes throughout the organization.
 
-To guide this transformation, this methodology provides a left-to-right maturity for business alignment (processes) and technical implementations (disciplines). These processes and disciplines create manageable steps on your security journey. Few organizations are able to jump in and implement the full methodology today. But most organizations can choose a single step & mature capabilities regarding that process or discipline.
+To guide this transformation, this methodology provides guidance on the integration of security with business processes (top row) and security technical disciplines (bottom row). These collectively enable meaningful and sustainable progress on your security journey to reduce organizational risk. Few organizations can master all of these at once, but all organizations should steadily mature each process and discipline.
 
 ### Change Drivers
 
 Security organizations are experiencing two types of major transformations at the same time
 
-- **Uplevel to business risk:** Security has been propelled into the realm of business risk management from a purely technical quality-oriented discipline. This is partly driven by digital transformation and partly by the massive increase in volume and sophistication of attacks that are enabled by the industrialization of the attack economy that makes specialized tools and skills cheap and easy for attackers to leverage.
-- **Platform change:** Security is also grappling with a technical platform change to the cloud on the scale of factories shifting from running their own electrical generators to plugging into an electrical grid. While they have the right foundational skills, nearly every process and technology is changing in some way.
-- **Shift in expectations:** In the past decade, digital innovation has redefined entire industries. Business agility, especially agility related to digital transformation, can quickly unseat an organization as a market leader. Likewise, loss of consumer confidence can have a similar impact on the business. The expectation has shifted from "Tell us No to protect us from what we shouldn't do." to an expectation of "Tell us how to stay safe, as we do what we must to compete."
+- **Security as business risk:** Security has been propelled into the realm of business risk management from a purely technical quality-oriented discipline. This is driven by dual forces of
+  - *digital transformation* - increases in digital footprint are continuously increasing the potential attack surface of the organization
+  -  *threat landscape* - increases in attack volume and sophistication that are fueled by an industrialized attack economy with specialized skills and continuous commoditization of attack tools and techniques
+- **Platform change:** Security is also grappling with a technical platform change to the cloud. This shift is on the scale of factories shifting from running their own electrical generators to plugging into an electrical grid. While security teams often have the right foundational skills, they are becoming overwhelmed by the changes to nearly every process and technology they use everyday.
+- **Shift in expectations:** In the past decade, digital innovation has redefined entire industries. Business agility, especially agility related to digital transformation, can quickly unseat an organization as a market leader. Likewise, loss of consumer confidence can have a similar impact on the business. While it was once acceptable for security to start with "No" to block a project and protect the organization,  the urgency of embracing digital transformation must change the engagement model to "Let's talk about how to stay safe while you do what is needed to stay relevant."
 
 ## Guiding lasting transformation
 
-Transforming how the business and tech teams view security requires realigment from the inside out.
+Transforming how the business and tech teams view security requires aligning security closely to the priorities, processes, and risk framework. Key areas that drive success are
 
-- **Culture:** The culture of security must match the culture of the business mission. Cultural shift requires improved processes, partnerships, and empowerment throughout risk management and multiple levels of decision making.
-- **Risk ownership:** Security is a shared responsibility across business and technoogy functions. Shared risk requires the security team to lead as an expert and a partner, advising all teams on accountable for risk outcomes.
-- **Talent focus:** Deep technical talent can be augmented and/or automated. Security must lead the organization by including diverse skillsets and perspectives which will help mitigate risk and solve problems using different frameworks (business, human psychology, economics, etc.).
+- **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. At the same time, security must become a normalized part of the culture of the organization as the internet upon which the business operates is open, allow adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
+- **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks, freeing security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that is communicated in the language of those leaders, but should not be held accountable for decisions they do not own. 
+- **Security Talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skillsets, mature security teams are also diversifying their strategy by focusing on
+  - *Growing security skillsets and knowledge* within existing teams in IT and the business. This is particularly important for DevOps teams with a DevSecOps approach and can take many forms (security helpdesk, identify and train champions within the community, job swapping programs, etc.).  
+  - *Recruiting diverse skillsets* to security teams to bring fresh perspectives and frameworks to problems (business, human psychology, economics, etc.) and build better relationships within the organization. To a hammer, all problems look like nails. 
 
 ### Business Alignment
 
@@ -89,7 +93,7 @@ This transformation will affect each security discipline differently. While all 
 
 - **Access Control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
 - **Security Operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continously reduce risk of breach
-- **Asset Protection:** Maximize protection of all assets (VMs, Data, Applications, Networks, and Identities) to minimize risk to the overall enviornment
+- **Asset Protection:** Maximize protection of all assets (VMs, Data, Applications, Networks, and Identities) to minimize risk to the overall environment
 - **Security Governance:** Delegated decisions accelerate innovation and introduce new risks. Monitor decisions, configurations, and data to govern decisions made across the environment and within all workloads across the portfolio.
 - **Innovation Security:** As organization adopt DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
 
@@ -99,7 +103,13 @@ All security activities should be aligned to and shaped by a dual focus on
 
 - **Business Enablement:** Align to organization's business objective and risk framework
 - **Security Assurances:** Focused on applying zero trust principles of
-- **Assume Breach:** When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
-- **Explicit Verification:** Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
-- **Least Privileged Access:** Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
+  - *Assume Breach:* When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
+  - *Explicit Verification:* Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
+  - *Least Privileged Access:* Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
 
+
+### Additional Resources
+
+This CAF Secure methodology is part of a comprehensive set of security guidance that also includes
+ - **Azure Well-Architected Framework** - Guidance on securing your workloads on Azure
+ - [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs) - Prescriptive Best Practices and Controls for Azure Security
