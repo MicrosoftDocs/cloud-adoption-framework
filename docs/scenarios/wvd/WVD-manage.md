@@ -57,22 +57,30 @@ These metrics will enable operations teams to monitor and react to performance a
 
 ### Operations compliance
 
-Patching and scaling are key elements of the on-going operational management of a Windows Virtual Desktop environment. The operators may sit in a number of different teams, depending on your desired operations approach. To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift. Each of these are tasks that central IT organizations tend to deliver as part of the operations baseline for Infrastructure-as-a-Service (IaaS).
+Patching and scaling are key elements of the on-going operational management of a Windows Virtual Desktop environment. The operators may sit in a number of different teams, depending on your desired operations approach. 
+
+To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift.
+
+Each of these are tasks that central IT organizations tend to deliver as part of the operations baseline for Infrastructure-as-a-Service (IaaS).
 
 The following guides provide best practices for implementing management capabilities for WVD environments:
 
-[WVD Azure Monitor PREVIEW](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor)
-[WVD Azure Advisor](https://docs.microsoft.com/azure/virtual-desktop/azure-advisor)
-[WVD Configure Automatic Updates](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates)
+- [WVD Azure Monitor](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor)
+- [WVD Azure Advisor](https://docs.microsoft.com/azure/virtual-desktop/azure-advisor)
+- [WVD Configure Automatic Updates](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates)
 
 ### Protect and recover
 
 The Windows Virtual Desktop architecture separates the host compute from the user profile and associated data, making it easier to move host if required for performance reasons.
+
 It is recommended that user profiles are managed in solutions such as [FSLogix profile containers](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-user-profile) in order to store the complete user profile in a single container. This enables the profile to roam between virtual desktops.
+
 In addition, using concepts such as [MSIX app attach](https://docs.microsoft.com/azure/virtual-desktop/app-attach-image-prep) also helps in separating the applications used from the operating system. This in turn makes it easier to provision virtual machines.
 
 ### Workload operations
 
 The platform operations section above illustrates a common conversation when managing AKS clusters. Will the virtual desktops platform and applications be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? That question is different for different organizations. The constant seen across most organizations is that virtual desktops are designed to give the users more flexibility in how they want to work and access applications in a secure way.
 
-Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate a Windows Virtual Desktop environment using completely decentralized workload operations. In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) to get very specific on the types of operational processes and tools to use for your workload.
+Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate a Windows Virtual Desktop environment using completely decentralized workload operations.
+
+In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) to get very specific on the types of operational processes and tools to use for your workload.

@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Windows Virtual Desktop assessment
 
-The Windows Virtual Desktop [proof of concept](./proof-of-concept.md) provides an initial scope as a baseline implementation for the Contoso cloud adoption team. But the output of that proof of concept is unlikely to meet their production needs.
+The Windows Virtual Desktop [proof of concept](./proof-of-concept.md) provides an initial scope as a baseline implementation. However, the output of that proof of concept is unlikely to meet their production needs as-is.
 
 The Windows Virtual Desktop assessment exercise serves as a focused means of testing assumptions through a data-driven process. Assessment data will help the team answer a series of important questions, validate or invalidate their assumptions, and refine the scope as necessary to support the team's Windows Virtual Desktop scenario. By using this assumption-validation approach, the team can accelerate the migration or deployment of its end-user desktops to Windows Virtual Desktop.
 
@@ -61,7 +61,7 @@ See examples for pricing in the [East US](https://azure.com/e/448606254c9a44f887
 
 ### Application groups
 
-Both Movere and lakeside scans of the current on-premises environment can provide data about the applications that are run on end-user desktops. By using that data, you can create a list of all applications required per each persona. For each required application, the answers to the following questions will shape deployment iterations:
+Both Movere and Lakeside scans of the current on-premises environment can provide data about the applications that are run on end-user desktops. By using that data, you can create a list of all applications required per each persona. For each required application, the answers to the following questions will shape deployment iterations:
 
 - Do any applications need to be installed for the persona to use this desktop? Unless the persona uses 100 percent web-based software as a service applications, you'll likely need to [configure a custom master VHD image](/azure/virtual-desktop/set-up-customize-master-image) for each persona, with the required applications installed on the master image.
 - Does this persona need Microsoft 365 applications? If so, you'll need to [add Microsoft 365 to a customized master VHD image](/azure/virtual-desktop/install-office-on-wvd-master-image).
