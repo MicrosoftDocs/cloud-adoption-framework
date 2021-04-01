@@ -19,7 +19,6 @@ Migrating an organization's end-user desktops to the cloud is a common scenario 
 This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption lifecycle. Completing the journey requires a few key guidance sets:
 
 - **Cloud Adoption Framework**: These articles walk through the considerations and recommendations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Windows Virtual Desktop as a central part of your technology strategy.
-- **Azure Well-Architected Framework**:
 - **Reference architectures**: These reference solutions aid in accelerating deployment of Windows Virtual Desktop
 - **Featured Azure products**: Learn more about the products that support your virtual desktop strategy in Azure
 - **Microsoft Learn modules**: Gain the hands-on skills required to implement, maintain, and support a virtual desktop environment
