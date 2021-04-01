@@ -416,6 +416,10 @@ items:
           href: /azure/sql-database/sql-database-security-best-practice?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
         - name: Choose a deployment option in Azure SQL
           href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: AI + Machine Learning
+        items:
+        - name: Organize and set up Azure Machine Learning environments
+          href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
       - name: Cost management
         items:
         - name: Track costs
