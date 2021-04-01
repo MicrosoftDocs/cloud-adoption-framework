@@ -31,7 +31,7 @@ Virtualization of your end users' desktops in the cloud can help your team reali
 
 ## The strategic impact of Windows Virtual Desktop in the cloud
 
-Windows Virtual Desktop products form a mission-critical platform for many organizations. When these products are foundational to an organization's business processes, the dependencies on Windows Virtual Desktop can be seen throughout the portfolio. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Windows Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. Understanding the strategy for an Windows Virtual Desktop cloud migration and future-state innovation targets is critical to the success of all other cloud adoption plans.
+Windows Virtual Desktop products form a mission-critical platform for many organizations. When these products are foundational to an organization's business processes, the dependencies on Windows Virtual Desktop can be seen throughout the portfolio. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Windows Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. Understanding the strategy for a Windows Virtual Desktop cloud migration and future-state innovation targets is critical to the success of all other cloud adoption plans.
 
 This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of Windows Virtual Desktop cloud adoption.
 
@@ -45,9 +45,13 @@ Windows Virtual Desktop is an influential platform, and organizations have sever
 
 - **Innovation motivations:** The cloud unlocks new opportunities for Windows Virtual Desktop to expand and deliver transformative products and services.
 
-- **Infrastructure scale flexibility requirements:** The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with Windows Virtual Desktop S/4HANA.
+- **Infrastructure scale flexibility requirements:** The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with Windows Virtual Desktop.
 
-Windows Virtual Desktop customers are often motivated by all four categories above. To successfully implement an Windows Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
+- **Choice and Flexibility:** Customers now have the choice and flexibility to  choose from any of the available Virtual Machine families and sizes, all optimised for different usage requirements, and provide these seamlessly to their user estate, all of which will liekly have differnt compute requirements based upon their application portfolio
+
+- **Potential cost savings:** Customers can now take advantage of Azure as an operational rather than upfraont cost and it being a consumption based service. For example Virtual Machines are only charged for the time they are powered on, providing the capbility to realise cost savings back to the organsitions
+
+Windows Virtual Desktop customers are often motivated by all six categories above. To successfully implement an Windows Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
 
 Motivations to adopt an Windows Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are for your organization if your team is reviewing this adoption scenario:
 
@@ -55,7 +59,7 @@ Motivations to adopt an Windows Virtual Desktop platform in the cloud are often 
 
 1. Windows Virtual Desktop hosting contracts lock in vendors across multiple years. If your hosting, managed service, or maintenance contracts are coming up for renewal, some cloud adoption opportunities and benefits are to improve agile, unlock new innovations, and streamline operations for your most mission-critical platform.
 
-1. Refresh and contract renewals can be triggered by Windows Virtual Desktop upgrade cycles or a business driver to expand into HANA, Windows Virtual Desktop Business Suite, or others Windows Virtual Desktop features. If your organization is seeking to expand Windows Virtual Desktop capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
+1. Refresh and contract renewals can be triggered by on-premises Virtual Desktop upgrade cycles or a business driver to expand into Windows Virtual Desktop. If your organization is seeking to expand Windows Virtual Desktop capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
 
 ## How to build a business justification for cloud migration
 
