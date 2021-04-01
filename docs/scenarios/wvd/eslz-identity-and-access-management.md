@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Identity and access management for Windows Virtual Desktop (WVD) Enterprise-Scale scenario
 
-Windows Virtual Desktop (WVD) is a managed service aiming to provide a Microsoft control plane for your VDI environment. Identity and access management for Windows Virtual Desktop control plane uses Azure role-based access controls with certain conditions outlined in this article.
+Windows Virtual Desktop (WVD) is a managed service aiming to provide a Microsoft control plane for your VDI environment. Identity and access management for Windows Virtual Desktop uses Azure role-based access controls with certain conditions outlined in this article.
 
 ## RBAC Design
 
-Role Based Access Controls (RBAC) can help you provide separation of duties among engineering and operational staff. As part of your landing zone design you should who will be added to each role and create security groups for each to simplify adding and removing users from each role.  
+Role Based Access Controls (RBAC) can help you provide separation of duties among the various teams and individuals responsible for ongoing management of the deployment. As part of your landing zone design you should who will be added to each role and create security groups for each to simplify adding and removing users from each role.  
 
 Windows virtual desktop has custom Azure roles designed for each functional area. Configuration details can be found inside the Microsoft [Windows Virtual Desktop Doc Site](https://docs.microsoft.com/azure/virtual-desktop/rbac)
 Common Roles include:
@@ -31,11 +31,11 @@ Common Roles include:
 - **User Session Operator:** The User Session Operator role lets you send messages, disconnect sessions, and use the "logoff" function to sign sessions out of the session host. However, this role doesn't let you perform session host management like removing session host, changing drain mode, and so on.
 - **Session Host Operator:** The Session Host Contributor role lets you view and remove session hosts, as well as change drain mode. They can't add session hosts using the Azure portal because they don't have write permission for host pool objects.
 
-Other Azure [RBAC Roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) can also be created and defined as part of the CAF Deployment
+Other Azure [RBAC Roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) can also be created and defined as part of the CAF Deployment. These Windows Virtual Desktop specific RBAC roles might need to be combined with other Azure RBAC roles to provide the complete set of permissions required for staff to be able to acheive their dutys across both Windows Virtual Desktop and other Azure services, such as VMs, networking etc.
 
 ## Design considerations
 
-- Windows Virtual Desktop users must be sourced form the same Active Directory Domain Services that is synchronized to Azure AD.
+- Windows Virtual Desktop users must be sourced form either the same Active Directory Domain Services that is synchronized to Azure AD, or an instance of Azure Active Directory Domain Services synchronized from Azure AD.
   > [!NOTE]
   > Windows Virtual Desktop does not support B2B or Microsoft Accounts.
 - The account used for domain join [can not have multi-factor authentication](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details) or other interactive prompts.
