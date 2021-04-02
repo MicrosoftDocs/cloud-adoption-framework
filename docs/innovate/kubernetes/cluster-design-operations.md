@@ -1,9 +1,10 @@
 ---
 title: Cluster design and operations
-description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design and operations.
+description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design, network design, and operations.
 author: sabbour
+keywords: Network design, cluster design, infrastructure provisioning, kubernetes
 ms.author: brblanch
-ms.date: 12/16/2019
+ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -14,28 +15,21 @@ ms.custom: think-tank
 
 # Cluster design and operations
 
-Identify for cluster configuration and network design. Future-proof scalability by automating infrastructure provisioning. Maintain high availability by planning for business continuity and disaster recovery.
+Identify for cluster configuration and network design. Future-proof scalability by automating infrastructure provisioning. Provisioning is the process of setting up desired IT infrastructure. Automated infrastructure provisioning allows for a completely remote installation and sets up virtual environments. Maintain high availability by planning for business continuity and disaster recovery.
 
 ## Plan, train, and proof
 
-As you get started, the checklist and resources below will help you plan the cluster design. You should be able answer these questions:
+As you get started, the checklist and Kubernetes resources below will help you plan the cluster design. You should be able answer these questions:
 
 > [!div class="checklist"]
 >
 >- Have you identified the networking design requirements for your cluster?
 >- Do you have workloads with varying requirements? How many node pools are you going to use?
 
-**Checklist:**
-
-- **Identify network design considerations.** Understand cluster network design considerations, compare network models, and choose the Kubernetes networking plug-in that fits your needs. For Azure container networking interface (CNI) networking, consider the number of IP addresses required as a multiple of the maximum pods per node (default of 30) and number of nodes. Add one node required during upgrade. When choosing load balancer services, consider using an ingress controller when there are too many services to reduce the number of exposed endpoints. For Azure CNI, the service CIDR has to be unique across the virtual network and all connected virtual networks to ensure appropriate routing.
-
-  To learn more, see:
-  - [Kubenet and Azure CNI networking](/azure/aks/concepts-network#azure-virtual-networks)
-  - [Use kubenet networking with your own IP address ranges in Azure Kubernetes Service (AKS)](/azure/aks/configure-kubenet)
-  - [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni)
-  - [Secure network design for an AKS cluster](https://github.com/Azure/sg-aks-workshop/blob/master/cluster-design/NetworkDesign.md)
-
-- **Create multiple node pools.** To support applications that have different compute or storage demands, you can optionally configure your cluster with multiple node pools. For example, use more node pools to provide GPUs for compute-intensive applications or access to high-performance SSD storage. For more information, see [Create&nbsp;and&nbsp;manage&nbsp;multiple node pools for a cluster in Azure Kubernetes Service](/azure/aks/use-multiple-node-pools).
+| Checklist | Resources |
+| --------- | --------- |
+| **Identify network design considerations.** Understand cluster network design considerations, compare network models, and choose the Kubernetes networking plug-in that fits your needs. For Azure container networking interface (CNI) networking, consider the number of IP addresses required as a multiple of the maximum pods per node (default of 30) and number of nodes. Add one node required during upgrade. When choosing load balancer services, consider using an ingress controller when there are too many services to reduce the number of exposed endpoints. For Azure CNI, the service CIDR has to be unique across the virtual network and all connected virtual networks to ensure appropriate routing. | [Kubenet and Azure CNI networking](/azure/aks/concepts-network#azure-virtual-networks) [Use kubenet networking with your own IP address ranges in Azure Kubernetes Service (AKS)](/azure/aks/configure-kubenet) [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni) [Secure network design for an AKS cluster](https://github.com/Azure/sg-aks-workshop/blob/master/cluster-design/NetworkDesign.md) |
+| **Create multiple node pools.** To support applications that have different compute or storage demands, you can optionally configure your cluster with multiple node pools. For example, use more node pools to provide GPUs for compute-intensive applications or access to high-performance SSD storage. For more information, see [Create&nbsp;and&nbsp;manage&nbsp;multiple node pools for a cluster in Azure Kubernetes Service](/azure/aks/use-multiple-node-pools).
 
 - **Decide on availability requirements.** A minimum of two pods behind Azure Kubernetes Service ensures high availability of your application if there is pod failures or restarts. Use three or more pods to handle load during pod failures and restarts.
 For the cluster configuration, a minimum of two nodes in an availability set or virtual machine scale set is required to meet the service-level agreement of 99.95%. Use at least three pods to ensure pod scheduling during node failures and reboots.
