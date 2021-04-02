@@ -21,7 +21,7 @@ Microsoft offers two implementation options for landing zones:
 
 Watch the following 15 minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RWwZeg>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWwZeg]
 
 You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](./partner-landing-zone.md).
 
@@ -160,7 +160,7 @@ The following table summarizes considerations for each landing zone implementati
 
     :::column-end:::
     :::column:::
-        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging
+        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging.
     :::column-end:::
     :::column:::
         Partial. Some resources are deployed. Additional offerings aligned to Cloud Adoption Framework methodologies required to apply best practices to support security, governance, and compliance.
