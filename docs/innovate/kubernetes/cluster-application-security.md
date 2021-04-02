@@ -4,7 +4,7 @@ description: Learn about Kubernetes in the Cloud Adoption Framework for cluster 
 author: sabbour
 keywords: Application security, security essentials, Kubernetes security
 ms.author: brblanch
-ms.date: 03/20/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -15,7 +15,7 @@ ms.custom: think-tank, seo-caf-innovate
 
 # Cluster and application security
 
-Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. . Kubernetes security is important throughout the container lifecycle due to the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application’s security.
+Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. Kubernetes security is important throughout the container lifecycle because of the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application’s security.
 
 ## Plan, train, and proof
 
@@ -31,13 +31,13 @@ As you get started, the security essentials checklist and Kubernetes security re
       **Security Checklist**
    :::column-end:::
    :::column span="":::
-      **Kuberetes security resources**
+      **Kubernetes security resources**
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
       
-**Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented.
+**Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that it protects the applications it runs, that it identifies and addresses security issues quickly, and that it prevents similar issues in the future.
    :::column-end:::
    :::column span="":::
       
@@ -47,60 +47,60 @@ As you get started, the security essentials checklist and Kubernetes security re
 :::row:::
    :::column span="":::
       
-**Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely.
+**Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and lets you deploy containers securely.
    :::column-end:::
    :::column span="":::
       
-[Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image)
+[Security hardening in Azure Kubernetes Service (AKS) virtual machine hosts](/azure/aks/security-hardened-vm-host-image)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
       
-**Setup cluster Kubernetes role-based access control (Kubernetes RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads.
+**Setup cluster Kubernetes role-based access control (Kubernetes RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or change resources, or view logs from running application services.
    :::column-end:::
    :::column span="":::
       
-[Understand Kubernetes role-based access control (Kubernetes RBAC)  (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=G3R24JSlGjY&index=12) <br>
+[Understand Role Based Access Control in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=G3R24JSlGjY&index=12)
 
-[Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
+[Integrate Azure Active Directory with AKS using the Azure CLI](/azure/aks/azure-ad-integration-cli)
 
-[Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)
+[Use Azure role-based access control to define access to the Kubernetes configuration file in AKS](/azure/aks/control-kubeconfig-access)
    :::column-end:::
 :::row-end:::
 
 ## Deploy to production and apply Kubernetes security best practices
 
-As you prepare the application for production, you should implement a minimum set of best practices. Use the following checklist at this stage.  By the end of this section, you'll be able to answer these questions:
+As you prepare the application for production, implement a minimum set of best practices. Use this checklist at this stage.  By the end of this section, you'll be able to answer these questions:
 
 > [!div class="checklist"]
 >
-> - Have you configured network security rules for ingress, egress, and intra-pod communication?
-> - Is your cluster configured to automatically apply node security updates?
-> - Are you running a security scanning solution for your cluster and container workloads?
+> - Have you set up network security rules for ingress, egress, and intra-pod communication?
+> - Is your cluster set up to automatically apply node security updates?
+> - Are you running a security scanning solution for your cluster and container services?
 
 :::row:::
    :::column span="":::
       **Security Checklist**
    :::column-end:::
    :::column span="":::
-      **Kuberetes security resources**
+      **Kubernetes security resources**
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
       
-**Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership.
+**Control access to clusters using group membership.** Set up Kubernetes RBAC to limit access to cluster resources based on user identity or group membership.
    :::column-end:::
    :::column span="":::
       
-[Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac)
+[Control access to cluster resources using Kubernetes RBAC and Azure AD identities in AKS](/azure/aks/azure-ad-rbac)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
       
-**Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes.
+**Create a secrets management policy.** Securely deploy and manage sensitive information, like passwords and certificates, using secrets management in Kubernetes.
    :::column-end:::
    :::column span="":::
       
@@ -150,7 +150,7 @@ As you prepare the application for production, you should implement a minimum se
 :::row:::
    :::column span="":::
       
-**Apply security and kernel updates to worker nodes.** Understand the AKS node update experience. To protect your clusters, security updates are automatically applied to Linux nodes in AKS. These updates include OS security fixes or kernel updates. Some of these updates require a node reboot to complete the process.
+**Apply security and kernel updates to worker nodes.** Understand the AKS node update experience. To protect your clusters, security updates are automatically applied to Linux nodes in AKS. These updates include OS security fixes or kernel updates. Some of these updates require a node reboot to finish the process.
    :::column-end:::
    :::column span="":::
       
@@ -160,13 +160,13 @@ As you prepare the application for production, you should implement a minimum se
 :::row:::
    :::column span="":::
       
-**Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls.
+**Set up a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls.
    :::column-end:::
    :::column span="":::
       
 [Azure Container Registry integration with Security Center](/azure/security-center/defender-for-container-registries-introduction)
 
-[Azure Kubernetes Service integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)
+[AKS integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)
    :::column-end:::
 :::row-end:::
 
@@ -183,7 +183,7 @@ Now that the application is in production, how can you optimize your workflow an
       **Security Checklist**
    :::column-end:::
    :::column span="":::
-      **Kuberetes security resources**
+      **Kubernetes security resources**
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -203,6 +203,6 @@ Now that the application is in production, how can you optimize your workflow an
    :::column-end:::
    :::column span="":::
       
-[Rotate certificates in Azure Kubernetes Service (AKS)](/azure/aks/certificate-rotation)
+[Rotate certificates in AKS](/azure/aks/certificate-rotation)
    :::column-end:::
 :::row-end:::
