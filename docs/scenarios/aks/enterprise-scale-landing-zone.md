@@ -23,6 +23,8 @@ The AKS construction set assumes that an enterprise-scale landing zone has been 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
+If you are not operating within an enterprise-scale landing zone topology, you may instead wish to follow the guidance found in the [AKS Baseline reference architecture](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks).
+
 ## What the AKS construction set provides
 
 The construction set approach to landing zones provides these assets to support your project:
@@ -36,14 +38,14 @@ The construction set approach to landing zones provides these assets to support 
 
 ## Design guidelines
 
-These articles provide guidelines for creating your landing zone:
+These articles provide guidelines for the AKS enterprise-scale scenario:
 
-- [Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md)
-- [Network topology and connectivity for AKS enterprise-scale scenario](./eslz-network-topology-and-connectivity.md)
-- [Management and monitoring for AKS enterprise-scale scenario](./eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery for AKS enterprise-scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance for AKS enterprise-scale scenario](./eslz-security-governance-and-compliance.md)
-- [Platform automation and DevOps for AKS enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Management and monitoring](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
+- [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
