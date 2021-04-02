@@ -8,7 +8,7 @@ ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, seo-caf-innovate
 ---
 
 <!-- cSpell:ignore autoscaler PDBs -->
