@@ -19,7 +19,7 @@ Microsoft offers two implementation options for landing zones:
 - Start small and expand
 - Enterprise-scale
 
-Watch the following 15 minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
+Watch the following 15-minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWwZeg]
 
