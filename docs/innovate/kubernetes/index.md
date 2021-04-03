@@ -15,7 +15,7 @@ keywords: Kubernetes adoption, Kubernetes documentation, Kubernetes resources
 
 # Kubernetes in the Cloud Adoption Framework
 
-Review a prescriptive framework that includes Kubernetes documentation, resources, tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of Kubernetes and cloud-native practices at scale.
+To simplify adoption of Kubernetes and cloud-native practices at scale, review a prescriptive framework that includes Kubernetes documentation, resources, tools, programs, and content (best practices, configuration templates, and architecture guidance).
 
 The list of required actions is categorized by persona to drive a successful deployment of applications on Kubernetes, from proof of concept to production, then scaling and optimization.
 
