@@ -19,7 +19,7 @@ The first step to developing any new innovation is to identify how that innovati
 
 ## What is business value?
 
-To define business value, it is understood that business value is an informal term which might vary from business to business. It's the net benefit that will be realized by the customer and includes all forms of value which determine the health and well-being of the company in the long run.
+Business value is an informal term that might vary from business to business. It's the net benefit realized by the customer and includes all forms of value, which determines the health and well-being of the company in the long run.
 
 ## Qualifying questions to determine business value
 
@@ -50,7 +50,7 @@ If either team fails to answer all four questions in 30 minutes, then alignment 
 
 ## Address the big picture first
 
-The Cloud Adoption Framework follows a prescribed path through four phases: strategizing, planning, readiness, and adoption. Cloud and business innovation fits within the adoption phase of this process. The answers to [qualifying questions](#qualifying-questions) three and four concern outcomes and motivations. When these answers are misaligned, it indicates that your organization missed something during the strategizing phase of the cloud adoption lifecycle. Several of the following scenarios are likely to be at play.
+The Cloud Adoption Framework follows a prescribed path through four phases: strategizing, planning, readiness, and adoption. Cloud and business innovation fits within the adoption phase of this process. The answers to [qualifying questions](#qualifying-questions-to-determine-business-value) three and four concern outcomes and motivations. When these answers are misaligned, it indicates that your organization missed something during the strategizing phase of the cloud adoption lifecycle. Several of the following scenarios are likely to be at play.
 
 - **Alignment opportunity:** When business stakeholders can't agree on motivations and business outcomes related to a cloud and business innovation effort, it's a symptom of a larger challenge. The exercises in the [Strategy methodology](../strategy/index.md) can be useful in developing alignment among business stakeholders. Additionally, it's highly recommended that the same stakeholders form a [cloud strategy team](../organize/cloud-strategy.md) that meets regularly.
 
@@ -68,7 +68,7 @@ These big picture opportunities often reveal ways to better align the innovative
 It's fairly common for the answers to questions one and two to be misaligned. During the early stages of ideation and development, customer need and business opportunity often get out of alignment. Many development teams find it challenging to achieve a balance between too much and too little definition. The Cloud Adoption Framework recommends lean approaches like build-measure-learn feedback loops to answer these questions. The following list shows opportunities and approaches to create alignment.
 
 - **Hypothesis opportunity:** It's common for various stakeholders and development teams to have too many expectations for a solution. Unrealistic expectations can be a sign that the hypothesis is too vague. Follow the guidance on [building with customer empathy](./considerations/build.md) to construct a clearer hypothesis.
-- **Build opportunity:** Teams might be misaligned because they disagree on the way to solve the customer need. Such disagreement typically indicates that the team is being [delayed by a premature technical spike](./considerations/build.md#reduce-complexity-and-delay-technical-spikes). To keep the team focused on the customer, start the first iteration and build a small minimum viable product (MVP) to address part of the hypothesis. For more guidance to help the team move forward, see [Develop digital inventions](./considerations/invention.md).
+- **Build opportunity:** Teams might be misaligned because they disagree on the way to solve the customer need. Such disagreement typically indicates that the team is being [delayed by a premature technical spike](./considerations/build.md#reduce-complexity-and-delay-technical-spikes). To keep the team focused on the customer, start the first iteration and build a small minimum viable product (MVP) to address part of the hypothesis. For more information, see [Develop digital inventions](./considerations/invention.md).
 - **Training opportunity:** Either team can be misaligned because they need deep technical requirements and extensive functional requirements. This need can lead to an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, you might find innovation and keeping pace with the market to be a challenge. For training resources about DevOps and agile practices, see:
   - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/)
   - [Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/)
