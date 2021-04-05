@@ -21,7 +21,11 @@ Microsoft offers two implementation options for landing zones:
 
 Watch the following 15 minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RWwZeg>]
+<!-- markdownlint-disable MD034 -->
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwZeg]
+
+<!-- markdownlint-enable MD034 -->
 
 You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](./partner-landing-zone.md).
 
@@ -31,10 +35,8 @@ The following table summarizes considerations for each landing zone implementati
 
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
-
     :::column-end:::
     :::column:::
         **Start small and expand**
@@ -59,7 +61,6 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         Baseline reference architecture
@@ -87,13 +88,12 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         Enables adoption velocity across the organization
     :::column-end:::
     :::column:::
-        Quickly enable low-risk adoption. Build towards security, governance, and compliance over time.
+        Quickly enable low-risk adoption. Build toward security, governance, and compliance over time.
     :::column-end:::
     :::column:::
         Start with security, governance, and compliance to enable compliant adoption sooner.
@@ -101,7 +101,6 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         Achieves operational excellence
@@ -129,7 +128,6 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         Associated risks while building out security, governance, and compliance
@@ -157,7 +155,6 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging
@@ -171,7 +168,6 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         Automation capabilities like infrastructure as code (IaC) and Azure DevOps
@@ -199,7 +195,6 @@ The following table summarizes considerations for each landing zone implementati
 :::row-end:::
 :::row:::
     :::column:::
-
     :::column-end:::
     :::column:::
         Timeline to achieve security, governance, and compliance requirements for all workloads:
@@ -236,7 +231,7 @@ The following considerations are key to your adoption plan for either type:
 
 Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps accelerate, compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
 
-If you start small and expand, there are ways to get to self-sufficiency, adoption velocity, and operational excellence. Use the Govern or Manage methodologies inside the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](../enterprise-scale/design-guidelines.md), to iteratively improve your design.
+If you start small and expand, there are ways to achieve self-sufficiency, adoption velocity, and operational excellence. Use the Govern and Manage methodologies of the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](../enterprise-scale/design-guidelines.md), to iteratively improve your design.
 
 To learn more about operational excellence, see [Deliver operational excellence during digital transformation](../../get-started/operational-excellence.md).
 
@@ -273,8 +268,8 @@ For more information, see [Best practices for Azure readiness](../azure-best-pra
 
 Both methodologies offer automation capabilities.
 
-- Start small and expand: ARM templates, Azure Policy, and Azure Blueprints. Can create your own CI/CD pipeline.
-- Enterprise-scale: ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included in the reference implementation guidance.
+- **Start small and expand:** ARM templates, Azure Policy, and Azure Blueprints. Can create your own CI/CD pipeline.
+- **Enterprise-scale:** ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included in the reference implementation guidance.
 
 Start small and expand uses ARM templates, Azure Policy, and Azure Blueprints.
 
@@ -293,8 +288,8 @@ Whether you implement start small and expand or enterprise-scale, you can use te
 
 Landing zone options take different amounts of time to implement. There are two types of timelines:
 
-- A timeline to adopt or migrate a low-risk workload
-- A timeline to reach security, governance, and compliance requirements for all workloads
+- A timeline to adopt or migrate a low-risk workload.
+- A timeline to reach security, governance, and compliance requirements for all workloads.
 
 With a start-small-and-expand approach, you can have a low-risk workload up and running in 3 to 10 days. For workloads with high security, governance, and compliance requirements, it could take four to six months.
 
