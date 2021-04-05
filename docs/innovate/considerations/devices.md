@@ -21,7 +21,7 @@ In [Build with customer empathy](./build.md), we discussed the three tests of tr
 
 An ambient user experience is a digital experience that relates to the immediate surroundings. Ambient user experiences occur when technology systems seamlessly interact with a user based on their needs and the context of their requests. A solution that features ambient user experiences tries to meet the customer in their moment of need. When possible, the solution meets the customer need without leaving the flow of activity that triggered it.
 
-Life in the digital economy is full of distractions. We're all bombarded with social, email, web, visual, and verbal messaging, each of which is a risk of distraction. This risk increases with every second that passes between the customer's point of need and the moment they encounter a solution. Countless customers are lost in that brief time gap. To foster an increase in repeat adoption, you must reduce the number of distractions by reducing the time to solution.
+Life in the digital economy is full of distractions. We're all bombarded with social, email, web, visual, and verbal messaging, each of which is a risk of distraction. This risk increases with every second that passes between the customer's point of need and the moment they find a solution. Countless customers are lost in that brief time gap. To foster an increase in repeat adoption, you must reduce the number of distractions by reducing the time to solution.
 
 ## Interact with devices
 
@@ -50,14 +50,14 @@ Azure App Service is a great example of this approach. During early iterations, 
 
 ## Mixed reality
 
-Mixed reality solutions represent the next level of maturity for ambient user experiences. This approach augments or replicates the customer's surroundings; it creates an extension of reality for the customer to operate within.
+Mixed reality solutions represent the next step for ambient user experiences. This approach augments or replicates the customer's surroundings; it creates an extension of reality for the customer to operate within.
 
 > [!IMPORTANT]
 > If a virtual reality (VR) device is required and it's not already part of a customer's immediate surroundings or natural behaviors, augmented or virtual reality is more of an alternative digital experience and less of an ambient experience.
 
 Mixed reality experiences are increasingly common among remote workforces. Their use is growing even faster in industries that require collaboration or specialty skills that aren't readily available in the local market. Situations that require centralized implementation support of a complex product for a remote labor force are particularly fertile ground for augmented reality. In these scenarios, the central support team and remote employees might use augmented reality to work on, troubleshoot, and install the product.
 
-For example, consider the case of spatial anchors. Spatial anchors allow you to create mixed reality experiences with objects that persist in their respective locations across devices over time. Through spatial anchors, a specific behavior can be captured, recorded, and persisted, thereby providing an ambient experience the next time the user operates within that augmented environment. [Azure Spatial Anchors](/azure/spatial-anchors/overview) is a service that moves this logic to the cloud, allowing digital experiences to be shared across interactive devices and even across solutions.
+For example, consider the case of spatial anchors. Spatial anchors allow you to create mixed reality experiences with objects that persist in their respective locations across devices over time. Through spatial anchors, a specific behavior can be captured, recorded, and persisted, providing an ambient experience the next time the user operates within that augmented environment. [Azure Spatial Anchors](/azure/spatial-anchors/overview) is a service that moves this logic to the cloud, allowing digital experiences to be shared across interactive devices and even across solutions.
 
 ## Integrated reality
 
