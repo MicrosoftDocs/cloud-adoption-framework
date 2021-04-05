@@ -74,7 +74,7 @@ This section of the article improves the governance MVP design to include new Az
     1. Governance enforcement is cloud-specific.
     2. The corporate policies established in the governance guide are not cloud-specific. While the implementation may vary from cloud to cloud, the policy statements can be applied to the secondary provider.
 
-Multicloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multicloud adoption grows, so does complexity and security risks.
+Multicloud adoption should be contained to where it's required based on technical needs or specific business requirements. As multicloud adoption grows, so does complexity and security risks.
 
 ## Next steps
 

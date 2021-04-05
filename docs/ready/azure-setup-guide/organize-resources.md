@@ -24,7 +24,7 @@ Organizing your cloud-based resources is critical to securing, managing, and tra
 Azure provides four levels of management scope: management groups, subscriptions, resource groups, and resources. The following image shows the relationship of these levels.
 
    ![Diagram that shows the relationship of management hierarchy levels](./media/organize-resources/scope-levels.png)
-    _Figure 1: How the four management-scope levels relate to each other._
+    *Figure 1: How the four management-scope levels relate to each other.*
 
 - **Management groups:** These groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
 - **Subscriptions:** A subscription logically associates user accounts and the resources that were created by those user accounts. Each subscription has limits or quotas on the amount of resources you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.
@@ -82,7 +82,7 @@ To learn more, see:
 - [Create your initial subscriptions](../azure-best-practices/initial-subscriptions.md)
 - [Create additional Azure subscriptions to scale your Azure environment](../azure-best-practices/scale-subscriptions.md)
 - [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
-- [Organize your resources with Azure management groups](/azure/azure-resource-manager/management-groups-overview)
+- [Organize your resources with Azure management groups](/azure/governance/management-groups/overview)
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Subscription service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 

@@ -73,7 +73,7 @@ At a high level, a many-models scenario occurs in three stages: data source, dat
 
 [![A diagram of a many-models scenario.](./media/many-models-scenario.png)](./media/many-models-scenario.png#lightbox)
 
-**Data source:** It's important to segment data without too many cardinalities in the data source stage. The product ID or barcode shouldn't be factored into the main partition, as this will produce too many segments and could inhibit meaningful models. The brand, SKU, or locality could be more fitting features. It is also important to homogenize the data by removing anomalies that would skew data distribution.
+**Data source:** It's important to segment data without too many cardinalities in the data source stage. The product ID or barcode shouldn't be factored into the main partition, as this will produce too many segments and could inhibit meaningful models. The brand, SKU, or locality could be more fitting features. It's also important to homogenize the data by removing anomalies that would skew data distribution.
 
 **Data science:** Several experiments run parallel to each data partition in the data science stage. This is a typically iterative process where models from the experiments are evaluated to determine the best one.
 

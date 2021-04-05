@@ -1,5 +1,5 @@
 ---
-title: "Centralize management operations"
+title: Centralize management operations
 description: Learn to centralize management operations by using a single Azure Active Directory tenant for all users. Centralized management simplifies management operations and reduces maintenance costs.
 author: JnHs
 ms.author: brblanch

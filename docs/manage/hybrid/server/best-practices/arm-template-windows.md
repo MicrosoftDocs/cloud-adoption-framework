@@ -35,7 +35,7 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
     az --version
     ```
 
-3. Azure subscription: If you don't have an Azure subscription, you can [create a free Azure account](https://azure.microsoft.com/free/).
+3. Azure subscription: if you don't have an Azure subscription, you can [create a free Azure account](https://azure.microsoft.com/free/).
 
 4. Create an Azure service principal.
 
@@ -79,9 +79,9 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
     1. Set local OS environment variables.
 
-    2. Generate a local OS sign-in script named *LogonScript.ps1*. This script will:
+    2. Generate a local OS sign-in script named `LogonScript.ps1`. This script will:
 
-        - Create the *LogonScript.Log* file.
+        - Create the `LogonScript.log` file.
 
         - Stop and disable the Windows Azure guest agent service.
 
@@ -91,7 +91,7 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
     3. Disable and prevent Windows Server Manager from running on startup.
 
-4. A user connects via RDP to the Windows VM, which starts running *LogonScript.ps1* and onboards the VM to Azure Arc.
+4. A user connects via RDP to the Windows VM, which starts running `LogonScript.ps1` and onboards the VM to Azure Arc.
 
 ## Deployment
 
@@ -104,7 +104,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 3. To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azure/windows/arm_template) and run the following command:
 
     ```console
-    az group create --name <Name of the Azure resource group> --location <Azure Region> --tags "Project=jumpstart-azure-arc-servers"
+    az group create --name <Name of the Azure resource group> --location <Azure Region> --tags "Project=jumpstart_azure_arc_servers"
     az deployment group create \
     --resource-group <Name of the Azure resource group> \
     --name <The name of this deployment> \
@@ -118,7 +118,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     For example:
 
     ```console
-    az group create --name Arc-Servers-Win-Demo --location "East US" --tags "Project=jumpstart-azure-arc-servers"
+    az group create --name Arc-Servers-Win-Demo --location "East US" --tags "Project=jumpstart_azure_arc_servers"
     az deployment group create \
     --resource-group Arc-Servers-Win-Demo \
     --name arcwinsrvdemo \

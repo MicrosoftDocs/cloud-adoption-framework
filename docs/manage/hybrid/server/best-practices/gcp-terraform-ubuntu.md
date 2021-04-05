@@ -84,7 +84,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
     ![A screenshot of how to create a service account in the GCP console.](./media/gcp-ubuntu/ubuntu-svc-account.png)
 
-4. Finally, make sure your SSH keys are available in `~/.ssh` and named `id-rsa.pub` and `id-rsa`. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/main.tf) to use a key with a different path.
+4. Finally, make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/main.tf) to use a key with a different path.
 
 ## Deployment
 
@@ -94,12 +94,12 @@ Before executing the Terraform plan, you must export the environment variables w
 
 2. The Terraform plan creates resources in both Microsoft Azure and Google Cloud Platform. It then executes a script on a GCP virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your GCP and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-    - `TF-VAR-subscription-id`= your Azure subscription ID
-    - `TF-VAR-client-id` = your Azure service principal application ID
-    - `TF-VAR-client-secret` = your Azure service principal password
-    - `TF-VAR-tenant-id` = your Azure tenant ID
-    - `TF-VAR-gcp-project-id` = GCP project ID
-    - `TF-VAR-gcp-credentials-filename` = GCP credentials JSON filename
+    - `TF_VAR_subscription_id`= your Azure subscription ID
+    - `TF_VAR_client_id` = your Azure service principal application ID
+    - `TF_VAR_client_secret` = your Azure service principal password
+    - `TF_VAR_tenant_id` = your Azure tenant ID
+    - `TF_VAR_gcp_project_id` = GCP project ID
+    - `TF_VAR_gcp_credentials_filename` = GCP credentials JSON filename
 
 3. From CLI, navigate to the `azure_arc_servers_jumpstart/gcp/ubuntu/terraform` directory of the cloned repo.
 
@@ -129,7 +129,7 @@ If you want to demo/control the actual registration process, do the following:
 
 1. In the [`install_arc_agent.sh.tmpl`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/install_arc_agent.sh.tmpl) script template, comment out the `run connect command` section and save the file.
 
-    ![A screenshot showing 'main.tf' being commented out to disable automatic onboarding of an Azure Arc agent.](./media/gcp-ubuntu/ubuntu-main-tf.png)
+    ![A screenshot showing `main.tf` being commented out to disable automatic onboarding of an Azure Arc agent.](./media/gcp-ubuntu/ubuntu-main-tf.png)
 
 2. Get the public IP of the GCP VM by running `terraform output`.
 
@@ -141,11 +141,12 @@ If you want to demo/control the actual registration process, do the following:
 
 4. Export all the environment variables in [`vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh)
 
-    ![A screenshot of environment variables exporting with 'vars.sh'.](./media/gcp-ubuntu/ubuntu-export-variables.png)
+    ![A screenshot of environment variables exporting with `vars.sh`.](./media/gcp-ubuntu/ubuntu-export-variables.png)
 
 5. Run the following command:
 
-    ```console azcmagent connect --service-principal-ID $tf-VAR-client-ID --service-principal-secret $tf-VAR-client-secret --resource-group "Azure Arc gcp-demo" --tenant-ID $tf-VAR-tenant-ID --location "westus2" --subscription-ID $tf-VAR-subscription-ID
+    ```console
+    azcmagent connect --service-principal-id $TF_VAR_client_id --service-principal-secret $TF_VAR_client_secret --resource-group "Azure Arc gcp-demo" --tenant-id $TF_VAR_tenant_id --location "westus2" --subscription-id $TF_VAR_subscription_id
     ```
 
     ![A screenshot of the `azcmagent connect` command completing successfully.](./media/gcp-ubuntu/ubuntu-azcmagent.png)

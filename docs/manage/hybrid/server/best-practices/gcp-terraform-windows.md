@@ -96,12 +96,12 @@ Before executing the Terraform plan, you must set and then export the environmen
 
 2. The Terraform plan creates resources in both Microsoft Azure and Google Cloud Platform. It then executes a script on a GCP virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your GCP and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-    - `TF-VAR-subscription-id` = your Azure subscription ID
-    - `TF-VAR-client-id` = your Azure service principal application ID
-    - `TF-VAR-client-secret` = your Azure service principal password
-    - `TF-VAR-tenant-id` = your Azure tenant ID
-    - `TF-VAR-gcp-project-id` = GCP project ID
-    - `TF-VAR-gcp-credentials-filename` = GCP credentials JSON filename
+    - `TF_VAR_subscription_id` = your Azure subscription ID
+    - `TF_VAR_client_id` = your Azure service principal application ID
+    - `TF_VAR_client_secret` = your Azure service principal password
+    - `TF_VAR_tenant_id` = your Azure tenant ID
+    - `TF_VAR_gcp_project_id` = GCP project ID
+    - `TF_VAR_gcp_credentials_filename` = GCP credentials JSON filename
 
 3. From CLI, navigate to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory of the cloned repo.
 
@@ -133,7 +133,7 @@ If you want to demo/control the actual registration process, do the following:
 
 1. Before running the `terraform apply` command, open [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/main.tf) and comment out the `windows-startup-script-ps1 = local-file.install_arc_agent-ps1.content` line and save the file.
 
-    ![A screenshot showing '' being commented out to disable automatic onboarding of an Azure Arc agent.](./media/gcp-windows/main-tf.png)
+    ![A screenshot showing `main.tf` being commented out to disable automatic onboarding of an Azure Arc agent.](./media/gcp-windows/main-tf.png)
 
 2. Run `terraform apply --auto-approve` as instructed above.
 
@@ -141,11 +141,11 @@ If you want to demo/control the actual registration process, do the following:
 
     ![A screenshot of a server in the GCP console.](./media/gcp-windows/gcp-server.png)
 
-    ![A screenshot showing how to reset a password for a Windows server in the GCP.](./media/gcp-windows/reset-password.png)
+    ![A screenshot showing how to reset a password for a Windows server in the GCP console.](./media/gcp-windows/reset-password.png)
 
 4. Create a user and password for the VM by selecting **Set Password** and specifying a user name.
 
-    ![A screenshot showing how to set a username and password for a Windows server in the GCP.](./media/gcp-windows/name-pword.png)
+    ![A screenshot showing how to set a username and password for a Windows server in the GCP console.](./media/gcp-windows/name-pword.png)
 
 5. RDP into the VM by selecting the RDP button from the VM page in the GCP console, and sign in with the username and password you just created.
 

@@ -1,5 +1,5 @@
 ---
-title: "Assess on-premises workloads for Azure migration"
+title: Assess on-premises workloads for Azure migration
 description: Learn through an illustrative example how to assess an on-premises application for migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -66,8 +66,8 @@ Contoso uses Microsoft tools for its migration assessment. The tools align with 
 | Technology | Description | Cost |
 | --- | --- | --- |
 | [Data Migration Assistant](/sql/dma/dma-overview) | Contoso uses Data Migration Assistant to assess and detect compatibility issues that might affect its database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets. It recommends performance and reliability improvements. | Data Migration Assistant is a free downloadable tool. |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. However, you may incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate).  |
-| [Service Map](/azure/operations-management-suite/operations-management-suite-service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges. |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. However, you may incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
+| [Service Map](/azure/azure-monitor/vm/service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges. |
 
 In this scenario, Contoso downloads and runs Data Migration Assistant to assess the on-premises SQL Server database for its travel app. Contoso uses Azure Migrate with dependency mapping to assess the app VMs before migration to Azure.
 
@@ -102,8 +102,8 @@ Contoso and other users must meet the following prerequisites for the assessment
 - At least two on-premises VMware VMs, one running a SQL Server database.
 - Permissions to install Azure Migrate agents on each VM.
 - The VMs should have direct internet connectivity.
-  - You can restrict internet access to the [required URLs](/azure/migrate/concepts-collector).
-  - If your VMs don't have internet connectivity, the Azure [Log Analytics Gateway](/azure/azure-monitor/platform/gateway) must be installed on them, and agent traffic directed through it.
+  - You can restrict internet access to the [required URLs](/azure/migrate/migrate-appliance).
+  - If your VMs don't have internet connectivity, the Azure [Log Analytics Gateway](/azure/azure-monitor/agents/gateway) must be installed on them, and agent traffic directed through it.
 - The fully qualified domain name (FQDN) of the VM running the SQL Server instance, for database assessment.
 - Windows Firewall running on the SQL Server VM should allow external connections on TCP port 1433 (default). This setup allows Data Migration Assistant to connect.
 
@@ -186,7 +186,7 @@ Results are displayed as soon as they're available. If Contoso fixes issues, it 
     ![Data Migration Assistant: Feature recommendations report](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-6.png)
 
     > [!NOTE]
-    > Contoso should [enable transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption) for all SQL Server databases. This is even more critical when a database is in the cloud than when it's hosted on-premises. Transparent data encryption should be enabled only after migration. If transparent data encryption is already enabled, Contoso must move the certificate or asymmetric key to the `master` database of the target server. Learn how to [move a transparent data encryption-protected database to another SQL Server instance](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server?view=sql-server-2017).
+    > Contoso should [enable transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption) for all SQL Server databases. This is even more critical when a database is in the cloud than when it's hosted on-premises. Transparent data encryption should be enabled only after migration. If transparent data encryption is already enabled, Contoso must move the certificate or asymmetric key to the `master` database of the target server. Learn how to [move a transparent data encryption-protected database to another SQL Server instance](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server).
 
 3. Contoso can export the assessment in JSON or CSV format.
 
@@ -195,7 +195,7 @@ Results are displayed as soon as they're available. If Contoso fixes issues, it 
 >
 > - Run multiple assessments concurrently and view the state of the assessments on the **All assessments** page.
 > - Consolidate assessments into a [SQL Server database](/sql/dma/dma-consolidatereports).
-> - Consolidate assessments into a [Power BI report](/sql/dma/dma-powerbiassesreport).
+> - Consolidate assessments into a [Power BI report](/sql/dma/dma-consolidatereports).
 
 ## Step 3: Prepare for VM assessment by using Azure Migrate
 
@@ -216,7 +216,7 @@ Contoso verifies that it has permissions to create a VM by importing a file in .
 
 ### Verify ports
 
-The Contoso assessment uses dependency mapping. Dependency mapping requires an agent to be installed on VMs that will be assessed. The agent must be able to connect to Azure from TCP port 443 on each VM. Learn about [connection requirements](/azure/log-analytics/log-analytics-concept-hybrid).
+The Contoso assessment uses dependency mapping. Dependency mapping requires an agent to be installed on VMs that will be assessed. The agent must be able to connect to Azure from TCP port 443 on each VM. Learn about [connection requirements](/azure/azure-monitor/agents/log-analytics-agent).
 
 ## Step 4: Discover VMs
 
@@ -278,7 +278,7 @@ Before deploying the VM, Contoso checks that the OVA file is secure:
 
     `C:\> CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256`
 
-3. The generated hash should match the hash values listed in the [Verify security](/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMware VMs for migration](/azure/migrate/tutorial-assess-vmware) tutorial.
+3. The generated hash should match the hash values listed in the [Verify security](/azure/migrate/tutorial-assess-vmware-azure-vm#verify-security) section of the [Assess VMware VMs for migration](/azure/migrate/tutorial-assess-vmware-azure-vm) tutorial.
 
 ### Create the collector appliance
 
@@ -474,7 +474,7 @@ An assessment has a confidence rating of from 1 star to 5 stars (1 star is the l
 
 - The confidence rating is assigned to an assessment based on the availability of data points that are needed to compute the assessment.
 - The rating helps you estimate the reliability of the size recommendations that are provided by Azure Migrate.
-- The confidence rating is useful when you are doing _performance-based sizing_. Azure Migrate might not have enough data points for utilization-based sizing. For _as on-premises_ sizing, the confidence rating is always 5 stars because Azure Migrate has all the data points it needs to size the VM.
+- The confidence rating is useful when you are doing *performance-based sizing*. Azure Migrate might not have enough data points for utilization-based sizing. For *as on-premises* sizing, the confidence rating is always 5 stars because Azure Migrate has all the data points it needs to size the VM.
 - Depending on the percentage of data points available, the confidence rating for the assessment is provided:
 
     | Availability of data points | Confidence rating |
@@ -498,7 +498,7 @@ The assessment report shows the information that's summarized in the table. To s
 | Setting | Indication | Details |
 | --- | --- | --- |
 | **Azure VM readiness** | Indicates whether the VM is ready for migration. | Possible states: <li> Ready for Azure <li> Ready with conditions <li> Not ready for Azure <li> Readiness unknown <br><br> If a VM isn't ready, Azure Migrate shows some remediation steps. |
-| **Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties: <li> If you used performance-based sizing, then sizing considers the performance history of the VMs. <li> If you used _as on-premises_ sizing, then sizing is based on the on-premises VM size and utilization. <li> Data isn't used. |
+| **Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties: <li> If you used performance-based sizing, then sizing considers the performance history of the VMs. <li> If you used *as on-premises* sizing, then sizing is based on the on-premises VM size and utilization. <li> Data isn't used. |
 | **Suggested tool** | Because Azure machines are running the agents, Azure Migrate looks at the processes that are running inside the machine. It identifies whether the machine is a database machine. | |
 | **VM information** | The report shows settings for the on-premises VM, including operating system, boot type, and disk and storage information. | |
 

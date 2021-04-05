@@ -17,7 +17,7 @@ keywords: Innovative solutions, cloud adoption framework, innovation solutions
 ::: zone target="docs"
 
 > [!NOTE]
-> This guide of innovative solutions provides a starting point for innovation guidance in the Cloud Adoption Framework. It is also available in the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade).
+> This guide of innovative solutions provides a starting point for innovation guidance in the Cloud Adoption Framework. It's also available in the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade).
 
 ::: zone-end
 

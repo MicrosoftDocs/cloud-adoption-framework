@@ -9,9 +9,9 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  - name: Adoption Journeys
+  - name: Adoption journeys
     items:
-    - name: Get Started
+    - name: Get started
       items:
       - name: Overview
         href: get-started/index.md
@@ -70,6 +70,13 @@ items:
       items:
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
+      - name: Modern containers
+        href: scenarios/aks/index.md
+      - name: SAP
+        href: scenarios/sap/index.md
+
+    - name: Antipatterns to avoid
+      href: antipatterns/antipatterns-to-avoid.md
 
   - name: Strategy
     items:
@@ -96,13 +103,13 @@ items:
       - name: Performance outcomes
         href: strategy/business-outcomes/performance-outcomes.md
       - name: Sustainability outcomes
-        href: strategy/business-outcomes/sustainability.md       
+        href: strategy/business-outcomes/sustainability.md
       - name: Business outcome template
         href: strategy/business-outcomes/business-outcome-template.md
       - name: Align efforts to learning metrics
         href: strategy/learning-metrics.md
       - name: Objectives and key results
-        href: strategy/business-outcomes/okr.md        
+        href: strategy/business-outcomes/okr.md
     - name: Business justification
       items:
       - name: Build a business justification
@@ -130,9 +137,12 @@ items:
       - name: Responsible AI
         href: strategy/responsible-ai.md
       - name: Accelerate cloud adoption with GitHub
-        href: scenarios/github-velocity/index.md 
+        href: scenarios/github-velocity/index.md
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
+
+    - name: Strategy antipatterns
+      href: antipatterns/strategy-antipatterns.md
 
   - name: Plan
     items:
@@ -186,6 +196,9 @@ items:
         href: plan/contoso-migration-assessment.md
       - name: Plan a data warehouse migration
         href: plan/data-warehouse-migration.md
+
+    - name: Plan antipatterns
+      href: antipatterns/plan-antipatterns.md
 
   - name: Ready
     items:
@@ -248,7 +261,37 @@ items:
           - name: Management group and subscription organization
             href: ready/enterprise-scale/management-group-and-subscription-organization.md
           - name: Network topology and connectivity
-            href: ready/enterprise-scale/network-topology-and-connectivity.md
+            items:
+            - name: Overview
+              href: ready/enterprise-scale/network-topology-and-connectivity.md
+            - name: Plan for IP addressing
+              href: ready/azure-best-practices/plan-for-ip-addressing.md
+            - name: DNS for on-premises and Azure resources
+              href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
+            - name: Private Link and DNS integration at scale
+              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md  
+            - name: Define an Azure network topology
+              href: ready/azure-best-practices/define-an-azure-network-topology.md
+            - name: Virtual WAN network topology (Microsoft-managed)
+              href: ready/azure-best-practices/virtual-wan-network-topology.md
+            - name: Traditional Azure networking topology
+              href: ready/azure-best-practices/traditional-azure-networking-topology.md
+            - name: Connectivity to Azure
+              href: ready/azure-best-practices/connectivity-to-azure.md
+            - name: Connectivity to Azure PaaS services
+              href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
+            - name: Plan for inbound and outbound internet connectivity
+              href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
+            - name: Plan for app delivery
+              href: ready/azure-best-practices/plan-for-app-delivery.md
+            - name: Plan for landing zone network segmentation
+              href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
+            - name: Define network encryption requirements
+              href: ready/azure-best-practices/define-network-encryption-requirements.md
+            - name: Plan for traffic inspection
+              href: ready/azure-best-practices/plan-for-traffic-inspection.md  
+            - name: Connectivity to other cloud providers
+              href: ready/azure-best-practices/connectivity-to-other-providers.md
           - name: Management and monitoring
             href: ready/enterprise-scale/management-and-monitoring.md
           - name: Business continuity and disaster recovery
@@ -259,6 +302,8 @@ items:
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implementation guidelines
           href: ready/enterprise-scale/implementation-guidelines.md
+        - name: Terraform module for CAF enterprise-scale
+          href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
         - name: Transition to enterprise-scale (brownfield)
           href: ready/enterprise-scale/transition.md
       - name: Start small and expand
@@ -371,6 +416,10 @@ items:
           href: /azure/sql-database/sql-database-security-best-practice?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
         - name: Choose a deployment option in Azure SQL
           href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: AI + Machine Learning
+        items:
+        - name: Organize and set up Azure Machine Learning environments
+          href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
       - name: Cost management
         items:
         - name: Track costs
@@ -387,6 +436,9 @@ items:
           href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Skills relevant to ready and landing zones
         href: ready/suggested-skills.md
+
+    - name: Ready antipatterns
+      href: antipatterns/ready-antipatterns.md
 
   - name: Adopt
     items:
@@ -463,7 +515,7 @@ items:
             - name: Follow up Moodle migration
               href: scenarios/lamp/moodle/migration-post.md
 
-        - name: Dev/test workloads 
+        - name: Dev/test workloads
           items:
           - name: Migrate dev/test environments to Azure IaaS
             href: migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md
@@ -714,10 +766,10 @@ items:
           - name: Govern
             href: scenarios/azure-stack/govern.md
           - name: Manage
-            href: scenarios/azure-stack/manage.md            
+            href: scenarios/azure-stack/manage.md
 
         - name: Analytics solutions
-          items: 
+          items:
           - name: Overview
             href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
           - name: Teradata
@@ -791,6 +843,9 @@ items:
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
+
+      - name: Migrate antipatterns
+        href: antipatterns/migrate-antipatterns.md
 
       - name: Process improvements
         items:
@@ -908,7 +963,7 @@ items:
           - name: AI apps and agents
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
-            href: innovate/ai/knowledge-mining.md  
+            href: innovate/ai/knowledge-mining.md
 
       - name: Best practices
         items:
@@ -975,9 +1030,9 @@ items:
             href: innovate/best-practices/apps.md
           - name: Citizen developers
             items:
-            - name: PowerApps overview
+            - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Creating apps in PowerApps
+            - name: Creating apps in Power Apps
               href: /powerapps/maker?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Create your first workflow with Power Automate
               href: /power-automate/getting-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1048,7 +1103,7 @@ items:
               - name: Distributed tracing with Azure Spring Cloud
                 href: /azure/spring-cloud/spring-cloud-tutorial-distributed-tracing?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
-                href: /azure/spring-cloud/spring-cloud-tutorial-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/spring-cloud/how-to-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Event-driven applications
               items:
               - name: Learning path for creating serverless applications
@@ -1070,7 +1125,7 @@ items:
               href: https://guides.github.com/introduction/git-handbook
             - name: Get started with a shared backlog
               href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
-            - name: Synchronize PowerApps with Azure DevOps
+            - name: Synchronize Power Apps with Azure DevOps
               href: /powerapps/developer/common-data-service/build-tools-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Feedback loops
             items:
@@ -1417,6 +1472,9 @@ items:
         - name: Azure tools for deployment acceleration
           href: govern/deployment-acceleration/toolchain.md
 
+    - name: Govern antipatterns
+      href: antipatterns/govern-antipatterns.md
+
   - name: Manage
     items:
     - name: Overview
@@ -1474,13 +1532,14 @@ items:
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
 
-
       - name: Monitoring
         items:
         - name: Overview
           href: manage/monitor/index.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
+        - name: Observability
+          href: manage/monitor/observability.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Alerting
@@ -1529,6 +1588,9 @@ items:
         href: manage/considerations/workload.md
     - name: Advanced management and system design
       href: manage/design-principles.md
+
+    - name: Manage antipatterns
+      href: antipatterns/manage-antipatterns.md
 
   - name: Organize
     items:
@@ -1591,8 +1653,13 @@ items:
       href: organize/suggested-skills.md
     - name: Creating a cost-conscious organization
       href: organize/cost-conscious-organization.md
-    - name: Anti-patterns - IT fiefdoms and IT silos
-      href: organize/fiefdoms-silos.md
+
+    - name: Organize antipatterns
+      items:
+      - name: Organizational antipatterns
+        href: antipatterns/organize-antipatterns.md
+      - name: IT fiefdoms and IT silos
+        href: organize/fiefdoms-silos.md
 
   - name: Resources
     items:

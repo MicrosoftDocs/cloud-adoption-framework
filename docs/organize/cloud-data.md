@@ -10,7 +10,7 @@ ms.subservice: organize
 ms.custom: think-tank
 ---
 
-# Cloud data functions
+# Understand cloud data functions
 
 There are multiple audiences involved in an analytics conversation, including the typical seller, database architect, and infrastructure team. In addition, analytics solutions involve influencers, recommenders, and decision-makers from enterprise architecture, data science, business analysts, and executive leadership roles.
 
@@ -26,7 +26,7 @@ Using Azure Synapse Analytics, database administrators can match their expanding
 
 These teams deal with the provisioning and architecture of the underlying compute resources required for large analytics systems. In many cases, they are managing transitions between datacenter-based and cloud-based systems, and current needs for interoperability across both. Disaster recovery, business continuity, and high availability are common concerns.
 
-With Azure Synapse Analytics, IT professionals can protect and manage their organization's data more efficiently. They can enable big data processing with both on-demand and provisioned compute. Through tight integration with Azure Active Directory, the service helps secure access to cloud and hybrid configurations. IT pros can enforce privacy requirements by using data masking, as well as row-level and column-level security.
+With Azure Synapse Analytics, IT professionals can protect and manage their organization's data more efficiently. They can enable big data processing with both on-demand and provisioned compute. Through tight integration with Azure Active Directory, the service helps secure access to cloud and hybrid configurations. IT professionals can enforce privacy requirements by using data masking along with row-level and column-level security.
 
 ## Enterprise architects and data engineers
 
@@ -39,17 +39,17 @@ These teams are responsible for putting together complex solutions with componen
 - Message-based middleware
 - Data marts
 - Geo-redundancy and data consistency
-- Dashboarding and reporting
+- Dashboards and reporting
 
- Enterprise architects and data engineers are generally concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
+ Enterprise architects and data engineers are concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
 
-Using Azure Synapse Analytics, data engineers can simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
+Data engineers can use Azure Synapse Analytics to simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
 
 ## Data scientists
 
 Data scientists understand how to build advanced models for huge volumes of critical, yet often disparate data. Their work involves translating the needs of the business into the technology requirements for normalization and transformation of data. They create statistical and other analytical models, and ensure that line-of-business teams can get the analysis they need to run the business.
 
-Using Azure Synapse Analytics, data scientists can build proofs of concept in minutes, and create or adjust end-to-end solutions. They can provision resources as needed, or simply query existing resources on demand across massive amounts of data. They can do their work in a variety of languages, including T-SQL, R, Python, Scala, .NET, and Spark SQL.
+Using Azure Synapse Analytics, data scientists can build proofs of concept in minutes, and create or adjust end-to-end solutions. They can provision resources as needed, or query existing resources on demand across massive amounts of data. They can do their work in various languages, including T-SQL, R, Python, Scala, .NET, and Spark SQL.
 
 ## Business analysts
 
