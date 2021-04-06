@@ -60,7 +60,7 @@ A consideration for this approach is a single environment deployment is subject 
 
 **Multiple environment workspace deployment:** When you choose a multiple environment workspace deployment, a workspace instance is deployed for each environment. A common scenario for this setup is a regulated workplace with a clear separation of duties between environments, and for users who have resource access to those environments.
 
-The benefits of this setup are: 
+The benefits of this setup are:
 
 * Staged rollout of Machine Learning workflows and artifacts. For example, models across environments, with the potential of enhancing agility and reducing time-to-deployment.
 
@@ -84,7 +84,7 @@ A consideration for this approach a defined development and rollout process for 
 
 The location of your resources, data, or users, might require you to create Azure Machine Learning workspace instances and associated resources in multiple Azure regions. For example, one project might span its resources across the West Europe and East US Azure regions for performance, cost, and  compliance reasons. The following scenarios are common:
 
-**Regional training:** The machine learning training jobs run in the same Azure region as where the data is located. In this setup,, a Machine Learning workspace is deployed to each Azure region where data is located. It’s a common scenario when you are acting under compliance, or when you have data movement constraints across regions.
+**Regional training:** The machine learning training jobs run in the same Azure region as where the data is located. In this setup, a Machine Learning workspace is deployed to each Azure region where data is located. It's a common scenario when you are acting under compliance, or when you have data movement constraints across regions.
 
 The benefit of this setup is experimentation can be done in the data center where the data is located with the least network latency.
 A consideration for this approach is when a Machine Learning pipeline is run across multiple workspace instances, it adds more management complexity. It becomes challenging to compare experimentation results across instances and adds overhead to quota and compute management.
