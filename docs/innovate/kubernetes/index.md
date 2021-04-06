@@ -23,6 +23,6 @@ The list of required actions is categorized by persona to drive a successful dep
 
 To prepare for this phase of the Kubernetes cloud adoption lifecycle, use the following exercises:
 
-- [Application development and deployment](./application-development.md): Examine patterns and practices of application development, configure CI/CD pipelines, and implement site reliability engineering (SRE) best practices.
+- [Application development and deployment](./application-development.md): Examine patterns and practices of application development, configure continuous integration and continuous delivery (CI/CD) pipelines, and implement site reliability engineering (SRE) best practices.
 - [Cluster design and operations](./cluster-design-operations.md): Identify for cluster configuration and network design. Ensure future scalability by automating infrastructure provisioning. Maintain high availability by planning for business continuity and disaster recovery.
 - [Cluster and application security](./cluster-application-security.md): Familiarize yourself with Kubernetes security essentials. Review the secure setup for clusters and application security guidance.
