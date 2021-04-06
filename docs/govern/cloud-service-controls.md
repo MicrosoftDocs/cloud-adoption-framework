@@ -48,9 +48,9 @@ Regardless of the approach taken to Service Governance the key input is the corp
 
 ## Basic governance (permitted services lists)
 
-The most implementation of Service Governance is the listing of permitted or disallowed services in Azure.
+The most basic implementation of Service Governance is the listing of permitted or disallowed services in Azure.
 
-In this form, the Governance team publishes a list of either the allowed or denied services to the adoption teams. Adoption teams are
+In this form, the Governance team publishes a list of either the allowed or denied services to the adoption teams.
 
 ### Creating and reviewing allowed services
 
@@ -180,9 +180,9 @@ A key component of the service review process is to ensure that services that do
 
 A staged approach of allowing the service use in different environments allows for earlier access to controls for adoption teams while reducing the exposure of services without controls.
 
-![Infographic of a new service control lifecycle](../_images/govern/new-service-control-lifecycle.png)
+To ensure that adoption teams are not blocked during the creation of new Service Guidance, there are several stages. The process looks to accelerate their ability to start using  services. The first stage "Sandbox" is for the adoption team to nominate the new service that they need for a service review.
 
-To ensure that adoption teams are not blocked during the creation of new Service Guidance, there are several stages. The process looks to accelerate their ability to start using the service. The first stage is for the adoption team to nominate the new service that they need for a service review.
+![Infographic of a new service control lifecycle](../_images/govern/new-service-control-lifecycle.png)
 
 At this stage, organizations can opt to allow adoption teams to start using the service in a disconnected sandbox environment. This allows the adoption team to start working with the service educating themselves prototyping solutions. The sandbox environment doesn't have any policy controls for the service as no review has been done yet, as such generic compensating controls should be enforced on the environment. These compensating controls could include:
 
@@ -214,7 +214,7 @@ One of the key components around driving the velocity required in placing contro
 
 This is where the implementation of clear set of Service Control Requirements can enable additional teams to work on the first two stages of the process for a service, contributing large amount of content to the process.
 
-The cloud has a many services. Though the cloud governance team can prepare a backlog for all of these services to go through a service review, there is no way that they can keep pace with the demands of a large organization. In addition, services in the cloud change at a continuing rate which places more and more demand on the need for a service review on previously defined services. Also projects may require knew types of services very quickly that they were not able to predict the demand for, and their immediate demand should not become a problem for the cloud governance team but rather should be borne by the cloud adoption team that needs a service.
+The cloud has many services. Though the cloud governance team can prepare a backlog for all of these services to go through a service review, there is no way that they can keep pace with the demands of a large organization. In addition, services in the cloud change at a continuing rate which places more and more demand on the need for a service review on previously defined services. Also projects may require knew types of services very quickly that they were not able to predict the demand for, and their immediate demand should not become a problem for the cloud governance team but rather should be borne by the cloud adoption team that needs a service.
 
 When the Service Control Requirements are written clearly and understood by others then the first two steps of the service review process can be augmented or completed by teams outside the Governance team.
 
