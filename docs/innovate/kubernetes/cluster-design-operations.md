@@ -36,7 +36,7 @@ As you get started, the checklist and Kubernetes resources below will help you p
   - [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni)
   - [Secure network design for an AKS cluster](https://github.com/Azure/sg-aks-workshop/blob/master/cluster-design/NetworkDesign.md)
 
-- **Create multiple node pools.** To support applications that have different compute or storage demands, you can optionally configure your cluster with multiple node pools. For example, use more node pools to provide GPUs for compute-intensive applications or access to high-performance SSD storage. For more information, see [Create&nbsp;and&nbsp;manage&nbsp;multiple node pools for a cluster in Azure Kubernetes Service](/azure/aks/use-multiple-node-pools).
+- **Create multiple node pools.** To support applications that have different compute or storage demands, you can optionally configure your cluster with multiple node pools. For example, use more node pools to provide GPUs for compute-intensive applications or access to high-performance SSD storage. For more information, see [Create and manage multiple node pools for a cluster in Azure Kubernetes Service](/azure/aks/use-multiple-node-pools).
 
 - **Decide on availability requirements.** A minimum of two pods behind Azure Kubernetes Service ensures high availability of your application if there is pod failures or restarts. Use three or more pods to handle load during pod failures and restarts.
 For the cluster configuration, a minimum of two nodes in an availability set or virtual machine scale set is required to meet the service-level agreement of 99.95%. Use at least three pods to ensure pod scheduling during node failures and reboots.
@@ -56,7 +56,7 @@ As you prepare the application for production, implement a minimum set of best p
 
 - **Automate cluster provisioning.** With infrastructure as code, you can automate infrastructure provisioning to provide more resiliency during disasters and gain agility to quickly redeploy the infrastructure as needed. For more information, see [Create a Kubernetes cluster with Azure Kubernetes Service using Terraform](/azure/developer/terraform/create-k8s-cluster-with-tf-and-aks).
 
-- **Plan for availability using pod disruption budgets.** To maintain the availability of applications, define pod disruption budgets (PDB) to ensure that a minimum number of pods are available in the cluster during hardware failures or cluster upgrades. To learn more, see [Plan&nbsp;for&nbsp;availability&nbsp;using&nbsp;pod disruption&nbsp;budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+- **Plan for availability using pod disruption budgets.** To maintain the availability of applications, define pod disruption budgets (PDB) to ensure that a minimum number of pods are available in the cluster during hardware failures or cluster upgrades. To learn more, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
 - **Enforce resource quotas on namespaces.** Plan and apply resource quotas at the namespace level. Quotas can be set on compute resources, storage resources, and object count. For more information, see [Enforce resource quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas).
 
@@ -80,5 +80,5 @@ Once the application is in production, how can you optimize your workflow and pr
 
   - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?v=W7aN_z-cyUw&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16)
   - [Configure alerts using Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview)
-  - [Review&nbsp;diagnostic&nbsp;logs&nbsp;for master components](/azure/aks/view-control-plane-logs)
+  - [Review diagnostic logs for master components](/azure/aks/view-control-plane-logs)
   - [Azure Kubernetes Service (AKS) diagnostics](/azure/aks/concepts-diagnostics)
