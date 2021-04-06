@@ -78,17 +78,11 @@ items:
       items:
         - name: Data Science Blueprint
           href: ./eslz-data-science-blueprint.md
-        - name: Data Science Training
-          href: ./eslz-data-science-training.md
         - name: Data Science Deployment
           href: ./eslz-data-science-deployment.md
 
     - name: Data Science Workflow and MLOps
-      items:
-        - name:  Git
-          href: ./eslz-git.md
-        - name: MLOps
-          href: ./eslz-mlops.md
+      href: ./eslz-data-science-workflow-and-mlops.md
 
 
   - name: Well-Architected workloads (TBD)

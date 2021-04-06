@@ -32,8 +32,8 @@ Enterprise Scale Analytics and AI considers six critical design areas that help 
 1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops)
 
 > [!IMPORTANT] For deployment, please choose one of the below **Supported Regions** list.
-
  > **Supported Regions**:
+
  > - Asia Southeast
  > - Europe North
  > - Europe West
@@ -52,23 +52,23 @@ At the heart of Enterprise Scale Analytics and AI is its data management capabil
 
 The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 
-* [Data Catalog](eslz-data-management-landing-zone.md#data-catalog)
-* [Data Classification](eslz-data-management-landing-zone.md#data-classification)
-* [Data Lineage](eslz-data-management-landing-zone.md#data-lineage)
-* [Data Quality Management](eslz-data-management-landing-zone.md#data-quality-management)
-* [Data Modelling Repository](eslz-data-management-landing-zone.md#data-modelling-repository)
-* [Master Data Management](eslz-data-management-landing-zone.md#master-data-management)
-* [API Catalog](eslz-data-management-landing-zone.md#api-catalog)
-* Data Sharing and Contracts
+- [Data Catalog](eslz-data-management-landing-zone.md#data-catalog)
+- [Data Classification](eslz-data-management-landing-zone.md#data-classification)
+- [Data Lineage](eslz-data-management-landing-zone.md#data-lineage)
+- [Data Quality Management](eslz-data-management-landing-zone.md#data-quality-management)
+- [Data Modelling Repository](eslz-data-management-landing-zone.md#data-modelling-repository)
+- [Master Data Management](eslz-data-management-landing-zone.md#master-data-management)
+- [API Catalog](eslz-data-management-landing-zone.md#api-catalog)
+- Data Sharing and Contracts
 
 For further reading, see [Data Management Landing Zone](eslz-data-management-landing-zone.md).
 
 The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective business domain. These subscriptions within the Enterprise Scale Analytics and AI solution pattern represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems. A few important points to keep in mind about Data Landing Zones:
 
-* Ingestion capabilities exist in each Data Landing Zone to allow domain subject matter experts to pull in data sources from third-party clouds or on-premises environments if they wish to do so.
-* Data Landing Zone are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.
-* A Data Landing Zone can host one or many [Data Domains](#data-domains).
-* A Data Landing Zone can also host one or many [Data Products](#data-products).
+- Ingestion capabilities exist in each Data Landing Zone to allow domain subject matter experts to pull in data sources from third-party clouds or on-premises environments if they wish to do so.
+- Data Landing Zone are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.
+- A Data Landing Zone can host one or many [Data Domains](#data-domains).
+- A Data Landing Zone can also host one or many [Data Products](#data-products).
 
 For further reading, see [Data Landing Zone](eslz-data-landing-zone.md).
 
@@ -92,11 +92,11 @@ For further reading, see [Data Landing Zone Data Domains](eslz-data-landing-zone
 ### Data Products
 
 A data product is anything that drives business value (*e.g.* reports, workbooks, bespoke database or data API). It can leverage additional services and technologies which are not part of Data Landing Zone core architecture such as:
- 
-* Reporting with niche requirements, *e.g.* compliance, tax reporting, HR, etc.
-* Specialized capabilities that address gaps in the baseline policies.
 
-Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. 
+- Reporting with niche requirements, *e.g.* compliance, tax reporting, HR, etc.
+- Specialized capabilities that address gaps in the baseline policies.
+
+Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases.
 
 Examples of Data Products include Azure Functions, App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL DB, Azure MySQL, and Azure CosmosDB.
 
@@ -129,7 +129,7 @@ In order to extend your analytics platform to include other Azure services on de
 
 ### Starting with a single Data Landing Zone
 
-If your environment is at a starting point, consider the following approach: 
+If your environment is at a starting point, consider the following approach:
 
 ![Enterprise Scale Data Management and Single Data Landing Zone](./images/hldsimple.png)
 *Figure 1: Enterprise Scale Data Management with a single Data Landing Zone*
