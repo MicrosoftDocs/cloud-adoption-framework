@@ -17,7 +17,7 @@ As discussed in [Democratize data with digital invention](data.md), data fuels m
 
 In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Innovative applications engage and interact with the user, providing information and guidance. This article summarizes several principles that can help you find the right application development solution, based on the hypotheses to be validated.
 
-![Engage via applications](../../_images/innovate/engage-via-apps.png)
+![The diagram shows elements that can help create an app that provides an experience for customers that meets their needs.](../../_images/innovate/engage-via-apps.png)
 
 ## Shared code
 
