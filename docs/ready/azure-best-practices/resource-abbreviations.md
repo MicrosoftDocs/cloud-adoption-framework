@@ -16,8 +16,7 @@ Azure workloads are typically composed of multiple resources and services. Inclu
 
 This list provides recommended abbreviations for various Azure resource types to include in your naming conventions. These abbreviations are often used as prefixes in resource names, so each abbreviation is shown below followed by a hyphen (`-`), except for resource types that disallow hyphens in the resource name. Your naming convention might place the resource type abbreviation in a different location of the name if it's more suitable for your organization's needs.
 
-<!-- cSpell:ignore osdisk stvm arck ssimp -->
-<!-- cSpell:ignoreRegExp [a-z]+- -->
+<!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 
 ## General
 
