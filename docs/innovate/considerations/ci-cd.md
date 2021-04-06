@@ -17,17 +17,17 @@ ms.custom:
 
 The ultimate test of innovation is customer reaction to your invention. Did the hypothesis prove true? Do customers use the solution? Does it scale to meet the needs of the desired percentage of users? Most importantly, do they keep coming back? None of these questions can be asked until the minimum viable product (MVP) solution has been deployed.
 
-In this article, we'll focus on the discipline of empowering adoption with continuous integration and continuous deployment (CI/CD) pipeline tools. Continuous integration is the automating of code multiple times per day in order to have an updated single project. Continuous deployment is the automatic delivery of those functions throughout the day.
+In this article, we'll focus on empowering adoption with continuous integration and continuous deployment (CI/CD) pipeline tools. Continuous integration is the automating of code multiple times per day in order to have an updated single project. Continuous deployment is the automatic delivery of those functions throughout the day.
 
 ## Reduce CI/CD friction that affects adoption
 
 Some obstacles to adoption can be minimized through a combination of technology and processes. For readers with knowledge of CI/CD or DevOps processes, the following CI/CD pipeline processes will be familiar. This article establishes a starting point for cloud adoption teams that fuels innovation and feedback loops. This starting point might foster more robust CI/CD or DevOps approaches as the products and teams mature.
 
-As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. This CI/CD article aims to minimize [technical spikes](./build.md#reduce-complexity-and-delay-technical-spikes) that slow innovation but still make sure you keep a few solid best practices in place. Doing so will help the team design for future success while delivering on current customer needs.
+As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. This CI/CD article aims to minimize [technical spikes](./build.md#reduce-complexity-and-delay-technical-spikes) that slow innovation, while making sure you keep best practices in place. Doing so will help the team design for future success while delivering on current customer needs.
 
 ## Empower adoption and digital invention: The maturity model
 
-The primary objective of the [Innovate methodology](./index.md) is to build customer partnerships and accelerate feedback loops, which lead to market innovations. The following image and sections describe initial implementations that support this methodology.
+The primary goal of the [Innovate methodology](./index.md) is to build customer partnerships and accelerate feedback loops, which lead to market innovations. The following image and sections describe initial implementations that support this methodology.
 
 ![Diagram that shows the empower adoption maturity model.](../../_images/innovate/empower-adoption-maturity.png)
 
@@ -38,13 +38,13 @@ The primary objective of the [Innovate methodology](./index.md) is to build cust
 - [Solution deployment](#solution-deployment): Deploy solutions so that the team can quickly share changes with customers.
 - [Integrated measurement](#integrated-measurements): Add learning metrics to the feedback loop for clear analysis by the full team.
 
-To minimize technical spikes, assume that maturity will initially be low across each of these principles. Plan ahead by aligning to tools and processes that can scale as hypotheses become more fine-grained. In Azure, [GitHub](https://guides.github.com) and [Azure DevOps](/azure/devops/) allow small teams to get started with little friction. These teams might grow to include thousands of developers who collaborate on scale solutions and test hundreds of customer hypotheses. The remainder of this article illustrates the "plan big, start small" approach to empowering adoption across each of these principles.
+To minimize technical spikes, assume that maturity will initially be low across each of these principles. Plan ahead by aligning to tools and processes that can scale as hypotheses become more fine-grained. In Azure, [GitHub](https://guides.github.com) and [Azure DevOps](/azure/devops/) allow small teams to get started with little friction. These teams might grow to include thousands of developers who collaborate on scale solutions and test hundreds of customer hypotheses. The rest of this article illustrates the "plan big, start small" approach to empowering adoption across each of these principles.
 
 ## Shared solution
 
 As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. You'll experience far more failures than wins during any innovation cycle. This is expected. However, when a customer need, hypothesis, and solution align at scale, the world changes quickly.
 
-When you're scaling digital invention and innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that should never be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
+When you're scaling digital invention and innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that shouldn't be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
 
 The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
 
@@ -58,7 +58,7 @@ Every point of feedback is a potential solution to the customer need. More impor
 
 ## Continuous integration
 
-Continuous integration is the automating of code multiple times per day in order to have an updated single project. As adoptions scale and a hypothesis gets closer to true innovation at scale, the number of smaller hypotheses to be tested tends to grow rapidly. For accurate feedback loops and smooth adoption processes, it's important that each of those hypotheses is integrated and supportive of the primary hypothesis behind the innovation. This means that you also have to move quickly to innovate and grow, which requires multiple developers for testing variations of the core hypothesis. For later stage development efforts, you might even need multiple teams of developers, each building toward a shared solution. Continuous integration is the first step toward management of all the moving parts.
+Continuous integration is the automating of code multiple times per day to have an updated single project. As adoptions scale and a hypothesis gets closer to true innovation at scale, the number of smaller hypotheses to be tested tends to grow rapidly. For accurate feedback loops and smooth adoption processes, it's important that each of those hypotheses is integrated and supportive of the primary hypothesis behind the innovation. This requires you to move quickly to innovate and grow, which requires multiple developers for testing variations of the core hypothesis. For later stage development efforts, you might even need multiple teams of developers, each building toward a shared solution. Continuous integration is the first step toward management of all the moving parts.
 
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
@@ -74,7 +74,7 @@ The [Azure Test Plans](/azure/devops/test/track-test-status?view=azure-devops) f
 
 ## Solution deployment
 
-Perhaps the most meaningful aspect of empowering adoption is your ability to control the release of a solution to customers. By providing a self-service or automated pipeline for releasing a solution to customers, you'll accelerate the feedback loop. By allowing customers to quickly interact with changes in the solution, you invite them into the process. This approach also triggers quicker testing of hypotheses, thereby reducing assumptions and potential rework.
+Perhaps the most meaningful aspect of empowering adoption is your ability to control the release of a solution to customers. By providing a self-service or automated pipeline for releasing a solution to customers, you'll accelerate the feedback loop. By allowing customers to quickly interact with changes in the solution, you invite them into the process. This approach also triggers quicker testing of hypotheses, reducing assumptions and potential rework.
 
 There are several methods for solution deployment. The three most common are:
 
