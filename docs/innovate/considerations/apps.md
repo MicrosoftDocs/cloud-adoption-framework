@@ -23,7 +23,7 @@ In some cases, data alone is enough to drive change and meet customer needs. Mor
 
 Teams that are quick to respond to customer feedback, market changes, and opportunities typically innovate best. The first principle of innovative applications is an element of the [growth mindset](learn.md#growth-mindset): "Share the code." Code sharing invites diverse perspectives and contributions, and spurs innovation. Therefore, application development should start with a shared code repository. 
 
-The leading tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. An alternative is [Microsoft Azure Repos](https://azure.microsoft.com/services/devops/repos/), which is an [Azure DevOps](https://azure.microsoft.com/services/devops/) service that provides unlimited, cloud-hosted private repos for your project. For version control when you use Azure Repos, you can choose either Git, which is a distributed type, or Team Foundation Version Control (TFVC), which is centralized. For more information about Azure Repos, Git, and TFVC, see [Azure Repos Documentation](/azure/devops/repos/?view=azure-devops&preserve-view=true).
+A widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. An alternative is [Microsoft Azure Repos](https://azure.microsoft.com/services/devops/repos/), which is an [Azure DevOps](https://azure.microsoft.com/services/devops/) service that provides unlimited, cloud-hosted private repos for your project. For version control when you use Azure Repos, you can choose either Git, which is a distributed type, or Team Foundation Version Control (TFVC), which is centralized. For more information about Azure Repos, Git, and TFVC, see [Azure Repos Documentation](/azure/devops/repos/?view=azure-devops&preserve-view=true).
 
 ## Citizen developers
 
@@ -32,7 +32,7 @@ Professional developers are important to innovation. When a hypothesis proves ac
 Citizen developers are users who create new business applications using development and runtime environments sanctioned by corporate IT. The use of citizen developers can help to scale development efforts and accelerate early hypothesis testing. This strategy is viable and effective when early hypotheses can be validated through tools like [Power Apps](/powerapps/powerapps-overview) for application interfaces, [AI Builder](/powerapps/use-ai-builder) for processes and predictions, [Power Automate](/power-automate/) for workflows, and [Power BI](/power-bi/) for data consumption.
 
 > [!NOTE]
-> When you rely on citizen developers to test hypotheses, it's advisable to also have professional developers to support, monitor, and guide the work. The professionals can help develop a robust design that accelerates returns on the innovation. By involving professional developers at the right time, you can realize cleaner transitions later.
+> When you rely on citizen developers to test hypotheses, it's advisable to also have professional developers to support, review, and guide the work. The professionals can help develop a robust design that accelerates returns on the innovation. By involving professional developers at the right time, you can realize cleaner transitions later.
 
 ## Intelligent experiences
 
@@ -44,7 +44,7 @@ Modern web applications can be the fastest way to meet the needs of internal or 
 
 ### Adding intelligence
 
-It gets easier all the time for professional and citizen developers to add artificial intelligence (AI) features to applications, feature such as:
+It gets easier all the time for professional and citizen developers to add  machine learning and AI features to applications that help meet the needs of the customer and create an interactive experience. Some examples of these features are:
 
 - Speech to text
 - Text to speech
@@ -62,9 +62,9 @@ Bots can do the same things as other types of software: read and write files, us
 
 ## Cloud-native solutions
 
-The cloud-native style of software architecture uses cloud computing and loosely-coupled components to create resilient, reliable, and maintainable applications. The applications are typically built using containers, [microservices](/azure/architecture/guide/architecture-styles/microservices), managed services, serverless functions, and event-based programming. Most commonly, cloud-native solutions use continuous delivery to achieve faster time to market.
+Cloud-native architecture enables you to embrace rapid change, and run resilient and scalable applications more easily. Cloud-native applications are typically built using containers, [microservices](/azure/architecture/guide/architecture-styles/microservices), managed services, serverless functions, and event-based programming. Most commonly, cloud-native solutions use continuous delivery to achieve faster time to market. 
 
-A cloud-native solution allows decentralized development teams to maintain control of the business logic without the need for monolithic, centralized solutions. It also creates an anchor to drive consistency across the input of citizen developers and modern experiences. Finally, cloud-native solutions provide an innovation accelerator by freeing citizen and professional developers to innovate safely and with a minimum of blockers.
+A cloud-native solution allows centralized development teams to maintain control of the business logic without the need for monolithic, centralized solutions. It also creates an anchor to drive consistency across the input of citizen developers and modern experiences. Finally, cloud-native solutions provide an innovation accelerator by freeing citizen and professional developers to innovate safely and with a minimum of blockers.
 
 ## Innovate through existing solutions
 
@@ -72,19 +72,19 @@ Many customer hypotheses can best be delivered by a modernized version of an exi
 
 Most forms of modernization, including refactoring, are included in the [Migrate methodology](../../migrate/index.md) within the Cloud Adoption Framework. That methodology guides cloud adoption teams through the process of migrating a [digital estate](../../digital-estate/index.md) to the cloud. The [Azure migration guide](../../migrate/azure-migration-guide/index.md) provides a streamlined approach to the same methodology, which is suitable for a small number of workloads or even a single application.
 
-After a solution has been migrated and modernized, there are a variety of ways it can be used to create new, innovative application solutions to customer needs. For example, [citizen developers](#citizen-developers) could test hypotheses, or professional developers could create [intelligent experiences](#intelligent-experiences) or [cloud-native solutions](#cloud-native-solutions).
+After a solution has been migrated and modernized, there are a variety of ways it can be used to create new, innovative application solutions to meet customer needs. For example, [citizen developers](#citizen-developers) could test hypotheses, or professional developers could create [intelligent experiences](#intelligent-experiences) or [cloud-native solutions](#cloud-native-solutions).
 
 ### Extend an existing solution
 
 Extending a solution is one common form of modernization. This can be the fastest path to innovation when the following are true of the customer hypothesis:
 
-- Existing business logic comes close to customer needs.
+- Existing business logic meets or comes close to customer needs.
 - An improved experience, not a new one, best meets the needs of customers.
 - The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [n-tier](/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in [Azure App Service](https://azure.microsoft.com/services/app-service/).
 
 ### Rebuild an existing solution
 
-If an existing solution comes close to meeting customer needs, but can't be easily extended, it may be necessary to refactor it. In this approach, the application is migrated to the cloud. After the application is migrated, parts of it are modified or duplicated, as web services or [microservices](/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel with the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
+If an existing solution meets or comes close to meeting customer needs, but can't be easily extended, it may be necessary to refactor it. In this approach, the application is migrated to the cloud. After the application is migrated, parts of it are modified or duplicated, as web services or [microservices](/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel with the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
 
 > [!CAUTION]
 > Refactoring or rearchitecting solutions or centralizing business logic can quickly trigger a time-consuming [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) instead of a source of customer value. This is a risk to innovation, especially early in hypothesis validation. With a bit of creativity in the design of a solution, there should be a path to MVP that doesn't require refactoring of existing solutions. It's wise to delay refactoring until the initial hypothesis can be validated at scale.
