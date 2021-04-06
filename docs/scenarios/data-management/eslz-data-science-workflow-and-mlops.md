@@ -67,5 +67,3 @@ This folder is used to store the definition of Azure Machine Learning pipelines 
 The tests folder is used for writing unit and integration tests that need to be executed to discover bugs and issues early on in the project.
 - **notebooks**
 A notebooks folder is used to separate jupyter notebooks from the actual python project. Inside the folder, each individual should have a subfolder to check in their notebooks and prevent git conflicts. The reason for this is that there are known issues wrt. git and jupyter notebooks.
-
-## MLOPs
