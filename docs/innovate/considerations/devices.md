@@ -27,7 +27,7 @@ Life in the digital economy is full of distractions. We're all bombarded with so
 
 A standard web experience is the most common application development technique used to meet a customer's needs. This approach assumes that the customer is in front of their computer. If your customer consistently meets their point of need while in front of their laptop, build a web application. That application will provide an ambient user experience for that customer in that scenario. However, we know that this scenario is less and less likely.
 
-![Ambient experiences](../../_images/innovate/ambient-experiences.png)
+![Diagram that shows the customer interaction through devices and ambient experiences.](../../_images/innovate/ambient-experiences.png)
 
 Ambient user experiences typically require more than a web application these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md), the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient and digital experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
 
@@ -38,7 +38,7 @@ Types of interactive devices for ambient user experiences:
 - **[Integrated reality](#integrated-reality):** Moving closer to true ambience, integrated reality solutions focus on the use of a device that exists within the customer's reality to integrate the solution into their natural behaviors. A Virtual Assistant is a great example of integrating reality into the surrounding environment. A less well-known option concerns Internet of Things (IoT) technologies, which integrate devices that already exist in the customer's surroundings.
 - **[Adjusted reality](#adjusted-reality):** When any of these ambient solutions use predictive analysis in the cloud to define and provide an interaction with the customer through the natural surroundings, the solution has adjusted reality.
 
-Understanding the customer need and measuring customer impact help you determine whether a device interaction or ambient experience are necessary to validate your hypothesis. With each of those data points, the following sections will help you find the best digital experience solution.
+Understanding the customer need and measuring customer impact help you determine whether a device interaction or ambient user experience are necessary to validate your hypothesis. With each of those data points, the following sections will help you find the best digital experience solution.
 
 ## Mobile experience
 
