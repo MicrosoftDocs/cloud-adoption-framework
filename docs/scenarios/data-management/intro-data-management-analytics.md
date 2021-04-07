@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Introduction to the concept of data management
+# Introduction to the concept of data management and analytics
 
 Describe data management in a way that non-technical audiences can understand.
 

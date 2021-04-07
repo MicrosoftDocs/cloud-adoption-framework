@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Overview
+# DataOps Overview
 
 The Enterprise Scale Analytics and AI architecture was designed with the following core principles in mind:
 

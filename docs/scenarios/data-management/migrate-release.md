@@ -8,3 +8,5 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
+
+# Migrate and Release

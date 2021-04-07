@@ -67,7 +67,8 @@ For example, you create one data landing zone where the business already has it'
 
 In another example, the owning business of a data landing zone doesn't have a business data office to build out their domains or data products. In this scenario the central data office should consider themselves a consultancy who would take people off the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases in either a SCRUM or AGILE manner. Once completed they would return to the central data office.
 
->[!NOTE] In the core services pattern of one data landing zone, it is likely that you will mix businesses into one data landing zone. You might then end up with a crossover of functions where Domain Ops or Data Product teams could be resourced from central and business data offices. However, in this scenario we would recommend that the function of Data Landing Zone Ops is all located in the central data office.
+>[!NOTE]
+>In the core services pattern of one data landing zone, it is likely that you will mix businesses into one data landing zone. You might then end up with a crossover of functions where Domain Ops or Data Product teams could be resourced from central and business data offices. However, in this scenario we would recommend that the function of Data Landing Zone Ops is all located in the central data office.
 
 ## Platform Group Teams
 

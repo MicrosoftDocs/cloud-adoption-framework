@@ -20,7 +20,6 @@ A core principle of the Enterprise Scale Analytics and AI solution pattern is to
 The [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) already uses this concept, and Enterprise Scale Analytics and AI solution pattern builds upon these standards by adding [custom Azure Policies](#azure-policies-for-enterprise-scale-analytics-and-ai) which are applied to our Data Management Landing Zone and Data Landing Zones.
 
 ![How Azure Governance works](./images/azure_governance.png)
-
 *Figure 1: How Azure Governance Works*
 
 Azure Policy is essential to ensuring security and compliance within Enterprise Scale Analytics and AI. It helps to enforce standards and to assess compliance at-scale. Policies can be used to evaluate resources in Azure and compare them to the desired properties. Several policies (business rules) can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure, such as management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and sub-scopes can be excluded with exceptions if necessary.
@@ -29,7 +28,8 @@ Azure Policy is essential to ensuring security and compliance within Enterprise 
 
 Azure policies in Enterprise Scale Analytics And AI were developed with the following design considerations in mind:
 
-- Azure Policy are used to implement governance and enforce rules for resource consistency, regulatory compliance, security, cost, and management. Pre-built policies which are available should be used to save time.
+- Azure Policy are used to implement governance and enforce rules for resource consistency, regulatory compliance, security, cost, and management.
+- Pre-built policies which are available should be used to save time.
 - Policies are assigned to the highest level possible in the management group tree to simplify the management of policies.
 - The number of Azure Policy assignments made at the root management group scope are limited to avoid managing through exclusions at inherited scopes.
 - Policy exceptions are only be used if required and should require global admin approval.
@@ -132,7 +132,7 @@ Enterprise Scale Analytics and AI contains custom policies pertaining to **resou
 
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
-|Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource?view=azure-dotnet-preview) in managed vnet settings when Synapse Workspace is created.|
+|Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource) in managed vnet settings when Synapse Workspace is created.|
 |Append-Synapse-Purview|Network Isolation|Enforce connection between central purview instance and Synapse Workspace.|
 |Append-SynapseSpark-ComputeIsolation|Resource Management|When a Synapse Spark Pool is created without compute isolation then this will add it.|
 |Append-SynapseSpark-DefaultSparkLogFolder|Logging|When a Synapse Spark Pool is created without logging then this will add it.|
@@ -384,7 +384,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
 |Deny-HdInsight-EncryptionAtHost|Encryption|Enforce encryption at host for HDInsight clusters.|
-|Deny-HdInsight-EncryptionInTransit|Encyrption|Enforces encryption in transit for HDInsight clusters.|
+|Deny-HdInsight-EncryptionInTransit|Encryption|Enforces encryption in transit for HDInsight clusters.|
 |Deny-HdInsight-MinimalTlsVersion|Encryption|Enforces minimal TLS version for HDInsight clusters.|
 |Deny-HdInsight-NetworkProperties|Network Isolation|Enforces private link enablement for HDInsight clusters.|
 |Deny-HdInsight-Sku||Enforces certain SKU's for HDInsight clusters.|

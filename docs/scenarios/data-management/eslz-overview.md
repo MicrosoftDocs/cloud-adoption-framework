@@ -32,19 +32,18 @@ Enterprise Scale Analytics and AI considers six critical design areas that help 
 1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops)
 
 > [!IMPORTANT] For deployment, please choose one of the below **Supported Regions** list.
- > **Supported Regions**:
-
- > - Asia Southeast
- > - Europe North
- > - Europe West
- > - France Central
- > - Japan East
- > - South Africa North
- > - UK South
- > - US Central
- > - US East
- > - US East 2
- > - US West 2
+>
+> - Asia Southeast
+> - Europe North
+> - Europe West
+> - France Central
+> - Japan East
+> - South Africa North
+> - UK South
+> - US Central
+> - US East
+> - US East 2
+> - US West 2
 
 ### Data Management
 

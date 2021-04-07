@@ -58,8 +58,8 @@ Raw Data from source systems for each **Domain** will land into either the non-s
 
 ```markdown
 .
-|--Domain
-|--Domain
+|-Domain
+|-Domain
 |--Transactional
 |---Subdomain/Dataset
 |----Entity
@@ -89,8 +89,8 @@ Enriched data is the version where raw data (as-is or aggregated) has a defined 
 
 ```markdown
 .
-|--Domain
-|--Domain
+|-Domain
+|-Domain
 |--Transactional
 |---Non-Sensitive
 |----Subdomain/Dataset
@@ -117,8 +117,8 @@ Data is taken from the golden layer, in Enriched Data, and transformed into high
 
 ```markdown
 .
-|--Domain
-|--Domain
+|-Domain
+|-Domain
 |--Transactional
 |---Non-Sensitive
 |----Subdomain/Dataset
@@ -194,7 +194,7 @@ With the Common Data Model (CDM), organizations can use a data format that provi
 
 ## Data Lake Zones Security
 
-![Data Lake Zones Security](./images/adlssecurityzones.png)
+![Data Lake Zones Security](../images/adlssecurityzones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 
@@ -206,7 +206,7 @@ The recommended security pattern for each of the of the Data Lake Zones is:
 
 Each of the data lakes should use Private Endpoints injected into the VNet of the Data Landing Zone. To allow access across landing zones, we propose connecting Data Landing Zones through VNet peering. This provides the optimal solution from both a cost perspective and an access control perspective.
 
-See [Private Endpoints](eslz-network-topology-and-connectivity.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](eslz-network-topology-and-connectivity.md#data-management-landing-zone-to-data-landing-zone)
+See [Private Endpoints](../01-overview/05-networking.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](../01-overview/05-networking.md#data-management-subscription-to-data-landing-zone)
 
 >[!IMPORTANT]
 >Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones (*e.g.* private links) are controlled by the Platform Ops team.
@@ -234,6 +234,10 @@ Immutable storage helps healthcare organization, financial institutions and rela
 For further information see [How Immutable storage for Azure Blob storage works](https://docs.microsoft.comazure/storage/blobs/storage-blob-immutable-storage#about-immutable-blob-storage)
 
 Depending on your industry, it is recommended that immutable storage is assessed for use in the RAW Layer of the Data Lake.
+
+## Multi-Region Deployments
+
+Data Residency rules or the requirement to have data close to a user base will sometimes drive the requirement to create Azure Data Lake accounts in other Azure regions. It is recommended that you create a Data Landing Zone in the region and replicate global data using third-party products, azcopy or Azure Data Factory to copy the deltas between the regions. Thus this would allow local data to remain in region whilst global data could be replicated around for us by Data Product teams.
 
 ## Monitoring
 
