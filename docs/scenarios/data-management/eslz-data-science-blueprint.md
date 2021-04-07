@@ -1,6 +1,6 @@
 ---
-title: Enterprise Scale Analytics and AI Data Science Environment
-description: Enterprise Scale Analytics and AI Architecture Data Science Environment
+title: Enterprise Scale Analytics and AI Data Science Blueprint
+description: Enterprise Scale Analytics and AI Architecture Data Science Blueprint
 author:  xigyenge
 ms.author:  xigyenge # Microsoft employees only
 ms.date: 03/03/2021
