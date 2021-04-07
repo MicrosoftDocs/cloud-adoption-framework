@@ -38,7 +38,7 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Working with Docker in Visual Studio Code](https://code.visualstudio.com/docs/containers/overview)
   - [Working with Kubernetes in Visual Studio Code](https://code.visualstudio.com/docs/azure/kubernetes)
-  - [Introduction to Azure Dev Spaces](/azure/dev-spaces/about)
+  - [Bridge to Kubernetes overview](/visualstudio/containers/overview-bridge-to-kubernetes)
 
 - **Containerize your application.** Familiarize yourself with the end-to-end Kubernetes development experience, including application scaffolding, inner-loop workflows, application-management frameworks, CI/CD pipelines, log aggregation, monitoring, and application metrics.
 
@@ -53,7 +53,7 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Project design and layout for successful Kubernetes applications (webinar)](https://info.microsoft.com/ww-OnDemandRegistration-successful-kubernetes-applications-webinar.html)
   - [How Kubernetes deployments work (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=mNK14yXIZF4&index=3)
-  - [Azure Kubernetes Service Workshop (learn module)](/learn/modules/aks-workshop/)
+  - [Develop and deploy applications on Kubernetes (Microsoft Learn)](/learn/paths/develop-deploy-applications-kubernetes/)
 
 - **Manage application storage.** Understand the performance needs and access methods for pods so that you can provide the appropriate storage options. Also, plan for ways to back up and test the restore process for attached storage.
 
@@ -128,13 +128,14 @@ Now that the application is in production, how can you optimize your workflow an
 
   For more information, see:
   - [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=izVWk7rYqWI&index=15) <br>
-  - [Learn about service meshes](/azure/aks/servicemesh-about) <br>
-  - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about) <br>
-  - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about) <br>
+  - [Learn about service meshes](/azure/aks/servicemesh-about)
+  - [Use Open Service Mesh with Azure Kubernetes Service](/azure/aks/servicemesh-osm-about)
+  - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about)
+  - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about)
   - [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-consul-about)
 
 - **Implement site reliability engineering (SRE) practices.** Site reliability engineering (SRE) is a proven approach to maintain crucial system and application reliability while iterating at the speed demanded by the marketplace.
 
   To learn more, see:
-  - [Introduction to site reliability engineering (SRE)](/learn/modules/intro-to-site-reliability-engineering/) <br>
+  - [Introduction to site reliability engineering (SRE)](/learn/modules/intro-to-site-reliability-engineering/)
   - [DevOps at Microsoft: game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)
