@@ -1274,7 +1274,7 @@ items:
             href: innovate/considerations/invention.md
           - name: Democratize data
             href: innovate/considerations/data.md
-          - name: Engage via apps
+          - name: Application development for innovative apps
             href: innovate/considerations/apps.md
           - name: Empower adoption
             href: innovate/considerations/ci-cd.md
