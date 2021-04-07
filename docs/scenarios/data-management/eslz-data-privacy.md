@@ -138,7 +138,7 @@ A policy engine will allows a central way of managing, securing, and controlling
 
 Typically, a policy engine would integrate with a Data Catalog such as Azure Purview. There are a number of solutions from third-party vendors in the Azure marketplace.
 
-Some of vendors work with both Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing Row- and Column-Level Security. Vendors to consider are [Immuta](https://www.immuta.com/integrations/azure-synapse/), [Privacera](https://privacera.com/), and [Okera](https://www.okera.com/partners/microsoft-gold-partner/).
+Some of vendors work with both Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing Row- and Column-Level Security.
 
 The Policy Engine should use Azure AD Groups to apply the policies to the datasets.
 
@@ -147,3 +147,8 @@ The expectation of any policy solution providing Data Privacy is to tokenize sen
 As mentioned, for a policy engine to succeed it is important that there is an integration into the Data Catalog and a REST API which can be used by the DevOps process when onboarding a new dataset.
 
 As Domains and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify sensitive data. The policy engine should import this definition and deny any access to this data until the domain has set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
+
+## Highly Confidential Data
+
+In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys and putting inbound/outbound restrictions to the landing zone. The Data Management Landing Zone should be able to connect to catalogue the data, in the Data Landing Zone, but should restrict who can search for this data in the catalogue.
+
