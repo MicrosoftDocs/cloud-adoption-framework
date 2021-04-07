@@ -12,16 +12,16 @@ ms.custom: e2e-hybrid
 
 # Ready: Prepare your environment for a hybrid and multicloud scenario
 
-The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment and align with best practices guidance in the Cloud Adoption Framework. When you prepare for a hybrid and multicloud deployment, environment configurations might be slightly different.
+The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, and align with best practices guidance in the Cloud Adoption Framework. When you prepare for a hybrid and multicloud deployment, environment configurations might be slightly different.
 
-This article outlines key considerations and changes that are necessary to prepare your environments to:
+Here are the key considerations and changes necessary to prepare your environments to:
 
 - Expand connectivity boundaries to connect across hybrid and multicloud platforms.
 - Improve support for cloud native services like containers, Kubernetes, and hyper-converged infrastructure solutions to reduce hybrid and multicloud adoption friction.
 - Establish proper cloud native tools to support the use of Azure as *one* of your cloud platforms.
 - Implement unified operations tooling across all cloud environments to allow for unified operations.
 
-This article guides you through the considerations required to achieve each of those environmental goals.
+This article guides you through the considerations required to achieve these environmental goals.
 
 ## Evaluate your cloud mix
 
