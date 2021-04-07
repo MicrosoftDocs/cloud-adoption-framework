@@ -31,19 +31,20 @@ Enterprise Scale Analytics and AI considers six critical design areas that help 
 1. [Data Science Environment](#data-science-environment)
 1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops)
 
-> [!IMPORTANT] For deployment, please choose one of the below **Supported Regions** list.
+>[!IMPORTANT]
+>For deployment, please choose one of the below **Supported Regions** list.
 >
-> - Asia Southeast
-> - Europe North
-> - Europe West
-> - France Central
-> - Japan East
-> - South Africa North
-> - UK South
-> - US Central
-> - US East
-> - US East 2
-> - US West 2
+>- Asia Southeast
+>- Europe North
+>- Europe West
+>- France Central
+>- Japan East
+>- South Africa North
+>- UK South
+>- US Central
+>- US East
+>- US East 2
+>- US West 2
 
 ### Data Management
 
@@ -126,7 +127,7 @@ For further reading, see [Data Science Workflow and MLOps](eslz-data-science-wor
 
 In order to extend your analytics platform to include other Azure services on demand, the prescribed approach is to provision the platform with only the services you require, with t-shirt sizing, and extend it further as new use cases are onboarded. This approach also allows enterprises to regulate the platform cost effectively.
 
-### Starting with a single Data Landing Zone
+### Starting with a Single Data Landing Zone
 
 If your environment is at a starting point, consider the following approach:
 
@@ -135,7 +136,7 @@ If your environment is at a starting point, consider the following approach:
 
 Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (i.e., the Data Landing Zone). For many environments this approach of deploying a central hub with a single spoke will be the starting point. An advantage of starting with this approach is that it allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones at a later stage as needed. This is close to a core service provider pattern which builds out common core services with flexibility to bolt on domain specific customizations.
 
-### Starting with multiple Data Landing Zones
+### Starting with Multiple Data Landing Zones
 
 For environments requiring multiple Data Landing Zones, consider the following approach:
 

@@ -57,7 +57,8 @@ By combining RLS with Column-Level Security (CLS) to restrict access to columns 
 
 When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as primary for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called /synapse/workspacename. It also uses container for managing libraries that you choose to install.
 
-During the Synapse workspace deployment, you have the option to either provide an existing storage account or create a new one. For any of the two options selected, the deployment process automatically grants the Synapse workspace identity data access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role. 
+During the Synapse workspace deployment, you have the option to either provide an existing storage account or create a new one. For any of the two options selected, the deployment process automatically grants the Synapse workspace identity data access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
+
 It is also possible to manually specify the storage account URL. However, in this case, you will need to contact the storage account owner, and ask them to grant the workspace identity access manually using the **Storage Blob Data Contributor.**
 
 The Synapse workspace identity permission context is used when executing Pipelines, workflows, and notebooks through jobs. If any of the jobs read and/or write to the workspace primary storage, the workspace identity will use the read/write permissions granted through the **Storage Blog Data Contributor**.
@@ -69,56 +70,57 @@ To allow read and write access to other users or groups on the primary storage a
 
 #### Fine-grained data access control using Access Control Lists
 
-When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access. 
+When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access.
 
-Before you start implementing fined-grained access with ACLs, is important to understand how ACLs permissions are evaluated. 
+Before you start implementing fined-grained access with ACLs, is important to understand how ACLs permissions are evaluated.
 
-1. Azure Role assignments are evaluated first and take priority over any ACL assignments. 
+1. Azure Role assignments are evaluated first and take priority over any ACL assignments.
 1. If the operation is fully authorized based on Azure role assignment, then ACLs are not evaluated at all.
 1. If the operation is not fully authorized, then ACLs are evaluated.
 
-![RBAC ACLs Evaluation](../images/RBAC-ACLsEvaluation.png)
+![RBAC ACLs Evaluation](./images/RBAC-ACLsEvaluation.png)
 
-Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information. 
+Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
 
-The first step in setting-up ACLs in Data Lake Storage Gen 2 is to install the Azure Storage Explore. Azure Data Explorer is the easiest way to setup ACLs access with ADLS Gen 2. 
-For instructions on how to use and install, refer to the following. [Get started with Storage Explorer | Microsoft Docs.](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) 
+The first step in setting-up ACLs in Data Lake Storage Gen 2 is to install the Azure Storage Explore. Azure Data Explorer is the easiest way to setup ACLs access with ADLS Gen 2.
+
+For instructions on how to use and install, refer to the following. [Get started with Storage Explorer | Microsoft Docs.](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
 
 #### Granting Azure RBAC Reader on the Storage Account
 
-Assigning Azure RBAC Reader role to users or groups in the Synapse workspace primary storage account is required for them to be able to list the storage account and containers when using Data Hub in Synapse Studio. 
+Assigning Azure RBAC Reader role to users or groups in the Synapse workspace primary storage account is required for them to be able to list the storage account and containers when using Data Hub in Synapse Studio.
 
 Using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data from spark from a specific file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, New Spark Table.
 
-Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account. 
+Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
 
-#### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs. 
+#### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs.
 
 The first step on this process, you will need to grant ACL permissions for a user or group at the container level in the Storage account. Please go through the following steps to get started.
 
 1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose Manage Access Control Lists. 
 
-![Container Level ACLs](../images/ACLRead1.png)
+![Container Level ACLs](./images/ACLRead1.png)
 
-1. Click in Add to include users or groups that you want to grant permissions. 
+1. Click in Add to include users or groups that you want to grant permissions.
 
-![Manage Access Window](../images/ACLRead2.png)
+![Manage Access Window](./images/ACLRead2.png)
 
 1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The users or groups should show-up. Select the user or group and choose **Add**.
 
-![Add Entity](../images/ACLRead3.png)
+![Add Entity](./images/ACLRead3.png)
 
 After adding the user or group. Select the identity added in the previous step. In Permission for: <name of user or group> check the option **Access**, followed by **Read** and **Execute** options on the right-hand side. 
 
 It is important to notice the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant Execute permissions on all parent folders, including the container which is the root directory, when granting read or write in a sub directory.
 
-![Manage Access](../images/ACLRead4.png)
+![Manage Read Access User 1](./images/ACLRead4.png)
 
-**Granting permissions automatically to new children of the directory using the Default*** **option.** 
+**Granting permissions automatically to new children of the directory using the Default*** **option.**
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the required permissions read, write, or execute.  
 
-![Manage Access](../images/ACLRead5.png)
+![Manage Access Default](./images/ACLRead5.png)
 
 After granting permission at the container level, repeat the same steps for any subfolder you want to give access to users or groups.
 
@@ -126,13 +128,13 @@ After granting permission at the container level, repeat the same steps for any 
 
 Select the folder you want to give users or groups write permission and choose **Manage ACLs.**
 
-![Manage Access](../images/ACLWrite1.png)
+![Manage ACLs](./images/ACLWrite1.png)
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the appropriate permissions **Read/write** and **execute.**  As mentioned in the Granting Read Access on ADLS Gen 2 section, this option will automatically propagate parent folder permissions to newly created children's items, such as folder and files.
 
 After selecting the appropriate permissions, click **OK** to close.
 
-![Manage Access](../images/ACLWrite2.png)
+![Manage Write Access](./images/ACLWrite2.png)
 
 Repeat the same steps for any additional folders and subfolder you may want to grant access to users or groups.
 
@@ -142,13 +144,13 @@ When granting ACLs permissions to folders that already contain child objects suc
 
 To propagate ACL permissions, right-click on the parent folder you desire to propagate the ACL permissions. This action will propagate permissions for all users to the existing child objects from the parent folder you are performing the action. 
 
-![Manage Access](../images/ACLPropag1.png)
+![Propagate Access](./images/ACLPropag1.png)
 
 In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
 
 Check the box I understand that propagating ACLs cannot be easily reversable and click OK. 
 
-![Manage Access](../images/ACLPropag2.png)
+![Propagate Access Control Lists](./images/ACLPropag2.png)
 
 ## References
 
