@@ -26,7 +26,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 > - Have you reviewed the security and threat model of Kubernetes clusters?
 > - Is your cluster enabled for Kubernetes role-based access control?
 
-**Checklist:**
+**Security checklist:**
 
 - **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [The definitive guide to securing Kubernetes (white paper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original).
 
@@ -49,7 +49,7 @@ As you prepare the application for production, implement a minimum set of best p
 > - Is your cluster set up to automatically apply node security updates?
 > - Are you running a security scanning solution for your cluster and container services?
 
-**Checklist:**
+**Security checklist:**
 
 - **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac).
 
@@ -79,7 +79,7 @@ Now that the application is in production, how can you optimize your workflow an
 >
 > - Can you enforce governance and cluster policies at scale?
 
-**Checklist:**
+**Security checklist:**
 
 - **Enforce cluster governance policies.** Apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. To learn more, see [Control deployments with Azure Policy](/azure/governance/policy/concepts/policy-for-kubernetes).
 
