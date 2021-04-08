@@ -1,5 +1,5 @@
 ---
-title: "Govern data management"
+title: "Govern 'data management and analytics'"
 description: Describe the scenario's impact on Governance
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-# Govern data management
+# Govern 'data management and analytics'
 
 Describe how your scenario requires governance changes
 
-## Data management policies
+## 'data management and analytics' policies
 
 Are there specific corporate policies that should be in place prior to adopting this scenario?
 
-## Data management disciplines
+## 'data management and analytics' disciplines
 
 Are there changes to how the governance team should approach the governance disciplines for this scenario?
 - Cost
@@ -26,12 +26,12 @@ Are there changes to how the governance team should approach the governance disc
 - Resource consistency
 - Deployment acceleration
 
-## Data management governance references
+## 'data management and analytics' governance references
 
 Are there specific examples the customer can look to for best practices?
 
-## Next step: Manage data management
+## Next step: Manage 'data management and analytics'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Manage data management](./manage.md)
+- [Manage 'data management and analytics'](./manage.md)
