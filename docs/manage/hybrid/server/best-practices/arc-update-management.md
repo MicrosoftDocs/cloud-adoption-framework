@@ -58,7 +58,7 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
     ```console
     az group create --name <Name for your resource group> \
     --location <Location for your resources> \
-    --tags "Project=jumpstart-azure-arc-servers"
+    --tags "Project=jumpstart_azure_arc_servers"
     ```
 
     ![A screenshot of the `az group create` command.](./media/arc-update-management/az-group-create.png)

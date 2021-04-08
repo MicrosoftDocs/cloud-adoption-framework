@@ -36,9 +36,9 @@ The following steps offer examples and potential options to consider when develo
 |--|--|
 | <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Resource Consistency discipline template](./template.md): Download the template for documenting a Resource Consistency discipline. |
 | <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Resource Consistency discipline. |
-| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand whether it is the right time to invest in the Resource Consistency discipline. |
+| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand whether it's the right time to invest in the Resource Consistency discipline. |
 | <br> ![Adherence icon](../../_images/govern/process-enforce.png) | <br> [Policy adherence processes](./compliance-processes.md): Suggested processes for supporting policy compliance in the Resource Consistency discipline. |
-| <br> ![Maturity icon](../../_images/govern/process-maturity.png) | <br> [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption.  |
+| <br> ![Maturity icon](../../_images/govern/process-maturity.png) | <br> [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption. |
 | <br> ![Toolchain icon](../../_images/govern/process-toolchain.png) | <br> [Toolchain](./toolchain.md): Azure services that can be implemented to support the Resource Consistency discipline. |
 
 ## Next steps

@@ -88,7 +88,7 @@ In healthy cloud-forward companies, this negotiation process is a dynamic conver
 
 ## Enable CCoE success
 
-Before proceeding with this model, it is important to validate the company's tolerance for a growth mindset and IT's comfort with releasing central responsibilities. As mentioned above, the purpose of a CCoE is to exchange control for agility and speed.
+Before proceeding with this model, it is important to consider the company's tolerance for a growth mindset and IT's comfort level with releasing central responsibilities. As mentioned above, the purpose of a CCoE is to exchange control for agility and speed.
 
 This type of change takes time, experimentation, and negotiation. There will be bumps and set backs during this maturation process. But if the team stays diligent and isn't discouraged from experimentation, there is a high probability of success in improving agility, speed, and reliability. One of the biggest factors in success or failure of a CCoE is support from leadership and key stakeholders.
 

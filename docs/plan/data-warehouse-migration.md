@@ -1,5 +1,5 @@
 ---
-title: "Plan a data warehouse migration"
+title: Plan a data warehouse migration
 description: Learn best practices for data warehouse migration, the core data warehouse migration process steps, and the tasks within each step.
 author: v-hanki
 ms.author: janet

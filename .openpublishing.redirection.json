@@ -291,6 +291,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/innovate/ai/conversational-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate/best-practices/conversational-ai",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/getting-started/migrate.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
          "redirect_document_id": true
@@ -389,6 +394,11 @@
          "source_path": "docs/scenarios/lamp/moodle/vpn-gateway.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/connectivity-to-other-cloud-providers.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-other-providers",
+         "redirect_document_id": true
       }
    ]
 }

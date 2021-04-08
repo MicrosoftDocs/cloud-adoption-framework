@@ -110,7 +110,7 @@ Real-time telemetry is available through Azure Monitor views both during an atta
 [user-defined-routes]: /azure/virtual-network/virtual-networks-udr-overview
 [network-virtual-appliances]: /azure/architecture/reference-architectures/dmz/nva-ha
 [azure-firewall]: /azure/firewall/overview
-[perimeter-network]: ../../reference/networking-vdc
+[perimeter-network]: ../../reference/networking-vdc.md
 [alb]: /azure/load-balancer/load-balancer-overview
 [ddos]: /azure/ddos-protection/ddos-protection-overview
 [public-ip]: /azure/virtual-network/virtual-network-public-ip-address

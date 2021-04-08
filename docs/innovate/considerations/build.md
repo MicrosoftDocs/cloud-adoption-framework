@@ -1,35 +1,38 @@
 ---
-title: Build adoption with customer empathy
-description: Learn to create solutions that drive innovation based on customer empathy, a deep understanding of the customer's experience.
+title: Build customer empathy
+description: Learn to create solutions that drive cloud innovation based on customer empathy, a deep understanding of the customer's experience.
 author: BrianBlanchard
+keywords: how to build empathy, customer empathy, cloud innovation
 ms.author: brblanch
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: internal
+ms.custom: 
+ - internal
+ - seo-caf-innovate
 ---
 
 <!-- docutune:casing "Oxford English Dictionary" -->
 
 # Build with customer empathy
 
-"Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you're forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption.
+"Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you're forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), cloud innovation requires a balance between invention and adoption.
 
-Continuing with the analogy, innovation comes from a more extended family. *Customer empathy is the proud parent of innovation.* Creating a solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy, a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
+Continuing with the analogy, innovation comes from a more extended family. *Customer empathy is the proud parent of innovation.* Creating a customer empathy solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy, a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
 
-Why is empathy so important? From the first release of a minimum viable product (MVP) to the general availability of a market-grade solution, customer empathy helps us understand and share in the experience of the customer. Empathy helps us build a better solution. More importantly, it better positions us to invent solutions that will encourage adoption. In a digital economy, those who can most readily empathize with customer needs can build a brighter future that redefines and leads the market.
+How do we build empathy, and why is customer empathy so important? Customer empathy helps us understand and share in the experience of the customer. From the first release of a minimum viable product (MVP) to the general availability of a market-grade solution, customer empathy helps us build a better solution. More importantly, it better positions us to invent solutions that will encourage adoption. In a digital economy, those who can most readily empathize with customer needs can build a brighter future that redefines and leads the market.
 
-## How to build with empathy
+## How to build with customer empathy
 
 Defining assumptions is a fundamental part of planning. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions are typically the product of self-empathy. In other words, *what would I want if I were in this position?* Starting with the build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
 
 > [!CAUTION]
-> Properly defining what to build can be tricky and requires some practice. If you build something too quickly, if might not reflect customer needs. If you spend too much time trying to understand initial customer needs and solution requirements, the market may meet them before you have a chance to build anything at all. In either scenario, the opportunity to learn can be significantly delayed or reduced. Sometimes the data can even be corrupted.
+> Properly defining what to build can be tricky and requires some practice. If you build something too quickly, if might not reflect customer needs. If you spend too much time trying to understand initial customer needs and solution requirements, the market might meet them before you have a chance to build anything at all. In either scenario, the opportunity to learn can be significantly delayed or reduced. Sometimes the data can even be corrupted.
 
 The most innovative solutions in history began with an intuitive belief. That gut feeling comes from both existing expertise and firsthand observation. We start with the build phase because it allows for a rapid test of that intuition. From there, we can cultivate deeper understanding and clearer degrees of empathy. At every iteration or release of a solution, balance comes from building MVPs that demonstrate customer empathy.
 
-To steady this balancing act, the following two sections discuss the concepts of building with empathy and defining an MVP.
+To steady this balancing act, the following two sections discuss the concepts of how to build with empathy and defining an MVP.
 
 ### Define a customer focused-hypothesis
 
@@ -40,7 +43,7 @@ Building with empathy means creating a solution based on defined hypotheses that
 3. Define a simple solution to a single challenge. Relying on expertise across people, processes, and subject matter experts will lead to a potential solution. This is the full hypothesis to be tested: can we help this specific customer with this manageable challenge through the proposed solution?
 4. Arrive at a value statement. What long-term value do you hope to provide to these customers? The answer to this question creates your full hypothesis: how will these customers' lives be improved by using the proposed solution to address this manageable challenge?
 
-This last step is the culmination of an empathy-driven hypothesis. It defines the audience, the problem, the solution, and the metric by which improvement is to be made, all of which center on the customer. During the measure and learn phases, each hypothesis should be tested. Changes in the customer, problem statement, or solution are anticipated as the team develops greater empathy for the addressable customer base.
+This last step is the culmination of a customer empathy-driven hypothesis. It defines the audience, the problem, the solution, and the metric by which improvement is to be made, all of which center on the customer. During the measure and learn phases, each hypothesis should be tested. Changes in the customer, problem statement, or solution are anticipated as the team develops greater empathy for the addressable customer base.
 
 > [!CAUTION]
 > The goal is to *build* with customer empathy, not to *plan* with it. It's all too easy to get stuck in endless cycles of planning and tweaking to hit upon the perfect customer empathy statement. Before you try to develop such a statement, review the following sections on defining and building an MVP.
@@ -97,7 +100,7 @@ When customer empathy is strong, a clearly existing problem should be easy to id
 
 ## When not to apply this approach
 
-Many legal, compliance, and industry requirements that might necessitate an alternate approach. If public releases of a developing solution create risk to patent timing, intellectual property protection, customer data leaks, or violation of established compliance requirements, this approach may not be suitable. When perceived risks like these exist, consult legal counsel before adopting any guided approach to release management.
+There are many legal, compliance, and industry requirements that might necessitate an alternate approach. If public releases of a developing solution create risk to patent timing, intellectual property protection, customer data leaks, or violation of established compliance requirements, this approach might not be suitable. When perceived risks like these exist, consult legal counsel before adopting any guided approach to release management.
 
 ## References
 

@@ -54,7 +54,7 @@ Tools are available to help developers and data scientists understand, protect, 
 
 ## Next steps
 
-For further resources to support your responsible solution development, visit:
+For more information about responsible solution development, visit:
 
 - [Responsible AI overview](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6)
 - [Responsible AI resources](https://www.microsoft.com/ai/responsible-ai-resources)

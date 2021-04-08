@@ -1,5 +1,5 @@
 ---
-title: "Platform operations in cloud management"
+title: Platform operations in cloud management
 description: Build an understanding of the dependency within your organization for common platform operations in cloud management.
 author: BrianBlanchard
 ms.author: brblanch
@@ -26,7 +26,7 @@ The objective of platform operations is to create reliable and repeatable soluti
 
 As the cloud management team establishes higher degrees of operational management and specialization related to specific platforms, those platforms are added to a growing service catalog. The service catalog provides self-service deployment of platforms in a specific configuration, which adheres to ongoing platform operations. During the business-alignment conversation, cloud management and cloud strategy teams can propose service catalog solutions as a way for the business to improve reliability, uptime, and recovery commitments in a controlled, repeatable process.
 
-For reference, some organizations refer to an early-stage service catalog as an _approved list_. The primary difference is that a service catalog comes with ongoing operational commitments from the cloud center of excellence (CCoE). An approved list is similar, in that it provides a preapproved list of solutions that a team can use in the cloud. However, typically there isn't an operational benefit associated with applications on an approved list.
+For reference, some organizations refer to an early-stage service catalog as an *approved list*. The primary difference is that a service catalog comes with ongoing operational commitments from the cloud center of excellence (CCoE). An approved list is similar, in that it provides a preapproved list of solutions that a team can use in the cloud. However, typically there isn't an operational benefit associated with applications on an approved list.
 
 Much like the debate between centralized IT and CCoE, the difference is one of priorities. A service catalog assumes good intent but provides operational, governance, and security guardrails that accelerate innovation. An approved list hinders innovation until operations, compliance, and security gates can be passed for a solution. Both solutions are viable, but they require the company to make subtle prioritization decisions to invest more in innovation or compliance.
 
@@ -51,7 +51,7 @@ Although management tools and processes can help improve platform operations, th
 - **Reliability:** Design systems to recover from failures and continue to function.
 - **Security:** Protect applications and data from threats.
 
-The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
+The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
 ## Get started with specific platforms
 

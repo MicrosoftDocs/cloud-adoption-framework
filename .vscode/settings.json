@@ -1,7 +1,6 @@
 {
     "cSpell.import": [
-        ".\\cspell.json",
-        ".\\cspell-caf.json"
+        ".\\cspell.json"
     ],
     "cSpell.ignorePaths": [
         "**/package-lock.json",

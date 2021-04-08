@@ -7,6 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-aks
 ---
 
 # Network topology and connectivity for Azure Kubernetes Service (AKS) enterprise-scale scenario
@@ -24,7 +25,7 @@ ms.subservice: ready
 - Virtual nodes can be used for quick cluster scaling, but there are some [known limitations](/azure/aks/virtual-nodes-portal).
 - AKS clusters support Basic and Standard Azure Load Balancer SKUs.
 - AKS services can be exposed with public or internal load balancers. Internal load balancers can be configured in the same subnet as the Kubernetes nodes or in a dedicated subnet.
-- Azure Policy and the [Azure Policy add-on for AKS](/azure/governance/policy/concepts/policy-for-kubernetes "Azure Policy for AKS") can control and limit the objects created in your AKS cluster, such as denying the creation of public IP addresses in the cluster.
+- Azure Policy and the [Azure Policy add-on for AKS](/azure/governance/policy/concepts/policy-for-kubernetes) can control and limit the objects created in your AKS cluster, such as denying the creation of public IP addresses in the cluster.
 - AKS uses CoreDNS to provide name resolution to pods running in the cluster.
   - CoreDNS will resolve cluster-internal domains directly.
   - Other domains will be forwarded to the DNS servers configured in Azure Virtual Network, which will be either the default Azure DNS resolver, or any custom DNS servers configured at the virtual network level.

@@ -65,8 +65,8 @@ Here are some example of OKRs:
 **Key results:**
 
 1. 45 percent of K-12 schools using our platform
-1. A 12-percent increase in student engagement, as measured through internal systems
-1. A 95-percent satisfaction rate from quarterly parent surveys
+1. A 12 percent increase in student engagement, as measured through internal systems
+1. A 95 percent satisfaction rate from quarterly parent surveys
 
 **Objective 2:** Build a technology platform that supports every person in our business to innovate and create.
 

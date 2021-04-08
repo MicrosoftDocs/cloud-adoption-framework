@@ -10,7 +10,7 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- docutune:casing Hanu Scalr ARO POC Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
+<!-- docutune:casing Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
 
 <!-- cSpell:ignore VHDs autosnooze unsnooze Hanu Scalr -->
 
