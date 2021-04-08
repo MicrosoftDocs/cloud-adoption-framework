@@ -58,7 +58,7 @@ Other Azure [RBAC Roles](https://docs.microsoft.com/azure/role-based-access-cont
 
 - Synchronize all identities to a single Azure Active Directory tenant using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-azure-ad-connect).
 - Ensure Windows Virtual Desktop Session Hosts can communicate with with Azure Active Directory Domain Services (Azure AD DS) or Active Directory Domain Services (AD DS).
-- Use a solution like [KDC proxy service](https://docs.microsoft.com/en-us/azure/virtual-desktop/key-distribution-center-proxy) to proxy Smartcard authentication traffic and sign in remotely.
+- Use the [KDC Proxy](https://docs.microsoft.com/en-us/azure/virtual-desktop/key-distribution-center-proxy) solution to proxy Smartcard authentication traffic and sign in remotely.
 - [Segregate Session Host virtual machines](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details) into Active Directory OUs (Organization Units) for each host pool to more easily manage policies and orphaned objects.
 - Use a solution like [LAPS (Local Administrator Password Solution)](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-1-quick-wins-with-minimal-operational-complexity) to rotate local administrator passwords on Windows Virtual Desktop Session Hosts frequently.
 - For users, assign the [Desktop Virtualization User](https://docs.microsoft.com/azure/virtual-desktop/delegated-access-virtual-desktop) built-in role to Security Groups to grant access to Windows Virtual Desktop app groups.
