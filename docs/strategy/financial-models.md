@@ -105,3 +105,4 @@ Learn more about [cloud accounting](./cloud-accounting.md) models.
 
 > [!div class="nextstepaction"]
 > [Cloud accounting](./cloud-accounting.md)
+
