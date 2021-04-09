@@ -89,11 +89,67 @@ Based on the observed initial and ongoing replications bandwidth patterns Contos
 
 ## Step 2: Testing and Pre/Post Migration Activities
 
-Given the success in replication planning for a subset of their migration groups/waves, Contoso decides to 
+Given the success in replication toolset deployment and planning for a subset of their migration groups/waves, Contoso decides to start planning their testing needs and pre/post migration activities. 
 
+Contoso understands that migration is both an orchestration of both business and technical groups. Therefore, the below activities are defined as pre and post migration activities.
+
+#### Business
+
+In order to prepare the business and its stakeholders for the migration activities, Contoso defines the below items:
+
+- A maintenance window for each of the applications to migrate.
+- Communications on application downtime and impact to business.
+- Points of Contacts (POCs) which can provide support for the below key areas during migration testing and cutover:
+    - Network Administrators
+    - Backup Administrators
+    - Server Administrators
+    - Application Owners (Fronend and Backend)
+    - Microsoft Support
+    - Partner (if available)
+- Soak Period after the cutover. During the Soak Period after application cutover to Azure, if any issues arise the rollback plan must be executed. After the Soak Period has expired, rollback of the application cannot be committed.
+
+#### Technical: Pre-Migration 
+
+In order to plan for best practice pre-migration activities, Contoso defines the below activities to be executed prior to a migration failover:
+
+- A Rollback Plan.
+- Latest backup of the servers.
+- Opening of firewalls prefixes, ports and protocols for needed traffic from on-premises to Azure and from within Azure vnets and subnets.
+- Attain local administrator accounts or keys for server login purposes.
+- [Manual changes needed for Windows and Linux](https://docs.microsoft.com/en-us/azure/migrate/prepare-for-migration#verify-required-changes-before-migrating)
+    - For more legacy Linux distributions, instructions to install Hyper-v drivers can be found within the [Hyper-v documentation](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows). 
+    - For legacy Windows versions (E.G. WS2003 or WS2008), instructions to install Hyper-v drivers can be found in the [Azure Migrate documentation](https://docs.microsoft.com/en-us/azure/migrate/prepare-windows-server-2003-migration).
+
+#### Technical: Post-Migration 
+ Further, in order to continue planning for best practices, Contoso defines the below activities to be executed after the migration failover:
+
+- Review Azure Migrate's documented post-migration activities:
+    - [VMWare Agentless](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
+    - [VMWare Agent-based](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
+    - [Hyper-v](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
+    - [Physical](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-physical-virtual-machines#complete-the-migration), [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration), [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
+
+- In addition, Contoso finds the below best-practice activities:
+    - Validate login with local account for SSH or RDP.
+    - Validate DNS resolves and DNS servers are configured in network settings (E.G. TCP/IP settings) for the OS.
+    - Validate IP address has been assigned to server in network settings (E.G. TCP/IP settings) for the OS.
+    - Validate access to OS licensing is activated and there is access to cloud-based licensing endpoints (E.G. Azure KMS endpoints).
+    - Validate login with domain accounts.
+    - Validate application URLs dependencies.
+    - Update any existing CMDB
+    - Validate Install or Update necessary Azure agents:
+        - Windows and/or WALinux VM agent.
+        - Windows and/or Linux Log Analytics agent/extension.
+        - Windows and/or Linux Dependency Map agent/extension.
+        - Windows SQL Extension.
+    - Validate VM monitoring via new or existing service.
+    - Validate VM patching via new or existing service.
+    - Validate VM backup via new or existing service.
+    - Validate VM Antivirus/endpoint protection via new or existing service.
+    - Tag Azure resources.
+    - Postmortem and Learnings.
 
 ## Step 3: Cutover and Post-Go-Live
-
 
 
 ## Conclusion
