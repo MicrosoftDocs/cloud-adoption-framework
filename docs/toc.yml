@@ -1280,7 +1280,7 @@ items:
           href: govern/policy-compliance/governance-alignment.md
         - name: Establish policy adherence processes
           href: govern/policy-compliance/processes.md
-        - name: Cloud service review process
+        - name: Implement cloud service controls
           href: govern/cloud-service-controls.md
         - name: Regulatory compliance
           href: govern/policy-compliance/regulatory-compliance.md
