@@ -121,7 +121,7 @@ In order to plan for best practice pre-migration activities, Contoso defines the
     - For legacy Windows versions (E.G. WS2003 or WS2008), instructions to install Hyper-v drivers can be found in the [Azure Migrate documentation](https://docs.microsoft.com/en-us/azure/migrate/prepare-windows-server-2003-migration).
 
 #### Technical: Post-Migration 
- Further, in order to continue planning for best practices, Contoso defines the below activities to be executed after the migration failover:
+ Further, Contoso defines the below activities to be executed after the migration failover:
 
 - Review Azure Migrate's documented post-migration activities:
     - [VMWare Agentless](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
@@ -129,14 +129,14 @@ In order to plan for best practice pre-migration activities, Contoso defines the
     - [Hyper-v](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
     - [Physical](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-physical-virtual-machines#complete-the-migration), [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration), [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
 
-- In addition, Contoso finds the below best-practice activities:
-    - Validate login with local account for SSH or RDP.
+- In addition, Contoso adds the below activities as best practice post-migration activities:
+    
+    - Validate login with local account/keys for RDP or SSH.
     - Validate DNS resolves and DNS servers are configured in network settings (E.G. TCP/IP settings) for the OS.
     - Validate IP address has been assigned to server in network settings (E.G. TCP/IP settings) for the OS.
     - Validate access to OS licensing is activated and there is access to cloud-based licensing endpoints (E.G. Azure KMS endpoints).
     - Validate login with domain accounts.
-    - Validate application URLs dependencies.
-    - Update any existing CMDB
+    - Validate application has access to dependencies (E.G. accessing target URLs or connection strings).
     - Validate Install or Update necessary Azure agents:
         - Windows and/or WALinux VM agent.
         - Windows and/or Linux Log Analytics agent/extension.
@@ -147,17 +147,72 @@ In order to plan for best practice pre-migration activities, Contoso defines the
     - Validate VM backup via new or existing service.
     - Validate VM Antivirus/endpoint protection via new or existing service.
     - Tag Azure resources.
+    - Update any existing CMDB
     - Postmortem and Learnings.
+
+#### Test Migration and Migration
+
+Moving forward Contoso now looks to understand the need for a test migration, what test cases make sense, and which vnets to leverage as targets for the test migration and migration.
+
+##### Define Smoke Test
+
+As a first step, Contoso realizes there's a need to perform a smoke test to simply test that servers they've identified as legacy, highly customized or hardened operating systems will simply boot in Azure. Additionally, Contoso would like to also run a smoke test for servers which have been marked as "Conditionally Ready" by their Azure Migrate assessments. 
+
+Contoso defines a smoke test to be successful when basic server functionality and properties are validated. For example, Smoke testing may include: 
+
+- The server boots in Azure.
+- The administrator is able to login to the server using local accounts. 
+- TCP/IP settings for DNS, IPv4 and default gateways assignment are updated to the values provided by the Azure vnet. 
+- OS licensing is activated.
+
+Typically this test is led by the server administrators or the migration partner.
+
+##### Define UAT Test
+
+As second step, Contoso now looks to perform a UAT test to ensure that the servers applications are functional and accessible by expected users. 
+
+Contoso defines a UAT test to be successful when application functionality and access to dependencies is validated. For example, UAT testing may include: 
+
+- Validate login with domain accounts
+- Validate application has access to dependencies (E.G. accessing target URLs or connection strings).
+
+Typically, this is usually led by application owners.
+
+#### Identify Testing and Migration Workflow
+
+Now that test cases have been defined, Contoso developes the below workflow to encompass the various scenarios they may encounter based on each applications and servers needs. 
+
+The majority of Contoso's scenarios require the second and fifth paths in the workflow below. Contoso has quite the amount of legacy servers and servers marked as "Ready with Conditions" which they are unsure will boot in Azure. Therefore, they will test each of those servers in an isolated vnet to ensure each pass the Smoke Test. For this, Contoso will perform a test migration in Azure Migrate which allows for the option to clean up created resources such as VMs and NICs.
+
+Further, Contoso's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration groups/waves. Contoso has decided to split their large migration groups/waves and migrate servers which are interdependent and have strict latency requirements. As a result, because not all dependencies as outlined in the migration group will be able to be migrated in a single migration wave, Contoso finds it's best that they migrate directly into the production vnet given that the production vnet already has connectivity back to their on-premises dependencies. In this path, Contoso will perform needed smoke test (if not done already) and UAT test. If all is successful, Contoso will conclude the migration as a final cutover for the servers. In this path, Contoso will not be using Azure Migrate's feature for a test Migration and rather will select the option to just migrate.
+
+Nonetheless, Contoso does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated vnet in order to perform UAT testing or where UAT testing is not enforced.
+
+![Concept Diagram](./media/contoso-migration-rehost-server-replication/migration-workflow.PNG)
+
+*Figure 2: Testing and Migration Workflow.*
 
 ## Step 3: Cutover and Post-Go-Live
 
+As a final step, Contoso is now ready and confident to perform the production migrations. The envision that during Cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Contoso is looking forward to close-out and call for a successful migration to Azure. 
+
+### Cutover
+
+With the migration activities and workflow defined, Contoso irons out the final plans for cutover by:
+
+- Identifying more specific cutover window, which they have planned for a Friday evening or weekend. Each cutover window will last at a minimum for 4 hours.
+- Announce to the business and those impacted by the migration of the maintenance window.
+- Reached out to the Network Admins, Backup Admins, Server Admins, App Owners,   Microsoft support and resources and partner to ensure they are available during cutover.
+- Ensure a backup of the server has been committed prior to cutover.
+- Ensure rollback plan is defined and ready for execution if needed
+- Ensure migration handover to operations team by settings expectations that day 2 operations must commence with regards to Azure server backup, patching, monitoring, etc.
+
+### Post-Go Live
+
+Once the cutover successfully concludes, Contoso prepares for decommission of the source servers. Contoso decides that servers decommissioning will be executed after the soak period timeline is concluded.
 
 ## Conclusion
 
-In this article, Contoso set up an Azure infrastructure and policy for Azure subscription, hybrid identify, disaster recovery, network, governance, and security.
+In this article, Contoso sets up Azure Migrate replication toolset and plans for their infrastructure migration activities and workflow.
 
-Not every step taken here is required for a cloud migration. In this case, Contoso planned a network infrastructure that can handle all types of migrations while being secure, resilient, and scalable.
-
-## Next steps
-
-After setting up its Azure infrastructure, Contoso is ready to begin migrating workloads to the cloud. See the [migration patterns and examples overview](./contoso-migration-overview.md#windows-server-workloads) for a selection of scenarios that use this sample infrastructure as a migration target.
+Not every step taken here is required for a server migration. In this case, Contoso planned for a migration workflow, test plans and pre/post migration activities which will be able to handle server migrations by replication pro-actively and reliably.
