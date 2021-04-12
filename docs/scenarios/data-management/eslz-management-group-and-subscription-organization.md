@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management Group and Subscription Organization"
+# Management Group and Subscription Organization for data management Enterprise-Scale scenario
 
 Enterprise Scale Analytics and AI includes a Data Management Landing Zone subscription which has the standard services of an [Enterprise Scale framework](/azure/cloud-adoption-framework/ready/enterprise-scale/). It is  connected to the Data Landing Zone(s) and connectivity subscriptions via Virtual Network Peering. For further reading on the subscriptions in Enterprise Scale Analytics and AI, see the [Data Management Landing Zone](eslz-data-management-landing-zone.md) and [Data Landing Zone](eslz-data-landing-zone.md) sections.
 
