@@ -37,8 +37,8 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for Windows Virtual Desktop](./wvd/WVD-strategy.md)
-- [Plan for Windows Virtual Desktop](./wvd/pland.md)
-- [Migrate to Windows Virtual Desktop](./wvd/migrate-assess.md)
-- [Manage a Windows Virtual Desktop environment](./wvd/WVD-manage.md)
-- [Govern a Windows Virtual Desktop environment](./wvd/WVD-govern.md)
+- [Strategy for Windows Virtual Desktop](./WVD-strategy.md)
+- [Plan for Windows Virtual Desktop](./plan.md)
+- [Migrate to Windows Virtual Desktop](./migrate-assess.md)
+- [Manage a Windows Virtual Desktop environment](./WVD-manage.md)
+- [Govern a Windows Virtual Desktop environment](./WVD-govern.md)
