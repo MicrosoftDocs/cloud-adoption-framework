@@ -34,8 +34,6 @@ items:
          href: ./eslz-management-group-and-subscription-organization.md
        - name: Policies
          href: ./eslz-policies.md
-       - name: Cost Management
-         href: ./eslz-cost-management.md
        - name: Data Management Landing Zone
          href: ./eslz-data-management-landing-zone.md
        - name: Data Landing Zone

@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for Enterprise Scale Analytics and AI
+# Identity and access management for data management Enterprise-Scale scenario
 
 Enterprise Scale Analytics and AI supports an access control model using Azure Active Directory (AAD) identities which utilizes both Role-based Access Control (Azure RBAC) and Access Control Lists (ACLs).
 
