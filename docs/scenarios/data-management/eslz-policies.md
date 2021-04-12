@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Policies and Cost Management
+# Policies
 
 Before considering a deployment, it is important for your organization to decide upon the guard rails that you wish to put in place. By using [Azure Policies](/azure/governance/policy/overview), you can implement governance for resource consistency, regulatory compliance, security, cost, and management.
 
