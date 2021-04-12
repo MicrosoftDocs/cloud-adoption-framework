@@ -107,6 +107,8 @@ items:
 
   - name: Best practices
     items:
+      - name: Platform Provisioning
+        href: ./eslz-platform-provisioning.md
       - name:  Data Lake Services
         href: ./eslz-data-lake-services.md
       - name:  Azure Databricks Integration
