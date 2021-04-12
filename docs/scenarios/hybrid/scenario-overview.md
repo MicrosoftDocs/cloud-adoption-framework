@@ -12,23 +12,29 @@ ms.custom: e2e-hybrid
 
 # Introduction to the hybrid and multicloud scenario
 
-As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes slightly more complex. This article series consolidates the various technical and non-technical considerations required to prepare for a hybrid and multicloud adoption scenario.
+As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes slightly more complex. This article series consolidates various technical and non-technical considerations required to prepare for a hybrid and multicloud adoption scenario.
 
 This scenario focuses on enabling two targeted outcomes:
 
 - [Hybrid and multicloud adoption](./index.md): Building, deploying, and/or migrating solutions that are portable, allowing for ease of movement between cloud platforms with minimum vendor lock-in.
 - [Unified operations](./unified-operations.md): Streamlining operations to support those solutions across each cloud, through a central set of governance and management processes which share common operations processes, regardless of where the solution is currently deployed.
 
-## Components of the scenario
+## Scenario components
 
-This scenario is designed to guide the end-2-end customer journey during the cloud adoption lifecycle. Delivery of the full journey requires a few key components, or guidance sets:
+This scenario is designed to guide the end-2-end customer journey during the cloud adoption lifecycle.
 
-- [Microsoft Cloud Adoption Framework for Azure](../../get-started/index.md): These articles walk through the smallest set of considerations and implementations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of hybrid and multicloud workloads across your portfolio.
-- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/): These articles outline the considerations that each workload owner should make when their workloads need to be deployed across hybrid and multicloud environments.
-- [Reference architectures](/azure/architecture/browse/): These reference solutions aid in accelerating deployment for a number of common hybrid and multicloud scenarios.
-- Best practices: These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products.
-- Feature Azure products: Learn more about the products that support your hybrid and multicloud strategy in Azure.
-- [Microsoft Learn modules](/learn/azure/): Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions.
+![Graphic of the hybrid multicloud approach](../../_images/hybrid/hybrid-multicloud-approach.png)
+
+Delivery of the full journey requires certain key components, or guidance sets:
+
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|
+| <br> :::image type="icon" source="../../_images/hybrid/cloud-journey.png"::: | <br> [Microsoft Cloud Adoption Framework for Azure](../../get-started/index.md): These articles walk through the smallest set of considerations and implementations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of hybrid and multicloud workloads across your portfolio. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-well-architected.png"::: | <br> [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/): These articles outline the considerations that each workload owner should make when their workloads need to be deployed across hybrid and multicloud environments. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-architectures.png"::: | <br> [Reference architectures](/azure/architecture/browse/): These reference solutions aid in accelerating deployment for a number of common hybrid and multicloud scenarios. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-best-practices.png"::: | <br> Best practices: These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-product-docs.png"::: | <br> Feature Azure products: Learn more about the products that support your hybrid and multicloud strategy in Azure. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-skills.png"::: | <br> [Microsoft Learn modules](/learn/azure/): Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions. |
 
 ## Common customer challenges and supporting guidance
 

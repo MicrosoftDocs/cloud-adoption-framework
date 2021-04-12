@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use a Terraform plan to deploy an Amazon Linux 2 instance on Amazon Elastic Compute Cloud and connect it to Azure Arc
 
-This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Amazon Web Services (AWS) Amazon Elastic Compute Cloud (Amazon EC2) Linux 2 instance and connect it as an Azure Arc enabled server resource.
+This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Amazon Web Services (AWS) Amazon Elastic Compute Cloud (EC2) Linux 2 instance and connect it as an Azure Arc enabled server resource.
 
 ## Prerequisites
 
@@ -98,12 +98,12 @@ Before executing the Terraform plan, you must export the environment variables w
 
 2. The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your AWS and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/AL2/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-    - `TF-VAR-subscription-id`= your Azure subscription ID
-    - `TF-VAR-client-id`= your Azure service principal application ID
-    - `TF-VAR-client-secret` = your Azure service principal password
-    - `TF-VAR-tenant-id`= your Azure tenant ID
-    - `AWS-ACCESS-KEY-ID` = AWS access key
-    - `AWS-SECRET-ACCESS-KEY` = AWS secret key
+    - `TF_VAR_subscription_id`= your Azure subscription ID
+    - `TF_VAR_client_id`= your Azure service principal application ID
+    - `TF_VAR_client_secret` = your Azure service principal password
+    - `TF_VAR_tenant_id`= your Azure tenant ID
+    - `AWS_ACCESS_KEY_ID` = AWS access key
+    - `AWS_SECRET_ACCESS_KEY` = AWS secret key
 
 3. From the Azure CLI, navigate to the `azure_arc_servers_jumpstart/aws/al2/terraform` directory of the cloned repo.
 
@@ -113,7 +113,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in `~/.ssh` and named `id-rsa.pub` and `id-rsa`. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/AL2/terraform/main.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/AL2/terraform/main.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the Terraform AzureRM provider.
 
@@ -149,12 +149,12 @@ If you want to demo/control the actual registration process, do the following:
 
 4. Export all the environment variables in [`vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/AL2/terraform/scripts/vars.sh)
 
-    ![A screenshot of environment variables exporting with ''.](./media/aws-terraform-al2/al2-export-variables.png)
+    ![A screenshot of exported environment variables in `var.sh`.](./media/aws-terraform-al2/al2-export-variables.png)
 
 5. Run the following command:
 
     ```console
-    azcmagent connect --service-principal-id $TF-VAR-client-id --service-principal-secret $TF-VAR-client-secret --resource-group "Arc-Servers-Demo" --tenant-id $TF-VAR-tenant-id --location "westus2" --subscription-id $TF-VAR-subscription-id
+    azcmagent connect --service-principal-id $TF_VAR_client_id --service-principal-secret $TF_VAR_client_secret --resource-group "Arc-Servers-Demo" --tenant-id $TF_VAR_tenant_id --location "westus2" --subscription-id $TF_VAR_subscription_id
     ```
 
     ![Another screenshot of the `azcmagent connect` command.](./media/aws-terraform-al2/al2-azcmagent-2.png)

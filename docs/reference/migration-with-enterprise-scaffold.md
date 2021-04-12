@@ -17,7 +17,7 @@ ROBOTS: NOINDEX,NOFOLLOW
 # Azure enterprise scaffold: Prescriptive subscription governance
 
 > [!NOTE]
-> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready](../ready/index.md) section of the new framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready overview](../ready/index.md), [Azure landing zones](../ready/landing-zone/index.md), and [landing zone considerations](../ready/considerations/index.md).
+> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready methodology](../ready/index.md) of the framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready methodology overview](../ready/index.md), [Azure landing zones](../ready/landing-zone/index.md), and [landing zone considerations](../ready/considerations/index.md).
 
 Enterprises are increasingly adopting the public cloud for its agility and flexibility. They rely on the cloud's strengths to generate revenue and optimize resource usage for the business. Microsoft Azure provides a multitude of services and capabilities that enterprises assemble like building blocks to address a wide array of workloads and applications.
 
@@ -167,7 +167,7 @@ One of the first, and most crucial, questions you ask yourself when starting wit
 
 To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. However, Azure AD is **not** the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your enrollment. Review [resource access management in Azure](../govern/resource-consistency/resource-access-management.md) to gain a solid understanding of Azure AD and on-premises Active Directory. To connect and synchronize your on-premises directory to Azure AD, install and configure the [Azure AD Connect tool](/azure/active-directory/connect/active-directory-aadconnect) on-premises.
 
-![Diagram of AD architecture](../_images/reference/ad-architecture.png)
+![Diagram of an Active Directory architecture](../_images/reference/ad-architecture.png)
 
 When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an enrollment. This proliferation of subscriptions is no longer needed. With Azure role-based access control (Azure RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
 

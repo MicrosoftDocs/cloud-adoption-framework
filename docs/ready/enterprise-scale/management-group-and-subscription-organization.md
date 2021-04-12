@@ -52,11 +52,11 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Limit the number of Azure Policy assignments made at the root management group scope (`/`). This limitation minimizes debugging inherited policies in lower-level management groups.
 
-- Use Azure Policies available in enterprise-scale landing zones to enforce compliance requirements either at the management group or subscription scope. Refer to guidance on [policy-driven governance](#policy-driven-governance) to learn more about all governance requirements that can be addressed.
+- Use the policies available for enterprise-scale landing zones to enforce compliance requirements either at management group or subscription scope. Refer to guidance in the [policy-driven governance](#policy-driven-governance) section to learn more about the governance requirements that can be addressed.
 
 - Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own management groups under the root management group).
 
-- [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure that subscriptions aren't placed under the root management group. This is especially important if there are users eligible for MSDN Platforms or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `Sandbox` management group.
+- [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure that no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `Sandbox` management group.
 
 ## Subscription organization and governance
 

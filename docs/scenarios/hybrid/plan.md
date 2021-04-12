@@ -153,7 +153,7 @@ Do you have a specific DevOps backlog the customer should use? Or is the standar
 
 ## Hybrid and multicloud readiness plan
 
-Are there specific skills or extra training this team should take before getting started?
+Are there specific skills or extra training this team should take before getting started? To prepare for the readiness phase of your hybrid and multicloud migration journey, consider a [skills readiness path](../../ready/suggested-skills.md) to add skills in organizational and technical readiness.
 
 ## Next step: Review your environment or Azure landing zone
 

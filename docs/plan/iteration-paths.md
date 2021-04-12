@@ -1,5 +1,5 @@
 ---
-title: "Establish iterations and release plans"
+title: Establish iterations and release plans
 description: Use the Cloud Adoption Framework for Azure to learn how to define iterations and release plans to help you manage your implementation.
 author: BrianBlanchard
 ms.author: brblanch

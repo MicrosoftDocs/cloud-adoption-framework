@@ -68,7 +68,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Deployment templates](https://aka.ms/adopt/plan/generator) | The [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine) template gives you a structured approach to uncovering latent insights contained in structured and unstructured data. .
+| [Deployment templates](https://aka.ms/adopt/plan/generator) | The Azure DevOps generator has project checklists to help you build your [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine), [modern data warehouse](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw) and industry focused accelerators such as the [retail recommender](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw) using AI and [modern IoT](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot). The templates gives you a structured approach and checklist to follow. Each template and workitem has links to required content, assets and code samples that can help you get started.
 
 
 ## Manage

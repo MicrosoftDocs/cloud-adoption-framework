@@ -56,7 +56,7 @@ This article provides guidance for connecting a Windows machine to Azure Arc usi
 
     ![A screenshot of an empty resource group in the Azure portal.](./media/onboard-server/windows-resource-group.png)
 
-4. Download the [`az-connect-win`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
+4. Download the [`az_connect_win.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/scripts/az_connect_win.ps1) PowerShell script.
 
 5. Change the environment variables according to your environment and copy the script to the designated machine.
 
@@ -68,11 +68,11 @@ On the designated machine, open PowerShell ISE **as Administrator** and run the 
 
 ![A screenshot of the `azcmagent connect` command.](./media/onboard-server/azcmagent.png)
 
-![A screenshot of the `az-connect` Windows script.](./media/onboard-server/az-connect-windows-2.png)
+![A screenshot of the `az_connect_win.ps1` Windows script.](./media/onboard-server/az-connect-windows-2.png)
 
 Upon completion, you will have your Windows Server instance, connected as a new Azure Arc resource inside your resource group.
 
-![A screenshot of the `az_connect` Windows script running.](./media/onboard-server/az-connect-windows.png)
+![A screenshot of the `az_connect_win.ps1` Windows script running.](./media/onboard-server/az-connect-windows.png)
 
 ![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/windows-resource.png)
 

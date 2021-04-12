@@ -24,7 +24,7 @@ For any enterprise-grade environment, the following table outlines the suggested
 | Process | Tool | Purpose |
 |---|---|---|
 | Monitor health of Azure services | [Azure Service Health](/azure/service-health/service-health-overview) | Health, performance, and diagnostics for services running in Azure |
-| Log centralization | [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview) | Central logging for all visibility purposes |
+| Log centralization | [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) | Central logging for all visibility purposes |
 | Monitoring centralization | [Azure Monitor](/azure/azure-monitor/overview) | Central monitoring of operational data and trends |
 | Virtual machine inventory and change tracking | [Change Tracking and Inventory](/azure/automation/change-tracking/overview) | Inventory VMs and monitor changes for guest OS level |
 | Subscription monitoring | [Azure activity log](/azure/azure-monitor/essentials/activity-log) | Monitoring change at the subscription level |

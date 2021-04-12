@@ -43,7 +43,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 For data present in Azure, Azure Backup offer varied levels of protection. For example, when backing up key cloud infrastructure pieces such as Azure Virtual Machines and Azure Files, it offers [Azure Virtual Machines backup](/azure/backup/backup-azure-vms-introduction) and [Azure Files backup](/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual Machines, it offers dedicated database backup solutions for [SQL Server](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) with far lower RPO.
 
-To get a glimpse of how easy it is to enable backup with Azure Backup, look at the following section to enable backup for Azure Virtual Machines.
+Review the following section to see how easily you can enable backup for Azure Virtual Machines.
 
 ### Enable backup for an Azure VM
 

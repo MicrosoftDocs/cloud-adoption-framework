@@ -16,10 +16,10 @@ This article provides guidance for using an Azure Resource Manager template [ARM
 
 Azure VMs are using the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc enabled server, a *conflict* is created which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used. Instead, the Azure Arc server will still "act" as a native Azure VM.
 
-This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server which is deployed outside of Azure, for example, on-premises or in other cloud platforms.
+This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server that is deployed outside of Azure, for example, on-premises or in other cloud platforms.
 
 > [!NOTE]
-> It is not expected for an Azure VM to be projected as an Azure Arc enabled server. **The below scenario is unsupported and should only be used for demo and testing purposes.**
+> An Azure VM is not expected to be projected as an Azure Arc enabled server. **The following scenario is unsupported and should only be used for demo and testing purposes.**
 
 ## Prerequisites
 
@@ -79,7 +79,7 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
     1. Set local OS environment variables.
 
-    2. Generate a `~/.bash-profile` file that will be initialized at user's first sign-in to configure the environment. This script will:
+    2. Generate a `~/.bash_profile` file that will be initialized at user's first sign-in to configure the environment. This script will:
 
         - Stop and disable the Linux Azure guest agent service.
 
@@ -87,9 +87,9 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
         - Install the Azure Arc connected machine agent.
 
-        - Remove the `~/.bash-profile` file so it will not run after first sign-in.
+        - Remove the `~/.bash_profile` file so it will not run after first sign-in.
 
-4. A user will SSH to the Linux VM, which will start the `~/.bash-profile` script execution and will onboard the VM to Azure Arc.
+4. A user will SSH to the Linux VM, which will start the `~/.bash_profile` script execution and will onboard the VM to Azure Arc.
 
     > [!NOTE]
     >  The [`install_arc_agent.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/linux/arm_template/scripts/install_arc_agent.sh) shell script enables the OS firewall and sets up new rules for incoming and outgoing connections. By default, all incoming and outgoing traffic will be allowed, except blocking Azure IMDS outbound traffic to the `169.254.169.254` remote address.
@@ -105,7 +105,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 3. To deploy the ARM template, navigate to the local cloned [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/azure/linux/arm_template) and run the following command:
 
     ```console
-    az group create --name <Name of the Azure resource group> --location <Azure region> --tags "Project=jumpstart-azure-arc-servers"
+    az group create --name <Name of the Azure resource group> --location <Azure region> --tags "Project=jumpstart_azure_arc_servers"
     az deployment group create \
     --resource-group <Name of the Azure resource group> \
     --name <The name of this deployment> \
@@ -119,7 +119,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     For example:
 
     ```console
-    az group create --name Arc-Servers-Linux-Demo --location "westeurope" --tags "Project=jumpstart-azure-arc-servers"
+    az group create --name Arc-Servers-Linux-Demo --location "westeurope" --tags "Project=jumpstart_azure_arc_servers"
     az deployment group create \
     --resource-group Arc-Servers-Linux-Demo \
     --name arclinuxdemo \

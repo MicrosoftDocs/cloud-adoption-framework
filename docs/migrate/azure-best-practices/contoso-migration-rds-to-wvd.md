@@ -197,7 +197,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
    - Windows Virtual Desktop is chosen as the VM name prefix for these pooled desktops.
    - Because Contoso is creating the pooled servers to use the new Windows 10 Enterprise multi-session functionality for the virtual machine settings, leave the image source set to **Gallery**. This option enables Contoso to select the Windows 10 Enterprise multi-session image for the VMs.
    - Based on the personas of the users from the Lakeside assessment, Contoso sets the total users to **150**.
-   - Other settings include the disk type, an AD domain join UPN field, an admin password, an optional OU path to which machines are added, the virtual network, and a subnet for adding servers.
+   - Other settings include the disk type, an Active Directory domain join UPN field, an admin password, an optional OU path to which machines are added, the virtual network, and a subnet for adding servers.
 
    ![Screenshot that shows configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-configure-virtual-machines-alt.png)
    *Figure 13: Configuring virtual machines.*

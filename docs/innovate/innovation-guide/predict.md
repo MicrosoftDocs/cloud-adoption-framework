@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Innovate with AI"
+title: Innovate with AI in Azure
 description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
@@ -14,7 +14,7 @@ keywords: Automate business processes, ai innovation, machine learning, knowledg
 
 <!-- cSpell:ignore ONNX -->
 
-# Innovate with AI
+# Innovate with AI in Azure
 
 As an innovator, your company has rich information about its business and its customers. Using AI innovation, your company can:
 
@@ -87,7 +87,7 @@ To get started with a Cognitive Services API:
 
     - If you know the name of the service you want to use, enter the name in **Search the Marketplace**. Then select the service.
 
-    - For a list of Cognitive Services APIs, next to the **Cognitive Services** heading, select **see more**. Then select the service.
+    - For a list of Cognitive Services APIs, select **See More** next to the **Cognitive Services** heading. Then select the service.
 
 1. Select **Create**, and follow the steps in the portal to provision the service.
 

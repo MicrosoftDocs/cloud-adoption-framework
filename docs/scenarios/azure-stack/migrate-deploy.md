@@ -43,12 +43,12 @@ After the Azure Stack Hub administrator has properly configured your stack insta
 
 ## Additional considerations during migration
 
-The following articles can help your team during migration and modernization:
+The following resources can help your team during migration and modernization:
 
-- [Scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, VM availability sets, VM scale sets, network adapters, and the ability to add and resize VMs and disks
-- [Storage capacity](https://azure.microsoft.com/blog/azure-stack-iaas-part-3/), including the ability to upload and download and also capture and deploy VM images
-- [Azure Stack quickstart templates](https://github.com/Azure/AzureStack-QuickStart-Templates) GitHub repository
-- [Azure quickstart templates](https://github.com/Azure/Azure-QuickStart-Templates) GitHub repository
+- [Scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, availability sets, virtual machine scale sets, network adapters, and the ability to add and resize VMs and disks.
+- [Storage capacity](https://azure.microsoft.com/blog/azure-stack-iaas-part-3/), including the ability to upload and download and also capture and deploy VM images.
+- The [Azure Stack quickstart templates](https://github.com/Azure/AzureStack-QuickStart-Templates) GitHub repository.
+- The [Azure quickstart templates](https://github.com/Azure/Azure-QuickStart-Templates) GitHub repository.
 
 ## Next steps
 

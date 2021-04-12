@@ -24,7 +24,7 @@ Adopting Azure begins by creating an Azure subscription, associating it with an 
 
 ## Model your organization
 
-Because every organization is different, Azure management groups are designed to be flexible. Modeling your cloud estate to reflect your organization's hierarchy helps you define and apply policies at higher levels of the hierarchy, and rely on inheritance to ensure that those policies are automatically applied to management groups lower in the hierarchy. Although subscriptions can be moved between different management groups, it is helpful to design an initial management group hierarchy that reflects your anticipated organizational needs.
+Because every organization is different, Azure management groups are designed to be flexible. Modeling your cloud estate to reflect your organization's hierarchy helps you define and apply policies at higher levels of the hierarchy, and rely on inheritance to ensure that those policies are automatically applied to management groups lower in the hierarchy. Although subscriptions can be moved between different management groups, it's helpful to design an initial management group hierarchy that reflects your anticipated organizational needs.
 
 Before finalizing your subscription design, also consider how [resource consistency](../resource-consistency/index.md) considerations might influence your design choices.
 
@@ -45,7 +45,7 @@ As an organization adds new workloads to the cloud, different ownership of subsc
 
 As an organization's cloud footprint grows, additional subscriptions are typically created to support applications with fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Building from the initial production and nonproduction subscriptions, the subscriptions supporting these application categories are organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by the operations staff of a central IT team.
 
-![Application category strategy](../../_images\decision-guides\decision-guide-subscriptions-hierarchy.png)
+![Application category strategy](../../_images/decision-guides/decision-guide-subscriptions-hierarchy.png)
 
 Each organization will categorize their applications differently, often separating subscriptions based on specific applications or services or along the lines of application archetypes. This categorization is often designed to support workloads that are likely to consume most of the resource limits of a subscription, or separate mission-critical workloads to ensure they don't compete with other workloads under these limits. Some workloads that might justify a separate subscription include:
 
@@ -69,7 +69,7 @@ For organizations with global operations, the geographic strategy groups subscri
 
 Management group hierarchies can be up to six levels deep. This provides you with the flexibility to create a hierarchy that combines several of these strategies to meet your organizational needs. For example, the following diagram shows an organizational hierarchy that combines a business unit strategy with a geographic strategy.
 
-![Mixed subscription strategy](../../_images\decision-guides\decision-guide-subscriptions-hierarchy-mixed.png)
+![Mixed subscription strategy](../../_images/decision-guides/decision-guide-subscriptions-hierarchy-mixed.png)
 
 ## Related resources
 

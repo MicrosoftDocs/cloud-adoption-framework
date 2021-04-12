@@ -61,7 +61,7 @@ To view your support requests and their status:
 
 To learn more, see:
 
-- [Azure Cost Management + Billing documentation](/azure/billing)
+- [Azure Cost Management + Billing documentation](/azure/cost-management-billing/)
 - [Cloud Adoption Framework: Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md)
 - [Cloud Adoption Framework: Cost Management discipline](../../govern/cost-management/index.md)
 

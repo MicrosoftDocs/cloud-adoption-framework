@@ -60,7 +60,7 @@ This guide assumes you already have an exiting inventory of VMware virtual machi
     ```
 
     For example:
-  
+
     ```console
     az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor
     ```
@@ -86,9 +86,9 @@ Below you can find the automation flow for this scenario:
 
 1. User edit the `vars.ps1` PowerCLI script.
 
-2. The `scale_deploy.ps1` script execution will initiate authentication against vCenter and will scan the targeted VM folder where Azure Arc candidate VMs are located and will copy both the `vars.ps1` and the `install-azure-arc-agent.ps1` PowerCLI scripts to VM Windows OS located in [this folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows) to each VM in that VM folder.
+2. The `scale_deploy.ps1` script execution will initiate authentication against vCenter and will scan the targeted VM folder where Azure Arc candidate VMs are located and will copy both the `vars.ps1` and the `install_azure_arc_agent.ps1` PowerCLI scripts to VM Windows OS located in [this folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows) to each VM in that VM folder.
 
-3. The `install-azure-arc-agent.ps1` PowerCLI script will run on the VM guest OS and will install the Azure Arc connected machine agent in order to onboard the VM to Azure Arc
+3. The `install-azure_arc_agent.ps1` PowerCLI script will run on the VM guest OS and will install the Azure Arc connected machine agent in order to onboard the VM to Azure Arc
 
 ## Predeployment
 
@@ -102,7 +102,7 @@ To demonstrate the before and after for this scenario, the below screenshots sho
 
 ## Deployment
 
-Before running the PowerCLI script, you must set the [environment variables](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows/vars.ps1) which will be used by the *install-azure-arc-agent.ps1* script. These variables are based on the Azure service principal you've just created, your Azure subscription and tenant, and your VMware vSphere credentials and data.
+Before running the PowerCLI script, you must set the [environment variables](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows/vars.ps1) which will be used by the `install_arc_agent.ps1` script. These variables are based on the Azure service principal you've just created, your Azure subscription and tenant, and your VMware vSphere credentials and data.
 
 1. Retrieve your Azure subscription ID and tenant ID using the `az account list` command
 
@@ -124,4 +124,4 @@ Before running the PowerCLI script, you must set the [environment variables](htt
 
     ![A screenshot of new Azure Arc enabled servers in an Azure resource group.](./media/vmware-scale-powercli/cli-windows-servers-1.png)
 
-    ![Another screenshot of new Azure Arc enabled servers in an  Azure resource group.](./media/vmware-scale-powercli/cli-windows-servers-2.png)
+    ![Another screenshot of new Azure Arc enabled servers in an Azure resource group.](./media/vmware-scale-powercli/cli-windows-servers-2.png)
