@@ -27,7 +27,7 @@ To establish proper operations management practices, you must understand how vir
 - How important is the performance and reliability of your virtual desktop environment?
 - Are the applications accessed via your virtual desktop resistent to disconnection? Do you need to persist state to protect and recover the application session on the desktop session?
 
-These basic questions will shape how to best integrate containers and AKS into your operations management strategy.
+These basic questions will shape how to best integrate Windows Virtual Desktop into your operations management strategy.
 
 ## Operations baseline
 
@@ -63,7 +63,7 @@ To maintain operations compliance, an operator will monitor usage, resize assets
 
 Each of these are tasks that central IT organizations tend to deliver as part of the operations baseline for Infrastructure-as-a-Service (IaaS).
 
-The following guides provide best practices for implementing management capabilities for WVD environments:
+The following guides provide best practices for implementing management capabilities for Windows Virtual Desktop environments:
 
 - [WVD Azure Monitor](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor)
 - [WVD Azure Advisor](https://docs.microsoft.com/azure/virtual-desktop/azure-advisor)
@@ -79,7 +79,7 @@ In addition, using concepts such as [MSIX app attach](https://docs.microsoft.com
 
 ### Workload operations
 
-The platform operations section above illustrates a common conversation when managing AKS clusters. Will the virtual desktops platform and applications be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? That question is different for different organizations. The constant seen across most organizations is that virtual desktops are designed to give the users more flexibility in how they want to work and access applications in a secure way.
+The platform operations section above illustrates a common conversation when managing Windows Virtual Desktop. Will the virtual desktops platform and applications be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? The answer is different for different organizations. The constant seen across most organizations is that virtual desktops are designed to give the users more flexibility in how they want to work and access applications in a secure way.
 
 Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate a Windows Virtual Desktop environment using completely decentralized workload operations.
 

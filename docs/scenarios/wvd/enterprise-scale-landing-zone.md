@@ -15,7 +15,7 @@ Enterprise scale Construction Sets provide specific architectural approach and r
 
 ## Should I start with Windows Virtual Desktop Construction Set?
 
-Not all customers adopt Windows Virtual Desktop on Azure in the same way, so the Cloud Adoption Framework for Azure enterprise-scale Construction set architecture varies between customers. The technical considerations and design recommendations of the Windows Virtual Desktop Construction Set might lead to different trade-offs based on your organization's scenario. Some variation is expected, but if you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale. The Windows Virtual Desktop Construction Set is modular by design so customers can customized environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
+Not all customers adopt Windows Virtual Desktop on Azure in the same way, so the Cloud Adoption Framework for Azure enterprise-scale Construction set architecture varies between customers. The technical considerations and design recommendations of the Windows Virtual Desktop Construction Set might lead to different trade-offs based on your organization's scenario. Some variation is expected, but if you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale. The Windows Virtual Desktop Construction Set is modular by design so customers can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
 
 ## Design guidelines
 
