@@ -1,87 +1,59 @@
 # docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-# cSpell:ignore devtest mariadb
+#cSpell:ignore devtest mariadb
 
 items:
-  - name: Enterprise Scale Analytics and AI - Microsoft Cloud Adoption Framework for Azure
+  - name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: Enterprise Scale Analytics and AI
+    pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
-    href: intro-data-management-analytics.md
-  - name: Build an initial strategy (TBD)
+    items:
+    - name: Intro to data management and analytics
+      href: index.md
+    - name: Intro to the analytics maturity model
+      href: intro-analytics-maturity.md
+    - name: Intro to data governance
+      href: intro-data-governance.md
+
+  - name: Build an initial strategy
     href: strategy.md
-  - name: Define your plan (TBD)
+  - name: Define your plan
     href: plan.md
-  - name: Prepare your environments (TBD)
-    href: ready.md
-  - name: Migrate to the cloud (TBD)
+  - name: Prepare your environment
+    items:
+    - name: Azure Landing Zones for data management and analytics
+      href: ready.md
+    - name: Enterprise-scale landing zone implementation
+      href: ./enterprise-scale-landing-zone.md
+    - name: Design area considerations
+      items:
+      - name: Enterprise enrollment
+        href: ./eslz-enterprise-enrollment-and-azure-ad-tenants.md
+      - name: Identity
+        href: ./eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: ./eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: ./eslz-management-group-and-subscription-organization.md
+      - name: Governance disciplines
+        href: ./eslz-security-governance-and-compliance.md
+      - name: Operations baseline
+        href: ./eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: ./eslz-business-continuity-and-disaster-recovery.md
+      - name: Deployment options
+        href: ./eslz-platform-automation-and-devops.md
+
+  - name: Migrate to the cloud
     href: migrate.md
-  - name: Innovate in the cloud (TBD)
+  - name: Innovate in the cloud
     href: migrate.md
-  - name: Govern your portfolio (TBD)
+  - name: Govern your portfolio
     href: govern.md
-  - name: Manage your portfolio (TBD)
+  - name: Manage your portfolio
     href: manage.md
 
   - name: Enterprise-Scale construction set
     items:
-    - name: Overview
-      href: ./eslz-overview.md
-    - name: Identity and access management
-      href: ./eslz-identity-and-access-management.md
-    - name: Management group and subscription organization
-      items:
-       - name: Overview
-         href: ./eslz-management-group-and-subscription-organization.md
-       - name: Policies
-         href: ./eslz-policies.md
-       - name: Data Management Landing Zone
-         href: ./eslz-data-management-landing-zone.md
-       - name: Data Landing Zone
-         items:
-          - name: Overview
-            href: ./eslz-data-landing-zone.md
-          - name: Data Domains
-            href: ./eslz-data-landing-zone-domains.md
-          - name: Data Products
-            href: ./eslz-data-landing-zone-data-products.md
-          - name: Division and Consumption
-            href: ./eslz-data-landing-zone-division-and-consumption.md
-    - name: Network topology and connectivity
-      href: ./eslz-network-topology-and-connectivity.md
-    - name: Management and monitoring
-      href: ./eslz-management-and-monitoring.md
-    - name: Business continuity and disaster recovery
-      href: ./eslz-business-continuity-and-disaster-recovery.md
-    - name: Security governance and compliance
-      items:
-        - name: Security Overview
-          href: ./eslz-security-governance-and-compliance.md
-        - name: Data Privacy
-          href: ./eslz-data-privacy.md
-        - name:  Security Provisioning
-          href: ./eslz-security-provisioning.md
-      
-    - name: Platform automation and DevOps
-      items:
-        - name:  Overview
-          href: ./eslz-dataops.md
-        - name: Personas and Teams
-          href: ./eslz-persona-and-teams.md
-        - name: Teams Functions
-          href: ./eslz-team-functions.md
-        - name: Deployment Models
-          href: ./eslz-deployment-models.md
-    
-    - name: Data Science Environment
-      items:
-        - name: Data Science Blueprint
-          href: ./eslz-data-science-blueprint.md
-        - name: Data Science Deployment
-          href: ./eslz-data-science-deployment.md
-
-    - name: Data Science Workflow and MLOps
-      href: ./eslz-data-science-workflow-and-mlops.md
-
 
   - name: Well-Architected workloads (TBD)
     items:
@@ -98,79 +70,22 @@ items:
     - name: Security (TBD)
       href: index.md
 
-  - name: Architectures
+  - name: Architectures (TBD)
     items:
-       - name: Data Management Landing Zone
-         href: ./eslz-data-management-landing-zone.md
-       - name: Data Landing Zone
-         href: ./eslz-data-landing-zone.md
+      - name: Include list of relevant architecture to accelerate adoption
+        href: https://docs.microsoft.com/azure/architecture/
 
-  - name: Best practices
+  - name: Best practices (TBD)
     items:
-      - name: Platform Provisioning
-        href: ./eslz-platform-provisioning.md
-      - name:  Data Lake Services
-        href: ./eslz-data-lake-services.md
-      - name:  Azure Databricks Integration
-        href: ./eslz-azure-databricks-integration.md
-      - name: Azure Synapse Analytics Integration
-        href: ./eslz-azure-synapse-analytics-integration.md
-      - name: Data Landing Zone Ingestion
-        items:
-          - name: Data Ingestion
-            href: ./eslz-data-ingestion.md
-          - name: SAP Data Ingestion
-            href: ./eslz-sap-data-ingestion.md
-          - name: Automated Ingestion Pattern
-            href: ./eslz-automated-ingestion-pattern.md
+      - name: Include best practices to configure and deploy central tooling
+        href: index.md
 
-  - name: Featured Azure products
+  - name: Featured Azure products (TBD)
     items:
-    - name: ARM Templates
-      href: https://docs.microsoft.com/azure/azure-resource-manager/templates/
-    - name: Blob Storage
-      href: https://docs.microsoft.com/azure/storage/blobs/
-    - name: Azure Cosmos DB
-      href: https://docs.microsoft.com/azure/cosmos-db/
-    - name: Azure Database for Maria DB
-      href: https://docs.microsoft.com/azure/mariadb/
-    - name: Azure Database for MySQL
-      href: https://docs.microsoft.com/azure/mysql/
-    - name: Azure Database for PostgreSQL
-      href: https://docs.microsoft.com/azure/data-explorer       
-    - name: Azure Databricks
-      href: https://docs.microsoft.com/azure/databricks/
-    - name: Azure Data Explorer
-      href: https://docs.microsoft.com/      
-    - name: Azure Data Lake
-      href: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction
-    - name: Azure Key Vault
-      href: https://docs.microsoft.com/azure/key-vault/
-    - name: Azure Policy
-      href: https://docs.microsoft.com/azure/governance/policy/      
-    - name: Azure Private Link
-      href: https://docs.microsoft.com/azure/private-link/
-    - name: Azure Purview
-      href: https://docs.microsoft.com/azure/purview/
-    - name: Azure Stream Analytics
-      href: https://docs.microsoft.com/azure/stream-analytics/
-    - name: Azure SQL
-      href: https://docs.microsoft.com/azure/azure-sql/
-    - name: Azure Synapse Analytics
-      href: https://docs.microsoft.com/azure/synapse-analytics/
-    - name: Data Factory
-      href: https://docs.microsoft.com/azure/data-factory/
-    - name: Event Hubs
-      href: https://docs.microsoft.com/en-us/azure/event-hubs/
-    - name: HDInsight
-      href: https://docs.microsoft.com/azure/hdinsight/           
-    - name: Network Watcher
-      href: https://docs.microsoft.com/azure/network-watcher/
-    - name: Virtual Network
-      href: https://docs.microsoft.com/azure/virtual-network/ 
+    - name: Links to Azure products used for 'data management and analytics'
+      href: https://docs.microsoft.com/
 
   - name: Learn modules (TBD)
     items:
-    - name: Links to learn modules for data management and governance
+    - name: Links to learn modules for 'data management and analytics'
       href: https://docs.microsoft.com/en-us/learn/
-  

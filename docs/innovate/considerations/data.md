@@ -43,7 +43,7 @@ Data governance is a broad topic that could require its own dedicated framework.
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
-- **Is the data cataloged?** Capturing details about the data being shared will aid in long-term data management. Tools for documenting data, like Azure Data Catalog, can make this process much easier in the cloud. Guidance regarding the [annotation of data](/azure/data-catalog/data-catalog-how-to-annotate) and the [documentation of data sources](/azure/data-catalog/data-catalog-how-to-documentation) can help accelerate the process.
+- **Is the data cataloged?** Capturing details about the data being shared will aid in long-term 'data management and analytics'. Tools for documenting data, like Azure Data Catalog, can make this process much easier in the cloud. Guidance regarding the [annotation of data](/azure/data-catalog/data-catalog-how-to-annotate) and the [documentation of data sources](/azure/data-catalog/data-catalog-how-to-documentation) can help accelerate the process.
 
 When democratization of data is important to a customer-focused hypothesis, make sure the governance of shared data is somewhere in the release plan. This will help protect customers, data consumers, and the company.
 
