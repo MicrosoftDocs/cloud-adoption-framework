@@ -23,77 +23,105 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Management group | `Microsoft.Management/managementGroups` | `mg-` |
-| Resource group | `Microsoft.Resources/resourceGroups` | `rg-` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy-` |
 | API management service instance | `Microsoft.ApiManagement/service` | `apim-` |
 | Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id-` |
+| Management group | `Microsoft.Management/managementGroups` | `mg-` |
+| Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy-` |
+| Resource group | `Microsoft.Resources/resourceGroups` | `rg-` |
 
 ## Networking
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-` |
-| Subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-` |
-| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-` |
-| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-` |
-| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-` |
-| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-` |
-| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-` |
-| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
-| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg-` |
-| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
-| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `cn-` |
-| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw-` |
-| Route table | `Microsoft.Network/routeTables` | `route-` |
-| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
-| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
-| Front door | `Microsoft.Network/frontDoors` | `fd-` |
+| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg-` |
+| Bastion | `Microsoft.Network/bastionHosts` | `bh-` |
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp-` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne-` |
+| Connections | `Microsoft.Network/connections`| `con-` |
+| DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
+| DNS | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
+| DNS | `Microsoft.Network/privateDnsZones/virtualNetworkLinks` | `pdnsvl-` |
+| Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
+| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
+| Front door | `Microsoft.Network/frontDoors` | `fd-` |
+| Front door | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp--`|
+| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-`|
+| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
+| Load balancer (inbound) | `Microsoft.Network/loadBalancers/inboundNatRules` | `lbinat-`|
+| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
+| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-`|
+| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
+| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsr-` |
+| Network watcher | `Microsoft.Network/networkWatchers` | `nw-` |
+| Private endpoint | `"Microsoft.Network/privateLinkServices` | `pl` |
+| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-`|
+| Public IP address | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
+| Route filter | `Microsoft.Network/routeFilters` | `rf-` |
+| Route filter | `Microsoft.Network/routeFilters/routeFilterRules` | `rfr-` |
+| Route table | `Microsoft.Network/routeTables` | `rt-` |
+| Route table route | `Microsoft.Network/routeTables/routes` | `rtr-` |
+| Service endpoint | `Microsoft.serviceEndPointPolicies` | `se-` |
+| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
+| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
+| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-`|
+| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
+| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-`|
+| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
+| VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng-`|
+| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `cn-` |
+| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `st-` |
+| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
 | Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
+| Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
 
 ## Compute and Web
 
 | Asset type | Resource provider namespace/entity | Abbreviation |
 |--|--|--|
-| Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
-| Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
-| Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
-| Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
-| Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
-| VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
-| Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
-| Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
-| Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
-| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci-` |
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
-| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
 | App Service environment | `Microsoft.Web/sites` | `ase-` |
 | App Service plan | `Microsoft.Web/serverFarms` | `plan-` |
-| Web app | `Microsoft.Web/sites` | `app-` |
-| Static web app | `Microsoft.Web/sites` | `stapp` |
-| Function app | `Microsoft.Web/sites` | `func-` |
+| Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
+| Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
+| Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld-` |
+| Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
+| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci-` |
+| Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des-` |
+| Function app | `Microsoft.Web/sites` | `func-` |
+| Gallery | `Microsoft.Compute/galleries` | `gal-` |
+| Gallery application | `Microsoft.Compute/galleries/applications` | `gala-` |
+| Gallery application version | `Microsoft.Compute/galleries/applications/versions` | `galav-` |
+| Gallery image | `Microsoft.Compute/galleries/images` | `gali-` |
+| Gallery image version | `Microsoft.Compute/galleries/images/versions` | `galiv-` |
+| Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
+| Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
+| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
+| Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
+| Static web app | `Microsoft.Web/sites` | `stapp` |
+| Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
+| Virtual machine extension | `Microsoft.Compute/virtualMachines/extensions` | `vme` 
+| Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
+| VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
+| Web app | `Microsoft.Web/sites` | `app-` |
 
 ## Databases
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
-| Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
 | Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos-` |
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis-` |
-| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
-| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
+| Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
+| Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn-` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `syn-` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndw-` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synspark-` |
+| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
+| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
 | SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi-` |
 
@@ -121,6 +149,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw-` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa-` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
+| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `decd` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
@@ -160,13 +189,14 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa-` |
+| Application Insights | `Microsoft.Insights/components` | `appi-` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag-` |
 | Azure Purview instance | `Microsoft.Purview/accounts` | `pview-` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp-` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa-` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv-` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log-` |
-| Application Insights | `Microsoft.Insights/components` | `appi-` |
+
 
 ## Migration
 
