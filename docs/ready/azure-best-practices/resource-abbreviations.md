@@ -40,27 +40,24 @@ This list provides recommended abbreviations for various Azure resource types to
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne-` |
 | Connections | `Microsoft.Network/connections`| `con-` |
 | DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
-| DNS | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
-| DNS | `Microsoft.Network/privateDnsZones/virtualNetworkLinks` | `pdnsvl-` |
+| DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
-| Front door | `Microsoft.Network/frontDoors` | `fd-` |
-| Front door | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp--`|
+| Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
+| Front Door policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
-| Load balancer (inbound) | `Microsoft.Network/loadBalancers/inboundNatRules` | `lbinat-`|
+| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-`|
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
 | Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-`|
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
-| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsr-` |
-| Network watcher | `Microsoft.Network/networkWatchers` | `nw-` |
-| Private endpoint | `"Microsoft.Network/privateLinkServices` | `pl` |
+| Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr-` |
+| Network Watcher | `Microsoft.Network/networkWatchers` | `nw-` |
+| Private Link | `"Microsoft.Network/privateLinkServices` | `pl-` |
 | Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-`|
-| Public IP address | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
+| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
 | Route filter | `Microsoft.Network/routeFilters` | `rf-` |
-| Route filter | `Microsoft.Network/routeFilters/routeFilterRules` | `rfr-` |
 | Route table | `Microsoft.Network/routeTables` | `rt-` |
-| Route table route | `Microsoft.Network/routeTables/routes` | `rtr-` |
 | Service endpoint | `Microsoft.serviceEndPointPolicies` | `se-` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
@@ -79,34 +76,32 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/entity | Abbreviation |
 |--|--|--|
-| AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
 | App Service environment | `Microsoft.Web/sites` | `ase-` |
 | App Service plan | `Microsoft.Web/serverFarms` | `plan-` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld-` |
-| Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
-| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci-` |
-| Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des-` |
+| Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
 | Function app | `Microsoft.Web/sites` | `func-` |
-| Gallery | `Microsoft.Compute/galleries` | `gal-` |
-| Gallery application | `Microsoft.Compute/galleries/applications` | `gala-` |
-| Gallery application version | `Microsoft.Compute/galleries/applications/versions` | `galav-` |
-| Gallery image | `Microsoft.Compute/galleries/images` | `gali-` |
-| Gallery image version | `Microsoft.Compute/galleries/images/versions` | `galiv-` |
+| Gallery | `Microsoft.Compute/galleries` | `gal` |
 | Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
-| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
 | Static web app | `Microsoft.Web/sites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
-| Virtual machine extension | `Microsoft.Compute/virtualMachines/extensions` | `vme` 
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
 | Web app | `Microsoft.Web/sites` | `app-` |
+
+## Containers
+
+| AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
+| Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
+| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
+| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
 
 ## Databases
 
@@ -131,7 +126,6 @@ This list provides recommended abbreviations for various Azure resource types to
 |--|--|--|
 | Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
-| Azure Container Registry | `Microsoft.ContainerRegistry/registries` | `acr` |
 
 ## AI and Machine Learning
 
@@ -149,7 +143,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw-` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa-` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
-| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `decd` |
+| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
@@ -164,6 +158,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | HDInsight - Storm cluster | `Microsoft.HDInsight/clusters` | `storm-` |
 | HDInsight - ML Services cluster | `Microsoft.HDInsight/clusters` | `mls-` |
 | IoT hub | `Microsoft.Devices/IotHubs` | `iot-` |
+| Provisioning services | `Microsoft.Devices/provisioningServices` | `provs-` |
+| Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert-` |
 | Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi-` |
 | Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi-` |
 
@@ -173,6 +169,7 @@ This list provides recommended abbreviations for various Azure resource types to
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs-` |
 | Azure Static Web Apps | `Microsoft.Web/sites` | `stap-` |
+| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 
 ## Integration
 
@@ -196,7 +193,6 @@ This list provides recommended abbreviations for various Azure resource types to
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa-` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv-` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log-` |
-
 
 ## Migration
 
