@@ -30,7 +30,7 @@ Microsoft has built capabilities and resources to help accelerate your implement
 
 The following diagram shows a holistic approach for using security guidance and platform tooling to establish security visibility and control over your cloud assets in Azure. We recommend this approach.
 
-![Security diagram](../_images/security/security-diagram.png)
+![Security diagram](../_images/security/security-diagram-2.png)
 
 Use these steps to plan and execute your strategy for securing your cloud assets and using the cloud to modernize security operations.
 
