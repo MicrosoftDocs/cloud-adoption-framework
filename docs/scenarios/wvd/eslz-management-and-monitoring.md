@@ -55,21 +55,24 @@ ms.subservice: ready
 | Memory | % Committed Bytes In Use | * |30 | Memory, % Committed Bytes In Use, * |
 | PhysicalDisk | Avg. Disk Queue Length | * | 30 | PhysicalDisk, Avg. Disk Queue Length, * | 
 
-- The following Windows Event Logs should be collected into the Azure Monitor Log Analytics Workspace.
+The following Windows Event Logs should be collected into the Azure Monitor Log Analytics Workspace.
 
-| Windows Event Log Name |
-| --- |
-| System |
-| Application |
-| Microsoft-Windows-TerminalServices-LocalSessionManager/Operational |
-| Microsoft-FSLogix-Apps/Operational |
-| Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin |
-| Microsoft-FSLogix-Apps/Admin |
+**Windows Event Log Name**
 
-- [Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) should be utilized for ease of configuration.
-- Application Groups should be assigned to user groups for ease of user administration overhead.
-- Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
-- For glossary, data storage cost estimations, and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
+- System
+- Application
+- Microsoft-Windows-TerminalServices-LocalSessionManager/Operational
+- Microsoft-FSLogix-Apps/Operational
+- Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin
+- Microsoft-FSLogix-Apps/Admin
+
+[Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) should be utilized for ease of configuration.
+
+Application Groups should be assigned to user groups for ease of user administration overhead.
+
+Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
+
+For glossary, data storage cost estimations, and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
 
 ## Infrastructure Management & Monitoring
 
