@@ -40,4 +40,4 @@ The following guides provide best practices for implementing security controls f
 
 - [Windows Virtual Desktop Security Baseline](https://docs.microsoft.com/azure/virtual-desktop/security-baseline)
 
-- [Windows Virtual Dekstop Security Guide](https://docs.microsoft.com/azure/virtual-desktop/security-guide)
+- [Windows Virtual Desktop Security Guide](https://docs.microsoft.com/azure/virtual-desktop/security-guide)

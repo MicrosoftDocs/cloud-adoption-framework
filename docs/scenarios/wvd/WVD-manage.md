@@ -31,7 +31,7 @@ These basic questions will shape how to best integrate Windows Virtual Desktop i
 
 ## Operations baseline
 
-Implementing an operations baseline provides centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't have an operations baseline for your non-containerized assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md).
+Implementing an operations baseline provides centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't have an operations baseline for your assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md).
 
 Your operations baseline should include tools and configurations to provide visibility, monitoring, operational compliance, optimization, and protection/recovery.
 
@@ -44,7 +44,7 @@ Unless this implementation is your organization's first or only deployment to th
 ### Inventory and visibility
 
 Monitoring Windows Virtual Desktop uses the tools, dashboards and alerts in your operations baseline.
-However, you may need to add extra configuration to integrate data from your virtual desktop into operations monitoring tools like [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json).
+However, you may need to add extra configuration to integrate data from your virtual desktop into operations monitoring tools like [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor).
 
 Once you've configured Azure Monitor to collect data on your virtual desktop, you can monitor the following areas as part of your centralized management processes:
 
