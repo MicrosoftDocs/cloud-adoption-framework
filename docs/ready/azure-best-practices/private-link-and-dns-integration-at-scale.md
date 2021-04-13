@@ -324,7 +324,7 @@ If an application owner deletes the private endpoint, the corresponding records 
 [image-5]: ./media/4-Black-Validation-Error-Detail.jpg
 [image-6]: ./media/5-Black-Private-DNS-integration.jpg
 [image-7]: ./media/6-Black-Create-Storage-Account.jpg
-[image-8]: ./media/7-Black-Create-Storage-Account-Network.jpg
+[image-8]: ./media/private-link-network-private.jpg
 [image-9]: ./media/8-Black-Create-Private-Endpoint.jpg
 [image-10]: ./media/9-Black-Create-Private-Endpoint-Resources.jpg
 [image-11]: ./media/10-Black-Create-Private-Endpoint-Configuration.jpg
