@@ -24,7 +24,7 @@ New infrastructure types will require the controls to be refactored to accommoda
 
 Implementing access controls should deliver assurances to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.
 
-Scaling this standard requires three things -
+Scaling this standard requires three things:
 
 - **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
 - **Orchestration** - streamline processes as much as possible in order to aggregate access requests and permissions management centrally. This context enables teams to approve access and govern usage of permissions in context and help spot patterns that require investigation
