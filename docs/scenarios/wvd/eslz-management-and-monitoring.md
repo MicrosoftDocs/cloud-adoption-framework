@@ -18,7 +18,6 @@ ms.subservice: ready
 -	Utilize Azure Monitor Log Analytics Workspaces as the administrative boundary of logs.
 -	Telemetry from the platform services to be collected.
     - Workspaces
-    - Application Groups
     - Hostpools
 - Performance Counters should be collected.
 - Windows Event Logs should be collected.
@@ -30,7 +29,7 @@ ms.subservice: ready
 - A separate dedicated Azure Monitor Log Analytics Workspace should be used for Windows Virtual Desktop.
 - Centralize your Azure Monitor Log Analytics workspace in the region of your Windows Virtual Desktop deployment.
 - Diagnostic settings can be exported to a storage account should there be a need to go beyond the two-year retention period.
-- Platform service diagnostic telemetry stated in the considerations should be enabled to go to the Azure Monitor Log Analytics.
+- Platform service diagnostic telemetry stated in the considerations should be enabled to go to the Azure Monitor Log Analytics Workspace.
 - The following Windows Performance Counters should be collected by Log Analytics for WVD Monitoring.
 
 | Object name | Counter name | Instance name | Interval | id |
@@ -58,19 +57,19 @@ ms.subservice: ready
 
 - The following Windows Event Logs should be collected into the Azure Monitor Log Analytics Workspace.
 
-| Windows Event Log Name | Windows Event Log Type |
-| --- | --- |
-| System | Error, Warning |
-| Application | Error, Warning | 
-| Microsoft-Windows-TerminalServices-LocalSessionManager/Operational | Error, Warning, Information |
-| Microsoft-FSLogix-Apps/Operational | Error, Warning, Information |
-| Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin | Error, Warning, Information |
-| Microsoft-FSLogix-Apps/Admin | Error, Warning, Information |
+| Windows Event Log Name |
+| --- |
+| System |
+| Application |
+| Microsoft-Windows-TerminalServices-LocalSessionManager/Operational |
+| Microsoft-FSLogix-Apps/Operational |
+| Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin |
+| Microsoft-FSLogix-Apps/Admin |
 
 - [Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) should be utilized for ease of configuration.
 - Application Groups should be assigned to user groups for ease of user administration overhead.
 - Application Groups can be segregated in a multitude of ways. We recommend that separating them based on which department/user type (power, engineering, general etc.) the user is part of. 
-- For glossary and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
+- For glossary, data storage cost estimations, and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation
 
 ## Infrastructure Management & Monitoring
 
