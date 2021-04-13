@@ -16,7 +16,7 @@ ms.custom: think-tank
 
 The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy.
 
-SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone)] to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
+SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
 
 The [Microsoft SAP automation repo](https://github.com/Azure/sap-hana) supports Azure-SAP customers to integrate scripts with current DevOps practices or use the code in its current state and directly from a cloned repository.
 
@@ -124,7 +124,7 @@ In this model, SAP environments are grouped into sandbox, development, quality a
 
 ### SAP application planning
 
-The SAP system is the actual SAP application, as it contains all Azure artifacts required to host the SAP application. Refer to [SAP on Azure](/azure/virtual-machines/workloads/sap/get-started) to get started, plan, and consider deployment factors in detail.
+The SAP system is the actual SAP application, as it contains all Azure Artifacts required to host the SAP application. Refer to [SAP on Azure](/azure/virtual-machines/workloads/sap/get-started) to get started, plan, and consider deployment factors in detail.
 
 **Design considerations:**
 
