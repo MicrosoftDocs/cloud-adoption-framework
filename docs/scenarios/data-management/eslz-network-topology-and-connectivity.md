@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Networking
 description: Enterprise Scale Analytics and AI Architecture Networking.
-author: 
-ms.author:  # Microsoft employees only
+author: BrianBlanchard
+ms.author: brblanch # Microsoft employees only
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
