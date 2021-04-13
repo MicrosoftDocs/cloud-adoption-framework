@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management and monitoring for AKS
-description: Describe how this enterprise-scale scenario can improve management and monitoring of AKS
+title: Operations baseline considerations for AKS
+description: Describe how to improve management and monitoring of AKS
 author: BrianBlanchard
 ms.author: pidebrui
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Management and monitoring for AKS enterprise-scale scenario
+# Operations baseline considerations for AKS
 
 Kubernetes is a relatively young technology, rapidly evolving and has an impressive ecosystem. As such it can be a challenge to manage it. By properly designing the solution with management and monitoring in mind, you can work towards operational excellence and customer success.
 
