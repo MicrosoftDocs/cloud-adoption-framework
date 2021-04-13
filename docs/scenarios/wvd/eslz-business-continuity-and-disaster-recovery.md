@@ -29,8 +29,8 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 ### Host Pool Compute Strategy
 
 - For WVD Host Pool, both *active-active* and *active-passive* can be viable BCDR approaches, depending on the requirements.
-  - With *active-active*, a single Host Pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) would be required to actively replicate the user Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one.
-    - This is a complex configuration. If active-active is chosen, it gives protection against storage outages without the need to re-log the user and enables continuous testing of the DR location. It is not considered either a performance or cost optimization.  
+  - With *active-active*, a single Host Pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) would be required to actively replicate the user's FSLogix Profile/Office containers between the regions. For VMs in each region, the Cloud Cache registry entry specifying locations need to be inverted to give precedence to the local one.
+    - This is a complex configuration. If active-active is chosen, it protects against storage outages without requiring the user to log in again and enables continuous testing of the DR location. It is not considered either a performance or cost optimization.  
     - Load balancing of incoming user connection cannot take into account proximity: all hosts will be equal, and users may be directed to a remote, not optimal, WVD Host Pool VM.
     - This configuration is limited to *Pooled* (shared) Host Pool type. For *Personal* (dedicated) type, once a desktop is assigned to a user on a certain Session Host VM, it sticks and will not change, even if not available.
 
@@ -59,16 +59,16 @@ Windows Virtual Desktop (WVD) main article on BCDR is available [here](https://d
 
 - Location of storage used for FSLogix containers is critical to ensure the lowest latency from the Host Pool VM.
 
-- In a BCDR situation, it is possible to reduce the time taken to backup, restore and replicate data, with the separation of user Profile and the Office container disks. FSLogix offers the possibility to allocate them in separate storage locations. In normal usage the Office disk can consume many GB more than the profile. Backup, replication, and restore of the profile disk will be far quicker without the inclusion of the cache data. The Office disk is not required to be made resilient as this can be re-downloaded and the data it contains is already present, in full, inside Office 365 on-line services.
+- In a BCDR situation, it is possible to reduce the time taken to backup, restore and replicate data, with the separation of user Profile and the Office container disks. FSLogix offers the possibility to allocate them in separate storage locations. In normal usage the Office disk can consume many GB more than the profile. Backup, replication, and restore of the profile disk will be far quicker without the inclusion of the cache data. The Office disk is not required to be made resilient as this is just a cache of data and can be re-downloaded as the data it contains is already present, in full, inside Office 365 on-line services.
 
   > [!NOTE]
   > The FSLogix Cloud Cache feature is 'write back' by design to increase performance characteristics to high latency targets, thus using asynchronous replication.
 
 - OneDrive can be used to redirect [well known folders](https://docs.microsoft.com/onedrive/redirect-known-folders) (Desktop, Documents, Pictures, Screenshots, and Camera Roll) if present. This would enable the resilience of these special folders to be handled by OneDrive rather than needing special consideration in a BCDR scenario.
 
-- Azure offers multiple storage solutions that you can use to store your FSLogix Profile and Office container. The article [Storage options for FSLogix profile containers in Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions Azure offers for Windows Virtual Desktop FSLogix user profile containers. Storage Spaces Direct (S2D) is supported in conjunction with FSLogix and Windows Virtual Desktop as well. It is a self-managed storage solution that is out of scope for this article. Customers can get most value out of either Azure Files or Azure NetApp Files while simplifying management of Windows Virtual Desktop.
+- Azure offers multiple storage solutions that you can use to store your FSLogix Profile and Office container. The article [Storage options for FSLogix profile containers in Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions Azure offers for Windows Virtual Desktop FSLogix user profile containers. Storage Spaces Direct (S2D) is supported in conjunction with FSLogix and Windows Virtual Desktop as well. It is a self-managed storage solution that is out of scope for this article. Customers can get most value out of either Azure Files or Azure NetApp Files while simplifying management of Windows Virtual Desktop, and as such are the recommended storage solutions for this workload.
 
-- The FSLogix agent can support multiple profile locations for higher resiliency if you configure the registry entries for FSLogix. in this case, proper [replication mechanism](https://docs.microsoft.com/azure/virtual-desktop/disaster-recovery#fslogix-configuration) needs to be in place, based on the storage type used, or Cloud Cache should be used.
+- The FSLogix agent can support multiple profile locations for higher resiliency if you configure the VHDLocations registry entry. In this case, proper [replication mechanism](https://docs.microsoft.com/azure/virtual-desktop/disaster-recovery#fslogix-configuration) needs to be in place, based on the storage type used, or Cloud Cache should be used.
 
 #### User Data Storage Replication and Resiliency
 
@@ -124,13 +124,14 @@ The following are best practices for your design:
 > With Azure File Share Premium tier, or Azure File Share Standard tier with Large File Support enabled, GRS is not available.
 
 - Cloud Cache should be used only when:
-  - User Profile or Office containers data availability required high-availability SLA is critical and need to be resilient to region failure.
+  - User Profile or Office containers data availability requires high-availability, an SLA is critical and need to be resilient to region failure.
   - Selected storage option is not able to satisfy BCDR requirements. For example, with Azure File Share Premium tier, or Azure File Share Standard with Large File Support enabled, GRS is not available.
   - When replication between disparate storage is required.
 
 - When Cloud Cache is used, below is recommended:
   - Use SSD for the Managed Disk of the WVD Host Pool VMs.
   - A backup solution must be in place to protect user Profile and Office Containers.
+  - Consideration of the size of the local VM managed disk in order to accomodate the local cache of all users FSLogix Profile/Office containers.
 
 - Use Azure Shared Image Gallery to replicate golden images to different regions.
   - Storage used for image creation should be Zone Replicated Storage (ZRS), and at least two copies per region should be maintained.
