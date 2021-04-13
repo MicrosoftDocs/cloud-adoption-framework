@@ -49,6 +49,7 @@ Other Azure [RBAC Roles](https://docs.microsoft.com/azure/role-based-access-cont
 - When specifying an OU (Organizational Unit), make sure to use the full path (Distinguished Name) without quotation marks.
 - Follow the principle of least privilege.
 - The UPN (User Principal Name) used to subscribe to Windows Virtual Desktop [must exist](https://docs.microsoft.com/azure/virtual-desktop/overview#requirements) in the Active Directory domain where the Session Host virtual machine is joined.
+- When using Smartcards, a direct connection or "line of sight" with an Active Directory domain controller for Kerberos authentication is required.
 - Using Windows Hello for Business requires the [hybrid certificate trust model](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust) to be compatible with Windows Virtual Desktop.
 - When using Windows Hello for Business or Smart Card authentication, the initiating client must be able to communicate with the domain controller because these [authentication methods](https://docs.microsoft.com/azure/virtual-desktop/authentication) use Kerberos to sign in.
 - Single sign-on can improve user experience but requires additional configuration to the solution and is only support using Active Directory Federation Services (AD FS).
@@ -57,6 +58,7 @@ Other Azure [RBAC Roles](https://docs.microsoft.com/azure/role-based-access-cont
 
 - Synchronize all identities to a single Azure Active Directory tenant using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-azure-ad-connect).
 - Ensure Windows Virtual Desktop Session Hosts can communicate with with Azure Active Directory Domain Services (Azure AD DS) or Active Directory Domain Services (AD DS).
+- Use the [KDC Proxy](https://docs.microsoft.com/azure/virtual-desktop/key-distribution-center-proxy) solution to proxy Smartcard authentication traffic and sign in remotely.
 - [Segregate Session Host virtual machines](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details) into Active Directory OUs (Organization Units) for each host pool to more easily manage policies and orphaned objects.
 - Use a solution like [LAPS (Local Administrator Password Solution)](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-1-quick-wins-with-minimal-operational-complexity) to rotate local administrator passwords on Windows Virtual Desktop Session Hosts frequently.
 - For users, assign the [Desktop Virtualization User](https://docs.microsoft.com/azure/virtual-desktop/delegated-access-virtual-desktop) built-in role to Security Groups to grant access to Windows Virtual Desktop app groups.
