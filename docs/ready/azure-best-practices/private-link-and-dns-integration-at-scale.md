@@ -305,7 +305,7 @@ Once the platform team has deployed the platform infrastructure components (priv
 
 At this point, application teams can use the storage account via a private endpoint from any VNet in the hub and spoke network environment and from on-premises, as the DNS record has been automatically recorded in the private DNS zone.
 
-If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed.
+If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed. 
 
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/private-link-overview#availability
