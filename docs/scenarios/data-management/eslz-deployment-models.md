@@ -77,7 +77,7 @@ To avoid starting from scratch for each asset, teams can leverage the templates 
 For example, if a new Data Landing Zone needs to be created, the responsible Data Landing Zone ops team can request a new Data Landing Zone through a management tool like ServiceNow, Power Apps or other kinds of applications. After the request has been approved, the following process gets kicked off based on the provided parameters:
 
 1. New subscription gets deployed for the new Data Landing Zone,
-1. Master branch of the Data Landing Zone template gets forked into a new repository,
+1. Main branch of the Data Landing Zone template gets forked into a new repository,
 1. Service connection is created in the repository,
 1. Parameters in forked repository gets updated based on the parameters and checked back into the repository,
 1. By updating the parameters and checking in the updated code, the deployment pipeline gets kicked off and deploys the services

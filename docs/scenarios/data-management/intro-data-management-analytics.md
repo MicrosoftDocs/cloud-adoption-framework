@@ -1,6 +1,6 @@
 ---
-title: "Introduction to the data governance"
-description: Introducing the concept of data governance in the cloud
+title: "Introduction to the data analytics"
+description: Introducing the concept of data analytics in the cloud
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -9,14 +9,14 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Introduction to the concept of data governance
+# Introduction to the concept of data analytics
 
 Describe data management in a way that non-technical audiences can understand.
 
-## Data governance responsibilities
+## Data analytics responsibilities
 
 Describe who is responsible for data management. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
 
-## Data governance in Azure
+## Data analytics in Azure
 
 Describe the tools used to manage data & how they help
