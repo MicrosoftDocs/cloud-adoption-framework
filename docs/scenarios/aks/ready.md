@@ -1,5 +1,5 @@
 ---
-title: Azure landing zone review for modern containers
+title: Azure landing zones for container operations
 description: Describe the scenario's impact on Azure landing zone design
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Azure landing zone review for modern containers
+# Azure landing zones for container operations
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
@@ -20,18 +20,24 @@ With Azure landing zones, you can start with a small implementation and expand o
 
 If you haven't already selected an Azure landing zone implementation approach, review the [Azure landing zones](../../ready/landing-zone/index.md) article series. Then review how that landing zone option can best be aligned to a modern container scenario.
 
-**Start-small options:** Container orchestration via Azure Kubernetes Service (AKS) requires some environmental configuration. The [baseline architecture for an Azure Kubernetes Service (AKS) cluster for Azure landing zones](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) provides considerations about networking, compute, identity, security, BCDR, and operations.
+**Start-small and expand with the AKS baseline:** Container orchestration via Azure Kubernetes Service (AKS) requires some environmental configuration. The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) provides a proven approach to deploying your first AKS environment.
 
-**Enterprise-scale options:** The enterprise-scale construction set for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. Included in the construction set documentation is a series of best practices that can be used to evaluate production readiness of any AKS environment. These considerations apply even if you select a start-small landing zone implementation. See the following articles to evaluate your AKS environment:
+**Enterprise-scale landing zones:** The enterprise-scale for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. 
+
+
+The primary deference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.
+
+## Azure Landing Zone design areas
+
+Regardless of your initial implementation option, all Azure Landing Zones for AKS should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the container operations team evaluate any landing zone to ensure it is ready to host AKS containers:
 
 - [Identity and access management](eslz-identity-and-access-management.md)
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Management and monitoring](eslz-management-and-monitoring.md)
+- [Resource Organization](eslz-resource-organization.md)
+- [Governance disciplines](eslz-security-governance-and-compliance.md)
+- [Operations baseline](eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Security governance and compliance](eslz-security-governance-and-compliance.md)
-- [Platform automation and DevOps](eslz-platform-automation-and-devops.md)
-
-The primary deference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.
+- [Deployment options](eslz-platform-automation-and-devops.md)
 
 ## Environmental considerations for non-orchestrated container solutions
 
