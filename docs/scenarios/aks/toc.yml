@@ -15,6 +15,8 @@ items:
       href: ready.md
     - name: Design areas
       items:
+      - name: Enterprise enrollment
+        href: eslz-enterprise-enrollment.md
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
