@@ -112,6 +112,7 @@ items:
     - name: Data Science Workflow and MLOps
       href: ./eslz-data-science-workflow-and-mlops.md
 
+
   - name: Well-Architected workloads (TBD)
     items:
     - name: Overview (TBD)
@@ -196,4 +197,9 @@ items:
     - name: Network Watcher
       href: https://docs.microsoft.com/azure/network-watcher/
     - name: Virtual Network
-      href: https://docs.microsoft.com/azure/virtual-network/
+      href: https://docs.microsoft.com/azure/virtual-network/ 
+
+  - name: Learn modules (TBD)
+    items:
+    - name: Links to learn modules for data management and governance
+      href: https://docs.microsoft.com/en-us/learn/
