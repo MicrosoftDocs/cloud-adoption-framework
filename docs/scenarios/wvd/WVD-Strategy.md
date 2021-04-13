@@ -47,9 +47,9 @@ Windows Virtual Desktop is an influential platform, and organizations have sever
 
 - **Infrastructure scale flexibility requirements:** The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with Windows Virtual Desktop.
 
-- **Choice and Flexibility:** Customers now have the choice and flexibility to  choose from any of the available Virtual Machine families and sizes, all optimised for different usage requirements, and provide these seamlessly to their user estate, all of which will liekly have differnt compute requirements based upon their application portfolio
+- **Choice and Flexibility:** Customers now have the choice and flexibility to  choose from any of the available Virtual Machine families and sizes, all optimized for different usage requirements, and provide these seamlessly to their user estate, all of which will likely have different compute requirements based upon their application portfolio
 
-- **Potential cost savings:** Customers can now take advantage of Azure as an operational rather than upfraont cost and it being a consumption based service. For example Virtual Machines are only charged for the time they are powered on, providing the capbility to realise cost savings back to the organsitions
+- **Potential cost savings:** Customers can now take advantage of Azure as an operational rather than upfront cost and it being a consumption based service. For example Virtual Machines are only charged for the time they are powered on, providing the capability to realise cost savings back to the organizations
 
 Windows Virtual Desktop customers are often motivated by all six categories above. To successfully implement an Windows Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
 
@@ -90,7 +90,7 @@ When the migration to the cloud is finished, the overhead and costs of managing 
 
 Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on [business outcomes](../../strategy/business-outcomes/index.md).
 
-Given the impact of an Windows Virtual Desktop platform, you need to define a number of defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down Windows Virtual Desktop adoption into manageable efforts. Read [objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
+Given the impact of a Windows Virtual Desktop platform, you need to create a number of defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down Windows Virtual Desktop adoption into manageable efforts. Read [objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
 
 ## Next step: Plan for a virtual desktop environment
 
