@@ -2,9 +2,9 @@
 #cSpell:ignore devtest mariadb
 
 items:
-  - name: Modern containers - Microsoft Cloud Adoption Framework for Azure
+  - name: Container operations - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: Modern containers - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Container operations - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
     href: strategy.md
   - name: Technical planning
@@ -49,8 +49,6 @@ items:
     items:
     - name: Best practices for application developers
       href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-    - name: Best practices for pod security
-      href: /azure/aks/developer-best-practices-pod-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
   - name: Architectures
     items:
     - name: Microservices architecture on AKS
@@ -80,6 +78,8 @@ items:
         href: /azure/aks/operator-best-practices-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Security
       items:
+      - name: Best practices for pod security
+        href: /azure/aks/developer-best-practices-pod-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Cluster security and upgrades
         href: /azure/aks/operator-best-practices-cluster-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Container image management and security
