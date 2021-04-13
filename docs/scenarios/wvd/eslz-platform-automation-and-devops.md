@@ -29,7 +29,7 @@ Pooled environments should be updated differently than you would do a traditiona
 ### Image Creation
 
 When scaling up your WVD environment, your host pools will generally be created from a gold image. The creation of that image should be via automation. You can alternatively instigate a process where checklists are used, but in large environments, this should only be part of the initial dev/test setup. The more you automate your gold image creation, the more secure you will be in the accuracy of your build and how stable your environment will be.
-It is possible to take the 'old' image then use it to create a VM (VIRTUAL MACHINES), update that VM with the applications and configuration changes for that update and then capture that to your 'new' image. This is not a recommended process for creating gold images as over time it will become risky to maintain and is the major cause of desktop virtualization environments becoming static and fragile. Additionally, Windows is limited to running Sysprep 8 times which will limit how many times you can create a Gold Image (Sysprep (Generalize) a Windows installation | Microsoft Docs).
+It is possible to take the 'old' image then use it to create a VM (Virtual Machine), update that VM with the applications and configuration changes for that update and then capture that to your 'new' image. This is not a recommended process for creating gold images as over time it will become risky to maintain and is the major cause of desktop virtualization environments becoming static and fragile. Additionally, Windows is limited to running Sysprep 8 times which will limit how many times you can create a Gold Image (Sysprep (Generalize) a Windows installation | Microsoft Docs).
 
 Many automation tools exist to create gold images and you should use the tool-set that is most appropriate for your organization, whether that is due to the existing skill-set and process or cost considerations.
 As you are looking at automation for your WVD environment, ideally you should try and get to 100% of your gold image build process automated but if you can get to at least 80% of the creation of your gold image automated this is still a good investment of your time. It will make it much easier in future to maintain your WVD environment in the best possible health.
@@ -52,14 +52,14 @@ As WVD environments start to scale out, it is often a requirement that images be
 
 Automation does not have to mean integration with DevOps, but there are many advantages to doing so and it's worth spending the extra time here once you have automated the build process for your golden image. A DevOps pipeline will give you better management of your whole automation flow and give you reporting and alerting on your pipeline. You can integrate with testing frameworks and create approval gates for stages in your automation. You can also start pipelines from many events, which could be the release of a new gallery image or application, or just on a schedule.
 Windows Virtual Desktop gold images should be available to create host pools in the required Azure Regions.
-In WVD you have much more freedom on the geographic placement of your host pools than you would do in a traditional desktop environment as all* (Choose the Right Azure Region for You | Microsoft Azure Azure locations support WVD. You should enable your organization to take advantage of this freedom and adjust the placement of the VMs to the most performant location.
+In WVD you have much more freedom on the geographic placement of your host pools than you would do in a traditional desktop environment as all Azure locations support WVD. You should enable your organization to take advantage of this freedom and adjust the placement of the VMs to the most performant location.
 
 To do this, it's sensible to make your gold image available in the required locations, so you do not have to create VMs from an image across the WAN (Wide Area Network).
 
-Updating or Rollback of the VMs in a host pool to a different version
+Updating or rollback of the VMs in a host pool to a different version.
 There are two approaches to updating the image that VMs in a host pool are based upon when using a gold image. The first is to deploy a second host pool and then cut the users over to the new host pool when ready. The old host pool is then available if roll back is needed. The old host pool can then be removed after the organization is satisfied that the new host pool is working correctly.
 
-The second is to set the VMs to drain mode in the host pool and deploy more VMs from the new image into the same host pool. While this is possible, care should be taken not to hit resource constraints when doubling the number of VMs inside a single host pool.
+The second is to set the VMs to drain mode in the host pool and deploy more VMs from the new image into the same host pool. While this is possible, care should be taken not to hit resource constraints/API throttling limits when doubling the number of VMs inside a single host pool.
 
 ### Host Pool creation
 
@@ -110,7 +110,7 @@ See [Install language packs on Windows 10 VMs in Windows Virtual Desktop - Azure
 
 Windows Virtual Desktop gold images should be available to create host pools in the required Azure Regions.
 
-There are several options available to automate the distribution of your WVD golden image to different Azure regions which then can be used to create your WVD host pools. However, the Shared Image Galleries service in Azure is the simplest option to use and it helps to build structure and organization around your images. Beyond image replication to different Azure regions to support WVD automation, it will also provide:
+There are several options available to automate the distribution of your WVD golden image to different Azure regions which then can be used to create your WVD host pools. However, the Shared Image Gallery service in Azure is the simplest option to use and it helps to build structure and organization around your images. Beyond image replication to different Azure regions to support WVD automation, it will also provide:
 
 * Global replication of images to different Azure Regions.
 * Versioning and grouping of images for easier management. This is helpful should you need to roll back WVD host pools to previous image versions
