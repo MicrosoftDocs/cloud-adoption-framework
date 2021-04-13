@@ -20,7 +20,7 @@ items:
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
       - name: Resource organization
-        href: eslz-network-topology-and-connectivity.md
+        href: eslz-resource-organization.md
       - name: Governance disciplines
         href: eslz-security-governance-and-compliance.md
       - name: Operations baseline
