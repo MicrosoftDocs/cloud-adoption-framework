@@ -47,7 +47,7 @@ We've updated the introduction to each category of business outcomes with refere
 
 ### Enterprise-scale updates
 
-The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we’ve updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization] in Azure to meet cloud governance requirements.  
+The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization] in Azure to meet cloud governance requirements.
 
 ### Anti-patterns
 
