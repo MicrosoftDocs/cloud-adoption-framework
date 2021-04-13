@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale network topology and connectivity for AKS
-description: Learn how this enterprise-scale scenario can improve the network topology and connectivity of the Azure Kubernetes Service (AKS).
+title: Network topology and connectivity for AKS
+description: Learn how to improve the network topology and connectivity of the Azure Kubernetes Service (AKS).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Network topology and connectivity for Azure Kubernetes Service (AKS) enterprise-scale scenario
+# Network topology and connectivity considerations for Azure Kubernetes Service (AKS)
 
 <!-- docutune:casing "Basic and Standard" -->
 
