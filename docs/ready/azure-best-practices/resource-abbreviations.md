@@ -62,8 +62,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-`|
-| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
 | Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-`|
+| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng-`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `cn-` |
@@ -98,6 +98,8 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ## Containers
 
+| Asset type | Resource provider namespace/entity | Abbreviation |
+|--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
