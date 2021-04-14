@@ -1,15 +1,15 @@
 ---
-title: "Enterprise-Scale identity and access management for data management"
-description: Describe how this enterprise-scale scenario can improve identity and access management of data management
-author: xigyenge
-ms.author: xigyenge
-ms.date: 03/03/2021
+title: "Enterprise-Scale identity and access management for 'data management and analytics'"
+description: Describe how this enterprise-scale scenario can improve identity and access management of 'data management and analytics'
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 09/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for data management Enterprise-Scale scenario
+# Identity and access management for 'data management and analytics' Enterprise-Scale scenario
 
 Enterprise Scale Analytics and AI supports an access control model using Azure Active Directory (AAD) identities which utilizes both Role-based Access Control (Azure RBAC) and Access Control Lists (ACLs).
 
@@ -46,4 +46,4 @@ The figure below shows how ACLs and Groups can be applied to an Enterprise Scale
 
 ![Data Access Model](./images/data_security_model.png)
 
-*Figure 1: Data Access Model* 
+*Figure 1: Data Access Model*

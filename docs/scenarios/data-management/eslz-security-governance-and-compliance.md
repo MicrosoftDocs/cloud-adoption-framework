@@ -1,15 +1,15 @@
 ---
-title: "Enterprise-Scale Analytics and AI  security, governance, and compliance"
-description: Enterprise-Scale Analytics and AI  security, governance, and compliance
-author: xigyenge
-ms.author: xigyenge
-ms.date: 03/03/2021
+title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics'"
+description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'data management and analytics'
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 09/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance, and compliance for data management Enterprise-Scale scenario
+# Security, governance, and compliance for 'data management and analytics' Enterprise-Scale scenario
 
 The Enterprise Analytics and AI solution pattern relies on a number of security features which can be enabled on Azure. They include Encryption, Role-Based Access Control, Access Control Lists, and Networking restrictions.
 
@@ -129,4 +129,4 @@ Other polygot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
 >[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](eslz-data-privacy.md#sensitive-data). 
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](eslz-data-privacy.md#sensitive-data).

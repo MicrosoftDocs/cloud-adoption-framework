@@ -1,15 +1,15 @@
 ---
-title: "Enterprise-Scale network topology and connectivity for data management"
-description: Describe how this enterprise-scale scenario can improve network topology and connectivity of data management
-author: xigyenge
-ms.author: xigyenge
-ms.date: 03/03/2021
+title: Enterprise Scale Analytics and AI Networking
+description: Enterprise Scale Analytics and AI Architecture Networking.
+author: BrianBlanchard
+ms.author: brblanch # Microsoft employees only
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for data management Enterprise-Scale scenario
+# Enterprise Scale Analytics and AI Networking
 
 This section outlines the networking patterns to assist with:
 
@@ -45,8 +45,6 @@ It is important that on-premises DNS Servers are configured correctly to forward
 
 ![Example of DNS Setup](./images/dns_setup.png)
 
-*Figure 1: DNS Setup*
-
 When Custom DNS servers are pointing to other DNS servers as forwarders, you may face similar name resolution challenges when dealing with on-premises DNS Servers to resolve Private Endpoints records stored in Azure Private DNS zones. Most of those challenges can be easily resolved by having your on-premises DNS Server use conditional forwarders for original PaaS service names (*e.g.* `blob.core.windows.net`).
 
 ### IPv6 Usage
@@ -72,7 +70,7 @@ The Data Management Landing Zone will connect to the Azure Networking Management
 Data Management Landing Zone services which support Private Link such as Azure Purview will be injected into the Data Management Landing Zone VNet.
 
 ![High Level Overview of Networking for Enterprise Scale Analytics and AI](./images/networking_overview.png)
-*Figure 2: High Level Overview of Networking for Enterprise Scale Analytics and AI*
+Figure 1: High Level Overview of Networking for Enterprise Scale Analytics and AI
 
 ## Data Management Landing Zone to Data Landing Zone
 
@@ -94,4 +92,4 @@ To enable connectivity between a Data Management Landing Zone and a third-party 
 Site-to-Site VPN can provide better continuity for your workloads in a hybrid cloud setup with Azure.
 
 >[!IMPORTANT]
->For connections to a third-party cloud, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and the third-party cloud Connectivity Subscription. 
+>For connections to a third-party cloud, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and the third-party cloud Connectivity Subscription.

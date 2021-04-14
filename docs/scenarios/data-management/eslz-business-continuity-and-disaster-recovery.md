@@ -1,15 +1,15 @@
 ---
-title: "Enterprise-Scale business continuity and disaster recovery for data management"
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of data management
-author: abdale
-ms.author: hamoodaleem
-ms.date: 03/03/2021
+title: "Enterprise-Scale business continuity and disaster recovery for 'data management and analytics'"
+description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of 'data management and analytics'
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 09/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery for data management Enterprise-Scale scenario
+# Business continuity and disaster recovery for 'data management and analytics' Enterprise-Scale scenario
 
 When architecting any cloud service, you must consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or even region-wide, so having a plan for both is important. Depending on the recovery time objective and the recovery point objective SLAs for your workload, you might choose an aggressive strategy for high availability and disaster recovery.
 
@@ -47,4 +47,4 @@ As Data Domains and Data Product are likely to have Azure DevOps repositories li
 
 Azure Key Vault automatically provides features to help you maintain availability and prevent data loss. Back up secrets ([Azure Key Vault Backup](https://docs.microsoft.com/azure/key-vault/general/backup)) only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate.
 
-Key Vault maintains availability in disaster scenarios and will automatically fail over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance). 
+Key Vault maintains availability in disaster scenarios and will automatically fail over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance).
