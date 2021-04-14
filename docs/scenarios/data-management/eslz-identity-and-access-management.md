@@ -46,4 +46,4 @@ The figure below shows how ACLs and Groups can be applied to an Enterprise Scale
 
 ![Data Access Model](./images/data_security_model.png)
 
-*Figure 1: Data Access Model*
+*Figure 1: Data Access Model* 

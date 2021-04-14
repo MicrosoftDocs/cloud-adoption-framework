@@ -94,4 +94,4 @@ To enable connectivity between a Data Management Landing Zone and a third-party 
 Site-to-Site VPN can provide better continuity for your workloads in a hybrid cloud setup with Azure.
 
 >[!IMPORTANT]
->For connections to a third-party cloud, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and the third-party cloud Connectivity Subscription.
+>For connections to a third-party cloud, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and the third-party cloud Connectivity Subscription. 
