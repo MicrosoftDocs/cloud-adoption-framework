@@ -31,6 +31,10 @@ Given that virtual desktops are a central, scalable, secure desktop experience u
 
     By providing specific users access to a desktop - and the associated applications and data - using WVD, organizations are able to retain the entire desktop within the corporate environment. This means if the local device were lost, or accessed by someone without authorization, the data and applications were not held locally and therefore not at risk.
 
+- **Modernize your Imaging workflow**:  Imaging processes really have not changed much over the last 10 years. Images require a source Operating System, Applications, Optimizations and Customization. Modernize your imaging process with a DevOps based Image as Code Cloud service called Azure Image Builder. By working with Images as Code you can manage your images like all other Azure resources with Versioning, Locks, RBAC and more. Using Azure Image Builder you will fully automate your imaging process, saving time effort. Azure Image Builder will also auto-replicate your images to any Azure region you need so you can manage 1 golden image to be deployed anywhere in the world.  
+
+- **Modernize Applications with MSIX AppAttach**:  .msi installers have become the application packaging standard for Windows based applications. MSIX is a new packaging format that offers many features aimed to improve packaging experience for all Windows apps. The WVD related innovation to application management is a new feature called MSIX App Attach. MSIX app attach is a way to deliver MSIX applications to both physical and virtual machines. However, MSIX app attach is different from regular MSIX because it's made especially for Windows Virtual Desktop. This create separation between user data, the OS, and apps by using MSIX containers. Removes the need for repackaging when delivering applications dynamically. Reduce the time it takes for a user to sign in to WVD and Reduces infrastructure requirements and cost.
+
 ## Next steps
 
 To get started with Windows Virtual Desktop, the following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the adoption of virtual desktops as part of your cloud environment.
@@ -41,6 +45,6 @@ To get started with Windows Virtual Desktop, the following list of articles will
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
-- [Enterprise Scale Landing Zone for Windows Virtual Desktop](./wvd/enterprise-scale-landing-zone.md)
-- [Manage your virtual desktop environment](./wvd/WVD-manage.md)
-- [Govern your virtual desktop environment](./wvd/WVD-govern.md)
+- [Enterprise Scale Landing Zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
+- [Manage your virtual desktop environment](./WVD-manage.md)
+- [Govern your virtual desktop environment](./WVD-govern.md)
