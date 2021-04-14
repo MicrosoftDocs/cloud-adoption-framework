@@ -268,4 +268,4 @@ All other failed anonymous requests are not logged.
 In a Data Landing Zone, all the monitoring is sent to the Data Management Landing Zone for analysis.
 
 >[!IMPORTANT]
->Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
+>Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription. 
