@@ -3,7 +3,7 @@ title: Recommended abbreviations for Azure resource types
 description: Review recommended abbreviations to use for various Azure resource types when naming your resources and assets.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/01/2020
+ms.date: 4/14/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -44,7 +44,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
 | Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
-| Front Door policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
+| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-`|
