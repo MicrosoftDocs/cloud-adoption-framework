@@ -1,9 +1,9 @@
 ---
 title: Ready methodology for hybrid and multicloud strategy
 description: Prepare your environment for a hybrid and multicloud scenario with Azure landing zones.
-author: brianblanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 02/01/2020
+ms.date: 04/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,24 +12,32 @@ ms.custom: e2e-hybrid
 
 # Ready: Prepare your environment for a hybrid and multicloud scenario
 
-The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, and align with best practices guidance in the Cloud Adoption Framework. When you prepare for a hybrid and multicloud deployment, environment configurations might be slightly different.
+The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Review your choice of what landing zone to deploy. If you need help choosing the right one to deploy, this guide can help you get started.
 
-Here are the key considerations and changes necessary to prepare your environments to:
+## Hybrid and multicloud landing zones
 
-- Expand connectivity boundaries to connect across hybrid and multicloud platforms.
-- Improve support for cloud native services like containers, Kubernetes, and hyper-converged infrastructure solutions to reduce hybrid and multicloud adoption friction.
-- Establish proper cloud native tools to support the use of Azure as *one* of your cloud platforms.
-- Implement unified operations tooling across all cloud environments to allow for unified operations.
+Landing zones automate the configuration of your Azure environment, and align with best practices guidance in the Cloud Adoption Framework. When you prepare for a hybrid and multicloud deployment, environment configurations might be slightly different.
 
-This article guides you through the considerations required to achieve these environmental goals.
+These are the key changes necessary to prepare a consistent environment for any hybrid and multicloud deployment
+(hybrid and multicloud landing zone):
+
+- Hybrid and multicloud network connectivity
+- Common ID management
+- Integrated management and security
+- Unified operational process controls for operations, governance, and compliance
+- Unified and consistent development and DevOps across heterogeneous environments
+
+This article guides you through the considerations required for these environment configurations.
 
 ## Evaluate your cloud mix
 
-Choosing a hybrid and multicloud environment isn't a binary decision. It's closer to a range of decisions, as seen in the following chart. Before you configure your Azure environment or any other cloud environment, it's important to identify how your cloud environment will support your specific mix of cloud hosting decisions. A few examples of common cloud mixes are shown here.
+Choosing a hybrid and multicloud environment isn't a binary decision. It's closer to a range of decisions, as seen in the chart below. Confirm what Azure landing zone option you have chosen.
+
+Before you configure your Azure environment or any other cloud environment, it's important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Here are some examples of common cloud mixes.
 
 ![Three illustrations showing how different customers distribute workloads across cloud providers.](../../_images/hybrid/cloud-mix.png)
 
-The preceding image illustrates three of the most common cloud mixes we see with customers. Each blue dot represents a workload. Each orange circle represents a business process, supported by a distinct environment. Each of this cloud mixes requires a different Azure environment configuration.
+The preceding image illustrates three of the most common cloud mixes we see with customers. Each dark blue dot represents a workload. Each light blue circle represents a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration.
 
 - **Hybrid first**: Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A few specific workloads are deployed to the edge, Azure, or to other cloud providers.
 - **Azure first**: Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
@@ -63,13 +71,6 @@ The following links will help you bring on and tag assets across each of your cl
 - **AWS assets**: [Linux VMs with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-ubuntu.md)
 - **GCP assets**: [Ubuntu VMs](../../manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/hybrid/server/best-practices/gcp-terraform-windows.md)
 
-## Configure your initial Azure environment
-
-For each of the preceding cloud mixes, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
-
-- Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
-- Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
-
 ## Modify your environment to reflect your cloud mix
 
 After your Azure environment is established, you can begin to modify it to support the most appropriate cloud mix. Consider the following modifications:
@@ -78,6 +79,13 @@ After your Azure environment is established, you can begin to modify it to suppo
 - **Public network connectivity**: Best practices suggest that all ingress and egress traffic should route through one cloud platform when possible. But your requirements or cloud mix might require more of a peer model. This arrangement is especially common if your cloud mix is used to satisfy redundancy and reliability requirements. How will you configure connectivity between each cloud platform and the public internet?
 - **Backup and recovery**: It's common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. Often the result is that one of the cloud providers serves as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case.
 - **Cloud platform connectivity**: If your cloud platforms will share common recovery, operations, or governance resources, you might require connectivity between each cloud platform. How will you configure connectivity between each cloud platform?
+
+## Configure your initial Azure environment
+
+For each of the preceding cloud mixes, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
+
+- Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
+- Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
 
 ### The most important consideration
 
