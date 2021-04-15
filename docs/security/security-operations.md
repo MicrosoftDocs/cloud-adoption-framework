@@ -72,7 +72,7 @@ focussed primarily on proactive hunting for highly-sophisticated attack processe
 
 ## Security Operations nomenclature disambiguation
 
-A wide array of names are used to describe security operations within organization and the role definition and duties within that team can differ from organization to organization. Most of the variations we see are with security operations taking on some or all aspects of posture management (defined in greater detail in the [Azure Security Center Planning and Operations Guide](https://docs.microsoft.com/en-us/azure/security-center/security-center-planning-and-operations-guide), given the need for operational urgency to address software vulnerabilities and the use of security operations data to prioritize preventive controls and policy enforcement.
+A wide array of names are used to describe security operations within organization and the role definition and duties within that team can differ from organization to organization. Most of the variations we see are with security operations taking on some or all aspects of posture management (defined in greater detail in the [Azure Security Center Planning and Operations Guide](https://docs.microsoft.com/azure/security-center/security-center-planning-and-operations-guide), given the need for operational urgency to address software vulnerabilities and the use of security operations data to prioritize preventive controls and policy enforcement.
 
 Rather than merge these two functions (which is a valid configuration) we chose to differentiate between these two while emphasizing the need for their integration (whether part of the same team or separate teams).
 
@@ -91,7 +91,7 @@ Guidance as part of the Cloud Adoption Framework's Strategy methodology outlines
 
 Delivering security controls inside an organization without business stakeholder engagement runs the risk of being seen as a blocker.
 Work with the business to establish a basis of understanding that security can be an enabler for innovation and growth, as opposed to a group that always says 'no'. Engaging in discussion with the business to agree how the security strategy can be delivered without compromising technical delivery or creativity.
-The resulting set of controls are often referred to as 'guard rails', which are technical boundaries, defined by policy. Enabling flexibility to a point but stops inadvertent increase in security risk or deviation from company policy. [Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-introduction) provides centralized definition and control of [Security Policies](https://docs.microsoft.com/en-us/azure/security-center/security-policy-concept) across all your Azure subscriptions
+The resulting set of controls are often referred to as 'guard rails', which are technical boundaries, defined by policy. Enabling flexibility to a point but stops inadvertent increase in security risk or deviation from company policy. [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-introduction) provides centralized definition and control of [Security Policies](https://docs.microsoft.com/azure/security-center/security-policy-concept) across all your Azure subscriptions
 
 The boundaries defined in the guard rails become the baseline. From this baseline, the security operations team can find and investigate deviations. This may result in a defect or issue being identified that requires resolution or - equally - it could find a use case where the boundary needs reviewing and potentially revising to maintain the balance between business function and security control.
 
@@ -102,7 +102,7 @@ It is not economically (or practically) viable to scale the number of people in 
 In practical terms, scale requires centralization of telemetry. Bring all of the organization's security signals into a consolidated data set.
 This data can be filtered, modelled, and have business logic applied to it in order to find the events and activities that require intervention - automated or human.
 
-Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools. [Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/overview) is Microsoft's  cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution for alert detection, threat visibility, proactive hunting, and threat response.
+Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools. [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview) is Microsoft's  cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 ## Processes required to 'assume breach'
 
