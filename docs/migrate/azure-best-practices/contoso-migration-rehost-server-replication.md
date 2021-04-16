@@ -33,7 +33,7 @@ In order for Contoso to migrate to Azure, it's critical to plan for the migratio
 Before we start diving deep in infrastructure migration planning and deployment, consider reading some background information relevant to Azure Migrate Server replication:
 
 - Review Azure Migrate [Server Migration Tool Overview](https://docs.microsoft.com/en-us/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
-- Review the differences between the [Azure Migrate appliance](https://docs.microsoft.com/en-us/azure/migrate/common-questions-appliance) and [Server Migration appliance](https://docs.microsoft.com/en-us/azure/migrate/common-questions-server-migration).
+- Review the differences between the [Azure Migrate appliance](https://docs.microsoft.com/en-us/azure/migrate/common-questions-appliance), [Replication Appliance](https://docs.microsoft.com/en-us/azure/migrate/migrate-replication-appliance), and [Hyper-V migration architecture](https://docs.microsoft.com/en-us/azure/migrate/hyper-v-migration-architecture).
 - Optionally, walkthrough MS Learn's [Migrate virtual machines and apps using Azure Migrate](https://docs.microsoft.com/en-us/learn/paths/m365-azure-migrate-virtual-machine/) Training.
 
 
@@ -41,15 +41,15 @@ Before we start diving deep in infrastructure migration planning and deployment,
 
 Contoso needs to figure out considerations on the number of appliances needed for replication and replication traffic impact.
 
-### Capacity Planning for cores quotas
+### Capacity Planning for Core Quotas
 
-In order to pro-actively ensure that the target migration Azure subscriptions will be able to host the virtual machines created during test migration or production migration, subscriptions core quotas need to be available for the target VM SKUs. Ensure [subscription quotas](https://docs.microsoft.com/en-us/azure/azure-portal/supportability/per-vm-quota-requests) for specific VM families have been increased for the specific target region.
+In order to pro-actively ensure that the target migration Azure subscriptions will be able to host the virtual machines created during test migration or production migration, subscriptions core quotas need to be available for the target VM SKUs. Ensure [subscription quotas](https://docs.microsoft.com/en-us/azure/azure-portal/supportability/per-vm-quota-requests) for specific VM SKUs have been increased for the specific target region.
 
-### Replication Appliances Planning and Implementation
+### Server Migration Tooling Planning and Implementation
 
-After increasing the subscription VM cores quotas, Contoso needs to prepare to deploy the appliances and/or agents needed for replication of their on-premises server infraestructure. 
+After increasing the subscription core quotas, Contoso needs to prepare to deploy the appliances and/or agents needed for replication of their on-premises server infrastructure.
 
-Using the below workflow, Contoso is able to define whether the Azure Migrate appliance, the Server Migration appliance, or just agents are needed to be deployed. This will aid Contoso in pro-actively defining needed additional infraestructure requests to successfully enable replication of their migratable state. 
+Using the below workflow, Contoso is able to define the server migration tools required to enable replication of on-premises servers. This will aid Contoso in pro-actively identifying necessary infrastructure requests to successfully enable replication of their migrateable estate.
 
 ![Concept Diagram](./media/contoso-migration-rehost-server-replication/replication-workflow.PNG)
 
@@ -66,21 +66,21 @@ Further details can be found in the reference links below from the Azure Migrate
     - [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines)
     - [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines)
 
-As a best practice, Contoso works closely with their virtualization administrators to ensure careful monitoring of core performance counters for CPU, memory and disk space of the deployed appliances and hypervisor hosts. This will ensure hypervisor infraestructure has enough resources to handle additional load from replication appliances and agents.
+As a best practice, Contoso works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory and disk space of the deployed appliances and hypervisor hosts. This will ensure virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
 
 ### Replication
 
-#### Replication Enablement and Monitoring
+#### Enabling and Monitoring Replication
 
-With replication appliances and agents configured, Contoso can look at replication of their migration groups/waves. 
+With replication appliances and agents configured, Contoso can start planning the replication of their on-premises servers. A colleciton of applications and their dependencies which must be migrated during the same time window is commonly referred to as a migration wave or migration group. Contoso will use the term migration wave to maintain consistency across planning activities.
 
-As a best practice, Contoso will plan to enable initial replication for a subset of their migration groups/waves in order to be cautious of their available bandwidth. Contoso understand that initial replication of servers takes more bandwidth vs. delta replications. Given Contoso's bandwidth constraint considerations, Contoso will only enable replication for migration groups/waves which are close to 1-2 weeks from test migration and cutover dates. 
+As a best practice, Contoso will plan to enable initial replication for a subset of their migration waves in order to be cautious of their available bandwidth. Contoso understands the initial replication is a full copy of the servers and consumes more bandwidth versus ongoing (delta) replications. Given Contoso's bandwidth constraint considerations, Contoso will only enable replication for migration waves which are close to 1-2 weeks from test migration and cutover dates.
 
-Further, Contoso will monitor initial and ongoing (delta) replication closely to ensure healthy and stable replication before enabling replication for additional servers. If errors or warnings should arise, Contoso can pro-actively detect these and act on it in advanced to test migration or cutover dates.
+Further, Contoso will monitor initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for additional servers. If errors or warnings should arise, Contoso can pro-actively detect and act on it prior to test migration or cutover dates.
 
 #### Replication Tuning
 
-Based on the observed initial and ongoing replications bandwidth patterns Contoso will tune their replication strategy based on the below queries:
+Based on the observed initial and ongoing replications bandwidth patterns, Contoso will tune their replication strategy based on the below queries:
 
 - How much bandwidth is needed and available for replications?
 - How many VMs, on average, can be initially replicated at the same time?
@@ -89,9 +89,9 @@ Based on the observed initial and ongoing replications bandwidth patterns Contos
 
 ## Step 2: Testing and Pre/Post Migration Activities
 
-Given the success in replication toolset deployment and planning for a subset of their migration groups/waves, Contoso decides to start planning their testing needs and pre/post migration activities. 
+Given the success in replication toolset deployment and planning for a subset of their migration waves, Contoso decides to start planning their testing needs and pre/post migration activities.
 
-Contoso understands that migration is both an orchestration of both business and technical groups. Therefore, the below activities are defined as pre and post migration activities.
+Contoso understands the migrations are an orchestration of both business and technical groups. Therefore, the below activities are defined as pre and post migration activities.
 
 #### Business
 
@@ -103,49 +103,53 @@ In order to prepare the business and its stakeholders for the migration activiti
     - Network Administrators
     - Backup Administrators
     - Server Administrators
-    - Application Owners (Fronend and Backend)
+    - Identity Administrators
+    - Application Owners (Frontend and Backend)
     - Microsoft Support
     - Partner (if available)
 - Soak Period after the cutover. During the Soak Period after application cutover to Azure, if any issues arise the rollback plan must be executed. After the Soak Period has expired, rollback of the application cannot be committed.
 
-#### Technical: Pre-Migration 
+#### Technical: Pre-Migration
 
 In order to plan for best practice pre-migration activities, Contoso defines the below activities to be executed prior to a migration failover:
 
 - A Rollback Plan.
 - Latest backup of the servers.
-- Opening of firewalls prefixes, ports and protocols for needed traffic from on-premises to Azure and from within Azure vnets and subnets.
-- Attain local administrator accounts or keys for server login purposes.
+- Opening of firewalls prefixes, ports and protocols for necessary traffic between on-premises to Azure and within Azure vnets and subnets.
+- Attain local administrator credentials or keys for server login purposes.
 - [Manual changes needed for Windows and Linux](https://docs.microsoft.com/en-us/azure/migrate/prepare-for-migration#verify-required-changes-before-migrating)
-    - For more legacy Linux distributions, instructions to install Hyper-v drivers can be found within the [Hyper-v documentation](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows). 
-    - For legacy Windows versions (E.G. WS2003 or WS2008), instructions to install Hyper-v drivers can be found in the [Azure Migrate documentation](https://docs.microsoft.com/en-us/azure/migrate/prepare-windows-server-2003-migration).
+    - For more legacy Linux distributions, instructions to install Hyper-V drivers can be found within the [Hyper-V documentation](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows).
+    - For legacy Windows versions (E.G. WS2003 or WS2008), instructions to install Hyper-V drivers can be found in the [Azure Migrate documentation](https://docs.microsoft.com/en-us/azure/migrate/prepare-windows-server-2003-migration).
+- Prepare isolated virtual networks for test migrations.
+    - Plan for secure management access (e.g. RDP, SSH) into this environment leveraging services like [Azure Bastion](https://docs.microsoft.com/en-us/azure/bastion/bastion-overview).
+    - Plan for an isolated virtual network in each subscription containing migrated VMs. The Test Migration functionality in Azure Migrate must use a virtual network in the same subscription where the migrated VM will exist.
 
-#### Technical: Post-Migration 
+#### Technical: Post-Migration
  Further, Contoso defines the below activities to be executed after the migration failover:
 
-- Review Azure Migrate's documented post-migration activities:
-    - [VMWare Agentless](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
-    - [VMWare Agent-based](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
-    - [Hyper-v](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
+- Review Azure Migrate's documented post-migration activities based on the source environments below:
+    - [VMware Agentless](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
+    - [VMware Agent-based](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
+    - [Hyper-V](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
     - [Physical](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-physical-virtual-machines#complete-the-migration), [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration), [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
 
 - In addition, Contoso adds the below activities as best practice post-migration activities:
-    
-    - Validate login with local account/keys for RDP or SSH.
+
+    - Validate login with local credentials/keys for RDP or SSH.
     - Validate DNS resolves and DNS servers are configured in network settings (E.G. TCP/IP settings) for the OS.
-    - Validate IP address has been assigned to server in network settings (E.G. TCP/IP settings) for the OS.
+    - Validate IP address has been assigned to server in network settings via DHCP (E.G. TCP/IP settings) for the OS.
     - Validate access to OS licensing is activated and there is access to cloud-based licensing endpoints (E.G. Azure KMS endpoints).
-    - Validate login with domain accounts.
+    - Validate login with domain credentials.
     - Validate application has access to dependencies (E.G. accessing target URLs or connection strings).
     - Validate Install or Update necessary Azure agents:
         - Windows and/or WALinux VM agent.
         - Windows and/or Linux Log Analytics agent/extension.
         - Windows and/or Linux Dependency Map agent/extension.
-        - Windows SQL Extension.
+        - Windows SQL Server IaaS Extension.
     - Validate VM monitoring via new or existing service.
     - Validate VM patching via new or existing service.
     - Validate VM backup via new or existing service.
-    - Validate VM Antivirus/endpoint protection via new or existing service.
+    - Validate VM antivirus/endpoint protection via new or existing service.
     - Tag Azure resources.
     - Update any existing CMDB
     - Postmortem and Learnings.
@@ -156,37 +160,38 @@ Moving forward Contoso now looks to understand the need for a test migration, wh
 
 ##### Define Smoke Test
 
-As a first step, Contoso realizes there's a need to perform a smoke test to simply test that servers they've identified as legacy, highly customized or hardened operating systems will simply boot in Azure. Additionally, Contoso would like to also run a smoke test for servers which have been marked as "Conditionally Ready" by their Azure Migrate assessments. 
+As a first step, Contoso realizes there's a need to perform a smoke test to validate that servers identified to migrate will boot in Azure. It is recommended to perform this smoke test in an isolated vnet for all servers to be migrated. Contoso will follow this recommendation and is especially focused on the smoke test for servers which are legacy, highly customized or contain hardened operating systems. Additionally, Contoso is also keen to run a smoke test for servers which have been marked as "Conditionally Ready" by their Azure Migrate assessments.
 
-Contoso defines a smoke test to be successful when basic server functionality and properties are validated. For example, Smoke testing may include: 
+Contoso defines a smoke test to be successful when basic server functionality and properties are validated. For example, Smoke testing may include:
 
 - The server boots in Azure.
-- The administrator is able to login to the server using local accounts. 
-- TCP/IP settings for DNS, IPv4 and default gateways assignment are updated to the values provided by the Azure vnet. 
+- The administrator is able to login to the server using local credentials.
+- TCP/IP settings for DNS, IPv4 and default gateways assignment are updated to the values provided by the Azure vnet via DHCP.
 - OS licensing is activated.
 
 Typically this test is led by the server administrators or the migration partner.
 
-##### Define UAT Test
+##### Define User Acceptance Testing
 
-As second step, Contoso now looks to perform a UAT test to ensure that the servers applications are functional and accessible by expected users. 
+As second step, Contoso now looks to perform UAT (User Acceptance Testing) to ensure that the applications are functional and accessible by expected users. Contoso is aware that UAT will help surface missed configuration changes necessary for a successful migration which may include hardcoded IP addresses.
 
-Contoso defines a UAT test to be successful when application functionality and access to dependencies is validated. For example, UAT testing may include: 
+Contoso defines UAT to be successful when application functionality and access to dependencies is validated. For example, UAT may include:
 
-- Validate login with domain accounts
+- Validate login with domain credentials.
 - Validate application has access to dependencies (E.G. accessing target URLs or connection strings).
+- Validate application functionality with test users.
 
 Typically, this is usually led by application owners.
 
 #### Identify Testing and Migration Workflow
 
-Now that test cases have been defined, Contoso developes the below workflow to encompass the various scenarios they may encounter based on each applications and servers needs. 
+Now that test cases have been defined, Contoso developes the below workflow to encompass the various scenarios they may encounter based on each applications and servers needs.
 
-The majority of Contoso's scenarios require the second and fifth paths in the workflow below. Contoso has quite the amount of legacy servers and servers marked as "Ready with Conditions" which they are unsure will boot in Azure. Therefore, they will test each of those servers in an isolated vnet to ensure each pass the Smoke Test. For this, Contoso will perform a test migration in Azure Migrate which allows for the option to clean up created resources such as VMs and NICs.
+The majority of Contoso's scenarios require the second and fifth paths in the workflow below. Contoso has quite the amount of legacy servers and servers marked as "Ready with Conditions" which they are unsure will boot in Azure. Therefore, they will test each of those servers in an isolated vnet to ensure each pass the Smoke Test. For this, Contoso will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
 
-Further, Contoso's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration groups/waves. Contoso has decided to split their large migration groups/waves and migrate servers which are interdependent and have strict latency requirements. As a result, because not all dependencies as outlined in the migration group will be able to be migrated in a single migration wave, Contoso finds it's best that they migrate directly into the production vnet given that the production vnet already has connectivity back to their on-premises dependencies. In this path, Contoso will perform needed smoke test (if not done already) and UAT test. If all is successful, Contoso will conclude the migration as a final cutover for the servers. In this path, Contoso will not be using Azure Migrate's feature for a test Migration and rather will select the option to just migrate.
+Further, Contoso's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration waves. Contoso has decided to split their large migration waves and migrate servers together which have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Contoso finds it's best they migrate directly into the production vnet given that the production vnet already has connectivity back to their on-premises dependencies. In this path, Contoso will perform necessary smoke tests in an isolated vnet and perform UAT in the production vnet. If all is successful, Contoso will conclude the migration as a final cutover for the servers.
 
-Nonetheless, Contoso does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated vnet in order to perform UAT testing or where UAT testing is not enforced.
+Nonetheless, Contoso does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated vnet in order to perform UAT or where UAT is not enforced.
 
 ![Concept Diagram](./media/contoso-migration-rehost-server-replication/migration-workflow.PNG)
 
@@ -194,25 +199,27 @@ Nonetheless, Contoso does find value in considering the remainder paths only for
 
 ## Step 3: Cutover and Post-Go-Live
 
-As a final step, Contoso is now ready and confident to perform the production migrations. The envision that during Cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Contoso is looking forward to close-out and call for a successful migration to Azure. 
+As a final step, Contoso is now ready and confident to perform the production migrations. The envision that during Cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Contoso is looking forward to close-out and call for a successful migration to Azure.
 
 ### Cutover
 
 With the migration activities and workflow defined, Contoso irons out the final plans for cutover by:
 
 - Identifying more specific cutover window, which they have planned for a Friday evening or weekend. Each cutover window will last at a minimum for 4 hours.
-- Announce to the business and those impacted by the migration of the maintenance window.
-- Reached out to the Network Admins, Backup Admins, Server Admins, App Owners,   Microsoft support and resources and partner to ensure they are available during cutover.
+- Announce to the business and those impacted by the migration of the maintenance window. The maintenance window should include a meeting invite that includes the migration plan and a conference bridge to discuss any open items during the migration.
+- Reached out to the Network Admins, Backup Admins, Server Admins, Identity Admins, App Owners,   Microsoft support and resources and partner to ensure they are available during cutover.
 - Ensure a backup of the server has been committed prior to cutover.
 - Ensure rollback plan is defined and ready for execution if needed
 - Ensure migration handover to operations team by settings expectations that day 2 operations must commence with regards to Azure server backup, patching, monitoring, etc.
 
 ### Post-Go Live
 
-Once the cutover successfully concludes, Contoso prepares for decommission of the source servers. Contoso decides that servers decommissioning will be executed after the soak period timeline is concluded.
+Once the cutover successfully concludes, Contoso prepares for decommission of the source servers. Contoso decides that server decommissioning will be executed after the soak period timeline is concluded.
+
+After each migration wave, Contoso also has a brief retrospective to discuss what went well and what could be improved for future migration waves. Contoso understands these incremental learnings and improvements will ensure a smoother migration for all subsequent migration waves.
 
 ## Conclusion
 
-In this article, Contoso sets up Azure Migrate replication toolset and plans for their infrastructure migration activities and workflow.
+In this article, Contoso sets up Azure Migrate Server Migration tools and plans for their infrastructure migration activities and workflow.
 
-Not every step taken here is required for a server migration. In this case, Contoso planned for a migration workflow, test plans and pre/post migration activities which will be able to handle server migrations by replication pro-actively and reliably.
+Not every step taken here is required for a server migration. In this case, Contoso planned for a migration workflow, test plans and pre/post migration activities which can be accomplished by  pro-active and reliable replication.
