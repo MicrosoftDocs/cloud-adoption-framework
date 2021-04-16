@@ -14,10 +14,13 @@ ms.custom: think-tank, e2e-aks
 
 As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into your cloud strategy.
 
-This scenario focuses on two targeted outcomes:
+This scenario focuses on mature application of containers across your cloud adoption strategy. That application requires basic understanding of the following concepts:
 
-- **Containerized solutions:** Containers create a layer of abstraction between technical assets and underlying infrastructure. Organizations include containers in their overall strategy to reduce vendor lock-in and make workloads more portable.
-- **Managing containers with Kubernetes:** Kubernetes provides a control plane for managing and deploying containerized applications, managing compute density, and describing high availability needs of workloads.
+- **Containerized solutions:** Containers create a layer of abstraction between operating system and underlying infrastructure. Organizations include containers in their overall strategy to accelerate developer productivity, reduce operating overhead, and make workloads more portability.
+- **Developer acceleration through containers:** Containers accelerate developer productivity by allowing developers to focus more on code & less on host environment concerns.
+- **Container orchestration:** A container orchestrator provides a consistent application runtime for an instance of a container host. This orchestration allows workload focused operations teams to mature deployment and devops practices to facilitate multiple deployment and operations practices, reducing dependencies on centralized or human operations.
+- **Standardized container operations:** Standardized container orchestration ensures consistent runtimes across all hosts, which streamlines operations regardless of the workloads developers may deploy. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts.
+- **Workload portability:** Moving workloads between container orchestrators allows for workload portability. Some container orchestration platforms work in the public cloud. Other container orchestration platforms are designed for edge or private cloud deployment. Allowing for diverse container orchestration options allows for portability of workloads between container hosts across hybrid, multicloud, edge, and public cloud platforms.
 
 This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
 
