@@ -35,5 +35,3 @@ Use these common finance terms when your team is creating a cloud migration busi
 
 ## Next steps
 <!-- To be added after all articles merged into release branch -->
-- [Write concepts](contribute-how-to-write-concept.md)
-- [Links](links-how-to.md)
