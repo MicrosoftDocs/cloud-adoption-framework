@@ -38,9 +38,10 @@ The Enterprise-scale landing zone for AKS approach provides these assets to supp
 
 These articles provide guidelines for creating your landing zone based on the design areas of Azure Landing Zones:
 
+- [Enterprise enrollment](./eslz-enterprise-enrollment.md)
 - [Identity and Access Management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
-- [Resource Organization](./resource-organization.md)
+- [Resource Organization](./eslz-resource-organization.md)
 - [Governance disciplines](./eslz-security-governance-and-compliance.md)
 - [Operations management](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)

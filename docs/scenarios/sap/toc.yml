@@ -8,7 +8,7 @@ items:
     href: strategy.md
   - name: Technical planning
     href: plan.md
-  - name: Prepare your environments
+  - name: Prepare your environment
     items:
     - name: Azure Landing Zones
       href: ready.md
@@ -44,7 +44,7 @@ items:
     href: manage.md
   - name: Well-Architected considerations
     href: /azure/architecture/reference-architectures/sap/sap-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-  - name: Accelerate with SAP architectures
+  - name: SAP architectures
     items:
     - name: SAP HANA Scale-up on Linux
       href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json

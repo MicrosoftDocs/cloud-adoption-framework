@@ -9,7 +9,7 @@ items:
     href: strategy.md
   - name: Technical planning
     href: plan.md
-  - name: Prepare your environments
+  - name: Prepare your environment
     items:
     - name: Azure Landing Zones
       href: ready.md
@@ -51,7 +51,7 @@ items:
     items:
     - name: Best practices for application developers
       href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-  - name: Architectures
+  - name: Container Architectures
     items:
     - name: Microservices architecture on AKS
       href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -225,7 +225,7 @@ items:
       - name: Networking
         href: /azure/aks/operator-best-practices-network?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
        
-  - name: Azure container products
+  - name: Azure product documentation
     items:
     - name: Container product decision tree
       href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
