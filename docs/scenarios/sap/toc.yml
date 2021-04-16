@@ -391,3 +391,12 @@ items:
           href: /cli/azure/ext/sap-hana/hanainstance
         - name: Azure PowerShell
           href: /powershell/module/az.hanaonazure/#sap-hana-on-azure
+  - name: Learn Modules
+    items:
+    - name: Plan for SAP on Azure
+      href: /learn/paths/plan-azure-sap-workloads/
+    - name: Run SAP on Azure
+      href: /learn/paths/running-azure-sap-workloads/
+    - name: SAP certified offerings for Azure
+      href: /learn/paths/sap-certified-offerings/
+      
