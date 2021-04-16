@@ -1250,6 +1250,22 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
+      - name: Azure innovation guide
+        items:
+        - name: Innovation guide overview
+          href: innovate/innovation-guide/index.md
+        - name: Prepare for customer feedback
+          href: innovate/innovation-guide/adoption.md
+        - name: Democratize data
+          href: innovate/innovation-guide/data.md
+        - name: Engage customers through apps
+          href: innovate/innovation-guide/apps.md
+        - name: Empower adoption
+          href: innovate/innovation-guide/ci-cd.md
+        - name: Interact through devices
+          href: innovate/innovation-guide/devices.md
+        - name: Innovate with AI
+          href: innovate/innovation-guide/predict.md
 
   - name: Govern
     items:
