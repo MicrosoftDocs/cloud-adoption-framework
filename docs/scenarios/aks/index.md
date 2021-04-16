@@ -14,13 +14,33 @@ ms.custom: think-tank, e2e-aks
 
 As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into your cloud strategy.
 
-This scenario focuses on mature application of containers across your cloud adoption strategy. That application requires basic understanding of the following concepts:
-
-- **Containerized solutions:** Containers create a layer of abstraction between operating system and underlying infrastructure. Organizations include containers in their overall strategy to accelerate developer productivity, reduce operating overhead, and make workloads more portability.
-- **Developer acceleration through containers:** Containers accelerate developer productivity by allowing developers to focus more on code & less on host environment concerns.
+Organizations include Platform as a Service, application services, containers in their overall strategy to accelerate developer productivity, reduce operating overhead, make workloads more portability, and modernize legacy workloads.
+- **Application services:** Application services, or Platform as a Service options for developers, provide a layer of abstraction between the application and the underlying host (which includes both the operation system and any underlying infrastructure). This layer of abstraction forces a specific and consistently defined runtime which can only run in specific environments.
+- **Containers:** Containers create a similar layer of abstraction between applications runtime requirements and underlying operating system & infrastructure. Unlike PaaS options, containers allows the application runtime to be configured for the needs of the application, regardless of the container host.
 - **Container orchestration:** A container orchestrator provides a consistent application runtime for an instance of a container host. This orchestration allows workload focused operations teams to mature deployment and devops practices to facilitate multiple deployment and operations practices, reducing dependencies on centralized or human operations.
-- **Standardized container operations:** Standardized container orchestration ensures consistent runtimes across all hosts, which streamlines operations regardless of the workloads developers may deploy. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts.
-- **Workload portability:** Moving workloads between container orchestrators allows for workload portability. Some container orchestration platforms work in the public cloud. Other container orchestration platforms are designed for edge or private cloud deployment. Allowing for diverse container orchestration options allows for portability of workloads between container hosts across hybrid, multicloud, edge, and public cloud platforms.
+
+This article series will outline how application services and containers can be integrated into your cloud adoption strategy to delivery the following outcomes:
+- **Developer acceleration through abstraction:** Both containers and application services, accelerate developer productivity by allowing developers to focus more on code & less on host environment concerns.
+- **Reduce operations costs through abstraction:** Standardized container orchestration ensures consistent runtimes across all hosts, which streamlines operations regardless of the workloads developers may deploy. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts.
+- **Workload portability through abstraction:** Moving workloads between container orchestrators allows for workload portability. Some container orchestration platforms work in the public cloud. Other container orchestration platforms are designed for edge or private cloud deployment. Allowing for diverse container orchestration options allows for portability of workloads between container hosts across hybrid, multicloud, edge, and public cloud platforms.
+
+
+TODO: Delete the following bullets before publication:
+- Azure Application Services on Kubernetes with Arc (AKA Lima): A common runtime (based on Azure's PaaS services) that can be deployed consistently across the cloud (AKS) or customer-managed containers running kubernetes, allowing customers to run their applications consistently in each.  
+  - **Fixed runtimes - Fixed operations - Public or Private cloud**
+    - Developer team wants to use the Azure App Plat native PaaS services. 
+    - Container operator wants flexibility to host the app plat in public cloud, edge, or private cloud. 
+- Azure Arc for kubernetes: Create consistent operations across containers orchestrated using K8S.
+  -  **Customizable runtimes - Fixed operations - Public or Private cloud** 
+    - Developer team wants to use their own app plat. 
+    - Container operator wants to apply cloud-based operations
+- Azure Stack HCI: A common runtime (based on Azure's PaaS services) running on a specific private cloud operated locally using tools which are very similar to cloud operations.
+  - **Fixed runtimes - Customizable operations - Private cloud only**
+    - Developer team wants to use the Azure App Plat native PaaS services. 
+    - Container operator wants to apply edge or private cloud operations
+- Turbos
+  - **?? runtimes - ?? operations - Public or Private cloud**
+
 
 This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
 
