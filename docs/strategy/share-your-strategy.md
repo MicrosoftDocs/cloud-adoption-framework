@@ -1,58 +1,59 @@
 ---
-title: #Required; page title is displayed in search results. Include the brand.
-description: #Required; article description that is displayed in search results. 
-author: #Required; your GitHub user alias, with correct capitalization.
+title: Share your cloud strategy
+description: Learn how to communicate your team's cloud strategy, such as a financial roadmap and multi-year plan, to your finance team.
+author: wering
 ms.author: wering
-ms.service: #Required; service per approved list. slug assigned by ACOM.
-ms.topic: conceptual #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-ms.custom: template-concept #Required; leave this attribute/value as-is.
+ms.service: cloud-adoption-framework
+ms.topic: conceptual 
+ms.date: 4/15/2021
+ms.custom: template-concept 
 ---
 
-<!--Remove all the comments in this template before you sign-off or merge to the 
-main branch.
--->
+# Share your strategy
 
-<!--
-This template provides the basic structure of a concept article.
-See the [concept guidance](contribute-how-write-concept.md) in the contributor guide.
+After your team has decided on the strategy and roadmap for your cloud adoption plan, you'll need to pitch your idea to your organization's finance team. Your goal is to showcase the benefits and cost-saving measures of moving services to the cloud from an on-premises plan.
 
-To provide feedback on this template contact 
-[the templates workgroup](mailto:templateswg@microsoft.com).
--->
+It's important to remember that your finance team might not understand much of the technical side of cloud adoption. Try to keep explanations at a high-level, with the main focus on the benefits of moving to the cloud.
 
-<!-- 1. H1
-Required. Set expectations for what the content covers, so customers know the 
-content meets their needs. Should NOT begin with a verb.
--->
+## Explain the benefits of moving to the cloud (business justification)
 
-# [H1 heading here]
+What are the immediate and long-term financial costs and savings from your plan? Chief Financial Officers (CFO) and finance teams want to know both the initial cost and potential savings from adopting cloud services. Keep the initial explanation broad. Catch the team's attention before jumping into the details.
 
-<!-- 2. Introductory paragraph 
-Required. Lead with a light intro that describes what the article covers. Answer the 
-fundamental “why would I want to know this?” question. Keep it short.
--->
+### Economic benefits
 
-[add your introductory paragraph]
+There are immediate benefits to your organization's overhead costs when switching to cloud services.
 
-<!-- 3. H2s
-Required. Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
--->
+Using on-premise data centers requires maintaining excess server capacity in case of peak usage. In times of normal usage, you might only use 30% of your capacity. The costs in network, personnel, power, building, and server usage don't shrink based on actual use.
 
-## [Section 1 heading]
-<!-- add your content here -->
+Cloud services allow for elasticity. If you anticipate a higher usage need, such as during a seasonal product release, cloud usage lets you quickly expand based on that need. Your organization will only ever pay for the capacity you actually use.
 
-## [Section 2 heading]
-<!-- add your content here -->
+### Financial benefits
 
-## [Section n heading]
-<!-- add your content here -->
+Financial benefits are less immediate, but moving to cloud services can affect budgeting, cost, and performance management for your Chief Financial Officer (CFO).
 
-<!-- 4. Next steps
-Required. Provide at least one next step and no more than three. Include some 
-context so the customer can determine why they would click the link.
--->
+- **Budgeting**: Moves from capital to operating expenses, allowing for higher predictability.
+- **Cost management**: There is a clear line of sight into the costs of a workload.
+- **Performance management**: Cloud costs allow for better predictability and cash flow timing.
+
+### IT benefits
+
+The main benefit to IT resources is agility. The following table shows the advantages of cloud supported IT versus traditional (on-premises) IT.
+
+|          | Traditional IT | Cloud supported IT |
+|----------|----------------|--------------------|
+| **Time to provision** | Weeks or months to provision resources | Minutes or hours to provision resources with self-service access |
+| **Hardware usage** | 1 CPU for 100 hours | 100 CPUs for 1 hour |
+| **Location** | Location dependent | Accessible everywhere |
+
+Instead of generating costs, your IT center can become an asset in generating profits. The creation of reusable processes, toolsets, scripts, and compute images make your organization more agile and innovative.
+
+### Business unit benefits
+
+On-premise cost tracking per workload might be fuzzy. With the cloud, there are better means to target the costs per workload or application, resulting in higher efficiency.
+
+## Present your financial model
+
+Now that you've shown the finance team the benefits, it's time to show them the potential returns on their investment. You'll want to show the team your financial roadmap that supports a hybrid datacenter deployment and modernization.
 
 ## Next steps
 <!-- Add a context sentence for the following links -->
