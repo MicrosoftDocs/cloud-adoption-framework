@@ -38,7 +38,7 @@ A company develops a new application in the cloud. It chooses an architecture ba
 
 Define a proper [cloud security strategy](../strategy/define-security-strategy.md). See [CISO cloud readiness guide](../govern/policy-compliance/cloud-security-readiness.md) for more information, and refer your chief information security office (CISO) to this guide. It discusses topics such as security platform resources, privacy and controls, compliance, and transparency.
 
-Read about secure cloud workloads in the [Azure Security Benchmark](/azure/security/benchmarks/introduction). Build upon the [CIS Controls v7.1](https://learn.cisecurity.org/cis-controls-download) from the Center for Internet Security, along with [NIST SP800-53](https://www.nist.gov/privacy-framework/nist-sp-800-53) from the National Institute of Standards and Technology, which address most security risks and measures.
+Read about secure cloud workloads in the [Azure Security Benchmark](/security/benchmark/azure/introduction). Build upon the [CIS Controls v7.1](https://learn.cisecurity.org/cis-controls-download) from the Center for Internet Security, along with [NIST SP800-53](https://www.nist.gov/privacy-framework/nist-sp-800-53) from the National Institute of Standards and Technology, which address most security risks and measures.
 
 Use the Azure Security Center to identify risks, adapt best practices, and improve your company's security posture.
 
