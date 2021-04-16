@@ -386,11 +386,11 @@ items:
       - name: Azure Monitor for SAP Solutions FAQ
         href: /azure/virtual-machines/workloads/sap/azure-monitor-faq.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
     - name: Reference
-        items:
-        - name: Azure CLI
-          href: /cli/azure/ext/sap-hana/hanainstance
-        - name: Azure PowerShell
-          href: /powershell/module/az.hanaonazure/#sap-hana-on-azure
+      items:
+      - name: Azure CLI
+        href: /cli/azure/ext/sap-hana/hanainstance
+      - name: Azure PowerShell
+        href: /powershell/module/az.hanaonazure/#sap-hana-on-azure
   - name: Learn Modules
     items:
     - name: Plan for SAP on Azure
