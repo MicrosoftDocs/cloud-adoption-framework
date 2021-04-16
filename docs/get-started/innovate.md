@@ -197,10 +197,10 @@ The Innovate methodology provides guidance on the tools and product management a
 
 **Guidance to support deliverable completion:**
 
-- [Business value consensus](../innovate/business-value.md): If more than three months have passed since the last business value consensus, or if one was never completed, start here.
-- [Azure innovation guide](../innovate/innovation-guide/index.md): Use the Azure innovation guide to speed up the deployment of innovative solutions by understanding the tools and processes that can help you create a minimum viable product (MVP).
-- [Innovation best practices](../innovate/best-practices/index.md): Combine Azure services to create a toolchain for digital invention.
-- [Feedback loops](../innovate/considerations/adoption.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
+- [Create hypothesis with business value consensus](../innovate/business-value.md): If more than three months have passed since the last business value consensus, or if one was never completed, start here.
+- [Build your first MVP](../innovate/considerations/build.md): Use the Azure innovation guide to speed up the deployment of innovative solutions by understanding the tools and processes that can help you create a minimum viable product (MVP).
+- [Measure](../innovate/considerations/measure.md): Combine Azure services to create a toolchain for digital invention.
+- [Expand digital innovation](../innovate/considerations/invention.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
 
 ## Step 9: Assess the innovation maturity of your organization
 
