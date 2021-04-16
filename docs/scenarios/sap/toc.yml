@@ -238,93 +238,93 @@ items:
         - name: SAP MaxDB, liveCache and Content Server deployment on Azure
           href: /azure/virtual-machines/workloads/sap/dbms_guide_maxdb.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
         - name: SAP HANA Availability in Azure Virtual Machines
+          items:
+          - name: SAP HANA on Azure Availability overview
+            href: /azure/virtual-machines/workloads/sap/sap-hana-availability-overview.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP HANA on Azure Availability within one Azure region
+            href: /azure/virtual-machines/workloads/sap/sap-hana-availability-one-region.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP HANA on Azure Availability across Azure regions
+            href: /azure/virtual-machines/workloads/sap/sap-hana-availability-across-regions.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP Business One on Azure Virtual Machines
+          href: /azure/virtual-machines/workloads/sap/business-one-azure.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP IDES on Windows/SQL Server SAP CAL deployment guide
+          href: /azure/virtual-machines/workloads/sap/cal-ides-erp6-erp7-sp3-sql.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP LaMa connector for Azure
+          href: /azure/virtual-machines/workloads/sap/lama-installation.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: High Availability (HA) on Windows and Linux
+          items:
+          - name: Overview
+            href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-start.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: High Availability Architecture
             items:
-            - name: SAP HANA on Azure Availability overview
-              href: /azure/virtual-machines/workloads/sap/sap-hana-availability-overview.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-            - name: SAP HANA on Azure Availability within one Azure region
-              href: /azure/virtual-machines/workloads/sap/sap-hana-availability-one-region.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-            - name: SAP HANA on Azure Availability across Azure regions
-              href: /azure/virtual-machines/workloads/sap/sap-hana-availability-across-regions.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-          - name: SAP Business One on Azure Virtual Machines
-            href: /azure/virtual-machines/workloads/sap/business-one-azure.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-          - name: SAP IDES on Windows/SQL Server SAP CAL deployment guide
-            href: /azure/virtual-machines/workloads/sap/cal-ides-erp6-erp7-sp3-sql.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-          - name: SAP LaMa connector for Azure
-            href: /azure/virtual-machines/workloads/sap/lama-installation.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-          - name: High Availability (HA) on Windows and Linux
+            - name: HA Architecture and Scenarios
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Higher Availability Architecture and Scenarios
+              href: /azure/virtual-machines/workloads/sap/sap-higher-availability-architecture-scenarios.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SAP workload configurations with Azure Availability Zones
+              href: /azure/virtual-machines/workloads/sap/sap-ha-availability-zones.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Windows with Shared Disk for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Windows with SOFS File Share for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA for SAP NetWeaver on Windows with Azure NetApp Files (SMB)
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on SUSE Linux for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on SUSE Linux for (A)SCS Instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Red Hat Enterprise Linux for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Red Hat Enterprise Linux for (A)SCS Instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: Azure Infrastructure Preparation
             items:
-            - name: Overview
-              href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-start.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-            - name: High Availability Architecture
-              items:
-                - name: HA Architecture and Scenarios
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Higher Availability Architecture and Scenarios
-                  href: /azure/virtual-machines/workloads/sap/sap-higher-availability-architecture-scenarios.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: SAP workload configurations with Azure Availability Zones
-                  href: /azure/virtual-machines/workloads/sap/sap-ha-availability-zones.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA on Windows with Shared Disk for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA on Windows with SOFS File Share for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA for SAP NetWeaver on Windows with Azure NetApp Files (SMB)
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA on SUSE Linux for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA on SUSE Linux for (A)SCS Instance with Azure NetApp Files
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA on Red Hat Enterprise Linux for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA on Red Hat Enterprise Linux for (A)SCS Instance with Azure NetApp Files
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-              - name: Azure Infrastructure Preparation
-                items:
-                - name: Windows with Shared Disk for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-infrastructure-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Windows with SOFS File Share for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-infrastructure-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: High availability for NFS on Azure VMs on SLES
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: GlusterFS on Azure VMs on Red Hat Enterprise Linux for SAP NetWeaver
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Pacemaker on SLES
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Pacemaker on RHEL
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Public endpoint connectivity for VMs using Azure Standard Load Balancer in SAP high-availability scenarios
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-              - name: SAP Installation
-                items:
-                - name: Windows with Shared Disk for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-installation-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Windows with SOFS File Share for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-high-availability-installation-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: HA for SAP NetWeaver on Windows with Azure NetApp Files (SMB)
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: SUSE Linux with NFS for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: SUSE Linux with NFS for (A)SCS Instance with Azure NetApp Files
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: High availability for SAP NetWeaver on Red Hat Enterprise Linux
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Red Hat Enterprise Linux with NFS for (A)SCS Instance with Azure NetApp Files
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-              - name: SAP Multi-SID
-                items:
-                - name: Windows with Azure Shared Disk for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-azure-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Windows with Shared Disk for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: Windows with SOFS File Share for (A)SCS Instance
-                  href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: SLES with Pacemaker multi-SID for A(SCS) Instance
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-                - name: RHEL with Pacemaker multi-SID for A(SCS) Instance
-                  href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-multi-sid.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-              - name: Azure Site Recovery for SAP Disaster Recovery
-                href: /azure/site-recovery/site-recovery-workload.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json#protect-sap
-              - name: Azure Proximity Placement Groups for optimal network latency with SAP applications
-                href: /azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with Shared Disk for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-infrastructure-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with SOFS File Share for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-infrastructure-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: High availability for NFS on Azure VMs on SLES
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: GlusterFS on Azure VMs on Red Hat Enterprise Linux for SAP NetWeaver
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Pacemaker on SLES
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Pacemaker on RHEL
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Public endpoint connectivity for VMs using Azure Standard Load Balancer in SAP high-availability scenarios
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP Installation
+            items:
+            - name: Windows with Shared Disk for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-installation-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with SOFS File Share for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-installation-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA for SAP NetWeaver on Windows with Azure NetApp Files (SMB)
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SUSE Linux with NFS for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SUSE Linux with NFS for (A)SCS Instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: High availability for SAP NetWeaver on Red Hat Enterprise Linux
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Red Hat Enterprise Linux with NFS for (A)SCS Instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP Multi-SID
+            items:
+            - name: Windows with Azure Shared Disk for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-azure-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with Shared Disk for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-shared-disk.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with SOFS File Share for (A)SCS Instance
+              href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-file-share.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SLES with Pacemaker multi-SID for A(SCS) Instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: RHEL with Pacemaker multi-SID for A(SCS) Instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-multi-sid.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: Azure Site Recovery for SAP Disaster Recovery
+            href: /azure/site-recovery/site-recovery-workload.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json#protect-sap
+          - name: Azure Proximity Placement Groups for optimal network latency with SAP applications
+            href: /azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
     - name: SAP BusinessObjects Business Intelligence platform on Azure
       items:
       - name: SAP BusinessObjects BI platform planning and implementation guide on Azure 
