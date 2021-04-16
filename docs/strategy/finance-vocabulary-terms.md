@@ -1,65 +1,39 @@
 ---
-title: #Required; page title is displayed in search results. Include the brand.
-description: #Required; article description that is displayed in search results. 
-author: #Required; your GitHub user alias, with correct capitalization.
+title: Common finance vocabulary terms
+description: Learn about common finance vocabulary terms to use when creating a cloud migration business case or financial model. 
+author: wering
 ms.author: wering
-ms.service: #Required; service per approved list. slug assigned by ACOM.
-ms.topic: conceptual #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-ms.custom: template-concept #Required; leave this attribute/value as-is.
+ms.service: cloud-adoption-framework
+ms.topic: conceptual
+ms.date: 4/16/2021
+ms.custom: template-concept
 ---
 
-<!--Remove all the comments in this template before you sign-off or merge to the 
-main branch.
--->
+# Glossary of common finance terms
 
-<!--
-This template provides the basic structure of a concept article.
-See the [concept guidance](contribute-how-write-concept.md) in the contributor guide.
+Use these common finance terms when your team is creating a cloud migration business case or a financial model. These terms can help when you pitch the plan to a finance team.
 
-To provide feedback on this template contact 
-[the templates workgroup](mailto:templateswg@microsoft.com).
--->
+## Terms
 
-<!-- 1. H1
-Required. Set expectations for what the content covers, so customers know the 
-content meets their needs. Should NOT begin with a verb.
--->
+**Cloud economics**: An understanding of the benefits of the cloud and the financial impact that happens when you start a digital transformation.
 
-# [H1 heading here]
+**Capital Expense (CAPEX)**: The upfront investment in equipment. This equipment is capitalized as an asset and put on your balance sheet.
 
-<!-- 2. Introductory paragraph 
-Required. Lead with a light intro that describes what the article covers. Answer the 
-fundamental “why would I want to know this?” question. Keep it short.
--->
+**Operating Expense (OPEX)**: The ongoing expenses for a business. For example, a maintenance payment or periodic bill for Azure services.
 
-[add your introductory paragraph]
+**Profit and Loss (P&L)**: The economic expenses of running a business. It's the same concept as an income statement.
 
-<!-- 3. H2s
-Required. Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
--->
+**Cash flow statement**: How much cash went in and out of the business during a given period.
 
-## [Section 1 heading]
-<!-- add your content here -->
+**Balance sheet**: The underlying assets of a business, and how those assets are financed.
 
-## [Section 2 heading]
-<!-- add your content here -->
+**Net Present Value (NPV)**: An assessment of the financial value of a business investment. This metric looks at cash flows, timing, and the required interest rate.
 
-## [Section n heading]
-<!-- add your content here -->
+**Double mortgage period**: A period when you have two sets of costs at the same time. For example, when you have both on-premise and cloud costs.
 
-<!-- 4. Next steps
-Required. Provide at least one next step and no more than three. Include some 
-context so the customer can determine why they would click the link.
--->
+**Earnings before interest, taxes, depreciation, and amortization (EBITDA)**: A performance indicator of the overall profitability of a business.
 
 ## Next steps
-<!-- Add a context sentence for the following links -->
+<!-- To be added after all articles merged into release branch -->
 - [Write concepts](contribute-how-to-write-concept.md)
 - [Links](links-how-to.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
--->
