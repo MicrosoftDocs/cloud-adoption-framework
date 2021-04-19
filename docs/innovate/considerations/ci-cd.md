@@ -44,7 +44,7 @@ As described in [Measure for customer impact](./measure.md), positive validation
 
 When you're scaling digital invention and innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that shouldn't be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
 
-The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
+The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos#tfvc) repository.
 
 ## Feedback loops
 
