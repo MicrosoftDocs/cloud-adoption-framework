@@ -37,7 +37,11 @@ Gathered information will enable Contoso to:
 
 For successful migration planning Contoso needs to think about following areas:
 > [!div class="checklist"]
->
+> - **Step 1: Set up tooling for Discovery & Assessment.** How many discovery appliances will you need? What are the best practices to run discovery of your environments? Do I need dependency mapping and application discovery?
+> - **Step 2: Perform Assessment.** How do I select parameters for assessment? How do I analyze dependencies and group servers?
+> - **Step 3: Plan for migration waves.** Are my servers ready for migration to Azure? How do I select servers/groups for migration waves?
+
+## Before you start
 
 Before diving deep in infrastructure discovery and assessment, consider reading some background information relevant to Azure Migrate discovery and assessment:
 
@@ -45,7 +49,7 @@ Before diving deep in infrastructure discovery and assessment, consider reading 
 - Review Azure Migrate [Assessment overview](https://docs.microsoft.com/en-us/azure/migrate/concepts-assessment-calculation).
 - Optionally, walkthrough MS Learn's [Migrate virtual machines and apps using Azure Migrate](https://docs.microsoft.com/en-us/learn/paths/m365-azure-migrate-virtual-machine/) Training.
 
-## Step 1: Tooling for Discovery & Assessment
+## Step 1: Set up tooling for Discovery & Assessment
 
 Contoso needs to figure out considerations on the type and number of appliances needed for discovery and assessment.
 
