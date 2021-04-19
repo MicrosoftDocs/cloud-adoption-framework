@@ -75,7 +75,7 @@ Further details can be found in the reference links below from the Azure Migrate
 - [Reference Link E](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#provide-server-credentials)
 - [Reference Link F](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies)
 
-Based on workflow above and following relevant Azure Migrate documentation, Contoso deploys required appliances and agents for discovery. After deployment Contoso regularly validates that data is being collected in Azure Migrate project.
+Based on workflow above and following relevant Azure Migrate documentation, Contoso deploys required appliances and agents for discovery. During deployment Contoso will need to specify server credentials used to perform software inventory, agentless dependency analysis and discovery of SQL Server instances and databases if this data needs to be collected during discovery. Collaborate with server administration and SQL server administration teams to prepare required credentials for discovery. After deployment and configuration, Contoso regularly validates that data is being collected in Azure Migrate project.
 
 As best practice Contoso gathers data over longer period of time, for example 5 weeks. This is to gather server performance data and dependencies over period which might have specific peaks only once per month.
 
