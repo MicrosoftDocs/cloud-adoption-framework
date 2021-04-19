@@ -2,7 +2,6 @@
 title: Innovation methodology and maturity modeling
 description: Learn about Azure tools that use the Innovate methodology to remove friction and empower adoption incrementally as hypotheses mature through the maturity model.
 author: BrianBlanchard
-keywords: Toolchain, maturity model, continuous integration, innovate methodology
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
@@ -11,6 +10,7 @@ ms.subservice: innovate
 ms.custom: 
  - internal
  - seo-caf-innovate
+keywords: toolchain, maturity model, continuous integration, innovate methodology
 ---
 
 # Tools to empower adoption in Azure

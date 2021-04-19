@@ -10,7 +10,7 @@ ms.subservice: innovate
 ms.custom:
  - think-tank
  - seo-caf-innovate
-keywords: What is the cloud adoption framework, CAF, cloud adoption framework, AI applications, cloud adoption lifecycle 
+keywords: What is the cloud adoption framework, CAF, cloud adoption framework, AI applications, cloud adoption lifecycle
 ---
 
 <!-- docutune:casing InterpretML FairLearn -->

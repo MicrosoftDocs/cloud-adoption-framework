@@ -2,7 +2,6 @@
 title: Ambient experience for device interaction
 description: Learn about Azure tools for device interaction and ambient experiences that augment customers' natural surroundings and behaviors.
 author: BrianBlanchard
-keywords: Ambient user experience, ambient experience, device interaction
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
@@ -11,6 +10,7 @@ ms.subservice: innovate
 ms.custom: 
  - internal
  - seo-caf-innovate
+keywords: ambient user experience, ambient experience, device interaction
 ---
 
 # Ambient experience tools to interact with devices in Azure

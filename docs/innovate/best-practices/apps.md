@@ -2,7 +2,6 @@
 title: Innovation application development tools
 description: Find out about Azure application development tools that align to the Innovate methodology of the Cloud Adoption Framework.
 author: BrianBlanchard
-keywords: Application development services, application development tools, innovation methodologies
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
@@ -11,6 +10,7 @@ ms.subservice: innovate
 ms.custom: 
  - internal
  - seo-caf-innovate
+keywords: application development services, application development tools, innovation methodologies
 ---
 
 # Tools to engage via applications in Azure
@@ -23,7 +23,7 @@ As described in [Engage via applications](../considerations/apps.md), applicatio
 
 ## Alignment to the innovation methodology
 
-You can accelerate this type of digital invention through each of the following approaches. Technical guidance for accelerating digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by their approaches to aligning guidance with the overall innovation methodology.
+You can accelerate this type of digital invention through each of the following approaches. Technical guidance for accelerating digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by their approaches to aligning guidance with the overall Innovate methodology.
 
 For this article, assume all inventions that result in an application stem from a shared solution as described in [Empower adoption](./ci-cd.md). Also assume each application results in some type of customer experience for both internal and external customers.
 
