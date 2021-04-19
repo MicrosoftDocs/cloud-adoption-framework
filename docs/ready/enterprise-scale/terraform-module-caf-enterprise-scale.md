@@ -104,8 +104,6 @@ module "enterprise_scale" {
 }
 ```
 
-<!-- docutune:enable -->
-
 This example code will deploy the minimum recommended [management group and subscription organization](./management-group-and-subscription-organization.md) from the enterprise-scale reference architecture. You can then start to customize your deployment once you've got this up and running.
 
 > [!TIP]
