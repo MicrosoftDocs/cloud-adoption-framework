@@ -18,46 +18,48 @@ This article shows how the fictional company Contoso uses Azure Migrate to plan 
 
 When you use this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample plan and deployment is specific to Contoso. Review your organization's business needs, structure, and technical requirements when making important infrastructure migration decisions.
 
-Whether you need all the elements described in this article depends on your migration strategy and needs. For example, you might find it's better to discover workload dependencies using existing network monitoring tools or get recommended VM sizes using existing performance monitoring tools.
+Whether you need all the elements described in this article depends on your migration strategy and needs. For example, you might find it's better to discover workload dependencies using existing network monitoring tools or get recommended VM sizes using Movere or existing performance monitoring tools.
 
 ## Overview
 
-In order for Contoso to plan migration to Azure, it's critical to plan for the migration toolset and activities. Deploying and running discovery enables Contoso to gather critical information on environment targeted for migration to Azure.
+In order for Contoso to plan migration to Azure, it's critical to plan for the right set of discovery and assessment toolset and activities. Deploying and running discovery tools enables Contoso to gather critical information on environment targeted for migration to Azure.
 
 Gathered information will enable Contoso to:
 
+- Build up-to date inventory of their datacenter - server and application estate
 - Identify server readiness for migration to Azure.
 - Perform assessment to get recommended sizing for Azure VMs
 - Get cost estimation for Azure VMs and their storage requirements
 - Analyze server dependencies to better plan migration waves
-- Assess migration options for existing SQL servers
 - Assess application compatibility with Azure
+- Assess migration options for existing SQL servers
 - Assess application migration options to Azure App Services
 
 For successful migration planning Contoso needs to think about following areas:
 > [!div class="checklist"]
 >
-> - **Step 1: Tooling for discovery.** How many discovery appliances will you need? What are the best practices to run discovery of your environments? Do I need dependency and application discovery?
-> - **Step 2: Perform Assessment.** How do I select parameters for assessment? How do I analyze dependencies?
-> - **Step 3: Plan for migration waves.** Are my servers ready for migration to Azure? How do I group servers into migration waves?
+> - **Step 1: Tooling for Discovery & Assessment.** How many discovery appliances will you need? What are the best practices to run discovery of your environments? Do I need dependency mapping and application discovery?
+> - **Step 2: Perform Assessment.** How do I select parameters for assessment? How do I analyze dependencies and group servers?
+> - **Step 3: Plan for migration waves.** Are my servers ready for migration to Azure? How do I select servers/groups for migration waves?
 
 ## Before you start
 
-Before diving deep in infrastructure migration discovery and assessment, consider reading some background information relevant to Azure Migrate discovery and assessment:
+Before diving deep in infrastructure discovery and assessment, consider reading some background information relevant to Azure Migrate discovery and assessment:
 
 - Review Azure Migrate [Discovery and assessment tool overview](https://docs.microsoft.com/en-us/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool).
 - Review the deployment scenarios and requirements for lightweight Azure Migrate appliance that performs discovery [Azure Migrate appliance](https://docs.microsoft.com/en-us/azure/migrate/migrate-appliance#deployment-scenarios).
+- Review Azure Migrate [Assessment overview](https://docs.microsoft.com/en-us/azure/migrate/concepts-assessment-calculation).
 - Optionally, walkthrough MS Learn's [Migrate virtual machines and apps using Azure Migrate](https://docs.microsoft.com/en-us/learn/paths/m365-azure-migrate-virtual-machine/) Training.
 
-## Step 1: Tooling for discovery
+## Step 1: Tooling for Discovery & Assessment
 
-Contoso needs to figure out considerations on the number of appliances needed for discovery.
+Contoso needs to figure out considerations on the type and number of appliances needed for discovery and assessment.
 
-### Discovery Tooling Planning and Implementation
+### Discovery Tooling - Planning and Implementation
 
 To start gathering data required for assessment, Contoso needs to prepare to deploy the appliances and/or agents needed for discovery of their on-premises server infrastructure.
 
-Using the below workflow, Contoso is able to define the server discovery tools required to gather information on-premises servers and their dependencies.
+Using the below workflow, Contoso is able to define the server discovery tools required to gather information from on-premises servers and their dependencies.
 
 ![Concept Diagram](./media/contoso-migration-assess-servers/discovery-workflow.png)
 
@@ -65,19 +67,21 @@ Using the below workflow, Contoso is able to define the server discovery tools r
 
 Further details can be found in the reference links below from the Azure Migrate documentation:
 
-- [Reference Link A](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#set-up-the-appliance)
-- [Reference Link B](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance)
-- Reference Link C:
-  - [Physical/Other hypervisors](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-physical#set-up-the-appliance)
-  - [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-aws#set-up-the-appliance)
-  - [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-gcp#set-up-the-appliance)
-- [Reference Link D](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless)
-- [Reference Link E](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#provide-server-credentials)
-- [Reference Link F](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies)
+- [Ref Link A - Discover VMWare VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#set-up-the-appliance)
+- [Ref Link B - Discover Hyper-V VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance)
+- Ref Link C -
+  - [Discover Physical/Other hypervisors](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-physical#set-up-the-appliance)
+  - [Discover AWS VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-aws#set-up-the-appliance)
+  - [Discover GCP VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-gcp#set-up-the-appliance)
+- Ref Link D - 
+    - [Dependency analysis (Azure Migrate/Agentless)](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless)
+    - [Application Discovery](https://docs.microsoft.com/en-us/azure/migrate/how-to-discover-applications)
+    - [SQL Server Discovery](https://docs.microsoft.com/en-us/azure/migrate/how-to-discover-sql-existing-project)
+- [Ref Link E - Dependency analysis (Service Map/Agent-based)](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies)
 
 Based on workflow above and following relevant Azure Migrate documentation, Contoso deploys required appliances and agents for discovery. After deployment Contoso regularly validates that data is being collected in Azure Migrate project.
 
-As best practice Contoso gathers data over longer period of time, for example 5 weeks. This is to gather server performance data and dependencies over period which might have specific peaks only once per month.
+As best practice Contoso gathers data over longer period of time, for example 5 weeks. This is to gather server performance data and dependencies over a period which might have specific peaks only once per month like a month end transaction (payroll) or weekly batch process or data import/export etc.
 
 ### Assessment
 
