@@ -1,9 +1,9 @@
 #cSpell:ignore eslz
 
 items:
-  - name: SAP adoption scenario - Microsoft Cloud Adoption Framework for Azure
+  - name: SAP adoption - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: SAP adoption scenario - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: SAP adoption - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
     href: strategy.md
   - name: Technical planning
@@ -34,7 +34,7 @@ items:
       items:
       - name: Start small & expand with SAP HANA on Azure (Large Instances)
         href: /azure/architecture/reference-architectures/sap/hana-large-instances?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Enterprise-scale landing zone for AKS
+      - name: Enterprise-scale landing zone for SAP
         href: enterprise-scale-landing-zone.md
   - name: Migrate SAP to Azure
     href: migrate.md
