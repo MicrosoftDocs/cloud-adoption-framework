@@ -15,7 +15,7 @@ items:
       href: intro-data-governance.md
 
   - name: Build an initial strategy
-    href: strategy.md
+    href: ./eslz-datastrategy.md
   - name: Define your plan
     href: plan.md
   - name: Prepare your environment
@@ -101,16 +101,6 @@ items:
           href: ./eslz-team-functions.md
         - name: Deployment Models
           href: ./eslz-deployment-models.md
-    
-    - name: Data Science Environment
-      items:
-        - name: Data Science Blueprint
-          href: ./eslz-data-science-blueprint.md
-        - name: Data Science Deployment
-          href: ./eslz-data-science-deployment.md
-
-    - name: Data Science Workflow and MLOps
-      href: ./eslz-data-science-workflow-and-mlops.md
 
 
   - name: Well-Architected workloads (TBD)
@@ -133,7 +123,14 @@ items:
        - name: Data Management Landing Zone
          href: ./eslz-data-management-landing-zone.md
        - name: Data Landing Zone
-         href: ./eslz-data-landing-zone.md
+         items:
+          - name: Overview
+            href: ./eslz-data-landing-zone.md
+          - name: Data Domains
+            href: ./eslz-data-landing-zone-domains.md
+          - name: Data Products
+            href: ./eslz-data-landing-zone-data-products.md
+       
 
   - name: Best practices
     items:
@@ -153,6 +150,14 @@ items:
             href: ./eslz-sap-data-ingestion.md
           - name: Automated Ingestion Pattern
             href: ./eslz-automated-ingestion-pattern.md
+      - name: Data Science Environment
+        items:
+          - name: Data Science Blueprint
+            href: ./eslz-data-science-blueprint.md
+          - name: Data Science Deployment
+            href: ./eslz-data-science-deployment.md
+      - name: Data Science Workflow and MLOps
+        href: ./eslz-data-science-workflow-and-mlops.md
 
   - name: Featured Azure products
     items:
