@@ -20,16 +20,16 @@ We call this *adoption*.
 The goal of this article is to take the [monitoring strategy](../../strategy/monitoring-strategy.md) recommendations, and create a monitoring plan to support the goal of modernizing and evolving your organizations IT operations strategy. The second goal is to drive operational maturity by being observant and constantly iterating to improve how you monitor those services.
 
 > [!NOTE]
-> In this article, a **Monitoring Solution** is the unit of production doing the monitoring of a service in the cloud.  Whereas a **Monitoring Target** is the service or thing that is being monitored. A solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, etc.
+> In this article, a *monitoring solution* is the unit of production doing the monitoring of a service in the cloud, and a *monitoring target* is the service or thing that is being monitored. A solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, and so on.
 
 ## Why observability is important
 
-Simply, its observability *first* that drives the monitoring consumer to understand what is considered or perceived as *normal* operation of a service. In other words, you seek *total visibility,* a key monitoring principle, as soon as possible. Once initial observability is achieved, then you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate AIOps solutions. This allows you time to get comfortable with the underlying metric and log monitoring data.
+Simply, its observability *first* that drives the monitoring consumer to understand what is considered or perceived as *normal* operation of a service. In other words, you seek *total visibility*, a key monitoring principle, as soon as possible. Once initial observability is achieved, then you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate AIOps solutions. This allows you time to get comfortable with the underlying metric and log monitoring data.
 
 >[!NOTE]
->This is the opposite approach taken in the past, when teams worked to define all of the monitoring requirements first on paper, before build, test, and deploy.
+> This is the opposite approach from the past, when teams worked to define all of the monitoring requirements first on paper, before build, test, and deploy.
 
-Whether the plan (that is, objective) targets an Azure resource type such as Key Vault, an entire Resource Group, or even Microsoft 365 Exchange Online, the first step is to *establish observability*.  
+Whether the plan (that is, objective) targets an Azure resource type such as Key Vault, an entire Resource Group, or even Microsoft 365 Exchange Online, the first step is to *establish observability*.
 
 This approach also simplifies your plans. In all cases, total visibility means achieving and sustaining, sufficient visibility across three dimensions or aspects:
 
@@ -45,8 +45,7 @@ Bottom line, it's the observability you want, early, and in your minimum viable 
 
 ## Monitoring systems and observability
 
-Infrastructure and application monitoring is complicated, it always has been and remains so even with the introduction of cloud computing.
-Business transformation applies technology to achieve current, and help shape, its future strategy. The cloud has further influenced the complicated nature of monitoring.
+Infrastructure and application monitoring is complicated, it always has been and remains so even with the introduction of cloud computing. Business transformation applies technology to achieve current, and help shape, its future strategy. The cloud has further influenced the complicated nature of monitoring.
 
 This is demonstrated in the following ways:
 
@@ -58,7 +57,7 @@ This is demonstrated in the following ways:
 
 For architects, diagnostics form the core of their exploitation of more cost effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
 
-Architects must, like operators, understand what diagnostic information an IT infrastructure component or application emits. To create a fusion of multi-variate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence, it depends on the following:
+Architects must, like operators, understand what diagnostic information an IT infrastructure component or application emits. Combining multivariate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence depends on the following:
 
 - The knowledge and experience of the developer or system engineer, who have a deep understanding of the monitoring target.
 
@@ -70,28 +69,30 @@ Architects must, like operators, understand what diagnostic information an IT in
 
 If you are familiar with System Center Operations Manager, Microsoft and its partners provide *management packs.*  Management packs are technology-specific; for example, you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less pre-defined by the product engineers at Microsoft and dozens of industries. With Operations Manager, you don't need to worry about north-south and east-west dependencies, so that observing the health of SQL is part of the larger IT service with networking, virtualization, and applications included. Owing to a common schema based on the familiar four-part *health model*, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural patterns, relative to cloud services.
 
-In the cloud, you have enormous flexibility in the kind of services you want. Monitoring includes how they change over time - they can be dynamical, global, and resilient.  As a cloud architect, you are not constrained by fixed, on-premises thinking. Operations Manager can participate, but again, its strength is traditional on-premises infrastructure and applications. In contrast, Azure Monitor's architecture is much more flexible in supporting all three cloud models. To reach your observability goals in Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to visualize the components working together.
+In the cloud, you have enormous flexibility in the types of services you can choose. Monitoring includes how they change over time, and they can be dynamic, global, and resilient. As a cloud architect, you are not constrained by fixed, on-premises thinking. Operations Manager can participate, but again, its strength is traditional on-premises infrastructure and applications. In contrast, Azure Monitor's architecture is much more flexible in supporting all three cloud models. To reach your observability goals in Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to visualize the components working together.
 
 With Azure Monitor, you can take advantage of existing workbooks that are included in [Insights](/azure/azure-monitor/monitor-reference), which provide similar functionality that a management pack in Operations Manager does. Otherwise, you need to review the Azure documentation for each of the Azure services in order to understand how you can monitor and detect for known failures or symptoms that indicate potential failure.
+
+<!-- docutune:ignore "Observe discipline" -->
 
 ## Monitoring disciplines
 
 The following figure shows the Observe discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role here.
 
-![Monitoring Disciplines](./media/observability/monitoring-and-control-disciplines.png)
+![Monitoring disciplines](./media/observability/monitoring-and-control-disciplines.png)
 
 ## Observability and response
 
 **Observability** is a *qualitative indicator that a monitoring solution helps the monitoring consumer achieve the satisfactory level of control of a defined service*. Where monitoring provides service consumers with a suitable range of monitoring *capabilities* and *perspectives*.
 
-**Response** is the organization's ability to quickly ascertain *significance* of observed monitoring data (detected events, telemetric patterns, correlated information, etc.) such that for negative events, it is able to rapidly restore or remediate. Such that for positive events or informational events also help to maintain service agreements, improve reliability, and reduce support costs. Events dynamically occur in the system or service, where monitoring solutions provide alerting, control loop automation, and raise incidents, problems, or changes in an external IT Service Management (ITSM) system. Realize that many events cannot or should not be auto remediated.
+**Response** is the organization's ability to quickly ascertain *significance* of observed monitoring data (detected events, telemetric patterns, correlated information, an so on) such that for negative events it can rapidly restore or remediate. For positive events or informational events, it can help to maintain service agreements, improve reliability, and reduce support costs. Events dynamically occur in the system or service, where monitoring solutions provide alerting, control loop automation, and raise incidents, problems, or changes in an external IT service management (ITSM) system. Realize that many events cannot or should not be automatically remediated.
 
-**Utility** is in this sense, observability (and response), is about the operational use or *utility* of the monitoring solution. Azure Monitor provides Microsoft's perspective of our service resources, and gives you similar capabilities as an on-premises monitoring system. A monitoring solution needs visualizations, for example dashboards, workbooks, etc., with role-based access.
+**Utility:** In this sense, observability (and response) is about the operational use or utility of the monitoring solution. Azure Monitor provides Microsoft's perspective of our service resources, and gives you similar capabilities as an on-premises monitoring system. A monitoring solution needs visualizations, such as dashboards and workbooks, with role-based access.
 
-**Responsibility** Both the service consumer and service provider share in the need to learn and improve based on hard data. As such, you need to understand the cloud provider's responsibility vs. the customer/consumer's responsibility. For each Azure resource, you get perspectives based on logs or metrics, this data can be represented in resource-specific dashboards or custom visualizations based on your requirements, and shared with the necessary personas in the organization.
+**Responsibility:** Both the service consumer and service provider share in the need to learn and improve based on hard data. As such, you need to understand the cloud provider's responsibility vs. the customer/consumer's responsibility. For each Azure resource, you get perspectives based on logs or metrics, this data can be represented in resource-specific dashboards or custom visualizations based on your requirements, and shared with the necessary personas in the organization.
 
 > [!NOTE]
-> [Wikipedia's overview of Observability](https://en.wikipedia.org/wiki/Observability) is said to be a property of a system, stemming from system control theory. We can say its a measure of how well the internal states of a system can be inferred from its system *external* outputs; with [Controllability](https://en.wikipedia.org/wiki/Controllability) as another property of a system. In addition, a *dynamical system* also that over time, a state observer measures or estimates the health state of the system. But in modern service management terms, refer to the [Microsoft Operations Framework](https://docs.microsoft.com/previous-versions/tn-archive/cc506049(v=technet.10)) (MOF) **Service Monitoring and Control**," and the Information Technology Infrastructure Library (ITIL) v3 **Monitor and control loop**.
+> [Observability](https://en.wikipedia.org/wiki/Observability) is a property of a system, stemming from system control theory. It's a measure of how well the internal states of a system can be inferred from its system *external* outputs, along with [Controllability](https://en.wikipedia.org/wiki/Controllability), another property of a system. In addition, a *dynamical system* also that over time, a state observer measures or estimates the health state of the system. But in modern service management terms, refer to the [Microsoft Operations Framework](/previous-versions/tn-archive/cc506049(v=technet.10)) (MOF) **Service Monitoring and Control**," and the Information Technology Infrastructure Library (ITIL) v3 **Monitor and control loop**.
 
 Before we go into details on observability, we need to highlight several monitoring-related terms we'll be using:
 
@@ -142,17 +143,17 @@ In the monitoring strategy, we recommend establishing a monitoring plan that sta
 
 Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (that is, metrics, logs, and transactions), you are able to understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data. Through observability, you gain confidence and you are able to realize the cause and find answers that can help:
 
-* Reduce monitoring blind spots by ensuring coverage of all needed monitoring components.
-* Improve monitoring of resources and services to help identify the issue in the future. Focus on issues or symptoms that are predictable and reliable.
-* Evaluate if this wasn't anticipated, what can be done to improve the infrastructure, application, etc.
-* Rule out it's the infrastructure or application, and narrow down to a specific browser, browser version, or client operating system is the potential issue.
-* Identify, and document or implement, workarounds that can be used to minimize any performance or availability issues with the application, infrastructure, etc.
-* Adapt to the dynamical and complex nature of an application. Continue learning its normal behavior patterns in order to narrow in on the unusual ones.
-* Tune the type of data collected, aggregated, and alerted on to minimize storage cost for data you never analyze, alert on, or visualize.
+- Reduce monitoring blind spots by ensuring coverage of all needed monitoring components.
+- Improve monitoring of resources and services to help identify the issue in the future. Focus on issues or symptoms that are predictable and reliable.
+- Evaluate if this wasn't anticipated, what can be done to improve the infrastructure, application, and so on.
+- Rule out the infrastructure or application as the source, and determine whether a specific browser, browser version, or client operating system is the potential issue.
+- Identify, and document or implement, workarounds that can be used to minimize any performance or availability issues with the application, infrastructure, etc.
+- Adapt to the dynamical and complex nature of an application. Continue learning its normal behavior patterns in order to narrow in on the unusual ones.
+- Tune the type of data collected, aggregated, and alerted on to minimize storage cost for data you never analyze, alert on, or visualize.
 
 At first, you no longer need to worry about the infrastructure or application as was the case in an on-premises world; you are now free to monitor or obtain monitoring data to support the needs of those responsible for managing and operating the workload.
 
-Like any application or infrastructure service, a diverse list of stakeholders and roles need access to the monitoring features, data and reports. Start with the core system engineers, operations, or service providers responsible for supporting the workload before extending access to other stakeholders.  
+Like any application or infrastructure service, a diverse list of stakeholders and roles need access to the monitoring features, data and reports. Start with the core system engineers, operations, or service providers responsible for supporting the workload before extending access to other stakeholders.
 
 ## Fixed versus dynamical approach
 
@@ -162,7 +163,7 @@ The long history of IaaS monitoring reveals that *observability can be pre-defin
 
 Thus in the need to control infrastructure services by monitoring solutions, customers seek more of a fixed approach in most cases.
 
-A fixed approach cannot occur in the cloud given the near infinite arrangement and combinations of resources both in space and in time. Each service can be unique. Service observability in Azure must be built depending on the flexible nature of the service (that is, dynamical, global, resilient, user-centric, etc.) or according to some set of architectural templates, which may not yet exist.
+A fixed approach cannot occur in the cloud given the near infinite arrangement and combinations of resources both in space and in time. Each service can be unique. Service observability in Azure must be built depending on the flexible nature of the service (that is, dynamical, global, resilient, user-centric, and so on) or according to some set of architectural templates, which may not yet exist.
 
 Observability then, is first and paramount to holistically seeing how all components are working together *before* establishing event significance (alerts, digests, workbooks, etc.).
 
@@ -174,79 +175,79 @@ You create a monitoring plan to describe the goals and objectives, requirements,
 
 While creating the plan, it is important to keep in mind the five disciplines of modern monitoring - observe, measure, respond, and learn and improve.
 
-The following provides a recommended outline and are considered to be the primary considerations for an individual plan for service(s) or when standardizing cloud service features such as Azure resource types or Microsoft 365 services. The essence of the plan is to define the line of visibility between service provider (who will field solutions) and consumers (who will operate or derive value).  
+The following provides a recommended outline and are considered to be the primary considerations for an individual plan for services or when standardizing cloud service features such as Azure resource types or Microsoft 365 services. The essence of the plan is to define the line of visibility between service provider (who will field solutions) and consumers (who will operate or derive value).
 
 The schedule of when (and how) is also important to include for the work management approach (for example, DevOps vs. waterfall).
 
 ### Business perspective
 
-A comprehensive monitoring plan needs to take into consideration what the business needs with and from monitoring, and this must include a user-centric focus. While defining the plan, it is important to document and share the business requirements, and the following suggests the scope of this part of the plan.
+A comprehensive monitoring plan needs to take into consideration what the business needs with and from monitoring, and this must include a user-centric focus. While defining the plan, it's important to document and share the business requirements, and the following suggests the scope of this part of the plan.
 
-* Stakeholders and consumers
-* Business value streams and processes
-* End-user perspective and utility
-* Measurement and reporting requirements
-* Identified risks and compliance control frameworks
-* Access and control requirements
-* Risk to the business
+- Stakeholders and consumers
+- Business value streams and processes
+- End-user perspective and utility
+- Measurement and reporting requirements
+- Identified risks and compliance control frameworks
+- Access and control requirements
+- Risk to the business
 
 ### Service perspective
 
-A comprehensive monitoring plan needs to take into consideration what the service owners need with and from monitoring. While defining the plan, it is important to document and share their requirements, and the following suggests the scope of this part of the plan.
+A comprehensive monitoring plan needs to take into consideration what the service owners need with and from monitoring. While defining the plan, it's important to document and share their requirements, and the following suggests the scope of this part of the plan.
 
-* Stakeholders and consumers
-* Roles and accountability's
-* Definition of the service
-* Access and control requirements
-* Architectural considerations?
-* Supplier and partner underpinning contracts
-* Service Agreements (SLAs, OLAs)
-* Identify Service Warranty coverage
-* Measurement and reporting requirements
-* Risks
+- Stakeholders and consumers
+- Roles and accountability's
+- Definition of the service
+- Access and control requirements
+- Architectural considerations?
+- Supplier and partner underpinning contracts
+- Service Agreements (SLAs, OLAs)
+- Identify Service Warranty coverage
+- Measurement and reporting requirements
+- Risks
 
 ### Technology perspective
 
 This section of the plan represents the monitoring solution using information from the business and service perspective.
 
-* User stories and scenarios
-* Technical targets (for example, networking)
-* Component dependency mapping
-* Types (for example, cloud native, hybrid, on-premises)
-* Observational
-* Responsive
-* Measurement
-* Tuning and Optimization
+- User stories and scenarios
+- Technical targets (for example, networking)
+- Component dependency mapping
+- Types (for example, cloud native, hybrid, on-premises)
+- Observational
+- Responsive
+- Measurement
+- Tuning and Optimization
 
 ### Key considerations
 
 Summarize the plan to ensure it communicates and informs all relevant consumers, stakeholders, and management levels.
 
-- **Production Stages:** The monitoring solution should be ready for value when the service goes live, so planning can include lab or pre-production configuration (that is, in another subscription dedicated to supporting this) to experiment with and test your assumptions. In the cloud, a production tenant is usually safe based on the overall governance.
+- **Production stages:** The monitoring solution should be ready for value when the service goes live, so planning can include lab or pre-production configuration (that is, in another subscription dedicated to supporting this) to experiment with and test your assumptions. In the cloud, a production tenant is usually safe based on the overall governance.
 
-- **Strategy:** Plans can also map back to Monitoring and IT strategy so that the monitoring objectives trace back to the mission or business. It is dependent on if the workload is native cloud
+- **Strategy:** Plans can also map back to Monitoring and IT strategy so that the monitoring objectives trace back to the mission or business. It's dependent on if the workload is native cloud
 
 - **Targets:** In the plan, you should describe and analyze the target asset(s) or service(s) under consideration and if needed, map all of the components to be monitored to include service dependencies. Identify coverage gaps and determine who owns parts of the service.
 
-- **Solution:** For the monitoring solution, identify the consumers, stakeholders, suppliers, partners, access, and instrumentation. Also monitoring aspects, focus, response, and reports and dashboards (availability, security, user experience, etc.)
+- **Solution:** For the monitoring solution, identify the consumers, stakeholders, suppliers, partners, access, and instrumentation. Also monitoring aspects, focus, response, and reports and dashboards (availability, security, user experience, and so on).
 
 ### Lean and agile considerations
 
-- **Minimum Viable Product:** Let the plan define the minimum viable product, that is what is initially needed to go live, then continue to evolve the monitoring solution to maximize value. For example, you may define a future task later to build other log-based workbooks, pinning to Azure dashboards, and expanding stakeholder access to the Azure portal.
+- **Minimum viable product:** Let the plan define the minimum viable product, that is what is initially needed to go live, then continue to evolve the monitoring solution to maximize value. For example, you may define a future task later to build other log-based workbooks, pinning to Azure dashboards, and expanding stakeholder access to the Azure portal.
 
-- **Start Where You’re At and Get Value Fast:**  Rapidly and radically experiment, exploit with SaaS out of the box, because it's easy and valuable.
+- **Start where you are and get value fast:**  Rapidly and radically experiment, exploit with SaaS out of the box, because it's easy and valuable.
 
-- **Know the Guardrails:** Cloud is new and uncertain, so let experts guide you so that you don’t add risk (for example, expose sensitive monitoring data).
+- **Know the guardrails:** Cloud is new and uncertain, so let experts guide you so that you don't add risk (for example, expose sensitive monitoring data).
 
-- **Microsoft 365 Sits on Azure:**  Any good plan considers your Azure tenant with Microsoft 365 as a major player. Microsoft 365 depends on Azure AD, and Azure Monitor provides Microsoft 365 integration with Endpoint management.
+- **Microsoft 365 depends on Azure:**  Any good plan considers your Azure tenant with Microsoft 365 as a major player. Microsoft 365 depends on Azure AD, and Azure Monitor provides Microsoft 365 integration with endpoint management.
 
-- **Observability Wins:**  Focus on total visibility before alerting, as alerting is now a cost.
+- **Observability wins:** Focus on total visibility before alerting, as alerting is now a cost.
 
-- **Log Architecture:**  Emitters, telemetry, signals, AI, and pre-packaged solutions such as the Intelligent Security Graph – focus on more of a SIEM approach, how to amass disparate logs into log solutions such as Azure Monitor Logs.
+- **Log architecture:** Emitters, telemetry, signals, AI, and prepackaged solutions such as the Intelligent Security Graph. Focus more on a SIEM approach, how to amass disparate logs into log solutions such as Azure Monitor Logs.
 
-- **Moving Data:**  Much more monitoring focus on emitter-to-dashboard and where data is going over the Internet and across your cloud regions, Express routes, and VPNs.
+- **Moving data:** Much more monitoring focus on emitter-to-dashboard and where data is going over the internet and across your cloud regions, ExpressRoute connections, and VPNs.
 
-- **Activity Monitoring:** Audit, sign in, and Activity Logs are now easy to slice and dice for service owners and security.
+- **Activity monitoring:** Audit, sign in, and Activity Logs are now easy to slice and dice for service owners and security.
 
 ## Next steps
 

@@ -62,7 +62,7 @@ The following are examples of some ways to deploy workspaces and Automation acco
 
 ### Placement by geography
 
-Small and midsize environments have a single subscription and several hundred resources that span multiple Azure geographies. For these environments, create one Log Analytics workspace and one Azure Automation account in each geography.
+Small and smallmidsize environments have a single subscription and several hundred resources that span multiple Azure geographies. For these environments, create one Log Analytics workspace and one Azure Automation account in each geography.
 
 You can create a workspace and an Azure Automation account, as one pair, in each resource group. Then, deploy the pair in the corresponding geography to the virtual machines.
 

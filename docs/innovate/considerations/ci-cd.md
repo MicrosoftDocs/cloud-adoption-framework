@@ -1,16 +1,14 @@
 ---
 title: CI/CD pipeline with digital invention
 description: Use the maturity model of the Innovate methodology to reduce friction that slows adoption in the CI/CD pipeline, while keeping best practices in place.
-keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 ---
 
 # Empower adoption with digital invention

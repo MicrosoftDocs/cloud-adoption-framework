@@ -7,9 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom:
- - think-tank
- - seo-caf-innovate
+ms.custom: think-tank, seo-caf-innovate
 keywords: What is the cloud adoption framework, CAF, cloud adoption framework, AI applications, cloud adoption lifecycle
 ---
 
