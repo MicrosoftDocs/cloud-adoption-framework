@@ -56,7 +56,7 @@ In this section, we address the uncertainty by reviewing several factors and off
 
 Keep in mind the following key technical aspects:
 
-- You need to collect data from Azure resources that support the workload, and forward them to your existing on-premises or managed service provider tools.
+- You need to collect data from Azure resources that support the workload, then forward the data to your existing on-premises or managed service provider tools.
 
 - You need to maintain your current investment in System Center Operations Manager, and configure it to monitor IaaS and PaaS resources that are running in Azure. Optionally, because you're monitoring two environments with different characteristics, based on your requirements, you need to determine how integrating with Azure Monitor supports your strategy.
 
