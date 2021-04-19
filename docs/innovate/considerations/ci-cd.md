@@ -68,7 +68,7 @@ Defects in any solution can create false positives or false negatives. Unexpecte
 
 During early iterations of an MVP solution, defects are expected. Early adopters might even find them endearing. In early releases, acceptance testing is typically nonexistent. However, one aspect of building with empathy concerns the validation of the need and hypothesis. Both can be completed through unit tests at a code level and manual acceptance tests before deployment. Together, these provide some means of reliability in testing. You should try to automate a well-defined series of build, unit, and acceptance tests. These will ensure reliable metrics related to finer tweaks to the hypothesis and the resulting solution.
 
-The [Azure Test Plans](/azure/devops/test/track-test-status?view=azure-devops) feature provides tooling to develop and operate test plans during manual or automated test execution.
+The [Azure Test Plans](/azure/devops/test/track-test-status) feature provides tooling to develop and operate test plans during manual or automated test execution.
 
 ## Solution deployment
 
