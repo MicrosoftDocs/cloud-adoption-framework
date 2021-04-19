@@ -15,7 +15,7 @@ items:
       href: intro-data-governance.md
 
   - name: Build an initial strategy
-    href: strategy.md
+    href: ./eslz-datastrategy.md
   - name: Define your plan
     href: plan.md
   - name: Prepare your environment
@@ -133,7 +133,14 @@ items:
        - name: Data Management Landing Zone
          href: ./eslz-data-management-landing-zone.md
        - name: Data Landing Zone
-         href: ./eslz-data-landing-zone.md
+         items:
+          - name: Overview
+            href: ./eslz-data-landing-zone.md
+          - name: Data Domains
+            href: ./eslz-data-landing-zone-domains.md
+          - name: Data Products
+            href: ./eslz-data-landing-zone-data-products.md
+       
 
   - name: Best practices
     items:
