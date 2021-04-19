@@ -247,7 +247,7 @@ items:
       href: /azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Firewall
       href: /azure/firewall/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-  - name: Learn modules
+  - name: Build skills on Learn
     items:
     - name: Hybrid cloud
       items:

@@ -14,13 +14,87 @@ ms.custom: think-tank, e2e-aks
 
 [Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud.
 
-The standard Plan methodology focuses on the [five rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). (Loosely translated: the most common paths to cloud adoption.) More specifically, those plans are tailored to the most common scenarios: rehost, rearchitect, or rebuild.
+Application of the Plan methodology focuses on the [five rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
+
+## Digital estate
+
+When planning for your digital estate, you'll want to [gather inventory data](../../digital-estate/inventory.md) and [rationalization your estate](../../digital-estate/rationalize.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package/rehost or rearchitect options.
+
+********* NEW CONTENT 
+
+The standard [cloud adoption plan template](../../plan/template.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
+
+> [!CAUTION]
+> This article assumes the reader is already following the best practices outlined in the article series on [Building a cloud adoption plan in Azure DevOps](../../plan/plan-intro.md). If you are tracking your cloud adoption plan in spreadsheet or other project tracking tools, the following sections are still applicable but the actionable steps of adding data to your plan would need to be adjusted.
+
+> [!WARNING]
+> Incorporating a modern container strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with "[architecting workloads prior to migration](../../migrate/migration-considerations/assess/architect.md)". Continuing with this strategy without those tasks will delay the migration effort & could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
+
+## Identify candidate workloads
+
+In the modern container scenario, longer term returns are prioritized (which require a greater upfront investment) are prioritized over more efficient migration processes. The longer term investments are represented in specific parts of the plan as an increased focus on enabling innovation and streamlining operations for specific groups of workloads.
+
+To begin aligning the strategy and plan, identify any workloads which are assumed to be impacted by the addition to modern containers in you cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates look for the following criteria within your portfolio of workloads:
+
+1. **Active Development or DevOps investments:** A percentage of production workloads will be under active development. Some may even be managed through on-going DevOps practices.  
+2. **Workload portability:** Some workloads are impacted by compliance, data protection, or operational constraints which may require portability across private cloud, edge, or even multiple public cloud providers.
+3. **Workload consolidation:** Many workloads (especially low utilization workloads) may be candidates for consolidation on container hosts resulting in few servers/VMs and reduced operating costs.
+4. **Legacy workloads:** Legacy workloads can block updates to operating systems and even prevent migration to the cloud. Legacy workloads which aren't compatible with the cloud might be a candidate for migration on a container host.
+
+## Document candidate workloads
+
+When building a cloud adoption plan, each workload is documented following the guidance in the article: [Define and prioritize workloads](../../plan/workloads.md). Any workload which are candidates for the modern container scenario will require additional information to guide execution of the plan. That article calls out the important of [documenting business and technical inputs to define the workload](../../plan/workloads.md?#define-workloads). For modern container candidates, the following data points should be added to the definition of the workload.
+
+### Business inputs
+
+The following are business related data points which may influence the decision to include a workload in the modern container strategy.
+
+- Compliance drivers: What specific compliance criteria are driving considerations to host this workload in a private cloud?
+- Data protection drivers: What data protection measures are driving considerations to host this workload in a private cloud?
+- Operational constraints: What operational constraints are driving considerations to host this workload in a private cloud?
+- Modern container outcomes: Which of the following is the driver behind evaluating this workload as a container candidate? DevOps, Portability, Consolidation, Legacy, or multiple
+- Operating model: Will this workload be managed centrally (by central IT/CCoE), de-centrally (by workload team), or with enterprise operations (central support AND workload specific operations)?
+
+### Technical inputs
+
+The following are data points from the technology teams which may influence the decision to include a workload in the modern container strategy.
+
+**Location considerations:**
+
+Considerations related to where the workload will be hosted.
+ 
+- Public cloud hosting requirement: Is there a specific technical constraint associated with the public cloud requirement?
+- Private cloud hosting requirement: Is there a specific technical constraint associated with the private cloud requirement?
+- Portability requirement: Is there a specific technical constraint associated with the cloud portability requirement?
+
+**Operations considerations:**
+
+Considerations related to the operations of the platform, hosts, and workloads.
+
+- Primary cloud platform: Organizations should define a primary cloud platform to provide operations management tooling. Some organizations may have more than one primary cloud platform to manage various types of operations. What is the primary cloud platform to operate this workload?
+- Additional operations platforms: Will this workload also be managed by any additional operations platforms?
+- Cloud hosting requirements: Does this workload require a specific cloud hosting strategy? Public cloud, Private cloud, or Cloud portability
+- Standardized orchestration platform: If the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS), AKS engine, Kubernetes, etc...
+- Custom orchestration considerations: Is there a requirement for a non-standard container orchestration platform? If so, explain that requirement.
+- Standardized host operations: It is assumed that workloads are non-hostile & can be hosted on shared containers supported by standardized host operations. Is this workload compatible with this approach?
+- Customized host operations considerations: If the workload is not compatible with standardized operations, what specific requirements should be considered when establishing host operations practices for this workload?
+
+**Application considerations:**
+
+Considerations specific to how the application is developed & will be developed going forward.
+
+- PaaS runtime: Public cloud providers produce consistent application runtimes, often referred to as Platform as a Service (PaaS) offerings. In Azure, the PaaS runtimes are summarized as Azure Application Services. Could this application operate on a PaaS runtime? Which runtime is most compatible?
+- Standardized runtime: If the application isn't compatible with a PaaS runtime, is there a standardized runtime provided by the organization? Which runtime will this workload be built on?
+- Custom runtime considerations: What specific considerations would require a customized runtime for this workload?
+- Runtime constraints: Are there any constraints imposed on the application by the chosen runtime?
+
+new Content ******
 
 ## Initial containers considerations
 
 Packaging your workloads in containers is the first body of work that needs to be scheduled and worked on. The second is planning the hosting of those containers.
 
-### Containers without orchestration
+### PaaS solutions for standardized runtimes, orchestration, and operations
 
 Some workloads are highly self-contained, and don't necessarily benefit from the advanced controls and infrastructure requirements that come with a large platform like Kubernetes. Just because your workload is containerized doesn't mean it must be deployed to Kubernetes. Azure provides a variety of solutions to run workloads within your portfolio that don't require the level of management and infrastructure that AKS requires. The following solutions would each follow this approach to planning:
 
@@ -31,11 +105,13 @@ Some workloads are highly self-contained, and don't necessarily benefit from the
 
 Consider using a lighter weight solution for your containers for workloads that do not expect to grow in complexity and align with the purposes and limits of the above solutions.
 
-### Containers with orchestration
+### Standardized orchestration with custom runtimes and operations in the public cloud
 
 For those workloads that cannot run in a fully managed PaaS platform and must relay on infrastructure-level controls, desire to use advanced deployment features such as those offered by container orchestrators, or expect to grow in modular complexity, turn to Azure Kubernetes Service (AKS). AKS solves for both container hosting, but also provides extensive architectural, SRE, security, deployment, monitoring, and infrastructure options.
 
 The platform's feature set comes with a requirement to learn the platform both at the cluster operator level and at the workload level. Factor the education of your operations teams, architecture teams, and workload engineering teams into migration timelines. Also, because AKS is a platform, ensure workloads teams understand the separation of responsibilities within this platform versus their current hosting arrangement. It might be similar in some ways, but likely will be novel in others.
+
+### Customized orchestration, runtimes and operations in the public cloud
 
 For very specialized workloads or specific organizational requirements, Azure offers two other major platforms in the container orchestration space.
 
@@ -44,17 +120,23 @@ For very specialized workloads or specific organizational requirements, Azure of
 
 If there is reason to explore alternatives, ensure time is allocated to understand the benefits and tradeoffs of all platform options. Azure's default solution is AKS, and this documentation assumes AKS is the chosen technology.
 
-## Digital estate
+****** new Content
 
-When planning for your digital estate, you'll want to [gather inventory data](../../digital-estate/inventory.md) and [rationalization your estate](../../digital-estate/rationalize.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package/rehost or rearchitect options.
+### Standardize operations across cloud platforms
 
-In digital estate evaluation, you'll also need to evaluate your plan for data based on container persistence. Containers can run in a persistent or non-persistent state. Persistent state containers will retain data if there is a failure. Non-persistent containers won't maintain data. If you choose a non-persistent configuration, which is common for mature DevOps teams, you'll need to account for hosting the workloads data in a persistent environment, like Azure SQL Database.
+Often times customers will deploy different container orchestrators in private cloud, edge, and public cloud environments. To standardize operations across those disparate cloud platforms, customer can incorporate a unified operations approach by extending their cloud operations tools to multiple cloud platforms.
 
-These considerations will create clarity about the actions needed to complete adoption of containerized workloads in the cloud.
+In Azure, organizations can standardize operations across various orchestrators by onboarding disparate container hosts into Azure Arc for Kubernetes. This tool ensures consistent monitoring, operations, and governance across each of those container hosts.
 
-## Modern container adoption plan
+### PaaS runtimes in private cloud and edge environments
 
-The standard [cloud adoption plan template](../../plan/template.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
+When workloads must be run in a private cloud or edge environment, but the workload is best supported by a PaaS runtime, there are a few tools that can enable developers to build on top of consistent PaaS runtimes using Azure Application Services:
+
+- Azure Stack HCI: Allows for hosting of Azure Application Services natively on Azure Stack, managed by the Azure Stack operator.
+- Azure Stack HCI for AKS: Allows for hosting of Azure Application Services running on AKS within Azure Stack, managed by AKS operators allowing for portability to other kubernetes solutions.
+- Azure Application Services on Kubernetes with Arc: Allows any Kubernetes host to provide Azure Application Services. All hosts become a small instance of Azure PaaS. Since each host is also onboarded into Azure Arc, those hosts can also be managed through consistent cloud-based host operations.
+
+new Content ******
 
 ## Modern container readiness plan
 

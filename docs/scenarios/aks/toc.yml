@@ -392,9 +392,15 @@ items:
         - name: Other (Go/Rust)
           href: /azure/azure-functions/create-first-function-vs-code-other?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
 
-  - name: Learn modules
+  - name: Build skills on Learn
     items:
-    - name: Introduction to Azure hybrid cloud services
-      href: /learn/modules/intro-to-azure-hybrid-services/
-    - name: Design a hybrid network architecture on Azure
-      href: /learn/modules/design-a-hybrid-network-architecture/
+    - name: Introduction to Kubernetes on Azure
+      href: /learn/paths/intro-to-kubernetes-on-azure/
+    - name: Azure Kubernetes Service deployment pipeline and GitHub Actions
+      href: /learn/modules/aks-deployment-pipeline-github-actions/
+    - name: Manage Application Configuration and Secrets in Azure Kubernetes Service (AKS)
+      href: /learn/modules/aks-secrets-configure-app/
+    - name: Deploy and manage a stateful application by using Azure Cosmos DB and Azure Kubernetes Service
+      href: /learn/modules/aks-manage-application-state/
+    - name: Application scalability on AKS with HorizontalPodAutoscalers
+      href: /learn/modules/aks-application-autoscaling-native/
