@@ -79,7 +79,7 @@ You've shown the finance team a brief overview of the benefits, now it's time to
 
 Show the finance team your financial plan. Your plan should reiterate the customer's business and financial goals and demonstrate how cloud economics align to their financial considerations.
 
-Your plan should be tailored to your organization's goals. It might be a consumption, rapid, moderate, or depth cloud financial plan. For detailed information on building your plan, see [Create a financial plan](link).
+Your plan should be tailored to your organization's goals. It might be a consumption, rapid, moderate, or depth cloud financial plan. For detailed information on building your plan, see [Create a financial plan].
 
 Use the following topics as guidelines when you present your plan. They contain important information to point out to the finance team, depending on the focus you've identified.
 
@@ -99,7 +99,7 @@ Finally, show the customer a comparison of cashflow and Profit and Loss (P&L). P
 
 :::image type="content" source="media/share-your-strategy/cashflow-pandl-comparison.png" alt-text="Screenshot that shows the comparison of cashflow and P&L.":::
 
-See [Create a financial model for cloud transformation](financial-models) to find tools to calculate the financial impact.
+See [Create a financial model for cloud transformation](financial-models.md) to find tools to calculate the financial impact.
 
 #### Show how cloud savings provide for future investment
 
