@@ -28,8 +28,8 @@ Enterprise Scale Analytics and AI considers six critical design areas that help 
 1. [Data Domains](#data-domains)
 1. [Data Products](#data-products)
 1. [Data Platform Operational Excellence](#data-platform-operational-excellence)
-1. [Data Science Environment](#data-science-environment)
-1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops)
+<!-- 1. [Data Science Environment](#data-science-environment)
+1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops) -->
 
 >[!IMPORTANT]
 >For deployment, please choose one of the below **Supported Regions** list.
@@ -111,7 +111,7 @@ The Enterprise Scale Analytics and AI platform was designed with data platform o
 
 For further reading, see [Platform automation and DevOps](eslz-dataops.md).
 
-### Data Science Environment
+<!-- ### Data Science Environment
 
 A **data science environment** following the Enterprise Scale Analytics and AI solution pattern, enables data scientists, business analyst and developers to benefit from many types of services, which can be quickly deployed to a [Data Product](#data-products).
 
@@ -121,4 +121,4 @@ For further reading, see [Data Science Environment](eslz-data-science-environmen
 
 On Enterprise Scale Analytics and AI platform there is a rigor process in place that allows data science teams to structure their projects and leverage git to share code and other artifacts.
 
-For further reading, see [Data Science Workflow and MLOps](eslz-data-science-workflow-and-mlops.md).
+For further reading, see [Data Science Workflow and MLOps](eslz-data-science-workflow-and-mlops.md). -->
