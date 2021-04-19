@@ -45,9 +45,9 @@ For successful migration planning Contoso needs to think about following areas:
 
 Before diving deep in infrastructure discovery and assessment, consider reading some background information relevant to Azure Migrate discovery and assessment:
 
-- Review the deployment scenarios and requirements for lightweight Azure Migrate appliance that performs discovery [Azure Migrate appliance](https://docs.microsoft.com/en-us/azure/migrate/migrate-appliance#deployment-scenarios).
-- Review Azure Migrate [Assessment overview](https://docs.microsoft.com/en-us/azure/migrate/concepts-assessment-calculation).
-- Optionally, walkthrough MS Learn's [Migrate virtual machines and apps using Azure Migrate](https://docs.microsoft.com/en-us/learn/paths/m365-azure-migrate-virtual-machine/) Training.
+- Review the deployment scenarios and requirements for lightweight Azure Migrate appliance that performs discovery [Azure Migrate appliance](https://docs.microsoft.com/azure/migrate/migrate-appliance#deployment-scenarios).
+- Review Azure Migrate [Assessment overview](https://docs.microsoft.com/azure/migrate/concepts-assessment-calculation).
+- Optionally, walkthrough MS Learn's [Migrate virtual machines and apps using Azure Migrate](https://docs.microsoft.com/learn/paths/m365-azure-migrate-virtual-machine/) Training.
 
 ## Step 1: Set up tooling for Discovery & Assessment
 
@@ -65,17 +65,17 @@ Using the below workflow, Contoso is able to define the server discovery tools r
 
 Further details can be found in the reference links below from the Azure Migrate documentation:
 
-- [Ref Link A - Discover VMWare VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-vmware#set-up-the-appliance)
-- [Ref Link B - Discover Hyper-V VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance)
+- [Ref Link A - Discover VMWare VMs](https://docs.microsoft.com/azure/migrate/tutorial-discover-vmware#set-up-the-appliance)
+- [Ref Link B - Discover Hyper-V VMs](https://docs.microsoft.com/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance)
 - Ref Link C -
-  - [Discover Physical/Other hypervisors](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-physical#set-up-the-appliance)
-  - [Discover AWS VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-aws#set-up-the-appliance)
-  - [Discover GCP VMs](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-gcp#set-up-the-appliance)
-- Ref Link D - 
-    - [Dependency analysis (Azure Migrate/Agentless)](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless)
-    - [Application Discovery](https://docs.microsoft.com/en-us/azure/migrate/how-to-discover-applications)
-    - [SQL Server Discovery](https://docs.microsoft.com/en-us/azure/migrate/how-to-discover-sql-existing-project)
-- [Ref Link E - Dependency analysis (Service Map/Agent-based)](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies)
+  - [Discover Physical/Other hypervisors](https://docs.microsoft.com/azure/migrate/tutorial-discover-physical#set-up-the-appliance)
+  - [Discover AWS VMs](https://docs.microsoft.com/azure/migrate/tutorial-discover-aws#set-up-the-appliance)
+  - [Discover GCP VMs](https://docs.microsoft.com/azure/migrate/tutorial-discover-gcp#set-up-the-appliance)
+- Ref Link D -
+  - [Dependency analysis (Azure Migrate/Agentless)](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies-agentless)
+  - [Application Discovery](https://docs.microsoft.com/azure/migrate/how-to-discover-applications)
+  - [SQL Server Discovery](https://docs.microsoft.com/azure/migrate/how-to-discover-sql-existing-project)
+- [Ref Link E - Dependency analysis (Service Map/Agent-based)](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies)
 
 Based on workflow above and following relevant Azure Migrate documentation, Contoso deploys required appliances and agents for discovery. During deployment Contoso will need to specify server credentials used to perform software inventory, agentless dependency analysis and discovery of SQL Server instances and databases if this data needs to be collected during discovery. Collaborate with server administration and SQL server administration teams to prepare required credentials for discovery. After deployment and configuration, Contoso regularly validates that data is being collected in Azure Migrate project.
 
@@ -83,17 +83,43 @@ As best practice Contoso gathers data over longer period of time, for example 5 
 
 ## Step 2: Perform Assessment
 
-After discovery is running for at least a day, Contoso can start performing assessments in Azure Migrate project through Azure Portal. Contoso can choose to run Azure VM assessment or Azure SQL assessment. Firstly, Contoso chooses Azure VM assessment and decides to execute Azure SQL assessment later. As discovery source, Contoso chooses Servers discovered from Azure Migrate Appliance.
+After discovery is running for at least a day, Contoso can start performing assessments in Azure Migrate project through Azure Portal. Contoso can choose to run Azure VM assessment or Azure SQL assessment. First, Contoso will run Azure VM assessment and execute Azure SQL assessment later. As discovery source, Contoso chooses Servers discovered from Azure Migrate Appliance.
 
 > [!NOTE]
-> In case Contoso would not be able to deploy Azure Migrate discovery appliance to collect data, they could provide CSV file with required data to Azure Migrate. [**Learn more**](https://docs.microsoft.com/en-us/azure/migrate/concepts-assessment-calculation#how-do-i-assess-with-imported-data) on how to import discovery data using CSV file.
+> In case Contoso would not be able to deploy Azure Migrate discovery appliance to collect data, they could provide CSV file with required data to Azure Migrate. [**Learn more**](https://docs.microsoft.com/azure/migrate/concepts-assessment-calculation#how-do-i-assess-with-imported-data) on how to import discovery data using CSV file.
 
+#### Assessment properties
 
+Contoso wants to specify [custom parameters](https://docs.microsoft.com/azure/migrate/how-to-modify-assessment) for assessment. They specify their primary Azure region as target location, leave storage type set to Automatic and discuss with business on selecting Reserved capacity (compute) option.
 
+For VM size properties Contoso selects Performance-based sizing criteria and sets Performance history to 1 Month. This will enable Contoso to find recommended VM sizes based on actual server requirements that were gathered during discovery phase. Azure Migrate assessment will recommend VM size based on CPU and memory utilization. Disk type recommendation will be based on IOPS and throughput of the existing disks in servers assessed. As Contoso expected existing workloads to slightly increase in future usage, they select 1.1x as Comfort factor. This will add 10% more resources to VM requirements based on gathered performance data and recommend VM size including this 10% buffer.
 
-Given the success in replication toolset deployment and planning for a subset of their migration waves, Contoso decides to start planning their testing needs and pre/post migration activities.
+Based on Microsoft Azure offer associated with Contoso's Azure subscription, appropriate Offer/Licensing program and Currency is selected. Contoso is eligible for [Azure Hybrid Benefit](http://go.microsoft.com/fwlink/?LinkId=859786), so they set 'Already have a Windows Server license' to 'Yes'.
 
-Contoso understands the migrations are an orchestration of both business and technical groups. Therefore, the below activities are defined as pre and post migration activities.
+After saving assessment properties Contoso needs to select servers to assess. Contoso creates a new server group that includes all discovered servers from all discovery appliances and creates assessment.
+
+> [!NOTE]
+> Contoso can run multiple assessments. Contoso can specifying different assessment properties and use different server groups per each assessment. All assessments will be stored in Azure Migrate project. This allows Contoso to compare different assessments and decide what migration options are best for their needs and business case (VM sizing, storage type, reserved capacity, etc.).
+
+#### Azure readiness
+
+Azure Migrates calculates assessment results in a few minutes after creating the assessment. When assessment results are available, Contoso reviews Azure readiness of all servers that were assessed. Azure Migrate provides the visualization that enables Contoso to drill down to servers readiness details for each server. Assessment details include recommended VM size, storage and networking configuration and Azure readiness.
+
+Contoso reviews reasons why some servers are conditionally ready for migration to Azure and why some servers are not ready for migration to Azure. List of [assessment readiness issues](https://docs.microsoft.com/azure/migrate/troubleshoot-assessment#assessment-readiness-issues) helps Contoso understand steps to mitigate Azure readiness issues. Contoso prepares plan of actions to fix readiness issues where possible (upgrade OS, change boot type, remove unused disks, etc.) and decides to take different migration approach for servers where issues can not be easily mitigated (replatform, modernize, replace, retire, etc.).
+
+> [!NOTE]
+> Although the server is marked as "Ready" and Azure Infrastructure will support the necessary configuration, the replication appliance may not always support the replication of the server (eg. Windows Server Failover Clustering with shared disks).
+
+As best practice Contoso reviews server assessment results with owners of workloads/applications that run on assessed servers. During review, Contoso will:
+
+- Validate assessment sizing recommendations (VM size, storage configuration, etc.)
+- Identify any components that will need optimization or replacement in Azure (eg. Load balancers, clusters...)
+- SLA requirements
+- Review costs estimation
+
+#### Azure cost details
+
+Azure Migrate assessment results include cost estimation for assessed servers. Contoso can estimate total compute and storage costs for migration, or drill down to estimation for compute and storage costs per individual server. Contoso understands that after migration to Azure, server might incur other costs related to networking, monitoring, backup, etc. Those additional costs are not part of assessment cost details.
 
 #### Business
 
