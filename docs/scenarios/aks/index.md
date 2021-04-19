@@ -16,7 +16,7 @@ As customers address larger, more sophisticated forms of cloud adoption, their j
 
 Organizations include Platform as a Service, application services, containers in their overall strategy to accelerate developer productivity, reduce operating overhead, make workloads more portability, and modernize legacy workloads.
 
-- **Application services:** Application services, or Platform as a Service options for developers, provide a layer of abstraction between the application and the underlying host (which includes both the operation system and any underlying infrastructure). This layer of abstraction forces a specific and consistently defined runtime which can only run in specific environments.
+- **Application services (PaaS services):** Application services, or Platform as a Service options for developers, provide a layer of abstraction between the application and the underlying host (which includes both the operation system and any underlying infrastructure). This layer of abstraction forces a specific and consistently defined runtime which can only run in specific environments.
 - **Containers:** Containers create a similar layer of abstraction between applications runtime requirements and underlying operating system & infrastructure. Unlike PaaS options, containers allows the application runtime to be configured for the needs of the application, regardless of the container host.
 - **Container orchestration:** A container orchestrator provides a consistent application runtime for an instance of a container host. This orchestration allows workload focused operations teams to mature deployment and devops practices to facilitate multiple deployment and operations practices, reducing dependencies on centralized or human operations.
 
@@ -26,36 +26,6 @@ This article series will outline how application services and containers can be 
 - **Reduce operations costs through abstraction:** Standardized container orchestration ensures consistent runtimes across all hosts, which streamlines operations regardless of the workloads developers may deploy. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts.
 - **Workload portability through abstraction:** Moving workloads between container orchestrators allows for workload portability. Some container orchestration platforms work in the public cloud. Other container orchestration platforms are designed for edge or private cloud deployment. Allowing for diverse container orchestration options allows for portability of workloads between container hosts across hybrid, multicloud, edge, and public cloud platforms.
 - **Modernize legacy workloads through abstraction:** Legacy workloads may require a layer of abstraction prior to migration or modernization. Customizing the runtime on a container host allows the legacy requirements to be met in a modern cloud environment.
-
-
-TODO: Delete the following bullets before publication:
-- Azure Application Services: Platform as a service runtimes that allow applications to run in the cloud
-  - **Fixed runtimes - Fixed operations - Fixed location (Public cloud only)**
-    - Developer team wants to use the Azure App Plat native PaaS services. 
-    - Cloud operator wants to apply public cloud operations
-- Azure Stack HCI: A common runtime (based on Azure's PaaS services) running on a specific private cloud operated locally using tools which are very similar to cloud operations.
-  - **Fixed runtimes - Customizable operations - Fixed location (Private cloud only)**
-    - Developer team wants to use the Azure App Plat native PaaS services. 
-    - Stack operator wants to apply edge or private cloud operations
-- Azure Stack HCI - AKS: A common runtime (based on Azure's PaaS services) running on a specific private cloud operated locally using tools which are very similar to cloud operations.
-  - **Customizable runtimes - Customizable operations - Fixed location (Private cloud only)**
-    - Developer team wants to use their own app plat.
-    - "Container HOST" (& Stack) operator wants to apply edge or private cloud operations
-- AKS:
-  -  **Customizable runtimes - Customizable operations - Fixed location (Public cloud only)** 
-    - Developer team wants to use their own app plat. 
-    - Container HOST operator wants to apply cloud-based operations
-- Azure Arc for kubernetes: Create consistent operations across containers orchestrated using K8S.
-  -  **Customizable runtimes - Fixed operations - Customizable location** 
-    - Developer team wants to use their own app plat. 
-    - Container HOST operator wants to apply cloud-based operations
-- Azure Application Services on Kubernetes with Arc (AKA Lima): A common runtime (based on Azure's PaaS services) that can be deployed consistently across the cloud (AKS) or customer-managed containers running kubernetes, allowing customers to run their applications consistently in each.  
-  - **Fixed runtimes - Customizable operations - Customizable location**
-    - Developer team wants to use the Azure App Plat native PaaS services. 
-    - Container HOST operator wants flexibility to host the app plat in public cloud, edge, or private cloud. 
-- Turbos: Purely a marketing concept & umbrella term which explains why PaaS would be portable between cloud locations.
-  - **Fixed runtimes - Fixed operations - Customizable location**
-- Next step: ACI, Containers in Azure App Service, and ARO/Open Shift
 
 This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
 

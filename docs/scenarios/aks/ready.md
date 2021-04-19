@@ -16,13 +16,23 @@ The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) gu
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern container solutions no matter what implementation option you choose.
 
-## Environmental considerations for orchestrated containers
+## Strategic & planning considerations for container operations landing zones
 
-If you haven't already selected an Azure landing zone implementation approach, review the [Azure landing zones](../../ready/landing-zone/index.md) article series. Then review how that landing zone option can best be aligned to a modern container scenario.
+Prioritization decisions made during [strategy](./strategy.md) and [plan](./plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your container operations plan. The following are the most important considerations from those phases:
 
-**Start-small and expand with the AKS baseline:** Container orchestration via Azure Kubernetes Service (AKS) requires some environmental configuration. The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) provides a proven approach to deploying your first AKS environment.
+- Will Central IT, CCoE, or other forms of centralize operations be responsible for operating the container hosts?
+- Does your strategy and plan require shared containers supporting multiple workloads per container host?
+- Will the centralized teams also support segmented container solutions for hostile workloads?
 
-**Enterprise-scale landing zones:** The enterprise-scale for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. The enterprise-scale landing zone deploys the same AKS baseline, but within the specific environmental configuration required by the broader enterprise-scale landing zone solutions.
+These questions will have a direct impact on implementation options.
+
+## Implementation option considerations
+
+Selecting the best Azure Landing Zone implementation option will have a direct impact on how well the landing zone(s) can support the implementation options above. For more information on Azure Landing Zone implementation options, review the [Azure landing zones](../../ready/landing-zone/index.md) article series. Which of the Azure Landing Zone implementation options best addresses the strategy & planning considerations governing your container operations scenario?
+
+- **Existing Azure Landing Zone strategy:** If your organization has already implemented an Azure Landing Zone strategy, it is likely that your container operations scenario will likely need to adhere to the existing strategy. Otherwise, please choose one of the following as your first step towards repeatable landing zone environments.
+- **Start-small and expand with the AKS baseline:** The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) provides a proven approach to deploying your first AKS environment. This option is most commonly used when workload specific DevOps teams are responsible for operations of the container host. This is also a common option when hostile workloads are completely isolated from centralized container solutions, resulting in reduced centralized operations support.
+- **Enterprise-scale landing zones:** [Enterprise-scale for AKS](./enterprise-scale-landing-zone.md) includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. The enterprise-scale landing zone deploys the same AKS baseline, but within the specific environmental configuration required by the broader enterprise-scale landing zone solutions. This is the most common option when compliance, governance, or security requirements must be applied centrally to any container environment. It is also the most common option for centralized teams who deliver container host operations, allowing developers to focus more on the application & less on developing for kubernetes.
 
 The primary difference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.
 
@@ -30,6 +40,7 @@ The primary difference between the two options above resides in how separation o
 
 Regardless of your initial implementation option, all Azure Landing Zones for AKS should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the container operations team evaluate any landing zone to ensure it is ready to host AKS containers:
 
+- [Enterprise enrollment](eslz-enterprise-enrollment.md)
 - [Identity and access management](eslz-identity-and-access-management.md)
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
 - [Resource Organization](eslz-resource-organization.md)
@@ -37,17 +48,6 @@ Regardless of your initial implementation option, all Azure Landing Zones for AK
 - [Operations baseline](eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
 - [Deployment options](eslz-platform-automation-and-devops.md)
-
-## Environmental considerations for non-orchestrated container solutions
-
-The following container services run as platform as a service solutions, which require less environmental configuration. But the reduced configuration requirements result in reduced control over container orchestration and solutions specific configurations to integrate the workload into other assets, like VMs or other containers. These non-orchestrated solutions tend to lend themselves to a workload-biased operations strategy.
-
-Review the concepts and how-to guides in each of the product documentation links below to evaluate different types of environmental configurations for non-orchestrated container types:
-
-- [App Service](/azure/app-service/)
-- [Azure Functions](/azure/azure-functions/functions-overview)
-- [Container instances](/azure/container-instances/container-instances-overview)
-- [Batch](/azure/batch/batch-technical-overview)
 
 ## Next step: Migrate workload to modern containers
 

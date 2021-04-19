@@ -1,0 +1,29 @@
+
+TODO: Delete this article before publication:
+- Azure Application Services: Platform as a service runtimes that allow applications to run in the cloud
+  - **Fixed runtimes - Fixed operations - Fixed location (Public cloud only)**
+    - Developer team wants to use the Azure App Plat native PaaS services. 
+    - Cloud operator wants to apply public cloud operations
+- Azure Stack HCI: A common runtime (based on Azure's PaaS services) running on a specific private cloud operated locally using tools which are very similar to cloud operations.
+  - **Fixed runtimes - Customizable operations - Fixed location (Private cloud only)**
+    - Developer team wants to use the Azure App Plat native PaaS services. 
+    - Stack operator wants to apply edge or private cloud operations
+- Azure Stack HCI - AKS: A common runtime (based on Azure's PaaS services) running on a specific private cloud operated locally using tools which are very similar to cloud operations.
+  - **Customizable runtimes - Customizable operations - Fixed location (Private cloud only)**
+    - Developer team wants to use their own app plat.
+    - "Container HOST" (& Stack) operator wants to apply edge or private cloud operations
+- AKS:
+  -  **Customizable runtimes - Customizable operations - Fixed location (Public cloud only)** 
+    - Developer team wants to use their own app plat. 
+    - Container HOST operator wants to apply cloud-based operations
+- Azure Arc for kubernetes: Create consistent operations across containers orchestrated using K8S.
+  -  **Customizable runtimes - Fixed operations - Customizable location** 
+    - Developer team wants to use their own app plat. 
+    - Container HOST operator wants to apply cloud-based operations
+- Azure Application Services on Kubernetes with Arc (AKA Lima): A common runtime (based on Azure's PaaS services) that can be deployed consistently across the cloud (AKS) or customer-managed containers running kubernetes, allowing customers to run their applications consistently in each.  
+  - **Fixed runtimes - Customizable operations - Customizable location**
+    - Developer team wants to use the Azure App Plat native PaaS services. 
+    - Container HOST operator wants flexibility to host the app plat in public cloud, edge, or private cloud. 
+- Turbos: Purely a marketing concept & umbrella term which explains why PaaS would be portable between cloud locations.
+  - **Fixed runtimes - Fixed operations - Customizable location**
+- Next step: ACI, Containers in Azure App Service, and ARO/Open Shift

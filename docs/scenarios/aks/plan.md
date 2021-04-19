@@ -52,7 +52,7 @@ The following are business related data points which may influence the decision 
 - Compliance drivers: What specific compliance criteria are driving considerations to host this workload in a private cloud?
 - Data protection drivers: What data protection measures are driving considerations to host this workload in a private cloud?
 - Operational constraints: What operational constraints are driving considerations to host this workload in a private cloud?
-- Modern container outcomes: Which of the following is the driver behind evaluating this workload as a container candidate? DevOps, Portability, Consolidation, Legacy, or multiple
+- Modern container outcomes: Which of the following is the driver behind evaluating this workload as a container candidate? DevOps, Portability, Consolidation, Legacy, or multiple of these drivers.
 - Operating model: Will this workload be managed centrally (by central IT/CCoE), de-centrally (by workload team), or with enterprise operations (central support AND workload specific operations)?
 
 ### Technical inputs
@@ -87,6 +87,9 @@ Considerations specific to how the application is developed & will be developed 
 - Standardized runtime: If the application isn't compatible with a PaaS runtime, is there a standardized runtime provided by the organization? Which runtime will this workload be built on?
 - Custom runtime considerations: What specific considerations would require a customized runtime for this workload?
 - Runtime constraints: Are there any constraints imposed on the application by the chosen runtime?
+- Application dependencies: Is this workload dependent on any existing systems that reside in a specific location (public, private, etc...)? Examples would include an ERP system like SAP running in a specific solution.
+- Data gravity: Is this workload dependent on a data source which resides in a specific location (public, private, etc...)? Examples could include dependence on the data in SAP or other centralized data sources.
+- Approve-list considerations: Are the custom operations considerations approved for use within your cloud platform? Which approved services must be included in the deployment.
 
 new Content ******
 
