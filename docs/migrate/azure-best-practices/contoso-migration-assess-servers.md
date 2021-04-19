@@ -37,7 +37,7 @@ Gathered information will enable Contoso to:
 For successful migration planning Contoso needs to think about following areas:
 > [!div class="checklist"]
 >
-> - **Step 1: Tooling for discovery.** How many discovery appliances will you need? What are the best practices to run discovery of your environments? Do I need dependency and application discovery?
+> - **Step 1: Set up tooling for discovery.** How many discovery appliances will you need? What are the best practices to run discovery of your environments? Do I need dependency and application discovery?
 > - **Step 2: Perform Assessment.** How do I select parameters for assessment? How do I analyze dependencies?
 > - **Step 3: Plan for migration waves.** Are my servers ready for migration to Azure? How do I group servers into migration waves?
 
@@ -49,7 +49,7 @@ Before diving deep in infrastructure migration discovery and assessment, conside
 - Review the deployment scenarios and requirements for lightweight Azure Migrate appliance that performs discovery [Azure Migrate appliance](https://docs.microsoft.com/en-us/azure/migrate/migrate-appliance#deployment-scenarios).
 - Optionally, walkthrough MS Learn's [Migrate virtual machines and apps using Azure Migrate](https://docs.microsoft.com/en-us/learn/paths/m365-azure-migrate-virtual-machine/) Training.
 
-## Step 1: Tooling for discovery
+## Step 1: Set up tooling for discovery
 
 Contoso needs to figure out considerations on the number of appliances needed for discovery.
 
@@ -79,26 +79,15 @@ Based on workflow above and following relevant Azure Migrate documentation, Cont
 
 As best practice Contoso gathers data over longer period of time, for example 5 weeks. This is to gather server performance data and dependencies over period which might have specific peaks only once per month.
 
-### Assessment
+## Step 2: Perform Assessment
 
-#### Enabling and Monitoring Replication
+After discovery is running for at least a day, Contoso can start performing assessments in Azure Migrate project through Azure Portal. Contoso can choose to run Azure VM assessment or Azure SQL assessment. Firstly, Contoso chooses Azure VM assessment and decides to execute Azure SQL assessment later. As discovery source, Contoso chooses Servers discovered from Azure Migrate Appliance.
 
-With replication appliances and agents configured, Contoso can start planning the replication of their on-premises servers. A colleciton of applications and their dependencies which must be migrated during the same time window is commonly referred to as a migration wave or migration group. Contoso will use the term migration wave to maintain consistency across planning activities.
+> [!NOTE]
+> In case Contoso would not be able to deploy Azure Migrate discovery appliance to collect data, they could provide CSV file with required data to Azure Migrate. [**Learn more**](https://docs.microsoft.com/en-us/azure/migrate/concepts-assessment-calculation#how-do-i-assess-with-imported-data) on how to import discovery data using CSV file.
 
-As a best practice, Contoso will plan to enable initial replication for a subset of their migration waves in order to be cautious of their available bandwidth. Contoso understands the initial replication is a full copy of the servers and consumes more bandwidth versus ongoing (delta) replications. Given Contoso's bandwidth constraint considerations, Contoso will only enable replication for migration waves which are close to 1-2 weeks from test migration and cutover dates.
 
-Further, Contoso will monitor initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for additional servers. If errors or warnings should arise, Contoso can pro-actively detect and act on it prior to test migration or cutover dates.
 
-#### Replication Tuning
-
-Based on the observed initial and ongoing replications bandwidth patterns, Contoso will tune their replication strategy based on the below queries:
-
-- How much bandwidth is needed and available for replications?
-- How many VMs, on average, can be initially replicated at the same time?
-- How many VMs, on average, can be left replicating (delta replication) at the same time?
-- Is there an need to throttle replication within the replication appliances or agents?
-
-## Step 2: Testing and Pre/Post Migration Activities
 
 Given the success in replication toolset deployment and planning for a subset of their migration waves, Contoso decides to start planning their testing needs and pre/post migration activities.
 
