@@ -3,7 +3,7 @@ title: Business justification for cloud migration
 description: Use the Cloud Adoption Framework for Azure to learn to start developing a business justification for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/10/2018
+ms.date: 04/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -12,109 +12,80 @@ ms.custom: internal
 
 # Build a business justification for cloud migration
 
-Cloud migrations can generate early return on investment (ROI) from cloud transformation efforts. But developing a clear business justification with tangible, relevant costs and returns can be a complex process. This article will help you think about what data you need to create a financial model that aligns with cloud migration outcomes. First, let's dispel a few myths about cloud migration, so your organization can avoid some common mistakes.
+Developing a business case for moving operations to the cloud includes building a cloud financial plan that provides a view of the technical and financial timeline of your environment. Cloud migration can generate early return on investment (ROI) from cloud transformation efforts. Before you start building your business case and creating your financial plan, it's important to articulate the key principles of cloud economics. These core principles will help you develop a clear business justification with tangible costs and returns.
 
-## Dispelling cloud migration myths
+## Benefits of moving to the cloud
 
-### Myth: The cloud is always cheaper
+We focus on three kinds of benefits of moving your operations to the cloud:
 
-It's commonly believed that operating a datacenter in the cloud is always cheaper than operating one on-premises. While this assumption might generally be true, it's not always the case. Sometimes cloud operating costs are higher. These higher costs are often caused by poor cost governance, misaligned system architectures, process duplication, atypical system configurations, or greater staffing costs. Fortunately, you can mitigate many of these problems to create early ROI. Following the guidance in [Build the business justification](#build-the-business-justification) can help you detect and avoid these misalignments. Dispelling the other myths described here can help too.
+- Economic benefits
+- Financial benefits
+- IT and business transformation
 
-### Myth: Everything should go into the cloud
+![This diagram summarizes benefits of migrating, including economic, financial, and I T and business transformation.](media/cloud-migration-business-case/benefits-cloud-migration.png)
 
-In fact, some business drivers might lead you to choose a hybrid solution. Before you finalize a business model, it's smart to complete a first-round quantitative analysis, as described in the [digital estate articles](../digital-estate/5-rs-of-rationalization.md). For more information about the individual quantitative drivers involved in rationalization, see the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md). Either approach will use easily obtained inventory data and a brief quantitative analysis to identify workloads or applications that could result in higher costs in the cloud. These approaches could also identify dependencies or traffic patterns that would necessitate a hybrid solution.
+### Economic benefits
 
-### Myth: Mirroring my on-premises environment will help me save money in the cloud
+Economic benefits are the principles that shift when you migrate from your on-premises architecture to your cloud architecture.
 
-During digital estate planning, it's not unheard of for businesses to detect unused capacity of more than 50% of the provisioned environment. If assets are provisioned in the cloud to match current provisioning, cost savings are hard to realize. Consider reducing the size of the deployed assets to align with usage patterns rather than provisioning patterns.
+One of the economic benefits of moving to the cloud is the ability to optimize your data center costs to generate value.  Servers make up a large portion of the expense of an on-premises datacenter. If your servers are mostly idle, those expenses are wasted.
 
-### Myth: Server costs drive business cases for cloud migration
+On-premises datacenters are frequently over-built to handle usage peaks, which might result in excess capacity and excess spend. If your datacenter operates at a baseline of 30 percent, with regular spikes up to 70 percent, there's room for optimization in the cloud.
 
-Sometimes this assumption is true. For some companies, it's important to reduce ongoing capital expenses related to servers. But it depends on several factors. Companies with a five-year to eight-year hardware refresh cycle are unlikely to see fast returns on their cloud migration. Companies with standardized or enforced refresh cycles can hit a break-even point quickly. In either case, other expenses might be the financial triggers that justify the migration. Here are a few examples of costs that are commonly overlooked when companies take a server-only or VM-only view of costs:
+An on-premises datacenter must have enough servers to accommodate not only the regular spikes, but also the unknown usage requirements. Adding on-premises datacenter and server capacity requires significant lead time. As a result, you might invest significantly in advance of uncertain demand, which results in under-utilized capacity.
 
-- Costs of software for virtualization, servers, and middleware can be extensive. Cloud providers eliminate some of these costs. Two examples of a cloud provider reducing virtualization costs are the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#services) and [Azure Reservations](https://azure.microsoft.com/reservations) programs.
-- Business losses caused by outages can quickly exceed hardware or software costs. If your current datacenter is unstable, work with the business to quantify the impact of outages in terms of opportunity costs or actual business costs.
-- Environmental costs can also be significant. For the average American family, a home is the biggest investment and the highest cost in the budget. The same is often true for datacenters. Real estate, facilities, and utility costs represent a fair portion of on-premises costs. When datacenters are retired, those facilities can be repurposed, or your business could potentially be released from these costs entirely.
+![This diagram shows on-premises costs, datacenter capacity, and server capacity.](media/cloud-migration-business-case/optimize-datacenter-costs.png)
 
-### Myth: An operating expense model is better than a capital expense model
+Another clear economic benefit to your organization from moving to the cloud is reducing unused capacity, which creates an opportunity to optimize your spend. You can save money by using hourly pricing for seasonal patterns and occasional bursts. You’re no longer paying for the uncertainty of fluctuating workloads. Your base workloads can use reserved instances, consistently meeting your needs.
 
-As explained in the [fiscal outcomes](./business-outcomes/fiscal-outcomes.md) article, an operating expense model can be a good thing. But some industries view operating expenditures negatively. Here are a few examples that would trigger tighter integration with the accounting and business units regarding the operating expense conversation:
+Finally, moving to the cloud lowers your sunk costs, because you aren't buying equipment that you might or might not need.
 
-- When a business sees capital assets as a driver for business valuation, capital expense reductions could be a negative outcome. Though it's not a universal standard, this sentiment is most commonly seen in the retail, manufacturing, and construction industries.
-- A private equity firm or a company that's seeking capital influx might consider operating expense increases as a negative outcome.
-- If a business focuses heavily on improving sales margins or reducing cost of goods sold (COGS), operating expenses could be a negative outcome.
+![This diagram shows unused capacity, fluctuations, and base workload.](media/cloud-migration-business-case/optimized-cloud-usage.png)
 
-Businesses are more likely to see operating expense as more favorable than capital expense. For example, this approach might be well received by businesses that are trying to improve cash flow, reduce capital investments, or decrease asset holdings.
+### Financial benefits
 
-Before you provide a business justification that focuses on a conversion from capital expense to operating expense, understand which is better for your business. Accounting and procurement can often help align the message to financial objectives.
+Financial benefits are the structural financial changes that occur when moving to the cloud.
 
-### Myth: Moving to the cloud is like flipping a switch
+One of the financial benefits of moving to the cloud is budgeting. When you move your workflows from on-premises servers, your capital expenses become operating expenses. This change improves your ability to understand workload level costs and improves predictability in budgeting.
 
-Migrations are a manually intense technical transformation. When developing a business justification, especially justifications that are time sensitive, consider the following aspects that could increase the time it takes to migrate assets:
+In addition to better budgeting, cost management is another financial benefit of moving to the cloud. A better understanding of workload ROI is possible due to an improved understanding of your cost structure. Tagging and cost management tools in Azure help you gain insights and understand the direct costs to run a service. This gives you direct visibility into project ROI that can be difficult to assess with an on-premises architecture.
 
-- **Bandwidth limitations:** The amount of bandwidth between the current datacenter and the cloud provider will drive timelines during migration.
-- **Testing timelines:** Testing applications with the business to ensure readiness and performance can be time consuming. Aligning power users and testing processes is critical.
-- **Migration timelines:** The amount of time and effort required to implement the migration can increase costs and cause delays. Allocating employees or contracting partners can also delay the process. The plan should account for these allocations.
+Moving to the cloud also improves performance management, offering more predictability and better cash flow timing.
 
-Technical and cultural impediments can slow cloud adoption. When time is an important aspect of the business justification, the best mitigation is proper planning. During planning, two approaches can help mitigate timeline risks:
+On-premises capital expenses are many times lumpy. For example, purchasing hardware doesn’t always happen on a regular, monthly schedule. This variability drives cash flow and Profit and Loss (P&L) variability.
 
-- Invest the time and energy in understanding technical adoption constraints. Though pressure to move quickly might be high, it's important to account for realistic timelines.
-- If cultural or people impediments arise, they'll have more serious effects than technical constraints. Cloud adoption creates change, which produces the desired transformation. Unfortunately, people sometimes fear change and might need additional support to align with the plan. Identify key people on the team who are opposed to change and engage them early.
+Be aware of earnings before interest, taxes, depreciation, and amortization (EBITDA), which can be worse after moving to the cloud.
 
-To maximize readiness and mitigation of timeline risks, prepare executive stakeholders by firmly aligning business value and business outcomes. Help those stakeholders understand the changes that will come with the transformation. Be clear and set realistic expectations from the beginning. When people or technologies slow the process, it will be easier to enlist executive support.
+## IT and business transformation
 
-## Build the business justification
+Moving to the cloud offers another benefit - new agility to your organization. Let’s compare traditional IT with cloud support:
 
-The following process defines an approach to developing the business justification for cloud migrations. For more information about the calculations and financial terms, see the article on [financial models](./financial-models.md).
+|                       | Traditional IT | Cloud support |
+|-----------------------|----------------|---------------|
+| **Time to provision** | Weeks/months to provision resources | Minutes/hours to provision resources by self-service access |
+| **Hardware usage**    | 1 CPU for 100 hours | 100 CPUs for 1 hour |
+| **Location**          | Location dependent | Accessible anywhere |
 
-At the highest level, the formula for business justification is simple. But the subtle data points required to populate the formula can be difficult to align. On a basic level, the business justification focuses on the return on investment (ROI) associated with the proposed technical change. The generic formula for ROI is:
+Agility influences not only IT Operations and business units. Agility also impacts finance in the allocation of budgets.
 
-![ROI equals (gain from investment minus cost of investment) divided by cost of investment](../_images/strategy/formula-roi.png)
+**Time to provision**: It can take weeks or even months in the on-premises world to get budget approval and to provision resources to extend capacity.
 
-We can unpack this equation to get a migration-specific view of the formulas for the input variables on the right side of the equation. The remaining sections of this article offer some considerations to take into account.
+In the cloud, you can spin up resources in short order. You can deprovision resources easily or reallocate them to other projects. This agility applies not only to the technical resources but also to the budgetary allocation to support those resources.
 
-## Migration-specific initial investment
+**Hardware usage:** In a traditional datacenter, resources are assigned to certain workloads for long periods of time. In the cloud, you can be much more flexible in your hardware usage. This fact enables the increase of business optionality, positive return on investment projects, and the ability to take advantage of new technical opportunities because of reduced sunk investments and technical debt.
 
-- Cloud providers offer calculators to estimate cloud investments. Microsoft provides the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
-- Some cloud providers also offer cost-delta calculators. Microsoft provides the [Azure total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator).
-- For more refined cost structures, consider a [digital estate planning](../digital-estate/index.md) exercise.
-- Estimate the cost of migration.
-- Estimate the cost of any expected training opportunities. [Microsoft Learn](/learn) might be able to help mitigate those costs.
-- At some companies, the time invested by existing staff members might need to be included in the initial costs. Consult the finance office for guidance.
-- Discuss any additional costs or burden costs with the finance office for validation.
+**Location:** The on-premises approach is tied to the location of your datacenter. In the cloud, you can have resources accessible anywhere.
 
-## Migration-specific revenue deltas
+## Optimize your Azure investment
 
-This aspect is often overlooked by strategists creating a business justification for migration. In some areas, the cloud can cut costs. But the ultimate goal of any transformation is to yield better results over time. Consider the downstream effects to understand long-term revenue improvements. What new technologies will be available to your business after the migration that can't be used today? What projects or business objectives are blocked by dependencies on legacy technologies? What programs are on hold, pending high capital expenditures for technology?
+As you migrate to the cloud, you’ll have options to make the most of your investment through incremental modernization. Each iteration of modernization has the potential to free up committed cash flows and budgets that can be reinvested into further modernization.
 
-After you consider the opportunities unlocked by the cloud, work with the business to calculate the revenue increases that could come from those opportunities.
+Start with your existing private on-premises cloud. Support legacy workloads, keeping non-end of life or under depreciated gear. As you Lift and Shift to Infrastructure as a Service, Azure virtual machines will host your workloads.
 
-## Migration-specific cost deltas
-
-Calculate any changes to costs that will come from the proposed migration. See the [financial models](./financial-models.md) article for details about the types of cost deltas. Cloud providers often offer tools for cost-delta calculations. The [Azure total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator) is one example.
-
-Other examples of costs that might be reduced by a cloud migration:
-
-- Datacenter termination or reduction (environmental costs)
-- Reduction in power consumed (environmental costs)
-- Rack termination (physical asset recovery)
-- Hardware refresh avoidance (cost avoidance)
-- Software renewal avoidance (operational cost reduction or cost avoidance)
-- Vendor consolidation (operational cost reduction and potential soft-cost reduction)
-
-## When ROI results are surprising
-
-If the ROI for a cloud migration doesn't match your expectations, you might want to revisit the common myths listed at the beginning of this article.
-
-But it's important to understand that a cost savings isn't always possible. Some applications cost more to operate in the cloud than on-premises. These applications can significantly skew results in an analysis.
-
-When the ROI is below 20%, consider a [digital estate planning](../digital-estate/index.md) exercise, paying specific attention to [rationalization](../digital-estate/rationalize.md). During quantitative analysis, review each application to find workloads that skew the results. It might make sense to remove those workloads from the plan. If usage data is available, consider reducing the size of VMs to match usage.
-
-If the ROI is still misaligned, seek help from your Microsoft sales representative or [engage an experienced partner](https://azure.microsoft.com/migration/support).
+From there, you can migrate some of those workloads to Platform as a Service. As you continue to migrate, you can implement some work as Software as a Service.
+As you move more work to the cloud, you free up budget and other resources that you can reinvest into further modernization, getting more out of every dollar of your investment.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a financial model for cloud transformation](./financial-models.md)
-
-
+> [Create a financial plan](./financial-models.md)
