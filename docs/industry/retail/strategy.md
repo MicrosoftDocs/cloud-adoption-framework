@@ -58,11 +58,6 @@ There are a number of [common business outcomes](https://docs.microsoft.com/azur
 - **Provide optimal shopping experiences** Triggering alerts based on real-time data from video cameras, beacon technology, and IoT sensors improves the customer experience.
 - **Reduce energy costs** Applying analytics and AI to unlock insights and visualize data for quicker decision making increases the efficiency of store and warehouse operations.
 
-## Retail industry justification
-
-Is there something special that customers have to do to justify doing this thing?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
-
 ## Next step: Cloud adoption plan for the Retail industry
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
