@@ -12,17 +12,36 @@ ms.custom: internal
 
 # Governance in Security
 
-Security governance monitors and sustains the application of best practices, policies, and standards over time. Governance ensures these are consistently applied across the full scope of assets and processes in your enterprise, helping ensure security and compliance posture improve consistently over time and doesn’t' regress. Governance also informs the risk management process of the organization based on it's monitoring the security and compliance posture of the organization. 
+Security governance provides the bridge from business priorities to technical implementation with architecture, standards, and policy. Governance also provides oversight and monitoring to sustain and improve security posture over time and also reports compliance as required by regulatory authorities. 
 
-## Transformation to Active Governance
+***((INSERT PICTURE HERE))***
 
-Hope (and reporting problems) is not a plan. Governance in the cloud age must have an active component that engages continuously with other teams.
+**Business goals and risk** provide the true north star for security, ensuring that security is focusing efforts on what matters to the organization and is informing the risk owners using familiar language and processes in the risk management framework
 
-In the on-premises world, security governance often followed the cadence of audits that were schedule months or years apart, but cloud technology now provides near-realtime visibility into the security posture and asset coverage. This often drives a major transformation of governance into a dynamic organization with closer relationships to other security teams to monitor security standards, provide guidance, and improve processes.
+### Compliance and reporting
 
-In it's ideal state, governance is the beating heart of continuous improvement, dynamically engaging across the organization to drive security posture of the organization forward. Governance should be continuously 
- - Monitoring the posture of the organization and guiding security and IT teams to address them
- - Researching and seeking new types of vulnerabilites (in partnership with threat intelligence teams if present) to identify the potential risk to the organization
+Compliance and reporting on external security requirements (and sometimes internal policy) are often basic required elements of operating in a given industry. The mandatory requirements are like feeding the bear in the zoo, if you don’t feed the bear every day, it may eat you. 
+
+### Architecture and Standards
+
+Architecture, Standards, and Policy provide the critical translation from business requirements and risk into the technical environment. We strongly recommend a unified view across your enterprise estate rather than splitting up cloud vs. on premises. Attackers don’t care about your internal processes and will attack any point in the organization and move laterally if that is the easiest path to their target. Most enterprises today are a hybrid environment that spans 
+ - **On-premises** – including multiple generations of technology, often significant numbers of legacy software and hardware (and sometimes operational technology controlling physical systems with a potential life/safety impact).
+ - **Clouds** – typically including multiple providers for
+   - Software as a Service (SaaS) applications
+   - Infrastructure and Platform as a Service (IaaS/PaaS) providers 
+
+### Security Posture Management
+
+Hope (and reporting problems) is not a plan. Governance in the cloud age must have an active component that engages continuously with other teams. Security posture management is a new/emerging function that represents a step forward in the long term convergence of security functions that answer the question “How secure is the environment?” (including vulnerability management and security compliance reporting)
+
+In the on-premises world, security governance often followed the cadence of the data it could get about the environment, which may take a long time and be constantly out of date. Cloud technology now provides on demand visibility into the current security posture and asset coverage. This drives a major transformation of governance into a more dynamic organization with closer relationships to other security teams to monitor security standards, provide guidance, and improve processes.
+
+In it's ideal state, governance is the beating heart of continuous improvement, dynamically engaging across the organization to drive security posture of the organization forward.
+
+The key tenets of success for this are
+ - **Continuous discovery of assets and asset types** - The cloud is a dynamic environment where new types of services are offered regularly and workload owners dynamically spin up and down instances of applications and services as needed. Governance teams need to perform continuously discovery to keep up with this pace of change. 
+ - **Continuous improvement of asset security posture** -  Attackers are continuously evolving, defenses are continuously improving, and you can’t always get all the security in the initial configuration, so governance teams should focus on continuously improving standards and enforcement of them. 
+ - **Policy Driven Governance** provides consistent execution by fixing something once in policy that is automatically applied at scale across resources. This limits wasted time/effort on repeated manual tasks and is often implemented using Azure Policy or 3rd party policy automation frameworks
 
 ## Security governance integration
 
@@ -68,4 +87,3 @@ This full process should be followed for the highest impact vulnerabilities and 
 
 
 > [!Note] While some organizations may choose to put monitoring of security posture in security operations, we generally recommend having this in the governance to foster deeper empathy and relationships with the IT engineering and operations teams that have to apply the standards. This often results in higher quality communications and better security outcomes than a governance team that is completely abstracted completely away the real world impact of their standards. 
-
