@@ -67,7 +67,11 @@ items:
   - name: Migrate existing workloads
     href: migrate.md
   - name: Innovate in the cloud
-    href: innovate.md
+    items:
+    - name: Overview
+      href: innovate.md
+    - name: Improve retail experience
+      href: improve-retail-experience.md
   - name: Govern your portfolio
     href: govern.md
   - name: Manage your assets
