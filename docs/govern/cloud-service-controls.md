@@ -151,11 +151,11 @@ The design imperatives must have a version and release cycle and be tied back to
 
 There are four key artifacts developed throughout this process.
 
-1. The **Service control requirements are the outline of the key controls that are required across all services. This document is published above the reference documentation for cloud adoption teams. This positioning ensures that they've reviewed and understand the controls that are being built into the systems. This document must be available so that others can help the development of a service review. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
+- The **Service control requirements** are the outline of the key controls that are required across all services. This document is published above the reference documentation for cloud adoption teams. This positioning ensures that they've reviewed and understand the controls that are being built into the systems. This document must be available so that others can help the development of a service review. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
 
-2. The **Service review schedule** is a document that outlines when the services are being reviewed, how long the expected wait for a review is, and lets adoption teams know when a new service becomes available. They'll also know when existing services might change and need more implementation of controls.
+- The **Service review schedule** is a document that outlines when the services are being reviewed, how long the expected wait for a review is, and lets adoption teams know when a new service becomes available. They'll also know when existing services might change and need more implementation of controls.
 
-3. **Service guidance**, is a per service document that outlines the key components around a service:
+- **Service guidance**, is a per service document that outlines the key components around a service:
 
    - When the service should be used
    - Any restrictions on what it should be used for
@@ -164,7 +164,7 @@ There are four key artifacts developed throughout this process.
 
    Cloud adoption teams refer to these documents for services they can pick up and use, and then plan the implementation of their project around the controls and components. The service guidance should also list any Azure policies and supporting functions that have been implemented. This guidance ensures that a reference can be enforced between the policy and service controls.
 
-4. **Azure policy and supporting functions**, are the components or technical implementation of the controls that go into the platform. This code is version-controlled and deployed. These code items must act in enforcing the policy and include the code for reporting compliance of the policy.
+- **Azure policy and supporting functions**, are the components or technical implementation of the controls that go into the platform. This code is version-controlled and deployed. These code items must act in enforcing the policy and include the code for reporting compliance of the policy.
 
 ### Starting with a baseline
 
