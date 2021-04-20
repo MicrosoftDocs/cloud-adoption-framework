@@ -71,7 +71,7 @@ This article provides guidance for connecting a Linux server to Azure Arc using 
 Run the script using the `. ./az_connect_linux.sh` command.
 
 > [!NOTE]
-> The extra dot is because the script has an _export_ function and needs to have the vars exported in the same shell session as the rest of the commands.
+> The extra dot is because the script has an *export* function and needs to have the vars exported in the same shell session as the rest of the commands.
 
 Upon successful completion, you will have your Linux server, connected as a new Azure Arc resource inside your resource group.
 

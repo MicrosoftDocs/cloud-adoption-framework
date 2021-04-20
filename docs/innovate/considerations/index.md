@@ -2,22 +2,20 @@
 title: Innovation in the digital economy
 description: Build your innovation processes. Focus on understanding customer needs and rapidly building cloud innovations. Shape the digital economy and interact with customers.
 author: BrianBlanchard
-keywords: digital economy, what is innovation, innovation process, innovation methodology
 ms.author: brblanch
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: digital economy, what is innovation, innovation process, innovation methodology
 ---
 
 # Innovation in the digital economy
 
 The digital economy is an undeniable force in almost every industry. During the industrial revolution, gasoline, conveyor belts, and human ingenuity were key resources for promoting market innovation. Product quality, price, and logistics drove markets as companies sought to deliver better products to their customers more quickly. Today's digital economy shifts the way in which customers interact with corporations. The primary forms of capital and market differentiators have all shifted as a result. In the digital economy, customers are less concerned with logistics and more concerned with their overall experience of using a product. This shift arises from direct interaction with technology in our daily lives and from a realization of the value associated with those interactions.
 
-In the Innovate methodology of the Cloud Adoption Framework, we'll focus on understanding customer needs and rapidly building innovations that shape how your customers interact with your products. We'll also illustrate an approach to delivering on the value of a minimum viable product (MVP). Finally, we'll map decisions common to innovation methodology cycles to help you understand how the cloud can unlock innovation and create partnerships with your customers.
+In the Innovate methodology of the Cloud Adoption Framework, we'll focus on understanding customer needs and rapidly building innovations that shape how your customers interact with your products. We'll also illustrate an approach to delivering on the value of a minimum viable product (MVP). Finally, we'll map decisions common to innovation cycles to help you understand how the cloud can unlock innovation and create partnerships with your customers.
 
 ## Innovate methodology
 
@@ -40,7 +38,7 @@ Successful innovation is not a big-bang transformational event or an elusive mag
 
 Innovation happens at the intersection of invention and adoption. True innovation stems from slowly adjusting human experiences through new approaches, new processes, and new technologies. In this formula, invention means creating a new solution that meets a customer need. Conversely, adoption means applying the new solution to shape human behaviors and interactions. Finding the right balance between invention and adoption requires iteration, data-driven decision making, constant learning, and a growth mindset. It also requires technologies that can keep pace with the countless opportunities to learn in today's digital economy.
 
-The cloud is often a great platform for invention or the technological aspects of innovation. Unfortunately, most great ideas fail during the hard work of adoption, rather than during the creative or invention processes. To ensure success, development teams should always start with adoption as the test for innovation. To use this innovation methodology, the following three commitments should be agreed upon by the team:
+The cloud is often a great platform for invention or the technological aspects of innovation. Unfortunately, most great ideas fail during the hard work of adoption, rather than during the creative or invention processes. To ensure success, development teams should always start with adoption as the test for innovation. To use this methodology, the team should agree on these three commitments:
 
 - [Commitment to prioritize customers over technology](#commitment-to-prioritize-customers-over-technology)
 - [Commitment to transparency](#commitment-to-transparency)

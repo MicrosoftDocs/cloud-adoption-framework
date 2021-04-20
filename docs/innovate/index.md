@@ -9,7 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
-
 ---
 
 # Cloud Adoption-related innovation
