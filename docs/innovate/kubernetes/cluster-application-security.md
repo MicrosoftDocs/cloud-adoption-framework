@@ -2,24 +2,24 @@
 title: Cluster and application security
 description: Learn about Kubernetes security essentials in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
-keywords: Application security, security essentials, Kubernetes security
 ms.author: brblanch
 ms.date: 04/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
+keywords: application security, security essentials, Kubernetes security
 ---
 
 <!-- cSpell:ignore kured -->
 
 # Cluster and application security
 
-Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. Kubernetes security is important throughout the container lifecycle because of the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application’s security.
+Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. Kubernetes security is important throughout the container lifecycle because of the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application's security.
 
 ## Plan, train, and proof
 
-As you get started, the security essentials checklist and Kubernetes security resources below will help you plan for cluster operations and application security.  By the end of this section, you'll be able to answer these questions:
+As you get started, the security essentials checklist and Kubernetes security resources below will help you plan for cluster operations and application security. By the end of this section, you'll be able to answer these questions:
 
 > [!div class="checklist"]
 >
@@ -41,7 +41,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
 ## Deploy to production and apply Kubernetes security best practices
 
-As you prepare the application for production, implement a minimum set of best practices. Use this checklist at this stage.  By the end of this section, you'll be able to answer these questions:
+As you prepare the application for production, implement a minimum set of best practices. Use this checklist at this stage. By the end of this section, you'll be able to answer these questions:
 
 > [!div class="checklist"]
 >
@@ -73,7 +73,7 @@ As you prepare the application for production, implement a minimum set of best p
 
 ## Optimize and scale
 
-Now that the application is in production, how can you optimize your workflow and prepare your application and team to scale? Use the optimization and scaling checklist to prepare.  By the end of this section, you'll be able to answer this question:
+Now that the application is in production, how can you optimize your workflow and prepare your application and team to scale? Use the optimization and scaling checklist to prepare. By the end of this section, you'll be able to answer this question:
 
 > [!div class="checklist"]
 >
