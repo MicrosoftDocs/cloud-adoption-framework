@@ -12,12 +12,55 @@ ms.custom: internal
 
 # Asset Protection
 
-This article summarizes the areas of consideration when planning to implement protection measures for corporate assets and data.
+Asset Protection implements the controls to support security architecture, standards, and policy. Each asset type and security requirements are unique (identities, endpoints, applications, Azure services, etc.), but the security standards for any asset type should be consistently applied to all instances. 
 
-Running infrastructure and services in a public cloud introduces many security benefits that are difficult to replicate at equal scale in private data centres, but that doesn't mean that the task of securing an environment is complete. Protecting company assets - from virtual machines and networks to applications and identity - is still mission critical in order to provide the best possible security to the functions of the business and company data.
+Asset protection is primarily focused on consistent execution of security controls at scale (preventive, detective, and other controls) to meet the policies, standards, and architecture of the organization. Asset protection typically acts as the technical subject matter expert for assets (which is a continuous journey of learning) while working with other disciplines (governance, architecture, security operations, workload teams, etc.). Asset protection ensures that policy and standards are feasible, enables implementation of controls to support the policy and standards, and provides feedback for continuous improvement. 
 
-The value of protecting corporate assets lies in the information they store - often sensitive data related to employees or products.
-In the same way as companies protect their physical buildings with doors and ID badge checks, or sensitive paper records with locked filing cabinets, the virtual assets owned by an organization need to be protected to prevent unauthorized access.
+Asset protection is critically important because threat actors are persistent and seek out gaps in the application of standards and policy to exploit. Attackers can directly target the business-critical data or application, but also frequently target the underlying infrastructure that grants them access to the business-critical data and applications. 
+
+***((INSERT PICTURE HERE FROM SLIDE 9))***
+
+### Get Secure
+The first focus area for asset protection is to Get Secure. The two activity types of getting secure are:
+ - **Greenfield** - Ensuring that new assets are configured and new asset types are configured to standards is critical to avoid continuously creating technical debt that has to be addressed later at a greater expense (and results in increased risk exposure until that is done). 
+ - **Brownfield** – retrofitting new security controls to existing assets. Organizations often operated IT environments for decades with security as a low or nonexistent priority, resulting in a large amount of technical debt (weak security configurations, unpatched software, unencrypted communication or storage, legacy software and protocols, etc.). Bringing security controls up to current standards and policy is critical to avoid increasing risk as attackers increase their ability to exploit it for profit with ransomware and other illicit business models)
+
+Get Secure roughly maps to Capital Expenditures (CapEx) dynamics. The budget and cost to implement security should be linked as closely as feasible to the creation of the asset (e.g. new software project, growth of an application, cloud adoption initiative, etc.) for greenfield. For correcting brownfield, this is usually a special project funded to bring security controls up to standards/compliance.
+
+### Stay Secure
+
+Everything wears out or degrades over time including security configurations and standards. This happens faster than ever in the cloud age with continuous evolution of capabilities. Part of sustaining asset protection is continuing to apply the latest best practices. 
+Examples 
+ - **Continuous Cloud Improvement** - Azure Storage, SQL, and others regularly add security features to detect attacker activity that wasn’t available when the service first launched. 
+ - **Software End of Life** - Any software, including Windows and Linux Operating sytems, will always reach end of life and security updates won’t be provided for them, potentially leaving business critical data and applications exposed to attackers. 
+
+Ensuring your security risk level sustains or improves over time requires ongoing investment and resources. Like  regularly changing the oil in a car avoids big expensive costs over time, investing into your security posture reduces risk of a major incident. Stay Secure roughly maps to Operational Expenditures (OpEx) as it is an ongoing cost 
+
+
+**Getting started**
+
+Asset protection can be challenging for teams working to secure newer asset types like Azure and AWS Services. We recommend organizations first focus on 
+**Well-known resources** like VMs, networks, identities, etc. that the team is familiar with (and which are easier to manage with newer cloud tools like Azure Security Center and Azure Defender). 
+**Baselines in Azure Security Benchmark** – Microsoft provides security configuration guidance for specific Azure services that are aligned to the Azure security benchmarks
+
+**Responsible Teams** - 
+
+Asset Protection may be performed by IT operations teams responsible for enterprise-wide assets, DevOps/DevSecOps teams responsible for their workload’s assets, or security teams working with the IT or DevOps/DevSecOps teams. 
+
+**Cloud Elasticity**
+
+Unlike on premises, cloud resources may be created and destroyed over short timeframes. As needed, workloads can spin up more instances of servers, Azure Functions, etc. to perform a job and then spin them down afterward within (something within month, but sometimes within minutes or hours). Your asset protection processes and measurements should take this into account. 
+
+**Exception Management**
+Once a best practice is identified for an asset, it should be consistently applied to all instances of it. While temporary exceptions may need to be approved, these should be managed closely with expiration dates to ensure that temporary exceptions don’t become a permanent risk from attackers. 
+
+**Challenges with measuring value/impact**
+
+ One of the difficulties with measuring the business value of asset protection investments is that the impact of a problem isn’t often apparent until there is a real-world failure. Just like changing your oil in a car seems like an expensive nuisance until the engine fails, security vulnerabilities can appear silent and invisible until an attacker exploits them. 
+
+**Favor Automated Policy**
+
+Asset protection should favor automated enforcement and remediation mechanisms like Azure Policy or another automation framework. This helps avoid cost and morale issues from repeatedly performing manual tasks (and increased security risk from human errors)
 
 ## Protection and secure management
 
