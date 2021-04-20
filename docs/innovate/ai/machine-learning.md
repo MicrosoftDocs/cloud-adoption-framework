@@ -15,7 +15,7 @@ keywords: machine learning solutions, machine learning checklist, machine learni
 
 # Machine learning
 
-Machine learning is a subset of AI, or artificial intelligence, which allows machines to detect patterns and learn from data without expressly being programed for it. Azure Machine Learning solutions can advance your computing insights.
+Machine learning is a subset of AI that allows machines to detect patterns and learn from data without expressly being programed for it. Azure Machine Learning solutions can advance your computing insights.
 
 Azure empowers you with the most advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models by using Azure Machine Learning. Machine Learning AI can be used for any kind of machine learning, from classical to deep, supervised, and unsupervised learning. Whether you prefer to write Python or R code, or use zero-code or low-code options such as the [designer](/azure/machine-learning/tutorial-designer-automobile-price-train-score), you can build, train, and track highly accurate machine learning and deep learning models in a Machine Learning workspace.
 
