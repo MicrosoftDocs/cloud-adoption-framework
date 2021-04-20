@@ -134,7 +134,7 @@ The admins follow the link to the [Azure Dev/Test subscription offer](https://az
 
 With their new subscription provisioned, Contoso admins use the Azure portal to create a new DevTest Labs instance. The new lab is created in the `ContosoDevRG` resource group.
 
-![Screenshot of the Create button for DevTest Labs on the portal.](./media/contoso-migration-devtest-to-labs/new-lab.png)
+![Screenshot of the **Create** button for DevTest Labs on the portal.](./media/contoso-migration-devtest-to-labs/new-lab.png)
 *Figure 4: Creating a new DevTest Labs instance.*
 
 ## Step 2: Configure the development virtual network, assign a resource group, and set policies
