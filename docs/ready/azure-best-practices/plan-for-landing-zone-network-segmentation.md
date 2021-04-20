@@ -47,9 +47,9 @@ This section explores key recommendations to deliver highly secure internal netw
 > [!NOTE] 
 > Rule priorities will need to be adjusted based on your existing NSG ruleset. 
 
-  | Priority | Name       | Source | Destination    | Service | Action | Remark                 |
-  | -------- | ---------- | ------ | -------------- | ------- | ------ | ---------------------- |
-  | 100      | AllowLocal | Any    | VirtualNetwork | Any     | Allow  | Allow traffic during normal operations. With Forced Tunneling enabled, 0.0.0.0/0 is considered part of the VirtualNetwork tag as long as BGP is advertising it to the ExpressRoute or VPN gateway | 
-  | 110      | DenyInternet | Any    | Internet | Any     | Deny  | Deny traffic directly to the internet if the 0.0.0.0/0 route is withdrawn from the routes advertised (for example, due to an outage or misconfiguration)| 
+  | Priority | Name | Source | Destination | Service | Action | Remark |
+  | --- | --- | --- | --- | --- | --- | --- |
+  | 100 | `AllowLocal` | `Any` | `VirtualNetwork` | `Any` | `Allow` | Allow traffic during normal operations. With Forced Tunneling enabled, `0.0.0.0/0` is considered part of the `VirtualNetwork` tag as long as BGP is advertising it to the ExpressRoute or VPN gateway. | 
+  | 110 | `DenyInternet` | `Any` | `Internet` | `Any` | `Deny` | Deny traffic directly to the internet if the `0.0.0.0/0` route is withdrawn from the routes advertised (for example, due to an outage or misconfiguration). | 
   
   
