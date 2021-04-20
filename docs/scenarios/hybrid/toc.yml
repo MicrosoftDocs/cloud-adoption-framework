@@ -14,12 +14,21 @@ items:
     - name: Azure products
       href: toolchain.md
 
-  - name: Build an initial strategy
+  - name: Strategic impact
     href: strategy.md
-  - name: Define your plan
+  - name: Technical planning
     href: plan.md
-  - name: Prepare your environments
-    href: ready.md
+  - name: Prepare your environment
+    items:
+    - name: Azure Landing Zones
+      href: ready.md
+    - name: Implementation options
+      items:
+      - name: Start small with basic vm management
+        href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      - name: Enterprise-scale landing zones for hybrid
+        href: enterprise-scale-landing-zone.md
+    
   - name: Migrate to the cloud
     href: migrate.md
   - name: Govern your portfolio
@@ -27,12 +36,7 @@ items:
   - name: Manage your portfolio
     href: manage.md
 
-  - name: Enterprise-scale landing zones
-    items:
-      - name: Support for hybrid and multicloud
-        href: enterprise-scale-landing-zone.md
-
-  - name: Well-architected hybrid workloads
+  - name: Well-architected for hybrid workloads
     items:
     - name: Overview
       href: /azure/architecture/framework/hybrid/hybrid-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -46,7 +50,7 @@ items:
       href: /azure/architecture/framework/hybrid/hybrid-reliability?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Security
       href: /azure/architecture/framework/hybrid/hybrid-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-  - name: Architectures
+  - name: Hybrid architectures
     items:
     - name: Overview
       href: /azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -87,8 +91,6 @@ items:
 
     - name: Management
       items:
-      - name: Manage configurations for Azure Arc enabled servers
-        href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Automation in a hybrid environment
         href: /azure/architecture/hybrid/azure-automation-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Back up files and applications on Azure Stack Hub
@@ -219,7 +221,7 @@ items:
         href: ../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2fscenarios%2fhybrid%2ftoc.json
       - name: Scale configuration of MMA
         href: ../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2fscenarios%2fhybrid%2ftoc.json
-  - name: Featured Azure products
+  - name: Azure product documentation
     items:
     - name: All hybrid and multicloud products
       href: /hybrid/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -245,7 +247,7 @@ items:
       href: /azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Firewall
       href: /azure/firewall/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-  - name: Learn modules
+  - name: Build skills on Learn
     items:
     - name: Hybrid cloud
       items:
@@ -279,3 +281,4 @@ items:
         href: /learn/modules/azure-stack-hci-technologies/
       - name: Azure Stack HCI - Arc integration
         href: /learn/modules/stack-hci-arc-integration/
+

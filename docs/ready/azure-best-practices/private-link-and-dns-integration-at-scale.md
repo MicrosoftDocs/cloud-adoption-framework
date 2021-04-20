@@ -305,7 +305,7 @@ Once the platform team has deployed the platform infrastructure components (priv
 
 At this point, application teams can use the storage account via a private endpoint from any VNet in the hub and spoke network environment and from on-premises, as the DNS record has been automatically recorded in the private DNS zone.
 
-If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed.
+If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed. 
 
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/private-link-overview#availability
@@ -318,16 +318,16 @@ If an application owner deletes the private endpoint, the corresponding records 
 [link-9]: /azure/governance/policy/how-to/remediate-resources
 [link-10]: /azure/governance/policy/overview
 [image-1]: ./media/private-link-example-central-dns.png
-[image-2]: ./media/private-link-storage-with-blob.jpg
-[image-3]: ./media/private-link-storage-policy-step-1.jpg
-[image-4]: ./media/private-link-storage-policy-step-2.jpg
-[image-5]: ./media/private-link-storage-policy-step-3.jpg
-[image-6]: ./media/private-link-private-dns-set-no.jpg
-[image-7]: ./media/private-link-create-storage.jpg
+[image-2]: ./media/create-private-dns-zones.jpg
+[image-3]: ./media/create-storage-account-blob.jpg
+[image-4]: ./media/validation.jpg
+[image-5]: ./media/validation-error-detail.jpg
+[image-6]: ./media/private-dns-integration.jpg
+[image-7]: ./media/create-storage-account.jpg
 [image-8]: ./media/private-link-network-private.jpg
-[image-9]: ./media/private-link-create-private.jpg
-[image-10]: ./media/private-link-target-blob.jpg
-[image-11]: ./media/private-link-integrate-with-private.jpg
-[image-12]: ./media/private-link-fqdn-private-ip.jpg
-[image-13]: ./media/private-link-activity-log.jpg
-[image-14]: ./media/private-link-check-private-dns.jpg
+[image-9]: ./media/create-private-endpoint.jpg
+[image-10]: ./media/create-private-endpoint-resources.jpg
+[image-11]: ./media/create-private-endpoint-configuration.jpg
+[image-12]: ./media/private-endpoint-ip-fqdn.jpg
+[image-13]: ./media/private-endpoint-activity-log.jpg
+[image-14]: ./media/private-dns-zones.png

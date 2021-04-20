@@ -2,15 +2,42 @@
 #cSpell:ignore devtest mariadb
 
 items:
-  - name: Modern containers - Microsoft Cloud Adoption Framework for Azure
+  - name: Container operations - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: Modern containers - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Container operations - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
     href: strategy.md
   - name: Technical planning
     href: plan.md
-  - name: Prepare your environments
-    href: ready.md
+  - name: Prepare your environment
+    items:
+    - name: Azure Landing Zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Enterprise enrollment
+        href: eslz-enterprise-enrollment.md
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: eslz-resource-organization.md
+      - name: Governance disciplines
+        href: eslz-security-governance-and-compliance.md
+      - name: Operations baseline
+        href: eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Deployment options
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Start small & expand with the AKS baseline
+        href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+      - name: Enterprise-scale landing zone for AKS
+        href: enterprise-scale-landing-zone.md
+      
   - name: Migrate to modern containers
     href: migrate.md
   - name: Innovate with modern containers
@@ -20,16 +47,12 @@ items:
   - name: Manage your portfolio
     href: manage.md
 
-  - name: Well-architected hybrid workloads
+  - name: Well-architected workloads on containers
     items:
     - name: Best practices for application developers
       href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-    - name: Best practices for pod security
-      href: /azure/aks/developer-best-practices-pod-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-  - name: Architectures
+  - name: Container Architectures
     items:
-    - name: AKS baseline cluster
-      href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Microservices architecture on AKS
       href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Microservices with AKS and Azure DevOps
@@ -57,6 +80,8 @@ items:
         href: /azure/aks/operator-best-practices-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Security
       items:
+      - name: Best practices for pod security
+        href: /azure/aks/developer-best-practices-pod-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Cluster security and upgrades
         href: /azure/aks/operator-best-practices-cluster-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Container image management and security
@@ -199,25 +224,8 @@ items:
         href: /azure/aks/operator-best-practices-cluster-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Networking
         href: /azure/aks/operator-best-practices-network?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-
-  - name: Enterprise-scale construction set
-    items:
-    - name: Construction set for AKS enterprise-scale scenario
-      href: enterprise-scale-landing-zone.md
-    - name: Identity and access management
-      href: eslz-identity-and-access-management.md
-    - name: Network topology and connectivity
-      href: eslz-network-topology-and-connectivity.md
-    - name: Management and monitoring
-      href: eslz-management-and-monitoring.md
-    - name: Business continuity and disaster recovery
-      href: eslz-business-continuity-and-disaster-recovery.md
-    - name: Security governance and compliance
-      href: eslz-security-governance-and-compliance.md
-    - name: Platform automation and DevOps
-      href: eslz-platform-automation-and-devops.md
        
-  - name: Azure container products
+  - name: Azure product documentation
     items:
     - name: Container product decision tree
       href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -384,9 +392,15 @@ items:
         - name: Other (Go/Rust)
           href: /azure/azure-functions/create-first-function-vs-code-other?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
 
-  - name: Learn modules
+  - name: Build skills on Learn
     items:
-    - name: Introduction to Azure hybrid cloud services
-      href: /learn/modules/intro-to-azure-hybrid-services/
-    - name: Design a hybrid network architecture on Azure
-      href: /learn/modules/design-a-hybrid-network-architecture/
+    - name: Introduction to Kubernetes on Azure
+      href: /learn/paths/intro-to-kubernetes-on-azure/
+    - name: Azure Kubernetes Service deployment pipeline and GitHub Actions
+      href: /learn/modules/aks-deployment-pipeline-github-actions/
+    - name: Manage Application Configuration and Secrets in Azure Kubernetes Service (AKS)
+      href: /learn/modules/aks-secrets-configure-app/
+    - name: Deploy and manage a stateful application by using Azure Cosmos DB and Azure Kubernetes Service
+      href: /learn/modules/aks-manage-application-state/
+    - name: Application scalability on AKS with HorizontalPodAutoscalers
+      href: /learn/modules/aks-application-autoscaling-native/

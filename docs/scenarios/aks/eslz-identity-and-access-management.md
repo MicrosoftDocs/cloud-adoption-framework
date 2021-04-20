@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale identity and access management for AKS
-description: Describes how this enterprise-scale scenario can improve identity and access management for the Azure Kubernetes Service.
+title: Identity and access management considerations for AKS
+description: Describes how to improve identity and access management for the Azure Kubernetes Service.
 author: TomGeske
 ms.author: thomasge
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Identity and access management for Azure Kubernetes Service (AKS) enterprise-scale scenario
+# Identity and access management considerations for AKS
 
 Your organization or enterprise needs to design suitable security settings to meet their requirements. Identity and access management covers multiple aspects like cluster identities, workload identities, and operator access.
 

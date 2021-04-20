@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale Azure Kubernetes Service (AKS) platform automation and DevOps
+title: Deployment option considerations for Azure Kubernetes Service (AKS)
 description: Understand design recommendations and considerations for Azure Kubernetes Service (AKS) platform automation and DevOps.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# AKS enterprise-scale platform automation and DevOps
+# Deployment option considerations for Azure Kubernetes Service (AKS)
 
 As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are open and extensible platforms with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 
