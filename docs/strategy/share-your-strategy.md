@@ -79,7 +79,7 @@ You've shown the finance team a brief overview of the benefits, now it's time to
 
 Show the finance team your financial plan. Your plan should reiterate your organization's business and financial goals, and demonstrate how cloud economics aligns to their financial considerations.
 
-Your plan should be tailored to your organization's goals. It might be a consumption, rapid, moderate, or depth cloud financial plan. For detailed information on building your plan, see [Create a financial plan].
+Your plan should be tailored to your organization's goals. It might be a consumption, rapid, moderate, or depth cloud financial plan. For help with building your plan, see [Create a financial plan] and [Strategy for partner alignment](partner-alignment.md).
 
 Use the following topics as guidelines when you present your plan. They contain important information to point out to the finance team, depending on the focus you've identified.
 
@@ -113,7 +113,7 @@ Saved costs from cloud adoption can be reinvested, also known as iterative moder
 
 **Spot VM pricing**: With Azure Spot Virtual Machines (Spot VMs), you can access unused Azure compute capacity at steep discounts. Up to 90 percent compared to pay-as-you-go prices.
 
-To learn more about licensing considerations and ways to reduce cloud costs, see [Licensing considerations].
+To learn more about licensing considerations and ways to reduce cloud costs, see [Licensing considerations](licensing-considerations.md).
 
 ### Implement the business case
 
