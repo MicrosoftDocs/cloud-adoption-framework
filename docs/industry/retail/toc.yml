@@ -14,8 +14,6 @@ items:
       href: retail-context.md
     - name: Azure for Retail overview
       href: retail-azure-advantages.md
-    - name: Organizational alignment for retail
-      href: organize.md
 
   - name: Strategic impact
     items:
@@ -32,10 +30,8 @@ items:
     - name: Data management and analytics
       href: retail-data-management-and-analytics.md
 
-  - name: Technical planning
-    items:
-    - name: Build a plan to reach cloud maturity
-      href: plan.md
+  - name: Technical planning (TODO)
+    href: plan.md
   - name: Prepare your environment
     items:
     - name: Azure Landing Zones
@@ -72,9 +68,9 @@ items:
       href: innovate.md
     - name: Improve retail experience
       href: improve-retail-experience.md
-  - name: Govern your portfolio
+  - name: Govern your portfolio (TODO)
     href: govern.md
-  - name: Manage your assets
+  - name: Manage your assets (TODO)
     href: manage.md
   - name: Understand retail organizations
     href: organize.md
