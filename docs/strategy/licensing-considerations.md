@@ -1,12 +1,12 @@
 ---
-title: #Required; page title is displayed in search results. Include the brand.
-description: #Required; article description that is displayed in search results. 
-author: #Required; your GitHub user alias, with correct capitalization.
+title: Licensing considerations
+description:This article focuses on the commercial savings opportunities and the reduction of spend over time related to licensing: reservations, Azure Hybrid Benefit, Dev/Test pricing, and Spot VM pricing.
+author: wering
 ms.author: wering
-ms.service: #Required; service per approved list. slug assigned by ACOM.
-ms.topic: conceptual #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-ms.custom: template-concept #Required; leave this attribute/value as-is.
+ms.service: cloud-adoption-framework
+ms.topic: conceptual 
+ms.date: 04/20/2021
+ms.custom: template-concept
 ---
 
 <!--Remove all the comments in this template before you sign-off or merge to the 
