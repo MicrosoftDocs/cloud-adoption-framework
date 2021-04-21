@@ -1,6 +1,6 @@
 ---
 title: Share your strategy
-description: This article reviews how to share your cloud financial plan and how to implement your business case with the finance team. 
+description: Use the Cloud Adoption Framework for Azure to share your financial plan with the finance team and implement your business case. 
 author: WendyRing
 ms.author: wering
 ms.service: cloud-adoption-framework
