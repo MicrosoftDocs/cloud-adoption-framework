@@ -17,6 +17,8 @@ items:
 
   - name: Strategic impact
     items:
+    - name: Understand retail organizations
+      href: organize.md
     - name: Retail specific strategies
       href: strategy.md
     - name: Personalization
@@ -72,8 +74,6 @@ items:
     href: govern.md
   - name: Manage your assets (TODO)
     href: manage.md
-  - name: Understand retail organizations
-    href: organize.md
   - name: Well-Architected for government workloads (TBD)
     items:
     - name: Overview (TBD)
