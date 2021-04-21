@@ -7,10 +7,10 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: continuous learning, customer empathy, drive innovation
+ms.custom:
 - internal
 - seo-caf-innovate
-keywords: 
+keywords: continuous learning, customer empathy, drive innovation
 ---
 
 # Learn with customers
