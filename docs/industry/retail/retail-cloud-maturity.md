@@ -25,7 +25,7 @@ Siloed retail organizations are characterized by limited to no cloud-native adop
 
 ## Connected retail
 
-Connected retail organizations are further along on their cloud journey, having established a course forward for infrastructure, data, and applications. These organizations often start by “lifting and shifting” elements of their computing infrastructure (e.g. servers and storage, networking firewalls and security) to the cloud via Infrastructure as a Service (IaaS) offerings. This shift reduces operational complexities, breaks down data siloes, and harmonizes their data estates. Retailers in this stage often leverage shared services such as item catalog availability and taxation handling and are likely to enable innovative POCs with ancillary cloud services such as artificial intelligence and internet of things (IoT) to explore new capabilities.
+Connected retail organizations are further along on their cloud journey, having established a course forward for infrastructure, data, and applications. These organizations often start by “lifting and shifting” elements of their computing infrastructure (e.g. servers and storage, networking firewalls and security) to the cloud via Infrastructure as a Service (IaaS) offerings. This shift reduces operational complexities, breaks down data silos, and harmonizes their data estates. Retailers in this stage often leverage shared services such as item catalog availability and taxation handling and are likely to enable innovative POCs with ancillary cloud services such as artificial intelligence and internet of things (IoT) to explore new capabilities.
 
 ## Analytics-driven retail
 

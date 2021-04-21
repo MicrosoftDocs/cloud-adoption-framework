@@ -10,7 +10,7 @@ ms.subservice: overview
 ---
 
 # Personalization in the retail industry
-
+ 
 Today’s digitally savvy consumers understand they can have it all. From product research to purchase convenience—from shipment tracking to return optimization—customers are leveraging digital means wherever possible and expect businesses to instantly react to all their needs and wants. Alongside their desire for personalized services, shoppers are increasingly concerned about privacy in the wake of corporate and social data breaches.
 
 As consumer behavior and expectations continue to evolve, retailers must seek new ways of understanding and meeting them. Delivering personalization across multiple channels to increase the relevance of offers and improve customer experiences is no longer just a competitive advantage—it’s imperative to survival in the retail business.
@@ -28,7 +28,7 @@ Deep personalization gives retailers what’s needed to thrive in today’s mark
 
 Unfortunately, integrating the mechanisms required to deliver personalization into existing retail processes is complex and exposes significant challenges for many organizations:
 
-1. Data siloes and lack of data governance make it hard to get a 360-degree view of consumers across channels.
+1. Data silos and lack of data governance make it hard to get a 360-degree view of consumers across channels.
 2. A lack of insights acquired through AI and machine learning model development limits the ability to respond to changes in customer behavior and tailor interactions to individual needs. 
 3. Ineffective targeting of advertisements and product information negatively impacts conversion, cross-sell effectiveness, and customer satisfaction.
 

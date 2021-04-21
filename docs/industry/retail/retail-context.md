@@ -23,7 +23,7 @@ In addition to meeting customer expectations, retailers need to increase efficie
 
 ## Harnessing technology and data to reimagine the future of retail 
 
-To optimize operations and create stronger customer experiences, data and cloud-based services will play an indispensable role for retailers and CG companies moving forward. To stay competitive, they’ll need to connect data siloes related to customer behavior across channels, finances, supply chain, and more. With next-generation technologies like cloud computing, advanced analytics, machine learning, IoT, and mixed reality, there are endless opportunities for retailers to not only improve what they’re doing today, but to reimagine the way they do business. Cloud-based capabilities can lay the foundation for retailers to survive in the short term and thrive in the future.
+To optimize operations and create stronger customer experiences, data and cloud-based services will play an indispensable role for retailers and CG companies moving forward. To stay competitive, they’ll need to connect data silos related to customer behavior across channels, finances, supply chain, and more. With next-generation technologies like cloud computing, advanced analytics, machine learning, IoT, and mixed reality, there are endless opportunities for retailers to not only improve what they’re doing today, but to reimagine the way they do business. Cloud-based capabilities can lay the foundation for retailers to survive in the short term and thrive in the future.
 
 ## COVID-19 context
 

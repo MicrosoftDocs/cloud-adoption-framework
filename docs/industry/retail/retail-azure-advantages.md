@@ -15,7 +15,7 @@ We are at an inflection point unlike any other that we’ve seen before. Retail 
 
 Microsoft enables retail organizations to transform their business and deliver extraordinary customer service using an intelligent, trusted, and secure cloud platform.
 
-[Microsoft Azure offers a wide range of products and services](https://azure.microsoft.com/services/), all with the speed and scale of the cloud. Our databases and storage services make it possible to connect and combine data siloes. This enables the creation of a digital feedback loop—wherein digital signals (e.g. customer demand, commerce, payments, and distribution) can be captured across the retail value chain and data can be connected and synthesized to drive improved business outcomes.
+[Microsoft Azure offers a wide range of products and services](https://azure.microsoft.com/services/), all with the speed and scale of the cloud. Our databases and storage services make it possible to connect and combine data silos. This enables the creation of a digital feedback loop—wherein digital signals (e.g. customer demand, commerce, payments, and distribution) can be captured across the retail value chain and data can be connected and synthesized to drive improved business outcomes.
 
 We also have advanced analytics and AI solutions that help retailers gain actionable intelligence and develop intelligent applications. We have a leading position in key 21st century technologies like IoT, blockchain, and mixed reality. For developers, we have a comprehensive set of tools that can be used in with any platform or language to build and manage cloud applications. 
 
