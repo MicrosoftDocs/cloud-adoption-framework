@@ -10,6 +10,11 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
+# Feel free to nuke all content here - saved in OneNote (delete this line after changes)
+
+
+
+
 # Security Integration
 
 While the majority of security functions operate out of sight of daily business workflows, some security goals require integration of security considerations into daily workflows and operations throughout the business organization. Just as security in the physical world is an integrated part of workflows like "if you see something, say something" and airport security checkpoints, so too must security be integrated into the normal experience of planning and operating the business. 
