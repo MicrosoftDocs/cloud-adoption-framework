@@ -18,7 +18,7 @@ Asset protection is primarily focused on consistent execution of security contro
 
 Asset protection is critically important because threat actors are persistent and seek out gaps in the application of standards and policy to exploit. Attackers can directly target the business-critical data or application, but also frequently target the underlying infrastructure that grants them access to the business-critical data and applications. 
 
-***((INSERT PICTURE HERE FROM SLIDE 9))***
+![Asset Protection](./media/asset-protection.png)
 
 ### Get Secure
 The first focus area for asset protection is to Get Secure. The two activity types of getting secure are:
