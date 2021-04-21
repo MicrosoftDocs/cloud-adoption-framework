@@ -351,3 +351,5 @@ Azure provides both internal and third-party capabilities from our extensive par
 Governance is crucial to the success of Azure. This article targets the technical implementation of an enterprise scaffold but only touches on the broader process and relationships between the components. Policy governance flows from the top down and is determined by what the business wants to achieve. Naturally, the creation of a governance model for Azure includes representatives from IT, but more importantly it should have strong representation from business group leaders, and security and risk management. In the end, an enterprise scaffold is about mitigating business risk to facilitate an organization's mission and objectives.
 
 Now that you have learned about subscription governance, it's time to see these recommendations in practice. For more information, see the [Best practices for Azure readiness](../ready/azure-best-practices/index.md).
+
+<!-- docutune:enable -->

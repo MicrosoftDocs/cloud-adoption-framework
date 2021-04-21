@@ -11,7 +11,7 @@ ms.subservice: reference
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- docutune:disable TODO -->
+<!-- docutune:disable -->
 <!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
@@ -560,3 +560,5 @@ Learn more about the Azure capabilities discussed in this document.
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
 [machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
+
+<!--docutune:enable -->

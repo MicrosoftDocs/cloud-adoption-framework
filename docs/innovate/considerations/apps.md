@@ -21,7 +21,7 @@ In some cases, data alone is enough to drive change and meet customer needs. Mor
 
 ## Shared code
 
-Teams that are quick to respond to customer feedback, market changes, and opportunities typically innovate best. The first principle of innovative applications is an element of the [growth mindset](learn.md#growth-mindset): "Share the code." Code sharing invites diverse perspectives and contributions, and spurs innovation. Therefore, application development should start with a shared code repository. 
+Teams that are quick to respond to customer feedback, market changes, and opportunities typically innovate best. The first principle of innovative applications is an element of the [growth mindset](./learn.md#growth-mindset): "Share the code." Code sharing invites diverse perspectives and contributions, and spurs innovation. Therefore, application development should start with a shared code repository.
 
 A widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. An alternative is [Microsoft Azure Repos](https://azure.microsoft.com/services/devops/repos/), which is an [Azure DevOps](https://azure.microsoft.com/services/devops/) service that provides unlimited, cloud-hosted private repos for your project. For version control when you use Azure Repos, you can choose either Git, which is a distributed type, or Team Foundation Version Control (TFVC), which is centralized. For more information about Azure Repos, Git, and TFVC, see [Azure Repos Documentation](/azure/devops/repos/?view=azure-devops&preserve-view=true).
 
@@ -44,7 +44,7 @@ Modern web applications can be the fastest way to meet the needs of internal or 
 
 ### Adding intelligence
 
-It gets easier all the time for professional and citizen developers to add  machine learning and AI features to applications that help meet the needs of the customer and create an interactive experience. Some examples of these features are:
+It gets easier all the time for professional and citizen developers to add machine learning and AI features to applications that help meet the needs of the customer and create an interactive experience. Some examples of these features are:
 
 - Speech to text
 - Text to speech
@@ -56,13 +56,13 @@ Innovators should be alert to take advantage of such features to create an inter
 
 ### Bots
 
-A bot is a conversational AI application that provides users an experience that is more like dealing with a person, and less like dealing with a conventional computer application. Users converse with a bot through text, interactive cards, and speech. A bot interaction can range from a quick question-and-answer—to make a dinner reservation, for instance—to a sophisticated conversation that intelligently provides access to services.
+A bot is a conversational AI application that provides users an experience that is more like dealing with a person, and less like dealing with a conventional computer application. Users converse with a bot through text, interactive cards, and speech. A bot interaction can range from a quick question and answer, such as making a dinner reservation, to a sophisticated conversation that intelligently provides access to services.
 
 Bots can do the same things as other types of software: read and write files, use databases and APIs, and handle regular computational tasks. What makes bots unique is their use of mechanisms generally reserved for human-to-human communication. Bots are a lot like modern web applications: they live on the internet and use APIs to send and receive messages. What's in a bot varies widely depending on what kind of bot it is. Modern bot software relies on a stack of technology and tools to deliver increasingly complex experiences on a variety of platforms. However, a simple bot could just receive a message and echo it back to the user with very little code involved.
 
 ## Cloud-native solutions
 
-Cloud-native architecture enables you to embrace rapid change, and run resilient and scalable applications more easily. Cloud-native applications are typically built using containers, [microservices](/azure/architecture/guide/architecture-styles/microservices), managed services, serverless functions, and event-based programming. Most commonly, cloud-native solutions use continuous delivery to achieve faster time to market. 
+Cloud-native architecture enables you to embrace rapid change, and run resilient and scalable applications more easily. Cloud-native applications are typically built using containers, [microservices](/azure/architecture/guide/architecture-styles/microservices), managed services, serverless functions, and event-based programming. Most commonly, cloud-native solutions use continuous delivery to achieve faster time to market.
 
 A cloud-native solution allows centralized development teams to maintain control of the business logic without the need for monolithic, centralized solutions. It also creates an anchor to drive consistency across the input of citizen developers and modern experiences. Finally, cloud-native solutions provide an innovation accelerator by freeing citizen and professional developers to innovate safely and with a minimum of blockers.
 
@@ -103,7 +103,7 @@ The more there is to maintain within an innovative application or solution, the 
 
 To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](/azure/app-service/overview) or [containers](/azure/containers/).
 
-In parallel, consider the serverless transaction data options that Azure provides—they can also reduce overhead. The [Azure product catalog](/azure/) provides database options that host data without the need for a full data platform.
+In parallel, consider the serverless transaction data options in Azure that can also reduce overhead. The [Azure product catalog](/azure/) provides database options that host data without the need for a full data platform.
 
 ## Next steps
 

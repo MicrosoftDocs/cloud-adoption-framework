@@ -17,7 +17,7 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 ## Prerequisites
 
 > [!NOTE]
-> This guide assumes that you have some VMware vSphere familiarity. It is also not designed to review either VMware or Ubuntu best practices.
+> This guide assumes that you have some VMware vSphere familiarity. It's not designed to review either VMware or Ubuntu best practices.
 
 - [Download the latest Ubuntu server 18.04 ISO file](https://releases.ubuntu.com/18.04/)
 

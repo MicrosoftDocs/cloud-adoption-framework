@@ -2,15 +2,13 @@
 title: Build customer empathy
 description: Learn to create solutions that drive cloud innovation based on customer empathy, a deep understanding of the customer's experience.
 author: BrianBlanchard
-keywords: how to build empathy, customer empathy, cloud innovation
 ms.author: brblanch
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: how to build empathy, customer empathy, cloud innovation
 ---
 
 <!-- docutune:casing "Oxford English Dictionary" -->

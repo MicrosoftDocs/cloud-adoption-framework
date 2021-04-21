@@ -481,6 +481,13 @@ items:
           - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
 
+        - name: Storage migration
+          items:
+          - name: Storage migration overview
+            href: /azure/storage/common/storage-migration-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Tools for unstructured storage migration
+            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
         - name: Linux and open-source databases
           items:
           - name: Migrate open-source databases to Azure
