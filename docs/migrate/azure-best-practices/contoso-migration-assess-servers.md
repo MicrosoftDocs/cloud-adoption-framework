@@ -89,9 +89,9 @@ As best practice, Contoso gathers data over longer period of time, for example 5
 
 ## Step 2: Perform Assessment
 
-After discovery is running for at least a day, Contoso can start performing assessments in Azure Migrate project through Azure Portal. Contoso can choose to run various assessments like [Azure VM assessment](https://docs.microsoft.com/en-us/azure/migrate/concepts-assessment-calculation), [Azure SQL assessment](https://docs.microsoft.com/en-us/azure/migrate/concepts-azure-sql-assessment-calculation) or [AVS assessment](https://docs.microsoft.com/en-us/azure/migrate/concepts-azure-vmware-solution-assessment-calculation).
+After discovery is running for at least a day, Contoso can start performing assessments in Azure Migrate project through Azure Portal. Contoso can choose to run various assessments like [Azure VM assessment](https://docs.microsoft.com/azure/migrate/concepts-assessment-calculation), [Azure SQL assessment](https://docs.microsoft.com/azure/migrate/concepts-azure-sql-assessment-calculation) or [AVS assessment](https://docs.microsoft.com/azure/migrate/concepts-azure-vmware-solution-assessment-calculation).
 
-Contoso starts with VM assessment following [assessment best practices](https://docs.microsoft.com/en-us/azure/migrate/best-practices-assessment) and executes Azure SQL assessment later. As discovery source, Contoso chooses servers discovered through Azure Migrate appliance.
+Contoso starts with VM assessment following [assessment best practices](https://docs.microsoft.com/azure/migrate/best-practices-assessment) and executes Azure SQL assessment later. As discovery source, Contoso chooses servers discovered through Azure Migrate appliance.
 
 > [!NOTE]
 > In case Contoso is not be able to deploy Azure Migrate discovery appliance to collect data, they can provide a CSV file with required data to Azure Migrate. [**Learn more**](https://docs.microsoft.com/azure/migrate/tutorial-discover-import) on how to import discovery data using CSV file.
@@ -130,7 +130,7 @@ Azure Migrate assessment results include cost estimation for assessed servers. C
 
 To perform successful migration to Azure, it is critical for Contoso to understand workload details and their dependencies during migration planning. As a best practice, Contoso migration team needs to identify application owners of workloads running on each server that is being assessed for migration. Contoso uses their CMDB data to link discovered servers to various business applications and identify respective applications owners, their development and support teams. After application owners are identified, Contoso migration team schedules review meetings (interviews) with them.
 
-The migration team [group machines](https://docs.microsoft.com/azure/migrate/how-to-create-a-group) for workload specific assessment based on the application tiers and their dependencies. During further analysis and application owner discussions, the idea is to further refine the group. This will also help later in finalizing migration batches.
+The migration team [groups machines](https://docs.microsoft.com/azure/migrate/how-to-create-a-group) for workload specific assessment based on the application tiers and their dependencies. During further analysis and application owner discussions, the idea is to further refine the group. This will also help later in finalizing migration waves.
 
 ### Dependency analysis
 
@@ -176,33 +176,35 @@ As best practice Contoso reviews server assessment results with application owne
 
 ### Document Migration Plan
 
-Based on the final assessment results and application owner interviews, Contoso Migration team finalizes the migration approach. They document the migration steps incl. details from assessment, dependency analysis and inputs from the application owner interviews. This captures additional configurations like load balancer, dns updates, db connection string, licenses and any additional steps the application team or vendor might need to execute as part of post migration steps.
+Based on the final assessment results and application owner interviews, Contoso Migration team finalizes the migration approach. They document the migration steps including details from assessment, dependency analysis and inputs from the application owner interviews. This captures additional configurations like load balancers, dns updates, database connection strings, licenses and any additional steps the application team or vendor might need to execute as part of post migration steps.
 
 ## Step 4: Plan for Migration Waves
 
-Contoso is now ready with server and application inventory, performed required assessments, captured server/application dependencies, completed application owner interviews and finalized the migration plan. Now they need to finalize the migration batches and order based on workload criticality, dependencies, business requirements, priority, etc.
+Contoso is now ready with server and application inventory, performed required assessments, captured server/application dependencies, completed application owner interviews and finalized the migration plan. Now they need to finalize the migration waves and order based on workload criticality, dependencies, business requirements, priority, etc.
 
 Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Azure Migrate can help to migrate to the cloud. The POC also helped Contoso in finalizing couple of things:
+
 - Identify any infrastructure issues/dependencies like firewall, agents, antivirus, that could potentially impact migrations.
-- Evaluate the network bandwidth available for replication and make some calculations on the # of VMs that can be replicated at the same time/batch. Daily data churn (rate of change) on the VMs was also factored in.
+- Evaluate the network bandwidth available for replication and make some calculations on the # of VMs that can be replicated at the same time/wave. Daily data churn (rate of change) on the VMs was also factored in.
 Contoso will need to allocate sufficient bandwidth based on the daily data change rate for the required VMs, to meet its recovery point objective (RPO).
 
 ### Server Grouping
 
 Based on the assessment, Contoso groups servers based on the application architecture (multi-tier) and server dependencies.
 Example:
-- Migration Batch/Group 1: 5 Servers
-- Migration Batch/Group 2: 30 Servers
-- Migration Batch/Group 3: 50 Servers
+
+- Migration Wave 1: 5 Servers
+- Migration Wave 2: 30 Servers
+- Migration Wave 3: 50 Servers
 
 ### Migration Wave Planning
 
-Contoso plans to start with smaller migration batches which includes standalone servers and workloads which are not business critical. With smaller initial batch it is easier to resolve any issues, verify migration process end-to-end and build confidence in migration strategy. On the second migration batch, Contoso plans to include multiple non-production workloads. Typically a migration batch is a single large business application (multiple servers - web, app and database servers) or couple of smaller, independent workloads. However in tightly coupled environments, a migration batch may include multiple applications and their servers that have cross dependencies at different application tiers (eg. shared database or web servers, file servers).
+Contoso plans to start with smaller migration waves which includes standalone servers and workloads which are not business critical. With smaller initial wave it is easier to resolve any issues, verify migration process end-to-end and build confidence in migration strategy. On the second migration wave, Contoso plans to include multiple non-production workloads. Typically a migration wave is a single large business application (multiple servers - web, app and database servers) or couple of smaller, independent workloads. However in tightly coupled environments, a migration wave may include multiple applications and their servers that have cross dependencies at different application tiers (eg. shared database or web servers, file servers).
 
 Contoso uses following [documented guidance](https://docs.microsoft.com/azure/migrate/concepts-migration-planning#prioritize-workloads) to prioritize workloads when assigning them to migration waves. Other best practices includes:
 
-- Start with Migration Batch/Groups with least number of interdependent servers.
-- Start with Migration Batch/Groups based on lowest business criticality. For example:
+- Start with Migration waves with least number of interdependent servers.
+- Start with Migration waves based on lowest business criticality. For example:
   - Prioritize environments with lower business impact (Non-Prod vs. Prod).
   - Prioritize workloads with lower SLA and higher RTO/RPO.
   - Prioritize workloads with less restrictive Data Classification.
@@ -211,7 +213,7 @@ Contoso uses following [documented guidance](https://docs.microsoft.com/azure/mi
 Contoso understands that some migration waves will change as they progress through migration, therefore migration team reviews and modifies waves periodically. Migration team incorporates learnings from executed waves to improve assessment and migration planning (such as capturing any missing network requirements, pre-migration testing, post-migration tweaks, review permissions, etc.). In case migration wave has to be split and not all servers are migrated as planed in a wave, Contoso will:
 
 - Identify which are the most latency sensitive connections to dependencies and prioritize these dependencies for the migration wave.
-- Re-schedule the left-out servers to be migrated on the next migration wave or as part of an interim migration batch.
+- Re-schedule the left-out servers to be migrated on the next migration wave or as part of an interim migration wave.
 
 ## Conclusion
 
