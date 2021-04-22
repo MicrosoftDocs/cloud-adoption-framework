@@ -38,8 +38,9 @@ Gathered information will enable Contoso to:
 For successful migration planning Contoso needs to think about following areas:
 > [!div class="checklist"]
 > - **Step 1: Set up tooling for Discovery & Assessment.** How many discovery appliances will you need? What are the best practices to run discovery of your environments? Do I need dependency mapping and application discovery?
-> - **Step 2: Perform Assessment.** How do I select parameters for assessment? How do I analyze dependencies and group servers?
-> - **Step 3: Plan for migration waves.** Are my servers ready for migration to Azure? How do I select servers/groups for migration waves?
+> - **Step 2: Perform Assessment.** How do I select parameters for assessment? How do I know if my servers are ready for migration to Azure? How do I estimate costs of migrated servers?
+> - **Step 3: Dependency analysis and Workload discovery.** Which servers are required for specific workload? What other components does workload depend on?
+> - **Step 4: Plan for migration waves.** Are my servers ready for migration to Azure? How do I select servers/groups for migration waves? How do I analyze dependencies?
 
 ## Before you start
 
@@ -77,9 +78,9 @@ Further details can be found in the reference links below from the Azure Migrate
   - [SQL Server Discovery](https://docs.microsoft.com/azure/migrate/how-to-discover-sql-existing-project)
 - [Ref Link E - Dependency analysis (Service Map/Agent-based)](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies)
 
-Based on workflow above and following relevant Azure Migrate documentation, Contoso deploys required appliances and agents for discovery. During deployment Contoso will need to specify server credentials used to perform software inventory, agentless dependency analysis and discovery of SQL Server instances and databases if this data needs to be collected during discovery. Collaborate with server administration and SQL server administration teams to prepare required credentials for discovery. After deployment and configuration, Contoso regularly validates that data is being collected in Azure Migrate project.
+Based on workflow above and following relevant Azure Migrate documentation, Contoso deploys required appliances and agents for discovery. During deployment, Contoso will need to specify server credentials used to perform software inventory, agentless dependency analysis and discovery of SQL Server instances and databases. Contoso migration team will collaborate with server administration and SQL server administration teams to prepare required credentials for discovery. After deployment and configuration, Contoso regularly validates that data is being collected in Azure Migrate project.
 
-As best practice Contoso gathers data over longer period of time, for example 5 weeks. This is to gather server performance data and dependencies over a period which might have specific peaks only once per month like a month end transaction (payroll) or weekly batch process or data import/export etc.
+As best practice, Contoso gathers data over longer period of time, for example 5 weeks. This is to gather server performance data and dependencies over a period which might have specific peaks only once per month like a month end transaction (payroll) or weekly batch process or data import/export etc.
 
 ## Step 2: Perform Assessment
 
@@ -88,7 +89,7 @@ After discovery is running for at least a day, Contoso can start performing asse
 > [!NOTE]
 > In case Contoso would not be able to deploy Azure Migrate discovery appliance to collect data, they could provide CSV file with required data to Azure Migrate. [**Learn more**](https://docs.microsoft.com/azure/migrate/concepts-assessment-calculation#how-do-i-assess-with-imported-data) on how to import discovery data using CSV file.
 
-#### Assessment properties
+### Assessment properties
 
 Contoso wants to specify [custom parameters](https://docs.microsoft.com/azure/migrate/how-to-modify-assessment) for assessment. They specify their primary Azure region as target location, leave storage type set to Automatic and discuss with business on selecting Reserved capacity (compute) option.
 
@@ -101,7 +102,7 @@ After saving assessment properties Contoso needs to select servers to assess. Co
 > [!NOTE]
 > Contoso can run multiple assessments. Contoso can specifying different assessment properties and use different server groups per each assessment. All assessments will be stored in Azure Migrate project. This allows Contoso to compare different assessments and decide what migration options are best for their needs and business case (VM sizing, storage type, reserved capacity, etc.).
 
-#### Azure readiness
+### Azure readiness
 
 Azure Migrates calculates assessment results in a few minutes after creating the assessment. When assessment results are available, Contoso reviews Azure readiness of all servers that were assessed. Azure Migrate provides the visualization that enables Contoso to drill down to servers readiness details for each server. Assessment details include recommended VM size, storage and networking configuration and Azure readiness.
 
@@ -110,40 +111,86 @@ Contoso reviews reasons why some servers are conditionally ready for migration t
 > [!NOTE]
 > Although the server is marked as "Ready" and Azure Infrastructure will support the necessary configuration, the replication appliance may not always support the replication of the server (eg. Windows Server Failover Clustering with shared disks).
 
-As best practice Contoso reviews server assessment results with owners of workloads/applications that run on assessed servers. During review, Contoso will:
+### Azure SQL Server assessment
 
-- Validate assessment sizing recommendations (VM size, storage configuration, etc.)
-- Identify any components that will need optimization or replacement in Azure (eg. Load balancers, clusters...)
-- SLA requirements
-- Review costs estimation
+Contoso is running SQL Server in existing environment. As part of migration to Azure, Contoso would like to understand options for migration SQL Server workloads to Azure SQL. Azure Migrate supports creating Azure SQL assessment and Contoso runs this assessment. For target location Contoso chooses their primary Azure region. As Target deployment type Contoso selects Recommended as they would like to know if Azure SQL Database or Azure SQL Managed Instance is better fit for their databases. Contoso specifies comfort factor to 1.1 to account for planned future workload growth. In pricing section Contoso chooses options that are aligned with their Azure offer and licensing programs. Contoso creates a new group for all discovered SQL Servers and runs assessment for this group.
 
-#### Azure cost details
+### Azure cost details
 
 Azure Migrate assessment results include cost estimation for assessed servers. Contoso can estimate total compute and storage costs for migration, or drill down to estimation for compute and storage costs per individual server. Contoso understands that after migration to Azure, server might incur other costs related to networking, monitoring, backup, etc. Those additional costs are not part of assessment cost details.
 
-## Step 3: Cutover and Post-Go-Live
+## Step 3: Dependency analysis and Workload discovery
 
-As a final step, Contoso is now ready and confident to perform the production migrations. The envision that during Cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Contoso is looking forward to close-out and call for a successful migration to Azure.
+To perform successful migration to Azure, it is critical for Contoso to understand workload details and their dependencies during migration planning. As a best practice, Contoso migration team needs to identify owners of workloads running on each server that is being assessed for migration. Contoso uses their CMDB data to link discovered servers to workloads and to identify workload owners. After workload owners are identified, Contoso migration team schedules reviews with them.
 
-### Cutover
+### Dependency analysis
 
-With the migration activities and workflow defined, Contoso irons out the final plans for cutover by:
+To plan for migration waves Contoso needs to understand dependencies between servers and workloads. Contoso uses results of dependency analysis that ran during assessment. Contoso exports dependency results and uses [Power BI to visualize network connections](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies-agentless#visualize-network-connections-in-power-bi).
 
-- Identifying more specific cutover window, which they have planned for a Friday evening or weekend. Each cutover window will last at a minimum for 4 hours.
-- Announce to the business and those impacted by the migration of the maintenance window. The maintenance window should include a meeting invite that includes the migration plan and a conference bridge to discuss any open items during the migration.
-- Reached out to the Network Admins, Backup Admins, Server Admins, Identity Admins, App Owners,   Microsoft support and resources and partner to ensure they are available during cutover.
-- Ensure a backup of the server has been committed prior to cutover.
-- Ensure rollback plan is defined and ready for execution if needed
-- Ensure migration handover to operations team by settings expectations that day 2 operations must commence with regards to Azure server backup, patching, monitoring, etc.
+To perform effective dependency analysis, Contoso takes following steps:
 
-### Post-Go Live
+- Clean up dependency mapping scan to show unique dependencies based on the longest time by using Powershell script as [described in the documentation.](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies-agentless#visualize-network-connections-in-power-bi)
+- Filters out noise from dependency mapping scan by removing well known dependencies such as
+  - Known system processes
+  - Known internet based endpoints (non-RFC 1918)
+  - Known internal endpoints (RFC 1918) such as Domain controllers, File servers, network appliances (e.g. Load Balancers), management infrastructure (e.g. SCCM, SCOM, backup, anti-malware, etc.)
+- Integrate dependency scan into visualization tooling like Power BI. Helpful visualizations include:
+  - [Sankey](https://powerbi.microsoft.com/blog/visual-awesomeness-unlocked-sankey-diagram/)
+  - [Network Navigator Chart](https://appsource.microsoft.com/product/power-bi-visuals/WA104380795)
+  - [Tassels Parallel Sets Slicer](https://appsource.microsoft.com/product/power-bi-visuals/WA200000311)
 
-Once the cutover successfully concludes, Contoso prepares for decommission of the source servers. Contoso decides that server decommissioning will be executed after the soak period timeline is concluded.
+### Review workloads with owners
 
-After each migration wave, Contoso also has a brief retrospective to discuss what went well and what could be improved for future migration waves. Contoso understands these incremental learnings and improvements will ensure a smoother migration for all subsequent migration waves.
+As Contoso migration team prepares for workload migrations they need to gather workload details from workload owners. Based on gathered information, migration team will understand complexity, criticality and dependencies of each workload and be able to plan migration strategy accordingly. As Contoso schedules interview with workload owners they use assessment questionnaire which includes following points:
+
+- Business criticality
+- Workload architecture (all servers and other components such as load balancers that are required for workload to run)
+- Number and type of users (internal, external)
+- Data classification
+- SLA requirements
+- Downtime window
+- Backup mechanism
+- Monitor mechanism
+- Patching mechanism
+- Licensing mechanism (OS and Software)
+- Firewall Rules (Host and Network): Ports and Protocols
+- Impact of changing servers IP
+
+As best practice Contoso reviews server assessment results with owners of workloads that run on assessed servers. During review, Contoso will:
+
+- Validate assessment sizing recommendations (VM size, storage configuration, etc.)
+- Identify any components that will need optimization or replacement in Azure (eg. Load balancers, clusters...)
+- Verify all dependencies are discovered using dependency analysis results and visualizations
+- Confirm SLA after migration to Azure matches required workload SLA
+- Review SQL assessment results and review options for replatforming SQL server to SQL Managed Instance or Azure SQL Database
+- Review costs estimation
+
+## Step 4: Plan for migration waves
+
+As a final step in migration planning, Contoso needs to prepare plan for migration waves. Contoso migration team uses all information gathered through assessment, dependency analysis and interviews with workload owners to define migration waves.
+
+Contoso plans for smaller migration waves at start of migration in order to resolve any issues, verifies migration process and build confidence in migration strategy. After initial waves, Contoso can plan for including multiple workloads in next migration waves. Typically a migration wave is a single large workload or couple of smaller, independent workloads. However in tightly coupled environments, a migration wave may include multiple workloads that have dependencies.
+
+Contoso uses following [documented guidance](https://docs.microsoft.com/azure/migrate/concepts-migration-planning#prioritize-workloads) to prioritize workloads when assigning them to migration waves. Additional best practices that Contoso follows:
+
+- Prioritize Migration Waves/Group with least number of interdependent servers.
+- Prioritize Migration Waves/Groups based on lowest business criticality. For example:
+  - Prioritize environments with lower business impact (Non-Prod vs. Prod).
+  - Prioritize workloads with lower SLA and higher RTO/RPO.
+  - Prioritize workloads with less restrictive Data Classification.
+  - Prioritize workloads with newer operating system as older operating systems tend to have more issues booting in Azure or in supporting Azure management extensions.
+
+Contoso plans that some migration waves will change as they progress with migration, therefore migration team tunes reviews waves periodically and incorporates learnings from executed waves to improve migration process (network requirements, testing/post migration tweaks, permissions, etc.). In case migration wave has to be split an not all servers are migrated as plan Contoso plans to:
+
+- Identify which are the most latency sensitive connections to dependencies and prioritize these dependencies for the migration Wave/Group.
+- Schedule the left-out dependencies to be migrated on the next migration Wave/Group.
 
 ## Conclusion
 
-In this article, Contoso sets up Azure Migrate Server Migration tools and plans for their infrastructure migration activities and workflow.
+In this article, Contoso sets up Azure Migrate tools for discovery and assessment and executes steps required to build migration plan with migration waves.
 
-Not every step taken here is required for a server migration. In this case, Contoso planned for a migration workflow, test plans and pre/post migration activities which can be accomplished by  pro-active and reliable replication.
+Not every step taken here is required for building a migration plan. However as proper migration planning is often key to successful migration Contoso invests time in proper migration plan by executing all steps described above.
+
+### Next steps
+
+As next step Contoso will start with implementing infrastructure required to execute migration. Best practices for migration execution are documented in article [Plan and Deploy Azure Migrate for Servers](./contoso-migration-rehost-server-replication.md).
