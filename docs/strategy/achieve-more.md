@@ -32,7 +32,7 @@ On-premises, your architecture is typically provisioned for peak capacity. Migra
 
 **Predictable workloads**: For your predictable workloads, you can take advantage of the cost-savings offers such as Azure Reservations.
 
-:::image type="content" source="/media/achieve-more/capacity-usage-optimization.png" alt-text="Diagram of how capacity usage can be optimized in a cloud native environment.":::
+![Alt text that describes the content of the image.](/media/achieve-more/capacity-usage-optimization.png)
 
 **Initial clean-up, right-sizing, and optimization**:  When planning to move to Azure, review which workloads are no longer needed. This clean-up can help you build a stronger business case and show an immediate effect on your budgets. For workloads you still want to use and bring to the cloud, you can use tools to help optimize them, for example, Azure Migrate.
 
