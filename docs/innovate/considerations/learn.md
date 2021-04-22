@@ -1,5 +1,5 @@
 ---
-title: Continuous Learning to Drive Innovation
+title: Continuous learning to drive innovation
 description: Learn customer empathy to build a minimum viable product solution. Drive innovation and generate customer impact metrics.
 author: BrianBlanchard
 ms.author: brblanch
