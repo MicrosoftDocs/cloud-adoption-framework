@@ -83,5 +83,5 @@ Learn more about how to create an ambient experience through an [adjusted realit
 
 Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption for the following innovation scenarios.
 
-- [Kubernetes in the Cloud Adoption Framework](.\kubernetes\index.md)
-- [AI in the Cloud Adoption Framework](.\ai\index.md)
+- [Kubernetes in the Cloud Adoption Framework](..\kubernetes\index.md)
+- [AI in the Cloud Adoption Framework](..\ai\index.md)
