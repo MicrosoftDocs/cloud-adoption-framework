@@ -36,14 +36,14 @@ The practice of continuous learning requires a great deal of trial and error. It
 
 ## Growth mindset
 
-Few could deny the radical transformation within Microsoft culture that's occurred over the last several years. This multifaceted transformation, led by Satya Nadella, has been hailed as a surprising business success story. At the heart of this story is the simple belief we call the growth mindset. An entire section of this framework could be dedicated to the adoption of a growth mindset. But to simplify this guidance, we'll focus on a few key points that inform the process of learning with customers:
+Few could deny the radical transformation within Microsoft culture that's occurred over the last several years. This multifaceted transformation, led by Satya Nadella, has been hailed as a surprising business success story. At the heart of this story is the growth mindset. Here are a few key points of the growth mindset that inform learning with customers:
 
 - **Customer first:** If a hypothesis is designed to improve the experience of real customers, you have to meet real customers where they are. Don't just rely on metrics. Compare and analyze metrics based on firsthand observation of customer experiences.
 - **Continuous learning:** Customer focus and customer empathy stem from a learn-it-all mindset. The Innovate methodology strives to be learn-it-all, not know-it-all.
 - **Beginner's mindset:** Demonstrate customer empathy by approaching every conversation with a beginner's mindset. Whether you're new to your field or a 30-year veteran, assume you know little, and you'll learn a lot.
 - **Listen more:** Customers want to partner with you. An ego-driven need to be right blocks that partnership. To learn beyond the metrics, speak less and listen more.
 - **Encourage others:** Don't just listen. Use the things you **do** say to encourage others. In every meeting, find ways to pull in diverse perspectives from those people who may not be quick to share.
-- **Share the code:** When we feel our obligation is to the ownership of a code base, we lose sight of the true power of innovation. Focus on owning and driving outcomes for your customers. Share your code, publicly with the world or privately within your company, to invite diverse perspectives into the solution and the code base.
+- **Share the code:** If our obligation is to own a code base, we lose sight of the true power of innovation. Focus on owning and driving outcomes for your customers. Share your code, publicly with the world or privately within your company, to invite diverse perspectives into the solution and the code base.
 - **Challenge what works:** Success doesn't mean you're demonstrating true customer empathy. Avoid having a fixed mindset and a bias toward doing what's worked before. Look for learning in positive and negative metrics by engaging your customers.
 - **Be inclusive:** Work hard to invite diverse perspectives into the mix. There are many variables that can divide humans into segregated groups. Cultural norms, past behaviors, gender, religion, sexual preference, even physical abilities. True innovation comes when we challenge ourselves to see past our differences and consciously strive to include all customers, partners, and coworkers.
 
