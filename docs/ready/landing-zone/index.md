@@ -24,7 +24,12 @@ A landing zone is an environment for hosting your workloads, preprovisioned thro
 
 ## Scalable and modular
 
-No single solution fits all technical environments. A few Azure landing zone implementation options can help you meet the deployment and operations needs of your growing cloud portfolio. All Azure landing zones provide a scalable, modular approach to building out your environment based on a common set of design areas. Whether you're looking to deploy your first production application to Azure or you're operating a complex portfolio of workloads, the Azure landing zone implementation options can be tailored to your needs.
+No single solution fits all technical environments. A few Azure landing zone implementation options can help you meet the deployment and operations needs of your growing cloud portfolio. 
+
+- **Scalable:** All Azure Landing Zones support cloud adoption at scale by providing repeatable environments which remain consistent regardless of the workloads being deployed to each landing zone instance. 
+- **Modular:** All Azure Landing Zones provide a modular approach to building out your environment, based on a common set of design areas. Each design area can be easily extended to support the distinct needs of various technology platforms like SQL, AKS, WVD, etc... 
+
+ Whether you're looking to deploy your first production application to Azure or you're operating a complex portfolio of tech platforms & workloads, the Azure landing zone implementation options can be tailored to your needs.
 
 ## Next steps
 
