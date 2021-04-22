@@ -1,5 +1,5 @@
 ---
-title: How to Measure Customer Impact and Business Metrics
+title: How to measure customer impact and business metrics
 description: Learn about business metrics and how to measure customer impact and strategic metric goals. Establish learning metrics to measure customer behavior and adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -49,10 +49,10 @@ In most cases, a customer flow has an easily defined starting point and no more 
 
 - **Starting point (initial trigger):** The starting point is the scenario that triggers the need for this solution. For a solution built with customer empathy, that initial trigger inspires a customer to try the MVP solution.
 - **Solution steps:** Steps required to move the customer from the initial trigger to a successful outcome. Each step produces a learning metric based on a customer decision to move on to the next step.
-- **Customer Need Met:** A solution that meets a customer need validates the hypothesis.
-- **Individual Adoption achieved:** If the customer returns to the solution the next time they find the trigger, individual adoption has been achieved.
+- **Customer need met:** A solution that meets a customer need validates the hypothesis.
+- **Individual adoption achieved:** If the customer returns to the solution the next time they find the trigger, individual adoption has been achieved.
 - **Business outcome indicator:** When a customer behaves in a way that contributes to the defined business outcome, a business outcome indicator is observed.
-- **True Innovation Achieved:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
+- **True innovation achieved:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
 
 Each step of the customer flow generates learning metrics. After each iteration or release, a new version of the hypothesis is tested. At the same time, tweaks to the solution are tested to reflect adjustments in the hypothesis. When customers follow the prescribed path in any given step, a positive metric is recorded. When customers deviate from the prescribed path, a negative metric is recorded.
 
