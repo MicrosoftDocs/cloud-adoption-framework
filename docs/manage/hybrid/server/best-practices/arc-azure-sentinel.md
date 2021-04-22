@@ -80,7 +80,7 @@ The following procedures will enable and configure Azure Sentinel on your Azure 
 
 ## Onboard Azure Sentinel
 
-Azure Sentinel uses the Log Analytics agent to collect log files for Windows and Linux servers and forwards them to Azure Sentinel. The data collected is stored in a Log Analytics workspace. Since you can't use the default workspace created by Azure Security Center a custom one is required. You could have raw events and alerts for Azure Security Center within the same custom workspace as Azure Sentinel.
+Azure Sentinel uses the Log Analytics agent to collect log files for Windows and Linux servers and forward them to Azure Sentinel. The data collected is stored in a Log Analytics workspace. Since you can't use the default workspace created by Azure Security Center a custom one is required. You could have raw events and alerts for Azure Security Center within the same custom workspace as Azure Sentinel.
 
 1. Create a dedicated Log Analytics workspace and enable the Azure Sentinel solution on the top of it. Use this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.json) to create a new Log Analytics workspace, define the Azure Sentinel solution, and enable it for the workspace. To automate the deployment you can edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace.
 
@@ -104,7 +104,7 @@ After you've deployed Azure Sentinel to your Log Analytics workspace, you need t
 
 There are connectors for Microsoft services, and third-party solutions from the security products ecosystem. You can also use Common Event Format (CEF), syslog, or REST API to connect your data sources with Azure Sentinel.
 
-For servers and VMs, you can install the Microsoft Monitoring Agent (MMA) agent or the Azure Sentinel agent that collects the logs and forwards them to Azure Sentinel. You can deploy the agent in multiple ways with Azure Arc:
+For servers and VMs, you can install the Log Analytics agent (MMA) agent or the Azure Sentinel agent that collects the logs and sends them to Azure Sentinel. You can deploy the agent in multiple ways with Azure Arc:
 
 - [Extension management](./arc-vm-extension-mma.md): This feature in Azure Arc enabled servers allows you to deploy the MMA agent VM extensions to a non-Azure Windows or Linux VMs. You can use the Azure portal, Azure CLI, an ARM template, and PowerShell script to manage extension deployment to Azure Arc enabled servers.
 

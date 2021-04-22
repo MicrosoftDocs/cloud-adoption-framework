@@ -7,9 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
 keywords: innovation challenges, cloud adoption challenges, challenges to innovation, technology adoption, challenges to adopting new technology
 ---
 

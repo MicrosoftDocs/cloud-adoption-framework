@@ -7,9 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - think-tank
- - seo-caf-innovate
+ms.custom: think-tank, seo-caf-innovate
 keywords: knowledge mining, knowledge mining solution, cognitive search, cloud search service
 ---
 

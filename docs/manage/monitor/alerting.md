@@ -73,7 +73,7 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 
 ### Specialized Azure monitoring offerings
 
-[Management solutions](/azure/azure-monitor/monitor-reference) generally store their data Azure Monitor Logs. Two exceptions are Azure Monitor for VMs and Azure Monitor for containers. The following table describes the alerting experience based on the particular data type and where it is stored.
+[Management solutions](/azure/azure-monitor/monitor-reference) generally store their data Azure Monitor Logs. Two exceptions are Azure Monitor for VMs and Azure Monitor for containers. The following table describes the alerting experience based on the particular data type and where it's stored.
 
 | Solution | Data type | Alert behavior |
 |---| ---| --- |
@@ -84,7 +84,7 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 
 ### Fastest speed, driven by cost
 
-Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real-time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it is stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.
+Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real-time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it's stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.
 
 That said, there are some important footnotes to this rule.
 

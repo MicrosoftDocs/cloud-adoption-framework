@@ -77,7 +77,7 @@ Standard migration assumes that every asset in the workload is a VM or PaaS serv
 
 A unified operations approach that considers hybrid and multicloud environments opens up more form factors for distributing cloud innovation by using Azure services and server management practices across other multicloud environments and the edge.
 
-The [Azure Stack family portfolio](https://azure.microsoft.com/resources/azure-stack-portfolio-datasheet/), integrated systems, and hyperconverged solutions open up standard cloud form factors, extending Azure services and management across datacenters, cloud, and edge locations.
+The [Azure Stack family portfolio](https://azure.microsoft.com/blog/expanding-the-azure-stack-portfolio-to-run-hybrid-applications-across-the-cloud-datacenter-and-the-edge/), integrated systems, and hyperconverged solutions open up standard cloud form factors, extending Azure services and management across datacenters, cloud, and edge locations.
 
 [Azure Stack Hub](https://azure.microsoft.com/products/azure-stack/hub/) extends full stack Azure services to on-premises, enabling you to run applications in on-premises environments and deliver Azure services in your datacenter. It unlocks new hybrid cloud use cases for both customer-facing and internal line-of-business applications: edge and disconnected solutions, cloud applications with varied regulatory requirements, and cloud application models on-premises using Azure services, containers, serverless, and microservice architectures.
 
