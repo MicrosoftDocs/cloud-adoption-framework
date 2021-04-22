@@ -69,7 +69,7 @@ Before using this guidance to deploy a Windows Server VM and connect it to Azure
 **The Terraform plan used the `remote-exec` provisioner which uses the WinRM protocol to copy and execute the required Azure Arc script. To allow WinRM connectivity to the VM, run the [`allow_winrm`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/scripts/allow_winrm.ps1) PowerShell script on your VM before converting it to template.**
 
 > [!NOTE]
-> If you already have a Windows Server VM template it is still recommended to use the guide as a reference.
+> If you already have a Windows Server VM template, you should still use the guide as a reference.
 
 ## Deployment
 

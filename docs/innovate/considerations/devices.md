@@ -2,15 +2,13 @@
 title: Ambient user experiences with interactive devices
 description: Learn about advanced approaches for ambient user experiences using interactive devices, rather than applications, for digital innovation.
 author: BrianBlanchard
-keywords: ambient user experience, digital experiences, interactive devices, digital innovation, ambient intelligence
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: ambient user experience, digital experiences, interactive devices, digital innovation, ambient intelligence
 ---
 
 # Ambient user experiences: Interact with devices
