@@ -38,8 +38,8 @@ The practice of continuous learning requires a great deal of trial and error. It
 
 Few could deny the radical transformation within Microsoft culture that's occurred over the last several years. This multifaceted transformation, led by Satya Nadella, has been hailed as a surprising business success story. At the heart of this story is the growth mindset. Here are a few key points of the growth mindset that inform learning with customers:
 
-- **Customer first:** If a hypothesis is designed to improve the experience of real customers, you have to meet real customers where they are. Don't just rely on metrics. Compare and analyze metrics based on firsthand observation of customer experiences.
-- **Continuous learning:** Customer focus and customer empathy stem from a learn-it-all mindset. The Innovate methodology strives to be learn-it-all, not know-it-all.
+- **Customer first:** To design a hypothesis to improve the experience of customers, you have to meet real customers where they are. Don't just rely on metrics. Compare and analyze metrics based on firsthand observation of customer experiences.
+- **Continuous learning:** Customer focus and customer empathy stem from a learn-it-all mindset. Strive for a learn-it-all, not know-it-all, mindset.
 - **Beginner's mindset:** Demonstrate customer empathy by approaching every conversation with a beginner's mindset. Whether you're new to your field or a 30-year veteran, assume you know little, and you'll learn a lot.
 - **Listen more:** Customers want to partner with you. An ego-driven need to be right blocks that partnership. To learn beyond the metrics, speak less and listen more.
 - **Encourage others:** Don't just listen. Use the things you **do** say to encourage others. In every meeting, find ways to pull in diverse perspectives from those people who may not be quick to share.
