@@ -197,10 +197,10 @@ The Innovate methodology provides guidance on the tools and product management a
 
 **Guidance to support deliverable completion:**
 
-- [Create hypothesis with business value consensus](../innovate/business-value.md): If more than three months have passed since the last business value consensus, or if one was never completed, start here.
-- [Build your first MVP](../innovate/considerations/build.md): Use the Azure innovation guide to speed up the deployment of innovative solutions by understanding the tools and processes that can help you create a minimum viable product (MVP).
-- [Measure](../innovate/considerations/measure.md): Combine Azure services to create a toolchain for digital invention.
-- [Expand digital innovation](../innovate/considerations/invention.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
+- [Create hypothesis with business value consensus](../innovate/business-value.md): Before you decide on technical solutions, identify how new innovations can drive business value and come up with a hypothesis about customer needs.
+- [Build your first MVP](../innovate/considerations/build.md): Once a hypothesis has enough value potential to be built into your application, the build process starts. Development sprints should be as quick as possible, to allow quick verification or rejection of the hypothesis, or to fine tune the way in which the required functionality is to be integrated in the application.
+- [Measure](../innovate/considerations/measure.md) and [learn](../innovate/considerations/learn.md): You want to verify the accuracy of your hypothesis as soon as possible. A Minimum Viable Product (MVP) is a preliminary version of the new functionality, that offers just enough functionality to gather feedback that confirms if you are moving in the right direction.
+- [Expand digital innovation](../innovate/considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions which include Democratize data, Engage via apps, Empower adoption, Interact with devices and Predict and Influence. These inventions are a core part of the Innovation methodology.
 
 ## Step 9: Assess the innovation maturity of your organization
 
