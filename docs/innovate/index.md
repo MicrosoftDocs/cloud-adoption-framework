@@ -37,7 +37,7 @@ This article series emphasizes the following aspects of this methodology:
 - First, always start with customer adoption to generate feedback that builds customer partnerships through the build-measure-learn feedback loop.
 - Second, examine approaches to developing digital inventions that prioritize adoption.
 
-Not all disciplines need to be adopted at once. These disciplines define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. 
+Not all disciplines need to be adopted at once. These disciplines define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind.
 
 The following section describes the formula for innovation and the commitments required for success with this approach.
 
@@ -73,8 +73,7 @@ Only one promise rings true across all innovation cycles: you won't get it right
 
 ## Next steps
 
-Before building the next great invention, get started with customer adoption by understanding the [build-measure-learn feedback loop](./considerations/learn.md).
+Before building the next great invention, review the different approaches to [developing digital inventions](./considerations/invention.md) while keeping adoption and customer empathy in mind.
 
 > [!div class="nextstepaction"]
-> [Customer adoption with the build-measure-learn feedback loop](./considerations/learn.md)
-
+> [Develop digital inventions](./considerations/invention.md)
