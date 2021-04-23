@@ -61,9 +61,9 @@ Understanding, identifying and designating business criticality is the first maj
 
 Leverage the [Operational Compliance](operational-compliance.md) content to ensure your business requirements, criticality and compliance requirements are aligned.
 
-Next, leverage the [Overview of the Azure Security Benchmark](https://docs.microsoft.com/en-us/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
+Next, leverage the [Overview of the Azure Security Benchmark](https://docs.microsoft.com/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
 
-Lastly, ensure the incorporation of the governance and security content within [Security Control V2: Governance and Strategy](https://docs.microsoft.com/en-us/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
+Lastly, ensure the incorporation of the governance and security content within [Security Control V2: Governance and Strategy](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
 
 ## Use the template
 
