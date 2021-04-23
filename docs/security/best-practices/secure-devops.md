@@ -29,9 +29,9 @@ When we "shift left" for security, we can bring the following into a DevOps pipe
 
 Automation and the agile methodology enables teams to deliver faster but also adds complexity to security because the workflow is extended to the developer teams themselves.
 
-The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle"> indicates security permissions which must be configured by the customer. This follows the [Shared Responsibility Model](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility) where Azure and other vendors provide permissions, which much be configured by the customer according to their governance model and business requirements.
+The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle" alt="configuration cog icon"> indicates security permissions which must be configured by the customer. This follows the [Shared Responsibility Model](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility) where Azure and other vendors provide permissions, which much be configured by the customer according to their governance model and business requirements.
 
-<img src="./../media/devsecops-workflow.svg" alt="Typical CI/CD Workflow">
+<img src="./../media/devsecops-workflow.svg" alt="A Typical CI/CD Workflow">
 
 _**Figure 1 - a typical CI/CD workflow illustrating how code changes in a git repository will affect your cloud resources**_
 
@@ -152,8 +152,7 @@ As a guiding principle, you should integrate Azure Active Directory for identity
 
 Please note that it is not enough to integrate Azure AD for authentication, i.e. sign-ins, which only establishes their identity, but not their role and thus their permissions. In this scenario, an administrator would also have to configure/remove access in the CI platform tool. 
 
-
-<img src="./../media/devsecops-role-assignments.svg" alt="End to End RBAC - Role Assignments">
+<img src="./../media/devsecops-role-assignments.svg" alt="Diagram - Azure Active Directory as Single Identity Management Plane">
 
 _**Figure 2 - Leveraging Azure Active Directory as a single Identity Management Plane in Azure DevOps**_
 
@@ -175,9 +174,9 @@ Please note that Figure 2 refers to Azure DevOps, which has strong integration w
 
 #### Further Reading
 
-- [Cloud Adoption Framework - Operating Model - Governance design for multiple teams](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/resource-consistency/governance-multiple-teams)
-- [Azure DevOps - Recommended method for granting and restricting permissions](https://docs.microsoft.com/en-us/azure/devops/organizations/security/restrict-access?view=azure-devops#recommended-method-for-granting-and-restricting-permissions)
-- [Azure DevOps - Default permissions and access](https://docs.microsoft.com/en-us/azure/devops/organizations/security/permissions-access?view=azure-devops)
+- [Cloud Adoption Framework - Operating Model - Governance design for multiple teams](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/resource-consistency/governance-multiple-teams)
+- [Azure DevOps - Recommended method for granting and restricting permissions](https://docs.microsoft.com/azure/devops/organizations/security/restrict-access?view=azure-devops#recommended-method-for-granting-and-restricting-permissions)
+- [Azure DevOps - Default permissions and access](https://docs.microsoft.com/azure/devops/organizations/security/permissions-access?view=azure-devops)
 - [GitHub.com - Managing people's access to your organization with roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles)
 
 ---
