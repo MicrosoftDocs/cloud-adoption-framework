@@ -47,7 +47,7 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows a golden state for an enterprise scale landing zone with a corporate landing zone subscription and shows design areas and best practices.
 
-![golden-state-enterprise-architecture-aks](./media/golden-state-enterprise-architecture-aks.PNG)
+![Golden state Architecture for AKS Construction Set](./media/golden-state-enterprise-architecture-aks.PNG)
 
 
 
