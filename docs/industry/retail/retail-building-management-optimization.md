@@ -54,11 +54,8 @@ As a trusted technology partner, Microsoft is working with retailers to build th
 
 ## Next step: The cloud adoption journey for the Retail industry
 
-Learn about another strategic driver for retail customers: [Data management and analytics](./retail-data-management-and-analytics.md)
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-**Continue your adoption journey:** The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- **[Cloud adoption strategy for the Retail industry](./strategy.md)
 - **[Cloud adoption plan for the Retail industry](./plan.md)
 - **[Review your environment or Azure Landing Zone(s)](./ready.md)
 - **[Migrate common Retail industry technologies](./migrate.md)

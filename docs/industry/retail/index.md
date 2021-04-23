@@ -13,6 +13,9 @@ ms.subservice: overview
 
 As retail companies address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series consolidates various technical and non-technical considerations required to prepare for a cloud adoption scenario specific to the retail industry.
 
+> [!WARNING]
+> This preview site contains references to Microsoft Cloud for Retail. All such references will be deleted prior to publication. They are included to help us all review how this industry scenario supports MC4R. When MC4R is officially released, those references will be updated & re-introduced into the live content. 
+
 ## Scenario components
 
 This scenario is designed to guide the end-2-end customer journey during the cloud adoption lifecycle.

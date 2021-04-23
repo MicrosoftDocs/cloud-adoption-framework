@@ -23,13 +23,18 @@ One example of achieving Intelligent retail maturity, is the [retail recommender
 
 As you strive to develop innovation within any retail organization, the following disciplines of innovation will help accelerate those innovations in similar ways.
 
+## Rapid innovation with the Microsoft Cloud for Retail
+
+TODO: Delete this section & update after release of MC4R
+
+[![Microsoft cloud for retail](./media/mc4r.png)](./media/mc4r.png#lightbox)
+
 ## Democratize data
 
 The most important step to innovation is [democratizing data](../../innovate/best-practices/data.md). Making data accessible AND understandable across the organization will fuel innovation.
 
 This step is significantly accelerated through the use of a common industry-specific data model. Maintaining a common model breaks down silos which prevent communication between applications & limit the pace of data democratization. When all employees, processes, and applications operate from a common data model, they can all participate in the application of technology to improve the products and services available to your customers.
 
-**Microsoft cloud for Retail** embeds a common data model into TODO: Add other MC4R benefits & links here.
 TODO: Link to common data model for retail
 
 To extend your common data model, use cloud native tools in Azure:

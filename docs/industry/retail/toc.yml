@@ -29,39 +29,17 @@ items:
       href: retail-supply-chain-optimization.md
     - name: Building management optimization
       href: retail-building-management-optimization.md
-    - name: Data management and analytics
-      href: retail-data-management-and-analytics.md
 
-  - name: Technical planning (TODO)
-    href: plan.md
-  - name: Prepare your environment (TODO)
+  - name: Technical planning
+    items:
+    - name: Cloud adoption plan
+      href: plan.md
+    - name: Initial organizational alignment
+      href: organize.md
+  - name: Prepare your environment
     items:
     - name: Azure Landing Zones
       href: ready.md
-    - name: Design areas  (TBD)
-      items:
-      - name: Enterprise enrollment
-        href: alz-enterprise-enrollment.md
-      - name: Identity and access management
-        href: alz-identity-and-access-management.md
-      - name: Network topology and connectivity
-        href: alz-network-topology-and-connectivity.md
-      - name: Resource organization
-        href: alz-resource-organization.md
-      - name: Governance disciplines
-        href: alz-security-governance-and-compliance.md
-      - name: Operations baseline
-        href: alz-management-and-monitoring.md
-      - name: Business continuity and disaster recovery
-        href: alz-business-continuity-and-disaster-recovery.md
-      - name: Deployment options
-        href: alz-platform-automation-and-devops.md
-    - name: Implementation options
-      items:
-      - name: Start small & expand (TBD)
-        href: index.md
-      - name: Enterprise-scale landing zone for Retail  (TBD)
-        href: enterprise-scale-landing-zone.md
   - name: Migrate existing workloads
     href: migrate.md
   - name: Innovate in the cloud
@@ -70,45 +48,47 @@ items:
       href: innovate.md
     - name: Improve retail experience
       href: improve-retail-experience.md
-  - name: Govern your portfolio (TODO)
-    href: govern.md
-  - name: Manage your assets (TODO)
-    href: manage.md
-  - name: Well-Architected for government workloads (TBD)
+  - name: Govern your portfolio
     items:
-    - name: Overview (TBD)
-      href: index.md
+    - name: Overview
+      href: govern.md
+    - name: Unified operations
+      href: /azure/cloud-adoption-framework/scenarios/hybrid/unified-operations.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+  - name: Manage your assets
+    href: manage.md
   - name: Retail solutions
     items:
     - name: Overview
-      href: /azure/architecture/industries/retail.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/industries/retail.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Build a Real-time Recommendation API on Azure
-      href: /azure/architecture/reference-architectures/ai/real-time-recommendation.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/reference-architectures/ai/real-time-recommendation.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Movie recommendations on Azure
-      href: /azure/architecture/example-scenario/ai/movie-recommendations.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/ai/movie-recommendations.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Scalable personalization on Azure
-      href: /azure/architecture/example-scenario/ai/scalable-personalization.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/ai/scalable-personalization.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Data warehousing and analytics
-      href: /azure/architecture/example-scenario/data/data-warehouse.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/data/data-warehouse.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Stream processing with Azure Databricks
-      href: /azure/architecture/reference-architectures/data/stream-processing-databricks.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/reference-architectures/data/stream-processing-databricks.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Stream processing with Azure Stream Analytics
-      href: /azure/architecture/reference-architectures/data/stream-processing-stream-analytics.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/reference-architectures/data/stream-processing-stream-analytics.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: E-commerce front end
-      href: /azure/architecture/example-scenario/apps/ecommerce-scenario.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/apps/ecommerce-scenario.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Intelligent product search engine for e-commerce
-      href: /azure/architecture/example-scenario/apps/ecommerce-search.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/apps/ecommerce-search.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Magento e-commerce platform in Azure Kubernetes Service
-      href: /azure/architecture/example-scenario/magento/magento-azure.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/magento/magento-azure.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Scalable order processing
-      href: /azure/architecture/example-scenario/data/ecommerce-order-processing.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/data/ecommerce-order-processing.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Retail - Buy online, pickup in store (BOPIS)
-      href: /azure/architecture/example-scenario/iot/vertical-buy-online-pickup-in-store.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
-  - name: Relevant Azure Products (TBD)
+      href: https://docs.microsoft.com/azure/architecture/example-scenario/iot/vertical-buy-online-pickup-in-store.yml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+
+  - name: Microsoft Cloud for Retail products
     items:
-    - name: Overview (TBD)
+    - name: Add MC4R links when live
       href: index.md
-  - name: Relevant Learn modules (TBD)
+
+  - name: Learn Modules
     items:
-    - name: Overview (TBD)
+    - name: Pending MC4R modules
       href: index.md
