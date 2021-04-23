@@ -51,6 +51,20 @@ An initial review of every workload in the portfolio can be time consuming. To e
 
 Based on the preceding criticality-scale table, we recommend that you adopt *medium* criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
 
+## Review operational compliance requirements
+
+Understanding, identifying and designating business criticality is the first major step. The next management consideration topic is to ensure your operational compliance requirements, especially security compliances, are aligned. Performing the same methodologies for business criticality to your security compliance considerations will:
+
+- Reveal the complexities of your business systems and their compliance requirements, e.g. sovereignty, industry, etc.
+- Map any inter-dependencies with your development, operation and security teams, ensuring key "point of contacts" / "SMEs" are identified and well known across your organization
+- Ensure your compliance adhere to any compliance audit and reporting requirements
+
+Leverage the [Operational Compliance](operational-compliance.md) content to ensure your business requirements, criticality and compliance requirements are aligned.
+
+Next, leverage the [Overview of the Azure Security Benchmark](https://docs.microsoft.com/en-us/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
+
+Lastly, ensure the incorporation of the governance and security content within [Security Control V2: Governance and Strategy](https://docs.microsoft.com/en-us/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
+
 ## Use the template
 
 The following steps apply if you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
