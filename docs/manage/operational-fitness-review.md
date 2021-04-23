@@ -1,6 +1,6 @@
 ---
-title: Establish an operational fitness review
-description: Establish an operational fitness review process to fully understand the problems that result from running workloads in a production environment.
+title: Operations management process 
+description: Establish an operational fitness review to support the ongoing operations management process 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2018
@@ -10,11 +10,11 @@ ms.subservice: operate
 ms.custom: internal
 ---
 
-# Establish an operational fitness review
+# Establish operations management processes
 
-As your enterprise begins to operate workloads in Azure, the next step is to establish a process for *operational fitness review*. This process enumerates, implements, and iteratively reviews and optimizes the operational state for these workloads.
+As your enterprise begins to operate workloads in Azure, the next step is to establish a process for *operational management and fitness*. This process enumerates, implements, and iteratively reviews and optimizes the operational state for these workloads.
 
-A process for operational fitness review ensures that your workloads meet the expectations of your business and defined business commitments. This process also allows [Central IT](../organize/central-it.md) and [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md) teams to scale the pillars of Well-Architected across the entire portfolio of workloads.
+A process for operational fitness review ensures that all of your workloads meet the expectations of your business and deliver on defined business commitments. This process also allows [Central IT](../organize/central-it.md) and [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md) teams to scale the pillars of Well-Architected across the entire portfolio of workloads.
 
 ## Establish a core process for operational fitness review 
 
