@@ -47,7 +47,9 @@ As the SOC matures, security operations should:
 ### SecOps Team Access 
 Security organizations require visibility into the technical environment to perform their duties. Ensure the security organization is aware of all enrollments and associated subscriptions connected to the existing environment and is able to monitor those resources as part of the overall enterprise security posture. 
 
-Nevertheless, restricting access based on the [need to know and least privilege](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json#use-role-based-access-control) security principles is imperative. Use [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to ensure it.
+Nevertheless, you should always:
+- Restrict access based on [need to know and least privilege](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json#use-role-based-access-control) security principles. 
+- Pleaser refer to this article on [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview), for guidance on how to ensure it.
 
 ## Identity monitoring 
 Identity is increasingly considered the primary security perimeter in the cloud, which is a shift from the traditional focus on network security. Identity services provide the core mechanisms supporting access control and organization within IT environments, and the [Identity Baseline](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/identity-baseline/) discipline complements the [Security Baseline](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/) discipline by consistently applying authentication and authorization requirements across cloud adoption efforts. It is really important that you define the [metrics, indicators and risk tolerance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/identity-baseline/metrics-tolerance) associated with your Identity Baseline and that you actively incorporate monitoring it in your security processes.
@@ -70,5 +72,8 @@ For bigger and more complexed environments there are several [other consideratio
 
 
 ## Accountability
-Designate who is responsible for monitoring and making each type of security decision for the enterprise Azure environment. Clear ownership of security areas speeds up cloud adoption and increases security. Lack of, typically creates friction. This friction frequently impedes business goals, developer timelines, IT goals, and security assurances. [Document these owners,](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/security/security-top-10#3-process-assign-accountability-for-cloud-security-decisions) their contact information, and socialize this widely within the security, IT, and cloud teams to ensure it's easy for all roles to contact them. 
+To ensure accountability, we recommend following these steps:
+- Designate who is responsible for monitoring and making each type of security decision for the enterprise Azure environment. Estabilish Clear ownership of security areas speeds up cloud adoption and increases security. Lack of, typically creates friction. This friction frequently impedes business goals, developer timelines, IT goals, and security assurances. 
+- [Document these owners,](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/security/security-top-10#3-process-assign-accountability-for-cloud-security-decisions) their contact information, and socialize this widely within the security, IT, and cloud teams to ensure it's easy for all roles to contact them. 
+
 It is also extremelly important to make sure you have set the right owners for [Azure incident notifications](https://docs.microsoft.com/en-us/azure/service-health/alerts-activity-log-service-notifications-portal) from Microsoft.
