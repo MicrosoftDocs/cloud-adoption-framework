@@ -10,7 +10,7 @@ ms.subservice: operate
 ms.custom: internal
 ---
 
-# Management leveling across cloud management disciplines
+# Cloud management disciplines
 
 The keys to proper management in any environment are consistency and repeatable processes. There are endless of options for the things that can be done in Azure. Likewise, there are countless approaches to cloud management. To provide consistency and repeatability, it's important to narrow those options to a consistent set of management processes and tools that will be offered for workloads hosted in the cloud.
 
