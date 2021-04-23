@@ -113,7 +113,7 @@ Saved costs from cloud adoption can be reinvested, also known as iterative moder
 
 **Spot VM pricing**: With Azure Spot Virtual Machines (Spot VMs), you can access unused Azure compute capacity at steep discounts. Up to 90 percent compared to pay-as-you-go prices.
 
-To learn more about licensing considerations and ways to reduce cloud costs, see [Licensing considerations](licensing-considerations.md).
+To learn more about how to you can achieve more with your Azure investment and reduce costs, see [Achieve more with your investment](achieve-more.md).
 
 ### Implement the business case
 
