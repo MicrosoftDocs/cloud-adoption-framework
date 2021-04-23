@@ -18,6 +18,14 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
+## April 2021
+
+### Cloud service controls
+
+To help you implement cloud governance at a pace that sustains a high level of innovation, and implements the right level of control for your environment, we've added a new article, [Implement cloud service controls](..docs/govern/cloud-service-controls.md).
+
+It outlines one possible governance implementation, allowing for a controlled and measured implementation.
+
 ## March 2021
 
 This release is the largest update of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework.
@@ -52,6 +60,16 @@ The critical design area of [network topology and connectivity](../ready/azure-b
 ### Anti-patterns
 
 Companies often miss important steps in their cloud adoption journey. The new [cloud adoption anti-patterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The anti-patterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
+
+### AI + Machine Learning
+
+When planning an Azure Machine Learning deployment for an enterprise environment, there are common decision points that affect how you create the workspaces. We've published a new article, [Organize and set up Azure Machine Learning environments](..ready/azure-best-practices/ai-machine-learning-resource-organization.md), that highlights these decision areas and the benefits of each:
+
+- Team structure: The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
+- Environments: The environments used as part of your development and release workflow to segregate development from production.
+- Region: The location of your data and the audience you need to serve your Machine Learning solution to.
+
+We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
 
 ## January 2021
 
