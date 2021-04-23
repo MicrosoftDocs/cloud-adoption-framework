@@ -23,7 +23,7 @@ The following table lists example reference implementations based on the recomme
 | Enterprise-scale foundation | This is the suggested foundation for enterprise-scale adoption. | [Example in GitHub][GitHub-WingTip] | [![DTA-Button-WingTip]][DTA-WingTip] |
 | Enterprise-scale hub and spoke | Add a hub and spoke network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
 | Enterprise-scale Virtual WAN | Add a Virtual WAN network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-Contoso] | [![DTA-Button-Contoso]][DTA-Contoso] |
-| Enterprise-scale for small enterprises | Add a hub and spoke network architecture for small organizations. | [Example in GitHub][GitHub-TreyResearch] | [![DTA-Button-TreyResearch]][DTA-Contoso] |
+| Enterprise-scale for small enterprises | Add a hub and spoke network architecture for small organizations. | [Example in GitHub][GitHub-TreyResearch] | [![DTA-Button-TreyResearch]][DTA-TreyResearch] |
 
 Each reference implementation deploys platform resources to the selected target environment. Deployment details and an overview of the deployed resources can be found using the GitHub link in the table above.
 
@@ -43,6 +43,7 @@ These examples provide an easy deployment option to support continued learning f
 [DTA-Button-WingTip]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy WingTip reference implementation (foundation) to Azure."
 [DTA-Button-AdventureWorks]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy AdventureWorks reference implementation (hybrid connectivity with hub and spoke) to Azure."
 [DTA-Button-Contoso]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Contoso reference implementation (hybrid connectivity with virtual wan) to Azure."
+[DTA-Button-TreyResearch]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy TreyResearch reference implementation for small organizations to Azure."
 
 [//]: # (**************************)
 [//]: # (EXTERNAL LINK LABELS BELOW)
