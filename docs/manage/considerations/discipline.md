@@ -35,10 +35,10 @@ The remaining articles in this series outline processes that are commonly found 
 
 Each suggested management level provides necessary operations management for all assets (apps, data, & infra) in the portfolio, with an increasing degree of specificity. This mapping is designed to make it easier for the relevant roles to find the most appropriate processes and tools to deliver on the required level of cloud management.
 
-The [operations management processes](../operational-fitness-review.md) defines the iterative discipline required to deliver operations and meet business commitments. This iterative process delivers on three levels of operations on a recurring rythm of business:
+The [operations management processes](../operational-fitness-review.md) defines the iterative discipline required to deliver operations and meet business commitments. This iterative process delivers on three levels of operations on a recurring rhythm of business:
 
 - **Operations baseline (or enhanced baseline):** Consistent operations management of all deployed assets. Centralized technology teams focus on portfolio health and implements broad sweeping changes.
-- **Platform operations:** Elevated operations for mission critical technology platforms. Centalized teams focus on operational fitness of shared platforms.
+- **Platform operations:** Elevated operations for mission critical technology platforms. Centralized teams focus on operational fitness of shared platforms.
 - **Workload operations:** Workload operations for refined changes to defined workloads. Workload specific teams deliver architecture change based on the pillars of [Azure Well-Architected Framework](/azure/architecture/framework/) to improve operations through more granular improvements.
 
 The [operations management processes](../operational-fitness-review.md) unite all three elevations of operations management in a holistic solution to improve operational fitness of all deployed assets regardless of the chosen operating model.
