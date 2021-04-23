@@ -45,7 +45,7 @@ Each organization's operating model determines the accountability and day-to-day
 
 Operational fitness is evaluated across the portfolio using a few metrics: Reliability, Performance, and Cost. Together, these properties allow for rapid evaluation of the health and fitness of all assets in the portfolio. These metrics are evaluated across the three elevations of operations management.
 
-![Elevations of operations](../../_images/manage/beyond-the-baseline.png)
+![Elevations of operations](../_images/manage/beyond-the-baseline.png)
 
 - **Operations baseline (or enhanced baseline):** Evalutates operational fitness across all deployed assets regardless of their funtion. This braod view of operations allows for sweeping changes and big impacts, but is limited by a lack of visibility into the architecture of individual workloads. All resources deployed in the cloud should be covered by an operations baseline with regular support from cloud operations. Some environments may require a higher degree of operational support to meet the needs of the enhanced baseline.
 - **Platform operations:** Evaluates operational fitness of centralized technology platforms. This view of operations is more refined since it considers the architecture of the platform and how changes to the soution will impact operational fitness. Changes to central technology platforms can have a braod downstream imapct on supported workloads. All mission-critical platforms should receive dedicated support from a central IT team.
