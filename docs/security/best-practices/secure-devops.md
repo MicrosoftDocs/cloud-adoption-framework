@@ -168,7 +168,7 @@ Review figure 2 above closely and note:
 - this AAD group has "Owner" role on Azure ARM side at _multiple_ subscription scopes
 - this AAD group has "Project Administrator" role on the Azure DevOps side at a _single_ project scope.
 
-In this way, the Azure AD group has similarly priviledged roles on both sides. Following this logic, if we have a developers group with "Contributor" access on the ARM side, we would not expect them to have "Project Administrator" access on the DevOps side. 
+In this way, the Azure AD group has similarly privileged roles on both sides. Following this logic, if we have a developers group with "Contributor" access on the ARM side, we would not expect them to have "Project Administrator" access on the DevOps side. 
 
 Please note that Figure 2 refers to Azure DevOps, which has strong integration with Azure and Azure Active Directory. If you are using another CI vendor, the concepts are still same. However, please refer to their documentation to understand built-in and custom roles work and evaluate if you can create a similar mapping as shown above.
 
