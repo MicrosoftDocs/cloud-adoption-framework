@@ -14,15 +14,22 @@ ms.custom: internal
 
 Innovation is the lifeblood of growth and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Most frequently, by securing the Development or DevOps process using a DevSecOps approach.
 
-In the ideal state, security should be invisible but persistent. Just as delivering on time without sufficient quality will cost you more to fix the quality after the fact, delivering without sufficient security will cost you more to clean up afterward. Security must be a part of the organization's culture from the very top, just like innovation and reliability. 
+![DevSecOps Heart](./media/DevSecOpsHeart.png)
+
+Developing new capabilites and applications requires successfully meeting three different types of requirements in a rapidly evolving world:
+ - **Business/Development (Dev)** - Your application must business and user needs as they rapidly evolve.
+ - **Security (Sec)** - Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
+ - **IT Operations (Ops)** - Your application must be reliable and perform well.
+
+Integrating these cultures and goals together can be challenging when building a DevSecOps strategy, but doing so allows you to embrace the fast pace of change and quickly pivot the team's focus to improving security, operational stability, or adding business features on any given sprint without waiting for the traditional waterfall ship schedule. 
 
 Cloud technologies enable organizations to innovate faster than ever before. Rapidly implementing new ideas and turning them into products and services at a rate that was not previously possible. Attackers also benefit from the speed of this platform and the challenge of keeping security controls current.
-
-As organization adopt DevOps and other rapid innovation methodologies, security must be a thread woven throughout the tapestry of the organization. 
 
 This article shares Microsoft's learnings on integrating modern security practices (such as DevSecOps) into innovation processes.  A key part of this is aligning security, development, and operational practices.
 
 ## Secure by design
+
+As organization adopt DevOps and other rapid innovation methodologies, security must be a thread woven throughout the tapestry of the organization. 
 
 Security must be core part of the envisioning, design, implementation, and operation of services and products. As development teams shift to DevOps and adopt cloud technologies, security must be a part of that transformation. 
 
@@ -121,74 +128,23 @@ Transformation requires building towards this ideal state incrementally on a jou
 ### Tips on overcoming these challenges
 
 So that’s a lot of challenges, now lets talk about the methods to overcome them. The DevSecOps teams should establish (and regularly refine) processes around
-- bug bar for security and non-security bugs
-- application evaluation processes	when to do these things and how deep to do them
-- **Business impact** – of applications if it is compromised by attackers. This will help identify how much effort should be put into security efforts. This business impact should include
-- Primary effects – of loss of CIA on the application or data (encompassing both direct loss of this applications’ data/functionality
-- Secondary effects – if an attacker could access other applications and services in the environment by compromising this application (negatively impact stuff listed in above)
-- Design Security - the methods to evaluate the security design and how much effort it will take to do things like threat modelling
-- Implementation Security - the tools for generating security findings (and quality rating of them via false positive rate)
+ - **Normalize Security** - ensure that all security elements fit within existing development processes to limit unneccesary friction. Proceses may need to be extended or changed, but limit this as much as you can without losing security outcomes. Some examples include
+      - **Align Security bug bar** for security and non-security bugs to the terminology and prioritization/classification already used by the DevOps/DevSecOps Teams. Ensure you have clear criteria for what types of security issues will be addressed in what priority order. 
+    - **Attacker Personas and Threat modelling** - integrate attacker persona(s) into the application design similar to user personas and using them to threat model the application to understand how attacker could abuse it and how to adjust the design accordingly
+ 
+- **Evaluate Business impact** – Estimate the potential business impact of a compromise of the application. This will help identify how much effort should be put into security efforts for this application relative to other applications. Business impact could include potential loss of human life/safety or data/application confidentiality, integrity, or availability. You should consider both:
+  - **Primary effects** – business impact if the application or it's data is controlled by attackers. 
+  - **Second, third, or Nth order effects** – business impact to other applications and data that the application has access to. One example is a customer facing web application may be able to change records in another application's database that uses those same records to send financial payments. Another example is an internet facing web server that is running as an administrative user of the operating system, which would allow an attacker that controls the application to steal credentials from that system and use them to attack other systems in the organization. 
+  
+- **Automate Security Tooling** - Integrate security tools that can scan for security bugs into the CI/CD pipeline. Ensure the bugs are part of the normal develop process generating security findings (and quality rating of them via false positive rate)
 
 This clarity will naturally help identify and resolve tension between security and productivity goals as the team encounters decisions during daily workflows.
 
-## Security in repositories
 
-Typically, developers create, manage, and share their code in repositories such as GitHub or Azure DevOps Repos. This approach provides a central, version controlled library of code that can be collaborate on easily.
-However, enabling a number of collaborators on a single codebase can also introduce the risk of changes being introduced. That risk can lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits.
 
-To address this risk, development teams should evaluate and implement a repository scanning capability. Repository scanning tools perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation.
+## Next Steps
 
-This capability acts to protect against human error and is a useful safeguard in distributed teams where a number of people are collaborating in the same repository.
-The validation of code can happen both within the Integrated Development Environment (IDE), such as Visual Studio Code, or at the point of creating a pull request to merge code into a branch or repository.
+For information on how GitHub Advanced Security integrates security into your continuous integration and continuous delivery (CI/CD) pipelines, see [About GitHub Advanced Security](https://docs.github.com/en/github/getting-started-with-github/about-github-advanced-security)
 
-## Security in pipelines
+For additional information and tooling on how Microsoft's IT organization implemented DevSecOps, see the [Secure DevOps Toolkit](https://azsk.azurewebsites.net/)
 
-Many organizations use build and release pipelines (often referred to as Continuos Integration and Continuous Delivery or CI/CD) to automate and standardize the processes for building and deploying code.
-
-This use of pipelines allows development teams to make iterative changes to sections of code quickly and at scale, without the need to spend large amounts of time redeploying or upgrading existing environments.
-Using pipelines also enables teams to promote code from development environments, through testing environments and ultimately into production.
-
-As part of this automation, development teams should include security tools that run scripted automated tests when code is deployed into testing environments. This can include tests such as unit testing the applications features to check for vulnerabilities or checking for public endpoints to ensure they are intentionally accessible.
-
-## Security in environments
-
-Alongside scanning and securing the code for applications, its important to ensure that the environments that applications are deployed into are also secure.
-This is particular key for organizations moving at pace or innovating and potentially using new technologies or creating environments quickly for experimentation.
-
-Azure has capabilities that enable organization's to create security standards from environments - such as Azure Policy that can be used to create policy sets that prevent the creation of certain workload types or configuration items such as public IP addresses.
-These 'guardrails' enable teams to experiment within a safe and controlled environment, therefore balancing innovation and governance.
-
-**Penetration testing** is a recommended practice for environments in order to check for any vulnerabilities in the infrastructure or application configuration that may create weaknesses that attackers could exploit.
-There are a number of products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](../azure/security/fundamentals/pen-testing.md)
-
-Testing typical covers the following test types:
-
-- Tests on your endpoints to uncover vulnerabilities
-- Fuzz testing (finding program errors by supplying malformed input data) of your endpoints
-- Port scanning of your endpoints
-
-**Infrastructure scanning**
-
-Azure includes monitoring and security capabilities designed to detect and alert on anomalous events or configurations that require investigation and potential remediation.
-
-Technologies such as Azure Defender, Aure Security Center, and Sentinel are first party tools that natively integrate into the Azure environments being deployed.
-
-These tools compliment the environment and code security tools to provide a broad reaching set of security monitoring to enable organizations to experiment and innovate, at pace, securely.
-
-## Actionable intelligence
-
-Taken together, the above tools and techniques can significantly contribute towards a holistic security model for organization's wishing to move at pace and experiment with new technologies that aim to drive innovation.
-
-A key element of DevSecOps is data-driven, event-driven processes that enable the three functions to operate effectively in identifying, evaluating and responding to potential risks.
-
-Many organizations choose to integrate these alerts and telemetry into their IT Service Management (ITSM) platform in order to bring the same structured workflow to security events that they use for other incidents are requests.
-
-## Feedback loops
-
-![Continuous Security model](./media/continuous-security.png)
-
-All of these techniques and tools enable teams to find and flag risks and vulnerabilities that require investigation and potential resolution.
-Operations teams who receive an alert, or discover a potential issue when investigating a support ticket, need a route back to the development team in order to flag items for review.
-This feedback loop being a smooth collaboration is vital to issues being addressed quickly and the risk of a vulnerability being minimized as much as possible.
-
-A common pattern for this feedback is to integrate it into the organization's developer work management system - such as Azure DevOps or Github - to link alerts or incidents to work items for developers to plan and action. This process provides an effective way for developers to resolve issues within their standard workflow, including development, testing and, release.
