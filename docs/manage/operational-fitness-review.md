@@ -14,7 +14,7 @@ ms.custom: internal
 
 As your enterprise begins to operate workloads in Azure, the next step is to establish a process for *operational management and fitness*. This process enumerates, implements, and iteratively reviews and optimizes the operational state for these workloads.
 
-A process for operational fitness review ensures that all of your workloads meet the expectations of your business and deliver on defined business commitments. This process also allows [Central IT](../organize/central-it.md) and [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md) teams to scale the pillars of Well-Architected across the entire portfolio of workloads.
+A process for operational fitness review ensures that the entire portfolio of workloads meet business commitments to performance, reliaibility, and cost. This process aligns the efforts of [Central IT](../organize/central-it.md), [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md), and workload teams to deliver operational excellence at scale.
 
 ## Establish a core process for operational fitness review 
 
@@ -31,15 +31,15 @@ The processes that Microsoft follows form the basis for the processes outlined i
 Operations management is a broad discipline involving multiple roles across the company. Depending on the organizations operating model, those roles may operate in a matrixed environment with a number of hand offs between centralized and decentralized operations teams. 
 
 - **Central IT / CCoE:** This centralized technology function is responsible for the configuration, operations, governance, and security of all technology assets in the technology portfolio.
-- **Cloud Operations:** As a dvision of the centralized technology function, this centralized operations function is responsible for the health and operations of the technology portfolio. It is their responsibility to ensure the process is run smoothly, that each adjecent role in the process has the tools they need, & that each of the subsequent roles is held accountable for expecations of this process. 
+- **Cloud Operations:** A function within the centralized technology organization, this centralized operations function is responsible for the health and operations of the technology portfolio. It is their responsibility to ensure the process is run smoothly, that each adjacent role in the process has the tools they need, & that each of the subsequent roles is held accountable for expectations of this process. 
 - **Cloud Strategy:** Provides knowledge of the business to identify and prioritize commitments to maintain operational requirements of various workloads. This role also compares the mitigation cost to the business impact, and drives the final decision on remediation.
-- **Workload Team:** Accountable for development and operations of descreet workloads which map to specific supporting applications, services, and infrastructure, whether on-premises or in the cloud. The role requires deep knowledge of the workload architecture.
+- **Workload Team:** Accountable for development and operations of discreet workloads which map to specific supporting applications, services, and infrastructure, whether on-premises or in the cloud. The role requires deep knowledge of the workload architecture.
 
 Each organization's operating model determines the accountability and day-to-day activities of the roles above:
 
-- **Centralized operations:** Central IT maintains full accountability for operations. Workload owners may have input to operations & configuration but they have no access to change production environments. Only Central IT and Cloud Operations can delier operational change to improve operational fitness.
+- **Centralized operations:** Central IT maintains full accountability for operations. Workload owners may have input to operations & configuration but they have no access to change production environments. Only Central IT and Cloud Operations can deliver operational change to improve operational fitness.
 - **Decentralized operations:** Workload teams are fully accountable for operations, generally through a mature CI/CD pipeline and DevOps automation. In this model, there is no central support for configuration, operations, governance, or security. This approach to operations is out of scope for the Cloud Adoption Framework. This operating model should see the [Azure Well-Architected Framework](/azure/architecture/framework/) for operational guidance.
-- **Enterprise oeprations:** Cloud Center of Excellence is accountable for operations. Cloud Operations and Workload Teams each share responsibility for specific aspects of operational fitness.
+- **Enterprise operations:** Cloud Center of Excellence is accountable for operations. Cloud Operations and Workload Teams each share responsibility for specific aspects of operational fitness.
 
 ## Objective of the review
 
@@ -47,8 +47,8 @@ Operational fitness is evaluated across the portfolio using a few metrics: Relia
 
 ![Elevations of operations](../_images/manage/beyond-the-baseline.png)
 
-- **Operations baseline (or enhanced baseline):** Evalutates operational fitness across all deployed assets regardless of their funtion. This braod view of operations allows for sweeping changes and big impacts, but is limited by a lack of visibility into the architecture of individual workloads. All resources deployed in the cloud should be covered by an operations baseline with regular support from cloud operations. Some environments may require a higher degree of operational support to meet the needs of the enhanced baseline.
-- **Platform operations:** Evaluates operational fitness of centralized technology platforms. This view of operations is more refined since it considers the architecture of the platform and how changes to the soution will impact operational fitness. Changes to central technology platforms can have a braod downstream imapct on supported workloads. All mission-critical platforms should receive dedicated support from a central IT team.
+- **Operations baseline (or enhanced baseline):** Evaluates operational fitness across all deployed assets regardless of their function. This broad view of operations allows for sweeping changes and big impacts, but is limited by a lack of visibility into the architecture of individual workloads. All resources deployed in the cloud should be covered by an operations baseline with regular support from cloud operations. Some environments may require a higher degree of operational support to meet the needs of the enhanced baseline.
+- **Platform operations:** Evaluates operational fitness of centralized technology platforms. This view of operations is more refined since it considers the architecture of the platform and how changes to the solution will impact operational fitness. Changes to central technology platforms can have a broad downstream impact on supported workloads. All mission-critical platforms should receive dedicated support from a central IT team.
 - **Workload operations:** Evaluates operational fitness of an individual workload. This view of operations is most refined & should be considered when operational fitness improvements require changes to the architecture of a workload. Workload operations should adhere to the principles of the [Azure Well-Architected Framework](/azure/architecture/framework/). All mission-critical workloads with an active DevOps cycle should receive dedicated support from a workload team.
 
 The objective of the operational fitness review is to regularly evaluate operational fitness at all levels. Identified improvements can then be applied at the appropriate level to inform the changes required to manage the overall portfolio.
@@ -87,7 +87,7 @@ The service-review phase is the core of the operational fitness review. It invol
 
 1. **Measure service metrics.** Use the scorecard metrics to monitor performance at each level of operations management, to ensure that the services meet the business commitments. Inventory & visibility services within the operations baseline is essential. If you can't monitor a set of resources with respect to the business commitments, consider the corresponding scorecard metrics to be red. In this case, the first step for remediation is to implement the appropriate service monitoring. For example, if the business expects a service to operate with 99.99 percent availability, but there is no production telemetry in place to measure availability, assume that you're not meeting the requirement.
 
-2. **Plan remediation.** For each business commitment for which metrics fall below an acceptable threshold, determine the appropriate operations team to complete the required remediation. That team is responsible for calculating the cost of remediating the service to bring operations to an acceptable level. If the cost of remediating the issue is greater than the budget allocated to that service, Central IT/CCoE should review with the cloud strategy team to evalaute addition investments.
+2. **Plan remediation.** For each business commitment for which metrics fall below an acceptable threshold, determine the appropriate operations team to complete the required remediation. That team is responsible for calculating the cost of remediating the service to bring operations to an acceptable level. If the cost of remediating the issue is greater than the budget allocated to that service, Central IT/CCoE should review with the cloud strategy team to evaluate addition investments.
 
 3. **Implement remediation.** After the cloud operations or workload team gain acceptance on a plan for remediation, implement it. Report the status of the implementation whenever you review scorecard metrics.
 
@@ -100,7 +100,7 @@ We recommend that your operational fitness be reviewed on a regular basis. Centr
 Adapt the details of the process and meeting to fit your specific needs. We recommend the following considerations as a starting point:
 
 - Centralized operations: Workload teams are unlikely to participate actively in the process, but should be included in any reports for visibility.
-- De-centralized operations: Cloud operations team should share best practices used to improve operations of tech platforms with the workload teams. Workload teams should sahre changes to their respective workloads to identify improvements that could be applied to tech platforms and the operations baseline.
+- De-centralized operations: Cloud operations team should share best practices used to improve operations of tech platforms with the workload teams. Workload teams should share changes to their respective workloads to identify improvements that could be applied to tech platforms and the operations baseline.
 
 ## Recommended resources
 
