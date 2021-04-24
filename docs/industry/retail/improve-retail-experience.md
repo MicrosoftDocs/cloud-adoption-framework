@@ -1,6 +1,6 @@
 ---
 title: Improve retail experience with retail recommender
-description: 
+description: Improve the retail experience using the retail recommender solution in Azure
 author: wayneme75
 ms.author: brblanch
 ms.date: 05/01/2021

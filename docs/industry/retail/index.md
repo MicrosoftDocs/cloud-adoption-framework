@@ -1,6 +1,6 @@
 ---
 title: "Introduction to cloud adoption for the Retail industry"
-description: Describe the scenario
+description: Follow the full cloud adoption journey for retail industry organizations
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
