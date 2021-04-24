@@ -13,7 +13,7 @@ ms.subservice: govern
 
 The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio across five governance disciplines pictured below. This article refines that methodology by mapping governance to needs specific to the retail industry.
 
-![Infographic of the Cloud Adoption Framework governance model](../_images/operational-transformation-govern-large.png)
+![Infographic of the Cloud Adoption Framework governance model](../../_images/operational-transformation-govern-large.png)
 
 When developing your cloud governance strategy, follow the approach in the standard methodology. But consider the following topics as potential additions to accelerate or extend your cloud governance capabilities specific to retail.
 

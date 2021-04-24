@@ -1,6 +1,6 @@
 ---
 title: "Cloud adoption strategy for the Retail industry"
-description: Describe the scenario's impact on strategy
+description: Develop a cloud adoption strategy with specific considerations for the retail industry
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021

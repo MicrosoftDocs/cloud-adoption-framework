@@ -39,7 +39,7 @@ In addition to perimeter network connections, you will also need to consider tra
 
 Most retail organizations require compliance with [Payment Card Industry (PCI) Data Security Standards (DSS)](/azure/compliance/offerings/offering-pci-dss). But this is just one example of the compliance requirements common seen in retail cloud adoption requirements.
 
-If your cloud adoption strategy and plan call for adherence to regulatory compliance standards, review the compliance section of the [governance for retail](./governance.md) article, before deploying your Azure Landing Zones.
+If your cloud adoption strategy and plan call for adherence to regulatory compliance standards, review the compliance section of the [governance for retail](./govern.md) article, before deploying your Azure Landing Zones.
 
 ## Next step: Assess for the Retail industry
 

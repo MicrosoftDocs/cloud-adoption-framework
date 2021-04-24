@@ -1,6 +1,6 @@
 ---
 title: "Management in the Retail industry"
-description: Describe the scenario's impact on operations management
+description: Managing a portfolio of retail applications in the cloud
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -54,7 +54,7 @@ To reduce overhead and minimize operational burden:
 
 - Consider PaaS-based alternatives to modernize many of your shared platforms. This is a common approach for platforms like SQL or Virtual Desktop.
 - Evaluate options to use SaaS based [retail industry applications in the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=retail&page=1)
-- Follow CAF Scenarios to automate governance and operations tasks for more complex tech platforms, such as [SAP](../../scenarios/sap) or [WVD](../../scenarios/wvd).
+- Follow CAF Scenarios to automate governance and operations tasks for more complex tech platforms, such as [SAP](../../scenarios/sap/index.md) or [WVD](../../scenarios/wvd/index.md).
 
 ## Enhanced baseline
 

@@ -32,7 +32,7 @@ Tractor Supply Company To Expand Relationship With Microsoft. The largest rural 
   
 Read the full story here: [https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx](https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx)
 
-![Starbucks](../../_images/innovate/starbucks.png)
+![Starbucks logo](../../_images/innovate/starbucks.png)
 
 Starbucks turns to technology to brew up a more personal connection with its customers. They have been using reinforcement learning technology — a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based upon external feedback — to provide a more personalized experience for customers who use the Starbucks® mobile app.
 
@@ -82,9 +82,6 @@ For additional training and support, please see:
 
 1. Clone this repository and navigate to the root of the directory
 2. Go to Deployment guide for the steps you need to take to deploy this solution
-The architecture diagram below details what you will be building for this Solution Accelerator:  
-
-![Retail Recommender Architecture](../../_images/innovate/retailrecommender_architecture.png)  
 
 - Utilizing Azure Data Lake Storage Gen2 for the enterprise-scale data lake  
 - With the models trained, there are two main recommendation paths: user-based and item-based  

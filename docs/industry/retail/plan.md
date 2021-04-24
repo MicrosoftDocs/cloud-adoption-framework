@@ -1,6 +1,6 @@
 ---
 title: "Cloud adoption plan for the Retail industry"
-description: Describe the scenario's impact on planning
+description: Develop a cloud adoption plan with considerations for the retail industry
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -38,7 +38,7 @@ Delivering the business promises of each cloud maturity horizon requires integra
 > [!IMPORTANT]
 > The links below will navigate to multi-page guides outlining complex technology scenarios, which can be integrated into your cloud adoption plans to guide a number of programs. Complete your cloud adoption strategy, cloud adoption plan, and define your target horizons before exploring the following scenarios.
 
-- **Connected Retail** A variety of [migration scenarios](../../scenarios/index.md) can be added to your migration process to accelerate your journey to a connected retail maturity. Commonly, retail customers will also integrate the [hybrid and multicloud scenario](../../scenarios/hybrid) to include a number of hosting options in their migration program.
+- **Connected Retail** A variety of [migration scenarios](../../scenarios/index.md) can be added to your migration process to accelerate your journey to a connected retail maturity. Commonly, retail customers will also integrate the [hybrid and multicloud scenario](../../scenarios/hybrid/index.md) to include a number of hosting options in their migration program.
 - **Analytics-driven Retail** The Data Management and Analytics scenario (coming soon) can aid in centralizing, governing, and analyzing your complex data portfolio.
 - **Intelligent Retail** The Modern applications scenario (coming soon) can guide citizen developers, professional developers, and DevOps teams as they innovate to improve a variety of retail workflows and functions.
 

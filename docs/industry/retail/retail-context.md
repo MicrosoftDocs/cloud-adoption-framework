@@ -1,6 +1,6 @@
 ---
 title: "Retail industry context"
-description: Describe the scenario
+description: Establish Microsoft Azure's view of the retail industry
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -40,10 +40,10 @@ If there is one thing to be learned following COVID-19, its that agility is the 
 
 ## Sources:
 
-1. [During COVID-19, Disruption in the marketplace, whether driven by supply-chain challenges or by changes in shopping behaviors, have led 15 to 20 percent of consumers to switch stores.](https:/www.mckinsey.com/industries/public-sector/our-insights/us-small-business-recovery-after-the-covid-19-crisis) 
-2. [Sixty-eight percent of US shoppers expect to buy essential goods online after the health threats of COVID-19 have subsided.](https:/www.zdnet.com/article/covid-19-has-permanently-changed-shopping-behavior)
+1. [During COVID-19, Disruption in the marketplace, whether driven by supply-chain challenges or by changes in shopping behaviors, have led 15 to 20 percent of consumers to switch stores.](https://www.mckinsey.com/industries/public-sector/our-insights/us-small-business-recovery-after-the-covid-19-crisis) 
+2. [Sixty-eight percent of US shoppers expect to buy essential goods online after the health threats of COVID-19 have subsided.](https://www.zdnet.com/article/covid-19-has-permanently-changed-shopping-behavior)
 3. [79% of worldwide respondents say they are using contactless payments.](https://mastercardcontentexchange.com/research-reports/2020/contactless) (Mastercard Consumer Polling Data; online interviews of 17,000 consumers in 19 countries worldwide conducted April 10-12, 2020)
-4. [75% of US companies supply chain affected by China's production halt.](https:/www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf)
+4. [75% of US companies supply chain affected by China's production halt.](https://www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf)
 5. [During COVID-19, grocery shopping, there was a spike of 210.1% of online ordering during March 12 to March 15, compared with the same period in 2019.](https://www.forbes.com/sites/jasongoldberg/2020/03/29/the-impact-of-covid-19-on-us-brands-and-retailers/#55642cb71452) For general merchandise retailers, they also experienced 50% more online orders on March 13.
 
 ## Next step: The cloud adoption journey for the Retail industry
