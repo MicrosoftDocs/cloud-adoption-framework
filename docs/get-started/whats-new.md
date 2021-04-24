@@ -24,7 +24,7 @@ This release is the largest update of the framework yet, adding a number of new 
 
 ### Adoption journeys
 
-Most notable in this release is the addition of adoption journeys, which provide a short, consumable overlay or lenses that rest on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance in the Cloud Adoption Framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), the [Azure Architecture Center](/azure/architecture), [Microsoft Learn](/learn), and other [Microsoft documentation](/) to the adoption of specific technology platforms. The table below provides links to the overview page for each of the new journeys:
+Most notable in this release is the addition of adoption journeys, which provide a short, consumable overlay or lenses that rest on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance in the Cloud Adoption Framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), the [Azure Architecture Center](/azure/architecture), [Microsoft Learn](/learn), and other [Microsoft documentation](/) to the adoption of specific technology platforms. The following table provides links to the overview page for each of the new journeys:
 
 | Journey | Description |
 |--|--|

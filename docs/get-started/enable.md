@@ -48,7 +48,7 @@ The core principles of a well-managed operating model are based on a set of comm
 
 ![Diagram that illustrates shared architecture principles.](../_images/shared-principles.png)
 
-_Figure 1: The principles of shared architecture._
+*Figure 1: The principles of shared architecture.*
 
 These principles are shared across Azure Advisor, the Microsoft Azure Well-Architected Framework, and solutions in the Azure Architecture Center:
 
