@@ -14,7 +14,7 @@ ms.custom: internal
 
 As your enterprise begins to operate workloads in Azure, the next step is to establish a process for *operational management and fitness*. This process enumerates, implements, and iteratively reviews and optimizes the operational state for these workloads.
 
-A process for operational fitness review ensures that the entire portfolio of workloads meet business commitments to performance, reliaibility, and cost. This process aligns the efforts of [Central IT](../organize/central-it.md), [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md), and workload teams to deliver operational excellence at scale.
+A process for operational fitness review ensures that the entire portfolio of workloads meet business commitments to performance, reliability, and cost. This process aligns the efforts of [Central IT](../organize/central-it.md), [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md), and workload teams to deliver operational excellence at scale.
 
 ## Establish a core process for operational fitness review 
 
