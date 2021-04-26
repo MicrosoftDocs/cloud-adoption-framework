@@ -18,8 +18,6 @@ This article will help expose a number of considerations regarding containers th
 
 ## Modern container motivations
 
-***** NEW CONTENT
-
 Application services and containers can accelerate cloud adoption strategies, if the motivations of that strategy focus on the following: 
 
 - Pace of innovation: Delivering technology-driven products and services to market faster than the competition
@@ -27,17 +25,7 @@ Application services and containers can accelerate cloud adoption strategies, if
 
 Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through modern abstraction options like Applications services (PaaS solutions) and orchestrated containers, can contribute to the success of each of these common motivations.
 
-**** Original content to be removed
-
-Organizations most commonly choose containers when innovation is a high priority. But management of highly componentized, cloud-native applications is also a very common driver. When migrating non-containerized workloads, first containerizing the workload may also be a sound option if workload portability and environmental consistency can obtained with minimal functionality changes within the workload.
-
-Kubernetes then provides a layer of orchestration to make it easier for the organizations to capitalize on the benefits of containers and improve overall operations of containerized environments and workloads. In Azure, the Azure Kubernetes Service (AKS) provides end to end container orchestration as a service.
-
-*******
-
 ## Modern container outcomes
-
-****** Added streamlined operations and closing note below. Also moved provisioning and scale time lower in the list.
 
 To measure the impact of modern container adoption efforts, the following are a few key outcomes that can be tracked and evaluated:
 

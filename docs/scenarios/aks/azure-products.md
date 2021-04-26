@@ -1,0 +1,106 @@
+---
+title: Azure products supporting the modern containers scenario
+description: A number of Azure products can support the modern container scenario depending on specific application and operations needs.
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 05/01/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: overview
+ms.custom: think-tank, e2e-aks
+---
+
+# Modern container solutions in Azure
+
+A number of Azure products and services can support your modern container needs. Selecting the right product requires intimate knowledge of the application and operations needs. To make that selection process simpler, this article will help prioritize which products to consider based on a few strategic questions:
+
+- **Application Platform:** Does the application require a *custom runtime*? Can the development team consider a *Cloud runtime* definition set by the cloud provider?
+- **Operations:** Will the operations of the application, application platform, or container host require *customized operations*? Or, is a *standardized operations* approach preferred to centralize operations across workloads? Alternatively, would *cloud operations* supported by the cloud provider by preferred?
+- **Location:** Will this solution run in the *public cloud*? Or does it need to be deployed to *private cloud* or *edge* environments? Does the solution require *workload portability*? 
+- **Workload consolidation:** Will each application or workload require a *dedicated host*? Can the workload operate on *shared host*? Or can this decision be deferred to the *cloud provider*?
+
+## Compare Azure products
+
+The following table maps the questions above to a few Azure products to consider.
+
+|Azure Products  |App Plat  |Operations  |Location  |Consolidation  |
+|---------|---------|---------|---------|---------|
+|Azure Application Services|Cloud runtime|Cloud ops|Fixed (public cloud only)|Managed by Azure|
+|Azure Stack HCI|Cloud runtime|Customizable|Fixed (private cloud only)|Shared host|
+|Azure Stack HCI - AKS|Customizable|Customizable|Fixed (private cloud only)|Shared host|
+|Azure Kubernetes Service (AKS)|Customizable|Customizable|Fixed (public cloud only)|Supports Dedicated or Shared hosts|
+|Azure Arc for kubernetes|N/A|Cloud ops|Supports public & private cloud|N/A|
+|Azure Application Services on Kubernetes with Arc (AKA Lima)|Cloud runtime|Customizable & Cloud ops|Supports public & private cloud|Supports dedicated or shared hosts|
+
+## Azure products alignment to various roles
+
+The following narratives share the perspectives of application and operations teams to better convey the value of each product offering.
+
+### Azure Application Services
+
+Azure Application Services is a collection of Platform as a Service (PaaS) application platforms or runtimes that allow applications to run in the cloud
+
+- **Developers** can best accelerate development using the Cloud-native application platform & runtime defined by Microsoft Azure as their application platform.
+- **Operations teams** want the ease and scale of operations that come from deferring many of the host operations tasks to the cloud provider.
+
+### Azure Stack HCI
+
+Azure Stack HCI provides a application platform (based on Azure's PaaS services) running on Azure Stack operated in private cloud or the edge, using tools which are very similar to cloud operations.
+
+- **Developers** can best accelerate development using the Cloud-native application platform & runtime defined by Microsoft Azure as their application platform.
+- **Operations teams** have specific constraints:
+    - Must run in private cloud or edge
+    - Requires custom operations to fit parallel private cloud operations
+    - Most likely will consolidate workloads on shared hosts, separating host and workload operations into distinct sets of tasks for centralized host operations & workload operations which could be centralized or workload specific.
+
+### Azure Stack HCI - AKS
+
+Azure Stack HCI can also run an instance of Azure Kubernetes Service to support customizable application platforms running on kubernetes.
+
+- **Developers** require the ability to customize the application platform to meet the runtime requirements of the application.
+- **Operations teams** have specific constraints:
+    - Must run in private cloud or edge
+    - Requires custom operations to fit parallel private cloud operations
+    - Most likely will consolidate workloads on shared hosts, separating host and workload operations into distinct sets of tasks for centralized host operations & workload operations which could be centralized or workload specific.
+
+### Azure Kubernetes Service (AKS)
+
+Azure Kubernetes Service (AKS) provides a customizable runtime option based on Kubernetes, running on public cloud resources running in Azure.
+
+- **Developers** require the ability to customize the application platform to meet the runtime requirements of the application.
+- **Operations teams** have specific constraints:
+    - Must run in public cloud only
+    - Requires custom operations defined by the container orchestrator and programmatic deployment of the hosts and containers, making this an idea solution for workload-specific DevOps teams with minimal dependency on centralized operations support. 
+        - Alternatively, Container orchestrator can also be standardized across Kubernetes containers, allowing for centralized operations at scale.
+    - AKS is designed to support dedicated containers per workload
+        - AKS can also be used to consolidate workloads, allowing central operations to extend support to container hosts.
+
+### Azure Arc for kubernetes
+
+Azure Arc extends operations of Kubernetes hosts allowing for consistent cloud operations across public cloud, private cloud, and edge deployments of Kubernetes containers.
+
+- **Operations teams** have specific constraints:
+    - Kubernetes containers have been deployed across multiple hybrid and multicloud environments.
+    - Management of those diverse containers require centralization of operations, governance, security, and other unified operations principles regardless of environment.
+
+### Azure Application Services on Kubernetes with Arc (AKA Lima)
+
+Azure Application Services on Kubernetes with Arc creates consistency across development and operations.
+
+- **Developers** can best accelerate development using the Cloud-native application platform & runtime defined by Microsoft Azure as their application platform.
+- **Operations teams** require flexibility:
+    - Azure Arc components allow for consistent cloud operations across environments
+    - Kubernetes foundation allow for customizable or standardized container host operations at the host and workload levels
+    - The application platform overlay ensures a consistent runtime for applications that can run on kubernetes container hosts in private cloud or edge AND AKS container hosts in Azure
+
+## Next step: Integrate modern containers into your cloud adoption journey
+
+The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
+
+- [Strategy for modern containers](./strategy.md)
+- [Plan for modern containers](./plan.md)
+- [Review your environment or Azure landing zones](./ready.md)
+- [Migrate workloads to modern containers](./migrate.md)
+- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern container solutions](./govern.md)
+- [Manage modern container solutions](./manage.md)

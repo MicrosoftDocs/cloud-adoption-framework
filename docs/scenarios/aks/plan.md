@@ -20,8 +20,6 @@ Application of the Plan methodology focuses on the [five rs of rationalizing you
 
 When planning for your digital estate, you'll want to [gather inventory data](../../digital-estate/inventory.md) and [rationalization your estate](../../digital-estate/rationalize.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package/rehost or rearchitect options.
 
-********* NEW CONTENT 
-
 The standard [cloud adoption plan template](../../plan/template.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
 
 > [!CAUTION]
@@ -42,6 +40,9 @@ To begin aligning the strategy and plan, identify any workloads which are assume
 4. **Legacy workloads:** Legacy workloads can block updates to operating systems and even prevent migration to the cloud. Legacy workloads which aren't compatible with the cloud might be a candidate for migration on a container host.
 
 ## Document candidate workloads
+
+> [!NOTE]
+> The following list of considerations should only be documented for migration candidates identified by the criteria above.
 
 When building a cloud adoption plan, each workload is documented following the guidance in the article: [Define and prioritize workloads](../../plan/workloads.md). Any workload which are candidates for the modern container scenario will require additional information to guide execution of the plan. That article calls out the important of [documenting business and technical inputs to define the workload](../../plan/workloads.md?#define-workloads). For modern container candidates, the following data points should be added to the definition of the workload.
 
@@ -91,8 +92,6 @@ Considerations specific to how the application is developed & will be developed 
 - Data gravity: Is this workload dependent on a data source which resides in a specific location (public, private, etc...)? Examples could include dependence on the data in SAP or other centralized data sources.
 - Approve-list considerations: Are the custom operations considerations approved for use within your cloud platform? Which approved services must be included in the deployment.
 
-new Content ******
-
 ## Initial containers considerations
 
 Packaging your workloads in containers is the first body of work that needs to be scheduled and worked on. The second is planning the hosting of those containers.
@@ -123,8 +122,6 @@ For very specialized workloads or specific organizational requirements, Azure of
 
 If there is reason to explore alternatives, ensure time is allocated to understand the benefits and tradeoffs of all platform options. Azure's default solution is AKS, and this documentation assumes AKS is the chosen technology.
 
-****** new Content
-
 ### Standardize operations across cloud platforms
 
 Often times customers will deploy different container orchestrators in private cloud, edge, and public cloud environments. To standardize operations across those disparate cloud platforms, customer can incorporate a unified operations approach by extending their cloud operations tools to multiple cloud platforms.
@@ -138,8 +135,6 @@ When workloads must be run in a private cloud or edge environment, but the workl
 - Azure Stack HCI: Allows for hosting of Azure Application Services natively on Azure Stack, managed by the Azure Stack operator.
 - Azure Stack HCI for AKS: Allows for hosting of Azure Application Services running on AKS within Azure Stack, managed by AKS operators allowing for portability to other kubernetes solutions.
 - Azure Application Services on Kubernetes with Arc: Allows any Kubernetes host to provide Azure Application Services. All hosts become a small instance of Azure PaaS. Since each host is also onboarded into Azure Arc, those hosts can also be managed through consistent cloud-based host operations.
-
-new Content ******
 
 ## Modern container readiness plan
 

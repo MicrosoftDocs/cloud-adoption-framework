@@ -14,13 +14,8 @@ ms.custom: think-tank, e2e-aks
 
 # Enterprise enrollment considerations for AKS
 
-What specific considerations should be factored into enrollment for AKS?
+Azure Landing Zones for AKS do not have any specific considerations or recommendations which would impact enterprise enrollment or AD Tenant decisions.
 
-## Design considerations
+However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [Enterprise enrollment or AD Tenant decisions](../../ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md).
 
-Here are some crucial factors to consider:
-
-
-## Design recommendations
-
-Follow these best practices for your design:
+You may also want to review the [Identity and Access Management considerations](eslz-identity-and-access-management.md) to understand how the AD Tenant is applied in the design of authentication and authorization solutions. You may also want to evaluate the [Resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment may be organized into subscriptions, management groups, and resource groups.

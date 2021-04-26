@@ -14,13 +14,29 @@ ms.custom: think-tank, e2e-aks
 
 # Resource organization considerations for AKS
 
-What specific considerations should be factored into organization for AKS?
+The following considerations and recommendations will help establish proper resource organization and segmentation across management group hierarchies, subscriptions, resource groups, and landing zones. It will also help establish proper tagging strategies to keep resources organized.
 
 ## Design considerations
 
-Here are some crucial factors to consider:
-
+- Decide who will be managing the container hosts:
+    - If the hosts are managed centrally, you could reduce the number of landing zone instances and require developers to follow defined processes for deploying the the hosts & using shared dashboards/alerts for workload-level operations
+    - If the hosts are managed by the workload teams, you would need more landing zone instances to segment host environments & allow workload teams to control their deployments.
+- Decide on a tenancy model for host instances:
+    - Workload operated, single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control
+    - Centrally operated, single tenant: For hostile workloads which can not be hosted in a multi-tenant host but which are still managed centrally, a dedicated landing zone may not be required
+    - Multi-tenant hosts: When hosts are centrally managed, dedicated landing zones are less common. Hosts and workloads are more likely to be sub-divided by resource group. Additionally landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints
+- Decide which scope to use for container registry settings:
+    - One registry per workload
+    - One registry per host with multiple workloads in the registry
+    - One registry per all hosts in the landing zone with multiple workloads and hosts in the same registry
+    - One registry per all hosts across multiple landing zones with multiple workloads and hosts in the same registry
+- Decide the scope for container registry policies in Azure policy:
+    - Set a policy at the subscription level requiring all hosts in the landing zone to use the defined registry
+    - Set a more granular policy at the resource group level
+    - Set a broader policy at the management group level
 
 ## Design recommendations
 
-Follow these best practices for your design:
+- Define a tag to identify the workload or workloads supported by each cluster
+- Define a tag to identify which team is responsible for operations of the host
+- Implement an Azure Policy to require a specific container registry

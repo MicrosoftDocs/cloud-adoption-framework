@@ -1,5 +1,5 @@
 ---
-title: Azure landing zones for container operations
+title: Azure landing zones for modern app platforms
 description: Describe the scenario's impact on Azure landing zone design
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,35 +10,39 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Azure landing zones for container operations
+# Azure landing zones for modern app platforms
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern container solutions no matter what implementation option you choose.
 
-## Strategic & planning considerations for container operations landing zones
+## Strategic & planning considerations for modern app platforms landing zones
 
-Prioritization decisions made during [strategy](./strategy.md) and [plan](./plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your container operations plan. The following are the most important considerations from those phases:
+Prioritization decisions made during [strategy](./strategy.md) and [plan](./plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your modern app platforms plan. The following are the most important considerations from those phases:
 
 - Will Central IT, CCoE, or other forms of centralize operations be responsible for operating the container hosts?
 - Does your strategy and plan require shared containers supporting multiple workloads per container host?
 - Will the centralized teams also support segmented container solutions for hostile workloads?
 
-These questions will have a direct impact on implementation options.
+The questions will influence landing zone design, since each suggests a need for a centralized operations team to manage containers. When operational responsibilities are shared across centralized teams and development teams, more considerations need to go into the design of the environment to allow for shared services & separation of duty, suggesting an enterprise-grade landing zone.
 
 ## Implementation option considerations
 
-Selecting the best Azure Landing Zone implementation option will have a direct impact on how well the landing zone(s) can support the implementation options above. For more information on Azure Landing Zone implementation options, review the [Azure landing zones](../../ready/landing-zone/index.md) article series. Which of the Azure Landing Zone implementation options best addresses the strategy & planning considerations governing your container operations scenario?
+Selecting the best Azure Landing Zone implementation option will have a direct impact on how well the landing zone(s) can support the implementation options above. For more information on Azure Landing Zone implementation options, review the [Azure landing zones](../../ready/landing-zone/index.md) article series. Which of the Azure Landing Zone implementation options best addresses the strategy & planning considerations governing your modern app platforms scenario?
 
-- **Existing Azure Landing Zone strategy:** If your organization has already implemented an Azure Landing Zone strategy, it is likely that your container operations scenario will likely need to adhere to the existing strategy. Otherwise, please choose one of the following as your first step towards repeatable landing zone environments.
-- **Start-small and expand with the AKS baseline:** The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) provides a proven approach to deploying your first AKS environment. This option is most commonly used when workload specific DevOps teams are responsible for operations of the container host. This is also a common option when hostile workloads are completely isolated from centralized container solutions, resulting in reduced centralized operations support.
-- **Enterprise-scale landing zones:** [Enterprise-scale for AKS](./enterprise-scale-landing-zone.md) includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. The enterprise-scale landing zone deploys the same AKS baseline, but within the specific environmental configuration required by the broader enterprise-scale landing zone solutions. This is the most common option when compliance, governance, or security requirements must be applied centrally to any container environment. It is also the most common option for centralized teams who deliver container host operations, allowing developers to focus more on the application & less on developing for kubernetes.
+- **Existing Azure Landing Zone strategy:** If your organization has already implemented an Azure Landing Zone strategy, it is likely that your modern app platforms scenario will likely need to adhere to the existing strategy. Otherwise, please choose one of the following as your first step towards repeatable landing zone environments.
+- **Start-small and expand with the AKS baseline:** The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) provides a proven approach to deploying your first AKS environment.
+    - This option is most commonly used when developer or DevOps teams are directly responsible for operations of the container host, cloud environment, and the application.
+    - Processes and best practices in the Ready, Govern, and Operate methodologies of the cloud adoption framework could be added later to prepare this deployment for central operations and shared hosts.
+- **Enterprise-scale landing zones:** [Enterprise-scale for AKS](./enterprise-scale-landing-zone.md) includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. The enterprise-scale landing zone deploys the same AKS baseline, but within the specific environmental configuration required by the broader enterprise-scale landing zone solutions.
+    - This is the most common option when compliance, governance, or security requirements must be applied centrally to any container environment.
+    - It is also the most common option for centralized teams who deliver container host operations, allowing developers to focus more on the application & less on developing for kubernetes.
 
 The primary difference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.
 
 ## Azure Landing Zone design areas
 
-Regardless of your initial implementation option, all Azure Landing Zones for AKS should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the container operations team evaluate any landing zone to ensure it is ready to host AKS containers:
+Regardless of your initial implementation option, all Azure Landing Zones for AKS should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the modern app platforms team evaluate any landing zone to ensure it is ready to host AKS containers:
 
 - [Enterprise enrollment](eslz-enterprise-enrollment.md)
 - [Identity and access management](eslz-identity-and-access-management.md)
