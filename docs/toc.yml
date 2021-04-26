@@ -70,7 +70,7 @@ items:
       items:
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
-      - name: Modern containers
+      - name: Modern app platform
         href: scenarios/aks/index.md
       - name: SAP
         href: scenarios/sap/index.md

@@ -1,6 +1,6 @@
 ---
-title: Azure products supporting the modern containers scenario
-description: A number of Azure products can support the modern container scenario depending on specific application and operations needs.
+title: Azure products supporting the modern app platforms scenario
+description: A number of Azure products can support the modern app platform scenario depending on specific application and operations needs.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Modern container solutions in Azure
 
-A number of Azure products and services can support your modern container needs. Selecting the right product requires intimate knowledge of the application and operations needs. To make that selection process simpler, this article will help prioritize which products to consider based on a few strategic questions:
+A number of Azure products and services can support your modern app platform needs. Selecting the right product requires intimate knowledge of the application and operations needs. To make that selection process simpler, this article will help prioritize which products to consider based on a few strategic questions:
 
 - **Application Platform:** Does the application require a *custom runtime*? Can the development team consider a *Cloud runtime* definition set by the cloud provider?
 - **Operations:** Will the operations of the application, application platform, or container host require *customized operations*? Or, is a *standardized operations* approach preferred to centralize operations across workloads? Alternatively, would *cloud operations* supported by the cloud provider by preferred?
@@ -93,14 +93,14 @@ Azure Application Services on Kubernetes with Arc creates consistency across dev
     - Kubernetes foundation allow for customizable or standardized container host operations at the host and workload levels
     - The application platform overlay ensures a consistent runtime for applications that can run on kubernetes container hosts in private cloud or edge AND AKS container hosts in Azure
 
-## Next step: Integrate modern containers into your cloud adoption journey
+## Next step: Integrate modern app platforms into your cloud adoption journey
 
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for modern containers](./strategy.md)
-- [Plan for modern containers](./plan.md)
+- [Strategy for modern app platforms](./strategy.md)
+- [Plan for modern app platforms](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Migrate workloads to modern app platforms](./migrate.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)

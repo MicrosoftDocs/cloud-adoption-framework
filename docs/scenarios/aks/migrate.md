@@ -1,5 +1,5 @@
 ---
-title: Migrate workloads for modern containers
+title: Migrate workloads for modern app platforms
 description: Reduce cloud platform dependency and potentially reduce infrastructure footprint by migrating multiple web applications to a container solution
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,9 +10,9 @@ ms.subservice: migrate
 ms.custom: think-tank, e2e-aks
 ---
 
-# Migrate workloads to modern containers
+# Migrate workloads to modern app platforms
 
-Most modern container options require a rearchitecture or redeployment of the application. But the orchestration capabilities of Azure Kubernetes Service (AKS) allows for AKS solutions to be integrated into standard migration processes.
+Most modern app platform options require a rearchitecture or redeployment of the application. But the orchestration capabilities of Azure Kubernetes Service (AKS) allows for AKS solutions to be integrated into standard migration processes.
 
 There's a clear and growing trend of migrating existing workloads from on-premises datacenters to a Kubernetes cluster in Azure. This approach has the potential of reducing the post-migration infrastructure footprint. More importantly, migrating to containers allows for greater portability in the portfolio, allowing workloads to be more easily moved between public and private cloud. This trend is most commonly experienced when organizations have a large collection of web applications.
 
@@ -47,10 +47,10 @@ If you're coming from an existing Kubernetes platform (AKS Engine, ACS, or anoth
 
 When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it may not be within the supported range and require upgrading versions to be supported by AKS. For more information, see [AKS supported Kubernetes versions](/azure/aks/supported-kubernetes-versions). Where possible, always try to migrate to the same version of Kubernetes. That means either do an in-place upgrade in the existing system or plan a post-migration upgrade -- based on your priorities.
 
-## Next step: Innovate using modern container solutions
+## Next step: Innovate using modern app platform solutions
 
 The following articles will take you to guidance at specific points in the cloud adoption journey and help you be successful in the cloud adoption scenario.
 
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)

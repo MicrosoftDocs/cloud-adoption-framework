@@ -1,5 +1,5 @@
 ---
-title: Manage modern container solutions
+title: Manage modern app platform solutions
 description: Describe the scenario's impact on operations management
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: operate
 ms.custom: think-tank, e2e-aks
 ---
 
-# Manage modern container solutions clusters
+# Manage modern app platform solutions clusters
 
 The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This guidance might still apply for organizations that have a mixture of infrastructure as a service (IaaS), platform as a service (PaaS), and containerized workloads. This article outlines what you need to integrate into your existing operations to prepare for container management. It also highlights the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
 
@@ -102,12 +102,12 @@ Workload operations can build on your existing operations baseline and platform-
 
 ## Next step: Your next migration iteration
 
-Once the modern containers migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next modern containers migration or deployment.
+Once the modern app platform migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next modern app platform migration or deployment.
 
-- [Strategy for modern containers](./strategy.md)
-- [Plan for modern containers](./plan.md)
+- [Strategy for modern app platforms](./strategy.md)
+- [Plan for modern app platforms](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Migrate workloads to modern app platforms](./migrate.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)

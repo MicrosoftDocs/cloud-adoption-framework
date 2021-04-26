@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
-With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern container solutions no matter what implementation option you choose.
+With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern app platform solutions no matter what implementation option you choose.
 
 ## Strategic & planning considerations for modern app platforms landing zones
 
@@ -53,11 +53,11 @@ Regardless of your initial implementation option, all Azure Landing Zones for AK
 - [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
 - [Deployment options](eslz-platform-automation-and-devops.md)
 
-## Next step: Migrate workload to modern containers
+## Next step: Migrate workload to modern app platforms
 
 The following list of articles will take you to guidance found at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Migrate workloads to modern app platforms](./migrate.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)

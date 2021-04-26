@@ -1,5 +1,5 @@
 ---
-title: Introduction to the modern containers adoption scenario
+title: Introduction to the modern app platform scenario
 description: Describe the scenario
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: overview
 ms.custom: think-tank, e2e-aks
 ---
 
-# Introduction to the modern containers adoption scenario
+# Introduction to the modern app platform scenario
 
 As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into your cloud strategy.
 
@@ -52,14 +52,14 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 **Implement specific Azure products:** Accelerate and improve container and Kubernetes capabilities using different kinds of Azure products outlined in the featured products section.
 
-## Next step: Integrate modern containers into your cloud adoption journey
+## Next step: Integrate modern app platforms into your cloud adoption journey
 
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for modern containers](./strategy.md)
-- [Plan for modern containers](./plan.md)
+- [Strategy for modern app platforms](./strategy.md)
+- [Plan for modern app platforms](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Migrate workloads to modern app platforms](./migrate.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)

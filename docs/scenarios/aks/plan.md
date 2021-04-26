@@ -1,5 +1,5 @@
 ---
-title: Plan for modern containers
+title: Plan for modern app platforms
 description: Describe the scenario's impact on planning
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: think-tank, e2e-aks
 ---
 
-# Plan for modern containers
+# Plan for modern app platforms
 
 [Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud.
 
@@ -26,13 +26,13 @@ The standard [cloud adoption plan template](../../plan/template.md) accounts for
 > This article assumes the reader is already following the best practices outlined in the article series on [Building a cloud adoption plan in Azure DevOps](../../plan/plan-intro.md). If you are tracking your cloud adoption plan in spreadsheet or other project tracking tools, the following sections are still applicable but the actionable steps of adding data to your plan would need to be adjusted.
 
 > [!WARNING]
-> Incorporating a modern container strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with "[architecting workloads prior to migration](../../migrate/migration-considerations/assess/architect.md)". Continuing with this strategy without those tasks will delay the migration effort & could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
+> Incorporating a modern app platform strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with "[architecting workloads prior to migration](../../migrate/migration-considerations/assess/architect.md)". Continuing with this strategy without those tasks will delay the migration effort & could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
 
 ## Identify candidate workloads
 
-In the modern container scenario, longer term returns are prioritized (which require a greater upfront investment) are prioritized over more efficient migration processes. The longer term investments are represented in specific parts of the plan as an increased focus on enabling innovation and streamlining operations for specific groups of workloads.
+In the modern app platform scenario, longer term returns are prioritized (which require a greater upfront investment) are prioritized over more efficient migration processes. The longer term investments are represented in specific parts of the plan as an increased focus on enabling innovation and streamlining operations for specific groups of workloads.
 
-To begin aligning the strategy and plan, identify any workloads which are assumed to be impacted by the addition to modern containers in you cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates look for the following criteria within your portfolio of workloads:
+To begin aligning the strategy and plan, identify any workloads which are assumed to be impacted by the addition to modern app platforms in you cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates look for the following criteria within your portfolio of workloads:
 
 1. **Active Development or DevOps investments:** A percentage of production workloads will be under active development. Some may even be managed through on-going DevOps practices.  
 2. **Workload portability:** Some workloads are impacted by compliance, data protection, or operational constraints which may require portability across private cloud, edge, or even multiple public cloud providers.
@@ -44,11 +44,11 @@ To begin aligning the strategy and plan, identify any workloads which are assume
 > [!NOTE]
 > The following list of considerations should only be documented for migration candidates identified by the criteria above.
 
-When building a cloud adoption plan, each workload is documented following the guidance in the article: [Define and prioritize workloads](../../plan/workloads.md). Any workload which are candidates for the modern container scenario will require additional information to guide execution of the plan. That article calls out the important of [documenting business and technical inputs to define the workload](../../plan/workloads.md?#define-workloads). For modern container candidates, the following data points should be added to the definition of the workload.
+When building a cloud adoption plan, each workload is documented following the guidance in the article: [Define and prioritize workloads](../../plan/workloads.md). Any workload which are candidates for the modern app platform scenario will require additional information to guide execution of the plan. That article calls out the important of [documenting business and technical inputs to define the workload](../../plan/workloads.md?#define-workloads). For modern app platform candidates, the following data points should be added to the definition of the workload.
 
 ### Business inputs
 
-The following are business related data points which may influence the decision to include a workload in the modern container strategy.
+The following are business related data points which may influence the decision to include a workload in the modern app platform strategy.
 
 - Compliance drivers: What specific compliance criteria are driving considerations to host this workload in a private cloud?
 - Data protection drivers: What data protection measures are driving considerations to host this workload in a private cloud?
@@ -58,7 +58,7 @@ The following are business related data points which may influence the decision 
 
 ### Technical inputs
 
-The following are data points from the technology teams which may influence the decision to include a workload in the modern container strategy.
+The following are data points from the technology teams which may influence the decision to include a workload in the modern app platform strategy.
 
 **Location considerations:**
 
@@ -151,8 +151,8 @@ Ensure time is allocated for workload teams to document and dry-run migration pl
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Review your environment or Azure landing zone(s)](./ready.md)
-- [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Migrate workloads to modern app platforms](./migrate.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)
 - [See container and compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree)

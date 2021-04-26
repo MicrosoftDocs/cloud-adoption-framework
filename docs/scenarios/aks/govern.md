@@ -1,6 +1,6 @@
 ---
-title: Govern modern container solutions
-description: Extend governance practices to modern containers instances
+title: Govern modern app platform solutions
+description: Extend governance practices to modern app platform instances
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 <!-- docutune:ignore "public container registry" -->
 
-# Govern modern container solutions
+# Govern modern app platform solutions
 
 The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Kubernetes clusters deployed to Azure or other public or private clouds.
 
@@ -28,7 +28,7 @@ The initial governance foundation focuses on the following aspects of governance
 - Organization of resources using resource groups, subscriptions, and management groups.
 - Azure Policy and Azure Blueprints to enforce governance policies.
 
-Each of these features of the initial governance foundation can be used to govern modern container solutions instances. But first, you'll need to add a few components to the initial foundation to apply [Azure Policy to your containers](/azure/governance/policy/concepts/policy-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). Once configured, you can use Azure Policy and your initial governance foundation to govern the following types of containers:
+Each of these features of the initial governance foundation can be used to govern modern app platform solutions instances. But first, you'll need to add a few components to the initial foundation to apply [Azure Policy to your containers](/azure/governance/policy/concepts/policy-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). Once configured, you can use Azure Policy and your initial governance foundation to govern the following types of containers:
 
 - [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Azure Arc enabled Kubernetes](/azure/azure-arc/kubernetes/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
@@ -91,8 +91,8 @@ There are many best practices you can apply to your identity baseline to ensure 
 - [Managed identities in Kubernetes](/azure/aks/use-managed-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Access other Azure resources with Azure AD pod identity](/azure/aks/use-azure-ad-pod-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 
-## Next step: Manage modern container solutions
+## Next step: Manage modern app platform solutions
 
 The following articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Manage modern container solutions](./manage.md)
+- [Manage modern app platform solutions](./manage.md)

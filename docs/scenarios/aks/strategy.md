@@ -1,5 +1,5 @@
 ---
-title: Strategy for modern container adoption
+title: Strategy for modern app platform adoption
 description: Describe the scenario's impact on strategy
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: think-tank, e2e-aks
 ---
 
-# Strategic impact of modern containers
+# Strategic impact of modern app platform
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
@@ -27,7 +27,7 @@ Reducing the direct dependencies between workload operations and the operations 
 
 ## Modern container outcomes
 
-To measure the impact of modern container adoption efforts, the following are a few key outcomes that can be tracked and evaluated:
+To measure the impact of modern app platform adoption efforts, the following are a few key outcomes that can be tracked and evaluated:
 
 - **Accelerated development times:** Combining development tools, automated deployment, and integrated monitoring across consistent and standardized environments allows developers to focus more on building great products and less on the supporting infrastructure configuration across dev and prod environments.
 - **Streamlined operations:** Standardized container orchestration ensures consistent runtimes across all hosts, which can reduce technical complexity across the portfolio. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts resulting in a smaller number of assets to be managed.
@@ -42,13 +42,13 @@ To measure the impact of modern container adoption efforts, the following are a 
 > [!NOTE]
 > Many of the outcomes above can create conflicts with one another. It is important to **prioritize** the desired outcomes. In later phases of the cloud adoption journey, these prioritization decisions will be used to make critical design and architecture decisions.
 
-## Next step: Plan for modern containers
+## Next step: Plan for modern app platform
 
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for modern containers](./plan.md)
+- [Plan for modern app platform](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern containers](./migrate.md)
-- [Innovate using modern container solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-- [Govern modern container solutions](./govern.md)
-- [Manage modern container solutions](./manage.md)
+- [Migrate workloads to modern app platform](./migrate.md)
+- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Govern modern app platform solutions](./govern.md)
+- [Manage modern app platform solutions](./manage.md)
