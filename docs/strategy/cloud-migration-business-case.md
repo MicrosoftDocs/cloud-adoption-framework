@@ -21,13 +21,13 @@ The cloud drives two core benefits:
 - Technical benefits
 - Financial benefits
 
-:::image type="content" source="/media/cloud-migration-business-case/benefits-cloud-migration.png" alt-text="Diagram that summarizes core benefits of cloud migration, including technical and financial benefits.":::
+  :::image type="content" source="media\cloud-migration-business-case\benefits-cloud-migration-v2.png" alt-text="Diagram that summarizes core benefits of cloud migration, including technical and financial benefits.":::
 
 ### Technical benefits
 
 **Scalability**: There's abilities that are limited on-premises and more accessible in the cloud, one of them being scalability. In the cloud, you can scale your resources up or down depending on usage, utilization, and demand.
 
-:::image type="content" source="/media/cloud-migration-business-case/scalability-time-deploy.png" alt-text="Diagram that shows a comparison between traditional IT and cloud for scalability and time to deploy.":::
+:::image type="content" source="media\cloud-migration-business-case/scalability-time-deploy.png" alt-text="iagram that shows a comparison between traditional IT and cloud for scalability and time to deploy":::
 
 **Availability**: Availability is another technical benefit of migrating to the cloud. It's more costly to build highly available infrastructure on-premises than to architect highly available infrastructure in the cloud.
 
@@ -36,7 +36,7 @@ The cloud drives two core benefits:
 **Capacity optimization**: Capacity optimization, where you pay only for what you consume over time, is another technical benefit of moving to the cloud. Your capacity can fluctuate depending on your business demands. You can scale your resources up or down to depending on what’s required.
 The cloud improves how you deploy and provision or deprovision resources because it’s done dynamically. On-premises datacenters are frequently over-built to handle usage peaks, which might result in excess capacity and excess spend. For example, if your datacenter operates at a baseline of 30 percent, with regular spikes up to 70 percent, there's room for optimization in the cloud.
 
-:::image type="content" source="/media/cloud-migration-business-case/capacity-usage-optimization.png" alt-text="Diagram that shows capacity can be optimized in a cloud native environment.":::
+:::image type="content" source="media\cloud-migration-business-case/capacity-usage-optimization.png" alt-text="Diagram that shows capacity can be optimized in a cloud native environment":::
 
 The initial technical benefits focus on the lift and shift model, where  you migrate workloads to infrastructure-as-a-service (IaaS) in the cloud. As you free up cash flow, continue your cloud adoption, and mature your workloads, you can reinvest the savings to modernize to different service levels. The goal is to get the most out of your on-premises investment, and then move those workloads to IaaS, potentially freeing up 20% to 30% of the overall required cash flow. Historically, this process would be considered a savings opportunity. This approach in the cloud is better viewed as a reinvestment opportunity.
 
