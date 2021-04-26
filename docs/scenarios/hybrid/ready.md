@@ -53,7 +53,6 @@ Each dark blue dot represents a workload—and each light blue circle a business
 
 Here are the most important items to consider when you prepare any of your cloud environments for hybrid and multicloud. Your hybrid and multicloud strategy for applications and data will drive the answers to the questions below. Clearly identify what intended cloud mix is required, then consider the best configuration for your environment(s):
 
-- Do you have an [existing Azure environment to transition into enterprise-scale](../../ready/enterprise-scale/transition.md)?
 - What mixture of hybrid, edge, and multicloud environments do you support today?
 - What mixture best aligns with your strategy for the future?
 - Do you want to operate each platform independently or through a unified operations approach?
@@ -106,9 +105,9 @@ Each customer now needs to address network, identity, governance, and operations
 - **Angie's Applications**' operational requirement is to ensure consistent environmental configuration and control, adding hybrid and multicloud configuration to existing environments. She started with a smaller landing zone footprint and grew over time—and are at the _Expand_ phase of the _Start Small and Expand_ approach to Azure Landing Zones. She'll use the Operations Baseline in the Manage methodology, and the decisions trees in the Ready methodology to move forward.
 - **Mary's Markets**' operational goal is to configure Azure and a hybrid environment to work with existing cloud configurations, using third-party options to extend her multicloud expertise to Azure and a hybrid environment configuration. Her organization has invested heavily in Terraform to build their multicloud environments. She'll start with the Cloud Adoption Framework Terraform modules to Start Small & Expand into the hybrid environment to integrate with their existing cloud solutions.
 
-## Modify your environment to reflect your cloud mix
+## Support the most appropriate cloud mix
 
-After establishing your Azure environment, consider these modifications to support the most appropriate cloud mix:
+After establishing your Azure environment, consider modifications to:
 
 - **Identity**: Which cloud will host your primary identity provider? If that provider is outside of Azure, you might need to integrate your identity provider with Azure Active Directory. For more information on identity providers, see [this article](/azure/active-directory/external-identities/identity-providers).
 - **Public network connectivity**: Best practices suggest that all ingress and egress traffic should route through one cloud platform when possible. But your requirements or cloud mix might require more of a peer model. This arrangement is especially common if your cloud mix is used to satisfy redundancy and reliability requirements. How will you configure connectivity between each cloud platform and the public internet?
@@ -117,10 +116,11 @@ After establishing your Azure environment, consider these modifications to suppo
 
 ## Configure your initial Azure environment
 
-For each of the preceding cloud mixes, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
+For each cloud mix above, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
 
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
 - Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
+- Do you have an [existing Azure environment to transition into enterprise-scale](../../ready/enterprise-scale/transition.md)?
 
 ### The most important consideration
 
@@ -137,4 +137,4 @@ For more guidance for your cloud adoption journey, see the following articles:
 - [Hybrid and multicloud migration](./migrate.md)
 - [Govern hybrid and multicloud environments](./govern.md)
 - [Manage hybrid and multicloud environments](./manage.md)
-- 
+- [Enterprise-scale support for hybrid and multicloud](../../scenarios/hybrid/enterprise-scale-landing-zone)
