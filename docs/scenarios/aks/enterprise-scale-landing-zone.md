@@ -3,7 +3,7 @@ title: Construction set for AKS enterprise-scale scenario
 description: Use the Azure Kubernetes Service (AKS) construction set to help you create enterprise-scale landing zones that support AKS.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 03/01/2021
+ms.date: 04/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -62,4 +62,7 @@ There are two types of templates:
 
 ## Next steps
 
-- Review the AKS construction set critical design areas to make complete considerations and recommendations for your AKS construction set architecture. See [Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md).
+Learn about design considerations for identity and access management for your AKS enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Identity and access management for Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md)
