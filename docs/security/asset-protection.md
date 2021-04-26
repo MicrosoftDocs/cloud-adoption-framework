@@ -115,3 +115,4 @@ All controls should designed as a partnership with key stakeholders. This typica
  - **Governance team** including provides context of how the control(s) fit into the overall security architecture, policies and standards, and regulatory compliance requirements.  
  - **Security Operations** advise on detective controls and ensure alerts and logs are integrated into security operations tools, processes, and training
  - **Vendors and Cloud Providers** can provide deep subject matter expertise on systems and components to avoid known issues seen across their customer base. 
+
