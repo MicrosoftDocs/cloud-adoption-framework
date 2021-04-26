@@ -33,7 +33,7 @@ Financially, get secure typically maps to Capital Expenditures (CapEx) dynamics 
 
 ## Stay Secure
 
-Everything degrades over time to where it no longer meets current requirements, including physical items that wear out, but also virtual items like software, security controls, and security. While software itself remains identical over time, the environment around it and requirements to meet those needs continually change. This happens particularly fast today because of rapid changes in
+Everything degrades over time to where it no longer meets current requirements including physical items that wear out, but also virtual items like software, security controls, and security. While software itself remains identical over time, the environment around it and requirements to meet those needs continually change. This happens particularly fast today because of rapid changes in
   - *Business requirements* driven by digital transformation
  - *Technology requirements* driven by rapid cloud platform evolution and feature releases
  - *Security requirements* driven by attacker innovation and rapid evolution of native cloud security capabilties
@@ -46,27 +46,31 @@ Two specific areas that affect asset protection the most are:
 
 Ensuring your security risk level sustains or improves over time requires regular ongoing investment and resources to upgrade or retire the use of end of life software. Like regularly changing the oil in a car avoids big expensive costs over time, investing into your security posture reduces risk of a major security incident. Stay Secure roughly maps to Operational Expenditures (OpEx) dynamics of a regular ongoing investment. 
 
-### Patch Dilemma - Risk if you do, risk if you don't
+### The Patch Dilemma - Risk if you do, risk if you don't
 
 It is critical for business leaders to support their IT and Security leaders and teams as they face a very difficult dilemma that occurs regularly. While the complex software environments of today provide incredible benefits to business over the preceding generation of paper based business processes, running complex software in an hostile environment has inherent risk. Security and IT leaders are constantly making difficult decisions on:
 
  - **Operational Risk** - A change to the software the system is running on could disrupt business processes by changing an implicit assumptions that were made when the system was customized and tailored to meet the unique needs of the organization. This creates pressure to avoiding changing the system if possible. 
- - **Security Risk** - Attackers immediately and aggressively analyze every major security update as it's released, often developing a working exploit in 24-48 hours that can be used to attack organizations that haven't yet applied the security update. This creates an urgency to patch immedaitely, which is a change that could incur operational risk.  
+ - **Security Risk** - Business risk of downtime from an attack is the other side of the equation. Attackers immediately and aggressively analyze every major security update as it's released, often developing a working exploit in 24-48 hours that can be used to attack organizations that haven't yet applied the security update. This potential for massive business interruption creates an urgency to patch immediately, but forces the organization to accept the operational risk.  
 
-This difficult dilemma visits organizations continuously (often with larger events monthly for most prevalent platforms). Business leaders must recognize this inherent risk of running a business using complex software and support updating business processes to 
+This difficult dilemma visits organizations continuously because of the continuing changes to technology and continuous evolution of attack technique. Business leaders must recognize the inherent risk of running a business using complex software, and must support updating business processes such as:
 
- - **Integrate maintenance** into the business operational schedule, expectations, forecasting, and other proceses. 
- - **Invest into architectures** that make  maintenance easier and reduce impact on business operations. This could involve updating existing architectures or shifting to new architectures entirely by migrating to cloud services or a service oriented architecture. 
+ - **Integrating software maintenance** into the business operational assumptions, schedule, forecasting, and other business processes. 
+ - **Investing into architectures** that make  maintenance easier and reduce impact on business operations. This could involve updating existing architectures or shifting to new architectures entirely by migrating to cloud services or a service oriented architecture. 
 
-Without this business leadership support, security and IT leaders will be constantly distracted from supporting other important business goals because they are constantly managing the politics of a no-win situation. 
+Without business leadership support, security and IT leaders will be constantly distracted from supporting other important business goals by constantly managing the politics of a no-win situation. 
 
 
 ### Network Isolation
- Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applciation). This is common in operational technology (OT) environment and legacy systems. Isolation itself is an is considered an Access Control, though they are identified as part of asset protection discipline. See [Avoid Firewall and Forget](.\access-control.md\#avoid-firewall-and-forget) in Access Control for more details. 
+ Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applications). This is common in operational technology (OT) environment and legacy systems. 
+
+Isolation itself is considered an Access Control, though these unsecurable assets are identified as part of asset protection discipline. See [Avoid Firewall and Forget](.\access-control.md\#avoid-firewall-and-forget) in Access Control for more details. 
 
 Some systems are end of life, but are difficult to disconnect and isolate completely. We do not recommend leaving these insecure system fully connected to a production network as this can allow attackers to easily compromise it and  gain access to business critical assets in the organization. 
 
-While it's never cheap or easy to upgrade or replace computer technology that has been working well for a decade or more (often with limited documentation on its exact functionality), the potential business impact of losing control of multiple business critical asset often exceeds the cost of upgrade or replacement. For these assets that cannot be isolated, organizations often find that modernizing the workload with cloud technology and analytics can create new business value that can offset or justify the cost of upgrade and/or replacement.
+While it's never cheap or easy to upgrade or replace computer technology that has been working well for a decade or more (often with limited documentation on its exact functionality), the potential business impact of losing control of multiple business critical assets often exceeds the cost of upgrade or replacement. For these assets that cannot be isolated, organizations often find that modernizing the workload with cloud technology and analytics can create new business value that can offset or justify the cost of upgrade and/or replacement.
+
+Staying secure is challenging in a world that is constantly changing. It is critical to constantly prioritize what assets to modernize and what to secure as best you can using business risk and business priorities as your guiding light. 
 
 ## Getting started
 
@@ -74,11 +78,11 @@ Asset protection can be challenging because of the breadth and depth of the disc
 
 We recommend that organizations
  
- - **Focus on Well-known resources first** like VMs, networks, identities, etc. in the cloud that the team is already familiar with. This allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender. 
-  - **Start with Vendor/industry baselines** - Start your security configuration with a well known and proven solution like
-      - **Azure Baselines** in Azure Security Benchmark - Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service, enabling security teams to rapidly adopt secure each service (and refine configurations as needed. See [Security Baselines for Azure](https://docs.microsoft.com/security/benchmark/azure/security-baselines-overview) 
-     - **Microsoft Security Baselines** - Microsoft provides security configuration guidance for commonly used technologies including Windows, Office, and Edge to help organizations rapidly secure them. See [Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) for more information
-     - **CIS Benchmarks** - The Center for Internet Security (CIS) provides specific configuration guidance for many products and vendors. See [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/) for more information
+ - **Focus on well-known resources first** like virtual machines, networks, and identities in the cloud that the team is already familiar with. This allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender. 
+  - **Start with vendor/industry baselines** - Start your security configuration with a well known and proven solution like
+      - *Azure Baselines* in Azure Security Benchmark - Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service, enabling security teams to rapidly adopt secure each service (and refine configurations as needed. See [Security Baselines for Azure](https://docs.microsoft.com/security/benchmark/azure/security-baselines-overview) 
+     - *Microsoft Security Baselines* - Microsoft provides security configuration guidance for commonly used technologies including Windows, Office, and Edge to help organizations rapidly secure them. See [Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) for more information
+     - *CIS Benchmarks* - The Center for Internet Security (CIS) provides specific configuration guidance for many products and vendors. See [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/) for more information
 
 ## Key Learnings
 
@@ -90,14 +94,18 @@ Accountability for security should always resides with the ultimate resource own
 
 Asset Protection responsibilities may be performed by IT operations that manage enterprise-wide assets, DevOps/DevSecOps teams responsible for their workload’s assets, or security teams working with the IT or DevOps/DevSecOps teams.
 
-As organizations move to the cloud, many of these responsibilities (though not all) are either transferred to the cloud provider (e.g. updating firmware and virtualization solution) or made easier (e.g. security configuration scanning and remediation). For more information on the shared responsibility model, see [Shared responsibility in the cloud](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
+As organizations move to the cloud, many of these responsibilities (though not all) are either transferred to the cloud provider (e.g. updating firmware and virtualization solution) or made easier (e.g. security configuration scanning and remediation). 
+
+For more information on the shared responsibility model, see [Shared responsibility in the cloud](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
 
 ### Cloud Elasticity
 
-Unlike on premises, cloud resources may be created and destroyed over short timeframes. As needed, workloads can spin up more instances of servers, Azure Functions, etc. to perform a job and then spin them down afterward within (something within month, but sometimes within minutes or hours). Your asset protection processes and measurements should take this into account. 
+Unlike on premises, cloud resources may exist for only short timeframes. As needed, workloads can spin up more instances of servers, Azure Functions, etc. to perform a job and then spin them down afterward. Sometimes this happens within months, but sometimes within minutes or hours. Your asset protection processes and measurements should take this into account.
+
+While this requires adjusting many processes, this improves your visibility (on demand inventory instead of static reports) and your ability to correct issues (e.g. building a new virtual machine for security reasons can happen very quickly)
 
 ### Exception Management
-Once a best practice is identified for an asset, it should be consistently applied to all instances of it. While temporary exceptions may need to be approved, these should be managed closely with specific expiration dates to ensure that temporary exceptions don’t become a permanent risk from attackers. 
+Once a best practice is identified for an asset, it should be consistently applied to all instances of it. While temporary exceptions may need to be approved, these should be managed closely with specific expiration dates to ensure that temporary exceptions don’t become a permanent business risk. 
 
 ### Challenges with measuring value/impact
 
