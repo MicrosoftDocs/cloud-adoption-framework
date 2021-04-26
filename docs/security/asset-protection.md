@@ -29,7 +29,7 @@ Get secure focuses on bringing resources up to meet the organization's current s
  - **Greenfield** - Ensuring that new assets and new asset types are configured to standards is critical to avoid continuously creating instant legacy/brownfield (systems that don't meet current standards). This technical debt will have to be addressed later at a greater expense (and results in increased risk exposure until that is done). 
  - **Brownfield** – Retrofit current security standards and controls to existing assets. Organizations often designed and operated IT environments for decades with security as minimal priority, resulting in a large amount of 'technical debt' in the form of weak security configurations, unpatched software, unencrypted communication or storage, legacy software and protocols, and more. Bringing security controls up to current approaches is critical to mitigate risk as attackers are continually improving their ability to exploit these opportunities for profit with ransomware and other illicit business models.
 
-Financially, get secure typically maps to Capital Expenditures (CapEx) dynamics of a one time investment. *Greenfield budget* for security should be linked as closely as feasible to the creation of the asset, ideally reserving security budget in each new software project, major software updgrade, or overall cloud adoption initiative, etc. (many organizations reserve around 10% of budget for security). *Brownfield budget* is typically a special project funded to bring security controls up to current standards/compliance.
+Financially, get secure typically maps to Capital Expenditures (CapEx) dynamics of a one time investment. *Greenfield budget* for security should be linked as closely as feasible to the creation of the asset, reserving percentage of budget for security for each new software project, major software updgrade, or overall cloud adoption initiative, etc. (many organizations reserve around 10% of budget for security). *Brownfield budget* is typically a special project funded to bring security controls up to current standards/compliance.
 
 ## Stay Secure
 
@@ -45,6 +45,21 @@ Two specific areas that affect asset protection the most are:
  - **Software End of Life** - Any software, including Windows and Linux operating systems, will always reach end of life and security updates won’t be provided for them, potentially exposing business critical data and applications to cheap and easy attacks. While Software as a service (SaaS) and cloud infrastructure/platforms are maintained by the cloud provider, enterprises often have a significant amount of software they install, author, and must maintain (most frequently installed on Infrastructure as a Server (IaaS) VMs) 
 
 Ensuring your security risk level sustains or improves over time requires regular ongoing investment and resources to upgrade or retire the use of end of life software. Like regularly changing the oil in a car avoids big expensive costs over time, investing into your security posture reduces risk of a major security incident. Stay Secure roughly maps to Operational Expenditures (OpEx) dynamics of a regular ongoing investment. 
+
+### Patch Dilemma - Risk if you do, risk if you don't
+
+It is critical for business leaders to support their IT and Security leaders and teams as they face a very difficult dilemma that occurs regularly. While the complex software environments of today provide incredible benefits to business over the preceding generation of paper based business processes, running complex software in an hostile environment has inherent risk. Security and IT leaders are constantly making difficult decisions on:
+
+ - **Operational Risk** - A change to the software the system is running on could disrupt business processes by changing an implicit assumptions that were made when the system was customized and tailored to meet the unique needs of the organization. This creates pressure to avoiding changing the system if possible. 
+ - **Security Risk** - Attackers immediately and aggressively analyze every major security update as it's released, often developing a working exploit in 24-48 hours that can be used to attack organizations that haven't yet applied the security update. This creates an urgency to patch immedaitely, which is a change that could incur operational risk.  
+
+This difficult dilemma visits organizations continuously (often with larger events monthly for most prevalent platforms). Business leaders must recognize this inherent risk of running a business using complex software and support updating business processes to 
+
+ - **Integrate maintenance** into the business operational schedule, expectations, forecasting, and other proceses. 
+ - **Invest into architectures** that make  maintenance easier and reduce impact on business operations. This could involve updating existing architectures or shifting to new architectures entirely by migrating to cloud services or a service oriented architecture. 
+
+Without this business leadership support, security and IT leaders will be constantly distracted from supporting other important business goals because they are constantly managing the politics of a no-win situation. 
+
 
 ### Network Isolation
  Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applciation). This is common in operational technology (OT) environment and legacy systems. Isolation itself is an is considered an Access Control, though they are identified as part of asset protection discipline. See [Avoid Firewall and Forget](.\access-control.md\#avoid-firewall-and-forget) in Access Control for more details. 
@@ -100,4 +115,3 @@ All controls should designed as a partnership with key stakeholders. This typica
  - **Governance team** including provides context of how the control(s) fit into the overall security architecture, policies and standards, and regulatory compliance requirements.  
  - **Security Operations** advise on detective controls and ensure alerts and logs are integrated into security operations tools, processes, and training
  - **Vendors and Cloud Providers** can provide deep subject matter expertise on systems and components to avoid known issues seen across their customer base. 
-
