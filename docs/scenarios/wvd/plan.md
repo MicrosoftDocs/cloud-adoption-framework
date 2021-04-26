@@ -38,13 +38,13 @@ The following list includes items to be used in a business case.
 
 - Azure is a hyperscale cloud, providing massive scale. On-premises services will never be able to compete with Azure as a computing platform. This provides substantial agility to your organization. If they have a new opportunity to expand into global locations for which they do not have a local data center, Microsoft can host this service in an ever-increasing number of Azure regions, that will enable Microsoft to place the infrastructure or services closer to your end users than you can.
 
-- Windows 10 rich user experience that end users expect, at multi session cost. Windows Virtual Desktop enables the scale of Windows Server with Remote Desktop Services combined with the user experience of Windows 10, without the compromise of application compatibility
+- Windows 10 rich user experience that end users expect, at multi session cost. Windows Virtual Desktop enables the scale of Windows Server with Remote Desktop Services combined with the user experience of Windows 10, without the compromise of application compatibility. Windows Virtual Desktop is the only place where Windows 10 multi-session can be run.
 
 - There is no requirement for client access licenses with Windows 10 Multi session, as Windows 10 multi session does not require a Client Access Licence (CAL)
 
 - In Windows Virtual Desktop if you deploy Windows Server (Windows Server 2012 R2, 2016 or 2019), there is no requirement to purchase a Windows Server license
 
-- All Windows Virtual Desktop virtual machines are charged at the Base compute rate. Windows Virtual Desktop is entitled though another license that you probably already own (M365 E3+), that includes Windows license
+- All Windows Virtual Desktop virtual machines are charged at the Base compute rate. Windows Virtual Desktop is entitled through another license that you probably already own (M365 E3+), that includes a Windows license
 
 - All Windows 7 virtual machines in Windows Virtual Desktop receive free extended security updates until Jan 14, 2023
 
