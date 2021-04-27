@@ -42,7 +42,7 @@ The primary difference between the two options above resides in how separation o
 
 ## Azure Landing Zone design areas
 
-Regardless of your initial implementation option, all Azure Landing Zones for AKS should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the modern app platforms team evaluate any landing zone to ensure it is ready to host AKS containers:
+All Azure Landing Zones are designed around a set of common design areas listed below. The articles below each include a set of AKS specific considerations and recommendations that can help the modern app platforms team prepare a landing zone for AKS containers:
 
 - [Enterprise enrollment](eslz-enterprise-enrollment.md)
 - [Identity and access management](eslz-identity-and-access-management.md)
