@@ -16,7 +16,7 @@ The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) gu
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern app platform solutions no matter what implementation option you choose.
 
-## Strategic & planning considerations for modern app platforms landing zones
+## Strategic & planning considerations for app platforms landing zones
 
 Prioritization decisions made during [strategy](./strategy.md) and [plan](./plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your modern app platforms plan. The following are the most important considerations from those phases:
 
