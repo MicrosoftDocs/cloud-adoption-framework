@@ -91,7 +91,7 @@ Azure Application Services on Kubernetes with Arc creates consistency across dev
 - **Operations teams** require flexibility:
     - Azure Arc components allow for consistent cloud operations across environments
     - Kubernetes foundation allow for customizable or standardized container host operations at the host and workload levels
-    - The application platform overlay ensures a consistent runtime for applications that can run on kubernetes container hosts in private cloud or edge AND AKS container hosts in Azure
+    - The application platform overlay ensures a consistent runtime for applications that can run on Kubernetes hosts in private cloud or edge AND AKS in Azure
 
 ## Next step: Integrate modern app platforms into your cloud adoption journey
 
