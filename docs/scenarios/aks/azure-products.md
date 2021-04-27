@@ -40,14 +40,14 @@ The following narratives share the perspectives of application and operations te
 
 Azure Application Services is a collection of Platform as a Service (PaaS) application platforms or runtimes that allow applications to run in the cloud
 
-- **Developers** can best accelerate development using the Cloud-native application platform & runtime defined by Microsoft Azure as their application platform.
+- **Developers** can best accelerate development using the Azure-native application platform & runtime defined by Microsoft Azure as their application platform.
 - **Operations teams** want the ease and scale of operations that come from deferring many of the host operations tasks to the cloud provider.
 
 ### Azure Stack HCI
 
 Azure Stack HCI provides a application platform (based on Azure's PaaS services) running on Azure Stack operated in private cloud or the edge, using tools which are very similar to cloud operations.
 
-- **Developers** can best accelerate development using the Cloud-native application platform & runtime defined by Microsoft Azure as their application platform.
+- **Developers** can best accelerate development using the Azure-native application platform & runtime defined by Microsoft Azure as their application platform.
 - **Operations teams** have specific constraints:
     - Must run in private cloud or edge
     - Requires custom operations to fit parallel private cloud operations
@@ -87,7 +87,7 @@ Azure Arc extends operations of Kubernetes hosts allowing for consistent cloud o
 
 Azure Application Services on Kubernetes with Arc creates consistency across development and operations.
 
-- **Developers** can best accelerate development using the Cloud-native application platform & runtime defined by Microsoft Azure as their application platform.
+- **Developers** can best accelerate development using the Azure-native application platform & runtime defined by Microsoft Azure as their application platform.
 - **Operations teams** require flexibility:
     - Azure Arc components allow for consistent cloud operations across environments
     - Kubernetes foundation allow for customizable or standardized container host operations at the host and workload levels
