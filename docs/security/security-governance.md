@@ -14,7 +14,7 @@ ms.custom: internal
 
 Security governance provides the bridge from business priorities to technical implementation with architecture, standards, and policy. Governance teams also provides oversight and monitoring to sustain and improve security posture over time, and also report compliance as required by regulating bodies. 
 
-![Security Governance](./media/governance-structure.png)
+:::image type="content" source="./media/governance-structure.png" alt-text="Security Governance" lightbox="./media/governance-structure-popout.png":::
 
 **Business goals and risk** provide the true north star for security, ensuring that security is focusing efforts on what matters to the organization and is informing the risk owners using familiar language and processes in the risk management framework
 
