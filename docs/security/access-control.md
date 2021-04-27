@@ -34,6 +34,9 @@ Scaling this standard requires three things:
 
 Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
 
+
+:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Image alt text" lightbox="./media/privileged-access-over-underlying-planes.png":::
+
 ![Adding user and application access pathways](./media/privileged-access-over-underlying-planes.png)
 
 For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
