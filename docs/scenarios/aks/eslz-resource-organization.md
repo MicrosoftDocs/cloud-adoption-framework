@@ -39,6 +39,8 @@ The following considerations and recommendations will help establish proper reso
 
 ## Design recommendations
 
-- Define a tag to identify the workload or workloads supported by each cluster
-- Define a tag to identify which team is responsible for operations of the host
+- Define a [naming and tagging standard](../../ready/azure-best-practices/naming-and-tagging.md) to be applied to all container resources deployed to Azure. At minimum, it should include the following: 
+    - Workload name(s): identify the workload or workloads supported by each cluster
+    - Cluster resources: identify the elevation of cluster resource alignment from considerations above
+    - Host operator: identify which team is responsible for operations of the host
 - Implement an Azure Policy to require a specific OCI artifact registry based on your organization's container registry topology
