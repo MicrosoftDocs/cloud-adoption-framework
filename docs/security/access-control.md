@@ -37,9 +37,7 @@ Scaling this standard requires three things:
 Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
 
 
-:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Image alt text" lightbox="./media/privileged-access-over-underlying-planes.png":::
-
-![Adding user and application access pathways](./media/privileged-access-over-underlying-planes.png)
+:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Adding user and application access pathways" lightbox="./media/privileged-access-over-underlying-planes.png":::
 
 For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
@@ -55,7 +53,7 @@ Organizations should develop a holistic access control strategy that is comprehe
 
 This diagram illustrates all of the different elements that an organization must consider for an access control strategy that spans multiple workloads, multiple clouds, different business sensitivity levels, and both human and computer access. 
 
-![Access Control Overview](./media/access-control.png)
+:::image type="content" source="./media/access-control.png" alt-text="Access Control Overview" lightbox="./media/access-control.png":::
 
 A good access control strategy goes beyond a single discrete tactic or technology, and should adopt a pragmatic approach that embraces the right technology and tactics for the right scenarios. 
 
@@ -70,7 +68,7 @@ Modern access control *must meet the productivity needs of the organization* and
 
 The enterprise access model is a comprehensive access model based on zero trust. This model addresses all type of access by internal and external users, services, applications, and privileged accounts with administrative access to systems.  
 
-![Adding user and application access pathways](./media/privileged-access-over-underlying-planes.png)
+:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Adding user and application access pathways" lightbox="./media/privileged-access-over-underlying-planes.png":::
 
 This is described in detail in [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
@@ -93,7 +91,7 @@ The key technical capabilites that enable modern access control are:
 
 This diagram depicts how Azure Active Directory provides a policy engine and a policy enforcement point for modern identity protocols to enable known-trusted-allowed: 
 
-![Known Trusted Allowed - Electronic](./media/known-trusted-allowed-electronic.png)
+:::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known Trusted Allowed - Electronic" lightbox="./media/known-trusted-allowed-electronic.png":::
 
 Azure Active Directory policy engine can be extended to other policy enforcement points including
  - **Modern applications** - that use modern authentication protocols 
@@ -121,7 +119,7 @@ For a reference on how an enterprise segmentation can be applied to Azure enviro
 
 An extreme form of segmentation called isolation is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business critical and difficult or impossible to bring up to current policy and standards. This frequently includes operational technology (OT) systems like Supervisory Control and Data Acquisition (SCADA) and Industrial Control Systems (ICS). 
 
-![People, Process, Technology for Isolation](./media/firewall-and-forget.png)
+:::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Procses, Technology for Isolation" lightbox="./media/firewall-and-forget.png":::
 
 Isolation must be designed as a complete people/process/technology system and be integrated with business processes to be successful and sustainable. This approach typically fails over time if it's implemented as purely a technology approach without processes and training to validate and sustain the defenses over time. It's easy to fall into a 'firewall and forget' trap by defining the problem as a static and technical. In most cases, processes are needed to sustain the defenses and require security, IT, OT, and sometimes business operations teams to follow them. 
 
