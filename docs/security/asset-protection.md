@@ -18,7 +18,8 @@ Asset Protection implements controls to support security architecture, standards
 
 Asset protection is primarily focused on consistent execution across all control types including preventive, detective, and others aligned to meet the policies, standards, and architecture. Asset protection typically acts as the technical subject matter expert for assets (which is a continuous journey of learning) while working with other disciplines (governance, architecture, security operations, workload teams, etc.). Asset protection ensures that policy and standards are feasible, enables implementation of controls to support the policy and standards, and provides feedback for continuous improvement. 
 
->[!Note] Asset protection is typically implemented by IT Operations teams that maintain the assets who are often supplemented by expertise in the security team. 
+>[!Note] Asset protection is typically implemented by IT Operations teams that maintain the assets and is often supplemented by expertise in the security team. See [Designing Controls as a team](#designing-controls-as-a-team) at the end of this article for more information.
+
 
 Asset protection is critically important because threat actors are persistent and seek out and exploit vulnerablities that result from gaps in the application of standards and policy. Attackers can directly target the business-critical data or application, but also frequently target the underlying infrastructure that grants them access to the business-critical data and applications. Whereas [Access Control](.\access-control.md) focuses on managing authorized access to resources, asset protection focuses on all other potential "out of band" ways to gain access or control of resources. These two disciplines complement each other and should be designed together to meet the organizations architecture, policies, and standards.  
 
@@ -27,13 +28,14 @@ Asset protection is critically important because threat actors are persistent an
 ## Get Secure
 Get secure focuses on bringing resources up to meet the organization's current security standards, policy, and architecture. The two types of activities are:
  - **Greenfield** - Ensuring that new assets and new asset types are configured to standards is critical to avoid continuously creating instant legacy/brownfield (systems that don't meet current standards). This technical debt will have to be addressed later at a greater expense (and results in increased risk exposure until that is done). 
- - **Brownfield** – Retrofit current security standards and controls to existing assets. Organizations often designed and operated IT environments for decades with security as minimal priority, resulting in a large amount of 'technical debt' in the form of weak security configurations, unpatched software, unencrypted communication or storage, legacy software and protocols, and more. Bringing security controls up to current approaches is critical to mitigate risk as attackers are continually improving their ability to exploit these opportunities for profit with ransomware and other illicit business models. 
+ - **Brownfield** – Retrofit current security standards and controls to existing assets. Organizations often designed and operated IT environments for decades with security as minimal priority, resulting in a large amount of 'technical debt' in the form of weak security configurations, unpatched software, unencrypted communication or storage, legacy software and protocols, and more. Bringing security controls up to current approaches is critical to mitigate risk as attackers are continually improving their ability to exploit these opportunities for profit with ransomware and other illicit business models.
 
-Financially, both greenfield and brownfield security investments typically map to Capital Expenditure (CapEx) dynamic of a one time investment. *Greenfield budget* for security should be linked as closely as feasible to the creation of the asset, reserve percentage of budget to security for each new software project, major software updgrade, or overall cloud adoption initiative, etc. (many organizations reserve around 10%). *Brownfield budget* is typically a special project funded to bring security controls up to current standards/compliance.
+Financially, get secure typically maps to Capital Expenditures (CapEx) dynamics of a one time investment. *Greenfield budget* for security should be linked as closely as feasible to the creation of the asset, reserving percentage of budget for security for each new software project, major software updgrade, or overall cloud adoption initiative, etc. (many organizations reserve around 10% of budget for security). *Brownfield budget* is typically a special project funded to bring security controls up to current standards/compliance.
+
 
 ## Stay Secure
 
-Everything degrades over time to where it no longer meets current requirements, including physical items that wear out, but also virtual items like software, security controls, and security. While software itself remains identical over time, the environment around it and requirements to meet those needs continually change. This happens particularly fast today because of rapid changes in
+Everything degrades over time to where it no longer meets current requirements including physical items that wear out, but also virtual items like software, security controls, and security. While software itself remains identical over time, the environment around it and requirements to meet those needs continually change. This happens particularly fast today because of rapid changes in
   - *Business requirements* driven by digital transformation
  - *Technology requirements* driven by rapid cloud platform evolution and feature releases
  - *Security requirements* driven by attacker innovation and rapid evolution of native cloud security capabilties
@@ -46,12 +48,33 @@ While staying secure encompasses many elements, two specific areas that you shou
 
 Ensuring your security risk level sustains or improves over time requires regular ongoing investment and resources to upgrade or retire the use of end of life software. Like regularly changing the oil in a car avoids big expensive costs over time, investing into your security posture reduces risk of a major security incident. Stay Secure roughly maps to Operational Expenditures (OpEx) dynamics of a regular ongoing investment. 
 
+### The Patch Dilemma - Risk if you do, risk if you don't
+
+It is critical for business leaders to support their IT and Security leaders and teams as they face a very difficult dilemma that occurs regularly. While the complex software environments of today provide incredible benefits to business over the preceding generation of paper based business processes, running complex software in an hostile environment has inherent risk. Security and IT leaders are constantly making difficult decisions on:
+
+ - **Operational Risk** - A change to the software the system is running on could disrupt business processes by changing an implicit assumptions that were made when the system was customized and tailored to meet the unique needs of the organization. This creates pressure to avoiding changing the system if possible. 
+ - **Security Risk** - Business risk of downtime from an attack is the other side of the equation. Attackers immediately and aggressively analyze every major security update as it's released, often developing a working exploit in 24-48 hours that can be used to attack organizations that haven't yet applied the security update. This potential for massive business interruption creates an urgency to patch immediately, but forces the organization to accept the operational risk.  
+
+This difficult dilemma visits organizations continuously because of the continuing changes to technology and continuous evolution of attack technique. Business leaders must recognize the inherent risk of running a business using complex software, and must support updating business processes such as:
+
+ - **Integrating software maintenance** into the business operational assumptions, schedule, forecasting, and other business processes. 
+ - **Investing into architectures** that make  maintenance easier and reduce impact on business operations. This could involve updating existing architectures or shifting to new architectures entirely by migrating to cloud services or a service oriented architecture. 
+
+Without business leadership support, security and IT leaders will be constantly distracted from supporting other important business goals by constantly managing the politics of a no-win situation. 
+
+
 ### Network Isolation
- Network isolation may be a valid option for protecting older assets that cannot be secured and cannot be retired immediately (typically end of life operating systems and applciation). This is common in operational technology (OT) environment and legacy systems. Isolation itself is an is considered an [Access Control](.\access-control.md), though these assets are typically identified as part of asset protection discipline.  
+
+Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applications). This is common in operational technology (OT) environment and legacy systems. 
+
+Isolation itself is considered an Access Control, though these unsecurable assets are identified as part of asset protection discipline. See [Avoid Firewall and Forget](.\access-control.md\#avoid-firewall-and-forget) in Access Control for more details. 
+
 
 Some systems are end of life, but are difficult to disconnect and isolate completely. We do not recommend leaving these insecure system fully connected to a production network as this can allow attackers to easily compromise it and  gain access to business critical assets in the organization. 
 
-While it's never cheap or easy to upgrade or replace computer technology that has been working well for a decade or more (often with limited documentation on its exact functionality), the potential business impact of losing control of multiple business critical asset often exceeds the cost of upgrade or replacement. For these assets that cannot be isolated, organizations often find that modernizing the workload with cloud technology and analytics can create new business value that can offset or justify the cost of upgrade and/or replacement.
+While it's never cheap or easy to upgrade or replace computer technology that has been working well for a decade or more (often with limited documentation on its exact functionality), the potential business impact of losing control of multiple business critical assets often exceeds the cost of upgrade or replacement. For these assets that cannot be isolated, organizations often find that modernizing the workload with cloud technology and analytics can create new business value that can offset or justify the cost of upgrade and/or replacement.
+
+Staying secure is challenging in a world that is constantly changing. It is critical to constantly prioritize what assets to modernize and what to secure as best you can using business risk and business priorities as your guiding light. 
 
 ## Getting started
 
@@ -104,3 +127,4 @@ All controls should designed as a partnership with key stakeholders. This typica
  - **Governance team** including provides context of how the control(s) fit into the overall security architecture, policies and standards, and regulatory compliance requirements.  
  - **Security Operations** advise on detective controls and ensure alerts and logs are integrated into security operations tools, processes, and training
  - **Vendors and Cloud Providers** can provide deep subject matter expertise on systems and components to avoid known issues seen across their customer base. 
+
