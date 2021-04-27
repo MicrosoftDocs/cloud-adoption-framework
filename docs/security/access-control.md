@@ -18,7 +18,7 @@ Access control is the part of security that people experience first and most oft
 
 The traditional approach of access control for IT has been based on restricting access to a corporate network and then supplementing this with additional controls as appropriate. This model restricts all resources to a corporate owned network connection and has become too inflexible to meet the needs of a dynamic enterprise. 
 
-:::image type="content" source="./media/zero-trust-shift.png" alt-text="Zero Trust Shift" lightbox="./media/zero-trust-shift.png":::
+:::image type="content" source="./media/zero-trust-shift.png" alt-text="Zero Trust Shift" lightbox="./media/zero-trust-shift-popout.png":::
 
 Organizations must embrace a zero trust approach to access control as they embrace remote work as normal and use cloud technology to digitally transform their business model, customer engagement model, employee engagement and empowerment model, and more. 
 
@@ -53,7 +53,7 @@ This is described in detail in [Enterprise access model](https://docs.microsoft.
 
 One helpful perspective on the zero trust transformation of access control is that it shifts from a static two-step process of authentication and authorization to a dynamic three step process:
 
-:::image type="content" source="./media/known-trusted-allowed-physical.png" alt-text="Known Trusted Allowed - Physical" lightbox="./media/known-trusted-allowed-physical.png":::
+:::image type="content" source="./media/known-trusted-allowed-physical.png" alt-text="Known Trusted Allowed - Physical" lightbox="./media/known-trusted-allowed-physical-popout.png":::
 
 1. **Known** - Authentication that ensures you are who you say you are. This is analogous to the physical process of checking a government issued identity card with a photo. 
 2. **Trusted** - Validation that your user and device are trustworthy enough to access the resource. This is analogous to security at an airport that screens all passengers for security risks before allowing them to enter the airport. 
@@ -68,7 +68,7 @@ The key technical capabilites that enable modern access control are:
 
 This diagram depicts how Azure Active Directory provides a policy engine and a policy enforcement point for modern identity protocols to enable known-trusted-allowed: 
 
-:::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known Trusted Allowed - Electronic" lightbox="./media/known-trusted-allowed-electronic.png":::
+:::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known Trusted Allowed - Electronic" lightbox="./media/known-trusted-allowed-electronic-popout.png":::
 
 Azure Active Directory policy engine can be extended to other policy enforcement points including
  - **Modern applications** - that use modern authentication protocols 
@@ -98,7 +98,7 @@ For a reference on how an enterprise segmentation can be applied to Azure enviro
 
 An extreme form of segmentation called isolation is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business critical and difficult or impossible to bring up to current policy and standards. This frequently includes operational technology (OT) systems like Supervisory Control and Data Acquisition (SCADA) and Industrial Control Systems (ICS). 
 
-:::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Process, Technology for Isolation" lightbox="./media/firewall-and-forget.png":::
+:::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Process, Technology for Isolation" lightbox="./media/firewall-and-forget-popout.png":::
 
 Isolation must be designed as a complete people/process/technology system and be integrated with business processes to be successful and sustainable. This approach typically fails over time if it's implemented as purely a technology approach without processes and training to validate and sustain the defenses over time. It's easy to fall into a 'firewall and forget' trap by defining the problem as a static and technical. In most cases, processes are needed to sustain the defenses and require security, IT, OT, and sometimes business operations teams to follow them. 
 
