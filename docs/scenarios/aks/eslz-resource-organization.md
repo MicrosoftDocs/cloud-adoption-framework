@@ -23,6 +23,10 @@ The following considerations and recommendations will help establish proper reso
     - Workload operated, single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control
     - Centrally operated, single tenant: For hostile workloads which can not be hosted in a multi-tenant host but which are still managed centrally, a dedicated landing zone may not be required
     - Multi-tenant hosts: When hosts are centrally managed, dedicated landing zones are less common. Hosts and workloads are more likely to be sub-divided by resource group. Additionally landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints
+- Decide on a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements
+    - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team
+    - Segmented structure to create a management group for centrally managed hosts and a seperate management group for decentralized operations
+    - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements 
 - Decide which scope to use for container registry settings:
     - One registry per workload
     - One registry per host with multiple workloads in the registry
