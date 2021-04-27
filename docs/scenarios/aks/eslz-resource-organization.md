@@ -21,7 +21,7 @@ The following considerations and recommendations will help establish proper reso
     - If the hosts are managed by the workload teams, you would need more landing zone instances to segment host environments & allow workload teams to control their deployments.
 - Decide on a tenancy model for clusters:
     - Workload operated, single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control
-    - Centrally operated, single tenant: For hostile workloads which can not be hosted in a multi-tenant host but which are still managed centrally, a dedicated landing zone may not be required
+    - Centrally operated, single tenant: For hostile or regulated workloads which can not be hosted in a multi-tenant host but which are still managed centrally, a dedicated landing zone may not be required
     - Multi-tenant hosts: When hosts are centrally managed, dedicated landing zones are less common. Hosts and workloads are more likely to be sub-divided by resource group. Additionally landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints
 - Decide on a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements
     - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team
