@@ -42,7 +42,7 @@ The vision must include security teams integrated closely with their IT and busi
 
 As systems are being designed, implemented, operated, and continuously improved with security involved, it's critical to set guardrails so that *no voice dominates all decisions* (Business, IT, or security). 
 
-### 2. Identify Right level of security** 
+### 2. Identify Right level of security
 
 While some security controls like biometric logon with [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview) have the dual benefits of making the user experience better and the security stronger, many security measures add friction to business processes and could slow them down. We always strive to first find security measures that are easy and invisible to users and developers, but we have to accept that sometimes a tradeoff must be made. 
 	
