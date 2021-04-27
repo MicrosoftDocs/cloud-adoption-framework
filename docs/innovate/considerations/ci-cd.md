@@ -1,16 +1,14 @@
 ---
 title: CI/CD pipeline with digital invention
 description: Use the maturity model of the Innovate methodology to reduce friction that slows adoption in the CI/CD pipeline, while keeping best practices in place.
-keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 ---
 
 # Empower adoption with digital invention
@@ -46,7 +44,7 @@ As described in [Measure for customer impact](./measure.md), positive validation
 
 When you're scaling digital invention and innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that shouldn't be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
 
-The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
+The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos#tfvc) repository.
 
 ## Feedback loops
 
@@ -70,7 +68,7 @@ Defects in any solution can create false positives or false negatives. Unexpecte
 
 During early iterations of an MVP solution, defects are expected. Early adopters might even find them endearing. In early releases, acceptance testing is typically nonexistent. However, one aspect of building with empathy concerns the validation of the need and hypothesis. Both can be completed through unit tests at a code level and manual acceptance tests before deployment. Together, these provide some means of reliability in testing. You should try to automate a well-defined series of build, unit, and acceptance tests. These will ensure reliable metrics related to finer tweaks to the hypothesis and the resulting solution.
 
-The [Azure Test Plans](/azure/devops/test/track-test-status?view=azure-devops) feature provides tooling to develop and operate test plans during manual or automated test execution.
+The [Azure Test Plans](/azure/devops/test/track-test-status) feature provides tooling to develop and operate test plans during manual or automated test execution.
 
 ## Solution deployment
 

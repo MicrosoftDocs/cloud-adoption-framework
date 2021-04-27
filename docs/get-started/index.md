@@ -31,7 +31,7 @@ Your organization's cloud adoption effort will tend to align towards supporting 
 
 ## Cloud adoption antipatterns
 
-You may encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [Antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.  
+You may encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.
 
 ## Align foundation
 

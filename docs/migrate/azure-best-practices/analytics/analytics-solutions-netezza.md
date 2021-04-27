@@ -115,7 +115,44 @@ Netezza implements some database objects that aren't directly supported in Azure
 
 - **Data type mapping:** Most Netezza data types have a direct equivalent in Azure Synapse. The following table shows the data types and the recommended approaches for mapping the data types.
 
-  Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
+| IBM Netezza data type | Azure Synapse SQL v2 data type |
+| :-------------------- | :----------------------------- |
+| bigint (int8) | bigint |
+| binary varying(n) (alias varbinary(n)) | varbinary(n) | |
+| binary(n) | binary(n) |
+| boolean (bool) | bit |
+| bpchar(n) | varchar(n) |
+| byteint (int1) | smallint |
+| character varying (n) (alias varchar(n)) | varchar(n) |
+| character(n) (alias char(n)) | char(n) |
+| dataslice | *Not Supported* |
+| date | date |
+| datetime | datetime |
+| decimal | decimal(18,0) |
+| decimal(p,s) | decimal(p,s) |
+| double | float(53) |
+| float | float |
+| float(p) | float(p) |
+| float4 | float(53) |
+| float8 | float(53) |
+| integer (alias int, int4) | int |
+| interval (alias timespan) | *Not Supported* |
+| national bpchar(n) | nvarchar(n) |
+| national character(n) (alias nchar(n)) | nchar(n) |
+| number(p,s) | decimal(p,s) |
+| numeric | decimal(18,0) |
+| numeric(p,s) | numeric (p,s)|
+| national character varying(n) (alias nvarchar(n)) | nvarchar(n) |
+| real | real |
+| rowid | *Not Supported* |
+| smallint (alias int2) | smallint |
+| st_geometry(n) | *Not Supported* |
+| time | time |
+| time with time zone (alias timetz) | datetimeoffset |
+| timestamp(p) | datetime2(p) |
+| transactionid | *Not Supported* |
+
+Note: Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
 
 - **SQL Data Manipulation Language (DML) syntax:** You should be aware of a few differences in SQL DML syntax between Netezza SQL and Azure Synapse.
 
