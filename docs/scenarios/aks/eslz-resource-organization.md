@@ -19,7 +19,7 @@ The following considerations and recommendations will help establish proper reso
 - Decide who will be managing the container hosts:
     - If the hosts are managed centrally, you could reduce the number of landing zone instances and require developers to follow defined processes for deploying the the hosts & using shared dashboards/alerts for workload-level operations
     - If the hosts are managed by the workload teams, you would need more landing zone instances to segment host environments & allow workload teams to control their deployments.
-- Decide on a tenancy model for host instances:
+- Decide on a tenancy model for clusters:
     - Workload operated, single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control
     - Centrally operated, single tenant: For hostile workloads which can not be hosted in a multi-tenant host but which are still managed centrally, a dedicated landing zone may not be required
     - Multi-tenant hosts: When hosts are centrally managed, dedicated landing zones are less common. Hosts and workloads are more likely to be sub-divided by resource group. Additionally landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints
