@@ -30,7 +30,7 @@ The following considerations and recommendations will help establish proper reso
 - Decide which container registry topology to use for OCI artifact distribution:
     - One registry per workload
     - One registry per cluster with multiple workloads in the registry
-    - One registry per all hosts in the landing zone with multiple workloads and hosts in the same registry
+    - One registry per all clusters in the landing zone with multiple workloads and clusters in the same registry
     - One registry per all hosts across multiple landing zones with multiple workloads and hosts in the same registry
 - Decide the scope for container registry policies in Azure policy:
     - Set a policy at the subscription level requiring all hosts in the landing zone to use the defined registry
