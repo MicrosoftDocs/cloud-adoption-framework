@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Resource organization considerations for AKS
 
-The following considerations and recommendations will help establish proper resource organization and segmentation across management group hierarchies, subscriptions, resource groups, and landing zones. It will also help establish proper tagging strategies to keep resources organized.
+The following considerations and recommendations will help establish proper resource organization and segmentation across management group hierarchies, subscriptions, landing zones, and resource groups. It will also help establish proper tagging strategies to keep resources organized.
 
 ## Design considerations
 
