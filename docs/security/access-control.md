@@ -18,29 +18,6 @@ Access control is the part of security that people experience first and most oft
 
 The traditional approach of access control for IT has been based on restricting access to a corporate network and then supplementing this with additional controls as appropriate. This model restricts all resources to a corporate owned network connection and has become too inflexible to meet the needs of a dynamic enterprise. 
 
-Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
-  
-By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
-Access control is an on-going process of checks and balances, baselines and refinements. The controls established should be included in an organization's standard operations and reviewed regularly, alongside other standard processes.
-New infrastructure types will require the controls to be refactored to accommodate new secure access methods, security incidents will require controls to be reviewed and refined.  
-
-Implementing access controls should deliver assurances to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.
-
-Scaling this standard requires three things:
-
-- **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
-- **Orchestration** - streamline processes as much as possible in order to aggregate access requests and permissions management centrally. This context enables teams to approve access and govern usage of permissions in context and help spot patterns that require investigation
-- **Automation** - as much as possible use the technologies available to automate monitoring, detecting, and responding to exceptions in access control patterns
-
-## Enterprise Access Model and blended control Plane
-
-Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
-
-
-:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Adding user and application access pathways" lightbox="./media/privileged-access-over-underlying-planes.png":::
-
-For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
-
 :::image type="content" source="./media/zero-trust-shift.png" alt-text="Zero Trust Shift" lightbox="./media/zero-trust-shift.png":::
 
 Organizations must embrace a zero trust approach to access control as they embrace remote work as normal and use cloud technology to digitally transform their business model, customer engagement model, employee engagement and empowerment model, and more. 
@@ -105,6 +82,8 @@ Azure Active Directory policy engine can be extended to other policy enforcement
 To fulfill the zero trust principle of explicit validation, it is critical to make an informed decision. The zero trust policy engine should have access to diverse data on the users and devices to make sound security decisions. This diversity helps you identify with greater confidence
  - whether the actual user is in control of the account
  - whether the device has been compromised by an attacker
+ - whether the user has the appropriate roles and permissions
+
 
 Microsoft has invested into building a threat intelligence system that integrates security context derived from a high volume of diverse signal sources. See [this summary of Microsoft Threat Intelligence](https://aka.ms/threatintelligence) for more information. 
 
@@ -114,7 +93,7 @@ Organizations often choose to create internal boundaries to divide the internal 
 
 For a reference on how an enterprise segmentation can be applied to Azure environments, see [Azure components and reference model](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
 
-### Avoid Firewall and Forget
+### Isolation: Avoid Firewall and Forget
 *Isolation requires people, process, and technology*
 
 An extreme form of segmentation called isolation is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business critical and difficult or impossible to bring up to current policy and standards. This frequently includes operational technology (OT) systems like Supervisory Control and Data Acquisition (SCADA) and Industrial Control Systems (ICS). 
