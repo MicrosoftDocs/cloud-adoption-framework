@@ -98,7 +98,7 @@ For a reference on how an enterprise segmentation can be applied to Azure enviro
 
 An extreme form of segmentation called isolation is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business critical and difficult or impossible to bring up to current policy and standards. This frequently includes operational technology (OT) systems like Supervisory Control and Data Acquisition (SCADA) and Industrial Control Systems (ICS). 
 
-:::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Procses, Technology for Isolation" lightbox="./media/firewall-and-forget.png":::
+:::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Process, Technology for Isolation" lightbox="./media/firewall-and-forget.png":::
 
 Isolation must be designed as a complete people/process/technology system and be integrated with business processes to be successful and sustainable. This approach typically fails over time if it's implemented as purely a technology approach without processes and training to validate and sustain the defenses over time. It's easy to fall into a 'firewall and forget' trap by defining the problem as a static and technical. In most cases, processes are needed to sustain the defenses and require security, IT, OT, and sometimes business operations teams to follow them. 
 
