@@ -27,7 +27,7 @@ The following considerations and recommendations will help establish proper reso
     - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team
     - Segmented structure to create a management group for centrally managed hosts and a seperate management group for decentralized operations
     - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements 
-- Decide which scope to use for container registry settings:
+- Decide which container registry topology to use for OCI artifact distribution:
     - One registry per workload
     - One registry per host with multiple workloads in the registry
     - One registry per all hosts in the landing zone with multiple workloads and hosts in the same registry
