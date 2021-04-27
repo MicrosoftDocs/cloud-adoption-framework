@@ -18,7 +18,7 @@ Just cloud adoption is a journey, cloud security is also an ongoing journey of i
 
 A journey without a target destination is just wandering. The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
 
-![CAF Secure Methodology](../_images/security/secure-methodology.png)
+:::image type="content" source="./media/secure-methodology.png" alt-text="CAF Secure Methodology" lightbox="./media/secure-methodology-popout.png":::
 
 The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, [The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
