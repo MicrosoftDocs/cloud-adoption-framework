@@ -73,7 +73,8 @@ DevOps combines and empowers both Developers and Operations, which offers signif
 
 Whether you are reactively integrating security into the process or proactively working to prevent the next exposure, it’s important to integrate security knowledge and skills into all roles in a DevSecOps approach. Much like every airport passenger is asked “if you see something, say something”, both Dev and Ops roles play equally important parts in securing applications and their operational environment during business operations.
 
-[!Note]Some implementations of this model combine operations and security responsibilities into a site reliability engineer (SRE) role. While fusing these responsibilities into a single role may be the ideal end-state for some organizations, this is an extreme change from current practices for most enterprises given the culture, tooling, and skillsets differences between these roles. We recommend starting by embedding security into DevOps using practical quick wins and incremental progress outlined in this guidance to ensure you are getting good return on investment (ROI) and meeting immediate needs. This will incrementally add security responsibilities to your Operations (and Developer) personnel, which gets your people closer to the end-state of an SRE (if your organization wishes to adopt that model later).
+>[!Note]
+>Some implementations of this model combine operations and security responsibilities into a site reliability engineer (SRE) role. While fusing these responsibilities into a single role may be the ideal end-state for some organizations, this is an extreme change from current practices for most enterprises given the culture, tooling, and skillsets differences between these roles. We recommend starting by embedding security into DevOps using practical quick wins and incremental progress outlined in this guidance to ensure you are getting good return on investment (ROI) and meeting immediate needs. This will incrementally add security responsibilities to your Operations (and Developer) personnel, which gets your people closer to the end-state of an SRE (if your organization wishes to adopt that model later).
 
 Much like developers adopt a different mindset and when they are accountable for uptime and reliability, so too does assigning security accountability help them see security issues and priorities more clearly. 
 
@@ -99,7 +100,8 @@ Organizations must blend all three cultures together to achieve DevSecOps and en
 - **Likely risks and threats** – based on threat intelligence team input (if present), the team should establish a sense of the likely threats that the application portfolio will face.
 - **Availability requirements** – the team should have a shared sense of the operational requirements such as required uptime, expected lifetime of the application, and troubleshooting/maintenance requirements (e.g. patching while service online)  
 
->[!Note] Ideally these teams should collectively create these shared goals to maximize buy in, whether for the whole organization or for a particular project or application. 
+>[!Note]
+>Ideally these teams should collectively create these shared goals to maximize buy in, whether for the whole organization or for a particular project or application. 
 >
 > Additionally, senior leadership within the organization must formalize these cultural priorities, model the behavior, and continually reinforce the importance of innovation, reliability, and security. 
 
