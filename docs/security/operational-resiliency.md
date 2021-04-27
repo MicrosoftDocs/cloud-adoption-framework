@@ -10,7 +10,8 @@ ms.subservice: secure
 ms.custom: internal
 
 ---
-# Operational Resilience
+# Business Resilience
+
 
 An organization can never have perfect security, but it can become resilient to security attacks. Like we are never perfectly immune to all health and safety risks in the physical world, the data and information systems we operate are also never 100% safe from all attacks all the time. 
 
@@ -22,7 +23,7 @@ Resilience requires taking a pragmatic view that assumes breach, and requires co
 
  - **Before an Incident** - Prior to an incident, the organization should continuously improve security posture and the organization’s ability to respond to an incident. This helps limit the likelihood and potential impact of a security incident on business operations and assets. There are many techniques here covered throughout the security disciplines, but all of them are designed to raise the cost of attack. Making the attackers have to develop and try new techniques because you have made their old reliable ones stop working raises their costs and friction, slowing them down and limiting their success. 
 
- - **During an Incident** - Business operations must continue during an incident, even if they are degraded, slower, or limited to only critical systems. During an attack, a hospital cannot stop caring for patients, ships should not be able to load and unload, government services that people depend on must be available, and planes must continue to fly safely. The two main priorities during an incident are
+ - **During an Incident** - Business operations must continue during an incident, even if they are degraded, slower, or limited to only critical systems. During an attack, a hospital cannot stop caring for patients, ships must be able to load and unload cargo, government services that people depend on must be available, and planes must continue to fly safely. The two main priorities during an incident are
      - *Protect critical operations* – If at threat, all efforts should focus on protecting and sustaining critical business operations first over all other functions. 
      - *Prevent further damage* - The default first priority for security operations is always to discover the full extent of attacker access and rapidly evict them from the environment. This prevents further damage by the attackers, including retaliation actions. 
 
@@ -39,6 +40,10 @@ Security resiliency is focused on supporting the resiliency of the business thro
 ## Security Resilience and Assume Breach
 
 Good security starts with assuming breach or assuming compromise, recognizing the essential truth that IT systems operate over the open internet where hostile criminals are continuously attacking organizations and sometimes succeed in compromising them. This assumption is a key principle of zero trust which drives healthy and pragmatic security behaviors, better preparing the organization to prevent attacks, limit their damage, and bounce back rapidly from them. 
+
+>[!Note] The principle assume breach doesn't assume that every compromise is a reportable event to regulators. The principle assumes that some level of security defenses have been breached or compromised, driving a focus on making the organization reslient through improvements to security posture and response processes. 
+
+Assuming compromise should drive changes across people, process, and technology in your organization like education, exercises, and other incident preparation activities. See [Incident preparation](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-incident-preparation) for more details.
 
 Assuming compromise is a significant shift from the classic security mindset that assumed organizations could establish a perfectly safe network protected by a security perimeter (and restrict all valuable business activity to that network). While elements of this strategy provide value in a resilient enterprise, the overall assumption of a perfectly safe network didn't survive contact with the real world of mobile work and continuously evolving business models, technology platforms, and security threats.
 

@@ -12,13 +12,14 @@ ms.custom: internal
 
 # Asset Protection
 
-Assets can take any physical or virtual form such as a laptop, a database, a file, a virtual storage account, an Azure Function, etc. Business critical assets often take the form of business critical data or business critical applications and services, but the security of these often relies on the security of underlying system dependencies like storage, data, endpoint devices, application components, and more. 
+Assets can take any physical or virtual form such as a laptop, a database, a file, a virtual storage account, an Azure Function, etc. Business critical assets often take the form of business critical data or business critical applications and services, but the security of these often relies on the security of underlying system dependencies like storage, data, endpoint devices, application components, and more. In today's world, the most valuable technical assets to an organization are typically data and the availability of applications (e.g. business websites, production lines, communications, etc.). 
 
 Asset Protection implements controls to support security architecture, standards, and policy. Each asset type and security requirements are unique (identities, endpoints, applications, Azure services, etc.), but the security standards for any asset type should be consistently applied to all instances. 
 
 Asset protection is primarily focused on consistent execution across all control types including preventive, detective, and others aligned to meet the policies, standards, and architecture. Asset protection typically acts as the technical subject matter expert for assets (which is a continuous journey of learning) while working with other disciplines (governance, architecture, security operations, workload teams, etc.). Asset protection ensures that policy and standards are feasible, enables implementation of controls to support the policy and standards, and provides feedback for continuous improvement. 
 
 >[!Note] Asset protection is typically implemented by IT Operations teams that maintain the assets and is often supplemented by expertise in the security team. See [Designing Controls as a team](#designing-controls-as-a-team) at the end of this article for more information.
+
 
 Asset protection is critically important because threat actors are persistent and seek out and exploit vulnerablities that result from gaps in the application of standards and policy. Attackers can directly target the business-critical data or application, but also frequently target the underlying infrastructure that grants them access to the business-critical data and applications. Whereas [Access Control](.\access-control.md) focuses on managing authorized access to resources, asset protection focuses on all other potential "out of band" ways to gain access or control of resources. These two disciplines complement each other and should be designed together to meet the organizations architecture, policies, and standards.  
 
@@ -31,6 +32,7 @@ Get secure focuses on bringing resources up to meet the organization's current s
 
 Financially, get secure typically maps to Capital Expenditures (CapEx) dynamics of a one time investment. *Greenfield budget* for security should be linked as closely as feasible to the creation of the asset, reserving percentage of budget for security for each new software project, major software updgrade, or overall cloud adoption initiative, etc. (many organizations reserve around 10% of budget for security). *Brownfield budget* is typically a special project funded to bring security controls up to current standards/compliance.
 
+
 ## Stay Secure
 
 Everything degrades over time to where it no longer meets current requirements including physical items that wear out, but also virtual items like software, security controls, and security. While software itself remains identical over time, the environment around it and requirements to meet those needs continually change. This happens particularly fast today because of rapid changes in
@@ -40,8 +42,8 @@ Everything degrades over time to where it no longer meets current requirements i
 
 This dynamic affects all parts of security, including [Security Operations](.\security-operations.md), [Access Control](.\access-control.md), and particularly DevSecOps in [Innovation Security](.\innovation-security.md)
 
-Two specific areas that affect asset protection the most are: 
- - **Continuous Cloud Improvement** - Azure Storage, SQL, and others regularly add security features to defend against attacker activity that weren't available when the service first launched. 
+While staying secure encompasses many elements, two specific areas that you should focus asset protection on are: 
+ - **Continuous Cloud Improvement** - Embrace the continuous improvement in security capabilties that cloud brings. For example, many services in Azure like Azure Storage and  Azure SQL added security features to defend against attackers that weren't available when the service first launched. 
  - **Software End of Life** - Any software, including Windows and Linux operating systems, will always reach end of life and security updates won’t be provided for them, potentially exposing business critical data and applications to cheap and easy attacks. While Software as a service (SaaS) and cloud infrastructure/platforms are maintained by the cloud provider, enterprises often have a significant amount of software they install, author, and must maintain (most frequently installed on Infrastructure as a Server (IaaS) VMs) 
 
 Ensuring your security risk level sustains or improves over time requires regular ongoing investment and resources to upgrade or retire the use of end of life software. Like regularly changing the oil in a car avoids big expensive costs over time, investing into your security posture reduces risk of a major security incident. Stay Secure roughly maps to Operational Expenditures (OpEx) dynamics of a regular ongoing investment. 
@@ -62,9 +64,11 @@ Without business leadership support, security and IT leaders will be constantly 
 
 
 ### Network Isolation
- Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applications). This is common in operational technology (OT) environment and legacy systems. 
+
+Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applications). This is common in operational technology (OT) environment and legacy systems. 
 
 Isolation itself is considered an Access Control, though these unsecurable assets are identified as part of asset protection discipline. See [Avoid Firewall and Forget](.\access-control.md\#avoid-firewall-and-forget) in Access Control for more details. 
+
 
 Some systems are end of life, but are difficult to disconnect and isolate completely. We do not recommend leaving these insecure system fully connected to a production network as this can allow attackers to easily compromise it and  gain access to business critical assets in the organization. 
 
@@ -111,7 +115,7 @@ Once a best practice is identified for an asset, it should be consistently appli
 
  One of the difficulties with measuring the business value of asset protection investments is that the impact of a problem isn’t often apparent until there is a real-world failure. Just like changing your oil in a car seems like an expensive nuisance until the engine fails, risk of not patching security vulnerabilities is silent and invisible until an attacker exploits them and causes a major business impacting incident.
 
-### Favor Automated Policy
+### Prefer Automated Policy
 
 Asset protection should favor automated enforcement and remediation mechanisms like Azure Policy or another automation framework. This helps avoid cost and morale issues from repeatedly performing manual tasks (and increased security risk from human errors)
 
