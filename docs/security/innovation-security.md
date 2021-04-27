@@ -81,8 +81,6 @@ Much like developers adopt a different mindset and when they are accountable for
 
 Security’s goal in applications should be to remain resilient in the face on continuous attacks while maximizing the agility of the organization and ability to create value from innovative application development. The overall success factors will be similar across any security program, but the program itself may vary based on the risk appetite of the organization, the availability of budget and talent, the nature of the application portfolio and development process, and other factors. 
 
-**((ADD DIAGRAM- DevSecOps – Native Security Integration))**
-
 Like the product of this process, building a successful DevSecOps program is a continuous journey with incremental progress - The hallmarks of success include:
 
 - **Converged Culture** – Security, Development, and Operations roles should contribute key elements into a shared culture and values. This shared culture should be supported by metrics to avoid natural negative perceptions (naturally see security as a negative impact that slows progress and meeting goals) and bring unique value to all aspects of application development:
