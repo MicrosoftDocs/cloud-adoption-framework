@@ -18,7 +18,7 @@ Security should be a part of everyone's job in the organization just like busine
 
 Maintaining security assurances while minimizing friction to the business processes is a delicate balance that is important to get right.
 
-![Security Integration](./media/security-Integration.png)
+:::image type="content" source="./media/security-Integration.png" alt-text="Security Integration" lightbox="./media/security-Integration-popout.png":::
 
 While internal friction and low levels of inter-team conflict are often the norm in many organizations, this is no longer sustainable. It is critical for all of these teams to work together in the age of cloud, digital business, and zero trust security. The pace of change driven by business environment, technical platforms, and attackers makes an organization inefficient and ineffective if they these teams are operating with separate goals, culture, and language. 
 
@@ -73,7 +73,7 @@ Correctly placing the accountability for all benefits and risk on the asset owne
 
 This example process illustrates how organizations are starting to solve this problem using shared responsibility and flexibility within a limited timeframe:
 
-![Security Updates Flow](./media/Security-update-process.png)
+:::image type="content" source="./media/Security-update-process.png" alt-text="Security Updates Flow" lightbox="./media/Security-update-process-popout.png":::
 
 This process is followed on a regular schedule
 
@@ -98,7 +98,7 @@ Security is a dynamic discipline that must always be responding to active threat
 
 The following workflow diagram illustrates how security disciplines should collaborate to completely integrate learnings and insights to improve security overall 
 
-![Security Integration](./media/complete-risk-mitigation.png)
+:::image type="content" source="./media/complete-risk-mitigation.png" alt-text="Security Integration" lightbox="./media/complete-risk-mitigation-popout.png":::
 
 Security's primary mission is to rapidly respond to:
 
