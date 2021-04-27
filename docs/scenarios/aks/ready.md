@@ -21,7 +21,7 @@ With Azure landing zones, you can start with a small implementation and expand o
 Prioritization decisions made during [strategy](./strategy.md) and [plan](./plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your modern app platforms plan. The following are the most important considerations from those phases:
 
 - Will Central IT, CCoE, or other forms of centralize operations be responsible for operating the container hosts?
-- Does your strategy and plan require shared containers supporting multiple workloads per container host?
+- Does your strategy and plan require shared containers supporting multiple workloads per cluster?
 - Will the centralized teams also support segmented container solutions for hostile workloads?
 
 The questions will influence landing zone design, since each suggests a need for a centralized operations team to manage containers. When operational responsibilities are shared across centralized teams and development teams, more considerations need to go into the design of the environment to allow for shared services & separation of duty, suggesting an enterprise-grade landing zone.
