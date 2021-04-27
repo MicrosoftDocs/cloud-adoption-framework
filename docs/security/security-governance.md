@@ -63,4 +63,5 @@ The security architects within the governance function to help identify lessons 
 
 See the Complete Risk Mitigation section in security integration for more information on this. 
 
-> [!Note] While some organizations may choose to put monitoring of security posture in security operations, we generally recommend having this in governance to foster deeper empathy and relationships with the IT engineering and operations teams that have to apply the standards. This often results in higher quality communications and better security outcomes than a governance team that is completely abstracted away from the real world impact of their standards. 
+>[!Note] 
+>While some organizations may choose to put monitoring of security posture in security operations, we generally recommend having this in governance to foster deeper empathy and relationships with the IT engineering and operations teams that have to apply the standards. This often results in higher quality communications and better security outcomes than a governance team that is completely abstracted away from the real world impact of their standards. 
