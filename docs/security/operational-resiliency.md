@@ -19,7 +19,7 @@ Security efforts should be focused primarily on increasing the resilience of bus
 
 Resilience requires taking a pragmatic view that assumes breach, and requires continuous investment across the full lifecycle of security risk:
 
-![Security Resilience Cycle](./media/security-resilience-cycle.png)
+:::image type="content" source="./media/security-resilience-cycle.png" alt-text="Security Resilience Cycle" lightbox="./media/security-resilience-cycle-popout.png":::
 
  - **Before an Incident** - Prior to an incident, the organization should continuously improve security posture and the organization’s ability to respond to an incident. This helps limit the likelihood and potential impact of a security incident on business operations and assets. There are many techniques here covered throughout the security disciplines, but all of them are designed to raise the cost of attack. Making the attackers have to develop and try new techniques because you have made their old reliable ones stop working raises their costs and friction, slowing them down and limiting their success. 
 
