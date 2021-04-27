@@ -41,7 +41,7 @@ Organizations should develop a holistic access control strategy that addresses a
 
 For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
-![Zero Trust Shift](./media/zero-trust-shift.png)
+:::image type="content" source="./media/zero-trust-shift.png" alt-text="Zero Trust Shift" lightbox="./media/zero-trust-shift.png":::
 
 Organizations must embrace a zero trust approach to access control as they embrace remote work as normal and use cloud technology to digitally transform their business model, customer engagement model, employee engagement and empowerment model, and more. 
 
@@ -76,7 +76,7 @@ This is described in detail in [Enterprise access model](https://docs.microsoft.
 
 One helpful perspective on the zero trust transformation of access control is that it shifts from a static two-step process of authentication and authorization to a dynamic three step process:
 
-![Known Trusted Allowed - Physical](./media/known-trusted-allowed-physical.png)
+:::image type="content" source="./media/known-trusted-allowed-physical.png" alt-text="Known Trusted Allowed - Physical" lightbox="./media/known-trusted-allowed-physical.png":::
 
 1. **Known** - Authentication that ensures you are who you say you are. This is analogous to the physical process of checking a government issued identity card with a photo. 
 2. **Trusted** - Validation that your user and device are trustworthy enough to access the resource. This is analogous to security at an airport that screens all passengers for security risks before allowing them to enter the airport. 
