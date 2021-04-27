@@ -75,9 +75,9 @@ Azure Kubernetes Service (AKS) provides a customizable runtime option based on K
     - AKS is designed to support dedicated containers per workload
         - AKS can also be used to consolidate workloads, allowing central operations to extend support to container hosts.
 
-### Azure Arc for kubernetes
+### Azure Arc for Kubernetes
 
-Azure Arc extends operations of Kubernetes hosts allowing for consistent cloud operations across public cloud, private cloud, and edge deployments of Kubernetes containers.
+Azure Arc extends operations of Kubernetes clusters allowing for consistent cloud operations across public cloud, private cloud, and edge deployments of Kubernetes clusters.
 
 - **Operations teams** have specific constraints:
     - Kubernetes containers have been deployed across multiple hybrid and multicloud environments.
