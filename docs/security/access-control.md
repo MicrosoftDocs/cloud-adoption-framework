@@ -53,7 +53,7 @@ Organizations should develop a holistic access control strategy that is comprehe
 
 This diagram illustrates all of the different elements that an organization must consider for an access control strategy that spans multiple workloads, multiple clouds, different business sensitivity levels, and both human and computer access. 
 
-:::image type="content" source="./media/access-control.png" alt-text="Access Control Overview" lightbox="./media/access-control.png":::
+:::image type="content" source="./media/access-control.png" alt-text="Access Control Overview" lightbox="./media/access-control-popout.png":::
 
 A good access control strategy goes beyond a single discrete tactic or technology, and should adopt a pragmatic approach that embraces the right technology and tactics for the right scenarios. 
 
