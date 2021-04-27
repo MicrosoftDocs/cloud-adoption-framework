@@ -41,4 +41,4 @@ The following considerations and recommendations will help establish proper reso
 
 - Define a tag to identify the workload or workloads supported by each cluster
 - Define a tag to identify which team is responsible for operations of the host
-- Implement an Azure Policy to require a specific container registry
+- Implement an Azure Policy to require a specific OCI artifact registry based on your organization's container registry topology
