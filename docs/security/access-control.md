@@ -18,6 +18,31 @@ Access control is the part of security that people experience first and most oft
 
 The traditional approach of access control for IT has been based on restricting access to a corporate network and then supplementing this with additional controls as appropriate. This model restricts all resources to a corporate owned network connection and has become too inflexible to meet the needs of a dynamic enterprise. 
 
+Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
+  
+By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
+Access control is an on-going process of checks and balances, baselines and refinements. The controls established should be included in an organization's standard operations and reviewed regularly, alongside other standard processes.
+New infrastructure types will require the controls to be refactored to accommodate new secure access methods, security incidents will require controls to be reviewed and refined.  
+
+Implementing access controls should deliver assurances to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.
+
+Scaling this standard requires three things:
+
+- **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
+- **Orchestration** - streamline processes as much as possible in order to aggregate access requests and permissions management centrally. This context enables teams to approve access and govern usage of permissions in context and help spot patterns that require investigation
+- **Automation** - as much as possible use the technologies available to automate monitoring, detecting, and responding to exceptions in access control patterns
+
+## Enterprise Access Model and blended control Plane
+
+Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
+
+
+:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Image alt text" lightbox="./media/privileged-access-over-underlying-planes.png":::
+
+![Adding user and application access pathways](./media/privileged-access-over-underlying-planes.png)
+
+For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
+
 ![Zero Trust Shift](./media/zero-trust-shift.png)
 
 Organizations must embrace a zero trust approach to access control as they embrace remote work as normal and use cloud technology to digitally transform their business model, customer engagement model, employee engagement and empowerment model, and more. 
