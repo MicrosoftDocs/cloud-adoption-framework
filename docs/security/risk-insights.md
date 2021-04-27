@@ -30,7 +30,7 @@ While these risks happen in the technical environment, they often represent a ri
 
 This diagram depicts the shift from a typical technically oriented program to a business framework
 
-:::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Risk Transformation" lightbox="./media/technical-to-business-transformation.png":::
+:::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Risk Transformation" lightbox="./media/technical-to-business-transformation-popout.png":::
 
 Security leaders must step back from the technical lens, learn what assets and data are important to business leaders, and prioritize how teams spend their time, attention, and budget through the lens of business importance. The technical lens will be re-applied as the security and IT teams work through solutions, but looking at this only as a technology problem runs a high risk of solving the wrong problems.
 
@@ -68,7 +68,7 @@ Because cybersecurity risk is caused by hostile human attackers seeking illicit 
 
 The motivations and incentives for different types of attackers mirrors those of legitimate organizations:
 
-:::image type="content" source="./media/attacker-motivations.png" alt-text="Risk Transformation" lightbox="./media/attacker-motivations.png":::
+:::image type="content" source="./media/attacker-motivations.png" alt-text="Risk Transformation" lightbox="./media/attacker-motivations-popout.png":::
 
 Understanding the motivation of attacker groups you face can better understand the likelihood and potential impact of different types of attacks. While the security strategies and most important technical controls will be similar across organizations, this context can help guide your security investment focus areas. 
 
