@@ -45,7 +45,7 @@ Modern access control *must meet the productivity needs of the organization* and
 
 The enterprise access model is a comprehensive access model based on zero trust. This model addresses all type of access by internal and external users, services, applications, and privileged accounts with administrative access to systems.  
 
-:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Adding user and application access pathways" lightbox="./media/privileged-access-over-underlying-planes.png":::
+:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Adding user and application access pathways" lightbox="./media/privileged-access-over-underlying-planes-popout.png":::
 
 This is described in detail in [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
