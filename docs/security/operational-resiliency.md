@@ -41,7 +41,8 @@ Security resiliency is focused on supporting the resiliency of the business thro
 
 Good security starts with assuming breach or assuming compromise, recognizing the essential truth that IT systems operate over the open internet where hostile criminals are continuously attacking organizations and sometimes succeed in compromising them. This assumption is a key principle of zero trust which drives healthy and pragmatic security behaviors, better preparing the organization to prevent attacks, limit their damage, and bounce back rapidly from them. 
 
-[!Note] The principle assume breach doesn't assume that every compromise is a reportable event to regulators. The principle assumes that some level of security defenses have been breached or compromised, driving a focus on making the organization reslient through improvements to security posture and response processes. 
+>[!Note]
+>The principle assume breach doesn't assume that every compromise is a reportable event to regulators. The principle assumes that some level of security defenses have been breached or compromised, driving a focus on making the organization reslient through improvements to security posture and response processes. 
 
 Assuming compromise should drive changes across people, process, and technology in your organization like education, exercises, and other incident preparation activities. See [Incident preparation](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-incident-preparation) for more details.
 
