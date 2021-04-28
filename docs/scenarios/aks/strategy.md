@@ -23,7 +23,7 @@ Application services and containers can accelerate cloud adoption strategies, if
 - Pace of innovation: Delivering technology-driven products and services to market faster than the competition
 - Streamlined operations: Operations of a diverse set of workloads needs to be optimized to reduce operational overhead
 
-Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through modern abstraction options like Applications services (PaaS solutions) and orchestrated containers, can contribute to the success of each of these common motivations.
+Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through abstraction options like Applications services (PaaS solutions) and orchestrated containers, can contribute to the success of each of these common motivations.
 
 ## Modern container outcomes
 
