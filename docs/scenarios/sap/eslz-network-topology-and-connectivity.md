@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale network topology and connectivity for an SAP migration
+title: Network topology and connectivity for an SAP migration
 description: Understand key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
 author: JefferyMitchell
 ms.author: brblanch
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
-# Enterprise-scale network topology and connectivity for an SAP migration
+# Network topology and connectivity for an SAP migration
 
-This article examines key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
+This article builds on a number of considerations and recommendations defined in the Azure Landing Zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 ## Plan for IP addressing
 

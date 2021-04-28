@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale business continuity and disaster recovery for an SAP migration
-description: Learn about enterprise-scale business continuity and disaster recovery for an SAP migration in the Microsoft Cloud Adoption Framework for Azure.
+title: Business continuity and disaster recovery for an SAP migration
+description: Learn about business continuity and disaster recovery for an SAP migration.
 author: JeffreyMitchell
 ms.author: brblanch
 ms.date: 3/12/2021
@@ -13,7 +13,9 @@ ms.custom: think-tank, e2e-sap
 <!-- docutune:casing "Azure Fence Agent" -->
 <!-- docutune:ignore DB -->
 
-# Enterprise-scale business continuity and disaster recovery for an SAP migration
+# Business continuity and disaster recovery (BC/DR) for an SAP migration
+
+This article builds on a number of considerations and recommendations defined in the Azure Landing Zone article [enterprise-scale design area for BC/DR](../../ready/enterprise-scale/business-continuity-and-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 ## Scenario and scope
 

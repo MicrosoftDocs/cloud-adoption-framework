@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale platform automation and DevOps recommendations for SAP in Azure
+title: Deployment options for SAP in Azure
 description: Understand the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
 author: JefferyMitchell
 ms.author: brblanch
@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-sap
 
 <!-- docutune:casing Snow -->
 
-# Enterprise-scale platform automation and DevOps recommendations for SAP in Azure
+# Deployment options for SAP in Azure
 
-The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy.
+The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy. Specifically in enterprise environments, deployment option should consider manual configuration, platform automation, and DevOps approaches used to support the SAP platform.
 
 SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
 

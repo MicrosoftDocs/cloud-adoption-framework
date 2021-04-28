@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale management and monitoring for SAP on Azure
+title: Operations baseline for SAP on Azure
 description: Learn about design considerations and recommendations for managing and monitoring SAP on Azure.
 author: JefferyMitchell
 ms.author: brblanch
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
-# Enterprise-scale management and monitoring for SAP on Azure
+# Operations baseline for SAP on Azure
 
-This article explores how to operationally maintain an SAP on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform.
+This article builds on a number of considerations and recommendations defined in the Azure Landing Zone article [enterprise-scale design area for management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 **Design considerations:**
 
