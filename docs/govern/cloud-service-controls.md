@@ -44,7 +44,7 @@ This level of implementation can be delivered in several layers. The governance 
 
 While classifying the different approaches lists out the extreme ends of the spectrum, many organizations will choose an approach between these models. For example, most organizations will allow some cloud services with a few controls, some will just be allowed without controls, and access to others will be denied.
 
-Whatever the approach taken to Service governance is, the key input is the corporate [Cloud policy statements](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition#create-cloud-policy-statements) defined by the governance team.
+Whatever the approach taken to Service governance is, the key input is the corporate [Cloud policy statements](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition#create-cloud-policy-statements) defined by the governance team.
 
 ## Basic governance
 
@@ -62,11 +62,11 @@ To create an allowlist and blocklist of cloud services, review each cloud servic
 
 ### Implementing blocklists
 
-Services that are explicitly denied use in your organization should use [Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage) to block the use of the service. Azure Policy is a platform level of control and can be implemented by a management group to ensure control over subordinate subscriptions.
+Services that are explicitly denied use in your organization should use [Azure Policy](/azure/governance/policy/tutorials/create-and-manage) to block the use of the service. Azure Policy is a platform level of control and can be implemented by a management group to ensure control over subordinate subscriptions.
 
 The number of policies used to implement the block service is a balanced decision that must take into account the process for a policy exception.
 
-There are often exceptions for the use of a service. Once the exception has been approved through the organizational process, [Azure Policy exemptions](https://docs.microsoft.com/azure/governance/policy/concepts/exemption-structure) can be used to allow the implementation of the service in a targeted area.
+There are often exceptions for the use of a service. Once the exception has been approved through the organizational process, [Azure Policy exemptions](/azure/governance/policy/concepts/exemption-structure) can be used to allow the implementation of the service in a targeted area.
 
 If a single policy is implemented with all the denied services listed, then granting an exception for a single service will grant an exception to all denied services. Upfront implementation is simpler, but releases more control with exceptions.
 
