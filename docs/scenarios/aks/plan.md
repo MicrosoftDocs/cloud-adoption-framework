@@ -32,7 +32,7 @@ The standard [cloud adoption plan template](../../plan/template.md) accounts for
 
 In the modern app platform scenario, longer term returns (which require a greater upfront investment) are prioritized over more efficient migration processes. The longer term investments are represented in specific parts of the plan as an increased focus on enabling innovation and streamlining operations for specific groups of workloads.
 
-To begin aligning the strategy and plan, identify any workloads which are assumed to be impacted by the addition to modern app platforms in you cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates look for the following criteria within your portfolio of workloads:
+To begin aligning the strategy and plan, identify any workloads which are assumed to be impacted by the addition of modern app platforms in your cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates, look for the following criteria within your portfolio of workloads:
 
 1. **Active Development or DevOps investments:** A percentage of production workloads will be under active development. Some may even be managed through on-going DevOps practices.  
 2. **Workload portability:** Some workloads are impacted by compliance, data protection, or operational constraints which may require portability across private cloud, edge, or even multiple public cloud providers.
