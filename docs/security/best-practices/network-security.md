@@ -10,6 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
+Point to https://docs.microsoft.com/en-us/azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+
+
 # Generic space holder - remember to edit the metadata before publication
 
 ## This article should cover all of the items under the "secured the network" question at the CAF level
