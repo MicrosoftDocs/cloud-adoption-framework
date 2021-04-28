@@ -16,7 +16,7 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 This article will help expose a number of considerations regarding containers that will have an impact on your strategy.
 
-## Modern container motivations
+## Motivations
 
 Application services and containers can accelerate cloud adoption strategies, if the motivations of that strategy focus on the following: 
 
