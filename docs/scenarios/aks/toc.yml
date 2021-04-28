@@ -57,6 +57,8 @@ items:
       href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
   - name: Container Architectures
     items:
+    - name: Container product decision tree
+      href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Microservices architecture on AKS
       href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Microservices with AKS and Azure DevOps
@@ -231,8 +233,6 @@ items:
        
   - name: Azure product documentation
     items:
-    - name: Container product decision tree
-      href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Azure Kubernetes Service (AKS)
       items:
       - name: Overview
