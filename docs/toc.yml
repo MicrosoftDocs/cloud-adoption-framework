@@ -1591,8 +1591,8 @@ items:
         href: security/risk-insights.md
       - name: Security Integration
         href: security/security-integration.md
-      - name: Operational Resiliency
-        href: security/operational-resiliency.md
+      - name: Business Resilience
+        href: security/business-resilience.md
       - name: Access Control
         href: security/access-control.md
       - name: Security Operations 
