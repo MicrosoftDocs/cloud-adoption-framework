@@ -400,11 +400,9 @@ items:
     items:
     - name: Introduction to Kubernetes on Azure
       href: /learn/paths/intro-to-kubernetes-on-azure/
-    - name: Azure Kubernetes Service deployment pipeline and GitHub Actions
-      href: /learn/modules/aks-deployment-pipeline-github-actions/
-    - name: Manage Application Configuration and Secrets in Azure Kubernetes Service (AKS)
-      href: /learn/modules/aks-secrets-configure-app/
-    - name: Deploy and manage a stateful application by using Azure Cosmos DB and Azure Kubernetes Service
-      href: /learn/modules/aks-manage-application-state/
-    - name: Application scalability on AKS with HorizontalPodAutoscalers
-      href: /learn/modules/aks-application-autoscaling-native/
+    - name: Administer containers in Azure
+      href: /learn/paths/administer-containers-in-azure/
+    - name: Develop and deploy applications on Kubernetes
+      href: /learn/paths/develop-deploy-applications-kubernetes/
+    - name: Architect modern applications in Azure
+      href: /learn/paths/architect-modern-apps/
