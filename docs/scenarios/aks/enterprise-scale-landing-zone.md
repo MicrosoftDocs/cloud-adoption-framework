@@ -52,7 +52,7 @@ There are two types of templates:
 - Terraform modules that deploy infrastructure components like virtual machines, networks, or storage to Azure.
 - Ansible playbooks that run different roles to configure virtual machines, and to install AKS HANA and required applications, on the already deployed infrastructure.
 
-![Reference Implementation](./media/aks-eslz-reference-implementation.PNG)
+![Reference Implementation](./media/aks-eslz-reference-implementation.png)
 
 ## Next steps
 
