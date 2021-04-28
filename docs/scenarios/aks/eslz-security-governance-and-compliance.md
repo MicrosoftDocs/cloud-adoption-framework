@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale Azure Kubernetes Service (AKS) security governance and compliance
+title: Enterprise-scale Azure Kubernetes Service (AKS) security, governance, and compliance
 description: Learn about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 <!-- docutune:casing "Contoso Financials" -->
 
-# AKS enterprise-scale platform security governance and compliance
+# AKS enterprise-scale platform security, governance, and compliance
 
 This article walks through aspects of Azure Kubernetes Service (AKS) security governance to think about before implementing any solution.
 
@@ -196,7 +196,7 @@ Take some time to navigate around the different views and features that Kubecost
 
 AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual Network, which require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
-Here are some other design considerations for AKS security governance and compliance:
+Here are some other design considerations for AKS security, governance, and compliance:
 
 - Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
 

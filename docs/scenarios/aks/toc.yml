@@ -212,7 +212,7 @@ items:
       href: eslz-management-and-monitoring.md
     - name: Business continuity and disaster recovery
       href: eslz-business-continuity-and-disaster-recovery.md
-    - name: Security governance and compliance
+    - name: Security, governance, and compliance
       href: eslz-security-governance-and-compliance.md
     - name: Platform automation and DevOps
       href: eslz-platform-automation-and-devops.md
