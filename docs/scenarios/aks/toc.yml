@@ -39,7 +39,7 @@ items:
       items:
       - name: Start small & expand with the AKS baseline
         href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Enterprise-scale landing zone for AKS
+      - name: Enterprise-scale for AKS
         href: enterprise-scale-landing-zone.md
       
   - name: Migrate to modern app platforms

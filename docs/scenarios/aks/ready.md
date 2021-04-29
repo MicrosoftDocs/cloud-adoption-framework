@@ -10,11 +10,19 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Azure landing zones for app platforms
+# Azure landing zones for modern app platforms
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern app platform solutions no matter what implementation option you choose.
+
+## Azure Landing Zone conceptual architecture
+
+When preparing any environment for sustained cloud adoption, we use the [Azure Landing Zones](../../ready/landing-zone/index.md) conceptual architecture to represent what a target end state should look like in Azure, as pictured below.
+
+[![Diagram that shows a conceptual architecture of an Azure Landing Zone based on an Azure Virtual WAN network topology.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
+
+When developing a long-term vision for landing zones, consider the design above. Working within this scenario, we focus on the most appropriate starting to point to meet your strategic and planning requirements related to modern application platforms.
 
 ## Strategic & planning considerations for app platforms landing zones
 
@@ -25,6 +33,12 @@ Prioritization decisions made during [strategy](./strategy.md) and [plan](./plan
 - Will the centralized teams also support segmented container solutions for hostile workloads?
 
 The questions will influence landing zone design, since each suggests a need for a centralized operations team to manage containers. When operational responsibilities are shared across centralized teams and development teams, more considerations need to go into the design of the environment to allow for shared services & separation of duty, suggesting an enterprise-grade landing zone.
+
+## Demonstrating actionable scope
+
+To maximize output during initial implementations, the remainder of this guidance focuses on implementing Azure Kubernetes Services (AKS) with the ability to add an overlay for Azure Application Services on Kubernetes with Arc (AKA Project Lima). This approach narrows the scope of options by providing a reference architecture and implementation.
+
+To establish a foundation for other [Azure products](./azure-products.md) for modern app platforms, see the [Container Architectures](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) tab in the left navigation for rich architecture and implementation references for each tool.
 
 ## Implementation option considerations
 

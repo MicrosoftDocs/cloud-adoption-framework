@@ -22,11 +22,11 @@ It's vital to plan for IP addressing in Azure to ensure that:
 - The virtual network (VNet) contains the right address space.
 - Proper planning for subnet configuration happens in advance.
 
-The following architecture diagram shows enterprise-scale networking considerations in an SAP on Azure construction set:
+The following architecture diagram shows  networking considerations in Enterprise-scale for SAP on Azure:
 
- ![A diagram of enterprise-scale networking considerations in an SAP on Azure construction set.](./media/ntc-architecture.png#lightbox)
+ ![A diagram of networking considerations in Enterprise-scale for SAP on Azure.](./media/ntc-architecture.png#lightbox)
 
-*Figure 1: A diagram of enterprise-scale networking considerations in an SAP on Azure construction set.*
+*Figure 1: A diagram of networking considerations in Enterprise-scale for SAP on Azure.*
 
 **Design considerations for SAP implementation:**
 

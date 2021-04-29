@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale support for SAP on Azure construction set
-description: Learn about enterprise-scale construction sets that let you build platform workload landing zones.
+title: Enterprise-scale for SAP on Azure
+description: Learn about Enterprise-scale for SAP on Azure.
 author: JefferyMitchell
 ms.author: brblanch
 ms.date: 02/15/2021
@@ -10,13 +10,13 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
-# Enterprise-scale support for SAP on Azure construction set
+# Enterprise-scale for SAP on Azure
 
-Enterprise-scale construction sets provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. After you have successfully implemented an enterprise-scale landing zone, they can use the SAP on Azure construction set. Review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the SAP on Azure construction set.
+Enterprise-scale for SAP on Azure provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. After you have successfully implemented an enterprise-scale landing zone, they can use Enterprise-scale for SAP on Azure. Review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying Enterprise-scale for SAP on Azure.
 
-## Adopting the SAP on Azure construction set
+## Adopting Enterprise-scale for SAP on Azure
 
-Not all customers adopt SAP on Azure in the same way. The Cloud Adoption Framework for Azure enterprise-scale SAP on Azure construction set architecture varies between customers. The technical considerations and design recommendations of the SAP on Azure construction set might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The SAP on Azure construction set is modular by design. You can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams:
+Not all customers adopt SAP on Azure in the same way. The Enterprise-scale for SAP on Azure architecture varies between customers. The technical considerations and design recommendations of Enterprise-scale for SAP on Azure might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The Enterprise-scale for SAP on Azure is modular by design. You can customize environmental variables. This solution approach to landing zones includes three sets of assets to support cloud teams:
 
 - [Design guidelines](#design-guidelines)
 - [Architecture](#architecture)
@@ -37,7 +37,7 @@ You have to make critical decisions that drive the design of the Cloud Adoption 
 
 The following image shows a conceptual reference architecture that demonstrates design areas:
 
-![A diagram depicting the SAP construction set conceptual reference architecture.](./media/overview-architecture.png)
+![A diagram depicting the Enterprise-scale for SAP on Azure conceptual reference architecture.](./media/overview-architecture.png)
 
 ## Implementation
 
@@ -60,6 +60,6 @@ Deploy and install the Ansible playbook components on the infrastructure that th
 
 ## Next steps
 
-Review the design areas for the SAP on Azure construction set that are critical to making complete considerations and recommendations for your SAP on Azure construction set architecture:
+Review the design areas of Enterprise-scale for SAP on Azure that are critical to making complete considerations and recommendations for your Enterprise-scale for SAP on Azure architecture:
 
 - [Identity and access management](./eslz-identity-and-access-management.md)
