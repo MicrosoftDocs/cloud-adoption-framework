@@ -29,13 +29,13 @@ When we "shift left" for security, we can bring the following into a DevOps pipe
 
 Automation and the agile methodology enables teams to deliver faster but also adds complexity to security because the workflow is extended to the developer teams themselves.
 
-The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle" alt="configuration cog icon"> indicates security permissions which must be configured by the customer. This follows the [Shared Responsibility Model](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility) where Azure and other vendors provide permissions, which much be configured by the customer according to their governance model and business requirements.
+The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle" alt="configuration cog icon"> indicates security permissions which must be configured by the customer. This follows the [Shared Responsibility Model](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility) where Azure and other vendors provide permissions, which must be configured by the customer according to their governance model and business requirements.
 
 <img src="./../media/devsecops-workflow.svg" alt="A Typical CI/CD Workflow">
 
 _**Figure 1 - a typical CI/CD workflow illustrating how code changes in a git repository will affect your cloud resources**_
 
-Let's examine each stage of this typical workflow to help you how the configurations often depend on one another. Your workflow may have or requirement more stages. The concepts below will help you understand CI/CD and help you design your workflow for security.
+Let's examine each stage of this typical workflow to help you understand how the configurations often depend on one another. Your workflow may have more stages. The concepts below will help you understand CI/CD and help you design your workflow for security.
 
 ### Stage 1 - Git Workflow
 
@@ -45,7 +45,7 @@ Code changes, not just to software but also to Pipeline as Code and [Infrastruct
 
 The industry standard workflow, regardless of your SCM Software as a Service (SaaS) vendor is to leverage [Pull Requests](https://docs.microsoft.com/azure/devops/repos/git/pull-requests?view=azure-devops) (1A), which can act both as an automated quality gatekeeper as well as a manual approval step before source code is accepted.
 
-The Pull Request workflow is designed to reduce agility, which is why it should only be applied to secure _specific git branches_ - especially those that will trigger automated workflows that can deploy, configure or in any other way affect your cloud resources. These branches are called Protected Branches (1B) and typically follow naming contents like `production`, `releases/*`, etc.
+The Pull Request workflow is designed to introduce healthy friction, which is why it should only be applied to secure _specific git branches_ - especially those that will trigger automated workflows that can deploy, configure or in any other way affect your cloud resources. These branches are called Protected Branches (1B) and typically follow naming contents like `production`, `releases/*`, etc.
 
 It is common for Pull Requests to require:
 
@@ -186,5 +186,6 @@ Please note that Figure 2 refers to Azure DevOps, which has strong integration w
 - [Cloud Adoption Framework - Ready - Platform automation and DevOps](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/platform-automation-and-devops)
 - [Azure DevOps Docs - Pipelines Security Walkthrough](https://docs.microsoft.com/azure/devops/pipelines/security/overview?view=azure-devops)  
   For more about the features used to secure pipelines, including [security through templates](https://docs.microsoft.com/azure/devops/pipelines/security/templates?view=azure-devops), which is not covered in this document.
+- [Azure Architecture Center - DevSecOps in GitHub](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github)
 
 
