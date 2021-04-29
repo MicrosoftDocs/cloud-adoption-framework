@@ -7,6 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: think-tank, e2e-aks
 ---
 
 # Plan for modern containers
@@ -59,9 +60,9 @@ The standard [cloud adoption plan template](../../plan/template.md) accounts for
 
 In addition to the cloud adoption skilling plan, the cloud adoption teams might need to develop skills related to container and Kubernetes before executing your plan:
 
-- [Learn the basics of Kubernetes](https://aka.ms/LearnAKS)
+- [Learn the basics of Kubernetes](/azure/aks/concepts-clusters-workloads)
 - [Learn about containers](https://azure.microsoft.com/product-categories/containers/)
-- [Get familiar with Kubernetes best practices](https://aka.ms/aks/bestpractices)
+- [Get familiar with Kubernetes best practices](/azure/aks/best-practices)
 
 Ensure time is allocated for workload teams to document and dry-run migration plans. The existing application or external system (both dependencies and systems that depend on this workload) may need to be modified with added flexibility to support the migration effort. This is true for both pre-production and production environments.
 

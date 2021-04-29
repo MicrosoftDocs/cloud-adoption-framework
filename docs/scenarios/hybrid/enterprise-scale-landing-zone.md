@@ -1,12 +1,13 @@
 ---
-title: "Enterprise-Scale support for hybrid and multicloud"
+title: Enterprise-Scale support for hybrid and multicloud
 description: Describe how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
-author: DominicAllen
+author: JefferyMitchell
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Enterprise-scale support for hybrid and multicloud
@@ -56,7 +57,7 @@ Landing zones are a set of reference architectures that help organizations quick
 
 The Cloud Adoption Framework includes specific guidance for developing architectures in Azure for connecting to external environments. [Patterns such as Hub and Spoke can be used to create landing zones for ingress from and egress to external locations.](../../ready/enterprise-scale/implementation.md)
 
-For example, [Guidance can be found here](../../ready/azure-best-practices/connectivity-to-other-cloud-providers.md) to help building out Landing Zone architectures specifically for connectivity to other cloud environments.
+For example, [Guidance can be found here](../../ready/azure-best-practices/connectivity-to-other-providers.md) to help building out Landing Zone architectures specifically for connectivity to other cloud environments.
 
 ## Network
 
@@ -77,18 +78,18 @@ Azure has technologies that help organizations manage identities across on-premi
 
 To achieve hybrid identity, organizations should consider the following three Azure Active Directory approaches:
 
-- [Password hash synchronization (PHS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-phs)
-- [Pass-through authentication (PTA)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta)
-- [Federation (AD FS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed)
+- [Password hash synchronization (PHS)](/azure/active-directory/hybrid/whatis-phs)
+- [Pass-through authentication (PTA)](/azure/active-directory/hybrid/how-to-connect-pta)
+- [Federation (AD FS)](/azure/active-directory/hybrid/whatis-fed)
 
-[Further information can be found here](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)  for planning identity models in a hybrid environment.
+[Further information can be found here](/azure/active-directory/hybrid/whatis-hybrid-identity)  for planning identity models in a hybrid environment.
 
 ## Governance
 
 Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards.
 As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
 
-The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
+The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
 These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
 
 ## Management
@@ -106,6 +107,6 @@ When implementing a hybrid Landing Zone, these Azure tools should be extended to
 This provides a single management plane and a single view on the entire hybrid estate in order to make monitoring and management at scale as straightforward as possible.
 
 [Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform.
-Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview#:~:text=Azure%20Resource%20Manager%20is%20the%20deployment%20and%20management,Manager%20templates%20(ARM%20templates),%20see%20the%20template).
+Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
 You can now manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure. Regardless of where they live, you can use familiar Azure services and management capabilities. Azure Arc enables you to continue using traditional ITOps, while introducing DevOps practices to support new cloud native patterns in your environment.

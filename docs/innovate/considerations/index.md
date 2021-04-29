@@ -1,13 +1,14 @@
 ---
 title: Innovation in the digital economy
-description: Focus on understanding customer needs and rapidly building cloud innovations that shape how your customers interact with your products.
+description: Build your innovation processes. Focus on understanding customer needs and rapidly building cloud innovations. Shape the digital economy and interact with customers.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: internal
+ms.custom: internal, seo-caf-innovate
+keywords: digital economy, what is innovation, innovation process, innovation methodology
 ---
 
 # Innovation in the digital economy
@@ -18,24 +19,26 @@ In the Innovate methodology of the Cloud Adoption Framework, we'll focus on unde
 
 ## Innovate methodology
 
-The simple methodology for cloud innovation within the Cloud Adoption Framework is illustrated in the following image. Subsequent articles in this section will show how to establish core processes, approaches, and mechanisms for finding and driving innovation within your company.
+The simple methodology for cloud innovation within the Cloud Adoption Framework is illustrated in the following image. Subsequent articles in this section will show how to establish core innovation processes, approaches, and mechanisms for finding and driving innovation within your company.
 
-![Diagram of the Innovate methodology of the Cloud Adoption Framework](../../_images/innovate/innovate-methodology.png)
+![Diagram that shows the Innovate methodology of the Cloud Adoption Framework.](../../_images/innovate/innovate-methodology.png)
 
 This article series emphasizes the following aspects of this methodology:
 
 - First, always start with customer adoption to generate feedback that builds customer partnerships through the build-measure-learn feedback loop.
 - Second, examine approaches to developing digital inventions that prioritize adoption.
 
-The following section describes the formula for innovation and the commitments required for success with this approach.
+The following section describes what innovation is, the formula for innovation, and the commitments required for success with this approach.
 
 ## Formula for innovation
 
+Innovation is the development and application of ideas that improve the way things are done or what can be achieved.
+
 Successful innovation is not a big-bang transformational event or an elusive magical unicorn. Success in innovation is more of a balancing act, illustrated by a simple equation: **innovation = invention + adoption**.
 
-Innovation happens at the intersection of invention and adoption. True innovation stems from slowly adjusting human experiences through new approaches, new processes, and new technologies. In this formula, invention means creating a new solution that meets a customer need. Conversely, adoption means applying the new solution to shape human behaviors and interactions. Finding the right balance between invention and adoption requires iteration, data-driven decision making, constant learning, and a growth mindset. It also requires technologies that can keep pace with the countless opportunities to learn in today's digital society.
+Innovation happens at the intersection of invention and adoption. True innovation stems from slowly adjusting human experiences through new approaches, new processes, and new technologies. In this formula, invention means creating a new solution that meets a customer need. Conversely, adoption means applying the new solution to shape human behaviors and interactions. Finding the right balance between invention and adoption requires iteration, data-driven decision making, constant learning, and a growth mindset. It also requires technologies that can keep pace with the countless opportunities to learn in today's digital economy.
 
-The cloud is often a great platform for invention or the technological aspects of innovation. Unfortunately, most great ideas fail during the hard work of adoption, rather than during the ideation or invention processes. To ensure success, development teams should always start with adoption as the test for innovation. That's why this methodology starts with adoption. To use this methodology, the following three commitments should be agreed upon by the team:
+The cloud is often a great platform for invention or the technological aspects of innovation. Unfortunately, most great ideas fail during the hard work of adoption, rather than during the creative or invention processes. To ensure success, development teams should always start with adoption as the test for innovation. To use this methodology, the team should agree on these three commitments:
 
 - [Commitment to prioritize customers over technology](#commitment-to-prioritize-customers-over-technology)
 - [Commitment to transparency](#commitment-to-transparency)

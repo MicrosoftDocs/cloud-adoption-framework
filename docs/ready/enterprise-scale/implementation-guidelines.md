@@ -22,9 +22,9 @@ In order to implement the enterprise-scale architecture, you must think in terms
 
 1. **What must be true for the enterprise-scale architecture:** Encompasses activities that must be performed by the Azure and Azure Active Directory (Azure AD) administrators to establish an initial configuration. These activities are sequential by nature and primarily one-off activities.
 
-2. **Enable a new region (File > New > Region):** Encompasses activities that are required whenever there is a need to expand the enterprise-scale platform into a new Azure region.
+2. **Enable a new region (File -> New -> Region):** Encompasses activities that are required whenever there is a need to expand the enterprise-scale platform into a new Azure region.
 
-3. **Deploy a new landing zone (File > New > Landing Zone):** These are recurring activities that are required to instantiate a new landing zone.
+3. **Deploy a new landing zone (File -> New -> Landing Zone):** These are recurring activities that are required to instantiate a new landing zone.
 
 <!-- docutune:enable -->
 
@@ -138,7 +138,7 @@ The following policies should be used to enforce company-wide compliance status.
 | [`Allowed-ResourceLocation`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyAssignments-Allowed-ResourceLocation.parameters.json)   | Specifies the allowed region where resources can be deployed. |
 | [`Allowed-RGLocation`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyAssignments-Allowed-RGLocation.parameters.json)         | Specifies the allowed region where resource groups can be deployed. |
 | [`Denied-Resources`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyAssignments-Denied-Resources.parameters.json)           | Resources that are denied for the company. |
-| [`Deny-AppGW-Without-WAF`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyDefinitions-Deny-AppGW-Without-WAF.parameters.json)     | Allows application gateways deployed with Azure Web Application Firewall enabled. |
+| [`Deny-AppGW-Without-WAF`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyDefinitions-Deny-AppGW-Without-WAF.parameters.json)     | Allows application gateways deployed with Azure Web Application Firewall (WAF) enabled. |
 | [`Deny-IP-Forwarding`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyAssignments-Deny-IP-Forwarding.parameters.json)         | Denies IP forwarding. |
 | [`Deny-RDP-From-Internet`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyAssignments-Deny-RDP-From-Internet.parameters.json)     | Denies RDP connections from the internet. |
 | [`Deny-Subnet-Without-Nsg`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyDefinitions-Deny-Subnet-Without-Nsg.parameters.json)    | Denies subnet creation without an NSG. |
@@ -179,7 +179,7 @@ The following list shows policies that you can use when you're implementing iden
 | [`Deploy-LA-Config`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyDefinitions-Deploy-LA-Config.parameters.json) | Configuration of the Log Analytics workspace. |
 | [`Deploy-Log-Analytics`](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560%20(3fc1081d-6105-4e19-b60c-1ec1252cf560)) /.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Log-Analytics.parameters.json) | Deploys a Log Analytics workspace. |
 
-## File > New > Region
+## File -> New -> Region
 
 1. If you create the networking resources via Azure Policy, assign the policies listed in the following table to the connectivity subscription. By doing this, Azure Policy ensures that the resources in the following list are created based on parameters provided.
 
@@ -199,7 +199,7 @@ The following list shows policies that you can use when you're implementing iden
 
 <!-- docutune:disable -->
 
-## File > New > Landing Zone for applications and workloads
+## File -> New -> Landing Zone for applications and workloads
 
 <!-- docutune:enable -->
 

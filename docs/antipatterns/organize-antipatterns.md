@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Customers often experience cloud adoption antipatterns within their organizational structure. Many factors can cause these problems:
 
-- Tool sets
+- Toolsets
 - Partners
 - Engineers
 - Misaligned IT departments
@@ -27,7 +27,7 @@ Many companies treat IT departments as cost centers. This approach can lead to t
 
 ### Example: Treat IT as a cost center
 
-A corporation manages its IT department as a cost center under the chief financial officer's (CFO's) responsibility. The managing board perceives IT as a slow service provider that's one of the company's biggest cost drivers. The managing board doesn't realize that the Mobility business unit is consuming most of the assets that the IT department ordered. IT purchases a datacenter for all business units to use, but the Mobility business unit gets this oversized asset. The board doesn't view IT as an enabler or a partner.
+A corporation manages its IT department as a cost center responsible to the chief financial officer (CFO). The managing board perceives IT as a slow service provider that's one of the company's biggest cost drivers. The managing board doesn't realize that the mobility business unit is consuming most of the assets that the IT department ordered. IT purchases a datacenter for all business units to use, but the mobility business unit gets this oversized asset. The board doesn't view IT as an enabler or a partner.
 
 ### Preferred outcome: View IT as an enabler
 
@@ -42,13 +42,13 @@ To improve transparency, focus on visibility, accountability, and optimization w
 
 ## Antipattern: Invest in new technology without involving the business
 
-IT departments often invest significant human and financial resources in building and deploying robust platforms and tool sets. But, sometimes IT fails to consider business units and their needs during design and development phases. This omission leads to new platforms with minimal relevance for business units. Employees are then hesitant to accept the new technology. Poor or slow adoption can result. Frustration also builds within IT when business units don't use its platforms.
+IT departments often invest significant human and financial resources in building and deploying robust platforms and toolsets. But, sometimes IT fails to consider business units and their needs during design and development phases. This omission leads to new platforms with minimal relevance for business units. Employees are then hesitant to accept the new technology. Poor or slow adoption can result. Frustration also builds within IT when business units don't use its platforms.
 
 ### Example: Set up a platform without involving business units
 
 The IT department of a data analysis firm sets up and customizes an Azure platform without involving any business units. While using the platform, business unit developers:
 
-- Realize that they don’t have the permissions that they need for deployment.
+- Realize that they don't have the permissions that they need for deployment.
 - Can only use a restricted number of services.
 - Issue support tickets, which lengthen approval cycles.
 - Begin to doubt the new platform.
@@ -80,9 +80,9 @@ Keep outsourcing in mind as a good cost-cutting strategy. But, make decisions wi
 
 Keep responsibility inside the company for these and other areas that are critical to your security estate. Use external partners to speed up the adoption journey. But, to avoid becoming dependent on providers, don't outsource everything.
 
-## Antipattern: Hire TDMs instead of developing cloud engineers
+## Antipattern: Hire technical decision makers instead of developing cloud engineers
 
-Companies place importance on finding the right personnel. As a result, they often hire or build up TDMs during initial cloud adoption phases. Successful cloud journeys rely on TDMs. But, more importantly, cloud adoptions need engineers with all-hands-on-deck mentalities and deep technical skills.
+Companies place importance on finding the right personnel. As a result, they often hire or build up TDMs during initial cloud adoption phases. Successful cloud journeys rely on TDMs. But more importantly, cloud adoptions need engineers with all-hands-on-deck mentalities and deep technical skills.
 
 ### Example: Hire TDMs only
 
@@ -90,10 +90,10 @@ A research institute hires several TDMs to lead its cloud journey. After the ini
 
 ### Preferred outcome: Use cloud engineers for the implementation phase
 
-Remember that engineers are essential for properly implementing cloud automation and landing zone concepts. Responsibilities and tasks can shift significantly when you adopt service models. By shifting responsibilities to a cloud provider, you can go into production faster. You can also use TDMs for decision making. But, use capable cloud engineers for tasks that require deep engineering knowledge. Then you can realize the advantages that the cloud provides.
+Remember that engineers are essential for properly implementing cloud automation and landing zone concepts. Responsibilities and tasks can shift significantly when you adopt service models. By shifting responsibilities to a cloud provider, you can go into production faster. You can also use TDMs for decision making, but use capable cloud engineers for tasks that require deep engineering knowledge. Then you'll realize the advantages that the cloud provides.
 
 ## Next steps
 
 - [Align responsibilities across teams](../organize/raci-alignment.md)
-- [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: silos and fiefdoms](../organize/fiefdoms-silos.md)
 - [Build a cost-conscious organization](../organize/cost-conscious-organization.md)

@@ -16,7 +16,7 @@ ms.custom: think-tank
 
 # Azure Synapse Analytics solutions and migration for Netezza
 
-As IBM support for Netezza ends, many organizations that currently use Netezza data warehouse systems are looking to take advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure. Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider.
+Many organizations that currently use Netezza data warehouse systems are looking to take advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure. Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider.
 
 Azure Synapse Analytics is a limitless analytics service that brings together enterprise data warehousing and big data analytics. It gives you the freedom to query data on your terms at scale by using either serverless on-demand or provisioned resources. Learn what to plan for as you migrate a legacy Netezza system to Azure Synapse.
 
@@ -32,7 +32,7 @@ At a high level, the migration process includes the steps that are listed in the
 
 | Preparation        | Migration                             | Post-migration |
 | :----------------- | :----------------------------- | :---------------- |
-| <ul><li> Define scope: what do we want to migrate?</li><li>Build an inventory of data and processes to migrate.</li><li>Define any data model changes.</li><li>Identify the best Azure and third-party tools and features to use.</li><li>Train staff early on the new platform.</li><li>Set up the Azure target platform.</li></ul> |  <ul><li> Start small and simple.</li><li>Automate where possible.</li><li>Use Azure built-in tools and features to reduce the migration effort.</li><li>Migrate metadata for tables and views.</li><li>Migrate relevant historical data.</li><li>Migrate or refactor stored procedures and business processes.</li><li>Migrate or refactor ETL or ELT incremental load processes.</li></ul> | <ul><li> Monitor and document all stages of the migration process.</li><li>Use experience gained to build a template for future migrations.</li><li>Reengineer the data model if necessary by using the new platform's performance and scalability.</li><li>Test applications and query tools.</li><li>Benchmark and optimize query performance.</li></ul> |
+| <li> Define scope: What do we want to migrate? <li> Build an inventory of data and processes to migrate. <li> Define any data model changes. <li> Identify the best Azure and third-party tools and features to use. <li> Train staff early on the new platform. <li> Set up the Azure target platform.</li> | <li> Start small and simple. <li> Automate where possible. <li> Use Azure built-in tools and features to reduce the migration effort. <li> Migrate metadata for tables and views. <li> Migrate relevant historical data. <li> Migrate or refactor stored procedures and business processes. <li> Migrate or refactor ETL or ELT incremental load processes.</li> | <li> Monitor and document all stages of the migration process. <li> Use experience gained to build a template for future migrations. <li> Reengineer the data model, if necessary, by using the new platform's performance and scalability. <li> Test applications and query tools. <li> Benchmark and optimize query performance.</li> |
 
 When you migrate from a legacy Netezza environment to Azure Synapse, you must consider some specific factors, in addition to the more general subjects described in the Netezza documentation.
 
@@ -42,7 +42,7 @@ Legacy Netezza environments typically evolve over time to encompass multiple sub
 
 - Proves the viability of migrating to Azure Synapse by quickly delivering the benefits of the new environment.
 - Allows in-house technical staff to gain experience with new processes and tools so that they can use them to migrate other areas.
-- Creates a template based on the current tools and processes to use in additional migration from the source Netezza environment.
+- Creates a template based on the current tools and processes to use in additional migrations from the source Netezza environment.
 
 A good candidate for an initial migration from a Netezza environment that would support these objectives typically is one that implements a Power BI/analytics workload rather than an OLTP workload. The workload should have a data model that can be migrated with minimal modifications, such as a star or snowflake schema.
 
@@ -76,7 +76,7 @@ As you plan your migration from a legacy Netezza environment to Azure Synapse, i
 
 In a Netezza environment, you might have multiple, separate databases for different parts of the overall environment. For example, you might have a separate database for data ingestion and staging tables, a database for core warehouse tables, and another database for data marts, sometimes called a *semantic layer*. Processing separate databases as ETL/ELT pipelines in Azure Synapse might require implementing cross-database joins and moving data between the separate databases.
 
-The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a series of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Netezza. If you use schemas in the Netezza environment, you might need to use a new naming convention to move the existing Netezza tables and views to the new environment. For example, you might concatenate the existing Netezza schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names.
+The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a set of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Netezza. If you use schemas in the Netezza environment, you might need to use a new naming convention to move the existing Netezza tables and views to the new environment. For example, you might concatenate the existing Netezza schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names.
 
 Another option is to use SQL views over the underlying tables to maintain the logical structures. There are some potential downsides to using SQL views:
 
@@ -115,7 +115,44 @@ Netezza implements some database objects that aren't directly supported in Azure
 
 - **Data type mapping:** Most Netezza data types have a direct equivalent in Azure Synapse. The following table shows the data types and the recommended approaches for mapping the data types.
 
-  Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
+| IBM Netezza data type | Azure Synapse SQL v2 data type |
+| :-------------------- | :----------------------------- |
+| bigint (int8) | bigint |
+| binary varying(n) (alias varbinary(n)) | varbinary(n) | |
+| binary(n) | binary(n) |
+| boolean (bool) | bit |
+| bpchar(n) | varchar(n) |
+| byteint (int1) | smallint |
+| character varying (n) (alias varchar(n)) | varchar(n) |
+| character(n) (alias char(n)) | char(n) |
+| dataslice | *Not Supported* |
+| date | date |
+| datetime | datetime |
+| decimal | decimal(18,0) |
+| decimal(p,s) | decimal(p,s) |
+| double | float(53) |
+| float | float |
+| float(p) | float(p) |
+| float4 | float(53) |
+| float8 | float(53) |
+| integer (alias int, int4) | int |
+| interval (alias timespan) | *Not Supported* |
+| national bpchar(n) | nvarchar(n) |
+| national character(n) (alias nchar(n)) | nchar(n) |
+| number(p,s) | decimal(p,s) |
+| numeric | decimal(18,0) |
+| numeric(p,s) | numeric (p,s)|
+| national character varying(n) (alias nvarchar(n)) | nvarchar(n) |
+| real | real |
+| rowid | *Not Supported* |
+| smallint (alias int2) | smallint |
+| st_geometry(n) | *Not Supported* |
+| time | time |
+| time with time zone (alias timetz) | datetimeoffset |
+| timestamp(p) | datetime2(p) |
+| transactionid | *Not Supported* |
+
+Note: Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
 
 - **SQL Data Manipulation Language (DML) syntax:** You should be aware of a few differences in SQL DML syntax between Netezza SQL and Azure Synapse.
 
@@ -175,7 +212,7 @@ You can access system catalog tables in Netezza by using a utility like nz_ddl_t
 
 - **Data extraction:** You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like nzsql and nzunload, and by using external tables. Compress the files by using Gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob Storage.
 
-  During a migration exercise, it's important to extract data as efficiently as possible. The recommended approach for Netezza is to use external tables, which also is the fastest method. You can complete multiple extracts in parallel to maximize the throughput for data extraction.
+  During a migration exercise, it's important to extract data as efficiently as possible. The recommended approach for Netezza is to use external tables, which is also the fastest method. You can complete multiple extracts in parallel to maximize the throughput for data extraction.
 
 Here's a simple example of an external table extract:
 

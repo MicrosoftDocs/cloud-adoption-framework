@@ -7,6 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: think-tank, e2e-aks
 ---
 
 # Manage modern container solutions clusters
@@ -97,7 +98,7 @@ AKS nodes are ephemeral in nature, and as such are not backed up in a way that c
 
 The platform operations section above illustrates a common conversation when managing AKS clusters. Are Kubernetes clusters a technology platform to be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? That question is different for different organizations. The constant seen across most organizations is that containers and AKS are designed to give the workload teams more flexibility in how they want to operate each workload, and provide specific features for those workloads to use in their architecture to benefit the application's owners and customers.
 
-Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate an AKS cluster using completely decentralized workload operations. In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) to get very specific on the types of operational processes and tools to use for your workload.
+Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate an AKS cluster using completely decentralized workload operations. In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) to get very specific on the types of operational processes and tools to use for your workload.
 
 ## Next step: Your next migration iteration
 

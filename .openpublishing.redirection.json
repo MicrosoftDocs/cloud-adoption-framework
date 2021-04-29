@@ -291,6 +291,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/innovate/ai/conversational-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate/best-practices/conversational-ai",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/getting-started/migrate.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
          "redirect_document_id": true

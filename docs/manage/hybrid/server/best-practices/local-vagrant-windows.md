@@ -124,7 +124,7 @@ If you want to demo/control the actual registration process, do the following:
 
     ![A screenshot of Windows PowerShell ISE.](./media/local-vagrant/vagrant-windows-ise.png)
 
-4. Paste the `Invoke-Expression "C:\runtime\vars.ps1"` command, the `az group create --location $env:location --name $env:resourceGroup --subscription $env:subscriptionId` command and the same `azcmagent connect` command you out and execute the script.
+4. Paste the `Invoke-Expression C:\runtime\vars.ps1` command, the `az group create --location $env:location --name $env:resourceGroup --subscription $env:subscriptionId` command and the same `azcmagent connect` command you out and execute the script.
 
     ![A screenshot of PowerShell ISE running a script.](./media/local-vagrant/vagrant-windows-ise-script.png)
 

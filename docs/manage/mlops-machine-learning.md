@@ -1,6 +1,6 @@
 ---
 title: MLOps with Azure Machine Learning
-description: Learn about machine learning operations (MLOps) principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
+description: Learn about MLOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -10,9 +10,9 @@ ms.subservice: operate
 ms.custom: think-tank
 ---
 
-# Machine learning operations with Azure Machine Learning
+# MLOps with Azure Machine Learning
 
-Machine learning operations (MLOps) is based on DevOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process in order to:
+*MLOps (machine learning operations)* is based on DevOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment. MLOps applies these principles to the machine learning process in order to:
 
 - Experiment and develop models more quickly.
 - Deploy models to production more quickly.
