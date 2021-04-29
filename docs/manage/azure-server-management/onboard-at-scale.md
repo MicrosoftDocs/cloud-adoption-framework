@@ -61,7 +61,7 @@ To assign the policies that described in the previous section:
 
 7. Select **Assign**.
 
-After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Microsoft Monitoring Agent is enabled on the VM by default.
+After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Log Analytics agent is enabled on the VM by default.
 
 ## Install agents on on-premises servers
 

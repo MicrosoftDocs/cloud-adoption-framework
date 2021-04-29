@@ -28,7 +28,7 @@ You know that innovation and digital transformation is critical to business succ
 > - Sometimes the attitude is "if we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
 > - Innovation is about the combination of people and technology.
 
-Organizations that successfully innovate towards digital transformation see vision, strategy, culture, unique potential, and capabilities as the foundational elements. They then turn to technology with a specific purpose in mind. Every company is becoming a software company. The hiring of software engineers is growing at a faster rate outside the tech industry than inside, according to LinkedIn data.
+Organizations that successfully innovate toward digital transformation see vision, strategy, culture, unique potential, and capabilities as the foundational elements. They then turn to technology with a specific purpose in mind. Every company is becoming a software company. The hiring of software engineers is growing at a faster rate outside the tech industry than inside, according to LinkedIn data.
 
 Innovation is accomplished when organizations support their people to create the value they seek. One group of those people, developers, is a catalyst for innovation. They play an increasingly vital role in value creation and growth across every industry. They're the builders of our era, writing the world's code and sitting at the heart of innovation. Innovative organizations build a culture that empowers developers to achieve more.
 

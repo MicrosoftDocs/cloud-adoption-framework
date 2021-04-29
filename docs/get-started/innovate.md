@@ -18,7 +18,7 @@ This guide uses the sections of the Cloud Adoption Framework that are highlighte
 
 ![The Cloud Adoption Framework methodologies, including the Innovate methodology.](../_images/get-started/innovation-map.png)
 
-_Figure 1: The Cloud Adoption Framework methodologies, including the Innovate methodology._
+*Figure 1: The Cloud Adoption Framework methodologies, including the Innovate methodology.*
 
 ## Step 1: Document the business strategy
 
