@@ -10,21 +10,6 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Holistic Approach to Cloud Security and Automation
-
-Just as DevOps brought operations closer to developers to focus on operations quality before deployment, DevSecOps brings security closer to developers. In this manner, teams pro-actively test for vulnerabilities and other security issues before it lands in production. This first part of this article refers to this as security in the pipeline.
-
-The second part of the article focuses on securing the pipeline, focussing on the people and processes required to introduce a little bit of healthy friction for the purpose of risk management.
-
-## DevSecOps & Security in the Pipeline
-
-When we "shift left" for security, we can bring the following into a DevOps pipeline for automation:
-
-- Vulnerability Scanning
-- Credential Scanning
-- Code Quality 
-- Updates, Security Patches
-
 ## Securing the Pipeline and CI/CD Workflow
 
 Automation and the agile methodology enables teams to deliver faster but also adds complexity to security because the workflow is extended to the developer teams themselves.
