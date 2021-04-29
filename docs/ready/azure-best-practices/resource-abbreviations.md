@@ -149,7 +149,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` |
-| Event hub | `Microsoft.EventHub namespaces/eventHubs` | `evh-` |
+| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt-` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop-` |
