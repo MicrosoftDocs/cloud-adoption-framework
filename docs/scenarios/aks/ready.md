@@ -20,7 +20,7 @@ With Azure landing zones, you can start with a small implementation and expand o
 
 When preparing any environment for sustained cloud adoption, we use the [Azure Landing Zones](../../ready/landing-zone/index.md) conceptual architecture to represent what a target end state should look like in Azure, as pictured below.
 
-[![Diagram that shows a conceptual architecture of an Azure Landing Zone](../../images/ready/alz-arch-cust-inline.png)](../../images/ready/alz-arch-cust-expanded.png#lightbox)
+[![Diagram that shows a conceptual architecture of an Azure Landing Zone](../../_images/ready/alz-arch-cust-inline.png)](../../_images/ready/alz-arch-cust-expanded.png#lightbox)
 
 When developing a long-term vision for landing zones, consider the design above. Working within this scenario, we focus on the most appropriate starting point to meet your strategic and planning requirements related to modern application platforms. This article is about the starting point, not necessarily all of the details required to reach the longer term target.
 
@@ -53,6 +53,17 @@ Selecting the best Azure Landing Zone implementation option will have a direct i
     - It is also the most common option for centralized teams who deliver container hosting operations, allowing developers to focus more on the application & less on developing for Kubernetes.
 
 The primary difference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.
+
+## Application platform overlay(s)
+
+Once the core AKS landing zone is deployed and ready for further application deployment, any additional application platform configuration could be applied to the container hosts. In the case of Azure Application Services for Kubernetes with Arc, this would include installation of a specific application platform on top of each of your clusters.
+
+Depending on your deployment pipeline and container registry, you have two options for adding the application platform overlays:
+
+- The overlay installation could be included in the container images in your container registry standardizing the application platform deployment with the container deployment.
+- Alternatively, the overlay could be deployed during your devops pipeline adding the runtime to an existing instance of your container hosts.
+
+The choice of these two options depends on host operations practices and the degree a variability in application runtimes across your portfolio of workloads.
 
 ## Azure Landing Zone design areas
 
