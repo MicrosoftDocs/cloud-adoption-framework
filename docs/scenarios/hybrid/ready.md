@@ -22,12 +22,20 @@ These are the key changes necessary to prepare a consistent environment for any 
 (hybrid and multicloud landing zone):
 
 - Hybrid and multicloud network connectivity
-- Common ID management
+- Common identity management
 - Integrated management and security
 - Unified operational process controls for operations, governance, and compliance
 - Unified and consistent development and DevOps across heterogeneous environments
 
 This article guides you through the considerations required for these environment configurations.
+
+## Configure your initial Azure environment
+
+For each cloud mix above, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
+
+- Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
+- Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
+- Do you have an [existing Azure environment to transition into enterprise-scale](../../ready/enterprise-scale/transition.md)?
 
 ## Evaluate your cloud mix
 
@@ -56,28 +64,6 @@ Here are the most important items to consider when you prepare any of your cloud
 - What mixture of hybrid, edge, and multicloud environments do you support today?
 - What mixture best aligns with your strategy for the future?
 - Do you want to operate each platform independently or through a unified operations approach?
-
-## Evaluate your cloud mix
-
-If you're unsure about your current cloud mix, the tools in Azure's control plane can help. Azure Arc, a built-in benefit of Azure Resource Manager, provides visibility into your cloud mix. Azure Arc extends across environments, and increases the discoverability of your assets, and, with greater visibility across your resources, is the first step towards taking control of your cloud mix. You can use Azure Arc (as a complimentary tool) for discovery across all your cloud platforms.
-
-![Illustration showing an overview of the visibility created across processes and controls of unified operations.](../../_images/hybrid/unified-operations-processes-controls.png)
-
-To start evaluating your cloud mix across multiple cloud providers, complete an inventory and tagging exercise in a few steps:
-
-- Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
-- Bring on and tag resources from AWS, GCP, or other cloud providers.
-- Query your resources to see where they're hosted.
-
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/hybrid/server/best-practices/arc-inventory-tagging.md).
-
-The following links will help you bring on and tag assets across each of your cloud providers:
-
-- **Azure assets**: [Linux VMs](../../manage/hybrid/server/best-practices/arm-template-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/arm-template-windows.md)
-- **Assets in your local datacenter**: [Linux VMs](../../manage/hybrid/server/best-practices/onboard-server-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/onboard-server-windows.md)
-- **VMware assets**: [Linux VMs](../../manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md) and [Windows VMs](../../manage/hybrid/server/best-practices/vmware-scaled-powercli-windows.md)
-- **AWS assets**: [Linux VMs with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-al2.md) and [AWS Ubuntu with Terraform](../../manage/hybrid/server/best-practices/aws-terraform-ubuntu.md)
-- **GCP assets**: [Ubuntu VMs](../../manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md) and [Windows VMs](../../manage/hybrid/server/best-practices/gcp-terraform-windows.md)
 
 ## Modify your environment to reflect your cloud mix
 
@@ -114,21 +100,15 @@ After establishing your Azure environment, consider modifications to:
 - **Backup and recovery**: It's common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. Often the result is that one of the cloud providers serves as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case.
 - **Cloud platform connectivity**: If your cloud platforms will share common recovery, operations, or governance resources, you might require connectivity between each cloud platform. How will you configure connectivity between each cloud platform?
 
-## Configure your initial Azure environment
-
-For each cloud mix above, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
-
-- Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
-- Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
-- Do you have an [existing Azure environment to transition into enterprise-scale](../../ready/enterprise-scale/transition.md)?
-
 ### The most important consideration
 
 **Will you operate each cloud independently or through a unified central operations approach?**
 
 Independent operations can double or triple your total cost of ownership (TCO). For some customers, TCO cost increases can be multiplied by over 10 times. To minimize costs and demands on your staff, a unified operations approach is best for all cloud mixes for your hybrid and multicloud strategy.
 
-To learn more about unification of your cloud operations, see the articles on [unified operations](./unified-operations.md), [governance](./govern.md), and [operations management](./manage.md) for hybrid and multicloud solutions.
+![Illustration showing an overview of the visibility created across processes and controls of unified operations.](../../_images/hybrid/unified-operations-processes-controls.png)
+
+To learn more about unified operations and your cloud operations, see the articles on [unified operations](./unified-operations.md), [governance](./govern.md), and [operations management](./manage.md) for hybrid and multicloud solutions.
 
 ## Next steps
 

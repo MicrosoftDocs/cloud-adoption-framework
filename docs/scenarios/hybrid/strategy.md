@@ -39,30 +39,7 @@ A hybrid and multicloud scenario is also commonly used as a tactic to accelerate
 - **Agility, global reach, and customer outcomes:** The ability to move between cloud providers allows businesses to more easily deploy to the cloud platform that can best address each of these business outcomes.
 - **Application innovation, data innovation, and data democratization outcomes:** Each outcome is accelerated by allowing development and analytics teams to manage and work with applications and data, regardless of the chosen cloud platform.
 
-## Technical considerations for hybrid and multicloud strategy
-
-Hybrid and multicloud connectivity, container hosting, and hyperconverged infrastructure can accelerate your strategy. But the following technical considerations should be included in your overall strategy and cloud adoption plan.
-
-How will you:
-
-- Maintain governance, management, and compliance across a hybrid and multicloud scenario?
-- Consistently manage identity and security?
-- Manage and govern data safely?
-- Safely transfer data across distributed environments?
-- Integrate disparate environments?
-
-## Expanding digital estate rationalization
-
-Hybrid and multicloud adoption efforts will change your rationalization criteria, so it's necessary to develop a plan for expanded rationalization options:
-
-- Working with assets that will **remain** in the on-premises datacenter, unchanged
-- Modernize to PaaS services that will **remain** in the datacenter
-- **Re-platform** assets to other cloud platforms
-- **Rehost portability** allowing workloads to move smoothly between hybrid and multicloud platforms
-
-These changes will impact the work required to reach your hybrid and multicloud strategy. This article outlines a number of impacts to the plans currently defined in the [Cloud Adoption Framework's Plan methodology](../../plan/index.md).
-
-## Match your cloud mix to hybrid and multicloud strategy
+## Impact of cloud mix on your strategy
 
 Your hybrid and multicloud strategy for applications and data will drive the answers to the questions below. Clearly identify what intended cloud mix is required, then consider the best configuration for your environment(s):
 
@@ -84,7 +61,7 @@ Each dark blue dot represents a workload—and each light blue circle a business
 
 - **Multicloud-first** customer: Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. You may be moving from a _hybrid first_ mix to an _Azure first_ mix as your cloud strategy matures. We also support customers making strategic decisions to prioritize hybrid or multicloud mixes, and Azure plays a role in each mix.
 
-## Unified operations considerations
+## Unified operations key considerations
 
 There might be diverse strategic impacts as a result of various hybrid and multicloud decisions. But there's one constant consideration in any strategy that involves a hybrid and multicloud scenario. Investments in unified operations and a single cloud control plane will reduce roadblocks to your hybrid and multicloud projects. The following key considerations are important for unified operations:
 
@@ -94,7 +71,7 @@ There might be diverse strategic impacts as a result of various hybrid and multi
 - **DevOps and flexible, cloud-native application deployments:** Organizations gain the agility to deploy application infrastructure through templates and application configurations through GitOps.
 - **Increased flexibility with platform as a service (PaaS):** Organizations also benefit from the ability to run PaaS services on their infrastructures of choice.
 
-Deploying a single enterprise control plane can accelerate hybrid and multicloud adoption. Organizations can develop cloud readiness with cloud skill-building efforts and process improvements that assume unified operations. Bring innovative cloud practices and technologies to on-premises environments while you prepare other workloads for migration to the cloud. A single cloud operations management dashboard can help you to manage and govern your operations consistently across on-premises, multicloud, and edge environments. You gain greater visibility into assets scattered across environments, cross-team accountability, and faster, consistent, and at-scale deployments for developers.
+Deploying a single enterprise control plane can accelerate hybrid and multicloud adoption. Organizations can develop cloud readiness with cloud skill-building efforts and process improvements that assume unified operations. Bring innovative cloud practices and technologies to on-premises environments, while you prepare other workloads for migration to the cloud. A single cloud operations management dashboard can help you to manage and govern your operations consistently across on-premises, multicloud, and edge environments. You gain greater visibility into assets scattered across environments, cross-team accountability, and faster, consistent, and at-scale deployments for developers.
 
 ## Accelerate hybrid and multicloud adoption with unified operations
 

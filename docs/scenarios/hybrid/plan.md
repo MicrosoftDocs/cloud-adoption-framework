@@ -1,7 +1,7 @@
 ---
 title: Plan methodology for hybrid and multicloud strategy
 description: Describe the scenario's impact on planning
-author: brianblanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -119,7 +119,7 @@ Azure Arc is a multicloud and on-premises management platform at the core of uni
 
 **Manage and operate all your resources as native Azure resources with a single pane of glass, consistently and at scale across disparate infrastructure, placing you in control** of resources across on-premises, multicloud, and edge environments, providing a single dashboard for your management, data services, governance, security, and identity. Azure Arc's unified operations approach offers you a **consistent visibility framework across distributed environments, reaching outside Azure and projecting your existing resources into Azure Resource Manager as first-class citizens.**
 
-## Azure Arc's main benefits
+## Unified operations considerations
 
 **Organize and govern across environments:** Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge and multicloud environments under control by centrally organizing and governing from a single place.
 
@@ -134,7 +134,7 @@ Planning efforts for unified operations and management assume that most assets f
 - **maintains regulatory and data sovereignty compliance** with standardized data governance, security, and Cost Management policies
 - **ensures uniform deployments and configuration** with consistent workload deployments, configured at scale
 
-### Benefits of Azure Arc-enabled infrastructure
+### Technical considerations for infrastructure in your cloud mix
 
 - **Reach out, and onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, bare-metal) with Azure Arc enabled servers.
 - **Use your existing SQL servers with Azure Arc with no migration necessary**, with inventory, governance, security, and proactive SQL Database assessments.
@@ -146,7 +146,7 @@ Planning efforts for unified operations and management assume that most assets f
 - **Deploy familiar Azure governance, security, inventory tracking and patch management tools** on auto-enrolled Azure Arc enabled servers.
 - **Monitor your full telemetry** across your cloud-native and on-premises resources in a single place with Azure Monitor.
 
-### Benefits of Azure Arc-enabled data services
+### Technical considerations for data services in your cloud mix
 
 - **Bring Azure data services to any infrastructure**, across on-premises, edge and multicloud using Kubernetes on any hardware.
 - **Remain current with fully automated updates, upgrades and policy-controlled deployments** like evergreen SQL and hyperscale deployment option of [Azure Database for PostgreSQL](/azure/postgresql/).
