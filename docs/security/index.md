@@ -94,7 +94,7 @@ This transformation will affect each security discipline differently. While all 
 
 - **Access Control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
 - **Security Operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continously reduce risk of breach
-- **Asset Protection:** Maximize protection of all assets (VMs, Data, Applications, Networks, and Identities) to minimize risk to the overall environment
+- **Asset Protection:** Maximize protection of all assets (Infrastructure, Devices, Data, Applications, Networks, and Identities) to minimize risk to the overall environment
 - **Security Governance:** Delegated decisions accelerate innovation and introduce new risks. Monitor decisions, configurations, and data to govern decisions made across the environment and within all workloads across the portfolio.
 - **Innovation Security:** As organization adopt DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
 
