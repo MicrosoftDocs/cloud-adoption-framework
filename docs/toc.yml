@@ -72,10 +72,10 @@ items:
         href: scenarios/hybrid/index.md
       - name: Modern containers
         href: scenarios/aks/index.md
-      - name: Virtual desktops
-        href: scenarios/wvd/index.md
       - name: SAP
         href: scenarios/sap/index.md
+      - name: Virtual desktops
+        href: scenarios/wvd/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
