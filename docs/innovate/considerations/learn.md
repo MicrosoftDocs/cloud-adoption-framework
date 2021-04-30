@@ -51,7 +51,4 @@ Few could deny the radical transformation within Microsoft culture that's occurr
 
 As a next step to understanding this methodology, see [Common blockers and challenges to innovation](./challenges.md) to prepare for the changes ahead.
 
-> [!div class="nextstepaction"]
-> [Understanding common blockers and challenges](./challenges.md)
-
 Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
