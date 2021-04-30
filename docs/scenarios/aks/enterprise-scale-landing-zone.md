@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 Prepare your enterprise-scale landing zone for a scalable Azure Kubernetes Service (AKS) cluster by using the AKS construction set. Learn about the assets that the AKS construction set brings to your project. The AKS construction set is a collection of templates that provides an architectural approach and reference implementation. The implementation follows the architecture and best practices of the Cloud Adoption Framework.
 
-The construction set templates are open source. You can adapt the templates to create an architecture that meets your needs. This article and related articles provide design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on these articles, can lay the groundwork for scalability.
+The construction set templates are open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
 
 ## To begin, implement an enterprise-scale landing zone
