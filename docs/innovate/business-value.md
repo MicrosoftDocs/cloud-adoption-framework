@@ -2,15 +2,13 @@
 title: Build business value through innovation
 description: Use the Cloud Adoption Framework for Azure to learn about business value, and how to build consensus around the definition of business value across stakeholders.
 author: BrianBlanchard
-keywords: business value, business value definition, what is business value, business values, business innovation
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: business value, business value definition, what is business value, business values, business innovation
 ---
 
 # Build consensus on the business value of innovation
@@ -74,7 +72,7 @@ It's fairly common for the answers to questions one and two to be misaligned. Du
   - [Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/)
   - [Deploy applications with Azure DevOps](/learn/paths/deploy-applications-with-azure-devops/)
 
-By following the business innovation methodology and the backlog management tools in each section of this article, you can help create solution alignment.
+By following the Innovate methodology and the backlog management tools in each section of this article, you can help create solution alignment.
 
 ## Next steps
 

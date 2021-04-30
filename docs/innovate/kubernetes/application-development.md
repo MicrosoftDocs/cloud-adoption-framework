@@ -7,9 +7,7 @@ ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom:
- - think-tank
- - seo-caf-innovate
+ms.custom: think-tank, seo-caf-innovate
 keywords: application development, application deployment, site reliability engineering
 ---
 
