@@ -63,5 +63,4 @@ There are two types of templates:
 ## Next steps
 
 Learn about design considerations for identity and access management for your AKS enterprise-scale scenario.
-
 - [Identity and access management for Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md)
