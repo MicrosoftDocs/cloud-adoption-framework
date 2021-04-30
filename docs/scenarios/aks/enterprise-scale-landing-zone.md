@@ -56,12 +56,7 @@ The following conceptual reference architecture is an example that shows design 
 
 ## Obtain the AKS construction set
 
-The AKS construction set is an open-source collection of Terraform templates, available in [this GitHub repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
-
-There are two types of templates:
-
-- Terraform modules that deploy infrastructure components like virtual machines, networks, or storage to Azure.
-- Ansible playbooks that run different roles to configure virtual machines, and to install AKS HANA and required applications, on the already deployed infrastructure.
+The AKS construction set is a collection of open-source Terraform templates. Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see [Enterprise-Scale Construction Set for Azure Kubernetes Services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
 
 ## Next steps
 
