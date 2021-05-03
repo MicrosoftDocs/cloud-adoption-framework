@@ -12,6 +12,7 @@ ms.custom: internal
 
 Point to https://docs.microsoft.com/en-us/azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
+https://docs.microsoft.com/en-us/security/compass/network-security-containment
 
 # Generic space holder - remember to edit the metadata before publication
 
