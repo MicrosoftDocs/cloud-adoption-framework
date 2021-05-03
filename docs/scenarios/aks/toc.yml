@@ -45,7 +45,7 @@ items:
   - name: Migrate to modern app platforms
     href: migrate.md
   - name: Innovate with modern app platforms
-    href: /azure/architecture/reference-architectures/containers/aks-start-here?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+    href: innovate.md
   - name: Govern your portfolio
     href: govern.md
   - name: Manage your portfolio

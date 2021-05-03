@@ -83,6 +83,6 @@ All Azure Landing Zones are designed around a set of common design areas listed 
 The following list of articles will take you to guidance found at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Migrate workloads to modern app platforms](./migrate.md)
-- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Innovate using modern app platform solutions](./innovate.md)
 - [Govern modern app platform solutions](./govern.md)
 - [Manage modern app platform solutions](./manage.md)

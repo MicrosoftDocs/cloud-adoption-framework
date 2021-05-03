@@ -152,7 +152,7 @@ The following list of articles will take you to guidance at specific points in t
 
 - [Review your environment or Azure landing zone(s)](./ready.md)
 - [Migrate workloads to modern app platforms](./migrate.md)
-- [Innovate using modern app platform solutions](/azure/architecture/reference-architectures/containers/aks-start-here?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Innovate using modern app platform solutions](./innovate.md)
 - [Govern modern app platform solutions](./govern.md)
 - [Manage modern app platform solutions](./manage.md)
 - [See container and compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree)
