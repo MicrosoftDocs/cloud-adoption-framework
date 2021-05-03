@@ -61,9 +61,7 @@ The primary use cases to perform a resource move is when you want to consolidate
 
 When performing a resource move, both the source resource group and the target resource group are locked (this lock will not affect any of the resources in the resource group) during the move operation, meaning you cannot add, update, or delete resources in the resource groups. A resource move operation will not change the location of the resources.
 
-For more guidance on how to move resources across resource groups and subscriptions in the same tenant please refer to the [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription) article. 
-
-[Azure Resource Mover](/azure/resource-mover/overview) could be used in case you plan on deploying Enterprise-Scale in a new region and you would like to move certain resources from the original region where they are currently deployed to the new region. Please review and evaluate beforehand the [resources that can be moved across regions](/azure/resource-mover/overview#what-resources-can-i-move-across-regions) with Azure Resource Mover.
+For more guidance on how to move resources across resource groups and subscriptions in the same tenant please refer to the [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription) article.
 
 ### Before you move resources
 
