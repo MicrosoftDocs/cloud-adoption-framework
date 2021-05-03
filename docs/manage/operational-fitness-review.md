@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 

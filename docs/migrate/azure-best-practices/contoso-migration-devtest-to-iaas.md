@@ -204,7 +204,7 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 
 1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**. Then select **Replicate**.
 
-    ![Screenshot that shows the Replicate button under migration tools.](./media/contoso-migration-devtest-to-iaas/select-replicate.png)
+    ![Screenshot that shows the **Replicate** button under migration tools.](./media/contoso-migration-devtest-to-iaas/select-replicate.png)
     *Figure 8: Replicating VMs.*
 
 2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
