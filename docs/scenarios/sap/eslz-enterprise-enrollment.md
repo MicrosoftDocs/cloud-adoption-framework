@@ -1,12 +1,12 @@
 ---
-title: 
-description: 
-author: JeffreyMitchell
+title: Enterprise enrollment considerations for SAP
+description: SAP guidelines for enterprise enrollment
+author: brianblanchard
 ms.author: brblanch
-ms.date: 3/12/2021
+ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: migrate
 ms.custom: think-tank, e2e-sap
 ---
 

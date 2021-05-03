@@ -1,7 +1,7 @@
 ---
-title: 
-description: 
-author: 
+title: Autoamted tool to review Azure Landing Zones for SAP
+description: The following tool will aid in review of any Azure Landing Zone to prepare for production release of SAP.
+author: brianblanchard
 ms.author: brblanch
 ms.date: 3/12/2021
 ms.topic: conceptual

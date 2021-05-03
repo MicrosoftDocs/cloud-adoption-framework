@@ -1,6 +1,6 @@
 ---
 title: Plan for modern app platforms
-description: Describe the scenario's impact on planning
+description: Develop a plan for cloud adoption with a focus on modern app platform data points and activities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
