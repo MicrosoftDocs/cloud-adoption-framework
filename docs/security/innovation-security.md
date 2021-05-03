@@ -12,47 +12,47 @@ ms.custom: internal
 
 # Innovation Security
 
-Innovation is the lifeblood of growth and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Most frequently, by securing the Development or DevOps process using a DevSecOps approach.
+Innovation is the lifeblood of an organization in the digital age needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or DevSecOps method to rapidly innovate without waiting for the traditional waterfall ship schedule that can take months or years between releases.
 
 ![DevSecOps Heart](./media/DevSecOpsHeart.png)
 
-Developing new capabilites and applications requires successfully meeting three different types of requirements in a rapidly evolving world:
- - **Business/Development (Dev)** - Your application must business and user needs as they rapidly evolve.
+Developing new capabilities and applications requires successfully meeting three different requirement types:
+ 
+ - **Business/Development (Dev)** - Your application must meet business and user needs (which are often rapidly evolving).
  - **Security (Sec)** - Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
  - **IT Operations (Ops)** - Your application must be reliable and perform well.
-
-Integrating these cultures and goals together can be challenging when building a DevSecOps strategy, but doing so allows you to embrace the fast pace of change and quickly pivot the team's focus to improving security, operational stability, or adding business features on any given sprint without waiting for the traditional waterfall ship schedule. 
-
-Cloud technologies enable organizations to innovate faster than ever before. Rapidly implementing new ideas and turning them into products and services at a rate that was not previously possible. Attackers also benefit from the speed of this platform and the challenge of keeping security controls current.
-
-This article shares Microsoft's learnings on integrating modern security practices (such as DevSecOps) into innovation processes.  A key part of this is aligning security, development, and operational practices.
-
-## Secure by design
-
-As organization adopt DevOps and other rapid innovation methodologies, security must be a thread woven throughout the tapestry of the organization. 
-
-Security must be core part of the envisioning, design, implementation, and operation of services and products. As development teams shift to DevOps and adopt cloud technologies, security must be a part of that transformation. 
-
-**Security for DevOps and Cloud** - As part of their development environment, security tools and techniques should be integrated throughout the process and made as invisible as possible. Security should show up where its needed. As a natural part of the workflow, to avoid a "quality gate" role at the end which slows deployment and creates unneccesary friction.
-
-**DevOps and Cloud for Security** - Security should also leverage the speed of the DevOps/DevSecOps cycle and cloud technologies to improve security. Cloud technology offers rapid updating of security tools, real-time access to threat intelligence, easy ability to segment and contain risk, and more. The DevOps/DevSecOps process enables teams to rapidly address security issues rapidly as a natural part of the process/workflow. Automation in the cloud is much more sophisticated and can remove manual steps during the development cycle, further amplifying these benefits. 
-
-This approach is a huge benefit, but can also introduce a risk of unintentional security issues if not approached correctly.
-Building security checks into development cycles can reduce the risk of tokens or credentials being checked into a code repository. Scanning for vulnerabilities in third-party libraries can also help to reduce the risk in code and in environments.
-
-Secure by design helps organizations become both more productive and more security, sidestepping natural issues with security as a "quality gate" after development finishes in a traditional waterfall approach.
 
 ## What is DevSecOps?
 
 Technology innovation is frequently developed in the context of a rapid lean/agile development approach that combines development and operations together into a *DevOps* process. We have learned that integrating security into that process is critical to mitigate risk to the innovation process, the organization's growth, and the existing assets in the organizations. Integrating security into the process creates a ***DevSecOps*** process.
 
-![Role of Security in Development](./media/security-in-dev.png)
+## Leadership and DevSecOps Culture
 
-DevSecOps is the integration of security into every stage of the DevOps lifecycle from idea inception through envisioning, architectural design, iterative application development and into operations. The first challenges to address with DevSecOps is the cultural element. Teams must align simultaneously to goals of innovation speed, reliability, and security resilience. The return on this cultural investment continuously pays off with the removal of removing internal friction, leading to rapid, reliable, and safe innovation. 
+Meeting these three requirements often requires merging these three cultures together to ensure that all team members are working together to common goals and aren't working against each other. 
 
-DevOps expanded the traditional development model (people, process, and technology) to include operations teams and reduce friction having them separated. Similarly, DevSecOps expands DevOps to  reduce the friction from separate or disparate security teams.  
+Integrating these cultures and goals together into a true DevSecOps approach can be challenging, but is always worth it. Many organizations today experience a high level of unhealthy friction from Development, IT Operations, and Security teams working independently, creating issues with
 
-**Development, Security, Operations**. Innovation and development are inherently complicated processes and it's extremely difficult to apply operational reliability and security assurances after the fact on a complex project. These three functions do their best work together in a common model, sharing context and working towards shared goals. 
+ - Slow value delivery and low agility
+ - Quality and performance issues
+ - Security issues
+
+While a small number of issues is normal and expected with new development, inter-team fighting often dramatically increases the number and severity of these issues. This is often because one or two teams have a political advantage and are repeatedly allowed to override requirements of other teams, allowing those neglected issues to grow in volume and seriousness. Left unsolved, this dynamic typically typically gets worse with DevOps as the speed of decisions increase to meet the rapid evolution of business needs and customer preferences.
+
+Solving these problems requires creating a shared culture that values Dev, Sec, and Ops requirements that is supported by leadership. This approach will allow your teams to work better together and solve the most urgent issues on any given sprint, whether they are improving security, operational stability, or adding critical business features. 
+
+## Secure by design and shifting left
+
+As organization adopt DevOps and other rapid innovation methodologies, security must be a thread woven throughout the tapestry of the organization and development processes. Integrating security late in the process is expensive and difficult to fix. 
+
+You must shift security "left" in the timeline to integrate it into the envisioning, design, implementation, and operation of services and products. As development teams shift to DevOps and adopt cloud technologies, security must be a part of that transformation. 
+
+:::image type="content" source="./media/waterfall-devops.png" alt-text="Security Throughout the Process" lightbox="./media/waterfall-devops.png":::
+
+In the waterfall model, security was traditionally a "quality gate" after development finishes in a traditional waterfall approach.
+
+DevOps expanded the traditional development model (people, process, and technology) to include operations teams and reduce friction having them separated. Similarly, DevSecOps expands DevOps to reduce the friction from separate or disparate security teams.  
+
+DevSecOps is the integration of security into every stage of the DevOps lifecycle from idea inception through envisioning, architectural design, iterative application development and into operations. The first challenges to address with DevSecOps is the cultural element. Teams must align simultaneously to goals of innovation speed, reliability, and security resilience. With mutual understanding and mutual respect for each other's needs, the teams will work the most important issues first regardless of source. 
 
 [The Cloud Adoption Framework's Organize methodology provides some further context on DevSecOps structures in an organization](../organize/cloud-security-application-security-devsecops.md)
 
@@ -60,7 +60,16 @@ DevOps expanded the traditional development model (people, process, and technolo
 
 DevOps brings agility, DevSecOps brings secure agility. 
 
-As nearly every organization on the planet engages in software development to innovate and gain competitive advantage, securing the devops process is critical to the success of the organization. Attackers have taken notice of this shift to custom applications are increasingly attacking custom applications during the course of their attacks. These new applications are also often rich sources of valuable intellectual property, containing valuable new ideas that haven't yet been commoditized by the marketplace.
+As nearly every organization on the planet looks to software development to gain a competitive advantage through innovation, securing the devops process is critical to the success of the organization. Attackers have taken notice of this shift to custom applications are increasingly attacking custom applications during the course of their attacks. These new applications are also often rich sources of valuable intellectual property, containing valuable new ideas that haven't yet been commoditized by the marketplace.
+
+Protecting this innovation requires that organizations address potential security weaknesses and attacks in both the development process and the infrastructure hosting the applications (whether cloud or on-premises)
+
+:::image type="content" source="./media/attacker-opportunities.png" alt-text="Attacker Opportunities" lightbox="./media/attacker-opportunities.png":::
+
+Attackers may exploit weaknesses in both
+
+ - **Development Process** - Attackers may find weaknesses in the application design process (e.g. using weak or no encryption for communications), or in the implementation of of the design (e.g. code doesn't check input and allows common attacks like SQL injection). Additionally, attackers may implant backdoors in code that they later return to exploit in your environment or in your customer's environment. 
+ - **IT Infrastructure** - Attackers can compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers may also conduct a multi-stage attacks that use stolen credentials or malware to access development infrastructure from other parts of the environment.   
 
 Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both
 
