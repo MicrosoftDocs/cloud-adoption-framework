@@ -69,6 +69,13 @@ When planning an Azure Machine Learning deployment for an enterprise environment
 
 We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
 
+### Azure Storage migration  overview
+
+To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](..windowsserverdocs/blob/master/WindowsServerDocs/storage/storage-migration-service/overview), for two migration scenarios:
+
+- Migration of unstructured data, such as files and objects
+- Migration of block-based devices, such as disks and storage area networks (SANs)
+
 ## January 2021
 
 To help you accelerate adoption and innovation, we've added new information about using GitHub and updated best practices for machine learning. We've published a new article and video to help you choose the best landing zone.
