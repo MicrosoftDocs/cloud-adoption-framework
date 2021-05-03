@@ -74,7 +74,7 @@ You can migrate the existing system as several layers; for example, the data ing
 - **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics might eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It might be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, you can achieve the process for data migration of historical data and possibly also incremental updates as shown in this diagram:
 
    ![Diagram that illustrates a modern data warehouse.](../../../_images/analytics/schema-migration-ddl.png)
-    _Figure 1: A modern data warehouse._
+    *Figure 1: A modern data warehouse.*
 
 If you can use these or similar approaches, the number of tables to be migrated is reduced. Some processes might be simplified or eliminated, again reducing the migration workload. The applicability of these approaches depends on the individual use case. But, the general principle is to consider using the features and facilities of the Azure ecosystem, where possible, to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions, such as backup/restore and workflow management and monitoring.
 
@@ -198,7 +198,7 @@ This section describes the features available within Azure Synapse Analytics tha
 
 The platform's features run performance tuning on the database that will be migrated. Indexes, data partitioning, and data distribution are examples of such performance tuning. When you're preparing for migration, documenting the tuning can capture and reveal optimizations that you can apply in the Azure Synapse Analytics target environment.
 
-For example, the presence of a non-unique index on a table can indicate that fields used in the index are used frequently for filtering, grouping, or joining. This will still be the case in the new environment, so keep it in mind when you're choosing which fields to index there. For more detailed information about Teradata or Netezza environments, see Azure the Synapse Analytics articles about [solutions and migration for Teradata](./analytics-solutions-teradata.md) and [solutions and migration for Netezza](./analytics-solutions-netezza.md).
+For example, the presence of a non-unique index on a table can indicate that fields used in the index are used frequently for filtering, grouping, or joining. This will still be the case in the new environment, so keep it in mind when you're choosing which fields to index there. For more detailed information about Teradata or Netezza environments, see the Azure Synapse Analytics articles about [solutions and migration for Teradata](./analytics-solutions-teradata.md) and [solutions and migration for Netezza](./analytics-solutions-netezza.md).
 
 Use the performance and scalability of the target Azure Synapse Analytics environment to experiment with different performance options like data distribution. Determine the best choice of alternative approaches (for example, replicated versus hash-distributed for a large dimension table). This doesn't mean that data must be reloaded from external sources. It's relatively quick and easy to test alternative approaches in Azure Synapse Analytics by creating copies of any table with different partitioning or distribution options via a `CREATE TABLE AS SELECT` statement.
 
