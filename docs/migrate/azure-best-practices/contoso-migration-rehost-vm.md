@@ -124,7 +124,7 @@ To migrate the VMs to Azure, Contoso needs a virtual network in which Azure VMs 
 
     1. From Azure Migrate, download the OVA image and import it into VMware.
 
-       ![Screenshot that shows the **Download** button for the `O V A` file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
+       ![Screenshot that shows the **Download** button for the O V A file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
     1. Start the imported image and configure the tool, including the following steps:
 

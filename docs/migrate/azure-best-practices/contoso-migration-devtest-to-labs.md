@@ -129,7 +129,7 @@ They set these up as follows:
 
 The admins follow the link to the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p/) and provision a new subscription, which saves them up to 80 percent on their systems. This offer allows them to run Windows 10 images on Azure for dev/test. They will gain access to [Windows Virtual Desktop](/azure/virtual-desktop/overview) to simplify the management experience of the remote developers.
 
-![Screenshot of a Pay-As-You-Go Dev/Test offer, with an Activate button.](./media/contoso-migration-devtest-to-labs/devtest-subscription.png)
+![Screenshot of a Pay-As-You-Go Dev/Test offer, with an **Activate** button.](./media/contoso-migration-devtest-to-labs/devtest-subscription.png)
 *Figure 3: An Azure Dev/Test subscription offer.*
 
 With their new subscription provisioned, Contoso admins use the Azure portal to create a new DevTest Labs instance. The new lab is created in the `ContosoDevRG` resource group.
@@ -145,7 +145,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
 
    1. In the portal, Contoso opens the DevTest Labs instance and selects **Configuration and policies**.
 
-      ![Screenshot of **Configuration and policies** in the settings for ContosoDevTestLabs.](./media/contoso-migration-devtest-to-labs/configure-lab.png)
+      ![Screenshot of **Configuration and policies** in the settings for `ContosoDevTestLabs`.](./media/contoso-migration-devtest-to-labs/configure-lab.png)
 
       *Figure 5: DevTest Labs instance: configuration and policies.*
 
@@ -218,7 +218,7 @@ Contoso needs to create a Windows Virtual Desktop base for remote developers.
 
 1. After the VM is created, Contoso's remote developers can connect to and use this development workstation for their work. The selected artifacts are installed, saving developers time in configuring their workstation.
 
-   ![Screenshot that shows information about the RemoteDevs virtual machine.](./media/contoso-migration-devtest-to-labs/remote-vm.png)
+   ![Screenshot that shows information about the `RemoteDevs` virtual machine.](./media/contoso-migration-devtest-to-labs/remote-vm.png)
 
    *Figure 15: A remote developer VM.*
 
@@ -264,13 +264,13 @@ The next steps provision application and database VMs through the formulas:
 
 1. With the formulas created, Contoso next selects **All virtual machines** and then the **Windows2012AppDevVmBase** formula to match the configuration of its current application development VMs.
 
-   ![Screenshot that shows the selection of an app VM as a base.](./media/contoso-migration-devtest-to-labs/app-vm.png)
+   ![Screenshot that shows the selection of an application VM as a base.](./media/contoso-migration-devtest-to-labs/app-vm.png)
 
    *Figure 21: An application development VM.*
 
 1. Contoso configures the VM with the size and artifacts that are required for this application VM.
 
-   ![Screenshot that shows size and artifact selections for an app VM.](./media/contoso-migration-devtest-to-labs/app-vm-configuration.png)
+   ![Screenshot that shows size and artifact selections for an application VM.](./media/contoso-migration-devtest-to-labs/app-vm-configuration.png)
 
    *Figure 22: Size and artifact configurations for a VM.*
 

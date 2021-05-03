@@ -6,7 +6,7 @@ ms.author: magoedte
 ms.date: 03/22/2021
 ms.topic: guide
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ---
 
 # Cloud monitoring guide: Observability
