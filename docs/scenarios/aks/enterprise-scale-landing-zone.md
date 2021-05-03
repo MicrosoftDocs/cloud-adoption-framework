@@ -10,12 +10,12 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
+
 # Construction set for AKS enterprise-scale scenario
 
-Prepare your enterprise-scale landing zone for a scalable Azure Kubernetes Service (AKS) cluster by using the AKS construction set. Learn about the assets that the AKS construction set brings to your project. The AKS construction set is a collection of templates that provides an architectural approach and reference implementation. The implementation follows the architecture and best practices of the Cloud Adoption Framework.
+The enterprise scale AKS construction set represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) landing zone. Prepare your enterprise-scale landing zone for a scalable Azure Kubernetes Service (AKS) cluster by using the AKS construction set. Learn about the assets that the AKS construction set brings to your project. The AKS construction set is a collection of templates that provides an architectural approach and reference implementation. The implementation follows the architecture and best practices of the Cloud Adoption Framework.
 
 The construction set templates are open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
-
 
 ## To begin, implement an enterprise-scale landing zone
 
@@ -33,9 +33,7 @@ The construction set approach to landing zones provides these assets to support 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
 - The landing zone architecture
-- An implementation that includes:
-  - A deployable reference capable of creating the environment for your AKS deployment
-  - A Microsoft-approved AKS reference implementation to test the deployed environment
+- A Microsoft-approved AKS reference implementation based on the [AKS secure baseline](https://github.com/mspnp/aks-secure-baseline)
 
 ## Design guidelines
 
@@ -50,13 +48,15 @@ These articles provide guidelines for the AKS enterprise-scale scenario:
 
 ## Example conceptual reference architecture
 
-The following conceptual reference architecture is an example that shows design areas and best practices.
+The following conceptual reference architecture is an example that shows a golden state for an enterprise scale landing zone with a corporate landing zone subscription and shows design areas and best practices.
 
-![Responsibility zones](./media/aks-enterprise-scale-landing-zone.png)
+![Golden state Architecture for AKS Construction Set](./media/golden-state-enterprise-architecture-aks.png)
 
-## Obtain the AKS construction set
+## AKS Construction Set RI for Online Landing Zone
 
-The AKS construction set is a collection of open-source Terraform templates. Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see [Enterprise-Scale Construction Set for Azure Kubernetes Services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
+The AKS construction set reference implementation (RI) is an open-source collection of Terraform templates. Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see [Enterprise-Scale Construction Set for Azure Kubernetes Services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This RI currently deploys a simplistic version of an AKS implementation that can sit in its own subscription within the online management group of an ESLZ. An application deployed in the subscription for an online landing zone will be internet-facing, and does not require hybrid connectivity.
+
+![Reference Implementation](./media/aks-eslz-reference-implementation.png)
 
 ## Next steps
 
