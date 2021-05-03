@@ -46,7 +46,7 @@ As organization adopt DevOps and other rapid innovation methodologies, security 
 
 You must shift security "left" in the timeline to integrate it into the envisioning, design, implementation, and operation of services and products. As development teams shift to DevOps and adopt cloud technologies, security must be a part of that transformation. 
 
-:::image type="content" source="./media/waterfall-devops.png" alt-text="Security Throughout the Process" lightbox="./media/waterfall-devops.png":::
+:::image type="content" source="./media/waterfall-devops-popout.png" alt-text="Security Throughout the Process" lightbox="./media/waterfall-devops.png":::
 
 In the waterfall model, security was traditionally a "quality gate" after development finishes in a traditional waterfall approach.
 
@@ -64,7 +64,7 @@ As nearly every organization on the planet looks to software development to gain
 
 Protecting this innovation requires that organizations address potential security weaknesses and attacks in both the development process and the infrastructure hosting the applications (whether cloud or on-premises)
 
-:::image type="content" source="./media/attacker-opportunities.png" alt-text="Attacker Opportunities" lightbox="./media/attacker-opportunities.png":::
+:::image type="content" source="./media/attacker-opportunities-popout.png" alt-text="Attacker Opportunities" lightbox="./media/attacker-opportunities.png":::
 
 Attackers may exploit weaknesses in both
 
