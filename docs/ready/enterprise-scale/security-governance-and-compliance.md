@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale security, governance, and compliance
-description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
+description: Learn about enterprise-scale security, governance, and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
