@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-sap
 
 # Review Azure Landing Zones for SAP on Azure
 
+TODO: Delete this article, unless completed in time for TOC updates.
+
 ## Review strategic objectives
 
 - Review the cloud adoption strategy
