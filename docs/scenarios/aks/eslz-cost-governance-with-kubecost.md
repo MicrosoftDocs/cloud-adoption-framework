@@ -3,7 +3,7 @@ title: Cost Governance with Kubecost
 description: Learn about  AKS cost management.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 03/01/2021
+ms.date: 04/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 <!-- docutune:casing "Contoso Financials" -->
 
-## Cost Governance with Kubecost
+# Cost Governance with Kubecost
 
 Cost governance is the continuous process of implementing policies to control costs. In the Kubernetes context, there are several ways organizations can control and optimize costs. These include native Kubernetes tooling to manage and govern resource usage and consumption and proactively monitor and optimize the underlying infrastructure.
 
