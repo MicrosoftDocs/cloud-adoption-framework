@@ -70,7 +70,7 @@ Most organizations are coming to find that DevOps or DevSecOps for any given wor
 
 This diagram depicts the lifecycle of this kind of innovation factory approach:
 
-:::image type="content" source="./media/devsecops-overview.png" alt-text="DevSecOps Phases" lightbox="./media/devsecops-overview.png":::
+:::image type="content" source="./media/devsecops-overview.png" alt-text="DevSecOps Phases" lightbox="./media/devsecops-overview-popout.png":::
 
 Secure Innovation is an integrated approach for both of these phases:
 
