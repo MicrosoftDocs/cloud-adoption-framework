@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Network topology and connectivity considerations for Azure Kubernetes Service (AKS)
+# Network topology and connectivity considerations for AKS
 
 <!-- docutune:casing "Basic and Standard" -->
 

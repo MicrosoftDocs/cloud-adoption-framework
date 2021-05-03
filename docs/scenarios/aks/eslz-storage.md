@@ -1,6 +1,6 @@
 ---
-title: AKS enterprise-scale storage
-description: AKS guidelines for enterprise-scale storage
+title: Storage considerations for AKS
+description: Storage considerations for AKS
 author: gbowerman
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: migrate
 ms.custom: think-tank, e2e-aks
 ---
 
-# AKS enterprise-scale storage
+# Storage considerations for AKS
 
 Your organization or enterprise needs to design suitable, AKS platform-level capabilities to meet their specific requirements. Specifically, these application workloads have storage requirements that probably differ. There are multiple considerations when choosing the storage needs for these applications such as performance, persistence, accessibility, and cost. Kubernetes provides different storage concepts to suit those needs and specifically in AKS you have to choose the right service for each application.
 

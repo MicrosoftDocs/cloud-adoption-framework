@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Business continuity and disaster recovery considerations for Azure Kubernetes Service
+# Business continuity and disaster recovery considerations for AKS
 
 Your organization needs to design suitable Azure Kubernetes Service (AKS) platform-level capabilities to meet its specific requirements. These application services have requirements related to recovery time objective (RTO) and recovery point objective (RPO). There are multiple considerations to address for AKS disaster recovery. Your first step is to define a service-level agreement (SLA) for your infrastructure and application. Learn about the [SLA for Azure Kubernetes Service (AKS)](https://azure.microsoft.com/support/legal/sla/kubernetes-service/v1_1/). See the **SLA details** section for information about monthly uptime calculations.
 

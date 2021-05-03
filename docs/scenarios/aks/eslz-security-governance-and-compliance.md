@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 <!-- docutune:casing "Contoso Financials" -->
 
-# Governance disciplines for Azure Kubernetes Service (AKS)
+# Governance disciplines for AKS
 
 This article walks through aspects of Azure Kubernetes Service (AKS) security governance to think about before implementing any solution.
 

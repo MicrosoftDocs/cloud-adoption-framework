@@ -10,7 +10,7 @@ ms.subservice: overview
 ms.custom: think-tank, e2e-aks
 ---
 
-# Modern container solutions in Azure
+# Modern app platform solutions in Azure
 
 A number of Azure products and services can support your modern app platform needs. Selecting the right product requires intimate knowledge of the application and operations needs. To make that selection process simpler, this article will help prioritize which products to consider based on a few strategic questions:
 

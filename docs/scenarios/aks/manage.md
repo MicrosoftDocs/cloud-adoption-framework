@@ -10,7 +10,7 @@ ms.subservice: operate
 ms.custom: think-tank, e2e-aks
 ---
 
-# Manage modern app platform solutions clusters
+# Manage modern app platform clusters
 
 The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This guidance might still apply for organizations that have a mixture of infrastructure as a service (IaaS), platform as a service (PaaS), and containerized workloads. This article outlines what you need to integrate into your existing operations to prepare for container management. It also highlights the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
 

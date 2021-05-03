@@ -1,6 +1,6 @@
 ---
-title: AKS enterprise-scale scalability
-description: AKS guidelines for enterprise-scale scalability
+title: Scalability considerations for AKS environments
+description: Scalability considerations for AKS environments
 author: xstabel
 ms.author: ctalaver
 ms.date: 03/01/2021
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 <!-- docutune:casing "HPA" -->
 
-# AKS enterprise-scale scalability
+# Scalability considerations for AKS environments
 
 AKS can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding node pools with special capabilities like GPU, or application needs, in this case you have several factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
 
