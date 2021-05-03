@@ -1,6 +1,6 @@
 ---
 title: "Enterprise-scale support for Windows Virtual Desktop"
-description: Learn how enterprise-scale support can accelerate the adoption of Windows Virtual Desktop.
+description: Learn how enterprise-scale support for the Windows Virtual Desktop Construction Set can accelerate the adoption of Windows Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
