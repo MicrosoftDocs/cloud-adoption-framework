@@ -28,7 +28,7 @@ If you haven't already selected an Azure landing zone implementation approach, r
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
 - [Management and monitoring](eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Security governance and compliance](eslz-security-governance-and-compliance.md)
+- [Security, governance, and compliance](eslz-security-governance-and-compliance.md)
 - [Platform automation and DevOps](eslz-platform-automation-and-devops.md)
 
 The primary deference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.

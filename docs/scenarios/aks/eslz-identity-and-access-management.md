@@ -3,7 +3,7 @@ title: Enterprise-scale identity and access management for AKS
 description: Describes how this enterprise-scale scenario can improve identity and access management for the Azure Kubernetes Service.
 author: TomGeske
 ms.author: thomasge
-ms.date: 03/01/2021
+ms.date: 04/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -16,9 +16,9 @@ Your organization or enterprise needs to design suitable security settings to me
 
 ## Design considerations
 
-- Decide what cluster identity is being used (managed identity or service principal).
-- Decide how to authenticate cluster access (certificate-based or Azure Active Directory).
-- Decide on a multitenancy cluster and how to set up role-based access control (RBAC) in Kubernetes.
+- Decide what cluster identity is being used ([managed identity](/azure/aks/use-managed-identity.md) or [service principal](/aks/kubernetes-service-principal)).
+- Decide how to authenticate cluster access (client certificate-based or [Azure Active Directory](/azure/aks/managed-aad)).
+- Decide on a [multitenancy cluster](/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
   - Decide on a method for isolation (namespace, network policy, compute (node pool), or cluster).
   - Decide about Kubernetes RBAC roles and compute allocation per application team for isolation.
   - Decide whether application teams can read other workloads in their cluster or in other clusters.
@@ -27,7 +27,7 @@ Your organization or enterprise needs to design suitable security settings to me
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
   - Decide what permissions are needed for the application teams to deploy into the cluster.
-- Decide whether you need workload identities (Azure AD pod identities). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
+- Decide whether you need workload identities ([Azure AD pod identities](/aks/use-azure-ad-pod-identity)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
 
 ## Design recommendations
 

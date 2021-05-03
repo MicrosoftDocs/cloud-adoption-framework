@@ -12,11 +12,12 @@ ms.custom: think-tank, e2e-aks
 
 # Introduction to the modern containers adoption scenario
 
-As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into your cloud strategy.
+As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. Commonly, customers are using orchestrated containers to manage pools of workloads in one or more centralized clusters. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
 
 This scenario focuses on two targeted outcomes:
 
 - **Containerized solutions:** Containers create a layer of abstraction between technical assets and underlying infrastructure. Organizations include containers in their overall strategy to reduce vendor lock-in and make workloads more portable.
+- **Workload portability:** The layer of abstraction created by containers makes it easier to move workloads between container platforms in private clouds or multiple public clouds. When applying a Workload portability approach, central IT teams provide a common container platform across clouds. Workload teams can then choose to deploy worklaods to the desired cloud provider. During operations, central IT and workload teams would have more easily be able to move workloads between clouds. 
 - **Managing containers with Kubernetes:** Kubernetes provides a control plane for managing and deploying containerized applications, managing compute density, and describing high availability needs of workloads.
 
 This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
