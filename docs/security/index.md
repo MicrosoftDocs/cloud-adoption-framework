@@ -16,11 +16,13 @@ Just cloud adoption is a journey, cloud security is also an ongoing journey of i
 
 ## Envision a security end state
 
-A journey without a target destination is just wandering. The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
+A journey without a target destination is just wandering. While this may eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results. 
+
+The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
 
 :::image type="content" source="./media/secure-methodology.png" alt-text="CAF Secure Methodology" lightbox="./media/secure-methodology-popout.png":::
 
-The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, [The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
+The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
 ## Mapping to concepts, frameworks, and standards
 
@@ -34,25 +36,11 @@ Security itself is both a standalone organizational discipline and a quality/att
 
 ## Mapping to Roles and Responsibilities
 
-At the organizational level, the security disciplines map to standard plan-build-run phases seen widely across industries and organizations. While this cycle is accelerating with the digital age and the advent of DevOps and DevSecOps, these fundamentals help illustrate how security maps to normal business processes. Security is both a unique discipline, but it also integrates with normal business operations. 
+While security is a highly technical discipline, it is first and foremost a human discipline reflective of the long history of human conflict (just updated for computers and the internet). The following diagram summarizes the roles and responsibilities in a security program. 
 
-![Security Personas](./media/securitypersonas.png)
+:::image type="content" source="./media/roles-and-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/roles-and-responsibilities.png":::
 
-The bottom section of this diagram has the specific organizational functions within security (sometimes called "jobs to be done" or responsibilities) that are detailed in https://aka.ms/securityroles. 
-
-The middle (dark blue) section groups these roles into security personas that have common skillsets and career profiles. This helps provide clarity on how industry trends are impacting security professionals:
-
- - **Security Leadership** - This spans across functions, ensuring that teams coordinate with each other, providing prioritization and setting cultural norms, policies, and standards for security.
- - **Security Architect** - Spans across functions with a strong emphasis on governance to ensure that all of the technical functions are working harmoniously within a consistent architecture
- - **Security Posture & Compliance** - This represents the combination of security posture management disciplines like vulnerability management with compliance reporting functions. These functions are increasingly working with the same near real-time data feeds and their scope is converging into all forms of risk and vulnerabilities to the organization (technology itself like software updates, technology configuration, and operational practices)
- - **Platform security engineer** - Technology roles focused on platforms that host multiple workloads, focused on access control and asset protection. These roles are often broken teams with specialized technical skillsets including network security, infrastructure and endpoints, identity and key management, and others. This includes preventive controls and detective controls with detective controls in partnership with SecOps and preventive controls primarily in partnership with IT Operations. 
- - **Application Security Engineer** - Technology roles focused on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. This is a blend of application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. 
->[!Note]
-> As both DevOps and Infrastructure as code trends progress, we expect to see some security talent migrate from platform security engineering teams to application security teams and posture management roles. This is because the DevOps model requires infrastructure security skills (e.g. securing the "ops" in devops) and governance teams will also require these skills and experience to effectively monitor technical security posture in real time. Additionally, infrastructure as code will automate repetitive manual technical tasks, reducing the volume of time required for these skills in the platform security engineer roles (though increasing the need for broad technical skillsets and automation/scripting skills).  
-
-For more information on detailed security functions held by roles, see https://aka.ms/securityroles
-
-
+For more information on these, see https://aka.ms/securityroles
 
 ## Security Transformation
 
