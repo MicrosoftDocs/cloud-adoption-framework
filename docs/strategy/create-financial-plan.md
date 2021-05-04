@@ -58,7 +58,7 @@ Cloud billing models and offers differ from on-premises however, they can create
 
 **Azure Dev/Test pricing**: Take advantage of discounted rates for your development and testing, including the Microsoft software charges on Azure Virtual Machines and special dev and test pricing on other services. For more information, see [Azure Dev/Test pricing](/pricing/dev-test/).
 
-**Extended security updates**: Receive continued support for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which has reached the end of their support (EOS) life cycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine. To learn more, see [Lifecycle FAQ - Extended Security Updates](MicrosoftDocs/lifecycle-pr/blob/live/lifecycle-docs/faq/extended-security-updates).
+**Extended security updates**: Receive continued support for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which has reached the end of their support (EOS) life cycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine. To learn more, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
 
 You can take your Azure view and compare it to your on-premises or status quo scenario with no migration so you can assess the benefit of migrating to the cloud.
 
@@ -100,4 +100,4 @@ The Calculator creates a match from Azure Services to create a high-level initia
 Learn more about Common finance vocabulary terms.
 
 > [!div class="nextstepaction"]
-> [Common finance vocabulary terms](./financevocabularyterms.md)
+> [Common finance vocabulary terms](./finance-vocabulary-terms.md)
