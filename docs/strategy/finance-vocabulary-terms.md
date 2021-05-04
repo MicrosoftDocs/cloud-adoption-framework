@@ -11,27 +11,33 @@ ms.custom: template-concept
 
 # Glossary of common finance terms
 
-Use these common finance terms when your team is creating a cloud migration business case or a financial model. These terms can help when you pitch the plan to a finance team.
+Use these common finance terms when your team is creating a cloud migration business case. These terms can help when you share your business case with a finance team.
 
 ## Terms
 
-**Cloud economics**: An understanding of the benefits of the cloud and the financial impact that happens when you start a digital transformation.
+**Amortization**:  To write off an expenditure for (an asset, especially an intangible one, such as a patent) by prorating over a certain period, usually the expected duration of the asset's benefit.
+
+**Balance sheet**: A balance sheet is a financial statement that reports a company's assets, liabilities, and shareholders' equity as of a specified date.
 
 **Capital Expense (CAPEX)**: The upfront investment in equipment. This equipment is capitalized as an asset and put on your balance sheet.
 
-**Operating Expense (OPEX)**: The ongoing expenses for a business. For example, a maintenance payment or periodic bill for Azure services.
+**Cash flow statement**: A cash flow statement is a financial statement that summarizes the amount of cash and cash equivalents entering and leaving a company during a given period.
 
-**Profit and Loss (P&L)**: The economic expenses of running a business. It's the same concept as an income statement.
+**Cloud economics**: An understanding of the benefits and costs of the cloud, and the financial impact when you start a migration from on-premises to cloud computing.
 
-**Cash flow statement**: How much cash went in and out of the business during a given period.
+**Depreciation**: An allowance made for a loss in value of property.
 
-**Balance sheet**: The underlying assets of a business, and how those assets are financed.
+**Double mortgage period**: A period when you have two sets of costs at the same time. For example, when you have both on-premises and cloud costs.
+
+**Earnings before interest, taxes, depreciation, and amortization (EBITDA)**: A performance indicator of the overall profitability of a business.
 
 **Net Present Value (NPV)**: An assessment of the financial value of a business investment. This metric looks at cash flows, timing, and the required interest rate.
 
-**Double mortgage period**: A period when you have two sets of costs at the same time. For example, when you have both on-premise and cloud costs.
+**Operating Expense (OPEX)**: The ongoing expenses for a business. For example, a maintenance payment or periodic bill for Azure services.
 
-**Earnings before interest, taxes, depreciation, and amortization (EBITDA)**: A performance indicator of the overall profitability of a business.
+**Profit and Loss (P&L)**: A financial statement that summarizes the revenues, costs, and expenses incurred during a specified period, usually a fiscal quarter, or year. It is also referred to as the income statement.
+
+**Return on Investment (ROI)**: Return on investment (ROI) is a metric used to understand the profitability of an investment. ROI compares how much you paid for an investment to how much you earned to evaluate its efficiency.
 
 ## Next steps
 <!-- To be added after all articles merged into release branch -->
