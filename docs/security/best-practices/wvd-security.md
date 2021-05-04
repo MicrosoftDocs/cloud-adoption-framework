@@ -10,10 +10,8 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Intro
-WVD intro here. Securing WVD. 
-
-[This is a test](../innovation-security.md)
+# Securing Windows Virtual Desktop
+Windows Virtual Desktop (WVD) provides a scaleable, virtualized, and familiar Windows 10 desktop experience for users, while providing administrators a wide breadth of configuratble options to customize their security posture.
 
 
 ## Security Responsibilities
@@ -50,16 +48,12 @@ To learn more, see [Onboard your Azure subscription to Security Center Standard.
 
 Secure Score provides recommendations and best practice advice for improving your overall security. These recommendations are prioritized to help you pick which ones are most important, and the Quick Fix options help you address potential vulnerabilities quickly. These recommendations also update over time, keeping you up to date on the best ways to maintain your environment’s security. To learn more, see [Improve your Secure Score in Azure Security Center.](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls)
 
-### Azure Defender for Endpoint
+### Azure Defender
 To protect your deployment from known malicious software, we recommend enabling endpoint protection on all session hosts. You can use either Windows Defender Antivirus or a third-party program. To learn more, see Deployment guide for [Windows Defender Antivirus in a VDI environment.](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus) 
 
 
 
-
-
-
-### Azure Defender
-
 ## Next Steps
-[Windows Virtual Desktop Security Best Practices](https://docs.microsoft.com/azure/virtual-desktop/security-guide)
-[Windows Virtual Desktop security baseline](https://docs.microsoft.com/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline)
+Review the Windows Virtual Desktop documentation:
+- [Windows Virtual Desktop Security Best Practices](https://docs.microsoft.com/azure/virtual-desktop/security-guide)
+- [Windows Virtual Desktop security baseline](https://docs.microsoft.com/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline)
