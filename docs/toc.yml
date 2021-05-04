@@ -1606,9 +1606,7 @@ items:
         href: security/innovation-security.md
       - name: DevSecOps Controls
         href: security/devsecops-controls.md
-      - name: This is a test
-        href: /azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
+        
     - name: Security Considerations
       items:
       - name: Security Strategy
