@@ -12,7 +12,9 @@ ms.custom: internal
 
 # DevSecOps Controls
 
-DevSecOps is the native integration of security processes and tools into development processes. Because DevOps itself is an emerging discipline with a high degree of process variations, successful DevSecOps is best achieved by understanding and thoughtfully integrating security into development process. Adding security should start with low friction changes to the code, the development processes, and the infrastructure that hosts the workload. Focus first on changes that have the highest positive impact on security while placing a low burden on DevOps processes and skills.
+DevSecOps is the application of [innovation security](./innovation-security.md) by integrating security processes and tools into the DevOps development process. 
+
+Because DevOps itself is an emerging discipline with a high degree of process variations, successful DevSecOps is best achieved by understanding and thoughtfully integrating security into development process. Adding security should start with low friction changes to the code, the development processes, and the infrastructure that hosts the workload. Focus first on changes that have the highest positive impact on security while placing a low burden on DevOps processes and skills.
 
 This documentation reviews each stage of a continuous integration and continuous delivery (CI/CD) DevOps process and what security controls we recommend integrating first.
 
@@ -40,16 +42,19 @@ Threat modeling effectively puts you in the mindset of an attacker and allows yo
 
 There are several differently published approaches for threat modelling that range from simple question/answer methods to detailed tool-based analysis. The can be based on methodologies like [STRIDE](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats), [DREAD](https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)), or [OWASP Approach](https://owasp.org/www-community/Threat_Modeling). 
 
-Because some approaches to threat modeling can be a time consuming and skill intensive process, we recommend starting with a simpler approach based on basic questions. 
+#### Threat Modelling - Start Simple
 
-These methods can help you starts the critical thinking process and quickly identify major security issues:
- - **[Simple Questions Method (Microsoft)](https://docs.microsoft.com/en-us/security/compass/applications-services#simple-questions-method)**
- - **[OWASP Threat modeling](https://owasp.org/www-community/Threat_Modeling)**
+Because some approaches to threat modeling can be a time consuming and skill intensive process, we recommend starting with a simpler approach based on basic questions. These simpler methods aren't as thorough, but start the critical thinking process and quickly identify major security issues
 
-As you get more comfortable with the process, you can applying more advanced techniques from Microsoft [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/threatmodeling) and integrate threat modeling tools like [Microsoft Threat Modelling Tool](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool) to get deeper insights and help automate the process. 
+These simple question for threat modelling are ideal to get your started:
+ - **[Simple Questions Method (Microsoft)](https://docs.microsoft.com/en-us/security/compass/applications-services#simple-questions-method)** - This method asks specific technical questions designed to surface common security design mistakes. 
+ - **[OWASP Threat modeling](https://owasp.org/www-community/Threat_Modeling)** - This method focuses on asking plain (non-technical) questions to get the process started. 
+
+You can use either or both of these, depending on what works better for the team. 
+
+As the team gets more comfortable with the process, they can apply more advanced techniques from Microsoft [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/threatmodeling) and integrate threat modeling tools like [Microsoft Threat Modelling Tool](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool) to get deeper insights and help automate the process. 
 
 Another helpful resource is [A Guide to Threat Modeling for Developers (martinfowler.com)](https://martinfowler.com/articles/agile-threat-modelling.html)
-
 
 ### IDE Security plugins and pre-commit hooks
 
