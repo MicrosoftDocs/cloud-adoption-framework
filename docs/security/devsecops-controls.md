@@ -12,42 +12,44 @@ ms.custom: internal
 
 # DevSecOps Controls
 
-The objective of DevSecOps is to integrate security processes and tools into development processes. Successful DevSecOps is achieved by outlining the development process, how changes are made in the code and infrastructure, and introducing security checks and gates without introducing unnecessary burden.
+DevSecOps is the native integration of security processes and tools into development processes. Because DevOps itself is an emerging discipline with a high degree of process variations, successful DevSecOps is best achieved by understanding and thoughtfully integrating security into development process. Adding security should start with low friction changes to the code, the development processes, and the infrastructure that hosts the workload. Focus first on changes that have the highest positive impact on security while placing a low burden on DevOps processes and skills.
 
-This documentation explores the development process based on DevOps continuous integration and continuous delivery and what security controls can be integrated.
+This documentation reviews each stage of a continuous integration and continuous delivery (CI/CD) DevOps process and what security controls we recommend integrating first.
 
 ![DevSecOps Controls](./media/DevSecOpsControls.png)
 
 ## Plan and develop
 
-Typically, modern development follows agile development methodology. Scrum is one the implementation of agile methodology, and every sprint starts with the planning. There could be implemented some security practices at this stage before even touching the keyboard, like threat modelling. Additionally, before the code is checked in the source code repository, there are security steps: lightweight static analysis checking in the developer's environments (IDEs), agreed security coding standards, peer reviews, and pre-commit hooks. It is not mandatory to add all of those steps, but they may help to discover and prevent potential security risks.
+Typically, modern development follows an agile development methodology. Scrum is one implementation of agile methodology that has every sprint start with a planning activity. Introducing security into this part of the development process should focus on
+ - **Threat modelling** - to view the application through the lens of a potential attacker
+ - **IDE Security plugins and pre-commit hooks** - lightweight static analysis checking in the developer's environments (IDEs)
+ - **Peer review and secure coding standards** - identifying good security coding standards, peer review processes, and pre-commit hooks. 
+
+It is not mandatory to add all of those steps, but each helps discover security issues early when they are much cheaper and easier to fix. 
 
 ### Threat modelling
 
-Threat modeling is a core element of the  [Security Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl/) (known as SDL). Threat modeling is a technique, which helps to identify threats, attacks, vulnerabilities, and countermeasures that could affect the application. It became popular with SDL adoption and later continued to play important role of DevSecOps practices. 
-There are different methodologies like STRIDE, DRIDE, OWASP Threat modeling, which defines the process. And to support threat modeling there are a lot of Threat Modeling tools to help the process automate or semi-automate. 
+Threat modelling is arguably the most important security practice as it both delivers immediate results and helps develop a security mindset in developers that can improve security in all of their future projects as well. 
 
-The biggest challenge with Threat Modeling adoption is that it is time and resource consuming and sometimes doesn't keep the pace of fast pace development in DevOps culture. As well it requires knowledge and rituals to be adopted by developers, which often ends up with ignoring this important step in DevSecOps. The problem with frameworks or custom methodologies provided by the security team is a need to collect a huge amount of data, do triage and rank. The process may take several weeks of work involved by many people or whole team. As result it may produce bigger cost and even results will be high quality data, the status may be already outdated because newer version was already deployed on production. 
+Threat Modelling is a very simple concept, though it can become quite detailed and technical if it needs to be. Threat modelling develops and documents a realistic security view of your application that includes:
+ - How attackers can abuse the application's design
+ - How to fix these issues
+ - How important it is to fix them
 
-Because classical threat modeling is a time consuming and skill intensive process, it is worth to start with a simpler approach. One of the approaches is Simple questions method:
-> This simple questioning method is designed to get security professionals and developers started on threat modeling before moving on to a more advanced method like STRIDE or OWASP’s method.
+Threat modeling effectively puts you in the mindset of an attacker and allows you to see the application through their eyes and can block their attack before they get a chance to do anything about it. If your team uses user personas in design, you can treat the attacker as a (hostile) user persona. 
 
-Following is a [four question framework](https://owasp.org/www-community/Threat_Modeling) that helps understand threat modeling:
+There are several differently published approaches for threat modelling that range from simple question/answer methods to detailed tool-based analysis. The can be based on methodologies like [STRIDE](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats), [DREAD](https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)), or [OWASP Approach](https://owasp.org/www-community/Threat_Modeling). 
 
-- What are we working on?
-- What can go wrong?
-- What are we going to do about it?
-- Did we do a good job?
+Because some approaches to threat modeling can be a time consuming and skill intensive process, we recommend starting with a simpler approach based on basic questions. 
 
-For the application a good start is to focus on technology rather than broader threats area by scoping  threat modeling on technical threats. Practical approach:
+These methods can help you starts the critical thinking process and quickly identify major security issues:
+ - **[Simple Questions Method (Microsoft)](https://docs.microsoft.com/en-us/security/compass/applications-services#simple-questions-method)**
+ - **[OWASP Threat modeling](https://owasp.org/www-community/Threat_Modeling)**
 
-- Scope Threat Modeling
-- Explore the architecture and how application is structured
-- Brainstorm threats
-- Prioritize and plan the fix
-- Document fixes in the backlog
+As you get more comfortable with the process, you can applying more advanced techniques from Microsoft [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/threatmodeling) and integrate threat modeling tools like [Microsoft Threat Modelling Tool](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool) to get deeper insights and help automate the process. 
 
-One of the guides for simplified version of Threat Modeling is described by Martin Fowler and can be helpful in the beginning of journey. It is available here: [A Guide to Threat Modeling for Developers (martinfowler.com)](https://martinfowler.com/articles/agile-threat-modelling.html)
+Another helpful resource is [A Guide to Threat Modeling for Developers (martinfowler.com)](https://martinfowler.com/articles/agile-threat-modelling.html)
+
 
 ### IDE Security plugins and pre-commit hooks
 
@@ -59,11 +61,15 @@ Another step worth considering is to introduce a pre-commit framework if the ver
 
 ### Peer review and secure coding standards
 
-Pull requests became standard in the development process and a part of the pull request is peer reviews that allow detecting uncovered defects, bugs or issues more related to human mistakes. It is a good practice where a security champion or knowledgeable security teammate can incorporate and guide the developer during the peer review before making the pull request. Additionally, secure coding practice guidelines may help ensure developers learn essential secure coding principles and how they should be applied. There are secure coding practices such as [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) available and incorporated with the general coding practices.
+Pull requests became standard in the development process and a part of the pull request is peer reviews that allow detecting uncovered defects, bugs or issues more related to human mistakes. It is a good practice where a security champion or knowledgeable security teammate can incorporate and guide the developer during the peer review before making the pull request. 
+
+Additionally, secure coding practice guidelines may help ensure developers learn essential secure coding principles and how they should be applied. There are secure coding practices such as [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) available and incorporated with the general coding practices.
 
 ## Commit the code
 
-Typically, developers create, manage, and share their code in repositories such as GitHub or Azure DevOps Repos. This approach provides a central, version controlled library of code that can be collaborate on easily. However, enabling a number of collaborators on a single codebase can also introduce the risk of changes being introduced. That risk can lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits. To address this risk, development teams should evaluate and implement a repository scanning capability. Repository scanning tools perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation. This capability acts to protect against human error and is a useful safeguard in distributed teams where a number of people are collaborating in the same repository.
+Typically, developers create, manage, and share their code in repositories such as GitHub or Azure DevOps Repos. This approach provides a central, version controlled library of code that can be collaborate on easily. However, enabling a number of collaborators on a single codebase can also introduce the risk of changes being introduced. That risk can lead to vulnerabilities or the unintentional inclusion of credentials or tokens in commits. 
+
+To address this risk, development teams should evaluate and implement a repository scanning capability. Repository scanning tools perform static code analysis on source code within repositories and look for vulnerabilities or credentials and flag items found for remediation. This capability acts to protect against human error and is a useful safeguard in distributed teams where a number of people are collaborating in the same repository.
 
 ### Dependency management
 
@@ -94,7 +100,6 @@ Many organizations use build and release pipelines to automate and standardize t
 ### Dynamic application security testing
 
 In a classical waterfall development model, security usually was introduced on the last stop - just before going to the production. One of the most popular security approaches were penetration testing or pentest. The penetration test is an important step, which allows looking at the application from the black-box security perspective, closest to the attacker mindset. Penetration test consists of several action points, one of them is known as a DAST - Dynamic Application Security Testing. DAST is a web application security test that focuses on finding security issues in the running application by seeing how the application responds to specially crafted requests. DAST tools are also known as web application vulnerability scanners. One of them is an open-source [OWASP ZAP Zed Attack Proxy](https://owasp.org/www-project-zap/), which finds vulnerabilities in the running web application. There are several ways how OWASP ZAP does the scan: passive baseline scan or full scan depending on the configuration.
-
 
 With all benefits brought by pentest, there is a downside - it takes time. The proper pentest may take up to several weeks, and with DevOps development speed, it becomes unsustainable. However, it is still worth adding a "lighter" version of pentest during the development process to uncover what may be missed by SAST and previous steps. And DAST tools like OWASP ZAP may help with that. Developers can integrate OWASP ZAP in the pipeline as a task. During the execution, the OWASP ZAP scanner is spun up in the container and does the scanning process after it publishes results. This may not be a perfect approach, as it is not complete penetration testing, but it is one more quality gate in the development cycle for improving the security posture.  
 
