@@ -40,7 +40,7 @@ Learn more about ways you can [build applications](../../innovate/best-practices
 Further extend the capabilities of a common runtime through new applications as:
 
 - Citizen developers, to empower business teams from sales, payroll, finance, and so on. To extend professional applications by creating their own Power Apps and Power Automate solutions.
-- Intelligent experiences, to build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.
+- Intelligent experiences, to build modern applications in the public cloud, private cloud, or edge with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.
 
 ## Interact on devices
 
