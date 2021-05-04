@@ -2,8 +2,8 @@
 title: Cloud security functions
 description: An overview of organizational functions required to manage information security risk in an enterprise
 author: MarkSimos
-ms.author: brblanch
-ms.date: 05/15/2020
+ms.author: mas
+ms.date: 05/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -28,7 +28,6 @@ These diagrams and documentation represent an ideal view of an complete enterpri
 
 :::image type="content" source="./media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/security-responsibilities.png":::
 
-
 Each of the following articles provide information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
 
 - [Policy and standards](./cloud-security-policy-standards.md)
@@ -43,6 +42,8 @@ Each of the following articles provide information about each function including
 - [Threat intelligence](./cloud-security-threat-intelligence.md)
 - [Posture management](./cloud-security-posture-management.md)
 - [Incident preparation](./cloud-security-incident-preparation.md)
+
+These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), the [Securing Privileged Access – Rapid Modernization Plan (RaMP)](https://aka.ms/sparoadmap), and the [Azure Security Top 10](https://aka.ms/azuresecuritytop10), 
 
 ## Roles and Responsibilities
 
