@@ -21,13 +21,14 @@ The following considerations and recommendations will help establish proper reso
     - If the hosts are managed by the workload teams, you would need more landing zone instances to segment host environments & allow workload teams to control their deployments.
     - In both cases, you'll need to extend this consideration to adjacent and related resources such as web application firewalls, key vaults, pipeline build agents, and potentially jump boxes.
 - Decide on a tenancy model for clusters:
-    - Workload operated, single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control
-    - Centrally operated, single tenant: For hostile or regulated workloads which can not be hosted in a multi-tenant host but which are still managed centrally, a dedicated landing zone may not be required
-    - Multi-tenant hosts: When hosts are centrally managed, dedicated landing zones are less common. Hosts and workloads are more likely to be sub-divided by resource group. Additionally landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints
-- Decide on a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements
+    - Workload operated, Single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control.
+    - Centrally operated, Multi-tenant hosts: When hosts are centrally managed, operational efficiency comes from consolidation of multiple hosts and multiple workloads in shared landing zone environments. This reduces the number of landing zones and hosts dedicated to the support of a single cluster &/or workload.
+        - Additionally landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints.
+    - Centrally operated, Single tenant: For hostile or regulated workloads which are still centrally operated, it is common to have dedicated hosts for those workloads. But you may still experience operational efficiency by consolidating hte number of supporting landing zones.
+- Decide on a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements:
     - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team
-    - Segmented structure to create a management group for centrally managed hosts and a seperate management group for decentralized operations
-    - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements 
+    - Segmented structure to create a management group for centrally managed hosts and a separate management group for decentralized operations
+    - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements
 - Decide which container registry topology to use for OCI artifact distribution:
     - One registry per workload
     - One registry per cluster with multiple workloads in the registry
@@ -40,7 +41,7 @@ The following considerations and recommendations will help establish proper reso
 
 ## Design recommendations
 
-- Define a [naming and tagging standard](../../ready/azure-best-practices/naming-and-tagging.md) to be applied to all container resources deployed to Azure. At minimum, it should include the following: 
+- Define a [naming and tagging standard](../../ready/azure-best-practices/naming-and-tagging.md) to be applied to all container resources deployed to Azure. At minimum, it should include the following:
     - Workload name(s): identify the workload or workloads supported by each cluster
     - Cluster resources: identify the elevation of cluster resource alignment from considerations above
     - Host operator: identify which team is responsible for operations of the host

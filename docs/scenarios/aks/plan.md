@@ -37,7 +37,7 @@ To begin aligning the strategy and plan, identify any workloads which are assume
 1. **Active Development or DevOps investments:** A percentage of production workloads will be under active development. Some may even be managed through on-going DevOps practices.  
 2. **Workload portability:** Some workloads are impacted by compliance, data protection, or operational constraints which may require portability across private cloud, edge, or even multiple public cloud providers.
 3. **Workload consolidation:** Many workloads (especially low utilization workloads) may be candidates for consolidation on container hosts resulting in few servers/VMs and reduced operating costs.
-4. **Legacy workloads:** Legacy workloads can block updates to operating systems and even prevent migration to the cloud. Legacy workloads which aren't compatible with the cloud might be a candidate for migration on a container host.
+4. **Legacy workloads:** Legacy workloads can block updates to operating systems and even prevent migration to the cloud. Legacy workloads which aren't compatible with the Azure features might be a candidate for migration on a container host.
 
 ## Document candidate workloads
 
@@ -63,9 +63,10 @@ The following are data points from the technology teams which may influence the 
 **Location considerations:**
 
 Considerations related to where the workload will be hosted.
- 
+
 - Public cloud hosting requirement: Is there a specific technical constraint associated with the public cloud requirement?
 - Private cloud hosting requirement: Is there a specific technical constraint associated with the private cloud requirement?
+- Edge hosting requirement: Is there a specific technical constraint associated with the edge requirement?
 - Portability requirement: Is there a specific technical constraint associated with the cloud portability requirement?
 
 **Operations considerations:**
@@ -128,12 +129,12 @@ Often times customers will deploy different container orchestrators in private c
 
 In Azure, organizations can standardize operations across various orchestrators by onboarding disparate container hosts into Azure Arc for Kubernetes. This tool ensures consistent monitoring, operations, and governance across each of those container hosts.
 
-### PaaS runtimes in private cloud and edge environments
+### Application runtimes in private cloud and edge environments
 
 When workloads must be run in a private cloud or edge environment, but the workload is best supported by a PaaS runtime, there are a few tools that can enable developers to build on top of consistent PaaS runtimes using Azure Application Services:
 
 - Azure Stack HCI: Allows for hosting of Azure Application Services natively on Azure Stack, managed by the Azure Stack operator.
-- Azure Stack HCI for AKS: Allows for hosting of Azure Application Services running on AKS within Azure Stack, managed by AKS operators allowing for portability to other kubernetes solutions.
+- Azure Stack HCI for AKS: Allows for hosting of custom runtimes running on AKS within Azure Stack, managed by Azure Stack & AKS operators allowing for portability to other kubernetes solutions.
 - Azure Application Services on Kubernetes with Arc: Allows any Kubernetes host to provide Azure Application Services. All hosts become a small instance of Azure PaaS. Since each host is also onboarded into Azure Arc, those hosts can also be managed through consistent cloud-based host operations.
 
 ## Modern container readiness plan
