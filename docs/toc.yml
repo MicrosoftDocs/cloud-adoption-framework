@@ -1609,7 +1609,7 @@ items:
       - name: This is a test
         href: azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
-    - name: Methodology
+    - name: Security Considerations
       items:
       - name: Security Strategy
         href: azure/cloud-adoption-framework/strategy/define-security-strategy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
