@@ -1617,7 +1617,7 @@ items:
         href: azure/cloud-adoption-framework/organize/cloud-security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Getting Started
         href: azure/cloud-adoption-framework/get-started/security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: Azure Security Top 10 (aka)
+      - name: Azure Security Top 10
         href: azure/cloud-adoption-framework/security/security-top-10?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Security Reference Archtectures
         href: azure/cloud-adoption-framework/strategy/define-security-strategy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
