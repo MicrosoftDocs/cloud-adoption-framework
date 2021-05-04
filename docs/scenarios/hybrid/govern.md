@@ -16,6 +16,14 @@ The cloud has fundamentally changed IT governance. Intensive manual reviews and 
 
 In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. You can combine [Azure Arc](/azure/azure-arc/overview) with [Azure Policy](/azure/governance/policy/overview), [Azure Blueprints](/azure/governance/blueprints/overview), and other governance tools. The combination extends many of your governance guardrails to virtually any cloud resource, private or public clouds alike. [Unified operations](./unified-operations.md) is the best concept to extend your governance controls by using native Azure tools.
 
+## Common processes and controls for unified operations
+
+The main goal of unified operations is to provide consistency in governance and operations management across all deployments. Organizations require consistency across defined governance and operations management processes. To meet long-term requirements, your unified operations solution will need to be able to scale to meet these common processes, s
+
+### Common governance processes (tasks)
+
+### Basic and advanced features 
+
 ## Deploy a unified operations MVP for governance
 
 Well-defined governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and [management groups allows for ease of governance](/azure/governance/management-groups/overview). Expand your cloud governance practices with a few steps:
@@ -38,6 +46,10 @@ Security baselines are among the most common ways that you can expand your gover
 - [Investigate and respond to security threats with Azure Sentinel](/azure/sentinel/tutorial-investigate-cases)
 - [Connect AWS accounts to Azure Defender](/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Azure Defender](/azure/security-center/quickstart-onboard-gcp)
+ 
+
+
+
 
 ## Next steps
 
