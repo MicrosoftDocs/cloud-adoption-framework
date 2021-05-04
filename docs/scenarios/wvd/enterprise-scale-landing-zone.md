@@ -19,7 +19,7 @@ Not everyone adopts Windows Virtual Desktop on Azure in the same way. The Cloud 
 
 ### Design guidelines
 
-A guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas:
+Learn about guidelines that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas:
 
 - [Identity and Access Management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
@@ -38,9 +38,7 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 ARM Windows Virtual Desktop Templates are a collection of the Infrastructure as Code ARM Template to deploy a Windows Virtual Desktop environment on Azure.
 
-This GitHub repository contains code that can be used to automatically deploy Windows Virtual Desktop environments in the Azure Cloud.
-
-[Automate WVD Deployments in Azure Cloud](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates)
+The [Automate Windows Virtual Desktop deployments in Azure Cloud](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) GitHub repository contains code that can be used to automatically deploy Windows Virtual Desktop environments in the Azure Cloud.
 
 ## Next steps
 
