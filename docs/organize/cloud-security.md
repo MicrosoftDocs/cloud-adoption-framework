@@ -26,7 +26,7 @@ This diagram depicts the specific organizational functions within security, ofte
 
 These diagrams and documentation represent an ideal view of an complete enterprise security team. This may be an aspirational view for security teams with limited resources that may not have formal responsibilities defined around all of these functions. Each function may be performed by one or more people, and each person may perform one or more functions depending on various factors such as culture, budget, and available resources.
 
-:::image type="content" source="./media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/security-responsibilities-popout.png":::
+:::image type="content" source="./security/media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./security/media/security-responsibilities-popout.png":::
 
 Each of the following articles provide information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
 
