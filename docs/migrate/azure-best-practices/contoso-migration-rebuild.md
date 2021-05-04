@@ -358,7 +358,7 @@ The admins create the pipeline:
 
 13. After they create the release, they select it and, under **Actions**, they select **Deploy**.
 
-      ![Screenshot highlighting the Deploy button for deploying a release.](./media/contoso-migration-rebuild/back-pipe13.png)
+      ![Screenshot highlighting the **Deploy** button for deploying a release.](./media/contoso-migration-rebuild/back-pipe13.png)
     *Figure 39: Deploying a release.*
 
 14. When the deployment is complete, they run the following command to check the status of services, using the Azure Cloud Shell: `kubectl get services`.

@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 03/22/2021
 ms.topic: guide
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank
 ---
 
