@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 # Enterprise enrollment considerations for AKS
 
-Azure Landing Zones for AKS do not have any specific considerations or recommendations which would impact enterprise enrollment or AD Tenant decisions.
+For most customer implementations, standard best practices regarding enterprise enrollment and AD tenants are unchanged when deploying Azure Landing Zones for AKS. There are seldom specific considerations or recommendations which would impact enterprise enrollment or AD Tenant decisions. See the considerations below to determine if AKS requirements would impact existing tenant decisions.
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [Enterprise enrollment or AD Tenant decisions](../../ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md).
 
@@ -22,4 +22,10 @@ You may also want to review the [Identity and Access Management considerations](
 
 ## Design considerations
 
-* To provide complete flexibility in Kubernetes RBAC management., Kubernetes supports being backed by an Azure AD tenant that is not the same Azure AD tenant as your landing zone's. Most customers will identify their primary Azure AD tenant as their Kubernetes RBAC Azure AD tenant, however consider using an isolated Azure AD tenant for Kubernetes RBAC to address advanced segmentation concerns such as clean-room development, heightened compliance requirements, or extended blast radius control for compromised identities. Managing multiple Azure AD tenants comes at a management cost that must be weighed against the benfits gained from such a topology.
+Most customers will identify their primary Azure AD tenant as their Kubernetes RBAC Azure AD tenant. But, Kubernetes allows for different elevations of RBAC management. There are situations where you may want to establish a different Kubernetes RBAC Azure AD Tenant from the tenant which governs identity for the landing zone.  This could lead to some specific considerations when establishing Azure Landing Zones for AKS. The following are indicators that may lead you to consider this alternative approach to tenant assignment:
+
+- Will the landing zone or kubernetes hosts be used as part of clean-room development?
+- Are there heightened compliance requirements which specify separation of duty between the people operating the host and the accounts which operate the landing zone environment?
+- In a centrally managed environment with multiple hosts in a single landing zone, is there a need for extended blast radius control for compromised identities?
+
+Managing multiple Azure AD tenants comes at a management cost that must be weighed against the benefits gained from such a topology. There are seldom cases with multiple tenants would be part of any Microsoft recommendation. But the above questions could indicate a need to consider this option.
