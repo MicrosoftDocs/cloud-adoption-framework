@@ -126,3 +126,5 @@ As you plan your cloud adoption, focus on integrating security functions more cl
  - Review the [Security Strategy Guidance](https://aka.ms/securitystrategy)
  - Review the [Security Organizational Functions](https://aka.ms/securityroles)
  - Review [Security Operational Resilience](./operational-resiliency.md)
+
+[Business Resilience](./business-resilience.md) is the next focus area of security.
