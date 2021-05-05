@@ -54,8 +54,9 @@ Resiliency requires a close partnership between business stakeholders, informati
 
 The security disciplines in this methodology align to the goal of increasing resilience to security incidents.
 
- - Access Control
- - Security Operations
- - Asset Protection
- - Security Governance
- - Innovation Security
+ - [Access Control](./access-control.md)
+ - [Security Operations](./security-operations.md)
+ - [Asset Protection](./asset-protection.md)
+ - [Security Governance](./security-governance.md)
+ - [Innovation Security](./innovation-security.md)
+
