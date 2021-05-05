@@ -1605,7 +1605,22 @@ items:
       - name: Innovation Security
         href: security/innovation-security.md
       - name: DevSecOps Controls
-        href: security/devsecops-controls.md
+        href: security/devsecops-controls.md    
+    
+    - name: Security Considerations
+      items:
+      - name: Securing DevOps
+        href: security/best-practices/secure-devops.md
+      - name: Secure DevOps Governance
+        href: security/best-practices/end-to-end-governance.md 
+      - name: Windows Virtual Desktop
+        href: security/best-practices/wvd-security.md
+      - name: Managing Secrets
+        href: security/best-practices/managing-secrets.md
+      - name: Network Security
+        href: security/best-practices/network-security.md
+      - name: Identity Management
+        href: security/best-practices/identity-management.md
         
     - name: Security Considerations
       items:
