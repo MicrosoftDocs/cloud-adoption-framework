@@ -22,7 +22,7 @@ Before implementing Windows Virtual Desktop, the environment needs an Azure land
 - **VPN or ExpressRoute:** Additionally, any landing zone that supports virtual desktops will need a network connection so that end users can connect to the landing zone and hosted assets. If an existing set of endpoints is configured for virtual desktops, end users can still be routed through those on-premises devices via a VPN or Azure ExpressRoute connection. If a connection doesn't already exist, you might want to review the guidance on configuring network connectivity options in the [Ready methodology](../../ready/index.md).
 - **Governance, users, and identity:** For consistent enforcement, any requirements to govern access from virtual desktops and to govern users and their identities should be configured as Azure policies and applied to the landing zone.
 - **Security:** The security team has reviewed the landing zone configurations and approved each landing zone for its intended use, including landing zones for the external connection and landing zones for any mission-critical applications or sensitive data.
-- **Windows Virtual Desktop:** Windows Virtual Desktop platform as a service has been enabled. <!-- TODO: Add link to enable the service. -->
+- **Windows Virtual Desktop:** Windows Virtual Desktop platform as a service has been enabled.
 
 Any landing zone that the team develops by using the best practices in the [Ready methodology](../../ready/index.md) and that can meet the previously mentioned specialized requirements would qualify as a landing zone for this migration.
 
