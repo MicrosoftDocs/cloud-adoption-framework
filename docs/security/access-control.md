@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Access Control
 
-Access control is the part of security that people experience first and most often. People see access control when they log into their computers and their mobile phones, when they share a file or try to access an application, and when they use a ID Card key to access a physical building or room. While it's not everything in security, it's critically important and it requires focusing on getting both user experience and security assurances right.
+Access control is the part of security that people experience first and most often. People see access control when they log into their computers and their mobile phones, when they share a file or try to access an application, and when they use an ID Card key to access a physical building or room. While it's not everything in security, it's critically important and it requires focusing on getting both user experience and security assurances right.
 
 ## From a perimeter tactic to zero trust strategy
 
