@@ -27,7 +27,7 @@ Resilience requires taking a pragmatic view that assumes breach, and requires co
      - *Protect critical operations* – If at threat, all efforts should focus on protecting and sustaining critical business operations first over all other functions. 
      - *Prevent further damage* - The default first priority for security operations is always to discover the full extent of attacker access and rapidly evict them from the environment. This prevents further damage by the attackers, including retaliation actions. 
 
- - **After an incident** - If business operations are damaged during an attack, repairs must start immediately to restore full business operations (even if that means doing so without data that was lost in a destructive or ransomware attack. 
+ - **After an incident** - If business operations are damaged during an attack, repairs must start immediately to restore full business operations (even if that means doing so without data that was lost in a destructive or ransomware attack). 
  - **Feedback Loop** - Attackers will repeat themselves, or repeat what other attackers have found to work. Just as they will continuously learn from attacking your organization, you must continuously learn from their attacks. Focus on taking the proven and available techniques that were attempted before and ensure you can block, detect, and rapidly respond and recover from them. This will continuously raise the cost of attack to your organization and deter or slow down future attacks. 
 
 ## Resilience Goals
