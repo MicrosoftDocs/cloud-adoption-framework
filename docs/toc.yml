@@ -1607,7 +1607,7 @@ items:
       - name: DevSecOps Controls
         href: security/devsecops-controls.md    
     
-    - name: Security Considerations
+    - name: Best Practices
       items:
       - name: Securing DevOps
         href: security/best-practices/secure-devops.md
