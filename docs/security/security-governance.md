@@ -65,3 +65,7 @@ See the Complete Risk Mitigation section in security integration for more inform
 
 >[!Note] 
 >While some organizations may choose to put monitoring of security posture in security operations, we generally recommend having this in governance to foster deeper empathy and relationships with the IT engineering and operations teams that have to apply the standards. This often results in higher quality communications and better security outcomes than a governance team that is completely abstracted away from the real world impact of their standards. 
+
+## Next Steps
+
+The next discipline is [Innovation Security](./innovation-security.md)
