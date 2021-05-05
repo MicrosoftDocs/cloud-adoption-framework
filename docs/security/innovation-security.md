@@ -129,7 +129,7 @@ The definitions for MVP can change over time and with different workload types a
 ### Integrate security natively in the process
 
 Security requirements must focus on natively integrating with the existing process and tools. For example:
- - Design activities like threat modelling should be integrated into design phase
+ - Design activities like threat modeling should be integrated into design phase
  - Security scanning tools should be integrated into the continuous integration / continuous deployment (CI/CD) systems like Azure DevOps, GitHub, and Jenkins
  - Security issues should be reported using the same bug tracking systems and processes (e.g. prioritization scheme) as other bugs. 
 
