@@ -129,3 +129,7 @@ All controls should designed as a partnership with key stakeholders. This typica
  - **Security Operations** advise on detective controls and ensure alerts and logs are integrated into security operations tools, processes, and training
  - **Vendors and Cloud Providers** can provide deep subject matter expertise on systems and components to avoid known issues seen across their customer base. 
 
+## Next Steps
+
+The next discipline is [Security Governance](./security-governance.md)
+
