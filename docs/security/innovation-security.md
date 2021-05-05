@@ -56,7 +56,7 @@ Protecting this innovation requires that organizations address potential securit
 
 Attackers may exploit weaknesses in both:
 
- - **Development Process** - Attackers may find weaknesses in the application design process (e.g. using weak or no encryption for communications), or in the implementation of of the design (e.g. code doesn't validate input and allows common attacks like SQL injection). Additionally, attackers may implant backdoors in the code which allows them to return later to exploit in your environment or in your customer's environment. 
+ - **Development Process** - Attackers may find weaknesses in the application design process (e.g. using weak or no encryption for communications), or in the implementation of the design (e.g. code doesn't validate input and allows common attacks like SQL injection). Additionally, attackers may implant backdoors in the code which allows them to return later to exploit in your environment or in your customer's environment. 
  - **IT Infrastructure** - Attackers can compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers may also conduct a multi-stage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment.   
 
 Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
@@ -122,7 +122,7 @@ In the critical transition from an idea to production, it's critical to ensure t
 
 - **Developers (Dev)** focus on representing the business needs for rapid delivery of capabilities that meet the expectations of users, customers, and business leaders. Identify the minimum requirements to ensure that the capability helps make the organization successful.  
 - **Security (Sec)** brings focus to meeting compliance obligations and defending against the attackers that are continuously seeking illicit gain from the organization's resources. Identify the minimum requirements to meet regulatory compliance requirements, sustain security posture, and ensure security operations can rapidly detect and respond to an active attack. 
-- **Operations (Ops)** focuses on performance, quality, and efficiency, ensuring that the workload can continue to deliver value over the long term. Identify the minimum requirements to ensure that the workload can perform and be supported without requiring massive architectural or design changes in the foreseeable future. 
+- **Operations (Ops)** focus on performance, quality, and efficiency, ensuring that the workload can continue to deliver value over the long term. Identify the minimum requirements to ensure that the workload can perform and be supported without requiring massive architectural or design changes in the foreseeable future. 
 
 The definitions for MVP can change over time and with different workload types as the team learns together from their own experience and from other organizations. 
 
