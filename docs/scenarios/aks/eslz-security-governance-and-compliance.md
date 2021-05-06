@@ -257,25 +257,24 @@ Cost governance is the continuous process of implementing policies to control co
 AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual Network, which require special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
 Here are some other design considerations for AKS security, governance, and compliance:
-
 - Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
-
 - Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems.
-
 - Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
-
-- Consider using [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
+- Decide whether your private container registry is accessible via the internet, or only within a specific virtual network.
+- Decide whether your private container registry instance is being shared across multiple landing zones or if you deploy a dedicated Azure container registry to each landing zone subscription.
+- Consider using a security solution for threat detection for your cluster.
+- Consider to scan your container images for vulnerabilities. 
 
 ## Design recommendations
-
 - Limit access to the [Kubernetes cluster configuration](/azure/aks/control-kubeconfig-access) file by using Azure role-based access control.
-
 - [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
-
-- Use [Pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) to protect secrets, certificates, and connection strings.
-
+- Use [Pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, certificates, and connection strings.
 - Use [AKS node image upgrade](/azure/aks/node-image-upgrade) to update AKS cluster node images if possible, or [kured](/azure/aks/node-updates-kured) to automate node reboots after applying updates.
-
-- View AKS recommendations in [Azure Security Center](/azure/security-center/security-center-introduction).
-
 - Monitor and enforce configuration by using the [Azure Policy add-on for Kubernetes](/azure/aks/use-pod-security-on-azure-policy).
+- View AKS recommendations in [Azure Security Center](/azure/security-center/security-center-introduction).
+- Use  [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) 
+- Deploy a dedicated and private instance of [Azure Container registry](/azure/container-registry/) to each landing zone subscription.
+- [Use Private Link for Azure Container registry](/azure/container-registry/container-registry-private-link) to connect it to AKS.
+- Use [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction) to scan your images for vulnerabilities.
+
+
