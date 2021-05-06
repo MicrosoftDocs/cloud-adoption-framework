@@ -110,18 +110,28 @@ items:
         href: strategy/learning-metrics.md
       - name: Objectives and key results
         href: strategy/business-outcomes/okr.md
-    - name: Business justification
+    - name: Financial considerations
       items:
       - name: Build a business justification
         href: strategy/cloud-migration-business-case.md
-      - name: Create a financial model
+      - name: Create a business case
         href: strategy/financial-models.md
+      - name: Common finance vocabulary terms
+        href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
-        href: strategy/cloud-accounting.md
-    - name: Align your partner strategy
-      href: strategy/partner-alignment.md
-    - name: First cloud adoption project
-      href: strategy/first-adoption-project.md
+        href: strategy/cloud-accounting.md    
+    - name: Technical considerations
+      items: 
+      - name: Achieve more with your investment
+        href: strategy/achieve-more.md
+      - name: First cloud adoption project
+        href: strategy/first-adoption-project.md
+      - name: Align your partner strategy
+        href: strategy/partner-alignment.md
+    - name: Build a digital transformation timeline
+      href: strategy/digital-transformation-timeline.md
+    - name: Share your strategy
+      href: strategy/strategy/share-your-strategy.md
     - name: Additional considerations
       items:
       - name: Balance competing priorities

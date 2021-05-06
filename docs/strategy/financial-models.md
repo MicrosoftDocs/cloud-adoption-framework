@@ -1,108 +1,103 @@
 ---
-title: Financial model for cloud migration
-description: Learn what you need to create a financial model that accurately represents the full business value of a cloud transformation.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 12/10/2018
-ms.topic: conceptual
+title: Create a business case
+description: Create a business case for your migration to the cloud that provides a technical and financial timeline of your environment and can represent the opportunities for reinvestment into further modernization.
+author: WendyRing
+ms.author: wering
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.topic: conceptual
+ms.date: 04/23/2021
+ms.custom: template-concept
 ---
 
-# Create a financial model for cloud transformation
+# What is a business case?
 
-Creating a financial model that accurately represents the full business value of any cloud transformation can be complicated. Financial models and business justifications tend to vary for different organizations. This article establishes some formulas and points out a few things that are commonly missed when strategists create financial models.
+Your organization depends on information technology (IT) for its operations, and probably for creating and supplying its products as well. It's a significant expense. For these reasons, a move to the cloud must be carefully considered and planned.
 
-## Return on investment
+A business case provides a view of the technical and financial timeline of your environment and can represent the opportunities for reinvestment into further modernization. Developing a business case includes building a financial plan that takes technical considerations into account and aligns with [business outcomes](business-outcomes/index.md). It helps you foster support from your Finance team and other areas of the business, helps accelerate cloud migration, and enables business [agility](business-outcomes/agility-outcomes.md).
 
-Return on investment (ROI) is often an important criteria for the C-suite or the board. ROI is used to compare different ways to invest limited capital resources. The formula for ROI is fairly simple. The details you'll need to create each input to the formula might not be as simple. Essentially, ROI is the amount of return produced from an initial investment. It's usually represented as a percentage:
+## Key components of a business case
 
-![ROI equals (gain from investment minus cost of investment) divided by cost of investment](../_images/strategy/formula-roi.png)
+When you're planning your business case to migrate to the cloud, there are several key components to consider.
 
-In the next sections, we'll walk through the data you'll need to calculate the initial investment and the gain from investment (earnings).
+**Environment scope, technical and financial**. As you build out the on-premises view of your environment, think about how your environment scope, from both a technical and financial perspective, is aligned. You want to be sure the technical environment you're using for your plan matches up to the financial data.
 
-## Calculate initial investment
+**Baseline financial data: Cost to run today**. When you build out your business case, it’s important to pull your baseline financial data. Common questions you can ask to gather the financial data needed are:
 
-Initial investment is the capital expense and operating expense required to complete a transformation. The classification of costs can vary depending on accounting models and CFO preference. But this category would include items like professional services to transform, software licenses used only during the transformation, the cost of cloud services during the transformation, and potentially the cost of salaried employees during the transformation.
+- How much does it cost to run my environment today?
+- What am I spending on servers in an average year?
+- What am I spending in my data center operations categories, for example, power or lease costs?
+- When is the next hardware refresh?
 
-Add these costs to create an estimate of the initial investment.
+**Projections: On-premises costs in on-premises scenario**. Forecast what your on-premises costs will be if you don’t migrate to the cloud.
 
-## Calculate the gain from investment
+**Projections: On-premises costs in Azure scenario**: Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario.
 
-Calculating the gain from investment often requires a second formula that's specific to the business outcomes and associated technical changes. Calculating earnings is harder than calculating cost reductions.
+**Projections: Migration timeline and Azure costs (optimized)**. Project what migration timeline and the Azure costs will be with a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
-To calculate earnings, you need two variables:
+A business case isn't just a point-in-time view. It’s a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
 
-![Gain from investment equals revenue deltas plus cost deltas](../_images/strategy/formula-gain-from-investment.png)
+Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan
 
-These variables are described in the following sections.
+:::image type="content" source="media/create-financial-plan/cloud-on-premises-comparison.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
-## Revenue deltas
+As a final step, when you create your business case, you want to compare the cloud environment to an on-premises or status quo scenario.
+The Azure view will show on-premises costs that are being reduced over time, your Azure environment costs, and any migration costs associated with shifting to a cloud environment.
 
-Revenue deltas should be forecast in partnership with business stakeholders. After the business stakeholders agree on a revenue impact, it can be used to improve the earning position.
+It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration all of the core benefits that Microsoft can address, and the Azure billing models provide.
 
-## Cost deltas
+## Savings opportunities
 
-Cost deltas are the amount of increase or decrease that will be caused by the transformation. Independent variables can affect cost deltas. Earnings are largely based on hard costs like capital expense reductions, cost avoidance, operational cost reductions, and depreciation reductions. The following sections describe some cost deltas to consider.
+Cloud billing models and offers differ from on-premises however, they can create meaningful savings opportunities you can take advantage of to reduce cloud costs:
 
-### Depreciation reduction or acceleration
+**Azure Hybrid Benefit**: Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](/pricing/hybrid-benefit/).
 
-For guidance on depreciation, speak with the CFO or finance team. The following information is meant to serve as a general reference on the topic of depreciation.
+**Spot virtual machines**: You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev and test environments, including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](/azure/virtual-machines/spot-vms).
 
-When capital is invested in the acquisition of an asset, that investment could be used for financial or tax purposes to produce ongoing benefits over the expected lifespan of the asset. Some companies see depreciation as a positive tax advantage. Others see it as a committed, ongoing expense similar to other recurring expenses attributed to the annual IT budget.
+**Reservations**: Receive a discount on your workloads when you reserve your resources in advance. In return, Microsoft passes the savings onto you as discounts of up to 72 percent. For more information, see [Azure reservations](/reservations/).
 
-Speak with the finance office to find out whether elimination of depreciation is possible and if it would make a positive contribution to cost deltas.
+**Azure Dev/Test pricing**: Take advantage of discounted rates for your development and testing, including the Microsoft software charges on Azure Virtual Machines and special dev and test pricing on other services. For more information, see [Azure Dev/Test pricing](/pricing/dev-test/).
 
-### Physical asset recovery
+**Extended security updates**: Receive continued support for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which has reached the end of their support (EOS) life cycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine. To learn more, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
 
-In some cases, retired assets can be sold as a source of revenue. This revenue is often lumped into cost reduction for simplicity. But it's truly an increase in revenue and can be taxed as such. Speak with the finance office to understand the viability of this option and how to account for the resulting revenue.
+You can take your Azure view and compare it to your on-premises or status quo scenario with no migration so you can assess the benefit of migrating to the cloud.
 
-### Operational cost reductions
+## Tools
 
-Recurring expenses required to operate a business are often called operating expenses. This is a broad category. In most accounting models, it includes:
+There are many valuable tools and calculators you can use to help prepare a business case for your cloud migration.
 
-- Software licensing.
-- Hosting expenses.
-- Electric bills.
-- Real estate rentals.
-- Cooling expenses.
-- Temporary staff required for operations.
-- Equipment rentals.
-- Replacement parts.
-- Maintenance contracts.
-- Repair services.
-- Business continuity and disaster recovery (BCDR) services.
-- Other expenses that don't require capital expense approvals.
+**Azure Total Cost of Ownership (TCO) Calculator**. Use the [Total Cost of Ownership (TCO) Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
+ online tool to estimate the cost savings you can realize when you migrate your workloads to Azure.
 
-This category provides one of the highest earning deltas. When you're considering a cloud migration, time invested in making this list exhaustive is rarely wasted. Ask the CIO and finance team questions to ensure all operational costs are accounted for.
+Enter details of your on-premises infrastructure into the tool including servers, databases, storage, and networking, licensing assumptions and costs.
 
-### Cost avoidance
+The Calculator creates a match from Azure Services to create a high-level initial TCO comparison. However, the results of the TCO calculator need to be considered with care, since an on-premises server list is often complex and optimization steps can be taken when considering Azure.
 
-When an operating expenditure is expected but not yet in an approved budget, it might not fit into a cost reduction category. For example, if VMware and Microsoft licenses need to be renegotiated and paid next year, they aren't fully qualified costs yet. Reductions in those expected costs are treated like operational costs for the sake of cost-delta calculations. Informally, however, they should be referred to as "cost avoidance" until negotiation and budget approval is complete.
+**Retail Rates Prices API**. Use the Retail Rates Prices API to retrieve retail prices for all Azure services. Previously, the only way that you could retrieve prices for Azure services was to either use the Azure Pricing Calculator or use the Azure portal. This API gives you an unauthenticated experience to get retail rates for all Azure services. Use the API to explore prices for Azure services against different regions and different SKUs. The programmatic API can also help you create your own tools for internal analysis and price comparison across SKUs and regions. To learn more, see [Retail Rates Prices API](/rest/api/cost-management/retail-prices/azure-retail-prices).
 
-### Soft-cost reductions
+**Azure Pricing Calculator**. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator) to configure and estimate the costs for Azure products.
 
-At some companies, soft costs like reductions in operational complexity or reductions in full-time staff for operating a datacenter could also be included in cost deltas. But including soft costs might not be a good idea. When you include soft-cost reductions, you insert an undocumented assumption that the reduction will create tangible cost savings. Technology projects rarely result in actual soft-cost recovery.
+**Partner toolsets**. Microsoft Partners have tools in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home) that can help create a migration cost analysis.
 
-### Headcount reductions
+**Solution assessments**: Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1).
 
-Time savings for staff are often included under soft-cost reduction. When those time savings map to actual reduction of IT salary or staffing, they could be calculated separately as headcount reductions.
+**Azure Migration Program**. Join the  [Azure Migration Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
 
-That said, the skills needed on-premises generally map to a similar (or higher-level) set of skills needed in the cloud. So people aren't generally laid off after a cloud migration.
+### Learn about Azure with Microsoft Learn
 
-An exception occurs when operational capacity is provided by a third party or a managed services provider (MSP). If IT systems are managed by a third party, the operating costs could be replaced by a cloud-native solution or cloud-native MSP. A cloud-native MSP is likely to operate more efficiently and potentially at a lower cost. If that's the case, operational cost reductions belong in the hard-cost calculations.
+[Microsoft Learn](/learn) offers many Azure learning paths that you might want to consider as you build your business case.
 
-### Capital expense reductions or avoidance
-
-Capital expenses are slightly different from operating expenses. Generally, this category is driven by refresh cycles or datacenter expansion. An example of a datacenter expansion would be a new high-performance cluster to host a big data solution or data warehouse. This expense would generally fit into a capital expense category. More common are the basic refresh cycles. Some companies have rigid hardware refresh cycles, meaning assets are retired and replaced on a regular cycle (usually every three, five, or eight years). These cycles often coincide with asset lease cycles or the forecasted life span of equipment. When a refresh cycle hits, IT draws capital expense to acquire new equipment.
-
-If a refresh cycle is approved and budgeted, the cloud transformation could help eliminate that cost. If a refresh cycle is planned but not yet approved, the cloud transformation could avoid a capital expenditure. Both reductions would be added to the cost delta.
+- [Control Azure spending and manage bills with Azure Cost Management + Billing](/learn/paths/control-spending-manage-bills).
+- [Microsoft Azure Well-Architected Framework—Cost Optimization](/learn/modules/azure-well-architected-cost-optimization)
+- [Plan and manage your Azure costs](/learn/modules/plan-manage-azure-costs)
+- [Analyze costs and create budgets with Azure Cost Management](/learn/modules/analyze-costs-create-budgets-azure-cost-management)
+- [Save money with Azure Reserved Instances](/learn/modules/save-money-with-azure-reserved-instances)
+- [Optimize Azure costs with data analysis in Power BI](/learn/modules/optimize-costs-data-analysis-powerbi)
+- [Configure and manage costs as a Microsoft partner by using Azure Cost Management](/learn/modules/manage-costs-partner-cost-management)
 
 ## Next steps
 
-Learn more about [cloud accounting](./cloud-accounting.md) models.
+Learn more about Common finance vocabulary terms.
 
 > [!div class="nextstepaction"]
-> [Cloud accounting](./cloud-accounting.md)
-
+> [Common finance vocabulary terms](./finance-vocabulary-terms.md)
