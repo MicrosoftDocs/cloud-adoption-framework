@@ -35,7 +35,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
     - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Windows Virtual Desktop Host Pool VM.
     - This configuration is limited to a *Pooled* (shared) host pool type. For a *Personal* (dedicated) type, once a desktop is assigned to a user on a certain session host VM, it sticks and doesn't change, even if not available.
 
-  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) or a secondary Host Pool (hot stand-by), you can use the disaster recovery region options.
+  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), or a secondary Host Pool (hot stand-by), you can use the disaster recovery region options.
     - Azure Site Recovery is supported for both *Personal* (dedicated) and *Pooled* (shared) Host Pool types, and lets you maintain a single host pool entity.
     - You can create a new host pool in the failover region while keeping all of the resources turned off. For this method, set up new Application Groups in the failover region and assign users to them. You can then use an Azure Site Recovery *Recovery Plan* to turn on host pools and create an orchestrated process.
 
@@ -49,7 +49,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
   - Using [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99% high-availability ([SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9)). Your capacity planning should take into account enough extra compute capacity to ensure Windows Virtual Desktop continues to operate even if a single zone is lost.
 
      > [!NOTE]
-     > An Azure Resource Manager (ARM) template must be used to specify zones; this option isn't available yet in the Azure Portal.
+     > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure Portal.
 
 - Critical applications and Multiple host pools
   - Before approaching Windows Virtual Desktop BCDR planning and design, it's important to consider which applications consumed through Windows Virtual Desktop are critical. You might want to separate them from non-critical apps. After separating them, use another host pool with a different disaster recovery approach and capabilities.
@@ -133,7 +133,7 @@ The following are best practices for your design:
 - We recommend the following guidelines when using Cloud Cache:
   - Use a Solid State Drive (SSD) for the managed disk of the Windows Virtual Desktop Host Pool VMs.
   - Have a backup solution in place to protect user Profile and Office Containers.
-  - Make sure the local VM managed disk is large enough to accommodate the local cache of all user's FSLogix Profile and Office Containers.
+  - Make sure that the local VM managed disk is large enough to accommodate the local cache of all user's FSLogix Profile and Office Containers.
 
 - Use an Azure Shared Image Gallery to replicate golden images to different regions.
   - The storage used for image creation should be Zone Replicated Storage (ZRS). At least two copies per region should be maintained.
