@@ -1632,7 +1632,7 @@ items:
         href: /azure/cloud-adoption-framework/get-started/security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Azure Security Top 10
         href: /azure/cloud-adoption-framework/security/security-top-10?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-      - name: Security Reference Archtectures (PPT)
+      - name: Security Reference Archtecture (PPT)
         href: https://aka.ms/MCRA
       - name: Security Documentation
         href: /security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
