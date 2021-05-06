@@ -28,7 +28,7 @@ It is possible to achieve conflicting motivations and competing outcomes. But, y
 
 Change mangement of any type places a strain on existing staff. Cloud adoption is no different. Even if the financial and technical considerations look good on paper, competing or parallel outcomes will intensify the strains of change management.
 
-Even with adequate staffing, or ample budget for implementation partners, staffing constraints are a notable risk when outcomes are expected in parallel. There is typically some overlooked shared dependency which becomes a blocker for one or more projects. Usually, those overlooked dependencies follows Murphy's law & become an issue when they are on the critical path for multiple projects. 
+Even with adequate staffing, or ample budget for implementation partners, staffing constraints are a notable risk when outcomes are expected in parallel. There is typically some overlooked shared dependency which becomes a blocker for one or more projects. Usually, those overlooked dependencies follows Murphy's law & become an issue when they are on the critical path for multiple projects.
 
 If you must deliver parallel outcomes, scrutinize your staffing plans and critical path for any potential shared dependencies before committing to the strategy.
 
@@ -40,7 +40,7 @@ Stratification is a sound principle in macroeconomics. But with the limited budg
 
 To create clarity and alignment, it's suggested that complex digital transformation projects align to an organization's horizons or phased program delivery. In this type of approach, the company commits to a single motivation category for a time-bound period. All teams and organizations prioritize investments and collaborate to support the priority outcome, as needed, for the defined period of time. This approach creates unity, clarity, and drives a snowball effect, allowing the success of one horizon to accelerate the target outcomes of the next horizon.
 
-In this model, the full program team can overcome skills gaps, together. Support one another in achieving small but critical milestones, together. Deliver on those outcomes more quickly, then move on to the next horizon together. In the end, a supportive team-based approach with loosely defined & agile horizons will progress faster than the same teams competing with one another for limited resources. 
+In this model, the full program team can overcome skills gaps, together. Support one another in achieving small but critical milestones, together. Deliver on those outcomes more quickly, then move on to the next horizon together. In the end, a supportive team-based approach with loosely defined & agile horizons will progress faster than the same teams competing with one another for limited resources.
 
 ## Example of a cloud adoption plan with four horizons
 
