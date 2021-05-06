@@ -26,7 +26,7 @@ It is possible to achieve conflicting motivations and competing outcomes. But, y
 
 ## Constrained staff
 
-Change mangement of any type places a strain on existing staff. Cloud adoption is no different. Even if the financial and technical considerations look good on paper, competing or parallel outcomes will intensify the strains of change management.
+Change management of any type places a strain on existing staff. Cloud adoption is no different. Even if the financial and technical considerations look good on paper, competing or parallel outcomes will intensify the strains of change management.
 
 Even with adequate staffing, or ample budget for implementation partners, staffing constraints are a notable risk when outcomes are expected in parallel. There is typically some overlooked shared dependency which becomes a blocker for one or more projects. Usually, those overlooked dependencies follows Murphy's law & become an issue when they are on the critical path for multiple projects.
 
