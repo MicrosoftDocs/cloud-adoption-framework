@@ -23,7 +23,7 @@ Use these common finance terms when your team is creating a cloud migration busi
 
 **Cash flow statement**: A cash flow statement is a financial statement that summarizes the amount of cash and cash equivalents entering and leaving a company during a given period.
 
-**Cloud economics**: A cash flow statement is a financial statement that summarizes the cash flows for a company over a given period (for example a quarter or fiscal year).
+**Cloud economics**: An understanding of the benefits and costs of the cloud, and the financial impact when you start a migration from on-premises to cloud computing.
 
 **Depreciation**: An expense tied to a capitalized asset, that reflects the “economic” usage of that asset in a particular time period. For example if you purchase a server worth $100, you would capitalize that on your balance sheet. If you depreciated it over 5-years, you would annually recognize an expense of $20 per year that impacts your income statement.
 
