@@ -274,8 +274,6 @@ Here are some other design considerations for AKS security, governance, and comp
 
 - Use [Pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](https://github.com/Azure/secrets-store-csi-driver-provider-azure) to protect secrets, certificates, and connection strings.
 
-- Make sure to [rotate certificates](/azure/aks/certificate-rotation) regularly, like every 90 days.
-
 - Use [AKS node image upgrade](/azure/aks/node-image-upgrade) to update AKS cluster node images if possible, or [kured](/azure/aks/node-updates-kured) to automate node reboots after applying updates.
 
 - View AKS recommendations in [Azure Security Center](/azure/security-center/security-center-introduction).
