@@ -12,12 +12,11 @@ ms.custom: think-tank
 
 # Connectivity to other cloud providers
 
-
 This section provides different options on how to establish connectivity from an Azure Enterprise-Scale landing zone architecture with other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
 
 The options differ in terms of transfer speed, latency, reliability, service level agreements (SLAs), complexity, and costs. This article describes considerations and recommendations for the different options available.
 
-For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered to provide low latency, high throughput cross-cloud connectivity, we have a specific guidance that can be found [here].
+For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered to provide low latency, high throughput cross-cloud connectivity, we have a specific guidance that can be found [here](#oracle-cloud-infrastructure-oci)
 
 ## General guidance
 
