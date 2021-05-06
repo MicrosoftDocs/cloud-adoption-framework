@@ -1,7 +1,7 @@
 ---
 title: Connectivity to other cloud providers
 description: Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to other cloud providers
-author: jodahlbo
+author: daltondhcp
 ms.author: brblanch
 ms.date: 05/06/2021
 ms.topic: conceptual
