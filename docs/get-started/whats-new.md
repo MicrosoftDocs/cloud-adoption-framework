@@ -71,7 +71,7 @@ We added a reference implementation example to help illustrate the deployment of
 
 ### Azure Storage migration  overview
 
-To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](..windowsserverdocs/blob/master/WindowsServerDocs/storage/storage-migration-service/overview), for two migration scenarios:
+To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
 
 - Migration of unstructured data, such as files and objects
 - Migration of block-based devices, such as disks and storage area networks (SANs)
@@ -204,7 +204,7 @@ The existing CAF blueprint definitions and CAF Terraform modules provide a start
 | [Enterprise-scale architecture](../ready/enterprise-scale/architecture.md) | Understand the architecture behind enterprise-scale |
 | [Enterprise-scale design principles](../ready/enterprise-scale/design-principles.md) | Understand the architectural design principles that guide decisions during implementation to evaluate whether this approach fits your cloud operating model |
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
-| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
+| [Implementation details](../ready/enterprise-scale/implementation.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
 Partners are an important aspect of successful cloud adoption. Throughout the Cloud Adoption Framework guidance, we have added references to show the important role that partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert managed service providers (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all), or [advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 
