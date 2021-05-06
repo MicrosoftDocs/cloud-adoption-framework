@@ -62,8 +62,7 @@ For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered 
 
 -   You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to other cloud providers to the hub VNet or Virtual WAN hub as depicted in the following figure.
 
-    ![Graphical user interface, application Description automatically generated]()
-
+    ![Graphical user interface, application Description automatically generated](./media/eslz-other-cloud-providers-customer-router.png)
     *Figure 2: Azure ExpressRoute and the other cloud providers equivalent with customer-managed routing*
 
     ![Graphical user interface Description automatically generated]()
