@@ -1,7 +1,7 @@
 ---
 title: Connectivity to other cloud providers
 description: Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to other cloud providers
-author: jodahlbo
+author: daltondhcp
 ms.author: brblanch
 ms.date: 05/06/2021
 ms.topic: conceptual
@@ -16,7 +16,7 @@ This section provides different options on how to establish connectivity from an
 
 The options differ in terms of transfer speed, latency, reliability, service level agreements (SLAs), complexity, and costs. This article describes considerations and recommendations for the different options available.
 
-For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered to provide low latency, high throughput cross-cloud connectivity, we have a specific guidance that can be found [here](#oracle-cloud-infrastructure-oci).
+For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered to provide low latency, high throughput cross-cloud connectivity, we have a specific guidance that can be found [here](connectivity-to-other-providers-oci.md).
 
 **Design considerations:**
 
