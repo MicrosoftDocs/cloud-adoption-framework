@@ -63,7 +63,7 @@ Two main metrics to focus on that have a direct influence on organizational risk
 
 Security Operations handles a combination of high volume incidents and high complexity incidents.
 
-:::image type="content" source="./media/secops-model.png" alt-text="Security Operations - Model" lightbox="./media/secops-model.png":::
+:::image type="content" source="./media/secops-model.png" alt-text="Security Operations - Model" lightbox="./media/secops-model-popout.png":::
 
 Security operations teams often focus on three key outcomes:
 
@@ -87,7 +87,7 @@ focussed primarily on proactive hunting for highly-sophisticated attack processe
 
 SecOps has multiple potential interactions with business leadership
 
-:::image type="content" source="./media/secops-business.png" alt-text="Security Operations - Business Relationships" lightbox="./media/secops-business.png":::
+:::image type="content" source="./media/secops-business.png" alt-text="Security Operations - Business Relationships" lightbox="./media/secops-business-popout.png":::
 
 
  - **Business context (to SecOps)** — SecOps needs to understand what is most important to the organization so the team can apply that context to fluid real-time security situations. What would have the most negative impact on the business? Downtime of critical systems? A loss of reputation and customer trust? Disclosure of sensitive data? Tampering with critical data or systems? We’ve learned it’s critical that key leaders and staff in the SOC understand this context as they wade through the continuous flood of information and triage incidents and prioritize their time, attention, and effort.
