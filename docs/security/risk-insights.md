@@ -36,7 +36,7 @@ Security leaders must step back from the technical lens, learn what assets and d
 
 ## Process - Aligning Security Risk Management
 
-You should continuously build a stronger bridge between cybersecurity and your organizational leadership, both in human relationships and explicity processes. The dynamic nature of security risk and the divergent dyanmics of business opportunities and security risk sources require ongoing investment into building and improving this relationship. 
+You should continuously build a stronger bridge between cybersecurity and your organizational leadership, both in human relationships and explicit processes. The dynamic nature of security risk and the divergent dyanmics of business opportunities and security risk sources require ongoing investment into building and improving this relationship. 
 
 A key ongoing process in this relationship is translating how business value maps to specific technical assets. Without this north star, security will not be sure what really matters to the organization and will only succeed at protecting the most important assets with lucky guesses. 
  
