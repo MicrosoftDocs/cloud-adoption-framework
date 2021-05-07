@@ -20,7 +20,7 @@ Maintaining security assurances while minimizing friction to the business proces
 
 :::image type="content" source="./media/security-Integration.png" alt-text="Security Integration" lightbox="./media/security-Integration-popout.png":::
 
-While internal friction and low levels of inter-team conflict may occur often and be the norm in many organizations, this is not sustainable. It is critical for all of these teams to work together in the age of cloud, digital business, and zero trust security. The pace of change driven by business environment, technical platforms, and attackers makes an organization inefficient and ineffective if they these teams are operating with separate goals, culture, and language. 
+While internal friction and low levels of inter-team conflict may occur often and be the norm in many organizations, this is not sustainable. It is critical for all of these teams to work together in the age of cloud, digital business, and zero trust security. The pace of change driven by business environment, technical platforms, and attackers makes an organization inefficient and ineffective if these teams are operating with separate goals, culture, and language. 
 
 An additional priority is to ensure security teams are not operating within silos, but are working closely together to ensure smooth process operations and knowledge sharing. 
 
