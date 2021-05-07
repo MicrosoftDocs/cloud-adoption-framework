@@ -18,6 +18,12 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
+## May 2021
+
+### Windows Virtual Desktop Adoption Journey
+
+As part of the on-going series of adoption journeys, this release includes [expanded guidance for integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance provides information on how each of the Cloud Adoption Framework methodologies can help provide structure and best practices to your implementation approach.
+
 ## April 2021
 
 ### Cloud service controls
