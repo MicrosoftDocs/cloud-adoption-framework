@@ -1,5 +1,5 @@
 ---
-title: "Networking for Windows Virtual Desktop at enterprise scale"
+title: Networking for Windows Virtual Desktop at enterprise scale
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Windows Virtual Desktop workloads.
 author: BrianBlanchard
 ms.author: brblanch
@@ -17,7 +17,7 @@ Designing and implementing Windows Virtual Desktop Azure networking capabilities
 
 ## Identify workload networking requirements
 
-Identify the networking capabilities that your landing zone needs to support. Assessing each application and service in your workloads to determine their connectivity network control requirements. After you identify and document the requirements, create policies for your landing zone that control networking resources and configuration based on your workload needs.
+Identify the networking capabilities that your landing zone needs to support. Assess each application and service in your workloads to determine their connectivity network control requirements. After you identify and document the requirements, create policies for your landing zone. Policies control networking resources and configuration based on your workload needs.
 
 For each application or service you'll deploy to your landing zone, use the following decision tree to help you determine the networking tools or services to use:
 
@@ -27,13 +27,13 @@ The following questions help you make decisions based on the Azure networking se
 
 - What is the size of your virtual network?
 
-  In Azure, Windows Virtual Desktop virtual machines are part of virtual networks. Your virtual network needs to be appropriately sized. Your network needs to use appropriate address ranges as defined in your existing networking architecture.
+  In Azure, Windows Virtual Desktop virtual machines are part of virtual networks. Your virtual network needs to be the right size. Use appropriate address ranges as defined in your existing networking architecture.
 
 - Will your workloads require connectivity between virtual networks and your on-premises datacenter?
 
   Azure provides two solutions for establishing hybrid networking capabilities:
 
-  - Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+  - Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN Gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
   - Azure ExpressRoute offers higher reliability and lower latency by using a private connection between Azure and your on-premises infrastructure. Bandwidth options for ExpressRoute range from 50 Mbps to 100 Gbps. For more information, see [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
 
 - Will you need to inspect and audit outgoing traffic by using on-premises network devices?
@@ -51,9 +51,9 @@ The following questions help you make decisions based on the Azure networking se
 
 - Do you need to connect multiple virtual networks?
 
-  You can use virtual network peering to connect multiple instances of Azure Virtual Network. Peering can support connections across subscriptions and regions. For more information, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview).
+  You can use virtual network peering to connect instances of Azure Virtual Network. Peering can support connections across subscriptions and regions. For more information, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview).
 
-  Virtual network peering provides connectivity only between two peered networks. You might provide services across multiple subscriptions or need to manage a large number of network peerings. Consider adopting a hub and spoke networking architecture or using Azure Virtual WAN. For more information, see [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) and [What is Azure Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
+  Virtual network peering provides connectivity between only two peered networks. You might provide services across multiple subscriptions or need to manage a large number of network peerings. Consider adopting a hub and spoke networking architecture or using Azure Virtual WAN. For more information, see [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) and [What is Azure Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
 
 - Will you need to support custom DNS management?
 
@@ -67,16 +67,16 @@ Azure networking includes products and services that provide different networkin
 
 | Scenario | Networking product or service |
 | --- | --- |
-| I need the networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network) |
+| I need networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network) |
 | I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](/azure/load-balancer) |
-| I want to optimize delivery from application server farms while increasing application security with a Web Application Firewall. | [Azure Application Gateway](/azure/application-gateway) <br> [Azure Front Door](/azure/frontdoor) |
+| I want to optimize delivery from application server farms while increasing application security with a web application firewall. | [Azure Application Gateway](/azure/application-gateway) and [Azure Front Door](/azure/frontdoor) |
 | I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN gateway](/azure/vpn-gateway) |
 | I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns) |
 | I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn) |
 | I need to protect my Azure applications from DDoS attacks. | [Azure DDoS protection](/azure/virtual-network/ddos-protection-overview) |
-| I need to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager) <br><br> [Azure Front Door](/azure/frontdoor) |
+| I need to distribute traffic optimally to services globally across Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager) and [Azure Front Door](/azure/frontdoor) |
 | I need to add private network connectivity to access Microsoft cloud services from my corporate networks as if they were on-premises. | [Azure ExpressRoute](/azure/expressroute) |
-| I want to monitor and diagnose conditions at a network-scenario level. | [Azure Network Watcher](/azure/network-watcher) |
+| I want to monitor and diagnose conditions at a network level. | [Azure Network Watcher](/azure/network-watcher) |
 | I need native firewall capabilities, with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](/azure/firewall/overview) |
 | I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](/azure/virtual-wan) |
 | I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](/azure/frontdoor) |
@@ -90,23 +90,23 @@ The following table summarizes the primary scenarios that these patterns support
 | Scenario  | Suggested network architecture |
 | --- | --- |
 | All of the Azure-hosted workloads in your landing zone are Platform as a Service (PaaS) resources. These resources don't require a virtual network and aren't part of a wider cloud adoption effort that includes Infrastructure as a Service (IaaS) resources. | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md) |
-| Your Azure-hosted workloads deploy IaaS-based resources like virtual machines or otherwise require a virtual network. These resources don't require connectivity to your on-premises environment.  | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md) |
+| Your Azure-hosted workloads deploy IaaS-based resources like virtual machines or the workloads require a virtual network. These resources don't require connectivity to your on-premises environment.  | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md) |
 | Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted. | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md) |
 | Your Azure-hosted workloads require limited access to on-premises resources. You plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment. | [Hybrid](../../decision-guides/software-defined-network/hybrid.md) |
-| You deploy and manage a large number of virtual machines and workloads, you need to share services across subscriptions, or you need a more segmented structure for role, application, or permission segregation. For more information, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits) | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) |
+| You deploy and manage a large number of virtual machines and workloads, you need to share services across subscriptions, or you need a more segmented structure for role, application, or permission segregation. For more information, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits). | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) |
 | You have many branch offices that need to connect to each other and to Azure. | [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) |
 
 <!-- TODO: Refactor VDC content below. -->
 <!-- docutune:casing "Azure Virtual Datacenter" -->
 
-In addition to using one of these architecture patterns, learn about an enterprise-scale landing zone. If you plan to host more than 1,000 assets, including applications, infrastructure, and data assets, in the cloud within 24 months, consider an enterprise-scale landing zone. The enterprise-scale landing zone provides a combined approach to networking, security, management, and infrastructure.
+In addition to using one of these architecture patterns, if you plan to host more than 1,000 assets, including applications, infrastructure, and data assets, in the cloud within 24 months, consider an enterprise-scale landing zone. The enterprise-scale landing zone provides a combined approach to networking, security, management, and infrastructure.
 
-For organizations that meet the following criteria, you may also want to start with an enterprise-scale landing zone:
+For organizations that meet some of the following criteria, you may also want to start with an enterprise-scale landing zone:
 
-- Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
-- You maintain common policy and governance compliance and centralized IT control over core services.
+- Your enterprise is subject to regulatory compliance requirements for centralized monitoring and audit capabilities.
+- You maintain common policy, governance compliance, and centralized IT control over core services.
 - Your industry depends on a complex platform that requires complex controls and deep domain expertise to govern the platform. This situation is common in large enterprises in finance, oil and gas, or manufacturing.
-- Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
+- Your existing IT governance policies require tight parity with existing features, even during early stage adoption.
 
 For more information, see [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md).
 
@@ -120,4 +120,4 @@ As part of your networking design process, see these articles:
 
 ## Next steps
 
-[Management and monitoring for Windows Virtual Desktop Enterprise-Scale scenario](eslz-management-and-monitoring.md)
+[Management and monitoring](eslz-management-and-monitoring.md)
