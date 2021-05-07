@@ -18,7 +18,7 @@ In many industries, organizations require that traffic in Azure is mirrored to a
 
 <!-- docutune:ignore TAP -->
 
-- [Azure Virtual Network terminal access point (TAP)](/azure/virtual-network/virtual-network-tap-overview) is in preview. Contact `azurevnettap@microsoft.com` for availability details.
+- [Azure Virtual Network terminal access point (TAP)](/azure/virtual-network/virtual-network-tap-overview) Preview is currently on hold in all Azure regions.
 
 - Packet capture in Azure Network Watcher is generally available, but captures are limited to a maximum period of five hours.
 
