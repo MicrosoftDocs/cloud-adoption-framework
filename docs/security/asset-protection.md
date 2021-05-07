@@ -66,7 +66,7 @@ Without business leadership support, security and IT leaders will be constantly 
 
 ### Network Isolation
 
-Network isolation may be a valid option for protecting older assets that can no longer secured but cannot be immediately retired (typically end of life operating systems and applications). This is common in operational technology (OT) environment and legacy systems. 
+Network isolation may be a valid option for protecting older assets that can no longer be secured but cannot be immediately retired (typically end of life operating systems and applications). This is common in operational technology (OT) environment and legacy systems. 
 
 Isolation itself is considered an Access Control, though these unsecurable assets are identified as part of asset protection discipline. See [Avoid Firewall and Forget](.\access-control.md\#avoid-firewall-and-forget) in Access Control for more details. 
 
@@ -85,7 +85,7 @@ We recommend that organizations
  
  - **Focus on well-known resources first** like virtual machines, networks, and identities in the cloud that the team is already familiar with. This allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender. 
   - **Start with vendor/industry baselines** - Start your security configuration with a well known and proven solution like
-      - *Azure Baselines* in Azure Security Benchmark - Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service, enabling security teams to rapidly adopt secure each service (and refine configurations as needed. See [Security Baselines for Azure](https://docs.microsoft.com/security/benchmark/azure/security-baselines-overview) 
+      - *Azure Baselines* in Azure Security Benchmark - Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service, enabling security teams to rapidly adopt secure each service and refine configurations as needed. See [Security Baselines for Azure](https://docs.microsoft.com/security/benchmark/azure/security-baselines-overview) 
      - *Microsoft Security Baselines* - Microsoft provides security configuration guidance for commonly used technologies including Windows, Office, and Edge to help organizations rapidly secure them. See [Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) for more information
      - *CIS Benchmarks* - The Center for Internet Security (CIS) provides specific configuration guidance for many products and vendors. See [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/) for more information
 
@@ -123,9 +123,9 @@ Asset protection should favor automated enforcement and remediation mechanisms l
 Azure policy allows central teams to specify certain configurations that should be used in order to ensure that the resources are considered secure across clouds (virtual machines, containers, databases, storage, networks, etc.).
 
 ### Designing Controls as a team
-All controls should designed as a partnership with key stakeholders. This typically includes: 
+All controls should be designed as a partnership with key stakeholders. This typically includes: 
  - **Asset protection** provides subject matter expertise on the assets, the controls available for them, and feasibility of implementing the controls. 
- - **Governance team** including provides context of how the control(s) fit into the overall security architecture, policies and standards, and regulatory compliance requirements.  
+ - **Governance team** provides context of how the control(s) fit into the overall security architecture, policies and standards, and regulatory compliance requirements.  
  - **Security Operations** advise on detective controls and ensure alerts and logs are integrated into security operations tools, processes, and training
  - **Vendors and Cloud Providers** can provide deep subject matter expertise on systems and components to avoid known issues seen across their customer base. 
 
