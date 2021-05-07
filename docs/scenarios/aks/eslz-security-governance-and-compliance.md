@@ -262,8 +262,8 @@ Here are some other design considerations for AKS security, governance, and comp
 - Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
 - Decide whether your private container registry is accessible via the internet, or only within a specific virtual network.
 - Decide whether your private container registry instance is being shared across multiple landing zones or if you deploy a dedicated Azure container registry to each landing zone subscription.
-- Consider using a security solution for threat detection for your cluster.
-- Consider to scan your container images for vulnerabilities. 
+- Consider using a security solution like [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
+- Consider scanning your container images for vulnerabilities. 
 
 ## Design recommendations
 - Limit access to the [Kubernetes cluster configuration](/azure/aks/control-kubeconfig-access) file by using Azure role-based access control.
