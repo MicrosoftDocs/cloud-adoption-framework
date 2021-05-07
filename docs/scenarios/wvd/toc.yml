@@ -31,20 +31,20 @@ items:
   - name: Architectures
     items:
     - name: Windows Virtual Desktop Architecture 
-      href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
+      href: /architecture/example-scenario/wvd/windows-virtual-desktop
 
   - name: Best practices
     items:
     - name: WVD Security Best Practices
-      href: /azure/virtual-desktop/security-guide.md
+      href: /virtual-desktop/security-guide
     - name: Azure Security Baseline for Windows Virtual Desktop
-      href: /azure/virtual-desktop/security-baseline
+      href: /virtual-desktop/security-baseline
     - name: Virtual Desktop machine sizing
       href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
     - name: Configure device redirections
-      href: /azure/virtual-desktop/configure-device-redirections
+      href: /virtual-desktop/configure-device-redirections
     - name: Scale session hosts
-      href: /azure/virtual-desktop/set-up-scaling-script
+      href: /virtual-desktop/set-up-scaling-script
 
   - name: Enterprise-scale construction set
     items:
@@ -66,23 +66,23 @@ items:
   - name: Microsoft products
     items:
     - name: Windows Virtual Desktop
-      href: /services/virtual-desktop/
+      href: https://azure.microsoft.com/services/virtual-desktop/
     - name: Azure Files
       href: https://azure.microsoft.com/services/storage/files/
 
   - name: Learn modules
     items:
     - name: Introduction to Windows Virtual Desktop in Microsoft Azure
-      href: https://docs.microsoft.com/learn/modules/m365-wvd-intro/
+      href: /learn/modules/m365-wvd-intro/
     - name: Prepare for Windows Virtual Desktop in Microsoft Azure
-      href: https://docs.microsoft.com/learn/modules/m365-prepare-for-wvd/
+      href: /learn/modules/m365-prepare-for-wvd/
     - name: Deploy Windows Virtual Desktop in Microsoft Azure
-      href: https://docs.microsoft.com/learn/modules/m365-deploy-wvd/
+      href: /learn/modules/m365-deploy-wvd/
     - name: Deliver remote desktops and apps from Azure with Windows Virtual Desktop
-      href: https://docs.microsoft.com/learn/paths/m365-wvd/      
+      href: /learn/paths/m365-wvd/      
     - name: Optimize Windows Virtual Desktop in Microsoft Azure
-      href: https://docs.microsoft.com/learn/modules/m365-optimize-wvd/
+      href: /learn/modules/m365-optimize-wvd/
     - name: Deploy applications by using MSIX app attach for Windows Virtual Desktop
-      href: https://docs.microsoft.com/learn/modules/m365-wvd-application-management/
+      href: /learn/modules/m365-wvd-application-management/
     - name: Secure a Windows Virtual Desktop deployment
-      href: https://docs.microsoft.com/learn/modules/m365-wvd-security/
+      href: /learn/modules/m365-wvd-security/

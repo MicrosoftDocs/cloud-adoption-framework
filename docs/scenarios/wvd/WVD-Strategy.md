@@ -51,15 +51,15 @@ Windows Virtual Desktop is an influential platform, and organizations have sever
 
 - **Potential cost savings:** Customers can now take advantage of Azure as an operational rather than upfront cost and it being a consumption based service. For example Virtual Machines are only charged for the time they are powered on, providing the capability to realise cost savings back to the organizations
 
-Windows Virtual Desktop customers are often motivated by all six categories above. To successfully implement an Windows Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
+Windows Virtual Desktop customers are often motivated by all six categories above. To successfully implement a Windows Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
 
-Motivations to adopt an Windows Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are for your organization if your team is reviewing this adoption scenario:
+Motivations to adopt a Windows Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are for your organization if your team is reviewing this adoption scenario:
 
-1. Cycles to refresh Windows Virtual Desktop infrastructure require significant capital expenditures. If your Windows Virtual Desktop infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs.
+1. Cycles to refresh on-premises Virtual Desktop infrastructure require significant capital expenditures. If your Virtual Desktop infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs.
 
-1. Windows Virtual Desktop hosting contracts lock in vendors across multiple years. If your hosting, managed service, or maintenance contracts are coming up for renewal, some cloud adoption opportunities and benefits are to improve agile, unlock new innovations, and streamline operations for your most mission-critical platform.
+2. Infrastructure hosting contracts lock in vendors across multiple years. If your hosting, managed service, or maintenance contracts are coming up for renewal, some cloud adoption opportunities and benefits are to improve agile, unlock new innovations, and streamline operations for your most mission-critical platform.
 
-1. Refresh and contract renewals can be triggered by on-premises Virtual Desktop upgrade cycles or a business driver to expand into Windows Virtual Desktop. If your organization is seeking to expand Windows Virtual Desktop capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
+3. Refresh and contract renewals can be triggered by on-premises Virtual Desktop upgrade cycles or a business driver to expand into Windows Virtual Desktop. If your organization is seeking to expand Windows Virtual Desktop capabilities, cloud adoption will provide opportunities to reduce costs, innovate, optimize, and be more agile.
 
 ## How to build a business justification for cloud migration
 
