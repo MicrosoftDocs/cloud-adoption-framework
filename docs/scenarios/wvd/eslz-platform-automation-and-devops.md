@@ -108,7 +108,7 @@ For more information about Packer, see the [Packer website](https://www.packer.i
 
 For universal applications installed in the gold image, use the same Packer method as above to install applications.
 
-[App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started) currently the supported method from Microsoft for streaming apps on a per-user basis.
+[App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming apps on a per-user basis.
 
 Use FSLogix [App Masking](https://docs.microsoft.com/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
 
@@ -122,7 +122,7 @@ Microsoft has processes for installing language packs manually or automatically.
 
 The automated process involves downloading a PowerShell script onto the VM that’s being converted to an image. Example automation scripts are found in Microsoft documentation. If you're following the recommendation for Packer pipelines, you can include this process as an extra task.
 
-For more information on installing language packs in Windows 10 Multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop - Azure](https://docs.microsoft.com/azure/virtual-desktop/language-packs).
+For more information on installing language packs in Windows 10 multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/language-packs).
 
 ### Integrate Windows Virtual Desktop golden image creation with DevOps
 
