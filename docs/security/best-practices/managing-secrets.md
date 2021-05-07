@@ -35,7 +35,9 @@ Before continuing, it is highly recommended the process of documenting the follo
 
 ## Anticipating exceptions
 
-Anticipating exceptions to the best practices found below will be difficult and these exceptions may occur within various phases of your cloud journey.  Ensuring exceptions and their risks to the business are documented and accepted across all stakeholders.  The overall best practice to each and every exception encountered is: *mitigate as much as possible to ensure your risks are minimized*. If each risk can not be mitigated, ensure your "observability" methodology will enable you to identify any security breaches as early as possible with the information that will support your *time to be notified* / *time to detection* (also known as *MTTD*), *root cause analysis* and *compromise recovery* (also known as *MTTR*) processes.
+Anticipating exceptions to the best practices found below will be difficult and these exceptions may occur within various phases of your cloud journey.  Ensuring exceptions and their risks to the business are documented and accepted across all stakeholders.  
+
+**Key take away**: The overall best practice to each and every exception encountered is: *mitigate as much as possible to ensure your risks are minimized*. If each risk can not be mitigated, ensure your "observability" methodology will enable you to identify any security breaches as early as possible with the information that will support your *time to be notified* / *time to detection* (also known as *MTTD*), *root cause analysis* and *compromise recovery* (also known as *MTTR*) processes.
 ## External Configuration Store cloud design pattern
 
 The majority of these best practices across your enterprise and workloads deployed to the cloud will leverage some secret store. Understanding the External Configuration Store cloud design pattern will not only provide context, it will provide insights to various issues and considerations.
@@ -58,22 +60,25 @@ Understanding alternatives to using Azure Key Vault and adhering to the External
 
 There are different types of "keys" that can be used within various Azure services:
 
-- Keys used for encryption-at-rest and/or encryption-in-transit (NOTE: This section will focus on encryption-at-rest)
+- Keys used for encryption-at-rest and/or encryption-in-transit (NOTE: The following section will focus on encryption-at-rest)
 - Keys used for connectivity to various Azure services
+
 ### **Keys used for encryption**
 
-The two types of keys for encryption-at-rest are: PMK - Platform-Managed Keys vs. CMK - Customer-Managed Keys
+Read [this](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure. 
 
-As mentioned earlier to the documentation of your various business requirements, what are your encryption-at-rest requirements with respect to key management.  Ask yourself: *Are there any exceptions that I need to be made aware of?*
+The two types of keys for encryption-at-rest are: 
 
-Do note that you may find various exceptions to various Azure services may not support Customer-Managed Keys (CMK). Validate these exceptions with your business stakeholders for each Azure service within your workload.
+- Platform-Managed Keys, also known as PMK
+- Customer-Managed Keys, also known as CMK or bring-your-own-key (BYOK)
 
-PMK - Platform-Managed Keys
-CMK - Customer-Managed Keys
+As mentioned above, to the documentation of your various business requirements, what are your encryption-at-rest requirements with respect to key management.  Ask yourself: *Are there any exceptions that I need to be made aware of?*
 
-**Best practice**: Use *Platform-Managed Keys* due to operational simplicity when *Customer-Managed Keys* are not required as they are managed and rotated by the platform.
+Do note that you may find various exceptions to various Azure services that may not support customer-managed keys (CMK). Validate these exceptions with your business stakeholders for each Azure service within your workload.
 
-If your business requires Customer Managed Keys for encryption-at-rest, ensure you document the various Azure services that support this and their limitations or their release status, such as Preview or GA. For example, Azure Monitor supports customer-managed keys and the documents any limitations.
+**Best practice**: When CMKs are not required, use PMKs due to operational simplicity as they are managed (including rotation) by the platform.
+
+If your business requires customer-managed keys for encryption-at-rest, ensure you document the various Azure services that support this and their limitations or their release status, such as Preview or GA. For example, Azure Monitor supports customer-managed keys and the documents any limitations.
 
 [!IMPORTANT]
 **Best practice**: Using customer-managed keys? Rotate your keys on a frequent interval for each of the Azure services within your workloads.  If backups are encrypted with your CMKs, ensure your key rotation allows these backups to be restored successfully.
@@ -120,6 +125,8 @@ Lastly, variuous Azure services have features that allow the connect... ?
 
 Secrets store sensitive information and are typcially contain password or fully qualified connection strings.
 
+...Secret rotation, etc.
+
 *Passwords and secrets are managed outside of application artifacts, using tools like Azure Key Vault. API keys, database connection string and passwords need to be stored in a secure store and not within the application code or configuration. This simplifies operational tasks like key rotation as well as improving overall security.*
 
 ### Further Reading
@@ -127,14 +134,14 @@ Secrets store sensitive information and are typcially contain password or fully 
 - [Azure Service Bus authentication and authorization](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-authentication-and-authorization)
 - [Microsoft's TechCommunity: Azure Architecture on managing and rotating secrets with Azure Key Vault, pt 1](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
 - [Automate the rotation of secret for resources that use one set of authentation credentials](https://docs.microsoft.com/azure/key-vault/secrets/tutorial-rotation)
-- [Automate the rotation of secret for resources that use two sets of authentation credentials](https://docs.microsoft.com/en-us/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
+- [Automate the rotation of secret for resources that use two sets of authentation credentials](https://docs.microsoft.com/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
 
 ## Renewing certificats
 
 ...Expiry dates of SSL/TLS certificates are monitored and there are renewal processes in place
 
 ### Further reading
-- [Renew your Azure Key Vault certificates](https://docs.microsoft.com/en-us/azure/key-vault/certificates/overview-renew-certificate)
+- [Renew your Azure Key Vault certificates](https://docs.microsoft.com/azure/key-vault/certificates/overview-renew-certificate)
 
 
 
