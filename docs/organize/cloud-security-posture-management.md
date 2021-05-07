@@ -34,7 +34,7 @@ Posture management introduces a structured approach to this, using the following
 
 ## Team composition and key relationships
 
-Security posture management is an evolving function, so it may be a dedicated team or may it be provided by other teams.
+Security posture management is an evolving function, so it might be a dedicated team, or it might be provided by other teams.
 
 Security posture management should work closely with the following teams:
 

@@ -1,5 +1,5 @@
 ---
-title: Cloud Adoption-related innovation
+title: Cloud adoption-related innovation
 description: Learn how cloud adoption-related innovation can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.custom: internal, seo-caf-innovate
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
 
-# Cloud Adoption-related innovation
+# Cloud adoption-related innovation
 
 All IT portfolios contain a few workloads and ideas that could significantly improve a company's position in the market. Most cloud adoption efforts focus on the migration and modernization of existing workloads. Cloud innovation, however, can provide the greatest business value. Innovation related to cloud adoption can unlock new technical skills and expanded business capabilities.
 
@@ -19,7 +19,7 @@ This section of the Cloud Adoption Framework focuses on the elements of your por
 
 To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following cloud innovation exercises:
 
-| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+| <span title="icon">&nbsp;</span> | <span title="description">&nbsp;</span> |
 |--|--|
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Business value consensus](./business-value.md): Before you decide on technical solutions, identify how new cloud innovation can drive business value. Map that value to your cloud strategy. In this incremental methodology, business value is represented by a hypothesis about customer needs. |
 | <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Azure innovation guide](./innovation-guide/index.md): Azure includes cloud innovation tools to accelerate the deployment of innovative solutions. Depending on your hypothesis, you might consider various combinations of tools. The creation of a minimum viable product (MVP) with basic tools is suggested. |
