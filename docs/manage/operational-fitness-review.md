@@ -104,6 +104,6 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
 
 ## Recommended resources
 
-- [Azure Automanage](/azure/automanage/). Azure Automanage automatically monitors operational fitness across the operations baseline & automates the application of various remediation strategies across the portfolio.
+- [Azure Automanage](https://azure.microsoft.com/services/azure-automanage/). Azure Automanage automatically monitors operational fitness across the operations baseline & automates the application of various remediation strategies across the portfolio.
 - [Azure Advisor](/azure/advisor/). Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources. By default this tool provides recommendations across a subscription to improve the operations baseline. It can also be used more granularly to identify improvements to tech platforms or individual workloads.
 - [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/): Guidance to improve workload operations or to guide decentralized operations.
