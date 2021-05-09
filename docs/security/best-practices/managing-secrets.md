@@ -27,17 +27,20 @@ Managing company sensitive secrets, keys and certificates aligns with a critical
 
 Before continuing, it is highly recommended the process of documenting the following within your organization so your alignment with these best practices can be put into action smoothly:
 
-1. Exceptions: Understand and document how various security configurations have direct impact to performance and cost. Ensure your documentation aligns with your overall business requirements.  Next, review each business requirements to ensure all stakeholders agree and accept the overhead and complexities various security requirements will place on your secrets management implementation.
+1. Limitations and Exceptions: Understand and document how various security configurations have direct impact to performance and cost. Ensure your documentation aligns with your overall business requirements.  Next, review each business requirements to ensure all stakeholders agree and accept the overhead and complexities various security requirements will place on your secrets management implementation.
 2. Identify your compliance / attestation requirements. For example: CIS, NIST, HIPAA HITRUST, CMMC, PBMM, FIPS, etc. With respect to implementation, do note that several of these compliance requirements may have built-in rulesets within Azure Policy. For example, there are various Security controls by Azure Policy that can be applied to Azure Key Vault.
 3. Identify the personas, their access requirements. For example, developers and applications may only require read access. On the other hand, operators or administrators will require full management access.
 4. The overall "observability" methodology used by your organization to ensure your logging, monitoring, auditing, and alerting configurations are aligned with business requirements.
 
+The following illustration is a high level logical representation of this process:
+
+![picture alt](./../media/managing-secrest-hl_process.svg "Managing Secrets high-level process")
 
 ## Anticipating exceptions
 
 Anticipating exceptions to the best practices found below will be difficult and these exceptions may occur within various phases of your cloud journey.  Ensuring exceptions and their risks to the business are documented and accepted across all stakeholders.  
 
-**Key take away**: The overall best practice to each and every exception encountered is: *mitigate as much as possible to ensure your risks are minimized*. If each risk can not be mitigated, ensure your "observability" methodology will enable you to identify any security breaches as early as possible with the information that will support your *time to be notified* / *time to detection* (also known as *MTTD*), *root cause analysis* and *compromise recovery* (also known as *MTTR*) processes.
+> **Key take away**: The overall best practice to each and every exception encountered is: *mitigate as much as possible to ensure your risks are minimized*. If each risk can not be mitigated, ensure your "observability" methodology will enable you to identify any security breaches as early as possible with the information that will support your *time to be notified* and "time to ackowledge* (also known as *MTTA*) / *time to detection* (also known as *MTTD*), *root cause analysis* and *compromise recovery* (also known as *MTTR*) processes.
 ## External Configuration Store cloud design pattern
 
 The majority of these best practices across your enterprise and workloads deployed to the cloud will leverage some secret store. Understanding the External Configuration Store cloud design pattern will not only provide context, it will provide insights to various issues and considerations.
@@ -76,12 +79,11 @@ As mentioned above, to the documentation of your various business requirements, 
 
 Do note that you may find various exceptions to various Azure services that may not support customer-managed keys (CMK). Validate these exceptions with your business stakeholders for each Azure service within your workload.
 
-**Best practice**: When CMKs are not required, use PMKs due to operational simplicity as they are managed (including rotation) by the platform.
+>**Best practice**: When CMKs are not required, use PMKs due to operational simplicity as they are managed (including rotation) by the platform.
 
 If your business requires customer-managed keys for encryption-at-rest, ensure you document the various Azure services that support this and their limitations or their release status, such as Preview or GA. For example, Azure Monitor supports customer-managed keys and the documents any limitations.
 
-[!IMPORTANT]
-**Best practice**: Using customer-managed keys? Rotate your keys on a frequent interval for each of the Azure services within your workloads.  If backups are encrypted with your CMKs, ensure your key rotation allows these backups to be restored successfully.
+>**Best practice**: Using customer-managed keys? Rotate your keys on a frequent interval for each of the Azure services within your workloads.  If backups are encrypted with your CMKs, ensure your key rotation allows these backups to be restored successfully.
 ### Further Reading: Keys used for encryption
 
 - [Azure Monitor customer-managed key](https://docs.microsoft.com/azure/azure-monitor/logs/customer-managed-keys?tabs=portal)
@@ -99,17 +101,17 @@ Azure Storage has support for shared access policies, shared access signatures, 
 
 Additionally, many Azure services support managed identities for authentication.  [What are Managed identities?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
 
-**Best practice**: Use Azure AD managed identities when your use cases support the capabilities of managed identities for the various Azure services your solution will be composed of.
-
-**Best practice**: If Azure AD managed identities is not suitable for your use cases nor available to an Azure service, following a "least-privelege model" by using stored access policies and/or signatures (also known as "SAS") with explicit access and  time-bound values.
+>**Best practice**: 
+> - Use Azure AD managed identities when your use cases support the capabilities of managed identities for the various Azure services your solution will be composed of.
+> - If Azure AD managed identities is not suitable for your use cases nor available to an Azure service, following a "least-privelege model" by using stored access policies and/or signatures (also known as "SAS") with explicit access and  time-bound values.
 
 Several Azure services may not have the features to use a stored access signature; however, these services may have the following policy features: manage, read, write. For example, Azure Service Bus topics and/or queues have these types of security access policies in addition to using Azure Active Directory.
 
-**Best practice**: Following a "least-privelege model", when defining and configuring a policy will only provide the necessary operations needed.
+> **Best practice**: Following a "least-privelege model", when defining and configuring a policy will only provide the necessary operations needed.
 
 Several Azure serices leverage a key to allow an invocation to be performed. For example, non-anonymous Azure functions have an access code (also known as a key).
 
-**Best practice**: Ensure the keys used for invocation have a defined purpose. Create several keys for their intended purpose and renew or regenerate these keys on a frequent interval or when the key is compromised.
+> **Best practice**: Ensure the keys used for invocation have a defined purpose. Create several keys for their intended purpose and renew or regenerate these keys on a frequent interval or when the key is compromised.
 
 Lastly, variuous Azure services have features that allow the connect... ? 
 
