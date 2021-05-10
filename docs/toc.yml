@@ -1613,14 +1613,10 @@ items:
         href: security/best-practices/secure-devops.md
       - name: Secure DevOps Governance
         href: security/best-practices/end-to-end-governance.md 
-      - name: Windows Virtual Desktop
-        href: security/best-practices/wvd-security.md
       - name: Managing Secrets
         href: security/best-practices/managing-secrets.md
       - name: Network Security
-        href: security/best-practices/network-security.md
-      - name: Identity Management
-        href: security/best-practices/identity-management.md
+        href: /security/compass/network-security-containment
       - name: Toolchain
         href: security/best-practices/toolchain.md
         
