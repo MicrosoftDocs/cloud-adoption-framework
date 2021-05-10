@@ -50,7 +50,8 @@ For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered 
 
 - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must use either the Ultra Performance SKU or the ErGw3AZ SKU for the ExpressRoute gateway to enable route management.
 
-    > [!NOTE] There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet peering.
+    > [!NOTE] 
+    > There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet peering.
 
 **Design recommendations:**
 
@@ -61,7 +62,7 @@ For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered 
 - You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to other cloud providers to the hub VNet or Virtual WAN hub as depicted in the following figure.
 
     ![Figure 2: Azure ExpressRoute and the other cloud providers equivalent private connection with customer-managed routing](./media/eslz-other-cloud-providers.png)
-
+    
     *Figure 2: Azure ExpressRoute and the other cloud providers equivalent private connection with customer-managed routing*
 
     ![Figure 3: Azure ExpressRoute and other cloud provider equivalent private connection with a cloud exchange provider.](./media/other-cloud-exchange-provider.png)
@@ -76,7 +77,7 @@ For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered 
 
 - If ExpressRoute is not required or not available, Site-to-Site VPN over the internet can be used to establish connectivity between Azure and other cloud provider.
 
-    [Connect on-premises networks to Azure by using site-to-site VPN gateways - Learn \| Microsoft Docs](learn/modules/connect-on-premises-network-with-vpn-gateway/2-connect-on-premises-networks-to-azure-using-site-to-site-vpn-gateways)
+    [Connect on-premises networks to Azure by using site-to-site VPN gateways - Learn \| Microsoft Docs](/learn/modules/connect-on-premises-network-with-vpn-gateway/2-connect-on-premises-networks-to-azure-using-site-to-site-vpn-gateways)
 
     ![Cross-cloud connectivity using site-to-site VPN over the Internet.](./media/other-cloud-s2s-vpn.png)
 
