@@ -30,6 +30,13 @@ As part of the on-going series of adoption journeys, this release includes [expa
 
 To help you implement cloud governance at a pace that sustains a high level of innovation, and implements the right level of control for your environment, we've added a new article, [Implement cloud service controls](../govern/cloud-service-controls.md). It focuses on a proven process to help governance teams implement granular controls across the Azure platform, while accelerating the development capabilities for cloud adoption teams. The process can be implemented by enterprises of any size, at any stage of their cloud journey. This guidance outlines the different stages of the process, from taking the enterprise requirements for cloud control for security, operations, and cost management, through the stages of development and release of controls.
 
+### Azure Storage migration  overview
+
+To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
+
+- Migration of unstructured data, such as files and objects
+- Migration of block-based devices, such as disks and storage area networks (SANs)
+
 ## March 2021
 
 This release is the largest update of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework.
@@ -74,13 +81,6 @@ When planning an Azure Machine Learning deployment for an enterprise environment
 - Region: The location of your data and the audience you need to serve your Machine Learning solution to.
 
 We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
-
-### Azure Storage migration  overview
-
-To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
-
-- Migration of unstructured data, such as files and objects
-- Migration of block-based devices, such as disks and storage area networks (SANs)
 
 ## January 2021
 
