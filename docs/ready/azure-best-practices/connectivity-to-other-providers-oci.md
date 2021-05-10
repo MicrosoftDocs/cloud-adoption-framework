@@ -10,8 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Connectivity to other cloud providers - Oracle Cloud Infrastructure
-
+# Connectivity to  Oracle Cloud Infrastructure
 
 This section provides different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
 
