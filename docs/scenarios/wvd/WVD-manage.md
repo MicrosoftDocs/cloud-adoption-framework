@@ -73,9 +73,9 @@ The following guides provide best practices for implementing management capabili
 
 The Windows Virtual Desktop architecture separates the host compute from the user profile and associated data, making it easier to move the host if necessary for performance reasons.
 
-You can manage user profiles in solutions such as [FSLogix profile containers](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-user-profile) in order to store the complete user profile in a single container. This configuration enables the profile to roam between virtual desktops.
+You can manage user profiles in solutions such as [FSLogix profile containers](/azure/virtual-desktop/create-host-pools-user-profile) in order to store the complete user profile in a single container. This configuration enables the profile to roam between virtual desktops.
 
-In addition, using concepts such as [MSIX app attach](https://docs.microsoft.com/azure/virtual-desktop/app-attach-image-prep) also helps separate the applications from the operating system. It's then easier to provision virtual machines.
+In addition, using concepts such as [MSIX app attach](/azure/virtual-desktop/app-attach-image-prep) also helps separate the applications from the operating system. It's then easier to provision virtual machines.
 
 ### Workload operations
 
