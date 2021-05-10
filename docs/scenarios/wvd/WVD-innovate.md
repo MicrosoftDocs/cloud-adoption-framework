@@ -1,5 +1,5 @@
 ---
-title: Innovation and Windows Virtual Desktop environment
+title: Innovation and Windows Virtual Desktop 
 description: Explore how organizations can innovate with Windows Virtual Desktop
 author: DominicAllen
 ms.author: doalle
@@ -11,31 +11,29 @@ ms.subservice: ready
 
 # Innovation and Windows Virtual Desktop environment
 
-This article outlines how Windows Virtual Desktop (WVD) technology can help organizations drive innovative new ways of working for teams.
+Technologies such as virtual desktops offer new ways to deliver a productivity environment to organizations. Virtual desktops provide a central, scalable, and secure desktop experience. The result is users can work in ways that traditionally weren't possible, and with a more performant experience.
 
-Technologies such as virtual desktops offer new ways to deliver a productivity environment to teams.
-
-Given that virtual desktops are a central, scalable, secure desktop experience users are able to work in ways that may not be possible with traditional ways, or that may not have offered a performant experience.
+The following guidance provides information on how Windows Virtual Desktop can help organizations drive innovative new ways for their teams to work.
 
 ## Innovation scenarios
 
-- **Provide desktop environments for temporary workers**: WVD instances can be deployed and configured quickly and at scale. Similarly, they can be shut down equally quickly. This makes it a useful solution for providing a standardized access method to corporate applications and information for temporary workers.
+- **Provide desktop environments for temporary workers**: Windows Virtual Desktop instances can be deployed and configured quickly and at scale. Similarly, they can be shut down quickly. This technology provides a standardized access method to corporate applications and information for temporary workers.
 
-    By using WVD, virtual desktops can be used to securely give productivity environments without the need to build, ship and manage physical devices. A WVD approach also means enterprise-level security and access management.
+    By using Windows Virtual Desktop, virtual desktops can be used to securely provide productivity environments without the need to build, ship, and manage physical devices. A Windows Virtual Desktop approach also provides enterprise-level security and access management.
 
-- **Deliver latency sensitive applications to remote workers**: remote working works best for asynchronous or latency-tolerant applications - those where performance is not degraded significantly by varying network quality or round-trip latency. For those applications that do require short ping times from client to server, a WVD environment can help provide a performant experience.
+- **Deliver latency sensitive applications to remote workers**: Remote working works best for asynchronous or latency-tolerant applications - applications where performance isn't degraded significantly by varying network quality or round-trip latency. For those applications that do require short ping times from client to server, a Windows Virtual Desktop environment can help provide a performant experience.
 
-    By hosting the desktop session in Azure, alongside the application being used, organizations can use the Azure network to connect application client and server resulting in a lower-latency connection than a traditional VPN connection over a public network.
+    By hosting the desktop session in Azure alongside the application, organizations can use the Azure network to connect the application client and server. This configuration results in a lower-latency connection than a traditional VPN connection over a public network.
 
-- **Provide highly-secure working environments**: in certain scenarios, the need to remove the risk of corporate data being stored on physical devices (such as laptops) is a key requirement.
+- **Provide highly secure working environments**: In certain scenarios, the need to remove the risk of corporate data being stored on physical devices, for example laptops, is a key requirement.
 
-    By providing specific users access to a desktop - and the associated applications and data - using WVD, organizations are able to retain the entire desktop within the corporate environment. This means if the local device were lost, or accessed by someone without authorization, the data and applications were not held locally and therefore not at risk.
+    By providing specific users access to a desktop, and the associated applications and data using Windows Virtual Desktop, organizations can retain the entire desktop within the corporate environment. The result is if the local device is lost, or accessed by someone without authorization, the data and applications are not stored locally and not at risk.
 
-- **Modernize Applications with MSIX AppAttach**:  .msi installers have become the application packaging standard for Windows based applications. MSIX is a new packaging format that offers many features aimed to improve packaging experience for all Windows apps. The WVD related innovation to application management is a new feature called [MSIX App Attach](/azure/virtual-desktop/what-is-app-attach). MSIX app attach is a way to deliver MSIX applications to both physical and virtual machines. However, MSIX app attach is different from regular MSIX because it's made especially for Windows Virtual Desktop. This create separation between user data, the OS, and apps by using MSIX containers. Remove the need for repackaging when delivering applications dynamically. Reduce the time it takes for a user to sign in to WVD and Reduces infrastructure requirements and cost.
+- **Modernize Applications with MSIX app attach**:  The use of .msi installers have become the application packaging standard for Windows-based applications. MSIX is a new packaging format that offers many features aimed to improve the packaging experience for all Windows apps. The Windows Virtual Desktop related innovation to application management is a new feature called [MSIX app attach](/azure/virtual-desktop/what-is-app-attach). MSIX app attach is a way to deliver MSIX applications to both physical and virtual machines. However, MSIX app attach is different from regular MSIX because it's made specifically for Windows Virtual Desktop. This creates separation between user data, the operating system, and apps by using MSIX containers. You can remove the need for repackaging when you deliver applications dynamically. You can reduce the time it takes for a user to sign in to Windows Virtual Desktop. At the same time, you can reduce infrastructure requirements and cost.
 
 ## Next steps
 
-To get started with Windows Virtual Desktop, the following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the adoption of virtual desktops as part of your cloud environment.
+The following resources provide guidance for specific points throughout the cloud adoption journey to help you be successful in the adoption of Windows Virtual Desktop, as part of your cloud environment.
 
 - [Plan for Windows Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
