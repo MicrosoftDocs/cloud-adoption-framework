@@ -65,9 +65,9 @@ Central IT organizations tend to deliver these tasks as part of the operations b
 
 The following guides provide best practices for implementing management capabilities for Windows Virtual Desktop environments:
 
-- [WVD Azure Monitor](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor)
-- [WVD Azure Advisor](https://docs.microsoft.com/azure/virtual-desktop/azure-advisor)
-- [WVD Configure Automatic Updates](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates)
+- [WVD Azure Monitor](/azure/virtual-desktop/azure-monitor)
+- [WVD Azure Advisor](/azure/virtual-desktop/azure-advisor)
+- [WVD Configure Automatic Updates](/azure/virtual-desktop/configure-automatic-updates)
 
 ### Protect and recover
 
