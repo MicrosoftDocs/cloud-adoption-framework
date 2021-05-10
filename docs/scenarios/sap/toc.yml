@@ -36,12 +36,6 @@ items:
         href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Enterprise-scale landing zone for SAP
         href: enterprise-scale-landing-zone.md
-    - name: Landing zone review
-      items:
-      - name: Review the landing zone and technology platform
-        href: review.md
-      - name: Use the ALZ Review tool for SAP
-        href: review-tool.md
   - name: Migrate SAP to Azure
     href: migrate.md
   - name: Innovate with SAP and Azure
