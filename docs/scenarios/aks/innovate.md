@@ -69,7 +69,7 @@ To learn more about using device interactions, see [Ambient experience tools to 
 
 ## Next steps
 
-The following articles provide guidance and help you suceed in the cloud adoption scenario:
+The following articles provide guidance and help you succeed in the cloud adoption scenario:
 
 - [Govern modern app platform solutions](./govern.md)
 - [Manage modern app platform solutions](./manage.md)
