@@ -13,6 +13,9 @@ ms.subservice: ready
 
 <!-- cSpell:ignore NVAs VPNs -->
 
+=======
+## Review network options
+
 Designing and implementing Windows Virtual Desktop Azure networking capabilities is critical for your Windows Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
 
 ## Identify workload networking requirements

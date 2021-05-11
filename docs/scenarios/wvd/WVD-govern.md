@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Governing a Windows Virtual Desktop environment
 
-The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Windows Virtual Desktop (WVD) environments deployed to Azure.
+The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Windows Virtual Desktop environments deployed to Azure.
 
 ## Initial governance foundation
 
@@ -27,7 +27,7 @@ The initial governance foundation focuses on the following aspects of governance
 
 ## Expanding on governance disciplines
 
-For WVD, the baseline needs to expand to include controls for functions specific to virtual desktops:
+For Windows Virtual Desktop, the baseline needs to expand to include controls for functions specific to virtual desktops:
 
 - User device used to access the virtual desktop
 - App security
@@ -36,8 +36,8 @@ For WVD, the baseline needs to expand to include controls for functions specific
 
 ## Security baseline
 
-The following guides provide best practices for implementing security controls for WVD environments:
+The following guides provide best practices for implementing security controls for Windows Virtual Desktop environments:
 
-- [Windows Virtual Desktop Security Baseline](https://docs.microsoft.com/azure/virtual-desktop/security-baseline)
+- [Windows Virtual Desktop Security Baseline](/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline).
 
-- [Windows Virtual Desktop Security Guide](https://docs.microsoft.com/azure/virtual-desktop/security-guide)
+- [Windows Virtual Desktop Security Guide](/virtual-desktop/security-guide).
