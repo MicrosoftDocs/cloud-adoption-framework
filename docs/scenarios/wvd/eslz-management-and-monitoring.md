@@ -22,7 +22,7 @@ ms.subservice: ready
 - Performance counters should be collected.
 - Windows Event Logs should be collected.
 - Create a dashboard from the platform logs to centralize visuals for reporting operations.
-- Use the [Windows Virtual Desktop Monitoring documentation](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) for more guidance.
+- Use the [Windows Virtual Desktop Monitoring documentation](/azure/virtual-desktop/azure-monitor) for more guidance.
 
 ### Design recommendations
 
@@ -59,20 +59,20 @@ ms.subservice: ready
 
    **Windows Event Log name**
 
-     - System
-     - Application
-     - Microsoft-Windows-TerminalServices-LocalSessionManager/Operational
-     - Microsoft-FSLogix-Apps/Operational
-     - Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin
-     - Microsoft-FSLogix-Apps/Admin
+  - System
+    - Application
+    - Microsoft-Windows-TerminalServices-LocalSessionManager/Operational
+    - Microsoft-FSLogix-Apps/Operational
+    - Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin
+    - Microsoft-FSLogix-Apps/Admin
 
-- Use [Monitoring for Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor) for ease of configuration.
+- Use [Monitoring for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor) for ease of configuration.
 
 - Assign application groups to user groups to ease your administration overhead.
 
-- application groups can be segregated in many ways. We recommend separating them based on which department or user type (for example, power, engineering, or general) the user is a part of.
+- Application groups can be segregated in many ways. We recommend separating them based on which department or user type (for example, power, engineering, or general) the user is a part of.
 
-For a glossary, data storage cost estimations, and further troubleshooting, see the [Next Steps](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation.
+For a glossary, data storage cost estimations, and further troubleshooting, see the [Next Steps](/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation.
 
 ## Infrastructure management and monitoring
 
@@ -87,6 +87,6 @@ For a glossary, data storage cost estimations, and further troubleshooting, see 
 ### Design recommendations - Infrastructure
 
 - Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
-- Set up the performance counters according to the [documentation](https://docs.microsoft.com/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
+- Set up the performance counters according to the [documentation](/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
 - Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session host(s).
 - Incorporate the Azure Policy and Governance for enterprise-scale into the Windows Virtual Desktop landing zone.
