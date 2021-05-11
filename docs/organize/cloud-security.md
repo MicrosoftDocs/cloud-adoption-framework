@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Cloud security functions
 
-Security is often thrown to the CISO and security team. It is our experience there are numerous organizational functions required to manage information security risk in an enterprise. This paper addresses those functions and helps clarify how a thread of security can and is owned by all parts of an organization. These organizational functions collectively form the human portion of an overall cybersecurity system. Each function may be performed by one or more people, and each person may perform one or more functions, depending on various factors such as culture, budget, and available resources.
+Security is often thrown to the CISO and security team. Numerous organizational functions are required to manage information security risk in an enterprise. This article addresses those functions and helps clarify how a thread of security is often owned by all parts of an organization. These organizational functions collectively form the human portion of an overall cybersecurity system. Each function may be performed by one or more people, and each person may perform one or more functions, depending on various factors such as culture, budget, and available resources.
 
 The following diagram and documentation represent an ideal view of the functions of an enterprise security team. The diagram represents an aspirational view for smaller organizations or smaller security teams who might not have significant resources and formal responsibilities defined around all of these functions.
 
