@@ -13,7 +13,6 @@ ms.subservice: ready
 
 <!-- cSpell:ignore NVAs VPNs -->
 
-=======
 ## Review network options
 
 Designing and implementing Windows Virtual Desktop Azure networking capabilities is critical for your Windows Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
@@ -92,7 +91,7 @@ The following table summarizes the primary scenarios that these patterns support
 
 | Scenario  | Suggested network architecture |
 | --- | --- |
-| All of the Azure-hosted workloads in your landing zone are Platform as a Service (PaaS) resources. These resources don't require a virtual network and aren't part of a wider cloud adoption effort that includes Infrastructure as a Service (IaaS) resources. | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md) |
+| All of the Azure-hosted workloads in your landing zone are platform as a service (PaaS) resources. These resources don't require a virtual network and aren't part of a wider cloud adoption effort that includes infrastructure as a service (IaaS) resources. | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md) |
 | Your Azure-hosted workloads deploy IaaS-based resources like virtual machines or the workloads require a virtual network. These resources don't require connectivity to your on-premises environment.  | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md) |
 | Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted. | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md) |
 | Your Azure-hosted workloads require limited access to on-premises resources. You plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment. | [Hybrid](../../decision-guides/software-defined-network/hybrid.md) |
