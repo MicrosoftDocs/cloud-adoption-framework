@@ -19,22 +19,29 @@ ms.custom: think-tank, e2e-aks
 - AKS supports two networking models: kubenet and Azure Container Networking Interface (CNI).
   - CNI requires additional planning for IP addresses.
   - Only CNI supports Windows Server node and network policies pool.
-  - kubenet requires user-defined routes (UDRs) to be manually applied.
+  - UDR for kubenet is automatically setup by AKS
+  - kubenet only supports up to 400 nodes
+  - 
   - Verify the [current list](/azure/aks/concepts-network#compare-network-models) of supported capabilities by each CNI plugin.
 - IP addressing and the size of the virtual network subnet must be carefully planned to support the scaling of the cluster. For example, you can add more nodes.
 - Virtual nodes can be used for quick cluster scaling, but there are some [known limitations](/azure/aks/virtual-nodes-portal).
 - AKS clusters support Basic and Standard Azure Load Balancer SKUs.
 - AKS services can be exposed with public or internal load balancers. Internal load balancers can be configured in the same subnet as the Kubernetes nodes or in a dedicated subnet.
-- Azure Policy and the [Azure Policy add-on for AKS](/azure/governance/policy/concepts/policy-for-kubernetes) can control and limit the objects created in your AKS cluster, such as denying the creation of public IP addresses in the cluster.
+- Azure Policy and the [Azure Policy add-on for AKS](/azure/governance/policy/concepts/policy-for-kubernetes) can control and limit the objects created in your AKS cluster, such as denying the creation of services with a public load balancer.
 - AKS uses CoreDNS to provide name resolution to pods running in the cluster.
   - CoreDNS will resolve cluster-internal domains directly.
   - Other domains will be forwarded to the DNS servers configured in Azure Virtual Network, which will be either the default Azure DNS resolver, or any custom DNS servers configured at the virtual network level.
 - Outbound (egress) network traffic can be sent through an Azure Firewall or network virtual appliance cluster.
   - By default, AKS clusters have unrestricted egress internet access.
+  - There are two deployment models for outbound connectivity: [LB or UDR](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype). With UDR, there’s no outbound rule in the standard LB created. 
   - Egress traffic from the AKS cluster can be sent through Azure Firewall or a network virtual appliance cluster by configuring UDRs in the AKS subnet.
-- By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster. Two [network policy models](/azure/aks/use-network-policies#network-policy-options-in-aks) are available for AKS.
+  - Two deployment models for outbound connectivity: LB or UDR. With UDR, there’s no outbound rule in the standard LB created. 
+  - If using outbound mode LB, you need to “carefully” manage outbound ports, since you can run into a case where you run into outbound port exhaustion 
+- By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster. Two [network policy models](/azure/aks/use-network-policies#network-policy-options-in-aks) are available for AKS. Azure network policies is fully supported by Microsoft while Calico is an open source network security solution with more features and is also recommended.
 - A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability. For more information, see the [selection criteria](/azure/aks/servicemesh-about#selection-criteria).
 - Global load balancing mechanisms such as [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) and [Azure Front Door](/azure/frontdoor/front-door-overview) increase resiliency by routing traffic across multiple clusters, potentially in different Azure regions.
+- AKS sets up a network security group (NSG) on the subnet in which the cluster is deployed. You should not manually edit this NSG, but you can influence by configuring the services you deploy in AKS. 
+- Consider using [NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/) in Kubernetes clusters
 
 ### Private clusters
 
@@ -68,7 +75,7 @@ Incoming (ingress) controllers can be used to expose applications running in the
 
 Ingress controllers can expose applications and APIs with a public or a private IP address.
 
-- The configuration should be aligned with the egress filtering design to avoid asymmetric routing.
+- The configuration should be aligned with the egress filtering design to avoid asymmetric routing. UDRs can cause asymmetric routing (potentially), but not necessarily. Application Gateway can SNAT on traffic, meaning return traffic will go back to Application Gateway node and not to UDR route if UDR is only setup for internet traffic
 - If TLS termination is required, management of TLS certificates must be considered.
 
 Application traffic can come from either on-premises or the public internet. The following picture describes an example where an [Azure Application Gateway](/azure/application-gateway/overview) is configured to reverse-proxy connections to the clusters both from on-premises and from the public internet.
@@ -117,14 +124,16 @@ Traffic between the AKS pods and the private endpoints per default will not go t
 - Use Azure Container Networking Interface (CNI) as a network model, unless you have a limited range of IP addresses that can be assigned to the AKS cluster.
   - Follow the documentation with regards to [IP address planning](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster) with CNI.
   - To use Windows Server node pools and virtual nodes to verify eventual limitations, please refer to the [Windows AKS support FAQ](/azure/aks/windows-faq).
-- Use Azure DDoS Protection Standard to protect the virtual network used for the AKS cluster.
+- Use Azure DDoS Protection Standard to protect the virtual network used for the AKS cluster **unless you use Azure Firewall or WAF in a centralized subscription **
 - Use the DNS configuration linked to the overall network setup with Azure Virtual WAN or hub and spoke architecture, Azure DNS zones, and your own DNS infrastructure.
 - Use Private Link to secure network connections and use private IP-based connectivity to other managed Azure services used that support Private Link, such as Azure Storage, Azure Container Registry, Azure SQL Database, and Azure Key Vault.
 - Use an ingress controller to provide advanced HTTP routing and security, and to offer a single endpoint for applications.
-- To conserve the compute and storage resources of your AKS cluster, use an off-cluster ingress controller.
+- Optionally, to conserve the compute and storage resources of your AKS cluster, use an off-cluster ingress controller.
   - Use the [Azure Application Gateway Ingress Controller (AGIC)](/azure/application-gateway/ingress-controller-overview) add-on, which is a first-party managed Azure service.
   - With AGIC, deploy a dedicated Azure Application Gateway for each AKS cluster and do not share the same Application Gateway across multiple AKS clusters.
   - If there are no resource or operational constraints, or AGIC does not provide the required features, use an in-cluster ingress controller solution like NGINX, Traefik, or any other Kubernetes-supported solution.
 - For Internet-facing and security-critical internal-facing web applications, use a Web Application Firewall with the ingress controller.
   - Azure Application Gateway and Azure Front Door both integrate the [Azure WAF](/azure/web-application-firewall/ag/ag-overview) to protect web-based applications.
 - If your security policy mandates inspecting all Internet-outbound traffic generated in the AKS cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the (managed) hub virtual network. For more information, see [Limit egress traffic](/azure/aks/limit-egress-traffic).
+- For non-private clusters, use authorized IP ranges.
+- Use Standard Load Balancers as opposed to Basic Load Balancers

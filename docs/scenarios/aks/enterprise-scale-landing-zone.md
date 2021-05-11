@@ -33,7 +33,7 @@ The construction set approach to landing zones provides these assets to support 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
 - The landing zone architecture
-- A Microsoft-approved AKS reference implementation based on the [AKS secure baseline](https://github.com/mspnp/aks-secure-baseline)
+- A Microsoft-recommended AKS reference implementation based on the [AKS secure baseline](https://github.com/mspnp/aks-secure-baseline)
 
 ## Design guidelines
 
