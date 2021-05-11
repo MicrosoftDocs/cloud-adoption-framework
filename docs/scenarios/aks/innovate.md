@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Innovation on modern app platforms
 
-The Innovate methodology of the Cloud Adoption Framework for Azure drives customer adoption through the Build, Measure, Learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI/machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern app platform. For more information, see [Innovate methodology](../../innovate/index.md).
+The Innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the Build, Measure, Learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI/machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern app platform. For more information, see [Innovate methodology](../../innovate/index.md).
 
 ## Modern app platform innovation
 
@@ -28,11 +28,11 @@ The following are examples of innovation from the layers of abstraction provided
 
 - Modernize your datacenter
 
-  Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development times for even the most extensively governed workloads. Use Azure Application Services for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
+  Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure Application Services for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
 
 - Application platforms for the edge
 
-  Extend your common runtime, shared containers, and orchestration to the edge running Azure IoT or your application runtime on Kubernetes. For more information, see [How to install IoT Edge on Kubernetes](https://docs.microsoft.com/azure/iot-edge/how-to-install-iot-edge-kubernetes).
+  Extend your common runtime, shared containers, and orchestration to the edge by running Azure IoT or your application runtime on Kubernetes. For more information, see [How to install IoT Edge on Kubernetes](/azure/iot-edge/how-to-install-iot-edge-kubernetes).
 
 - Workload portability
 
@@ -40,16 +40,16 @@ The following are examples of innovation from the layers of abstraction provided
 
 ### Democratize data
 
-Your modern app platform scenario can accelerate democratization of data. Breaking down data silos across clouds opens doors for business users and data scientists alike. Combining data that lives on-premises and in the cloud can form new analytics and insights. To learn more, see [Innovation tools to democratize data in Azure](../../innovate/best-practices/data.md).
+Using modern app platforms can accelerate democratization of data. Breaking down data silos across clouds empowers business users and data scientists alike. Combining data that lives on-premises and in the cloud can form new analytics and insights. To learn more, see [Innovation tools to democratize data in Azure](../../innovate/best-practices/data.md).
 
 ### Engage on applications
 
 Using new applications can further extend the capabilities of a common runtime.
 
 - Developers create their own Power Apps and Power Automate solutions to extend professional applications. These applications can empower business teams from sales, payroll, finance, and others.
-- Add intelligence to your applications with speech, text, vision, and chat bots. Include intelligent experiences in the public cloud, private cloud, or edge with web apps or serverless functions.
+- Add intelligence to your applications with speech, text, vision, and chat bots. Include intelligent experiences in the public cloud, private cloud, or on the edge with web apps or serverless functions.
 - Azure Application Services provides an Azure-native runtime. Building on that application platform accelerates development. It also offers Azure-native features like Intelligent experiences.
-- Azure Application Services offers workload portability. Azure Application Services allows developers to build solutions in the cloud or edge environment that best meets their needs. You can delay issues of governance, compliance, and security associated with public cloud, private cloud, or edge decisions until later in the development cycle.
+- Azure Application Services offers workload portability. Azure Application Services allows developers to build solutions in the cloud or edge environment that best meets their needs. You can delay governance, compliance, and security decisions until later in the development cycle.
 
 To learn more about ways you can build applications on various modern app platforms using the consistent runtimes provided by Azure, see [Tools to engage via applications in Azure](../../innovate/best-practices/apps.md).
 
