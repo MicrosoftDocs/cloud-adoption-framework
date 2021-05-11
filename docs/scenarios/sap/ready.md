@@ -10,11 +10,19 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
-# Review your environment or Azure landing zone for an SAP enterprise-scale migration
+# Azure landing zone for an SAP on Azure
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options, which will include operations, security, and governance services in the initial environment.
+
+## Azure Landing Zone conceptual architecture
+
+When preparing any environment for sustained cloud adoption, we use the [Azure Landing Zones](../../ready/landing-zone/index.md) conceptual architecture to represent what a target end state should look like in Azure, as pictured below.
+
+[![Diagram that shows a conceptual architecture of an Azure Landing Zone](../../_images/ready/alz-arch-cust-inline.png)](../../_images/ready/alz-arch-cust-expanded.png#lightbox)
+
+When developing a long-term vision for landing zones, consider the design above. Working within this scenario, we focus on the most appropriate starting point to meet your strategic and planning requirements for SAP on Azure. This article is about the starting point, not necessarily all of the details required to reach the longer term target.
 
 ## Strategic & planning considerations for SAP landing zones
 
