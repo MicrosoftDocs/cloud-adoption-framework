@@ -1,9 +1,9 @@
 ---
 title: Innovation on modern app platforms
-description: Understand innovation in a modern app platforms environment.
+description: Understand the Innovate methodology for a modern app platforms environment in the Cloud Adoption Framework for Azure.
 author: brianblanchard
 ms.author: brblanch
-ms.date: 02/01/2020
+ms.date: 05/14/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,50 +12,64 @@ ms.custom: e2e-hybrid
 
 # Innovation on modern app platforms
 
-In the [Innovate methodology](../../innovate/index.md) of the Cloud Adoption Framework for Azure, establishes the processes to drive impactful customer adoption through the Build, Measure, Learn cycle. This methodology focuses on disciplines of digital innovation across data, applications, analytics and AI/ML. With so much innovation potential its imperative to establish a vision for the innovation you want to deliver using the abstraction layers provided by a modern app platform.
+The Innovate methodology of the Cloud Adoption Framework for Azure drives customer adoption through the Build, Measure, Learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI/machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern app platform. For more information, see [Innovate methodology](../../innovate/index.md).
 
-## Vision for modern app platform innovation
+## Modern app platform innovation
 
-When integrating modern app platforms into your cloud adoption strategy, the opportunities to innovate are not limited to containers. Integration of modern app platform can unlock all of the innovation that comes with other forms of hybrid and multicloud strategy.
+When integrating modern app platforms into your cloud adoption strategy, innovation isn't limited to containers. Integration of modern app platforms offers the innovation that comes with other forms of hybrid and multicloud strategy.
 
 ![Diagram that shows the various innovation options enabled by the layers of abstraction in a modern app platform.](../../_images/innovate/hybrid-innovation-vision.png)
 
-The following are a few examples of innovation unlocked through the layers of abstraction provided by a modern app platform innovation approach:
+The following are examples of innovation from the layers of abstraction provided by a modern app platform innovation approach:
 
-- **Data and innovation anywhere:** Unlocking application portability between clouds means that data can live where it makes the most sense for your end users. Applications can then follow the data removing boundaries to data democratization and application innovation. *Azure Arc for data* and *Azure Arc for Kubernetes* allows for consistency in management as applications and data move to various environments, allowing developers to focus more on the app & data with less focus on cloud or infrastructure.
-- **Modernize your data center:** Modernizing your data centers allows even the most extensively governed workloads to evolve and modernize to use Azure-native tools that can accelerate development times. Building on *Azure Application Services for Kubernetes with Arc* or *Azure Stack HCI* abstract out data center dependencies and allow teams to build for cloud capabilities without leaving the data center.
-- **Application platforms for the edge:** Extend your common runtime, shared containers, and orchestration to the edge running IoT or your application runtime on Kubernetes. Install [IoT Edge on Kubernetes](https://docs.microsoft.com/azure/iot-edge/how-to-install-iot-edge-kubernetes) to create a common runtime for IoT devices.
-- **Workload portability:** Standardize and centralize container orchestration around *Kubernetes*, *Azure Kubernetes Service*, &/or *Azure Application Services for Kubernetes with Arc* to enable portability of workloads across instances of the common application platform running on public cloud, private cloud, and edge environments.
+- Data and innovation anywhere
 
-Understanding how you will integrate modern app platform into you vision will innovation will inform how you apply the CAF Innovate methodology across each of the innovation discipline section below:
+  Using application portability lets data live where it makes the most sense for your users. Applications can follow the data. This approach encourages data democratization and application innovation. Azure Arc for data and Azure Arc for Kubernetes offer management consistency when applications and data move to various environments. This approach allows developers to focus more on the app and the data, instead of the cloud or infrastructure.
 
-## Democratize data
+- Modernize your datacenter
 
-Learn more about ways you can [democratize data](../../innovate/best-practices/data.md). Your modern app platform scenario can accelerate democratization of data. Breaking down data silos across clouds will open doors for business users and data scientists alike. New analytics and insights can be formed by combining data that lives on-prem and in the cloud.
+  Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development times for even the most extensively governed workloads. Use Azure Application Services for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
 
-## Engage on applications
+- Application platforms for the edge
 
-Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) on a variety of modern app platforms using the consistent runtimes provided by Azure.
+  Extend your common runtime, shared containers, and orchestration to the edge running Azure IoT or your application runtime on Kubernetes. For more information, see [How to install IoT Edge on Kubernetes](https://docs.microsoft.com/azure/iot-edge/how-to-install-iot-edge-kubernetes).
 
-Further extend the capabilities of a common runtime through new applications as:
+- Workload portability
 
-- Citizen developers, to empower business teams from sales, payroll, finance, and so on. To extend professional applications by creating their own Power Apps and Power Automate solutions.
-- Intelligent experiences, to build modern applications in the public cloud, private cloud, or edge with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.
-- Azure Application Services provide an Azure-native runtime. Building on that application platform accelerates development and unlocks Azure-native features like Intelligent experiences.
-- Workload portability built on top of the Azure Application Services allows developers to build solutions in the cloud or edge environment that best meets their development criteria. Since those workloads are portable, issues of governance, compliance, and security associated with public cloud, private cloud, or edge decisions can be delayed until later in the development cycles with no fear of re-work or release impacts.
+  Standardize and centralize container orchestration around Kubernetes, Azure Kubernetes Service, or Azure Application Services for Kubernetes with Arc. This approach enables portability of workloads across instances of the common application platform running on public cloud, private cloud, and edge environments.
 
-## Interact on devices
+### Democratize data
 
-Learn more about using [device interactions](../../innovate/best-practices/devices.md) to get closer to your customers.
+Your modern app platform scenario can accelerate democratization of data. Breaking down data silos across clouds opens doors for business users and data scientists alike. Combining data that lives on-premises and in the cloud can form new analytics and insights. To learn more, see [Innovation tools to democratize data in Azure](../../innovate/best-practices/data.md).
 
-Bring the business integration of your modern app platform into your customer's environment with:
+### Engage on applications
 
-- **Mobile experiences:** Extend applications through the rapid development of mobile apps using the Azure Application Services runtime.
-- **IoT:** Collect data in near-real time from devices in your business environments with Azure IoT on Kubernetes.
+Using new applications can further extend the capabilities of a common runtime.
 
-## Next step: Govern your modern application platform
+- Developers create their own Power Apps and Power Automate solutions to extend professional applications. These applications can empower business teams from sales, payroll, finance, and others.
+- Add intelligence to your applications with speech, text, vision, and chat bots. Include intelligent experiences in the public cloud, private cloud, or edge with web apps or serverless functions.
+- Azure Application Services provides an Azure-native runtime. Building on that application platform accelerates development. It also offers Azure-native features like Intelligent experiences.
+- Azure Application Services offers workload portability. Azure Application Services allows developers to build solutions in the cloud or edge environment that best meets their needs. You can delay issues of governance, compliance, and security associated with public cloud, private cloud, or edge decisions until later in the development cycle.
 
-The following articles will take you to guidance at specific points in the cloud adoption journey and help you be successful in the cloud adoption scenario.
+To learn more about ways you can build applications on various modern app platforms using the consistent runtimes provided by Azure, see [Tools to engage via applications in Azure](../../innovate/best-practices/apps.md).
+
+### Interact on devices
+
+Bring the business integration of your modern app platform to your environment:
+
+- Mobile experiences
+
+  Extend applications through the rapid development of mobile apps using the Azure Application Services runtime.
+
+- Azure IoT
+
+  Collect data in near-real time from devices in your business environments with Azure IoT on Kubernetes.
+
+To learn more about using device interactions, see [Ambient experience tools to interact with devices in Azure](../../innovate/best-practices/devices.md).
+
+## Next steps
+
+The following articles provide guidance and help you suceed in the cloud adoption scenario:
 
 - [Govern modern app platform solutions](./govern.md)
 - [Manage modern app platform solutions](./manage.md)
