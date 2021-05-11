@@ -60,7 +60,7 @@ items:
     - name: Container product decision tree
       href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Microservices architecture on AKS
-      href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+      href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices-advanced?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Microservices with AKS and Azure DevOps
       href: /azure/architecture/solution-ideas/articles/microservices-with-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Secure DevOps for AKS
