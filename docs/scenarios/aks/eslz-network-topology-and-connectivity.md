@@ -19,7 +19,6 @@ ms.custom: think-tank, e2e-aks
 - AKS supports two networking models: kubenet and Azure Container Networking Interface (CNI).
   - CNI requires additional planning for IP addresses.
   - Only CNI supports Windows Server node and network policies pool.
-  - ~~kubenet requires user-defined routes (UDRs) to be manually applied.~~
   - UDR for kubenet is automatically setup by AKS
   - kubenet only supports up to 400 nodes
   - 
