@@ -10,8 +10,6 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Generic space holder - remember to edit the metadata before publication
-
 # Managing secrets in a secure way
 
 Managing company sensitive secrets, keys and certificates aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
