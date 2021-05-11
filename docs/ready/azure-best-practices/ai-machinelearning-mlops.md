@@ -152,7 +152,7 @@ The architectural patterns can include but are not limited to the following topi
 
 ### Facilitate cross-team collaboration and sharing
 
-Shared code repositories and utilities can accelerate the development of ML solutions.
+Shared code repositories and utilities can accelerate the development of ML solutions. These repositoritories can be developed in a modular way during project development so that they are generic enough to be used by other projects. They can be made available in a central repository that all Data Science teams can access.
 
 #### Sharing and reuse of intellectual property
 
