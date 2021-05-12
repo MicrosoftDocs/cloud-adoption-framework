@@ -61,7 +61,7 @@ The following sample policy statements address common identity-related business 
 
 **Policy statement:** Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
 
-**Potential design options:** Implement [federation with Azure Active Directory](/azure/active-directory/hybrid/whatis-fed) between your internal and customer identity providers or use [Azure Active Directory B2B](/azure/active-directory/b2b/what-is-b2b)
+**Potential design options:** Implement [federation with Azure Active Directory](/azure/active-directory/hybrid/whatis-fed) between your internal and customer identity providers or use [Azure Active Directory B2B](/azure/active-directory/external-identities/what-is-b2b)
 
 ## Identity reviews
 

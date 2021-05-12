@@ -1,19 +1,22 @@
 ---
-title: "Azure innovation: Empower adoption"
-description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation in Azure.
+title: Empower digital transformation
+description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation. Get digital transformation services on Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: internal, fasttrack-new, AQC
+ms.custom: internal, fasttrack-new, AQC, seo-caf-innovate
+keywords: Digital transformation, digital transformation services, cloud adoption
 ---
 
-# Empower adoption
+# Empower cloud adoption
 
-You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. Developers are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+You know that innovation and digital transformation is critical to business success. Digital transformation is the adoption of cloud-based and digital technologies to replace old systems and create better customer experiences, better efficiency, business insights, and greater innovation from the data. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. Developers are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+
+<!-- docutune:ignore "one thing: drive" -->
 
 ## Generate value
 
@@ -25,7 +28,7 @@ You know that innovation is critical to business success. You don't accomplish i
 > - Sometimes the attitude is "if we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
 > - Innovation is about the combination of people and technology.
 
-Organizations that successfully innovate see vision, strategy, culture, unique potential, and capabilities as the foundational elements. They then turn to technology with a specific purpose in mind. Every company is becoming a software company. The hiring of software engineers is growing at a faster rate outside the tech industry than inside, according to LinkedIn data.
+Organizations that successfully innovate toward digital transformation see vision, strategy, culture, unique potential, and capabilities as the foundational elements. They then turn to technology with a specific purpose in mind. Every company is becoming a software company. The hiring of software engineers is growing at a faster rate outside the tech industry than inside, according to LinkedIn data.
 
 Innovation is accomplished when organizations support their people to create the value they seek. One group of those people, developers, is a catalyst for innovation. They play an increasingly vital role in value creation and growth across every industry. They're the builders of our era, writing the world's code and sitting at the heart of innovation. Innovative organizations build a culture that empowers developers to achieve more.
 
@@ -33,7 +36,7 @@ Innovation is accomplished when organizations support their people to create the
 
 ### Developer velocity
 
-Empowering developers to invent means accelerating developer velocity, enabling them to create more, innovate more, and solve more problems. Developer velocity is the underpinning of each organization's tech intensity. Developer velocity isn't just about speed. It's also about unleashing developer ingenuity, turning your developers' ideas into software with speed and agility so that innovative solutions can be built. The differentiated Azure solution is uniquely positioned to unleash innovation in your organization.
+Empowering developers to invent means accelerating developer velocity, enabling them to create more, innovate more, and solve more problems. Developer velocity is the underpinning of each organization's tech intensity. Developer velocity isn't just about speed. It's also about unleashing developer ingenuity, turning your developers' ideas into software with speed and agility so that innovative solutions can be built. The differentiated Azure solution is uniquely positioned to unleash innovation and cloud adoption in your organization.
 
 ### Build productively
 
@@ -44,9 +47,9 @@ There are several areas of opportunity where Azure can help you build productive
 > - Ensure developers become and stay proficient in their domain by helping them advance their knowledge.
 > - Hone the right skills by giving them the right tools.
 
-One of the best ways to improve your developers' skills is by giving them tools they know and love. Azure tools meet developers where they are today and introduce them to new technologies in the context of the code they're writing. With the Azure commitment to open-source software and support for all languages and frameworks in Azure tools, your developers can build how they want and deploy where you want.
+One of the best ways to improve your developers' skills is by giving them tools they know and love. Azure tools meet developers where they are today and introduce them to new digital transformation technologies in the context of the code they're writing. With the Azure commitment to open-source software and support for all languages and frameworks in Azure tools, your developers can build how they want and deploy where you want.
 
-Azure DevOps provides best-in-class tools for every developer. Azure developer services infuse modern development practices and emerging trends into our tools. With the Azure platform, developers have access to the latest technologies and a cutting-edge toolchain that supports the way they work.
+Azure DevOps provides best-in-class tools for every developer. Azure developer and digital transformation services infuse modern development practices and emerging trends into our tools. With the Azure platform, developers have access to the latest technologies and a cutting-edge toolchain that supports the way they work.
 
 > [!div class="checklist"]
 >
@@ -56,7 +59,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="docs"
 
-**Go to [Azure DevOps documentation](/azure/devops/user-guide/?view=azure-devops)**
+**Go to [Azure DevOps documentation](/azure/devops/get-started/)**
 
 ::: zone-end
 
@@ -93,8 +96,8 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 ### Learn more
 
 - [Open source starts in GitHub](https://azure.microsoft.com/products/github/)
-- [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
-- [Microsoft Teams](/MicrosoftTeams/teams-overview)
+- [Open source on Azure](https://azure.microsoft.com/overview/open-source/)
+- [Microsoft Teams](/microsoftteams/teams-overview)
 
 ## [Innovation characteristics](#tab/Characteristics)
 
@@ -134,4 +137,4 @@ Game development is one example of an industry that's embracing LiveOps today. M
 
 PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device and platform agnostic and can be easily integrated with social identity providers like Facebook or Steam, store platforms to orchestrate commerce, and device platforms like iOS, Android, Xbox, and PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
-**Go to the [Azure PlayFab documentation](/gaming/playfab)**
+**Go to the [Azure PlayFab documentation](/gaming/playfab/)**

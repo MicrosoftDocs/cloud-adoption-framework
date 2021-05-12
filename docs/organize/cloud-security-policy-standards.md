@@ -21,7 +21,7 @@ The policies and standards should:
 
 **Security policy** should reflect long term sustainable objectives that align to the organizations security strategy and risk tolerance. Policy should always address:
 
-- Regulatory compliance requirements and current compliance status (requirements met, risks accepted, etc.)
+- Regulatory compliance requirements and current compliance status (requirements met, risks accepted, and so on.)
 - Architectural assessment of current state and what is technically possible to design, implement, and enforce
 - Organizational culture and preferences
 - Industry best practices

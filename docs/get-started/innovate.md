@@ -16,7 +16,9 @@ Creating new products and services in the cloud requires a different approach th
 
 This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
-![Diagram of the Cloud Adoption Framework, including the Innovate methodology.](../_images/get-started/innovation-map.png)
+![The Cloud Adoption Framework methodologies, including the Innovate methodology.](../_images/get-started/innovation-map.png)
+
+*Figure 1: The Cloud Adoption Framework methodologies, including the Innovate methodology.*
 
 ## Step 1: Document the business strategy
 
@@ -190,25 +192,25 @@ The Innovate methodology provides guidance on the tools and product management a
   - Custom-built applications.
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
-  - Ambient intelligence: integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
+  - Ambient intelligence: Integration of nonintrusive technology into an environment.
+  - Azure Cognitive Services: Big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 
-- [Business value consensus](../innovate/business-value.md): If more than three months have passed since the last business value consensus, or if one was never completed, start here.
-- [Azure innovation guide](../innovate/innovation-guide/index.md): Use the Azure innovation guide to speed up the deployment of innovative solutions by understanding the tools and processes that can help you create a minimum viable product (MVP).
-- [Innovation best practices](../innovate/best-practices/index.md): Combine Azure services to create a toolchain for digital invention.
-- [Feedback loops](../innovate/considerations/adoption.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
+- [Create hypothesis with business value consensus](../innovate/business-value.md): Before you decide on technical solutions, identify how new innovations can drive business value and come up with a hypothesis about customer needs.
+- [Build your first MVP](../innovate/considerations/build.md): Once a hypothesis has enough value potential to be built into your application, the build process starts. Development sprints should be as quick as possible, to allow quick verification or rejection of the hypothesis, or to fine tune the way in which the required functionality is to be integrated in the application.
+- [Measure](../innovate/considerations/measure.md) and [learn](../innovate/considerations/learn.md): You want to verify the accuracy of your hypothesis as soon as possible. A Minimum Viable Product (MVP) is a preliminary version of the new functionality, that offers just enough functionality to gather feedback that confirms if you are moving in the right direction.
+- [Expand digital innovation](../innovate/considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions which include Democratize data, Engage via apps, Empower adoption, Interact with devices and Predict and Influence. These inventions are a core part of the Innovation methodology.
 
 ## Step 9: Assess the innovation maturity of your organization
 
-To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
+To support the development of your innovation strategy, the [AI readiness assessment tool](https://info.microsoft.com/ww-landing-ai-maturity-model-website.html) is a free resource that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies.
 
-The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI Maturity Model to compute your organization's score and provide an estimate of the AI innovation maturity on a curve.
+The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI readiness assessment tool to compute your organization's score and provide an estimate of the AI innovation maturity on a curve.
 
 **Deliverables:**
 
-- Use the [AI Maturity Model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
+- Use the [Gartner AI Maturity Model](https://www.gartner.com/en/documents/3982174/artificial-intelligence-maturity-model) to assess your organization's AI maturity to create AI-based systems.
 
 **Guidance to support deliverable completion:**
 

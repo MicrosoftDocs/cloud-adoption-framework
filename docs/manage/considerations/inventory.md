@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -36,7 +36,7 @@ These challenges stem from a small number of questions that can be answered only
 - Were the changes intentional? Malicious?
 - How did changes affect performance telemetry?
 
-It is difficult, if not impossible, to answer these questions without a rich, centralized source for logs and telemetry data. To enable cloud management by ensuring the consistent configuration that's required to centralize the data, the baseline service must first start by defining the processes. The processes should capture how such a configuration enforces data collection to support the components of inventory and visibility in the next section.
+It's difficult, if not impossible, to answer these questions without a rich, centralized source for logs and telemetry data. To enable cloud management by ensuring the consistent configuration that's required to centralize the data, the baseline service must first start by defining the processes. The processes should capture how such a configuration enforces data collection to support the components of inventory and visibility in the next section.
 
 ## Components of inventory and visibility
 

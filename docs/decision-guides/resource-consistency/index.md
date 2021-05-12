@@ -35,7 +35,7 @@ Resource groups act as containers for resources with a common lifecycle as well 
 If you answered **no** to any of the above points, the resource in question should be placed elsewhere, in another resource group.
 
 > [!IMPORTANT]
-> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they're managed together as described above. For more information about region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
+> Resource groups are also region specific; however, it's common for resources to be in different regions within the same resource group because they're managed together as described above. For more information about region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
 
 ## Deployment consistency
 
@@ -43,7 +43,7 @@ Building on top of the base resource grouping mechanism, the Azure platform prov
 
 [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) allow you to repeatedly deploy your resources in a consistent state using a predetermined configuration and resource group structure. Resource Manager templates help you define a set of standards as a basis for your deployments.
 
-For example, you can have a standard template for deploying a web server workload that contains two virtual machines as web servers combined with a load balancer to distribute traffic between the servers. You can then reuse this template to create structurally identical set of virtual machines and load balancer whenever this type of workload is needed, only changing the deployment name and IP addresses involved.
+For example, you can have a standard template for deploying a web server workload that contains two virtual machines as web servers combined with a load balancer to distribute traffic between the servers. You can then reuse this template to create structurally identical set of virtual machines with a load balancer whenever this type of workload is needed, only changing the deployment name and IP addresses involved.
 
 You can also programmatically deploy these templates and integrate them with your CI/CD systems.
 
@@ -61,11 +61,11 @@ For a more in-depth discussion of enforcing your policy decisions within a cloud
 
 Resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. As the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's enterprise/department/account/subscription hierarchy.
 
-[Azure management groups](/azure/governance/management-groups) allow you to organize subscriptions into more sophisticated organizational structures by grouping subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy allows you to apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. Management group hierarchies can be used to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
+[Azure management groups](/azure/governance/management-groups/) allow you to organize subscriptions into more sophisticated organizational structures by grouping subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy allows you to apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. Management group hierarchies can be used to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
 
 ## Automated consistency
 
-For large cloud deployments, global governance becomes both more important and more complex. It is crucial to automatically apply and enforce governance requirements when deploying resources, as well as meet updated requirements for existing deployments.
+For large cloud deployments, global governance becomes both more important and more complex. It's crucial to automatically apply and enforce governance requirements when deploying resources, as well as meet updated requirements for existing deployments.
 
 [Azure Blueprints](/azure/governance/blueprints/overview) enable organizations to support global governance of large cloud estates in Azure. Blueprints move beyond the capabilities provided by standard Azure Resource Manager templates to create complete deployment orchestrations capable of deploying resources and applying policy rules. Blueprints support versioning, the ability to update all subscriptions where the blueprint was used, and the ability to lock down deployed subscriptions to avoid the unauthorized creation and modification of resources.
 

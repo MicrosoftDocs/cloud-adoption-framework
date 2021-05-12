@@ -3,31 +3,21 @@
   "language": "en",
   "words": [
       "deprioritize",
-      "moodle",
+      "inexhaustive",
       "offboarding",
       "passwordless",
       "personalizer",
-      "preintegration"
+      "preintegration",
+      "reauthenticate",
+      "replatform"
   ],
   "ignoreWords": [
-      "AppOps",
       "BYOK",
       "CCoE",
       "CDO's",
       "CIO's",
-      "CISO",
-      "HDFS",
-      "ISVs",
-      "ITSM",
-      "MPLS",
-      "MTBF",
-      "MTTR",
-      "NVAs",
-      "SIEM",
+      "eslz",
       "SQLVM",
-      "TOGAF",
-      "VPNs",
-      "WAFs",
       "WEBVM"
   ],
   "flagWords": [

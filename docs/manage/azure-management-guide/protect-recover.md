@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
@@ -15,7 +15,7 @@ ms.custom: internal, fasttrack-edit, AQC
 
 # Protect and recover in Azure
 
-_Protect and recover_ is the third and final discipline in any cloud-management baseline.
+*Protect and recover* is the third and final discipline in any cloud-management baseline.
 
 ![Cloud Management Baseline](../../_images/manage/management-baseline.png)
 
@@ -41,9 +41,9 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 With Azure Backup, you can back up, protect, and recover your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or offsite backup solution with a cloud-based solution. This new solution is reliable, secure, and cost competitive. Azure Backup can also help protect and recover on-premises assets through one consistent solution.
 
-For data present in Azure, Azure Backup offer varied levels of protection. For example, when backing up key cloud infrastructure pieces such as Azure Virtual Machines and Azure Files, it offers [Azure Virtual Machines backup](/azure/backup/backup-azure-vms-introduction) and [Azure Files backup](/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual Machines, it offers dedicated database backup solutions for [MS SQL](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) with far lower RPO.
+For data present in Azure, Azure Backup offer varied levels of protection. For example, when backing up key cloud infrastructure pieces such as Azure Virtual Machines and Azure Files, it offers [Azure Virtual Machines backup](/azure/backup/backup-azure-vms-introduction) and [Azure Files backup](/azure/backup/azure-file-share-backup-overview). For more critical components such as databases running in Azure Virtual Machines, it offers dedicated database backup solutions for [SQL Server](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) with far lower RPO.
 
-To get a glimpse of how easy it is to enable backup with Azure Backup, look at the section below to enable backup for Azure Virtual Machines.
+Review the following section to see how easily you can enable backup for Azure Virtual Machines.
 
 ### Enable backup for an Azure VM
 

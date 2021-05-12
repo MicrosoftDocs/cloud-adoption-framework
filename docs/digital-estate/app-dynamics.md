@@ -30,17 +30,16 @@ This guidance will focus on how to measure business outcomes of a pre- and post-
 
 ## How AppDynamics works
 
-Prior to migration, a small, lightweight agent is deployed alongside your applications. Agents are purpose-built for various languages such as .NET, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller to correlate and analyze the information. Controllers can reside in a fully managed AppDynamics environment, or the customer can choose to manage them in Azure. Key user experiences are identified as 'business transactions', which help you to discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, database, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each business transaction.
+Prior to migration, a small, lightweight agent is deployed alongside your applications. Agents are purpose-built for various languages such as .NET, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller to correlate and analyze the information. Controllers can reside in a fully managed AppDynamics environment, or the customer can choose to manage them in Azure. Key user experiences are identified as *business transactions*, which help you to discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, database, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each business transaction.
 
 ![An AppDynamics flow map](./media/app-dynamics-flow-map.jpg)
-
-_Figure 1: An AppDynamics flow map._
+*Figure 1: An AppDynamics flow map.*
 
 ## AppDynamics identifies business metrics
 
 AppDynamics helps you to define business value for your applications, identify the key metrics that they should meet to retain their value, and verify if they're fulfilling their target business outcomes. AppDynamics agents collect these data points and traditional application performance metrics like response time and memory utilization in real time, directly from the application, and without any changes to code.
 
-Business metrics are closely related to business outcomes. Many organizations have complex metrics that measure unique business outcomes, and these outcomes can range from fiscal and agility-related to performance and customer engagement goals. AppDynamics collects the metrics that are specific and useful to your organization, and those metrics can contribute to current business operations before and after a migration.
+Business metrics are closely related to business outcomes. Many organizations have complex metrics that measure unique business outcomes, and these outcomes can range from fiscal and agility-related to performance and customer engagement goals. AppDynamics collects the metrics that are specific and useful to your organization, and those metrics can contribute to current business operations before and after migrating workloads to Azure.
 
 **Example:**
 
@@ -65,8 +64,7 @@ Combining application and business performance metrics helps to clearly demonstr
 Configurable dashboards are one of many AppDynamics tools that visualize these insights. In this real-time example, we see the overall conversion funnel and the impact on individual page performance against abandoners alongside shopping cart totals, customer segment, location, and general revenue details.
 
 ![AppDynamics business impact dashboard](./media/app-dynamics-business-impact-dashboard.jpg)
-
-_Figure 2: AppDynamics business impact dashboard._
+*Figure 2: AppDynamics business impact dashboard.*
 
 ## Resources to help identify business metrics
 
@@ -87,9 +85,8 @@ In addition to improving performance, they want to ensure that the business outc
 In this case, they were able to see an increase in conversion rates from 48 to 79 percent and improvements to underlying performance, response time, and ticket sales volume.
 
 ![AppDynamics migration comparison](./media/app-dynamics-migration-comparison.jpg)
-
-_Figure 3: AppDynamics migration comparison._
+*Figure 3: AppDynamics migration comparison.*
 
 ## Next steps
 
-AppDynamics gives organizations the unique ability to measure the business outcomes during their cloud adoption strategy. Visit [AppDynamics](https://www.appdynamics.com/product/infrastructure-monitoring/cloud-monitoring/microsoft-azure) to learn more about AppDynamics with Azure.
+AppDynamics gives organizations the unique ability to measure the business outcomes during their cloud adoption strategy. Visit [AppDynamics](https://www.appdynamics.com/solutions/azure-monitoring) to learn more about AppDynamics with Azure.

@@ -1,28 +1,29 @@
 ---
-title: "Azure innovation: Before you start"
-description: Prepare your environment for cloud innovation with Azure features that help you engage customers, build solutions, and drive adoption.
+title: Innovative solutions guide
+description: Before you start, look at this guide for innovative solutions using the Cloud Adoption Framework. Get cloud innovation that helps engage customers and drive adoption.
 author: matticusau
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: think-tank, fasttrack-edit, AQC
+ms.custom: think-tank, fasttrack-edit, AQC, sep-caf-innovate
+keywords: Innovative solutions, cloud adoption framework, innovation solutions
 ---
 
-# Azure innovation guide overview
+# Azure innovative solutions guide overview
 
 ::: zone target="docs"
 
 > [!NOTE]
-> This guide provides a starting point for innovation guidance in the Cloud Adoption Framework. It is also available in the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade).
+> This guide of innovative solutions provides a starting point for innovation guidance in the Cloud Adoption Framework. It's also available in the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade).
 
 ::: zone-end
 
-Before you start developing innovative solutions by using Azure services, you need to prepare your environment, which includes preparing to manage customer feedback loops. In this guide, we introduce features that help you engage customers, build solutions, and drive adoption. For more information, best practices, and considerations related to preparing your cloud environment, see the [Cloud Adoption Framework innovate section](../index.md).
+Before you start developing innovative solutions by using Azure services, you need to prepare your environment, which includes preparing to manage customer feedback loops. In this guide, we introduce features that help you engage customers, build innovative solutions, and drive adoption. For more information, best practices, and considerations related to preparing your cloud environment, see the [Cloud Adoption Framework innovate section](../index.md).
 
-In this guide, you'll learn how to:
+In this innovation guide, you'll learn how to:
 
 > [!div class="checklist"]
 >

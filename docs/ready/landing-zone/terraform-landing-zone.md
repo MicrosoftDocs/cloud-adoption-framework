@@ -86,7 +86,7 @@ The minimum set of tags shown below must be present on all resources and resourc
 <!-- TODO: Review capitalization and hyphenation -->
 <!-- TODO: Eliminate either "Tag name" or "Key" column -->
 
-| Tag name          | Description                                                                                        | Key             | Example values                                    |
+| Tag name          | Description                                                                                        | Key               | Example values                                    |
 |-------------------|----------------------------------------------------------------------------------------------------|-------------------|--------------------------------------------------|
 | Business unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | `BusinessUnit`    | `finance`, `marketing`, `<product-name>`, `corp`, `shared` |
 | Cost center       | Accounting cost center associated with this resource.                                              | `CostCenter`      | `<cost-center-number>`                                     |

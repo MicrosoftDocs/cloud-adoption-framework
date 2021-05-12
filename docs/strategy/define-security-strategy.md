@@ -23,21 +23,21 @@ Security teams need to modernize strategies, architectures, and technology as th
 - Security teams are likely to be left out of cloud adoption decision making if they take a legacy mindset of "arms-length" security where the answer always starts with "no" (instead of working together with IT and business teams to reduce risk while enabling the business).
 - Security teams will have a difficult time detecting and defending against cloud attacks if they use only legacy on-premises tooling and exclusively adhere to network perimeter only doctrine for all defenses and monitoring. Defending at cloud scale mandates the use of cloud native detection and automation capabilities and the introduction of an identity perimeter to help monitor and protect cloud and mobile assets.
 
-Because this transformation can be significant, we recommend security teams take an agile approach to modernizing security that rapidly modernizes the most critical aspects of the strategy and then continuously improving incrementally after that.
+Because this transformation can be significant, we recommend that security teams take an agile approach to modernizing security that rapidly modernizes the most critical aspects of the strategy and then continuously improve incrementally afterwards.
 
 ### Security of the cloud and from the cloud
 
 As your organization adopts cloud services, security teams will be working towards two main objectives:
 
 - **Security \*of\* the cloud (securing cloud resources):** Security should be integrated into the planning and operation of cloud services to ensure that those core security assurances are consistently applied across all resources.
-- **Security \*from\* the cloud (using the cloud to transform security):** Security should immediately start planning and thinking about how to use cloud technologies to modernize security tools and processes, particularly natively integrated security tools. More and more security tools are being hosted in the cloud and providing capabilities that are difficult or impossible to do in an on-premises environment.
+- **Security \*from\* the cloud (using the cloud to transform security):** Security should immediately start planning and thinking about how to use cloud technologies to modernize security tools and processes, particularly natively integrated security tools. Increasingly, security tools are being hosted in the cloud and providing capabilities that are difficult or impossible to do in an on-premises environment.
 
-Many organizations start by treating cloud resources as an additional _virtual datacenter_, which works very well as a starting point for security of the cloud. As organizations modernize using security from the cloud, most will find themselves quickly outgrowing this model of thinking. Securing a software-defined datacenter using cloud-hosted tools enables capabilities beyond what on-premises models can offer:
+Many organizations start by treating cloud resources as another *virtual datacenter*, an effective starting point for security of the cloud. As organizations modernize using security from the cloud, most will find themselves quickly outgrowing this model of thinking. Securing a software-defined datacenter using cloud-hosted tools enables capabilities beyond what on-premises models can offer:
 
 - Rapid enablement and scaling of security capabilities.
 - Highly effective asset inventory and security configuration hygiene discovery.
 - Continuous assessment of the organization's security posture and controls.
-- Vastly improved threat detection that uses vast repositories of threat intelligence and virtually unlimited processing/storage of the cloud.
+- Vastly improved threat detection that uses vast repositories of threat intelligence and the nearly unlimited processing and storage capabilities of the cloud.
 
 ### The right level of security friction
 
@@ -48,12 +48,12 @@ Security naturally creates friction that slows down processes, it is critical to
 
 ### Standalone and integrated responsibilities
 
-Providing confidentiality, integrity, and availability assurances requires security experts to operate dedicated security functions as well as work closely with other teams in the organization:
+Providing confidentiality, integrity, and availability assurances requires security experts to operate dedicated security functions and work closely with other teams in the organization:
 
 - **Unique security functions:** Security teams perform independent functions that are not found elsewhere in the organization, such as security operations, vulnerability management, and other functions.
 - **Integrating security into other functions:** Security teams also serve as subject matter experts to other teams and functions in the organization who are driving business initiatives, assessing risk, designing or developing applications, and operating IT systems. Security teams advise these teams with expertise and context on attackers, attack methods and trends, vulnerabilities that could allow unauthorized access, and options for mitigation steps or workarounds and their potential benefits or pitfalls. This function of security resembles that of a quality function as it will be woven into many places large and small in support of a single outcome.
 
-Executing on these responsibilities whilst keeping up with the rapid pace of change in the cloud and the transformation of business will require security teams to modernize their tools, technologies and processes.
+Executing on these responsibilities while keeping up with the rapid pace of change in the cloud and the transformation of business requires security teams to modernize their tools, technologies, and processes.
 
 ## Transformations, mindsets, and expectations
 
@@ -69,7 +69,7 @@ The internal transformation process typically includes:
 
 ### Internal conflict can be costly
 
-Change creates stress and conflict, which can grind decision making to a halt. This is particularly true in security where accountability for security risk is often misplaced on the subject matter experts (security teams), rather than on the owners of the assets (business owners) that are accountable for business outcomes and all other risk types. This misplaced accountability often happens because all stakeholders incorrectly view security as a technical or absolute problem to be solved, rather than a dynamic ongoing risk like corporate espionage and other traditional criminal activities.
+Change creates stress and conflict, which can grind decision making to a halt. This is especially true in security where accountability for security risk is often misplaced on the subject matter experts (security teams), rather than on the owners of the assets (business owners) that are accountable for business outcomes and all other risk types. This misplaced accountability often happens because all stakeholders incorrectly view security as a technical or absolute problem to be solved, rather than a dynamic ongoing risk like corporate espionage and other traditional criminal activities.
 
 During this time of transformation, leadership of all teams must work actively to reduce conflict that can both derail critical projects and incentivize teams to bypass security risk mitigation. Internecine conflict between teams can result in:
 
@@ -86,7 +86,7 @@ Leaders can help drive culture changes with concrete proactive steps like:
 
 ### Cybersecurity resilience
 
-Many classic security strategies have been focused solely on preventing attacks, which is not sufficient for modern threats. Security teams must ensure their strategy goes beyond this and also enables rapid attack detection, response, and recovery to increase resilience. Organizations must assume that attackers will compromise some resources (sometimes called "assume breach") and work to ensure that resources and technical designs are balanced between attack prevention and attack management (rather than the typical default approach of only attempting to prevent attacks).
+Many classic security strategies have been focused solely on preventing attacks, an approach that is insufficient for modern threats. Security teams must ensure their strategy goes beyond this and also enables rapid attack detection, response, and recovery to increase resilience. Organizations must assume that attackers will compromise some resources (sometimes called *assume breach*) and work to ensure that resources and technical designs are balanced between attack prevention and attack management (rather than the typical default approach of only attempting to prevent attacks).
 
 Many organizations are already on this journey because they have been managing the steady rise in volume and sophistication of attacks in recent years. This journey often starts with the first major incident, which can be an emotional event where people lose their prior sense of invulnerability and safety. While not as severe as a loss of life, this event can trigger similar emotions starting with denial and ultimately ending in acceptance. This assumption of "failure" may be difficult for some to accept at first, but it has strong parallels to the well-established "fail-safe" engineering principle and the assumption allows your teams to focus on a better definition of success: resilience.
 
@@ -152,12 +152,12 @@ Building a resilient security posture in the cloud requires several parallel com
 
 ### Security and trust
 
-Note that the use of the word _trust_ in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
+The use of the word *trust* in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
 
-- [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of "zero trust") and designs security accordingly.
+- [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of *zero trust*) and designs security accordingly.
 - [Trust but verify](https://www.emazzanti.net/wp-content/uploads/2017/11/Trust-but-verify-Article-PDF.pdf) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
 
-A cloud provider and their practices and processes can be accountable to meet contractual and regulatory requirements and could earn or lose trust. A network is a nonliving connection which cannot face consequences if it is used by attackers (much like you cannot hold a road or a car accountable for criminals using them).
+A cloud provider and their practices and processes can be accountable to meet contractual and regulatory requirements and could earn or lose trust. A network is a nonliving connection that cannot face consequences if it is used by attackers (much like you cannot hold a road or a car accountable for criminals using them).
 
 ## How cloud is changing security relationships and responsibilities
 
@@ -171,17 +171,17 @@ This section describes the key relationships that frequently change on the journ
 
 - **Between security leadership and team members:** Security leadership should take these insights from business leadership back to their teams to guide their investment priorities.
 
-  By setting a tone of cooperation with business leaders and their teams rather than a classic 'arms length' relationship, security leaders can avoid an adversarial dynamic that impedes both security and productivity goals.
+  By setting a tone of cooperation with business leaders and their teams rather than a classic "arms-length" relationship, security leaders can avoid an adversarial dynamic that impedes both security and productivity goals.
 
   Security leaders should strive to provide clarity to their team on how to manage their daily decisions on productivity and security tradeoffs as this may be new to many on their teams.
 
 - **Between application and infrastructure teams (and cloud providers):** This relationship is undergoing significant changes because of multiple trends in the IT and security industry aimed at increasing innovation speed and developer productivity.
 
-  The old norms and organizational functions have been disrupted, but new norms and functions are still emerging, so we recommend accepting the ambiguity, keeping up with current thinking, and experiment with what works for your organizations until it does. We don;t recommend adopting a wait-and-see approach in this space because it might put your organization at a major competitive disadvantage.
+  The old norms and organizational functions have been disrupted, but new norms and functions are still emerging, so we recommend accepting the ambiguity, keeping up with current thinking, and experiment with what works for your organizations until it does. We don't recommend adopting a wait-and-see approach in this space because it might put your organization at a major competitive disadvantage.
 
   These trends are challenging the traditional norms for roles and relationships of applications and infrastructure:
 
-  - **DevOps-fusing disciplines:** In its ideal state, this effectively creates a single highly functional team that combines both sets of subject matter expertise together to rapidly innovate, release updates, and resolve issues (security and otherwise). While this ideal state will take some time to achieve and the responsibilities in the middle are still very ambiguous, organizations are already reaping some benefits of rapid releases because of this cooperative approach. Microsoft recommends integrating security into this cycle to help learn those cultures, share security learnings, and work towards a common goal of rapidly releasing secure and reliable applications.
+  - **DevOps-fusing disciplines:** In its ideal state, this effectively creates a single highly functional team that combines both sets of subject matter expertise together to rapidly innovate, release updates, and resolve issues (security and otherwise). While this ideal state will take some time to achieve and the responsibilities in the middle are still ambiguous, organizations are already reaping some benefits of rapid releases because of this cooperative approach. Microsoft recommends integrating security into this cycle to help learn those cultures, share security learnings, and work towards a common goal of rapidly releasing secure and reliable applications.
 
   ![DevOps-fusing disciplines](../_images/security/devops-disciplines.png)
 
@@ -203,7 +203,7 @@ This section describes the key relationships that frequently change on the journ
     - Provide application functions instead of developing their own components. This has led to a _serverless_ model that uses existing cloud services for common functions. The number and variety of cloud services (and their pace of innovation) has also exceeded the ability of security teams to evaluate and approve the use of those services, leaving them to choose between allowing developers to use any service, attempting to prevent the development teams from using unapproved services, or trying to find a better way.
     - **Codeless applications and Power Apps:** Another emerging trend is the use of codeless technologies like Microsoft Power Apps. This technology enables people without coding skills to create applications that achieve business outcomes. Because of this low friction and high value potential, this trend has the potential to rise in popularity quickly and security professionals would be wise to rapidly understand its implications. Security efforts should be focused on the areas where a human could make a mistake in the application, namely the design of the application and asset permissions via threat modeling the application components, interactions/relationships, and role permissions.
 
-- **Between developers and open-source component authors:** Developers are also increasing efficiency by using open-source components and libraries instead of developing their own components. This bring value through efficiency, but also introduces security risks by creating an external dependency and a requirement to properly maintain and patch those components. Developers are effectively assuming the risk of security and other bugs when they use these components and have to ensure there is a plan mitigate them at the same standards as code they would develop.
+- **Between developers and open-source component authors:** Developers are also increasing efficiency by using open-source components and libraries instead of developing their own components. This brings value through efficiency, but also introduces security risks by creating an external dependency and a requirement to properly maintain and patch those components. Developers are effectively assuming the risk of security and other bugs when they use these components and have to ensure there is a plan to mitigate them at the same standards as code they would develop.
 
 - **Between applications and data:** The line between security of data and applications is becoming blurred in places and new regulations are creating a need for closer cooperation between data/privacy teams and security teams:
 
@@ -226,9 +226,9 @@ This section describes the key relationships that frequently change on the journ
 
   - **Increasing value of IT and security activities** by freeing teams to focus on higher value (business-aligned) activities rather than lower-level commodity tasks that are provided more efficiently by cloud services on their behalf.
 
-  - **Increased reliability and responsiveness:** Most modern clouds also have extremely high uptime compared to traditional on-premises datacenters and have shown they can scale rapidly (such as during the COVID-19 pandemic) and provide resiliency following natural events like lightning strikes (which would have kept many on-premises equivalents down for much longer).
+  - **Increased reliability and responsiveness:** Most modern clouds also have high uptime compared to traditional on-premises datacenters and have shown they can scale rapidly (such as during the COVID-19 pandemic) and provide resiliency following natural events like lightning strikes (which would have kept many on-premises equivalents down for much longer).
 
-    While extremely beneficial, this shift to the cloud is not without risk. As organizations adopt cloud services, they should consider potential risk areas including:
+    While beneficial, this shift to the cloud is not without risk. As organizations adopt cloud services, they should consider potential risk areas including:
 
   - **Business continuity and disaster recovery:** Is the cloud provider financially healthy with a business model that's likely to survive and thrive during your organization's use of the service? Has the cloud provider made provisions to allow customer continuity if the provider experiences financial or other failure, such as providing their source code to customers or open-sourcing it?
 

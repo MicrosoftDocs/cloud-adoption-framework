@@ -39,7 +39,7 @@ Start your cloud policy enforcement planning by examining how the application of
 
 A first step beyond simply relying on the policy enforcement mechanisms provided by the Azure platform is ensuring ability to verify cloud-based applications and services comply with organizational policy. This includes implementing notification capabilities for alerting responsible parties if a resource becomes noncompliant. Effective [logging and reporting](../logging-and-reporting/index.md) of the compliance status of your cloud workloads is a critical part of a corporate policy enforcement strategy.
 
-As your cloud estate grows, additional tools such as [Azure Security Center](/azure/security-center) can provide integrated security and threat detection, and help apply centralized policy management and alerting for both your on-premises and cloud assets.
+As your cloud estate grows, additional tools such as [Azure Security Center](/azure/security-center/) can provide integrated security and threat detection, and help apply centralized policy management and alerting for both your on-premises and cloud assets.
 
 ## Policy enforcement
 

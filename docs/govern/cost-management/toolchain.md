@@ -16,7 +16,7 @@ The [Cost Management discipline](./index.md) is one of the [Five Disciplines of 
 
 The following is a list of Azure native tools that can help mature the policies and processes that support this discipline.
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview)  | [Power BI Desktop connector](/power-bi/connect-data/desktop-connect-azure-cost-management) | [Azure Policy](/azure/governance/policy/overview) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal/) | [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) | [Power BI Desktop connector](/power-bi/connect-data/desktop-connect-azure-cost-management) | [Azure Policy](/azure/governance/policy/overview) |
 |---------|---------|---------|---------|---------|
 | Budget control     | No         | Yes         | No         | Yes         |
 | Monitor spending on single resource    | Yes         | Yes         | Yes         | No         |

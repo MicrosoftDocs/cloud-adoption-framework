@@ -1,17 +1,20 @@
 ---
-title: "Azure innovation: Engage via applications"
-description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native applications.
+title: Build applications and engage using app services
+description: Build cloud-native applications and easily modernize your existing web and API apps. Learn about Azure App Service, Azure DevOps, and Visual Studio App Center.
 author: billyclaymyersmsft
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: think-tank, fasttrack-edit, AQC
+ms.custom: think-tank, fasttrack-edit, AQC, seo-caf-innovate
+keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
 
 # Engage customers through applications
+
+Build cloud-native applications to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. Cloud-native applications are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
 
 Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .NET, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
 
@@ -93,26 +96,26 @@ To configure or monitor Azure Bot Service deployments:
 
 ### Azure DevOps
 
-During your innovation journey, you'll eventually find yourself on the path to DevOps. Microsoft has long had an on-premises product known as Team Foundation Server (TFS). During our own innovation journey, Microsoft developed Azure DevOps, a cloud-based service that provides build and release tools supporting many languages and destinations for your releases. For more information, see [Azure DevOps](/azure/devops).
+During your innovation journey, you'll eventually find yourself on the path to DevOps. Microsoft has long had an on-premises product known as Team Foundation Server (TFS). During our own innovation journey, Microsoft developed Azure DevOps, a cloud-based service that provides build and release tools supporting many languages and destinations for your releases. For more information, see [Azure DevOps](/azure/devops/).
 
 ### Visual Studio App Center
 
-As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](/appcenter).
+As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your cloud-native applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](/appcenter/).
 
-Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](/appcenter/push).
+Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](/appcenter/push/).
 
 ### Learn more
 
 - [App Service overview](/azure/app-service/overview)
-- [Web App for Containers: Run a custom container](/azure/app-service/containers/quickstart-docker)
+- [Web App for Containers: run a custom container](/azure/app-service/quickstart-custom-container?pivots=platform-linux)
 - [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-- [Azure for .NET and .NET Core developers](/dotnet/azure/?view=azure-dotnet)
-- [Azure SDK for Python documentation](/azure/python)
-- [Azure for Java cloud developers](/azure/java/?view=azure-java-stable)
-- [Create a PHP web app in Azure](/azure/app-service/app-service-web-get-started-php)
-- [Azure SDK for JavaScript documentation](/azure/javascript)
-- [Azure SDK for Go documentation](/azure/go)
-- [DevOps solutions](https://azure.microsoft.com/solutions/devops)
+- [Azure for .NET and .NET Core developers](/dotnet/azure/)
+- [Azure SDK for Python documentation](/azure/developer/python/)
+- [Azure for Java cloud developers](/azure/developer/java/)
+- [Create a PHP web app in Azure](/azure/app-service/quickstart-php)
+- [Azure SDK for JavaScript documentation](/azure/developer/javascript/)
+- [Azure SDK for Go documentation](/azure/developer/go/)
+- [DevOps solutions](https://azure.microsoft.com/solutions/devops/)
 
 ## [Create cloud-native applications](#tab/CloudNative)
 
@@ -170,7 +173,7 @@ Azure Functions provides a platform for running small units of code or functions
 
 The Azure Functions runtime supports many languages, including C#, Java, JavaScript, and Python. For a complete list, see [Supported languages in Azure Functions](/azure/azure-functions/supported-languages).
 
-Another benefit of functions is that they can be triggered by different actions and events, like HTTP triggers, timer triggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](/azure/azure-functions/functions-triggers-bindings).
+Another benefit of functions is that they can be triggered by different actions and events, like HTTP triggers, timer triggers, and triggers from other Azure services like Blob Storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](/azure/azure-functions/functions-triggers-bindings).
 
 #### Action
 
@@ -274,7 +277,7 @@ As you start to transition from your initial testing phase, evaluate ways to iso
 
 ### Azure Front Door
 
-Azure Front Door provides a scalable, secure entry point that you can use to deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. You should use Azure Front Door rather than Azure Traffic Manager if you need transport layer security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request application-layer processing.
+Azure Front Door provides a scalable, secure entry point that you can use to deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. You should use Azure Front Door rather than Azure Traffic Manager if you need Transport Layer Security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request application-layer processing.
 
 #### Action
 
@@ -341,5 +344,5 @@ To configure or monitor Azure CDN profiles:
 ### Learn more
 
 - [Azure Front Door](/azure/frontdoor/front-door-overview)
-- [Traffic Manager](/azure/traffic-manager)
-- [Azure Content Delivery Network](/azure/cdn)
+- [Traffic Manager](/azure/traffic-manager/)
+- [Azure Content Delivery Network](/azure/cdn/)

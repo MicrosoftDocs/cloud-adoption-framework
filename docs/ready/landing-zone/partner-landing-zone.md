@@ -42,7 +42,7 @@ As outlined in the [Azure landing zone implementation options](./implementation-
 **Question for the partner:** Which of the following approaches are supported by the partner's Azure landing zone solution?
 
 - **Start small and expand:** Begin with a lightweight template. The landing zone solution is matured over time as your desired cloud operating model becomes clearer.
-- **Start with enterprise scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
+- **Start with enterprise-scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
 - **Other:** The partner has a modified approach and should be able to describe the approach.
 
 ## Design principles

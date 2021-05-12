@@ -53,7 +53,7 @@ Answer the following questions about your workloads to help you make decisions b
 
 The following table illustrates a few common use scenarios and the recommended compute services for handling them:
 
-| Scenario  | Compute service |
+| Scenario | Compute service |
 | --- | --- |
 | I need to provision Linux and Windows virtual machines in seconds with the configurations of my choice. | [Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines) |
 | I need to achieve high availability by autoscaling to create thousands of VMs in minutes. | [Virtual machine scale sets](https://azure.microsoft.com/services/virtual-machine-scale-sets) |

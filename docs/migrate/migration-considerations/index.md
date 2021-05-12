@@ -25,13 +25,13 @@ The Cloud Adoption Framework migration model depends on your organization having
 
 ## Envision an end state
 
-It's important to establish a rough vision of your end state before starting your migration efforts. The diagram below shows an on-premises starting point of infrastructure, applications, and data, which defines your _digital estate_. During the migration process, those assets are transitioned using one of the five migration strategies described in the [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md).
+It's important to establish a rough vision of your end state before starting your migration efforts. The following diagram shows an on-premises starting point of infrastructure, applications, and data, which defines your *digital estate*. During the migration process, those assets are transitioned using one of the five migration strategies described in the [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md).
 
 ![Infographic of the migration options](../../_images/migrate/migration-options.png)
 
-Migration and modernization of workloads range from simple _rehost_ migrations (also called _lift and shift_ migrations) using infrastructure as a service (IaaS) capabilities that don't require code and application changes, through _refactoring_ with minimal changes, to _rearchitecting_ to modify and extend code and application functionality to take advantage of cloud technologies.
+Migration and modernization of workloads range from simple *rehost* migrations (also called *lift and shift* migrations) using infrastructure as a service (IaaS) capabilities that don't require code and application changes, through *refactoring* with minimal changes, to *rearchitecting* to modify and extend code and application functionality to take advantage of cloud technologies.
 
-Cloud-native strategies and platform as a service (PaaS) strategies _rebuild_ on-premises workloads using Azure platform offerings and managed services. Workloads that have equivalent fully managed software as a service (SaaS) cloud-based offerings can often be fully _replaced_ by these services as part of the migration process.
+Cloud-native strategies and platform as a service (PaaS) strategies *rebuild* on-premises workloads using Azure platform offerings and managed services. Workloads that have equivalent fully managed software as a service (SaaS) cloud-based offerings can often be fully *replaced* by these services as part of the migration process.
 
 > [!NOTE]
 > During the public preview of the Cloud Adoption Framework, this section of the framework emphasizes a rehost migration strategy. Although PaaS and SaaS solutions are discussed as alternatives when appropriate, the migration of virtual machine-based workloads using IaaS capabilities is the primary focus.

@@ -1,5 +1,5 @@
 ---
-title: "Understand partnership and support options"
+title: Understand partnership and support options
 description: Use the Cloud Adoption Framework for Azure to understand partnership options and approaches to supporting migration costs.
 author: BrianBlanchard
 ms.author: brblanch
@@ -31,14 +31,14 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 
 - **Assessment and migration tools.** Azure provides a wide range of tools to be used in different phases for your cloud transformation, including assessing your existing infrastructure. For more information, refer to the "assess" section in the "migration" chapter that follows.
 - **[Microsoft Cloud Adoption Framework](../../index.md).** This framework presents a structured approach to cloud adoption and migration. It is based on best practices across many Microsoft-supported customer engagements and is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance helps you with the design of your application architecture.
-- **[Cloud design patterns](/azure/architecture/patterns).** Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they're relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
-- **[Cloud fundamentals](/azure/architecture/guide).** Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
-- **[Example scenarios](/azure/architecture/example-scenario).** The guide provides references from real customer implementations, outlining the tools, approaches, and processes that past customers have followed to accomplish specific business goals.
-- **[Reference architectures](/azure/architecture/reference-architectures).** Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes best practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
+- **[Cloud design patterns](/azure/architecture/patterns/).** Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they're relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
+- **[Cloud fundamentals](/azure/architecture/guide/).** Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
+- **[Example scenarios](/azure/architecture/browse/).** The guide provides references from real customer implementations, outlining the tools, approaches, and processes that past customers have followed to accomplish specific business goals.
+- **[Reference architectures](/azure/architecture/browse/).** Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes best practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
 
 ## FastTrack for Azure
 
-[FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
+[FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
 
 - Datacenter migration
 - Windows Server on Azure
@@ -79,9 +79,9 @@ The main phases of a typical FastTrack for Azure engagement are:
 
 **Innovate:** The [cloud center of excellence (CCoE) solution](https://download.microsoft.com/download/F/8/B/F8BBE4BD-E5F8-4DFB-82F7-C0A4E17051BB/Cloud_Center_of_Excellence_Datasheet_EN_US.pdf) from Microsoft Services offers a DevOps coaching engagement and uses DevOps principles combined with prescriptive cloud-native service management and security controls to help drive business innovation, increase agility, and reduce time to value within a secure, predictable, and flexible services delivery and operations management capability.
 
-## Azure support
+## Azure Support
 
-If you have questions or need help, [create a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). If your support request requires deep technical guidance, visit [Azure support plans](https://azure.microsoft.com/support/plans) to align the best plan for your needs.
+If you have questions or need help, [create a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). If your support request requires deep technical guidance, visit [Azure Support plans](https://azure.microsoft.com/support/plans/) to align the best plan for your needs.
 
 ## Azure solutions partner
 
@@ -90,7 +90,7 @@ Microsoft certified solution providers specialize in providing modern customer s
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 
 - [Find a cloud solutions partner](https://www.microsoft.com/solution-providers/home). A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
-- [Find an Azure expert managed service provider (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all). MSPs help businesses transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
+- [Find an Azure Expert Managed Service Provider (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all). MSPs help businesses transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
 
 ## Next steps
 

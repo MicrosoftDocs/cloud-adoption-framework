@@ -1,16 +1,21 @@
 ---
 title: What are AI applications?
-description: Learn how you can integrate AI capabilities and breakthroughs into your applications with Azure Cognitive Services.
+description: What are AI applications? Learn how you can integrate AI applications and capabilities with your applications using Azure Cognitive Services.
 author: v-hanki
 ms.author: janet
-ms.date: 07/14/2020
+ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, seo-caf-innovate
+keywords: ai applications, what are ai applications, speech recognition apis, computer vision apis, decision logic apis
 ---
 
+<!-- docutune:ignore "computer vision APIs" -->
+
 # What are AI applications?
+
+AI applications are things like speech recognition APIs, computer vision APIs, decision logic APIs, and other kinds of intelligent systems that mimic human reason. These are essential functions of many software products in the market today, since AI applications can communicate with end users in a more natural manner and make for a better user experience. Azure can help you and your team save time by being able to roll out AI applications anywhere.
 
 In Azure, you can build intelligent applications faster by using the tools and technologies of your choice and built-in AI.
 
@@ -24,41 +29,40 @@ Azure Cognitive Services can simplify how you integrate AI capabilities and brea
 
 Cognitive Services is made up of APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills or knowledge. Cognitive Services enables developers to easily add cognitive features into their applications. The catalog of services within Cognitive Services can be categorized into five main parts: vision, speech, language, web search, and decision.
 
-### Vision APIs
+### Computer vision APIs
 
 | Service name | Service description |
 | --- | --- |
-| [Computer Vision](/azure/cognitive-services/computer-vision/) | Computer Vision provides you with access to advanced algorithms for processing images and returning information. |
-| [Custom Vision](/azure/cognitive-services/custom-vision-service/home) | Custom Vision allows you to build custom image classifiers. |
+| [Computer Vision](/azure/cognitive-services/computer-vision/) | Computer Vision APIs provides you with access to advanced algorithms for processing images and returning information. |
+| [Custom Vision](/azure/cognitive-services/custom-vision-service/overview) | Custom Vision allows you to build custom image classifiers. |
 | [Face](/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms that detect and recognize facial attributes. |
 | [Form Recognizer](/azure/cognitive-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |
-| [Ink Recognizer](/azure/cognitive-services/ink-recognizer/) (preview) | Ink Recognizer allows you to recognize and analyze digital ink-stroke data, shapes, and handwritten content, and output a document structure with all recognized entities. |
-| [Video Indexer](/azure/cognitive-services/video-indexer/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
+| [Video Indexer](/azure/media-services/video-indexer/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
 
-### Speech APIs
+### Speech recognition APIs
 
 | Service name | Service description |
 | --- | --- |
 | [Speech](/azure/cognitive-services/speech-service/) | Speech service adds speech-enabled features to applications. |
-| [Speaker Recognition](/azure/cognitive-services/speaker-recognition/home "Speaker Recognition API") (preview) | The Speaker Recognition API provides algorithms for Speaker Identification and verification. |
-| [Bing Speech](/azure/cognitive-services/speech/home) (retiring) | The Bing Speech API provides you with an easy way to create speech-enabled features in your applications. |
-| [Translator speech](/azure/cognitive-services/translator-speech/) (retiring) | Translator speech is a machine translation service. |
+| [Speaker Recognition](/azure/cognitive-services/speech-service/speaker-recognition-overview) (preview) | The Speaker Recognition API provides algorithms for Speaker Identification and verification. |
+| [Bing Speech](/azure/cognitive-services/speech-service/how-to-migrate-from-bing-speech) (retired) | You can migrate existing Bing Speech API applications to the Speech service. |
+| [Translator Speech](/azure/cognitive-services/speech-service/how-to-migrate-from-translator-speech-api) (retired) | You can migrate existing Bing Translator Speech API applications to the Speech service. |
 
 ### Language APIs
 
 | Service name | Service description |
 |--|--|
 | [Language Understanding (LUIS)](/azure/cognitive-services/luis/) | The Language Understanding service (LUIS) allows your application to understand what a person wants in their own words. |
-| [QnA Maker](/azure/cognitive-services/qnamaker/index "QnA Maker") | QnA Maker allows you to build a question-and-answer service from your semistructured content. |
+| [QnA Maker](/azure/cognitive-services/qnamaker/) | QnA Maker allows you to build a question-and-answer service from your semistructured content. |
 | [Text Analytics](/azure/cognitive-services/text-analytics/) | Text Analytics provides natural language processing over raw text for sentiment analysis, key phrase extraction, and language detection. |
 | [Translator](/azure/cognitive-services/translator/) | Translator provides machine-based text translation in near real time. |
 
-### Decision APIs
+### Decision logic APIs
 
 | Service name | Service description |
 | --- | --- |
 | [Anomaly Detector](/azure/cognitive-services/anomaly-detector/) (preview) | Anomaly Detector allows you to monitor and detect abnormalities in your time series data. |
-| [Content Moderator](/azure/cognitive-services/content-moderator/overview "Content Moderator") | Content Moderator provides monitoring for possible offensive, undesirable, and risky content. |
+| [Content Moderator](/azure/cognitive-services/content-moderator/overview) | Content Moderator provides monitoring for possible offensive, undesirable, and risky content. |
 | [Personalizer](/azure/cognitive-services/personalizer/) | Personalizer allows you to learn from users' real-time behavior in order to choose the most tailored experience for them. |
 
 ### Supported cultural languages
@@ -81,7 +85,7 @@ Cognitive Services has been awarded certifications such as CSA STAR certificatio
 
 You can [download](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) certifications for your own audits and security reviews.
 
-To understand privacy and 'data management and analytics', go to the [Microsoft Trust Center](https://servicetrust.microsoft.com/).
+To understand privacy and data management, go to the [Microsoft Trust Center](https://servicetrust.microsoft.com/).
 
 ## How are Cognitive Services and Azure Machine Learning similar?
 

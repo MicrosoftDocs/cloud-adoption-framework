@@ -1,28 +1,31 @@
 ---
-title: "Azure innovation: Interact via devices"
-description: Learn how Azure provides a framework for building immersive and effective business solutions through connected and perceptive edge devices.
+title: Ubiquitous computing and device management
+description: Learn about ubiquitous computing and Azure's framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
 author: umarmohamedusman
 ms.author: brblanch
-ms.date: 10/10/2019
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: think-tank, fasttrack-new, AQC
+ms.custom: think-tank, fasttrack-new, AQC, seo-caf-innovate
+keywords: Connected devices, ubiquitous computing, device management, edge devices
 ---
 
 <!-- cSpell:ignore umarmohamedusman umarm Moovit -->
 
-# Interact through devices
+# Interact through connected devices
 
-Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
+Innovate through intermittently connected devices and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
 
-Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data (close to their users, the data, or both). Users get real-time insights and experiences, delivered by highly responsive and contextually aware applications. By moving parts of the workload to the edge, these devices can spend less time sending messages to the cloud and react more quickly to spatial events.
+Ubiquitous computing is the processing of information that connects devices and processors to have constant availability, so that computing and processing is made to appear anytime and everywhere needed, using any connected device or perceptive edge device. Examples of ubiquitous computing include any system that sends information to another system to complete a task seamlessly, like a fitness watch that alerts that there is an incoming call from a cell phone and allows completion of the call through the watch, or systems that learn and adjust such as a thermostat or smart speakers.
+
+Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data (close to their users, the data, or both), with complete device management. Users get real-time insights and experiences, delivered by highly responsive and contextually aware applications. By moving parts of the workload to the edge, these connected devices can spend less time sending messages to the cloud and react more quickly to spatial events.
 
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - [Microsoft HoloLens 2](/hololens)
+> - [Microsoft HoloLens 2](/hololens/)
 > - [Azure Sphere](/azure-sphere/product-overview/what-is-azure-sphere)
 > - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
@@ -36,7 +39,7 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 Here are a few features you'll find:
 
 - **Security-enhanced communication** channel for sending and receiving data from IoT devices.
-- **Built-in device management** and provisioning to connect and manage IoT devices at scale.
+- **Built-in device management** and provisioning to connect and manage IoT and edge devices at scale.
 - **Full integration with Event Grid** and serverless compute, simplifying IoT application development.
 - **Compatibility with Azure IoT Edge** for building hybrid IoT applications.
 
@@ -46,6 +49,7 @@ Here are a few features you'll find:
 
 - [Azure IoT Hub](/azure/iot-hub)
 - [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
+- [use our modern IoT Azure DevOps project to help with your work item management](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot)
 
 ::: zone-end
 
@@ -95,7 +99,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ### Learn more
 
-- [Azure Digital Twins](/azure/digital-twins/about-digital-twins)
+- [Azure Digital Twins](/azure/digital-twins/overview)
 
 ::: zone-end
 
@@ -132,7 +136,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ### Learn more
 
-- [Azure Maps](/azure/azure-maps)
+- [Azure Maps](/azure/azure-maps/)
 
 ::: zone-end
 

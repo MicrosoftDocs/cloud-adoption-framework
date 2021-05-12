@@ -1,12 +1,12 @@
 ---
-title: "Common Azure Policy examples"
+title: Common Azure Policy examples
 description: Use the Cloud Adoption Framework for Azure to ensure compliance to governance policy requirements by creating policies with PowerShell cmdlets.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -32,17 +32,21 @@ Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq 'BuiltIn')
   -and ($_.Properties.displayName -like '*location*') }
 ```
 
-The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
+The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in.
 
 ```powershell
+
 # Specify the value for $SubscriptionID.
+
 $SubscriptionID = <subscription ID>
 $scope = "/subscriptions/$SubscriptionID"
 
 # Replace the -Name GUID with the policy GUID you want to assign.
+
 $AllowedLocationPolicy = Get-AzPolicyDefinition -Name "e56962a6-4747-49cd-b67b-bf8b01975c4c"
 
 # Replace the locations with the ones you want to specify.
+
 $policyParam = '{ "listOfAllowedLocations":{"value":["eastus","westus"]}}'
 New-AzPolicyAssignment -Name "Allowed Location" -DisplayName "Allowed locations for resource creation" -Scope $scope -PolicyDefinition $AllowedLocationPolicy -Location eastus -PolicyParameter $policyParam
 ```
@@ -59,7 +63,7 @@ To find this policy in the portal, search for "allowed resource types" on the po
 Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq "BuiltIn") -and ($_.Properties.displayName -like "*allowed resource types") }
 ```
 
-After you identify the policy that you want to use, you can modify the PowerShell sample in the [restrict resource regions](#restrict-resource-regions) section to assign the policy.
+After you identify the policy that you want to use, you can modify the PowerShell sample in the [Restrict resource regions](#restrict-resource-regions) section to assign the policy.
 
 ### Restrict VM size
 
@@ -71,17 +75,20 @@ You can use this policy to deploy the Microsoft Antimalware Extension with a def
 
 The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 
-The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
+The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in.
 
 ```powershell
+
 # Specify the value for $SubscriptionID.
+
 $subscriptionID = <subscription ID>
 $scope = "/subscriptions/$subscriptionID"
 
 $antimalwarePolicy = Get-AzPolicyDefinition -Name "2835b622-407b-4114-9198-6f7064cbe0dc"
 
 # Replace location "eastus" with the value that you want to use.
-New-AzPolicyAssignment -Name "Deploy Antimalware" -DisplayName "Deploy default Microsoft IaaSAntimalware extension for Windows Server" -Scope $scope -PolicyDefinition $antimalwarePolicy -Location eastus –AssignIdentity
+
+New-AzPolicyAssignment -Name "Deploy Antimalware" -DisplayName "Deploy default Microsoft IaaSAntimalware extension for Windows Server" -Scope $scope -PolicyDefinition $antimalwarePolicy -Location eastus -AssignIdentity
 
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Decisions that affect migration"
+title: Decisions that affect migration
 description: Use the Cloud Adoption Framework for Azure to make appropriate decisions and choose execution activities that will support a successful migration.
 author: BrianBlanchard
 ms.author: brblanch
@@ -48,11 +48,11 @@ Before making any decisions that could have a long-term impact on the current mi
 
 ### Effort type
 
-In any migration of significant scale (more than 250 VMs), assets are migrated using a variety of transition options, discussed in the five Rs of rationalization: _rehost_, _refactor_, _rearchitect_, _rebuild_, and _replace_.
+In any migration of significant scale (more than 250 VMs), assets are migrated using a variety of transition options, discussed in the five Rs of rationalization: *rehost*, *refactor*, *rearchitect*, *rebuild*, and *replace*.
 
-Some workloads are modernized through a _rebuild_ or _rearchitect_ process, creating more modern applications with new features and technical capabilities. Other assets go through a _refactor_ process, for instance a move to containers or other more modern hosting and operational approaches that don't necessarily affect the solutions code base. Commonly, virtual machines and other assets that are more well established go through a _rehost_ process, transitioning those assets from the datacenter to the cloud. Some workloads could potentially be migrated to the cloud, but instead should be _replaced_ using service-based (SaaS-based) cloud services that meet the same business need&mdash;for example, by using Microsoft 365 as an alternative to migrating Exchange Server instances.
+Some workloads are modernized through a *rebuild* or *rearchitect* process, creating more modern applications with new features and technical capabilities. Other assets go through a *refactor* process, for instance a move to containers or other more modern hosting and operational approaches that don't necessarily affect the solutions code base. Commonly, virtual machines and other assets that are more well established go through a *rehost* process, transitioning those assets from the datacenter to the cloud. Some workloads could potentially be migrated to the cloud, but instead should be *replaced* using service-based (SaaS-based) cloud services that meet the same business need&mdash;for example, by using Microsoft 365 as an alternative to migrating Exchange Server instances.
 
-In the majority of scenarios, some business event creates a forcing function that causes a high percentage of assets to temporarily migrate using the _rehost_ process, followed by a more significant secondary transition using one of the other migration strategies after they're in the cloud. This process is commonly known as a _cloud transition_.
+In the majority of scenarios, some business event creates a forcing function that causes a high percentage of assets to temporarily migrate using the *rehost* process, followed by a more significant secondary transition using one of the other migration strategies after they're in the cloud. This process is commonly known as a *cloud transition*.
 
 During the process of [rationalizing the digital estate](../../../digital-estate/calculate.md), these types of decisions are applied to each asset to migrate. However, the prerequisite needed at this time is to make a baseline assumption. Of the five migration strategies, which best aligns with the business objectives or business outcomes driving this migration effort? This decision serves as a guiding assumption throughout the migration effort.
 
@@ -62,7 +62,7 @@ Scale of the migration is the next important prerequisite decision. The processe
 
 - **How many assets support the migrating workloads today?** Assets include data structures, applications, VMs, and necessary IT appliances. Choose a relatively small workload for your first migration candidate.
 - **Of those assets, how many are planned for migration?** It's common for some assets to be terminated during a migration process, due to lack of sustained end-user dependency.
-- **What are the top-down estimates of the scale of migrateable assets?** For the workloads included for migration, estimate the number of supporting assets such as applications, virtual machines, data sources, and IT appliances. See the [digital estate](../../../digital-estate/index.md) section of the Cloud Adoption Framework for guidance on identifying relevant assets.
+- **What are the top-down estimates of the scale of migrateable assets?** For the workloads included for migration, estimate the number of supporting assets such as applications, virtual machines, data sources, and IT appliances. See the [Digital estate](../../../digital-estate/index.md) section of the Cloud Adoption Framework for guidance on identifying relevant assets.
 
 ### Effort timing
 
@@ -73,7 +73,7 @@ Often, migrations are driven by a compelling business event that is time sensiti
 Before proceeding, document the following assumptions and share them with the cloud strategy team and the cloud adoption teams:
 
 - Business outcomes.
-- Roles, documented and refined for the _Assess_, _Migrate_, _Optimize_, and _Secure and manage_ migration processes.
+- Roles, documented and refined for the *Assess*, *Migrate*, *Optimize*, and *Secure and manage* migration processes.
 - Definition of done, documented and refined separately for these migration processes.
 - Effort type.
 - Effort scale.

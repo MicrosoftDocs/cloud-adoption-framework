@@ -1,12 +1,12 @@
 ---
-title: "Guiding theory in cloud management"
+title: Guiding theory in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn about the operating model, processes, and tooling that have proven successful in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 

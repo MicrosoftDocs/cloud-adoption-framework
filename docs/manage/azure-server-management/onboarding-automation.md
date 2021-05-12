@@ -1,12 +1,12 @@
 ---
-title: "Automate onboarding"
+title: Automate onboarding
 description: Use the onboarding sample files to help you consider automating your Azure server management services deployment to improve efficiency.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -18,7 +18,7 @@ This guidance is supported by a [GitHub repository of sample code](https://githu
 
 The sample files illustrate how to use Azure PowerShell cmdlets to automate the following tasks:
 
-- Create a [Log Analytics workspace](/azure/azure-monitor/platform/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
+- Create a [Log Analytics workspace](/azure/azure-monitor/logs/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
 - Create an Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 

@@ -114,7 +114,7 @@ To ensure consistent alignment with the portfolio hierarchy decisions, it's impo
 
 Build a subscription strategy:
 
-- Start with [two subscriptions by design](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs, like shared services or sandbox subscriptions.
+- Start with [Two subscriptions by design](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs, like shared services or sandbox subscriptions.
 - [Manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as additional subscriptions are required to support the cloud adoption plan.
 - Establish [clear boundaries based on the portfolio hierarchy](../reference/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
 - When required, [move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) to adhere to the organization strategy.
@@ -131,7 +131,7 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 **Deliverables:**
 
-- Complete the getting-started guides for organizational alignment based on these concepts.
+- Complete the getting started guides for organizational alignment based on these concepts.
 
 **Guidance to support deliverable completion:**
 
@@ -146,7 +146,7 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 ## What's next
 
-Build on this set of fundamental concepts through the series of getting-started guides in this section of the Cloud Adoption Framework.
+Build on this set of fundamental concepts through the series of getting started guides in this section of the Cloud Adoption Framework.
 
 > [!div class="nextstepaction"]
-> [Apply fundamental concepts to other getting-started guides](./index.md)
+> [Apply fundamental concepts to other getting started guides](./index.md)

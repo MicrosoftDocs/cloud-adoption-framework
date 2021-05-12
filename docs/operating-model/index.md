@@ -1,21 +1,18 @@
 ---
-title: "Understand cloud operating models"
+title: Understand cloud operating models
 description: Understand cloud operating models and how they impact your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal, operating-model
 ---
 
-<!-- docutune:casing GRC -->
-<!-- cspell:ignore reimagine -->
-
 # Understand cloud operating models
 
-Adopting the cloud creates an opportunity to revisit how you operate technology systems. This article series will clarify cloud operating models and the considerations that impact your cloud adoption strategy. But first, let's clarify the term _cloud operating model_.
+Adopting the cloud creates an opportunity to revisit how you operate technology systems. This article series will clarify cloud operating models and the considerations that impact your cloud adoption strategy. But first, let's clarify the term *cloud operating model*.
 
 ## Define your operating model
 
@@ -23,7 +20,7 @@ Before deploying your cloud architecture, it's important to understand how you w
 
 ## What is an operating model?
 
-Prior to the existence of cloud technologies, technology teams established operating models to define how technology would support the business. Any company's IT operating model has a number of factors, but a few remain consistent: _alignment to business strategy, organization of people, change management (or adoption processes), operations management, governance/compliance, and security_. Each factor is essential to long-term technology operations.
+Prior to the existence of cloud technologies, technology teams established operating models to define how technology would support the business. Any company's IT operating model has a number of factors, but a few remain consistent: *alignment to business strategy, organization of people, change management (or adoption processes), operations management, governance/compliance, and security*. Each factor is essential to long-term technology operations.
 
 When technology operations shift to the cloud, these vital processes are still relevant, but they're likely to change in some ways. Current operating models focus heavily on physical assets in physical locations funded largely through capital expenditure cycles. These assets are used to support the workloads that the business needs to maintain business operations. The mission of most operating models is to prioritize stability of the workloads by investing in the stability of the underlying physical assets.
 
@@ -33,7 +30,7 @@ Redundancy in the hardware stack is a never-ending cycle. Physical hardware brea
 
 As your operating model shifts to the cloud, you still need the same people and processes, but they also shift to focus on a higher level of operations. If your people no longer focus on server uptime, then their success metrics will change. If security is no longer protected by the four walls of a datacenter, then your threat profile changes. When procurement is no longer a blocker to innovation, then the pace at which you manage change also changes.
 
-A _cloud operating model_ is the collection of processes and procedures that define how you want to operate technology in the cloud.
+A *cloud operating model* is the collection of processes and procedures that define how you want to operate technology in the cloud.
 
 ## Purpose of a cloud operating model
 

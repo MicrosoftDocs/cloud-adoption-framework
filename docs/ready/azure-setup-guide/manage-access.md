@@ -20,7 +20,7 @@ Azure RBAC provides detailed access management of resources in Azure. It helps y
 When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning Azure RBAC.
 
 ![Diagram that shows Azure roles](./media/manage-access/role-examples.png)
-_Figure 1: Azure roles._
+*Figure 1: Azure roles.*
 
 When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
 

@@ -39,7 +39,7 @@ Use cases, business cases, and technology advances all support how Azure Synapse
 - Clinical analytics
 - Compliance analytics
 - Cost-based analytics
-- Omni-channel optimization
+- Omnichannel optimization
 - Personalization
 - Intelligent supply chain
 - Dynamic pricing

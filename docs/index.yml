@@ -8,15 +8,15 @@ brand: azure
 
 metadata:
 
-  title: "Microsoft Cloud Adoption Framework for Azure"
-  description: "The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that accelerate your cloud adoption journey."
-  ms.service: cloud-adoption-framework
-  ms.topic: hub-page
+  title: Microsoft Cloud Adoption Framework for Azure
+  description: The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that accelerate your cloud adoption journey.
   services: cloud-adoption-framework
-  ms.subservice: overview
   author: JanetCThomas
   ms.author: janet
   ms.date: 05/15/2020
+  ms.topic: hub-page
+  ms.service: cloud-adoption-framework
+  ms.subservice: overview
 
 # Maximum of 8 items
 
@@ -27,20 +27,24 @@ highlightedContent:
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
 
   items:
+
     # Card
-    - title: "Start your cloud journey"
+    - title: Start your cloud journey
       itemType: get-started
       url: ./get-started/index.md
+
     # Card
-    - title: "Find cloud adoption tools and templates"
+    - title: Find cloud adoption tools and templates
       itemType: download
       url: ./reference/tools-templates.md
+
     # Card
-    - title: "What is the Cloud Adoption Framework"
+    - title: What is the Cloud Adoption Framework?
       itemType: overview
       url: ./overview.md
+
     # Card
-    - title: "What's new in the Cloud Adoption Framework"
+    - title: What's new in the Cloud Adoption Framework
       itemType: whats-new
       url: ./get-started/whats-new.md
 
@@ -50,8 +54,10 @@ productDirectory:
   title: Cloud Adoption Framework guidance # < 60 chars (optional)
   summary: Find guidance for each methodology as you proceed through your cloud adoption journey. # < 160 chars (optional)
   items:
+
     # Card
-    - title: "Get started"
+    - title: Get started
+
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/caf-get-started.png
       links:
@@ -76,6 +82,7 @@ productDirectory:
           text: Align your partner strategy
         - url: ./strategy/first-adoption-project.md
           text: Choose the right first project
+
     # Card
     - title: Plan
       imageSrc: ./_images/caf-plan.png
@@ -88,6 +95,7 @@ productDirectory:
           text: Skills readiness plan
         - url: ./plan/template.md
           text: Cloud adoption plan for DevOps
+
     # Card
     - title: Ready
       imageSrc: ./_images/caf-ready.png
@@ -100,18 +108,20 @@ productDirectory:
           text: Azure landing zones
         - url: ./ready/azure-best-practices/index.md
           text: Best practices for Azure readiness
+
     # Card
     - title: Migrate
       imageSrc: ./_images/caf-migrate.png
       links:
         - url: ./migrate/azure-migration-guide/index.md
           text: Azure migration guide
-        - url: ./migrate/azure-best-practices/contoso-migration-overview.md
+        - url: ./scenarios/index.md
           text: Migration scenarios
         - url: ./migrate/azure-best-practices/index.md
           text: Best practices for cloud migration
         - url: ./migrate/migration-considerations/index.md
           text: Process improvements
+
     # Card
     - title: Innovate
       imageSrc: ./_images/caf-adopt.png
@@ -124,6 +134,7 @@ productDirectory:
           text: Best practices
         - url: ./innovate/considerations/adoption.md
           text: Feedback loops
+
     # Card
     - title: Govern
       imageSrc: ./_images/caf-govern.png
@@ -136,6 +147,7 @@ productDirectory:
           text: Governance foundation
         - url: ./govern/foundation-improvements.md
           text: Improve the foundation
+
     # Card
     - title: Manage
       imageSrc: ./_images/caf-manage.png
@@ -148,6 +160,7 @@ productDirectory:
           text: Expand the baseline
         - url: ./manage/design-principles.md
           text: Evaluate design principles
+
     # Card
     - title: Organize
       imageSrc: ./_images/caf-organize.png
@@ -163,18 +176,23 @@ productDirectory:
 
 tools:
   title: Build your skills with Microsoft Learn
+
  # < 60 Chars (optional)
   summary: Learn more about Azure and the Cloud Adoption Framework by completing the following Microsoft Learn modules.
   items:
+
     # Card
     - title: Microsoft Cloud Adoption Framework for Azure
+
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/learn-caf-logo.png
       url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/index
+
     # Card
     - title: Azure fundamentals
       imageSrc: ./_images/learn-azure-fundamentals-logo.png
       url: /learn/paths/azure-fundamentals
+
     # Card
     - title: Learn the business value of Azure
       imageSrc: ./_images/learn-business-value-of-azure-logo.png
@@ -189,24 +207,28 @@ conceptualContent:
   title: Assessments # < 60 chars (optional)
   summary: Assessments help you plan your cloud journey. Use them to identify differences between your current state and your desired state. We'll provide personalized, curated recommendations to help you reach your desired state. # < 160 Chars (optional)
   items:
+
     # Card
     - title: Cloud journey tracker
       links:
         - url: /assessments/?id=cloud-journey-tracker&mode=pre-assessment
           itemType: get-started
           text: Identify your cloud adoption path based on the needs of your business.
+
     # Card
     - title: Strategic migration assessment and readiness tool (SMART)
       links:
         - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
           itemType: get-started
           text: Unblock migration efforts, improve processes, and drive business success.
+
     # Card
     - title: Governance benchmark
       links:
         - url: https://www.cafbaseline.com
           itemType: quickstart
           text: Identify gaps between your current state and business priorities, and get the right resources to help you address those gaps.
+
     # Card
     - title: Microsoft Azure Well-Architected Review
       links:
@@ -219,22 +241,27 @@ conceptualContent:
 # Card with summary style
 
 additionalContent:
+
   # Supports up to 3 sections
   sections:
     - title: Find support  # < 60 chars (optional)
       summary: If you're blocked in your cloud adoption journey, Microsoft has dedicated resources to help you get unblocked.  # < 160 chars (optional)
       items:
+
         # Card
         - title: FastTrack for Azure
           summary: Get help from Microsoft engineers
           url: https://azure.microsoft.com/programs/azure-fasttrack
+
         # Card
         - title: Azure Migration Program
           summary: Get help migrating workloads to the cloud
           url: https://azure.microsoft.com/migration/migration-program
+
         # Card
         - title: Find a partner
           summary: Find a partner to help you get started
           url: https://aka.ms/adopt/findapartner
+
   # footer (optional)
   footer: "See why the Cloud Adoption Framework is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"

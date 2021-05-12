@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
@@ -16,7 +16,7 @@ ms.custom: internal, fasttrack-edit, AQC
 
 # Operational compliance in Azure
 
-_Operational compliance_ is the second discipline in any cloud management baseline.
+*Operational compliance* is the second discipline in any cloud management baseline.
 
 ![Cloud Management Baseline](../../_images/manage/management-baseline.png)
 
@@ -122,9 +122,9 @@ To apply a policy to a resource group:
 
 To learn more, see:
 
-- [Azure Policy](/azure/azure-policy)
+- [Azure Policy](/azure/governance/policy/)
 - [Azure Policy: Guest Configuration](/azure/governance/policy/concepts/guest-configuration)
-- [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
+- [Cloud Adoption Framework policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
 
@@ -210,8 +210,8 @@ To publish blueprint artifacts to your subscription:
 
 To learn more, see:
 
-- [Azure Blueprints](/azure/governance/blueprints)
-- [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Azure Blueprints](/azure/governance/blueprints/)
+- [Cloud Adoption Framework resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
+- [Standards-based blueprints samples](/azure/governance/blueprints/samples/#standards-based-blueprint-samples)
 
 ::: zone-end

@@ -65,8 +65,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 - Contoso will deploy microservices by using a PowerShell script that calls Kubernetes command-line tools.
 
     ![Diagram of scenario architecture for migration to Azure.](./media/contoso-migration-rebuild/architecture.png)
-
-    _Figure 1: Scenario architecture._
+    *Figure 1: Scenario architecture.*
 
 ### Solution review
 
@@ -86,17 +85,16 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 5. Finally, Contoso deploys the function and web app.
 
     ![Diagram of the migration process from preparation to deployment in the cloud.](./media/contoso-migration-rebuild/migration-process.png)
-
-    _Figure 2: The migration process._
+    *Figure 2: The migration process.*
 
 ### Azure services
 
 | Service | Description | Cost |
 |---|---|---|
-| [AKS](/sql/dma/dma-overview?view=ssdt-18vs2017) | Simplifies Kubernetes management, deployment, and operations. Provides a fully managed Kubernetes container orchestration service. | AKS is a free service. Pay for only the VMs and the associated storage and networking resources that are consumed. [Learn more](https://azure.microsoft.com/pricing/details/kubernetes-service). |
-| [Azure Functions](https://azure.microsoft.com/services/functions) | Accelerates development with an event-driven, serverless compute experience. Scale on demand. | Pay only for consumed resources. Plan is billed based on per-second resource consumption and executions. [Learn more](https://azure.microsoft.com/pricing/details/functions). |
-| [Azure Container Registry](https://azure.microsoft.com/services/container-registry) | Stores images for all types of container deployments. | Cost is based on features, storage, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/container-registry). |
-| [Azure App Service](https://azure.microsoft.com/services/app-service/containers) | Quickly build, deploy, and scale enterprise-grade web, mobile, and API apps that run on any platform. | App Service plans are billed on a per-second basis. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
+| [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) | Simplifies Kubernetes management, deployment, and operations. Provides a fully managed Kubernetes container orchestration service. | AKS is a free service. Pay for only the VMs and the associated storage and networking resources that are consumed. [Learn more](https://azure.microsoft.com/pricing/details/kubernetes-service/). |
+| [Azure Functions](https://azure.microsoft.com/services/functions/) | Accelerates development with an event-driven, serverless compute experience. Scale on demand. | Pay only for consumed resources. Plan is billed based on per-second resource consumption and executions. [Learn more](https://azure.microsoft.com/pricing/details/functions/). |
+| [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) | Stores images for all types of container deployments. | Cost is based on features, storage, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/container-registry/). |
+| [Azure App Service](https://azure.microsoft.com/services/app-service/) | Quickly build, deploy, and scale enterprise-grade web, mobile, and API apps that run on any platform. | App Service plans are billed on a per-second basis. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
 
 ## Prerequisites
 
@@ -104,9 +102,9 @@ Here's what Contoso needs for this scenario:
 
 | Requirements | Details |
 | --- | --- |
-| Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
+| Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads) <li> [The Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install), set to use Windows containers |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [The Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
 
 ## Scenario steps
 
@@ -117,7 +115,7 @@ Here's how Contoso will run the migration:
 > - **Step 1: Provision AKS and Azure Container Registry.** Contoso provisions the managed AKS cluster and the container registry by using PowerShell.
 > - **Step 2: Build Docker containers.** Contoso sets up continuous integration (CI) for Docker containers by using Azure DevOps and pushes the containers to the container registry.
 > - **Step 3: Deploy back-end microservices.** Contoso deploys the rest of the infrastructure that will be used by back-end microservices.
-> - **Step 4: Deploy front-end infrastructure.** Contoso deploys the front-end infrastructure, including Blob storage for the pet phones, Azure Cosmos DB, and the Computer Vision API.
+> - **Step 4: Deploy front-end infrastructure.** Contoso deploys the front-end infrastructure, including Blob Storage for the pet phones, Azure Cosmos DB, and the Computer Vision API.
 > - **Step 5: Migrate the back end.** Contoso deploys microservices and runs them on AKS to migrate the back end.
 > - **Step 6: Publish the front end.** Contoso publishes the SmartHotel360 application to Azure App Service along with the function app to be called by the pet service.
 
@@ -140,46 +138,39 @@ The Contoso admins provision AKS and Azure Container Registry as follows:
 2. They run the script to create the managed Kubernetes cluster, using AKS and Azure Container Registry.
 
     ![Screenshot showing the AKS script in Visual Studio Code.](./media/contoso-migration-rebuild/aks1.png)
-
-    _Figure 3: Creating the managed Kubernetes cluster._
+    *Figure 3: Creating the managed Kubernetes cluster.*
 
 3. With the file open, they update the $location parameter to `eastus2`, and save the file.
 
     ![Screenshot showing AKS $location parameter updated to eastus2.](./media/contoso-migration-rebuild/aks2.png)
-
-    _Figure 4: Saving the file._
+    *Figure 4: Saving the file.*
 
 4. They select **View** > **Integrated terminal** to open the integrated terminal in Visual Studio Code.
 
-    ![Screenshot showing the "Integrated Terminal" link.](./media/contoso-migration-rebuild/aks3.png)
+    ![Screenshot showing the **Integrated Terminal** link.](./media/contoso-migration-rebuild/aks3.png)
+    *Figure 5: The terminal in Visual Studio Code.*
 
-    _Figure 5: The terminal in Visual Studio Code._
-
-5. In the PowerShell integrated terminal, they sign into Azure using the `Connect-AzureRmAccount` command. For more information, see [Get started with PowerShell](/powershell/azure/get-started-azureps).
+5. In the PowerShell integrated terminal, they sign in to Azure using the `Connect-AzureRmAccount` command. For more information, see [Get started with PowerShell](/powershell/azure/get-started-azureps).
 
     ![Screenshot of the sign-in window for the PowerShell integrated terminal.](./media/contoso-migration-rebuild/aks4.png)
+    *Figure 6: The PowerShell integrated terminal.*
 
-    _Figure 6: The PowerShell integrated terminal._
-
-6. They authenticate the Azure CLI by running the `az login` command and following the instructions to authenticate using their web browser. Learn more about [logging in with the Azure CLI](/cli/azure/authenticate-azure-cli?view=azure-cli-latest).
+6. They authenticate the Azure CLI by running the `az login` command and following the instructions to authenticate using their web browser. Learn more about [signing in with the Azure CLI](/cli/azure/authenticate-azure-cli).
 
     ![Screenshot showing the authentication window for the Azure CLI.](./media/contoso-migration-rebuild/aks5.png)
-
-    _Figure 7: Authenticating the Azure CLI._
+    *Figure 7: Authenticating the Azure CLI.*
 
 7. They run the following command while passing the resource group name of `ContosoRG`, the name of the AKS cluster `smarthotel-aks-eus2`, and the new registry name.
 
     `.\gen-aks-env.ps1  -resourceGroupName ContosoRg -orchestratorName smarthotelakseus2 -registryName smarthotelacreus2`
 
     ![Screenshot showing the smarthotel commands on the resource group pane.](./media/contoso-migration-rebuild/aks6.png)
-
-    _Figure 8: Running the command._
+    *Figure 8: Running the command.*
 
 8. Azure creates another resource group that contains the resources for the AKS cluster.
 
     ![Screenshot of resource group creation.](./media/contoso-migration-rebuild/aks7.png)
-
-    _Figure 9: Azure creating a resource group._
+    *Figure 9: Azure creating a resource group.*
 
 9. After the deployment is finished, they install the `kubectl` command-line tool. The tool is already installed on the Azure Cloud Shell.
 
@@ -188,8 +179,7 @@ The Contoso admins provision AKS and Azure Container Registry as follows:
 10. They verify the connection to the cluster by running the `kubectl get nodes` command. The node has the same name as the VM in the automatically created resource group.
 
     ![Screenshot showing verification of the connection to the cluster.](./media/contoso-migration-rebuild/aks8.png)
-
-    _Figure 10: Verifying the connection to the cluster._
+    *Figure 10: Verifying the connection to the cluster.*
 
 11. They run the following command to start the Kubernetes dashboard:
 
@@ -198,8 +188,7 @@ The Contoso admins provision AKS and Azure Container Registry as follows:
 12. A browser tab opens to the dashboard. This is a tunneled connection that uses the Azure CLI.
 
     ![Screenshot showing a tunneled connection.](./media/contoso-migration-rebuild/aks9.png)
-
-    _Figure 11: A tunneled connection._
+    *Figure 11: A tunneled connection.*
 
 ## Step 2: Configure the back-end pipeline
 
@@ -211,87 +200,73 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
 2. They create a new project (`SmartHotelBackend`), selecting **Git** for version control and **Agile** for the workflow.
 
-    ![Screenshot of the Azure DevOps "Create new project" pane.](./media/contoso-migration-rebuild/vsts1.png)
-
-    _Figure 12: Creating a new project._
+    ![Screenshot of the Azure DevOps **Create new project** pane.](./media/contoso-migration-rebuild/vsts1.png)
+    *Figure 12: Creating a new project.*
 
 3. They import the [GitHub repo](https://github.com/Microsoft/SmartHotel360-Backend).
 
-    ![Screenshot of the Azure DevOps "Import a Git repository" pane.](./media/contoso-migration-rebuild/vsts2.png)
-
-    _Figure 13: Importing the GitHub repo._
+    ![Screenshot of the Azure DevOps **Import a Git repository** pane.](./media/contoso-migration-rebuild/vsts2.png)
+    *Figure 13: Importing the GitHub repo.*
 
 4. In **Pipelines**, they select **Build** and create a new pipeline by using Azure Repos Git as a source from the repository.
 
     ![Screenshot of DevOps pane for creating a new pipeline.](./media/contoso-migration-rebuild/vsts3.png)
-
-    _Figure 14: Creating a new pipeline._
+    *Figure 14: Creating a new pipeline.*
 
 5. They select **Empty job**.
 
-    ![Screenshot of the "Empty job" link in Azure DevOps.](./media/contoso-migration-rebuild/vsts4.png)
-
-    _Figure 15: Starting with an empty job._
+    ![Screenshot of the **Empty job** link in Azure DevOps.](./media/contoso-migration-rebuild/vsts4.png)
+    *Figure 15: Starting with an empty job.*
 
 6. They select **Hosted Linux Preview** for the build pipeline.
 
     ![Screenshot of setting up the build pipeline in Azure DevOps.](./media/contoso-migration-rebuild/vsts5.png)
-
-    _Figure 16: Setting up the build pipeline._
+    *Figure 16: Setting up the build pipeline.*
 
 7. In **Step 1**, they add a **Docker Compose** task. This task builds the Docker Compose.
 
     ![Screenshot of building a Docker Compose task in Azure DevOps.](./media/contoso-migration-rebuild/vsts6.png)
-
-    _Figure 17: Building the Docker Compose._
+    *Figure 17: Building the Docker Compose.*
 
 8. They repeat and add another **Docker Compose** task. This one pushes the containers to the container registry.
 
      ![Screenshot of adding another Docker Compose task in Azure DevOps.](./media/contoso-migration-rebuild/vsts7.png)
-
-    _Figure 18: Adding another Docker Compose task._
+    *Figure 18: Adding another Docker Compose task.*
 
 9. They select the first task to build and configure the build with the Azure subscription, authorization, and Container Registry.
 
     ![Screenshot of building and configuring the build in Azure DevOps.](./media/contoso-migration-rebuild/vsts8.png)
+    *Figure 19: Building and configuring the build.*
 
-    _Figure 19: Building and configuring the build._
-
-10. They specify the path of the `docker-compose.yaml` file in the *src* folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
+10. They specify the path of the `docker-compose.yaml` file in the `src` folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
 
     ![Screenshot of various task-building specifics in Azure DevOps.](./media/contoso-migration-rebuild/vsts9.png)
-
-    _Figure 20: The specifics of the task._
+    *Figure 20: The specifics of the task.*
 
 11. Now, they configure the second Docker task (to push). They select the subscription and the container registry (`smarthotelacreus2`).
 
     ![Screenshot of configuring the second Docker task in Azure DevOps.](./media/contoso-migration-rebuild/vsts10.png)
+    *Figure 21: Configuring the second Docker task.*
 
-    _Figure 21: Configuring the second Docker task._
-
-12. They enter the *docker-compose.yaml* file name and select **Push service images**, including the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
+12. They enter the `docker-compose.yaml` file name and select **Push service images**, including the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
 
     ![Screenshot of changing the Azure DevOps task name.](./media/contoso-migration-rebuild/vsts11.png)
-
-    _Figure 22: Changing the Azure DevOps task name._
+    *Figure 22: Changing the Azure DevOps task name.*
 
 13. With the Azure DevOps tasks configured, Contoso saves the build pipeline and starts the build process.
 
     ![Screenshot of starting the build process in Azure DevOps.](./media/contoso-migration-rebuild/vsts12.png)
-
-    _Figure 23: Starting the build process._
+    *Figure 23: Starting the build process.*
 
 14. They select the build job to check progress.
 
     ![Screenshot of checking build progress in Azure DevOps.](./media/contoso-migration-rebuild/vsts13.png)
-
-    _Figure 24: Checking the progress._
+    *Figure 24: Checking the progress.*
 
 15. After the build finishes, the container registry shows the new repos, which are populated with the containers used by the microservices.
 
     ![Screenshot of viewing new repos after the build finishes in Azure DevOps.](./media/contoso-migration-rebuild/vsts14.png)
-
-    _Figure 25: Viewing new repos after the build finishes._
+    *Figure 25: Viewing new repos after the build finishes.*
 
 ### Deploy the back-end infrastructure
 
@@ -309,14 +284,12 @@ The admins deploy the infrastructure as follows:
     `.\deploy.cmd azuredeploy ContosoRG -c eastus2`
 
     ![Screenshot of deploying the back end.](./media/contoso-migration-rebuild/backend1.png)
-
-    _Figure 26: Deploying the back end._
+    *Figure 26: Deploying the back end.*
 
 3. In the Azure portal, they capture the connection string for each database for later use.
 
     ![Screenshot showing the connection string for each database.](./media/contoso-migration-rebuild/backend2.png)
-
-    _Figure 27: Capturing the connection string for each database._
+    *Figure 27: Capturing the connection string for each database.*
 
 ### Create the back-end release pipeline
 
@@ -330,78 +303,63 @@ Now, Contoso admins do the following:
 
 The admins create the pipeline:
 
-1. In Visual Studio, they update the */deploy/k8s/config_local.yml* file with the database connection information that they noted earlier.
-
-    ![Screenshot showing the "New pipeline" button in Visual Studio.](./media/contoso-migration-rebuild/back-pipe1.png)
-
-    _Figure 28: Database connections._
+1. In Visual Studio, they update the `/deploy/k8s/config_local.yml` file with the database connection information that they noted earlier.
 
 2. They open Azure DevOps and, in the SmartHotel360 project, they select **+ New pipeline** on the **Releases** pane.
 
-    ![Screenshot showing the "New pipeline" button in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe2.png)
-
-    _Figure 29: Creating a new pipeline._
+    ![Screenshot showing the **New pipeline** button in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe2.png)
+    *Figure 29: Creating a new pipeline.*
 
 3. They select **Empty Job** to start the pipeline without a template.
 4. They provide the stage and pipeline names.
 
       ![Screenshot showing creation of a stage name in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe4.png)
-
-    _Figure 30: The stage name._
+    *Figure 30: The stage name.*
 
       ![Screenshot showing creation of a pipeline name in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe5.png)
-
-    _Figure 31: The pipeline name._
+    *Figure 31: The pipeline name.*
 
 5. They add an artifact.
 
      ![Screenshot showing adding an artifact in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe6.png)
-
-    _Figure 32: Adding an artifact._
+    *Figure 32: Adding an artifact.*
 
 6. They select **Git** as the source type and specify the project, source, and main branch for the SmartHotel360 application.
 
-    ![Screenshot of the "Add an artifact" pane, with Git as the source type.](./media/contoso-migration-rebuild/back-pipe7.png)
-
-    _Figure 33: The artifact settings pane._
+    ![Screenshot of the **Add an artifact** pane, with Git as the source type.](./media/contoso-migration-rebuild/back-pipe7.png)
+    *Figure 33: The artifact settings pane.*
 
 7. They select the task link.
 
     ![Screenshot showing the task link highlighted in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe8.png)
-
-    _Figure 34: The task link._
+    *Figure 34: The task link.*
 
 8. They add a new Azure PowerShell task so that they can run a PowerShell script in an Azure environment.
 
     ![Screenshot of adding a new PowerShell task in Azure.](./media/contoso-migration-rebuild/back-pipe9.png)
-
-    _Figure 35: Adding a new PowerShell task._
+    *Figure 35: Adding a new PowerShell task.*
 
 9. They select the Azure subscription for the task and select the `deploy.ps1` script from the Git repo.
 
     ![Screenshot of selecting a script to run from the Git repo.](./media/contoso-migration-rebuild/back-pipe10.png)
-
-    _Figure 36: Running the script._
+    *Figure 36: Running the script.*
 
 10. They add arguments to the script. The script will delete all cluster content (except **ingress** and **ingress controller**), and deploy the microservices.
 
     ![Screenshot showing arguments to be added to the script.](./media/contoso-migration-rebuild/back-pipe11.png)
-
-    _Figure 37: Adding arguments to the script._
+    *Figure 37: Adding arguments to the script.*
 
 11. They set the preferred Azure PowerShell version to the latest version, and save the pipeline.
 
 12. They go back to the **Create a new release** pane and manually create a new release.
 
-    ![Screenshot of the "Create a new release" pane.](./media/contoso-migration-rebuild/back-pipe12.png)
-
-    _Figure 38: Manually creating a new release._
+    ![Screenshot of the **Create a new release** pane.](./media/contoso-migration-rebuild/back-pipe12.png)
+    *Figure 38: Manually creating a new release.*
 
 13. After they create the release, they select it and, under **Actions**, they select **Deploy**.
 
-      ![Screenshot highlighting the Deploy button for deploying a release.](./media/contoso-migration-rebuild/back-pipe13.png)
-
-    _Figure 39: Deploying a release._
+      ![Screenshot highlighting the **Deploy** button for deploying a release.](./media/contoso-migration-rebuild/back-pipe13.png)
+    *Figure 39: Deploying a release.*
 
 14. When the deployment is complete, they run the following command to check the status of services, using the Azure Cloud Shell: `kubectl get services`.
 
@@ -409,32 +367,29 @@ The admins create the pipeline:
 
 Contoso admins need to deploy the infrastructure that will be used by the front-end applications. They create:
 
-- A Blob storage container to store the pet images.
+- A Blob Storage container to store the pet images.
 - An Azure Cosmos DB database to store documents containing pet information.
 - The Computer Vision API for the website.
 
 Instructions for this section use the [SmartHotel360-website](https://github.com/microsoft/smartHotel360-website) repo.
 
-### Create Blob storage containers
+### Create Blob Storage containers
 
 1. In the Azure portal, the admins open the storage account that was created, and then select **Blobs**.
 2. They create a new container named `Pets` with the public-access level set for the container. Users will upload their pet photos to this container.
 
     ![Screenshot of creating a new container in the Azure portal.](./media/contoso-migration-rebuild/blob1.png)
-
-    _Figure 40: Creating a new container._
+    *Figure 40: Creating a new container.*
 
 3. They create a second new container named `settings`. A file with all the front-end app settings will be placed in this container.
 
     ![Screenshot of creating a second new container in the Azure portal.](./media/contoso-migration-rebuild/blob2.png)
-
-    _Figure 41: Creating a second container._
+    *Figure 41: Creating a second container.*
 
 4. They capture the access details for the storage account in a text file for future reference.
 
-    ![Screenshot of a text file capturing access details.](./media/contoso-migration-rebuild/blob2.png)
-
-    _Figure 42: A text file capturing access details._
+    ![Screenshot of a text file capturing access details.](./media/contoso-migration-rebuild/blob3.png)
+    *Figure 42: A text file capturing access details.*
 
 ### Provision an Azure Cosmos DB database
 
@@ -443,26 +398,22 @@ Contoso admins provision an Azure Cosmos DB database to be used for pet informat
 1. They create an **Azure Cosmos DB** database in Azure Marketplace.
 
     ![Screenshot showing the creation of an Azure Cosmos DB database in Azure Marketplace.](./media/contoso-migration-rebuild/cosmos1.png)
-
-    _Figure 43: Creating an Azure Cosmos DB database._
+    *Figure 43: Creating an Azure Cosmos DB database.*
 
 2. They specify a name `contososmarthotel`, select the SQL API, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
 
     ![Screenshot of the Azure Cosmos DB database name and other settings.](./media/contoso-migration-rebuild/cosmos2.png)
-
-    _Figure 44: Naming an Azure Cosmos DB database._
+    *Figure 44: Naming an Azure Cosmos DB database.*
 
 3. They add a new collection to the database, with default capacity and throughput.
 
-    ![Screenshot of the "Add Collection" pane for Azure Cosmos DB.](./media/contoso-migration-rebuild/cosmos3.png)
-
-    _Figure 45: Adding a new collection to the database._
+    ![Screenshot of the **Add Collection** pane for Azure Cosmos DB.](./media/contoso-migration-rebuild/cosmos3.png)
+    *Figure 45: Adding a new collection to the database.*
 
 4. They note the connection information for the database for future reference.
 
     ![Screenshot of the connection information for the Azure Cosmos DB database.](./media/contoso-migration-rebuild/cosmos4.png)
-
-    _Figure 46: The connection information for the database._
+    *Figure 46: The connection information for the database.*
 
 ### Provision the Computer Vision API
 
@@ -471,20 +422,17 @@ Contoso admins provision the Computer Vision API. The API will be called by the 
 1. The admins create a **Computer Vision** instance in Azure Marketplace.
 
      ![Screenshot of creating a new computer vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
-
-    _Figure 47: A new instance in Azure Marketplace._
+    *Figure 47: A new instance in Azure Marketplace.*
 
 2. They provision the API (`smarthotelpets`) in the production resource group `ContosoRG`, in the main region (`East US 2`).
 
     ![Screenshot of setting up an API in a production resource group.](./media/contoso-migration-rebuild/vision2.png)
-
-    _Figure 48: Provisioning an API in a production resource group._
+    *Figure 48: Provisioning an API in a production resource group.*
 
 3. They save the connection settings for the API to a text file for later reference.
 
-     ![Screenshot of saving the API's connection settings to a text file.](./media/contoso-migration-rebuild/vision3.png)
-
-    _Figure 49: Saving an API's connection settings._
+     ![Screenshot of saving the API connection settings to a text file.](./media/contoso-migration-rebuild/vision3.png)
+    *Figure 49: Saving the API connection settings.*
 
 ### Provision the Azure web app
 
@@ -493,22 +441,19 @@ Contoso admins provision the web app by using the Azure portal.
 1. They select **Web App** in the portal.
 
     ![Screenshot of selecting a web app in the Azure portal.](./media/contoso-migration-rebuild/web-app1.png)
-
-    _Figure 50: Selecting the web app._
+    *Figure 50: Selecting the web app.*
 
 2. They provide a web app name (`smarthotelcontoso`), run it on Windows, and place it in the production resource group `ContosoRG`. They create a new Application Insights instance for application monitoring.
 
     ![Screenshot of providing a web app name and other details.](./media/contoso-migration-rebuild/web-app2.png)
-
-    _Figure 51: The web app name._
+    *Figure 51: The web app name.*
 
 3. After they're done, the admins browse to the address of the application to check on whether it has been created successfully.
 
 4. In the Azure portal, they create a staging slot for the code. The pipeline will be deployed to this slot. This approach ensures that code isn't put into production until the admins perform a release.
 
     ![Screenshot of adding a web app staging slot.](./media/contoso-migration-rebuild/web-app3.png)
-
-    _Figure 52: Adding a web app staging slot._
+    *Figure 52: Adding a web app staging slot.*
 
 ### Provision the function app
 
@@ -517,14 +462,12 @@ In the Azure portal, Contoso admins provision the function app.
 1. They select **Function App**.
 
     ![Screenshot showing the creation of a function app.](./media/contoso-migration-rebuild/function-app1.png)
-
-    _Figure 53: Selecting the function app._
+    *Figure 53: Selecting the function app.*
 
 2. They provide a name for the function app (`smarthotelpetchecker`). They place the function app in the production resource group (`ContosoRG`). They set the hosting place to **Consumption Plan**, and place the function app in the `East US 2` region. A new storage account is created along with an Application Insights instance for monitoring.
 
     ![Screenshot showing the function app's settings.](./media/contoso-migration-rebuild/function-app2.png)
-
-    _Figure 54: Function app settings._
+    *Figure 54: Function app settings.*
 
 3. After they've deployed the function app, the admins browse to its address to verify that it has been created successfully.
 
@@ -535,12 +478,11 @@ Contoso admins create two different projects for the front-end site.
 1. In Azure DevOps, they create a project `SmartHotelFrontend`.
 
     ![Screenshot of the creation of a front-end project.](./media/contoso-migration-rebuild/function-app1.png)
-
-    _Figure 55: Creating a front-end project._
+    *Figure 55: Creating a front-end project.*
 
 2. They import the [SmartHotel360 front end](https://github.com/Microsoft/SmartHotel360-Website) Git repository into the new project.
 
-3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [petchecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) git repository into this project.
+3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
 
 ### Configure the web app
 
@@ -550,8 +492,7 @@ Now Contoso admins configure the web app to use Contoso resources.
 2. In Visual Studio, they open the folder to show all the files in the repo.
 
     ![Screenshot of Visual Studio showing a folder with all the files in the repo.](./media/contoso-migration-rebuild/configure-webapp1.png)
-
-    _Figure 56: Viewing all files in the repo._
+    *Figure 56: Viewing all files in the repo.*
 
 3. They update the configuration changes as required.
 
@@ -567,26 +508,22 @@ Now Contoso admins configure the web app to use Contoso resources.
     - For Contoso, this is `smarthotelcontoso.eastus2.cloudapp.azure.com`.
 
     ![Screenshot of the .json settings in Visual Studio.](./media/contoso-migration-rebuild/configure-webapp2.png)
+    *Figure 57: The .json settings.*
 
-    _Figure 57: The .json settings._
-
-5. After they update the file, the admins rename it `smarthotelsettingsurl` and upload it to the Blob storage they created earlier.
+5. After they update the file, the admins rename it `smarthotelsettingsurl` and upload it to the Blob Storage they created earlier.
 
     ![Screenshot of renaming and uploading the .json file.](./media/contoso-migration-rebuild/configure-webapp3.png)
-
-    _Figure 58: Renaming and uploading the file._
+    *Figure 58: Renaming and uploading the file.*
 
 6. They select the file to get the URL. The URL is used by the application when it pulls down the configuration files.
 
     ![Screenshot of the URL of the file that's used by the application.](./media/contoso-migration-rebuild/configure-webapp4.png)
+    *Figure 59: The application URL.*
 
-    _Figure 59: The application URL._
-
-7. In the *appsettings.Production.json* file, they update the `SettingsURL` to the URL of the new file.
+7. In the `appsettings.Production.json` file, they update the `SettingsURL` to the URL of the new file.
 
     ![Screenshot of updating the URL to the new file.](./media/contoso-migration-rebuild/configure-webapp5.png)
-
-    _Figure 60: Updating the URL to the new file._
+    *Figure 60: Updating the URL to the new file.*
 
 ### Deploy the website to Azure App Service
 
@@ -598,74 +535,63 @@ Contoso admins can now publish the website.
 4. They review the pipeline and check to ensure that **Publish Web Projects** and **Zip Published Projects** are selected.
 
     ![Screenshot of the web project's pipeline settings.](./media/contoso-migration-rebuild/vsts-publish-front2.png)
-
-    _Figure 61: Pipeline settings._
+    *Figure 61: Pipeline settings.*
 
 5. In **Triggers**, they enable continuous integration and add the main branch. This ensures that the build pipeline starts each time the solution has new code committed to the main branch.
 
     ![Screenshot of enabling continuous integration and adding the main branch.](./media/contoso-migration-rebuild/vsts-publish-front3.png)
-
-    _Figure 62: Enabling continuous integration._
+    *Figure 62: Enabling continuous integration.*
 
 6. They select **Save & Queue** to start a build.
 7. After the build finishes, they configure a release pipeline by using **Azure App Service Deployment**.
 8. They provide a stage name, **Staging**.
 
     ![Screenshot of providing a stage name for the environment.](./media/contoso-migration-rebuild/vsts-publish-front4.png)
-
-    _Figure 63: Naming the environment._
+    *Figure 63: Naming the environment.*
 
 9. They add an artifact and select the build that they've configured.
 
     ![Screenshot of adding an artifact, with Build as the source type.](./media/contoso-migration-rebuild/vsts-publish-front5.png)
-
-    _Figure 64: Adding an artifact._
+    *Figure 64: Adding an artifact.*
 
 10. They select the lightning bolt icon on the artifact and then set continuous deployment to **Enabled**.
 
     ![Screenshot of enabling continuous deployment.](./media/contoso-migration-rebuild/vsts-publish-front6.png)
-
-    _Figure 65: Enabling continuous deployment._
+    *Figure 65: Enabling continuous deployment.*
 
 11. In **Environment**, they select **1 job, 1 task** under **Staging**.
 
 12. After selecting the subscription and web app name, the admins open the **Deploy Azure App Service** task. The deployment is configured to use the **staging** deployment slot. This automatically builds code for review and approval in this slot.
 
      ![Screenshot of deploying the web app to a slot.](./media/contoso-migration-rebuild/vsts-publish-front7.png)
-
-    _Figure 66: Deploying to a slot._
+    *Figure 66: Deploying to a slot.*
 
 13. In the **Pipeline**, they add a new stage.
 
     ![Screenshot of the Pipeline tab and adding a new stage.](./media/contoso-migration-rebuild/vsts-publish-front8.png)
-
-    _Figure 67: Adding a new stage._
+    *Figure 67: Adding a new stage.*
 
 14. They select **Azure App Service deployment with slot** and then name the environment **Prod**.
 
 15. They select **1 job, 2 tasks** and then select the subscription, the app service name, and the **staging** slot.
 
     ![Screenshot showing naming the environment.](./media/contoso-migration-rebuild/vsts-publish-front10.png)
-
-    _Figure 68: Naming the environment._
+    *Figure 68: Naming the environment.*
 
 16. They remove the **Deploy Azure App Service to Slot** from the pipeline. It was placed there by the previous steps.
 
     ![Screenshot showing removing a slot from the pipeline.](./media/contoso-migration-rebuild/vsts-publish-front11.png)
-
-    _Figure 69: Removing a slot from the pipeline._
+    *Figure 69: Removing a slot from the pipeline.*
 
 17. They save the pipeline. On the pipeline, they select **Post-deployment conditions**.
 
-    ![Screenshot of the "Post-deployment conditions" button.](./media/contoso-migration-rebuild/vsts-publish-front12.png)
-
-    _Figure 70: Post-deployment conditions._
+    ![Screenshot of the **Post-deployment conditions** button.](./media/contoso-migration-rebuild/vsts-publish-front12.png)
+    *Figure 70: Post-deployment conditions.*
 
 18. They enable **Post-deployment approvals** and then add a dev lead as the approver.
 
     ![Screenshot of the enabled post-deployment approvers list.](./media/contoso-migration-rebuild/vsts-publish-front13.png)
-
-    _Figure 71: Adding an approver._
+    *Figure 71: Adding an approver.*
 
 19. In the build pipeline, the admins manually kick off a build. This triggers the new release pipeline, which deploys the site to the staging slot. For Contoso, the URL for the slot is `https://smarthotelcontoso-staging.azurewebsites.net/`.
 
@@ -673,21 +599,18 @@ Contoso admins can now publish the website.
 
 21. The dev lead selects **View approval** and can approve or reject the request in the Azure DevOps portal.
 
-    ![Screenshot of the post-deployment approval "Approve or reject" link.](./media/contoso-migration-rebuild/vsts-publish-front14.png)
-
-    _Figure 72: A pending release approval request._
+    ![Screenshot of the post-deployment approval **Approve or reject** link.](./media/contoso-migration-rebuild/vsts-publish-front14.png)
+    *Figure 72: A pending release approval request.*
 
 22. The dev lead makes a comment and approves. This starts swapping the **staging** and **prod** slots and moves the build into production.
 
     ![Screenshot of post-deployment approval and comment.](./media/contoso-migration-rebuild/vsts-publish-front15.png)
-
-    _Figure 73: Moving the build into production._
+    *Figure 73: Moving the build into production.*
 
 23. The pipeline completes the swap.
 
     ![Screenshot showing the statuses of the build deployment.](./media/contoso-migration-rebuild/vsts-publish-front16.png)
-
-    _Figure 74: Completing the swap._
+    *Figure 74: Completing the swap.*
 
 24. The team checks the **prod** slot to verify that the web app is in production at `https://smarthotelcontoso.azurewebsites.net/`.
 
@@ -697,11 +620,10 @@ Contoso admins deploy the application by doing the following:
 
 1. They clone the repository locally to the development machine by connecting to the Azure DevOps project.
 2. In Visual Studio, they open the folder to show all the files in the repo.
-3. They open the *src/PetCheckerFunction/local.settings.json* file and add the app settings for storage, the Azure Cosmos DB database, and the Computer Vision API.
+3. They open the `src/PetCheckerFunction/local.settings.json` file and add the app settings for storage, the Azure Cosmos DB database, and the Computer Vision API.
 
     ![Screenshot of the app settings in the .json file in Visual Studio.](./media/contoso-migration-rebuild/function5.png)
-
-    _Figure 75: Deploying the function._
+    *Figure 75: Deploying the function.*
 
 4. They commit the code and sync it back to Azure DevOps, pushing their changes.
 5. They add a new build pipeline and then select **Azure DevOps Git** for the source.
@@ -713,14 +635,12 @@ Contoso admins deploy the application by doing the following:
 10. They name the environment **Prod** and then select the subscription. They set the **App type** to **Function App** and the app service name as `smarthotelpetchecker`.
 
     ![Screenshot of the app type and app service name.](./media/contoso-migration-rebuild/petchecker2.png)
-
-    _Figure 76: The function app._
+    *Figure 76: The function app.*
 
 11. They add an artifact, **Build**.
 
     ![Screenshot of adding an artifact, with the Build source type.](./media/contoso-migration-rebuild/petchecker3.png)
-
-    _Figure 77: Adding an artifact._
+    *Figure 77: Adding an artifact.*
 
 12. They enable **Continuous deployment trigger** and then select **Save**.
 
@@ -728,29 +648,25 @@ Contoso admins deploy the application by doing the following:
 
 14. After the function is deployed, it appears in the Azure portal with the status **Running**.
 
-    ![Screenshot of the function app, showing a "Running" status.](./media/contoso-migration-rebuild/function6.png)
-
-    _Figure 78: Updating the function's status._
+    ![Screenshot of the function app, showing a **Running** status.](./media/contoso-migration-rebuild/function6.png)
+    *Figure 78: Updating the function's status.*
 
 15. They browse to the pet checker application, at `http://smarthotel360public.azurewebsites.net/pets`, to verify that it's working properly.
 
 16. They select the avatar to upload a picture.
 
     ![Screenshot of the pane for assigning a picture to an avatar.](./media/contoso-migration-rebuild/function7.png)
-
-    _Figure 79: Assigning a picture to an avatar._
+    *Figure 79: Assigning a picture to an avatar.*
 
 17. The first photo they want to check is of a small dog.
 
     ![Screenshot showing a photo of a dog.](./media/contoso-migration-rebuild/function8.png)
-
-    _Figure 80: Checking the photo._
+    *Figure 80: Checking the photo.*
 
 18. The application returns an acceptance message.
 
     ![Screenshot of an acceptance message.](./media/contoso-migration-rebuild/function9.png)
-
-    _Figure 81: An acceptance message._
+    *Figure 81: An acceptance message.*
 
 ## Review the deployment
 
@@ -758,14 +674,14 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 
 ### Security
 
-- Contoso needs to ensure that the new databases are secure. To learn more, see [Overview of Azure SQL Database and SQL Managed Instance security capabilities](/azure/sql-database/sql-database-security-overview).
+- Contoso needs to ensure that the new databases are secure. To learn more, see [Overview of Azure SQL Database and SQL Managed Instance security capabilities](/azure/azure-sql/database/security-overview).
 - The application must be updated to use SSL with certificates. The container instance should be redeployed to answer on 443.
 - Contoso should consider using Azure Key Vault to help protect secrets for their Service Fabric applications. To learn more, see [Manage encrypted secrets in Service Fabric applications](/azure/service-fabric/service-fabric-application-secret-management).
 
 ### Backups and disaster recovery
 
-- Contoso needs to review [backup requirements for Azure SQL Database](/azure/sql-database/sql-database-automated-backups).
-- Contoso should consider implementing [SQL failover groups to provide regional failover for the database](/azure/sql-database/sql-database-auto-failover-group).
+- Contoso needs to review [backup requirements for Azure SQL Database](/azure/azure-sql/database/automated-backups-overview).
+- Contoso should consider implementing [SQL failover groups to provide regional failover for the database](/azure/azure-sql/database/auto-failover-group-overview).
 - Contoso can use [geo-replication for the Azure Container Registry Premium SKU](/azure/container-registry/container-registry-geo-replication).
 - Azure Cosmos DB is backed up automatically. To learn more, see [Online backup and on-demand data restore in Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore).
 
@@ -785,8 +701,8 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 Here are two examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 application in Azure.
 
-<!-- docsTest:casing "with the Azure Cognitive Vision Services" "computer vision functionality" -->
+<!-- docsTest:casing "computer vision functionality" -->
 
-- **[Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service):** By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
+- **[Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/):** By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- **[Process and classify images with the Azure Cognitive Vision Services](/learn/paths/classify-images-with-vision-services):** Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure Cognitive Vision Services to detect faces, tag and classify images, and identify objects.
+- **[Process and classify images with the Azure cognitive vision services](/learn/paths/process-classify-images-with-azure-cognitive-vision-services/):** Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.

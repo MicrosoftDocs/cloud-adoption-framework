@@ -1,12 +1,12 @@
 ---
-title: "Design principles and advanced operations"
+title: Design principles and advanced operations
 description: Learn to apply design principles and advanced options to create an offering that provides a minimum level of business commitment for all supported workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -73,7 +73,7 @@ Within each specialization, the following four-step process is delivered in a di
 
 Improving system design is the most effective approach to improving operations of any common platform. System design improvements can help increase stability and decrease business interruptions. Design of individual systems is out of scope for the environment view taken throughout the Cloud Adoption Framework.
 
-As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload. The framework focuses on improvement across five pillars of architecture excellence:
+As a complement to this framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) provides guiding tenets for improving the quality of a platform or a specific workload. The framework focuses on improvement across five pillars of architecture excellence:
 
 - **Cost optimization:** Manage costs to maximize the value delivered.
 - **Operational excellence:** Follow operational processes that keep a system running in production.
@@ -83,7 +83,7 @@ As a complement to this framework, the [Microsoft Azure Well-Architected Framewo
 
 Most business interruptions equate to some form of technical debt, or deficiency in the architecture. For existing deployments, systems design improvements can be viewed as payments against existing technical debt. For new deployments, systems design improvements can be viewed as avoidance of technical debt. The next section, "Automated remediation," looks at ways to address technical debt that can't or shouldn't be addressed.
 
-To improve system design, learn more about the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework). As your system design improves, return to this article to find new opportunities to improve and scale the improvements across your environment.
+To improve system design, learn more about the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/). As your system design improves, return to this article to find new opportunities to improve and scale the improvements across your environment.
 
 ### Automated remediation
 
@@ -99,12 +99,12 @@ The cornerstone of platform specialization and platform operations is a well-man
 
 To maximize adoption and minimize maintenance overhead of any optimized platform, the platform should be added to a service catalog. Each application in the catalog can be deployed for internal consumption via the service catalog, or as a marketplace offering for external consumers.
 
-For information about publishing to a service catalog, see the series on [publishing to a service catalog](/azure/managed-applications/publish-service-catalog-app).
+For information about publishing to a service catalog, see the series on [publishing to a service catalog](/azure/azure-resource-manager/managed-applications/publish-service-catalog-app).
 
 ### Continuous improvement
 
 Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider beginning with continuous improvement data collection by reviewing the following articles:
 
-- [Container performance](/azure/azure-monitor/insights/container-insights-overview)
+- [Container performance](/azure/azure-monitor/containers/container-insights-overview)
 - [PaaS database performance](/azure/azure-monitor/insights/azure-sql)
 - [IaaS database performance](/azure/azure-monitor/insights/sql-assessment)

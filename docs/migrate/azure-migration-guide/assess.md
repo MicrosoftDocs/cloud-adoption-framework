@@ -1,5 +1,5 @@
 ---
-title: "Assess each workload and refine plans"
+title: Assess each workload and refine plans
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
 ms.author: brblanch
@@ -21,34 +21,31 @@ If you didn't follow the guidance in the links above, you will likely need data 
 
 ### Azure Migrate
 
-Azure Migrate assesses on-premises infrastructure, applications, and data for migration to Azure. This service:
+Azure Migrate provides a centralized hub to assess and migrate to Azure on-premises servers, infrastructure, applications, and data. This service:
 
-- Assesses the migration suitability of on-premises assets.
-- Performs performance-based sizing.
-- Provides cost estimates for running on-premises assets in Azure.
+- Assesses whether on-premises servers are ready for migration to Azure.
+- Estimates the size of Azure VMs/Azure SQL configuration/number of Azure VMware Solution nodes after migration.
+- Estimates costs for running on-premises servers in Azure.
+- Identifies cross-server dependencies and optimization strategies for moving interdependent servers to Azure.
 
 If you're considering a lift-and-shift approach or are in the early assessment stages of migration, this service is for you. After completing the assessment, use Azure Migrate to execute the migration.
 
 ![Azure Migrate overview](./media/assess/azure-migrate-overview-1.png)
 
-#### Create a new server migration project
+#### Create a new project
 
-Begin a server migration assessment using Azure Migrate via these steps:
+Begin server discovery, assessment and migration using Azure Migrate via these steps:
 
 1. Select **Azure Migrate**.
-1. In **Overview**, select **Assess and migrate servers**.
+1. In **Overview**, select **Discover, assess and migrate**.
 1. Select **Add tools**.
-1. In **Discover, assess and migrate servers**, select **Add tools**.
-1. In **Migrate project**, select your Azure subscription, then create a resource group if you don't have one.
-1. In **Project Details**, specify the project name and geography where you want to create the project, then select **Next**.
-1. In **Select assessment tool**, select **Skip adding an assessment tool for now** > **Next**.
-1. In **Select migration tool**, select **Azure Migrate: Server Migration** > **Next**.
-1. In **Review + add tools**, review the settings, then select **Add tools**.
-1. After adding the tool, it appears in **Azure Migrate project** > **Servers** > **Migration tools**.
+1. In **Project**, select your Azure subscription, then create a resource group if you don't have one.
+1. In **Project Details**, specify the project name and geography where you want to create the project, then select **Create**.
+1. After creating the project, tools are visible in project and user can start with Discovery.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Assess and migrate servers" :::
+::: form action="OpenBlade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Discover, assess and migrate" :::
 
 ::: zone-end
 
@@ -62,26 +59,20 @@ Begin a server migration assessment using Azure Migrate via these steps:
 
 ::: zone-end
 
-### Service Map
+### Dependency analysis
 
-Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services. With Service Map, you can view your servers in the way that you think of them: as interconnected systems that deliver critical services. Service Map shows connections between servers, processes, inbound and outbound connection latency, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.
+Dependency analysis identifies dependencies between discovered on-premises servers. It provides these advantages:
 
-Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](/azure/migrate/concepts-dependency-visualization). If you use the Azure Migrate service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
-
-#### Enable dependency visualization using Service Map
-
-To use dependency visualization, download and install agents on each on-premises machine that you want to analyze.
-
-- [Microsoft Monitoring Agent](/azure/log-analytics/log-analytics-agent-windows) must be installed on each machine.
-- The [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) must be installed on each machine.
-- Also, if you have machines with no internet connectivity, download and install Log Analytics gateway on those machines.
+- Gather servers into groups for assessment, more accurately, with greater confidence.
+- Identify servers that must be migrated together. This is especially useful if you're not sure which servers are part of an app deployment that you want to migrate to Azure.
+- Identify whether servers are in use, and which servers can be decommissioned instead of migrated.
+- Analyzing dependencies helps ensure that nothing is left behind, and thus avoids surprise outages after migration.
 
 <!-- markdownlint-disable MD024 -->
 
 #### Learn more
 
-- [Using Service Map solution in Azure](/azure/azure-monitor/insights/service-map)
-- [Azure Migrate and Service Map: Dependency visualization](/azure/migrate/concepts-dependency-visualization)
+- [Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization)
 
 ## [Challenge assumptions](#tab/Challenge-Assumptions)
 

@@ -22,7 +22,7 @@ Not all enterprises adopt Azure the same way, so the Cloud Adoption Framework en
 
 ## Landing zone in enterprise-scale
 
-Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security, governance, networking, and identity. Azure landing zones enable application migrations and greenfield development at enterprise scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
+Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security, governance, networking, and identity. Azure landing zones enable application migrations and greenfield development at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
 
 An example is how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared utility services that must be readily available to help streamline the application migration process before it begins.
 
@@ -32,7 +32,7 @@ _Figure 1: Landing zone design._
 
 ## High-level architecture
 
-An enterprise-scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an enterprise-scale architecture based on an Azure Virtual WAN network topology (depictured on figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted on figure 3).
+An enterprise-scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an enterprise-scale architecture based on an Azure Virtual WAN network topology (depicted in figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted in figure 3).
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
@@ -58,7 +58,7 @@ On figures 2 and 3 there are references to the enterprise-scale critical design 
 
 ![The letter F](./media/f.png), ![The letter G](./media/g.png), ![The letter H](./media/h.png) [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md) and [Security, governance, and compliance](./security-governance-and-compliance.md). Holistic and landing-zone-specific policies must be identified, described, built, and deployed onto the target Azure platform to ensure corporate, regulatory, and line-of-business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning or administration capability.
 
-![The letter I](./media/i.png) [Platform automation and DevOps](platform-automation-and-devops.md). An end-to-end DevOps experience with robust software development lifecycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed by using dedicated integration, release, and deployment pipelines with strong source control and traceability.
+![The letter I](./media/i.png) [Platform automation and DevOps](./platform-automation-and-devops.md). An end-to-end DevOps experience with robust software development lifecycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed by using dedicated integration, release, and deployment pipelines with strong source control and traceability.
 
 ## Next steps
 

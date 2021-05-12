@@ -1,6 +1,6 @@
 ---
 title: Migrate SQL Server databases to Azure
-description: Learn how Contoso migrates their on-premises SQL Databases to Azure.
+description: Learn how Contoso migrates their on-premises SQL databases to Azure.
 author: deltadan
 ms.author: abuck
 ms.date: 07/01/2020
@@ -47,7 +47,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 | **Data sources** | All databases will be moved to Azure with no exceptions. Based on the database and application analysis of the SQL features being used, they will move to PaaS, IaaS or managed instances. All databases must move. |
 | **Application** | Applications must be moved to the cloud wherever possible. If they cannot move, then they will be allowed to connect to the migrated database over the Azure network through private connections only. |
 | **Costs** | Contoso wants to understand not only its migration options, but also the costs associated with the infrastructure after it moves to the cloud. |
-| **Management** | Resource management groups must be created for the various departments along with resource groups to managed all SQL databases that are migrated. All resources must be tagged with department information for charge-back requirements. |
+| **Management** | Resource management groups must be created for the various departments along with resource groups to managed all SQL databases that are migrated. All resources must be tagged with department information for chargeback requirements. |
 | **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through virtual network gateways. |
 
 ## Solution design
@@ -64,7 +64,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Azure will provide a single pane of glass into the database workloads <br><br> Costs will be monitored via Azure Cost Management and Billing. <br><br> Business charge-back billing will be easy to perform with the Azure Billing APIs. <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
+| **Pros** | Azure will provide a single pane of glass into the database workloads <br><br> Costs will be monitored via Azure Cost Management + Billing. <br><br> Business chargeback billing will be easy to perform with the Azure Billing APIs. <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
 | **Cons** | Due to the requirement of IaaS-based virtual machines, there will still need to be management of the software on those machines. |
 
 ### Budget and management
@@ -105,7 +105,7 @@ Contoso also added Data Migration Assistant to their Azure Migrate project. By s
 
 <!-- docutune:casing "mainly .NET-based" "non-.NET-based" -->
 
-The results from the assessment provided Contoso with the visibility that they utilizes mainly .NET-based applications, however, over the years various projects have used other technologies such as PHP and Node.js. Vendor purchased systems also introduced non-.NET-based applications. They have identified the following:
+The assessment determined that Contoso uses mainly .NET-based applications. However, some projects have used other technologies such as PHP and Node.js. Vendor-purchased systems also introduced applications not based on .NET. Contoso identified the following applications:
 
 - ~800 Windows .NET applications
 - ~50 PHP applications
@@ -137,7 +137,7 @@ With the database information now loaded into Azure Migrate, Contoso has identif
 When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
 
 > [!NOTE]
-> Contoso discovered various open source databases during the assessment phase. Separately, they followed [Migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
+> Contoso discovered various open-source databases during the assessment phase. Separately, they followed the guidance in [migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
 
 <!-- docutune:casing "custom .NET" -->
 
@@ -147,9 +147,9 @@ With the information at hand, Contoso uses the following guidelines to determine
 
 | Target | Database usage | Details | Online migration | Offline migration | Max size | Migration guide |
 | --- | --- | --- | --- | ---| --- | --- |
-| Azure SQL Database (PaaS) | SQL Server (data only) | These databases simply use basic tables, columns, stored procedures and functions | [Data Migration Assistant](/sql/dma/dma-overview), [transactional replication](/azure/sql-database/sql-database-managed-instance-transactional-replication) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15) | 1 TiB | [Link](/azure/dms/tutorial-sql-server-to-azure-sql) |
-| Azure SQL Managed Instance | SQL Server (advanced features) | These databases use triggers and other [advanced concepts](/azure/sql-database/sql-database-managed-instance-transact-sql-information#service-broker) such as custom .NET types, service brokers, etc. | [Data Migration Assistant](/sql/dma/dma-overview), [transactional replication](/azure/sql-database/sql-database-managed-instance-transactional-replication) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15), [native backup/restore](/azure/sql-database/sql-database-managed-instance-get-started-restore) | 2 TiB - 8 TiB | [Link](/azure/dms/tutorial-sql-server-managed-instance-online) |
-| SQL Server on Azure Virtual Machines (IaaS) | SQL Server (third-party integrations) | The SQL Server must have [non-supported SQL Managed Instance features](/azure/sql-database/sql-database-managed-instance-transact-sql-information#service-broker) (cross-instance service brokers, cryptographic providers, buffer pool, compatibility levels below 100, database mirroring, FILESTREAM, PolyBase, anything that requires access to file shares, external scripts, extended stored procedures, and others) or third-party software installed to support the activities of the database. | [transactional replication](/azure/sql-database/sql-database-managed-instance-transactional-replication) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15), [snapshot replication](/azure/sql-database/sql-database-managed-instance-transactional-replication), [native backup/restore](/azure/sql-database/sql-database-managed-instance-get-started-restore), convert physical machine to VM | 4 GiB - 64 TiB | [Link](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql) |
+| Azure SQL Database (PaaS) | SQL Server (data only) | These databases simply use basic tables, columns, stored procedures and functions | [Data Migration Assistant](/sql/dma/dma-overview), [transactional replication](/azure/azure-sql/managed-instance/replication-transactional-overview) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15) | 1 TiB | [Link](/azure/dms/tutorial-sql-server-to-azure-sql) |
+| Azure SQL Managed Instance | SQL Server (advanced features) | These databases use triggers and other [advanced concepts](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#service-broker) such as custom .NET types, service brokers, and so on. | [Data Migration Assistant](/sql/dma/dma-overview), [transactional replication](/azure/azure-sql/managed-instance/replication-transactional-overview) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15), [native backup/restore](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) | 2 TiB - 8 TiB | [Link](/azure/dms/tutorial-sql-server-managed-instance-online) |
+| SQL Server on Azure Virtual Machines (IaaS) | SQL Server (third-party integrations) | The SQL Server must have [non-supported SQL Managed Instance features](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#service-broker) (cross-instance service brokers, cryptographic providers, buffer pool, compatibility levels below 100, database mirroring, FILESTREAM, PolyBase, anything that requires access to file shares, external scripts, extended stored procedures, and others) or third-party software installed to support the activities of the database. | [Transactional replication](/azure/azure-sql/managed-instance/replication-transactional-overview) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15), [snapshot replication](/azure/azure-sql/managed-instance/replication-transactional-overview), [native backup/restore](/azure/azure-sql/managed-instance/restore-sample-database-quickstart), convert physical machine to VM | 4 GiB - 64 TiB | [Link](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server) |
 
 Due to the large number of databases, Contoso created a project management office (PMO) to keep track of every database migration instance. [Accountability and responsibilities](../..//migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
 
@@ -188,10 +188,10 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 #### Security
 
-- Contoso needs to ensure that their new Azure database workloads are secure. [Learn more](/azure/sql-database/sql-database-security-overview).
+- Contoso needs to ensure that their new Azure database workloads are secure. [Learn more](/azure/azure-sql/database/security-overview).
 - In particular, Contoso should review the firewall and virtual network configurations.
 - Setup [Private Link](/azure/azure-sql/database/private-endpoint-overview) so that all database traffic is kept inside Azure and the on-premises network.
-- Enable [Azure Advanced Threat Protection](/azure/azure-sql/database/threat-detection-overview) for Azure SQL Database.
+- Enable [Microsoft Defender for Identity](/azure/azure-sql/database/threat-detection-overview) for Azure SQL Database.
 
 #### Backups
 
@@ -202,12 +202,12 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 - Many Azure database workloads can be scaled up or down, therefore performance monitoring of the server and databases is important to ensure you're meeting your needs but also keeping costs at a minimum.
 - Both CPU and storage have costs associated. There are several pricing tiers to select from. Be sure the appropriate pricing plan is selected for the data workloads.
-- [Elastic pools](/azure/sql-database/sql-database-service-tiers-dtu) are to be implemented for databases that have compatible resource utilization patterns.
+- [Elastic pools](/azure/azure-sql/database/service-tiers-dtu) are to be implemented for databases that have compatible resource utilization patterns.
 - Each read replica is billed based on the compute and storage selected
 - Use reserved capacity to save on costs.
 
 ## Conclusion
 
 In this article, Contoso assessed, planned, and migrated their Microsoft SQL Server workloads to Azure.
- 
-An Azure DevOps project has been developed for you to study in your SQL Migration journey, and it aligns with the Cloud Adoption Framework. This project will guide you through the key decisions required. [Select this link](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) to navigate to the Azure DevOps project.
+
+An Azure DevOps project has been developed for you to study in your SQL migration journey, and it aligns with the Cloud Adoption Framework. This project will guide you through the key decisions required. [Select this link](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) to navigate to the Azure DevOps project.

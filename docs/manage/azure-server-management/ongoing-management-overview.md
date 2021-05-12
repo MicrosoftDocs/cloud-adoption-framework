@@ -1,12 +1,12 @@
 ---
-title: "Ongoing management and security"
+title: Ongoing management and security
 description: Use the Cloud Adoption Framework for Azure to learn to focus on the operations and security configurations that will support your ongoing operations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -24,7 +24,7 @@ After you've onboarded Azure server management services, you'll need to focus on
 
 Azure Security Center is the central place to manage security for your environment. You'll see an overall assessment and targeted recommendations.
 
-We recommend that you review and implement the recommendations provided by this service. For information about additional benefits of Azure Security Center, see [Follow Azure Security Center recommendations](/azure/migrate/migrate-best-practices-security-management#best-practice-follow-azure-security-center-recommendations).
+We recommend that you review and implement the recommendations provided by this service. For information about additional benefits of Azure Security Center, see [Follow Azure Security Center recommendations](../../migrate/azure-best-practices/migrate-best-practices-security-management.md#best-practice-follow-azure-security-center-recommendations).
 
 ## Next steps
 

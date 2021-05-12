@@ -1,12 +1,12 @@
 ---
-title: "Configure the service for a subscription"
+title: Configure the service for a subscription
 description: Learn to configure Azure server management services for a subscription by deploying service agents to your servers and enabling management solutions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -32,10 +32,10 @@ This article covers the three processes that are necessary to complete these tas
 
 All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on virtual machines in Azure as well as on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a [built-in policy initiative](/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a [built-in policy initiative](/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency Agent](/azure/azure-monitor/vm/vminsights-enable-overview#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 > [!NOTE]
-> For more information about various agents for monitoring Azure, see [Overview of the Azure monitoring agents](/azure/azure-monitor/platform/agents-overview).
+> For more information about various agents for monitoring Azure, see [Overview of the Azure monitoring agents](/azure/azure-monitor/agents/agents-overview).
 
 ### Assign policies
 
@@ -61,14 +61,14 @@ To assign the policies that described in the previous section:
 
 7. Select **Assign**.
 
-After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Microsoft Monitoring Agent is enabled on the VM by default.
+After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Log Analytics agent is enabled on the VM by default.
 
 ## Install agents on on-premises servers
 
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard Azure server management services to servers.
 
-For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency Agent](/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency Agent](/azure/azure-monitor/vm/vminsights-enable-hybrid) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 
@@ -129,7 +129,7 @@ To create or modify the saved search, follow these steps:
 
 ### Azure activity log
 
-[Azure activity log](/azure/azure-monitor/platform/activity-logs-overview) is also part of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
+[Azure activity log](/azure/azure-monitor/essentials/platform-logs-overview) is also part of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
 
 To implement this solution:
 
@@ -172,7 +172,7 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
+You can enable [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 

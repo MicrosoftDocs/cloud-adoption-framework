@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal, homepage
 ---
 
@@ -26,10 +26,10 @@ The Cloud Adoption Framework brings together cloud adoption best practices from 
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|--|--|
-| <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
+| <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md):&nbsp;Define&nbsp;business&nbsp;justification&nbsp;and expected outcomes of adoption. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md):&nbsp;Align&nbsp;actionable&nbsp;adoption&nbsp;plans to business outcomes. |
 | <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
 | <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern the environment and workloads. |
-| <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Operations management for cloud and hybrid solutions. | <br> ![Organize icon](./_images/icons/organize.png) | <br> [Organize](./organize/index.md): Govern the environment and workloads. |
+| <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Operations management for cloud and hybrid solutions. | <br> ![Organize icon](./_images/icons/organize.png) | <br> [Organize](./organize/index.md): Align the teams and roles supporting your organization's cloud adoption efforts. |
 
 ## Understand the lifecycle
 

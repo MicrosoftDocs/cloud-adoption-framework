@@ -1,6 +1,6 @@
 ---
 title: Migrate an application to Azure App Service and SQL Database
-description: Use the Cloud Adoption Framework for Azure to learn how to refactor an app by migrating it to Azure App Service and Azure SQL Database.
+description: Use the Cloud Adoption Framework for Azure to learn how to refactor an application by migrating it to Azure App Service and Azure SQL Database.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2020
@@ -16,7 +16,7 @@ ms.custom: internal
 
 This article demonstrates how the fictional company Contoso refactors a two-tier Windows .NET application that's running on VMware VMs as part of a migration to Azure. The Contoso team migrates the application front-end virtual machine (VM) to an Azure App Service web app and the application database to Azure SQL Database.
 
-The SmartHotel360 application that we use in this example is provided as open source. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
+The SmartHotel360 application that we use in this example is provided as open-source software. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
 ## Business drivers
 
@@ -47,16 +47,16 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 - The SmartHotel360 on-premises application is tiered across two VMs, `WEBVM` and `SQLVM`.
 - The VMs are located on VMware ESXi host contosohost1.contoso.com version 6.5.
-- The VMware environment is managed by vCenter Server 6.5 (vcenter.contoso.com), which runs on a VM.
+- The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), which runs on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (contosodc1).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
 ### Proposed solution
 
-- For the database tier of the application, Contoso compared Azure SQL Database to SQL Server by referring to [Features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure/sql-database/sql-database-features). Contoso decided to use Azure SQL Database for a few reasons:
+- For the database tier of the application, Contoso compared Azure SQL Database to SQL Server by referring to the [features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison). Contoso decided to use Azure SQL Database for a few reasons:
   - Azure SQL Database is a managed relational database service. It delivers predictable performance at multiple service levels, with near-zero administration. Advantages include dynamic scalability with no downtime, built-in intelligent optimization, and global scalability and availability.
-  - Contoso can use the lightweight Data Migration Assistant to assess the on-premises database migration to Azure SQL.
-  - Contoso can use Azure Database Migration Service to migrate the on-premises database to Azure SQL.
+  - Contoso can use the lightweight Data Migration Assistant to assess the on-premises database migration to Azure SQL Database.
+  - Contoso can use Azure Database Migration Service to migrate the on-premises database to Azure SQL Database.
   - With Software Assurance, Contoso can exchange existing licenses for discounted rates on a database in SQL Database by using the Azure Hybrid Benefit for SQL Server. This approach could provide a cost saving of up to 30 percent.
   - SQL Database provides security features such as Always Encrypted, dynamic data masking, row-level security, and SQL threat detection.
 - For the application web tier, Contoso has decided to use Azure App Service. This PaaS service enables them to deploy the application with just a few configuration changes. Contoso will use Visual Studio to make the change, and they'll deploy two web apps, one for the website and one for the WCF service.
@@ -87,10 +87,10 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure App Service Migration Assistant](/learn/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
-| [Data Migration Assistant](/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso will use Data Migration Assistant to assess and detect compatibility issues that might affect database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets, and it recommends performance and reliability improvements. | It's a downloadable tool, free of charge. |
-| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | An intelligent, fully managed relational cloud database service. | Cost is based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/sql-database/managed). |
-| [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
+| [Data Migration Assistant](/sql/dma/dma-overview) | Contoso will use Data Migration Assistant to assess and detect compatibility issues that might affect database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets, and it recommends performance and reliability improvements. | It's a downloadable tool, free of charge. |
+| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
+| [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | An intelligent, fully managed relational cloud database service. | Cost is based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/). |
+| [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
 | [Azure DevOps](/azure/azure-portal/tutorial-azureportal-devops) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system to deploy changes in dev, test, and production environments. |
 
 ## Prerequisites
@@ -99,7 +99,7 @@ To run this scenario, Contoso must meet the following prerequisites:
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
+| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
 | **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 
 ## Scenario steps
@@ -119,7 +119,7 @@ Here's how Contoso will run the migration:
 
 Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure learning path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. The admins perform these actions:
 
-- They use the Azure [App Service Migration Assessment](https://appmigration.microsoft.com/assessment/) tool to evaluate any dependencies between their web apps and to determine if there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
+- They use the Azure [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 
 - They download the Azure App Service Migration Assistant and sign in to their Azure account.
 
@@ -131,11 +131,11 @@ Contoso admins assess and migrate their web app using the [Azure App Service Mig
 
     ![Screenshot showing the SQL Database link.](./media/contoso-migration-refactor-web-app-sql/provision-sql1.png)
 
-1. They specify a database name to match the database, `SmartHotel.Registration`, that's running on the on-premises VM. They place the database in the ContosoRG resource group. This is the resource group they use for production resources in Azure.
+1. They specify a database name to match the database, `SmartHotel.Registration`, that's running on the on-premises VM. They place the database in the `ContosoRG` resource group. This is the resource group they use for production resources in Azure.
 
     ![Screenshot showing SQL Database instance details.](./media/contoso-migration-refactor-web-app-sql/provision-sql2.png)
 
-1. They set up a new SQL Server instance, **sql-smarthotel-eus2**, in the primary region.
+1. They set up a new SQL Server instance, `sql-smarthotel-eus2`, in the primary region.
 
     ![Screenshot of the new SQL Server instance.](./media/contoso-migration-refactor-web-app-sql/provision-sql3.png)
 
@@ -154,12 +154,12 @@ Contoso admins assess and migrate their web app using the [Azure App Service Mig
 
 **Need more help?**
 
-- [Get help](/azure/sql-database/sql-database-get-started-portal) provisioning a SQL Database.
-- Learn about [vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools).
+- [Get help](/azure/azure-sql/database/single-database-create-quickstart) provisioning a SQL database.
+- Learn about [vCore resource limits](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
 
 ## Step 3: Assess the database
 
-Contoso admins assess the database by using Data Migration Assistant and then migrate it by using Azure Database Migration Service by referring to the [step-by-step migration tutorial](/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
+Contoso admins assess the database by using Data Migration Assistant and then migrate it by using Azure Database Migration Service by referring to the [step-by-step migration tutorial](/azure/dms/tutorial-sql-server-to-azure-sql). They can perform online, offline, and hybrid (preview) migrations.
 
 In brief, the admins do the following:
 
@@ -186,11 +186,11 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 
 1. They import the Git repo that currently holds their application code. They download it from the [public GitHub repository](https://github.com/Microsoft/SmartHotel360-Registration).
 
-    ![Screenshot of the "Import a Git repository" pane.](./media/contoso-migration-refactor-web-app-sql/vsts2.png)
+    ![Screenshot of the **Import a Git repository** pane.](./media/contoso-migration-refactor-web-app-sql/vsts2.png)
 
 1. They connect Visual Studio to the repo and then clone the code to the developer machine by using Team Explorer.
 
-    ![Screenshot of the "Connect to a Project" pane.](./media/contoso-migration-refactor-web-app-sql/devops1.png)
+    ![Screenshot of the **Connect to a Project** pane.](./media/contoso-migration-refactor-web-app-sql/devops1.png)
 
 1. They open the solution file for the application. The web app and the WCF service have separate projects within the file.
 
@@ -201,17 +201,18 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 The Contoso admins make sure that the web apps and database can communicate with each other. To do this, they configure connection strings in the code and in the web apps.
 
 1. In the web app for the WCF service, `SHWCF-EUS2`, under **Settings** > **Application settings**, they add a new connection string named **DefaultConnection**.
+
 1. They pull the connection string from the SmartHotel-Registration database and then update it with the correct credentials.
 
     ![Screenshot of the connection string settings pane.](./media/contoso-migration-refactor-web-app-sql/string1.png)
 
 1. In Visual Studio, the admins open the `SmartHotel.Registration.wcf` project from the solution file. In the project, they update the `connectionStrings` section of the `web.config` file with the connection string.
 
-     ![Screenshot of the connectionStrings section of the web.config file in the SmartHotel.Registration.wcf project.](./media/contoso-migration-refactor-web-app-sql/string2.png)
+     ![Screenshot of the `connectionStrings` section of the `web.config` file in the `SmartHotel.Registration.wcf` project.](./media/contoso-migration-refactor-web-app-sql/string2.png)
 
 1. They change the `client` section of the `web.config` file for `SmartHotel.Registration.Web` to point to the new location of the WCF service. This is the URL of the WCF web app that hosts the service endpoint.
 
-    ![Screenshot of the client section of the web.config file in the SmartHotel.Registration.wcf project.](./media/contoso-migration-refactor-web-app-sql/strings3.png)
+    ![Screenshot of the client section of the `web.config` file in the `SmartHotel.Registration.wcf` project.](./media/contoso-migration-refactor-web-app-sql/strings3.png)
 
 1. With the code changes now in place, the admins commit and sync them by using Team Explorer in Visual Studio.
 
@@ -221,19 +222,19 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. In Azure DevOps, they select **Build and release** > **New pipeline**.
 
-    ![Screenshot of the "New pipeline" link in Azure DevOps.](./media/contoso-migration-refactor-web-app-sql/pipeline1.png)
+    ![Screenshot of the **New pipeline** link in Azure DevOps.](./media/contoso-migration-refactor-web-app-sql/pipeline1.png)
 
 1. They select **Azure Repos Git** and, in the **Repository** drop-down list, they select the relevant repo.
 
-    ![Screenshot of the "Azure Repos Git" button and the selected repository.](./media/contoso-migration-refactor-web-app-sql/pipeline2.png)
+    ![Screenshot of the **Azure Repos Git** button and the selected repository.](./media/contoso-migration-refactor-web-app-sql/pipeline2.png)
 
-1. Under **Select a template**, they select the **ASP.NET** template for their build.
+1. Under **Select a template**, they select the `ASP.NET` template for their build.
 
-     ![Screenshot of the "Select a template" pane for selecting the ASP.NET template.](./media/contoso-migration-refactor-web-app-sql/pipeline3.png)
+     ![Screenshot of the **Select a template** pane for selecting the ASP.NET template.](./media/contoso-migration-refactor-web-app-sql/pipeline3.png)
 
-1. They use the name **ContosoSmartHotelRefactor-ASP.NET-CI** for the build and then select **Save & queue**, which kicks off the first build.
+1. They use the name `ContosoSmartHotelRefactor-ASP.NET-CI` for the build and then select **Save & Queue**, which kicks off the first build.
 
-     ![Screenshot of the "Save and queue" button for the build.](./media/contoso-migration-refactor-web-app-sql/pipeline4.png)
+     ![Screenshot of the **Save & Queue** button for the build.](./media/contoso-migration-refactor-web-app-sql/pipeline4.png)
 
 1. They select the build number to watch the process. After it's finished, the admins can see the process feedback, and they select **Artifacts** to review the build results.
 
@@ -244,7 +245,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
     - The two .zip files are the packages that contain the applications.
     - These .zip files are used in the release pipeline for deployment to Azure App Service.
 
-     ![Screenshot of the "Artifacts explorer" pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline6.png)
+     ![Screenshot of the **Artifacts explorer** pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline6.png)
 
 1. They select **Releases** > **+ New pipeline**.
 
@@ -254,21 +255,21 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
     ![Screenshot of the Azure App Service deployment template.](./media/contoso-migration-refactor-web-app-sql/pipeline8.png)
 
-1. They name the release pipeline **ContosoSmartHotel360Refactor** and, in the **Stage name** box, specify **SHWCF-EUS2** as the name of the WCF web app.
+1. They name the release pipeline `ContosoSmartHotel360Refactor` and, in the **Stage name** box, specify `SHWCF-EUS2` as the name of the WCF web app.
 
     ![Screenshot of the stage name of the WCF web app.](./media/contoso-migration-refactor-web-app-sql/pipeline9.png)
 
 1. Under the stages, they select **1 job, 1 task** to configure deployment of the WCF service.
 
-    ![Screenshot of the "1 job, 1 task" option.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline10.png)
+    ![Screenshot of the **1 job, 1 task** option.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline10.png)
 
 1. They verify that the subscription is selected and authorized, and then they select the **app service name**.
 
      ![Screenshot of selecting the app service name.](./media/contoso-migration-refactor-web-app-sql/pipeline11.png)
 
-1. On the pipeline > **Artifacts**, they select **+ Add an artifact**, then select to build with the **ContosoSmarthotel360Refactor** pipeline.
+1. On the pipeline > **Artifacts**, they select **+ Add an artifact**, then select to build with the `ContosoSmarthotel360Refactor` pipeline.
 
-     ![Screenshot of the Build button on the "Add an artifact" pane.](./media/contoso-migration-refactor-web-app-sql/pipeline12.png)
+     ![Screenshot of the **Build** button on the **Add an artifact** pane.](./media/contoso-migration-refactor-web-app-sql/pipeline12.png)
 
 1. To enable the continuous deployment trigger, the admins select the lightning bolt icon on the artifact.
 
@@ -280,19 +281,19 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. The admins go back to the stage **1 job, 1 task** and then select **Deploy Azure App Service**.
 
-    ![Screenshot of the option to select "Deploy Azure App Service."](./media/contoso-migration-refactor-web-app-sql/pipeline15.png)
+    ![Screenshot of the option to select **Deploy Azure App Service.**](./media/contoso-migration-refactor-web-app-sql/pipeline15.png)
 
-1. In **Select a file or folder**, they expand the **drop** folder, select the *SmartHotel.Registration.Wcf.zip* file that was created during the build, and then select **Save**.
+1. In **Select a file or folder**, they expand the **drop** folder, select the `SmartHotel.Registration.Wcf.zip` file that was created during the build, and then select **Save**.
 
-    ![Screenshot of the "Select a file or folder" pane for selecting the WCF file.](./media/contoso-migration-refactor-web-app-sql/pipeline16.png)
+    ![Screenshot of the **Select a file or folder** pane for selecting the WCF file.](./media/contoso-migration-refactor-web-app-sql/pipeline16.png)
 
 1. They select **Pipeline** > **Stages**, and then select **+ Add** to add an environment for `SHWEB-EUS2`. They select another Azure App Service deployment.
 
-    ![Screenshot of the "1 job, 1 task" link for adding an environment.](./media/contoso-migration-refactor-web-app-sql/pipeline17.png)
+    ![Screenshot of the **1 job, 1 task** link for adding an environment.](./media/contoso-migration-refactor-web-app-sql/pipeline17.png)
 
 1. They repeat the process to publish the `SmartHotel.Registration.Web.zip` file to the correct web app, and then select **Save**.
 
-    ![Screenshot of the "Select a file or folder" pane for selecting the WEB file.](./media/contoso-migration-refactor-web-app-sql/pipeline18.png)
+    ![Screenshot of the **Select a file or folder** pane for selecting the WEB file.](./media/contoso-migration-refactor-web-app-sql/pipeline18.png)
 
     The release pipeline is displayed, as shown here:
 
@@ -300,11 +301,11 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They go back to **Build**, select **Triggers**, and then select the **Enable continuous integration** check box. This action enables the pipeline so that when changes are committed to the code, the full build and release occur.
 
-    ![Screenshot highlighting the "Enable continuous integration" check box.](./media/contoso-migration-refactor-web-app-sql/pipeline20.png)
+    ![Screenshot highlighting the **Enable continuous integration** check box.](./media/contoso-migration-refactor-web-app-sql/pipeline20.png)
 
-1. They select **Save & queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
+1. They select **Save & Queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
 
-    ![Screenshot of the "Save & queue" button.](./media/contoso-migration-refactor-web-app-sql/pipeline21.png)
+    ![Screenshot of the **Save & Queue** button.](./media/contoso-migration-refactor-web-app-sql/pipeline21.png)
 
 1. Contoso admins can follow the build and release pipeline process from Azure DevOps. After the build finishes, the release starts.
 
@@ -331,21 +332,21 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 
 ### Security
 
-- Contoso helps ensure that their new `SmartHotel-Registration` database is secure. [Learn more](/azure/sql-database/sql-database-security-overview).
+- Contoso helps ensure that their new `SmartHotel-Registration` database is secure. [Learn more](/azure/azure-sql/database/security-overview).
 - In particular, Contoso updates the web apps to use SSL with certificates.
 
 ### Backups
 
-- The Contoso team reviews the backup requirements for the Azure SQL Database. [Learn more](/azure/sql-database/sql-database-automated-backups).
-- They also learn about managing SQL Database backups and restores. Learn more about [automatic backups](/azure/sql-database/sql-database-automated-backups).
-- They consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/sql-database/sql-database-geo-replication-overview).
+- The Contoso team reviews the backup requirements for the Azure SQL Database. [Learn more](/azure/azure-sql/database/automated-backups-overview).
+- They also learn about managing SQL Database backups and restores. Learn more about [automatic backups](/azure/azure-sql/database/automated-backups-overview).
+- They consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/azure-sql/database/auto-failover-group-overview).
 - For resilience, they consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`). The team could configure Traffic Manager to ensure failover during regional outages.
 
 ### Licensing and cost optimization
 
 - After all resources are deployed, Contoso assigns Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This cost is deducted from the Enterprise Agreement.
-- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure that they stay within the budgets established by their IT leadership.
+- Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure that they stay within the budgets established by their IT leadership.
 
 ## Conclusion
 

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the Azure migration guide"
+title: Introduction to the Azure migration guide
 description: Use the Cloud Adoption Framework for Azure to learn how to effectively migrate your organization's services to Azure.
 author: matticusau
 ms.author: brblanch
@@ -40,7 +40,7 @@ It is assumed that a landing zone has already been deployed, in alignment with t
 
 ## [When to use this guide](#tab/WhenToUseThisGuide)
 
-While the tools discussed in this guide support a wide variety of migration scenarios, this guide will focus on limited scope efforts with _minimal complexity_. To determine whether this migration guide is suitable for your project, consider whether the following conditions apply to your situation:
+While the tools discussed in this guide support a wide variety of migration scenarios, this guide will focus on limited scope efforts with *minimal complexity*. To determine whether this migration guide is suitable for your project, consider whether the following conditions apply to your situation:
 
 - The workloads for initial migration aren't mission critical and don't contain sensitive data.
 - You're migrating a homogeneous environment.

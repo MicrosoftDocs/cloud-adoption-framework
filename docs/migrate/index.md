@@ -1,5 +1,5 @@
 ---
-title: "Cloud migration"
+title: Cloud migration
 description: Prepare for a successful migration to Azure using an iterative process to assess, migrate, optimize, secure, and manage workloads.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,7 +29,7 @@ The Migrate methodology and the steps above build on the following assumptions:
 
 - The methodology governing migration sprints fits within migration waves or releases, which are defined using the Plan, Ready, and Adopt methodologies. Within each migration sprint, a batch of workloads is migrated to the cloud.
 - Before migrating workloads, at least one [landing zone](../ready/index.md) has been identified, configured, and deployed to meet the needs of the near-term cloud adoption plan.
-- Migration is commonly associated with the terms _lift and shift_ or _rehost_. This methodology and the above steps are built on the belief that no datacenter and few workloads should be migrated using a pure rehost approach. While many workloads can be rehosted, customers more often choose to modernize specific assets within each workload. During this iterative process, the balance between speed and modernization is a common discussion point.
+- Migration is commonly associated with the terms *lift and shift* or *rehost*. This methodology and the above steps are built on the belief that no datacenter and few workloads should be migrated using a pure rehost approach. While many workloads can be rehosted, customers more often choose to modernize specific assets within each workload. During this iterative process, the balance between speed and modernization is a common discussion point.
 
 ## Migration effort
 
@@ -42,11 +42,14 @@ In a standard two-week long iteration, an experienced migration team can complet
 The following bullets provide an overview of the phases of this process (pictured above):
 
 - **Assess workloads:** Assess workloads to evaluate cost, modernization, and deployment tooling. This process focuses on validating or challenging the assumptions made during earlier discovery and assessments by looking more closely at rationalization options. This is also when user patterns and dependencies are studied more closely to ensure workloads will achieve technical success after migration.
-- **Deploy workloads:** After workloads are assessed, the existing functionality of those workloads is replicated (or improved) in the cloud. This could involve a _lift and shift_ or _rehost_ to the cloud. But more commonly during this phase, many of the assets supporting these workloads will be modernized to capitalize on the benefits of the cloud.
+- **Deploy workloads:** After workloads are assessed, the existing functionality of those workloads is replicated (or improved) in the cloud. This could involve a *lift and shift* or *rehost* to the cloud. But more commonly during this phase, many of the assets supporting these workloads will be modernized to capitalize on the benefits of the cloud.
 - **Release workloads:** Once functionality is replicated to the cloud, workloads can be tested, optimized, documented, and released for ongoing operations. Critical during this process, is the effort to review the migrated workloads and hand them off to governance, operations management, and security teams for ongoing support of those workloads.
 
 > [!NOTE]
 > In some early iterations of migration effort, it is common to limit scope to a single workload. This approach maximizes skills retention and provides the team with more time to experiment and learn.
+
+<!-- -->
+
 > [!NOTE]
 > When building a migration factory, some teams may choose to disperse each of the above phases across multiple teams and multiple sprints. This approach can improve repeatability and accelerate migration efforts.
 

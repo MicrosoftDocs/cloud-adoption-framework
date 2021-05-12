@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites to migration"
+title: Prerequisites to migration
 description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Prerequisites for migration
 
-Prior to beginning any migrations, your migration target environment must be prepared for the coming changes. In this case, _environment_ refers to the technical foundation in the cloud. Environment also means the business environment and mindset driving the migration. Likewise, the environment includes the culture of the teams executing the changes and those receiving the output. Lack of preparation for these changes is the most common reason for failure of migrations. This series of articles walks you through suggested prerequisites to prepare the environment.
+Prior to beginning any migrations, your migration target environment must be prepared for the coming changes. In this case, *environment* refers to the technical foundation in the cloud. Environment also means the business environment and mindset driving the migration. Likewise, the environment includes the culture of the teams executing the changes and those receiving the output. Lack of preparation for these changes is the most common reason for failure of migrations. This series of articles walks you through suggested prerequisites to prepare the environment.
 
 ## Objective
 
@@ -34,7 +34,7 @@ Prerequisites are completed when the following are true:
 - **Technical readiness.** The landing zone (or allocated hosting space in the cloud) that will receive the migrated assets meets minimum requirements to host the first migrated workload.
 
 > [!CAUTION]
-> Preparation is key to the success of a migration. However, too much preparation can lead to _analysis paralysis_, where too much time spent on planning can seriously delay a migration effort. The processes and prerequisites defined in this section are meant to help you make decisions, but don't let them block you from making meaningful progress.
+> Preparation is key to the success of a migration. However, too much preparation can lead to *analysis paralysis*, where too much time spent on planning can seriously delay a migration effort. The processes and prerequisites defined in this section are meant to help you make decisions, but don't let them block you from making meaningful progress.
 >
 > Choose a relatively simple workload for your initial migration. Use the processes discussed in this section as you plan and implement this first migration. This first migration effort will quickly demonstrate cloud principles to your team and force them to learn about how the cloud works. As your team gains experience, integrate these learnings as you take on larger and more complex migrations.
 

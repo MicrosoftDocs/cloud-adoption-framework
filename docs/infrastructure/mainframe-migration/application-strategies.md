@@ -49,7 +49,7 @@ Cloud-based batch environments use parallel compute and high-speed networks for 
 
 ### Data ingestion systems
 
-Mainframes ingest large batches of data from retail, financial services, manufacturing, and other solutions for processing. With Azure, you can use simple command-line utilities such as [AzCopy](/azure/storage/common/storage-use-azcopy) for copying data to and from storage location. You can also use the [Azure Data Factory](/azure/data-factory/introduction) service, enabling you to ingest data from disparate data stores to create and schedule data-driven workflows.
+Mainframes ingest large batches of data from retail, financial services, manufacturing, and other solutions for processing. With Azure, you can use simple command-line utilities such as [AzCopy](/azure/storage/common/storage-use-azcopy-v10) for copying data to and from storage location. You can also use the [Azure Data Factory](/azure/data-factory/introduction) service, enabling you to ingest data from disparate data stores to create and schedule data-driven workflows.
 
 In addition to emulation environments, Azure provides platform as a service (PaaS) and analytics services that can enhance existing mainframe environments.
 
@@ -61,19 +61,19 @@ TP monitors are available from various vendors and run on virtual machines, an i
 
 !["Lift and shift" migration of a mainframe environment to Azure using emulation software](../../_images/mainframe-migration/mainframe-vs-azure.png)
 
-On Azure, emulation environments are used to run the TP manager and the batch jobs that use JCL. In the data tier, DB2 is replaced by [Azure SQL Database](/azure/sql-database/sql-database-technical-overview), although Microsoft SQL Server, DB2 LUW, or Oracle Database can also be used. An emulator supports IMS, VSAM, and SEQ. The mainframe's system management tools are replaced by Azure services, and software from other vendors, that run in VMs.
+On Azure, emulation environments are used to run the TP manager and the batch jobs that use JCL. In the data tier, DB2 is replaced by [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview), although Microsoft SQL Server, DB2 LUW, or Oracle Database can also be used. An emulator supports IMS, VSAM, and SEQ. The mainframe's system management tools are replaced by Azure services, and software from other vendors, that run in VMs.
 
 The screen handling and form entry functionality is commonly implemented using web servers, which can be combined with database APIs, such as ADO, ODBC, and JDBC for data access and transactions. The exact line-up of Azure IaaS components to use depends on the operating system you prefer. For example:
 
-- **Windows–based VMs:** Internet Information Server (IIS) along with ASP.NET for the screen handling and business logic. Use ADO.NET for data access and transactions.
+- **Windows-based VMs:** Internet Information Server (IIS) along with ASP.NET for the screen handling and business logic. Use ADO.NET for data access and transactions.
 
-- **Linux–based VMs:** The Java-based application servers that are available, such as Apache Tomcat for screen handling and Java-based business functionality. Use JDBC for data access and transactions.
+- **Linux-based VMs:** The Java-based application servers that are available, such as Apache Tomcat for screen handling and Java-based business functionality. Use JDBC for data access and transactions.
 
 ## Migrate batch workloads to Azure
 
 Batch operations in Azure differ from the typical batch environment on mainframes. Mainframe batch jobs are typically serial in nature and depend on the IOPS provided by the mainframe backbone for performance. Cloud-based batch environments use parallel computing and high-speed networks for performance.
 
-To optimize batch performance using Azure, consider the [compute](/azure/virtual-machines/windows/overview), [storage](/azure/storage/blobs/storage-blobs-introduction), [networking](https://azure.microsoft.com/blog/maximize-your-vm-s-performance-with-accelerated-networking-now-generally-available-for-both-windows-and-linux), and [monitoring](/azure/azure-monitor/overview) options as follows.
+To optimize batch performance using Azure, consider the [compute](/azure/virtual-machines/windows/overview), [storage](/azure/storage/blobs/storage-blobs-introduction), [networking](https://azure.microsoft.com/blog/maximize-your-vm-s-performance-with-accelerated-networking-now-generally-available-for-both-windows-and-linux/), and [monitoring](/azure/azure-monitor/overview) options as follows.
 
 ### Compute
 
@@ -91,7 +91,7 @@ Use:
 
 Use:
 
-- [Azure premium SSD](/azure/virtual-machines/windows/premium-storage) or [Azure ultra SSD](/azure/virtual-machines/windows/disks-ultra-ssd) for maximum available IOPS.
+- [Azure premium SSDs](/azure/virtual-machines/disks-types#premium-ssd) or [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-ssd-preview) for maximum available IOPS.
 
 - Striping with multiple disks for more IOPS per storage size.
 
@@ -103,7 +103,7 @@ Use:
 
 ### Monitoring
 
-- Use monitoring tools, [Azure Monitor](/azure/azure-monitor/overview), [Application Insights](/azure/application-insights/app-insights-overview), and Azure logs enable administrators to monitor any over performance of batch runs and help eliminate bottlenecks.
+- Use monitoring tools, [Azure Monitor](/azure/azure-monitor/overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), and Azure logs enable administrators to monitor any over performance of batch runs and help eliminate bottlenecks.
 
 ## Migrate development environments
 
@@ -123,7 +123,7 @@ The cloud's distributed architectures rely on a different set of development too
 
 ## Migrate databases and data
 
-Application migration usually involves rehosting the data tier. You can migrate SQL Server, open-source, and other relational databases to fully managed solutions on Azure, such as [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), [Azure Database for PostgreSQL](/azure/postgresql/overview), and [Azure Database for MySQL](/azure/mysql/overview) with [Azure Database Migration Service](/azure/dms/dms-overview).
+Application migration usually involves rehosting the data tier. You can migrate SQL Server, open-source, and other relational databases to fully managed solutions on Azure, such as [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), [Azure Database for PostgreSQL](/azure/postgresql/overview), and [Azure Database for MySQL](/azure/mysql/overview) with [Azure Database Migration Service](/azure/dms/dms-overview).
 
 For example, you can migrate if the mainframe data tier uses:
 
@@ -147,7 +147,7 @@ Database migration also includes these components:
 
 ## Optimize scale and throughput for Azure
 
-Generally speaking, mainframes scale up, while the cloud scales out. To optimize scale and throughput of mainframe-style applications running on Azure, it is important that you understand at how mainframes can separate and isolate applications. A z/OS mainframe uses a feature called logical partitions (LPARs) to isolate and manage the resources for a specific application on a single instance.
+Generally speaking, mainframes scale up, while the cloud scales out. To optimize scale and throughput of mainframe-style applications running on Azure, it's important that you understand at how mainframes can separate and isolate applications. A z/OS mainframe uses a feature called logical partitions (LPARs) to isolate and manage the resources for a specific application on a single instance.
 
 For example, a mainframe might use one LPAR for a CICS region with associated COBOL programs, and a separate LPAR for DB2. Additional LPARs are often used for the development, testing, and staging environments.
 
@@ -161,11 +161,11 @@ The following figure shows a possible Azure deployment using a primary and a sec
 
 ## Perform a staged mainframe to Azure
 
-Moving solutions from a mainframe to Azure may involve a _staged_ migration, whereby some applications are moved first, and others remain on the mainframe temporarily or permanently. This approach typically requires systems that allow applications and databases to interoperate between the mainframe and Azure.
+Moving solutions from a mainframe to Azure may involve a *staged* migration, whereby some applications are moved first, and others remain on the mainframe temporarily or permanently. This approach typically requires systems that allow applications and databases to interoperate between the mainframe and Azure.
 
 A common scenario is to move an application to Azure while keeping the data used by the application on the mainframe. Specific software is used to enable the applications on Azure to access data from the mainframe. Fortunately, a wide range of solutions provide integration between Azure and existing mainframe environments, support for hybrid scenarios, and migration over time. Microsoft partners, independent software vendors, and system integrators can help you on your journey.
 
-One option is [Microsoft Host Integration Server](/host-integration-server), a solution that provides the distributed relational database architecture (DRDA) required for applications in Azure to access data in DB2 that remains on the mainframe. Other options for mainframe-to-Azure integration include solutions from IBM, Attunity, Codit, other vendors, and open-source options.
+One option is [Microsoft Host Integration Server](/host-integration-server/), a solution that provides the distributed relational database architecture (DRDA) required for applications in Azure to access data in DB2 that remains on the mainframe. Other options for mainframe-to-Azure integration include solutions from IBM, Attunity, Codit, other vendors, and open-source options.
 
 ## Partner solutions
 
@@ -177,8 +177,8 @@ Azure provides a proven, highly available, and scalable infrastructure for syste
 
 For more information, see the following resources:
 
-- [Get started with Azure](/azure)
+- [Get started with Azure](/azure/)
 
-- [Deploy IBM DB2 pureScale on Azure](https://azure.microsoft.com/resources/deploy-ibm-db2-purescale-on-azure)
+- [Deploy IBM DB2 pureScale on Azure](https://azure.microsoft.com/resources/deploy-ibm-db2-purescale-on-azure/)
 
-- [Host Integration Server documentation](/host-integration-server)
+- [Host Integration Server documentation](/host-integration-server/)

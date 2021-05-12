@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 09/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: internal
 ---
 
@@ -104,8 +104,8 @@ These are the typical areas where security decisions are needed, descriptions, a
 | Decision         | Description           | Typical Team  |
 | ------------- |-------------| -----|
 | Network Security | Configuration and maintenance of Azure Firewall, Network Virtual Appliances (and associated routing), WAFs, NSGs, ASGs, etc. | _Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security_  |
-| Network Management | Enterprise-wide virtual network and subnet allocation  | _Typically existing network operations team in [Central IT Operations](../organize/central-it.md)_ |
-| Server Endpoint Security | Monitor and remediate server security (patching, configuration, endpoint security, etc.)  | _Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly_ |
+| Network Management | Enterprise-wide virtual network and subnet allocation | _Typically existing network operations team in [Central IT Operations](../organize/central-it.md)_ |
+| Server Endpoint Security | Monitor and remediate server security (patching, configuration, endpoint security, etc.) | _Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly_ |
 | Incident Monitoring and Response | Investigate and remediate security incidents in SIEM or source console (Azure Security Center, Azure AD Identity Protection, etc.) | _Typically [security operations](../organize/cloud-security-operations-center.md) team_ |
 | Policy Management | Set direction for use of Azure role-based access control (Azure RBAC), Azure Security Center, Administrator protection strategy, and Azure Policy to govern Azure resources | _Typically [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly_ |
 | Identity Security and Standards | Set direction for Azure AD directories, PIM/PAM usage, MFA, password/synchronization configuration, Application Identity Standards | _Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly_  |

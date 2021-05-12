@@ -1,19 +1,22 @@
 ---
-title: "Azure innovation: Democratize data"
-description: Learn about Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
-author: absheik
-ms.author: absheik
-ms.date: 10/17/2019
+title: Data democratization
+description: Learn about data democratization with Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.localizationpriority: high
-ms.custom: internal, fasttrack-new, AQC
+ms.custom: internal, fasttrack-new, AQC, seo-caf-innovate
+keywords: Democratize, democratize data, democratizing data, data democratization, democratized
 ---
 
 # Democratize data
 
-One of the first steps in democratizing data is to enhance data discoverability. Cataloging and managing data sharing can help enterprises get the most value from their existing information assets. A data catalog makes data sources easy to discover and understand by the users who manage the data. Azure Data Catalog enables management inside an enterprise, whereas Azure Data Share enables management and sharing outside the enterprise.
+Data democratization is the ability to make digital information accessible to the average non-technical user of information systems, without having a gatekeeper or outside help to access the data. Democratizing data helps users gain unfettered access to important data without creating a bottleneck that impedes productivity.
+
+One of the first steps in democratizing data is to enhance data discoverability. Cataloging and managing data sharing can help enterprises get the most value from their existing information assets. By democratizing a data catalog it makes data sources easy to discover and understand by the users who manage the data. Azure Data Catalog enables management inside an enterprise, whereas Azure Data Share enables management and sharing outside the enterprise.
 
 Azure services that provide data processing, like Azure Time Series Insights and Stream Analytics, are other capabilities that customers and partners are successfully using for their innovation needs.
 
@@ -31,7 +34,7 @@ Azure Data Catalog addresses the discovery challenges of data consumers and enab
 
 ::: zone target="docs"
 
-**Go to the [Azure Data Catalog documentation](/azure/data-catalog)**
+**Go to the [Azure Data Catalog documentation](/azure/data-catalog/)**
 
 ::: zone-end
 
@@ -69,7 +72,7 @@ Achieving a balance between openly sharing data and exercising control over what
 
 ::: zone target="docs"
 
-**Go to the [Azure Data Share documentation](/azure/data-share)**
+**Go to the [Azure Data Share documentation](/azure/data-share/)**
 
 ::: zone-end
 
@@ -107,7 +110,7 @@ The data innovation capabilities of Azure Time Series Insights are endless. It p
 
 ::: zone target="docs"
 
-**Go to the [Azure Time Series Insights overview](/azure/time-series-insights/time-series-insights-update-overview)**
+**Go to the [Azure Time Series Insights overview](/azure/time-series-insights/overview-what-is-tsi)**
 
 ::: zone-end
 

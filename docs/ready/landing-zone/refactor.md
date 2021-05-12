@@ -99,7 +99,7 @@ For this example, the above set of agreed upon conditions will allow the adoptio
 
 ## Meeting long-term requirements while refactoring
 
-The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, see [Expand your landing zone](../considerations/index.md)) for guidance to help make decisions and refactor to meet the evolving requirements of various teams.
+The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, review [Expand your landing zone](../considerations/index.md) for guidance to help make decisions and refactor to meet the evolving requirements of various teams.
 
 ![Parallel landing zone iteration](../../_images/ready/refactor-methodologies.png)
 _Figure 5: Deeper methodologies assisting a parallel landing zone iteration._

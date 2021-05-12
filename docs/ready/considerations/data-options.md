@@ -44,7 +44,7 @@ Answer the following questions about your workloads to help you make decisions b
 
 The following table illustrates a few common use scenario requirements and the recommended database services for handling them:
 
-| Scenario  | Data service |
+| Scenario | Data service |
 |---|---|
 | I need a globally distributed, multi-model database with support for NoSQL choices. | [Azure Cosmos DB](/azure/cosmos-db/introduction) |
 | I need a fully managed relational database that provisions quickly, scales on the fly, and includes built-in intelligence and security. | [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) |

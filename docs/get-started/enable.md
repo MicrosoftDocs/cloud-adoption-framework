@@ -29,7 +29,7 @@ When adoption of the cloud is slowed or stalled, it might be wise to evaluate yo
 
 Beyond the common blockers, a few key opportunities can be scaled across the portfolio through incremental improvements to your operating model. In particular, customers commonly want to scale operational excellence, cost optimization, security, reliability, performance, or people management. Scaling these conversations at the portfolio level can help bring best practices for specific workload-focused teams to all other projects and workloads.
 
-## Get-started guides to enable teams through an operating model
+## Getting started guides to enable teams through an operating model
 
 The following guides will help you get started with operating model alignment and improve over time.
 
@@ -44,9 +44,11 @@ The following guides will help you get started with operating model alignment an
 
 ## Shared architecture principles
 
-The core principles of a well-managed operating model are based on a set of common architecture principles. The get-started guidance in this article series will help supporting teams as they scale these principles across the cloud platform and throughout the portfolio of workloads.
+The core principles of a well-managed operating model are based on a set of common architecture principles. The getting started guidance in this article series will help supporting teams as they scale these principles across the cloud platform and throughout the portfolio of workloads.
 
 ![Diagram that illustrates shared architecture principles.](../_images/shared-principles.png)
+
+*Figure 1: The principles of shared architecture.*
 
 These principles are shared across Azure Advisor, the Microsoft Azure Well-Architected Framework, and solutions in the Azure Architecture Center:
 

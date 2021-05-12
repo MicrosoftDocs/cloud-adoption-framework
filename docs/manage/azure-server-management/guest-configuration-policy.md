@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -30,7 +30,7 @@ Use the following example PowerShell script to deploy these policies to:
 - Verify that password security settings in Windows and Linux computers are set correctly.
 - Verify that certificates aren't close to expiration on Windows VMs.
 
- Before you run this script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
+ Before you run this script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
 
 ```powershell
 

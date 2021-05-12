@@ -1,6 +1,6 @@
 ---
 title: Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
-description: Learn how Contoso rehosts an on-premises Linux app by migrating it to Azure VMs and Azure Database for MySQL.
+description: Learn how Contoso rehosts an on-premises Linux application by migrating it to Azure VMs and Azure Database for MySQL.
 author: givenscj
 ms.author: abuck
 ms.date: 07/01/2020
@@ -14,9 +14,9 @@ ms.custom: think-tank
 
 # Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
 
-This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application and migrates it from on-premises to Azure by using Azure Virtual Machines (VMs) and Azure Database for MySQL.
+This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application and migrates it from on-premises to Azure by using Azure Virtual Machines (VMs) and Azure Database for MySQL.
 
-The service desk application used in this example, osTicket, is provided as open source. If you want to use it for your own testing, you can download it from [GitHub](https://github.com/osTicket/osTicket).
+The service desk application used in this example, osTicket, is provided as open-source software. If you want to use it for your own testing, you can download it from [GitHub](https://github.com/osTicket/osTicket).
 
 ## Business drivers
 
@@ -76,9 +76,9 @@ To migrate the database:
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | [Azure Migrate](https://azure.microsoft.com/pricing/details/azure-migrate) is available at no additional charge. You might incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. |
-| [Azure Database Migration Service](/azure/dms/dms-overview) | Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure Database for MySQL](/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed enterprise-ready community MySQL database for application development and deployment. | Learn more about Azure Database for MySQL [pricing](https://azure.microsoft.com/pricing/details/mysql) and scalability options. |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | [Azure Migrate](https://azure.microsoft.com/pricing/details/azure-migrate/) is available at no additional charge. You might incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. |
+| [Azure Database Migration Service](/azure/dms/dms-overview) | Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
+| [Azure Database for MySQL](/azure/mysql/) | The database is based on the open-source MySQL database engine. It provides a fully managed enterprise-ready community MySQL database for application development and deployment. | Learn more about Azure Database for MySQL [pricing](https://azure.microsoft.com/pricing/details/mysql/server/) and scalability options. |
 
 ## Prerequisites
 
@@ -86,7 +86,7 @@ Here's what Contoso needs for this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control (Azure RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Azure Site Recovery access with role-based access control (RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, 6.5, or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
@@ -124,11 +124,11 @@ To set up the components, Contoso admins follow these steps:
 
        1. Set up the prerequisites.
 
-          ![Screenshot that shows the Set up prerequisites screen.](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
+          ![Screenshot of the **Set up prerequisites** page.](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
 
        1. Point the tool to the Azure subscription.
 
-          ![Screenshot that shows configuring the subscription](./media/contoso-migration-rehost-vm/migration-register-azure.png)
+          ![Screenshot of configuring the subscription.](./media/contoso-migration-rehost-vm/migration-register-azure.png)
 
        1. Set the VMware vCenter credentials.
 
@@ -282,7 +282,7 @@ As a summary, Contoso admins must perform the following tasks:
 
 - Ensure all migration prerequisites are met:
   - The MySQL server database source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across the source and target with the same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do so will cause the following error in the Migration Wizard: "Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full.'" For more information, see the [MySQL website](https://go.microsoft.com/fwlink/?linkid=873009`).
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do so will cause the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full.'` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via Azure ExpressRoute or a VPN to your on-premises network.
@@ -336,13 +336,13 @@ Contoso admins migrate the database by using backup and restore with MySQL tools
 
 1. Install MySQL Workbench for Windows by following the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html).
 
-1. In MySQL Workbench, create a MySQL connection to OSTICKETMYSQL.
+1. In MySQL Workbench, create a MySQL connection to `OSTICKETMYSQL`.
 
     ![Screenshot that shows the Connection tab.](./media/contoso-migration-rehost-linux-vm-mysql/workbench1.png)
 
 1. Export the database as `osticket` to a local self-contained file.
 
-    ![Screenshot that shows the Data Export screen.](./media/contoso-migration-rehost-linux-vm-mysql/workbench2.png)
+    ![Screenshot of the **Data Export** page.](./media/contoso-migration-rehost-linux-vm-mysql/workbench2.png)
 
 1. After the database is backed up locally, create a connection to the Azure Database for MySQL instance.
 
@@ -424,4 +424,4 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 - After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure](./contoso-migration-infrastructure.md#set-up-tagging) deployment.
 - There are no licensing issues for the Contoso Ubuntu servers.
-- Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
+- Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.

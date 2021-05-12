@@ -28,7 +28,7 @@ Define your naming and tagging strategy as early as possible. Use the following 
 
 ## Purpose of naming and tagging
 
-Accurately representing and naming your resources is essential for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Azure Security Center](/azure/security-center/security-center-introduction) and [Azure Sentinel](/azure/sentinel) reference resources and their associated logging and alert information by resource name.
+Accurately representing and naming your resources is essential for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Azure Security Center](/azure/security-center/security-center-introduction) and [Azure Sentinel](/azure/sentinel/) reference resources and their associated logging and alert information by resource name.
 
 Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 

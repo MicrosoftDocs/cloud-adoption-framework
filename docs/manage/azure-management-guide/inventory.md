@@ -6,14 +6,14 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
 # Inventory and visibility in Azure
 
-_Inventory and visibility_ is the first of three disciplines in a cloud management baseline.
+*Inventory and visibility* is the first of three disciplines in a cloud management baseline.
 
 ![Cloud management baseline](../../_images/manage/management-baseline.png)
 
@@ -23,14 +23,14 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 | Process | Tool | Purpose |
 |---|---|---|
-| Monitor health of Azure services | Azure Service Health | Health, performance, and diagnostics for services running in Azure |
-| Log centralization | Log Analytics | Central logging for all visibility purposes |
-| Monitoring centralization | Azure Monitor | Central monitoring of operational data and trends |
-| Virtual machine inventory and change tracking | Change Tracking and Inventory | Inventory VMs and monitor changes for guest OS level |
-| Subscription monitoring | Azure activity log | Monitoring change at the subscription level |
-| Guest OS monitoring | Azure Monitor for VMs | Monitoring changes and performance of VMs |
-| Network monitoring | Azure Network Watcher | Monitoring network changes and performance |
-| DNS monitoring | DNS Analytics | Security, performance, and operations of DNS |
+| Monitor health of Azure services | [Azure Service Health](/azure/service-health/service-health-overview) | Health, performance, and diagnostics for services running in Azure |
+| Log centralization | [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) | Central logging for all visibility purposes |
+| Monitoring centralization | [Azure Monitor](/azure/azure-monitor/overview) | Central monitoring of operational data and trends |
+| Virtual machine inventory and change tracking | [Change Tracking and Inventory](/azure/automation/change-tracking/overview) | Inventory VMs and monitor changes for guest OS level |
+| Subscription monitoring | [Azure activity log](/azure/azure-monitor/essentials/activity-log) | Monitoring change at the subscription level |
+| Guest OS monitoring | [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) | Monitoring changes and performance of VMs |
+| Network monitoring | [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) | Monitoring network changes and performance |
+| DNS monitoring | [DNS Analytics](/azure/azure-monitor/insights/dns-analytics) | Security, performance, and operations of DNS |
 
 ::: zone target="docs"
 
@@ -79,7 +79,7 @@ To set up Service Health alerts, go to the [Azure portal](https://portal.azure.c
 
 ### Learn more
 
-For more information, see [Azure Service Health](/azure/service-health).
+For more information, see [Azure Service Health](/azure/service-health/).
 
 ## Log Analytics
 
@@ -90,7 +90,7 @@ For more information, see [Azure Service Health](/azure/service-health).
 
 ::: zone-end
 
-A [Log Analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) is a unique environment for storing Azure Monitor log data. Each workspace has its own data repository and configuration. Data sources and solutions are configured to store their data in particular workspaces. Azure monitoring solutions require all servers to be connected to a workspace, so that their log data can be stored and accessed.
+A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is a unique environment for storing Azure Monitor log data. Each workspace has its own data repository and configuration. Data sources and solutions are configured to store their data in particular workspaces. Azure monitoring solutions require all servers to be connected to a workspace, so that their log data can be stored and accessed.
 
 ::: zone target="chromeless"
 
@@ -108,7 +108,7 @@ A [Log Analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) i
 
 ### Learn more
 
-To learn more, see the [Log Analytics workspace creation documentation](/azure/azure-monitor/learn/quick-create-workspace).
+To learn more, see the [Log Analytics workspace creation documentation](/azure/azure-monitor/logs/quick-create-workspace).
 
 ## Azure Monitor
 
@@ -143,9 +143,9 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
  Start monitoring your:
 
-- [Applications](/azure/application-insights/app-insights-overview)
-- [Containers](/azure/monitoring/monitoring-container-overview)
-- [Virtual machines](/azure/monitoring/monitoring-service-map)
+- [Applications](/azure/azure-monitor/app/app-insights-overview)
+- [Containers](/azure/azure-monitor/containers/container-insights-overview)
+- [Virtual machines](/azure/azure-monitor/vm/service-map)
 - [Networks](/azure/networking/network-monitoring-overview)
 
 To monitor other resources, find additional solutions in Azure Marketplace.
@@ -154,7 +154,7 @@ To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#bla
 
 ### Learn more
 
-To learn more, see [Azure Monitor documentation](/azure/monitoring-and-diagnostics).
+To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 ## Onboard solutions
 

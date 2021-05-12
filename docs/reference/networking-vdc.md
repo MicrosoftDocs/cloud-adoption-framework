@@ -2,16 +2,16 @@
 title: "The virtual datacenter: A network perspective"
 description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
-manager: rossort
 ms.author: brblanch
+manager: rossort
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- docutune:disable TODO -->
+<!-- docutune:disable -->
 <!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
@@ -108,19 +108,19 @@ Virtual networks are also anchor points for integrating platform as a service (P
 
 A virtual datacenter can be built using one of these high-level topologies, based on your needs and scale requirements:
 
-In a _Flat topology_, all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
+In a *Flat topology*, all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
 
 ![11][11]
 
-In a _Mesh topology_, virtual network peering connects all virtual networks directly to each other.
+In a *Mesh topology*, virtual network peering connects all virtual networks directly to each other.
 
 ![12][12]
 
-A _Peering hub and spoke topology_ is well suited for distributed applications and teams with delegated responsibilities.
+A *Peering hub and spoke topology* is well suited for distributed applications and teams with delegated responsibilities.
 
 ![13][13]
 
-An _Azure Virtual WAN topology_ can support large-scale branch office scenarios and global WAN services.
+An *Azure Virtual WAN topology* can support large-scale branch office scenarios and global WAN services.
 
 ![14][14]
 
@@ -150,7 +150,7 @@ The role of each spoke can be to host different types of workloads. The spokes a
 
 In Azure, every component, whatever the type, is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
 
-A single VDC implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of virtual network peerings. For details, see [Azure subscription and service limits, quotas, and constraints][limits]). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be connected using virtual network peering, ExpressRoute, Virtual WAN, or site-to-site VPN.
+A single VDC implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of virtual network peerings. For details, see [Azure subscription and service limits, quotas, and constraints][limits]). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be connected using virtual network peering, ExpressRoute, Virtual WAN, or Site-to-Site VPN.
 
 ![2][2]
 
@@ -210,7 +210,7 @@ This component type is where most of the supporting infrastructure resides. It's
 
 Infrastructure components provide an interconnection for the different components of a VDC implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT team or security team.
 
-One of the primary tasks of the IT infrastructure team is to guarantee the consistency of IP address schemas across the enterprise. The private IP address space assigned to a VDC implementation must be consistent and NOT overlapping with private IP addresses assigned on your on-premises networks.
+One of the primary tasks of the IT infrastructure team is to guarantee the consistency of IP address schemas across the enterprise. The private IP address space assigned to a VDC implementation must be consistent and **not** overlapping with private IP addresses assigned on your on-premises networks.
 
 While NAT on the on-premises edge routers or in Azure environments can avoid IP address conflicts, it adds complications to your infrastructure components. Simplicity of management is one of the key goals of the VDC, so using NAT to handle IP concerns, while a valid solution, is not a recommended solution.
 
@@ -395,7 +395,7 @@ Synchronization and heartbeat monitoring of applications in different VDC implem
 - Virtual network peering to connect hubs across regions.
 - ExpressRoute private peering, when the hubs in each VDC implementation are connected to the same ExpressRoute circuit.
 - Multiple ExpressRoute circuits connected via your corporate backbone, and your multiple VDC implementations connected to the ExpressRoute circuits.
-- Site-to-site VPN connections between the hub zone of your VDC implementations in each Azure region.
+- Site-to-Site VPN connections between the hub zone of your VDC implementations in each Azure region.
 
 Typically, Virtual WAN hubs, virtual network peering, or ExpressRoute connections are preferred for network connectivity, due to the higher bandwidth and consistent latency levels when passing through the Microsoft backbone.
 
@@ -428,8 +428,8 @@ Learn more about the Azure capabilities discussed in this document.
     :::column:::
         **Load balancing** <br>
         [Azure Front Door][azure-front-door] <br>
-        [Azure Load Balancer (L4)][ALB] <br>
-        [Application Gateway (L7)][AppGW] <br>
+        [Azure Load Balancer (Layer 4)][ALB] <br>
+        [Application Gateway (Layer 7)][AppGW] <br>
         [Azure Traffic Manager][azure-traffic-manager]
     :::column-end:::
     :::column:::
@@ -497,7 +497,7 @@ Learn more about the Azure capabilities discussed in this document.
 <!-- images -->
 
 [0]: ../_images/vdc/networking-vdc-redundant.png "Examples of component overlap"
-<!-- _1_ >: ../_images/vdc/networking-vdc-high-level.png "Example of hub and spoke VDC" -->
+<!-- *1* >: ../_images/vdc/networking-vdc-high-level.png "Example of hub and spoke VDC" -->
 [2]: ../_images/vdc/networking-vdc-cluster.png "Cluster of hubs and spokes"
 [3]: ../_images/vdc/networking-vdc-spoke-to-spoke.png "Spoke-to-spoke"
 [4]: ../_images/vdc/networking-vdc-block-level-diagram.png "Block level diagram of the VDC"
@@ -517,7 +517,7 @@ Learn more about the Azure capabilities discussed in this document.
 [limits]: /azure/azure-resource-manager/management/azure-subscription-service-limits
 [Roles]: /azure/role-based-access-control/built-in-roles
 [virtual-network]: /azure/virtual-network/virtual-networks-overview
-[NSG]: /azure/virtual-network/security-overview
+[NSG]: /azure/virtual-network/network-security-groups-overview
 [PrivateLink]: /azure/private-link/private-link-overview
 [PrivateLinkSvc]: /azure/private-link/private-link-service-overview
 [ServiceEndpoints]: /azure/virtual-network/virtual-network-service-endpoints-overview
@@ -538,7 +538,7 @@ Learn more about the Azure capabilities discussed in this document.
 [MgmtGrp]: /azure/governance/management-groups/overview
 [RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
 [ALB]: /azure/load-balancer/load-balancer-overview
-[DDoS]: /azure/virtual-network/ddos-protection-overview
+[DDoS]: /azure/ddos-protection/ddos-protection-overview
 [PIP]: /azure/virtual-network/virtual-network-public-ip-address
 [azure-front-door]: /azure/frontdoor/front-door-overview
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
@@ -546,9 +546,9 @@ Learn more about the Azure capabilities discussed in this document.
 [AppGWWAF]: /azure/web-application-firewall/ag/ag-overview
 [MonitorOverview]: /azure/networking/networking-overview#monitor
 [AzureMonitor]: /azure/azure-monitor/overview
-[Metrics]: /azure/azure-monitor/platform/data-platform-metrics
-[Logs]: /azure/azure-monitor/platform/data-platform-logs
-[LogAnalytics]: /azure/azure-monitor/log-query/get-started-portal
+[Metrics]: /azure/azure-monitor/essentials/data-platform-metrics
+[Logs]: /azure/azure-monitor/logs/data-platform-logs
+[LogAnalytics]: /azure/azure-monitor/logs/log-analytics-tutorial
 [NetWatch]: /azure/network-watcher/network-watcher-monitoring-overview
 [WebApps]: /azure/app-service/
 [HDInsight]: /azure/hdinsight/hdinsight-overview
@@ -556,7 +556,9 @@ Learn more about the Azure capabilities discussed in this document.
 [ServiceBus]: /azure/service-bus-messaging/service-bus-messaging-overview
 [azure-traffic-manager]: /azure/traffic-manager/traffic-manager-overview
 [Storage]: /azure/storage/common/storage-introduction
-[SQL]: /azure/sql-database/sql-database-technical-overview
+[SQL]: /azure/azure-sql/database/sql-database-paas-overview
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
 [machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
+
+<!--docutune:enable -->

@@ -24,7 +24,7 @@ In the foundational adoption stage, our goal is to deploy a simple workload to A
 Before you begin designing our governance model, it's important to understand how Azure is licensed. This is because the administrative accounts associated with your Azure license have the highest level of access to your Azure resources. These administrative accounts form the basis of your governance model.
 
 > [!NOTE]
-> If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
+> If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/overview/sales-number/).
 
 When Azure was added to your organization's Enterprise Agreement, your organization was prompted to create an **Azure account**. During the account creation process, an **Azure account owner** was created, as well as an Azure Active Directory (Azure AD) tenant with a **global administrator** account. An Azure AD tenant is a logical construct that represents a secure, dedicated instance of Azure AD.
 
@@ -33,11 +33,11 @@ When Azure was added to your organization's Enterprise Agreement, your organizat
 
 ## Identity management
 
-Azure only trusts [Azure AD](/azure/active-directory) to authenticate users and authorize user access to resources, so Azure AD is our identity management system. The Azure AD global administrator has the highest level of permissions and can perform all actions related to identity, including creating users and assigning permissions.
+Azure only trusts [Azure AD](/azure/active-directory/) to authenticate users and authorize user access to resources, so Azure AD is our identity management system. The Azure AD Global Administrator has the highest level of permissions and can perform all actions related to identity, including creating users and assigning permissions.
 
 Our requirement is identity management for a single **workload owner** who is responsible for deploying and maintaining the simple workload. The workload owner requires permission to create, read, update, and delete resources as well as permission to delegate these rights to other users in the identity management system.
 
-Our Azure AD global administrator will create the **workload owner** account for the workload owner:
+Our Azure AD Global Administrator will create the **workload owner** account for the workload owner:
 
 ![The Azure AD global administrator creates the workload owner account](../../_images/govern/design/governance-1-2.png)
 *Figure 2: The Azure AD global administrator creates the workload owner user account.*
@@ -65,7 +65,7 @@ Since the **account owner** is currently the only user with permission to add th
 ![The Azure account owner adds the **workload owner** to the subscription](../../_images/govern/design/governance-1-5.png)
 *Figure 5: The Azure account owner adds the workload owner to the subscription.*
 
-The Azure **account owner** grants permissions to the **workload owner** by assigning an [Azure role](/azure/role-based-access-control). The Azure role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
+The Azure **account owner** grants permissions to the **workload owner** by assigning an [Azure role](/azure/role-based-access-control/). The Azure role specifies a set of permissions that the **workload owner** has for an individual resource type or a set of resource types.
 
 Notice that in this example, the **account owner** has assigned the [built-in **owner** role](/azure/role-based-access-control/built-in-roles#owner):
 
@@ -97,13 +97,13 @@ The **workload owner** inherits the Owner role at the resource scope, which mean
 
 Let's move on to learn how to implement the governance model designed earlier.
 
-To begin, your organization requires an Azure account. If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
+To begin, your organization requires an Azure account. If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/overview/sales-number/).
 
-When your Azure account is created, you specify a person in your organization to be the Azure **account owner**. An Azure Active Directory (Azure AD) tenant is then created by default. Your Azure **account owner** must [create the user account](/azure/active-directory/add-users-azure-active-directory) for the person in your organization who is the **workload owner**.
+When your Azure account is created, you specify a person in your organization to be the Azure **account owner**. An Azure Active Directory (Azure AD) tenant is then created by default. Your Azure **account owner** must [create the user account](/azure/active-directory/fundamentals/add-users-azure-active-directory) for the person in your organization who is the **workload owner**.
 
 Next, your Azure **account owner** must [create a subscription](/partner-center/create-a-new-subscription) and [associate the Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) with it.
 
-Finally, now that the subscription is created and your Azure AD tenant is associated with it, you can [add the **workload owner** to the subscription with the built-in **owner** role](/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
+Finally, now that the subscription is created and your Azure AD tenant is associated with it, you can [add the **workload owner** to the subscription with the built-in **owner** role](/azure/cost-management-billing/manage/add-change-subscription-administrator#to-assign-a-user-as-an-administrator).
 
 ## Next steps
 

@@ -1,24 +1,24 @@
 ---
-title: "Workload operations in cloud management"
+title: Workload operations in cloud management
 description: Understand an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
 # Workload operations in cloud management
 
-Some workloads are critical to the success of the business. For those workloads, a management baseline is insufficient to meet the required business commitments to cloud management. Platform operations might not even be sufficient to meet business commitments. This highly important subset of workloads requires a specialized focus on the way the workload functions and how it is supported.
+Some workloads are critical to the success of the business. For those workloads, a management baseline is insufficient to meet the required business commitments to cloud management. Platform operations might not even be sufficient to meet business commitments. This highly important subset of workloads requires a specialized focus on the way the workload functions and how it's supported.
 
 In return, the investment in workload operations can lead to improved performance, decreased risk of business interruption, and faster recovery when system failures occur. This article discusses an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 
 ## When to invest in workload operations
 
-The _Pareto principle_ (also known as the _80/20 rule_) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
+The *Pareto principle* (also known as the *80/20 rule*) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
 
 - 80 percent of system failures tend to be the result of 20 percent of the common errors or bugs.
 - 80 percent of business value tends to come from 20 percent of the workloads in a portfolio.
@@ -88,7 +88,7 @@ In the cases of technical debt resolution and automated remediation, system flaw
 - **Management:** Operations processes that keep a system running in production.
 - **Security:** Protecting applications and data from threats.
 
-To help improve overall operations, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars. Apply the pillars to both platform operations and workload operations.
+To help improve overall operations, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) provides an approach to evaluating specific workloads for adherence to these pillars. Apply the pillars to both platform operations and workload operations.
 
 ## Next steps
 

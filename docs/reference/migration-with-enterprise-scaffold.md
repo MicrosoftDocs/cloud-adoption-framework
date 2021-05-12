@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 09/22/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: think-tank
 ROBOTS: NOINDEX,NOFOLLOW
 ---
@@ -17,7 +17,7 @@ ROBOTS: NOINDEX,NOFOLLOW
 # Azure enterprise scaffold: Prescriptive subscription governance
 
 > [!NOTE]
-> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready](../ready/index.md) section of the new framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready overview](../ready/index.md), [Azure landing zones](../ready/landing-zone/index.md), and [landing zone considerations](../ready/considerations/index.md).
+> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready methodology](../ready/index.md) of the framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready methodology overview](../ready/index.md), [Azure landing zones](../ready/landing-zone/index.md), and [landing zone considerations](../ready/considerations/index.md).
 
 Enterprises are increasingly adopting the public cloud for its agility and flexibility. They rely on the cloud's strengths to generate revenue and optimize resource usage for the business. Microsoft Azure provides a multitude of services and capabilities that enterprises assemble like building blocks to address a wide array of workloads and applications.
 
@@ -167,7 +167,7 @@ One of the first, and most crucial, questions you ask yourself when starting wit
 
 To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. However, Azure AD is **not** the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your enrollment. Review [resource access management in Azure](../govern/resource-consistency/resource-access-management.md) to gain a solid understanding of Azure AD and on-premises Active Directory. To connect and synchronize your on-premises directory to Azure AD, install and configure the [Azure AD Connect tool](/azure/active-directory/connect/active-directory-aadconnect) on-premises.
 
-![Diagram of AD architecture](../_images/reference/ad-architecture.png)
+![Diagram of an Active Directory architecture](../_images/reference/ad-architecture.png)
 
 When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an enrollment. This proliferation of subscriptions is no longer needed. With Azure role-based access control (Azure RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
 
@@ -284,7 +284,7 @@ These are tools to provide you instant information on cost as well as the abilit
 
 - **Power BI Azure Consumption Insights:** Do you want to create your own visualizations for your organization? If so, then the Azure Consumption Insights content pack for Power BI is your tool of choice. Using this content pack and Power BI you can create custom visualizations to represent your organization, do deeper analysis on costs and add in other data sources for further enrichment.
 
-- **Azure Consumption APIs:** The [Consumption APIs](/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for EA enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](/cli/azure/consumption?view=azure-cli-latest).
+- **Azure Consumption APIs:** The [Consumption APIs](/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for EA enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](/cli/azure/consumption).
 
 Customers who are long-term and mature cloud users follow certain best practices:
 
@@ -303,7 +303,7 @@ Several tools can help you build out this capability, from first-party tools suc
 
 - **Azure Automation** Is a cloud-based capability that allows you to author runbooks (in either PowerShell or Python) and allows you automate processes, configure resources, and even apply patches. [Azure Automation](/azure/automation/automation-intro) has an extensive set of cross platform capabilities that are integral to your deployment but are too extensive to be covered in depth here.
 - **Event Grid** is a fully managed event routing system that allows you to react to events within your Azure environment. Just as Azure Automation is the connective tissue of mature cloud organizations, [Event Grid](/azure/event-grid) is the connective tissue of good automation. Using Event Grid, you can create a simple serverless action to send an email to an administrator whenever a new resource is created and log that resource to a database. That same Event Grid can notify when a resource is deleted and remove the item from the database.
-- **Azure Cloud Shell** is an interactive, browser-based [shell](/azure/cloud-shell/overview) for managing resources in Azure. It provides a complete environment for either PowerShell or Bash that is launched as needed (and maintained for you) so that you have a consistent environment from which to run your scripts. The Azure Cloud Shell provides access to additional key tools -already installed-- to automate your environment including [Azure CLI](/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), [Terraform](/azure/virtual-machines/linux/terraform-install-configure) and a growing list of additional [tools](https://azure.microsoft.com/updates/cloud-shell-new-cli-tools-and-font-size-selection) to manage containers, databases (sqlcmd), and more.
+- **Azure Cloud Shell** is an interactive, browser-based [shell](/azure/cloud-shell/overview) for managing resources in Azure. It provides a complete environment for either PowerShell or Bash that is launched as needed (and maintained for you) so that you have a consistent environment from which to run your scripts. The Azure Cloud Shell provides access to additional key tools -already installed-- to automate your environment including [Azure CLI](/cli/azure/get-started-with-azure-cli), [Terraform](/azure/virtual-machines/linux/terraform-install-configure) and a growing list of additional [tools](https://azure.microsoft.com/updates/cloud-shell-new-cli-tools-and-font-size-selection) to manage containers, databases (sqlcmd), and more.
 
 Automation is a full-time job, and it will rapidly become one of the most important operational tasks within your cloud team. Organizations that take the approach of "automate first" have greater success in using Azure:
 
@@ -314,7 +314,7 @@ Automation is a full-time job, and it will rapidly become one of the most import
 
 As highlighted in the Automate section, your goal as an organization should be to provision resources through source-controlled templates and scripts and to minimize interactive configuration of your environments. This approach of "infrastructure as code" along with a disciplined DevOps process for continuous deployment can ensure consistency and reduce drift across your environments. Almost every Azure resource is deployable through [Azure Resource Manager JSON templates](/azure/azure-resource-manager/resource-group-template-deploy) in conjunction with PowerShell or the Azure cross platform CLI and tools such as Terraform by HashiCorp, which has first class support and integration with the Azure Cloud Shell).
 
-Article such as [Best practices for using Azure Resource Manager templates](/archive/blogs/mvpawardprogram/azure-resource-manager) provide an excellent discussion of best practices and lessons learned for applying a DevOps approach to Azure Resource Manager templates with the [Azure DevOps](/azure/devops/user-guide/?view=vsts) toolchain. Take the time and effort to develop a core set of templates specific to your organization's requirements, and to develop continuous delivery pipelines with DevOps toolchains (such as Azure DevOps, Jenkins, Bamboo, TeamCity, and Concourse), especially for your production and QA environments. There is a large library of [Azure quickstart templates](https://github.com/azure/azure-quickstart-templates) on GitHub that you can use as a starting point for templates, and you can quickly create cloud-based delivery pipelines with Azure DevOps.
+Article such as [Best practices for using Azure Resource Manager templates](/archive/blogs/mvpawardprogram/azure-resource-manager) provide an excellent discussion of best practices and lessons learned for applying a DevOps approach to Azure Resource Manager templates with the [Azure DevOps](/azure/devops/user-guide) toolchain. Take the time and effort to develop a core set of templates specific to your organization's requirements, and to develop continuous delivery pipelines with DevOps toolchains (such as Azure DevOps, Jenkins, Bamboo, TeamCity, and Concourse), especially for your production and QA environments. There is a large library of [Azure quickstart templates](https://github.com/azure/azure-quickstart-templates) on GitHub that you can use as a starting point for templates, and you can quickly create cloud-based delivery pipelines with Azure DevOps.
 
 As a best practice for production subscriptions or resource groups, your goal should be using Azure RBAC security to disallow interactive users by default and using automated continuous delivery pipelines based on service principals to provision all resources and deliver all application code. No admin or developer should touch the Azure portal to interactively configure resources. This level of DevOps takes a concerted effort and uses all the concepts of the Azure scaffold, providing a consistent and more secure environment that will meet your organization's need to scale.
 
@@ -351,3 +351,5 @@ Azure provides both internal and third-party capabilities from our extensive par
 Governance is crucial to the success of Azure. This article targets the technical implementation of an enterprise scaffold but only touches on the broader process and relationships between the components. Policy governance flows from the top down and is determined by what the business wants to achieve. Naturally, the creation of a governance model for Azure includes representatives from IT, but more importantly it should have strong representation from business group leaders, and security and risk management. In the end, an enterprise scaffold is about mitigating business risk to facilitate an organization's mission and objectives.
 
 Now that you have learned about subscription governance, it's time to see these recommendations in practice. For more information, see the [Best practices for Azure readiness](../ready/azure-best-practices/index.md).
+
+<!-- docutune:enable -->

@@ -1,5 +1,5 @@
 ---
-title: "Mature team structures"
+title: Mature team structures
 description: Use these examples of common team structures, to find the organizational structure that best aligns with your operational needs during cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -35,7 +35,7 @@ Organizational structures tend to move through the common maturity model that's 
 5. [Operational alignment](#operational-alignment)
 6. [Cloud center of excellence (CCoE)](#cloud-center-of-excellence)
 
-Most companies start with little more than a _cloud adoption team_. But we recommend that you establish an organizational structure that more closely resembles the [MVP best practice](#best-practice-minimum-viable-product-mvp) structure.
+Most companies start with little more than a *cloud adoption team*. But we recommend that you establish an organizational structure that more closely resembles the [MVP best practice](#best-practice-minimum-viable-product-mvp) structure.
 
 ## Cloud adoption team only
 

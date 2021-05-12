@@ -113,7 +113,7 @@ Qualitative analysis factors:
 
 ## Rebuild
 
-In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This is especially true for applications that previously met the needs of a business but are now unsupported or misaligned with the current business processes. In this case, a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative) approach.
+In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This is especially true for applications that previously met the needs of a business but are now unsupported or misaligned with the current business processes. In this case, a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative/) approach.
 
 Common drivers might include:
 

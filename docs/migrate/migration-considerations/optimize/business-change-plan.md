@@ -1,5 +1,5 @@
 ---
-title: "Develop a business change plan"
+title: Develop a business change plan
 description: Use the Cloud Adoption Framework for Azure to learn about how a business change plan can help you implement a broader user adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
@@ -21,10 +21,10 @@ Traditionally, IT has overseen the release of new workloads. During a major tran
 
 User adoption plans focus on how users will adopt a new technology or change to a given technology. This approach is time tested for introducing users to new tools. In a typical user adoption plan, IT focuses on the installation, configuration, maintenance, and training associated with the technical changes being introduced to the business environment.
 
-Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
+Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the following figure, represents the drivers behind those themes across a spectrum of adoption types.
 
 ![Eason Matrix of user adoption concerns](../../../_images/migrate/eason-matrix.jpg)
-_Diagram: Eason Matrix of user adoption types._
+*Diagram: Eason Matrix of user adoption types.*
 
 These themes are often based on the assumption that introduction of new solutions to users should focus largely on risk control and facilitation of change. Additionally, IT has focused mostly on risk from the technology change and facilitation of that change.
 
@@ -66,6 +66,6 @@ After business change is documented and planned, [business testing](./business-t
 
 <!-- docutune:disable -->
 
-- Eason, K. (1988) _Information Technology and Organizational Change_, New York: Taylor and Francis.
+- Eason, K. (1988) *Information Technology and Organizational Change*, New York: Taylor and Francis.
 
 <!-- docutune:enable -->

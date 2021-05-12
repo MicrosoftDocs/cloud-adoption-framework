@@ -1,12 +1,12 @@
 ---
-title: "Business impact in cloud management"
+title: Business impact in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to determine and understand the impact that outages or performance degradation can have on your business.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -16,13 +16,13 @@ Assume the best, prepare for the worst. In IT management, it's safe to assume th
 
 ![Impact of business interruptions](../../_images/manage/time-value-impact.png)
 
-To create a fair basis of comparison for the impact on various workloads across a portfolio, a time/value metric is suggested. The time/value metric captures the adverse impact of a workload outage. Generally, this impact is recorded as a direct loss of revenue or operating revenue during a typical outage period. More specifically, it calculates the amount of lost revenue for a unit of time. The most common time/value metric is _Impact per hour_, which measures operating revenue losses per hour of outage.
+To create a fair basis of comparison for the impact on various workloads across a portfolio, a time/value metric is suggested. The time/value metric captures the adverse impact of a workload outage. Generally, this impact is recorded as a direct loss of revenue or operating revenue during a typical outage period. More specifically, it calculates the amount of lost revenue for a unit of time. The most common time/value metric is *Impact per hour*, which measures operating revenue losses per hour of outage.
 
 A few approaches can be used to calculate impact. You can apply any of the options in the following sections to achieve similar outcomes. It's important to use the same approach for each workload when you calculate protected losses across a portfolio.
 
 ## Start with estimates
 
-Current operating models might make it difficult to determine an accurate impact. Fortunately, few systems need a highly accurate loss calculation. In the previous step, _Classify Criticality_, we suggested that you start all workloads with a default of _medium criticality_. Medium criticality workloads generally receive a standard level of management support with a relatively low impact on operating cost. Only when a workload requires additional operational management resources might you require an accurate financial impact.
+Current operating models might make it difficult to determine an accurate impact. Fortunately, few systems need a highly accurate loss calculation. In the previous step, *Classify Criticality*, we suggested that you start all workloads with a default of *medium criticality*. Medium criticality workloads generally receive a standard level of management support with a relatively low impact on operating cost. Only when a workload requires additional operational management resources might you require an accurate financial impact.
 
 For all standardized workloads, business impact serves as a prioritization variable when you're recovering systems during an outage. Outside of those limited situations, the business impact creates little to no change in the operations management experience.
 

@@ -3,7 +3,7 @@ title: "Complex enterprise governance: Improve the Security Baseline discipline"
 description: Use the Cloud Adoption Framework for Azure to learn about adding security controls that support moving protected data to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/05/2019
+ms.date: 01/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -24,7 +24,7 @@ For the past 12 months, the cloud adoption teams have cleared most of the 5,000 
 
 The cloud governance team continues to change along with the narrative. The two founding members of the team are now among the most respected cloud architects in the company. The collection of configuration scripts has grown as new teams tackle innovative new deployments. The cloud governance team has also grown. Most recently, members of the IT operations team have joined cloud governance team activities to prepare for cloud operations. The cloud architects who helped foster this community are seen both as cloud guardians and cloud accelerators.
 
-While the difference is subtle, it is an important distinction when building a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects, and the two roles have natural friction and opposing objectives. A cloud guardian helps keep the cloud safe, so other cloud architects can move more quickly with fewer messes. A cloud accelerator performs both functions but is also involved in the creation of templates to accelerate deployment and adoption, becoming an innovation accelerator as well as a defender of the Five Disciplines of Cloud Governance.
+While the difference is subtle, it's an important distinction when building a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects, and the two roles have natural friction and opposing objectives. A cloud guardian helps keep the cloud safe, so other cloud architects can move more quickly with fewer messes. A cloud accelerator performs both functions but is also involved in the creation of templates to accelerate deployment and adoption, becoming an innovation accelerator as well as a defender of the Five Disciplines of Cloud Governance.
 
 ### Changes in the current state
 
@@ -163,7 +163,7 @@ Adding these processes and changes to the governance MVP helps remediate many of
 
 ## Next steps
 
-As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed.
+As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed. A critical part of the security governance narrative will be to review best practices that Microsoft has built for security. The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. [Read here.](/azure/security/benchmarks/overview)
 
 > [!div class="nextstepaction"]
 > [Improve the Resource Consistency discipline](./resource-consistency-improvement.md)

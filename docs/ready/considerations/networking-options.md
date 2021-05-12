@@ -67,7 +67,7 @@ After you identify the Azure networking services that you need to support your w
 
 The following table summarizes the primary scenarios that these patterns support:
 
-| Scenario  | Suggested network architecture                                                  |
+| Scenario | Suggested network architecture |
 | --- | --- |
 | All of the Azure-hosted workloads deployed to your landing zone will be entirely PaaS-based, won't require a virtual network, and aren't part of a wider cloud adoption effort that includes IaaS resources.                                                                                                                                                          | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md)            |
 | Your Azure-hosted workloads will deploy IaaS-based resources like virtual machines or otherwise require a virtual network, but don't require connectivity to your on-premises environment.                                                                                                                                                                            | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md)      |

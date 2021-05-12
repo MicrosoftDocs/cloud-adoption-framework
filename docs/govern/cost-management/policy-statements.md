@@ -34,7 +34,7 @@ The following sample policy statements address common cost-related business risk
 
 **Policy statement:** Any cloud deployment must be allocated to a billing unit with approved budget and a mechanism for budgetary limits.
 
-**Design options:** In Azure, budget can be controlled with [Azure Cost Management + Billing](/azure/cost-management/manage-budgets).
+**Design options:** In Azure, budget can be controlled with [Azure Cost Management + Billing](/azure/cost-management-billing/cloudyn/manage-budgets).
 
 ## Underutilization
 
@@ -44,12 +44,12 @@ The following sample policy statements address common cost-related business risk
 
 **Design options:**
 
-- In Azure, planned versus actual spending can be managed via [Azure Cost Management + Billing](/azure/cost-management/quick-acm-cost-analysis).
+- In Azure, planned versus actual spending can be managed via [Azure Cost Management + Billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 - There are several options for grouping resources by billing unit. In Azure, a [resource consistency model](../../decision-guides/resource-consistency/index.md) should be chosen in conjunction with the governance team and applied to all assets.
 
 ## Overprovisioned assets
 
-**Business risk:** In traditional on-premises datacenters, it is common practice to deploy assets with extra capacity planning for growth in the distant future. The cloud can scale more quickly than traditional equipment. Assets in the cloud are also priced based on the technical capacity. There is a risk of the old on-premises practice artificially inflating cloud spending.
+**Business risk:** In traditional on-premises datacenters, it's common practice to deploy assets with extra capacity planning for growth in the distant future. The cloud can scale more quickly than traditional equipment. Assets in the cloud are also priced based on the technical capacity. There is a risk of the old on-premises practice artificially inflating cloud spending.
 
 **Policy statement:** Any asset deployed to the cloud must be enrolled in a program that can monitor utilization and report any capacity in excess of 50% of utilization. Any asset deployed to the cloud must be grouped or tagged in a logical manner, so governance team members can engage the workload owner regarding any optimization of overprovisioned assets.
 
@@ -66,7 +66,7 @@ The following sample policy statements address common cost-related business risk
 
 **Design options:**
 
-- In Azure, [Azure Monitor's insights features](/azure/azure-monitor/insights/vminsights-performance) can help with analysis of system utilization.
+- In Azure, [Azure Monitor's insights features](/azure/azure-monitor/vm/vminsights-performance) can help with analysis of system utilization.
 - There are several options for grouping and tagging resources based on roles. In Azure, you should choose a [resource consistency model](../../decision-guides/resource-consistency/index.md) in conjunction with the governance team and apply this to all assets.
 
 ## Next steps

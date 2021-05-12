@@ -45,7 +45,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Current application
 
-The MySQL database stores employee data that's used for all aspects of the company's HR department. A [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application is used as the front end to handle employee HR requests. Contoso has 100,000 employees worldwide, so uptime is important.
+The MySQL database stores employee data that's used for all aspects of the company's HR department. A [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application is used as the front end to handle employee HR requests. Contoso has 100,000 employees worldwide, so uptime is important.
 
 ### Proposed solution
 
@@ -76,7 +76,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 ## Proposed architecture
 
 ![Diagram shows the scenario architecture.](./media/contoso-migration-mysql-to-azure/architecture.png)
-_Figure 1: Scenario architecture._
+*Figure 1: Scenario architecture.*
 
 ### Migration process
 
@@ -86,7 +86,7 @@ Before you can migrate your MySQL databases, you need to ensure that those insta
 
 #### Supported versions
 
-MySQL uses the _x.y.z_ versioning scheme, where _x_ is the major version, _y_ is the minor version, and _z_ is the patch version.
+MySQL uses the `x.y.z` versioning scheme, where `x` is the major version, `y` is the minor version, and `z` is the patch version.
 
 Azure currently supports MySQL versions 10.2.25 and 10.3.16.
 
@@ -97,7 +97,7 @@ Azure automatically manages upgrades for patch updates. Examples are 10.2.21 to 
 Contoso needs to set up a virtual network gateway connection from its on-premises environment to the virtual network where its MySQL database is located. This connection allows the on-premises application to access the database over the gateway when the connection strings are updated.
 
 ![Diagram shows the migration process.](./media/contoso-migration-mysql-to-azure/migration-process.png)
-_Figure 2: The migration process._
+*Figure 2: The migration process.*
 
 #### Migration
 
@@ -110,7 +110,7 @@ As a summary, they must do the following tasks:
 
 - Ensure all migration prerequisites are met:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration Wizard: "Error in binary logging. Variable binlog_row_image has value 'minimal.' please change it to 'full'." For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal.' please change it to 'full'.` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
   - User must have the `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or a VPN to your on-premises network.
@@ -119,7 +119,7 @@ As a summary, they must do the following tasks:
 - Create a new Database Migration Service project:
 
   ![Screenshot shows how to create a new Database Migration Service project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)
-  _Figure 3: An Azure Database Migration Service project._
+  *Figure 3: An Azure Database Migration Service project.*
 
 #### Migration by using native tools
 
@@ -129,7 +129,7 @@ As an alternative to using Azure Database Migration Service, Contoso can use com
   - Use the exclude-triggers option in mysqldump to prevent triggers from executing during import and improve performance.
   - Use the single-transaction option to set the translation isolation mode to `REPEATABLE READ`, and send a `START TRANSACTION` SQL statement before you dump data.
   - Use the disable-keys option in mysqldump to disable foreign key constraints before load. Removing constraints provides performance gains.
-  - Use Azure Blob storage to store the backup files and perform the restore from there for faster restore.
+  - Use Azure Blob Storage to store the backup files and perform the restore from there for faster restore.
   - Update application connection strings.
   - After the database is migrated, Contoso must update the connection strings to point to the new Azure Database for MySQL.
 
@@ -148,7 +148,7 @@ Contoso needs to:
 - Ensure that its new Azure Database for MySQL instance and databases are secure. For more information, see [Security in Azure Database for MySQL](/azure/mysql/concepts-security).
 - Review the firewall and virtual network configurations.
 - Set up Private Link so that all database traffic is kept inside Azure and the on-premises network.
-- Enable Azure Advanced Threat Protection.
+- Enable Microsoft Defender for Identity.
 
 ### Backups
 

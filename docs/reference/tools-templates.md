@@ -6,7 +6,7 @@ ms.author: janet
 ms.date: 04/14/2020
 ms.topic: article
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: internal
 ---
 
@@ -25,6 +25,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
+| [Strategic Migration Assessment and Readiness Tool](/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment) | From business planning to training to security and governance, find out what you need to do to prepare for your Microsoft Azure migration with SMART—the Strategic Migration Assessment and Readiness Tool. |
 | [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy&nbsp;and&nbsp;plan&nbsp;template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions, as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
@@ -53,6 +54,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/identity-baseline-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on identity requirements. |
 | [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on resource consistency. |
 | [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on security baseline. |
+| [Azure Security Benchmark](/azure/security/benchmarks/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
 | [Azure governance visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) | The Azure governance visualizer is a PowerShell script that iterates through an Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities such as Azure Policy, Azure role-based access control (Azure RBAC), and Azure Blueprints. From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
 
 ## Migrate
@@ -67,7 +69,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Deployment templates](https://aka.ms/adopt/plan/generator) | The [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine) template gives you a structured approach to uncovering latent insights contained in structured and unstructured data. .
+| [Deployment templates](https://aka.ms/adopt/plan/generator) | The Azure DevOps generator has project checklists to help you build your [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine), [modern data warehouse](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw) and industry focused accelerators such as the [retail recommender](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw) using AI and [modern IoT](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot). The templates gives you a structured approach and checklist to follow. Each template and workitem has links to required content, assets and code samples that can help you get started.
 
 
 ## Manage

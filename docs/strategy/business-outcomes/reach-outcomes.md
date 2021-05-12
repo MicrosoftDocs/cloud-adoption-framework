@@ -1,9 +1,9 @@
 ---
 title: Examples of global reach outcomes
 description: Use the Cloud Adoption Framework for Azure to understand global reach outcomes in the context of a cloud transformation.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -15,11 +15,13 @@ ms.custom: internal
 
 # Examples of global reach outcomes
 
-As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. _Reach_ is a concise term that, in this case, refers to a company's globalization strategy. Understanding the company's globalization strategy helps you better articulate the business outcomes that are the target of a business's transformation journey.
+As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. *Reach* is a concise term that, in this case, refers to a company's globalization strategy. Understanding the company's globalization strategy helps you better articulate the business outcomes that are the target of a business's transformation journey.
 
 Fortune 500 and smaller enterprises have focused on the globalization of services and customers for over three decades, and most business are likely to engage in global commerce as this globalization continues to pull focus. Hosting datacenters around the world can consume more than 80 percent of an annual IT budget, and wide-area networks using private lines to connect those datacenters can cost millions of dollars per year. Therefore, supporting global operations is both challenging and costly.
 
 Cloud solutions move the cost of globalization to the cloud provider. In Azure, customers can quickly deploy resources in the same region as customers or operations, without buying and provisioning a datacenter. Microsoft owns one of the largest wide-area networks in the world, connecting datacenters around the globe. Connectivity and global operating capacity are available to global customers on demand.
+
+[Walgreens Boots Alliance (WBA)](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration) moved on-premises applications and IT resources in a heterogeneous Linux and Windows environment to the cloud, benefiting from improved performance and data centralization - and helping the company provide better customer service.
 
 ## Global access
 
@@ -27,7 +29,7 @@ Expanding into a new market can be one of the most valuable business outcomes du
 
 ### Manufacturing example
 
-A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales wants to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region by _x%_ within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
+A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales wants to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
 
 ### Retail example
 
