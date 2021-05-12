@@ -12,137 +12,119 @@ ms.custom: internal
 
 # Security Integration
 
-While the majority of security functions operate out of sight of daily business workflows, some security goals require integration of security considerations into daily workflows and operations throughout the business organization. Just as security in the physical world is an integrated part of workflows like "if you see something, say something" and airport security checkpoints, so too must security be integrated into the normal experience of planning and operating the business. 
+Security should feel like natural part of business, and business should feel like a natural part of security
 
-The goal of security integration is to achieve critical security goals while minimizing friction and change for the business, a delicate balance that is important to get right.
+Security should be a part of everyone's job in the organization just like business requirements, performance, and reliability. Conversely, security at all levels should be familiar with overall business priorities, IT Initiatives, and risk appetite for the organization. One way to think of this is to envision security as a thread that weaves through every aspect of the business. Without it the fabric would fall apart or at the very least be extremely weak. 
 
-## Security Operations nomenclature disambiguation
-Within the security space exists many commonly used terms for individual positions or teams whose definition, roles, and duties, can often differ wildly from organization to organization. Even the term for someone working in the security field can require clarification - "Security" might be specific to physical security, while "Cybersecurity" is reserved for all things technology related. However as identity becomes the new perimeter, even this deliniation becomes nebulous as physical security becomes tied to cybersecurity for things such as building or workstation access. What does become clear is the need for security as a concept which needs to be integrated into every part of an organization. 
+Maintaining security assurances while minimizing friction to the business processes is a delicate balance that is important to get right.
 
-The following is a breakdown of roles and their responsibilities as utilized in the Cloud Adoption Framework security documentation. Not all of the roles listed here are required to be separate individuals, as the overall workload will vary from company to company. However, the all of the responsibilities listed should have defined owners.
+:::image type="content" source="./media/security-Integration.png" alt-text="Security Integration" lightbox="./media/security-Integration-popout.png":::
 
-[//]: # (Security people be doin' security things)
+While internal friction and low levels of inter-team conflict may occur often and be the norm in many organizations, this is not sustainable. It is critical for all of these teams to work together in the age of cloud, digital business, and zero trust security. The pace of change driven by business environment, technical platforms, and attackers makes an organization inefficient and ineffective if these teams are operating with separate goals, culture, and language. 
 
-### CISO - Chief Information Security Officer / Office of the CISO
->A [CISO](https://en.wikipedia.org/wiki/Chief_information_security_officer) is the senior-level executive within an organization responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected.
+An additional priority is to ensure security teams are not operating within silos, but are working closely together to ensure smooth process operations and knowledge sharing. 
 
-The CISO acts as the executive-level sponsor for all security-centric endevors and is accountable for the overall security posture and establishing the risk tolerance of an organization. The CISO and the Office of the CISO coordinates with other subject matter experts to create guidance, governance, as well as maintaining audit compliance. All security-specific personel generally report under or have a "dotted-line" relationship with the CISO. In larger enterprises, the Office of the CISO may act as a aggregation-only entity, acting as a auditing and reporting body without any hands-on-keyboard interactions with the environment. In other organizations, the CISO may not only define the company's security posture, but have direct reports responsible for the actual implementation of the policies, working hand-in-hand with the Chief Technology Officer (CTO) and their Information Technology (IT) teams.
+This section will outline how you can improve security integration with the business and IT teams and integration between security teams. 
 
-**Responsibilities** - The CISO is the top executive sponsor, accountable for the establishment, implementation, and maintenance of the overall security posture, as well as ensuring that the organization is abiding by all required compliance and governance standards. The CISO is also responsible for the enterprise security vision, balancing the protection of information versus allowing for agility and growth. 
+## Normalize Relations
 
-### SO - Security Operations
-> Similar to / also known as: Security Operations Center (SOC), Cyber Defense Operations Center ([CDOC](https://www.microsoft.com/en-us/msrc/cdoc)), Information Security Operations Center (ISOC)
+While overcoming the silo approach that is prevalent at many organizations can be challenging, it can be done. The main elements are to provide clarity on the end state, clarity on the process, and ongoing leadership support for both tangible objectives and for culture and behavior changes. 
 
-To some organizations, the way we define Security Operations within the Cloud Adoption Framework will potentially be the largest shift compared to some other contemporary definitions of the group. SO is responsible for all of the traditional functions expected of other Operations Center entities (such as the Network Operations Center (NOC)) - that is, monitoring for, and responding to active events - often referred to as **Incident Management**. Within [CAF](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center), SO takes on additional responsibilities and migrates from a reactive-only stance to also including proactive activities. 
+The two most critical elements in this process are to
+1. Identify Shared Goals and Outcomes
+2. Identify Right level of security
 
-**Responsibilities** - Security Operations encompasses [Security Operations functions](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center). This includes:
+### 1. Identify Shared Goals and Outcomes
 
-- Elevation to business risk management: SO is growing into a key component of managing business risk for the organization
-- Metrics and goals: Tracking SO effectiveness is evolving from "time to detect" to these key indicators:
-  - Responsiveness via mean time to acknowledge (MTTA).
-  - Remediation speed via mean time to remediate (MTTR).
-- Technology evolution: SO technology is evolving from exclusive use of static analysis of logs in a SIEM to add the use of specialized tooling and sophisticated analysis techniques. This provides deep insights into assets that provide high quality alerts and investigation experience that complement the breadth view of the SIEM. Both types of tooling are increasingly using AI and machine learning, behavior analytics, and integrated threat intelligence to help spot and prioritize anomalous actions that could be a malicious attacker.
-- Threat hunting: SO is adding hypothesis driven threat hunting to proactively identify advanced attackers and shift noisy alerts out of frontline analyst queues.
-- Incident management: Discipline is becoming formalized to coordinate nontechnical elements of incidents with legal, communications, and other teams. Integration of internal context: To help prioritize SO activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
-- Practice Exercises / Tabletops: Activity engaging in breach and bug testing activities against internal assets and endpoints to verify proper asset hardening.
+The first step is to ensure there is a shared vision of what good looks like that involves all teams. Security teams have often defined themselves as a kind of quality control over the business and IT functions, creating an adversarial dynamic and generating friction that drains energy and focus away from everyone's goals. Business productivity, IT goals, and security goals often suffer in this dynamic. 
 
-**Security Operations versus Security Operations Center?**
+The vision must include security teams integrated closely with their IT and business counterparts and being jointly responsible for the business, IT, and security outcomes of any initiative. By sharing in the challenges of designing systems to meet business and IT goals, and by sharing their security perspective and expertise at the right time, security will be part of the process and less likely to delay or derail projects (or be too late to fix security issues). Work to change from the culture of "no" to the culture of "let's figure out a way". 
 
-When many people think of an IT Operations Center, they imagine a group of people in a room - surrounded by monitors, graphs, and various ticker streams. While this is an example implementation of an operations center, it is not the only option. In smaller organizations, the individuals focused on security may be directly integrated into the day-to-day IT operations staff. In some larger enterprises, a segregated SOC may not exist - its functions absorbed into other monitoring teams. The important takeaway is that all of the security responsibilities are covered.
+As systems are being designed, implemented, operated, and continuously improved with security involved, it's critical to set guardrails so that *no voice dominates all decisions* (Business, IT, or security). 
 
-### Security Architect
+### 2. Identify Right level of security
 
-Security Architects often report directly to the CISO, being hyper-focused on the security posture of an environment, considering both current and future-tense implementations or changes. The Security Architect generally differs from operations-focused technical personel in scope (a more holistic enterprise view versus workload specific) and consideration of buisiness impact (return on investment, adherence to compliance).
+While some security controls like biometric logon with [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview) have the dual benefits of making the user experience better and the security stronger, many security measures add friction to business processes and could slow them down. We always strive to first find security measures that are easy and invisible to users and developers, but we have to accept that sometimes a tradeoff must be made. 
+	
+These joint teams should always strive for a healthy level of friction in the process that creates value by driving critical thinking at the right time (considering what an attacker may do with a new feature, how much business impact would incur from altering this data, etc.)
 
-**Responsibilities** 
+Teams should strive for the best balance between two absolute truths:
 
-- Influence [security policies and standards](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-policy-standards)
-- Guide the [cloud security posture management](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-posture-management)
-- Evangellize security education initiatives for [people security in the cloud](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-people)
-- Ensure [governance and compliance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-compliance-management) management functions are properly aligned with regulatory requirements
+ - **Security cannot be skipped** – skipping security often leads to incidents that cost more in the long run (productivity, revenue, overall business impact) than integrating security would have.  
+ - **Security cannot dominate** – Security controls can reach an unhealthy level of friction where the security friction impedes more value than it protects
 
-### Governance and Compliance
+It is critical to find a balance between these as security is integrated into the process. Stakeholders must all work together to ensure business concerns, IT reliability/performance concerns, and security concerns are considered and balanced. Organizations need to also work on solving for the 80% and then coming up with a plan for the other 20%. By holding off on controls, features, capabilities for security until there is a 100% solution organizations will be putting everything they do at risk of exposure. Iterative approaches work well as do the basics of patching and education. 
 
-Whether you are operating in a global landscape, a [regulated industry](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/policy-compliance/regulatory-compliance), or building a new online presence, governance and compliance can often present a challenge for an organization. Those focused on governance and compliance are tasked with validating that corporate governance is properly aligned and compliant with all regulations. Many industries may have additional requirements which necessitate third party auditors to validate compliance on a scheduled basis. 
+For more on healthy security friction, see [The right level of security friction](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/define-security-strategy#the-right-level-of-security-friction) in the security strategy guidance. 
 
-**Responsibilities**
+The examples in the following section illustrate some example processes on how to integrate security stakeholders with IT, end users, workload owners, as well as some examples within the security teams. 
 
-- Work hand-in-hand with the Security Architect to determine applicable regulatory compliance requirements for the enterprise.
-- Validate adherance to required regulatory guidelines by way of stateful monitoring and scheduled auditing.
+## Integration with IT and Business operations
+While the majority of security functions operate out of sight of daily business workflows, some security considerations appear in daily business and IT workflows. Just as security in the physical world is an integrated part of workflows like walking through an airport (and reporting anything suspicious as part of  "if you see something, say something", so too must security thinking be integrated into the normal experience of planning and operating a digital business. 
+
+### Security Update Process
+
+Security Updates are one of the most common and visible points where business processes and security processes regularly interact. This is a common source of friction because it involves a difficult balance of two different forces which are often mapped to separate stakeholders in the organization:
+
+ - *Immediate business impact* - Security updates often require testing and system reboots, which consume time/resources for application owners and IT teams, and potentially result in business impact from downtime. 
+ - *Potential future business impact (via security risk)* - If updates are not applied completely, attackers can exploit the vulnerabilities and cause even greater business impact.  
+
+If teams are operating without shared goals and responsibility (IT/business focused 100% on immediate business impact, security accountable for 100% of the security risk), then they will be in constant conflict over security updates (fiercely defending their positions at the expense of the other). This distracts the teams with endless arguments instead of working together to solve this problem, then moving onto the next problems, risks, and business value creation opportunities. Ongoing communication across the organization and creating a culture where updates are embraced will go a long way in limiting pushback from end users. If they know they will be better protected, able to be more productive, and build the business because security is side by side with them they will be more likely to embrace updates and ongoing education. 
+
+Correctly placing the accountability for all benefits and risk on the asset owners (usually application owners in the business) makes it easier for that one person to consider immediate and potential future impact. Making identifying the solution a joint responsibility of all subject matter experts in security, IT, and business increases the quality of the solution by considering more and diverse perspectives. Make everyone a stakeholder in the security story across the company. While everyone might not have security as their day to day role they do have security requirements to perform their role. 
+
+This example process illustrates how organizations are starting to solve this problem using shared responsibility and flexibility within a limited timeframe:
+
+:::image type="content" source="./media/Security-update-process.png" alt-text="Security Updates Flow" lightbox="./media/Security-update-process-popout.png":::
+
+This process is followed on a regular schedule
+
+ - **Enterprise IT and Security Teams** start the process by identifying which patches (aka security updates) are required and the highest impact. These are then made available to end users and/or workload owners through enterprise-wide distribution channels. 
+ - **End Users** are given a fixed period of time to test the patches, apply them, and reboot their devices. After that self-service period (and any grace period) expires, Enterprise IT and Security teams will either force the patch to apply or block access to corporate resources (through a mechanism like Azure AD Conditional Access or 3rd party network access control solution)
+ - **Workload Owners** are given a fixed period of time to test the patches, apply them to production systems, and reboot as required. After that self-service period (and any grace period) expires, Enterprise IT and Security teams will either force the patch to apply or isolate them from other corporate resources. Some organizations with stringent requirements may also decommission the assets by deleting them from Azure Subscriptions or AWS Accounts. 
+- **Enterprise IT and Security Teams** also monitors the status of the patching and conduct any forced remediation that the organization has identified. 
+
+This process is not static and it's not set up in one day. It is built iteratively and continuously improved over time. Start wherever you are and continually improve the process to make incremental progress towards this end state. Dimensions you can use for continuous improvement planning include
+
+ - *Coverage* - Start with a few application teams that have a high chance of success (or have an outsized business impact if compromised) and continually add more until you are covering all workloads in the environment
+ - *Time* - Start with deadlines that you know can be accomplished and set a clear roadmap to continually shorten those until you are as close as possible to fully patched in a week or less. 
+ - *Technology scope* - Continuously improve what patches and technologies you cover, including applications, middleware, and open source components used in application code. You should also encourage use of components that are patched for you to lower the maintenance burden (e.g. using [Azure SQL](https://docs.microsoft.com/azure/azure-sql/) instead of installing and patching your own SQL server)
+ - *Processes* - Continually improve communication channels between teams, prioritization guidance, exception processes, and all other aspects of this process
+
+## Integration within Security Teams
+
+Security teams should work together and collaborate to avoid increased business risk resulting from operating in silos. When learnings and key insights aren't shared across security teams, the organization may experience greater damage and impact from a future incident that could have been avoided. 
+
+Security is a dynamic discipline that must always be responding to active threats and always be learning and continuously improving processes, tools, and technologies. Security must constantly adapt to the shifts in attacker techniques, technology platforms, and business models of their organization. Security teams should work together to rapidly respond to threats and continuously integrate insights and learnings into processes that both improve the security posture of the organization and ability to rapidly respond to attacks.  
+
+The following workflow diagram illustrates how security disciplines should collaborate to completely integrate learnings and insights to improve security overall 
+
+:::image type="content" source="./media/complete-risk-mitigation.png" alt-text="Security Integration" lightbox="./media/complete-risk-mitigation-popout.png":::
+
+Security's primary mission is to rapidly respond to:
+
+ - **New Incidents** Active attackers with access to organizational resource pose an immediate risk to the organization that must be *rapidly and completely* remediated as a first priority. After remediation, these attacks represent the best opportunity to learn what future attacks will look like. Whether they succeeded or failed, attackers are extremely likely to repeat pursuing the same target, technique, or monetization model again. 
+
+- **New Insights/learnings** can come from additional sources including:
+
+     - *External incidents* - incidents at other organizations can offer similar insights on what attackers are likely to attempt on your organization, helping inform improvement plans or validate that the organization's investments are on the right track. These can be discovered through Information Sharing and Analysis Center (ISACs), direct relationships with industry peer organizations, or other public reporting and analysis on incidents.
+     -  *New technical capabilities* - cloud providers and software vendors are continuously innovating and adding capabilities to their products to remain relevant to customers and competitive in the marketplace. These include new or updated 
+         - *business capabilities* that require security defenses 
+         - *security capabilities* that improve the ability of security to defend the assets. These may be native security capabilities integrated into cloud platforms or other platform technology, or they may be traditional standalone security capabilities. 
+         - The visibility and telemetry available from cloud based security far outweighs what organizations could get from their single on premises environment. This is due to the power of all this telemetry being pulled via meta data from all over, then put through a rigorous analysis process (behavioral analytics, detonation chambers, machine learning, and AI all working together)
+     - *Industry best practices* from vendors and organizations like National Institute of Standards and Technology (NIST), Center for Internet Security (CIS), The Open Group, and others. These organizations have a charter to gather and share learnings and best practices that security teams can learn from.  
+     - *New vulnerabilities* - Vulnerabilities anything that an attacker can exploit to take control of an asset without authorization. This often takes the form of software vulnerabilities, but can also be  security configuration choices, mathematical weaknesses in cryptographic algorithms, insecure practices and processes for using or managing systems, and more. As these vulnerabilities are discovered, they should be evaluated for how much they impact the organizations security posture and ability to detect, respond to, and recovery from an attack. 
+- **Respond to Threat** - Security Operations team(s) investigate detections and respond to them by evicting adversaries from their control points in the organization. Depending on the size of the organization and complexity of the incident, this may involve one or more teams within security operations.  
+- **Root Cause Analysis** - Identifying the key contributing factors that made a major incident higher likelihood or higher impact generates insights learnings that can improve the organizations security posture and ability to respond. These learnings could happen along many dimensions including attack tools and infrastructure, attack techniques, targets, motivation and monetization models, and more. These can inform preventive controls, detective controls, security operations processes, or any other element of the security program or architecture.  
+- **Hunt for threat** - Hunting proactively for threats is an ongoing activity at all times. Hinting should always consider new insights or learnings in their hunt planning and hypothesis development. Hunt teams may want to prioritize hunting for exploitation of a recently  widespread or high impact vulnerability, for a new attacker group that was recently found, for a new attack technique that was demonstrated at a conference, and so on.  
+- **Design/Implement Migitation** - To fully learn a lesson, it must be integrated into the techncal environment and security/business processes going forward. Teams should work together to integrate learnings into the architecture, policy, standards, and more. For example, the theft of administrative credentials in a recent internal or public incident may spur the organization to adopt the controls in Micrsoft's privilege access [Rapid Modernization plan (RaMP)](https://aka.ms/SPA-RAMP)   
 
 
-### Platform Security Engineer
-> Similar to / also known as: IT Operations, Systems Administrator, Security Administrator
+## Next Steps
+As you plan your cloud adoption, focus on integrating security functions more closely together and integrating security with the larger organization. Pay close attention to the kind of friction that security generates in processes, ensuring that it is generating the healthy friction that reduces risk for the organization without creating slowdowns that erode more value than they protect.
+ 
+ - Review the [Security Strategy Guidance](https://aka.ms/securitystrategy)
+ - Review the [Security Organizational Functions](https://aka.ms/securityroles)
+ - Review [Security Operational Resilience](./operational-resiliency.md)
 
-The platform security engineer is the more traditional hands-on role, generally tasked with the work of installing and actually implementing security fixes into the environment. The platform security engineer is generally tightly integrated not only with the Security Architect and Security Operations group, but also with individual workload owner and specialists. While the Security Operations team may often begin the incident response process, it usually falls into the domain of the platform security engineer to act as the subject matter expert (SME) when working to resolve the incident as well as to provide insight during a post mortem process. 
-
-**Responsibilities**
-
-- Have awareness of the risk mitigation posture across the enterprise systems. 
-- Deep understanding of systems interconnectivity, endpoints, data classification, and common attack surfaces for enterprise systems.
-- Ensure all systems and workloads abide by security requirements.
-- Create procedure for regularlly scheduled patch and maintenance events.
-- Act as the SME as needed during security incidents.
-- 
-
-### Application Security Engineer / DevSecOps
-
-With the shift to serverless applications, the line between the responsibilities of an platform security engineer or the persons responsible for securing an application are becoming muddled. The idea of [DevSecOps](https://www.microsoft.com/en-us/securityengineering/devsecops) blurs the lines further by introducing concepts of continuous integration / continuous delivery (CI/CD) where the workload owners are the ones responsible for continuously updating the application. While DevSecOps and the application security engineer may currently be the outliers, cloud-native and containerized applications are quickly becoming the norm, supplanting traditional virtual machine-hosted workloads. 
-
-**Responsibilities**
-
-- Adoption of a full DevOps pipeline and [Secure Development Lifecycle (SDL)](https://www.microsoft.com/en-us/securityengineering/sdl) engineering practices.
-- Understanding all regulatory requirements and defining metrics to successfully meet governance and compliance objectives.
-- Utilization of threat modeling in order to reduce risk and further secure application against well known attack vectors.
-
-
-## Integrated processes
-
-The Security Roles list above can often seem daunting when intially attempting to fufill all of the various positions. The actual size of a security team will vary wildly depending on the size and need of an organization. In very general terms, the following needs must be met:
-
-Regulatory Observance | Risk Management | Security Oversight | Security Event Monitoring | Incident Management | Risk Mitigation | Threat Modeling
-
-Each of the needs eventually feeds into the others. Regulatory requirements often helps determine the risk management threshold of an organization. This in turn helps shape the overall security posture, leading to identifiable metrics which can be utilized to monitor the systems and workloads. Should a security event trigger on one of the monitored resources, an incident is spawned, triaged, and resolved through the mitigation process. The information from the post mortem of the incident can be used to adjust future threat models.
-
-As part of the risk mitigation process or often as a regulatory requirement, user education may be required. The persons needing to be educated may be the application developer who was unaware of a specific type of potential breach attack, or an end user (client) who fell victim to a phishing attempt. 
-
-[//]: # (TODO: Paint the picture. What does the world look like when security is integrated? The following are few questions that can help paint the picture. What processes and people need to be inplace to ensure integration of security? Does the security team have a responsibility to train & ready other teams to integrate security into their decisions? How does this team coordinate with IT staff and/or workload staff?)
-
-
-
-
-### Strategic integration
-Security integration begins with integration of security into business processes. Evaluate digital transformation strategy and cloud adoption strategies with the cloud strategy team on a regular rythm. Build on those strategies to identify required changes & risks resulting from that change. Use that risk and risk management insights to educate the business on the risks and other options that may mitigate risks, while empowering change.
-
-### Platform and environment integration
-Many security breaches start with inconsistent environmental configuration. Using approaches like Azure Landing Zones, define security requirements that must be included in the configuration of any environments.
-
-### Governance integration
-Automate enforcement of security requirements using integration with security governance and IT operations governance. Security requirements that aren't set at the environment level, but can be automatically enforced, should be added to standard governance processes.
-
-### Adoption integration
-Integrate with adoption, innovation, and workload teams, to understand cloud adoption plans & the teams which will be making critical decisions. Use those plans to educate technical teams on risks and risk tolerances to aid in decision making. Prepare those teams for innovation within automated security guardrails & any required security reviews. Coach the teams on ways to reach their goals within defined guardrails.
-
-## Technical integration
-
-The following are examples of integrating security into various technical functions across technology environments.
-
-### Starting with Zero Trust
-Zero Trust architecture adopts an "Assume Breach" mindset, shifting from a "if a breach occurs" to a "when a breach occurs" security stance. This strategic shift requires both technology and business teams to be in alignment in order for adoption to be succssful. The business must agree to prioritize zero trust activities and technology owners must move forward to create a segmented strategy which is applied to all parts of the enterprise - identity, network, data, application, and others.
-
-#### Building an identity-based perimeter (Identity is the new perimeter)
-Zero Trust is succinctly named - "Never trust, always verify" - do not trust identities or assume privileges. Verify and validate at every turn. Instead of relying on a singular authentication method such as a username and password (something you know), utilize multi-factor authentication (MFA) options to increase the likelihood of a user being who they claim to be. Use MFA to add secondary challenges via an authentication application on a registered phone (something you have) or match biometric features (something you are). After the identify is verified, conditional access policies allow additional for configuration options to manage risk and conform to various compliance and governance requirements.
-
-Identity is verified on an resource-by-resource basis - this segmentation allows for a limited surface exposure. Successfully authenticating once will not guarantee that the identity will have access to all resources, but instead will be challenged on each attempt to access additional items.
-
-### Detection
-Data tracking for cloud-native, on-prem, a hybrid mix of the two, as well as all of the potential endpoints, is of paramount importance for security. Utilizing [Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) and [Microsoft 365 Defender](https://www.microsoft.com/en-us/microsoft-365/security/microsoft-365-defender) in combination with other tools such as [Azure Sentinel](https://azure.microsoft.com/en-us/services/azure-sentinel) can paint an overall status of your current security landscape. Properly configured, the [Azure Security Center](https://azure.microsoft.com/en-us/services/security-center) provides a wealth of insight from multiple datapoints in your cloud environment.
-
-### Prevention
-As the security perimeter has shifted to identity, end user education has never been of more importance. Continuous learning on common phishing attack methods, social engineering, as well as understanding surrounding the reasons for general security hygene should drive home the message that security starts with the user. Data classification and other specific governance requirements should be common knowledge. 
-
-Data should be encrypted whenever possible - while actively being utilized, at rest, as well as in transit. For workloads with high security requirements for data in use, developers can consider utilizing [Azure Confidential Compute](https://azure.microsoft.com/en-us/solutions/confidential-compute/) to create hardware-based compute enclaves.  
-
-DevSecOps places much of the security of the infrastructure of workloads into the hands of the application developer. As such, developers should follow well-known software development methodologies such as the [Microsoft Secure Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl/practices) (SDL) through the life of their applications. Utilizing the SDL will keep security at the forefront of the development and implementation processes. From creating a threat model, defining encryption requirements, to helping define an active penetration testing outline. 
-
-Application security owners should work in concert with their Security Operations counterparts in order to perform regular security testing exercises. Depending on the industry, publications such as [NIST 800-84](https://csrc.nist.gov/publications/detail/sp/800-84/final) may provide information on meeting compliance requirements. Assigning roles such as [Blue Team](https://www.microsoft.com/security/blog/2020/06/11/blue-teams-helping-red-teams-a-tale-of-a-process-crash-powershell-and-the-mitre-attck-evaluation/) and [Red Team](https://www.microsoft.com/security/blog/2021/01/21/the-dynamic-duo-how-to-build-a-red-and-blue-team-to-strengthen-your-cybersecurity-part-2/) can help drive focus and allow for a more specific mindset when approaching security testing. Using a cybersecurity knowledge base such as [MITRE ATT&CK](https://attack.mitre.org/) will help in ensuring that testing includes real world scenarios. 
+[Business Resilience](./business-resilience.md) is the next focus area of security.

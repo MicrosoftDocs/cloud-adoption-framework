@@ -10,6 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
+
+Point to: https://docs.microsoft.com/en-us/security/compass/identity
+
 # Generic space holder - remember to edit the metadata before publication
 
 ## This article should cover all of the items under the "managing identity" question at the CAF level

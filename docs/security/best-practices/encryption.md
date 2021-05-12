@@ -9,6 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
 ---
+https://docs.microsoft.com/en-us/azure/security/fundamentals/encryption-overview
+https://docs.microsoft.com/en-us/security/compass/storage-data-encryption
+
 
 # Generic space holder - remember to edit the metadata before publication
 

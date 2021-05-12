@@ -13,11 +13,11 @@ ms.custom: internal
 <!-- docutune:casing CDOC "Cyber Defense Operations Center" -->
 <!-- cSpell:ignore CISO MTTA MTTR SIEM NIST SOCs CDOC -->
 
-# Cloud SOC functions
+# Security Operations (SecOps) functions
 
-The main objective of a cloud security operations center (SOC) is to detect, respond to, and recover from active attacks on enterprise assets.
+The main objective of a cloud security operations (SecOps) function is to detect, respond to, and recover from active attacks on enterprise assets.
 
-As the SOC matures, security operations should:
+As SecOps matures, security operations should:
 
 - Reactively respond to attacks detected by tools
 - Proactively hunt for attacks that slipped past reactive detections
@@ -36,10 +36,10 @@ Detecting and responding to threats is currently undergoing significant moderniz
 **Integration of internal context:** To help prioritize SOC activities such as the relative risk scores of user accounts and devices, sensitivity of data and applications, and key security isolation boundaries to closely defend.
 
  For more information, see:
-
-- [Strategy and architecture standards&mdash;security operations](/security/compass/security-operations-videos-and-decks)
+ - [Security Operations Discipline](../../security/security-operations.md)
+ - [Security Operations Best Practices Videos/Slides](/security/compass/security-operations-videos-and-decks)
 - [CISO workshop module 4b: threat protection strategy](/security/ciso-workshop/ciso-workshop-module-4b)
-- Cyber Defense Operations Center (CDOC) blog series [part 1](https://www.microsoft.com/security/blog/2019/02/21/lessons-learned-from-the-microsoft-soc-part-1-organization), [part 2a](https://www.microsoft.com/security/blog/2019/04/23/lessons-learned-microsoft-soc-part-2-organizing-people), [part 2b](https://www.microsoft.com/security/blog/2019/06/06/lessons-learned-from-the-microsoft-soc-part-2b-career-paths-and-readiness), [part 3a](https://www.microsoft.com/security/blog/2019/10/07/ciso-series-lessons-learned-from-the-microsoft-soc-part-3a-choosing-soc-tools), [part 3b](https://www.microsoft.com/security/blog/2019/12/23/ciso-series-lessons-learned-from-the-microsoft-soc-part-3b-a-day-in-the-life)
+- Cyber Defense Operations Center (CDOC) blog series [part 1](https://www.microsoft.com/security/blog/2019/02/21/lessons-learned-from-the-microsoft-soc-part-1-organization), [part 2a](https://www.microsoft.com/security/blog/2019/04/23/lessons-learned-microsoft-soc-part-2-organizing-people), [part 2b](https://www.microsoft.com/security/blog/2019/06/06/lessons-learned-from-the-microsoft-soc-part-2b-career-paths-and-readiness), [part 3a](https://www.microsoft.com/security/blog/2019/10/07/ciso-series-lessons-learned-from-the-microsoft-soc-part-3a-choosing-soc-tools), [part 3b](https://www.microsoft.com/security/blog/2019/12/23/ciso-series-lessons-learned-from-the-microsoft-soc-part-3b-a-day-in-the-life), [part 3c](https://www.microsoft.com/security/blog/2020/05/04/lessons-learned-microsoft-soc-part-3c/), [part 3d](https://www.microsoft.com/security/blog/2020/06/25/zen-and-the-art-of-threat-hunting/)
 - [NIST computer security incident handling guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
 - [NIST guide for cybersecurity event recovery](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-184.pdf)
 

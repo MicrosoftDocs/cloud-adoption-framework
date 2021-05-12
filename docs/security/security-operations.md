@@ -12,56 +12,69 @@ ms.custom: internal
 
 # Security Operations
 
-This article provides guidance for organizations planning to establish or modernize a security operation function.
+This article provides strategic guidance for leaders planning to establish or modernize a security operation function. For architecture and technology focused best practices, see https://aka.ms/secopstech
 
-## Context
+Security Operations reduces organizational risk by limiting damage from attackers who have gained access to the organization's resources. Security operations focuses on reducing the time attackers have access by detecting, responding to, and helping recover from active attacks.
 
-Security operations works closely with posture management that mitigates potential risks and vulnerabilities to the organization, but it focused on the realized risk of active attackers that currently have access to organizational assets.
+Rapid response and recovery protects the organization by damaging the adversary's return on investment (ROI). When adversaries are evicted and forced to start a new attack, their cost to attack your organization goes up.
 
-Like all security disciplines, security operations. requires a healthy collaborative relationship with IT operations, security governance functions that ensure standards and changes are consistently applied.
-
-Security operations is currently undergoing significant modernization at all levels with the advent of cloud technologies, adversary targeting of IoT and OT resources, and the zero trust transformation of security to a multi-layer discipline (vs. a network centric strategy). This modernization of security operations is becoming urgent because of the massive increase in relevant telemetry (which is hard to process with classic techniques), the availability of cloud services to provide analytics such as machine learning (ML) and behavior analytics, and the time sensitive nature of the security operations mission.
-
-Today, there are two commonly observed patterns for how organizations structure their security functions:
-
-- **IT-driven security** - often within an IT organization, and focussed primarily on reactively responding to threat detections and resolving security incidents. In this structure, security is often defined within the IT organization and builds processes and architectures based on the outcome of securing the infrastructure that runs the business operations.
-
-- **Business-driven security** - in this pattern, IT security is a mechanism for contributing to a broader concept of security within a business. The definition of what needs to be secured and the risk appetite is driven from stakeholders outside of IT and considered in a broader context of what is valuable to the business.
-Securing infrastructure and applications is often part of the approach, rather than the success criteria itself, in this model.  
+Security Operations (SecOps) is sometimes referred to or structured as a Security Operations Center (SOC). [Security posture management](./security-governance.md#security-posture-management) of the operational environment is a function of governance discipline. Security of the DevOps process is part of the [innovation security](innovation-security.md) discipline
 
 ## People and Process
 
-People are the most valuable asset in the SOC—their experience, skill, insight, creativity, and resourcefulness are what makes our SOC effective. By ensuring that people are set up with what they need to succeed and stay engaged, and improving processes, it's possible to decrease the time it takes to train people up and increase employee enjoyment of their jobs.
+While Security Operations can be highly technical, it is first and foremost a human discipline. People are the most valuable asset in security operations — their experience, skill, insight, creativity, and resourcefulness are what makes the discipline effective. 
 
-Empower humans with automation.
-Rapidly sorting out  signal (real detections) from the noise (false positives) in the SOC requires investing in both humans and automation. Automation and technology can reduce human toil, but ultimately attackers are human and human judgement is critical to the process for defeating them.
+Attacks on an organization are also planned and conducted motivated by people (criminals, spies, hacktivists, etc.). While some commodity attacks are fully automated, the most damaging ones are often perpetrated by live human attack operators. 
 
-Automation is not necessarily about using efficiency to remove humans from the process—it is about empowering humans. We continuously think about how we can automate repetitive tasks from the analyst’s job, so they can focus on the complex problems that people are uniquely able to solve.
+**Focus on empowering (not replacing) people** - Your goal should not be to replace people with automation, but to empower your people with tools that simplify their daily workflows and enable them to keep up with or get ahead of the human adversaries they face. 
+ 
+Rapidly sorting out  signal (real detections) from the noise (false positives) requires investing in both humans and automation. Automation and technology can reduce human toil, but ultimately attackers are human and human judgement is critical to the process for defeating them.
 
-Automation empowers humans to do more in the SOC by increasing response speed and capturing human expertise. The toil our staff experiences comes mostly from repetitive tasks and repetitive tasks come from either attackers or defenders doing the same things over and over. Repetitive tasks are ideal candidates for automation.
+**Diversify your thinking portfolio** - While security operations is highly technical, it is also just another new version of forensic investigation that shows up in many career fields like criminal justice. Don't be afraid to hire people with a strong competency in investigation or deductive/inductive reasons and train them on technology. 
 
-We also found that we need to constantly refine the automation because attackers are creative and persistent, constantly innovating to avoid detections and preventive controls. When an effective attack method is identified (like phishing), they exploit it until it stops working. But they also continually innovate new tactics to evade defenses introduced by the cybersecurity community. Given the profit potential of attacks, we expect the challenges of evolving attacks to continue for the foreseeable future.
+You can increase productivity and employee enjoyment of their jobs by ensuring people are set up with a healthy culture and are  measuring the right outcomes.
 
-When repetitive and boring work is automated, analysts can apply more of their creative minds and energy to solving the new problems that attackers present to them and proactively hunting for attackers that got past the first lines of defense. 
+### SecOps Culture
 
-Security tools are only as good as the processes that surround them, so it is crucial that organizations design and run a well-structured security operations function to keep the organization safe.
+:::image type="content" source="./media/secops-people-culture.png" alt-text="Security Operations - People Centric" lightbox="./media/secops-people-culture.png":::
 
-Recent history has repeatedly shown the importance of maintaining a clear watch over the infrastructure and systems within an organization. The very real risk of unauthorized data access or exfiltration, rogue actors affecting production systems or deploying malware that disrupts the business' day to day operations should be top of mind for any company executives.
-It is almost impossible to prevent a break in at a house if no one is checking that the doors and windows are shut and locked.
+Key cultural elements to focus on include:
 
-Organizations are becoming hyper-aware of the need to ensure that there are strong processes in place to ensure that the metaphorical doors and windows of their environments are shut and locked, and - when a window is left open - there is a process in place to close it and ensure it stays closed.
+- **Mission Alignment** - Because of how challenging this work is, security operations should always have a clear understanding of how their work connects to the overall organization's mission and goals.  
+- **Continuous Learning** - Security Operations is highly detailed work and always changing because attackers are creative and persistent. Because of this, it's critical to continuously learn and continuously work to automate highly repetitive or highly manual tasks (which can quickly wear down morale and team effectiveness). Ensure the culture rewards learning and finding and fixing these pain points. 
+ - **Teamwork** - We’ve learned that the “lone hero” doesn't work in security operations, nobody is as smart as the whole team together. Teamwork also makes a high-pressure working environment much more fun, enjoyable, and productive. It's important that everyone has each other’s back and share insights, coordinate and check each other’s work, and constantly learn from each other.
 
-## SOC teams and tiers model
+### SecOps Metrics
 
-![Security Operations teams and tiers diagram](./media/secops-functions.png)
+:::image type="content" source="./media/secops-people-metrics.png" alt-text="Security Operations - People Centric" lightbox="./media/secops-people-metrics.png":::
 
-Security operations teams focus on three key outcomes:
+Because metrics drive behavior, measuring success is a critical element to get right. Metrics translate culture into clear measurable objectives that drive outcomes. 
 
-- **Incident Management -** Reactively respond to detected attacks, proactively hunting for undetected attacks, and coordinating the legal, communications, and other business implications of security incidents. This is often delivered through teams referred to as a SOC.
-- **Incident Preparation -** Helping the organization prepare for future attacks, which is a broader strategic set of activities aimed at building context and muscle memory to better handle attacks as well as develop insights on how to improve security processes overall.
+We’ve learned that it’s critical to consider both what you measure, as well as the way that you focus on and enforce those metrics. You must recognize that security operations must manage significant variables that are out of their direct control (attacks, attackers, etc.). Any deviations from targets should be viewed primarily as a learning opportunity for process or tool improvement rather assumed to be a failing on the part of the SOC to meet a goal.
+
+Two main metrics to focus on that have a direct influence on organizational risk are:
+
+ - **Mean Time to acknowledge (MTTA)** — Responsiveness is one of the few elements SecOps has a lot of direct control over. Measure the time between an alert being raised (“light starts to blink”) and when an analyst acknowledges that alert and begins the investigation. Improving this responsiveness requires that analysts don’t waste time investigating false positives while another true positive alert sits waiting. This can be achieved with ruthless prioritization, ensuring that any alert feed that requires an analyst response must have a track record of 90 percent true positive detections. 
+ - **Mean Time to remediate (MTTR)** — Effectiveness of reducing risk is measured by the next period of time, from the time the analyst begins the investigation to when the incident is remediated. This identifies how long it takes SecOps to remove the attacker's access from the environment. This information helps identify where to invest in processes and tools to help analysts reduce risk. 
+ - *Incidents remediated (manually/with automation)* — Measuring how many incidents are remediated manually and how many are resolved with automation is another key way to inform staffing and tool decisions. 
+ - *Escalations between each tier* — tracking how many incidents escalated between tiers helps ensure accurately tracking of the workload to inform staffing and other decisions (e.g. work done on escalated incidents isn't attributed to the wrong team)
+
+## Security Operations Model
+
+Security Operations handles a combination of high volume incidents and high complexity incidents.
+
+:::image type="content" source="./media/secops-model.png" alt-text="Security Operations - Model" lightbox="./media/secops-model-popout.png":::
+
+Security operations teams often focus on three key outcomes:
+
+- **Incident Management -** Manage active attacks on the environment, including both
+    - *Reactively respond* to detected attacks
+    - *Proactively hunting* for attacks that slipped through traditional threat detections
+    - *Coordinating* the legal, communications, and other business implications of security incidents. 
+- **Incident Preparation -** Help the organization prepare for future attacks. This a broader strategic set of activities aimed at building muscle memory and context at all levels of the organization, preparing people to better handle major attacks as well as gain insights on security process improvements. 
 - **Threat Intelligence -** Gathering, processing, and disseminating threat intelligence to security operations, security teams, security leadership, and business leadership stakeholders (via security leadership).  
 
-In order to deliver against these outcomes, Security Operations functions should structure their teams into tiered capabilities, each with a specific focus: 
+In order to deliver against these outcomes, Security Operations teams should be structured to focus on key outcomes. In larger SecOps teams, these are often broken into sub-teams: 
 
 - **Triage** (Tier 1)
 the first line of response for security incidents, focussed on high-volume processing of alerts, typically generated by automation and tools. The triage processes will solve for the majority of common incident types and resolve them within the team. More complex incidents, or those that have not been seen and resolved before should be escalated to Tier 2.
@@ -70,77 +83,38 @@ focussed on incidents that require further investigation - often requiring corre
 - **Hunt** (Tier 3)
 focussed primarily on proactive hunting for highly-sophisticated attack processes and developing guidance to the wider teams for maturing security controls as a result. The Tier 3 team also acts as an escalation point for major incidents in order to support forensic analysis and response. 
 
-## Security Operations nomenclature disambiguation
+## SecOps Business touchpoints
 
-A wide array of names are used to describe security operations within organization and the role definition and duties within that team can differ from organization to organization. Most of the variations we see are with security operations taking on some or all aspects of posture management (defined in greater detail in the [Azure Security Center Planning and Operations Guide](https://docs.microsoft.com/azure/security-center/security-center-planning-and-operations-guide), given the need for operational urgency to address software vulnerabilities and the use of security operations data to prioritize preventive controls and policy enforcement.
+SecOps has multiple potential interactions with business leadership
 
-Rather than merge these two functions (which is a valid configuration) we chose to differentiate between these two while emphasizing the need for their integration (whether part of the same team or separate teams).
+:::image type="content" source="./media/secops-business.png" alt-text="Security Operations - Business Relationships" lightbox="./media/secops-business-popout.png":::
 
-## Operations within a security strategy
 
-### Security strategy connections
+ - **Business context (to SecOps)** — SecOps needs to understand what is most important to the organization so the team can apply that context to fluid real-time security situations. What would have the most negative impact on the business? Downtime of critical systems? A loss of reputation and customer trust? Disclosure of sensitive data? Tampering with critical data or systems? We’ve learned it’s critical that key leaders and staff in the SOC understand this context as they wade through the continuous flood of information and triage incidents and prioritize their time, attention, and effort.
+ - **Joint practice exercises (with SecOps)** — Business leaders should regularly join SecOps in practicing response to major incidents. This builds the muscle memory and relationships that are critical to fast and effective decision making in the high pressure of real incidents, reducing organizational risk. This practice also reduces risk by exposing gaps and assumptions in the process that can be fixed prior to a real incident.
+ - **Major incidents updates (from SecOps)** — SecOps should provide updates to business stakeholders for major incidents as they happen. This allows business leaders to understand their risk and take both proactive and reactive steps to manage that risk. For more learnings on major incidents by Microsoft's DART team, see the [incident response reference guide](https://aka.ms/IRRG).
+ - **Business intelligence (from the SOC)** — Sometimes SecOps finds that adversaries are targeting a system or data set that isn’t expected. As these discoveries are made, the threat intelligence team should share these signals with business leaders as they may trigger insight for business leaders (e.g. someone outside the company is aware of a secret project, unexpected attacker targets highlight the value of an otherwise overlooked dataset, etc.).
 
-The Security Operations function should deliver on the requirements set out in the organization's security strategy.
-Risk priorities and responsibilities defined in the strategy should be reflected in the day-to-day operations of the security operations.
 
-Guidance as part of the Cloud Adoption Framework's Strategy methodology outlines how to define the organization security strategy:
+## SecOps Modernization
 
-[Define a security strategy - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy)
+Just like other security disciplines, security operations faces the transformative effect of continuously evolving business models, attackers, and technology platforms. 
 
-### Managing a security program
+The transformation of security operations is driven primarily by these trends:
 
-Delivering security controls inside an organization without business stakeholder engagement runs the risk of being seen as a blocker.
-Work with the business to establish a basis of understanding that security can be an enabler for innovation and growth, as opposed to a group that always says 'no'. Engaging in discussion with the business to agree how the security strategy can be delivered without compromising technical delivery or creativity.
-The resulting set of controls are often referred to as 'guard rails', which are technical boundaries, defined by policy. Enabling flexibility to a point but stops inadvertent increase in security risk or deviation from company policy. [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-introduction) provides centralized definition and control of [Security Policies](https://docs.microsoft.com/azure/security-center/security-policy-concept) across all your Azure subscriptions
+ - **Cloud Platform Coverage** - Security operations must detect and respond to attacks across the enterprise estate including cloud resources, a new and rapidly evolving platform that is often unfamilliar to SecOps professionals
+ - **Shift to Identity Centric Security** - traditional SecOps relies heavily on network based tools, but now must integrate identity, endpoint, application, and other tools and skills. This is because 
+     - Attackers have incorporated identity attacks (phishing, credential theft, password spray) and other attack types into their arsenal that reliably evade network based detections. 
+     - Assets of value (such as bring your own devices - BYODs) spend some or all of their lifecycle outside the network perimeter, limiting the utility of network detections. 
+ - **IoT and OT Coverage** - Adversary actively target Internet of Things (IoT) and Operational Technology (OT) devices as part of their attack chains. These may be the ultimate purpose of an attack or a means to access or traverse the environment. 
+ - **Cloud Processing of Telemetry** - Security operations modernization is required because because of the massive increase in relevant telemetry that comes from the cloud. This is difficult or impossible to process with on-premises resources and classic techniques, driving SecOps to embrace cloud services that provide massive scale analytics, machine learning (ML), and behavior analytics. These technologies help extract the value rapidly to meet the time sensitive needs of security operations. 
 
-The boundaries defined in the guard rails become the baseline. From this baseline, the security operations team can find and investigate deviations. This may result in a defect or issue being identified that requires resolution or - equally - it could find a use case where the boundary needs reviewing and potentially revising to maintain the balance between business function and security control.
+It's important to invest in updated SecOps tools and training to ensure security operations can meet these challenges. For resources and guidance on this, see [Update incident response processes for cloud](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-processes-for-cloud)
 
-### Building a modern SOC
+For more information on Security Operations role/responsibilities, see [Security Operations](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-operations-center)
 
-In a world of hyper-scale distributed compute, the ability to collate, analyze, and respond to events and telemetry at scale is crucially important.
-It is not economically (or practically) viable to scale the number of people in a security operations function in direct correlation to the number of workloads managed. Technology must be used to scale the management to meet the demand.
-In practical terms, scale requires centralization of telemetry. Bring all of the organization's security signals into a consolidated data set.
-This data can be filtered, modelled, and have business logic applied to it in order to find the events and activities that require intervention - automated or human.
+For more architecture and technology focused best practices, see  https://aka.ms/secopstech (and [accompanying videos/slides](https://docs.microsoft.com/security/compass/security-operations-videos-and-decks))
 
-Security Information and Event Management (SIEM) tools can help address this goal. Many are designed to ingest telemetry from a wide range of sources - identity platforms, network monitors, applications, device management tools. [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview) is Microsoft's  cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution for alert detection, threat visibility, proactive hunting, and threat response.
+## Next Steps
 
-## Processes required to 'assume breach'
-
-### Holistic monitoring
-
-Every data point related to an environment helps build a better picture of the activities and anomalies - either by confirming a common behavior or being an antipattern to it.
-As a result, security operations teams should seek to ingest as many relevant data feeds as possible in order to develop the most articulate view of activities as possible. This context will prove useful - not only in spotting an anomalous event - but also in responding to the event and determining potential impact and scale.
-
-### Proactive testing and recovery
-
-Assume breach. Assume that the environment is already compromised and approach testing as if you were looking for an attacker.
-
-### Recovering and re-securing
-
-Even with the best processes and technologies in place, there will be bugs or incidents that require resolution. The impact of the incident is influenced by how teams respond and rectify the issue - and learn from it to ensure it cannot happen again.
-
-## Integration with other security teams
-
-![Modern Security Operations diagram](./media/modern-security-operations.png)
-
-- **DevSecOps teams** - note the split expertise and that you need to build a process that leverages joinly how this works
-Most of the time, teams have to lean heavily on multiple security teams in partnership to handle security. 
-    Skillsets to blend:
-    - Security Operations - familiarity with handling security incidents, notification to broad business stakeholders (legal, comms, etc.) in case of a major incident
-    - DevOps/DevSecOps- familiarity with the application itself, the value of the data, and the implications to the business if it is offline 
-
-    - Incident types. Active attack always brings in the SOC. Affected app teams are always brought in, but not always at the same level. 
-        - App-agnostic - Most security alerts come from SOC (infrastructure alerts, etc.). 
-        In this case SOC probably leads and application team assists, provides impact analysis on "did they abuse the app/data, what is the business impact, can we reboot/rebuild/etc. the server/vm, etc."
-        - App Specific - Sometimes DevOps/DevSecOps teams see security activity as part of monitoring the application (rare)
-        
-    If the app is actually deliberately targeted, then the teams need to work closely together to blend the expertise to understand what happened to the app, what the attackers may have ben after, what they actually did and got, etc.
-    - Planning controls - requires joint effort to ensure basic/common infra (vms, containers, etc.) have best practices for security (preventive and detective controls). Ideally, app teams have threat modelled and build specific detections/preventions for abuse of the app itself. 
-
-		The most uncomfortable phase in this transition is when teams accept the importance of security, but don't have native teams in the dev(sec)ops process. Before this, teams will try to resist security, after this its easier to integrate security knowledge rather than rely on external teams. 
-			Critical to sell them on incremental view of security so they don't feel like they have to be perfect right away (default security communications style / assumption). 
-		
-		
-- **Governance** - provides standards and business rules for the security operations teams to work to. Governance is a key partner in delivering successful security operations, as they provide the criteria for business risk and the controls that need to be monitored.
-- **Access Control** - provides identity and network infrastructure to protect the perimeter of the environment. These boundaries are a key definition of where the response starts when breach alerts are raised. 
-- **Asset protection** - provide infrastructure and network level encryption to protect data at rest (basic corp standard, not tailored to elevated sensitivity of applications), information protection assistance (e.g. Microsoft Information Protection and Azure Purview). 
+The next discipline is [Asset Protection](./asset-protection.md)

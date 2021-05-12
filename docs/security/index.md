@@ -16,42 +16,31 @@ Just cloud adoption is a journey, cloud security is also an ongoing journey of i
 
 ## Envision a security end state
 
-A journey without a target destination is just wandering. The Secure methodology provides a vision of the complete end state to guide your maturity over time. The following infographic provides a visual mapping of the considerations which are important to reach your end state and the key components it must include.
+A journey without a target destination is just wandering. While this may eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results. 
 
-![CAF Secure Methodology](../_images/security/secure-methodology.png)
+The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
 
-The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and Center for Internet Security (CIS).
+:::image type="content" source="./media/secure-methodology.png" alt-text="CAF Secure Methodology" lightbox="./media/secure-methodology-popout.png":::
+
+The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
 ## Mapping to concepts, frameworks, and standards
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated/overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF secure methodology disciplines relates to other security concepts and guidance:
 
- - **Zero Trust** - Microsoft views all of security under the umbrella of Zero Trust following the three principles in (SECTION NAME). The first and most transformative part of zero trust is in access control, so we highlighted that in the access control security discipline.  
+ - **Zero Trust** - Microsoft believes all security disciplines should follow the  Zero Trust principles of *assume breach, verify explicity,* and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it is  highlighted in the description of access control security discipline.  
 	
- - **The Open Group** - These security disciplines map closely to the XXXX in the Open Group Core principles where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for organizations. 
+ - **The Open Group** - These security disciplines map closely to the Zero Trust Components in the [Core principles whitepaper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for many organizations. 
 	
- - **NIST Cybersecurity Framework (CSF)** - For organizations that use the NIST cybersecurity framework, we have highlighted bold text where the NIST CSF most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of CSF so aren't noted invidually. 
+ - **NIST Cybersecurity Framework (CSF)** - For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the NIST CSF most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of CSF so aren't noted individually. 
 
 ## Mapping to Roles and Responsibilities
 
-At the organizational level, the security disciplines map to standard plan-build-run phases seen widely across industries and organizations. While there is plan-build-run cycles and feedback loops throughout each security discipline, it's helpful to see how security maps at the macro level as security is both a unique discipline, but also just another part of business operations overall. 
+While security is a highly technical discipline, it is first and foremost a human discipline reflective of the long history of human conflict (just updated for computers and the internet). The following diagram summarizes the roles and responsibilities in a security program. 
 
-We also mapped in the specific organizational functions and responsibilities that will be assigned to security roles where they primarily fit with - detailed in https://aka.ms/securityroles. Additionally we added a grouping of these roles into personas with common career and skill profiles as these provide clarity on how industry trends are impacting security career paths and skillsets:
+:::image type="content" source="./media/roles-and-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/roles-and-responsibilities-popout.png":::
 
- - **Security Leadership** - This spans across functions, ensuring that teams coordinate with each other, providing prioritization and setting cultural norms, policies, and standards for security.
- - **Security Architect** - Spans across functions with a strong emphasis on governance to ensure that all of the technical functions are working harmoniously within a consistent architecture
- - **Posture Management and Compliance** - This represents the combination of security posture management disciplines like vulnerability management with compliance reporting functions. These functions are increasingly working with the same near real-time data feeds and their scope is converging into all forms of risk and vulnerabilities to the organization (technology itself like software updates, technology configuration, and operational practices)
- - **Platform security engineer** - Technology roles focused on platforms that host multiple workloads, focused on access control and asset protection. These roles are often broken teams with specialized technical skillsets including network security, infrastructure and endpoints, identity and key management, and others. This includes preventive controls and detective controls with detective controls in partnership with SecOps and preventive controls primarily in partnership with IT Operations. 
- - **Application Security Engineer** - Technology roles focused on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. This is a blend of application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. 
->[!Note]
-> As both DevOps and Infrastructure as code trends progress, we expect to see some security talent migrate from platform security engineering teams to application security teams and posture management roles. This is because the DevOps model requires infrastructure security skills (e.g. securing the "ops" in devops) and governance teams will also require these skills and experience to effectively monitor technical security posture in real time. Additionally, infrastructure as code will automate repetitive manual technical tasks, reducing the volume of time required for these skills in the platform security engineer roles (though increasing the need for broad technical skillsets and automation/scripting skills).  
-
-For more information on detailed security functions held by roles, see https://aka.ms/securityroles
-
-
-
-
-
+For more information on these, see https://aka.ms/securityroles
 
 ## Security Transformation
 
@@ -93,7 +82,7 @@ This transformation will affect each security discipline differently. While all 
 
 - **Access Control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
 - **Security Operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continously reduce risk of breach
-- **Asset Protection:** Maximize protection of all assets (VMs, Data, Applications, Networks, and Identities) to minimize risk to the overall environment
+- **Asset Protection:** Maximize protection of all assets (Infrastructure, Devices, Data, Applications, Networks, and Identities) to minimize risk to the overall environment
 - **Security Governance:** Delegated decisions accelerate innovation and introduce new risks. Monitor decisions, configurations, and data to govern decisions made across the environment and within all workloads across the portfolio.
 - **Innovation Security:** As organization adopt DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
 
@@ -111,5 +100,7 @@ All security activities should be aligned to and shaped by a dual focus on
 ### Additional Resources
 
 This CAF Secure methodology is part of a comprehensive set of security guidance that also includes
- - **Azure Well-Architected Framework** - Guidance on securing your workloads on Azure
+ - [**Azure Well-Architected Framework**](https://docs.microsoft.com/azure/architecture/framework/security/overview) - Guidance on securing your workloads on Azure
  - [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs) - Prescriptive Best Practices and Controls for Azure Security
+ - [**Enterprise Scale Landing Zone**](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance) -Azure Reference architecture and implementation with integrated security
+ - [**Azure Top 10 Security Best Practices**](https://aka.ms/azuresecuritytop10) - Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.

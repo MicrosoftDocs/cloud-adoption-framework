@@ -12,135 +12,107 @@ ms.custom: internal
 
 # Access Control
 
-This article summarizes the areas for consideration when planning and implementing good access control practices inside your organization.
+Access control is the part of security that people experience first and most often. People see access control when they log into their computers and their mobile phones, when they share a file or try to access an application, and when they use an ID Card key to access a physical building or room. While it's not everything in security, it's critically important and it requires focusing on getting both user experience and security assurances right.
 
-As organizations plan for cloud-based environments, the concept of network boundaries as the single outer edge of the security perimeter is challenged. With users and applications expanding beyond internal network boundaries, organizations must plan access control in a holistic way across technologies including  network, identity, applications, data, and more.
+## From a perimeter tactic to zero trust strategy
 
-Establishing patterns of people and services securely connecting to infrastructure and applications enables organizations to build secure services at scale without compromising security or increasing risk.
+The traditional approach of access control for IT has been based on restricting access to a corporate network and then supplementing this with additional controls as appropriate. This model restricts all resources to a corporate owned network connection and has become too inflexible to meet the needs of a dynamic enterprise. 
+
+:::image type="content" source="./media/zero-trust-shift.png" alt-text="Zero Trust Shift" lightbox="./media/zero-trust-shift-popout.png":::
+
+Organizations must embrace a zero trust approach to access control as they embrace remote work as normal and use cloud technology to digitally transform their business model, customer engagement model, employee engagement and empowerment model, and more. 
+
+Zero trust principles help establish and continuously improve security assurances while maintaining flexibility to match pace with this new world. Most zero trust journeys start with access control and focus on identity as a preferred and primary control while continuing to embrace network security technology as a key element. Network technology and the security perimeter tactic are still present in a modern access control model, but they aren't the dominant and preferred approach in a complete access control strategy
+
+## Modern Access Control
+
+Organizations should develop a holistic access control strategy that is comprehensive, consistent, and rigorously applies security principles deeply across the technology stack, but is also flexible to meet the needs of the organization. 
+
+This diagram illustrates all of the different elements that an organization must consider for an access control strategy that spans multiple workloads, multiple clouds, different business sensitivity levels, and both human and computer access. 
+
+:::image type="content" source="./media/access-control.png" alt-text="Access Control Overview" lightbox="./media/access-control-popout.png":::
+
+A good access control strategy goes beyond a single discrete tactic or technology, and should adopt a pragmatic approach that embraces the right technology and tactics for the right scenarios. 
+
+Modern access control *must meet the productivity needs of the organization* and also be:
   
-By establishing these fundamentals, the business is able to monitor against a 'known' standard, agree on exceptions, and manage anomalies and exception requests.
-Access control is an on-going process of checks and balances, baselines and refinements. The controls established should be included in an organization's standard operations and reviewed regularly, alongside other standard processes.
-New infrastructure types will require the controls to be refactored to accommodate new secure access methods, security incidents will require controls to be reviewed and refined.  
+ - **Secure** - Explicitly validate the trust of the users and devices during access requests using all available data and telemetry. This makes it more difficult for attackers to impersonate legitimate users without being detected. Additionally, the access control strategy should focus on eliminating unauthorized escalation of privilege (e.g. inadvertently granting a lower privilege user ability to gain higher privileges). For more information on protecting privileged access, see [Securing Privileged Access](https://aka.ms/spa)
+ - **Consistent** - Ensure that security assurances are applied consistently and seamlessly across the environment. This improves the user experience and removes opportunities for attackers to sneak in through weaknesses in a disjointed or highly complex access control implementation. You should have a single access control strategy that uses the fewest number of policy engines to avoid configuration inconsistencies and configuration drift. 
+ - **Comprehensive** - Enforcement of access policy should be done as close to the resources and access pathways as possible. This improve security coverage for scenarios and helps security fit smoothly into scenarios and expectations of user personas. Take advantage of security controls for data, applications, identity, network, databases, and more to drive policy enforcement closer to the business assets of value.  
+ - **Identity Centric** – Prioritize the use of  identity and related controls when available. Identity controls provide rich context into access requests and application context that isn't available from raw network traffic. Networking controls are still important to maintain and are sometimes the only available option (such as in operational technology environments), but identity should always be the first choice if available. A failure dialog during application access from the identity layer will be more precise and informative than a network traffic block, making it more likely the user can correct the issue without a costly helpdesk call. 
 
-Implementing access controls should deliver assurances to business stakeholders that access to infrastructure and services owned by the organization is appropriate, monitored, and controlled. This should be a consistent outcome irrespective of the scale of the environment, the technologies in use, or workloads in scope.
+### Enterprise Access Model
 
-Scaling this standard requires three things:
+The enterprise access model is a comprehensive access model based on zero trust. This model addresses all type of access by internal and external users, services, applications, and privileged accounts with administrative access to systems.  
 
-- **Visibility** - use tools and techniques to establish standard patterns - user access, locations, devices - and find and review exceptions
-- **Orchestration** - streamline processes as much as possible in order to aggregate access requests and permissions management centrally. This context enables teams to approve access and govern usage of permissions in context and help spot patterns that require investigation
-- **Automation** - as much as possible use the technologies available to automate monitoring, detecting, and responding to exceptions in access control patterns
+:::image type="content" source="./media/privileged-access-over-underlying-planes.png" alt-text="Adding user and application access pathways" lightbox="./media/privileged-access-over-underlying-planes-popout.png":::
 
-## Enterprise Access Model and blended control Plane
+This is described in detail in [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
 
-Organizations should develop a holistic access control strategy that addresses all type access by all users, services and applications, and privileged accounts with administrative access to systems.  
+## Known, trusted, allowed
 
-![Adding user and application access pathways](./media/privileged-access-over-underlying-planes.png)
+One helpful perspective on the zero trust transformation of access control is that it shifts from a static two-step process of authentication and authorization to a dynamic three step process:
 
-For more details on Microsoft's reference model for enterprise access, see [Enterprise access model](https://docs.microsoft.com/security/compass/privileged-access-access-model)
+:::image type="content" source="./media/known-trusted-allowed-physical.png" alt-text="Known Trusted Allowed - Physical" lightbox="./media/known-trusted-allowed-physical-popout.png":::
 
-## Blend network and identity access controls
+1. **Known** - Authentication that ensures you are who you say you are. This is analogous to the physical process of checking a government issued identity card with a photo. 
+2. **Trusted** - Validation that your user and device are trustworthy enough to access the resource. This is analogous to security at an airport that screens all passengers for security risks before allowing them to enter the airport. 
+3. **Allowed** - Granting the specific rights and privileges for the application, service, or data. This is analogous to an airline that manages where passengers are going, what cabin they sit in (first class, business class, coach), whether they have to pay for luggage, and so on. 
 
-While access controls will be infused throughout the environment, the control plane will be primarily a blend of identity and network controls. While the focus level on each will vary by type of environment, these should be designed to work in harmony to meet both productivity and security goals.
+### Key Access Control Technologies
 
-![Network and access controls](./media/Network-and-access-controls.png)
+The key technical capabilites that enable modern access control are:
 
-## Zero Trust concept
+ - **Policy Engine** - is the component where organizations configure the technical security policy to meet the organizations productivity and security objectives.
+ - **Policy Enforcement Points** - enforce the central policy decisions by the policy engine across the organization's resources including data, applications, identity, network, databases, and more. 
 
-A [Zero Trust](https://www.microsoft.com/security/business/zero-trust) approach assumes breach within an organization's infrastructure and establishes processes where each request is explicitly validated as though it originates from an open network.
+This diagram depicts how Azure Active Directory provides a policy engine and a policy enforcement point for modern identity protocols to enable known-trusted-allowed: 
 
-Zero Trust teaches us to "never trust, always verify" and ensure every access request is fully authenticated, authorized, and encrypted before granting access.  
+:::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known Trusted Allowed - Electronic" lightbox="./media/known-trusted-allowed-electronic-popout.png":::
 
-## Identity
+Azure Active Directory policy engine can be extended to other policy enforcement points including
+ - **Modern applications** - that use modern authentication protocols 
+ - **Legacy applications** - via Azure AD App Proxy
+ - **VPN and remote access solutions** - such as Cisco AnyConnect, Palo Alto Networks, F5, Fortinet, Citrix, Zscaler, and more
+ - **Documents, email, and other files** - via Microsoft Information Protection
+ - **And more** - see [Tutorials for integrating SaaS applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/tutorial-list)
 
-Identity as an authentication parameter should be the basis of all connections and validations to grant access within an organization.
-Users and service accounts should be validated to determine integrity - including as many data points as possible, such as location and comparisons of location compared to typical patterns.
+## Data-driven access decisions
 
-The use of least privileged access techniques should be applied to minimize lateral movement.
-Separation of duties techniques between accounts and roles enables identity teams to limit the amount of access or privilege an attacker can gain by compromising one account.
+To fulfill the zero trust principle of explicit validation, it is critical to make an informed decision. The zero trust policy engine should have access to diverse data on the users and devices to make sound security decisions. This diversity helps you identify with greater confidence
+ - whether the actual user is in control of the account
+ - whether the device has been compromised by an attacker
+ - whether the user has the appropriate roles and permissions
 
-The Cloud Adoption Framework provides [guidance on structuring roles and role-based access controls (RBAC) as part of multi-team organizations](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/considerations/roles). This guidance should be the starting point for considering how to manage permissions and access to infrastructure and applications
-Manage access to your Azure environment with Azure role-based access control - Cloud Adoption Framework | Microsoft Docs
 
-For identities with elevated levels of access or permissions, time-based approvals should be considered to reduce the risk profile.
-User accounts authenticating against services should use strong passwords and multi-factor authentication.
+Microsoft has invested into building a threat intelligence system that integrates security context derived from a high volume of diverse signal sources. See [this summary of Microsoft Threat Intelligence](https://aka.ms/threatintelligence) for more information. 
 
-### Multifactor authentication (MFA)
+## Segmentation and Isolation
 
-MFA is becoming a commonly used component of safeguarding access into corporate systems. Many large scale cloud services offer MFA as an authentication step in order ask the person attempting to authenticate that they are who they say they are.
-The factors of MFA are 'something you know'  - typically your username and password, 'something you are' - typically a biometric, and 'something you have' - for example a phone, or a cryptokey. For more details on Microsoft's MFA and passwordless recommendations, see https://docs.microsoft.com/en-us/security/compass/privileged-access-accounts#account-security
+Organizations often choose to create internal boundaries to divide the internal environment into separate segments as part of their access control approach. This is intended to contain the damage of an attack by limiting attacker access if they get into the environment. Segmentation is traditionally done with firewalls or other network filtering technology, though the concept may be applied to identity and other technologies as well. 
 
-By using MFA to secure accounts reduces the impact of a user's account details being stolen as the attacker would still need to obtain the 'something you have' item in order to gain access. As a result, using multi-factor authentication is a highly recommended security mechanism to protect access into organizations.
+For a reference on how an enterprise segmentation can be applied to Azure environments, see [Azure components and reference model](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
 
-### Azure Active Directory Premium
+### Isolation: Avoid Firewall and Forget
+*Isolation requires people, process, and technology*
 
-When using Azure Active Directory as the identity platform, organizations are able to enable enhancement features aimed at improving security.
-For example:
+An extreme form of segmentation called isolation is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business critical and difficult or impossible to bring up to current policy and standards. This frequently includes operational technology (OT) systems like Supervisory Control and Data Acquisition (SCADA) and Industrial Control Systems (ICS). 
 
-- Password protection (custom banned passwords)
-- Self-service password reset
-- Privileged Identity Management (PIM)
+:::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Process, Technology for Isolation" lightbox="./media/firewall-and-forget-popout.png":::
 
-### Just In Time (JIT) Access
+Isolation must be designed as a complete people/process/technology system and be integrated with business processes to be successful and sustainable. This approach typically fails over time if it's implemented as purely a technology approach without processes and training to validate and sustain the defenses over time. It's easy to fall into a 'firewall and forget' trap by defining the problem as a static and technical. In most cases, processes are needed to sustain the defenses and require security, IT, OT, and sometimes business operations teams to follow them. 
 
-Reducing the amount of time that a specific account has elevated privileges can often correlate with the reduction in threat risk for unauthorized access to sensitive infrastructure or data.
-Using techniques and tools that enable JIT means granting an account only the specific permissions required to complete a task for the amount of time required to complete the task. Those permissions are then removed when the task is complete - or the time expires - whichever occurs first.
-JIT tools also often include request and approval workflows in order to audit the reason for the elevated privileges and who requested it. JIT provides further governance controls and also information that could be used in a post-breach investigation to ascertain how the breach was possible.
+ - **People** - Train all employees, vendors, and stakeholders on isolation strategy and their part in it, including why it's important (threats/risks and potential business impact, what they are expected to do, and how to do it. 
+ - **Process** - Establish clear policy and standards, document processes for business and technical stakeholders for all scenarios (vendor access, change management process, threat response procedures, etc.) including exception management. Monitor to ensure the configuration doesn't drift and other processes are followed correctly and rigorously. 
+ - **Technology** - Implement technical controls to block unauthorized communications, detect anomalies and potential threats, and harden bridging/transit devices that interact with the isolated environment (e.g. operator consoles for OT systems)
 
-### Separate administrator accounts
+See also [Network Isolation](.\asset-protection.md\#network-isolation) in Asset Protection
 
-Separating user accounts from administrator accounts reduces the impact of account credentials being compromised and being used for lateral movement by an attacker.
-User accounts (and passwords) used for day-to-day system access are often used in web services outside of an organization's control and are therefore at risk of data breaches or phishing attacks.
-By keeping administrator accounts separate and only used inside an organization, reduces the probability of them being found and exploited by actors looking to gain unauthorized access.
+## Next Steps
 
-A common pattern for naming these accounts is adm-*username* which makes them visually distinguishable from 'standard' user accounts.
+While each organization will have unique requirements for access control, your strategy should be grounded in the same fundamentals.
+The guidance provided in these articles, and the Cloud Adoption Framework more broadly, can help organizations find the right approach. 
 
-## Endpoints
+The next discipline is modernizing [Security Operations](./security-operations.md)
 
-In an increasingly mobile workforce, the external connection points for users into a set of corporate services is likely to be larger than devices connecting from within the corporate network.
 
-Access control using Zero Trust techniques should consider all device connections as untrusted and validate what the device is, the health of the device, the identity of the user and the location of the device before granting approval to connect. Using these data points to check the integrity of an endpoint can reduce the risk probability of an authorized device gaining access to internal assets.
-
-## Data
-
-Data is the crown jewels of an organization, and should be protected as such.
-
-From internal personnel or financial data, to proprietary product-related or sensitive customer information; the ramifications of leaving exploitable weakness in the protections for accessing data are significant.
-
-As a guiding principle, data held within the organization should be secure and isolated from accounts who do not have a justifiable reason for having access.
-
-Policy-based controls should be used to govern the movement, modification or extraction of data to only accounts with justified and managed business reasons.
-
-## Apps
-
-Controlling the access and permissions for applications will be an on-going activity, as users requirements change and those who require access changes.
-
-Ensuring that privileges for applications are appropriate to the role of the requestor, and still appropriate over time, will be a key factor in reducing the risk profile of allowing access to sensitive applications and the data they contain.
-
-In line with the Zero Trust concept, each access request to an application should be validated to check that it is appropriate.
-
-Access to the application should be controlled by role-based permissions, with limitations placed on the ability to change or extract data to further reduce the risk of a rogue actor being able to obtain sensitive information.
-
-## Infrastructure
-
-The ability to access infrastructure within an organization should be, by default, access controlled. Only those who authenticate as a known,  approved user should be granted access rights.
-
-The ability to access configuration, change, or deploy new infrastructure should be tightly restricted to only those identities who have a verified, managed justification. Permissions governing privileged access should be controlled within a role-based access control (RBAC) structure, tied to the organizations identity platform.
-
-Accounts with elevated access rights to infrastructure should have the access protected using tools such as multi-factor authentication (MFA) and Just in time (JIT) access controls.
-
-Access to infrastructure should be monitored, audited, and reviewed for anomalies to ensure that only those who explicit authorization are accessing.
-
-Remote access is a known pattern used by both business users and IT Professionals to gain access to central infrastructure - these access routes should be protected with tools and techniques such as VPNs, Bastion servers and multi-factor authentication to reduce the risk profile.
-
-## Network
-
-Zero Trust is founded in the concept of assumed breach. Treat every connection as suspicious and requiring validation.
-
-Taking this concept a step further, treat the network as if every network node is internet facing and protect them accordingly. Access should be segmented to contain movement to as small an area as possible within the network, and sensitive apps and infrastructure should be segmented to create separation by using Virtual networks (Vnets), Firewalls and, Network Security Groups (NSG).
-
-The Cloud Adoption Framework provides [reference architectures for hub and spoke network topologies as part of the Landing Zone guidance,](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) which help establish a pattern of network segregation as part of architecture fundamentals when adopting cloud technologies.
-
-## Developing further
-
-Not every implementation of these concepts will be the same, but every one should be grounded in the same fundamentals.
-The guidance provided in these articles, and the Cloud Adoption Framework more broadly, can help organizations find the right structure for their implementation.

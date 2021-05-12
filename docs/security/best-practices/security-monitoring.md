@@ -1,25 +1,79 @@
 ---
 title: Security Title
 description: Security Description
-author: GitHubAlias
-ms.author: msftalias
-ms.date: 04/04/2021
+author: joanabmartins
+ms.author: joamar
+ms.date: 22/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
 ---
 
-# Generic space holder - remember to edit the metadata before publication
+# Security Monitoring
+Monitoring is a critical component of cloud security and management. In this article, we give you some best practices to have in mind to efficiently monitor the security of your environment.
 
-## This article should cover all of the items under the "monitoring security events" question at the CAF level
+## Azure Security Center 
+Keeping your resources safe is a joint effort between your cloud provider, Azure, and you, the customer. [Azure Security Center](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/govern-org-compliance?tabs=AzureSecurityCenter) helps you understand what Microsoft is already addressing in trems of security vs what is your responsability, providing you the tools needed to harden your network, secure your services and make sure you're on top of your security posture. 
 
-- Tools like Azure Security Center are used to discover and remediate common risks within Azure tenants.Identifying and remediating common security hygiene risks significantly reduces overall risk to the organization by increasing cost to attackers. Azure Secure Score in Azure Security Center monitors the security posture of machines, networks, storage and data services, and applications to discover potential security issues (internet connected VMs, or missing security updates, missing endpoint protection or encryption, deviations from baseline security configurations, missing Web Application Firewall (WAF), and more).
-- A central SecOps team monitors security related telemetry data for this workload.Organization is monitoring the security posture across workloads and central SecOps team is monitoring security-related telemetry data and investigating security breaches.
-- The security team has read-only access into all cloud environment resources for this workload.Provide security teams read-only access to the security aspects of all technical resources in their purview. Security organizations require visibility into the technical environment to perform their duties of assessing and reporting on organizational risk. Without this visibility, security will have to rely on information provided from groups, operating the environment, who have a potential conflict of interest (and other priorities). Note that security teams may separately be granted additional privileges if they have operational responsibilities or a requirement to enforce compliance on Azure resources. For example in Azure, assign security teams to the Security Readers permission that provides access to measure security risk (without providing access to the data itself). Because security will have broad access to the environment (and visibility into potentially exploitable vulnerabilities), you should consider them critical impact accounts and apply the same protections as administrators.
-- The security team has access to and monitor all subscriptions and tenants that are connected to the existing cloud environment, relative to this workload.Ensure the security organization is aware of all enrollments and associated subscriptions connected to the existing environment and is able to monitor those resources as part of the overall enterprise security posture.
-- Identity related risk events related to potentially compromised identities are actively monitored.Most security incidents take place after an attacker initially gains access using a stolen identity. These identities can often start with low privileges, but attackers then use that identity to traverse laterally and gain access to more privileged identities. This repeats as needed until the attacker controls access to the ultimate target data or systems. Reported risk events for Azure AD can be viewed in Azure AD reporting, or Azure AD Identity Protection. Additionally, the Identity Protection risk events API can be used to programmatically access identity related security detections using Microsoft Graph.
-- Communication, investigation and hunting activities are aligned with the workload team.Development team needs to be aware of those activities to align their security improvement activities with the outcome of those activities.
-- Periodic & automated access reviews of the workload are conducted to ensure that only authorized people have access?As people in the organization and on the project change, it is crucial to make sure that only the right people have access to the application infrastructure. Auditing and reviewing the access control reduces the attack vector to the application. Azure control plane depends on Azure AD and access reviews are often centrally performed often as part of internal or external audit activities. For the application specific access it is recommended to do the same at least twice a year.
-- Cloud application security broker (CASB) is leveraged in this workload.CASBs provide rich visibility, control over data travel, and sophisticated analytics to identify and combat cyberthreats across all Microsoft and third-party cloud services.
-- A designated point of contact was assigned for this workload to receive Azure incident notifications from Microsoft.
+Azure Security Center covers two broad pillars of cloud security:
+
+* **Cloud security posture management (CSPM)** - Free service that allows you to manage and track compliance based on several built-in policies, and associating them with a [Secure Score](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls) 
+* **Cloud Workload protection (CWP)** - [Azure Defender](https://docs.microsoft.com/en-us/azure/security-center/azure-defender) brings advanced, intelligent, protection of your Azure and hybrid resources and workloads.
+
+## Sentinel
+[Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/overview) is a scalable, cloud-native, **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response. 
+
+As today's cyberattacks are more advanced than ever before, it makes sense to use Azure Sentinel as your birds-eye view across the enterprise. Some of its characteristics inluces:
+
+* Collect data from different data sources
+
+* Detect previously undetected threats
+
+* Investigate and hunt threats and suspicious activities with artificial intelligence
+
+* Respond to incidents 
+
+Note: Not all environments require such a sophisiticate tool like Sentinel to keep them protected. However, there should be thoughtout processes for investigating, hunting and communiting security events. 
+
+## SecOps Team 
+The main objective of a [cloud security operations center (SOC)](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-security-operations-center) is to detect, respond to, and recover from active attacks on enterprise assets.
+
+As the SOC matures, security operations should:
+
+* Reactively respond to attacks detected by tools
+* Proactively hunt for attacks that slipped past reactive detections
+
+### SecOps Team Access 
+Security organizations require visibility into the technical environment to perform their duties. Ensure the security organization is aware of all enrollments and associated subscriptions connected to the existing environment and is able to monitor those resources as part of the overall enterprise security posture. 
+
+Nevertheless, you should always:
+- Restrict access based on [need to know and least privilege](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json#use-role-based-access-control) security principles. 
+- Pleaser refer to this article on [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview), for guidance on how to ensure it.
+
+## Identity monitoring 
+Identity is increasingly considered the primary security perimeter in the cloud, which is a shift from the traditional focus on network security. Identity services provide the core mechanisms supporting access control and organization within IT environments, and the [Identity Baseline](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/identity-baseline/) discipline complements the [Security Baseline](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/) discipline by consistently applying authentication and authorization requirements across cloud adoption efforts. It is really important that you define the [metrics, indicators and risk tolerance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/identity-baseline/metrics-tolerance) associated with your Identity Baseline and that you actively incorporate monitoring it in your security processes.
+
+There are also serveral [identity management and access control security best practices](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) that you should consider following:
+* Treat identity as the primary security perimeter
+* Centralize identity management
+* Manage connected tenants
+* Enable single sign-on
+* Turn on Conditional Access
+* Plan for routine security improvements
+* Enable password management
+* Enforce multi-factor verification for users
+* Use role-based access control
+* Lower exposure of privileged accounts
+* Control locations where resources are located
+* Use Azure AD for storage authentication
+
+For bigger and more complexed environments there are several [other considerations](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) that you should take into consideration, such as, using the capabilities for Azure AD Premium P2 that will allow you to do [Access Reviews](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview) and use just-in-time access to Azure AD  and Azure resources (with [Priviledge Identity Management](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview)).
+
+
+## Accountability
+To ensure accountability, we recommend following these steps:
+- Designate who is responsible for monitoring and making each type of security decision for the enterprise Azure environment. Estabilish Clear ownership of security areas speeds up cloud adoption and increases security. Lack of, typically creates friction. This friction frequently impedes business goals, developer timelines, IT goals, and security assurances. 
+- [Document these owners,](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/security/security-top-10#3-process-assign-accountability-for-cloud-security-decisions) their contact information, and socialize this widely within the security, IT, and cloud teams to ensure it's easy for all roles to contact them. 
+
+It is also extremelly important to make sure you have set the right owners for [Azure incident notifications](https://docs.microsoft.com/en-us/azure/service-health/alerts-activity-log-service-notifications-portal) from Microsoft.

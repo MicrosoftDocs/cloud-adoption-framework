@@ -10,6 +10,8 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
+https://docs.microsoft.com/en-us/security/compass/incident-response-playbooks
+
 # Generic space holder - remember to edit the metadata before publication
 
 ## This article should cover all of the items under the "validate security and incident response" question at the CAF level
