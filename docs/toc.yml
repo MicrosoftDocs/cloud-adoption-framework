@@ -254,6 +254,11 @@ items:
             href: ready/enterprise-scale/business-continuity-and-disaster-recovery.md
           - name: Security, governance, and compliance
             href: ready/enterprise-scale/security-governance-and-compliance.md
+            items:
+            - name: Security Provisioning
+              href: ready/enterprise-scale/security-provisioning.md
+            - name: Data Privacy
+              href: ready/enterprise-scale/data-privacy.md
           - name: Platform automation and DevOps
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implementation guidelines

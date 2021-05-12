@@ -11,12 +11,12 @@ ms.subservice: overview
 
 # Introduction to the concept of data governance
 
-Describe data governance in a way that non-technical audiences can understand.
+Describe data management in a way that non-technical audiences can understand.
 
-# Data governance responsibilities
+## Data governance responsibilities
 
-Describe who is responsible for data governance. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
+Describe who is responsible for data management. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
 
-# Data governance in Azure
+## Data governance in Azure
 
-Describe the tools used to govern data & how they help
+Describe the tools used to manage data & how they help
