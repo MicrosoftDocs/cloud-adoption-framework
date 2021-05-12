@@ -44,7 +44,7 @@ Consider the following factors:
 
   - A non-stateful service can be replicated efficiently.
 
-  - If you need to store state in the cluster (not recommended), make sure you back up the data frequently in the paired region.
+  - If you need to store state in the cluster, make sure you back up the data frequently in the paired region. Consider that storing state in the cluster properly is quite complicated.
 
 - Cluster update and maintenance.
 
@@ -98,7 +98,7 @@ The following are best practices for your design:
 
 - [Enforce resource quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas) on the service namespaces. The resource quota on a namespace will ensure pod requests and limits are properly set on a deployment.
 
-  - Setting resources quotas at the cluster level can cause problems when deploying partner services that don't have proper requests and limits.
+  - Setting resources quotas at the cluester level can cause problems when deploying partner services that don't have proper requests and limits.
 
 - Regularly run the latest version of the [`kube-advisor` open-source tool](/azure/aks/operator-best-practices-scheduler#regularly-check-for-cluster-issues-with-kube-advisor) to detect issues in your cluster.
 

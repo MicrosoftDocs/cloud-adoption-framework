@@ -16,7 +16,7 @@ Your organization or enterprise needs to design suitable security settings to me
 
 ## Design considerations
 
-- Decide what cluster identity is being used ([managed identity](/azure/aks/use-managed-identity.md) or [service principal](/aks/kubernetes-service-principal)).
+- Decide what cluster identity is being used ([managed identity](/azure/aks/use-managed-identity.md) and [service principal](/aks/kubernetes-service-principal)).
 - Decide how to authenticate cluster access (client certificate-based or [Azure Active Directory](/azure/aks/managed-aad)).
 - Decide on a [multitenancy cluster](/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
   - Decide on a method for isolation (namespace, network policy, compute (node pool), or cluster).
