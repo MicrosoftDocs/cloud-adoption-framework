@@ -112,10 +112,6 @@ items:
         href: strategy/business-outcomes/okr.md
     - name: Financial considerations
       items:
-      - name: Build a business justification
-        href: strategy/cloud-migration-business-case.md
-      - name: Create a business case
-        href: strategy/financial-models.md
       - name: Common finance vocabulary terms
         href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
@@ -130,6 +126,8 @@ items:
         href: strategy/partner-alignment.md
     - name: Build a digital transformation timeline
       href: strategy/digital-transformation-timeline.md
+    - name: Create a business case
+      href: strategy/financial-models.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
