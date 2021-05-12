@@ -1,5 +1,5 @@
 ---
-title: Innovation and Windows Virtual Desktop 
+title: Innovation and Windows Virtual Desktop
 description: Explore how organizations can innovate with Windows Virtual Desktop
 author: DominicAllen
 ms.author: doalle

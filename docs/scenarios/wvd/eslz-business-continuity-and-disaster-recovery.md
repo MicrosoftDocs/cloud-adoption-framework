@@ -31,7 +31,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 - For Windows Virtual Desktop host pool, both *active-active* and *active-passive* can be good BCDR approaches, depending on the requirements.
   - With *active-active*, a single host pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix Profile/Office containers between the regions. For Virtual Machines (VMs) in each region, the Cloud Cache registry entry specifying locations needs to be inverted to give precedence to the local one.
-    - This configuration is complex. *active-active* protects against storage outages without requiring the user to log in again. It then enables continuous testing of the disaster recovery location. This configuration isn't considered either a performance or cost optimization.  
+    - This configuration is complex. *active-active* protects against storage outages without requiring the user to log in again. It then enables continuous testing of the disaster recovery location. This configuration isn't considered either a performance or cost optimization.
     - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Windows Virtual Desktop host pool VM.
     - This configuration is limited to a *Pooled* (shared) host pool type. For a *Personal* (dedicated) type, once a desktop is assigned to a user on a certain session host VM, it sticks and doesn't change, even if not available.
 
@@ -40,9 +40,9 @@ For more information, see [Set up a business continuity and disaster recovery pl
     - You can create a new host pool in the failover region while keeping all of the resources turned off. For this method, set up new Application Groups in the failover region and assign users to them. You can then use an Azure Site Recovery *Recovery Plan* to turn on host pools and create an orchestrated process.
 
 - For host pool VM resiliency, different [options](/azure/virtual-machines/availability) are available when creating a new Windows Virtual Desktop host pool. It's important to select the right option based on your requirements during creation. These options can't be changed later.
-  
+
   - The default resiliency option for Windows Virtual Desktop host pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95% high-availability ([SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9)).
-  
+
      > [!NOTE]
      > The maximum number of VMs inside an **Availability Set** is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
@@ -117,11 +117,11 @@ The following are best practices for your design:
   - We recommended that you split user Profile and Office Containers.
   - The recommended options for container storage types are (in order): Azure Files Premium, Azure NetApp Files Standard, and Azure NetApp Files Premium. The recommended storage type depends on the resources and latency required by the specific workload.
   - For optimal performance, place FSLogix containers on storage close to the VM the user is logged on to. Keeping the containers in the same datacenter is best.
-  
+
 - Use Azure storage built-in replication mechanisms for BCDR when possible for less critical environments.
   - Use Zone Replicated Storage (ZRS) or GRS for Azure Files.
   - Use LRS with local only resiliency if no zone/region protection is required.
-  
+
 > [!NOTE]
 > GRS isn't available with Azure File Share Premium tier or Azure File Share Standard tier with Large File Support enabled.
 

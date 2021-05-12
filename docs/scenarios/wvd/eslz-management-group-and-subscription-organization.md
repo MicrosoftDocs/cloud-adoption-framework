@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management group and subscription organization for Windows Virtual Desktop"
+title: Enterprise-Scale management group and subscription organization for Windows Virtual Desktop
 description: Describe how this enterprise-scale scenario can improve management group and subscription organization of <Insert Scenario Name>
 author: BrianBlanchard
 ms.author: brblanch

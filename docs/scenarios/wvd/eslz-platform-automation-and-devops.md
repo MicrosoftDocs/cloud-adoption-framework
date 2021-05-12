@@ -86,7 +86,7 @@ Use Packer to create the image. By using a Packer Pipeline for image management,
 
 The Azure DevOps Project should be private unless your company policy specifies that repositories must be public. We recommend using Git for version control. Amend the project permissions to allow other team members access to the project. Adopt a basic work item process to develop the pipeline and keep your workloads streamlined.
 
-When you use Azure Repositories, initialize the repo with a README file. The file lets you start filling information into the repository about your project. A good structure for the repository is to have two folders in the root of the repository. One called ‘ARM templates’ to store the Azure Resource Manager (ARM) templates, and one for the build you're planning, for example 'Windows 2004 - EVD'.
+When you use Azure Repositories, initialize the repo with a README file. The file lets you start filling information into the repository about your project. A good structure for the repository is to have two folders in the root of the repository: one called `ARM templates` to store the Azure Resource Manager (ARM) templates, and one for the build you're planning, such as `Windows 2004 - EVD`.
 
 When working in Azure DevOps, use variable groups in your pipelines. Variable groups let you have repeatable parameters in your pipelines, such as secrets and names. There are two variable groups. One stores standard variables, and the other is linked to Azure Key Vault. The second group is used to pull across secrets for use in the pipeline.
 
@@ -120,7 +120,7 @@ Windows Virtual Desktop works in many languages. There are two ways we recommend
 
 Microsoft has processes for installing language packs manually or automatically. We recommended keeping as little administration overhead as possible and automating the process of language installation.
 
-The automated process involves downloading a PowerShell script onto the VM that’s being converted to an image. Example automation scripts are found in Microsoft documentation. If you're following the recommendation for Packer pipelines, you can include this process as an extra task.
+The automated process involves downloading a PowerShell script onto the VM that's being converted to an image. Example automation scripts are found in Microsoft documentation. If you're following the recommendation for Packer pipelines, you can include this process as an extra task.
 
 For more information on installing language packs in Windows 10 multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop](/azure/virtual-desktop/language-packs).
 

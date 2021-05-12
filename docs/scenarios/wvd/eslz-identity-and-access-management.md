@@ -15,7 +15,7 @@ Windows Virtual Desktop is a managed service that provides a Microsoft control p
 
 ## RBAC design
 
-RBAC supports separation of duties for the various teams and individuals that manage the deployment of Windows Virtual Desktop. As part of your landing zone design you should decide who assumes the various roles. You then create a security group for each role to simplify adding and removing users to and from the roles.  
+RBAC supports separation of duties for the various teams and individuals that manage the deployment of Windows Virtual Desktop. As part of your landing zone design you should decide who assumes the various roles. You then create a security group for each role to simplify adding and removing users to and from the roles.
 
 Windows Virtual Desktop has custom Azure roles designed for each functional area. Configuration details are in [Built-in roles for Windows Virtual Desktop](/azure/virtual-desktop/rbac). Common roles include:
 
