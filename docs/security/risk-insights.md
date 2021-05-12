@@ -18,7 +18,7 @@ Operating a business comes with risk. A security team's role is to inform and ad
 > [!NOTE]
 > The general rule for risk accountability is:
 >
->The person who owns and accepts the risk is the person that explains to the world what went wrong.
+> The person who owns and accepts the risk is the person that explains to the world what went wrong.
 
 When mature, the goal of security is to expose and mitigate risks, and then provide business change with minimal risk. That level of maturity requires risk insights and deep security integration. At any level of maturity for your organization, the top security risks should appear on the risk register. Those risks are then managed down to an acceptable level.
 
