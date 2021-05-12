@@ -75,7 +75,7 @@ In most cases Windows Virtual Desktop is deployed into a landing zone as part of
 
 ## Windows Virtual Desktop host operating system security
 
-In addition to service level logging for Windows Virtual Desktop, administrators need to have a security strategy inside the guest operating system. Microsoft recommends security tools such as.  
+In addition to service level logging for Windows Virtual Desktop, administrators need to have a security strategy inside the guest operating system. Microsoft recommends security tools such as:
 
 - [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-antivirus/deployment-vdi-microsoft-defender-antivirus) - OS Level Anti-virus and Anti-malware
 - [Threat Protection (Windows 10)](/windows/security/threat-protection/) - Threat Protection overview and details
@@ -85,5 +85,6 @@ In addition to service level logging for Windows Virtual Desktop, administrators
 - [Enable Screen Capture Protection](/azure/virtual-desktop/security-guide#enable-screen-capture-protection-preview) - Protects from remote capture of data
 - [Azure Security Center](/azure/security-center/security-center-services?tabs=features-windows) - Security Audits, Regulatory compliance scanning, Policy Compliance
 - [Windows Security Baselines](/windows/security/threat-protection/windows-security-baselines)
-- For more information on Windows Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
-- For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
+
+For more information on Windows Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
+For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
