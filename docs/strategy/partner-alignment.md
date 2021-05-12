@@ -33,7 +33,7 @@ Completing these steps early, will ensure success of the team when the technical
 
 Throughout the cloud adoption lifecycle, the various teams may require support to be successful. The following are a few examples of the types of help commonly required.
 
-- **Strategy:** Support defining the business strategy and supporting technology strategy.
+- **Strategy:** Support defining the business strategy, building a business case, and supporting technology strategy.
 - **Plan:** Support with discovery of the portfolio, quantitative assessment of the digital estate, development of a cloud adoption plan, creation of a skilling plan.
 - **Ready:** Support deploying a landing zone or full cloud environment capable of supporting the cloud adoption plan.
 - **Migrate:** Assistance migrating workloads or building a migration factory to ensure sound migration processes.
@@ -52,6 +52,7 @@ You are not alone in your cloud journey. There are several options to support yo
 - **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
 - **Azure Migration Program (AMP):** The AMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
+- **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1).
 
 ### Azure solution providers
 
@@ -84,6 +85,10 @@ Watch this short video to get an overview of how the Azure Migration Program can
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4D1vH]
 
 <!-- markdownlint-enable MD034 -->
+
+### Solution assessments
+
+Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer’s data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
 
 ### Azure support
 

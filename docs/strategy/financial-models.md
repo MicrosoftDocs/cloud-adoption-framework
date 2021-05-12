@@ -31,24 +31,25 @@ When you're planning your business case to migrate to the cloud, there are sever
 
 **Projections: On-premises costs in on-premises scenario**. Forecast what your on-premises costs will be if you don’t migrate to the cloud.
 
-**Projections: On-premises costs in Azure scenario**: Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario.
+:::image type="content" source="media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
+
+**Projections: On-premises costs in Azure scenario**: Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
+
+:::image type="content" source="media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
 **Projections: Migration timeline and Azure costs (optimized)**. Project what migration timeline and the Azure costs will be with a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
 A business case isn't just a point-in-time view. It’s a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
 
-Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan
+Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan.
+
+As a final step, when you create your business case, you want to compare the cloud environment to an on-premises or status quo scenario. You can take your Azure view and compare it to your on-premises or status quo scenario with no migration so you can assess the benefit of migrating to the cloud. The Azure view will show on-premises costs that are being reduced over time, your Azure environment costs, and any migration costs associated with shifting to a cloud environment.
 
 :::image type="content" source="media/create-financial-plan/cloud-on-premises-comparison.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
-As a final step, when you create your business case, you want to compare the cloud environment to an on-premises or status quo scenario.
-The Azure view will show on-premises costs that are being reduced over time, your Azure environment costs, and any migration costs associated with shifting to a cloud environment.
+## Cloud savings provide for future investment
 
-It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration all of the core benefits that Microsoft can address, and the Azure billing models provide.
-
-## Savings opportunities
-
-Cloud billing models and offers differ from on-premises however, they can create meaningful savings opportunities you can take advantage of to reduce cloud costs:
+Cloud billing models and offers differ from on-premises however, they can create meaningful savings opportunities you can take advantage of to reduce cloud costs. Saved costs from cloud adoption can be reinvested into iterative modernization. Cloud costs are flexible, and can be reduced with:
 
 **Azure Hybrid Benefit**: Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](/pricing/hybrid-benefit/).
 
@@ -59,8 +60,6 @@ Cloud billing models and offers differ from on-premises however, they can create
 **Azure Dev/Test pricing**: Take advantage of discounted rates for your development and testing, including the Microsoft software charges on Azure Virtual Machines and special dev and test pricing on other services. For more information, see [Azure Dev/Test pricing](/pricing/dev-test/).
 
 **Extended security updates**: Receive continued support for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which has reached the end of their support (EOS) life cycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine. To learn more, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
-
-You can take your Azure view and compare it to your on-premises or status quo scenario with no migration so you can assess the benefit of migrating to the cloud.
 
 ## Tools
 
@@ -97,7 +96,7 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 ## Next steps
 
-Learn more about Common finance vocabulary terms.
+Learn more about how to share your strategy and business case to migrate to the cloud:
 
 > [!div class="nextstepaction"]
-> [Common finance vocabulary terms](./finance-vocabulary-terms.md)
+> [Share your strategy](./share-your-strategy.md)
