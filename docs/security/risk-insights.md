@@ -30,11 +30,11 @@ While these attacks happen in the technical environment, they often represent a 
 
 The following diagram shows the shift from a typical technically oriented program to a business framework.
 
-:::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Risk Transformation" lightbox="./media/technical-to-business-transformation-popout.png":::
+:::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Diagram that shows the shift from a typical technically oriented program to a business framework." lightbox="./media/technical-to-business-transformation-popout.png":::
 
 Security leaders must step back from the technical lens and learn what assets and data are important to business leaders. Then prioritize how teams spend their time, attention, and budget relating to business importance. The technical lens is reapplied as the security and Information Technology (IT) teams work through solutions. But looking at cybersecurity risk only as a technology problem runs the risk of solving the wrong problems.
 
-## Process for aligning security risk management
+## Align your security risk management
 
 Continuously work to build a stronger bridge between cybersecurity and your organizational leadership. This concept applies to both human relationships and explicit processes. The nature of security risk and the divergent dynamics of business opportunities are always changing. Security risk sources require ongoing investment into building and improving this relationship.
 
@@ -56,7 +56,7 @@ The typical process of starting this transformation is:
      - Use **Zero trust** to create a strategy, plan, and architecture for reducing risks in your organization. Align them with the [zero trust](https://aka.ms/zerotrust) principles of assuming breach, least privilege, and explicit verification. Adopting these principles shifts from static controls to more dynamic risk-based decisions. These decisions are based on real-time detections of strange behavior no matter where the threat started.
      - **Lower technical debt** as a consistent strategy by operating security best practices across the organization. For example, replace password-based authentication with passwordless and multi-factor authentication (MFA), apply security patches, and retire or isolate legacy systems. Like paying off a mortgage, you must make steady payments to realize the full benefit and value of your investments.
      - **Apply data classifications, sensitivity labels, and role-based access controls** to protect data from loss or compromise throughout its lifecycle. These efforts can’t completely capture the dynamic nature and richness of business context and insight. But these key enablers are used to guide information protection and governance, limiting the potential impact of an attack.
-3. **Establish a healthy [security culture](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/define-security-strategy#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues. Then apply that focus to a ‘growth mindset’ of continuous learning. Focus culture changes on removing silos from security, IT, and the larger business organization. These changes achieve greater knowledge sharing and resilience levels.
+3. **Establish a healthy [security culture](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues. Then apply that focus to a ‘growth mindset’ of continuous learning. Focus culture changes on removing silos from security, IT, and the larger business organization. These changes achieve greater knowledge sharing and resilience levels.
 
 For more information, see [Define a security strategy](https://aka.ms/securitystrategy).
 
@@ -68,7 +68,7 @@ Cybersecurity risk is caused by human attackers trying to steal money, informati
 
 The motivations and incentives for different types of attackers mirror those of legitimate organizations.
 
-:::image type="content" source="./media/attacker-motivations.png" alt-text="Risk Transformation" lightbox="./media/attacker-motivations-popout.png":::
+:::image type="content" source="./media/attacker-motivations.png" alt-text="Diagram that shows the motivations of attackers." lightbox="./media/attacker-motivations-popout.png":::
 
 Understanding the attackers' motivations can help you understand the likelihood and potential impact of different types of attacks. While the security strategies and most important technical controls are similar across organizations, this context can help guide your security investment focus areas.
 
