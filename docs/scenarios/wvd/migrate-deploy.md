@@ -7,7 +7,7 @@ ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore NTFS Logix -->

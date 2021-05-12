@@ -65,7 +65,7 @@ Motivations to adopt a Windows Virtual Desktop platform in the cloud are often b
 
 [Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts associated with Windows Virtual Desktop cloud adoption.
 
-The [Forrester study on the total economic impact of Microsoft Azure for Windows Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-windows-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting//) offers an analysis where the following justifications are typically defendable:
+The [Forrester study on the total economic impact of Microsoft Azure for Windows Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-windows-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD

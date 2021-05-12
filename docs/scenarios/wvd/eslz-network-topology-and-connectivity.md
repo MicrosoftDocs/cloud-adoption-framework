@@ -65,7 +65,7 @@ The following questions help you make decisions based on the Azure networking se
 
 ## Understand common networking scenarios
 
-Azure networking includes products and services that provide different networking capabilities. As part of your networking design process, compare your workload requirements to  networking scenarios. Identify the Azure tools or services that provide these networking capabilities:
+Azure networking includes products and services that provide different networking capabilities. As part of your networking design process, compare your workload requirements to networking scenarios. Identify the Azure tools or services that provide these networking capabilities:
 
 | Scenario | Networking product or service |
 | --- | --- |

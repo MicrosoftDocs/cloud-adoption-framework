@@ -37,19 +37,19 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 - Windows Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Azure Active Directory (Azure AD), or an instance of Azure AD Domain Services (Azure AD DS) synchronized from Azure AD.
   > [!NOTE]
   > Windows Virtual Desktop does not support B2B or Microsoft Accounts.
-- The account used for domain join can't have multi-factor authentication or other interactive prompts, and there are other requirements. See [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details) for more information.
+- The account used for domain join can't have multi-factor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Windows Virtual Desktop requires AD DS or Azure AD DS.
 - Choose a hosting strategy for domain services, either Azure AD DS or AD DS.
-- When joining to an Azure AD DS domain, the account must be part of the Azure AD DC Administrators group and the account password must work in Azure AD DS. See [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details) for more information.
+- When joining to an Azure AD DS domain, the account must be part of the Azure AD DC Administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Azure AD DS is a supported option, but there are limitations:
   - You must have password hash synchronization enabled (uncommon when federating Azure AD).
   - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-Public IP address range. You can't add domain controllers to an Azure AD DS domain.
   - You can't fail over Azure AD DS to another region for disaster recovery.
 
-   See [Frequently asked questions (FAQs) about Azure Active Directory (AD) Domain Services](/azure/active-directory-domain-services/faqs) for more information.
+   For more information, see [Frequently asked questions (FAQs) about Azure Active Directory (AD) Domain Services](/azure/active-directory-domain-services/faqs).
 - When specifying an organizational unit, use the distinguished name without quotation marks.
-- Follow the principle of least privilege—assign the minimum permissions needed for authorized tasks.
-- The UserPrincipalName used to subscribe to Windows Virtual Desktop must exist in the Active Directory domain where the session host virtual machine is joined. For more information about user requirements, see [What is Active Directory?—Requirements](/azure/virtual-desktop/overview#requirements).
+- Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks.
+- The UserPrincipalName used to subscribe to Windows Virtual Desktop must exist in the Active Directory domain where the session host virtual machine is joined. For more information about user requirements, see [Windows Virtual Desktop requirements](/azure/virtual-desktop/overview#requirements).
 - When using Smartcards, a direct connection (line of sight) with an Active Directory domain controller for Kerberos authentication is required. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Windows Virtual Desktop. For more information, see [Hybrid Azure AD joined Certificate Trust Deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or Smartcard authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
@@ -58,7 +58,7 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 ## Design recommendations
 
 - Use Azure AD Connect to synchronize all identities to a single Azure AD tenant. For more information, see [What is Azure AD Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect) .
-- Ensure Windows Virtual Desktop Session Hosts can communicate with with Azure AD DS or AD DS.
+- Ensure Windows Virtual Desktop Session Hosts can communicate with Azure AD DS or AD DS.
 - Use the KDC proxy solution to proxy Smartcard authentication traffic and to sign in remotely. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Segregate Session Host virtual machines into Active Directory organization units for each host pool to more easily manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Use a solution like Local Administrator Password Solution (LAPS) to rotate local administrator passwords on Windows Virtual Desktop session hosts frequently. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).

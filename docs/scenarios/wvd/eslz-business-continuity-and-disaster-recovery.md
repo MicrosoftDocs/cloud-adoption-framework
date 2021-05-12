@@ -11,8 +11,7 @@ ms.subservice: ready
 
 # Business Continuity and Disaster Recovery (BCDR) for Windows Virtual Desktop Enterprise-scale scenario
 
-Windows Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment.
-The service is free of charge, and Microsoft doesn't offer a financially backed [service level agreement](https://azure.microsoft.com/support/legal/sla/virtual-desktop) (SLA). Despite having no SLA, we try to achieve at least 99.9% availability for the Windows Virtual Desktop service URLs.
+Windows Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment. The service is free of charge, and Microsoft doesn't offer a financially backed [service level agreement](https://azure.microsoft.com/support/legal/sla/virtual-desktop) (SLA). Despite having no SLA, we try to achieve at least 99.9% availability for the Windows Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
@@ -73,11 +72,11 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 In Windows Virtual Desktop, multiple replication mechanisms and strategies can be used for user data in [FSLogix](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) containers:
 
-- **Profile Pattern #1**: Native Azure storage replication mechanisms. For example, Azure Files Standard [Geo Replicated Storage (GRS) replication](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region), Azure NetApp Files [Cross Region Replication](/azure/azure-netapp-files/cross-region-replication-introduction), or Azure [Files Sync](/azure/storage/files/storage-sync-files-deployment-guide) for VM-based file servers.
+- **Profile Pattern #1:** Native Azure storage replication mechanisms. For example, Azure Files Standard [Geo Replicated Storage (GRS) replication](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region), Azure NetApp Files [Cross Region Replication](/azure/azure-netapp-files/cross-region-replication-introduction), or Azure [Files Sync](/azure/storage/files/storage-sync-files-deployment-guide) for VM-based file servers.
 
-- **Profile Pattern #2**: FSLogix [Cloud Cache](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) has a built-in automatic mechanism to replicate containers between different (up to 4) storage accounts.
+- **Profile Pattern #2:** FSLogix [Cloud Cache](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) has a built-in automatic mechanism to replicate containers between different (up to 4) storage accounts.
 
-- **Profile Pattern #3**: Only set up geo disaster recovery for application data and not for user data or profile containers. Store important application data in separate storages, like OneDrive or other external storage with its own built-in disaster recovery mechanism.
+- **Profile Pattern #3:** Only set up geo disaster recovery for application data and not for user data or profile containers. Store important application data in separate storages, like OneDrive or other external storage with its own built-in disaster recovery mechanism.
 
 ### Golden image availability
 

@@ -21,8 +21,7 @@ This article on automation focuses on the operational tasks you need to run a Wi
 
 As organizations scale out their environment, most of the workload falls under a *pooled* configuration instead of *personal*. Personal is correct for specific workloads, like developers. Since developers usually need elevated permissions, personal is often more expensive to run than a pooled configuration.
 
-If you run host pools in personal mode, try to maintain the machines like you maintain your physical desktops. This method reduces the amount of tooling in your environment.
-Since pooled is the most popular configuration and specific to desktop virtualization, it's the focus of this article.
+If you run host pools in personal mode, try to maintain the machines like you maintain your physical desktops. This method reduces the amount of tooling in your environment. Since pooled is the most popular configuration and specific to desktop virtualization, it's the focus of this article.
 
 You'll update pooled environments differently than in a traditional environment. The virtual machines (VMs) should be updated from a gold image at the correct cadence for your organization. That cadence is usually every 1-3 months. In highly automated organizations, it's possible to increase that cadence to weekly or even nightly if needed.
 
@@ -72,7 +71,7 @@ There are two approaches to updating the image that VMs in a host pool are based
 
 ### Host pool creation
 
-You can decide to update VMs in place, or create a side-by–side environment for updating your host pools. Either way, automating the creation process for your host pool provides you with consistent and reliable results. Even in an environment where the host pools are static, you might want to move your host pool metadata to a new geographical location. This movement is recommended because new locations are made available over time.
+You can decide to update VMs in place, or create a side-by-side environment for updating your host pools. Either way, automating the creation process for your host pool provides you with consistent and reliable results. Even in an environment where the host pools are static, you might want to move your host pool metadata to a new geographical location. This movement is recommended because new locations are made available over time.
 
 ## Design recommendations
 

@@ -43,8 +43,7 @@ Unless this implementation is your organization's first or only deployment to th
 
 ### Inventory and visibility
 
-Monitoring Windows Virtual Desktop uses the tools, dashboards, and alerts in your operations baseline.
-However, you might need to add extra configuration to integrate data from your virtual desktop into operations monitoring tools like [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor).
+Monitoring Windows Virtual Desktop uses the tools, dashboards, and alerts in your operations baseline. However, you might need to add extra configuration to integrate data from your virtual desktop into operations monitoring tools like [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor).
 
 Once you've configured Azure Monitor to collect data on your virtual desktop, you can monitor the following areas as part of your centralized management processes:
 
