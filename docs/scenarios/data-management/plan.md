@@ -1,6 +1,6 @@
 ---
-title: Enterprise Scale Analytics and AI Define Strategy
-description: Enterprise Scale Analytics and AI Define Strategy
+title: Building a plan for 'data management and analytics'
+description: Building a plan for 'data management and analytics'
 author: pratimdas
 ms.author: prda # Microsoft employees only
 ms.date: 01/27/2021
@@ -9,42 +9,19 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Defining a Data Strategy Overview
+# Develop a plan for 'data management and analytics'
 
-Leveraging data to build better products and higher value services as a point of competitive advantage is nothing new. What is new is the volume, velocity, and variety of data that has been enabled by cloud computing. Designing a modern data analytics platform in the cloud is the convergence of security, governance, monitoring, on-demand scaling, data-ops, and self-service. What distinguishes a great data strategy from a good one is understanding how these facets interplay. We use tools like the Cloud Adoption Framework and the Well Architected Framework to ensure architectural cohesiveness, integrity, and best practices.
+[Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud.
 
-## Identify potential challenges and roadblocks to overcome
+Much of the guidance in the Plan methodology focuses on the [five rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall [analytics maturity](./intro-analytics-maturity.md) and the [data governance practices](./intro-data-governance.md) required to support the desired maturity.
+
+## Prepare for potential challenges and roadblocks early
 
 It can be difficult to harness the power of data in a secure and compliant manner. Sometimes, you can run into challenges like organizational silos, building a data-driven culture, and a never-ending challenge coming out of running multiple tools and technologies across the organization. Time to market is one of the most critical factors these days for all businesses. Organizations can have great ideas and data can be an enabler, but with so many challenges it can take weeks, if not months, before they can start getting insights and ultimately deliver business value from data.
 
-## Understand the 7 attributes of data for a strong data strategy
+## Data estate rationalization
 
-To build a strong data strategy, you first need to understand how data works. Understanding these core characteristics will help you build a principled practice around how to deal with data.
-
-1. Data travels fast, but the velocity of data movement cannot defy the laws of physics. It must conform to the laws of the land or the industry that created it.
-1. Data never changes by itself, but it is prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. Ensure controls, databases and storage anti-corruption measures, monitoring, audits, alerts and downstream processes are in place to deal planned or unforeseen changes.
-1. Data by itself, and simply though the act of storing it, does not produce any insights or yield any value. In order to discover insights or extract value, most (if not all) data, independent of the volume, velocity, variety and veracity, has to go through four discrete steps: ingestion, storage, processing, and analytics. These each have their own set of principles, processes, tools, and technologies. Withholding data assets and related insights may affect socio-economic, political, research and investment decisions, hence it is of paramount importance for organizations to build the capability to provide insights in a secure and responsible manner.
-1. All data generated or procured must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit.
-1. Data has gravity. This means that data, applications, and services all have their own gravitational pull. But data is the heaviest here, and therefore has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects; instead, latency and throughput act as accelerators to the analytics process.
-1. Latency, throughput, and ease of access often warrants that data is duplicated even when that is not the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against organization's data polices.
-1. The speed at which data can be processed is governed by architectural constructs, and facilitated through innovations in software, hardware, and networking. Some of the key architectural considerations are: setting up data distribution, partitioning, cache technologies, batch vs stream-processing, and balancing backend vs client-side processing.
-
-## Prioritize the business outcomes you want your data strategy to achieve
-
-It is key to align your data strategy with your business outcomes. Having a successful data strategy will give you competitive advantage. In essence, most business outcomes can be classified under one or more of these four umbrella categories:
-
-1. **Empower your employees**  
-Consider enabling your workforce with real-time knowledge of customers/devices/machines, efficiently collaborating to meet customer or business needs with agility.
-2. **Engage with customers**
-Deliver a personalized, rich, connected experience, inspired through your brand. Drive loyalty along every step of the customer journey by harnessing the power of data and insights.
-3. **Optimise operations**  
-Increase the flow of information across your entire business operation. Keep your business processes synchronized and make every interaction valuable through a data driven approach.
-4. **Transform your products and development lifecycle**
-Gather telemetry data about your services and offerings. Use the data to prioritize a release or create a new feature, and evaluate effectiveness and adoption continuously.
-
-Once you have prioritized your business outcomes, it is key to look at current projects, long-term strategic initiatives and classify them accordingly. Consider combining the 4 business outcomes in a matrix format shown below, based on complexity and impact. Also, think about adding the architectural pillars to help you dive deeper into the scenario.
-
-## Benchmark your current data estate and capability
+To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives which represent little business value could easily be included in you cloud migration plan to deliver quick efficiency gains. Initiatives with greater business impact and greater technical complexity would likely require richer planning to enable long term innovation value.
 
 ![Strategic Initiative](./images/strategicinitiative.png)
 
@@ -63,94 +40,6 @@ To can help you get started. Here is a table showing the thought process:
 Table 1: Assessing your current estate and capability is key in ensuring you can track progress and celebrate success. Using the maturity level detailed further below, you can rate your current capability 0-4 and use the 5 pillars of architecture to guide those benchmarks.
 
 Once you're clear about the business outcomes you're looking to drive through your data strategy, the next step is to build the capability to deliver them.
-
-## Building a capability organization-wide and project-wide
-
-Now that you have your key projects mapped with business outcomes and calibrated with impact and complexity, and your baseline, you can start looking at building the capability to deliver them.
-
-The first step would be to look at all capabilities you need, either at an organizational level holistically, or at a project level. Start by mapping what you have.
-
-### Capabilities to As Is Capabilities
-
-![A table showing guidance on building capabilities](./images/capablityasis.png)
-
-Figure 1: Exercise 1, assessing current capability.
-
-As a next step, look at Azure native services, and start mapping what you need to deliver success.
-
-![A table showing cloud-native capabilities for your data strategy](./images/capablitymapazure.png)
-Figure 2: Exercise 2, mapping to cloud native capabilities.
-
-## Culture
-
-To build a successful data strategy, you need a data-driven culture. One that fosters open, collaborative participation consistently. This is so the entire workforce can learn, communicate and improve the organization's business outcomes. It will also improve an employee's own ability to generate impact or influence, backed by data. Where you start on the journey will depend on your organization, your industry, and where you in the maturity curve. Let's look at what a maturity curve looks like:
-
-### Level 0
-
-Data is not exploited programmatically and consistently. The data focus within the company is from an application development perspective. On this level, we commonly see ad-hoc analytics projects. Additionally, each application is highly specialized to the unique data and stakeholder needs. Each has significant code bases and engineering teams, with many being engineered outside of IT as well. Finally, use case enablement – as well as analytics – are very siloed.
-
-### Level 1
-
-Here, we see teams being formed, strategy being created, but analytics still is departmentalized. At this level, organizations tend to be good at traditional data capture and analytics. They may also have a level of commitment to cloud-based approaches; for example, they may already be accessing data from the cloud.
-
-### Level 2
-
-The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization is able to answer a few 'why' questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent apps that bring compute to the centrally governed data lake(s), reducing the need for federated copies of key data, reducing GDPR and privacy risks as well as reducing compute costs. They are also ready for multi-tenantable ,centrally hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science driven Intelligence Services.
-
-### Level 3
-
-Some of the characteristics of this level are a holistic approach to data and projects related to data being deeply integrated with business outcomes. We would also see predictions being done using analytics platforms. At this level, organizations are unlocking digital innovation from both a data estate and application development perspective. They have the foundational data services including data lake(s) and shared data services in place. Multiple teams across the company are successfully delivering on critical business workloads, key business use cases, and measurable outcomes. Telemetry is being utilized to identify new shared data services. IT is a trusted advisor to teams across the company to help improve critical business processes through the end-to-end trusted and connected data strategy.
-
-### Level 4
-
-Here we see the entire company using a data-driven culture, frameworks and standards enterprise. We also see automation, centres of excellence around analytics and/or automation, and data-driven feedback loops in action. One of the outcomes of a data-driven culture, is the use of AI in a meaningful way, and here it is easy to define a maturity model as the one shown below.
-
-![Maturity evolution of organization](./images/datastratmaturity.png)
-Figure 3: Maturity evolution of organization across reporting, deriving insights & decision support.
-
-## Focus on architecture
-
-When considering every data product or service, it's important to focus on the architectural principals. Think about whether you want to continue to manage and maintain your current service or products, or undertake new ones. The five architectural constructs are detailed in the [Azure Well Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) and summarized below.  
-
-### Security
-
-This is about the [confidentiality and integrity of data, including privilege management, data privacy and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/). For all data products and services, [consider network isolation](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices), [end-to-end encryption](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview), auditing and polices at platform level. For identity, consider single sign on integration, multi-factor authentication backed conditional access and managed service identities. It is essential to focus on separation of concerns, such as control pane versus data place, [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC). Security and [data management](https://docs.microsoft.com/azure/architecture/patterns/category/data-management) must be baked into the architectural process at layers for every application and workload. In general, set up processes around regular or continuous vulnerability assessment, threat protection and compliance monitoring.
-
-### Reliability
-
-Everything has the potential to break and data pipelines are no exception. Hence, great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change, and how quickly you can resume operations. When building your data platform, consider resilient architectures, cross region redundancies, service level SLAs and critical support. Set up auditing, monitoring, and alerting by using integrated monitoring, and a notification framework.
-
-### Performance efficiency
-
-User delight comes from the architectural constructs of performance and scalability. Performance can vary based on external factors. It is key to continuously gather performance telemetry and react as quickly as possible, i.e. using the architectural constructs for management and monitoring. The key considerations here are storage and compute abstraction, dynamic scaling, partitioning, storage pruning, enhanced drivers, and multi-layer cache. Take advantage of hardware acceleration such as FPGA network where possible.
-
-### Cost optimization
-
-Every bit of your platform investment must yield value. It is critical to architect with the right tool for the right solution in mind. This will help you analyse spend over time and the ability to scale out versus scale in when needed. For your data and analytics platform, consider reusability, on-demand scaling, reduced data duplication and certainly take advantage of the Azure advisor service.  
-
-### Operational excellence
-
-This is about making the operational management of your data products and service as seamless as possible through automation and your ability to quickly respond to events. Focus on data ops though process automation, automated testing, and consistency. For AI, considering building in a MLOps framework as part of your normal release cycle.
-
-## Tools and technology to power your data strategy
-
-The right set of tools and technologies will be the backbone for your data products and services. Here are some of the key considerations to take.
-
-Avoid getting stuck in a never-ending learning or design loop, otherwise known as analysis paralysis, or building PoC after PoC. Beyond a certain point, additional time spent in this cycle does not add equivalent value to your organization's business objectives.
-
-## Think big, start small, and act fast
-
-Even if you don't have 100 percent of the features from the get-go, it is more important to get started in delivering business value iteratively. Leave the rest to product innovation from vendors and the capability you going to build with each iteration. Growth mindset is cultivated best when we accomplish more with less. This balance is an art, it fosters creativity and innovation.
-
-Simplification is key. At Microsoft, we have been innovating on behalf of our customers. We have many services for data procurement and many more for storage – depending on the volume, variety, velocity, and veracity. Similarly, an array of services for analytics, visualization, and data science. Despite the flexibility and options, we understand that simplicity is important. A holistic solution that you can get started with immediately makes it easy to see return of investment quicker. For example, we see [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/) as a category in its own right. It has ample integration options in your current estate, as well as ISV solutions.
-
-In a nutshell, what we have created is a single integrated platform for BI, AI and Continuous Intelligence. This is wrapped under four foundational capabilities of: management, security, monitoring and a metastore. Underpinning this is a decoupled storage layer, data integration layer, analytics runtimes (either on-demand as serverless, or provisioned). The runtimes provide choice, such as SQL with T-SQL for batch and interactive processing, or Spark for big data, and support of most languages such as SQL, Python, .NET, Java, Scala and are all made available through a single interface called Synapse Analytics Studio.
-
-![Azure Synapse Analytics for integrated data platform experience, BI, AI, and continuous intelligence as part of your data strategy](./images/datastratsynapse.png)
-
-Figure 4: Azure Synapse Analytics for integrated data platform experience for BI, AI and continuous intelligence.
-
-This principled approach will help you shift from an application-only approach to an application and data-led approach. This will help your organization build an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
 ## A principled approach to your data strategy
 
@@ -190,12 +79,6 @@ Azure Enterprise Scale Analytics and AI Construction Set helps collate all the f
 
 Now that we have covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end to end data governance capability.  
 
-## Building Blocks
-
-After making all the capability provisions, and taking a principled architectural view as discussed in this section, you will most likely end up with the building blocks required for your cloud strategy journey which may look something like the below:
-
-![Building Blocks lifecycle](./images/datastratbuildingblock.png)
-
 ## Data Strategy Summary
 
 Taking a principled approach on additional, but very relevant considerations, such as data governance and responsible AI will pay dividends later.
@@ -212,18 +95,51 @@ The pivot to becoming a data-driven organization is fundamental to deliver compe
 
 ![Unlocking Innovation](./images/datastratinnovation.png)
 
-## Further Reading
+## Develop a skilling plan
 
-* [Explore the Azure Well Architected Framework](https://docs.microsoft.com/azure/architecture/framework/)
-* [Driving effective data governance for improved quality and analytics](https://www.microsoft.com/itshowcase/driving-effective-data-governance-for-improved-quality-and-analytics)
-* [Designing a modern data catalog at Microsoft to enable business insights](https://www.microsoft.com/itshowcase/designing-a-modern-data-catalog-at-microsoft-to-enable-business-insights)
-* [Download: A Guide to Data Governance](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GEtu)
+Clear mapping out the Product, Services or Tools capabilities Maturity Assessment along with People skills, who will help deliver on the achieving the overall objectives.
+
+![Who Can Transform](./images/whocantransform.png)
+
+The above is not an exhaustive list by any means and could vary depending on the organization type/structure.
+
+### Assess Capability Maturity
+
+There must be an exercise in assessing the Data Analytics & AI capabilities required to deliver on a specific use case, holistically or at an organizational level. However, there has to be some guiding principles/process to go about the assessment:
+
+- Define current capabilities and ambition
+- Identify risks and blockers to progress
+- Clearly state benefits and key stakeholders
+- Link benefits to stated business objectives
+- Identify key dependencies
+
+As a next step, look at Azure native services, and start mapping what you need to deliver success.
+
+Along with capability maturity assessment, culture is also another important aspect which is the key focus of this framework to make it successful.
+
+### Initial org alignment: Center of Excellence
+
+Center of Excellence would assist in:
+
+- Driving adoption, standards, best practices and innovation
+- Funded team for full delivery and specialist skills provision
+- Deep technical skills in key technologies
+- Active participation and evangelizing in Communities of Practice
+
+![Strategy Cycle](./images/strategycycle.png)
+
+### Adopting Agile Delivery Method
+
+Agile is the ability to create and respond to change. It is a way of dealing with, and ultimately succeeding in, an uncertain and turbulent
+environment.
+
+It's really about thinking through how you can understand what's going on in the environment that you're in today, identify what uncertainty you're facing, and figure out how you can adapt to that as you go along.
+
 
 ## Next step: Assess for 'data management and analytics'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-* [Plan for 'data management and analytics'](./plan.md)
 * [Review your environment or Azure Landing Zone(s)](./ready.md)
 * [Assess for 'data management and analytics' migration](./migrate-assess.md)
 * [Migrate 'data management and analytics'](./migrate-deploy.md)

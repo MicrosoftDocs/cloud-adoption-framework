@@ -13,11 +13,18 @@ items:
       href: intro-analytics-maturity.md
     - name: Intro to data governance
       href: intro-data-governance.md
+    - name: Technology to support analytics maturity
+      href: synapse.md
 
   - name: Build an initial strategy
-    href: ./eslz-datastrategy.md
+    href: strategy.md
   - name: Define your plan
-    href: plan.md
+    items:
+    - name: Building your plan
+      href: plan.md
+    - name: Building capabilities
+      href: capabilities.md
+
   - name: Prepare your environment
     items:
     - name: Azure Landing Zones for data management and analytics
@@ -103,20 +110,10 @@ items:
           href: ./eslz-deployment-models.md
 
 
-  - name: Well-Architected workloads (TBD)
+  - name: Well-Architected data workloads
     items:
-    - name: Overview (TBD)
-      href: index.md
-    - name: Cost Optimization (TBD)
-      href: index.md
-    - name: Operational excellence (TBD)
-      href: index.md
-    - name: Performance Efficiency (TBD)
-      href: index.md
-    - name: Reliability (TBD)
-      href: index.md
-    - name: Security (TBD)
-      href: index.md
+    - name: Placeholder
+      href: waf-placeholder.md
 
   - name: Architectures
     items:
@@ -206,5 +203,5 @@ items:
 
   - name: Learn modules (TBD)
     items:
-    - name: Links to learn modules for data management and governance
-      href: https://docs.microsoft.com/en-us/learn/
+    - name: Data analytics for developers
+      href: https://docs.microsoft.com/learn/paths/data-analytics-microsoft/?ocid=AID3020565
