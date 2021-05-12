@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Managing secrets in a secure way
 
-Managing company sensitive secrets, keys and certificates aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
+Managing company sensitive secrets, keys and certificates (and associated private keys) aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
 
 Before continuing, it is highly recommended the process of documenting the following items within your organization so your alignment with these best practices can be put into action smoothly:
 
@@ -58,8 +58,8 @@ Understanding alternatives to using Azure Key Vault and adhering to the External
 
 There are different types of "keys" that can be used within various Azure services:
 
-- Keys used for encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
-- Keys used for connectivity to various Azure services
+- Keys used for cryptographic keys, for example, encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
+- Keys used for connectivity (also known as a token for authenatication "AuthN" and/or authorization "AuthZ") to various Azure services
 
 ### **Keys used for encryption**
 
