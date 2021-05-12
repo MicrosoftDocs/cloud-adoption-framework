@@ -13,6 +13,8 @@ ms.subservice: overview
 
 Describe 'data management and analytics' in a way that non-technical audiences can understand.
 
+![Analytics scope](./media/analytics.png)
+
 # 'data management and analytics' responsibilities
 
 Describe who is responsible for 'data management and analytics'. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
