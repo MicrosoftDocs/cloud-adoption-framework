@@ -24,11 +24,11 @@ The following are examples of innovation from the layers of abstraction provided
 
 - Data and innovation anywhere
 
-  Using application portability lets data live where it makes the most sense for your users. Applications can follow the data. This approach encourages data democratization and application innovation. Azure Arc for data and Azure Arc for Kubernetes offer management consistency when applications and data move to various environments. This approach allows developers to focus more on the app and the data, instead of the cloud or infrastructure.
+  Using application portability lets data live where it makes the most sense for your users. Applications can follow the data. This approach encourages data democratization and application innovation. Azure Arc enabled data services and Azure Arc enabled Kubernetes offer management consistency when applications and data move to various environments. This approach allows developers to focus more on the app and the data, instead of the cloud or infrastructure.
 
 - Modernize your datacenter
 
-  Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure Application Services for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
+  Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure Application Service for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
 
 - Application platforms for the edge
 
@@ -36,7 +36,7 @@ The following are examples of innovation from the layers of abstraction provided
 
 - Workload portability
 
-  Standardize and centralize container orchestration around Kubernetes, Azure Kubernetes Service, or Azure Application Services for Kubernetes with Arc. This approach enables portability of workloads across instances of the common application platform running on public cloud, private cloud, and edge environments.
+  Standardize and centralize container orchestration around Kubernetes, Azure Kubernetes Service, or Azure Application Service for Kubernetes with Arc. This approach enables portability of workloads across instances of the common application platform running on public cloud, private cloud, and edge environments.
 
 ### Democratize data
 
@@ -48,8 +48,8 @@ Using new applications can further extend the capabilities of a common runtime.
 
 - Developers create their own Power Apps and Power Automate solutions to extend professional applications. These applications can empower business teams from sales, payroll, finance, and others.
 - Add intelligence to your applications with speech, text, vision, and chat bots. Include intelligent experiences in the public cloud, private cloud, or on the edge with web apps or serverless functions.
-- Azure Application Services provides an Azure-native runtime. Building on that application platform accelerates development. It also offers Azure-native features like Intelligent experiences.
-- Azure Application Services offers workload portability. Azure Application Services allows developers to build solutions in the cloud or edge environment that best meets their needs. You can delay governance, compliance, and security decisions until later in the development cycle.
+- Azure Application Service provides an Azure-native runtime. Building on that application platform accelerates development. It also offers Azure-native features like intelligent experiences.
+- Azure Application Service offers workload portability. Azure Application Service allows developers to build solutions in the cloud or edge environment that best meets their needs. You can delay governance, compliance, and security decisions until later in the development cycle.
 
 To learn more about ways you can build applications on various modern app platforms using the consistent runtimes provided by Azure, see [Tools to engage via applications in Azure](../../innovate/best-practices/apps.md).
 
@@ -59,7 +59,7 @@ Bring the business integration of your modern app platform to your environment:
 
 - Mobile experiences
 
-  Extend applications through the rapid development of mobile apps using the Azure Application Services runtime.
+  Extend applications through the rapid development of mobile apps using the Azure Application Service runtime.
 
 - Azure IoT
 
