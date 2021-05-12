@@ -92,7 +92,7 @@ Preventing data loss for critical user data is important.
 2. Consider the appropriate mechanism to provide protection for critical user data.
 
    - You can use the [Azure Backup](/azure/backup/backup-overview) service to protect Profile and Office Containers data when it's stored on Azure Files Standard and Premium tiers.
-   - You can use Azure NetApp Files [Snapshots](azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [Policies](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies) for Azure NetApp Files on all tiers.
+   - You can use Azure NetApp Files [Snapshots](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [Policies](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies) for Azure NetApp Files on all tiers.
    - You can use Azure Backup to protect host pool VMs. This practice is supported even if host pool VMs are stateless.
 
 ### Infrastructure and application dependencies
