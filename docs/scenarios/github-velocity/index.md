@@ -46,7 +46,7 @@ With IaC, teams make changes to the environment description and version the conf
 
 See the [AzOps](https://github.com/Azure/azops) GitHub action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you're new to Resource Manager templates or IaC, you can also browse the [azure-quickstart-templates repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find the template that you wish to deploy, and select the **Deploy to Azure** button to test how it works.
 
-![Screenshit of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
+![Screenshot of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
 
 ### Cloud pattern components and best practices
 

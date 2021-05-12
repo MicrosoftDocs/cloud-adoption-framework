@@ -6,7 +6,7 @@ ms.author: janet
 ms.date: 04/14/2020
 ms.topic: article
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: internal
 ---
 

@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 05/12/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: internal
 ---
 
