@@ -17,14 +17,14 @@ This article on automation focuses on the operational tasks you need to run a Wi
 
 ## Design considerations
 
-### Pooled vs personal
+### Pooled vs. personal
 
 As organizations scale out their environment, most of the workload falls under a *pooled* configuration instead of *personal*. Personal is correct for specific workloads, like developers. Since developers usually need elevated permissions, personal is often more expensive to run than a pooled configuration.
 
 If you run host pools in personal mode, try to maintain the machines like you maintain your physical desktops. This method reduces the amount of tooling in your environment.
 Since pooled is the most popular configuration and specific to desktop virtualization, it's the focus of this article.
 
-You'll update pooled environments differently than in a traditional environment. The Virtual Machines (VMs) should be updated from a gold image at the correct cadence for your organization. That cadence is usually every 1-3 months. In highly automated organizations, it's possible to increase that cadence to weekly or even nightly if needed.
+You'll update pooled environments differently than in a traditional environment. The virtual machines (VMs) should be updated from a gold image at the correct cadence for your organization. That cadence is usually every 1-3 months. In highly automated organizations, it's possible to increase that cadence to weekly or even nightly if needed.
 
 ### Image creation
 
@@ -32,11 +32,11 @@ When scaling up your Windows Virtual Desktop environment, your host pools are cr
 
 Another option is to start a process where checklists are used. In large environments, this process should only be part of the initial dev/test setup. The more you automate your gold image creation, the more secure you'll be in the accuracy of your build and environment stability.
 
-It's possible to take the 'old' image, and then use it to create a VM. You can update that VM with the applications and configuration changes for that update, and then capture that to your 'new' image. We don't recommend this process for creating gold images, as it's risky to maintain. It's the major cause of desktop virtualization environments becoming static and fragile. Windows is limited to running [Sysprep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) eight times, which limits how many times you can create a gold image.
+It's possible to take the 'old' image, and then use it to create a VM. You can update that VM with the applications and configuration changes for that update, and then capture that to your 'new' image. We don't recommend this process for creating gold images, as it's risky to maintain. It's the major cause of desktop virtualization environments becoming static and fragile. Windows is limited to running [Sysprep](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) eight times, which limits how many times you can create a gold image.
 
 There are many automation tools available to create gold images. Use the tool set that's most appropriate for your organization. You can choose the tool set based on the existing skill set and process, or cost considerations.
 
-When you're considering automation for your Windows Virtual Desktop environment, try to get 100% of your gold image build process automated. If you can get at least 80% of your gold image creation automated, it's still a good investment of your time. It makes it much easier to maintain the health of your Windows Virtual Desktop environment.
+When you're considering automation for your Windows Virtual Desktop environment, try to get 100 percent of your gold image build process automated. If you can get at least 80% of your gold image creation automated, it's still a good investment of your time. It makes it much easier to maintain the health of your Windows Virtual Desktop environment.
 
 ### Application installation
 
@@ -44,13 +44,13 @@ Applications are made available to your users in two ways: installed in the imag
 
 In a large-scale environment, it's impractical to install all of the applications into the image. You might have apps that must have restricted access, or incompatible apps or versions. Now you must split your apps into the two groups previously mentioned.
 
-Applications installed in the image should be universal to your users. For example, security products and the Office 365 suite. These apps should be a part of your image creation automation.
+Applications installed in the image should be universal to your users. For example, security products and the Microsoft 365 suite. These apps should be a part of your image creation automation.
 
 Applications dynamically delivered per user should be everything else. You'll need flexibility here, as following these rules can force you to spend too much time making an incompatible application fit into a group.
 
 ### Languages deployment
 
-As Windows Virtual Desktop environments start to scale out, it's often required that images be localized into the native language for the user. Consider the basis for your image. The pre-optimized Windows 10 gallery image both with and without Office 365 is only supplied in United States English (en-US). You can start your image automation from a native language, or you can adapt the existing en-US gallery image. Install languages before you install other applications. If you're using Windows 10 multi-session, it's not available to start from a native language, and you must adapt the provided gallery image.
+As Windows Virtual Desktop environments start to scale out, it's often required that images be localized into the native language for the user. Consider the basis for your image. The pre-optimized Windows 10 gallery image both with and without Microsoft 365 is only supplied in United States English (en-US). You can start your image automation from a native language, or you can adapt the existing en-US gallery image. Install languages before you install other applications. If you're using Windows 10 multi-session, it's not available to start from a native language, and you must adapt the provided gallery image.
 
 ### Integrate image creation with DevOps
 
@@ -80,7 +80,7 @@ You can decide to update VMs in place, or create a side-by–side environment fo
 
 Use Packer to create the image. By using a Packer Pipeline for image management, you can automate image creation. Azure DevOps licensing is required to use the full suite of tools. The other prerequisites are:
 
-- An Azure AD global administrator.
+- An Azure Active Directory (Azure AD) global administrator.
 - A service principal with contributor access to the subscription.
 - An Azure Key Vault to store secrets in, giving the service principal **secret management** in the access policy.
 
@@ -108,9 +108,9 @@ For more information about Packer, see the [Packer website](https://www.packer.i
 
 For universal applications installed in the gold image, use the same Packer method as above to install applications.
 
-[App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming apps on a per-user basis.
+[App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming apps on a per-user basis.
 
-Use FSLogix [App Masking](https://docs.microsoft.com/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
+Use FSLogix [App Masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
 
 Third parties also available.
 
@@ -122,7 +122,7 @@ Microsoft has processes for installing language packs manually or automatically.
 
 The automated process involves downloading a PowerShell script onto the VM that’s being converted to an image. Example automation scripts are found in Microsoft documentation. If you're following the recommendation for Packer pipelines, you can include this process as an extra task.
 
-For more information on installing language packs in Windows 10 multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/language-packs).
+For more information on installing language packs in Windows 10 multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop](/azure/virtual-desktop/language-packs).
 
 ### Integrate Windows Virtual Desktop golden image creation with DevOps
 
@@ -133,10 +133,10 @@ There are several options to automate the distribution of your Windows Virtual D
 - Global replication of images to different Azure regions.
 - Versioning and grouping of images for easier management. It's helpful if you need to roll back Windows Virtual Desktop host pools to previous image versions.
 - Highly available images with Zone Redundant Storage (ZRS) accounts in regions that support Availability Zones. ZRS offers better resilience against zonal failures.
-- Sharing Windows Virtual Desktop images across subscriptions, and even between Active Directory (AD) tenants, using role-based access control (RBAC).
+- Sharing Windows Virtual Desktop images across subscriptions, and even between Azure AD tenants, using role-based access control (RBAC).
 - Scaling your deployments with image replicas in each region.
 
-For more information, see [Shared Image Galleries](https://docs.microsoft.com/azure/virtual-machines/shared-image-galleries).
+For more information, see [Shared Image Galleries](/azure/virtual-machines/shared-image-galleries).
 
 ### Create Windows Virtual Desktop host pools using ARM Templates from images in Shared Image Galleries
 

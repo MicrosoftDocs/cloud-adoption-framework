@@ -27,21 +27,21 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 ## Design considerations
 
-### Host Pool compute strategy
+### Host pool compute strategy
 
-- For Windows Virtual Desktop Host Pool, both *active-active* and *active-passive* can be good BCDR approaches, depending on the requirements.
-  - With *active-active*, a single Host Pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix Profile/Office containers between the regions. For Virtual Machines (VMs) in each region, the Cloud Cache registry entry specifying locations needs to be inverted to give precedence to the local one.
+- For Windows Virtual Desktop host pool, both *active-active* and *active-passive* can be good BCDR approaches, depending on the requirements.
+  - With *active-active*, a single host pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix Profile/Office containers between the regions. For Virtual Machines (VMs) in each region, the Cloud Cache registry entry specifying locations needs to be inverted to give precedence to the local one.
     - This configuration is complex. *active-active* protects against storage outages without requiring the user to log in again. It then enables continuous testing of the disaster recovery location. This configuration isn't considered either a performance or cost optimization.  
-    - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Windows Virtual Desktop Host Pool VM.
+    - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Windows Virtual Desktop host pool VM.
     - This configuration is limited to a *Pooled* (shared) host pool type. For a *Personal* (dedicated) type, once a desktop is assigned to a user on a certain session host VM, it sticks and doesn't change, even if not available.
 
-  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), or a secondary Host Pool (hot stand-by), you can use the disaster recovery region options.
-    - Azure Site Recovery is supported for both *Personal* (dedicated) and *Pooled* (shared) Host Pool types, and lets you maintain a single host pool entity.
+  - With *active-passive*, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), or a secondary host pool (hot stand-by), you can use the disaster recovery region options.
+    - Azure Site Recovery is supported for both *Personal* (dedicated) and *Pooled* (shared) host pool types, and lets you maintain a single host pool entity.
     - You can create a new host pool in the failover region while keeping all of the resources turned off. For this method, set up new Application Groups in the failover region and assign users to them. You can then use an Azure Site Recovery *Recovery Plan* to turn on host pools and create an orchestrated process.
 
-- For Host Pool VM resiliency, different [options](https://docs.microsoft.com/azure/virtual-machines/availability) are available when creating a new Windows Virtual Desktop Host Pool. It's important to select the right option based on your requirements during creation. These options can't be changed later.
+- For host pool VM resiliency, different [options](https://docs.microsoft.com/azure/virtual-machines/availability) are available when creating a new Windows Virtual Desktop host pool. It's important to select the right option based on your requirements during creation. These options can't be changed later.
   
-  - The default resiliency option for Windows Virtual Desktop Host Pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95% high-availability ([SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9)).
+  - The default resiliency option for Windows Virtual Desktop host pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95% high-availability ([SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9)).
   
      > [!NOTE]
      > The maximum number of VMs inside an **Availability Set** is 200, as documented in [Subscription and service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
@@ -105,10 +105,10 @@ Preventing data loss for critical user data is important.
 
 The following are best practices for your design:
 
-- For the Windows Virtual Desktop Host Pool compute deployment model BCDR, use the *active-passive* option if it satisfies your requirements for Recovery Point Objective (RPO) and Recovery Time Objective (RTO).
+- For the Windows Virtual Desktop host pool compute deployment model BCDR, use the *active-passive* option if it satisfies your requirements for Recovery Point Objective (RPO) and Recovery Time Objective (RTO).
 
-- Azure Site Recovery is recommended for Personal (*dedicated*) Host Pools. The target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
-  - Azure Site Recovery is also supported for Pooled (*shared*) Host Pools. This option can be evaluated and compared to the deployment of another host pool in the secondary disaster recovery region.
+- Azure Site Recovery is recommended for Personal (*dedicated*) host pools. The target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
+  - Azure Site Recovery is also supported for Pooled (*shared*) host pools. This option can be evaluated and compared to the deployment of another host pool in the secondary disaster recovery region.
 
 - When maximum resiliency of the host pool is required in a single region, use *Availability Zones*.
   - Verify the *Availability Zones* feature availability in the specific region, and availability of the specific VM SKU inside all the zones.
@@ -131,7 +131,7 @@ The following are best practices for your design:
   - Replication between disparate storage is required.
 
 - We recommend the following guidelines when using Cloud Cache:
-  - Use a Solid State Drive (SSD) for the managed disk of the Windows Virtual Desktop Host Pool VMs.
+  - Use a Solid State Drive (SSD) for the managed disk of the Windows Virtual Desktop host pool VMs.
   - Have a backup solution in place to protect user Profile and Office Containers.
   - Make sure that the local VM managed disk is large enough to accommodate the local cache of all user's FSLogix Profile and Office Containers.
 
