@@ -20,9 +20,9 @@ The following table lists example reference implementations based on the recomme
 
 | Example deployment | Description | GitHub repo | Deploy to Azure |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| Enterprise-scale foundation | This is the suggested foundation for enterprise-scale adoption. | [Example in GitHub][GitHub-WingTip] | [![DTA-Button-WingTip]][DTA-WingTip] |
-| Enterprise-scale hub and spoke | Add a hub and spoke network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
-| Enterprise-scale Virtual WAN | Add a Virtual WAN network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-Contoso] | [![DTA-Button-Contoso]][DTA-Contoso] |
+| Enterprise-scale foundation | This is the suggested foundation for enterprise-scale adoption. | [Example in GitHub][GitHub-WingTip] | [![**DTA-Button-WingTip**]][DTA-WingTip] |
+| Enterprise-scale hub and spoke | Add a hub and spoke network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![**DTA-Button-AdventureWorks**]][DTA-AdventureWorks] |
+| Enterprise-scale Virtual WAN | Add a Virtual WAN network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-Contoso] | [![**DTA-Button-Contoso**]][DTA-Contoso] |
 
 ## Next steps
 

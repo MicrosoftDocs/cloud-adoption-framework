@@ -72,7 +72,7 @@ In our case, as we will use **Storage account with blob** as our example, it tra
 
 In addition to the private DNS zones, we also need to [create a set of custom Azure Policy definitions][link-5] to enforce the use of private endpoints and automate the DNS record creation in the DNS zone we created:
 
-1. **Deny** public endpoint for PaaS services policy
+1. `Deny` public endpoint for PaaS services policy.
 
    This policy will prevent users from creating Azure PaaS services with public endpoints and give them an error message if private endpoint is not selected at resource creation.
 
@@ -107,7 +107,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
    }
    ```
 
-2. **Deny** creation of a private DNS zone with the `privatelink` prefix policy
+2. `Deny` creation of a private DNS zone with the `privatelink` prefix policy.
 
    Since we use a centralized DNS architecture with a conditional forwarder and private DNS zones hosted in the subscriptions managed by the platform team, we need to prevent the application teams owners from creating their own Private Link private DNS zones and linking services into their subscriptions.
 
@@ -143,7 +143,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
    }
    ```
 
-3. **DeployIfNotExists** policy to automatically create the required DNS record in the central private DNS zone
+3. `DeployIfNotExists` policy to automatically create the required DNS record in the central private DNS zone.
 
    This policy will be triggered if a private endpoint resource is created with a service-specific `groupId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which is used to associate the private endpoint with our private DNS zone. For our example, the `groupId` for Azure Storage blobs is `blob` (`groupId` for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that `groupId` in the private endpoint created, it will deploy a [`privateDNSZoneGroup`][link-6] within the private endpoint, and it will be linked to the private DNS zone resource ID that is specified as parameter. For our example, the private DNS zone resource ID would be:
 
@@ -305,7 +305,7 @@ Once the platform team has deployed the platform infrastructure components (priv
 
 At this point, application teams can use the storage account via a private endpoint from any VNet in the hub and spoke network environment and from on-premises, as the DNS record has been automatically recorded in the private DNS zone.
 
-If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed. 
+If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed.
 
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/private-link-overview#availability

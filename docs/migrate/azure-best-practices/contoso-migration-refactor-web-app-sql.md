@@ -180,7 +180,7 @@ In brief, the admins do the following:
 
 Contoso needs to build the DevOps infrastructure and pipelines for the application. To do this, Contoso admins create a new DevOps project, import the code, and then set up build and release pipelines.
 
-1. In the Contoso Azure DevOps account, they create a new project, **ContosoSmartHotelRefactor**, and then select **Git** for version control.
+1. In the Contoso Azure DevOps account, they create a new project, `ContosoSmartHotelRefactor`, and then select **Git** for version control.
 
     ![Screenshot of creating a new project in Azure DevOps.](./media/contoso-migration-refactor-web-app-sql/vsts1.png)
 
@@ -202,7 +202,7 @@ The Contoso admins make sure that the web apps and database can communicate with
 
 1. In the web app for the WCF service, `SHWCF-EUS2`, under **Settings** > **Application settings**, they add a new connection string named **DefaultConnection**.
 
-1. They pull the connection string from the SmartHotel-Registration database and then update it with the correct credentials.
+1. They pull the connection string from the `SmartHotel-Registration` database and then update it with the correct credentials.
 
     ![Screenshot of the connection string settings pane.](./media/contoso-migration-refactor-web-app-sql/string1.png)
 

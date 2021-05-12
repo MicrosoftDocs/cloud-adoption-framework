@@ -145,7 +145,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
 
    1. In the portal, Contoso opens the DevTest Labs instance and selects **Configuration and policies**.
 
-      ![Screenshot of **Configuration and policies** in the settings for ContosoDevTestLabs.](./media/contoso-migration-devtest-to-labs/configure-lab.png)
+      ![Screenshot of **Configuration and policies** in the settings for `ContosoDevTestLabs`.](./media/contoso-migration-devtest-to-labs/configure-lab.png)
 
       *Figure 5: DevTest Labs instance: configuration and policies.*
 
@@ -262,7 +262,7 @@ With DevTest Labs configured and the remote developers' workstation up and runni
 
 The next steps provision application and database VMs through the formulas:
 
-1. With the formulas created, Contoso next selects **All virtual machines** and then the **Windows2012AppDevVmBase** formula to match the configuration of its current application development VMs.
+1. With the formulas created, Contoso next selects **All virtual machines** and then the `Windows2012AppDevVmBase` formula to match the configuration of its current application development VMs.
 
    ![Screenshot that shows the selection of an app VM as a base.](./media/contoso-migration-devtest-to-labs/app-vm.png)
 
@@ -274,7 +274,7 @@ The next steps provision application and database VMs through the formulas:
 
    *Figure 22: Size and artifact configurations for a VM.*
 
-1. Contoso provisions the database VM by using the **SQLDbDevVmBase** formula to match the configuration of its current database development VMs.
+1. Contoso provisions the database VM by using the `SQLDbDevVmBase` formula to match the configuration of its current database development VMs.
 
    ![Screenshot that shows provisioning of the database VM.](./media/contoso-migration-devtest-to-labs/database-vm.png)
 

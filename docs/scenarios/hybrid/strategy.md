@@ -87,7 +87,7 @@ Various [motivations](../../strategy/motivations.md) might steer customers to ad
 
 Customers might have a digital estate that's bound by specific regulatory requirements and data localization laws that constrain in which geographic location it must reside. A particular industry might require low latency and high connectivity for efficient operational capacity, such as financial services. Low-latency and high-connectivity are common requirements for other industries like media, healthcare, education, and government.
 
-A multinational organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that's not compatible with a companywide migration effort. Or, there might be corporations with even larger cloud estates that are sprawled across several cloud environments, where visibility and control of IT operations is challenging.
+A multinational organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that's not compatible with a company-wide migration effort. Or, there might be corporations with even larger cloud estates that are sprawled across several cloud environments, where visibility and control of IT operations is challenging.
 
 ## What are the overall benefits of a multicloud control plane?
 

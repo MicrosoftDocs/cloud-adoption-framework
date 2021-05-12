@@ -10,6 +10,8 @@ ms.subservice: operate
 ms.custom: internal
 ---
 
+<!-- cspell:ignore perf -->
+
 # Automate onboarding
 
 To improve the efficiency of deploying Azure server management services, consider automating deployment as discussed in previous sections of this guidance. The script and the example templates provided in the following sections are starting points for developing your own automation of onboarding processes.

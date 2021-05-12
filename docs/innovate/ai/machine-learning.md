@@ -55,8 +55,8 @@ Common scenarios for machine learning solutions include:
   - [Build zero-code models with Machine Learning designer](https://aka.ms/studioanddesigner)
   - [MLOps for managing the end-to-end lifecycle](https://aka.ms/mlopsvideo)
   - [Incorporating ONNX Runtime into your models](https://www.youtube.com/watch?v=qy7X2JGLUC4)
-  - [Model interpretability and transparency](https://aka.ms/azuremlinterpret)
-  - [Building models with R](https://aka.ms/Rmodels)
+  - [Model interpretability and transparency](https://channel9.msdn.com/shows/ai-show/machine-learning-Interpretability-toolkit)
+  - [Building models with R](https://channel9.msdn.com/shows/ai-show/r-in-azure-machine-learning)
 
 - [Review reference architectures for AI machine learning solutions](/azure/architecture/browse/#ai--machine-learning).
 

@@ -10,9 +10,6 @@ ms.subservice: overview
 ms.custom: internal, operating-model
 ---
 
-<!-- docutune:casing GRC -->
-<!-- cspell:ignore reimagine -->
-
 # Understand cloud operating models
 
 Adopting the cloud creates an opportunity to revisit how you operate technology systems. This article series will clarify cloud operating models and the considerations that impact your cloud adoption strategy. But first, let's clarify the term *cloud operating model*.

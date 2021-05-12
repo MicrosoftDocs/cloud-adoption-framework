@@ -62,7 +62,7 @@ Before you move your workloads to the cloud, estimate the monthly cost of runnin
 
 To forecast your monthly bill for Azure resources, there are several tools you can use.
 
-<!-- TODO: Change "input costs" -->
+<!-- TODO - Change "input costs" -->
 
 - **Azure pricing calculator:** Select the products you want to estimate, for example VMs and storage, then input costs into the calculator to build an estimate.
 
