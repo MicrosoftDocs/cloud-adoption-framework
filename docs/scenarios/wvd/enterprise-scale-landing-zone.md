@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-scale support for the Windows Virtual Desktop Construction Set
   
-Enterprise-scale construction sets provide you with a specific architectural approach and reference implementation. These construction sets enable effective construction and start-up of platform workload landing zones. These landing zones are within the Cloud Adoption Framework enterprise-scale landing zone. The Windows Virtual Desktop Construction Set is used after you've implemented an enterprise-scale landing zone. Review the enterprise-scale [Overview](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the Windows Virtual Desktop Construction Set.
+Enterprise-scale construction sets provide you with a specific architectural approach and reference implementation. These construction sets enable effective construction and start-up of platform workload landing zones. These landing zones are within the Cloud Adoption Framework enterprise-scale landing zone. The Windows Virtual Desktop Construction Set is used after you've implemented an enterprise-scale landing zone. Review the enterprise-scale [Overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the Windows Virtual Desktop Construction Set.
 
 ## Getting started with the Windows Virtual Desktop Construction Set
 
