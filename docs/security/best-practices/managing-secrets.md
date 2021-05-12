@@ -1,6 +1,6 @@
 ---
-title: Security Title
-description: Security Description
+title: Managing Secrets Best Practices
+description: Best practices in managing secrets
 author: petpipe-msft
 ms.author: pepiper
 ms.date: 04/04/2021
