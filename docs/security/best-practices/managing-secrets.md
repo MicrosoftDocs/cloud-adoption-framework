@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Managing secrets in a secure way
 
-Managing company sensitive secrets, keys and certificates aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
+Managing company sensitive secrets, keys and certificates (and associated private keys) aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
 
 Before continuing, it is highly recommended the process of documenting the following items within your organization so your alignment with these best practices can be put into action smoothly:
 
@@ -58,10 +58,10 @@ Understanding alternatives to using Azure Key Vault and adhering to the External
 
 There are different types of "keys" that can be used within various Azure services:
 
-- Keys used for encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
-- Keys used for connectivity to various Azure services
+- Keys used for cryptographic keys, for example, encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
+- Keys used for connectivity (also known as a token for authentication "AuthN" and/or authorization "AuthZ") to various Azure services
 
-### **Keys used for encryption**
+### **Keys used for cryptographic keys: encryption-at-rest**
 
 Read [the encryption security fundamentals](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure. 
 
@@ -88,9 +88,9 @@ If your business requires customer-managed keys for encryption-at-rest, ensure y
 - [Replicate machines with CMK enabled disks](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-replication-cmk-disks)
 - [Configure customer-managed keys for your Azure Cosmos account with Azure Key Vault](https://docs.microsoft.com/azure/cosmos-db/how-to-setup-cmk)
 
-### Other security -based cloud design patterns
+### Other security-based cloud design patterns
 
-For the following sections on keys and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
+For the following sections on keys (used as tokens) and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
 
 - Valet Key pattern
  
@@ -106,10 +106,10 @@ For the following sections on keys and secrets, there are several cloud design p
 
 - [Valet pattern](https://docs.microsoft.com/azure/architecture/patterns/valet-key)
 - [CQRS pattern](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
-### **Keys used to invocate or within connection strings**
 
-The other type of "keys" are used for various Azure services for connectivity, for example, Azure Storage or Azure Service Bus access keys.
+### **Keys used as connectivity or tokens: invocation or within connection strings**
 
+The other type of "keys" are used for various Azure services for connectivity or tokens, for example, Azure Storage or Azure Service Bus access keys.
 
 Do note there are limitations and/or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, etc.
 
