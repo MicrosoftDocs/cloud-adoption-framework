@@ -300,7 +300,7 @@ You can learn more in an [overview of Azure Cost Management + Billing](/azure/co
 
 Contoso will also use scripts to locate unused resources.
 
-During large migrations, there are often leftover pieces of data such as virtual hard drives, which incur a charge but provide no value to the company. Scripts are available in the [GitHub repo](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+During large migrations, there are often leftover pieces of data such as virtual hard drives, which incur a charge but provide no value to the company. Scripts are available in the [GitHub repo](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/azure-resource-optimization-toolkit).
 
 Contoso will take advantage of work done by Microsoft's IT department and consider implementing the Azure Resource Optimization (ARO) toolkit. The toolkit is also in the GitHub repo.
 
