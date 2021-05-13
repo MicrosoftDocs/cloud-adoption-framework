@@ -1,6 +1,6 @@
 ---
-title: Security Integration
-description: Integrate security insights and practices into business and IT processes
+title: Security integration
+description: Integrate security insights and practices. Learn how security teams should work with other stakeholders to IT and business operations.
 author: NaomiOooo
 ms.author: naomio
 ms.date: 05/14/2021
@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Security Integration
+# Security integration
 
 Security should feel like natural part of business. Business should feel like a natural part of security.
 
