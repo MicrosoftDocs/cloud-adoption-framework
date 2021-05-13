@@ -35,6 +35,7 @@ There may be other limitations and exceptions that will require documentation an
 > - *Time to be notified* and "time to ackowledge* (also known as *MTTA*)
 > - *Time to detection* (also known as *MTTD*)
 > - *Root cause analysis* and *compromise recovery* (also known as *MTTR*) processes.
+
 ## External Configuration Store cloud design pattern
 
 Most of these best practices across your enterprise and workloads deployed to the cloud will use some secret store. Understanding the External Configuration Store cloud design pattern will not only provide context, it will provide insights to various issues and considerations that may affect your workload architectural design.
@@ -42,6 +43,15 @@ Most of these best practices across your enterprise and workloads deployed to th
 For example, there are rare exceptions to the security best practice of using Azure Key Vault for storing secrets, such as connection strings. These exceptions may be revealed during the development implementation phase when conducting performance and load testing. Ensure your business stakeholders state that performance is critical to the workload.
 
 Understanding alternatives to using Azure Key Vault and adhering to the External Configuration Store design pattern will ensure alignment with best practices and compliance requirements.  An alternative may be to have secrets stored closer to the application's compute layer, for example, Azure App Services Application settings that will only be accessed by designated and approved personas for the connections that require lower latency.
+
+> **Key take away**: The overall best practice on how to implement the External Configuration Store cloud design pattern is to ensure:
+> - Alignment with your business and compliance requirements
+> - Ensure the appropriate personas, their scope and permissions adhere to the least-privelege model at a minimum
+> - Implement observability, for example: logging, monitoring and alerting
+> - Using Azure Key Vault?
+>   - Implement the security baseline for Azure Key Vault
+>   - Enable [Azure Defender for Azure Key Vault](https://docs.microsoft.com/azure/security-center/defender-for-key-vault-introduction)
+>   - Enable logging for Azure Key Vault
 
 ## Further Reading
 
@@ -58,7 +68,7 @@ Understanding alternatives to using Azure Key Vault and adhering to the External
 
 There are different types of "keys" that can be used within various Azure services:
 
-- Keys used for cryptographic keys, for example, encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
+- Keys that are cryptographic keys, for example, encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
 - Keys used for connectivity (also known as a token for authenatication "AuthN" and/or authorization "AuthZ") to various Azure services
 
 ### **Keys used for encryption**
