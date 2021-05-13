@@ -20,7 +20,7 @@ Unfortunately, customers often take a myopic view that leads to decisions based 
 
 ## Examples of predictions and influence
 
-A variety of applications and ambient experiences use data to make predictions:
+Various applications and ambient experiences use data to make predictions:
 
 - **E-commerce:** Based on what other similar consumers have purchased, an e-commerce website suggests products that may be worth adding to your cart.
 - **Adjusted reality:** IoT offers more advanced instances of predictive functionality. For example, a device on an assembly line detects a rise in a machine's temperature. A cloud-based predictive model determines how to respond. Based on that prediction, another device slows down the assembly line until the machine can cool.
@@ -47,7 +47,7 @@ Each aspect is required to develop predictive capabilities. Like all great innov
 
 Data is the most elemental of the characteristics mentioned earlier. Each of the disciplines for developing digital inventions generates data. That data, of course, contributes to the development of predictions. For more guidance on ways to get data into a predictive solution, see [Democratizing data](./data.md) and [interacting with devices](./devices.md).
 
-A variety of data sources can be used to deliver predictive capabilities:
+Various data sources can be used to deliver predictive capabilities:
 
 ## Insights
 
