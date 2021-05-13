@@ -12,17 +12,19 @@ ms.custom: internal
 
 # Identity and Access Management Best Practices
 
-## Checklist: How are you managing the identity for your workload?
+## Checklist: how are you managing the identity for your workload?
 
-- Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principles.
-- Assign permissions to users, groups, and applications at a certain scope through Azure RBAC. Use built-in roles when possible.
-- Prevent deletion or modification of a resource, resource group, or subscription through management locks.
-- Use Managed Identities to access resources in Azure.
-- Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
-- Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact accounts.
-- Have a separate identity source for non-employees.
-- Preferably use passwordless methods or opt for modern password methods.
-- Block legacy protocols and authentication methods.
+> [!div class="checklist"]
+>
+> * Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principles.
+> * Assign permissions to users, groups, and applications at a certain scope through Azure RBAC. Use built-in roles when possible.
+> * Prevent deletion or modification of a resource, resource group, or subscription through management locks.
+> * Use Managed Identities to access resources in Azure.
+> * Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
+> * Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact accounts.
+> * Have a separate identity source for non-employees.
+> * Preferably use passwordless methods or opt for modern password methods.
+> * Block legacy protocols and authentication methods.
 
 
 
