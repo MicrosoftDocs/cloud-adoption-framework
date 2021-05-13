@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Managing secrets in a secure way
 
-Managing company sensitive secrets, keys and certificates aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
+Managing company sensitive secrets, keys and certificates (and associated private keys) aligns with a critical process in improving your security posture. Below are several security best practices on managing each of these sensitive assets and additionally, some of these best practices may align with your compliance or attestation requirements.
 
 Before continuing, it is highly recommended the process of documenting the following items within your organization so your alignment with these best practices can be put into action smoothly:
 
@@ -35,6 +35,7 @@ There may be other limitations and exceptions that will require documentation an
 > - *Time to be notified* and "time to ackowledge* (also known as *MTTA*)
 > - *Time to detection* (also known as *MTTD*)
 > - *Root cause analysis* and *compromise recovery* (also known as *MTTR*) processes.
+
 ## External Configuration Store cloud design pattern
 
 Most of these best practices across your enterprise and workloads deployed to the cloud will use some secret store. Understanding the External Configuration Store cloud design pattern will not only provide context, it will provide insights to various issues and considerations that may affect your workload architectural design.
@@ -42,6 +43,15 @@ Most of these best practices across your enterprise and workloads deployed to th
 For example, there are rare exceptions to the security best practice of using Azure Key Vault for storing secrets, such as connection strings. These exceptions may be revealed during the development implementation phase when conducting performance and load testing. Ensure your business stakeholders state that performance is critical to the workload.
 
 Understanding alternatives to using Azure Key Vault and adhering to the External Configuration Store design pattern will ensure alignment with best practices and compliance requirements.  An alternative may be to have secrets stored closer to the application's compute layer, for example, Azure App Services Application settings that will only be accessed by designated and approved personas for the connections that require lower latency.
+
+> **Key take away**: The overall best practice on how to implement the External Configuration Store cloud design pattern is to ensure:
+> - Alignment with your business and compliance requirements
+> - Ensure the appropriate personas, their scope and permissions adhere to the least-privelege model at a minimum
+> - Implement observability, for example: logging, monitoring and alerting
+> - Using Azure Key Vault?
+>   - Implement the security baseline for Azure Key Vault
+>   - Enable [Azure Defender for Azure Key Vault](https://docs.microsoft.com/azure/security-center/defender-for-key-vault-introduction)
+>   - Enable logging for Azure Key Vault
 
 ## Further Reading
 
@@ -58,10 +68,10 @@ Understanding alternatives to using Azure Key Vault and adhering to the External
 
 There are different types of "keys" that can be used within various Azure services:
 
-- Keys used for encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
-- Keys used for connectivity to various Azure services
+- Keys that are cryptographic keys, for example, encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
+- Keys used for connectivity (also known as a token for authenatication "AuthN" and/or authorization "AuthZ") to various Azure services
 
-### **Keys used for encryption**
+### **Keys used for cryptographic keys: encryption-at-rest**
 
 Read [the encryption security fundamentals](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure. 
 
@@ -88,9 +98,9 @@ If your business requires customer-managed keys for encryption-at-rest, ensure y
 - [Replicate machines with CMK enabled disks](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-replication-cmk-disks)
 - [Configure customer-managed keys for your Azure Cosmos account with Azure Key Vault](https://docs.microsoft.com/azure/cosmos-db/how-to-setup-cmk)
 
-### Other security -based cloud design patterns
+### Other security-based cloud design patterns
 
-For the following sections on keys and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
+For the following sections on keys (used as tokens) and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
 
 - Valet Key pattern
  
@@ -106,10 +116,10 @@ For the following sections on keys and secrets, there are several cloud design p
 
 - [Valet pattern](https://docs.microsoft.com/azure/architecture/patterns/valet-key)
 - [CQRS pattern](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
-### **Keys used to invocate or within connection strings**
 
-The other type of "keys" are used for various Azure services for connectivity, for example, Azure Storage or Azure Service Bus access keys.
+### **Keys used as connectivity or tokens: invocation or within connection strings**
 
+The other type of "keys" are used for various Azure services for connectivity or tokens, for example, Azure Storage or Azure Service Bus access keys.
 
 Do note there are limitations and/or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, etc.
 
