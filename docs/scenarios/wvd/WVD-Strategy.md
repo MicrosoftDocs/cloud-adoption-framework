@@ -47,7 +47,7 @@ Windows Virtual Desktop is an influential platform, and organizations have sever
 
 - **Infrastructure scale flexibility requirements:** The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with Windows Virtual Desktop.
 
-- **Choice and Flexibility:** Customers now have the choice and flexibility to choose from any of the available virtual machine families and sizes, all optimized for different usage requirements. They can provide these virtual machines seamlessly to their user estate, all of which will likely have different compute requirements based upon their application portfolio.
+- **Choice and Flexibility:** Customers now have the choice and flexibility to choose from any of the available virtual machine families and sizes, all optimized for different usage requirements. They can provide these virtual machines seamlessly to their user estate, all of which will likely have different compute requirements based on their application portfolio.
 
 - **Potential cost savings:** Customers can take advantage of Azure as an operational cost rather than upfront cost, because it's a consumption-based service. For example, virtual machines charge costs only for the time they are powered on, providing the capability to realize cost savings back to their organizations.
 

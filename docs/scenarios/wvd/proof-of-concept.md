@@ -19,7 +19,7 @@ Before deploying end-user desktops, validate the configuration of the Azure land
 The following approach to the migration process is simplified to outline a proof-of-concept implementation.
 
 1. **Assess:** The team deploys host pools by using the default virtual machine (VM) sizes. Assessment data helps the team identify the expected number of concurrent user sessions and the number of VMs required to support those concurrent sessions.
-2. **Deploy:** The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise Multi Session gallery image from Azure Marketplace and the sizing from assessment step 1.
+2. **Deploy:** The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise multi-session gallery image from Azure Marketplace and the sizing from assessment step 1.
 3. **Deploy:** The team [creates either Desktop or RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that it has already migrated.
 4. **Deploy:** The team [creates an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 5. **Release:** The team tests the performance and latency of application groups and deployed desktops for a sampling of users.

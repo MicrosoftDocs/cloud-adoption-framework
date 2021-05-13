@@ -40,7 +40,7 @@ The following list includes items to be used in a business case.
 
 - Windows Virtual Desktop provides the rich Windows 10 experience that users expect, at multi-session cost. Windows Virtual Desktop enables the scale of Windows Server with Remote Desktop Services combined with the user experience of Windows 10, without the compromise of application compatibility. Windows 10 Enterprise multi-session runs only on Windows Virtual Desktop.
 
-- There is no requirement for client access licenses with Windows 10 Enterprise multi-session, as Windows 10 multi-session does not require a Client Access License (CAL)
+- There is no requirement for client access licenses with Windows 10 Enterprise multi-session, as Windows 10 Enterprise multi-session does not require a Client Access License (CAL)
 
 - In Windows Virtual Desktop, if you deploy Windows Server (Windows Server 2012 R2, 2016 or 2019), there is no requirement to purchase a Windows Server license
 

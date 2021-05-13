@@ -71,7 +71,7 @@ Azure networking includes products and services that provide different networkin
 | --- | --- |
 | I need networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network) |
 | I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](/azure/load-balancer) |
-| I want to optimize delivery from application server farms while increasing application security with a web application firewall. | [Azure Application Gateway](/azure/application-gateway) and [Azure Front Door](/azure/frontdoor) |
+| I want to optimize delivery from application server farms while increasing application security with a Web Application Firewall. | [Azure Application Gateway](/azure/application-gateway) and [Azure Front Door](/azure/frontdoor) |
 | I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN gateway](/azure/vpn-gateway) |
 | I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns) |
 | I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn) |
