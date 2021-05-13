@@ -10,11 +10,6 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-
-Point to: https://docs.microsoft.com/en-us/security/compass/identity
-
-
-
 ## Checklist: How are you managing the identity for your workload?
 
 - Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principles.
@@ -32,9 +27,10 @@ Point to: https://docs.microsoft.com/en-us/security/compass/identity
 
 ## Azure Services for Identity
 
-- [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis) Azure AD allos application management for cloud and on-premises apps using Application Proxy, the My Apps portal or Access Panel, and Software as a Service Apps. It allows authentication, self service password resets, Multi-Factor Authentication, custom banned password list, and smart lockout. It allows developers to build apps that sign in all Microsoft Identities, get tokens to call Microsoft Graph, other Microsoft APIs or custom APIs.Among the features provided by AAD are: conditional access, device management, manage license assignments for enterprise users, access to apps and setup delegates using groups and administrator roles. Use Azure Active Directory Connect and Connect Health to provide a single user identity for authentication and authorization to all resources, regardless of location (cloud or on-premises) through Hybrid Identity. It offers Identity governance and protection, managed identities to access Azure resources, Privileged Identity Management (PIM) as well as reports and monitoring.
-- [Azure AD B2B](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/what-is-b2b) Azure Active Directory (Azure AD) business-to-business (B2B) collaboration is a feature within External Identities that lets you invite guest users to collaborate with your organization. With B2B collaboration, you can securely share your company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. Work safely and securely with external partners, large or small, even if they don't have Azure AD or an IT department. A simple invitation and redemption process lets partners use their own credentials to access your company's resources. Developers can use Azure AD business-to-business APIs to customize the invitation process or write applications like self-service sign-up portals.
-- [Azure AD B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/overview) Azure Active Directory B2C provides business-to-customer identity as a service. Your customers use their preferred social, enterprise, or local account identities to get single sign-on access to your applications and APIs. Azure Active Directory B2C (Azure AD B2C) is a customer identity access management (CIAM) solution capable of supporting millions of users and billions of authentications per day. It takes care of the scaling and safety of the authentication platform, monitoring and automatically handling threats like denial-of-service, password spray, or brute force attacks. Azure AD B2C is a white-label authentication solution. You can customize the entire user experience with your brand so that it blends seamlessly with your web and mobile applications. It allows Single Sign On access with a user-provided identity using standards-based authentication protocols including OpenID Connect, OAuth 2.0, and SAML.
+- [Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) Azure AD allows application management for cloud and on-premises apps using Application Proxy, the My Apps portal or Access Panel, and Software as a Service Apps. It allows authentication, self service password resets, Multi-Factor Authentication, custom banned password list, and smart lockout. It allows developers to build apps that sign in all Microsoft Identities, get tokens to call Microsoft Graph, other Microsoft APIs or custom APIs.Among the features provided by AAD are: conditional access, device management, manage license assignments for enterprise users, access to apps and setup delegates using groups and administrator roles. Use Azure Active Directory Connect and Connect Health to provide a single user identity for authentication and authorization to all resources, regardless of location (cloud or on-premises) through Hybrid Identity. It offers Identity governance and protection, managed identities to access Azure resources, Privileged Identity Management (PIM) as well as reports and monitoring.
+- [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity) Synchronize Azure AD with your existing authoritative on premises Active Directory using Azure AD connect. This is also required for an Office 365 migration, so it is often already done before Azure migration and development projects begin.
+- [Azure AD B2B](https://docs.microsoft.com/azure/active-directory/external-identities/what-is-b2b) Azure Active Directory (Azure AD) business-to-business (B2B) collaboration is a feature within External Identities that lets you invite guest users to collaborate with your organization. With B2B collaboration, you can securely share your company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. Work safely and securely with external partners, large or small, even if they don't have Azure AD or an IT department. A simple invitation and redemption process lets partners use their own credentials to access your company's resources. Developers can use Azure AD business-to-business APIs to customize the invitation process or write applications like self-service sign-up portals.
+- [Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/overview) Azure Active Directory B2C provides business-to-customer identity as a service. Your customers use their preferred social, enterprise, or local account identities to get single sign-on access to your applications and APIs. Azure Active Directory B2C (Azure AD B2C) is a customer identity access management (CIAM) solution capable of supporting millions of users and billions of authentications per day. It takes care of the scaling and safety of the authentication platform, monitoring and automatically handling threats like denial-of-service, password spray, or brute force attacks. Azure AD B2C is a white-label authentication solution. You can customize the entire user experience with your brand so that it blends seamlessly with your web and mobile applications. It allows Single Sign On access with a user-provided identity using standards-based authentication protocols including OpenID Connect, OAuth 2.0, and SAML.
 
 Azure AD External Identities focuses less on a user's relationship to your organization and more on how the user wants to sign in to your apps and resources. Within this framework, Azure AD supports a variety of scenarios from business-to-business (B2B) collaboration to access management for consumer/customer- or citizen-facing applications (business-to-customer, or B2C). To compare External Identities solutions and determine which service is best for your scenario, please refer to this article ["Compare External Identity Solutions"](https://docs.microsoft.com/azure/active-directory/external-identities/compare-with-b2c#compare-external-identities-solutions)
 
@@ -44,12 +40,12 @@ Identity Management is at the core of all data protection. Identity-based attack
 
 Use managed identities to access data resources in Azure whenever possible, this will avoid the user of credentials and protect access to the resource using Azure Active Directory. Ideally, credentials are never stored in developers' workstations and aren't checked into source control, using a managed identity allows this identity to authenticate with any service that supports Azure AD authentication, without credentials in the code.
 
-[Managed Identities (MI)](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) allows you to give a resource in Azure an identity. Internally, managed identities are service principals of a special type, which are locked to only be used with Azure resources. They were formerly known as Managed Service Identities. There are two types of managed identities:
+[Managed Identities (MI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) allows you to give a resource in Azure an identity. Internally, managed identities are service principals of a special type, which are locked to only be used with Azure resources. They were formerly known as Managed Service Identities. There are two types of managed identities:
 
 - System-assigned Managed Identity: The life cycle of a system-assigned identity is directly tied to the Azure service instance that it's enabled on. If the instance is deleted, Azure automatically cleans up the credentials and the identity in Azure AD.
 - User-assigned Managed Identity: After the identity is created, the identity can be assigned to one or more Azure service instances. The life cycle of a user-assigned identity is managed separately from the life cycle of the Azure service instances to which it's assigned.
 
-[Services that support Managed Identities](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities#azure-services-that-support-managed-identities-for-azure-resources)
+[Services that support Managed Identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities#azure-services-that-support-managed-identities-for-azure-resources)
 
 ## Examples of securing database access and storage using Managed Identities
 
@@ -68,9 +64,10 @@ Microsoft Azure Active Directory (Azure AD) enables integration with many authen
 The OAuth 2.0 is the industry protocol for authorization. It allows a user to grant limited access to its protected resources. Designed to work specifically with Hypertext Transfer Protocol (HTTP), OAuth separates the role of the client from the resource owner. The client requests access to the resources controlled by the resource owner and hosted by the resource server. The resource server issues access tokens with the approval of the resource owner. The client uses the access tokens to access the protected resources hosted by the resource server.
 
 ### OpenID Connect
+
 OpenID Connect extends the OAuth 2.0 authorization protocol for use as an authentication protocol, so that you can do single sign-on using OAuth. OpenID Connect introduces the concept of an ID token, which is a security token that allows the client to verify the identity of the user. The ID token also gets basic profile information about the user. It also introduces the UserInfo endpoint, an API that returns information about the user.
 
-For more on Auth 2.0 and OpenID Connect, the terminology, endpoints as well as the grants to securely obtain tokens please refer to [OAuth 2.0 and OpenID Connect Protocols](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols)
+For more on Auth 2.0 and OpenID Connect, the terminology, endpoints as well as the grants to securely obtain tokens please refer to [OAuth 2.0 and OpenID Connect Protocols](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols)
 
 The Microsoft identity platform supports authentication for these app architectures:
 
@@ -123,9 +120,9 @@ By using MSAL instead of ADAL:
 
 With **Microsoft Graph**, you can access (Azure Active Directory (Azure AD))[https://docs.microsoft.com/azure/active-directory/active-directory-whatis] resources to enable scenarios like managing administrator (directory) roles, inviting external users to an organization, and, if you are a Cloud Solution Provider (CSP), managing your customer's data. Microsoft Graph also provides methods that apps can use to, for example, discover information about users' transitive group and role memberships.
 
-Directory resources and APIs can open up new ways for you to engage with users and manage their experiences with Microsoft Graph. You can try the API in the (Graph Explorer0[https://developer.microsoft.com/graph/graph-explorer].
+Directory resources and APIs can open up new ways for you to engage with users and manage their experiences with Microsoft Graph. You can try the API in the [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
 
-You can use the (**Azure Active Directory PowerShell Module** Version for Graph)[https://docs.microsoft.com/powershell/module/azuread/?view=azureadps-2.0] for Azure AD administrative tasks such as user management, domain management and for configuring single sign-on. The Azure AD PowerShell for Graph module has two versions: a Public preview version and a General Availability version. It is not recommended to use the Public Preview version for production scenarios.
+You can use the [**Azure Active Directory PowerShell Module** Version for Graph](https://docs.microsoft.com/powershell/module/azuread/?view=azureadps-2.0) for Azure AD administrative tasks such as user management, domain management and for configuring single sign-on. The Azure AD PowerShell for Graph module has two versions: a Public preview version and a General Availability version. It is not recommended to use the Public Preview version for production scenarios.
 
 ## Azure AD Conditional Access
 
@@ -216,9 +213,11 @@ Identity Management [Best Practices](https://docs.microsoft.com/azure/security/f
 - Actively monitor for suspicious activities
 - Use Azure AD for storage authentication
 
-**Further reading**
+## Further reading on best practices
+
 [Security Checklist for Identity Management](https://docs.microsoft.com/azure/security/fundamentals/steps-secure-identity)
 [Choose passwordless authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless)
+[Microsoft security best practices for Identity and Access Management](https://docs.microsoft.com/security/compass/identity)
 
 ## Summary
 
@@ -244,3 +243,7 @@ Identity Management [Best Practices](https://docs.microsoft.com/azure/security/f
 - IM-6: [Restrict Azure resource access based on conditions](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-6-restrict-azure-resource-access-based-on-conditions)
 - IM-7: [Eliminate unintended credential exposure](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-7-eliminate-unintended-credential-exposure)
 - IM-8: [Secure user access to legacy applications](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-8-secure-user-access-to-legacy-applications)
+
+
+
+
