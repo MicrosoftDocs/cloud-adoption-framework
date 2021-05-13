@@ -20,7 +20,7 @@ Windows Virtual Desktop offers BCDR to preserve customer metadata during outages
 
 To keep your organization's data safe, you might adopt a BCDR strategy. This strategy is for resources that are deployed in your subscription as part of the Windows Virtual Desktop data plane, like host pools and storage.
 
-A good BCDR strategy keeps your critical apps and workload up and running during planned and unplanned service or Azure outages.
+A good BCDR strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages.
 
 For more information, see [Set up a business continuity and disaster recovery plan](/azure/virtual-desktop/disaster-recovery).
 
@@ -51,7 +51,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
      > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure Portal.
 
 - Critical applications and Multiple host pools
-  - Before approaching Windows Virtual Desktop BCDR planning and design, it's important to consider which applications consumed through Windows Virtual Desktop are critical. You might want to separate them from non-critical apps. After separating them, use another host pool with a different disaster recovery approach and capabilities.
+  - Before approaching Windows Virtual Desktop BCDR planning and design, it's important to consider which applications consumed through Windows Virtual Desktop are critical. You might want to separate them from non-critical applications. After separating them, use another host pool with a different disaster recovery approach and capabilities.
 
 ### Optimal storage for Profile and Office Containers
 
@@ -142,6 +142,6 @@ The following are best practices for your design:
   - Even if supported, using Azure Backup to save your VM state in the host pool isn't recommended since it should be stateless.
 
 - Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
-  - Network infrastructure, as part of Hub & Spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
+  - Network infrastructure, as part of Hub and Spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
   - Hybrid connectivity must be highly available in both the primary and secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.

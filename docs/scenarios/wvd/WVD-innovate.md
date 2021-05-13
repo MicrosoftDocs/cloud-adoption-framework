@@ -29,7 +29,7 @@ The following guidance provides information on how Windows Virtual Desktop can h
 
     By providing specific users access to a desktop, and the associated applications and data using Windows Virtual Desktop, organizations can retain the entire desktop within the corporate environment. The result is if the local device is lost, or accessed by someone without authorization, the data and applications are not stored locally and not at risk.
 
-- **Modernize Applications with MSIX app attach:** The use of .msi installers have become the application packaging standard for Windows-based applications. MSIX is a new packaging format that offers many features aimed to improve the packaging experience for all Windows apps. The Windows Virtual Desktop related innovation to application management is a new feature called [MSIX app attach](/azure/virtual-desktop/what-is-app-attach). MSIX app attach is a way to deliver MSIX applications to both physical and virtual machines. However, MSIX app attach is different from regular MSIX because it's made specifically for Windows Virtual Desktop. This creates separation between user data, the operating system, and apps by using MSIX containers. You can remove the need for repackaging when you deliver applications dynamically. You can reduce the time it takes for a user to sign in to Windows Virtual Desktop. At the same time, you can reduce infrastructure requirements and cost.
+- **Modernize Applications with MSIX app attach:** The use of .MSI installers have become the application packaging standard for Windows-based applications. MSIX is a new packaging format that offers many features aimed to improve the packaging experience for all Windows applications. The Windows Virtual Desktop related innovation to application management is a new feature called [MSIX app attach](/azure/virtual-desktop/what-is-app-attach). MSIX app attach is a way to deliver MSIX applications to both physical and virtual machines. However, MSIX app attach is different from regular MSIX because it's made specifically for Windows Virtual Desktop. This creates separation between user data, the operating system, and applications by using MSIX containers. You can remove the need for repackaging when you deliver applications dynamically. You can reduce the time it takes for a user to sign in to Windows Virtual Desktop. At the same time, you can reduce infrastructure requirements and cost.
 
 ## Next steps
 
@@ -42,5 +42,5 @@ The following resources provide guidance for specific points throughout the clou
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
 - [Enterprise Scale Landing Zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
-- [Manage your virtual desktop environment](./WVD-manage.md)
-- [Govern your virtual desktop environment](./WVD-govern.md)
+- [Manage your virtual desktop environment](./wvd-manage.md)
+- [Govern your virtual desktop environment](./wvd-govern.md)

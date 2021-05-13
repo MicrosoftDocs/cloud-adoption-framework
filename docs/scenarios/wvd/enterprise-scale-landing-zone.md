@@ -34,7 +34,7 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 ![Construction Set Architecture](media\windowsvirtualdesktoparchitecture.png)
 
-### Implementation with Azure Resource Manager (ARM) Templates for Remote Desktop services
+### Implementation with Azure Resource Manager (ARM) Templates for Remote Desktop Services
 
 ARM Windows Virtual Desktop Templates are a collection of the Infrastructure as Code ARM Template to deploy a Windows Virtual Desktop environment on Azure.
 

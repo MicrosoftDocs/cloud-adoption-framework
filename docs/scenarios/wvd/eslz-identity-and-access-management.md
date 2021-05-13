@@ -23,9 +23,9 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 - **Desktop Virtualization Reader:** The Desktop Virtualization Reader role lets you view everything in the deployment but doesn't let you make changes.
 - **Host Pool Contributor:** The Host Pool Contributor role lets you manage all aspects of host pools, including access to resources. To create virtual machines you need another role, Virtual Machine Contributor.
 - **Host Pool Reader:** The Host Pool Reader role lets you view everything in the host pool, but doesn't let you make changes.
-- **Application Group Contributor:** The Application Group Contributor role lets you manage all aspects of app groups. To publish app groups to users, or to user groups, you need the User Access Administrator role.
-- **Application Group Reader:** The Application Group Reader role lets you view everything in the app group, but doesn't let you make changes.
-- **Workspace Contributor:** The Workspace Contributor role lets you manage all aspects of workspaces. To get information on applications added to the app groups, you need the Application Group Reader role.
+- **Application Group Contributor:** The Application Group Contributor role lets you manage all aspects of application groups. To publish application groups to users, or to user groups, you need the User Access Administrator role.
+- **Application Group Reader:** The Application Group Reader role lets you view everything in the application group, but doesn't let you make changes.
+- **Workspace Contributor:** The Workspace Contributor role lets you manage all aspects of workspaces. To get information on applications added to the application groups, you need the Application Group Reader role.
 - **Workspace Reader:** The Workspace Reader role lets you view everything in the workspace, but doesn't let you make changes.
 - **User Session Operator:** The User Session Operator role lets you send messages, disconnect sessions, and use the logoff function to sign sessions out of the session host. However, it doesn't let you perform session host management like removing session host, changing drain mode, and so on.
 - **Session Host Operator:** The Session Host Contributor role lets you view and remove session hosts, and change drain mode. You can't add session hosts using the Azure portal because you don't have write permission for host pool objects.
@@ -37,7 +37,7 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 - Windows Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Azure Active Directory (Azure AD), or an instance of Azure AD Domain Services (Azure AD DS) synchronized from Azure AD.
   > [!NOTE]
   > Windows Virtual Desktop does not support B2B or Microsoft Accounts.
-- The account used for domain join can't have multi-factor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
+- The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Windows Virtual Desktop requires AD DS or Azure AD DS.
 - Choose a hosting strategy for domain services, either Azure AD DS or AD DS.
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC Administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
@@ -62,6 +62,6 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 - Use the KDC proxy solution to proxy Smartcard authentication traffic and to sign in remotely. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Segregate Session Host virtual machines into Active Directory organization units for each host pool to more easily manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Use a solution like Local Administrator Password Solution (LAPS) to rotate local administrator passwords on Windows Virtual Desktop session hosts frequently. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
-- For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Windows Virtual Desktop app groups. For more information, see [Delegated access in Windows Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
-- Create conditional access policies for Windows Virtual Desktop. Such policies can enforce multi-factor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure multifactor authentication for Windows Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Windows Virtual Desktop application groups. For more information, see [Delegated access in Windows Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
+- Create conditional access policies for Windows Virtual Desktop. Such policies can enforce multifactor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure multifactor authentication for Windows Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 - Configure AD FS to enable single sign-on for users on the corporate network.

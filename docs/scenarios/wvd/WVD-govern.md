@@ -30,7 +30,7 @@ The initial governance foundation focuses on the following aspects of governance
 For Windows Virtual Desktop, the baseline needs to expand to include controls for functions specific to virtual desktops:
 
 - User device used to access the virtual desktop
-- App security
+- Application security
 - Session host OS
 - Deployment configuration
 

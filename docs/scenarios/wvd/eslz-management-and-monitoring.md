@@ -78,7 +78,7 @@ For a glossary, data storage cost estimations, and further troubleshooting, see 
 
 ### Design considerations - Infrastructure
 
-- Use the same log analytics workspace that's used for the Windows Virtual Desktop platform.
+- Use the same Log Analytics workspace that's used for the Windows Virtual Desktop platform.
 - The Session Host Performance counters are collected and logged.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model around the collected logs and metrics.

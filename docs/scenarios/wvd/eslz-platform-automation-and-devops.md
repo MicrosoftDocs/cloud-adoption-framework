@@ -41,15 +41,15 @@ When you're considering automation for your Windows Virtual Desktop environment,
 
 Applications are made available to your users in two ways: installed in the image, or delivered dynamically per user.
 
-In a large-scale environment, it's impractical to install all of the applications into the image. You might have apps that must have restricted access, or incompatible apps or versions. Now you must split your apps into the two groups previously mentioned.
+In a large-scale environment, it's impractical to install all of the applications into the image. You might have applications that must have restricted access, or incompatible applications or versions. Now you must split your applications into the two groups previously mentioned.
 
-Applications installed in the image should be universal to your users. For example, security products and the Microsoft 365 suite. These apps should be a part of your image creation automation.
+Applications installed in the image should be universal to your users. For example, security products and the Microsoft 365 suite. These applications should be a part of your image creation automation.
 
 Applications dynamically delivered per user should be everything else. You'll need flexibility here, as following these rules can force you to spend too much time making an incompatible application fit into a group.
 
 ### Languages deployment
 
-As Windows Virtual Desktop environments start to scale out, it's often required that images be localized into the native language for the user. Consider the basis for your image. The pre-optimized Windows 10 gallery image both with and without Microsoft 365 is only supplied in United States English (en-US). You can start your image automation from a native language, or you can adapt the existing en-US gallery image. Install languages before you install other applications. If you're using Windows 10 multi-session, it's not available to start from a native language, and you must adapt the provided gallery image.
+As Windows Virtual Desktop environments start to scale out, it's often required that images be localized into the native language for the user. Consider the basis for your image. The pre-optimized Windows 10 gallery image both with and without Microsoft 365 is only supplied in United States English (en-US). You can start your image automation from a native language, or you can adapt the existing en-US gallery image. Install languages before you install other applications. If you're using Windows 10 Enterprise multi-session, it's not available to start from a native language, and you must adapt the provided gallery image.
 
 ### Integrate image creation with DevOps
 
@@ -79,7 +79,7 @@ You can decide to update VMs in place, or create a side-by-side environment for 
 
 Use Packer to create the image. By using a Packer Pipeline for image management, you can automate image creation. Azure DevOps licensing is required to use the full suite of tools. The other prerequisites are:
 
-- An Azure Active Directory (Azure AD) global administrator.
+- A user assigned the Global Administrator role in Azure Active Directory (Azure AD).
 - A service principal with contributor access to the subscription.
 - An Azure Key Vault to store secrets in, giving the service principal **secret management** in the access policy.
 
@@ -107,7 +107,7 @@ For more information about Packer, see the [Packer website](https://www.packer.i
 
 For universal applications installed in the gold image, use the same Packer method as above to install applications.
 
-[App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming apps on a per-user basis.
+[App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming applications on a per-user basis.
 
 Use FSLogix [App Masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
 
@@ -121,7 +121,7 @@ Microsoft has processes for installing language packs manually or automatically.
 
 The automated process involves downloading a PowerShell script onto the VM that's being converted to an image. Example automation scripts are found in Microsoft documentation. If you're following the recommendation for Packer pipelines, you can include this process as an extra task.
 
-For more information on installing language packs in Windows 10 multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop](/azure/virtual-desktop/language-packs).
+For more information on installing language packs in Windows 10 Enterprise multi-session, see [Install language packs on Windows 10 VMs in Windows Virtual Desktop](/azure/virtual-desktop/language-packs).
 
 ### Integrate Windows Virtual Desktop golden image creation with DevOps
 
