@@ -19,7 +19,7 @@ Microsoft offers two implementation options for landing zones:
 - Start small and expand
 - Enterprise-scale
 
-Watch the following 15 minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
+Watch the following 15-minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
 
 <!-- markdownlint-disable MD034 -->
 
@@ -144,7 +144,7 @@ The following table summarizes considerations for each landing zone implementati
         **Deployment considerations**
     :::column-end:::
     :::column:::
-        Best-practices from cloud provider?
+        Best practices from cloud provider?
     :::column-end:::
     :::column:::
         More best practices are required to be added using Cloud Adoption Framework methodologies to apply security, governance, and compliance.
@@ -157,7 +157,7 @@ The following table summarizes considerations for each landing zone implementati
     :::column:::
     :::column-end:::
     :::column:::
-        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging
+        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging.
     :::column-end:::
     :::column:::
         Partial. Some resources are deployed. Additional offerings aligned to Cloud Adoption Framework methodologies required to apply best practices to support security, governance, and compliance.
@@ -229,7 +229,7 @@ The following considerations are key to your adoption plan for either type:
 - Adoption velocity across the organization
 - Operational excellence
 
-Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps accelerate, compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
+Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps to accelerate compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
 
 If you start small and expand, there are ways to achieve self-sufficiency, adoption velocity, and operational excellence. Use the Govern and Manage methodologies of the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](../enterprise-scale/design-guidelines.md), to iteratively improve your design.
 

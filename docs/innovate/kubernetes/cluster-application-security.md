@@ -1,31 +1,32 @@
 ---
 title: Cluster and application security
-description: Learn about Kubernetes in the Cloud Adoption Framework for cluster and application security.
+description: Learn about Kubernetes security essentials in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
 ms.author: brblanch
-ms.date: 03/20/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: think-tank
+ms.custom: think-tank, seo-caf-innovate
+keywords: application security, security essentials, Kubernetes security
 ---
 
 <!-- cSpell:ignore kured -->
 
 # Cluster and application security
 
-Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance.
+Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. Kubernetes security is important throughout the container lifecycle because of the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application's security.
 
 ## Plan, train, and proof
 
-As you get started, the checklist and resources below will help you plan for cluster operations and security. You should be able answer these questions:
+As you get started, the security essentials checklist and Kubernetes security resources below will help you plan for cluster operations and application security. By the end of this section, you'll be able to answer these questions:
 
 > [!div class="checklist"]
 >
 > - Have you reviewed the security and threat model of Kubernetes clusters?
 > - Is your cluster enabled for Kubernetes role-based access control?
 
-**Checklist:**
+**Security checklist:**
 
 - **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [The definitive guide to securing Kubernetes (white paper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original).
 
@@ -38,17 +39,17 @@ As you get started, the checklist and resources below will help you plan for clu
   - [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
   - [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)
 
-## Deploy to production and apply best practices
+## Deploy to production and apply Kubernetes security best practices
 
-As you prepare the application for production, you should implement a minimum set of best practices. Use the following checklist at this stage. You should be able to answer these questions:
+As you prepare the application for production, implement a minimum set of best practices. Use this checklist at this stage. By the end of this section, you'll be able to answer these questions:
 
 > [!div class="checklist"]
 >
-> - Have you configured network security rules for ingress, egress, and intra-pod communication?
-> - Is your cluster configured to automatically apply node security updates?
-> - Are you running a security scanning solution for your cluster and container workloads?
+> - Have you set up network security rules for ingress, egress, and intra-pod communication?
+> - Is your cluster set up to automatically apply node security updates?
+> - Are you running a security scanning solution for your cluster and container services?
 
-**Checklist:**
+**Security checklist:**
 
 - **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac).
 
@@ -72,13 +73,13 @@ As you prepare the application for production, you should implement a minimum se
 
 ## Optimize and scale
 
-Now that the application is in production, how can you optimize your workflow and prepare your application and team to scale? Use the optimization and scaling checklist to prepare. You should be able to answer:
+Now that the application is in production, how can you optimize your workflow and prepare your application and team to scale? Use the optimization and scaling checklist to prepare. By the end of this section, you'll be able to answer this question:
 
 > [!div class="checklist"]
 >
 > - Can you enforce governance and cluster policies at scale?
 
-**Checklist:**
+**Security checklist:**
 
 - **Enforce cluster governance policies.** Apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. To learn more, see [Control deployments with Azure Policy](/azure/governance/policy/concepts/policy-for-kubernetes).
 

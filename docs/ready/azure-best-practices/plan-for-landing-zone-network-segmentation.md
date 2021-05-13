@@ -41,3 +41,15 @@ This section explores key recommendations to deliver highly secure internal netw
 - Use NSGs to selectively allow connectivity between landing zones.
 
 - For Virtual WAN topologies, route traffic across landing zones via Azure Firewall if your organization requires filtering and logging capabilities for traffic flowing across landing zones.
+
+- If your organization decides to implement forced tunneling (advertise default route) to on-premises, we recommend incorporating the following **outbound** NSG rules to deny egress traffic from VNets directly to the internet should the BGP session drop. 
+
+> [!NOTE] 
+> Rule priorities will need to be adjusted based on your existing NSG ruleset. 
+
+  | Priority | Name | Source | Destination | Service | Action | Remark |
+  | --- | --- | --- | --- | --- | --- | --- |
+  | 100 | `AllowLocal` | `Any` | `VirtualNetwork` | `Any` | `Allow` | Allow traffic during normal operations. With Forced Tunneling enabled, `0.0.0.0/0` is considered part of the `VirtualNetwork` tag as long as BGP is advertising it to the ExpressRoute or VPN gateway. | 
+  | 110 | `DenyInternet` | `Any` | `Internet` | `Any` | `Deny` | Deny traffic directly to the internet if the `0.0.0.0/0` route is withdrawn from the routes advertised (for example, due to an outage or misconfiguration). | 
+  
+  

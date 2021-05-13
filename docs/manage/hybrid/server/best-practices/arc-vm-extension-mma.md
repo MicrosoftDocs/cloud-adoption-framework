@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -16,7 +16,7 @@ This article provides guidance on how to manage extensions to Azure Arc enabled 
 
 Azure Arc enabled servers, enables you to deploy Azure VM extensions to non-Azure Windows and Linux VMs, giving you a hybrid or multicloud management experience that levels to Azure VMs.
 
-You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure Arc enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Microsoft Monitoring Agent (MMA) to your servers. This onboards them in Azure services that use this agent: Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure Arc enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Log Analytics agent to your servers. This onboards them in Azure services that use this agent: Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
@@ -124,7 +124,7 @@ Please review the [Azure Monitor supported OS documentation](/azure/azure-monito
 
     ![A screenshot of an output from an ARM template.](./media/arc-vm-extension-mma/mma-output.png)
 
-4. You will have the Microsoft Monitoring Agent deployed on your Windows or Linux system and reporting to the Log Analytics workspace that you have selected. You can verify by going back to **Agents Management** in your workspace and choosing either **Windows** or **Linux**. You should see an additional connected VM.
+4. You will have the Log Analytics agent deployed on your Windows or Linux system and reporting to the Log Analytics workspace that you have selected. You can verify by going back to **Agents Management** in your workspace and choosing either **Windows** or **Linux**. You should see an additional connected VM.
 
     ![A screenshot of connected agents for Windows servers.](./media/arc-vm-extension-mma/windows-agents.png)
 

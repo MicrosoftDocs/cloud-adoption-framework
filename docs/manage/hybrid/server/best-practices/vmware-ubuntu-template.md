@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -17,7 +17,7 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 ## Prerequisites
 
 > [!NOTE]
-> This guide assumes that you have some VMware vSphere familiarity. It is also not designed to review either VMware or Ubuntu best practices.
+> This guide assumes that you have some VMware vSphere familiarity. It's not designed to review either VMware or Ubuntu best practices.
 
 - [Download the latest Ubuntu server 18.04 ISO file](https://releases.ubuntu.com/18.04/)
 

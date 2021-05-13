@@ -244,8 +244,6 @@ items:
         items:
         - name: Overview
           href: ready/enterprise-scale/index.md
-        - name: Implement enterprise-scale landing zones
-          href: ready/enterprise-scale/implementation.md
         - name: Architecture
           href: ready/enterprise-scale/architecture.md
         - name: Design principles
@@ -300,8 +298,8 @@ items:
             href: ready/enterprise-scale/security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: ready/enterprise-scale/platform-automation-and-devops.md
-        - name: Implementation guidelines
-          href: ready/enterprise-scale/implementation-guidelines.md
+        - name: Implement enterprise-scale landing zones
+          href: ready/enterprise-scale/implementation.md
         - name: Testing approach for Enterprise Scale
           href: ready/enterprise-scale/testing-approach.md
         - name: Terraform module for CAF enterprise-scale
@@ -482,6 +480,13 @@ items:
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
           - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
+
+        - name: Storage migration
+          items:
+          - name: Storage migration overview
+            href: /azure/storage/common/storage-migration-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Tools for unstructured storage migration
+            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
         - name: Linux and open-source databases
           items:
@@ -1359,6 +1364,8 @@ items:
           href: govern/policy-compliance/governance-alignment.md
         - name: Establish policy adherence processes
           href: govern/policy-compliance/processes.md
+        - name: Implement cloud service controls
+          href: govern/cloud-service-controls.md
         - name: Regulatory compliance
           href: govern/policy-compliance/regulatory-compliance.md
         - name: Cloud security readiness

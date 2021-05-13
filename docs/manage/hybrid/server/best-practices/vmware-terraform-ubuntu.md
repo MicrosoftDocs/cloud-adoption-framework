@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -67,7 +67,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 Before using the below guide to deploy an Ubuntu server VM and connect it to Azure Arc, a VMware vSphere template is required. [This article](./vmware-ubuntu-template.md) shows how to easily create such a template using VMware vSphere 6.5 and above.
 
 > [!NOTE]
-> If you already have an Ubuntu server VM template it is still recommended to use the guide as a reference.
+> If you already have an Ubuntu server VM template, you should still use the guide as a reference.
 
 ## Deployment
 
