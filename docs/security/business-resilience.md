@@ -43,7 +43,7 @@ Good security starts with assuming breach or assuming compromise. Understand tha
 > [!NOTE]
 > The "assume breach" principle doesn't assume that every compromise is a reportable event to regulators. The principle assumes that some level of security defenses have been breached or compromised. It then drives a focus on making the organization resilient through improvements to security posture and response processes.
 
-Assuming compromise should drive changes across people, process, and technology in your organization. Education, exercises, and other incident preparation activities are good examples. For more information, see [Incident preparation](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/cloud-security-incident-preparation).
+Assuming compromise should drive changes across people, process, and technology in your organization. Education, exercises, and other incident preparation activities are good examples. For more information, see [Incident preparation](./organize/cloud-security-incident-preparation.md).
 
 Assuming compromise is a significant shift from the classic security mindset. That mindset assumed organizations could establish a perfectly safe network protected by a security perimeter, restricting all valuable business activity to that network. Elements of this strategy provide value in a resilient enterprise. But the assumption of a perfectly safe network didn't in the world of mobile work and evolving business models, technology platforms, and security threats.
 
