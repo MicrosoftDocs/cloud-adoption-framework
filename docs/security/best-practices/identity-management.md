@@ -10,6 +10,8 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
+# Identity and Access Management Best Practices
+
 ## Checklist: How are you managing the identity for your workload?
 
 - Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principles.
@@ -195,7 +197,24 @@ Here are some of the key features of Privileged Identity Management:
 
 *Using this feature requires an Azure AD Premium P2 license.*
 
-## Best Practices
+## Security Controls for Identity Management
+
+[Security Control V2: Identity Management](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management)
+
+- IM-1 [Standardize Azure Active Directory as the central identity and authentication system](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system)
+- IM-2: [Manage application identities securely and automatically](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-2-manage-application-identities-securely-and-automatically)
+- IM-3: [Use Azure AD single sign-on (SSO) for application access](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-3-use-azure-ad-single-sign-on-sso-for-application-access)
+- IM-4: [Use strong authentication controls for all Azure Active Directory based access](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access)
+- IM-5: [Monitor and alert on account anomalies](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-5-monitor-and-alert-on-account-anomalies)
+- IM-6: [Restrict Azure resource access based on conditions](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-6-restrict-azure-resource-access-based-on-conditions)
+- IM-7: [Eliminate unintended credential exposure](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-7-eliminate-unintended-credential-exposure)
+- IM-8: [Secure user access to legacy applications](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-8-secure-user-access-to-legacy-applications)
+
+
+
+
+
+## Additional Considerations and Best Practices
 
 Identity Management [Best Practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices)
 
@@ -213,11 +232,6 @@ Identity Management [Best Practices](https://docs.microsoft.com/azure/security/f
 - Actively monitor for suspicious activities
 - Use Azure AD for storage authentication
 
-## Further reading on best practices
-
-[Security Checklist for Identity Management](https://docs.microsoft.com/azure/security/fundamentals/steps-secure-identity)
-[Choose passwordless authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless)
-[Microsoft security best practices for Identity and Access Management](https://docs.microsoft.com/security/compass/identity)
 
 ## Summary
 
@@ -230,20 +244,10 @@ Identity Management [Best Practices](https://docs.microsoft.com/azure/security/f
 - Password-less or multi-factor authentication (MFA) is enforced for users of this workload.Attack methods have evolved to the point where passwords alone cannot reliably protect an account. Modern authentication solutions including password-less and multi-factor authentication increase security posture through strong authentication.
 - Current on-premises Active Directory is synchronized with Azure AD or other cloud identity system.
 
+## Further reading
 
-## Security Controls for Identity Management
+[Security Checklist for Identity Management](https://docs.microsoft.com/azure/security/fundamentals/steps-secure-identity)
 
-[Security Control V2: Identity Management](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management)
+[Choose passwordless authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless)
 
-- IM-1 [Standardize Azure Active Directory as the central identity and authentication system](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system)
-- IM-2: [Manage application identities securely and automatically](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-2-manage-application-identities-securely-and-automatically)
-- IM-3: [Use Azure AD single sign-on (SSO) for application access](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-3-use-azure-ad-single-sign-on-sso-for-application-access)
-- IM-4: [Use strong authentication controls for all Azure Active Directory based access](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access)
-- IM-5: [Monitor and alert on account anomalies](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-5-monitor-and-alert-on-account-anomalies)
-- IM-6: [Restrict Azure resource access based on conditions](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-6-restrict-azure-resource-access-based-on-conditions)
-- IM-7: [Eliminate unintended credential exposure](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-7-eliminate-unintended-credential-exposure)
-- IM-8: [Secure user access to legacy applications](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-identity-management#im-8-secure-user-access-to-legacy-applications)
-
-
-
-
+[Microsoft security best practices for Identity and Access Management](https://docs.microsoft.com/security/compass/identity)
