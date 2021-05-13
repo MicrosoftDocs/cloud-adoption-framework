@@ -71,7 +71,7 @@ There are different types of "keys" that can be used within various Azure servic
 - Keys that are cryptographic keys, for example, encryption-at-rest and/or encryption-in-transit (**NOTE**: The following section will focus on encryption-at-rest)
 - Keys used for connectivity (also known as a token for authenatication "AuthN" and/or authorization "AuthZ") to various Azure services
 
-### **Keys used for encryption**
+### **Keys used for cryptographic keys: encryption-at-rest**
 
 Read [the encryption security fundamentals](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure. 
 
@@ -98,9 +98,9 @@ If your business requires customer-managed keys for encryption-at-rest, ensure y
 - [Replicate machines with CMK enabled disks](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-replication-cmk-disks)
 - [Configure customer-managed keys for your Azure Cosmos account with Azure Key Vault](https://docs.microsoft.com/azure/cosmos-db/how-to-setup-cmk)
 
-### Other security -based cloud design patterns
+### Other security-based cloud design patterns
 
-For the following sections on keys and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
+For the following sections on keys (used as tokens) and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
 
 - Valet Key pattern
  
@@ -116,10 +116,10 @@ For the following sections on keys and secrets, there are several cloud design p
 
 - [Valet pattern](https://docs.microsoft.com/azure/architecture/patterns/valet-key)
 - [CQRS pattern](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
-### **Keys used to invocate or within connection strings**
 
-The other type of "keys" are used for various Azure services for connectivity, for example, Azure Storage or Azure Service Bus access keys.
+### **Keys used as connectivity or tokens: invocation or within connection strings**
 
+The other type of "keys" are used for various Azure services for connectivity or tokens, for example, Azure Storage or Azure Service Bus access keys.
 
 Do note there are limitations and/or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, etc.
 
