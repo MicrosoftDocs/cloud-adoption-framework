@@ -36,7 +36,7 @@ Many successful innovations start as a minimum viable product (MVP) that deliver
 The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like Power BI.
 
 > [!NOTE]
-> Before you share data, make sure you've read the following sections. Sharing data might require governance to provide protection for the data. Also, if the data spans multiple clouds it might require centralization. If data reside within applications, you must collect it in order to share it.
+> Before you share data, make sure you've read the following sections. Sharing data might require governance to provide protection for the data. Also, if the data spans multiple clouds it might require centralization. If data resides within applications, you must collect it in order to share it.
 
 ### Govern data
 
@@ -65,18 +65,18 @@ When you centralize, you need an appropriate data store for the centralized data
 
 The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data/) solutions can help you choose the most appropriate centralization solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
-### Collect data
-
 > [!IMPORTANT]
 > For some customer needs and solutions, a simple approach might be enough. The cloud architect should challenge the team to consider low-cost solutions to validate the customer hypothesis, especially during early development. This section on collecting data discusseses scenarios that might suggest a different solution for your situation.
 
+### Collect data
+
 The two primary forms of data collection are *integration* and *ingestion*.
 
-- **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
+**Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 
 Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) and [Azure Data Factory](https://azure.microsoft.com/services/data-factory/) are two examples. The reference architecture for [Data Factory with an OLAP data store](/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
 
-- **Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
+**Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
 
 You can integrate these various forms of data into a central data store on an OLAP or big data solution. However, for early iterations of the build-measure-learn cycle, an online transactional processing (OLTP) solution might be sufficient to validate a customer hypothesis. OLTP solutions aren't the best option for any reporting scenario. However, when you're [building with customer empathy](./build.md), it's more important to focus on customer needs than on technical tooling decisions. After the customer hypothesis is validated at scale, a more suitable platform might be required. The reference architecture on [OLTP data stores](/azure/architecture/data-guide/relational-data/online-transaction-processing) can help you determine which data store is most appropriate for your solution.
 
