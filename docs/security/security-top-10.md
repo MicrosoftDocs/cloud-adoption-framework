@@ -303,12 +303,12 @@ These native solutions also enable security operations teams to focus on inciden
 
 - **Sponsorship:** This is typically sponsored by the Security Operations Director (or equivalent)..
 - **Execution:** Integrating native threat detection is a collaborative effort involving those with:
-  - **[Security Operations](../organize/cloud-security-operations-center.md):** integrate alerts into SIEM and incident investigation processes, educate analysts on cloud alerts and what they mean, and how to use the native cloud tools.
-  - **[Incident Preparation](../organize/cloud-security-incident-preparation.md):** Integrate cloud incidents into practice exercises and ensure practice exercises are conducted to drive team readiness.
-  - **[Threat Intelligence](../organize/cloud-security-threat-intelligence.md):** Research and integrate information on cloud attacks to inform teams with context and intelligence.
-  - **[Security Architecture](../organize/cloud-security-architecture.md):** Integrate native tooling into security architecture documentation.
-  - **[Policy and standards](../organize/cloud-security-policy-standards.md):** Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
-  - **[Infrastructure and Endpoint](../organize/cloud-security-infrastructure-endpoint.md)** / **[Central IT Operations](../organize/central-it.md):** Configure and enable detections, integrate into automation and infrastructure as code solutions.
+  - [Security Operations](../organize/cloud-security-operations-center.md): integrate alerts into SIEM and incident investigation processes, educate analysts on cloud alerts and what they mean, and how to use the native cloud tools.
+  - [Incident Preparation](../organize/cloud-security-incident-preparation.md): Integrate cloud incidents into practice exercises and ensure practice exercises are conducted to drive team readiness.
+  - [Threat Intelligence](../organize/cloud-security-threat-intelligence.md): Research and integrate information on cloud attacks to inform teams with context and intelligence.
+  - [Security Architecture](../organize/cloud-security-architecture.md): Integrate native tooling into security architecture documentation.
+  - [Policy and standards](../organize/cloud-security-policy-standards.md): Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
+  - [Infrastructure and Endpoint](../organize/cloud-security-infrastructure-endpoint.md) / [Central IT Operations](../organize/central-it.md): Configure and enable detections, integrate into automation and infrastructure as code solutions.
 
 **How**: Enable [threat detection in Azure security center](/azure/security-center/threat-protection) for all the resources you are using and have each team integrate these into their processes as described above.
 

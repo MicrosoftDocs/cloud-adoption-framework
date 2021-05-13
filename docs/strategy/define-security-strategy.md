@@ -207,7 +207,7 @@ This section describes the key relationships that frequently change on the journ
 
 - **Between applications and data:** The line between security of data and applications is becoming blurred in places and new regulations are creating a need for closer cooperation between data/privacy teams and security teams:
 
-  - **Machine learning (machine learning) algorithms:** machine learning algorithms are similar to applications in that they are designed to process data to create an outcome. The key differences are:
+  - **Machine learning algorithms:** Machine learning algorithms are similar to applications in that they are designed to process data to create an outcome. The key differences are:
 
     - **High-value machine learning:** Machine learning often confers a significant competitive advantage and is often considered sensitive intellectual property and a trade secret.
 
