@@ -1,5 +1,5 @@
 ---
-title: Security Title
+title: Secure Identity Management
 description: CAF Best Practices - Identity Management
 author: lizetpenamsft
 ms.author: lipenade
