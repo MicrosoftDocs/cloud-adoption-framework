@@ -319,7 +319,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Virtual WAN is an enterprise-level network service that helps organizations to resolve connectivity challenges. The service provides higher aggregate throughput with network connectivity, optimal routing over the Azure backbone, and a unified Azure management experience.
 
-    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways, and Azure Firewall are also provisioned to address network connectivity requirements.  
+    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, Azure VPN Gateway, and Azure Firewall are also provisioned to address network connectivity requirements.  
 
 - **Back up virtual machines**
 

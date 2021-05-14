@@ -86,11 +86,11 @@ If you use custom images to deploy Windows Virtual Desktop host pool VMs, it's i
 
 Preventing data loss for critical user data is important.
 
-1. Assess which data needs to be saved and protected. If you're using OneDrive or some other external storage, saving the user profile or office containers data might not be necessary.
+1. Assess which data needs to be saved and protected. If you're using OneDrive or some other external storage, saving the user profile or office container data might not be necessary.
 
 2. Consider the appropriate mechanism to provide protection for critical user data.
 
-   - You can use the [Azure Backup](/azure/backup/backup-overview) service to protect profile and office containers data when it's stored on Azure Files standard and premium tiers.
+   - You can use the [Azure Backup](/azure/backup/backup-overview) service to protect profile and office container data when stored in either Azure Files Standard tier or Premium tier.
    - You can use Azure NetApp Files [snapshots](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [policies](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies) for Azure NetApp Files on all tiers.
    - You can use Azure Backup to protect host pool VMs. This practice is supported even if host pool VMs are stateless.
 
@@ -125,7 +125,7 @@ The following are best practices for your design:
 > GRS isn't available with Azure Files Premium tier or Standard tier with large file support enabled.
 
 - Only use cloud cache when:
-  - The user profile or office containers data availability requires high-availability, or an SLA is critical and must be resilient to region failure.
+  - The user profile or office container data availability requires high-availability, or an SLA is critical and must be resilient to region failure.
   - The selected storage option can't satisfy BCDR requirements. For example, GRS isn't available with Azure Files Premium tier or Standard tier with large file support enabled.
   - Replication between disparate storage is required.
 
