@@ -183,9 +183,7 @@ Azure Machine Learning Compute supports reserved instances. Discounts are automa
 
 Every time a pipeline is executed, intermediate datasets can be generated at each step for data caching and reuse. This could form a pain point for big organization with group of data scientists, running pipelines heavily.
 
-Normally DS don't spend time cleaning up these intermediate datasets. Overtime it will pipeline up, makes it even more difficult to clean up without deleting useful data.
-
-Storage team released one very relevant feature compared with Cosmos stream expiration in 2020: [Setting rules for Blob data retention](https://docs.microsoft.com/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal) Customers can set up general rules/policies to move data to cool/archive/delete categories to leverage Blob storage data deletion mechanisms there.
+Data scientist would typically not spend their time to clean up the intermediate datasets that are generated. Over time the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Blob Lifecycle Management](https://docs.microsoft.com/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general/policies to move data that is unused into colder storage tiers and save costs.  this way, you can 
 
 ### Infrastructure cost optimization considerations
 
