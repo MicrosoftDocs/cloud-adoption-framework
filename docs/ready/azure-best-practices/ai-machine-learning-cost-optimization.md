@@ -206,7 +206,7 @@ For production scenarios where high throughput or enterprise security is require
 
 For dev/test scenarios where throughput and security are less critical, either Standard or Premium SKU is recommended.
 
-The `Basic` SKU of Azure Container Registry is not recommended for Azure ML, because of its low throughput and low included storage, which can be quickly exceeded by Azure ML's relatively large sized (1+ GB) Docker images.
+The 'Basic' SKU of Azure Container Registry is not recommended for Azure ML, because of its low throughput and low included storage, which can be quickly exceeded by Azure ML's relatively large sized (1+ GB) Docker images.
 
 #### Consider compute type availability when choosing Azure regions
 
