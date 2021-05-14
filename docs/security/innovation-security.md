@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Innovation Security
 
-Innovation is the lifeblood of an organization in the digital age and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or DevSecOps method to rapidly innovate without waiting for the traditional waterfall ship schedule that can take months or years between releases.
+Innovation is the lifeblood of an organization in the digital age and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or [DevSecOps](./devsecops-controls.md) method to rapidly innovate without waiting for the traditional waterfall ship schedule that can take months or years between releases.
 
 ![DevSecOps Heart](./media/DevSecOpsHeart.png)
 
@@ -38,7 +38,7 @@ You must shift security "left" in the timeline to integrate it into the envision
 
 In the waterfall model, security was traditionally a "quality gate" after development finishes.
 
-DevOps expanded the traditional development model (people, process, and technology) to include operations teams. This reduced the friction that resulted from having the development and operations teams separated. Similarly, DevSecOps expands DevOps to reduce the friction from separate or disparate security teams.  
+DevOps expanded the traditional development model (people, process, and technology) to include operations teams. This reduced the friction that resulted from having the development and operations teams separated. Similarly, [DevSecOps](./devsecops-controls.md) expands DevOps to reduce the friction from separate or disparate security teams.  
 
 DevSecOps is the integration of security into every stage of the DevOps lifecycle from idea inception through envisioning, architectural design, iterative application development and into operations. Teams must align simultaneously to goals of innovation speed, reliability, and security resilience. With mutual understanding and mutual respect for each other's needs, the teams will work on the most important issues first, regardless of source. 
 
