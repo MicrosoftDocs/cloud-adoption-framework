@@ -18,21 +18,21 @@ Operating a business comes with risk. A security team's role is to inform and ad
 > [!NOTE]
 > The general rule for risk accountability is:
 >
-> The person who owns and accepts the risk is the person that explains to the world what went wrong.
+> The person who owns and accepts the risk is the person that explains to the world what went wrong (often in front of TV cameras).
 
-When mature, the goal of security is to expose and mitigate risks, and then provide business change with minimal risk. That level of maturity requires risk insights and deep security integration. At any level of maturity for your organization, the top security risks should appear on the risk register. Those risks are then managed down to an acceptable level.
+When mature, the goal of security is to expose and mitigate risks, and then empower the business to change with minimal risk. That level of maturity requires risk insights and deep security integration. At any level of maturity for your organization, the top security risks should appear on the risk register. Those risks are then managed down to an acceptable level.
 
 ## What is cybersecurity risk?
 
 Cybersecurity risk is the potential damage or destruction of business assets, revenue, and reputation. This damage is caused by human attackers attempting to steal money, information, or technology.
 
-While these attacks happen in the technical environment, they often represent a risk to your entire organization. Cybersecurity risk should be aligned to your risk measurement, tracking, and mitigation framework. Many organizations still treat cybersecurity risk as a technical problem to be 'solved'. This perception isn't right and doesn't mitigate the strategic business impact of risk.
+While these attacks happen in the technical environment, they often represent a risk to your entire organization. Cybersecurity risk should be aligned to your risk measurement, tracking, and mitigation framework. Many organizations still treat cybersecurity risk as a technical problem to be *solved*. This perception isn't right and doesn't mitigate the strategic business impact of risk.
 
 The following diagram shows the shift from a typical technically oriented program to a business framework.
 
 :::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Diagram that shows the shift from a typical technically oriented program to a business framework." lightbox="./media/technical-to-business-transformation-popout.png":::
 
-Security leaders must step back from the technical lens and learn what assets and data are important to business leaders. Then prioritize how teams spend their time, attention, and budget relating to business importance. The technical lens is reapplied as the security and Information Technology (IT) teams work through solutions. But looking at cybersecurity risk only as a technology problem runs the risk of solving the wrong problems.
+Security leaders must step back from the technical lens and learn what assets and data are important to business leaders. Then prioritize how teams spend their time, attention, and budget relating to business importance. The technical lens is reapplied as the security and IT teams work through solutions. But looking at cybersecurity risk only as a technology problem runs the risk of solving the wrong problems.
 
 ## Align your security risk management
 
@@ -54,9 +54,9 @@ The typical process of starting this transformation is:
      - Monitor changes in business strategies and initiatives to stay in alignment.
    - **Long term** sets direction and priorities to make steady progress over time, improving the overall security posture.
      - Use **Zero trust** to create a strategy, plan, and architecture for reducing risks in your organization. Align them with the [zero trust](https://aka.ms/zerotrust) principles of assuming breach, least privilege, and explicit verification. Adopting these principles shifts from static controls to more dynamic risk-based decisions. These decisions are based on real-time detections of strange behavior no matter where the threat started.
-     - **Lower technical debt** as a consistent strategy by operating security best practices across the organization. For example, replace password-based authentication with passwordless and multi-factor authentication (MFA), apply security patches, and retire or isolate legacy systems. Like paying off a mortgage, you must make steady payments to realize the full benefit and value of your investments.
+     - **Pay off technical debt** as a consistent strategy by operating security best practices across the organization. For example, replace password-based authentication with passwordless and multi-factor authentication (MFA), apply security patches, and retire or isolate legacy systems. Like paying off a mortgage, you must make steady payments to realize the full benefit and value of your investments.
      - **Apply data classifications, sensitivity labels, and role-based access controls** to protect data from loss or compromise throughout its lifecycle. These efforts can’t completely capture the dynamic nature and richness of business context and insight. But these key enablers are used to guide information protection and governance, limiting the potential impact of an attack.
-3. **Establish a healthy [security culture](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues. Then apply that focus to a ‘growth mindset’ of continuous learning. Focus culture changes on removing silos from security, IT, and the larger business organization. These changes achieve greater knowledge sharing and resilience levels.
+3. **Establish a healthy [security culture](/azure/cloud-adoption-framework/strategy/define-security-strategy#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues. Then apply that focus to a ‘growth mindset’ of continuous learning. Focus culture changes on removing silos from security, IT, and the larger business organization. These changes achieve greater knowledge sharing and resilience levels.
 
 For more information, see [Define a security strategy](https://aka.ms/securitystrategy).
 
@@ -72,7 +72,7 @@ The motivations and incentives for different types of attackers mirror those of 
 
 Understanding the attackers' motivations can help you understand the likelihood and potential impact of different types of attacks. While the security strategies and most important technical controls are similar across organizations, this context can help guide your security investment focus areas.
 
-For more information, see [Disrupting Attacker Return on Investment](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-2#part-1-disrupting-attacker-return-on-investment-1431).
+For more information, see [Disrupting Attacker Return on Investment](/security/ciso-workshop/ciso-workshop-module-2#part-1-disrupting-attacker-return-on-investment-1431).
 
 ### Behavior patterns
 
