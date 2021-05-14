@@ -20,8 +20,8 @@ The guidance in this article assumes that you've [established a plan for Windows
 
 The deployment of Windows Virtual Desktop instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
 
-- [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from step 1 of that procedure.
-- Create Desktop or [RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
+- [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from the first step of that procedure.
+- Create desktop or [RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
 - [Create an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 
 Deployment and migration consist of persona migration, application migration, and user profile migration. Depending on the results of the workload assessment, there will likely be changes to each of those migration tasks. This article helps identify ways that the scope would change based on the assessment feedback.
@@ -36,7 +36,7 @@ Each of the following sets of considerations should be included in the design do
 
 ### Azure landing zone considerations
 
-Before you deploy the persona groups, a landing zone should be created in the Azure region(s) that's required to support each persona to be deployed. Each assigned landing zone should be evaluated against the [landing zone review requirements](./ready.md).
+Before you deploy the persona groups, a landing zone should be created in the Azure regions required to support each persona to be deployed. Each assigned landing zone should be evaluated against the [landing zone review requirements](./ready.md).
 
 If the assigned Azure landing zone doesn't meet your requirements, scope should be added for any modifications to be made to the environment.
 

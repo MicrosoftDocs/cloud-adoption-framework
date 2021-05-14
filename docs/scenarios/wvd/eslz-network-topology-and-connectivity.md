@@ -11,8 +11,6 @@ ms.subservice: ready
 
 # Network topology and connectivity for Windows Virtual Desktop at enterprise scale
 
-<!-- cSpell:ignore NVAs VPNs -->
-
 ## Review network options
 
 Designing and implementing Windows Virtual Desktop Azure networking capabilities is critical for your Windows Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
@@ -35,7 +33,7 @@ The following questions help you make decisions based on the Azure networking se
 
   Azure provides two solutions for establishing hybrid networking capabilities:
 
-  - Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN Gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+  - Azure VPN gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
   - Azure ExpressRoute offers higher reliability and lower latency by using a private connection between Azure and your on-premises infrastructure. Bandwidth options for ExpressRoute range from 50 Mbps to 100 Gbps. For more information, see [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
 
 - Will you need to inspect and audit outgoing traffic by using on-premises network devices?
@@ -71,7 +69,7 @@ Azure networking includes products and services that provide different networkin
 | --- | --- |
 | I need networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network) |
 | I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](/azure/load-balancer) |
-| I want to optimize delivery from application server farms while increasing application security with a Web Application Firewall. | [Azure Application Gateway](/azure/application-gateway) and [Azure Front Door](/azure/frontdoor) |
+| I want to optimize delivery from application server farms while increasing application security with a web application firewall. | [Azure Application Gateway](/azure/application-gateway) and [Azure Front Door](/azure/frontdoor) |
 | I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN gateway](/azure/vpn-gateway) |
 | I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns) |
 | I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn) |

@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and DevOps for a Windows Virtual Desktop Enterprise-scale scenario
+# Platform automation and DevOps for a Windows Virtual Desktop enterprise-scale scenario
 
 Windows Virtual Desktop is a managed service that provides a Microsoft control plane for your desktop virtualization environment.
 
@@ -59,7 +59,7 @@ Windows Virtual Desktop gold images should be available to create host pools in 
 
 In Windows Virtual Desktop, you have more freedom on the geographic placement of your host pools than in a traditional desktop environment. This freedom exists because all Azure locations support Windows Virtual Desktop. Enable your organization to take advantage of this freedom and adjust the placement of the VMs to the most effective location.
 
-To do adjust the VM placement, make your gold image available in the required locations. Then you don't have to create VMs from an image across the Wide Area Network (WAN).
+To do adjust the VM placement, make your gold image available in the required locations. Then you don't have to create VMs from an image across the wide area network (WAN).
 
 You can update or roll back the VMs in a host pool to a different version.
 
@@ -77,29 +77,29 @@ You can decide to update VMs in place, or create a side-by-side environment for 
 
 ### Creation of Windows Virtual Desktop images
 
-Use Packer to create the image. By using a Packer Pipeline for image management, you can automate image creation. Azure DevOps licensing is required to use the full suite of tools. The other prerequisites are:
+Use Packer to create the image. By using a Packer pipeline for image management, you can automate image creation. Azure DevOps licensing is required to use the full suite of tools. The other prerequisites are:
 
 - A user assigned the Global Administrator role in Azure Active Directory (Azure AD).
 - A service principal with contributor access to the subscription.
 - An Azure Key Vault to store secrets in, giving the service principal **secret management** in the access policy.
 
-The Azure DevOps Project should be private unless your company policy specifies that repositories must be public. We recommend using Git for version control. Amend the project permissions to allow other team members access to the project. Adopt a basic work item process to develop the pipeline and keep your workloads streamlined.
+The Azure DevOps project should be private unless your company policy specifies that repositories must be public. We recommend using Git for version control. Amend the project permissions to allow other team members access to the project. Adopt a basic work item process to develop the pipeline and keep your workloads streamlined.
 
-When you use Azure Repositories, initialize the repo with a README file. The file lets you start filling information into the repository about your project. A good structure for the repository is to have two folders in the root of the repository: one called `ARM templates` to store the Azure Resource Manager (ARM) templates, and one for the build you're planning, such as `Windows 2004 - EVD`.
+When you use Azure Repos, initialize the repo with a README file. The file lets you start filling information into the repository about your project. A good structure for the repository is to have two folders in the root of the repository: one called `ARM templates` to store the Azure Resource Manager (ARM) templates, and one for the build you're planning, such as `Windows 2004 - EVD`.
 
 When working in Azure DevOps, use variable groups in your pipelines. Variable groups let you have repeatable parameters in your pipelines, such as secrets and names. There are two variable groups. One stores standard variables, and the other is linked to Azure Key Vault. The second group is used to pull across secrets for use in the pipeline.
 
-Store your Packer files and provisions in a centralized location for Azure Pipelines to access. We recommend using Azure File Shares to securely store these files. The access credentials are an example of what's stored in the key vault that's linked to the variable group.
+Store your Packer files and provisions in a centralized location for Azure Pipelines to access. We recommend using Azure file shares to securely store these files. The access credentials are an example of what's stored in the key vault that's linked to the variable group.
 
-When you use Azure File Share for the Packer files, store the name and account key in the Key Vault that's linked to the variable group in Azure DevOps. These credentials are accessed by Pipelines to download the Packer files to the VM that's used to create the image. Like the storage account name and primary key, store the Universal Naming Convention (UNC) path as a variable in the variable group.
+When you use Azure file share for the Packer files, store the name and account key in the key vault that's linked to the variable group in Azure DevOps. These credentials are accessed by pipelines to download the Packer files to the VM that's used to create the image. Like the storage account name and primary key, store the unc path as a variable in the variable group.
 
-Azure Pipelines has many different features. Our recommendations when it comes to setting up Packer are to use Gateways, Marketplace, and deployment services.
+Azure Pipelines has many different features. Our recommendations when it comes to setting up Packer are to use gateways, marketplace, and deployment services.
 
-When working with Packer in the deployment pipeline, you must install Packer Tools. The image being built can install Packer Tools onto the VM configured to be in the image.
+When working with Packer in the deployment pipeline, you must install Packer tools. The image being built can install Packer tools onto the VM configured to be in the image.
 
 We recommend creating a validation stage in the pipeline. The validation stage allows the pipeline to validate that the build works.
 
-After validation, you need the deployment pipeline as another stage. Clone the validation stage and set the Deployment Mode to **Incremental**.
+After validation, you need the deployment pipeline as another stage. Clone the validation stage and set the deployment mode to **Incremental**.
 
 For more information about Packer, see the [Packer website](https://www.packer.io/docs/builders/azure).
 
@@ -125,24 +125,24 @@ For more information on installing language packs in Windows 10 Enterprise multi
 
 ### Integrate Windows Virtual Desktop golden image creation with DevOps
 
-Make sure that Windows Virtual Desktop gold images are available to create host pools in the required Azure Regions.
+Make sure that Windows Virtual Desktop gold images are available to create host pools in the required Azure regions.
 
 There are several options to automate the distribution of your Windows Virtual Desktop golden image to different Azure regions. These options can then be used to create your Windows Virtual Desktop host pools. The Shared Image Gallery service in Azure is the simplest option to use, and it helps to build structure and organization around your images. It provides image replication to different Azure regions to support Windows Virtual Desktop automation, and:
 
 - Global replication of images to different Azure regions.
 - Versioning and grouping of images for easier management. It's helpful if you need to roll back Windows Virtual Desktop host pools to previous image versions.
-- Highly available images with Zone Redundant Storage (ZRS) accounts in regions that support Availability Zones. ZRS offers better resilience against zonal failures.
+- Highly available images with zone-redundant storage (ZRS) accounts in regions that support Availability Zones. ZRS offers better resilience against zonal failures.
 - Sharing Windows Virtual Desktop images across subscriptions, and even between Azure AD tenants, using role-based access control (RBAC).
 - Scaling your deployments with image replicas in each region.
 
 For more information, see [Shared Image Galleries](/azure/virtual-machines/shared-image-galleries).
 
-### Create Windows Virtual Desktop host pools using ARM Templates from images in Shared Image Galleries
+### Create Windows Virtual Desktop host pools using ARM templates from images in shared image galleries
 
-Using ARM templates allows for an Infrastructure as Code (IaC) approach to the deployment and customization of Windows Virtual Desktop resources. They should be used when possible to ensure consistency in deployments. ARM templates can be used to deploy Windows Virtual Desktop resources as part of a DevOps pipeline task. You can also use them when using the Azure portal, Azure PowerShell, or Azure CLI.
+Using ARM templates allows for an infrastructure as code (IaC) approach to the deployment and customization of Windows Virtual Desktop resources. They should be used when possible to ensure consistency in deployments. ARM templates can be used to deploy Windows Virtual Desktop resources as part of a DevOps pipeline task. You can also use them when using the Azure portal, Azure PowerShell, or Azure CLI.
 
-We recommend automating as much of the process of building an image as possible. The example above shows one method of image automation using Azure DevOps and a Packer continuous integration and continuous delivery (CI/CD) pipeline. Part of the underlying technology in the process is an ARM Template.
+We recommend automating as much of the process of building an image as possible. The example above shows one method of image automation using Azure DevOps and a Packer continuous integration and continuous delivery (CI/CD) pipeline. Part of the underlying technology in the process is an ARM template.
 
 The Shared Image Gallery is a service that helps you build structure and organization around your images. These images can be referred to in your IaC deployments of your Windows Virtual Desktop session hosts. The service allows for versioning, grouping, and replication of images.
 
-When you deploy your session hosts with an [ARM Template](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates/CreateAndProvisionHostPool), we recommend using the resource ID of the image you created in your shared image gallery as the VM Custom Image Source ID. The image that you're using must be replicated using the shared image gallery to the Azure regions where you're deploying your Windows Virtual Desktop host pools.
+When you deploy your session hosts with an [ARM template](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates/CreateAndProvisionHostPool), we recommend using the resource ID of the image you created in your gallery as the VM custom image source ID. The image that you're using must be replicated via the Shared Image Gallery service to the Azure regions where you're deploying your Windows Virtual Desktop host pools.
