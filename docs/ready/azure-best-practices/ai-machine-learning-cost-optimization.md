@@ -94,7 +94,7 @@ Based on the insights from the monitoring details, you can better plan or adjust
 
 You can access these metrics directly from the Azure Portal. Simply go to your Machine Learning Workspace, and select &quot;Metrics&quot; under the monitoring section on the left panel. Then, you can select details on what you would like to view, such as metrics, aggregation, and time period. For more information, you can refer to the [Monitor Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/monitor-azure-machine-learning) documentation page.
 
-![Azure Monitor metrics for Azure Machine Learning](ai-machine-learning-azuremonitor-metrics.png)
+![Azure Monitor metrics for Azure Machine Learning](media/ai-machine-learning-azuremonitor-metrics.png)
 
 ###
 
