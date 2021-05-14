@@ -1,6 +1,6 @@
 ---
 title: Business resilience
-description: Learn what your organization should do before, during, and after an attack to keep it online and available.
+description: Learn what your organization should do before, during, and after an attack to keep services and products online and available.
 author: NaomiOooo
 ms.author: naomio
 ms.date: 04/04/2021
@@ -12,7 +12,7 @@ ms.custom: internal
 ---
 # Business resilience
 
-An organization can never have perfect security, but it can become resilient to security attacks. We aren't immune to all health and safety risks in the physical world. And like the physical world, the data and information systems we operate are never 100% safe from attacks.
+An organization can never have perfect security, but it can become resilient to security attacks. Like we are never perfectly immune to all health and safety risks in the physical world, the data and information systems we operate are also never 100 percent safe from all attacks all the time.
 
 Focus your security efforts on increasing the resilience of business operations in the face of security incidents. These efforts can reduce risk and enable continuous improvements in security posture and your ability to respond to incidents.  
 
@@ -20,14 +20,14 @@ Resilience requires taking a pragmatic view that assumes a breach. It needs cont
 
 :::image type="content" source="./media/security-resilience-cycle.png" alt-text="Security Resilience Cycle" lightbox="./media/security-resilience-cycle-popout.png":::
 
-- **Before an incident** - Continuously improve security posture and the organization’s ability to respond to an incident. Keeping security practices current helps limit the likelihood and potential impact of a security incident on your business operations and assets. There are many techniques covered throughout the security disciplines, but all of them are designed to raise the cost of attack. Make the attackers develop and try new techniques because you've made their old ones stop working. These techniques raise their costs and friction, slowing them down and limiting their success.
+- **Before an incident**: Continuously improve security posture and the organization’s ability to respond to an incident. Continuously improving security posture helps limit the likelihood and potential impact of a security incident on your business operations and assets. There are many techniques covered throughout the security disciplines, but all of them are designed to raise the cost of attack. Make the attackers develop and try new techniques because you've made their old ones stop working. These techniques raise their costs and friction, slowing them down and limiting their success.
 
-- **During an incident** - Business operations must continue during an incident, even if they're degraded, slower, or limited to only critical systems. During an attack, a hospital can't stop caring for patients, ships need to move cargo, and planes must continue to fly safely. The two main priorities during an incident are:
-  - *Protect critical operations* – If threatened, all efforts should focus on protecting and sustaining critical business operations over all other functions.
-  - *Prevent further damage* - The default priority for security operations is to discover the full extent of attacker access, and then rapidly evict them from the environment. This eviction prevents further damage by the attackers, including retaliation.
+- **During an incident**: Business operations must continue during an incident, even if they're degraded, slower, or limited to only critical systems. During an attack, a hospital can't stop caring for patients, ships need to move cargo, and planes must continue to fly safely. The two main priorities during an incident are:
+  - *Protect critical operations*: If threatened, all efforts should focus on protecting and sustaining critical business operations over all other functions.
+  - *Prevent further damage*: The default priority for security operations is to discover the full extent of attacker access, and then rapidly evict them from the environment. This eviction prevents further damage by the attackers, including retaliation.
 
-- **After an incident** - If business operations are damaged during an attack, repairs must start immediately to restore full business operations. These repairs apply even if that means restoring operations without data that was lost in an attack.
-- **Feedback Loop** - Attackers repeat themselves, or repeat what other attackers have found to work. Attackers learn from attacking your organization, so you must continuously learn from their attacks. Focus on taking the proven and available techniques that were attempted before. Then ensure you can block, detect, rapidly respond, and recover from them. Your efforts raise the cost of attack on your organization and deter or slow down future attacks.
+- **After an incident**: If business operations are damaged during an attack, repairs must start immediately to restore full business operations. These repairs apply even if that means restoring operations without data that was lost in an attack, for example ransomware or a destructive attack like NotPetya.
+- **Feedback Loop**: Attackers repeat themselves, or repeat what other attackers have found to work. Attackers learn from attacking your organization, so you must continuously learn from their attacks. Focus on taking the proven and available techniques that were attempted before. Then ensure you can block, detect, rapidly respond, and recover from them. Your efforts raise the cost of attack on your organization and deter or slow down future attacks.
 
 ## Resilience goals
 
@@ -53,8 +53,8 @@ Resiliency requires a close partnership between business stakeholders, IT pro's 
 
 The security disciplines in this methodology align to the goal of increasing resilience to security incidents.
 
-- [Access Control](./access-control.md)
-- [Security Operations](./security-operations.md)
-- [Asset Protection](./asset-protection.md)
-- [Security Governance](./security-governance.md)
-- [Innovation Security](./innovation-security.md)
+- [Access control](./access-control.md)
+- [Security operations](./security-operations.md)
+- [Asset protection](./asset-protection.md)
+- [Security governance](./security-governance.md)
+- [Innovation security](./innovation-security.md)
