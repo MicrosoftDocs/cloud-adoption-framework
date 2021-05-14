@@ -418,6 +418,8 @@ items:
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
+        - name: Budget, Cost and Quota management with Azure Machine Learning
+          href: ready/azure-best-practicesai-machine-learning-cost-optimization.md
       - name: Cost management
         items:
         - name: Track costs
