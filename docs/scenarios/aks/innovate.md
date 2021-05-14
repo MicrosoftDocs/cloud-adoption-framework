@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Innovation on modern app platforms
 
-The Innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the Build, Measure, Learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI/machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern app platform. For more information, see [Innovate methodology](../../innovate/index.md).
+The Innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern app platform. For more information, see [Innovate methodology](../../innovate/index.md).
 
 ## Modern app platform innovation
 
@@ -22,21 +22,13 @@ When integrating modern app platforms into your cloud adoption strategy, innovat
 
 The following are examples of innovation from the layers of abstraction provided by a modern app platform innovation approach:
 
-- Data and innovation anywhere
+- **Data and innovation anywhere:** Using application portability lets data live where it makes the most sense for your users. Applications can follow the data. This approach encourages data democratization and application innovation. Azure Arc enabled data services and Azure Arc enabled Kubernetes offer management consistency when applications and data move to various environments. This approach allows developers to focus more on the app and the data, instead of the cloud or infrastructure.
 
-  Using application portability lets data live where it makes the most sense for your users. Applications can follow the data. This approach encourages data democratization and application innovation. Azure Arc enabled data services and Azure Arc enabled Kubernetes offer management consistency when applications and data move to various environments. This approach allows developers to focus more on the app and the data, instead of the cloud or infrastructure.
+- **Modernize your datacenter:** Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure Application Service for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
 
-- Modernize your datacenter
+- **Application platforms for the edge:** Extend your common runtime, shared containers, and orchestration to the edge by running Azure IoT or your application runtime on Kubernetes. For more information, see [How to install IoT Edge on Kubernetes](/azure/iot-edge/how-to-install-iot-edge-kubernetes).
 
-  Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure Application Service for Kubernetes with Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
-
-- Application platforms for the edge
-
-  Extend your common runtime, shared containers, and orchestration to the edge by running Azure IoT or your application runtime on Kubernetes. For more information, see [How to install IoT Edge on Kubernetes](/azure/iot-edge/how-to-install-iot-edge-kubernetes).
-
-- Workload portability
-
-  Standardize and centralize container orchestration around Kubernetes, Azure Kubernetes Service, or Azure Application Service for Kubernetes with Arc. This approach enables portability of workloads across instances of the common application platform running on public cloud, private cloud, and edge environments.
+- **Workload portability:** Standardize and centralize container orchestration around Kubernetes, Azure Kubernetes Service, or Azure Application Service for Kubernetes with Arc. This approach enables portability of workloads across instances of the common application platform running on public cloud, private cloud, and edge environments.
 
 ### Democratize data
 
@@ -57,13 +49,9 @@ To learn more about ways you can build applications on various modern app platfo
 
 Bring the business integration of your modern app platform to your environment:
 
-- Mobile experiences
+- **Mobile experiences:** Extend applications through the rapid development of mobile apps using the Azure Application Service runtime.
 
-  Extend applications through the rapid development of mobile apps using the Azure Application Service runtime.
-
-- Azure IoT
-
-  Collect data in near-real time from devices in your business environments with Azure IoT on Kubernetes.
+- **Azure IoT:** Collect data in near-real time from devices in your business environments with Azure IoT on Kubernetes.
 
 To learn more about using device interactions, see [Ambient experience tools to interact with devices in Azure](../../innovate/best-practices/devices.md).
 
